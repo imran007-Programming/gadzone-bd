@@ -38,22 +38,22 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
           whileTap={{ scale: 0.9 }}
           onClick={() => onAddToCart(p.id)}
           aria-label={`Add ${p.name} to cart`}
-          className="absolute bottom-1.5 left-1/2 flex h-11 w-11 -translate-x-1/2 items-center justify-center rounded-full bg-white text-lg shadow-lg ring-1 ring-slate-200 transition hover:bg-emerald-600 hover:text-white"
+          className="absolute bottom-1.5 left-1/2 flex h-11 w-11 -translate-x-1/2 items-center justify-center rounded-full bg-white text-lg shadow-lg ring-1 ring-slate-200 transition hover:bg-violet-600 hover:text-white"
         >
           🛒
         </motion.button>
       </div>
       <div className="flex flex-1 flex-col items-center gap-1 px-3 pb-4 pt-1 text-center">
-        <span className="text-[11px] font-bold uppercase tracking-widest text-emerald-600">{p.category}</span>
-        <h3 className="cursor-pointer text-sm font-bold leading-snug text-slate-900 hover:text-emerald-600 sm:text-[15px]" onClick={() => onQuickView(p)}>{p.name}</h3>
+        <span className="text-[11px] font-bold uppercase tracking-widest text-violet-600">{p.category}</span>
+        <h3 className="cursor-pointer text-sm font-bold leading-snug text-slate-900 hover:text-violet-600 sm:text-[15px]" onClick={() => onQuickView(p)}>{p.name}</h3>
         <div className="flex items-center gap-1.5"><Stars rating={p.rating} /><span className="text-xs text-slate-500">{p.rating} ({p.reviews.toLocaleString()})</span></div>
-        <span className={`w-fit rounded-full px-2.5 py-1 text-[11px] font-semibold ${p.stock === "In Stock" ? "bg-emerald-50 text-emerald-700" : "bg-amber-50 text-amber-700"}`}>{p.stock === "In Stock" ? "● In Stock" : "⚠ " + p.stock}</span>
+        <span className={`w-fit rounded-full px-2.5 py-1 text-[11px] font-semibold ${p.stock === "In Stock" ? "bg-violet-50 text-violet-700" : "bg-amber-50 text-amber-700"}`}>{p.stock === "In Stock" ? "● In Stock" : "⚠ " + p.stock}</span>
         <p className="line-clamp-2 text-[13px] text-slate-500">{p.desc}</p>
         <div className="mt-auto flex items-end gap-2 pt-2">
-          <span className="text-lg font-extrabold text-emerald-600 sm:text-xl">{tk(p.price)}</span>
+          <span className="text-lg font-extrabold text-violet-600 sm:text-xl">{tk(p.price)}</span>
           <span className="text-sm text-slate-400 line-through">{tk(p.oldPrice)}</span>
         </div>
-        <button onClick={() => onQuickView(p)} className="mt-2 rounded-full border border-slate-300 bg-white px-4 py-1.5 text-xs font-semibold text-slate-700 transition hover:border-emerald-600 hover:text-emerald-600">
+        <button onClick={() => onQuickView(p)} className="mt-2 rounded-full border border-slate-300 bg-white px-4 py-1.5 text-xs font-semibold text-slate-700 transition hover:border-violet-600 hover:text-violet-600">
           View details
         </button>
       </div>

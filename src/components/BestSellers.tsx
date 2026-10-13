@@ -14,7 +14,7 @@ export default function BestSellers({ products, onQuickView, onAddToCart }: Best
   return (
     <section className="mx-auto max-w-7xl px-4 py-16">
       <Reveal>
-        <span className="text-xs font-bold uppercase tracking-widest text-emerald-600">Customer Favourites</span>
+        <span className="text-xs font-bold uppercase tracking-widest text-violet-600">Customer Favourites</span>
         <h2 className="mt-1 text-3xl font-black tracking-tight text-slate-900">🏆 Best Sellers</h2>
         <p className="mt-1 text-sm text-slate-500">Customers der sobcheye pochonder products</p>
       </Reveal>

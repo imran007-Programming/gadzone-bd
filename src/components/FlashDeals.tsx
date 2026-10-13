@@ -24,9 +24,9 @@ export default function FlashDeals({ products, countdown, onQuickView, onAddToCa
           <div className="flex flex-wrap items-end justify-between gap-3">
             <div>
               <h2 className="text-2xl font-black tracking-tight sm:text-3xl">
-                <span className="text-emerald-400">Trending</span> New Arrivals
+                <span className="text-violet-400">Trending</span> New Arrivals
               </h2>
-              <span className="mt-2 block h-1 w-14 rounded-full bg-emerald-500" aria-hidden />
+              <span className="mt-2 block h-1 w-14 rounded-full bg-violet-500" aria-hidden />
               <p className="mt-2 text-sm text-slate-300">Fresh picks, latest tech — handpicked for you.</p>
             </div>
             <div className="flex items-center gap-2 text-sm font-bold">

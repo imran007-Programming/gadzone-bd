@@ -25,12 +25,12 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden bg-slate-950 text-white">
-      {/* emerald glow accents */}
-      <div aria-hidden className="pointer-events-none absolute -left-24 -top-24 h-80 w-80 rounded-full bg-emerald-500/30 blur-3xl" />
-      <div aria-hidden className="pointer-events-none absolute -bottom-32 right-0 h-96 w-96 rounded-full bg-emerald-400/20 blur-3xl" />
+      {/* violet glow accents */}
+      <div aria-hidden className="pointer-events-none absolute -left-24 -top-24 h-80 w-80 rounded-full bg-violet-500/30 blur-3xl" />
+      <div aria-hidden className="pointer-events-none absolute -bottom-32 right-0 h-96 w-96 rounded-full bg-violet-400/20 blur-3xl" />
 
-      {/* 4-banner carousel */}
-      <BannerCarousel onQuickView={onQuickView} />
+      {/* 4-banner carousel (image-only slides) */}
+      <BannerCarousel />
 
       {/* Stats + featured picks, kept from the previous hero */}
       <div className="relative mx-auto max-w-7xl px-4 pb-16 pt-10 md:pb-20">
@@ -51,7 +51,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </motion.div>
 
         <div className="relative mt-10">
-          <p className="mb-4 text-sm font-bold tracking-wide text-emerald-300">⭐ Featured Picks</p>
+          <p className="mb-4 text-sm font-bold tracking-wide text-violet-300">⭐ Featured Picks</p>
           <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
             {[PRODUCTS[0], PRODUCTS[1], PRODUCTS[2], PRODUCTS[4]].map((p, i) => (
               <motion.div
@@ -67,7 +67,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                   <ProductImage product={p} />
                   <span className="absolute left-3 top-3 rounded-full bg-amber-400 px-2.5 py-1 text-xs font-bold text-slate-950">-{discountPct(p)}%</span>
                 </div>
-                <div className="p-3"><p className="truncate text-sm font-bold">{p.name}</p><p className="text-sm font-extrabold text-emerald-600">{tk(p.price)} <span className="text-xs font-medium text-slate-400 line-through">{tk(p.oldPrice)}</span></p></div>
+                <div className="p-3"><p className="truncate text-sm font-bold">{p.name}</p><p className="text-sm font-extrabold text-violet-600">{tk(p.price)} <span className="text-xs font-medium text-slate-400 line-through">{tk(p.oldPrice)}</span></p></div>
               </motion.div>
             ))}
           </div>
