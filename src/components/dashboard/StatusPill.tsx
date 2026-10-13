@@ -7,7 +7,7 @@ export const STATUSES: OrderStatus[] = ["Processing", "Shipped", "Delivered", "C
 export const STATUS_STYLES: Record<OrderStatus, string> = {
   Processing: "bg-amber-100 text-amber-800",
   Shipped: "bg-sky-100 text-sky-800",
-  Delivered: "bg-emerald-100 text-emerald-700",
+  Delivered: "bg-violet-100 text-violet-700",
   Cancelled: "bg-red-100 text-red-700",
 };
 
