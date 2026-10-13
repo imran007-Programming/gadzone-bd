@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { PRODUCTS, FLASH_IDS, BESTSELLER_IDS, type Product } from "@/data/products";
+import { PRODUCTS, FLASH_IDS, type Product } from "@/data/products";
 import { discountPct } from "@/lib/format";
 import type { CartItem, SortKey, PayMethod, CheckoutForm, Countdown } from "@/types";
 import TopBar from "@/components/TopBar";
@@ -9,7 +9,11 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import CategoryGrid from "@/components/CategoryGrid";
 import FlashDeals from "@/components/FlashDeals";
-import BestSellers from "@/components/BestSellers";
+import ProductSection from "@/components/ProductSection";
+import BottomNav from "@/components/BottomNav";
+import MobileMenu from "@/components/MobileMenu";
+import AccountModal from "@/components/AccountModal";
+import HelpSheet from "@/components/HelpSheet";
 import ShopSection from "@/components/ShopSection";
 import WhyShop from "@/components/WhyShop";
 import FaqSection from "@/components/FaqSection";
@@ -27,6 +31,9 @@ export default function Home() {
   const [sort, setSort] = useState<SortKey>("featured");
   const [cart, setCart] = useState<CartItem[]>([]);
   const [cartOpen, setCartOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [accountOpen, setAccountOpen] = useState(false);
+  const [helpOpen, setHelpOpen] = useState(false);
   const [quickView, setQuickView] = useState<Product | null>(null);
   const [qvQty, setQvQty] = useState(1);
   const [checkoutOpen, setCheckoutOpen] = useState(false);
@@ -122,7 +129,9 @@ export default function Home() {
   };
 
   const flash = FLASH_IDS.map((id) => PRODUCTS.find((p) => p.id === id)!).filter(Boolean);
-  const best = BESTSELLER_IDS.map((id) => PRODUCTS.find((p) => p.id === id)!).filter(Boolean);
+  const audioProducts = PRODUCTS.filter((p) => p.category === "Audio & Wearables");
+  const watchProducts = PRODUCTS.filter((p) => /watch|tracker|band/i.test(p.name));
+  const smartHomeProducts = PRODUCTS.filter((p) => p.category === "Smart Home");
 
   const handleQuickView = (p: Product) => { setQuickView(p); setQvQty(1); };
   const handleQuickViewAdd = (id: number, qty: number, buyNow?: boolean) => {
@@ -137,20 +146,26 @@ export default function Home() {
   const handleCheckout = () => { setCartOpen(false); setCheckoutOpen(true); };
 
   return (
-    <div className="min-h-screen bg-[#f1f5f9] font-sans text-slate-900">
+    <div className="min-h-screen bg-[#f1f5f9] pb-20 font-sans text-slate-900 md:pb-0">
       <TopBar />
-      <Header query={query} onQueryChange={setQuery} category={category} onCategoryChange={setCategory} cartCount={cartCount} onCartOpen={() => setCartOpen(true)} />
+      <Header query={query} onQueryChange={setQuery} category={category} onCategoryChange={setCategory} cartCount={cartCount} onCartOpen={() => setCartOpen(true)} onMenuOpen={() => setMenuOpen(true)} onAccountOpen={() => setAccountOpen(true)} />
       <Hero onQuickView={handleQuickView} />
       <CategoryGrid category={category} onCategoryChange={setCategory} />
       <FlashDeals products={flash} countdown={countdown} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
-      <BestSellers products={best} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
+      <ProductSection accent="Trending" rest="Audio Products" subtitle="Explore earbuds, headphones & speakers picked for better sound." products={audioProducts} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
+      <ProductSection accent="Trending" rest="Smartwatches" subtitle="Stay connected, track your day & find the right watch for you." products={watchProducts} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
+      <ProductSection accent="Smart Home" rest="Gadgets" subtitle="Useful home tech designed to make everyday living easier." products={smartHomeProducts} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
       <ShopSection filtered={filtered} category={category} sort={sort} onSortChange={setSort} maxPrice={maxPrice} onMaxPriceChange={setMaxPrice} onReset={handleResetFilters} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
       <WhyShop />
-      <section className="mx-auto grid max-w-7xl gap-10 px-4 py-16 lg:grid-cols-2">
+      <section id="faq" className="mx-auto grid max-w-7xl scroll-mt-32 gap-10 px-4 py-16 lg:grid-cols-2">
         <FaqSection openFaq={openFaq} onToggleFaq={setOpenFaq} />
         <Newsletter email={email} onEmailChange={setEmail} subscribed={subscribed} onSubscribe={handleSubscribe} />
       </section>
       <Footer onCategoryChange={setCategory} />
+      <BottomNav cartCount={cartCount} onCartOpen={() => setCartOpen(true)} onMenuOpen={() => setMenuOpen(true)} onAccountOpen={() => setAccountOpen(true)} onHelpOpen={() => setHelpOpen(true)} />
+      <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} category={category} onCategoryChange={setCategory} />
+      <AccountModal open={accountOpen} onClose={() => setAccountOpen(false)} />
+      <HelpSheet open={helpOpen} onClose={() => setHelpOpen(false)} onViewAllFaq={() => { setHelpOpen(false); document.getElementById("faq")?.scrollIntoView({ behavior: "smooth" }); }} />
       <QuickViewModal product={quickView} qty={qvQty} onQtyChange={setQvQty} onClose={() => setQuickView(null)} onAddToCart={handleQuickViewAdd} district={district} />
       <CartDrawer open={cartOpen} cartDetailed={cartDetailed} cartCount={cartCount} promo={promo} promoMsg={promoMsg} subtotal={subtotal} discountAmt={discountAmt} delivery={delivery} total={total} district={district} onClose={() => setCartOpen(false)} onQtyChange={setQty} onPromoChange={setPromo} onApplyPromo={applyPromo} onCheckout={handleCheckout} />
       <CheckoutModal open={checkoutOpen} orderPlaced={orderPlaced} orderId={orderId} form={form} district={district} payMethod={payMethod} subtotal={subtotal} discountAmt={discountAmt} delivery={delivery} total={total} onClose={() => setCheckoutOpen(false)} onFormChange={handleFormChange} onDistrictChange={setDistrict} onPayMethodChange={setPayMethod} onPlaceOrder={placeOrder} onContinueShopping={handleContinueShopping} />

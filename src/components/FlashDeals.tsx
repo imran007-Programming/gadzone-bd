@@ -17,14 +17,17 @@ export default function FlashDeals({ products, countdown, onQuickView, onAddToCa
   const { hh, mm, ss } = countdown;
   const reduce = useReducedMotion();
   return (
-    <section id="flash" className="relative overflow-hidden bg-slate-950 py-16 text-white">
+    <section id="flash" className="relative overflow-hidden bg-slate-950 py-12 text-white sm:py-14">
       <div aria-hidden className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-amber-400/20 blur-3xl" />
       <div className="relative mx-auto max-w-7xl px-4">
         <Reveal>
-          <div className="flex flex-wrap items-center justify-between gap-3">
+          <div className="flex flex-wrap items-end justify-between gap-3">
             <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-amber-400">Limited Time</span>
-              <h2 className="mt-1 text-3xl font-black tracking-tight">⚡ Flash Deals — Today Only!</h2>
+              <h2 className="text-2xl font-black tracking-tight sm:text-3xl">
+                <span className="text-emerald-400">Trending</span> New Arrivals
+              </h2>
+              <span className="mt-2 block h-1 w-14 rounded-full bg-emerald-500" aria-hidden />
+              <p className="mt-2 text-sm text-slate-300">Fresh picks, latest tech — handpicked for you.</p>
             </div>
             <div className="flex items-center gap-2 text-sm font-bold">
               <span className="text-slate-300">Ends in</span>
@@ -39,7 +42,7 @@ export default function FlashDeals({ products, countdown, onQuickView, onAddToCa
             </div>
           </div>
         </Reveal>
-        <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{products.map((p, i) => <ProductCard key={p.id} product={p} onQuickView={onQuickView} onAddToCart={onAddToCart} delay={(i % 4) * 0.06} />)}</div>
+        <div className="mt-7 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">{products.map((p, i) => <ProductCard key={p.id} product={p} onQuickView={onQuickView} onAddToCart={onAddToCart} delay={(i % 4) * 0.06} />)}</div>
       </div>
     </section>
   );
