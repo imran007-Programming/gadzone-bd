@@ -16,12 +16,13 @@ type FaqSectionProps = {
 export default function FaqSection({ openFaq, onToggleFaq }: FaqSectionProps) {
   return (
     <div>
-      <h2 className="text-2xl font-black">❓ Frequently Asked Questions</h2>
+      <span className="text-xs font-bold uppercase tracking-widest text-emerald-600">Need Help?</span>
+      <h2 className="mt-1 text-3xl font-black tracking-tight text-slate-900">❓ Frequently Asked Questions</h2>
       <div className="mt-5 space-y-3">
         {FAQS.map((f, i) => (
-          <div key={i} className="overflow-hidden rounded-2xl border border-gray-100">
+          <div key={i} className="overflow-hidden rounded-3xl border border-slate-200">
             <button onClick={() => onToggleFaq(openFaq === i ? null : i)} className="flex w-full items-center justify-between px-5 py-4 text-left font-bold">{f.q}<span>{openFaq === i ? "−" : "+"}</span></button>
-            {openFaq === i && <p className="bg-gray-50 px-5 pb-4 pt-1 text-sm text-gray-600">{f.a}</p>}
+            {openFaq === i && <p className="bg-slate-100 px-5 pb-4 pt-1 text-sm text-gray-600">{f.a}</p>}
           </div>
         ))}
       </div>
