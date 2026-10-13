@@ -1,26 +1,52 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { useSession, signIn, signOut } from "next-auth/react";
+import { useSession } from "next-auth/react";
 import { PRODUCTS } from "@/data/products";
 import { loadOrders, saveOrders } from "@/lib/orders";
 import { tk } from "@/lib/format";
 import type { OrderStatus, StoredOrder } from "@/types";
+import DashboardSidebar, { type DashboardNavItem } from "@/components/dashboard/DashboardSidebar";
+import MobileTabs from "@/components/dashboard/MobileTabs";
+import StatCard from "@/components/dashboard/StatCard";
+import OrderCard from "@/components/dashboard/OrderCard";
+import EmptyState from "@/components/dashboard/EmptyState";
+import FilterPills from "@/components/dashboard/FilterPills";
+import SignInPrompt from "@/components/dashboard/SignInPrompt";
+import WeeklyChart from "@/components/dashboard/WeeklyChart";
+import { initials } from "@/components/dashboard/StatusPill";
+import Reveal from "@/components/Reveal";
 
-const STATUSES: OrderStatus[] = ["Processing", "Shipped", "Delivered", "Cancelled"];
+type AdminTab = "overview" | "orders" | "products" | "customers";
+type StatusFilter = "All" | OrderStatus;
 
-const statusStyles: Record<OrderStatus, string> = {
-  Processing: "bg-amber-100 text-amber-800",
-  Shipped: "bg-sky-100 text-sky-800",
-  Delivered: "bg-emerald-100 text-emerald-700",
-  Cancelled: "bg-red-100 text-red-700",
+const NAV: DashboardNavItem[] = [
+  { id: "overview", label: "Overview", icon: "📊" },
+  { id: "orders", label: "Orders", icon: "📦" },
+  { id: "products", label: "Products", icon: "🛍️" },
+  { id: "customers", label: "Customers", icon: "👥" },
+];
+
+const STATUS_OPTIONS: StatusFilter[] = ["All", "Processing", "Shipped", "Delivered", "Cancelled"];
+
+const STOCK_STYLES: Record<string, string> = {
+  "In Stock": "bg-emerald-100 text-emerald-700",
+  "Low Stock": "bg-amber-100 text-amber-800",
+  "Only a few left": "bg-red-100 text-red-700",
 };
+
+type CustomerRow = { name: string; email: string; orders: number; spent: number };
 
 export default function AdminPage() {
   const { data: session, status } = useSession();
   const [orders, setOrders] = useState<StoredOrder[]>([]);
   const [loaded, setLoaded] = useState(false);
+  const [tab, setTab] = useState<AdminTab>("overview");
+  const [orderSearch, setOrderSearch] = useState("");
+  const [statusFilter, setStatusFilter] = useState<StatusFilter>("All");
+  const [productSearch, setProductSearch] = useState("");
+  const [showAddNote, setShowAddNote] = useState(false);
 
   /* eslint-disable react-hooks/set-state-in-effect */
   useEffect(() => {
@@ -38,156 +64,303 @@ export default function AdminPage() {
   };
 
   const revenue = orders.filter((o) => o.status !== "Cancelled").reduce((s, o) => s + o.total, 0);
-  const customers = new Set(orders.map((o) => o.email.toLowerCase()).filter((e) => e !== "guest")).size;
+  const customers = useMemo<CustomerRow[]>(() => {
+    const map = new Map<string, CustomerRow>();
+    for (const o of orders) {
+      const email = o.email.toLowerCase();
+      if (!email || email === "guest") continue;
+      const existing = map.get(email) ?? { name: o.name, email: o.email, orders: 0, spent: 0 };
+      existing.orders += 1;
+      if (o.status !== "Cancelled") existing.spent += o.total;
+      map.set(email, existing);
+    }
+    return [...map.values()].sort((a, b) => b.spent - a.spent);
+  }, [orders]);
+
+  const filteredOrders = useMemo(() => {
+    const q = orderSearch.trim().toLowerCase();
+    return orders.filter((o) => {
+      const matchesStatus = statusFilter === "All" || o.status === statusFilter;
+      const matchesSearch =
+        !q || o.id.toLowerCase().includes(q) || o.name.toLowerCase().includes(q) || o.email.toLowerCase().includes(q);
+      return matchesStatus && matchesSearch;
+    });
+  }, [orders, orderSearch, statusFilter]);
+
+  const filteredProducts = useMemo(() => {
+    const q = productSearch.trim().toLowerCase();
+    if (!q) return PRODUCTS;
+    return PRODUCTS.filter((p) => p.name.toLowerCase().includes(q) || p.category.toLowerCase().includes(q));
+  }, [productSearch]);
+
+  const lowStock = PRODUCTS.filter((p) => p.stock === "Low Stock" || p.stock === "Only a few left").slice(0, 5);
+  const recentOrders = [...orders].slice(0, 5);
+  const statusCounts = useMemo(() => {
+    const counts: Record<string, number> = { All: orders.length };
+    for (const o of orders) counts[o.status] = (counts[o.status] ?? 0) + 1;
+    return counts;
+  }, [orders]);
+
+  const isAdmin = session?.user?.role === "admin";
 
   return (
-    <div className="min-h-screen bg-[#f1f5f9] font-sans text-slate-900">
-      <header className="border-b border-slate-200 bg-white/80 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="flex h-9 w-9 items-center justify-center rounded-2xl bg-emerald-600 text-xl font-black text-white">G</span>
-            <span className="text-lg font-black tracking-tight">Gad<span className="text-emerald-600">Zone</span> BD <span className="rounded-full bg-amber-400 px-2 py-0.5 text-xs font-black text-slate-950">Admin</span></span>
-          </Link>
-          <div className="flex items-center gap-2">
-            <Link href="/dashboard" className="rounded-full px-3 py-1.5 text-sm font-bold text-slate-700 hover:bg-slate-100">My Dashboard</Link>
-            <Link href="/" className="rounded-full px-3 py-1.5 text-sm font-bold text-slate-700 hover:bg-slate-100">Shop</Link>
-            {session && (
-              <button onClick={() => signOut({ callbackUrl: "/" })} className="rounded-full px-3 py-1.5 text-sm font-bold text-slate-700 hover:bg-slate-100">Sign out</button>
+    <div className="min-h-screen bg-[#f1f5f9] font-sans text-slate-900 lg:flex">
+      <DashboardSidebar
+        nav={NAV}
+        active={tab}
+        onSelect={(id) => setTab(id as AdminTab)}
+        badge="Admin"
+        userName={session?.user?.name}
+        userEmail={session?.user?.email}
+        userImage={session?.user?.image}
+        userRole="admin"
+      />
+
+      <div className="min-w-0 flex-1">
+        <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/90 backdrop-blur lg:static">
+          <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3">
+            <Link href="/" className="flex shrink-0 items-center gap-2 lg:hidden">
+              <span className="flex h-9 w-9 items-center justify-center rounded-2xl bg-emerald-600 text-xl font-black text-white">G</span>
+              <span className="text-base font-black tracking-tight">Gad<span className="text-emerald-600">Zone</span> BD</span>
+            </Link>
+            <div className="min-w-0 flex-1">
+              <p className="flex flex-wrap items-center gap-2 truncate text-sm font-bold text-slate-950 sm:text-base">
+                Admin Dashboard
+                <span className="rounded-full bg-amber-400 px-2 py-0.5 text-[11px] font-black text-slate-950">ADMIN</span>
+              </p>
+              <p className="hidden text-xs text-slate-500 sm:block">Manage orders, products and customers.</p>
+            </div>
+            {session?.user && (
+              <>
+                <Link href="/dashboard" className="hidden shrink-0 rounded-full px-3 py-2 text-sm font-bold text-slate-700 hover:bg-slate-100 sm:block">My Dashboard</Link>
+                {session.user.image ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={session.user.image} alt="" className="h-10 w-10 shrink-0 rounded-full object-cover ring-2 ring-amber-200" />
+                ) : (
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-slate-950 font-black text-white">
+                    {initials(session.user.name, session.user.email)}
+                  </span>
+                )}
+              </>
             )}
           </div>
-        </div>
-      </header>
+        </header>
 
-      <main className="mx-auto max-w-7xl px-4 py-8">
-        {status === "loading" ? (
-          <p className="text-center text-slate-500">Checking your session…</p>
-        ) : !session?.user ? (
-          <div className="mx-auto max-w-md rounded-3xl bg-white p-8 text-center shadow-sm">
-            <h1 className="text-2xl font-black">Admin Dashboard</h1>
-            <p className="mt-2 text-sm text-slate-600">Sign in with Google to continue. Only admin accounts can view this page.</p>
-            <button
-              onClick={() => signIn("google", { callbackUrl: "/admin" })}
-              className="mt-5 flex w-full items-center justify-center gap-3 rounded-full border border-slate-300 bg-white py-3 font-bold text-slate-800 shadow-sm transition hover:bg-slate-50"
-            >
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-base font-black shadow">G</span>
-              Continue with Google
-            </button>
-            <Link href="/" className="mt-4 inline-block text-sm font-bold text-emerald-600">← Back to shop</Link>
-          </div>
-        ) : session.user.role !== "admin" ? (
-          <div className="mx-auto max-w-md rounded-3xl bg-white p-8 text-center shadow-sm">
-            <p className="text-4xl">🔒</p>
-            <h1 className="mt-2 text-2xl font-black">Access denied — admin only</h1>
-            <p className="mt-2 text-sm text-slate-600">You are signed in as {session.user.email}, but this account does not have admin access.</p>
-            <Link href="/" className="mt-5 inline-block rounded-full bg-emerald-600 px-6 py-3 text-sm font-bold text-white">Back to Shop</Link>
-          </div>
-        ) : (
-          <>
-            <div className="flex flex-wrap items-end justify-between gap-3">
-              <div>
-                <h1 className="text-2xl font-black">Admin Dashboard</h1>
-                <p className="mt-1 text-sm text-slate-500">Signed in as {session.user.email}</p>
-              </div>
-              <p className="max-w-md rounded-2xl bg-amber-50 p-3 text-xs font-semibold text-amber-800">
-                Demo data — orders are stored in this browser only (localStorage). A real database is needed for multi-device / multi-user orders.
-              </p>
+        <main className="mx-auto max-w-6xl px-4 py-6">
+          {status === "loading" ? (
+            <p className="py-16 text-center text-slate-500">Checking your session…</p>
+          ) : !session?.user ? (
+            <SignInPrompt
+              title="Admin Dashboard"
+              text="Sign in with Google to continue. Only admin accounts can view this page."
+              callbackUrl="/admin"
+            />
+          ) : !isAdmin ? (
+            <div className="mx-auto max-w-md rounded-3xl bg-white p-8 text-center shadow-sm ring-1 ring-slate-100">
+              <p className="text-4xl" aria-hidden="true">🔒</p>
+              <h1 className="mt-2 text-2xl font-black text-slate-950">Access denied — admin only</h1>
+              <p className="mt-2 text-sm text-slate-600">You are signed in as {session.user.email}, but this account does not have admin access.</p>
+              <Link href="/" className="mt-5 inline-block rounded-full bg-emerald-600 px-6 py-3 text-sm font-bold text-white transition hover:bg-emerald-700">Back to Shop</Link>
             </div>
+          ) : (
+            <>
+              <MobileTabs nav={NAV} active={tab} onSelect={(id) => setTab(id as AdminTab)} />
 
-            <div className="mt-6 grid grid-cols-2 gap-4 lg:grid-cols-4">
-              {[
-                { label: "Total Products", value: String(PRODUCTS.length) },
-                { label: "Total Orders", value: loaded ? String(orders.length) : "—" },
-                { label: "Total Revenue", value: loaded ? tk(revenue) : "—" },
-                { label: "Total Customers", value: loaded ? String(customers) : "—" },
-              ].map((s) => (
-                <div key={s.label} className="rounded-3xl bg-white p-5 shadow-sm">
-                  <p className="text-sm font-semibold text-slate-500">{s.label}</p>
-                  <p className="mt-1 text-3xl font-black">{s.value}</p>
+              <Reveal>
+                <p className="mt-4 rounded-2xl bg-amber-50 p-3 text-xs font-semibold text-amber-800 ring-1 ring-amber-100">
+                  Demo data — orders are stored in this browser only (localStorage). A real database is needed for multi-device / multi-user orders.
+                </p>
+              </Reveal>
+
+              {tab === "overview" && (
+                <div className="space-y-6 pt-5">
+                  <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+                    <StatCard label="Total Revenue" value={loaded ? tk(revenue) : "—"} icon="💰" sub="Excludes cancelled orders" delay={0.05} />
+                    <StatCard label="Total Orders" value={loaded ? String(orders.length) : "—"} icon="📦" sub="All time, this browser" accent="bg-sky-100 text-sky-700" delay={0.1} />
+                    <StatCard label="Total Products" value={String(PRODUCTS.length)} icon="🛍️" sub="In the catalogue" accent="bg-amber-100 text-amber-700" delay={0.15} />
+                    <StatCard label="Total Customers" value={loaded ? String(customers.length) : "—"} icon="👥" sub="Distinct signed-in emails" accent="bg-violet-100 text-violet-700" delay={0.2} />
+                  </div>
+
+                  <div className="grid gap-6 lg:grid-cols-5">
+                    <div className="lg:col-span-3">
+                      <WeeklyChart orders={orders} />
+                    </div>
+                    <section className="rounded-3xl bg-white p-5 shadow-sm ring-1 ring-slate-100 lg:col-span-2">
+                      <div className="flex items-center justify-between">
+                        <h3 className="font-black text-slate-950">Low-stock products</h3>
+                        <button onClick={() => setTab("products")} className="text-sm font-bold text-emerald-600 hover:text-emerald-700">View all →</button>
+                      </div>
+                      {lowStock.length === 0 ? (
+                        <p className="mt-4 text-sm text-slate-500">All products are well stocked. 🎉</p>
+                      ) : (
+                        <ul className="mt-4 space-y-3">
+                          {lowStock.map((p) => (
+                            <li key={p.id} className="flex items-center justify-between gap-3">
+                              <span className="min-w-0 truncate text-sm font-semibold text-slate-800">{p.name}</span>
+                              <span className={`shrink-0 rounded-full px-2.5 py-1 text-xs font-bold ${STOCK_STYLES[p.stock] ?? "bg-slate-100 text-slate-700"}`}>{p.stock}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </section>
+                  </div>
+
+                  <section>
+                    <div className="mb-3 flex items-center justify-between">
+                      <h2 className="text-lg font-black text-slate-950">Recent Orders</h2>
+                      <button onClick={() => setTab("orders")} className="text-sm font-bold text-emerald-600 hover:text-emerald-700">View all →</button>
+                    </div>
+                    {!loaded ? (
+                      <p className="text-sm text-slate-500">Loading orders…</p>
+                    ) : recentOrders.length === 0 ? (
+                      <EmptyState icon="📦" title="No orders yet" text="Place a test order from the shop to see it here." actionLabel="Go to shop" actionHref="/" />
+                    ) : (
+                      <div className="space-y-3">
+                        {recentOrders.map((o) => (
+                          <div key={o.id} className="flex flex-wrap items-center justify-between gap-3 rounded-3xl bg-white p-4 shadow-sm ring-1 ring-slate-100">
+                            <div className="min-w-0">
+                              <p className="font-black text-slate-950">{o.id}</p>
+                              <p className="truncate text-sm text-slate-500">{o.name} · {o.email}</p>
+                            </div>
+                            <div className="flex items-center gap-3">
+                              <span className="font-black text-emerald-600">{tk(o.total)}</span>
+                              <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-slate-700">{o.status}</span>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </section>
                 </div>
-              ))}
-            </div>
+              )}
 
-            <h2 className="mt-8 text-xl font-black">Orders</h2>
-            {!loaded ? (
-              <p className="mt-3 text-slate-500">Loading orders…</p>
-            ) : orders.length === 0 ? (
-              <p className="mt-3 rounded-3xl bg-white p-6 text-center text-sm text-slate-500 shadow-sm">
-                No orders yet in this browser. Place a test order from the shop to see it here.
-              </p>
-            ) : (
-              <div className="mt-3 overflow-x-auto rounded-3xl bg-white shadow-sm">
-                <table className="min-w-full text-left text-sm">
-                  <thead>
-                    <tr className="border-b border-slate-100 text-xs uppercase tracking-wide text-slate-500">
-                      <th className="px-4 py-3">Order</th>
-                      <th className="px-4 py-3">Customer</th>
-                      <th className="px-4 py-3">Items</th>
-                      <th className="px-4 py-3">Total</th>
-                      <th className="px-4 py-3">Payment</th>
-                      <th className="px-4 py-3">Status</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {orders.map((o) => (
-                      <tr key={o.id} className="border-b border-slate-50 last:border-0">
-                        <td className="px-4 py-3">
-                          <p className="font-bold">{o.id}</p>
-                          <p className="text-xs text-slate-500">{new Date(o.date).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}</p>
-                        </td>
-                        <td className="px-4 py-3">
-                          <p className="font-semibold">{o.name}</p>
-                          <p className="text-xs text-slate-500">{o.email}</p>
-                        </td>
-                        <td className="px-4 py-3">{o.items.reduce((s, it) => s + it.qty, 0)} item(s)</td>
-                        <td className="px-4 py-3 font-bold">{tk(o.total)}</td>
-                        <td className="px-4 py-3">{o.payment}</td>
-                        <td className="px-4 py-3">
-                          <select
-                            value={o.status}
-                            onChange={(e) => updateStatus(o.id, e.target.value as OrderStatus)}
-                            className={`rounded-full px-2 py-1 text-xs font-bold outline-none ${statusStyles[o.status]}`}
-                            aria-label={`Status for order ${o.id}`}
-                          >
-                            {STATUSES.map((s) => (
-                              <option key={s} value={s}>{s}</option>
-                            ))}
-                          </select>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            )}
+              {tab === "orders" && (
+                <div className="space-y-5 pt-5">
+                  <div className="flex flex-wrap items-end justify-between gap-3">
+                    <div>
+                      <h1 className="text-2xl font-black text-slate-950">Orders</h1>
+                      <p className="mt-1 text-sm text-slate-500">{filteredOrders.length} order{filteredOrders.length === 1 ? "" : "s"} shown</p>
+                    </div>
+                    {(orderSearch.trim() || statusFilter !== "All") && (
+                      <button onClick={() => { setOrderSearch(""); setStatusFilter("All"); }} className="rounded-full bg-white px-4 py-2 text-sm font-bold text-slate-700 ring-1 ring-slate-200 hover:bg-slate-50">Clear filters ✕</button>
+                    )}
+                  </div>
 
-            <h2 className="mt-8 text-xl font-black">Products</h2>
-            <div className="mt-3 overflow-x-auto rounded-3xl bg-white shadow-sm">
-              <table className="min-w-full text-left text-sm">
-                <thead>
-                  <tr className="border-b border-slate-100 text-xs uppercase tracking-wide text-slate-500">
-                    <th className="px-4 py-3">Product</th>
-                    <th className="px-4 py-3">Category</th>
-                    <th className="px-4 py-3">Price</th>
-                    <th className="px-4 py-3">Stock</th>
-                    <th className="px-4 py-3">Rating</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {PRODUCTS.map((p) => (
-                    <tr key={p.id} className="border-b border-slate-50 last:border-0">
-                      <td className="px-4 py-3 font-semibold">{p.name}</td>
-                      <td className="px-4 py-3 text-slate-600">{p.category}</td>
-                      <td className="px-4 py-3 font-bold">{tk(p.price)}</td>
-                      <td className="px-4 py-3">{p.stock}</td>
-                      <td className="px-4 py-3">⭐ {p.rating}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </>
-        )}
-      </main>
+                  <label className="relative block max-w-md">
+                    <span className="sr-only">Search orders</span>
+                    <span className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-slate-400" aria-hidden="true">🔍</span>
+                    <input
+                      value={orderSearch}
+                      onChange={(e) => setOrderSearch(e.target.value)}
+                      placeholder="Search by order id, name or email…"
+                      className="w-full rounded-full border border-slate-200 bg-white py-2.5 pr-3 pl-9 text-sm outline-none focus:border-emerald-500"
+                    />
+                  </label>
+
+                  <FilterPills options={STATUS_OPTIONS} value={statusFilter} onChange={(v) => setStatusFilter(v as StatusFilter)} counts={statusCounts} />
+
+                  {!loaded ? (
+                    <p className="text-sm text-slate-500">Loading orders…</p>
+                  ) : filteredOrders.length === 0 ? (
+                    <EmptyState icon="🔍" title={orders.length === 0 ? "No orders yet" : "No orders match your filters"} text={orders.length === 0 ? "Place a test order from the shop to see it here." : "Try a different search or status filter."} actionLabel={orders.length === 0 ? "Go to shop" : undefined} actionHref={orders.length === 0 ? "/" : undefined} />
+                  ) : (
+                    <div className="space-y-4">
+                      {filteredOrders.map((o) => (
+                        <OrderCard key={o.id} order={o} showCustomer statusEditable onStatusChange={updateStatus} />
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {tab === "products" && (
+                <div className="space-y-5 pt-5">
+                  <div className="flex flex-wrap items-end justify-between gap-3">
+                    <div>
+                      <h1 className="text-2xl font-black text-slate-950">Products</h1>
+                      <p className="mt-1 text-sm text-slate-500">{filteredProducts.length} product{filteredProducts.length === 1 ? "" : "s"} in the catalogue</p>
+                    </div>
+                    <button onClick={() => setShowAddNote((v) => !v)} className="rounded-full bg-emerald-600 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-emerald-700">+ Add Product</button>
+                  </div>
+
+                  {showAddNote && (
+                    <p className="rounded-2xl bg-amber-50 p-4 text-sm font-semibold text-amber-800 ring-1 ring-amber-100">
+                      Adding products is not wired up yet — there is no backend to save a new product. The catalogue below is read-only for now.
+                    </p>
+                  )}
+
+                  <label className="relative block max-w-md">
+                    <span className="sr-only">Search products</span>
+                    <span className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-slate-400" aria-hidden="true">🔍</span>
+                    <input
+                      value={productSearch}
+                      onChange={(e) => setProductSearch(e.target.value)}
+                      placeholder="Search by product name or category…"
+                      className="w-full rounded-full border border-slate-200 bg-white py-2.5 pr-3 pl-9 text-sm outline-none focus:border-emerald-500"
+                    />
+                  </label>
+
+                  {filteredProducts.length === 0 ? (
+                    <EmptyState icon="🔍" title="No products found" text="Try a different search term." />
+                  ) : (
+                    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                      {filteredProducts.map((p) => (
+                        <article key={p.id} className="overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-slate-100 transition hover:shadow-md">
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img src={p.img} alt={p.name} loading="lazy" className="h-40 w-full object-cover" />
+                          <div className="p-4">
+                            <div className="flex items-start justify-between gap-2">
+                              <h3 className="min-w-0 font-black text-slate-950">{p.name}</h3>
+                              <span className={`shrink-0 rounded-full px-2.5 py-1 text-[11px] font-bold ${STOCK_STYLES[p.stock] ?? "bg-slate-100 text-slate-700"}`}>{p.stock}</span>
+                            </div>
+                            <p className="mt-1 text-xs font-semibold tracking-wide text-slate-500 uppercase">{p.category}</p>
+                            <div className="mt-3 flex items-center justify-between">
+                              <p className="font-black text-emerald-600">{tk(p.price)} <span className="text-xs font-semibold text-slate-400 line-through">{tk(p.oldPrice)}</span></p>
+                              <p className="text-sm font-bold text-slate-700">⭐ {p.rating} <span className="font-normal text-slate-400">({p.reviews})</span></p>
+                            </div>
+                          </div>
+                        </article>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {tab === "customers" && (
+                <div className="space-y-5 pt-5">
+                  <h1 className="text-2xl font-black text-slate-950">Customers</h1>
+                  <p className="text-sm text-slate-500">Derived from orders placed in this browser. Guest checkouts are not listed here.</p>
+                  {!loaded ? (
+                    <p className="text-sm text-slate-500">Loading customers…</p>
+                  ) : customers.length === 0 ? (
+                    <EmptyState icon="👥" title="No customers yet" text="When a signed-in customer places an order, they will appear here." actionLabel="Go to shop" actionHref="/" />
+                  ) : (
+                    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                      {customers.map((c) => (
+                        <article key={c.email} className="rounded-3xl bg-white p-5 shadow-sm ring-1 ring-slate-100">
+                          <div className="flex items-center gap-3">
+                            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-base font-black text-white">
+                              {initials(c.name, c.email)}
+                            </span>
+                            <div className="min-w-0">
+                              <p className="truncate font-black text-slate-950">{c.name}</p>
+                              <p className="truncate text-sm text-slate-500">{c.email}</p>
+                            </div>
+                          </div>
+                          <div className="mt-4 flex items-center justify-between border-t border-slate-100 pt-3 text-sm">
+                            <span className="font-semibold text-slate-500">{c.orders} order{c.orders === 1 ? "" : "s"}</span>
+                            <span className="font-black text-emerald-600">{tk(c.spent)}</span>
+                          </div>
+                        </article>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
+            </>
+          )}
+        </main>
+      </div>
     </div>
   );
 }

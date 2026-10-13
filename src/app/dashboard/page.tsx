@@ -1,23 +1,39 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { useSession, signIn, signOut } from "next-auth/react";
+import { useSession } from "next-auth/react";
 import { loadOrders } from "@/lib/orders";
 import { tk } from "@/lib/format";
 import type { StoredOrder } from "@/types";
+import DashboardSidebar, { type DashboardNavItem } from "@/components/dashboard/DashboardSidebar";
+import MobileTabs from "@/components/dashboard/MobileTabs";
+import StatCard from "@/components/dashboard/StatCard";
+import OrderCard from "@/components/dashboard/OrderCard";
+import EmptyState from "@/components/dashboard/EmptyState";
+import FilterPills from "@/components/dashboard/FilterPills";
+import SignInPrompt from "@/components/dashboard/SignInPrompt";
+import { initials, StatusPill } from "@/components/dashboard/StatusPill";
+import Reveal from "@/components/Reveal";
 
-const statusStyles: Record<StoredOrder["status"], string> = {
-  Processing: "bg-amber-100 text-amber-800",
-  Shipped: "bg-sky-100 text-sky-800",
-  Delivered: "bg-emerald-100 text-emerald-700",
-  Cancelled: "bg-red-100 text-red-700",
-};
+type CustomerTab = "overview" | "orders" | "profile";
+type StatusFilter = "All" | StoredOrder["status"];
+
+const NAV: DashboardNavItem[] = [
+  { id: "overview", label: "Overview", icon: "🏠" },
+  { id: "orders", label: "My Orders", icon: "📦" },
+  { id: "profile", label: "Profile", icon: "👤" },
+];
+
+const STATUS_OPTIONS: StatusFilter[] = ["All", "Processing", "Shipped", "Delivered", "Cancelled"];
 
 export default function DashboardPage() {
   const { data: session, status } = useSession();
   const [orders, setOrders] = useState<StoredOrder[]>([]);
   const [loaded, setLoaded] = useState(false);
+  const [tab, setTab] = useState<CustomerTab>("overview");
+  const [search, setSearch] = useState("");
+  const [statusFilter, setStatusFilter] = useState<StatusFilter>("All");
 
   /* eslint-disable react-hooks/set-state-in-effect */
   useEffect(() => {
@@ -29,116 +45,274 @@ export default function DashboardPage() {
   }, [status, session]);
   /* eslint-enable react-hooks/set-state-in-effect */
 
-  const totalSpent = orders
-    .filter((o) => o.status !== "Cancelled")
-    .reduce((s, o) => s + o.total, 0);
+  const firstName = (session?.user?.name ?? "").split(" ")[0] || "there";
+
+  const filtered = useMemo(() => {
+    const q = search.trim().toLowerCase();
+    return orders.filter((o) => {
+      const matchesStatus = statusFilter === "All" || o.status === statusFilter;
+      const matchesSearch =
+        !q || o.id.toLowerCase().includes(q) || o.items.some((it) => it.name.toLowerCase().includes(q)) || o.name.toLowerCase().includes(q);
+      return matchesStatus && matchesSearch;
+    });
+  }, [orders, search, statusFilter]);
+
+  const totalSpent = orders.filter((o) => o.status !== "Cancelled").reduce((s, o) => s + o.total, 0);
+  const processing = orders.filter((o) => o.status === "Processing").length;
+  const delivered = orders.filter((o) => o.status === "Delivered").length;
+  const recent = [...orders].slice(0, 3);
+  const statusCounts = useMemo(() => {
+    const counts: Record<string, number> = { All: orders.length };
+    for (const o of orders) counts[o.status] = (counts[o.status] ?? 0) + 1;
+    return counts;
+  }, [orders]);
+
+  const handleSearch = (value: string) => {
+    setSearch(value);
+    if (value.trim()) setTab("orders");
+  };
 
   return (
-    <div className="min-h-screen bg-[#f1f5f9] font-sans text-slate-900">
-      <header className="border-b border-slate-200 bg-white/80 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="flex h-9 w-9 items-center justify-center rounded-2xl bg-emerald-600 text-xl font-black text-white">G</span>
-            <span className="text-lg font-black tracking-tight">Gad<span className="text-emerald-600">Zone</span> BD</span>
-          </Link>
-          <div className="flex items-center gap-2">
-            <Link href="/" className="rounded-full px-3 py-1.5 text-sm font-bold text-slate-700 hover:bg-slate-100">Shop</Link>
-            {session?.user?.role === "admin" && (
-              <Link href="/admin" className="rounded-full bg-amber-400 px-3 py-1.5 text-sm font-black text-slate-950 hover:bg-amber-300">Admin</Link>
-            )}
-            {session && (
-              <button onClick={() => signOut({ callbackUrl: "/" })} className="rounded-full px-3 py-1.5 text-sm font-bold text-slate-700 hover:bg-slate-100">Sign out</button>
+    <div className="min-h-screen bg-[#f1f5f9] font-sans text-slate-900 lg:flex">
+      <DashboardSidebar
+        nav={NAV}
+        active={tab}
+        onSelect={(id) => setTab(id as CustomerTab)}
+        userName={session?.user?.name}
+        userEmail={session?.user?.email}
+        userImage={session?.user?.image}
+        userRole={session?.user?.role ?? "customer"}
+      />
+
+      <div className="min-w-0 flex-1">
+        {/* Top header */}
+        <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/90 backdrop-blur lg:static">
+          <div className="mx-auto flex max-w-5xl items-center gap-3 px-4 py-3">
+            <Link href="/" className="flex shrink-0 items-center gap-2 lg:hidden">
+              <span className="flex h-9 w-9 items-center justify-center rounded-2xl bg-emerald-600 text-xl font-black text-white">G</span>
+              <span className="text-base font-black tracking-tight">Gad<span className="text-emerald-600">Zone</span> BD</span>
+            </Link>
+            <div className="min-w-0 flex-1">
+              <p className="truncate text-sm font-bold text-slate-950 sm:text-base">Hello, {session?.user?.name ?? "Guest"} 👋</p>
+              <p className="hidden text-xs text-slate-500 sm:block">Track your orders and manage your account.</p>
+            </div>
+            {session?.user && (
+              <>
+                <label className="relative hidden w-56 shrink-0 sm:block md:w-72">
+                  <span className="sr-only">Search orders</span>
+                  <span className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-slate-400" aria-hidden="true">🔍</span>
+                  <input
+                    value={search}
+                    onChange={(e) => handleSearch(e.target.value)}
+                    placeholder="Search orders by id or item…"
+                    className="w-full rounded-full border border-slate-200 bg-slate-50 py-2 pr-3 pl-9 text-sm outline-none focus:border-emerald-500 focus:bg-white"
+                  />
+                </label>
+                <Link href="/" className="relative shrink-0 rounded-full bg-slate-950 px-4 py-2 text-sm font-bold text-white transition hover:bg-slate-800">
+                  🛒 <span className="hidden sm:inline">Cart</span>
+                </Link>
+                {session.user.image ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={session.user.image} alt="" className="hidden h-10 w-10 shrink-0 rounded-full object-cover ring-2 ring-emerald-100 sm:block" />
+                ) : (
+                  <span className="hidden h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-600 font-black text-white sm:flex">
+                    {initials(session.user.name, session.user.email)}
+                  </span>
+                )}
+              </>
             )}
           </div>
-        </div>
-      </header>
-
-      <main className="mx-auto max-w-7xl px-4 py-8">
-        {status === "loading" ? (
-          <p className="text-center text-slate-500">Checking your session…</p>
-        ) : !session?.user ? (
-          <div className="mx-auto max-w-md rounded-3xl bg-white p-8 text-center shadow-sm">
-            <h1 className="text-2xl font-black">My Dashboard</h1>
-            <p className="mt-2 text-sm text-slate-600">Sign in with Google to view your profile and order history.</p>
-            <button
-              onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
-              className="mt-5 flex w-full items-center justify-center gap-3 rounded-full border border-slate-300 bg-white py-3 font-bold text-slate-800 shadow-sm transition hover:bg-slate-50"
-            >
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-base font-black shadow">G</span>
-              Continue with Google
-            </button>
-            <Link href="/" className="mt-4 inline-block text-sm font-bold text-emerald-600">← Back to shop</Link>
-          </div>
-        ) : (
-          <>
-            <div className="flex flex-col gap-4 rounded-3xl bg-white p-6 shadow-sm sm:flex-row sm:items-center">
-              {session.user.image ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img src={session.user.image} alt="" className="h-16 w-16 rounded-full object-cover" />
-              ) : (
-                <span className="flex h-16 w-16 items-center justify-center rounded-full bg-emerald-600 text-2xl font-black text-white">
-                  {(session.user.name ?? session.user.email ?? "G").slice(0, 1).toUpperCase()}
-                </span>
-              )}
-              <div className="min-w-0 flex-1">
-                <h1 className="truncate text-2xl font-black">{session.user.name ?? "Welcome back"}</h1>
-                <p className="truncate text-sm text-slate-500">{session.user.email}</p>
-                <span className="mt-2 inline-block rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-700 capitalize">{session.user.role ?? "customer"}</span>
-              </div>
-              <Link href="/" className="rounded-full bg-emerald-600 px-5 py-2.5 text-center text-sm font-bold text-white transition hover:bg-emerald-700">Continue Shopping</Link>
+          {/* Mobile search */}
+          {session?.user && (
+            <div className="px-4 pb-3 sm:hidden">
+              <label className="relative block">
+                <span className="sr-only">Search orders</span>
+                <span className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-slate-400" aria-hidden="true">🔍</span>
+                <input
+                  value={search}
+                  onChange={(e) => handleSearch(e.target.value)}
+                  placeholder="Search orders by id or item…"
+                  className="w-full rounded-full border border-slate-200 bg-slate-50 py-2 pr-3 pl-9 text-sm outline-none focus:border-emerald-500 focus:bg-white"
+                />
+              </label>
             </div>
+          )}
+        </header>
 
-            <div className="mt-6 grid grid-cols-2 gap-4">
-              <div className="rounded-3xl bg-white p-5 shadow-sm">
-                <p className="text-sm font-semibold text-slate-500">Total Orders</p>
-                <p className="mt-1 text-3xl font-black">{loaded ? orders.length : "—"}</p>
-              </div>
-              <div className="rounded-3xl bg-white p-5 shadow-sm">
-                <p className="text-sm font-semibold text-slate-500">Total Spent</p>
-                <p className="mt-1 text-3xl font-black text-emerald-600">{loaded ? tk(totalSpent) : "—"}</p>
-              </div>
-            </div>
+        <main className="mx-auto max-w-5xl px-4 py-6">
+          {status === "loading" ? (
+            <p className="py-16 text-center text-slate-500">Checking your session…</p>
+          ) : !session?.user ? (
+            <SignInPrompt
+              title="My Dashboard"
+              text="Sign in with Google to view your profile and order history."
+              callbackUrl="/dashboard"
+            />
+          ) : (
+            <>
+              <MobileTabs nav={NAV} active={tab} onSelect={(id) => setTab(id as CustomerTab)} />
 
-            <h2 className="mt-8 text-xl font-black">My Orders</h2>
-            {!loaded ? (
-              <p className="mt-3 text-slate-500">Loading orders…</p>
-            ) : orders.length === 0 ? (
-              <div className="mt-3 rounded-3xl bg-white p-8 text-center shadow-sm">
-                <p className="text-4xl">📦</p>
-                <p className="mt-2 font-bold">No orders yet</p>
-                <p className="mt-1 text-sm text-slate-500">When you place an order while signed in, it will show up here.</p>
-                <Link href="/" className="mt-4 inline-block rounded-full bg-emerald-600 px-5 py-2.5 text-sm font-bold text-white">Shop now</Link>
-              </div>
-            ) : (
-              <div className="mt-3 space-y-4">
-                {orders.map((o) => (
-                  <div key={o.id} className="rounded-3xl bg-white p-5 shadow-sm">
-                    <div className="flex flex-wrap items-center justify-between gap-2">
-                      <p className="font-black">{o.id}</p>
-                      <span className={`rounded-full px-3 py-1 text-xs font-bold ${statusStyles[o.status]}`}>{o.status}</span>
-                    </div>
-                    <p className="mt-1 text-sm text-slate-500">
-                      {new Date(o.date).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} · {o.payment} · Delivery to {o.district}
-                    </p>
-                    <ul className="mt-3 space-y-1 text-sm">
-                      {o.items.map((it, i) => (
-                        <li key={i} className="flex justify-between gap-3">
-                          <span className="truncate">{it.name} × {it.qty}</span>
-                          <span className="font-semibold">{tk(it.price * it.qty)}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <div className="mt-3 flex justify-between border-t border-slate-100 pt-3 text-sm font-bold">
-                      <span>Total</span>
-                      <span className="text-emerald-600">{tk(o.total)}</span>
-                    </div>
+              {tab === "overview" && (
+                <div className="space-y-6 pt-4">
+                  <Reveal>
+                    <section className="overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-600 via-emerald-700 to-slate-950 p-6 text-white shadow-lg sm:p-8">
+                      <p className="text-sm font-bold text-emerald-200">Welcome back, {firstName} 👋</p>
+                      <h1 className="mt-1 text-2xl font-black tracking-tight sm:text-3xl">Everything about your orders, in one place.</h1>
+                      <p className="mt-2 max-w-lg text-sm text-emerald-100/90">
+                        {orders.length === 0
+                          ? "You have no orders yet — explore the shop and find your next gadget."
+                          : `You have ${orders.length} order${orders.length === 1 ? "" : "s"} with us. ${processing > 0 ? `${processing} still processing.` : "Nothing is waiting to ship right now."}`}
+                      </p>
+                      <div className="mt-5 flex flex-wrap gap-2">
+                        <Link href="/" className="rounded-full bg-amber-400 px-5 py-2.5 text-sm font-black text-slate-950 transition hover:bg-amber-300">Shop Now →</Link>
+                        <button onClick={() => setTab("orders")} className="rounded-full bg-white/15 px-5 py-2.5 text-sm font-bold text-white ring-1 ring-white/30 transition hover:bg-white/25">Track Order</button>
+                      </div>
+                    </section>
+                  </Reveal>
+
+                  <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+                    <StatCard label="Total Orders" value={loaded ? String(orders.length) : "—"} icon="📦" sub="All time" delay={0.05} />
+                    <StatCard label="Total Spent" value={loaded ? tk(totalSpent) : "—"} icon="💳" sub="Excludes cancelled" accent="bg-amber-100 text-amber-700" delay={0.1} />
+                    <StatCard label="Processing" value={loaded ? String(processing) : "—"} icon="⏳" sub="Being prepared" accent="bg-sky-100 text-sky-700" delay={0.15} />
+                    <StatCard label="Delivered" value={loaded ? String(delivered) : "—"} icon="✅" sub="Arrived safely" delay={0.2} />
                   </div>
-                ))}
-              </div>
-            )}
-          </>
-        )}
-      </main>
+
+                  <section>
+                    <div className="mb-3 flex items-center justify-between">
+                      <h2 className="text-lg font-black text-slate-950">Recent Orders</h2>
+                      <button onClick={() => setTab("orders")} className="text-sm font-bold text-emerald-600 hover:text-emerald-700">View all →</button>
+                    </div>
+                    {!loaded ? (
+                      <p className="text-sm text-slate-500">Loading orders…</p>
+                    ) : recent.length === 0 ? (
+                      <EmptyState icon="📦" title="No orders yet" text="When you place an order while signed in, it will show up here." actionLabel="Shop now" actionHref="/" />
+                    ) : (
+                      <div className="space-y-3">
+                        {recent.map((o) => (
+                          <div key={o.id} className="flex flex-wrap items-center justify-between gap-3 rounded-3xl bg-white p-4 shadow-sm ring-1 ring-slate-100">
+                            <div className="min-w-0">
+                              <p className="font-black text-slate-950">{o.id}</p>
+                              <p className="truncate text-sm text-slate-500">{o.items.map((it) => `${it.name} × ${it.qty}`).join(" · ")}</p>
+                            </div>
+                            <div className="flex items-center gap-3">
+                              <span className="font-black text-emerald-600">{tk(o.total)}</span>
+                              <StatusPill status={o.status} />
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </section>
+
+                  <section>
+                    <h2 className="mb-3 text-lg font-black text-slate-950">Quick actions</h2>
+                    <div className="grid gap-3 sm:grid-cols-3">
+                      <Link href="/" className="rounded-3xl bg-white p-5 shadow-sm ring-1 ring-slate-100 transition hover:shadow-md">
+                        <p className="text-2xl" aria-hidden="true">🛍️</p>
+                        <p className="mt-2 font-black text-slate-950">Shop Now</p>
+                        <p className="text-sm text-slate-500">Browse deals and new arrivals.</p>
+                      </Link>
+                      <button onClick={() => setTab("orders")} className="rounded-3xl bg-white p-5 text-left shadow-sm ring-1 ring-slate-100 transition hover:shadow-md">
+                        <p className="text-2xl" aria-hidden="true">🚚</p>
+                        <p className="mt-2 font-black text-slate-950">Track Order</p>
+                        <p className="text-sm text-slate-500">See the status of every order.</p>
+                      </button>
+                      <Link href="/#faq" className="rounded-3xl bg-white p-5 shadow-sm ring-1 ring-slate-100 transition hover:shadow-md">
+                        <p className="text-2xl" aria-hidden="true">💬</p>
+                        <p className="mt-2 font-black text-slate-950">Support</p>
+                        <p className="text-sm text-slate-500">Answers to common questions.</p>
+                      </Link>
+                    </div>
+                  </section>
+                </div>
+              )}
+
+              {tab === "orders" && (
+                <div className="space-y-5 pt-4">
+                  <div className="flex flex-wrap items-end justify-between gap-3">
+                    <div>
+                      <h1 className="text-2xl font-black text-slate-950">My Orders</h1>
+                      <p className="mt-1 text-sm text-slate-500">{filtered.length} order{filtered.length === 1 ? "" : "s"} shown</p>
+                    </div>
+                    {(search.trim() || statusFilter !== "All") && (
+                      <button
+                        onClick={() => { setSearch(""); setStatusFilter("All"); }}
+                        className="rounded-full bg-white px-4 py-2 text-sm font-bold text-slate-700 ring-1 ring-slate-200 hover:bg-slate-50"
+                      >
+                        Clear filters ✕
+                      </button>
+                    )}
+                  </div>
+
+                  <FilterPills options={STATUS_OPTIONS} value={statusFilter} onChange={(v) => setStatusFilter(v as StatusFilter)} counts={statusCounts} />
+
+                  {!loaded ? (
+                    <p className="text-sm text-slate-500">Loading orders…</p>
+                  ) : filtered.length === 0 ? (
+                    <EmptyState
+                      icon="🔍"
+                      title={orders.length === 0 ? "No orders yet" : "No orders match your filters"}
+                      text={orders.length === 0 ? "When you place an order while signed in, it will show up here." : "Try a different search or status filter."}
+                      actionLabel={orders.length === 0 ? "Shop now" : undefined}
+                      actionHref={orders.length === 0 ? "/" : undefined}
+                    />
+                  ) : (
+                    <div className="space-y-4">
+                      {filtered.map((o) => (
+                        <OrderCard key={o.id} order={o} />
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {tab === "profile" && (
+                <div className="space-y-5 pt-4">
+                  <h1 className="text-2xl font-black text-slate-950">Profile</h1>
+                  <Reveal>
+                    <section className="flex flex-col items-start gap-4 rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-100 sm:flex-row sm:items-center">
+                      {session.user.image ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={session.user.image} alt="" className="h-20 w-20 rounded-full object-cover ring-4 ring-emerald-100" />
+                      ) : (
+                        <span className="flex h-20 w-20 items-center justify-center rounded-full bg-emerald-600 text-3xl font-black text-white">
+                          {initials(session.user.name, session.user.email)}
+                        </span>
+                      )}
+                      <div className="min-w-0 flex-1">
+                        <h2 className="truncate text-xl font-black text-slate-950">{session.user.name ?? "GadZone customer"}</h2>
+                        <p className="truncate text-sm text-slate-500">{session.user.email}</p>
+                        <span className="mt-2 inline-block rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-700 capitalize">{session.user.role ?? "customer"}</span>
+                      </div>
+                      <Link href="/" className="rounded-full bg-emerald-600 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-emerald-700">Continue Shopping</Link>
+                    </section>
+                  </Reveal>
+
+                  <section className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-100">
+                    <h2 className="font-black text-slate-950">Account info</h2>
+                    <dl className="mt-4 grid gap-4 text-sm sm:grid-cols-2">
+                      <div><dt className="font-semibold text-slate-500">Full name</dt><dd className="mt-0.5 font-bold text-slate-900">{session.user.name ?? "—"}</dd></div>
+                      <div><dt className="font-semibold text-slate-500">Email</dt><dd className="mt-0.5 truncate font-bold text-slate-900">{session.user.email ?? "—"}</dd></div>
+                      <div><dt className="font-semibold text-slate-500">Role</dt><dd className="mt-0.5 font-bold text-slate-900 capitalize">{session.user.role ?? "customer"}</dd></div>
+                      <div><dt className="font-semibold text-slate-500">Member since</dt><dd className="mt-0.5 font-bold text-slate-900">Google account</dd></div>
+                    </dl>
+                  </section>
+
+                  <section className="rounded-3xl bg-emerald-50 p-5 ring-1 ring-emerald-100">
+                    <h2 className="font-black text-emerald-900">🔒 Signed in with Google</h2>
+                    <p className="mt-1 text-sm text-emerald-800">Your account is protected by your Google sign-in. GadZone BD never sees or stores your Google password.</p>
+                  </section>
+
+                  <section className="rounded-3xl bg-amber-50 p-5 ring-1 ring-amber-100">
+                    <h2 className="font-black text-amber-900">✏️ Profile editing</h2>
+                    <p className="mt-1 text-sm text-amber-800">Profile edits are not available yet — there is no backend connected to save changes. Your name, email and photo come from your Google account for now.</p>
+                  </section>
+                </div>
+              )}
+            </>
+          )}
+        </main>
+      </div>
     </div>
   );
 }
