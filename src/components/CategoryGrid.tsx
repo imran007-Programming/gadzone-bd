@@ -1,29 +1,38 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { CATEGORIES, PRODUCTS } from "@/data/products";
-
-type CategoryGridProps = {
-  category: string;
-  onCategoryChange: (category: string) => void;
-};
+import SectionHeader from "./SectionHeader";
+import Reveal from "./Reveal";
 
 const categoryIcons: Record<string, string> = {
+  All: "🛍️",
   "Mobile Accessories": "📱", "Audio & Wearables": "🎧", "Computer & Office": "💻", "Smart Home": "🏠", "Lifestyle & Travel": "🎒",
 };
 
-export default function CategoryGrid({ category, onCategoryChange }: CategoryGridProps) {
+const categoryCounts: Record<string, number> = {
+  All: PRODUCTS.length,
+  ...Object.fromEntries(CATEGORIES.filter((c) => c !== "All").map((c) => [c, PRODUCTS.filter((p) => p.category === c).length])),
+};
+
+export default function CategoryGrid({ category, onCategoryChange }: { category: string; onCategoryChange: (category: string) => void }) {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-10">
-      <h2 className="text-2xl font-black">Shop by Category</h2>
-      <p className="text-sm text-gray-500">Category-te click korle product filter hoye jabe</p>
-      <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
-        {CATEGORIES.filter((c) => c !== "All").map((c) => (
-          <button key={c} onClick={() => { onCategoryChange(c); document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" }); }}
-            className={`rounded-2xl border p-5 text-center transition hover:border-brand hover:shadow-lg ${category === c ? "border-brand bg-orange-50" : "border-gray-100 bg-white"}`}>
-            <span className="text-4xl">{categoryIcons[c]}</span>
-            <span className="mt-2 block text-sm font-bold">{c}</span>
-            <span className="text-xs text-gray-500">{PRODUCTS.filter((p) => p.category === c).length} products</span>
-          </button>
+    <section className="mx-auto max-w-7xl px-4 py-10 sm:py-12">
+      <SectionHeader accent="Shop" rest="by Category" subtitle="Explore our most popular gadget categories and find your perfect pick." />
+      <div className="mt-6 grid grid-cols-4 gap-2 sm:gap-3 lg:grid-cols-6">
+        {CATEGORIES.map((c, i) => (
+          <Reveal key={c} delay={i * 0.05}>
+            <motion.button
+              whileHover={{ y: -4 }}
+              whileTap={{ scale: 0.97 }}
+              onClick={() => { onCategoryChange(c); document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" }); }}
+              className={`flex h-full w-full flex-col items-center gap-1.5 rounded-2xl border p-2.5 text-center shadow-sm transition-shadow hover:shadow-md hover:ring-2 hover:ring-emerald-600/40 sm:p-4 ${category === c ? "border-emerald-600 bg-emerald-50" : "border-slate-200 bg-white"}`}
+            >
+              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-emerald-100 text-2xl sm:h-14 sm:w-14 sm:text-3xl">{categoryIcons[c]}</span>
+              <span className="text-[11px] font-bold leading-tight text-slate-900 sm:text-sm">{c === "All" ? "All" : c}</span>
+              <span className="hidden text-[11px] text-slate-500 sm:block">{categoryCounts[c]} products</span>
+            </motion.button>
+          </Reveal>
         ))}
       </div>
     </section>

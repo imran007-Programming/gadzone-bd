@@ -1,6 +1,7 @@
 "use client";
 
 import type { FormEvent } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { DISTRICTS } from "@/data/products";
 import type { CheckoutForm, PayMethod } from "@/types";
 import { tk } from "@/lib/format";
@@ -25,49 +26,67 @@ type CheckoutModalProps = {
 };
 
 export default function CheckoutModal({ open, orderPlaced, orderId, form, district, payMethod, subtotal, discountAmt, delivery, total, onClose, onFormChange, onDistrictChange, onPayMethodChange, onPlaceOrder, onContinueShopping }: CheckoutModalProps) {
-  if (!open) return null;
+  const reduce = useReducedMotion();
   return (
-    <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/60 sm:items-center sm:p-4" onClick={onClose}>
-      <div className="max-h-[92vh] w-full max-w-lg overflow-y-auto rounded-t-3xl bg-white p-6 sm:rounded-3xl" onClick={(e) => e.stopPropagation()}>
-        {orderPlaced ? (
-          <div className="py-6 text-center">
-            <span className="text-6xl">🎉</span>
-            <h3 className="mt-3 text-2xl font-black">Order Placed Successfully!</h3>
-            <p className="mt-2 text-gray-600">Dhonnobad, {form.name}! Apnar order confirm hoyeche.</p>
-            <div className="mx-auto mt-4 max-w-xs rounded-2xl bg-green-50 p-4"><p className="text-sm text-gray-500">Order ID</p><p className="text-2xl font-black text-green-700">{orderId}</p><p className="mt-1 text-sm">Payment: {payMethod === "COD" ? "Cash on Delivery" : payMethod} · Delivery to {district}</p></div>
-            <p className="mt-3 text-sm text-gray-500">Amra shighroi phone-e confirm korbo. Tracking link SMS-e pathano hobe.</p>
-            <button onClick={onContinueShopping} className="mt-5 rounded-full bg-brand px-8 py-3 font-bold text-white">Continue Shopping</button>
-          </div>
-        ) : (
-          <form onSubmit={onPlaceOrder}>
-            <div className="flex items-start justify-between"><h3 className="text-xl font-black">Checkout 🧾</h3><button type="button" onClick={onClose} className="text-2xl text-gray-400">×</button></div>
-            <label className="mt-4 block text-sm font-bold">Full Name *</label>
-            <input required value={form.name} onChange={(e) => onFormChange("name", e.target.value)} placeholder="e.g. Imran Hasan" className="mt-1 w-full rounded-xl border px-4 py-2.5 text-sm outline-none focus:border-brand" />
-            <label className="mt-3 block text-sm font-bold">Phone Number *</label>
-            <input required type="tel" value={form.phone} onChange={(e) => onFormChange("phone", e.target.value)} placeholder="01XXXXXXXXX" className="mt-1 w-full rounded-xl border px-4 py-2.5 text-sm outline-none focus:border-brand" />
-            <label className="mt-3 block text-sm font-bold">District *</label>
-            <select value={district} onChange={(e) => onDistrictChange(e.target.value)} className="mt-1 w-full rounded-xl border bg-white px-4 py-2.5 text-sm outline-none focus:border-brand">{DISTRICTS.map((d) => <option key={d}>{d}</option>)}</select>
-            <label className="mt-3 block text-sm font-bold">Full Address *</label>
-            <textarea required value={form.address} onChange={(e) => onFormChange("address", e.target.value)} placeholder="House, road, area…" rows={2} className="mt-1 w-full rounded-xl border px-4 py-2.5 text-sm outline-none focus:border-brand" />
-            <p className="mt-4 text-sm font-bold">Payment Method</p>
-            <div className="mt-2 grid grid-cols-2 gap-2">
-              {([["COD", "💵 Cash on Delivery"], ["bKash", "📱 bKash"], ["Nagad", "🟠 Nagad"], ["Card", "💳 Card"]] as [PayMethod, string][]).map(([v, label]) => (
-                <label key={v} className={`cursor-pointer rounded-xl border px-3 py-2.5 text-sm font-semibold ${payMethod === v ? "border-brand bg-orange-50 text-brand" : ""}`}>
-                  <input type="radio" name="pay" checked={payMethod === v} onChange={() => onPayMethodChange(v)} className="mr-2 accent-[#ff6b00]" />{label}
-                </label>
-              ))}
-            </div>
-            {payMethod !== "COD" && <p className="mt-2 rounded-lg bg-blue-50 p-2.5 text-xs text-blue-700">Demo checkout — {payMethod} payment is simulated. No real money is charged.</p>}
-            <div className="mt-4 space-y-1 rounded-2xl bg-gray-50 p-4 text-sm">
-              <div className="flex justify-between"><span>Subtotal</span><span className="font-bold">{tk(subtotal)}</span></div>
-              {discountAmt > 0 && <div className="flex justify-between text-green-600"><span>Promo discount</span><span>−{tk(discountAmt)}</span></div>}
-              <div className="flex justify-between"><span>Delivery</span><span className="font-bold">{delivery === 0 ? "FREE" : tk(delivery)}</span></div>
-              <div className="flex justify-between border-t pt-2 text-base font-black"><span>Total</span><span className="text-brand">{tk(total)}</span></div>
-            </div>
-            <button type="submit" className="mt-4 w-full rounded-full bg-brand py-3.5 font-bold text-white hover:bg-brand-dark">Place Order • {tk(total)} →</button>
-          </form>
-        )}
-      </div>
-    </div>
+    <AnimatePresence>
+      {open && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
+          className="fixed inset-0 z-50 flex items-end justify-center bg-black/60 sm:items-center sm:p-4"
+          onClick={onClose}
+        >
+          <motion.div
+            initial={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.94, y: 16 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.96, y: 8 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className="max-h-[92vh] w-full max-w-lg overflow-y-auto rounded-t-3xl bg-white p-6 sm:rounded-3xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {orderPlaced ? (
+              <div className="py-6 text-center">
+                <span className="text-6xl">🎉</span>
+                <h3 className="mt-3 text-2xl font-black">Order Placed Successfully!</h3>
+                <p className="mt-2 text-gray-600">Dhonnobad, {form.name}! Apnar order confirm hoyeche.</p>
+                <div className="mx-auto mt-4 max-w-xs rounded-3xl bg-green-50 p-4"><p className="text-sm text-gray-500">Order ID</p><p className="text-2xl font-black text-green-700">{orderId}</p><p className="mt-1 text-sm">Payment: {payMethod === "COD" ? "Cash on Delivery" : payMethod} · Delivery to {district}</p></div>
+                <p className="mt-3 text-sm text-gray-500">Amra shighroi phone-e confirm korbo. Tracking link SMS-e pathano hobe.</p>
+                <button onClick={onContinueShopping} className="mt-5 rounded-full bg-emerald-600 px-8 py-3 font-bold text-white">Continue Shopping</button>
+              </div>
+            ) : (
+              <form onSubmit={onPlaceOrder}>
+                <div className="flex items-start justify-between"><h3 className="text-xl font-black">Checkout 🧾</h3><button type="button" onClick={onClose} className="text-2xl text-gray-400">×</button></div>
+                <label className="mt-4 block text-sm font-bold">Full Name *</label>
+                <input required value={form.name} onChange={(e) => onFormChange("name", e.target.value)} placeholder="e.g. Imran Hasan" className="mt-1 w-full rounded-xl border px-4 py-2.5 text-sm outline-none focus:border-emerald-600" />
+                <label className="mt-3 block text-sm font-bold">Phone Number *</label>
+                <input required type="tel" value={form.phone} onChange={(e) => onFormChange("phone", e.target.value)} placeholder="01XXXXXXXXX" className="mt-1 w-full rounded-xl border px-4 py-2.5 text-sm outline-none focus:border-emerald-600" />
+                <label className="mt-3 block text-sm font-bold">District *</label>
+                <select value={district} onChange={(e) => onDistrictChange(e.target.value)} className="mt-1 w-full rounded-xl border bg-white px-4 py-2.5 text-sm outline-none focus:border-emerald-600">{DISTRICTS.map((d) => <option key={d}>{d}</option>)}</select>
+                <label className="mt-3 block text-sm font-bold">Full Address *</label>
+                <textarea required value={form.address} onChange={(e) => onFormChange("address", e.target.value)} placeholder="House, road, area…" rows={2} className="mt-1 w-full rounded-xl border px-4 py-2.5 text-sm outline-none focus:border-emerald-600" />
+                <p className="mt-4 text-sm font-bold">Payment Method</p>
+                <div className="mt-2 grid grid-cols-2 gap-2">
+                  {([["COD", "💵 Cash on Delivery"], ["bKash", "📱 bKash"], ["Nagad", "🟠 Nagad"], ["Card", "💳 Card"]] as [PayMethod, string][]).map(([v, label]) => (
+                    <label key={v} className={`cursor-pointer rounded-xl border px-3 py-2.5 text-sm font-semibold ${payMethod === v ? "border-emerald-600 bg-emerald-50 text-emerald-600" : ""}`}>
+                      <input type="radio" name="pay" checked={payMethod === v} onChange={() => onPayMethodChange(v)} className="mr-2 accent-emerald-600" />{label}
+                    </label>
+                  ))}
+                </div>
+                {payMethod !== "COD" && <p className="mt-2 rounded-lg bg-blue-50 p-2.5 text-xs text-blue-700">Demo checkout — {payMethod} payment is simulated. No real money is charged.</p>}
+                <div className="mt-4 space-y-1 rounded-3xl bg-slate-100 p-4 text-sm">
+                  <div className="flex justify-between"><span>Subtotal</span><span className="font-bold">{tk(subtotal)}</span></div>
+                  {discountAmt > 0 && <div className="flex justify-between text-green-600"><span>Promo discount</span><span>−{tk(discountAmt)}</span></div>}
+                  <div className="flex justify-between"><span>Delivery</span><span className="font-bold">{delivery === 0 ? "FREE" : tk(delivery)}</span></div>
+                  <div className="flex justify-between border-t pt-2 text-base font-black"><span>Total</span><span className="text-emerald-600">{tk(total)}</span></div>
+                </div>
+                <motion.button whileTap={{ scale: 0.98 }} type="submit" className="mt-4 w-full rounded-full bg-emerald-600 py-3.5 font-bold text-white hover:bg-emerald-700">Place Order • {tk(total)} →</motion.button>
+              </form>
+            )}
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 }

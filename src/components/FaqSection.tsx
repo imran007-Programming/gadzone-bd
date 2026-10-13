@@ -1,5 +1,8 @@
 "use client";
 
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import Reveal from "./Reveal";
+
 const FAQS = [
   { q: "Cash on Delivery ki available?", a: "Ha! Puro Bangladesh-e Cash on Delivery available. Product hate peye tarpor payment korben." },
   { q: "Delivery koto din lage?", a: "Dhakar vitore 24–48 ghonta, Dhakar baire 2–4 working days. Sob order-e tracking deya hoy." },
@@ -14,17 +17,31 @@ type FaqSectionProps = {
 };
 
 export default function FaqSection({ openFaq, onToggleFaq }: FaqSectionProps) {
+  const reduce = useReducedMotion();
   return (
-    <div>
-      <h2 className="text-2xl font-black">❓ Frequently Asked Questions</h2>
+    <Reveal>
+      <span className="text-xs font-bold uppercase tracking-widest text-emerald-600">Need Help?</span>
+      <h2 className="mt-1 text-3xl font-black tracking-tight text-slate-900">❓ Frequently Asked Questions</h2>
       <div className="mt-5 space-y-3">
         {FAQS.map((f, i) => (
-          <div key={i} className="overflow-hidden rounded-2xl border border-gray-100">
+          <div key={i} className="overflow-hidden rounded-3xl border border-slate-200">
             <button onClick={() => onToggleFaq(openFaq === i ? null : i)} className="flex w-full items-center justify-between px-5 py-4 text-left font-bold">{f.q}<span>{openFaq === i ? "−" : "+"}</span></button>
-            {openFaq === i && <p className="bg-gray-50 px-5 pb-4 pt-1 text-sm text-gray-600">{f.a}</p>}
+            <AnimatePresence initial={false}>
+              {openFaq === i && (
+                <motion.div
+                  initial={reduce ? { opacity: 0 } : { height: 0, opacity: 0 }}
+                  animate={reduce ? { opacity: 1 } : { height: "auto", opacity: 1 }}
+                  exit={reduce ? { opacity: 0 } : { height: 0, opacity: 0 }}
+                  transition={{ duration: 0.25, ease: "easeOut" }}
+                  className="overflow-hidden"
+                >
+                  <p className="bg-slate-100 px-5 pb-4 pt-1 text-sm text-gray-600">{f.a}</p>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         ))}
       </div>
-    </div>
+    </Reveal>
   );
 }
