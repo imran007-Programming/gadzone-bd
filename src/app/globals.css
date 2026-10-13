@@ -7,6 +7,16 @@
 }
 
 html { scroll-behavior: smooth; }
+
+/* Keep animations minimal for users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
 body { background: #f1f5f9; color: #020617; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
 ::-webkit-scrollbar-thumb { background: #059669; border-radius: 8px; }

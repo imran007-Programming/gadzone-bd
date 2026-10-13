@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { CATEGORIES } from "@/data/products";
 
 type HeaderProps = {
@@ -12,8 +14,16 @@ type HeaderProps = {
 };
 
 export default function Header({ query, onQueryChange, category, onCategoryChange, cartCount, onCartOpen }: HeaderProps) {
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 shadow-sm backdrop-blur">
+    <header className={`sticky top-0 z-40 border-b border-slate-200 bg-white/80 backdrop-blur-xl transition-shadow duration-300 ${scrolled ? "shadow-lg shadow-slate-900/5" : "shadow-sm"}`}>
       <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-3 px-4 py-3">
         <a href="#" className="flex items-center gap-2.5">
           <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-emerald-600 text-2xl font-black text-white shadow-md shadow-emerald-600/30">G</span>
@@ -30,17 +40,17 @@ export default function Header({ query, onQueryChange, category, onCategoryChang
         <div className="order-2 ml-auto flex items-center gap-2 sm:order-3 sm:ml-0">
           <span className="hidden md:inline-flex rounded-full bg-pink-50 px-3 py-1.5 text-xs font-bold text-pink-600">bKash ✓</span>
           <span className="hidden md:inline-flex rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-bold text-emerald-700">COD ✓</span>
-          <button onClick={onCartOpen} className="relative rounded-full bg-slate-950 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-emerald-700">
+          <motion.button whileTap={{ scale: 0.94 }} onClick={onCartOpen} className="relative rounded-full bg-slate-950 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-emerald-700">
             🛒 Cart
             {cartCount > 0 && <span className="absolute -right-1.5 -top-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-amber-400 text-xs font-bold text-slate-950 ring-2 ring-white">{cartCount}</span>}
-          </button>
+          </motion.button>
         </div>
       </div>
       <nav className="border-t border-slate-100">
         <div className="no-scrollbar mx-auto flex max-w-7xl gap-1.5 overflow-x-auto px-4 py-2">
           {CATEGORIES.map((c) => (
-            <button key={c} onClick={() => { onCategoryChange(c); document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" }); }}
-              className={`whitespace-nowrap rounded-full px-4 py-1.5 text-sm font-semibold transition ${category === c ? "bg-emerald-600 text-white shadow-sm" : "text-slate-600 hover:bg-emerald-50 hover:text-emerald-600"}`}>{c}</button>
+            <motion.button whileTap={{ scale: 0.96 }} key={c} onClick={() => { onCategoryChange(c); document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" }); }}
+              className={`whitespace-nowrap rounded-full px-4 py-1.5 text-sm font-semibold transition ${category === c ? "bg-emerald-600 text-white shadow-sm" : "text-slate-600 hover:bg-emerald-50 hover:text-emerald-600"}`}>{c}</motion.button>
           ))}
         </div>
       </nav>

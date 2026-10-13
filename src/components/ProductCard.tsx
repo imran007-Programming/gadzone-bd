@@ -1,5 +1,6 @@
 "use client";
 
+import { motion, useReducedMotion } from "framer-motion";
 import type { Product } from "@/data/products";
 import { tk, discountPct } from "@/lib/format";
 import ProductImage from "./ProductImage";
@@ -9,11 +10,20 @@ type ProductCardProps = {
   product: Product;
   onQuickView: (product: Product) => void;
   onAddToCart: (id: number) => void;
+  delay?: number;
 };
 
-export default function ProductCard({ product: p, onQuickView, onAddToCart }: ProductCardProps) {
+export default function ProductCard({ product: p, onQuickView, onAddToCart, delay = 0 }: ProductCardProps) {
+  const reduce = useReducedMotion();
   return (
-    <div key={p.id} className="group relative flex flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:ring-2 hover:ring-emerald-600/40">
+    <motion.div
+      initial={reduce ? false : { opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-40px" }}
+      transition={{ duration: 0.45, delay, ease: "easeOut" }}
+      whileHover={reduce ? undefined : { y: -6, scale: 1.01 }}
+      className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-shadow duration-300 hover:shadow-xl hover:ring-2 hover:ring-emerald-600/40"
+    >
       <div className="relative overflow-hidden cursor-pointer" onClick={() => onQuickView(p)}>
         <ProductImage product={p} />
         <span className="absolute left-3 top-3 rounded-full bg-amber-400 px-2.5 py-1 text-xs font-bold text-slate-950 shadow">-{discountPct(p)}%</span>
@@ -31,10 +41,10 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart }: Pr
           <span className="ml-auto rounded-full bg-emerald-50 px-2 py-0.5 text-[11px] font-bold text-emerald-700">Save {tk(p.oldPrice - p.price)}</span>
         </div>
         <div className="mt-3 flex gap-2">
-          <button onClick={() => onAddToCart(p.id)} className="flex-1 rounded-full bg-emerald-600 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-emerald-700">Add to Cart</button>
+          <motion.button whileTap={{ scale: 0.96 }} onClick={() => onAddToCart(p.id)} className="flex-1 rounded-full bg-emerald-600 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-emerald-700">Add to Cart</motion.button>
           <button onClick={() => onQuickView(p)} className="rounded-full border border-slate-200 px-3.5 text-sm font-semibold hover:border-emerald-600 hover:text-emerald-600">👁️</button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -146,7 +146,7 @@ export default function Home() {
       <BestSellers products={best} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
       <ShopSection filtered={filtered} category={category} sort={sort} onSortChange={setSort} maxPrice={maxPrice} onMaxPriceChange={setMaxPrice} onReset={handleResetFilters} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
       <WhyShop />
-      <section className="mx-auto grid max-w-7xl gap-10 px-4 py-12 lg:grid-cols-2">
+      <section className="mx-auto grid max-w-7xl gap-10 px-4 py-16 lg:grid-cols-2">
         <FaqSection openFaq={openFaq} onToggleFaq={setOpenFaq} />
         <Newsletter email={email} onEmailChange={setEmail} subscribed={subscribed} onSubscribe={handleSubscribe} />
       </section>
