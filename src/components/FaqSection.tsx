@@ -20,7 +20,7 @@ export default function FaqSection({ openFaq, onToggleFaq }: FaqSectionProps) {
   const reduce = useReducedMotion();
   return (
     <Reveal>
-      <span className="text-xs font-bold uppercase tracking-widest text-emerald-600">Need Help?</span>
+      <span className="text-xs font-bold uppercase tracking-widest text-violet-600">Need Help?</span>
       <h2 className="mt-1 text-3xl font-black tracking-tight text-slate-900">❓ Frequently Asked Questions</h2>
       <div className="mt-5 space-y-3">
         {FAQS.map((f, i) => (

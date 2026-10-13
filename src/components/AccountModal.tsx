@@ -75,17 +75,17 @@ export default function AccountModal({ open, onClose }: AccountModalProps) {
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src={session.user.image} alt="" className="h-12 w-12 rounded-full object-cover" />
                   ) : (
-                    <span className="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-600 text-lg font-black text-white">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-full bg-violet-600 text-lg font-black text-white">
                       {(session.user.name ?? session.user.email ?? "G").slice(0, 1).toUpperCase()}
                     </span>
                   )}
                   <div className="min-w-0">
                     <p className="truncate font-bold text-slate-900">{session.user.name ?? "Signed in"}</p>
                     <p className="truncate text-sm text-slate-500">{session.user.email}</p>
-                    <span className="mt-1 inline-block rounded-full bg-emerald-100 px-2.5 py-0.5 text-xs font-bold text-emerald-700 capitalize">{session.user.role ?? "customer"}</span>
+                    <span className="mt-1 inline-block rounded-full bg-violet-100 px-2.5 py-0.5 text-xs font-bold text-violet-700 capitalize">{session.user.role ?? "customer"}</span>
                   </div>
                 </div>
-                <Link href="/dashboard" onClick={close} className="mt-4 block rounded-full bg-emerald-600 py-3 text-center font-bold text-white transition hover:bg-emerald-700">
+                <Link href="/dashboard" onClick={close} className="mt-4 block rounded-full bg-violet-600 py-3 text-center font-bold text-white transition hover:bg-violet-700">
                   Go to My Dashboard
                 </Link>
                 {session.user.role === "admin" && (

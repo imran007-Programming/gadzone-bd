@@ -41,11 +41,11 @@ export default function QuickViewModal({ product, qty, onQtyChange, onClose, onA
                 <div className="relative"><ProductImage product={product} big /><span className="absolute left-3 top-3 rounded-full bg-amber-400 text-slate-950 px-2.5 py-1 text-xs font-bold text-white">-{discountPct(product)}% OFF</span></div>
                 <div className="p-5">
                   <div className="flex items-start justify-between gap-2"><h3 className="text-xl font-black">{product.name}</h3><button onClick={onClose} className="text-2xl leading-none text-gray-400 hover:text-slate-900">×</button></div>
-                  <p className="text-xs font-semibold uppercase tracking-wide text-emerald-600">{product.category}</p>
+                  <p className="text-xs font-semibold uppercase tracking-wide text-violet-600">{product.category}</p>
                   <div className="mt-2 flex items-center gap-1.5"><Stars rating={product.rating} /><span className="text-sm text-gray-500">{product.rating} ({product.reviews.toLocaleString()} reviews)</span></div>
                   <p className="mt-3 text-sm text-gray-600">{product.desc}</p>
                   <ul className="mt-3 space-y-1">{product.specs.map((s) => <li key={s} className="text-sm text-gray-600">✓ {s}</li>)}</ul>
-                  <div className="mt-4 flex items-end gap-2"><span className="text-2xl font-extrabold text-emerald-600">{tk(product.price)}</span><span className="text-gray-400 line-through">{tk(product.oldPrice)}</span><span className="rounded-full bg-green-50 px-2 py-0.5 text-xs font-bold text-green-700">You save {tk(product.oldPrice - product.price)}</span></div>
+                  <div className="mt-4 flex items-end gap-2"><span className="text-2xl font-extrabold text-violet-600">{tk(product.price)}</span><span className="text-gray-400 line-through">{tk(product.oldPrice)}</span><span className="rounded-full bg-green-50 px-2 py-0.5 text-xs font-bold text-green-700">You save {tk(product.oldPrice - product.price)}</span></div>
                   <p className="mt-3 text-xs text-gray-500">🚚 {district === "Dhaka" ? "Inside Dhaka: ৳60" : "Outside Dhaka: ৳120"} · Free over ৳2,000 · 7-day replacement warranty</p>
                 </div>
               </div>
@@ -56,7 +56,7 @@ export default function QuickViewModal({ product, qty, onQtyChange, onClose, onA
                 <span className="w-8 text-center font-bold">{qty}</span>
                 <button onClick={() => onQtyChange(qty + 1)} className="px-3 py-2 text-lg" aria-label="Increase quantity">+</button>
               </div>
-              <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(product.id, qty)} className="flex-1 rounded-full bg-emerald-600 py-3 font-bold text-white hover:bg-emerald-700">Add To Cart</motion.button>
+              <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(product.id, qty)} className="flex-1 rounded-full bg-violet-600 py-3 font-bold text-white hover:bg-violet-700">Add To Cart</motion.button>
               <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(product.id, qty, true)} className="shrink-0 rounded-full bg-slate-950 px-4 py-3 text-sm font-bold text-white">Buy Now</motion.button>
             </div>
           </motion.div>

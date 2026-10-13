@@ -66,12 +66,12 @@ export default function ProductDetails({
     >
       {/* Breadcrumb + back */}
       <div className="flex flex-wrap items-center gap-2 text-sm">
-        <button onClick={onBack} className="rounded-full border border-slate-300 bg-white px-3 py-1.5 font-semibold text-slate-700 transition hover:border-emerald-600 hover:text-emerald-600">
+        <button onClick={onBack} className="rounded-full border border-slate-300 bg-white px-3 py-1.5 font-semibold text-slate-700 transition hover:border-violet-600 hover:text-violet-600">
           ← Back
         </button>
-        <button onClick={onHome} className="text-slate-500 hover:text-emerald-600">Home</button>
+        <button onClick={onHome} className="text-slate-500 hover:text-violet-600">Home</button>
         <span className="text-slate-300">/</span>
-        <button onClick={() => onCategory(p.category)} className="text-slate-500 hover:text-emerald-600">{p.category}</button>
+        <button onClick={() => onCategory(p.category)} className="text-slate-500 hover:text-violet-600">{p.category}</button>
         <span className="text-slate-300">/</span>
         <span className="max-w-56 truncate font-semibold text-slate-900 sm:max-w-none">{p.name}</span>
       </div>
@@ -81,7 +81,7 @@ export default function ProductDetails({
         <div>
           <div className="relative overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-slate-200">
             {imgErr ? (
-              <div className="flex h-80 items-center justify-center bg-gradient-to-br from-emerald-100 via-amber-50 to-sky-100 sm:h-96">
+              <div className="flex h-80 items-center justify-center bg-gradient-to-br from-violet-100 via-amber-50 to-sky-100 sm:h-96">
                 <span className="text-6xl">🔌</span>
               </div>
             ) : (
@@ -111,10 +111,10 @@ export default function ProductDetails({
                 key={v.label}
                 onClick={() => setView(i)}
                 aria-label={`View ${v.label}`}
-                className={`overflow-hidden rounded-2xl bg-white ring-2 transition ${view === i ? "ring-emerald-600" : "ring-slate-200 hover:ring-emerald-300"}`}
+                className={`overflow-hidden rounded-2xl bg-white ring-2 transition ${view === i ? "ring-violet-600" : "ring-slate-200 hover:ring-violet-300"}`}
               >
                 {imgErr ? (
-                  <div className="flex h-20 items-center justify-center bg-gradient-to-br from-emerald-100 via-amber-50 to-sky-100"><span className="text-2xl">🔌</span></div>
+                  <div className="flex h-20 items-center justify-center bg-gradient-to-br from-violet-100 via-amber-50 to-sky-100"><span className="text-2xl">🔌</span></div>
                 ) : (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
@@ -132,20 +132,20 @@ export default function ProductDetails({
 
         {/* Info column */}
         <div>
-          <p className="text-xs font-bold uppercase tracking-widest text-emerald-600">{p.category}</p>
+          <p className="text-xs font-bold uppercase tracking-widest text-violet-600">{p.category}</p>
           <h1 className="mt-1 text-2xl font-black leading-tight text-slate-900 sm:text-3xl">{p.name}</h1>
           <div className="mt-2 flex flex-wrap items-center gap-2">
             <Stars rating={p.rating} />
             <span className="text-sm text-slate-500">{p.rating} ({p.reviews.toLocaleString()} reviews)</span>
-            <span className={`rounded-full px-2.5 py-1 text-[11px] font-semibold ${p.stock === "In Stock" ? "bg-emerald-50 text-emerald-700" : "bg-amber-50 text-amber-700"}`}>
+            <span className={`rounded-full px-2.5 py-1 text-[11px] font-semibold ${p.stock === "In Stock" ? "bg-violet-50 text-violet-700" : "bg-amber-50 text-amber-700"}`}>
               {p.stock === "In Stock" ? "● In Stock" : "⚠ " + p.stock}
             </span>
           </div>
 
           <div className="mt-4 flex flex-wrap items-end gap-2">
-            <span className="text-3xl font-extrabold text-emerald-600">{tk(p.price)}</span>
+            <span className="text-3xl font-extrabold text-violet-600">{tk(p.price)}</span>
             <span className="text-lg text-slate-400 line-through">{tk(p.oldPrice)}</span>
-            <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-700">You save {tk(p.oldPrice - p.price)}</span>
+            <span className="rounded-full bg-violet-50 px-3 py-1 text-xs font-bold text-violet-700">You save {tk(p.oldPrice - p.price)}</span>
           </div>
 
           <p className="mt-4 text-[15px] leading-relaxed text-slate-600">{p.desc}</p>
@@ -166,7 +166,7 @@ export default function ProductDetails({
                     key={c}
                     onClick={() => setColour(c)}
                     aria-pressed={colour === c}
-                    className={`rounded-full border px-4 py-2 text-sm font-semibold transition ${colour === c ? "border-emerald-600 bg-emerald-50 text-emerald-700 ring-1 ring-emerald-600" : "border-slate-300 bg-white text-slate-700 hover:border-emerald-400"}`}
+                    className={`rounded-full border px-4 py-2 text-sm font-semibold transition ${colour === c ? "border-violet-600 bg-violet-50 text-violet-700 ring-1 ring-violet-600" : "border-slate-300 bg-white text-slate-700 hover:border-violet-400"}`}
                   >
                     {c}
                   </button>
@@ -181,7 +181,7 @@ export default function ProductDetails({
                     key={o}
                     onClick={() => setOption(o)}
                     aria-pressed={option === o}
-                    className={`rounded-full border px-4 py-2 text-sm font-semibold transition ${option === o ? "border-emerald-600 bg-emerald-50 text-emerald-700 ring-1 ring-emerald-600" : "border-slate-300 bg-white text-slate-700 hover:border-emerald-400"}`}
+                    className={`rounded-full border px-4 py-2 text-sm font-semibold transition ${option === o ? "border-violet-600 bg-violet-50 text-violet-700 ring-1 ring-violet-600" : "border-slate-300 bg-white text-slate-700 hover:border-violet-400"}`}
                   >
                     {o}
                   </button>
@@ -197,7 +197,7 @@ export default function ProductDetails({
               <span className="w-8 text-center font-bold">{qty}</span>
               <button onClick={() => setQty(Math.min(99, qty + 1))} className="px-4 py-3 text-lg" aria-label="Increase quantity">+</button>
             </div>
-            <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty)} className="rounded-full bg-emerald-600 px-7 py-3 font-bold text-white shadow-lg shadow-emerald-600/30 transition hover:bg-emerald-700">
+            <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty)} className="rounded-full bg-violet-600 px-7 py-3 font-bold text-white shadow-lg shadow-violet-600/30 transition hover:bg-violet-700">
               Add To Cart
             </motion.button>
             <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty, true)} className="rounded-full bg-slate-950 px-7 py-3 font-bold text-white transition hover:bg-slate-800">
@@ -228,7 +228,7 @@ export default function ProductDetails({
               role="tab"
               aria-selected={tab === t}
               onClick={() => setTab(t)}
-              className={`rounded-full px-4 py-2 text-sm font-bold transition ${tab === t ? "bg-emerald-600 text-white" : "bg-slate-100 text-slate-700 hover:bg-emerald-50 hover:text-emerald-700"}`}
+              className={`rounded-full px-4 py-2 text-sm font-bold transition ${tab === t ? "bg-violet-600 text-white" : "bg-slate-100 text-slate-700 hover:bg-violet-50 hover:text-violet-700"}`}
             >
               {t}
             </button>
@@ -288,10 +288,10 @@ export default function ProductDetails({
         <section className="mt-10">
           <div className="flex flex-wrap items-end justify-between gap-3">
             <div>
-              <p className="text-xs font-bold uppercase tracking-widest text-emerald-600">You may also like</p>
+              <p className="text-xs font-bold uppercase tracking-widest text-violet-600">You may also like</p>
               <h2 className="mt-1 text-2xl font-black text-slate-900">Related Products</h2>
             </div>
-            <button onClick={() => onCategory(p.category)} className="rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-emerald-600 hover:text-emerald-600">
+            <button onClick={() => onCategory(p.category)} className="rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-violet-600 hover:text-violet-600">
               All {p.category} →
             </button>
           </div>
@@ -307,16 +307,16 @@ export default function ProductDetails({
       <div className="fixed inset-x-0 bottom-16 z-40 border-t border-slate-200 bg-white/95 shadow-[0_-4px_20px_rgba(2,6,23,0.10)] backdrop-blur md:bottom-0">
         <div className="mx-auto flex max-w-7xl items-center gap-3 px-4 py-3">
           {imgErr ? (
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-100 via-amber-50 to-sky-100"><span className="text-xl">🔌</span></div>
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-violet-100 via-amber-50 to-sky-100"><span className="text-xl">🔌</span></div>
           ) : (
             // eslint-disable-next-line @next/next/no-img-element
             <img src={p.img} alt="" aria-hidden className="h-12 w-12 shrink-0 rounded-xl object-cover" onError={() => setImgErr(true)} />
           )}
           <div className="min-w-0 flex-1">
             <p className="truncate text-sm font-bold text-slate-900">{p.name}</p>
-            <p className="text-sm font-extrabold text-emerald-600">{tk(p.price)} <span className="text-xs font-medium text-slate-400 line-through">{tk(p.oldPrice)}</span></p>
+            <p className="text-sm font-extrabold text-violet-600">{tk(p.price)} <span className="text-xs font-medium text-slate-400 line-through">{tk(p.oldPrice)}</span></p>
           </div>
-          <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty)} className="shrink-0 rounded-full bg-emerald-600 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-emerald-700 sm:px-6">
+          <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty)} className="shrink-0 rounded-full bg-violet-600 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-violet-700 sm:px-6">
             Add to Cart
           </motion.button>
           <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty, true)} className="hidden shrink-0 rounded-full bg-slate-950 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-slate-800 sm:block">

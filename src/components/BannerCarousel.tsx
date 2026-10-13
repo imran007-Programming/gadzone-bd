@@ -2,9 +2,6 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion, type Variants } from "framer-motion";
-import { PRODUCTS, type Product } from "@/data/products";
-import { tk, discountPct } from "@/lib/format";
-import ProductImage from "./ProductImage";
 
 type BannerSlide = {
   id: string;
@@ -12,11 +9,9 @@ type BannerSlide = {
   headline: string;
   accent: string;
   subtext: string;
-  /** Tailwind gradient classes for this slide (emerald / slate / amber family only). */
-  bg: string;
-  /** Accent pill / badge classes for this slide. */
-  pill: string;
-  product: Product;
+  /** Local demo banner photo in public/banners/. */
+  image: string;
+  alt: string;
 };
 
 const SLIDES: BannerSlide[] = [
@@ -26,9 +21,8 @@ const SLIDES: BannerSlide[] = [
     headline: "Save Big This Eid",
     accent: "up to 45% off",
     subtext: "Original gadgets at festival prices across Bangladesh — plus an extra 10% off with code GADZONE10.",
-    bg: "from-emerald-700 via-emerald-800 to-slate-950",
-    pill: "bg-amber-400 text-slate-950",
-    product: PRODUCTS[0],
+    image: "/banners/banner-1.jpg",
+    alt: "Over-ear headphones on a dark background",
   },
   {
     id: "flash-deals",
@@ -36,9 +30,8 @@ const SLIDES: BannerSlide[] = [
     headline: "Deals That Won't Wait",
     accent: "ending tonight",
     subtext: "Fresh price drops on the week's most wanted gadgets. When the countdown ends, the prices go back up.",
-    bg: "from-amber-500 via-amber-600 to-slate-950",
-    pill: "bg-slate-950 text-amber-300",
-    product: PRODUCTS[2],
+    image: "/banners/banner-2.jpg",
+    alt: "Portable power bank",
   },
   {
     id: "audio-wearables",
@@ -46,9 +39,8 @@ const SLIDES: BannerSlide[] = [
     headline: "Hear More, Wear Smarter",
     accent: "earbuds · watches",
     subtext: "Crisp sound, long battery and comfy fits — earbuds, headphones and smartwatches picked for everyday life.",
-    bg: "from-slate-900 via-emerald-900 to-slate-950",
-    pill: "bg-emerald-400 text-slate-950",
-    product: PRODUCTS[1],
+    image: "/banners/banner-3.jpg",
+    alt: "Wireless earbuds in their charging case",
   },
   {
     id: "smart-home-power",
@@ -56,20 +48,15 @@ const SLIDES: BannerSlide[] = [
     headline: "A Smarter Home, On Every Charge",
     accent: "smart home · power",
     subtext: "Keep the house connected and every device charged — smart gadgets and power gear that just work.",
-    bg: "from-slate-950 via-slate-900 to-emerald-950",
-    pill: "bg-amber-400 text-slate-950",
-    product: PRODUCTS[10],
+    image: "/banners/banner-4.jpg",
+    alt: "Smart speaker at home",
   },
 ];
 
 const AUTO_ADVANCE_MS = 5000;
 const DRAG_THRESHOLD = 80;
 
-type BannerCarouselProps = {
-  onQuickView?: (product: Product) => void;
-};
-
-export default function BannerCarousel({ onQuickView }: BannerCarouselProps) {
+export default function BannerCarousel() {
   const reduce = useReducedMotion();
   const [[index, direction], setIndex] = useState<[number, number]>([0, 0]);
   const [paused, setPaused] = useState(false);
@@ -156,13 +143,26 @@ export default function BannerCarousel({ onQuickView }: BannerCarouselProps) {
               else if (dx > DRAG_THRESHOLD) prev();
               touchStartX.current = null;
             }}
-            className={`grid items-center gap-8 bg-gradient-to-br px-6 py-10 text-white sm:px-10 md:grid-cols-2 md:py-14 ${slide.bg}`}
+            className="relative h-[320px] w-full md:h-[440px]"
           >
-            <div>
-              <span className={`inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold tracking-wide ${slide.pill}`}>
+            {/* Full-bleed banner image */}
+            <img
+              src={slide.image}
+              alt={slide.alt}
+              className="absolute inset-0 h-full w-full object-cover"
+              draggable={false}
+            />
+            {/* Dark gradient overlay for readable text */}
+            <div
+              aria-hidden
+              className="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-950/45 to-slate-950/10"
+            />
+            {/* Slide copy */}
+            <div className="absolute inset-0 flex flex-col justify-center px-6 text-white sm:px-10">
+              <span className="inline-flex w-fit items-center gap-2 rounded-full bg-amber-400 px-4 py-1.5 text-xs font-bold tracking-wide text-slate-950">
                 {slide.eyebrow}
               </span>
-              <h2 className="mt-5 text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl">
+              <h2 className="mt-5 max-w-xl text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl">
                 {slide.headline}
                 <span className="mt-2 block text-xl font-bold text-amber-300 sm:text-2xl">{slide.accent}</span>
               </h2>
@@ -170,7 +170,7 @@ export default function BannerCarousel({ onQuickView }: BannerCarouselProps) {
               <div className="mt-7 flex flex-wrap gap-3">
                 <a
                   href="#shop"
-                  className="rounded-full bg-emerald-600 px-7 py-3.5 font-bold text-white shadow-lg shadow-emerald-600/30 transition hover:bg-emerald-700"
+                  className="rounded-full bg-violet-600 px-7 py-3.5 font-bold text-white shadow-lg shadow-violet-600/30 transition hover:bg-violet-700"
                 >
                   Shop Now →
                 </a>
@@ -180,33 +180,6 @@ export default function BannerCarousel({ onQuickView }: BannerCarouselProps) {
                 >
                   ⚡ Flash Deals
                 </a>
-              </div>
-            </div>
-            <div
-              className="group cursor-pointer overflow-hidden rounded-3xl bg-white text-slate-900 shadow-xl"
-              onClick={() => onQuickView?.(slide.product)}
-              role="button"
-              tabIndex={0}
-              aria-label={`View ${slide.product.name}`}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") {
-                  e.preventDefault();
-                  onQuickView?.(slide.product);
-                }
-              }}
-            >
-              <div className="relative">
-                <ProductImage product={slide.product} big />
-                <span className="absolute left-3 top-3 rounded-full bg-amber-400 px-2.5 py-1 text-xs font-bold text-slate-950">
-                  -{discountPct(slide.product)}%
-                </span>
-              </div>
-              <div className="p-4">
-                <p className="truncate text-base font-bold">{slide.product.name}</p>
-                <p className="mt-1 text-lg font-extrabold text-emerald-600">
-                  {tk(slide.product.price)}{" "}
-                  <span className="text-sm font-medium text-slate-400 line-through">{tk(slide.product.oldPrice)}</span>
-                </p>
               </div>
             </div>
           </motion.div>
@@ -242,7 +215,7 @@ export default function BannerCarousel({ onQuickView }: BannerCarouselProps) {
             aria-label={`Go to slide ${i + 1}: ${s.eyebrow}`}
             onClick={() => goTo(i, i > index ? 1 : -1)}
             className={`h-2.5 rounded-full transition-all ${
-              i === index ? "w-8 bg-emerald-500" : "w-2.5 bg-slate-600 hover:bg-slate-500"
+              i === index ? "w-8 bg-violet-500" : "w-2.5 bg-slate-600 hover:bg-slate-500"
             }`}
           />
         ))}

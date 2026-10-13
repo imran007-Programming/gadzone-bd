@@ -50,7 +50,7 @@ export default function MobileMenu({ open, onClose, category, onCategoryChange }
           >
             <div className="flex items-center justify-between border-b p-4">
               <span className="text-lg font-black text-slate-900">
-                Gad<span className="text-emerald-600">Zone</span> BD
+                Gad<span className="text-violet-600">Zone</span> BD
               </span>
               <button onClick={onClose} className="text-2xl text-slate-400" aria-label="Close menu">×</button>
             </div>
@@ -59,7 +59,7 @@ export default function MobileMenu({ open, onClose, category, onCategoryChange }
                 <button
                   key={t}
                   onClick={() => setTab(t)}
-                  className={`flex-1 py-3 text-sm font-bold uppercase tracking-wide ${tab === t ? "border-b-2 border-emerald-600 text-emerald-600" : "text-slate-500"}`}
+                  className={`flex-1 py-3 text-sm font-bold uppercase tracking-wide ${tab === t ? "border-b-2 border-violet-600 text-violet-600" : "text-slate-500"}`}
                 >
                   {t === "categories" ? "Categories" : "Menu"}
                 </button>
@@ -76,7 +76,7 @@ export default function MobileMenu({ open, onClose, category, onCategoryChange }
                           document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" });
                           onClose();
                         }}
-                        className={`flex w-full items-center justify-between px-4 py-3.5 text-left text-[15px] font-semibold ${category === c ? "text-emerald-600" : "text-slate-800"}`}
+                        className={`flex w-full items-center justify-between px-4 py-3.5 text-left text-[15px] font-semibold ${category === c ? "text-violet-600" : "text-slate-800"}`}
                       >
                         {c === "All" ? "All Products" : c}
                         <span className="text-slate-400">›</span>

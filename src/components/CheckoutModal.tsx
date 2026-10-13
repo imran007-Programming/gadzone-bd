@@ -53,24 +53,24 @@ export default function CheckoutModal({ open, orderPlaced, orderId, form, distri
                 <p className="mt-2 text-gray-600">Dhonnobad, {form.name}! Apnar order confirm hoyeche.</p>
                 <div className="mx-auto mt-4 max-w-xs rounded-3xl bg-green-50 p-4"><p className="text-sm text-gray-500">Order ID</p><p className="text-2xl font-black text-green-700">{orderId}</p><p className="mt-1 text-sm">Payment: {payMethod === "COD" ? "Cash on Delivery" : payMethod} · Delivery to {district}</p></div>
                 <p className="mt-3 text-sm text-gray-500">Amra shighroi phone-e confirm korbo. Tracking link SMS-e pathano hobe.</p>
-                <button onClick={onContinueShopping} className="mt-5 rounded-full bg-emerald-600 px-8 py-3 font-bold text-white">Continue Shopping</button>
+                <button onClick={onContinueShopping} className="mt-5 rounded-full bg-violet-600 px-8 py-3 font-bold text-white">Continue Shopping</button>
               </div>
             ) : (
               <form onSubmit={onPlaceOrder}>
                 <div className="flex items-start justify-between"><h3 className="text-xl font-black">Checkout 🧾</h3><button type="button" onClick={onClose} className="text-2xl text-gray-400">×</button></div>
                 <label className="mt-4 block text-sm font-bold">Full Name *</label>
-                <input required value={form.name} onChange={(e) => onFormChange("name", e.target.value)} placeholder="e.g. Imran Hasan" className="mt-1 w-full rounded-xl border px-4 py-2.5 text-sm outline-none focus:border-emerald-600" />
+                <input required value={form.name} onChange={(e) => onFormChange("name", e.target.value)} placeholder="e.g. Imran Hasan" className="mt-1 w-full rounded-xl border px-4 py-2.5 text-sm outline-none focus:border-violet-600" />
                 <label className="mt-3 block text-sm font-bold">Phone Number *</label>
-                <input required type="tel" value={form.phone} onChange={(e) => onFormChange("phone", e.target.value)} placeholder="01XXXXXXXXX" className="mt-1 w-full rounded-xl border px-4 py-2.5 text-sm outline-none focus:border-emerald-600" />
+                <input required type="tel" value={form.phone} onChange={(e) => onFormChange("phone", e.target.value)} placeholder="01XXXXXXXXX" className="mt-1 w-full rounded-xl border px-4 py-2.5 text-sm outline-none focus:border-violet-600" />
                 <label className="mt-3 block text-sm font-bold">District *</label>
-                <select value={district} onChange={(e) => onDistrictChange(e.target.value)} className="mt-1 w-full rounded-xl border bg-white px-4 py-2.5 text-sm outline-none focus:border-emerald-600">{DISTRICTS.map((d) => <option key={d}>{d}</option>)}</select>
+                <select value={district} onChange={(e) => onDistrictChange(e.target.value)} className="mt-1 w-full rounded-xl border bg-white px-4 py-2.5 text-sm outline-none focus:border-violet-600">{DISTRICTS.map((d) => <option key={d}>{d}</option>)}</select>
                 <label className="mt-3 block text-sm font-bold">Full Address *</label>
-                <textarea required value={form.address} onChange={(e) => onFormChange("address", e.target.value)} placeholder="House, road, area…" rows={2} className="mt-1 w-full rounded-xl border px-4 py-2.5 text-sm outline-none focus:border-emerald-600" />
+                <textarea required value={form.address} onChange={(e) => onFormChange("address", e.target.value)} placeholder="House, road, area…" rows={2} className="mt-1 w-full rounded-xl border px-4 py-2.5 text-sm outline-none focus:border-violet-600" />
                 <p className="mt-4 text-sm font-bold">Payment Method</p>
                 <div className="mt-2 grid grid-cols-2 gap-2">
                   {([["COD", "💵 Cash on Delivery"], ["bKash", "📱 bKash"], ["Nagad", "🟠 Nagad"], ["Card", "💳 Card"]] as [PayMethod, string][]).map(([v, label]) => (
-                    <label key={v} className={`cursor-pointer rounded-xl border px-3 py-2.5 text-sm font-semibold ${payMethod === v ? "border-emerald-600 bg-emerald-50 text-emerald-600" : ""}`}>
-                      <input type="radio" name="pay" checked={payMethod === v} onChange={() => onPayMethodChange(v)} className="mr-2 accent-emerald-600" />{label}
+                    <label key={v} className={`cursor-pointer rounded-xl border px-3 py-2.5 text-sm font-semibold ${payMethod === v ? "border-violet-600 bg-violet-50 text-violet-600" : ""}`}>
+                      <input type="radio" name="pay" checked={payMethod === v} onChange={() => onPayMethodChange(v)} className="mr-2 accent-violet-600" />{label}
                     </label>
                   ))}
                 </div>
@@ -79,9 +79,9 @@ export default function CheckoutModal({ open, orderPlaced, orderId, form, distri
                   <div className="flex justify-between"><span>Subtotal</span><span className="font-bold">{tk(subtotal)}</span></div>
                   {discountAmt > 0 && <div className="flex justify-between text-green-600"><span>Promo discount</span><span>−{tk(discountAmt)}</span></div>}
                   <div className="flex justify-between"><span>Delivery</span><span className="font-bold">{delivery === 0 ? "FREE" : tk(delivery)}</span></div>
-                  <div className="flex justify-between border-t pt-2 text-base font-black"><span>Total</span><span className="text-emerald-600">{tk(total)}</span></div>
+                  <div className="flex justify-between border-t pt-2 text-base font-black"><span>Total</span><span className="text-violet-600">{tk(total)}</span></div>
                 </div>
-                <motion.button whileTap={{ scale: 0.98 }} type="submit" className="mt-4 w-full rounded-full bg-emerald-600 py-3.5 font-bold text-white hover:bg-emerald-700">Place Order • {tk(total)} →</motion.button>
+                <motion.button whileTap={{ scale: 0.98 }} type="submit" className="mt-4 w-full rounded-full bg-violet-600 py-3.5 font-bold text-white hover:bg-violet-700">Place Order • {tk(total)} →</motion.button>
               </form>
             )}
           </motion.div>
