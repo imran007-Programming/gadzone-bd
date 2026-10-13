@@ -137,7 +137,7 @@ export default function Home() {
   const handleCheckout = () => { setCartOpen(false); setCheckoutOpen(true); };
 
   return (
-    <div className="min-h-screen bg-white font-sans text-navy">
+    <div className="min-h-screen bg-[#f1f5f9] font-sans text-slate-900">
       <TopBar />
       <Header query={query} onQueryChange={setQuery} category={category} onCategoryChange={setCategory} cartCount={cartCount} onCartOpen={() => setCartOpen(true)} />
       <Hero onQuickView={handleQuickView} />
