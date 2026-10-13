@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
+import { useSession, signOut } from "next-auth/react";
 import { CATEGORIES } from "@/data/products";
 
 type HeaderProps = {
@@ -16,6 +18,7 @@ type HeaderProps = {
 };
 
 export default function Header({ query, onQueryChange, category, onCategoryChange, cartCount, onCartOpen, onMenuOpen, onAccountOpen }: HeaderProps) {
+  const { data: session } = useSession();
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -37,7 +40,29 @@ export default function Header({ query, onQueryChange, category, onCategoryChang
             <span className="hidden text-[11px] font-medium text-slate-500 sm:block">Gadgets in Bangladesh</span></span>
           </a>
           <div className="flex items-center justify-end gap-1 sm:gap-2">
-            <button onClick={onAccountOpen} className="rounded-full p-2 text-xl text-slate-800 hover:bg-slate-100" aria-label="My account">👤</button>
+            {session?.user ? (
+              <>
+                <Link href="/dashboard" className="flex items-center gap-2 rounded-full p-1 pr-2 hover:bg-slate-100 sm:pr-3" aria-label="My dashboard">
+                  {session.user.image ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={session.user.image} alt="" className="h-8 w-8 rounded-full object-cover" />
+                  ) : (
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-600 text-sm font-black text-white">
+                      {(session.user.name ?? session.user.email ?? "G").slice(0, 1).toUpperCase()}
+                    </span>
+                  )}
+                  <span className="hidden max-w-28 truncate text-sm font-bold text-slate-800 md:inline">{session.user.name ?? "My Account"}</span>
+                </Link>
+                <Link href="/dashboard" className="hidden rounded-full px-3 py-1.5 text-xs font-bold text-slate-700 hover:bg-slate-100 md:inline-flex">Dashboard</Link>
+                {session.user.role === "admin" && (
+                  <Link href="/admin" className="hidden rounded-full bg-amber-400 px-3 py-1.5 text-xs font-black text-slate-950 hover:bg-amber-300 md:inline-flex">Admin</Link>
+                )}
+                <button onClick={() => signOut({ callbackUrl: "/" })} className="hidden rounded-full px-3 py-1.5 text-xs font-bold text-slate-700 hover:bg-slate-100 md:inline-flex">Sign out</button>
+                <button onClick={() => signOut({ callbackUrl: "/" })} className="rounded-full p-2 text-lg text-slate-800 hover:bg-slate-100 md:hidden" aria-label="Sign out">↪</button>
+              </>
+            ) : (
+              <button onClick={onAccountOpen} className="rounded-full bg-emerald-600 px-4 py-2 text-sm font-bold text-white transition hover:bg-emerald-700">Sign in</button>
+            )}
             <span className="hidden rounded-full bg-pink-50 px-3 py-1.5 text-xs font-bold text-pink-600 md:inline-flex">bKash ✓</span>
             <span className="hidden rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-bold text-emerald-700 md:inline-flex">COD ✓</span>
             <motion.button whileTap={{ scale: 0.94 }} onClick={onCartOpen} className="relative rounded-full bg-slate-950 px-3 py-2.5 text-sm font-bold text-white transition hover:bg-emerald-700 sm:px-4">

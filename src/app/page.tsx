@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { useSession } from "next-auth/react";
 import { PRODUCTS, FLASH_IDS, type Product } from "@/data/products";
 import { discountPct } from "@/lib/format";
-import type { CartItem, SortKey, PayMethod, CheckoutForm, Countdown } from "@/types";
+import { addOrder } from "@/lib/orders";
+import type { CartItem, SortKey, PayMethod, CheckoutForm, Countdown, StoredOrder } from "@/types";
 import TopBar from "@/components/TopBar";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -25,6 +27,7 @@ import CheckoutModal from "@/components/CheckoutModal";
 import Toast from "@/components/Toast";
 
 export default function Home() {
+  const { data: session } = useSession();
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("All");
   const [maxPrice, setMaxPrice] = useState(5000);
@@ -121,7 +124,24 @@ export default function Home() {
   const placeOrder = (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name.trim() || !form.phone.trim() || !form.address.trim()) { showToast("⚠️ Please fill all fields"); return; }
-    setOrderId("GZ" + Math.floor(100000 + Math.random() * 900000));
+    const newOrderId = "GZ" + Math.floor(100000 + Math.random() * 900000);
+    // Demo persistence: save the order to this browser's localStorage so the
+    // Customer/Admin dashboards can list it. No backend / database involved.
+    const order: StoredOrder = {
+      id: newOrderId,
+      date: new Date().toISOString(),
+      items: cartDetailed.map((i) => ({ name: i.name, qty: i.qty, price: i.price })),
+      total,
+      name: form.name.trim(),
+      phone: form.phone.trim(),
+      address: form.address.trim(),
+      district,
+      payment: payMethod === "COD" ? "Cash on Delivery" : payMethod,
+      status: "Processing",
+      email: session?.user?.email ?? "guest",
+    };
+    addOrder(order);
+    setOrderId(newOrderId);
     setOrderPlaced(true);
     setCart([]);
     setPromoApplied(0); setPromo(""); setPromoMsg("");
