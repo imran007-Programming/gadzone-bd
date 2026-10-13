@@ -1,6 +1,30 @@
 import NextAuth from "next-auth";
 import Google from "next-auth/providers/google";
 
+// Sanitize URL env vars: next-auth's client code runs `new URL(...)` on
+// NEXTAUTH_URL / AUTH_URL at module-evaluation time, and a value that starts
+// with `https://` but is otherwise unparseable (e.g. `https://` on its own,
+// stray whitespace/quotes) throws and crashes the whole build during
+// prerendering. Drop unparseable values so NextAuth falls back to
+// trustHost / request host instead of crashing. Never throw here.
+for (const key of ["NEXTAUTH_URL", "AUTH_URL"] as const) {
+  const raw = process.env[key];
+  if (raw === undefined) continue;
+  try {
+    new URL(raw);
+  } catch {
+    // Retry once with a cleaned-up variant (stray whitespace / surrounding
+    // quotes, as happens when a value is pasted into a dashboard).
+    const cleaned = raw.trim().replace(/^["']|["']$/g, "");
+    try {
+      new URL(cleaned);
+      process.env[key] = cleaned;
+    } catch {
+      delete process.env[key];
+    }
+  }
+}
+
 const adminEmails = (process.env.ADMIN_EMAILS ?? "")
   .split(",")
   .map((e) => e.trim().toLowerCase())
