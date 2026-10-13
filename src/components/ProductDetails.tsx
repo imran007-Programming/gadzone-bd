@@ -1,0 +1,329 @@
+"use client";
+
+import { useEffect, useMemo, useState } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { PRODUCTS, type Product } from "@/data/products";
+import { tk, discountPct } from "@/lib/format";
+import ProductCard from "./ProductCard";
+import Stars from "./Stars";
+
+type ProductDetailsProps = {
+  product: Product;
+  district: string;
+  onBack: () => void;
+  onHome: () => void;
+  onCategory: (category: string) => void;
+  onSelectProduct: (product: Product) => void;
+  onAddToCart: (id: number, qty: number, buyNow?: boolean) => void;
+};
+
+const GALLERY_VIEWS = [
+  { label: "Front", position: "50% 50%", zoom: "scale-100" },
+  { label: "Detail", position: "50% 30%", zoom: "scale-125" },
+  { label: "Angle", position: "50% 70%", zoom: "scale-110" },
+] as const;
+
+const COLOURS = ["Black", "White", "Silver"];
+const OPTIONS = ["Standard", "With Accessories"];
+const TABS = ["Description", "Additional Information", "Shipping & Delivery"] as const;
+
+export default function ProductDetails({
+  product: p,
+  district,
+  onBack,
+  onHome,
+  onCategory,
+  onSelectProduct,
+  onAddToCart,
+}: ProductDetailsProps) {
+  const reduce = useReducedMotion();
+  const [view, setView] = useState(0);
+  const [colour, setColour] = useState("Black");
+  const [option, setOption] = useState("Standard");
+  const [qty, setQty] = useState(1);
+  const [tab, setTab] = useState<(typeof TABS)[number]>("Description");
+  const [imgErr, setImgErr] = useState(false);
+
+  // Parent remounts this component per product (key={product.id}), so local
+  // state already starts fresh. The effect only syncs scroll position.
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
+  }, [p.id]);
+
+  const related = useMemo(
+    () => PRODUCTS.filter((x) => x.category === p.category && x.id !== p.id).slice(0, 4),
+    [p.id, p.category]
+  );
+
+  const activeView = GALLERY_VIEWS[view];
+
+  return (
+    <motion.div
+      initial={reduce ? false : { opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.35, ease: "easeOut" }}
+      className="mx-auto max-w-7xl px-4 pb-44 pt-4 md:pb-28"
+    >
+      {/* Breadcrumb + back */}
+      <div className="flex flex-wrap items-center gap-2 text-sm">
+        <button onClick={onBack} className="rounded-full border border-slate-300 bg-white px-3 py-1.5 font-semibold text-slate-700 transition hover:border-emerald-600 hover:text-emerald-600">
+          ← Back
+        </button>
+        <button onClick={onHome} className="text-slate-500 hover:text-emerald-600">Home</button>
+        <span className="text-slate-300">/</span>
+        <button onClick={() => onCategory(p.category)} className="text-slate-500 hover:text-emerald-600">{p.category}</button>
+        <span className="text-slate-300">/</span>
+        <span className="max-w-56 truncate font-semibold text-slate-900 sm:max-w-none">{p.name}</span>
+      </div>
+
+      <div className="mt-5 grid gap-8 lg:grid-cols-2">
+        {/* Gallery */}
+        <div>
+          <div className="relative overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-slate-200">
+            {imgErr ? (
+              <div className="flex h-80 items-center justify-center bg-gradient-to-br from-emerald-100 via-amber-50 to-sky-100 sm:h-96">
+                <span className="text-6xl">🔌</span>
+              </div>
+            ) : (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={p.img}
+                alt={p.name}
+                onError={() => setImgErr(true)}
+                style={{ objectPosition: activeView.position }}
+                className={`h-80 w-full object-cover transition-transform duration-500 sm:h-96 ${activeView.zoom}`}
+              />
+            )}
+            {p.badge && (
+              <span className="absolute left-4 top-4 rounded-full bg-slate-950 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white shadow">
+                {p.badge}
+              </span>
+            )}
+            {discountPct(p) > 0 && (
+              <span className="absolute right-4 top-4 rounded-full bg-amber-400 px-3 py-1 text-xs font-bold text-slate-950 shadow">
+                -{discountPct(p)}% OFF
+              </span>
+            )}
+          </div>
+          <div className="mt-3 grid grid-cols-3 gap-3">
+            {GALLERY_VIEWS.map((v, i) => (
+              <button
+                key={v.label}
+                onClick={() => setView(i)}
+                aria-label={`View ${v.label}`}
+                className={`overflow-hidden rounded-2xl bg-white ring-2 transition ${view === i ? "ring-emerald-600" : "ring-slate-200 hover:ring-emerald-300"}`}
+              >
+                {imgErr ? (
+                  <div className="flex h-20 items-center justify-center bg-gradient-to-br from-emerald-100 via-amber-50 to-sky-100"><span className="text-2xl">🔌</span></div>
+                ) : (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={p.img}
+                    alt={`${p.name} — ${v.label} view`}
+                    style={{ objectPosition: v.position }}
+                    className={`h-20 w-full object-cover ${v.zoom}`}
+                  />
+                )}
+                <span className="block py-1 text-center text-[11px] font-semibold text-slate-600">{v.label}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Info column */}
+        <div>
+          <p className="text-xs font-bold uppercase tracking-widest text-emerald-600">{p.category}</p>
+          <h1 className="mt-1 text-2xl font-black leading-tight text-slate-900 sm:text-3xl">{p.name}</h1>
+          <div className="mt-2 flex flex-wrap items-center gap-2">
+            <Stars rating={p.rating} />
+            <span className="text-sm text-slate-500">{p.rating} ({p.reviews.toLocaleString()} reviews)</span>
+            <span className={`rounded-full px-2.5 py-1 text-[11px] font-semibold ${p.stock === "In Stock" ? "bg-emerald-50 text-emerald-700" : "bg-amber-50 text-amber-700"}`}>
+              {p.stock === "In Stock" ? "● In Stock" : "⚠ " + p.stock}
+            </span>
+          </div>
+
+          <div className="mt-4 flex flex-wrap items-end gap-2">
+            <span className="text-3xl font-extrabold text-emerald-600">{tk(p.price)}</span>
+            <span className="text-lg text-slate-400 line-through">{tk(p.oldPrice)}</span>
+            <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-700">You save {tk(p.oldPrice - p.price)}</span>
+          </div>
+
+          <p className="mt-4 text-[15px] leading-relaxed text-slate-600">{p.desc}</p>
+
+          <ul className="mt-4 space-y-1.5">
+            {p.specs.map((s) => (
+              <li key={s} className="text-sm text-slate-600">✓ {s}</li>
+            ))}
+          </ul>
+
+          {/* Variant selectors (demo only) */}
+          <div className="mt-6 space-y-4">
+            <div>
+              <p className="mb-2 text-sm font-bold text-slate-900">Colour: <span className="font-medium text-slate-600">{colour}</span></p>
+              <div className="flex flex-wrap gap-2">
+                {COLOURS.map((c) => (
+                  <button
+                    key={c}
+                    onClick={() => setColour(c)}
+                    aria-pressed={colour === c}
+                    className={`rounded-full border px-4 py-2 text-sm font-semibold transition ${colour === c ? "border-emerald-600 bg-emerald-50 text-emerald-700 ring-1 ring-emerald-600" : "border-slate-300 bg-white text-slate-700 hover:border-emerald-400"}`}
+                  >
+                    {c}
+                  </button>
+                ))}
+              </div>
+            </div>
+            <div>
+              <p className="mb-2 text-sm font-bold text-slate-900">Option: <span className="font-medium text-slate-600">{option}</span></p>
+              <div className="flex flex-wrap gap-2">
+                {OPTIONS.map((o) => (
+                  <button
+                    key={o}
+                    onClick={() => setOption(o)}
+                    aria-pressed={option === o}
+                    className={`rounded-full border px-4 py-2 text-sm font-semibold transition ${option === o ? "border-emerald-600 bg-emerald-50 text-emerald-700 ring-1 ring-emerald-600" : "border-slate-300 bg-white text-slate-700 hover:border-emerald-400"}`}
+                  >
+                    {o}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Quantity + actions */}
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <div className="flex items-center rounded-full border border-slate-300 bg-white">
+              <button onClick={() => setQty(Math.max(1, qty - 1))} className="px-4 py-3 text-lg" aria-label="Decrease quantity">−</button>
+              <span className="w-8 text-center font-bold">{qty}</span>
+              <button onClick={() => setQty(Math.min(99, qty + 1))} className="px-4 py-3 text-lg" aria-label="Increase quantity">+</button>
+            </div>
+            <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty)} className="rounded-full bg-emerald-600 px-7 py-3 font-bold text-white shadow-lg shadow-emerald-600/30 transition hover:bg-emerald-700">
+              Add To Cart
+            </motion.button>
+            <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty, true)} className="rounded-full bg-slate-950 px-7 py-3 font-bold text-white transition hover:bg-slate-800">
+              Buy Now
+            </motion.button>
+          </div>
+
+          {/* Delivery box */}
+          <div className="mt-6 rounded-3xl border border-slate-200 bg-white p-4">
+            <h2 className="text-sm font-bold text-slate-900">🚚 Delivery & Returns</h2>
+            <ul className="mt-2 space-y-1.5 text-sm text-slate-600">
+              <li>Cash on Delivery available across Bangladesh.</li>
+              <li>{district === "Dhaka" ? "Inside Dhaka: ৳60" : "Outside Dhaka: ৳120"} · Free delivery on orders over ৳2,000.</li>
+              <li>Fast dispatch — Inside Dhaka 1–3 days, outside Dhaka 2–4 days.</li>
+              <li>7-day easy return on unused products in original packaging.</li>
+              <li>Warranty support on every GadZone BD order.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Tabs */}
+      <div className="mt-10 rounded-3xl border border-slate-200 bg-white p-5 sm:p-6">
+        <div className="flex flex-wrap gap-2 border-b border-slate-200 pb-3" role="tablist" aria-label="Product information">
+          {TABS.map((t) => (
+            <button
+              key={t}
+              role="tab"
+              aria-selected={tab === t}
+              onClick={() => setTab(t)}
+              className={`rounded-full px-4 py-2 text-sm font-bold transition ${tab === t ? "bg-emerald-600 text-white" : "bg-slate-100 text-slate-700 hover:bg-emerald-50 hover:text-emerald-700"}`}
+            >
+              {t}
+            </button>
+          ))}
+        </div>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={tab}
+            initial={reduce ? false : { opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={reduce ? undefined : { opacity: 0, y: -8 }}
+            transition={{ duration: 0.2 }}
+            className="pt-4 text-[15px] leading-relaxed text-slate-600"
+          >
+            {tab === "Description" && (
+              <div className="space-y-3">
+                <p>{p.desc}</p>
+                <p>
+                  Every GadZone BD order is checked before dispatch, so your {p.name.toLowerCase()} arrives in
+                  good condition and ready to use. The specs above cover the key details — if you need help
+                  choosing the right option, message our support team before ordering and we will guide you.
+                </p>
+                <p>
+                  This product is covered by our 7-day easy return policy on unused items in original
+                  packaging, plus warranty support from GadZone BD.
+                </p>
+              </div>
+            )}
+            {tab === "Additional Information" && (
+              <dl className="grid gap-x-8 gap-y-2 sm:grid-cols-2">
+                <div className="flex justify-between border-b border-slate-100 py-2"><dt className="font-semibold text-slate-900">Category</dt><dd>{p.category}</dd></div>
+                <div className="flex justify-between border-b border-slate-100 py-2"><dt className="font-semibold text-slate-900">Availability</dt><dd>{p.stock}</dd></div>
+                <div className="flex justify-between border-b border-slate-100 py-2"><dt className="font-semibold text-slate-900">Rating</dt><dd>{p.rating} / 5 ({p.reviews.toLocaleString()} reviews)</dd></div>
+                <div className="flex justify-between border-b border-slate-100 py-2"><dt className="font-semibold text-slate-900">In the box</dt><dd>Product + quick-start guide</dd></div>
+                <div className="flex justify-between border-b border-slate-100 py-2"><dt className="font-semibold text-slate-900">Payment</dt><dd>COD, bKash, Nagad, Card</dd></div>
+                <div className="flex justify-between border-b border-slate-100 py-2"><dt className="font-semibold text-slate-900">Warranty</dt><dd>7-day easy return + warranty support</dd></div>
+              </dl>
+            )}
+            {tab === "Shipping & Delivery" && (
+              <div className="space-y-3">
+                <p>We deliver to all 64 districts of Bangladesh with Cash on Delivery.</p>
+                <ul className="list-disc space-y-1.5 pl-5">
+                  <li>Inside Dhaka: ৳60 — delivery in 1–3 working days.</li>
+                  <li>Outside Dhaka: ৳120 — delivery in 2–4 working days.</li>
+                  <li>Free delivery on orders over ৳2,000 (after any promo discount).</li>
+                  <li>Please check your product at delivery time and keep the packaging until you have tested it.</li>
+                </ul>
+                <p>For returns or delivery questions, contact GadZone BD support from the Help section.</p>
+              </div>
+            )}
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      {/* Related products */}
+      {related.length > 0 && (
+        <section className="mt-10">
+          <div className="flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-widest text-emerald-600">You may also like</p>
+              <h2 className="mt-1 text-2xl font-black text-slate-900">Related Products</h2>
+            </div>
+            <button onClick={() => onCategory(p.category)} className="rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-emerald-600 hover:text-emerald-600">
+              All {p.category} →
+            </button>
+          </div>
+          <div className="mt-5 grid grid-cols-2 gap-4 lg:grid-cols-4">
+            {related.map((r, i) => (
+              <ProductCard key={r.id} product={r} onQuickView={onSelectProduct} onAddToCart={(id) => onAddToCart(id, 1)} delay={i * 0.05} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Sticky bottom bar */}
+      <div className="fixed inset-x-0 bottom-16 z-40 border-t border-slate-200 bg-white/95 shadow-[0_-4px_20px_rgba(2,6,23,0.10)] backdrop-blur md:bottom-0">
+        <div className="mx-auto flex max-w-7xl items-center gap-3 px-4 py-3">
+          {imgErr ? (
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-100 via-amber-50 to-sky-100"><span className="text-xl">🔌</span></div>
+          ) : (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={p.img} alt="" aria-hidden className="h-12 w-12 shrink-0 rounded-xl object-cover" onError={() => setImgErr(true)} />
+          )}
+          <div className="min-w-0 flex-1">
+            <p className="truncate text-sm font-bold text-slate-900">{p.name}</p>
+            <p className="text-sm font-extrabold text-emerald-600">{tk(p.price)} <span className="text-xs font-medium text-slate-400 line-through">{tk(p.oldPrice)}</span></p>
+          </div>
+          <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty)} className="shrink-0 rounded-full bg-emerald-600 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-emerald-700 sm:px-6">
+            Add to Cart
+          </motion.button>
+          <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty, true)} className="hidden shrink-0 rounded-full bg-slate-950 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-slate-800 sm:block">
+            Buy Now
+          </motion.button>
+        </div>
+      </div>
+    </motion.div>
+  );
+}

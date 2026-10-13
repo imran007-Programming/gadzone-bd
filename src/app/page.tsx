@@ -19,7 +19,7 @@ import WhyShop from "@/components/WhyShop";
 import FaqSection from "@/components/FaqSection";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
-import QuickViewModal from "@/components/QuickViewModal";
+import ProductDetails from "@/components/ProductDetails";
 import CartDrawer from "@/components/CartDrawer";
 import CheckoutModal from "@/components/CheckoutModal";
 import Toast from "@/components/Toast";
@@ -34,8 +34,7 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [accountOpen, setAccountOpen] = useState(false);
   const [helpOpen, setHelpOpen] = useState(false);
-  const [quickView, setQuickView] = useState<Product | null>(null);
-  const [qvQty, setQvQty] = useState(1);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [checkoutOpen, setCheckoutOpen] = useState(false);
   const [promo, setPromo] = useState("");
   const [promoApplied, setPromoApplied] = useState<number>(0);
@@ -133,12 +132,14 @@ export default function Home() {
   const watchProducts = PRODUCTS.filter((p) => /watch|tracker|band/i.test(p.name));
   const smartHomeProducts = PRODUCTS.filter((p) => p.category === "Smart Home");
 
-  const handleQuickView = (p: Product) => { setQuickView(p); setQvQty(1); };
+  const handleQuickView = (p: Product) => { setSelectedProduct(p); };
   const handleQuickViewAdd = (id: number, qty: number, buyNow?: boolean) => {
     addToCart(id, qty);
-    setQuickView(null);
     if (buyNow) setCartOpen(true);
   };
+  const handleBackToShop = () => { setSelectedProduct(null); setTimeout(() => document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" }), 50); };
+  const handleHome = () => { setSelectedProduct(null); setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 50); };
+  const handlePdpCategory = (cat: string) => { setCategory(cat); setSelectedProduct(null); setTimeout(() => document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" }), 50); };
   const handleResetFilters = () => { setCategory("All"); setMaxPrice(5000); setQuery(""); setSort("featured"); };
   const handleSubscribe = (e: React.FormEvent) => { e.preventDefault(); if (email.includes("@")) setSubscribed(true); };
   const handleFormChange = (field: keyof CheckoutForm, value: string) => setForm((f) => ({ ...f, [field]: value }));
@@ -149,24 +150,38 @@ export default function Home() {
     <div className="min-h-screen bg-[#f1f5f9] pb-20 font-sans text-slate-900 md:pb-0">
       <TopBar />
       <Header query={query} onQueryChange={setQuery} category={category} onCategoryChange={setCategory} cartCount={cartCount} onCartOpen={() => setCartOpen(true)} onMenuOpen={() => setMenuOpen(true)} onAccountOpen={() => setAccountOpen(true)} />
-      <Hero onQuickView={handleQuickView} />
-      <CategoryGrid category={category} onCategoryChange={setCategory} />
-      <FlashDeals products={flash} countdown={countdown} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
-      <ProductSection accent="Trending" rest="Audio Products" subtitle="Explore earbuds, headphones & speakers picked for better sound." products={audioProducts} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
-      <ProductSection accent="Trending" rest="Smartwatches" subtitle="Stay connected, track your day & find the right watch for you." products={watchProducts} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
-      <ProductSection accent="Smart Home" rest="Gadgets" subtitle="Useful home tech designed to make everyday living easier." products={smartHomeProducts} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
-      <ShopSection filtered={filtered} category={category} sort={sort} onSortChange={setSort} maxPrice={maxPrice} onMaxPriceChange={setMaxPrice} onReset={handleResetFilters} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
-      <WhyShop />
-      <section id="faq" className="mx-auto grid max-w-7xl scroll-mt-32 gap-10 px-4 py-16 lg:grid-cols-2">
-        <FaqSection openFaq={openFaq} onToggleFaq={setOpenFaq} />
-        <Newsletter email={email} onEmailChange={setEmail} subscribed={subscribed} onSubscribe={handleSubscribe} />
-      </section>
+      {selectedProduct ? (
+        <ProductDetails
+          key={selectedProduct.id}
+          product={selectedProduct}
+          district={district}
+          onBack={handleBackToShop}
+          onHome={handleHome}
+          onCategory={handlePdpCategory}
+          onSelectProduct={handleQuickView}
+          onAddToCart={handleQuickViewAdd}
+        />
+      ) : (
+        <>
+          <Hero onQuickView={handleQuickView} />
+          <CategoryGrid category={category} onCategoryChange={setCategory} />
+          <FlashDeals products={flash} countdown={countdown} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
+          <ProductSection accent="Trending" rest="Audio Products" subtitle="Explore earbuds, headphones & speakers picked for better sound." products={audioProducts} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
+          <ProductSection accent="Trending" rest="Smartwatches" subtitle="Stay connected, track your day & find the right watch for you." products={watchProducts} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
+          <ProductSection accent="Smart Home" rest="Gadgets" subtitle="Useful home tech designed to make everyday living easier." products={smartHomeProducts} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
+          <ShopSection filtered={filtered} category={category} sort={sort} onSortChange={setSort} maxPrice={maxPrice} onMaxPriceChange={setMaxPrice} onReset={handleResetFilters} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
+          <WhyShop />
+          <section id="faq" className="mx-auto grid max-w-7xl scroll-mt-32 gap-10 px-4 py-16 lg:grid-cols-2">
+            <FaqSection openFaq={openFaq} onToggleFaq={setOpenFaq} />
+            <Newsletter email={email} onEmailChange={setEmail} subscribed={subscribed} onSubscribe={handleSubscribe} />
+          </section>
+        </>
+      )}
       <Footer onCategoryChange={setCategory} />
       <BottomNav cartCount={cartCount} onCartOpen={() => setCartOpen(true)} onMenuOpen={() => setMenuOpen(true)} onAccountOpen={() => setAccountOpen(true)} onHelpOpen={() => setHelpOpen(true)} />
       <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} category={category} onCategoryChange={setCategory} />
       <AccountModal open={accountOpen} onClose={() => setAccountOpen(false)} />
       <HelpSheet open={helpOpen} onClose={() => setHelpOpen(false)} onViewAllFaq={() => { setHelpOpen(false); document.getElementById("faq")?.scrollIntoView({ behavior: "smooth" }); }} />
-      <QuickViewModal product={quickView} qty={qvQty} onQtyChange={setQvQty} onClose={() => setQuickView(null)} onAddToCart={handleQuickViewAdd} district={district} />
       <CartDrawer open={cartOpen} cartDetailed={cartDetailed} cartCount={cartCount} promo={promo} promoMsg={promoMsg} subtotal={subtotal} discountAmt={discountAmt} delivery={delivery} total={total} district={district} onClose={() => setCartOpen(false)} onQtyChange={setQty} onPromoChange={setPromo} onApplyPromo={applyPromo} onCheckout={handleCheckout} />
       <CheckoutModal open={checkoutOpen} orderPlaced={orderPlaced} orderId={orderId} form={form} district={district} payMethod={payMethod} subtotal={subtotal} discountAmt={discountAmt} delivery={delivery} total={total} onClose={() => setCheckoutOpen(false)} onFormChange={handleFormChange} onDistrictChange={setDistrict} onPayMethodChange={setPayMethod} onPlaceOrder={placeOrder} onContinueShopping={handleContinueShopping} />
       <Toast message={toast} />
