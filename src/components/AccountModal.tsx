@@ -58,7 +58,7 @@ export default function AccountModal({ open, onClose }: AccountModalProps) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.96, y: 8 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="max-h-[92vh] w-full max-w-md overflow-y-auto rounded-t-3xl bg-white p-6 sm:rounded-3xl"
+            className="max-h-[92vh] w-full max-w-md overflow-y-auto rounded-t-3xl bg-white p-6 shadow-2xl sm:rounded-3xl"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-start justify-between">
@@ -70,7 +70,7 @@ export default function AccountModal({ open, onClose }: AccountModalProps) {
               <p className="mt-6 text-center text-sm text-slate-500">Checking your session…</p>
             ) : session?.user ? (
               <div className="mt-5">
-                <div className="flex items-center gap-3 rounded-2xl bg-slate-50 p-4">
+                <div className="flex items-center gap-3 rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-100">
                   {session.user.image ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src={session.user.image} alt="" className="h-12 w-12 rounded-full object-cover" />
@@ -85,15 +85,15 @@ export default function AccountModal({ open, onClose }: AccountModalProps) {
                     <span className="mt-1 inline-block rounded-full bg-violet-100 px-2.5 py-0.5 text-xs font-bold text-violet-700 capitalize">{session.user.role ?? "customer"}</span>
                   </div>
                 </div>
-                <Link href="/dashboard" onClick={close} className="mt-4 block rounded-full bg-violet-600 py-3 text-center font-bold text-white transition hover:bg-violet-700">
+                <Link href="/dashboard" onClick={close} className="mt-4 block rounded-full bg-violet-600 py-3 text-center font-bold text-white shadow-md shadow-violet-600/25 transition hover:bg-violet-700 active:scale-[0.99]">
                   Go to My Dashboard
                 </Link>
                 {session.user.role === "admin" && (
-                  <Link href="/admin" onClick={close} className="mt-3 block rounded-full bg-amber-400 py-3 text-center font-black text-slate-950 transition hover:bg-amber-300">
+                  <Link href="/admin" onClick={close} className="mt-3 block rounded-full bg-amber-400 py-3 text-center font-black text-slate-950 shadow-sm transition hover:bg-amber-300 active:scale-[0.99]">
                     Go to Admin Dashboard
                   </Link>
                 )}
-                <button onClick={() => signOut({ callbackUrl: "/" })} className="mt-3 w-full rounded-full border border-slate-200 py-3 font-bold text-slate-700 transition hover:bg-slate-50">
+                <button onClick={() => signOut({ callbackUrl: "/" })} className="mt-3 w-full rounded-full border border-slate-200 py-3 font-bold text-slate-700 shadow-sm transition hover:bg-slate-50 active:scale-[0.99]">
                   Sign out
                 </button>
               </div>
@@ -105,13 +105,13 @@ export default function AccountModal({ open, onClose }: AccountModalProps) {
                 <button
                   onClick={handleGoogle}
                   disabled={loading}
-                  className="mt-4 flex w-full items-center justify-center gap-3 rounded-full border border-slate-300 bg-white py-3 font-bold text-slate-800 shadow-sm transition hover:bg-slate-50 disabled:opacity-60"
+                  className="mt-4 flex w-full items-center justify-center gap-3 rounded-full border border-slate-300 bg-white py-3 font-bold text-slate-800 shadow-sm ring-1 ring-slate-100 transition hover:bg-slate-50 active:scale-[0.99] disabled:opacity-60"
                 >
                   <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-base font-black shadow">G</span>
                   {loading ? "Connecting to Google…" : "Continue with Google"}
                 </button>
                 {error && (
-                  <p className="mt-4 rounded-2xl bg-amber-50 p-4 text-center text-sm font-semibold text-amber-800">{error}</p>
+                  <p className="mt-4 rounded-2xl bg-amber-50 p-4 text-center text-sm font-semibold text-amber-800 ring-1 ring-amber-100">{error}</p>
                 )}
                 <p className="mt-4 text-center text-xs text-slate-400">
                   By continuing you agree to use your Google profile only for sign-in on this store.

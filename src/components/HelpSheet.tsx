@@ -32,7 +32,7 @@ export default function HelpSheet({ open, onClose, onViewAllFaq }: HelpSheetProp
             animate={{ y: 0, opacity: 1 }}
             exit={reduce ? { opacity: 0 } : { y: "100%" }}
             transition={{ type: "tween", duration: 0.28, ease: "easeOut" }}
-            className="max-h-[85vh] w-full max-w-lg overflow-y-auto rounded-t-3xl bg-white p-5"
+            className="max-h-[85vh] w-full max-w-lg overflow-y-auto rounded-t-3xl bg-white p-5 shadow-2xl sm:p-6"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="mx-auto mb-4 h-1.5 w-12 rounded-full bg-slate-200" />
@@ -42,19 +42,19 @@ export default function HelpSheet({ open, onClose, onViewAllFaq }: HelpSheetProp
             </div>
             <div className="mt-4 space-y-3">
               {QUICK_FAQS.map((f) => (
-                <div key={f.q} className="rounded-2xl border border-slate-200 p-4">
+                <div key={f.q} className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm">
                   <p className="font-bold text-slate-900">{f.q}</p>
                   <p className="mt-1 text-sm text-slate-500">{f.a}</p>
                 </div>
               ))}
             </div>
-            <div className="mt-4 rounded-2xl bg-violet-50 p-4">
+            <div className="mt-4 rounded-2xl bg-violet-50 p-4 ring-1 ring-violet-100">
               <p className="font-bold text-slate-900">Still need help?</p>
               <p className="mt-1 text-sm text-slate-600">📞 +880 1700-000000<br />✉️ hello@gadzonebd.example</p>
             </div>
             <button
               onClick={onViewAllFaq}
-              className="mt-4 w-full rounded-full bg-violet-600 py-3 font-bold text-white transition hover:bg-violet-700"
+              className="mt-4 w-full rounded-full bg-violet-600 py-3 font-bold text-white shadow-lg shadow-violet-600/30 transition hover:bg-violet-700 active:scale-[0.99]"
             >
               View all FAQs
             </button>

@@ -66,7 +66,7 @@ export default function ProductDetails({
     >
       {/* Breadcrumb + back */}
       <div className="flex flex-wrap items-center gap-2 text-sm">
-        <button onClick={onBack} className="rounded-full border border-slate-300 bg-white px-3 py-1.5 font-semibold text-slate-700 transition hover:border-violet-600 hover:text-violet-600">
+        <button onClick={onBack} className="rounded-full border border-slate-200 bg-white px-3 py-1.5 font-semibold text-slate-700 shadow-sm transition hover:border-violet-600 hover:text-violet-600">
           ← Back
         </button>
         <button onClick={onHome} className="text-slate-500 hover:text-violet-600">Home</button>
@@ -79,7 +79,7 @@ export default function ProductDetails({
       <div className="mt-5 grid gap-8 lg:grid-cols-2">
         {/* Gallery */}
         <div>
-          <div className="relative overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-slate-200">
+          <div className="relative overflow-hidden rounded-[2rem] bg-white shadow-md ring-1 ring-slate-200/80">
             {imgErr ? (
               <div className="flex h-80 items-center justify-center bg-gradient-to-br from-violet-100 via-amber-50 to-sky-100 sm:h-96">
                 <span className="text-6xl">🔌</span>
@@ -111,7 +111,7 @@ export default function ProductDetails({
                 key={v.label}
                 onClick={() => setView(i)}
                 aria-label={`View ${v.label}`}
-                className={`overflow-hidden rounded-2xl bg-white ring-2 transition ${view === i ? "ring-violet-600" : "ring-slate-200 hover:ring-violet-300"}`}
+                className={`overflow-hidden rounded-2xl bg-white shadow-sm ring-2 transition ${view === i ? "ring-violet-600" : "ring-slate-200 hover:ring-violet-300"}`}
               >
                 {imgErr ? (
                   <div className="flex h-20 items-center justify-center bg-gradient-to-br from-violet-100 via-amber-50 to-sky-100"><span className="text-2xl">🔌</span></div>
@@ -133,7 +133,7 @@ export default function ProductDetails({
         {/* Info column */}
         <div>
           <p className="text-xs font-bold uppercase tracking-widest text-violet-600">{p.category}</p>
-          <h1 className="mt-1 text-2xl font-black leading-tight text-slate-900 sm:text-3xl">{p.name}</h1>
+          <h1 className="mt-1 text-2xl font-black leading-tight tracking-tight text-slate-900 sm:text-3xl">{p.name}</h1>
           <div className="mt-2 flex flex-wrap items-center gap-2">
             <Stars rating={p.rating} />
             <span className="text-sm text-slate-500">{p.rating} ({p.reviews.toLocaleString()} reviews)</span>
@@ -143,7 +143,7 @@ export default function ProductDetails({
           </div>
 
           <div className="mt-4 flex flex-wrap items-end gap-2">
-            <span className="text-3xl font-extrabold text-violet-600">{tk(p.price)}</span>
+            <span className="text-3xl font-extrabold tracking-tight text-violet-600">{tk(p.price)}</span>
             <span className="text-lg text-slate-400 line-through">{tk(p.oldPrice)}</span>
             <span className="rounded-full bg-violet-50 px-3 py-1 text-xs font-bold text-violet-700">You save {tk(p.oldPrice - p.price)}</span>
           </div>
@@ -206,7 +206,7 @@ export default function ProductDetails({
           </div>
 
           {/* Delivery box */}
-          <div className="mt-6 rounded-3xl border border-slate-200 bg-white p-4">
+          <div className="mt-6 rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm">
             <h2 className="text-sm font-bold text-slate-900">🚚 Delivery & Returns</h2>
             <ul className="mt-2 space-y-1.5 text-sm text-slate-600">
               <li>Cash on Delivery available across Bangladesh.</li>
@@ -220,7 +220,7 @@ export default function ProductDetails({
       </div>
 
       {/* Tabs */}
-      <div className="mt-10 rounded-3xl border border-slate-200 bg-white p-5 sm:p-6">
+      <div className="mt-10 rounded-2xl border border-slate-200/80 bg-white p-5 shadow-sm sm:p-6">
         <div className="flex flex-wrap gap-2 border-b border-slate-200 pb-3" role="tablist" aria-label="Product information">
           {TABS.map((t) => (
             <button
@@ -289,7 +289,7 @@ export default function ProductDetails({
           <div className="flex flex-wrap items-end justify-between gap-3">
             <div>
               <p className="text-xs font-bold uppercase tracking-widest text-violet-600">You may also like</p>
-              <h2 className="mt-1 text-2xl font-black text-slate-900">Related Products</h2>
+              <h2 className="mt-1 text-2xl font-black tracking-tight text-slate-900">Related Products</h2>
             </div>
             <button onClick={() => onCategory(p.category)} className="rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-violet-600 hover:text-violet-600">
               All {p.category} →
@@ -304,13 +304,13 @@ export default function ProductDetails({
       )}
 
       {/* Sticky bottom bar */}
-      <div className="fixed inset-x-0 bottom-16 z-40 border-t border-slate-200 bg-white/95 shadow-[0_-4px_20px_rgba(2,6,23,0.10)] backdrop-blur md:bottom-0">
+      <div className="fixed inset-x-0 bottom-16 z-40 border-t border-slate-200 bg-white/95 shadow-[0_-8px_24px_rgba(2,6,23,0.10)] backdrop-blur md:bottom-0">
         <div className="mx-auto flex max-w-7xl items-center gap-3 px-4 py-3">
           {imgErr ? (
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-violet-100 via-amber-50 to-sky-100"><span className="text-xl">🔌</span></div>
           ) : (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={p.img} alt="" aria-hidden className="h-12 w-12 shrink-0 rounded-xl object-cover" onError={() => setImgErr(true)} />
+            <img src={p.img} alt="" aria-hidden className="h-12 w-12 shrink-0 rounded-xl object-cover ring-1 ring-slate-100" onError={() => setImgErr(true)} />
           )}
           <div className="min-w-0 flex-1">
             <p className="truncate text-sm font-bold text-slate-900">{p.name}</p>
