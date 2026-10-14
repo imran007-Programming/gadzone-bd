@@ -30,6 +30,26 @@ const adminEmails = (process.env.ADMIN_EMAILS ?? "")
   .map((e) => e.trim().toLowerCase())
   .filter(Boolean);
 
+// Sanitize Google OAuth credentials: pasting from a dashboard often adds
+// stray whitespace or surrounding quotes, which makes Auth.js throw a
+// `Configuration` error at sign-in time (the /api/auth/signin/google route
+// then redirects to /api/auth/error?error=Configuration). Trim those here.
+// Only presence is ever logged — values stay secret.
+for (const key of ["GOOGLE_CLIENT_ID", "GOOGLE_CLIENT_SECRET"] as const) {
+  const raw = process.env[key];
+  if (raw === undefined) continue;
+  const cleaned = raw.trim().replace(/^["']|["']$/g, "");
+  if (cleaned !== raw) process.env[key] = cleaned;
+}
+
+const googleClientId = process.env.GOOGLE_CLIENT_ID ?? "";
+const googleClientSecret = process.env.GOOGLE_CLIENT_SECRET ?? "";
+if (!googleClientId || !googleClientSecret) {
+  console.warn(
+    "[auth] GOOGLE_CLIENT_ID / GOOGLE_CLIENT_SECRET missing — Google sign-in will fail with a Configuration error."
+  );
+}
+
 export const { handlers, auth, signIn, signOut } = NextAuth({
   trustHost: true,
   // Secret comes from env only (AUTH_SECRET or NEXTAUTH_SECRET). Never hardcoded.
@@ -38,8 +58,9 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     Google({
       // Empty-string fallbacks keep the build from crashing when env vars are
       // missing; sign-in itself will fail at runtime and the UI explains why.
-      clientId: process.env.GOOGLE_CLIENT_ID ?? "",
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET ?? "",
+      // Values were sanitized above (whitespace/quotes trimmed).
+      clientId: googleClientId,
+      clientSecret: googleClientSecret,
     }),
   ],
   callbacks: {
