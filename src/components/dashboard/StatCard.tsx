@@ -12,7 +12,7 @@ type StatCardProps = {
   delay?: number;
 };
 
-export default function StatCard({ label, value, icon, sub, accent = "bg-teal-100 text-teal-700", delay = 0 }: StatCardProps) {
+export default function StatCard({ label, value, icon, sub, accent = "bg-amber-100 text-amber-700", delay = 0 }: StatCardProps) {
   return (
     <Reveal delay={delay}>
       <div className="rounded-3xl bg-white p-5 shadow-sm ring-1 ring-slate-100 transition hover:shadow-md">
