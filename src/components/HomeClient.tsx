@@ -191,7 +191,7 @@ export default function HomeClient() {
           <ProductSection accent="Smart Home" rest="Gadgets" subtitle="Useful home tech designed to make everyday living easier." products={smartHomeProducts} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
           <ShopSection filtered={filtered} category={category} sort={sort} onSortChange={setSort} maxPrice={maxPrice} onMaxPriceChange={setMaxPrice} onReset={handleResetFilters} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
           <WhyShop />
-          <section id="faq" className="mx-auto grid max-w-7xl scroll-mt-32 gap-10 px-4 py-16 lg:grid-cols-2">
+          <section id="faq" className="mx-auto grid max-w-7xl scroll-mt-32 gap-10 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-2 lg:gap-12">
             <FaqSection openFaq={openFaq} onToggleFaq={setOpenFaq} />
             <Newsletter email={email} onEmailChange={setEmail} subscribed={subscribed} onSubscribe={handleSubscribe} />
           </section>

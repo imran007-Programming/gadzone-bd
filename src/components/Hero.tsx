@@ -42,16 +42,16 @@ export default function Hero({ onQuickView }: HeroProps) {
               { v: "50K+", l: "Happy Customers" },
               { v: "COD", l: "Available" },
             ].map((s) => (
-              <div key={s.l} className="rounded-3xl border border-white/10 bg-white/5 px-5 py-3 backdrop-blur">
-                <p className="text-2xl font-black">{s.v}</p>
-                <p className="text-xs text-slate-400">{s.l}</p>
+              <div key={s.l} className="rounded-2xl border border-white/15 bg-white/[0.06] px-5 py-3.5 shadow-sm backdrop-blur-md">
+                <p className="text-2xl font-black tracking-tight">{s.v}</p>
+                <p className="mt-0.5 text-[11px] font-semibold uppercase tracking-wider text-slate-400">{s.l}</p>
               </div>
             ))}
           </motion.div>
         </motion.div>
 
         <div className="relative mt-10">
-          <p className="mb-4 text-sm font-bold tracking-wide text-violet-300">⭐ Featured Picks</p>
+          <p className="mb-4 text-xs font-bold uppercase tracking-widest text-violet-300">⭐ Featured Picks</p>
           <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
             {[PRODUCTS[0], PRODUCTS[1], PRODUCTS[2], PRODUCTS[4]].map((p, i) => (
               <motion.div
@@ -60,18 +60,18 @@ export default function Hero({ onQuickView }: HeroProps) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45, delay: 0.2 + i * 0.08, ease: "easeOut" }}
                 whileHover={{ y: -4 }}
-                className="group cursor-pointer overflow-hidden rounded-3xl bg-white text-slate-900 shadow-md transition-shadow hover:shadow-xl"
+                className="group cursor-pointer overflow-hidden rounded-2xl bg-white text-slate-900 shadow-lg ring-1 ring-white/10 transition-shadow hover:shadow-xl"
                 onClick={() => onQuickView(p)}
               >
                 <div className="relative">
                   <ProductImage product={p} />
-                  <span className="absolute left-3 top-3 rounded-full bg-amber-400 px-2.5 py-1 text-xs font-bold text-slate-950">-{discountPct(p)}%</span>
+                  <span className="absolute left-3 top-3 rounded-full bg-amber-400 px-2.5 py-1 text-xs font-bold text-slate-950 shadow-md ring-1 ring-amber-300/50">-{discountPct(p)}%</span>
                 </div>
-                <div className="p-3"><p className="truncate text-sm font-bold">{p.name}</p><p className="text-sm font-extrabold text-violet-600">{tk(p.price)} <span className="text-xs font-medium text-slate-400 line-through">{tk(p.oldPrice)}</span></p></div>
+                <div className="p-3.5"><p className="truncate text-sm font-bold tracking-tight">{p.name}</p><p className="mt-0.5 text-sm font-extrabold tracking-tight text-violet-600">{tk(p.price)} <span className="text-xs font-medium text-slate-400 line-through">{tk(p.oldPrice)}</span></p></div>
               </motion.div>
             ))}
           </div>
-          <span className="absolute -right-2 -top-3 rotate-6 rounded-full bg-amber-400 px-4 py-2 text-sm font-bold text-slate-950 shadow-lg">-45% TODAY</span>
+          <span className="absolute -right-2 -top-3 rotate-6 rounded-full bg-amber-400 px-4 py-2 text-sm font-bold text-slate-950 shadow-lg ring-1 ring-amber-300/60">-45% TODAY</span>
         </div>
       </div>
     </section>
