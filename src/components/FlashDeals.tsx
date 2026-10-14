@@ -18,25 +18,25 @@ export default function FlashDeals({ products, countdown, onQuickView, onAddToCa
   const reduce = useReducedMotion();
   return (
     <section id="flash" className="relative overflow-hidden bg-[#240f04] py-14 text-white sm:py-16">
-      <div aria-hidden className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-orange-500/25 blur-3xl" />
-      <div aria-hidden className="pointer-events-none absolute -bottom-24 -left-16 h-72 w-72 rounded-full bg-amber-600/20 blur-3xl" />
+      <div aria-hidden className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-teal-500/25 blur-3xl" />
+      <div aria-hidden className="pointer-events-none absolute -bottom-24 -left-16 h-72 w-72 rounded-full bg-cyan-600/20 blur-3xl" />
       <div className="relative mx-auto max-w-7xl px-4">
         <Reveal>
           <div className="flex flex-wrap items-end justify-between gap-3">
             <div>
               <h2 className="text-2xl font-black leading-tight tracking-tight sm:text-3xl">
-                <span className="text-orange-400">Trending</span> New Arrivals
+                <span className="text-teal-400">Trending</span> New Arrivals
               </h2>
-              <span className="mt-2.5 block h-1 w-16 rounded-full bg-gradient-to-r from-orange-500 to-amber-400" aria-hidden />
-              <p className="mt-2.5 text-sm leading-relaxed text-orange-100/80">Fresh picks, latest tech — handpicked for you.</p>
+              <span className="mt-2.5 block h-1 w-16 rounded-full bg-gradient-to-r from-teal-500 to-cyan-400" aria-hidden />
+              <p className="mt-2.5 text-sm leading-relaxed text-teal-100/80">Fresh picks, latest tech — handpicked for you.</p>
             </div>
             <div className="flex items-center gap-2 text-sm font-bold tracking-wide">
-              <span className="text-orange-200/80">Ends in</span>
-              {[hh, mm].map((v, i) => <span key={i} className="rounded-lg bg-orange-600 px-3.5 py-2 text-lg font-black tabular-nums text-white shadow-lg shadow-orange-600/30 ring-1 ring-orange-500">{v}</span>)}
+              <span className="text-teal-200/80">Ends in</span>
+              {[hh, mm].map((v, i) => <span key={i} className="rounded-lg bg-teal-600 px-3.5 py-2 text-lg font-black tabular-nums text-white shadow-lg shadow-teal-600/30 ring-1 ring-teal-500">{v}</span>)}
               <motion.span
                 animate={reduce ? undefined : { scale: [1, 1.08, 1] }}
                 transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
-                className="rounded-lg bg-orange-600 px-3.5 py-2 text-lg font-black tabular-nums text-white shadow-lg shadow-orange-600/30 ring-1 ring-orange-500"
+                className="rounded-lg bg-teal-600 px-3.5 py-2 text-lg font-black tabular-nums text-white shadow-lg shadow-teal-600/30 ring-1 ring-teal-500"
               >
                 {ss}
               </motion.span>
