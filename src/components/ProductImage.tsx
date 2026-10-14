@@ -7,7 +7,7 @@ export default function ProductImage({ product, big = false }: { product: Produc
   const [err, setErr] = useState(false);
   if (err) {
     return (
-      <div className={`flex w-full items-center justify-center bg-gradient-to-br from-amber-100 via-orange-50 to-orange-100 ${big ? "h-80" : "h-48"}`}>
+      <div className={`flex w-full items-center justify-center bg-gradient-to-br from-teal-100 via-emerald-50 to-emerald-100 ${big ? "h-80" : "h-48"}`}>
         <span className="text-6xl">🔌</span>
       </div>
     );
