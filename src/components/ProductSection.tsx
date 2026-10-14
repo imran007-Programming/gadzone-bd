@@ -16,9 +16,9 @@ type ProductSectionProps = {
 export default function ProductSection({ accent, rest, subtitle, products, onQuickView, onAddToCart }: ProductSectionProps) {
   if (products.length === 0) return null;
   return (
-    <section className="mx-auto max-w-7xl px-4 py-10 sm:py-12">
+    <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-14">
       <SectionHeader accent={accent} rest={rest} subtitle={subtitle} />
-      <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+      <div className="mt-8 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">
         {products.map((p, i) => (
           <ProductCard key={p.id} product={p} onQuickView={onQuickView} onAddToCart={onAddToCart} delay={(i % 4) * 0.05} />
         ))}
