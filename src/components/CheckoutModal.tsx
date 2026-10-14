@@ -53,24 +53,24 @@ export default function CheckoutModal({ open, orderPlaced, orderId, form, distri
                 <p className="mt-2 text-gray-600">Dhonnobad, {form.name}! Apnar order confirm hoyeche.</p>
                 <div className="mx-auto mt-4 max-w-xs rounded-3xl bg-green-50 p-4 ring-1 ring-green-100"><p className="text-sm text-gray-500">Order ID</p><p className="text-2xl font-black text-green-700">{orderId}</p><p className="mt-1 text-sm">Payment: {payMethod === "COD" ? "Cash on Delivery" : payMethod} · Delivery to {district}</p></div>
                 <p className="mt-3 text-sm text-gray-500">Amra shighroi phone-e confirm korbo. Tracking link SMS-e pathano hobe.</p>
-                <button onClick={onContinueShopping} className="mt-5 rounded-full bg-teal-600 px-8 py-3 font-bold text-white shadow-lg shadow-teal-600/30 transition hover:bg-teal-700 active:scale-[0.98]">Continue Shopping</button>
+                <button onClick={onContinueShopping} className="mt-5 rounded-full bg-orange-600 px-8 py-3 font-bold text-white shadow-lg shadow-orange-600/30 transition hover:bg-orange-700 active:scale-[0.98]">Continue Shopping</button>
               </div>
             ) : (
               <form onSubmit={onPlaceOrder}>
                 <div className="flex items-start justify-between"><h3 className="text-xl font-black">Checkout 🧾</h3><button type="button" onClick={onClose} className="text-2xl text-gray-400">×</button></div>
                 <label className="mt-4 block text-sm font-bold">Full Name *</label>
-                <input required value={form.name} onChange={(e) => onFormChange("name", e.target.value)} placeholder="e.g. Imran Hasan" className="mt-1 w-full rounded-2xl border border-slate-200 bg-white px-4 py-2.5 text-sm shadow-sm outline-none transition focus:border-teal-600 focus:ring-2 focus:ring-teal-600/20" />
+                <input required value={form.name} onChange={(e) => onFormChange("name", e.target.value)} placeholder="e.g. Imran Hasan" className="mt-1 w-full rounded-2xl border border-slate-200 bg-white px-4 py-2.5 text-sm shadow-sm outline-none transition focus:border-orange-600 focus:ring-2 focus:ring-orange-600/20" />
                 <label className="mt-3 block text-sm font-bold">Phone Number *</label>
-                <input required type="tel" value={form.phone} onChange={(e) => onFormChange("phone", e.target.value)} placeholder="01XXXXXXXXX" className="mt-1 w-full rounded-2xl border border-slate-200 bg-white px-4 py-2.5 text-sm shadow-sm outline-none transition focus:border-teal-600 focus:ring-2 focus:ring-teal-600/20" />
+                <input required type="tel" value={form.phone} onChange={(e) => onFormChange("phone", e.target.value)} placeholder="01XXXXXXXXX" className="mt-1 w-full rounded-2xl border border-slate-200 bg-white px-4 py-2.5 text-sm shadow-sm outline-none transition focus:border-orange-600 focus:ring-2 focus:ring-orange-600/20" />
                 <label className="mt-3 block text-sm font-bold">District *</label>
-                <select value={district} onChange={(e) => onDistrictChange(e.target.value)} className="mt-1 w-full rounded-2xl border border-slate-200 bg-white px-4 py-2.5 text-sm shadow-sm outline-none transition focus:border-teal-600 focus:ring-2 focus:ring-teal-600/20">{DISTRICTS.map((d) => <option key={d}>{d}</option>)}</select>
+                <select value={district} onChange={(e) => onDistrictChange(e.target.value)} className="mt-1 w-full rounded-2xl border border-slate-200 bg-white px-4 py-2.5 text-sm shadow-sm outline-none transition focus:border-orange-600 focus:ring-2 focus:ring-orange-600/20">{DISTRICTS.map((d) => <option key={d}>{d}</option>)}</select>
                 <label className="mt-3 block text-sm font-bold">Full Address *</label>
-                <textarea required value={form.address} onChange={(e) => onFormChange("address", e.target.value)} placeholder="House, road, area…" rows={2} className="mt-1 w-full rounded-2xl border border-slate-200 bg-white px-4 py-2.5 text-sm shadow-sm outline-none transition focus:border-teal-600 focus:ring-2 focus:ring-teal-600/20" />
+                <textarea required value={form.address} onChange={(e) => onFormChange("address", e.target.value)} placeholder="House, road, area…" rows={2} className="mt-1 w-full rounded-2xl border border-slate-200 bg-white px-4 py-2.5 text-sm shadow-sm outline-none transition focus:border-orange-600 focus:ring-2 focus:ring-orange-600/20" />
                 <p className="mt-4 text-sm font-bold">Payment Method</p>
                 <div className="mt-2 grid grid-cols-2 gap-2">
                   {([["COD", "💵 Cash on Delivery"], ["bKash", "📱 bKash"], ["Nagad", "🟠 Nagad"], ["Card", "💳 Card"]] as [PayMethod, string][]).map(([v, label]) => (
-                    <label key={v} className={`cursor-pointer rounded-2xl border px-3 py-2.5 text-sm font-semibold transition ${payMethod === v ? "border-teal-600 bg-teal-50 text-teal-600 shadow-sm ring-1 ring-teal-200" : "border-slate-200 hover:border-teal-300"}`}>
-                      <input type="radio" name="pay" checked={payMethod === v} onChange={() => onPayMethodChange(v)} className="mr-2 accent-teal-600" />{label}
+                    <label key={v} className={`cursor-pointer rounded-2xl border px-3 py-2.5 text-sm font-semibold transition ${payMethod === v ? "border-orange-600 bg-orange-50 text-orange-600 shadow-sm ring-1 ring-orange-200" : "border-slate-200 hover:border-orange-300"}`}>
+                      <input type="radio" name="pay" checked={payMethod === v} onChange={() => onPayMethodChange(v)} className="mr-2 accent-orange-600" />{label}
                     </label>
                   ))}
                 </div>
@@ -79,9 +79,9 @@ export default function CheckoutModal({ open, orderPlaced, orderId, form, distri
                   <div className="flex justify-between"><span>Subtotal</span><span className="font-bold">{tk(subtotal)}</span></div>
                   {discountAmt > 0 && <div className="flex justify-between text-green-600"><span>Promo discount</span><span>−{tk(discountAmt)}</span></div>}
                   <div className="flex justify-between"><span>Delivery</span><span className="font-bold">{delivery === 0 ? "FREE" : tk(delivery)}</span></div>
-                  <div className="flex justify-between border-t pt-2 text-base font-black"><span>Total</span><span className="text-teal-600">{tk(total)}</span></div>
+                  <div className="flex justify-between border-t pt-2 text-base font-black"><span>Total</span><span className="text-orange-600">{tk(total)}</span></div>
                 </div>
-                <motion.button whileTap={{ scale: 0.98 }} type="submit" className="mt-4 w-full rounded-full bg-teal-600 py-3.5 font-bold text-white shadow-lg shadow-teal-600/30 transition hover:bg-teal-700 active:scale-[0.99]">Place Order • {tk(total)} →</motion.button>
+                <motion.button whileTap={{ scale: 0.98 }} type="submit" className="mt-4 w-full rounded-full bg-orange-600 py-3.5 font-bold text-white shadow-lg shadow-orange-600/30 transition hover:bg-orange-700 active:scale-[0.99]">Place Order • {tk(total)} →</motion.button>
               </form>
             )}
           </motion.div>

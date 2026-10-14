@@ -31,8 +31,8 @@ const NAV: DashboardNavItem[] = [
 const STATUS_OPTIONS: StatusFilter[] = ["All", "Processing", "Shipped", "Delivered", "Cancelled"];
 
 const STOCK_STYLES: Record<string, string> = {
-  "In Stock": "bg-teal-100 text-teal-700",
-  "Low Stock": "bg-cyan-100 text-cyan-800",
+  "In Stock": "bg-orange-100 text-orange-700",
+  "Low Stock": "bg-amber-100 text-amber-700",
   "Only a few left": "bg-red-100 text-red-700",
 };
 
@@ -120,13 +120,13 @@ export default function AdminPage() {
         <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/90 backdrop-blur lg:static">
           <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3">
             <Link href="/" className="flex shrink-0 items-center gap-2 lg:hidden">
-              <span className="flex h-9 w-9 items-center justify-center rounded-2xl bg-teal-600 text-xl font-black text-white">G</span>
-              <span className="text-base font-black tracking-tight">Gad<span className="text-teal-600">Zone</span> BD</span>
+              <span className="flex h-9 w-9 items-center justify-center rounded-2xl bg-orange-600 text-xl font-black text-white">G</span>
+              <span className="text-base font-black tracking-tight">Gad<span className="text-orange-600">Zone</span> BD</span>
             </Link>
             <div className="min-w-0 flex-1">
               <p className="flex flex-wrap items-center gap-2 truncate text-sm font-bold text-slate-950 sm:text-base">
                 Admin Dashboard
-                <span className="rounded-full bg-cyan-400 px-2 py-0.5 text-[11px] font-black text-slate-950">ADMIN</span>
+                <span className="rounded-full bg-amber-400 px-2 py-0.5 text-[11px] font-black text-slate-950">ADMIN</span>
               </p>
               <p className="hidden text-xs text-slate-500 sm:block">Manage orders, products and customers.</p>
             </div>
@@ -135,7 +135,7 @@ export default function AdminPage() {
                 <Link href="/dashboard" className="hidden shrink-0 rounded-full px-3 py-2 text-sm font-bold text-slate-700 hover:bg-slate-100 sm:block">My Dashboard</Link>
                 {session.user.image ? (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src={session.user.image} alt="" className="h-10 w-10 shrink-0 rounded-full object-cover ring-2 ring-cyan-200" />
+                  <img src={session.user.image} alt="" className="h-10 w-10 shrink-0 rounded-full object-cover ring-2 ring-amber-200" />
                 ) : (
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-slate-950 font-black text-white">
                     {initials(session.user.name, session.user.email)}
@@ -160,14 +160,14 @@ export default function AdminPage() {
               <p className="text-4xl" aria-hidden="true">🔒</p>
               <h1 className="mt-2 text-2xl font-black text-slate-950">Access denied — admin only</h1>
               <p className="mt-2 text-sm text-slate-600">You are signed in as {session.user.email}, but this account does not have admin access.</p>
-              <Link href="/" className="mt-5 inline-block rounded-full bg-teal-600 px-6 py-3 text-sm font-bold text-white transition hover:bg-teal-700">Back to Shop</Link>
+              <Link href="/" className="mt-5 inline-block rounded-full bg-orange-600 px-6 py-3 text-sm font-bold text-white transition hover:bg-orange-700">Back to Shop</Link>
             </div>
           ) : (
             <>
               <MobileTabs nav={NAV} active={tab} onSelect={(id) => setTab(id as AdminTab)} />
 
               <Reveal>
-                <p className="mt-4 rounded-2xl bg-cyan-50 p-3 text-xs font-semibold text-cyan-800 ring-1 ring-cyan-100">
+                <p className="mt-4 rounded-2xl bg-amber-50 p-3 text-xs font-semibold text-amber-700 ring-1 ring-amber-100">
                   Demo data — orders are stored in this browser only (localStorage). A real database is needed for multi-device / multi-user orders.
                 </p>
               </Reveal>
@@ -176,9 +176,9 @@ export default function AdminPage() {
                 <div className="space-y-6 pt-5">
                   <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
                     <StatCard label="Total Revenue" value={loaded ? tk(revenue) : "—"} icon="💰" sub="Excludes cancelled orders" delay={0.05} />
-                    <StatCard label="Total Orders" value={loaded ? String(orders.length) : "—"} icon="📦" sub="All time, this browser" accent="bg-sky-100 text-sky-700" delay={0.1} />
-                    <StatCard label="Total Products" value={String(PRODUCTS.length)} icon="🛍️" sub="In the catalogue" accent="bg-cyan-100 text-cyan-700" delay={0.15} />
-                    <StatCard label="Total Customers" value={loaded ? String(customers.length) : "—"} icon="👥" sub="Distinct signed-in emails" accent="bg-teal-100 text-teal-700" delay={0.2} />
+                    <StatCard label="Total Orders" value={loaded ? String(orders.length) : "—"} icon="📦" sub="All time, this browser" accent="bg-amber-100 text-orange-700" delay={0.1} />
+                    <StatCard label="Total Products" value={String(PRODUCTS.length)} icon="🛍️" sub="In the catalogue" accent="bg-amber-100 text-amber-600" delay={0.15} />
+                    <StatCard label="Total Customers" value={loaded ? String(customers.length) : "—"} icon="👥" sub="Distinct signed-in emails" accent="bg-orange-100 text-orange-700" delay={0.2} />
                   </div>
 
                   <div className="grid gap-6 lg:grid-cols-5">
@@ -188,7 +188,7 @@ export default function AdminPage() {
                     <section className="rounded-3xl bg-white p-5 shadow-sm ring-1 ring-slate-100 lg:col-span-2">
                       <div className="flex items-center justify-between">
                         <h3 className="font-black text-slate-950">Low-stock products</h3>
-                        <button onClick={() => setTab("products")} className="text-sm font-bold text-teal-600 hover:text-teal-700">View all →</button>
+                        <button onClick={() => setTab("products")} className="text-sm font-bold text-orange-600 hover:text-orange-700">View all →</button>
                       </div>
                       {lowStock.length === 0 ? (
                         <p className="mt-4 text-sm text-slate-500">All products are well stocked. 🎉</p>
@@ -208,7 +208,7 @@ export default function AdminPage() {
                   <section>
                     <div className="mb-3 flex items-center justify-between">
                       <h2 className="text-lg font-black text-slate-950">Recent Orders</h2>
-                      <button onClick={() => setTab("orders")} className="text-sm font-bold text-teal-600 hover:text-teal-700">View all →</button>
+                      <button onClick={() => setTab("orders")} className="text-sm font-bold text-orange-600 hover:text-orange-700">View all →</button>
                     </div>
                     {!loaded ? (
                       <p className="text-sm text-slate-500">Loading orders…</p>
@@ -223,7 +223,7 @@ export default function AdminPage() {
                               <p className="truncate text-sm text-slate-500">{o.name} · {o.email}</p>
                             </div>
                             <div className="flex items-center gap-3">
-                              <span className="font-black text-teal-600">{tk(o.total)}</span>
+                              <span className="font-black text-orange-600">{tk(o.total)}</span>
                               <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-slate-700">{o.status}</span>
                             </div>
                           </div>
@@ -253,7 +253,7 @@ export default function AdminPage() {
                       value={orderSearch}
                       onChange={(e) => setOrderSearch(e.target.value)}
                       placeholder="Search by order id, name or email…"
-                      className="w-full rounded-full border border-slate-200 bg-white py-2.5 pr-3 pl-9 text-sm outline-none focus:border-teal-500"
+                      className="w-full rounded-full border border-slate-200 bg-white py-2.5 pr-3 pl-9 text-sm outline-none focus:border-orange-500"
                     />
                   </label>
 
@@ -280,11 +280,11 @@ export default function AdminPage() {
                       <h1 className="text-2xl font-black text-slate-950">Products</h1>
                       <p className="mt-1 text-sm text-slate-500">{filteredProducts.length} product{filteredProducts.length === 1 ? "" : "s"} in the catalogue</p>
                     </div>
-                    <button onClick={() => setShowAddNote((v) => !v)} className="rounded-full bg-teal-600 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-teal-700">+ Add Product</button>
+                    <button onClick={() => setShowAddNote((v) => !v)} className="rounded-full bg-orange-600 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-orange-700">+ Add Product</button>
                   </div>
 
                   {showAddNote && (
-                    <p className="rounded-2xl bg-cyan-50 p-4 text-sm font-semibold text-cyan-800 ring-1 ring-cyan-100">
+                    <p className="rounded-2xl bg-amber-50 p-4 text-sm font-semibold text-amber-700 ring-1 ring-amber-100">
                       Adding products is not wired up yet — there is no backend to save a new product. The catalogue below is read-only for now.
                     </p>
                   )}
@@ -296,7 +296,7 @@ export default function AdminPage() {
                       value={productSearch}
                       onChange={(e) => setProductSearch(e.target.value)}
                       placeholder="Search by product name or category…"
-                      className="w-full rounded-full border border-slate-200 bg-white py-2.5 pr-3 pl-9 text-sm outline-none focus:border-teal-500"
+                      className="w-full rounded-full border border-slate-200 bg-white py-2.5 pr-3 pl-9 text-sm outline-none focus:border-orange-500"
                     />
                   </label>
 
@@ -315,7 +315,7 @@ export default function AdminPage() {
                             </div>
                             <p className="mt-1 text-xs font-semibold tracking-wide text-slate-500 uppercase">{p.category}</p>
                             <div className="mt-3 flex items-center justify-between">
-                              <p className="font-black text-teal-600">{tk(p.price)} <span className="text-xs font-semibold text-slate-400 line-through">{tk(p.oldPrice)}</span></p>
+                              <p className="font-black text-orange-600">{tk(p.price)} <span className="text-xs font-semibold text-slate-400 line-through">{tk(p.oldPrice)}</span></p>
                               <p className="text-sm font-bold text-slate-700">⭐ {p.rating} <span className="font-normal text-slate-400">({p.reviews})</span></p>
                             </div>
                           </div>
@@ -339,7 +339,7 @@ export default function AdminPage() {
                       {customers.map((c) => (
                         <article key={c.email} className="rounded-3xl bg-white p-5 shadow-sm ring-1 ring-slate-100">
                           <div className="flex items-center gap-3">
-                            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-teal-600 text-base font-black text-white">
+                            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-orange-600 text-base font-black text-white">
                               {initials(c.name, c.email)}
                             </span>
                             <div className="min-w-0">
@@ -349,7 +349,7 @@ export default function AdminPage() {
                           </div>
                           <div className="mt-4 flex items-center justify-between border-t border-slate-100 pt-3 text-sm">
                             <span className="font-semibold text-slate-500">{c.orders} order{c.orders === 1 ? "" : "s"}</span>
-                            <span className="font-black text-teal-600">{tk(c.spent)}</span>
+                            <span className="font-black text-orange-600">{tk(c.spent)}</span>
                           </div>
                         </article>
                       ))}

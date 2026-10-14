@@ -5,9 +5,9 @@ import type { OrderStatus } from "@/types";
 export const STATUSES: OrderStatus[] = ["Processing", "Shipped", "Delivered", "Cancelled"];
 
 export const STATUS_STYLES: Record<OrderStatus, string> = {
-  Processing: "bg-cyan-100 text-cyan-800",
-  Shipped: "bg-sky-100 text-sky-800",
-  Delivered: "bg-teal-100 text-teal-700",
+  Processing: "bg-amber-100 text-amber-700",
+  Shipped: "bg-amber-100 text-orange-800",
+  Delivered: "bg-orange-100 text-orange-700",
   Cancelled: "bg-red-100 text-red-700",
 };
 

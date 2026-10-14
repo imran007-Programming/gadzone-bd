@@ -22,38 +22,38 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.45, delay, ease: "easeOut" }}
       whileHover={reduce ? undefined : { y: -6, scale: 1.01 }}
-      className="group relative flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-lg shadow-teal-950/[0.07] ring-1 ring-teal-900/10 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-teal-900/15 hover:ring-teal-500/40"
+      className="group relative flex h-full flex-col overflow-hidden rounded-2xl border-2 border-orange-950/15 bg-white shadow-[6px_6px_0_0_#ffedd5] transition-all duration-300 hover:-translate-y-1.5 hover:border-orange-600/40 hover:shadow-[9px_9px_0_0_#fed7aa]"
     >
-      <div className="relative bg-gradient-to-b from-teal-50 via-cyan-50/60 to-white px-3 pb-9 pt-3">
-        <div className="relative cursor-pointer overflow-hidden rounded-2xl ring-1 ring-teal-900/10" onClick={() => onQuickView(p)}>
+      <div className="relative bg-gradient-to-b from-orange-100 via-amber-50/70 to-white px-3 pb-9 pt-3">
+        <div className="relative cursor-pointer overflow-hidden rounded-xl border border-orange-950/10" onClick={() => onQuickView(p)}>
           <ProductImage product={p} />
           {p.badge === "New" && (
-            <span className="absolute left-3 top-3 rounded-full bg-slate-950 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-teal-300 shadow-md">New</span>
+            <span className="absolute left-3 top-3 rounded-md bg-[#1f0e05] px-3 py-1 text-[11px] font-black uppercase tracking-wider text-amber-300 shadow-md">New</span>
           )}
           {discountPct(p) > 0 && (
-            <span className="absolute right-3 top-3 flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-teal-500 to-cyan-600 text-[11px] font-black text-white shadow-lg shadow-teal-900/25 ring-2 ring-white/80">-{discountPct(p)}%</span>
+            <span className="absolute right-3 top-3 flex h-11 w-11 rotate-12 items-center justify-center rounded-md bg-gradient-to-br from-orange-600 to-red-600 text-[11px] font-black text-white shadow-lg shadow-orange-900/25 ring-2 ring-white/80">-{discountPct(p)}%</span>
           )}
         </div>
         <motion.button
           whileTap={{ scale: 0.9 }}
           onClick={() => onAddToCart(p.id)}
           aria-label={`Add ${p.name} to cart`}
-          className="absolute bottom-2 left-1/2 flex h-12 w-12 -translate-x-1/2 items-center justify-center rounded-full bg-gradient-to-br from-teal-500 to-cyan-600 text-lg text-white shadow-xl shadow-teal-600/40 ring-2 ring-white transition-all hover:scale-105 hover:from-teal-600 hover:to-cyan-700 active:scale-95"
+          className="absolute bottom-2 left-1/2 flex h-12 w-12 -translate-x-1/2 items-center justify-center rounded-xl border-2 border-white bg-gradient-to-br from-orange-600 to-red-600 text-lg text-white shadow-xl shadow-orange-900/40 transition-all hover:scale-105 hover:from-orange-700 hover:to-red-700 active:scale-95"
         >
           🛒
         </motion.button>
       </div>
       <div className="flex flex-1 flex-col items-start gap-1.5 px-5 pb-5 pt-2 text-left">
-        <span className="rounded-full bg-teal-50 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.16em] text-teal-700 ring-1 ring-teal-100">{p.category}</span>
-        <h3 className="cursor-pointer text-[15px] font-bold leading-snug tracking-tight text-slate-900 hover:text-teal-700" onClick={() => onQuickView(p)}>{p.name}</h3>
+        <span className="rounded-full bg-orange-50 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.16em] text-orange-700 ring-1 ring-orange-100">{p.category}</span>
+        <h3 className="cursor-pointer text-[15px] font-bold leading-snug tracking-tight text-slate-900 hover:text-orange-700" onClick={() => onQuickView(p)}>{p.name}</h3>
         <div className="flex items-center gap-1"><Stars rating={p.rating} /><span className="text-xs font-medium text-slate-500">{p.rating} ({p.reviews.toLocaleString()})</span></div>
-        <span className={`w-fit rounded-full px-3 py-1 text-[11px] font-bold ${p.stock === "In Stock" ? "bg-teal-50 text-teal-700 ring-1 ring-teal-200" : "bg-cyan-50 text-cyan-800 ring-1 ring-cyan-200"}`}>{p.stock === "In Stock" ? "● In Stock" : "⚠ " + p.stock}</span>
+        <span className={`w-fit rounded-full px-3 py-1 text-[11px] font-bold ${p.stock === "In Stock" ? "bg-orange-50 text-orange-700 ring-1 ring-orange-200" : "bg-amber-50 text-amber-700 ring-1 ring-amber-200"}`}>{p.stock === "In Stock" ? "● In Stock" : "⚠ " + p.stock}</span>
         <p className="line-clamp-2 text-[13px] leading-relaxed text-slate-500">{p.desc}</p>
         <div className="mt-auto flex w-full items-end justify-between gap-2 pt-2.5">
           <span className="text-[22px] font-black tracking-tight text-slate-900">{tk(p.price)}</span>
-          <span className="rounded-full bg-teal-600/10 px-2.5 py-1 text-xs font-bold text-teal-700 line-through decoration-teal-400">{tk(p.oldPrice)}</span>
+          <span className="rounded-full bg-orange-600/10 px-2.5 py-1 text-xs font-bold text-orange-700 line-through decoration-orange-400">{tk(p.oldPrice)}</span>
         </div>
-        <button onClick={() => onQuickView(p)} className="mt-3 w-full rounded-full bg-slate-950 px-4 py-2.5 text-xs font-bold uppercase tracking-wider text-white shadow-md transition hover:bg-teal-600 hover:shadow-lg hover:shadow-teal-600/30 active:scale-[0.98]">
+        <button onClick={() => onQuickView(p)} className="mt-3 w-full rounded-xl border-2 border-[#1f0e05] bg-[#1f0e05] px-4 py-2.5 text-xs font-bold uppercase tracking-wider text-amber-100 shadow-[3px_3px_0_0_#fed7aa] transition hover:-translate-y-0.5 hover:bg-orange-700 hover:shadow-[5px_5px_0_0_#fdba74] active:translate-y-0 active:shadow-none">
           View details
         </button>
       </div>
