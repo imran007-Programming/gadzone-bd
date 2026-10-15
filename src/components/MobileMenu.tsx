@@ -50,7 +50,7 @@ export default function MobileMenu({ open, onClose, category, onCategoryChange }
           >
             <div className="flex items-center justify-between border-b border-slate-100 px-5 py-4">
               <span className="text-lg font-black text-slate-900">
-                Gad<span className="text-teal-600">Zone</span> BD
+                Gad<span className="text-violet-600">Zone</span> BD
               </span>
               <button onClick={onClose} className="rounded-full px-2 text-2xl text-slate-400 transition hover:bg-slate-100 hover:text-slate-900" aria-label="Close menu">×</button>
             </div>
@@ -59,7 +59,7 @@ export default function MobileMenu({ open, onClose, category, onCategoryChange }
                 <button
                   key={t}
                   onClick={() => setTab(t)}
-                  className={`flex-1 py-3.5 text-sm font-bold uppercase tracking-wide transition-colors ${tab === t ? "border-b-2 border-teal-600 bg-teal-50/50 text-teal-600" : "text-slate-500 hover:text-slate-800"}`}
+                  className={`flex-1 py-3.5 text-sm font-bold uppercase tracking-wide transition-colors ${tab === t ? "border-b-2 border-violet-600 bg-violet-50/50 text-violet-600" : "text-slate-500 hover:text-slate-800"}`}
                 >
                   {t === "categories" ? "Categories" : "Menu"}
                 </button>
@@ -76,7 +76,7 @@ export default function MobileMenu({ open, onClose, category, onCategoryChange }
                           document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" });
                           onClose();
                         }}
-                        className={`flex w-full items-center justify-between px-5 py-4 text-left text-[15px] font-semibold transition hover:bg-teal-50/60 ${category === c ? "text-teal-600" : "text-slate-800"}`}
+                        className={`flex w-full items-center justify-between px-5 py-4 text-left text-[15px] font-semibold transition hover:bg-violet-50/60 ${category === c ? "text-violet-600" : "text-slate-800"}`}
                       >
                         {c === "All" ? "All Products" : c}
                         <span className="text-slate-300">›</span>
@@ -90,7 +90,7 @@ export default function MobileMenu({ open, onClose, category, onCategoryChange }
                     <li key={link.label}>
                       <button
                         onClick={() => scrollTo(link.target)}
-                        className="flex w-full items-center justify-between px-5 py-4 text-left text-[15px] font-semibold text-slate-800 transition hover:bg-teal-50/60"
+                        className="flex w-full items-center justify-between px-5 py-4 text-left text-[15px] font-semibold text-slate-800 transition hover:bg-violet-50/60"
                       >
                         {link.label}
                         <span className="text-slate-300">›</span>
