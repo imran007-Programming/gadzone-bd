@@ -28,7 +28,7 @@ export default function WeeklyChart({ orders }: { orders: StoredOrder[] }) {
     <div className="rounded-3xl bg-white p-5 shadow-sm ring-1 ring-slate-100">
       <div className="flex items-baseline justify-between gap-3">
         <h3 className="font-black text-slate-950">Orders — last 7 days</h3>
-        <p className="text-sm font-bold text-orange-600">{total} order{total === 1 ? "" : "s"}</p>
+        <p className="text-sm font-bold text-teal-600">{total} order{total === 1 ? "" : "s"}</p>
       </div>
       {total === 0 ? (
         <p className="mt-4 text-sm text-slate-500">No orders in the last 7 days yet. New orders will appear here as bars.</p>
@@ -38,7 +38,7 @@ export default function WeeklyChart({ orders }: { orders: StoredOrder[] }) {
           <div key={i} className="flex flex-1 flex-col items-center gap-2">
             <span className="text-xs font-bold text-slate-600">{d.count}</span>
             <div
-              className={`w-full max-w-10 rounded-t-xl transition-all ${i === days.length - 1 ? "bg-orange-600" : "bg-slate-950/80"}`}
+              className={`w-full max-w-10 rounded-t-xl transition-all ${i === days.length - 1 ? "bg-teal-600" : "bg-slate-950/80"}`}
               style={{ height: `${Math.max(d.count === 0 ? 4 : (d.count / max) * 100, 4)}%` }}
             />
             <span className="text-xs font-semibold text-slate-500">{d.label}</span>

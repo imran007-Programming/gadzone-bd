@@ -48,13 +48,13 @@ export default function HelpSheet({ open, onClose, onViewAllFaq }: HelpSheetProp
                 </div>
               ))}
             </div>
-            <div className="mt-4 rounded-2xl bg-orange-50 p-4 ring-1 ring-orange-100">
+            <div className="mt-4 rounded-2xl bg-teal-50 p-4 ring-1 ring-teal-100">
               <p className="font-bold text-slate-900">Still need help?</p>
               <p className="mt-1 text-sm text-slate-600">📞 +880 1700-000000<br />✉️ hello@gadzonebd.example</p>
             </div>
             <button
               onClick={onViewAllFaq}
-              className="mt-4 w-full rounded-full bg-orange-600 py-3 font-bold text-white shadow-lg shadow-orange-600/30 transition hover:bg-orange-700 active:scale-[0.99]"
+              className="mt-4 w-full rounded-full bg-teal-600 py-3 font-bold text-white shadow-lg shadow-teal-600/30 transition hover:bg-teal-700 active:scale-[0.99]"
             >
               View all FAQs
             </button>
