@@ -20,12 +20,12 @@ export default function FaqSection({ openFaq, onToggleFaq }: FaqSectionProps) {
   const reduce = useReducedMotion();
   return (
     <Reveal>
-      <span className="text-xs font-bold uppercase tracking-widest text-lime-600">Need Help?</span>
+      <span className="text-xs font-bold uppercase tracking-widest text-rose-600">Need Help?</span>
       <h2 className="mt-2 text-3xl font-black leading-tight tracking-tight text-slate-900 sm:text-[2rem]">❓ Frequently Asked Questions</h2>
       <div className="mt-5 space-y-3">
         {FAQS.map((f, i) => (
-          <div key={i} className="overflow-hidden rounded-2xl border border-lime-100 bg-white shadow-sm ring-1 ring-lime-100/60">
-            <button onClick={() => onToggleFaq(openFaq === i ? null : i)} className="flex w-full items-center justify-between gap-3 px-5 py-4 text-left text-[15px] font-bold tracking-tight transition hover:bg-lime-50/60 sm:px-6">{f.q}<span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-lime-50 text-base text-lime-600">{openFaq === i ? "−" : "+"}</span></button>
+          <div key={i} className="overflow-hidden rounded-2xl border border-rose-100 bg-white shadow-sm ring-1 ring-rose-100/60">
+            <button onClick={() => onToggleFaq(openFaq === i ? null : i)} className="flex w-full items-center justify-between gap-3 px-5 py-4 text-left text-[15px] font-bold tracking-tight transition hover:bg-rose-50/60 sm:px-6">{f.q}<span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-rose-50 text-base text-rose-600">{openFaq === i ? "−" : "+"}</span></button>
             <AnimatePresence initial={false}>
               {openFaq === i && (
                 <motion.div
@@ -35,7 +35,7 @@ export default function FaqSection({ openFaq, onToggleFaq }: FaqSectionProps) {
                   transition={{ duration: 0.25, ease: "easeOut" }}
                   className="overflow-hidden"
                 >
-                  <p className="bg-lime-50/50 px-5 pb-4 pt-1 text-sm leading-relaxed text-slate-600 sm:px-6">{f.a}</p>
+                  <p className="bg-rose-50/50 px-5 pb-4 pt-1 text-sm leading-relaxed text-slate-600 sm:px-6">{f.a}</p>
                 </motion.div>
               )}
             </AnimatePresence>

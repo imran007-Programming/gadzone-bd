@@ -53,11 +53,11 @@ export default function OrderCard({ order, showCustomer, statusEditable, onStatu
       <p className="mt-3 truncate text-sm text-slate-600">{summary || "No items"}</p>
 
       <div className="mt-3 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 pt-3">
-        <button onClick={() => setExpanded((v) => !v)} aria-expanded={expanded} className="text-sm font-bold text-lime-600 hover:text-lime-700">
+        <button onClick={() => setExpanded((v) => !v)} aria-expanded={expanded} className="text-sm font-bold text-rose-600 hover:text-rose-700">
           {expanded ? "Hide details ↑" : "View details ↓"}
         </button>
         <p className="text-sm font-bold text-slate-950">
-          Total <span className="ml-1 text-base text-lime-600">{tk(order.total)}</span>
+          Total <span className="ml-1 text-base text-rose-600">{tk(order.total)}</span>
         </p>
       </div>
 

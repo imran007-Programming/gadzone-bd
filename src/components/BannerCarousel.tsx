@@ -115,7 +115,7 @@ export default function BannerCarousel() {
       aria-roledescription="carousel"
       aria-label="Featured offers"
     >
-      <div className="relative overflow-hidden rounded-3xl shadow-2xl shadow-lime-950/40 ring-1 ring-lime-950/15">
+      <div className="relative overflow-hidden rounded-3xl shadow-2xl shadow-rose-950/40 ring-1 ring-rose-950/15">
         <AnimatePresence initial={false} custom={direction} mode="wait">
           <motion.div
             key={slide.id}
@@ -155,23 +155,23 @@ export default function BannerCarousel() {
             {/* Cool lagoon gradient overlay for readable text */}
             <div
               aria-hidden
-              className="absolute inset-0 bg-gradient-to-br from-[#171717]/95 via-[#171717]/45 to-yellow-900/20"
+              className="absolute inset-0 bg-gradient-to-br from-[#171717]/95 via-[#171717]/45 to-amber-900/20"
             />
             <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#0c0a09]/80 via-transparent to-transparent" />
             {/* Slide copy */}
             <div className="absolute inset-0 flex flex-col justify-center px-6 text-white sm:px-10 lg:px-14">
-              <span className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-lime-500 to-yellow-500 px-5 py-1.5 text-xs font-black uppercase tracking-[0.18em] text-white shadow-lg shadow-black/25 ring-1 ring-white/30">
+              <span className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-rose-500 to-amber-500 px-5 py-1.5 text-xs font-black uppercase tracking-[0.18em] text-white shadow-lg shadow-black/25 ring-1 ring-white/30">
                 {slide.eyebrow}
               </span>
               <h2 className="mt-5 max-w-xl text-4xl font-black leading-[1.05] tracking-tight drop-shadow-sm sm:text-5xl">
                 {slide.headline}
-                <span className="mt-2.5 block text-xl font-bold tracking-tight text-lime-200 drop-shadow-sm sm:text-2xl">{slide.accent}</span>
+                <span className="mt-2.5 block text-xl font-bold tracking-tight text-rose-200 drop-shadow-sm sm:text-2xl">{slide.accent}</span>
               </h2>
-              <p className="mt-4 max-w-md text-base leading-relaxed text-lime-50/90 drop-shadow-sm">{slide.subtext}</p>
+              <p className="mt-4 max-w-md text-base leading-relaxed text-rose-50/90 drop-shadow-sm">{slide.subtext}</p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <a
                   href="#shop"
-                  className="rounded-full bg-gradient-to-r from-lime-500 to-yellow-500 px-7 py-3.5 font-bold text-white shadow-lg shadow-lime-900/40 ring-1 ring-white/30 transition hover:from-lime-400 hover:to-yellow-500 hover:shadow-xl active:scale-[0.98]"
+                  className="rounded-full bg-gradient-to-r from-rose-500 to-amber-500 px-7 py-3.5 font-bold text-white shadow-lg shadow-rose-900/40 ring-1 ring-white/30 transition hover:from-rose-400 hover:to-amber-500 hover:shadow-xl active:scale-[0.98]"
                 >
                   Shop Now →
                 </a>
@@ -216,7 +216,7 @@ export default function BannerCarousel() {
             aria-label={`Go to slide ${i + 1}: ${s.eyebrow}`}
             onClick={() => goTo(i, i > index ? 1 : -1)}
             className={`h-2.5 rounded-full transition-all ${
-              i === index ? "w-9 bg-lime-600 shadow-sm" : "w-2.5 bg-lime-950/20 hover:bg-lime-950/35"
+              i === index ? "w-9 bg-rose-600 shadow-sm" : "w-2.5 bg-rose-950/20 hover:bg-rose-950/35"
             }`}
           />
         ))}

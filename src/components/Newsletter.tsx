@@ -14,18 +14,18 @@ type NewsletterProps = {
 export default function Newsletter({ email, onEmailChange, subscribed, onSubscribe }: NewsletterProps) {
   return (
     <Reveal>
-      <div className="relative flex flex-col justify-center overflow-hidden rounded-2xl border-2 border-neutral-900 bg-[#171717] p-8 text-white shadow-[6px_6px_0_#65a30d] sm:p-10">
-        <div aria-hidden className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-lime-500/30 blur-3xl" />
+      <div className="relative flex flex-col justify-center overflow-hidden rounded-2xl border-2 border-neutral-900 bg-[#171717] p-8 text-white shadow-[6px_6px_0_#e11d48] sm:p-10">
+        <div aria-hidden className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-rose-500/30 blur-3xl" />
         <div className="relative">
-          <span className="text-xs font-bold uppercase tracking-widest text-yellow-400">Newsletter</span>
+          <span className="text-xs font-bold uppercase tracking-widest text-amber-400">Newsletter</span>
           <h2 className="mt-2 text-2xl font-black leading-tight tracking-tight sm:text-[1.75rem]">Get Exclusive Deals 🎁</h2>
           <p className="mt-2.5 text-sm leading-relaxed text-slate-300">Newsletter-e join korun — notun product, flash sale ar secret discount code age paben.</p>
           {subscribed ? (
-            <p className="mt-5 rounded-2xl bg-lime-500/20 p-4 font-bold text-lime-300 ring-1 ring-lime-400/30">✅ Subscribed! Welcome to GadZone BD family.</p>
+            <p className="mt-5 rounded-2xl bg-rose-500/20 p-4 font-bold text-rose-300 ring-1 ring-rose-400/30">✅ Subscribed! Welcome to GadZone BD family.</p>
           ) : (
             <form className="mt-5 flex flex-col gap-3 sm:flex-row" onSubmit={onSubscribe}>
-              <input type="email" required value={email} onChange={(e) => onEmailChange(e.target.value)} placeholder="Your email address" className="flex-1 rounded-full bg-white/10 px-5 py-3.5 text-sm text-white outline-none ring-1 ring-white/15 placeholder:text-slate-400 transition focus:bg-white/15 focus:ring-2 focus:ring-lime-400" />
-              <motion.button whileTap={{ scale: 0.96 }} className="rounded-full bg-lime-600 px-6 py-3 font-bold shadow-lg shadow-lime-600/30 transition hover:bg-lime-500 active:scale-[0.98]">Subscribe</motion.button>
+              <input type="email" required value={email} onChange={(e) => onEmailChange(e.target.value)} placeholder="Your email address" className="flex-1 rounded-full bg-white/10 px-5 py-3.5 text-sm text-white outline-none ring-1 ring-white/15 placeholder:text-slate-400 transition focus:bg-white/15 focus:ring-2 focus:ring-rose-400" />
+              <motion.button whileTap={{ scale: 0.96 }} className="rounded-full bg-rose-600 px-6 py-3 font-bold shadow-lg shadow-rose-600/30 transition hover:bg-rose-500 active:scale-[0.98]">Subscribe</motion.button>
             </form>
           )}
           <p className="mt-3.5 text-xs text-slate-400/90">No spam, only deals. Unsubscribe anytime.</p>
