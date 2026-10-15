@@ -22,7 +22,7 @@ export default function SignInPrompt({ title, text, callbackUrl }: SignInPromptP
         <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-base font-black shadow">G</span>
         Continue with Google
       </button>
-      <Link href="/" className="mt-4 inline-block text-sm font-bold text-violet-600">← Back to shop</Link>
+      <Link href="/" className="mt-4 inline-block text-sm font-bold text-orange-600">← Back to shop</Link>
     </div>
   );
 }
