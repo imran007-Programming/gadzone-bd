@@ -21,9 +21,9 @@ export default function DashboardSidebar({ nav, active, onSelect, badge, userNam
   return (
     <aside className="sticky top-0 hidden h-screen w-72 shrink-0 flex-col border-r border-slate-200 bg-slate-950 p-5 text-white lg:flex">
       <Link href="/" className="flex items-center gap-2">
-        <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-rose-600 text-xl font-black text-white">G</span>
+        <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-600 text-xl font-black text-white">G</span>
         <span className="text-lg font-black tracking-tight">
-          Gad<span className="text-rose-500">Zone</span> BD
+          Gad<span className="text-emerald-500">Zone</span> BD
         </span>
         {badge && <span className="rounded-full bg-amber-400 px-2 py-0.5 text-[11px] font-black text-slate-950">{badge}</span>}
       </Link>
@@ -37,7 +37,7 @@ export default function DashboardSidebar({ nav, active, onSelect, badge, userNam
               onClick={() => onSelect(item.id)}
               aria-current={isActive ? "page" : undefined}
               className={`flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-left text-sm font-bold transition ${
-                isActive ? "bg-rose-600 text-white shadow-lg shadow-rose-600/30" : "text-slate-300 hover:bg-white/10 hover:text-white"
+                isActive ? "bg-emerald-600 text-white shadow-lg shadow-emerald-600/30" : "text-slate-300 hover:bg-white/10 hover:text-white"
               }`}
             >
               <span className="text-lg" aria-hidden="true">{item.icon}</span>
@@ -62,7 +62,7 @@ export default function DashboardSidebar({ nav, active, onSelect, badge, userNam
             // eslint-disable-next-line @next/next/no-img-element
             <img src={userImage} alt="" className="h-10 w-10 shrink-0 rounded-full object-cover" />
           ) : (
-            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-rose-600 text-base font-black text-white">
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-base font-black text-white">
               {initials(userName, userEmail)}
             </span>
           )}
