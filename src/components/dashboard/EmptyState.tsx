@@ -18,12 +18,12 @@ export default function EmptyState({ icon, title, text, actionLabel, actionHref,
       <p className="mt-3 font-black text-slate-950">{title}</p>
       <p className="mx-auto mt-1 max-w-sm text-sm text-slate-500">{text}</p>
       {actionLabel && actionHref && (
-        <Link href={actionHref} className="mt-4 inline-block rounded-full bg-rose-600 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-rose-700">
+        <Link href={actionHref} className="mt-4 inline-block rounded-full bg-yellow-500 px-5 py-2.5 text-sm font-bold text-neutral-950 transition hover:bg-yellow-600">
           {actionLabel}
         </Link>
       )}
       {actionLabel && !actionHref && onAction && (
-        <button onClick={onAction} className="mt-4 inline-block rounded-full bg-rose-600 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-rose-700">
+        <button onClick={onAction} className="mt-4 inline-block rounded-full bg-yellow-500 px-5 py-2.5 text-sm font-bold text-neutral-950 transition hover:bg-yellow-600">
           {actionLabel}
         </button>
       )}
