@@ -32,11 +32,11 @@ export default function Header({ query, onQueryChange, category, onCategoryChang
       <div className="mx-auto max-w-7xl px-4 pt-3 sm:px-6">
         <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-2">
           <div className="flex items-center gap-1">
-            <button onClick={onMenuOpen} className="rounded-full p-2 text-xl text-slate-800 transition hover:bg-teal-50 hover:text-teal-600" aria-label="Open menu">☰</button>
+            <button onClick={onMenuOpen} className="rounded-full p-2 text-xl text-slate-800 transition hover:bg-blue-50 hover:text-blue-600" aria-label="Open menu">☰</button>
           </div>
           <a href="#" className="flex items-center justify-center gap-2">
-            <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-500 to-zinc-800 text-xl font-black text-white shadow-md shadow-teal-500/30 ring-2 ring-teal-300/60">G</span>
-            <span className="leading-none"><span className="block text-lg font-black tracking-tight text-slate-900 sm:text-xl">Gad<span className="text-teal-500">Zone</span> BD</span>
+            <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-zinc-800 text-xl font-black text-white shadow-md shadow-blue-500/30 ring-2 ring-blue-300/60">G</span>
+            <span className="leading-none"><span className="block text-lg font-black tracking-tight text-slate-900 sm:text-xl">Gad<span className="text-blue-500">Zone</span> BD</span>
             <span className="hidden text-[11px] font-medium text-slate-500 sm:block">Gadgets in Bangladesh</span></span>
           </a>
           <div className="flex items-center justify-end gap-1 sm:gap-2">
@@ -47,7 +47,7 @@ export default function Header({ query, onQueryChange, category, onCategoryChang
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src={session.user.image} alt="" className="h-8 w-8 rounded-full object-cover" />
                   ) : (
-                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-teal-500 text-sm font-black text-white">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-500 text-sm font-black text-white">
                       {(session.user.name ?? session.user.email ?? "G").slice(0, 1).toUpperCase()}
                     </span>
                   )}
@@ -55,25 +55,25 @@ export default function Header({ query, onQueryChange, category, onCategoryChang
                 </Link>
                 <Link href="/dashboard" className="hidden rounded-full px-3 py-1.5 text-xs font-bold text-slate-700 hover:bg-slate-100 md:inline-flex">Dashboard</Link>
                 {session.user.role === "admin" && (
-                  <Link href="/admin" className="hidden rounded-md bg-teal-500 px-3 py-1.5 text-xs font-black text-white hover:bg-teal-400 md:inline-flex">Admin</Link>
+                  <Link href="/admin" className="hidden rounded-md bg-blue-500 px-3 py-1.5 text-xs font-black text-white hover:bg-blue-400 md:inline-flex">Admin</Link>
                 )}
                 <button onClick={() => signOut({ callbackUrl: "/" })} className="hidden rounded-full px-3 py-1.5 text-xs font-bold text-slate-700 hover:bg-slate-100 md:inline-flex">Sign out</button>
                 <button onClick={() => signOut({ callbackUrl: "/" })} className="rounded-full p-2 text-lg text-slate-800 hover:bg-slate-100 md:hidden" aria-label="Sign out">↪</button>
               </>
             ) : (
-              <button onClick={onAccountOpen} className="rounded-full bg-teal-500 px-5 py-2 text-sm font-bold text-white shadow-sm shadow-teal-500/30 transition hover:bg-teal-600 active:scale-[0.98]">Sign in</button>
+              <button onClick={onAccountOpen} className="rounded-full bg-blue-500 px-5 py-2 text-sm font-bold text-white shadow-sm shadow-blue-500/30 transition hover:bg-blue-600 active:scale-[0.98]">Sign in</button>
             )}
-            <span className="hidden rounded-full bg-teal-50 px-3 py-1.5 text-xs font-bold text-teal-500 ring-1 ring-teal-100 md:inline-flex">bKash ✓</span>
-            <span className="hidden rounded-full bg-teal-50 px-3 py-1.5 text-xs font-bold text-teal-600 ring-1 ring-teal-100 md:inline-flex">COD ✓</span>
-            <motion.button whileTap={{ scale: 0.94 }} onClick={onCartOpen} className="relative rounded-full bg-[#09090b] px-3 py-2.5 text-sm font-bold text-white shadow-sm shadow-zinc-950/30 ring-2 ring-teal-300/40 transition hover:bg-zinc-800 active:scale-[0.98] sm:px-4">
+            <span className="hidden rounded-full bg-blue-50 px-3 py-1.5 text-xs font-bold text-blue-500 ring-1 ring-blue-100 md:inline-flex">bKash ✓</span>
+            <span className="hidden rounded-full bg-blue-50 px-3 py-1.5 text-xs font-bold text-blue-600 ring-1 ring-blue-100 md:inline-flex">COD ✓</span>
+            <motion.button whileTap={{ scale: 0.94 }} onClick={onCartOpen} className="relative rounded-full bg-[#09090b] px-3 py-2.5 text-sm font-bold text-white shadow-sm shadow-zinc-950/30 ring-2 ring-blue-300/40 transition hover:bg-zinc-800 active:scale-[0.98] sm:px-4">
               <span className="hidden sm:inline">🛒 Cart</span>
               <span className="sm:hidden">🛒</span>
-              {cartCount > 0 && <span className="absolute -right-1.5 -top-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-teal-500 text-xs font-bold text-white ring-2 ring-white">{cartCount}</span>}
+              {cartCount > 0 && <span className="absolute -right-1.5 -top-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-blue-500 text-xs font-bold text-white ring-2 ring-white">{cartCount}</span>}
             </motion.button>
           </div>
         </div>
         <form
-          className="mt-3 flex items-center gap-2 rounded-full border-2 border-slate-200 bg-white p-1.5 pl-2 shadow-md shadow-slate-900/5 transition focus-within:border-teal-500 focus-within:ring-4 focus-within:ring-teal-500/15"
+          className="mt-3 flex items-center gap-2 rounded-full border-2 border-slate-200 bg-white p-1.5 pl-2 shadow-md shadow-slate-900/5 transition focus-within:border-blue-500 focus-within:ring-4 focus-within:ring-blue-500/15"
           onSubmit={(e) => {
             e.preventDefault();
             document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" });
@@ -86,14 +86,14 @@ export default function Header({ query, onQueryChange, category, onCategoryChang
             className="min-w-0 flex-1 bg-transparent px-3 py-1.5 text-sm outline-none placeholder:text-slate-400"
             aria-label="Search for products"
           />
-          <button type="submit" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-teal-500 text-base text-white shadow-md shadow-teal-500/30 transition hover:bg-teal-600 active:scale-95" aria-label="Search">🔍</button>
+          <button type="submit" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-500 text-base text-white shadow-md shadow-blue-500/30 transition hover:bg-blue-600 active:scale-95" aria-label="Search">🔍</button>
         </form>
       </div>
       <nav className="mt-3 border-t border-slate-100">
         <div className="no-scrollbar mx-auto flex max-w-7xl gap-1.5 overflow-x-auto px-4 py-2.5 sm:px-6">
           {CATEGORIES.map((c) => (
             <motion.button whileTap={{ scale: 0.96 }} key={c} onClick={() => { onCategoryChange(c); document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" }); }}
-              className={`whitespace-nowrap rounded-full px-4 py-2 text-sm font-semibold transition active:scale-95 ${category === c ? "bg-teal-500 text-white shadow-md shadow-teal-500/30 ring-2 ring-teal-500" : "text-slate-600 hover:bg-teal-50 hover:text-teal-600"}`}>{c}</motion.button>
+              className={`whitespace-nowrap rounded-full px-4 py-2 text-sm font-semibold transition active:scale-95 ${category === c ? "bg-blue-500 text-white shadow-md shadow-blue-500/30 ring-2 ring-blue-500" : "text-slate-600 hover:bg-blue-50 hover:text-blue-600"}`}>{c}</motion.button>
           ))}
         </div>
       </nav>
