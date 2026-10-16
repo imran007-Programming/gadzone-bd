@@ -24,13 +24,13 @@ export default function Hero({ onQuickView }: HeroProps) {
   const reduce = useReducedMotion();
   const anim = reduce ? { initial: false } : {};
   return (
-    <section className="relative overflow-hidden bg-green-950 text-white">
-      {/* forest matcha: deep green gradient + soft light pools */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-br from-green-950 via-green-900 to-green-950" />
-      <div aria-hidden className="pointer-events-none absolute -top-36 right-[-8rem] h-[28rem] w-[28rem] rounded-full bg-green-500/25 blur-3xl" />
+    <section className="relative overflow-hidden bg-stone-950 text-white">
+      {/* midnight ember: deep ink gradient + ember glow pools */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-br from-stone-950 via-stone-900 to-stone-950" />
+      <div aria-hidden className="pointer-events-none absolute -top-36 right-[-8rem] h-[28rem] w-[28rem] rounded-full bg-orange-500/25 blur-3xl" />
       <div aria-hidden className="pointer-events-none absolute top-64 -left-32 h-[24rem] w-[24rem] rounded-full bg-amber-400/20 blur-3xl" />
-      {/* dotted leaf texture */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 opacity-30 [background-image:radial-gradient(rgba(187,247,208,0.22)_1.5px,transparent_1.5px)] [background-size:26px_26px]" />
+      {/* ember spark texture */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 opacity-30 [background-image:radial-gradient(rgba(254,215,170,0.22)_1.5px,transparent_1.5px)] [background-size:26px_26px]" />
       {/* warm amber top accent strip */}
       <div aria-hidden className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-amber-300 via-amber-400 to-amber-300" />
 
@@ -50,10 +50,10 @@ export default function Hero({ onQuickView }: HeroProps) {
               { v: "COD", l: "Available" },
             ].map((s) => (
               <div key={s.l} className="flex items-center gap-3 border-2 border-amber-300/40 bg-white/10 py-2 pl-2 pr-7 shadow-[4px_4px_0_0_rgba(0,0,0,0.35)] backdrop-blur-md">
-                <span className="flex h-11 w-11 items-center justify-center border-2 border-amber-300 bg-green-800 text-base font-black text-amber-300">{s.v.replace("+", "").replace("K", "")[0]}</span>
+                <span className="flex h-11 w-11 items-center justify-center border-2 border-amber-300 bg-orange-900 text-base font-black text-amber-300">{s.v.replace("+", "").replace("K", "")[0]}</span>
                 <span>
                   <span className="block text-lg font-black leading-none tracking-tight text-white">{s.v}</span>
-                  <span className="mt-1 block text-[10px] font-extrabold uppercase tracking-[0.14em] text-green-200">{s.l}</span>
+                  <span className="mt-1 block text-[10px] font-extrabold uppercase tracking-[0.14em] text-orange-200">{s.l}</span>
                 </span>
               </div>
             ))}
@@ -62,10 +62,10 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-5 flex items-center gap-3">
-            <span className="flex h-9 w-9 items-center justify-center border-2 border-amber-300 bg-amber-400 text-sm text-green-950">🌿</span>
-            <p className="text-sm font-black uppercase tracking-[0.2em] text-white">Featured <span className="bg-amber-400 px-3 py-1 text-green-950">Picks</span></p>
+            <span className="flex h-9 w-9 items-center justify-center border-2 border-amber-300 bg-amber-400 text-sm text-stone-950">🌿</span>
+            <p className="text-sm font-black uppercase tracking-[0.2em] text-white">Featured <span className="bg-amber-400 px-3 py-1 text-stone-950">Picks</span></p>
             <span className="flex flex-1 flex-col gap-1" aria-hidden>
-              <span className="h-[3px] w-full bg-gradient-to-r from-amber-400 via-green-400 to-transparent" />
+              <span className="h-[3px] w-full bg-gradient-to-r from-amber-400 via-orange-400 to-transparent" />
               <span className="h-[2px] w-2/3 bg-white/15" />
             </span>
           </div>
@@ -77,20 +77,20 @@ export default function Hero({ onQuickView }: HeroProps) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45, delay: 0.2 + i * 0.08, ease: "easeOut" }}
                 whileHover={{ y: -8 }}
-                className="group cursor-pointer border-2 border-green-950 bg-white p-2.5 shadow-[5px_5px_0_0_#14532d] transition-all hover:-translate-y-1.5 hover:shadow-[8px_8px_0_0_#14532d]"
+                className="group cursor-pointer border-2 border-stone-950 bg-white p-2.5 shadow-[5px_5px_0_0_#14532d] transition-all hover:-translate-y-1.5 hover:shadow-[8px_8px_0_0_#14532d]"
                 onClick={() => onQuickView(p)}
               >
                 <div className="relative">
-                  <div className="overflow-hidden border border-green-100 bg-gradient-to-b from-green-50 to-white">
+                  <div className="overflow-hidden border border-orange-100 bg-gradient-to-b from-orange-50 to-white">
                     <ProductImage product={p} />
                   </div>
-                  <span className="absolute right-2 top-2 bg-green-700 px-3 py-1 text-[11px] font-black text-white">-{discountPct(p)}%</span>
+                  <span className="absolute right-2 top-2 bg-orange-700 px-3 py-1 text-[11px] font-black text-white">-{discountPct(p)}%</span>
                 </div>
-                <div className="px-2 pb-1.5 pt-3 text-center"><p className="truncate text-sm font-bold tracking-tight text-slate-900">{p.name}</p><p className="mt-1 text-base font-extrabold tracking-tight text-green-800">{tk(p.price)} <span className="text-xs font-medium text-slate-400 line-through">{tk(p.oldPrice)}</span></p></div>
+                <div className="px-2 pb-1.5 pt-3 text-center"><p className="truncate text-sm font-bold tracking-tight text-slate-900">{p.name}</p><p className="mt-1 text-base font-extrabold tracking-tight text-orange-900">{tk(p.price)} <span className="text-xs font-medium text-slate-400 line-through">{tk(p.oldPrice)}</span></p></div>
               </motion.div>
             ))}
           </div>
-          <span className="absolute -top-5 right-2 -rotate-2 border-2 border-green-950 bg-amber-400 px-5 py-2 text-sm font-black tracking-wide text-green-950 shadow-[4px_4px_0_0_rgba(0,0,0,0.4)]">-45% TODAY</span>
+          <span className="absolute -top-5 right-2 -rotate-2 border-2 border-stone-950 bg-amber-400 px-5 py-2 text-sm font-black tracking-wide text-stone-950 shadow-[4px_4px_0_0_rgba(0,0,0,0.4)]">-45% TODAY</span>
         </div>
       </div>
 
