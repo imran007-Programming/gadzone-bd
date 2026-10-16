@@ -75,21 +75,21 @@ export default function AccountModal({ open, onClose }: AccountModalProps) {
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src={session.user.image} alt="" className="h-12 w-12 rounded-full object-cover" />
                   ) : (
-                    <span className="flex h-12 w-12 items-center justify-center rounded-full bg-orange-600 text-lg font-black text-white">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-full bg-rose-700 text-lg font-black text-white">
                       {(session.user.name ?? session.user.email ?? "G").slice(0, 1).toUpperCase()}
                     </span>
                   )}
                   <div className="min-w-0">
                     <p className="truncate font-bold text-slate-900">{session.user.name ?? "Signed in"}</p>
                     <p className="truncate text-sm text-slate-500">{session.user.email}</p>
-                    <span className="mt-1 inline-block rounded-full bg-orange-100 px-2.5 py-0.5 text-xs font-bold text-orange-700 capitalize">{session.user.role ?? "customer"}</span>
+                    <span className="mt-1 inline-block rounded-full bg-rose-100 px-2.5 py-0.5 text-xs font-bold text-rose-800 capitalize">{session.user.role ?? "customer"}</span>
                   </div>
                 </div>
-                <Link href="/dashboard" onClick={close} className="mt-4 block rounded-full bg-orange-600 py-3 text-center font-bold text-white shadow-md shadow-orange-600/25 transition hover:bg-orange-700 active:scale-[0.99]">
+                <Link href="/dashboard" onClick={close} className="mt-4 block rounded-full bg-rose-700 py-3 text-center font-bold text-white shadow-md shadow-rose-700/25 transition hover:bg-rose-800 active:scale-[0.99]">
                   Go to My Dashboard
                 </Link>
                 {session.user.role === "admin" && (
-                  <Link href="/admin" onClick={close} className="mt-3 block rounded-lg bg-orange-600 py-3 text-center font-black text-white shadow-sm transition hover:bg-orange-500 active:scale-[0.99]">
+                  <Link href="/admin" onClick={close} className="mt-3 block rounded-lg bg-rose-700 py-3 text-center font-black text-white shadow-sm transition hover:bg-rose-600 active:scale-[0.99]">
                     Go to Admin Dashboard
                   </Link>
                 )}
@@ -111,7 +111,7 @@ export default function AccountModal({ open, onClose }: AccountModalProps) {
                   {loading ? "Connecting to Google…" : "Continue with Google"}
                 </button>
                 {error && (
-                  <p className="mt-4 rounded-2xl bg-orange-50 p-4 text-center text-sm font-semibold text-orange-700 ring-1 ring-orange-100">{error}</p>
+                  <p className="mt-4 rounded-2xl bg-rose-50 p-4 text-center text-sm font-semibold text-rose-800 ring-1 ring-rose-100">{error}</p>
                 )}
                 <p className="mt-4 text-center text-xs text-slate-400">
                   By continuing you agree to use your Google profile only for sign-in on this store.

@@ -38,14 +38,14 @@ export default function QuickViewModal({ product, qty, onQtyChange, onClose, onA
           >
             <div className="flex-1 overflow-y-auto">
               <div className="grid sm:grid-cols-2">
-                <div className="relative"><ProductImage product={product} big /><span className="absolute left-0 top-3 -skew-x-6 rounded-r-md bg-orange-600 px-3 py-1 text-xs font-black text-white shadow-md">-{discountPct(product)}% OFF</span></div>
+                <div className="relative"><ProductImage product={product} big /><span className="absolute left-0 top-3 -skew-x-6 rounded-r-md bg-rose-700 px-3 py-1 text-xs font-black text-white shadow-md">-{discountPct(product)}% OFF</span></div>
                 <div className="p-5 sm:p-6">
                   <div className="flex items-start justify-between gap-2"><h3 className="text-xl font-black tracking-tight">{product.name}</h3><button onClick={onClose} className="text-2xl leading-none text-gray-400 hover:text-slate-900">×</button></div>
-                  <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-orange-600">{product.category}</p>
+                  <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-rose-700">{product.category}</p>
                   <div className="mt-2 flex items-center gap-1.5"><Stars rating={product.rating} /><span className="text-sm text-gray-500">{product.rating} ({product.reviews.toLocaleString()} reviews)</span></div>
                   <p className="mt-3 text-sm text-gray-600">{product.desc}</p>
                   <ul className="mt-3 space-y-1">{product.specs.map((s) => <li key={s} className="text-sm text-gray-600">✓ {s}</li>)}</ul>
-                  <div className="mt-4 flex items-end gap-2"><span className="text-2xl font-extrabold tracking-tight text-orange-600">{tk(product.price)}</span><span className="text-gray-400 line-through">{tk(product.oldPrice)}</span><span className="rounded-full bg-orange-50 px-2 py-0.5 text-xs font-bold text-orange-700 ring-1 ring-orange-100">You save {tk(product.oldPrice - product.price)}</span></div>
+                  <div className="mt-4 flex items-end gap-2"><span className="text-2xl font-extrabold tracking-tight text-rose-700">{tk(product.price)}</span><span className="text-gray-400 line-through">{tk(product.oldPrice)}</span><span className="rounded-full bg-rose-50 px-2 py-0.5 text-xs font-bold text-rose-800 ring-1 ring-rose-100">You save {tk(product.oldPrice - product.price)}</span></div>
                   <p className="mt-3 text-xs text-gray-500">🚚 {district === "Dhaka" ? "Inside Dhaka: ৳60" : "Outside Dhaka: ৳120"} · Free over ৳2,000 · 7-day replacement warranty</p>
                 </div>
               </div>
@@ -56,8 +56,8 @@ export default function QuickViewModal({ product, qty, onQtyChange, onClose, onA
                 <span className="w-8 text-center font-bold">{qty}</span>
                 <button onClick={() => onQtyChange(qty + 1)} className="px-3 py-2 text-lg" aria-label="Increase quantity">+</button>
               </div>
-              <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(product.id, qty)} className="flex-1 rounded-full bg-orange-600 py-3 font-bold text-white shadow-md shadow-orange-600/25 transition hover:bg-orange-700 active:scale-[0.99]">Add To Cart</motion.button>
-              <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(product.id, qty, true)} className="shrink-0 rounded-lg bg-[#09090b] px-4 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-orange-700 active:scale-[0.98]">Buy Now</motion.button>
+              <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(product.id, qty)} className="flex-1 rounded-full bg-rose-700 py-3 font-bold text-white shadow-md shadow-rose-700/25 transition hover:bg-rose-800 active:scale-[0.99]">Add To Cart</motion.button>
+              <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(product.id, qty, true)} className="shrink-0 rounded-lg bg-[#09090b] px-4 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-rose-800 active:scale-[0.98]">Buy Now</motion.button>
             </div>
           </motion.div>
         </motion.div>

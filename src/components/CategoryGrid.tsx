@@ -26,9 +26,9 @@ export default function CategoryGrid({ category, onCategoryChange }: { category:
               whileHover={{ y: -4 }}
               whileTap={{ scale: 0.97 }}
               onClick={() => { onCategoryChange(c); document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" }); }}
-              className={`flex h-full w-full flex-col items-center gap-1.5 rounded-[1.4rem] border p-3 text-center shadow-sm transition-all hover:shadow-lg hover:ring-2 hover:ring-orange-600/40 sm:p-5 ${category === c ? "border-orange-600 bg-gradient-to-b from-orange-50 to-orange-50 shadow-md shadow-orange-600/10 ring-1 ring-orange-600/30" : "border-orange-300/70 bg-white hover:border-orange-300"}`}
+              className={`flex h-full w-full flex-col items-center gap-1.5 rounded-[1.4rem] border p-3 text-center shadow-sm transition-all hover:shadow-lg hover:ring-2 hover:ring-rose-700/40 sm:p-5 ${category === c ? "border-rose-700 bg-gradient-to-b from-rose-50 to-rose-50 shadow-md shadow-rose-700/10 ring-1 ring-rose-700/30" : "border-rose-300/70 bg-white hover:border-rose-300"}`}
             >
-              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-orange-100 to-orange-300 text-2xl shadow-sm ring-2 ring-white sm:h-14 sm:w-14 sm:text-3xl">{categoryIcons[c]}</span>
+              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-rose-100 to-rose-300 text-2xl shadow-sm ring-2 ring-white sm:h-14 sm:w-14 sm:text-3xl">{categoryIcons[c]}</span>
               <span className="text-xs font-bold leading-tight tracking-tight text-slate-900 sm:text-sm">{c === "All" ? "All" : c}</span>
               <span className="hidden text-[11px] text-slate-400 sm:block">{categoryCounts[c]} products</span>
             </motion.button>

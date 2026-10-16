@@ -13,17 +13,17 @@ export default function SectionHeader({ accent, rest, subtitle, showViewAll = tr
   return (
     <Reveal>
       <div className="flex flex-wrap items-end justify-between gap-4">
-        <div className="max-w-xl border-l-4 border-orange-600 pl-4 sm:pl-5">
-          <h2 className="text-[1.65rem] font-black uppercase leading-tight tracking-tight text-slate-900 sm:text-[2rem]">
-            <span className="text-orange-700">{accent}</span> {rest}
+        <div className="max-w-xl rounded-l-3xl border-l-8 border-rose-700 pl-4 sm:pl-5">
+          <h2 className="text-[1.65rem] font-black uppercase leading-tight tracking-tight text-stone-900 sm:text-[2rem]">
+            <span className="text-rose-700">{accent}</span> {rest}
           </h2>
-          <span className="mt-2.5 block h-1.5 w-28 -skew-x-12 bg-orange-600" aria-hidden />
-          {subtitle && <p className="mt-2.5 text-[15px] leading-relaxed text-slate-500">{subtitle}</p>}
+          <span className="mt-2.5 block h-1.5 w-28 rounded-full bg-gradient-to-r from-rose-700 to-amber-200" aria-hidden />
+          {subtitle && <p className="mt-2.5 text-[15px] leading-relaxed text-stone-500">{subtitle}</p>}
         </div>
         {showViewAll && (
           <button
             onClick={() => document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" })}
-            className="border-2 border-stone-950 bg-white px-6 py-2.5 text-sm font-bold text-orange-900 shadow-[3px_3px_0_0_#14532d] transition hover:-translate-y-0.5 hover:bg-orange-700 hover:text-white active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
+            className="rounded-full bg-white px-6 py-2.5 text-sm font-bold text-rose-800 shadow-lg shadow-stone-900/10 ring-2 ring-rose-200 transition hover:-translate-y-0.5 hover:bg-rose-700 hover:text-white hover:ring-rose-700 active:translate-y-0"
           >
             All Products →
           </button>
