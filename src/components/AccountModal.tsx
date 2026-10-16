@@ -75,21 +75,21 @@ export default function AccountModal({ open, onClose }: AccountModalProps) {
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src={session.user.image} alt="" className="h-12 w-12 rounded-full object-cover" />
                   ) : (
-                    <span className="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-600 text-lg font-black text-white">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-full bg-rose-600 text-lg font-black text-white">
                       {(session.user.name ?? session.user.email ?? "G").slice(0, 1).toUpperCase()}
                     </span>
                   )}
                   <div className="min-w-0">
                     <p className="truncate font-bold text-slate-900">{session.user.name ?? "Signed in"}</p>
                     <p className="truncate text-sm text-slate-500">{session.user.email}</p>
-                    <span className="mt-1 inline-block rounded-full bg-emerald-100 px-2.5 py-0.5 text-xs font-bold text-emerald-700 capitalize">{session.user.role ?? "customer"}</span>
+                    <span className="mt-1 inline-block rounded-full bg-rose-100 px-2.5 py-0.5 text-xs font-bold text-rose-700 capitalize">{session.user.role ?? "customer"}</span>
                   </div>
                 </div>
-                <Link href="/dashboard" onClick={close} className="mt-4 block rounded-full bg-emerald-600 py-3 text-center font-bold text-white shadow-md shadow-emerald-600/25 transition hover:bg-emerald-700 active:scale-[0.99]">
+                <Link href="/dashboard" onClick={close} className="mt-4 block rounded-full bg-rose-600 py-3 text-center font-bold text-white shadow-md shadow-rose-600/25 transition hover:bg-rose-700 active:scale-[0.99]">
                   Go to My Dashboard
                 </Link>
                 {session.user.role === "admin" && (
-                  <Link href="/admin" onClick={close} className="mt-3 block rounded-lg bg-emerald-600 py-3 text-center font-black text-white shadow-sm transition hover:bg-emerald-500 active:scale-[0.99]">
+                  <Link href="/admin" onClick={close} className="mt-3 block rounded-lg bg-rose-600 py-3 text-center font-black text-white shadow-sm transition hover:bg-rose-500 active:scale-[0.99]">
                     Go to Admin Dashboard
                   </Link>
                 )}
