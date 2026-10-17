@@ -160,18 +160,18 @@ export default function BannerCarousel() {
             <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#0c0a09]/80 via-transparent to-transparent" />
             {/* Slide copy */}
             <div className="absolute inset-0 flex flex-col justify-center px-6 text-white sm:px-10 lg:px-14">
-              <span className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-emerald-600 to-emerald-700 px-5 py-1.5 text-xs font-black uppercase tracking-[0.18em] text-white shadow-lg shadow-black/25 ring-1 ring-white/30">
+              <span className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-brand-600 to-brand-700 px-5 py-1.5 text-xs font-black uppercase tracking-[0.18em] text-white shadow-lg shadow-black/25 ring-1 ring-white/30">
                 {slide.eyebrow}
               </span>
               <h2 className="mt-5 max-w-xl text-4xl font-black leading-[1.05] tracking-tight drop-shadow-sm sm:text-5xl">
                 {slide.headline}
-                <span className="mt-2.5 block text-xl font-bold tracking-tight text-emerald-300 drop-shadow-sm sm:text-2xl">{slide.accent}</span>
+                <span className="mt-2.5 block text-xl font-bold tracking-tight text-brand-300 drop-shadow-sm sm:text-2xl">{slide.accent}</span>
               </h2>
-              <p className="mt-4 max-w-md text-base leading-relaxed text-emerald-50/90 drop-shadow-sm">{slide.subtext}</p>
+              <p className="mt-4 max-w-md text-base leading-relaxed text-brand-50/90 drop-shadow-sm">{slide.subtext}</p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <a
                   href="#shop"
-                  className="rounded-full bg-gradient-to-r from-emerald-600 to-emerald-700 px-7 py-3.5 font-bold text-white shadow-lg shadow-zinc-900/40 ring-1 ring-white/30 transition hover:from-emerald-400 hover:to-emerald-700 hover:shadow-xl active:scale-[0.98]"
+                  className="rounded-full bg-gradient-to-r from-brand-600 to-brand-700 px-7 py-3.5 font-bold text-white shadow-lg shadow-zinc-900/40 ring-1 ring-white/30 transition hover:from-brand-400 hover:to-brand-700 hover:shadow-xl active:scale-[0.98]"
                 >
                   Shop Now →
                 </a>
@@ -216,7 +216,7 @@ export default function BannerCarousel() {
             aria-label={`Go to slide ${i + 1}: ${s.eyebrow}`}
             onClick={() => goTo(i, i > index ? 1 : -1)}
             className={`h-2.5 rounded-full transition-all ${
-              i === index ? "w-9 bg-emerald-700 shadow-sm" : "w-2.5 bg-zinc-950/20 hover:bg-zinc-950/35"
+              i === index ? "w-9 bg-brand-700 shadow-sm" : "w-2.5 bg-zinc-950/20 hover:bg-zinc-950/35"
             }`}
           />
         ))}

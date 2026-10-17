@@ -26,9 +26,9 @@ export default function CategoryGrid({ category, onCategoryChange }: { category:
               whileHover={{ y: -4 }}
               whileTap={{ scale: 0.97 }}
               onClick={() => { onCategoryChange(c); document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" }); }}
-              className={`flex h-full w-full flex-col items-center gap-1.5 rounded-[1.4rem] border p-3 text-center shadow-sm transition-all hover:shadow-lg hover:ring-2 hover:ring-emerald-700/40 sm:p-5 ${category === c ? "border-emerald-700 bg-gradient-to-b from-emerald-50 to-emerald-50 shadow-md shadow-emerald-700/10 ring-1 ring-emerald-700/30" : "border-emerald-300/70 bg-white hover:border-emerald-300"}`}
+              className={`flex h-full w-full flex-col items-center gap-1.5 rounded-[1.4rem] border p-3 text-center shadow-sm transition-all hover:shadow-lg hover:ring-2 hover:ring-brand-700/40 sm:p-5 ${category === c ? "border-brand-700 bg-gradient-to-b from-brand-50 to-brand-50 shadow-md shadow-brand-700/10 ring-1 ring-brand-700/30" : "border-brand-300/70 bg-white hover:border-brand-300"}`}
             >
-              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-emerald-100 to-emerald-300 text-2xl shadow-sm ring-2 ring-white sm:h-14 sm:w-14 sm:text-3xl">{categoryIcons[c]}</span>
+              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-brand-100 to-brand-300 text-2xl shadow-sm ring-2 ring-white sm:h-14 sm:w-14 sm:text-3xl">{categoryIcons[c]}</span>
               <span className="text-xs font-bold leading-tight tracking-tight text-slate-900 sm:text-sm">{c === "All" ? "All" : c}</span>
               <span className="hidden text-[11px] text-slate-400 sm:block">{categoryCounts[c]} products</span>
             </motion.button>
