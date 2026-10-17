@@ -22,28 +22,28 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.45, delay, ease: "easeOut" }}
       whileHover={reduce ? undefined : { y: -6 }}
-      className="group relative flex h-full flex-col overflow-hidden rounded-[1.75rem] bg-white shadow-lg shadow-brand-950/10 ring-2 ring-brand-100 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-brand-900/20 hover:ring-brand-300"
+      className="group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-md shadow-brand-950/10 ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-brand-900/20 hover:ring-brand-400"
     >
-      <div className="relative bg-gradient-to-b from-brand-100 via-amber-50 to-white p-3">
-        <div className="relative cursor-pointer overflow-hidden rounded-2xl" onClick={() => onQuickView(p)}>
+      <div className="relative bg-gradient-to-b from-brand-100 via-cyan-50 to-white p-3">
+        <div className="relative cursor-pointer overflow-hidden rounded-xl" onClick={() => onQuickView(p)}>
           <ProductImage product={p} />
           {p.badge === "New" && (
-            <span className="absolute left-3 top-3 rounded-md bg-brand-600 px-2.5 py-1 text-[11px] font-black uppercase tracking-wider text-white shadow-md shadow-slate-900/20">New</span>
+            <span className="absolute left-3 top-3 rounded-full bg-cyan-400 px-2.5 py-1 text-[11px] font-black uppercase tracking-wider text-brand-950 shadow-md shadow-slate-900/20">New</span>
           )}
           {discountPct(p) > 0 && (
-            <span className="absolute right-3 top-3 rounded-md bg-slate-900 px-2.5 py-1 text-[11px] font-black text-amber-300 shadow-md shadow-slate-950/30">-{discountPct(p)}%</span>
+            <span className="absolute right-3 top-3 rounded-full bg-slate-900 px-2.5 py-1 text-[11px] font-black text-cyan-300 shadow-md shadow-slate-950/30">-{discountPct(p)}%</span>
           )}
         </div>
       </div>
       <div className="flex flex-1 flex-col items-start gap-1.5 px-5 pb-4 pt-1 text-left">
-        <span className="rounded-md bg-brand-700 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-[0.16em] text-white">{p.category}</span>
+        <span className="rounded-full bg-brand-50 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-[0.16em] text-brand-800 ring-1 ring-brand-200">{p.category}</span>
         <h3 className="cursor-pointer text-[15px] font-bold leading-snug tracking-tight text-slate-900 hover:text-brand-800" onClick={() => onQuickView(p)}>{p.name}</h3>
         <div className="flex items-center gap-1"><Stars rating={p.rating} /><span className="text-xs font-medium text-slate-500">{p.rating} ({p.reviews.toLocaleString()})</span></div>
         <span className={`w-fit rounded-md px-2.5 py-1 text-[11px] font-bold ${p.stock === "In Stock" ? "bg-brand-50 text-brand-800 ring-1 ring-brand-200" : "bg-slate-100 text-slate-600 ring-1 ring-slate-200"}`}>{p.stock === "In Stock" ? "● In Stock" : "⚠ " + p.stock}</span>
         <p className="line-clamp-2 text-[13px] leading-relaxed text-slate-500">{p.desc}</p>
         <div className="mt-auto flex w-full items-end justify-between gap-2 pt-2.5">
           <span className="text-[22px] font-black tracking-tight text-slate-900">{tk(p.price)}</span>
-          <span className="rounded-md bg-brand-50 px-2 py-1 text-xs font-bold text-brand-600 line-through decoration-brand-300">{tk(p.oldPrice)}</span>
+          <span className="text-xs font-bold text-slate-400 line-through">{tk(p.oldPrice)}</span>
         </div>
       </div>
       <div className="flex flex-col gap-2 px-5 pb-5">
@@ -51,7 +51,7 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
           whileTap={{ scale: 0.98 }}
           onClick={() => onAddToCart(p.id)}
           aria-label={`Add ${p.name} to cart`}
-          className="flex w-full items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-brand-700 via-brand-600 to-brand-700 px-4 py-3 text-xs font-black uppercase tracking-wider text-white shadow-md shadow-brand-700/30 transition hover:from-brand-800 hover:via-brand-700 hover:to-brand-800 active:scale-[0.98]"
+          className="flex w-full items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-brand-600 via-brand-500 to-cyan-600 px-4 py-3 text-xs font-black uppercase tracking-wider text-white shadow-md shadow-brand-700/30 transition hover:from-brand-700 hover:via-brand-600 hover:to-cyan-700 active:scale-[0.98]"
         >
           🛒 Add
         </motion.button>
@@ -62,8 +62,8 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
           View →
         </button>
       </div>
-      {/* ember base rule */}
-      <div aria-hidden className="h-1.5 bg-gradient-to-r from-brand-700 via-amber-400 to-brand-700" />
+      {/* tide base rule */}
+      <div aria-hidden className="h-1.5 bg-gradient-to-r from-brand-700 via-cyan-400 to-brand-700" />
     </motion.div>
   );
 }
