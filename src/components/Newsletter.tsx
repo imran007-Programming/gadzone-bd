@@ -16,7 +16,7 @@ export default function Newsletter({ email, onEmailChange, subscribed, onSubscri
     <Reveal>
       <div className="relative flex flex-col justify-center overflow-hidden rounded-3xl bg-gradient-to-br from-brand-800 via-brand-900 to-slate-950 p-8 text-white shadow-xl shadow-slate-950/25 sm:p-10">
         <div aria-hidden className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-brand-400/30 blur-3xl" />
-        <div aria-hidden className="pointer-events-none absolute -bottom-20 -left-10 h-48 w-48 rounded-full bg-lime-200/20 blur-3xl" />
+        <div aria-hidden className="pointer-events-none absolute -bottom-20 -left-10 h-48 w-48 rounded-full bg-amber-200/20 blur-3xl" />
         <div className="relative">
           <span className="text-xs font-bold uppercase tracking-widest text-brand-300">Newsletter</span>
           <h2 className="mt-2 text-2xl font-black leading-tight tracking-tight sm:text-[1.75rem]">Get Exclusive Deals 🎁</h2>

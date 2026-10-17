@@ -25,13 +25,13 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden text-white">
-      {/* forest night: deep forest gradient + lime glow orbs */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#04170c] via-[#0a3a22] to-[#04170c]" />
-      <div aria-hidden className="pointer-events-none absolute -top-44 right-[-8rem] h-[32rem] w-[32rem] rounded-full bg-brand-500/30 blur-3xl" />
-      <div aria-hidden className="pointer-events-none absolute top-64 -left-40 h-[28rem] w-[28rem] rounded-full bg-lime-300/15 blur-3xl" />
+      {/* midnight ember: deep charred gradient + amber glow orbs */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#170a04] via-[#33200f] to-[#170a04]" />
+      <div aria-hidden className="pointer-events-none absolute -top-44 right-[-8rem] h-[32rem] w-[32rem] rounded-full bg-brand-500/35 blur-3xl" />
+      <div aria-hidden className="pointer-events-none absolute top-64 -left-40 h-[28rem] w-[28rem] rounded-full bg-amber-300/15 blur-3xl" />
       <div aria-hidden className="pointer-events-none absolute bottom-16 left-1/2 h-[20rem] w-[20rem] -translate-x-1/2 rounded-full bg-brand-900/60 blur-3xl" />
-      {/* forest canopy dot texture */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 opacity-60 [background-image:radial-gradient(rgba(190,242,100,0.14)_1.5px,transparent_1.5px)] [background-size:26px_26px]" />
+      {/* ember spark dot texture */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 opacity-60 [background-image:radial-gradient(rgba(253,186,116,0.14)_1.5px,transparent_1.5px)] [background-size:26px_26px]" />
 
       {/* 4-banner carousel (image-only slides) */}
       <div className="relative">
@@ -49,9 +49,9 @@ export default function Hero({ onQuickView }: HeroProps) {
               { v: "COD", l: "Available" },
             ].map((s) => (
               <div key={s.l} className="relative overflow-hidden rounded-2xl border border-white/15 bg-white/10 p-4 shadow-lg shadow-black/20 backdrop-blur-md">
-                <span aria-hidden className="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-brand-300 to-lime-300" />
+                <span aria-hidden className="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-brand-300 to-amber-300" />
                 <span className="block pl-3 text-2xl font-black tracking-tight text-white">{s.v}</span>
-                <span className="mt-1 block pl-3 text-[10px] font-extrabold uppercase tracking-[0.18em] text-brand-200">{s.l}</span>
+                <span className="mt-1 block pl-3 text-[10px] font-extrabold uppercase tracking-[0.18em] text-amber-200">{s.l}</span>
               </div>
             ))}
           </motion.div>
@@ -60,8 +60,8 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div className="relative mt-12">
           <div className="mb-6">
             <p className="text-xs font-extrabold uppercase tracking-[0.28em] text-brand-300">Handpicked for you</p>
-            <h2 className="mt-1.5 text-3xl font-black tracking-tight text-white">Featured <span className="bg-gradient-to-r from-brand-300 to-lime-200 bg-clip-text text-transparent">Picks</span></h2>
-            <span className="mt-3 block h-1 w-24 rounded-full bg-gradient-to-r from-brand-400 to-lime-300" aria-hidden />
+            <h2 className="mt-1.5 text-3xl font-black tracking-tight text-white">Featured <span className="bg-gradient-to-r from-brand-400 to-amber-200 bg-clip-text text-transparent">Picks</span></h2>
+            <span className="mt-3 block h-1 w-24 rounded-full bg-gradient-to-r from-brand-500 to-amber-300" aria-hidden />
           </div>
           <div className="grid grid-cols-2 gap-5 md:grid-cols-4">
             {[PRODUCTS[0], PRODUCTS[1], PRODUCTS[2], PRODUCTS[4]].map((p, i) => (
@@ -80,18 +80,18 @@ export default function Hero({ onQuickView }: HeroProps) {
                   </div>
                   <span className="absolute right-2.5 top-2.5 rounded-lg bg-brand-600 px-2.5 py-1 text-[11px] font-black text-white shadow-md shadow-black/30">-{discountPct(p)}%</span>
                 </div>
-                <div className="p-3.5 text-left"><p className="truncate text-sm font-bold tracking-tight text-white">{p.name}</p><p className="mt-1 text-base font-extrabold tracking-tight text-brand-200">{tk(p.price)} <span className="text-xs font-medium text-white/50 line-through">{tk(p.oldPrice)}</span></p></div>
+                <div className="p-3.5 text-left"><p className="truncate text-sm font-bold tracking-tight text-white">{p.name}</p><p className="mt-1 text-base font-extrabold tracking-tight text-amber-200">{tk(p.price)} <span className="text-xs font-medium text-white/50 line-through">{tk(p.oldPrice)}</span></p></div>
               </motion.div>
             ))}
           </div>
-          <span className="absolute -top-5 right-2 rotate-3 rounded-xl bg-gradient-to-br from-lime-300 to-brand-300 px-5 py-2 text-sm font-black tracking-wide text-brand-950 shadow-lg shadow-black/30 ring-2 ring-white/40">-45% TODAY</span>
+          <span className="absolute -top-5 right-2 rotate-3 rounded-xl bg-gradient-to-br from-amber-300 to-brand-400 px-5 py-2 text-sm font-black tracking-wide text-brand-950 shadow-lg shadow-black/30 ring-2 ring-white/40">-45% TODAY</span>
         </div>
       </div>
 
-      {/* forest accent strip along the base */}
-      <div aria-hidden className="absolute inset-x-0 bottom-0 z-10 h-1.5 bg-gradient-to-r from-brand-300 via-lime-200 to-brand-300" />
+      {/* ember accent strip along the base */}
+      <div aria-hidden className="absolute inset-x-0 bottom-0 z-10 h-1.5 bg-gradient-to-r from-brand-400 via-amber-300 to-brand-400" />
       {/* soft curve divider into the page */}
-      <svg aria-hidden viewBox="0 0 1440 90" preserveAspectRatio="none" className="absolute bottom-0 left-0 h-16 w-full text-[#f1f7f2] md:h-20">
+      <svg aria-hidden viewBox="0 0 1440 90" preserveAspectRatio="none" className="absolute bottom-0 left-0 h-16 w-full text-[#fff8f3] md:h-20">
         <path fill="currentColor" d="M0,64 C360,10 1080,10 1440,64 L1440,90 L0,90 Z" />
       </svg>
     </section>

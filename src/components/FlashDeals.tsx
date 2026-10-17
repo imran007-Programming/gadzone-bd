@@ -18,7 +18,7 @@ export default function FlashDeals({ products, countdown, onQuickView, onAddToCa
   const reduce = useReducedMotion();
   return (
     <section id="flash" className="relative overflow-hidden bg-[#0a2b1a] py-14 text-white sm:py-16">
-      <div aria-hidden className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-lime-400/15 blur-3xl" />
+      <div aria-hidden className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-amber-400/15 blur-3xl" />
       <div aria-hidden className="pointer-events-none absolute -bottom-24 -left-16 h-72 w-72 rounded-full bg-brand-700/20 blur-3xl" />
       <div className="relative mx-auto max-w-7xl px-4">
         <Reveal>
