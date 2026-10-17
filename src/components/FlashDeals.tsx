@@ -17,11 +17,11 @@ export default function FlashDeals({ products, countdown, onQuickView, onAddToCa
   const { hh, mm, ss } = countdown;
   const reduce = useReducedMotion();
   return (
-    <section id="flash" className="relative overflow-hidden bg-[#1b0e05] py-14 text-white sm:py-16">
-      <div aria-hidden className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-amber-300/15 blur-3xl" />
-      <div aria-hidden className="pointer-events-none absolute -bottom-24 -left-16 h-72 w-72 rounded-full bg-brand-700/25 blur-3xl" />
-      {/* kiln spark dash texture */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 opacity-30 [background-image:repeating-linear-gradient(135deg,rgba(251,179,107,0.08)_0px,rgba(251,179,107,0.08)_2px,transparent_2px,transparent_30px)]" />
+    <section id="flash" className="relative overflow-hidden bg-brand-950 py-14 text-white sm:py-16">
+      <div aria-hidden className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-brand-300/20 blur-3xl" />
+      <div aria-hidden className="pointer-events-none absolute -bottom-24 -left-16 h-72 w-72 rounded-full bg-brand-600/30 blur-3xl" />
+      {/* lagoon ripple dash texture */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 opacity-30 [background-image:repeating-linear-gradient(135deg,rgba(112,211,178,0.10)_0px,rgba(112,211,178,0.10)_2px,transparent_2px,transparent_30px)]" />
       <div className="relative mx-auto max-w-7xl px-4">
         <Reveal>
           <div className="flex flex-wrap items-end justify-between gap-3">
@@ -38,7 +38,7 @@ export default function FlashDeals({ products, countdown, onQuickView, onAddToCa
               <motion.span
                 animate={reduce ? undefined : { scale: [1, 1.08, 1] }}
                 transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
-                className="rounded-lg bg-brand-700 px-3.5 py-2 text-lg font-black tabular-nums text-white shadow-lg shadow-brand-700/30 ring-2 ring-amber-400/40"
+                className="rounded-full bg-brand-700 px-3.5 py-2 text-lg font-black tabular-nums text-white shadow-lg shadow-brand-700/30 ring-2 ring-brand-300/50"
               >
                 {ss}
               </motion.span>
@@ -47,8 +47,8 @@ export default function FlashDeals({ products, countdown, onQuickView, onAddToCa
         </Reveal>
         <div className="mt-8 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">{products.map((p, i) => <ProductCard key={p.id} product={p} onQuickView={onQuickView} onAddToCart={onAddToCart} delay={(i % 4) * 0.06} />)}</div>
       </div>
-      {/* ember accent strip along the base */}
-      <div aria-hidden className="absolute inset-x-0 bottom-0 h-1.5 bg-gradient-to-r from-brand-500 via-amber-300 to-brand-500" />
+      {/* lagoon accent strip along the base */}
+      <div aria-hidden className="absolute inset-x-0 bottom-0 h-1.5 bg-gradient-to-r from-brand-500 via-brand-300 to-brand-500" />
     </section>
   );
 }
