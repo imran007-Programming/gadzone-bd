@@ -22,9 +22,9 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.45, delay, ease: "easeOut" }}
       whileHover={reduce ? undefined : { y: -6 }}
-      className="group relative flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-lg shadow-brand-950/10 ring-2 ring-brand-100 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-brand-900/20 hover:ring-brand-300"
+      className="group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-lg shadow-brand-950/10 ring-2 ring-brand-100 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-brand-900/20 hover:ring-brand-300"
     >
-      <div className="relative bg-gradient-to-b from-brand-100 via-amber-50 to-white p-3">
+      <div className="relative bg-gradient-to-b from-brand-100 via-lime-50 to-white p-3">
         <div className="relative cursor-pointer overflow-hidden rounded-2xl" onClick={() => onQuickView(p)}>
           <ProductImage product={p} />
           {p.badge === "New" && (
@@ -62,8 +62,8 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
           View →
         </button>
       </div>
-      {/* ember base rule */}
-      <div aria-hidden className="h-1.5 bg-gradient-to-r from-brand-700 via-amber-400 to-brand-700" />
+      {/* forest base rule */}
+      <div aria-hidden className="h-1.5 bg-gradient-to-r from-brand-700 via-lime-400 to-brand-700" />
     </motion.div>
   );
 }

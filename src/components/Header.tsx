@@ -35,7 +35,7 @@ export default function Header({ query, onQueryChange, category, onCategoryChang
             <button onClick={onMenuOpen} className="rounded-full p-2 text-xl text-slate-800 transition hover:bg-brand-50 hover:text-brand-800" aria-label="Open menu">☰</button>
           </div>
           <a href="#" className="flex items-center justify-center gap-2">
-            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-amber-400 via-brand-600 to-brand-900 text-xl font-black text-white shadow-md shadow-brand-700/40 ring-2 ring-amber-300/70">G</span>
+            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-lime-300 via-brand-600 to-brand-950 text-xl font-black text-white shadow-md shadow-brand-700/40 ring-2 ring-lime-300/70">G</span>
             <span className="leading-none"><span className="block text-lg font-black tracking-tight text-slate-900 sm:text-xl">Gad<span className="text-brand-700">Zone</span> BD</span>
             <span className="hidden text-[11px] font-medium text-slate-500 sm:block">Gadgets in Bangladesh</span></span>
           </a>
