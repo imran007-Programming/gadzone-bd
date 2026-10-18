@@ -14,22 +14,26 @@ type NewsletterProps = {
 export default function Newsletter({ email, onEmailChange, subscribed, onSubscribe }: NewsletterProps) {
   return (
     <Reveal>
-      <div className="relative flex flex-col justify-center overflow-hidden rounded-3xl bg-gradient-to-br from-brand-800 via-brand-900 to-slate-950 p-8 text-white shadow-xl shadow-slate-950/25 sm:p-10">
-        <div aria-hidden className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-brand-400/30 blur-3xl" />
-        <div aria-hidden className="pointer-events-none absolute -bottom-20 -left-10 h-48 w-48 rounded-full bg-brand-200/25 blur-3xl" />
+      <div className="relative flex flex-col justify-center overflow-hidden rounded-3xl bg-gradient-to-br from-brand-700 via-brand-600 to-brand-800 p-8 text-white shadow-xl shadow-brand-900/30 sm:p-10">
+        <div aria-hidden className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-white/15 blur-3xl" />
+        <div aria-hidden className="pointer-events-none absolute -bottom-20 -left-10 h-48 w-48 rounded-full bg-brand-300/30 blur-3xl" />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 opacity-40 [background-image:radial-gradient(rgba(255,255,255,0.22)_1px,transparent_1.5px)] [background-size:22px_22px]"
+        />
         <div className="relative">
-          <span className="text-xs font-bold uppercase tracking-widest text-brand-300">Newsletter</span>
+          <span className="text-xs font-bold uppercase tracking-widest text-brand-100">Newsletter</span>
           <h2 className="mt-2 text-2xl font-black leading-tight tracking-tight sm:text-[1.75rem]">Get Exclusive Deals 🎁</h2>
-          <p className="mt-2.5 text-sm leading-relaxed text-brand-50/90">Newsletter-e join korun — notun product, flash sale ar secret discount code age paben.</p>
+          <p className="mt-2.5 text-sm leading-relaxed text-white/90">Newsletter-e join korun — notun product, flash sale ar secret discount code age paben.</p>
           {subscribed ? (
             <p className="mt-5 rounded-2xl bg-white/15 p-4 font-bold text-white ring-1 ring-white/25">✅ Subscribed! Welcome to GadZone BD family.</p>
           ) : (
             <form className="mt-5 flex flex-col gap-3 sm:flex-row" onSubmit={onSubscribe}>
-              <input type="email" required value={email} onChange={(e) => onEmailChange(e.target.value)} placeholder="Your email address" className="flex-1 rounded-full bg-white/10 px-5 py-3.5 text-sm text-white outline-none ring-1 ring-white/20 placeholder:text-brand-100/70 transition focus:bg-white/15 focus:ring-2 focus:ring-white/60" />
-              <motion.button whileTap={{ scale: 0.96 }} className="rounded-full bg-white px-6 py-3 font-bold text-slate-900 shadow-lg transition hover:bg-brand-50 active:scale-[0.98]">Subscribe</motion.button>
+              <input type="email" required value={email} onChange={(e) => onEmailChange(e.target.value)} placeholder="Your email address" className="flex-1 rounded-full bg-white px-5 py-3.5 text-sm text-[#232b38] outline-none ring-1 ring-white/40 placeholder:text-[#8d8778] transition focus:ring-2 focus:ring-white/80" />
+              <motion.button whileTap={{ scale: 0.96 }} className="rounded-full bg-[#232b38] px-6 py-3 font-bold text-white shadow-lg transition hover:bg-black active:scale-[0.98]">Subscribe</motion.button>
             </form>
           )}
-          <p className="mt-3.5 text-xs text-brand-100/80">No spam, only deals. Unsubscribe anytime.</p>
+          <p className="mt-3.5 text-xs text-white/80">No spam, only deals. Unsubscribe anytime.</p>
         </div>
       </div>
     </Reveal>

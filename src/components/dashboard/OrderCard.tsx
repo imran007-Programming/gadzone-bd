@@ -19,16 +19,16 @@ export default function OrderCard({ order, showCustomer, statusEditable, onStatu
   const summary = order.items.slice(0, 2).map((it) => `${it.name} × ${it.qty}`).join(" · ") + (order.items.length > 2 ? ` +${order.items.length - 2} more` : "");
 
   return (
-    <article className="rounded-3xl bg-white p-5 shadow-sm ring-1 ring-slate-100 transition hover:shadow-md">
+    <article className="rounded-3xl bg-white p-5 shadow-sm ring-1 ring-[#efe5cf] transition hover:shadow-md">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="min-w-0">
-          <p className="font-black text-slate-950">{order.id}</p>
-          <p className="mt-0.5 text-sm text-slate-500">
+          <p className="font-black text-[#232b38]">{order.id}</p>
+          <p className="mt-0.5 text-sm text-[#8d8778]">
             {formatOrderDate(order.date)} · {itemCount} item{itemCount === 1 ? "" : "s"} · {order.payment}
           </p>
           {showCustomer && (
-            <p className="mt-1 text-sm font-semibold text-slate-700">
-              {order.name} <span className="font-normal text-slate-500">· {order.email}</span>
+            <p className="mt-1 text-sm font-semibold text-[#55606f]">
+              {order.name} <span className="font-normal text-[#8d8778]">· {order.email}</span>
             </p>
           )}
         </div>
@@ -38,7 +38,7 @@ export default function OrderCard({ order, showCustomer, statusEditable, onStatu
             <select
               value={order.status}
               onChange={(e) => onStatusChange?.(order.id, e.target.value as OrderStatus)}
-              className="cursor-pointer rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-bold text-slate-800 outline-none"
+              className="cursor-pointer rounded-full border border-[#e9dcc3] bg-white px-3 py-1.5 text-xs font-bold text-[#3a4453] outline-none"
             >
               {STATUSES.map((s) => (
                 <option key={s} value={s}>{s}</option>
@@ -50,14 +50,14 @@ export default function OrderCard({ order, showCustomer, statusEditable, onStatu
         )}
       </div>
 
-      <p className="mt-3 truncate text-sm text-slate-600">{summary || "No items"}</p>
+      <p className="mt-3 truncate text-sm text-[#6f6a5c]">{summary || "No items"}</p>
 
-      <div className="mt-3 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 pt-3">
-        <button onClick={() => setExpanded((v) => !v)} aria-expanded={expanded} className="text-sm font-bold text-yellow-500 hover:text-yellow-600">
+      <div className="mt-3 flex flex-wrap items-center justify-between gap-3 border-t border-[#efe5cf] pt-3">
+        <button onClick={() => setExpanded((v) => !v)} aria-expanded={expanded} className="text-sm font-bold text-brand-600 hover:text-brand-700">
           {expanded ? "Hide details ↑" : "View details ↓"}
         </button>
-        <p className="text-sm font-bold text-slate-950">
-          Total <span className="ml-1 text-base text-yellow-500">{tk(order.total)}</span>
+        <p className="text-sm font-bold text-[#232b38]">
+          Total <span className="ml-1 text-base text-brand-600">{tk(order.total)}</span>
         </p>
       </div>
 
@@ -66,24 +66,24 @@ export default function OrderCard({ order, showCustomer, statusEditable, onStatu
           <ul className="space-y-2 text-sm">
             {order.items.map((it, i) => (
               <li key={i} className="flex justify-between gap-3">
-                <span className="text-slate-700">{it.name} <span className="text-slate-500">× {it.qty}</span></span>
-                <span className="shrink-0 font-semibold text-slate-950">{tk(it.price * it.qty)}</span>
+                <span className="text-[#55606f]">{it.name} <span className="text-[#8d8778]">× {it.qty}</span></span>
+                <span className="shrink-0 font-semibold text-[#232b38]">{tk(it.price * it.qty)}</span>
               </li>
             ))}
           </ul>
-          <div className="grid gap-3 border-t border-slate-200 pt-3 text-sm sm:grid-cols-2">
+          <div className="grid gap-3 border-t border-[#e9dcc3] pt-3 text-sm sm:grid-cols-2">
             <div>
-              <p className="text-xs font-bold tracking-wide text-slate-500 uppercase">Delivery address</p>
-              <p className="mt-1 font-semibold text-slate-800">{order.name}</p>
-              <p className="text-slate-600">{order.address}</p>
-              <p className="text-slate-600">{order.district}</p>
-              <p className="text-slate-600">{order.phone}</p>
+              <p className="text-xs font-bold tracking-wide text-[#8d8778] uppercase">Delivery address</p>
+              <p className="mt-1 font-semibold text-[#3a4453]">{order.name}</p>
+              <p className="text-[#6f6a5c]">{order.address}</p>
+              <p className="text-[#6f6a5c]">{order.district}</p>
+              <p className="text-[#6f6a5c]">{order.phone}</p>
             </div>
             <div>
-              <p className="text-xs font-bold tracking-wide text-slate-500 uppercase">Order info</p>
-              <p className="mt-1 text-slate-600">Payment: <span className="font-semibold text-slate-800">{order.payment}</span></p>
-              <p className="text-slate-600">Email: <span className="font-semibold text-slate-800">{order.email}</span></p>
-              <p className="text-slate-600">Status: <span className="font-semibold text-slate-800">{order.status}</span></p>
+              <p className="text-xs font-bold tracking-wide text-[#8d8778] uppercase">Order info</p>
+              <p className="mt-1 text-[#6f6a5c]">Payment: <span className="font-semibold text-[#3a4453]">{order.payment}</span></p>
+              <p className="text-[#6f6a5c]">Email: <span className="font-semibold text-[#3a4453]">{order.email}</span></p>
+              <p className="text-[#6f6a5c]">Status: <span className="font-semibold text-[#3a4453]">{order.status}</span></p>
             </div>
           </div>
         </div>

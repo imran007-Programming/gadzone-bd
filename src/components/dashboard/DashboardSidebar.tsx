@@ -19,13 +19,13 @@ type DashboardSidebarProps = {
 
 export default function DashboardSidebar({ nav, active, onSelect, badge, userName, userEmail, userImage, userRole }: DashboardSidebarProps) {
   return (
-    <aside className="sticky top-0 hidden h-screen w-72 shrink-0 flex-col border-r border-slate-200 bg-slate-950 p-5 text-white lg:flex">
+    <aside className="sticky top-0 hidden h-screen w-72 shrink-0 flex-col border-r border-[#e9dcc3] bg-[#f8f3e8] p-5 text-[#232b38] lg:flex">
       <Link href="/" className="flex items-center gap-2">
-        <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-yellow-500 text-xl font-black text-neutral-950">G</span>
+        <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-500 text-xl font-black text-white">G</span>
         <span className="text-lg font-black tracking-tight">
-          Gad<span className="text-yellow-400">Zone</span> BD
+          Gad<span className="text-brand-600">Zone</span> BD
         </span>
-        {badge && <span className="rounded-full bg-yellow-400 px-2 py-0.5 text-[11px] font-black text-slate-950">{badge}</span>}
+        {badge && <span className="rounded-full bg-white px-2 py-0.5 text-[11px] font-black text-brand-700">{badge}</span>}
       </Link>
 
       <nav className="mt-8 space-y-1" aria-label="Dashboard navigation">
@@ -37,7 +37,7 @@ export default function DashboardSidebar({ nav, active, onSelect, badge, userNam
               onClick={() => onSelect(item.id)}
               aria-current={isActive ? "page" : undefined}
               className={`flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-left text-sm font-bold transition ${
-                isActive ? "bg-yellow-500 text-neutral-950 shadow-lg shadow-yellow-500/30" : "text-slate-300 hover:bg-white/10 hover:text-white"
+                isActive ? "bg-brand-500 text-white shadow-lg shadow-brand-500/30" : "text-[#6f6a5c] hover:bg-[#f4eddc] hover:text-[#232b38]"
               }`}
             >
               <span className="text-lg" aria-hidden="true">{item.icon}</span>
@@ -47,29 +47,29 @@ export default function DashboardSidebar({ nav, active, onSelect, badge, userNam
         })}
       </nav>
 
-      <div className="mt-auto space-y-2 border-t border-white/10 pt-4">
-        <Link href="/" className="flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-bold text-slate-300 transition hover:bg-white/10 hover:text-white">
+      <div className="mt-auto space-y-2 border-t border-[#e9dcc3] pt-4">
+        <Link href="/" className="flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-bold text-[#6f6a5c] transition hover:bg-[#f4eddc] hover:text-[#232b38]">
           <span aria-hidden="true">🛍️</span> Back to Shop
         </Link>
         <button
           onClick={() => signOut({ callbackUrl: "/" })}
-          className="flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-left text-sm font-bold text-slate-300 transition hover:bg-white/10 hover:text-white"
+          className="flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-left text-sm font-bold text-[#6f6a5c] transition hover:bg-[#f4eddc] hover:text-[#232b38]"
         >
           <span aria-hidden="true">🚪</span> Sign out
         </button>
-        <div className="flex items-center gap-3 rounded-2xl bg-white/5 px-3 py-3">
+        <div className="flex items-center gap-3 rounded-2xl bg-white px-3 py-3">
           {userImage ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img src={userImage} alt="" className="h-10 w-10 shrink-0 rounded-full object-cover" />
           ) : (
-            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-yellow-500 text-base font-black text-neutral-950">
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-500 text-base font-black text-white">
               {initials(userName, userEmail)}
             </span>
           )}
           <div className="min-w-0">
             <p className="truncate text-sm font-bold">{userName ?? "Account"}</p>
-            <p className="truncate text-xs text-slate-400">{userEmail ?? ""}</p>
-            {userRole && <p className="mt-0.5 text-[11px] font-bold tracking-wide text-yellow-400 uppercase">{userRole}</p>}
+            <p className="truncate text-xs text-[#8d8778]">{userEmail ?? ""}</p>
+            {userRole && <p className="mt-0.5 text-[11px] font-bold tracking-wide text-brand-600 uppercase">{userRole}</p>}
           </div>
         </div>
       </div>
