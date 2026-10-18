@@ -14,11 +14,11 @@ export default function SectionHeader({ accent, rest, subtitle, showViewAll = tr
     <Reveal>
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div className="max-w-xl">
-          <h2 className="flex items-center gap-3 text-[1.65rem] font-black leading-tight tracking-tight text-[#2f2417] sm:text-[2rem]">
+          <h2 className="flex items-center gap-3 text-[1.65rem] font-black leading-tight tracking-tight text-[#34202a] sm:text-[2rem]">
             <span className="inline-block h-9 w-2.5 rounded-full bg-gradient-to-b from-brand-400 to-brand-700 shadow-[0_0_14px_rgba(240, 158, 18,0.7)]" aria-hidden />
             <span><span className="text-brand-600">{accent}</span> {rest}</span>
           </h2>
-          {subtitle && <p className="mt-2.5 text-[15px] leading-relaxed text-[#7d6a4f]">{subtitle}</p>}
+          {subtitle && <p className="mt-2.5 text-[15px] leading-relaxed text-[#8a6a71]">{subtitle}</p>}
         </div>
         {showViewAll && (
           <button

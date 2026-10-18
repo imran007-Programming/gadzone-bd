@@ -32,25 +32,25 @@ export default function HelpSheet({ open, onClose, onViewAllFaq }: HelpSheetProp
             animate={{ y: 0, opacity: 1 }}
             exit={reduce ? { opacity: 0 } : { y: "100%" }}
             transition={{ type: "tween", duration: 0.28, ease: "easeOut" }}
-            className="max-h-[85vh] w-full max-w-lg overflow-y-auto rounded-t-3xl border border-[#e3d2ab] bg-[#fffdf6] p-5 shadow-2xl sm:p-6"
+            className="max-h-[85vh] w-full max-w-lg overflow-y-auto rounded-t-3xl border border-[#f0d3df] bg-[#fffbfc] p-5 shadow-2xl sm:p-6"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="mx-auto mb-4 h-1.5 w-12 rounded-full bg-[#e3d6b8]" />
+            <div className="mx-auto mb-4 h-1.5 w-12 rounded-full bg-[#efd8e2]" />
             <div className="flex items-start justify-between">
-              <h3 className="text-xl font-black text-[#2f2417]">How can we help?</h3>
-              <button onClick={onClose} className="text-2xl leading-none text-[#7d6a4f] hover:text-[#2f2417]" aria-label="Close help sheet">×</button>
+              <h3 className="text-xl font-black text-[#34202a]">How can we help?</h3>
+              <button onClick={onClose} className="text-2xl leading-none text-[#8a6a71] hover:text-[#34202a]" aria-label="Close help sheet">×</button>
             </div>
             <div className="mt-4 space-y-3">
               {QUICK_FAQS.map((f) => (
-                <div key={f.q} className="rounded-2xl border border-[#e3d2ab] bg-[#ffffff] p-4 shadow-sm">
-                  <p className="font-bold text-[#2f2417]">{f.q}</p>
-                  <p className="mt-1 text-sm text-[#7d6a4f]">{f.a}</p>
+                <div key={f.q} className="rounded-2xl border border-[#f0d3df] bg-[#ffffff] p-4 shadow-sm">
+                  <p className="font-bold text-[#34202a]">{f.q}</p>
+                  <p className="mt-1 text-sm text-[#8a6a71]">{f.a}</p>
                 </div>
               ))}
             </div>
             <div className="mt-4 rounded-2xl bg-brand-400/10 p-4 ring-1 ring-brand-400/30">
-              <p className="font-bold text-[#2f2417]">Still need help?</p>
-              <p className="mt-1 text-sm text-[#6f6a5c]">📞 +880 1700-000000<br />✉️ hello@gadzonebd.example</p>
+              <p className="font-bold text-[#34202a]">Still need help?</p>
+              <p className="mt-1 text-sm text-[#76646b]">📞 +880 1700-000000<br />✉️ hello@gadzonebd.example</p>
             </div>
             <button
               onClick={onViewAllFaq}

@@ -115,7 +115,7 @@ export default function BannerCarousel() {
       aria-roledescription="carousel"
       aria-label="Featured offers"
     >
-      <div className="relative overflow-hidden rounded-2xl border border-[#d6c194] shadow-[0_24px_70px_-18px_rgba(240, 158, 18,0.45)] ring-1 ring-[#e3d2ab]">
+      <div className="relative overflow-hidden rounded-2xl border border-[#e8c9d7] shadow-[0_24px_70px_-18px_rgba(240, 158, 18,0.45)] ring-1 ring-[#f0d3df]">
         <AnimatePresence initial={false} custom={direction} mode="wait">
           <motion.div
             key={slide.id}
@@ -155,10 +155,10 @@ export default function BannerCarousel() {
             {/* Midnight gold glow + readable-text overlay */}
             <div
               aria-hidden
-              className="absolute inset-0 bg-gradient-to-br from-[#efe2c2]/95 via-[#efe2c2]/45 to-[#f8f3e8]/20"
+              className="absolute inset-0 bg-gradient-to-br from-[#f5e5ec]/95 via-[#f5e5ec]/45 to-[#faf2f5]/20"
             />
             <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_82%_18%,rgba(240, 158, 18,0.22),transparent)]" />
-            <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#efe2c2]/80 via-transparent to-transparent" />
+            <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#f5e5ec]/80 via-transparent to-transparent" />
             {/* Slide copy */}
             <div className="absolute inset-0 flex flex-col justify-center px-6 text-white sm:px-10 lg:px-14">
               <span className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-brand-600 to-brand-800 px-5 py-1.5 text-xs font-black uppercase tracking-[0.18em] text-white shadow-[0_0_22px_rgba(240, 158, 18,0.6)]">
@@ -178,7 +178,7 @@ export default function BannerCarousel() {
                 </a>
                 <a
                   href="#flash"
-                  className="rounded-full border border-white/25 bg-[#f4eddc] px-7 py-3.5 font-bold text-[#2f2417] backdrop-blur-sm transition hover:bg-[#ffffff] active:scale-[0.98]"
+                  className="rounded-full border border-white/25 bg-[#f9e8ef] px-7 py-3.5 font-bold text-[#34202a] backdrop-blur-sm transition hover:bg-[#ffffff] active:scale-[0.98]"
                 >
                   ⚡ Flash Deals
                 </a>
@@ -192,7 +192,7 @@ export default function BannerCarousel() {
           type="button"
           onClick={prev}
           aria-label="Previous banner"
-          className="absolute left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-[#efe2c2]/55 text-lg text-white shadow-lg ring-1 ring-brand-300/30 backdrop-blur transition hover:bg-[#efe2c2]/80 active:scale-95 sm:left-4"
+          className="absolute left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-[#f5e5ec]/55 text-lg text-white shadow-lg ring-1 ring-brand-300/30 backdrop-blur transition hover:bg-[#f5e5ec]/80 active:scale-95 sm:left-4"
         >
           ‹
         </button>
@@ -200,7 +200,7 @@ export default function BannerCarousel() {
           type="button"
           onClick={next}
           aria-label="Next banner"
-          className="absolute right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-[#efe2c2]/55 text-lg text-white shadow-lg ring-1 ring-brand-300/30 backdrop-blur transition hover:bg-[#efe2c2]/80 active:scale-95 sm:right-4"
+          className="absolute right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-[#f5e5ec]/55 text-lg text-white shadow-lg ring-1 ring-brand-300/30 backdrop-blur transition hover:bg-[#f5e5ec]/80 active:scale-95 sm:right-4"
         >
           ›
         </button>

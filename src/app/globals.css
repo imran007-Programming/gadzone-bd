@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 @theme {
-  /* marigold courtyard: warm amber marigold over sunlit cream — original palette */
-  --color-brand-50: #fef9ec;
-  --color-brand-100: #fdf0c7;
-  --color-brand-200: #fbe18f;
-  --color-brand-300: #f8cb57;
-  --color-brand-400: #f5b32e;
-  --color-brand-500: #f09e12;
-  --color-brand-600: #d17907;
-  --color-brand-700: #a85d0c;
-  --color-brand-800: #8a4b10;
-  --color-brand-900: #75400f;
-  --color-brand-950: #432405;
-  --color-brand: #f09e12;
-  --color-brand-dark: #d17907;
-  --color-brand-deep: #8a4b10;
+  /* rose garden: soft garden rose over blush cream — original palette */
+  --color-brand-50: #fef5f8;
+  --color-brand-100: #fde9f1;
+  --color-brand-200: #fad0e2;
+  --color-brand-300: #f7a9c6;
+  --color-brand-400: #f27da3;
+  --color-brand-500: #e8558a;
+  --color-brand-600: #d43d72;
+  --color-brand-700: #b02d5c;
+  --color-brand-800: #8f274c;
+  --color-brand-900: #772243;
+  --color-brand-950: #420e20;
+  --color-brand: #e8558a;
+  --color-brand-dark: #d43d72;
+  --color-brand-deep: #8f274c;
 }
 
 html { scroll-behavior: smooth; }
@@ -30,38 +30,48 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #faf4e6;
+  background: #fdf6f8;
   background-image:
-    radial-gradient(ellipse 90% 40% at 50% -10%, rgba(240, 158, 18, 0.16), transparent),
-    radial-gradient(ellipse 45% 30% at 90% 18%, rgba(201, 106, 59, 0.08), transparent),
-    radial-gradient(ellipse 45% 30% at 6% 34%, rgba(111, 154, 82, 0.07), transparent),
-    repeating-linear-gradient(115deg, rgba(209, 121, 7, 0.028) 0 2px, transparent 2px 26px);
-  background-size: 100% 100%, 100% 100%, 100% 100%, auto;
-  color: #2f2417;
+    radial-gradient(ellipse 90% 40% at 50% -10%, rgba(232, 85, 138, 0.14), transparent),
+    radial-gradient(ellipse 45% 30% at 90% 18%, rgba(184, 77, 125, 0.08), transparent),
+    radial-gradient(ellipse 45% 30% at 6% 34%, rgba(160, 32, 90, 0.07), transparent),
+    radial-gradient(circle, rgba(212, 61, 114, 0.10) 1.2px, transparent 1.8px),
+    repeating-linear-gradient(105deg, rgba(212, 61, 114, 0.025) 0 2px, transparent 2px 30px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 52px 52px, auto;
+  color: #34202a;
 }
-::selection { background: #f09e12; color: #432405; }
+::selection { background: #e8558a; color: #420e20; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: #d17907; border-radius: 4px; }
-::-webkit-scrollbar-track { background: #efe3c8; }
+::-webkit-scrollbar-thumb { background: #d43d72; border-radius: 4px; }
+::-webkit-scrollbar-track { background: #f6e0e8; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Sun-sway keyframes shared by the hero sun disc and bunting flags. */
-@keyframes sun-drift {
-  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
-  50% { transform: translate3d(-2%, 3%, 0) rotate(3deg); }
+/* Petal keyframes: gentle drift for floating petals in the hero. */
+@keyframes petal-drift {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(-8deg); }
+  33% { transform: translate3d(3%, -4%, 0) rotate(10deg); }
+  66% { transform: translate3d(-3%, 3%, 0) rotate(-4deg); }
 }
-.sun-drift { animation: sun-drift 16s ease-in-out infinite; }
+.petal-drift { animation: petal-drift 18s ease-in-out infinite; }
 
-@keyframes bunting-sway {
-  0%, 100% { transform: rotate(-2.5deg); }
-  50% { transform: rotate(2.5deg); }
+@keyframes petal-fall {
+  0% { transform: translate3d(0, -12%, 0) rotate(0deg); opacity: 0; }
+  12% { opacity: 0.85; }
+  88% { opacity: 0.6; }
+  100% { transform: translate3d(-6vw, 105vh, 0) rotate(340deg); opacity: 0; }
 }
-.bunting-sway { animation: bunting-sway 5s ease-in-out infinite; transform-origin: top center; }
+.petal-fall { animation: petal-fall 14s linear infinite; }
 
-/* Warm paper lift used on cards and buttons. */
+@keyframes petal-sway {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+.petal-sway { animation: petal-sway 5s ease-in-out infinite; transform-origin: top center; }
+
+/* Soft petal lift used on cards and buttons. */
 .paper-lift {
   box-shadow:
     0 1px 0 0 rgba(255, 255, 255, 0.9) inset,
-    0 14px 34px -16px rgba(168, 93, 12, 0.35);
+    0 14px 34px -16px rgba(176, 45, 92, 0.35);
 }
