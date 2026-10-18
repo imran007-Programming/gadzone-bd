@@ -117,18 +117,18 @@ export default function AdminPage() {
       />
 
       <div className="min-w-0 flex-1">
-        <header className="sticky top-0 z-20 border-b border-[#f0d3df] bg-[#ffffff]/90 backdrop-blur lg:static">
+        <header className="sticky top-0 z-20 border-b border-[#e3d9bd] bg-[#ffffff]/90 backdrop-blur lg:static">
           <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3">
             <Link href="/" className="flex shrink-0 items-center gap-2 lg:hidden">
               <span className="flex h-9 w-9 items-center justify-center rounded-2xl bg-brand-500 text-xl font-black text-white">G</span>
               <span className="text-base font-black tracking-tight">Gad<span className="text-brand-600">Zone</span> BD</span>
             </Link>
             <div className="min-w-0 flex-1">
-              <p className="flex flex-wrap items-center gap-2 truncate text-sm font-bold text-[#34202a] sm:text-base">
+              <p className="flex flex-wrap items-center gap-2 truncate text-sm font-bold text-[#22301f] sm:text-base">
                 Admin Dashboard
                 <span className="rounded-full bg-[#ffffff] px-2 py-0.5 text-[11px] font-black text-brand-700">ADMIN</span>
               </p>
-              <p className="hidden text-xs text-[#8a6a71] sm:block">Manage orders, products and customers.</p>
+              <p className="hidden text-xs text-[#75705f] sm:block">Manage orders, products and customers.</p>
             </div>
             {session?.user && (
               <>
@@ -137,7 +137,7 @@ export default function AdminPage() {
                   // eslint-disable-next-line @next/next/no-img-element
                   <img src={session.user.image} alt="" className="h-10 w-10 shrink-0 rounded-full object-cover ring-2 ring-brand-200" />
                 ) : (
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#faf2f5] font-black text-[#34202a]">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#faf2f5] font-black text-[#22301f]">
                     {initials(session.user.name, session.user.email)}
                   </span>
                 )}
@@ -148,7 +148,7 @@ export default function AdminPage() {
 
         <main className="mx-auto max-w-6xl px-4 py-6">
           {status === "loading" ? (
-            <p className="py-16 text-center text-[#8a6a71]">Checking your session…</p>
+            <p className="py-16 text-center text-[#75705f]">Checking your session…</p>
           ) : !session?.user ? (
             <SignInPrompt
               title="Admin Dashboard"
@@ -158,8 +158,8 @@ export default function AdminPage() {
           ) : !isAdmin ? (
             <div className="mx-auto max-w-md rounded-2xl bg-[#ffffff] p-8 text-center shadow-sm ring-1 ring-[#f7e9ee]">
               <p className="text-4xl" aria-hidden="true">🔒</p>
-              <h1 className="mt-2 text-2xl font-black text-[#34202a]">Access denied — admin only</h1>
-              <p className="mt-2 text-sm text-[#76646b]">You are signed in as {session.user.email}, but this account does not have admin access.</p>
+              <h1 className="mt-2 text-2xl font-black text-[#22301f]">Access denied — admin only</h1>
+              <p className="mt-2 text-sm text-[#6b6355]">You are signed in as {session.user.email}, but this account does not have admin access.</p>
               <Link href="/" className="mt-5 inline-block rounded-full bg-brand-500 px-6 py-3 text-sm font-bold text-white transition hover:bg-brand-600">Back to Shop</Link>
             </div>
           ) : (
@@ -187,16 +187,16 @@ export default function AdminPage() {
                     </div>
                     <section className="rounded-2xl bg-[#ffffff] p-5 shadow-sm ring-1 ring-[#f7e9ee] lg:col-span-2">
                       <div className="flex items-center justify-between">
-                        <h3 className="font-black text-[#34202a]">Low-stock products</h3>
+                        <h3 className="font-black text-[#22301f]">Low-stock products</h3>
                         <button onClick={() => setTab("products")} className="text-sm font-bold text-brand-600 hover:text-brand-700">View all →</button>
                       </div>
                       {lowStock.length === 0 ? (
-                        <p className="mt-4 text-sm text-[#8a6a71]">All products are well stocked. 🎉</p>
+                        <p className="mt-4 text-sm text-[#75705f]">All products are well stocked. 🎉</p>
                       ) : (
                         <ul className="mt-4 space-y-3">
                           {lowStock.map((p) => (
                             <li key={p.id} className="flex items-center justify-between gap-3">
-                              <span className="min-w-0 truncate text-sm font-semibold text-[#5c4148]">{p.name}</span>
+                              <span className="min-w-0 truncate text-sm font-semibold text-[#3f4a38]">{p.name}</span>
                               <span className={`shrink-0 rounded-full px-2.5 py-1 text-xs font-bold ${STOCK_STYLES[p.stock] ?? "bg-[#f0dae4] text-[#75616a]"}`}>{p.stock}</span>
                             </li>
                           ))}
@@ -207,11 +207,11 @@ export default function AdminPage() {
 
                   <section>
                     <div className="mb-3 flex items-center justify-between">
-                      <h2 className="text-lg font-black text-[#34202a]">Recent Orders</h2>
+                      <h2 className="text-lg font-black text-[#22301f]">Recent Orders</h2>
                       <button onClick={() => setTab("orders")} className="text-sm font-bold text-brand-600 hover:text-brand-700">View all →</button>
                     </div>
                     {!loaded ? (
-                      <p className="text-sm text-[#8a6a71]">Loading orders…</p>
+                      <p className="text-sm text-[#75705f]">Loading orders…</p>
                     ) : recentOrders.length === 0 ? (
                       <EmptyState icon="📦" title="No orders yet" text="Place a test order from the shop to see it here." actionLabel="Go to shop" actionHref="/" />
                     ) : (
@@ -219,8 +219,8 @@ export default function AdminPage() {
                         {recentOrders.map((o) => (
                           <div key={o.id} className="flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-[#ffffff] p-4 shadow-sm ring-1 ring-[#f7e9ee]">
                             <div className="min-w-0">
-                              <p className="font-black text-[#34202a]">{o.id}</p>
-                              <p className="truncate text-sm text-[#8a6a71]">{o.name} · {o.email}</p>
+                              <p className="font-black text-[#22301f]">{o.id}</p>
+                              <p className="truncate text-sm text-[#75705f]">{o.name} · {o.email}</p>
                             </div>
                             <div className="flex items-center gap-3">
                               <span className="font-black text-brand-600">{tk(o.total)}</span>
@@ -238,29 +238,29 @@ export default function AdminPage() {
                 <div className="space-y-5 pt-5">
                   <div className="flex flex-wrap items-end justify-between gap-3">
                     <div>
-                      <h1 className="text-2xl font-black text-[#34202a]">Orders</h1>
-                      <p className="mt-1 text-sm text-[#8a6a71]">{filteredOrders.length} order{filteredOrders.length === 1 ? "" : "s"} shown</p>
+                      <h1 className="text-2xl font-black text-[#22301f]">Orders</h1>
+                      <p className="mt-1 text-sm text-[#75705f]">{filteredOrders.length} order{filteredOrders.length === 1 ? "" : "s"} shown</p>
                     </div>
                     {(orderSearch.trim() || statusFilter !== "All") && (
-                      <button onClick={() => { setOrderSearch(""); setStatusFilter("All"); }} className="rounded-full bg-[#ffffff] px-4 py-2 text-sm font-bold text-[#75616a] ring-1 ring-[#f0d3df] hover:bg-[#f0dae4]">Clear filters ✕</button>
+                      <button onClick={() => { setOrderSearch(""); setStatusFilter("All"); }} className="rounded-full bg-[#ffffff] px-4 py-2 text-sm font-bold text-[#75616a] ring-1 ring-[#e3d9bd] hover:bg-[#f0dae4]">Clear filters ✕</button>
                     )}
                   </div>
 
                   <label className="relative block max-w-md">
                     <span className="sr-only">Search orders</span>
-                    <span className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-[#8a6a71]" aria-hidden="true">🔍</span>
+                    <span className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-[#75705f]" aria-hidden="true">🔍</span>
                     <input
                       value={orderSearch}
                       onChange={(e) => setOrderSearch(e.target.value)}
                       placeholder="Search by order id, name or email…"
-                      className="w-full rounded-full border border-[#f0d3df] bg-[#ffffff] py-2.5 pr-3 pl-9 text-sm outline-none focus:border-brand-400"
+                      className="w-full rounded-full border border-[#e3d9bd] bg-[#ffffff] py-2.5 pr-3 pl-9 text-sm outline-none focus:border-brand-400"
                     />
                   </label>
 
                   <FilterPills options={STATUS_OPTIONS} value={statusFilter} onChange={(v) => setStatusFilter(v as StatusFilter)} counts={statusCounts} />
 
                   {!loaded ? (
-                    <p className="text-sm text-[#8a6a71]">Loading orders…</p>
+                    <p className="text-sm text-[#75705f]">Loading orders…</p>
                   ) : filteredOrders.length === 0 ? (
                     <EmptyState icon="🔍" title={orders.length === 0 ? "No orders yet" : "No orders match your filters"} text={orders.length === 0 ? "Place a test order from the shop to see it here." : "Try a different search or status filter."} actionLabel={orders.length === 0 ? "Go to shop" : undefined} actionHref={orders.length === 0 ? "/" : undefined} />
                   ) : (
@@ -277,8 +277,8 @@ export default function AdminPage() {
                 <div className="space-y-5 pt-5">
                   <div className="flex flex-wrap items-end justify-between gap-3">
                     <div>
-                      <h1 className="text-2xl font-black text-[#34202a]">Products</h1>
-                      <p className="mt-1 text-sm text-[#8a6a71]">{filteredProducts.length} product{filteredProducts.length === 1 ? "" : "s"} in the catalogue</p>
+                      <h1 className="text-2xl font-black text-[#22301f]">Products</h1>
+                      <p className="mt-1 text-sm text-[#75705f]">{filteredProducts.length} product{filteredProducts.length === 1 ? "" : "s"} in the catalogue</p>
                     </div>
                     <button onClick={() => setShowAddNote((v) => !v)} className="rounded-full bg-brand-500 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-brand-600">+ Add Product</button>
                   </div>
@@ -291,12 +291,12 @@ export default function AdminPage() {
 
                   <label className="relative block max-w-md">
                     <span className="sr-only">Search products</span>
-                    <span className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-[#8a6a71]" aria-hidden="true">🔍</span>
+                    <span className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-[#75705f]" aria-hidden="true">🔍</span>
                     <input
                       value={productSearch}
                       onChange={(e) => setProductSearch(e.target.value)}
                       placeholder="Search by product name or category…"
-                      className="w-full rounded-full border border-[#f0d3df] bg-[#ffffff] py-2.5 pr-3 pl-9 text-sm outline-none focus:border-brand-400"
+                      className="w-full rounded-full border border-[#e3d9bd] bg-[#ffffff] py-2.5 pr-3 pl-9 text-sm outline-none focus:border-brand-400"
                     />
                   </label>
 
@@ -310,13 +310,13 @@ export default function AdminPage() {
                           <img src={p.img} alt={p.name} loading="lazy" className="h-40 w-full object-cover" />
                           <div className="p-4">
                             <div className="flex items-start justify-between gap-2">
-                              <h3 className="min-w-0 font-black text-[#34202a]">{p.name}</h3>
+                              <h3 className="min-w-0 font-black text-[#22301f]">{p.name}</h3>
                               <span className={`shrink-0 rounded-full px-2.5 py-1 text-[11px] font-bold ${STOCK_STYLES[p.stock] ?? "bg-[#f0dae4] text-[#75616a]"}`}>{p.stock}</span>
                             </div>
-                            <p className="mt-1 text-xs font-semibold tracking-wide text-[#8a6a71] uppercase">{p.category}</p>
+                            <p className="mt-1 text-xs font-semibold tracking-wide text-[#75705f] uppercase">{p.category}</p>
                             <div className="mt-3 flex items-center justify-between">
-                              <p className="font-black text-brand-600">{tk(p.price)} <span className="text-xs font-semibold text-[#8a6a71] line-through">{tk(p.oldPrice)}</span></p>
-                              <p className="text-sm font-bold text-[#75616a]">⭐ {p.rating} <span className="font-normal text-[#8a6a71]">({p.reviews})</span></p>
+                              <p className="font-black text-brand-600">{tk(p.price)} <span className="text-xs font-semibold text-[#75705f] line-through">{tk(p.oldPrice)}</span></p>
+                              <p className="text-sm font-bold text-[#75616a]">⭐ {p.rating} <span className="font-normal text-[#75705f]">({p.reviews})</span></p>
                             </div>
                           </div>
                         </article>
@@ -328,10 +328,10 @@ export default function AdminPage() {
 
               {tab === "customers" && (
                 <div className="space-y-5 pt-5">
-                  <h1 className="text-2xl font-black text-[#34202a]">Customers</h1>
-                  <p className="text-sm text-[#8a6a71]">Derived from orders placed in this browser. Guest checkouts are not listed here.</p>
+                  <h1 className="text-2xl font-black text-[#22301f]">Customers</h1>
+                  <p className="text-sm text-[#75705f]">Derived from orders placed in this browser. Guest checkouts are not listed here.</p>
                   {!loaded ? (
-                    <p className="text-sm text-[#8a6a71]">Loading customers…</p>
+                    <p className="text-sm text-[#75705f]">Loading customers…</p>
                   ) : customers.length === 0 ? (
                     <EmptyState icon="👥" title="No customers yet" text="When a signed-in customer places an order, they will appear here." actionLabel="Go to shop" actionHref="/" />
                   ) : (
@@ -343,12 +343,12 @@ export default function AdminPage() {
                               {initials(c.name, c.email)}
                             </span>
                             <div className="min-w-0">
-                              <p className="truncate font-black text-[#34202a]">{c.name}</p>
-                              <p className="truncate text-sm text-[#8a6a71]">{c.email}</p>
+                              <p className="truncate font-black text-[#22301f]">{c.name}</p>
+                              <p className="truncate text-sm text-[#75705f]">{c.email}</p>
                             </div>
                           </div>
                           <div className="mt-4 flex items-center justify-between border-t border-[#f7e9ee] pt-3 text-sm">
-                            <span className="font-semibold text-[#8a6a71]">{c.orders} order{c.orders === 1 ? "" : "s"}</span>
+                            <span className="font-semibold text-[#75705f]">{c.orders} order{c.orders === 1 ? "" : "s"}</span>
                             <span className="font-black text-brand-600">{tk(c.spent)}</span>
                           </div>
                         </article>

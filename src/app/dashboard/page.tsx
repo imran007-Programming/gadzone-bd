@@ -86,29 +86,29 @@ export default function DashboardPage() {
 
       <div className="min-w-0 flex-1">
         {/* Top header */}
-        <header className="sticky top-0 z-20 border-b border-[#f0d3df] bg-[#ffffff]/90 backdrop-blur lg:static">
+        <header className="sticky top-0 z-20 border-b border-[#e3d9bd] bg-[#ffffff]/90 backdrop-blur lg:static">
           <div className="mx-auto flex max-w-5xl items-center gap-3 px-4 py-3">
             <Link href="/" className="flex shrink-0 items-center gap-2 lg:hidden">
               <span className="flex h-9 w-9 items-center justify-center rounded-2xl bg-brand-500 text-xl font-black text-white">G</span>
               <span className="text-base font-black tracking-tight">Gad<span className="text-brand-600">Zone</span> BD</span>
             </Link>
             <div className="min-w-0 flex-1">
-              <p className="truncate text-sm font-bold text-[#34202a] sm:text-base">Hello, {session?.user?.name ?? "Guest"} 👋</p>
-              <p className="hidden text-xs text-[#8a6a71] sm:block">Track your orders and manage your account.</p>
+              <p className="truncate text-sm font-bold text-[#22301f] sm:text-base">Hello, {session?.user?.name ?? "Guest"} 👋</p>
+              <p className="hidden text-xs text-[#75705f] sm:block">Track your orders and manage your account.</p>
             </div>
             {session?.user && (
               <>
                 <label className="relative hidden w-56 shrink-0 sm:block md:w-72">
                   <span className="sr-only">Search orders</span>
-                  <span className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-[#8a6a71]" aria-hidden="true">🔍</span>
+                  <span className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-[#75705f]" aria-hidden="true">🔍</span>
                   <input
                     value={search}
                     onChange={(e) => handleSearch(e.target.value)}
                     placeholder="Search orders by id or item…"
-                    className="w-full rounded-full border border-[#f0d3df] bg-[#f0dae4] py-2 pr-3 pl-9 text-sm outline-none focus:border-brand-400 focus:bg-[#ffffff]"
+                    className="w-full rounded-full border border-[#e3d9bd] bg-[#f0dae4] py-2 pr-3 pl-9 text-sm outline-none focus:border-brand-400 focus:bg-[#ffffff]"
                   />
                 </label>
-                <Link href="/" className="relative shrink-0 rounded-full bg-[#faf2f5] px-4 py-2 text-sm font-bold text-[#34202a] transition hover:bg-[#f4e4ea]">
+                <Link href="/" className="relative shrink-0 rounded-full bg-[#faf2f5] px-4 py-2 text-sm font-bold text-[#22301f] transition hover:bg-[#f4e4ea]">
                   🛒 <span className="hidden sm:inline">Cart</span>
                 </Link>
                 {session.user.image ? (
@@ -127,12 +127,12 @@ export default function DashboardPage() {
             <div className="px-4 pb-3 sm:hidden">
               <label className="relative block">
                 <span className="sr-only">Search orders</span>
-                <span className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-[#8a6a71]" aria-hidden="true">🔍</span>
+                <span className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-[#75705f]" aria-hidden="true">🔍</span>
                 <input
                   value={search}
                   onChange={(e) => handleSearch(e.target.value)}
                   placeholder="Search orders by id or item…"
-                  className="w-full rounded-full border border-[#f0d3df] bg-[#f0dae4] py-2 pr-3 pl-9 text-sm outline-none focus:border-brand-400 focus:bg-[#ffffff]"
+                  className="w-full rounded-full border border-[#e3d9bd] bg-[#f0dae4] py-2 pr-3 pl-9 text-sm outline-none focus:border-brand-400 focus:bg-[#ffffff]"
                 />
               </label>
             </div>
@@ -141,7 +141,7 @@ export default function DashboardPage() {
 
         <main className="mx-auto max-w-5xl px-4 py-6">
           {status === "loading" ? (
-            <p className="py-16 text-center text-[#8a6a71]">Checking your session…</p>
+            <p className="py-16 text-center text-[#75705f]">Checking your session…</p>
           ) : !session?.user ? (
             <SignInPrompt
               title="My Dashboard"
@@ -179,11 +179,11 @@ export default function DashboardPage() {
 
                   <section>
                     <div className="mb-3 flex items-center justify-between">
-                      <h2 className="text-lg font-black text-[#34202a]">Recent Orders</h2>
+                      <h2 className="text-lg font-black text-[#22301f]">Recent Orders</h2>
                       <button onClick={() => setTab("orders")} className="text-sm font-bold text-brand-600 hover:text-brand-700">View all →</button>
                     </div>
                     {!loaded ? (
-                      <p className="text-sm text-[#8a6a71]">Loading orders…</p>
+                      <p className="text-sm text-[#75705f]">Loading orders…</p>
                     ) : recent.length === 0 ? (
                       <EmptyState icon="📦" title="No orders yet" text="When you place an order while signed in, it will show up here." actionLabel="Shop now" actionHref="/" />
                     ) : (
@@ -191,8 +191,8 @@ export default function DashboardPage() {
                         {recent.map((o) => (
                           <div key={o.id} className="flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-[#ffffff] p-4 shadow-sm ring-1 ring-[#f7e9ee]">
                             <div className="min-w-0">
-                              <p className="font-black text-[#34202a]">{o.id}</p>
-                              <p className="truncate text-sm text-[#8a6a71]">{o.items.map((it) => `${it.name} × ${it.qty}`).join(" · ")}</p>
+                              <p className="font-black text-[#22301f]">{o.id}</p>
+                              <p className="truncate text-sm text-[#75705f]">{o.items.map((it) => `${it.name} × ${it.qty}`).join(" · ")}</p>
                             </div>
                             <div className="flex items-center gap-3">
                               <span className="font-black text-brand-600">{tk(o.total)}</span>
@@ -205,22 +205,22 @@ export default function DashboardPage() {
                   </section>
 
                   <section>
-                    <h2 className="mb-3 text-lg font-black text-[#34202a]">Quick actions</h2>
+                    <h2 className="mb-3 text-lg font-black text-[#22301f]">Quick actions</h2>
                     <div className="grid gap-3 sm:grid-cols-3">
                       <Link href="/" className="rounded-2xl bg-[#ffffff] p-5 shadow-sm ring-1 ring-[#f7e9ee] transition hover:shadow-md">
                         <p className="text-2xl" aria-hidden="true">🛍️</p>
-                        <p className="mt-2 font-black text-[#34202a]">Shop Now</p>
-                        <p className="text-sm text-[#8a6a71]">Browse deals and new arrivals.</p>
+                        <p className="mt-2 font-black text-[#22301f]">Shop Now</p>
+                        <p className="text-sm text-[#75705f]">Browse deals and new arrivals.</p>
                       </Link>
                       <button onClick={() => setTab("orders")} className="rounded-2xl bg-[#ffffff] p-5 text-left shadow-sm ring-1 ring-[#f7e9ee] transition hover:shadow-md">
                         <p className="text-2xl" aria-hidden="true">🚚</p>
-                        <p className="mt-2 font-black text-[#34202a]">Track Order</p>
-                        <p className="text-sm text-[#8a6a71]">See the status of every order.</p>
+                        <p className="mt-2 font-black text-[#22301f]">Track Order</p>
+                        <p className="text-sm text-[#75705f]">See the status of every order.</p>
                       </button>
                       <Link href="/#faq" className="rounded-2xl bg-[#ffffff] p-5 shadow-sm ring-1 ring-[#f7e9ee] transition hover:shadow-md">
                         <p className="text-2xl" aria-hidden="true">💬</p>
-                        <p className="mt-2 font-black text-[#34202a]">Support</p>
-                        <p className="text-sm text-[#8a6a71]">Answers to common questions.</p>
+                        <p className="mt-2 font-black text-[#22301f]">Support</p>
+                        <p className="text-sm text-[#75705f]">Answers to common questions.</p>
                       </Link>
                     </div>
                   </section>
@@ -231,13 +231,13 @@ export default function DashboardPage() {
                 <div className="space-y-5 pt-4">
                   <div className="flex flex-wrap items-end justify-between gap-3">
                     <div>
-                      <h1 className="text-2xl font-black text-[#34202a]">My Orders</h1>
-                      <p className="mt-1 text-sm text-[#8a6a71]">{filtered.length} order{filtered.length === 1 ? "" : "s"} shown</p>
+                      <h1 className="text-2xl font-black text-[#22301f]">My Orders</h1>
+                      <p className="mt-1 text-sm text-[#75705f]">{filtered.length} order{filtered.length === 1 ? "" : "s"} shown</p>
                     </div>
                     {(search.trim() || statusFilter !== "All") && (
                       <button
                         onClick={() => { setSearch(""); setStatusFilter("All"); }}
-                        className="rounded-full bg-[#ffffff] px-4 py-2 text-sm font-bold text-[#75616a] ring-1 ring-[#f0d3df] hover:bg-[#f0dae4]"
+                        className="rounded-full bg-[#ffffff] px-4 py-2 text-sm font-bold text-[#75616a] ring-1 ring-[#e3d9bd] hover:bg-[#f0dae4]"
                       >
                         Clear filters ✕
                       </button>
@@ -247,7 +247,7 @@ export default function DashboardPage() {
                   <FilterPills options={STATUS_OPTIONS} value={statusFilter} onChange={(v) => setStatusFilter(v as StatusFilter)} counts={statusCounts} />
 
                   {!loaded ? (
-                    <p className="text-sm text-[#8a6a71]">Loading orders…</p>
+                    <p className="text-sm text-[#75705f]">Loading orders…</p>
                   ) : filtered.length === 0 ? (
                     <EmptyState
                       icon="🔍"
@@ -268,7 +268,7 @@ export default function DashboardPage() {
 
               {tab === "profile" && (
                 <div className="space-y-5 pt-4">
-                  <h1 className="text-2xl font-black text-[#34202a]">Profile</h1>
+                  <h1 className="text-2xl font-black text-[#22301f]">Profile</h1>
                   <Reveal>
                     <section className="flex flex-col items-start gap-4 rounded-2xl bg-[#ffffff] p-6 shadow-sm ring-1 ring-[#f7e9ee] sm:flex-row sm:items-center">
                       {session.user.image ? (
@@ -280,8 +280,8 @@ export default function DashboardPage() {
                         </span>
                       )}
                       <div className="min-w-0 flex-1">
-                        <h2 className="truncate text-xl font-black text-[#34202a]">{session.user.name ?? "GadZone customer"}</h2>
-                        <p className="truncate text-sm text-[#8a6a71]">{session.user.email}</p>
+                        <h2 className="truncate text-xl font-black text-[#22301f]">{session.user.name ?? "GadZone customer"}</h2>
+                        <p className="truncate text-sm text-[#75705f]">{session.user.email}</p>
                         <span className="mt-2 inline-block rounded-full bg-brand-100 px-3 py-1 text-xs font-bold text-brand-700 capitalize">{session.user.role ?? "customer"}</span>
                       </div>
                       <Link href="/" className="rounded-full bg-brand-500 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-brand-600">Continue Shopping</Link>
@@ -289,18 +289,18 @@ export default function DashboardPage() {
                   </Reveal>
 
                   <section className="rounded-2xl bg-[#ffffff] p-6 shadow-sm ring-1 ring-[#f7e9ee]">
-                    <h2 className="font-black text-[#34202a]">Account info</h2>
+                    <h2 className="font-black text-[#22301f]">Account info</h2>
                     <dl className="mt-4 grid gap-4 text-sm sm:grid-cols-2">
-                      <div><dt className="font-semibold text-[#8a6a71]">Full name</dt><dd className="mt-0.5 font-bold text-[#75616a]">{session.user.name ?? "—"}</dd></div>
-                      <div><dt className="font-semibold text-[#8a6a71]">Email</dt><dd className="mt-0.5 truncate font-bold text-[#75616a]">{session.user.email ?? "—"}</dd></div>
-                      <div><dt className="font-semibold text-[#8a6a71]">Role</dt><dd className="mt-0.5 font-bold text-[#75616a] capitalize">{session.user.role ?? "customer"}</dd></div>
-                      <div><dt className="font-semibold text-[#8a6a71]">Member since</dt><dd className="mt-0.5 font-bold text-[#75616a]">Google account</dd></div>
+                      <div><dt className="font-semibold text-[#75705f]">Full name</dt><dd className="mt-0.5 font-bold text-[#75616a]">{session.user.name ?? "—"}</dd></div>
+                      <div><dt className="font-semibold text-[#75705f]">Email</dt><dd className="mt-0.5 truncate font-bold text-[#75616a]">{session.user.email ?? "—"}</dd></div>
+                      <div><dt className="font-semibold text-[#75705f]">Role</dt><dd className="mt-0.5 font-bold text-[#75616a] capitalize">{session.user.role ?? "customer"}</dd></div>
+                      <div><dt className="font-semibold text-[#75705f]">Member since</dt><dd className="mt-0.5 font-bold text-[#75616a]">Google account</dd></div>
                     </dl>
                   </section>
 
                   <section className="rounded-2xl bg-brand-50 p-5 ring-1 ring-brand-100">
                     <h2 className="font-black text-[#75616a]">🔒 Signed in with Google</h2>
-                    <p className="mt-1 text-sm text-[#5c4148]">Your account is protected by your Google sign-in. GadZone BD never sees or stores your Google password.</p>
+                    <p className="mt-1 text-sm text-[#3f4a38]">Your account is protected by your Google sign-in. GadZone BD never sees or stores your Google password.</p>
                   </section>
 
                   <section className="rounded-2xl bg-brand-50 p-5 ring-1 ring-brand-100">

@@ -22,30 +22,30 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.45, delay, ease: "easeOut" }}
       whileHover={reduce ? undefined : { y: -5 }}
-      className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-[#f0d3df] bg-[#ffffff] shadow-[0_14px_44px_-14px_rgba(66,14,32,0.6)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-400/60 hover:shadow-[0_0_30px_-8px_rgba(232,85,138,0.5)]"
+      className="cut-corners lantern-lift group relative flex h-full flex-col overflow-hidden border-2 border-brand-800 bg-[#fefdf7] transition-all duration-300 hover:-translate-y-1.5 hover:border-gold-deep"
     >
-      {/* neon aurora top edge */}
-      <div aria-hidden className="h-1 bg-gradient-to-r from-brand-500 via-[#b84d7d] to-[#a0205a] opacity-80" />
+      {/* lantern gold top edge */}
+      <div aria-hidden className="h-1.5 bg-gradient-to-r from-brand-700 via-gold to-brand-700" />
       <div className="relative p-3">
-        <div className="relative cursor-pointer overflow-hidden rounded-xl ring-1 ring-[#f0d3df]" onClick={() => onQuickView(p)}>
+        <div className="cut-corners-sm relative cursor-pointer overflow-hidden ring-2 ring-brand-800/20" onClick={() => onQuickView(p)}>
           <ProductImage product={p} />
           {p.badge === "New" && (
-            <span className="absolute left-3 top-3 rounded-full bg-gradient-to-r from-brand-600 to-brand-800 px-2.5 py-1 text-[11px] font-black uppercase tracking-wider text-white shadow-[0_4px_14px_-4px_rgba(240, 158, 18,0.45)]">New</span>
+            <span className="cut-corners-sm absolute left-3 top-3 bg-gradient-to-r from-brand-600 to-brand-800 px-2.5 py-1 text-[11px] font-black uppercase tracking-wider text-white shadow-[0_4px_14px_-4px_rgba(30,122,88,0.55)]">New</span>
           )}
           {discountPct(p) > 0 && (
-            <span className="absolute right-3 top-3 rounded-full bg-brand-600 px-2.5 py-1 text-[11px] font-black text-white shadow-[0_4px_14px_-4px_rgba(240, 158, 18,0.45)]">-{discountPct(p)}%</span>
+            <span className="cut-corners-sm absolute right-3 top-3 bg-gradient-to-r from-gold-deep to-gold px-2.5 py-1 text-[11px] font-black text-brand-950 shadow-[0_4px_14px_-4px_rgba(232,160,32,0.6)]">-{discountPct(p)}%</span>
           )}
         </div>
       </div>
       <div className="flex flex-1 flex-col items-start gap-1.5 px-5 pb-4 pt-1 text-left">
-        <span className="rounded-full border border-brand-400/30 bg-brand-400/10 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-[0.16em] text-brand-600">{p.category}</span>
-        <h3 className="cursor-pointer text-[15px] font-bold leading-snug tracking-tight text-[#34202a] hover:text-brand-600" onClick={() => onQuickView(p)}>{p.name}</h3>
-        <div className="flex items-center gap-1"><Stars rating={p.rating} /><span className="text-xs font-medium text-[#8a6a71]">{p.rating} ({p.reviews.toLocaleString()})</span></div>
-        <span className={`w-fit rounded-full border px-2.5 py-1 text-[11px] font-bold ${p.stock === "In Stock" ? "border-emerald-600/30 bg-emerald-600/10 text-emerald-700" : "border-[#e8c9d7] bg-[#ffffff] text-[#8a6a71]"}`}>{p.stock === "In Stock" ? "● In Stock" : "⚠ " + p.stock}</span>
-        <p className="line-clamp-2 text-[13px] leading-relaxed text-[#8a6a71]">{p.desc}</p>
+        <span className="cut-corners-sm border border-gold-deep/50 bg-gold/15 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-[0.16em] text-gold-deep">{p.category}</span>
+        <h3 className="cursor-pointer text-[15px] font-bold leading-snug tracking-tight text-[#22301f] hover:text-brand-600" onClick={() => onQuickView(p)}>{p.name}</h3>
+        <div className="flex items-center gap-1"><Stars rating={p.rating} /><span className="text-xs font-medium text-[#75705f]">{p.rating} ({p.reviews.toLocaleString()})</span></div>
+        <span className={`w-fit px-2.5 py-1 text-[11px] font-bold ${p.stock === "In Stock" ? "cut-corners-sm border border-brand-600/40 bg-brand-600/10 text-brand-700" : "cut-corners-sm border border-[#d9cfae] bg-[#fefdf7] text-[#75705f]"}`}>{p.stock === "In Stock" ? "● In Stock" : "⚠ " + p.stock}</span>
+        <p className="line-clamp-2 text-[13px] leading-relaxed text-[#75705f]">{p.desc}</p>
         <div className="mt-auto flex w-full items-end justify-between gap-2 pt-2.5">
-          <span className="text-[22px] font-black tracking-tight text-brand-600">{tk(p.price)}</span>
-          <span className="text-xs font-bold text-[#8a6a71] line-through">{tk(p.oldPrice)}</span>
+          <span className="text-[22px] font-black tracking-tight text-brand-700">{tk(p.price)}</span>
+          <span className="text-xs font-bold text-[#75705f] line-through">{tk(p.oldPrice)}</span>
         </div>
       </div>
       <div className="flex flex-col gap-2 px-5 pb-5">
@@ -53,18 +53,17 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
           whileTap={{ scale: 0.98 }}
           onClick={() => onAddToCart(p.id)}
           aria-label={`Add ${p.name} to cart`}
-          className="flex w-full items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-brand-500 to-brand-700 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-[0_8px_24px_-8px_rgba(240, 158, 18,0.4)] transition hover:brightness-110 active:scale-[0.98]"
+          className="cut-corners-sm flex w-full items-center justify-center gap-1.5 bg-gradient-to-r from-brand-600 to-brand-800 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-[0_8px_24px_-8px_rgba(18,85,57,0.5)] transition hover:brightness-110 active:scale-[0.98]"
         >
           🛒 Add
         </motion.button>
         <button
           onClick={() => onQuickView(p)}
-          className="flex w-full items-center justify-center rounded-full border border-[#e8c9d7] bg-[#ffffff] px-4 py-2 text-xs font-black uppercase tracking-wider text-brand-600 transition hover:border-brand-400/50 hover:bg-brand-400/10 active:scale-[0.98]"
+          className="cut-corners-sm flex w-full items-center justify-center border-2 border-gold-deep/60 bg-transparent px-4 py-2 text-xs font-black uppercase tracking-wider text-gold-deep transition hover:bg-gold/15 active:scale-[0.98]"
         >
           View →
         </button>
       </div>
-      {/* price row keeps its spacing; neon edge lives at the top */}
     </motion.div>
   );
 }
