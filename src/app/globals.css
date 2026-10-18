@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 @theme {
-  /* neon aurora: electric cyan aurora over a deep midnight indigo — original palette */
-  --color-brand-50: #ecfeff;
-  --color-brand-100: #cffafe;
-  --color-brand-200: #a5f3fc;
-  --color-brand-300: #67e8f9;
-  --color-brand-400: #22d3ee;
-  --color-brand-500: #06b6d4;
-  --color-brand-600: #0891b2;
-  --color-brand-700: #0e7490;
-  --color-brand-800: #155e75;
-  --color-brand-900: #164e63;
-  --color-brand-950: #041a22;
-  --color-brand: #22d3ee;
-  --color-brand-dark: #0891b2;
-  --color-brand-deep: #155e75;
+  /* marigold courtyard: warm amber marigold over sunlit cream — original palette */
+  --color-brand-50: #fef9ec;
+  --color-brand-100: #fdf0c7;
+  --color-brand-200: #fbe18f;
+  --color-brand-300: #f8cb57;
+  --color-brand-400: #f5b32e;
+  --color-brand-500: #f09e12;
+  --color-brand-600: #d17907;
+  --color-brand-700: #a85d0c;
+  --color-brand-800: #8a4b10;
+  --color-brand-900: #75400f;
+  --color-brand-950: #432405;
+  --color-brand: #f09e12;
+  --color-brand-dark: #d17907;
+  --color-brand-deep: #8a4b10;
 }
 
 html { scroll-behavior: smooth; }
@@ -30,32 +30,38 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #0a0f1e;
+  background: #faf4e6;
   background-image:
-    radial-gradient(ellipse 110% 45% at 50% -12%, rgba(34, 211, 238, 0.14), transparent),
-    radial-gradient(ellipse 50% 35% at 88% 22%, rgba(167, 139, 250, 0.1), transparent),
-    radial-gradient(ellipse 50% 35% at 8% 40%, rgba(163, 230, 53, 0.06), transparent),
-    radial-gradient(ellipse 80% 40% at 50% 110%, rgba(8, 145, 178, 0.1), transparent);
-  background-size: 100% 100%;
-  color: #eaf0fa;
+    radial-gradient(ellipse 90% 40% at 50% -10%, rgba(240, 158, 18, 0.16), transparent),
+    radial-gradient(ellipse 45% 30% at 90% 18%, rgba(201, 106, 59, 0.08), transparent),
+    radial-gradient(ellipse 45% 30% at 6% 34%, rgba(111, 154, 82, 0.07), transparent),
+    repeating-linear-gradient(115deg, rgba(209, 121, 7, 0.028) 0 2px, transparent 2px 26px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, auto;
+  color: #2f2417;
 }
-::selection { background: #22d3ee; color: #041a22; }
+::selection { background: #f09e12; color: #432405; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: #0891b2; border-radius: 4px; }
-::-webkit-scrollbar-track { background: #0d1528; }
+::-webkit-scrollbar-thumb { background: #d17907; border-radius: 4px; }
+::-webkit-scrollbar-track { background: #efe3c8; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Aurora ribbon keyframes shared by hero + section dividers. */
-@keyframes aurora-drift {
+/* Sun-sway keyframes shared by the hero sun disc and bunting flags. */
+@keyframes sun-drift {
   0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
-  50% { transform: translate3d(3%, -2%, 0) rotate(2deg); }
+  50% { transform: translate3d(-2%, 3%, 0) rotate(3deg); }
 }
-.aurora-drift { animation: aurora-drift 14s ease-in-out infinite; }
+.sun-drift { animation: sun-drift 16s ease-in-out infinite; }
 
-/* Neon edge glow used on cards and buttons. */
-.neon-edge {
+@keyframes bunting-sway {
+  0%, 100% { transform: rotate(-2.5deg); }
+  50% { transform: rotate(2.5deg); }
+}
+.bunting-sway { animation: bunting-sway 5s ease-in-out infinite; transform-origin: top center; }
+
+/* Warm paper lift used on cards and buttons. */
+.paper-lift {
   box-shadow:
-    0 0 0 1px rgba(34, 211, 238, 0.22),
-    0 12px 40px -12px rgba(34, 211, 238, 0.28);
+    0 1px 0 0 rgba(255, 255, 255, 0.9) inset,
+    0 14px 34px -16px rgba(168, 93, 12, 0.35);
 }
