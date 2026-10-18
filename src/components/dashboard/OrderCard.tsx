@@ -27,7 +27,7 @@ export default function OrderCard({ order, showCustomer, statusEditable, onStatu
             {formatOrderDate(order.date)} · {itemCount} item{itemCount === 1 ? "" : "s"} · {order.payment}
           </p>
           {showCustomer && (
-            <p className="mt-1 text-sm font-semibold text-[#55606f]">
+            <p className="mt-1 text-sm font-semibold text-[#aeb8cc]">
               {order.name} <span className="font-normal text-[#93a0b8]">· {order.email}</span>
             </p>
           )}
@@ -66,7 +66,7 @@ export default function OrderCard({ order, showCustomer, statusEditable, onStatu
           <ul className="space-y-2 text-sm">
             {order.items.map((it, i) => (
               <li key={i} className="flex justify-between gap-3">
-                <span className="text-[#55606f]">{it.name} <span className="text-[#93a0b8]">× {it.qty}</span></span>
+                <span className="text-[#aeb8cc]">{it.name} <span className="text-[#93a0b8]">× {it.qty}</span></span>
                 <span className="shrink-0 font-semibold text-[#eaf0fa]">{tk(it.price * it.qty)}</span>
               </li>
             ))}

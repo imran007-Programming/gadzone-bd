@@ -237,7 +237,7 @@ export default function DashboardPage() {
                     {(search.trim() || statusFilter !== "All") && (
                       <button
                         onClick={() => { setSearch(""); setStatusFilter("All"); }}
-                        className="rounded-full bg-[#101a30] px-4 py-2 text-sm font-bold text-[#55606f] ring-1 ring-[#22304d] hover:bg-[#0d1528]"
+                        className="rounded-full bg-[#101a30] px-4 py-2 text-sm font-bold text-[#aeb8cc] ring-1 ring-[#22304d] hover:bg-[#0d1528]"
                       >
                         Clear filters ✕
                       </button>
