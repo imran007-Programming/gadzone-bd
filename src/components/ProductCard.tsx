@@ -22,16 +22,16 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.45, delay, ease: "easeOut" }}
       whileHover={reduce ? undefined : { y: -6 }}
-      className="group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-[0_10px_0_-6px_rgba(153,59,20,0.4)] ring-1 ring-brand-100 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_14px_0_-6px_rgba(153,59,20,0.5)] hover:ring-brand-300"
+      className="group relative flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-[0_24px_50px_-24px_rgba(14,116,144,0.40)] ring-1 ring-brand-200 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_32px_64px_-24px_rgba(14,116,144,0.50)] hover:ring-brand-400"
     >
       <div className="relative bg-gradient-to-b from-brand-100/70 via-white to-white p-3">
-        <div className="relative cursor-pointer overflow-hidden rounded-xl ring-1 ring-brand-100" onClick={() => onQuickView(p)}>
+        <div className="relative cursor-pointer overflow-hidden rounded-2xl ring-1 ring-brand-200" onClick={() => onQuickView(p)}>
           <ProductImage product={p} />
           {p.badge === "New" && (
-            <span className="absolute left-3 top-3 rounded-md bg-brand-900 px-2.5 py-1 text-[11px] font-black uppercase tracking-wider text-white shadow-md shadow-brand-950/30">New</span>
+            <span className="absolute left-3 top-3 rounded-full bg-brand-900 px-2.5 py-1 text-[11px] font-black uppercase tracking-wider text-white shadow-md shadow-brand-950/30">New</span>
           )}
           {discountPct(p) > 0 && (
-            <span className="absolute right-3 top-3 -rotate-3 rounded-md bg-brand-600 px-2.5 py-1 text-[11px] font-black text-white shadow-md shadow-brand-700/30">-{discountPct(p)}%</span>
+            <span className="absolute right-3 top-3 -rotate-3 rounded-full bg-brand-600 px-2.5 py-1 text-[11px] font-black text-white shadow-md shadow-brand-700/30">-{discountPct(p)}%</span>
           )}
         </div>
       </div>
@@ -51,19 +51,19 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
           whileTap={{ scale: 0.98 }}
           onClick={() => onAddToCart(p.id)}
           aria-label={`Add ${p.name} to cart`}
-          className="flex w-full items-center justify-center gap-1.5 rounded-xl bg-brand-600 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-[0_4px_0_0_#7d3317] transition hover:bg-brand-700 active:translate-y-1 active:shadow-none"
+          className="flex w-full items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-brand-700 to-brand-500 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-lg shadow-brand-600/30 transition hover:shadow-xl hover:shadow-brand-600/40 active:scale-[0.98]"
         >
           🛒 Add
         </motion.button>
         <button
           onClick={() => onQuickView(p)}
-          className="flex w-full items-center justify-center rounded-xl bg-white px-4 py-2 text-xs font-black uppercase tracking-wider text-brand-700 ring-1 ring-brand-300 transition hover:bg-brand-50 active:scale-[0.98]"
+          className="flex w-full items-center justify-center rounded-full bg-white px-4 py-2 text-xs font-black uppercase tracking-wider text-brand-700 ring-1 ring-brand-300 transition hover:bg-brand-50 active:scale-[0.98]"
         >
           View →
         </button>
       </div>
-      {/* ember base dash */}
-      <div aria-hidden className="h-1.5 bg-[repeating-linear-gradient(-45deg,#bd4c16_0,#bd4c16_10px,#993b14_10px,#993b14_20px)]" />
+      {/* tide gradient tide-mark */}
+      <div aria-hidden className="h-2 bg-gradient-to-r from-brand-300 via-brand-600 to-brand-300" />
     </motion.div>
   );
 }
