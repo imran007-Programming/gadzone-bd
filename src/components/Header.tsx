@@ -28,52 +28,52 @@ export default function Header({ query, onQueryChange, category, onCategoryChang
   }, []);
 
   return (
-    <header className={`sticky top-0 z-40 border-b border-slate-200/80 bg-white/85 backdrop-blur-xl transition-shadow duration-300 ${scrolled ? "shadow-lg shadow-slate-900/10" : "shadow-none"}`}>
+    <header className={`sticky top-0 z-40 border-b border-white/10 bg-[#0a0f1e]/85 backdrop-blur-xl transition-shadow duration-300 ${scrolled ? "shadow-[0_12px_40px_-12px_rgba(245,158,11,0.25)]" : "shadow-none"}`}>
       <div className="mx-auto max-w-7xl px-4 pt-3 sm:px-6">
         <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-2">
           <div className="flex items-center gap-1">
-            <button onClick={onMenuOpen} className="rounded-full p-2 text-xl text-slate-800 transition hover:bg-brand-50 hover:text-brand-800" aria-label="Open menu">☰</button>
+            <button onClick={onMenuOpen} className="rounded-full p-2 text-xl text-slate-200 transition hover:bg-white/10 hover:text-brand-300" aria-label="Open menu">☰</button>
           </div>
           <a href="#" className="flex items-center justify-center gap-2">
-            <span className="flex h-10 w-10 items-center justify-center rounded-xl border-2 border-brand-950/25 bg-brand-600 text-xl font-black text-white shadow-[3px_3px_0_0_rgba(55,26,5,0.35)]">G</span>
-            <span className="leading-none"><span className="block text-lg font-black tracking-tight text-slate-900 sm:text-xl">Gad<span className="text-brand-700">Zone</span> BD</span>
-            <span className="hidden text-[11px] font-medium text-slate-500 sm:block">Gadgets in Bangladesh</span></span>
+            <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-300 to-brand-600 text-xl font-black text-[#0a0f1e] shadow-[0_8px_24px_-8px_rgba(245,158,11,0.7)] ring-1 ring-brand-300/50">G</span>
+            <span className="leading-none"><span className="block text-lg font-black tracking-tight text-white sm:text-xl">Gad<span className="text-brand-400">Zone</span> BD</span>
+            <span className="hidden text-[11px] font-medium text-slate-400 sm:block">Gadgets in Bangladesh</span></span>
           </a>
           <div className="flex items-center justify-end gap-1 sm:gap-2">
             {session?.user ? (
               <>
-                <Link href="/dashboard" className="flex items-center gap-2 rounded-full p-1 pr-2 hover:bg-slate-100 sm:pr-3" aria-label="My dashboard">
+                <Link href="/dashboard" className="flex items-center gap-2 rounded-full p-1 pr-2 hover:bg-white/10 sm:pr-3" aria-label="My dashboard">
                   {session.user.image ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src={session.user.image} alt="" className="h-8 w-8 rounded-full object-cover" />
                   ) : (
-                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-700 text-sm font-black text-white">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-brand-400 to-brand-600 text-sm font-black text-[#0a0f1e]">
                       {(session.user.name ?? session.user.email ?? "G").slice(0, 1).toUpperCase()}
                     </span>
                   )}
-                  <span className="hidden max-w-28 truncate text-sm font-bold text-slate-800 md:inline">{session.user.name ?? "My Account"}</span>
+                  <span className="hidden max-w-28 truncate text-sm font-bold text-slate-100 md:inline">{session.user.name ?? "My Account"}</span>
                 </Link>
-                <Link href="/dashboard" className="hidden rounded-full px-3 py-1.5 text-xs font-bold text-slate-700 hover:bg-slate-100 md:inline-flex">Dashboard</Link>
+                <Link href="/dashboard" className="hidden rounded-full px-3 py-1.5 text-xs font-bold text-slate-300 hover:bg-white/10 md:inline-flex">Dashboard</Link>
                 {session.user.role === "admin" && (
-                  <Link href="/admin" className="hidden rounded-md bg-brand-600 px-3 py-1.5 text-xs font-black text-white shadow-[2px_2px_0_0_rgba(55,26,5,0.35)] hover:bg-brand-700 md:inline-flex">Admin</Link>
+                  <Link href="/admin" className="hidden rounded-full bg-gradient-to-r from-brand-400 to-brand-600 px-3 py-1.5 text-xs font-black text-[#0a0f1e] shadow-[0_4px_16px_-4px_rgba(245,158,11,0.6)] md:inline-flex">Admin</Link>
                 )}
-                <button onClick={() => signOut({ callbackUrl: "/" })} className="hidden rounded-full px-3 py-1.5 text-xs font-bold text-slate-700 hover:bg-slate-100 md:inline-flex">Sign out</button>
-                <button onClick={() => signOut({ callbackUrl: "/" })} className="rounded-full p-2 text-lg text-slate-800 hover:bg-slate-100 md:hidden" aria-label="Sign out">↪</button>
+                <button onClick={() => signOut({ callbackUrl: "/" })} className="hidden rounded-full px-3 py-1.5 text-xs font-bold text-slate-300 hover:bg-white/10 md:inline-flex">Sign out</button>
+                <button onClick={() => signOut({ callbackUrl: "/" })} className="rounded-full p-2 text-lg text-slate-200 hover:bg-white/10 md:hidden" aria-label="Sign out">↪</button>
               </>
             ) : (
-              <button onClick={onAccountOpen} className="rounded-lg bg-brand-600 px-5 py-2 text-sm font-bold text-white shadow-[3px_3px_0_0_rgba(55,26,5,0.35)] transition hover:bg-brand-700 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none">Sign in</button>
+              <button onClick={onAccountOpen} className="rounded-full bg-gradient-to-r from-brand-400 to-brand-600 px-5 py-2 text-sm font-bold text-[#0a0f1e] shadow-[0_8px_24px_-8px_rgba(245,158,11,0.7)] transition hover:brightness-110 active:scale-[0.98]">Sign in</button>
             )}
-            <span className="hidden rounded-full bg-brand-50 px-3 py-1.5 text-xs font-bold text-brand-700 ring-1 ring-brand-100 md:inline-flex">bKash ✓</span>
-            <span className="hidden rounded-full bg-brand-50 px-3 py-1.5 text-xs font-bold text-brand-800 ring-1 ring-brand-100 md:inline-flex">COD ✓</span>
-            <motion.button whileTap={{ scale: 0.94 }} onClick={onCartOpen} className="relative rounded-lg bg-[#09090b] px-3 py-2.5 text-sm font-bold text-white shadow-[3px_3px_0_0_rgba(55,26,5,0.35)] ring-2 ring-brand-500/50 transition hover:bg-zinc-800 active:scale-[0.98] sm:px-4">
+            <span className="hidden rounded-full bg-white/5 px-3 py-1.5 text-xs font-bold text-brand-300 ring-1 ring-white/10 md:inline-flex">bKash ✓</span>
+            <span className="hidden rounded-full bg-white/5 px-3 py-1.5 text-xs font-bold text-brand-300 ring-1 ring-white/10 md:inline-flex">COD ✓</span>
+            <motion.button whileTap={{ scale: 0.94 }} onClick={onCartOpen} className="relative rounded-full bg-white/5 px-3 py-2.5 text-sm font-bold text-white shadow-sm ring-1 ring-brand-400/40 transition hover:bg-white/10 hover:ring-brand-400/70 active:scale-[0.98] sm:px-4">
               <span className="hidden sm:inline">🛒 Cart</span>
               <span className="sm:hidden">🛒</span>
-              {cartCount > 0 && <span className="absolute -right-1.5 -top-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-brand-700 text-xs font-bold text-white ring-2 ring-white">{cartCount}</span>}
+              {cartCount > 0 && <span className="absolute -right-1.5 -top-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-brand-400 to-brand-600 text-xs font-black text-[#0a0f1e] ring-2 ring-[#0a0f1e]">{cartCount}</span>}
             </motion.button>
           </div>
         </div>
         <form
-          className="mt-3 flex items-center gap-2 rounded-xl border-2 border-slate-200 bg-white p-1.5 pl-2 shadow-[4px_4px_0_0_rgba(192,94,14,0.12)] transition focus-within:border-brand-600 focus-within:shadow-[4px_4px_0_0_rgba(192,94,14,0.25)]"
+          className="mt-3 flex items-center gap-2 rounded-full border border-white/10 bg-white/5 p-1.5 pl-2 shadow-[0_8px_28px_-12px_rgba(245,158,11,0.35)] transition focus-within:border-brand-400/60 focus-within:shadow-[0_8px_28px_-8px_rgba(245,158,11,0.5)]"
           onSubmit={(e) => {
             e.preventDefault();
             document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" });
@@ -83,17 +83,17 @@ export default function Header({ query, onQueryChange, category, onCategoryChang
             value={query}
             onChange={(e) => onQueryChange(e.target.value)}
             placeholder="Search for products"
-            className="min-w-0 flex-1 bg-transparent px-3 py-1.5 text-sm outline-none placeholder:text-slate-400"
+            className="min-w-0 flex-1 bg-transparent px-3 py-1.5 text-sm text-white outline-none placeholder:text-slate-500"
             aria-label="Search for products"
           />
-          <button type="submit" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-600 text-base text-white shadow-[3px_3px_0_0_rgba(55,26,5,0.35)] transition hover:bg-brand-700 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none" aria-label="Search">🔍</button>
+          <button type="submit" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-brand-400 to-brand-600 text-base text-[#0a0f1e] shadow-[0_6px_18px_-6px_rgba(245,158,11,0.8)] transition hover:brightness-110 active:scale-[0.95]" aria-label="Search">🔍</button>
         </form>
       </div>
-      <nav className="mt-3 border-t border-slate-100">
+      <nav className="mt-3 border-t border-white/10">
         <div className="no-scrollbar mx-auto flex max-w-7xl gap-1.5 overflow-x-auto px-4 py-2.5 sm:px-6">
           {CATEGORIES.map((c) => (
             <motion.button whileTap={{ scale: 0.96 }} key={c} onClick={() => { onCategoryChange(c); document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" }); }}
-              className={`whitespace-nowrap rounded-lg px-4 py-2 text-sm font-semibold transition active:scale-95 border-2 border-transparent ${category === c ? "border-brand-800 bg-brand-600 text-white shadow-[3px_3px_0_0_rgba(55,26,5,0.35)]" : "text-slate-600 hover:border-brand-200 hover:bg-brand-50 hover:text-brand-800"}`}>{c}</motion.button>
+              className={`whitespace-nowrap rounded-full px-4 py-2 text-sm font-semibold transition active:scale-95 border ${category === c ? "border-brand-300/60 bg-gradient-to-r from-brand-400 to-brand-600 text-[#0a0f1e] shadow-[0_6px_20px_-6px_rgba(245,158,11,0.7)]" : "border-transparent text-slate-400 hover:border-white/10 hover:bg-white/5 hover:text-brand-300"}`}>{c}</motion.button>
           ))}
         </div>
       </nav>

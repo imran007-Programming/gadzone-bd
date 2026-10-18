@@ -18,19 +18,19 @@ export default function BottomNav({ cartCount, onCartOpen, onMenuOpen, onAccount
     { label: "Help", icon: "💬", onClick: onHelpOpen },
   ];
   return (
-    <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-slate-200 bg-white/95 shadow-[0_-8px_24px_rgba(2,6,23,0.10)] backdrop-blur md:hidden">
+    <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-[#0a0f1e]/95 shadow-[0_-8px_24px_rgba(0,0,0,0.4)] backdrop-blur md:hidden">
       <div className="grid grid-cols-4 pb-[env(safe-area-inset-bottom)]">
         {items.map((item) => (
           <motion.button
             key={item.label}
             whileTap={{ scale: 0.94 }}
             onClick={item.onClick}
-            className="relative flex flex-col items-center gap-0.5 py-2.5 text-[11px] font-semibold tracking-tight text-slate-700 transition-colors active:text-brand-700"
+            className="relative flex flex-col items-center gap-0.5 py-2.5 text-[11px] font-semibold tracking-tight text-slate-400 transition-colors active:text-brand-300"
           >
             <span className="relative text-xl leading-none">
               {item.icon}
               {typeof item.badge === "number" && item.badge > 0 && (
-                <span className="absolute -right-3 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-brand-700 px-1 text-[10px] font-bold text-white shadow-sm ring-2 ring-white">
+                <span className="absolute -right-3 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-gradient-to-br from-brand-400 to-brand-600 px-1 text-[10px] font-black text-[#0a0f1e] shadow-sm ring-2 ring-[#0a0f1e]">
                   {item.badge}
                 </span>
               )}
