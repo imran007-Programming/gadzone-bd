@@ -115,7 +115,7 @@ export default function BannerCarousel() {
       aria-roledescription="carousel"
       aria-label="Featured offers"
     >
-      <div className="relative overflow-hidden rounded-3xl border border-[#e0d0b1] shadow-[0_24px_70px_-18px_rgba(226,86,64,0.45)] ring-1 ring-[#e9dcc3]">
+      <div className="relative overflow-hidden rounded-2xl border border-[#2a3a5c] shadow-[0_24px_70px_-18px_rgba(34, 211, 238,0.45)] ring-1 ring-[#22304d]">
         <AnimatePresence initial={false} custom={direction} mode="wait">
           <motion.div
             key={slide.id}
@@ -157,11 +157,11 @@ export default function BannerCarousel() {
               aria-hidden
               className="absolute inset-0 bg-gradient-to-br from-[#09090b]/95 via-[#09090b]/45 to-[#f8f3e8]/20"
             />
-            <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_82%_18%,rgba(226,86,64,0.22),transparent)]" />
+            <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_82%_18%,rgba(34, 211, 238,0.22),transparent)]" />
             <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#0c0a09]/80 via-transparent to-transparent" />
             {/* Slide copy */}
             <div className="absolute inset-0 flex flex-col justify-center px-6 text-white sm:px-10 lg:px-14">
-              <span className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-brand-300 to-brand-500 px-5 py-1.5 text-xs font-black uppercase tracking-[0.18em] text-white shadow-[0_0_22px_rgba(226,86,64,0.6)]">
+              <span className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-brand-300 to-brand-500 px-5 py-1.5 text-xs font-black uppercase tracking-[0.18em] text-white shadow-[0_0_22px_rgba(34, 211, 238,0.6)]">
                 {slide.eyebrow}
               </span>
               <h2 className="mt-5 max-w-xl text-4xl font-black leading-[1.05] tracking-tight drop-shadow-sm sm:text-5xl">
@@ -172,13 +172,13 @@ export default function BannerCarousel() {
               <div className="mt-7 flex flex-wrap gap-3">
                 <a
                   href="#shop"
-                  className="rounded-full bg-gradient-to-r from-brand-400 to-brand-600 px-7 py-3.5 font-bold text-white shadow-[0_10px_28px_-8px_rgba(226,86,64,0.45)] transition hover:brightness-110 active:scale-[0.98]"
+                  className="rounded-full bg-gradient-to-r from-brand-400 to-brand-600 px-7 py-3.5 font-bold text-white shadow-[0_10px_28px_-8px_rgba(34, 211, 238,0.45)] transition hover:brightness-110 active:scale-[0.98]"
                 >
                   Shop Now →
                 </a>
                 <a
                   href="#flash"
-                  className="rounded-full border border-white/25 bg-[#f4eddc] px-7 py-3.5 font-bold text-[#232b38] backdrop-blur-sm transition hover:bg-white active:scale-[0.98]"
+                  className="rounded-full border border-white/25 bg-[#f4eddc] px-7 py-3.5 font-bold text-[#eaf0fa] backdrop-blur-sm transition hover:bg-[#101a30] active:scale-[0.98]"
                 >
                   ⚡ Flash Deals
                 </a>
@@ -217,7 +217,7 @@ export default function BannerCarousel() {
             aria-label={`Go to slide ${i + 1}: ${s.eyebrow}`}
             onClick={() => goTo(i, i > index ? 1 : -1)}
             className={`h-2.5 rounded-full transition-all ${
-              i === index ? "w-9 bg-brand-400 shadow-[0_0_12px_rgba(226,86,64,0.85)]" : "w-2.5 bg-white/20 hover:bg-white/40"
+              i === index ? "w-9 bg-brand-400 shadow-[0_0_12px_rgba(34, 211, 238,0.85)]" : "w-2.5 bg-[#101a30]/20 hover:bg-[#101a30]/40"
             }`}
           />
         ))}

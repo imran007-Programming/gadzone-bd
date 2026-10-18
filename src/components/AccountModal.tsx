@@ -58,19 +58,19 @@ export default function AccountModal({ open, onClose }: AccountModalProps) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.96, y: 8 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="max-h-[92vh] w-full max-w-md overflow-y-auto rounded-t-3xl border border-[#e9dcc3] bg-[#f0e7d3] p-6 shadow-2xl sm:rounded-3xl"
+            className="max-h-[92vh] w-full max-w-md overflow-y-auto rounded-t-3xl border border-[#22304d] bg-[#111a30] p-6 shadow-2xl sm:rounded-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-start justify-between">
-              <h3 className="text-2xl font-black text-[#232b38]">My Account</h3>
-              <button onClick={close} className="text-2xl leading-none text-[#8d8778] hover:text-[#232b38]" aria-label="Close account dialog">×</button>
+              <h3 className="text-2xl font-black text-[#eaf0fa]">My Account</h3>
+              <button onClick={close} className="text-2xl leading-none text-[#93a0b8] hover:text-[#eaf0fa]" aria-label="Close account dialog">×</button>
             </div>
 
             {status === "loading" ? (
-              <p className="mt-6 text-center text-sm text-[#8d8778]">Checking your session…</p>
+              <p className="mt-6 text-center text-sm text-[#93a0b8]">Checking your session…</p>
             ) : session?.user ? (
               <div className="mt-5">
-                <div className="flex items-center gap-3 rounded-2xl bg-white p-4 ring-1 ring-[#e9dcc3]">
+                <div className="flex items-center gap-3 rounded-2xl bg-[#101a30] p-4 ring-1 ring-[#22304d]">
                   {session.user.image ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src={session.user.image} alt="" className="h-12 w-12 rounded-full object-cover" />
@@ -80,40 +80,40 @@ export default function AccountModal({ open, onClose }: AccountModalProps) {
                     </span>
                   )}
                   <div className="min-w-0">
-                    <p className="truncate font-bold text-[#232b38]">{session.user.name ?? "Signed in"}</p>
-                    <p className="truncate text-sm text-[#8d8778]">{session.user.email}</p>
+                    <p className="truncate font-bold text-[#eaf0fa]">{session.user.name ?? "Signed in"}</p>
+                    <p className="truncate text-sm text-[#93a0b8]">{session.user.email}</p>
                     <span className="mt-1 inline-block rounded-full bg-brand-400/15 px-2.5 py-0.5 text-xs font-bold text-brand-600 ring-1 ring-brand-400/30 capitalize">{session.user.role ?? "customer"}</span>
                   </div>
                 </div>
-                <Link href="/dashboard" onClick={close} className="mt-4 block rounded-full bg-gradient-to-r from-brand-400 to-brand-600 py-3 text-center font-bold text-white shadow-[0_8px_24px_-8px_rgba(226,86,64,0.4)] transition hover:brightness-110 active:scale-[0.99]">
+                <Link href="/dashboard" onClick={close} className="mt-4 block rounded-full bg-gradient-to-r from-brand-400 to-brand-600 py-3 text-center font-bold text-white shadow-[0_8px_24px_-8px_rgba(34, 211, 238,0.4)] transition hover:brightness-110 active:scale-[0.99]">
                   Go to My Dashboard
                 </Link>
                 {session.user.role === "admin" && (
-                  <Link href="/admin" onClick={close} className="mt-3 block rounded-full bg-white py-3 text-center font-black text-brand-600 shadow-sm ring-1 ring-brand-400/40 transition hover:bg-[#f4eddc] active:scale-[0.99]">
+                  <Link href="/admin" onClick={close} className="mt-3 block rounded-full bg-[#101a30] py-3 text-center font-black text-brand-600 shadow-sm ring-1 ring-brand-400/40 transition hover:bg-[#f4eddc] active:scale-[0.99]">
                     Go to Admin Dashboard
                   </Link>
                 )}
-                <button onClick={() => signOut({ callbackUrl: "/" })} className="mt-3 w-full rounded-full border border-[#e0d0b1] py-3 font-bold text-[#6f6a5c] shadow-sm transition hover:bg-white active:scale-[0.99]">
+                <button onClick={() => signOut({ callbackUrl: "/" })} className="mt-3 w-full rounded-full border border-[#2a3a5c] py-3 font-bold text-[#6f6a5c] shadow-sm transition hover:bg-[#101a30] active:scale-[0.99]">
                   Sign out
                 </button>
               </div>
             ) : (
               <div className="mt-5">
-                <p className="text-sm text-[#8d8778]">
+                <p className="text-sm text-[#93a0b8]">
                   Sign in with Google to track your orders and view your dashboard. No password needed.
                 </p>
                 <button
                   onClick={handleGoogle}
                   disabled={loading}
-                  className="mt-4 flex w-full items-center justify-center gap-3 rounded-full border border-[#d6c49f] bg-white py-3 font-bold text-[#232b38] shadow-sm ring-1 ring-[#e9dcc3] transition hover:bg-[#f4eddc] active:scale-[0.99] disabled:opacity-60"
+                  className="mt-4 flex w-full items-center justify-center gap-3 rounded-full border border-[#d6c49f] bg-[#101a30] py-3 font-bold text-[#eaf0fa] shadow-sm ring-1 ring-[#22304d] transition hover:bg-[#f4eddc] active:scale-[0.99] disabled:opacity-60"
                 >
-                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-base font-black text-[#2b3442] shadow">G</span>
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#101a30] text-base font-black text-[#2b3442] shadow">G</span>
                   {loading ? "Connecting to Google…" : "Continue with Google"}
                 </button>
                 {error && (
                   <p className="mt-4 rounded-2xl bg-brand-400/10 p-4 text-center text-sm font-semibold text-brand-700 ring-1 ring-brand-400/30">{error}</p>
                 )}
-                <p className="mt-4 text-center text-xs text-[#8d8778]">
+                <p className="mt-4 text-center text-xs text-[#93a0b8]">
                   By continuing you agree to use your Google profile only for sign-in on this store.
                 </p>
               </div>
