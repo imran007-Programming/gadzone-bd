@@ -35,7 +35,7 @@ export default function Header({ query, onQueryChange, category, onCategoryChang
             <button onClick={onMenuOpen} className="rounded-full p-2 text-xl text-slate-800 transition hover:bg-brand-50 hover:text-brand-800" aria-label="Open menu">☰</button>
           </div>
           <a href="#" className="flex items-center justify-center gap-2">
-            <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-300 via-brand-600 to-brand-900 text-xl font-black text-white shadow-md shadow-brand-700/40 ring-2 ring-brand-200/80">G</span>
+            <span className="flex h-10 w-10 items-center justify-center rounded-xl border-2 border-brand-950/25 bg-brand-600 text-xl font-black text-white shadow-[3px_3px_0_0_rgba(55,26,5,0.35)]">G</span>
             <span className="leading-none"><span className="block text-lg font-black tracking-tight text-slate-900 sm:text-xl">Gad<span className="text-brand-700">Zone</span> BD</span>
             <span className="hidden text-[11px] font-medium text-slate-500 sm:block">Gadgets in Bangladesh</span></span>
           </a>
@@ -55,17 +55,17 @@ export default function Header({ query, onQueryChange, category, onCategoryChang
                 </Link>
                 <Link href="/dashboard" className="hidden rounded-full px-3 py-1.5 text-xs font-bold text-slate-700 hover:bg-slate-100 md:inline-flex">Dashboard</Link>
                 {session.user.role === "admin" && (
-                  <Link href="/admin" className="hidden rounded-md bg-brand-700 px-3 py-1.5 text-xs font-black text-white hover:bg-brand-600 md:inline-flex">Admin</Link>
+                  <Link href="/admin" className="hidden rounded-md bg-brand-600 px-3 py-1.5 text-xs font-black text-white shadow-[2px_2px_0_0_rgba(55,26,5,0.35)] hover:bg-brand-700 md:inline-flex">Admin</Link>
                 )}
                 <button onClick={() => signOut({ callbackUrl: "/" })} className="hidden rounded-full px-3 py-1.5 text-xs font-bold text-slate-700 hover:bg-slate-100 md:inline-flex">Sign out</button>
                 <button onClick={() => signOut({ callbackUrl: "/" })} className="rounded-full p-2 text-lg text-slate-800 hover:bg-slate-100 md:hidden" aria-label="Sign out">↪</button>
               </>
             ) : (
-              <button onClick={onAccountOpen} className="rounded-full bg-brand-700 px-5 py-2 text-sm font-bold text-white shadow-sm shadow-brand-700/30 transition hover:bg-brand-800 active:scale-[0.98]">Sign in</button>
+              <button onClick={onAccountOpen} className="rounded-lg bg-brand-600 px-5 py-2 text-sm font-bold text-white shadow-[3px_3px_0_0_rgba(55,26,5,0.35)] transition hover:bg-brand-700 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none">Sign in</button>
             )}
             <span className="hidden rounded-full bg-brand-50 px-3 py-1.5 text-xs font-bold text-brand-700 ring-1 ring-brand-100 md:inline-flex">bKash ✓</span>
             <span className="hidden rounded-full bg-brand-50 px-3 py-1.5 text-xs font-bold text-brand-800 ring-1 ring-brand-100 md:inline-flex">COD ✓</span>
-            <motion.button whileTap={{ scale: 0.94 }} onClick={onCartOpen} className="relative rounded-full bg-[#09090b] px-3 py-2.5 text-sm font-bold text-white shadow-sm shadow-zinc-950/30 ring-2 ring-brand-400/40 transition hover:bg-zinc-800 active:scale-[0.98] sm:px-4">
+            <motion.button whileTap={{ scale: 0.94 }} onClick={onCartOpen} className="relative rounded-lg bg-[#09090b] px-3 py-2.5 text-sm font-bold text-white shadow-[3px_3px_0_0_rgba(55,26,5,0.35)] ring-2 ring-brand-500/50 transition hover:bg-zinc-800 active:scale-[0.98] sm:px-4">
               <span className="hidden sm:inline">🛒 Cart</span>
               <span className="sm:hidden">🛒</span>
               {cartCount > 0 && <span className="absolute -right-1.5 -top-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-brand-700 text-xs font-bold text-white ring-2 ring-white">{cartCount}</span>}
@@ -73,7 +73,7 @@ export default function Header({ query, onQueryChange, category, onCategoryChang
           </div>
         </div>
         <form
-          className="mt-3 flex items-center gap-2 rounded-full border-2 border-slate-200 bg-white p-1.5 pl-2 shadow-md shadow-slate-900/5 transition focus-within:border-brand-700 focus-within:ring-4 focus-within:ring-brand-700/15"
+          className="mt-3 flex items-center gap-2 rounded-xl border-2 border-slate-200 bg-white p-1.5 pl-2 shadow-[4px_4px_0_0_rgba(192,94,14,0.12)] transition focus-within:border-brand-600 focus-within:shadow-[4px_4px_0_0_rgba(192,94,14,0.25)]"
           onSubmit={(e) => {
             e.preventDefault();
             document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" });
@@ -86,14 +86,14 @@ export default function Header({ query, onQueryChange, category, onCategoryChang
             className="min-w-0 flex-1 bg-transparent px-3 py-1.5 text-sm outline-none placeholder:text-slate-400"
             aria-label="Search for products"
           />
-          <button type="submit" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-700 text-base text-white shadow-md shadow-brand-700/30 transition hover:bg-brand-800 active:scale-95" aria-label="Search">🔍</button>
+          <button type="submit" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-600 text-base text-white shadow-[3px_3px_0_0_rgba(55,26,5,0.35)] transition hover:bg-brand-700 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none" aria-label="Search">🔍</button>
         </form>
       </div>
       <nav className="mt-3 border-t border-slate-100">
         <div className="no-scrollbar mx-auto flex max-w-7xl gap-1.5 overflow-x-auto px-4 py-2.5 sm:px-6">
           {CATEGORIES.map((c) => (
             <motion.button whileTap={{ scale: 0.96 }} key={c} onClick={() => { onCategoryChange(c); document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" }); }}
-              className={`whitespace-nowrap rounded-full px-4 py-2 text-sm font-semibold transition active:scale-95 ${category === c ? "bg-brand-700 text-white shadow-md shadow-brand-700/30 ring-2 ring-brand-700" : "text-slate-600 hover:bg-brand-50 hover:text-brand-800"}`}>{c}</motion.button>
+              className={`whitespace-nowrap rounded-lg px-4 py-2 text-sm font-semibold transition active:scale-95 border-2 border-transparent ${category === c ? "border-brand-800 bg-brand-600 text-white shadow-[3px_3px_0_0_rgba(55,26,5,0.35)]" : "text-slate-600 hover:border-brand-200 hover:bg-brand-50 hover:text-brand-800"}`}>{c}</motion.button>
           ))}
         </div>
       </nav>

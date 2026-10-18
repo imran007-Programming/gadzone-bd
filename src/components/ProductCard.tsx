@@ -21,25 +21,25 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.45, delay, ease: "easeOut" }}
-      whileHover={reduce ? undefined : { y: -6 }}
-      className="group relative flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-[0_24px_50px_-24px_rgba(14,116,144,0.40)] ring-1 ring-brand-200 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_32px_64px_-24px_rgba(14,116,144,0.50)] hover:ring-brand-400"
+      whileHover={reduce ? undefined : { y: -5 }}
+      className="group relative flex h-full flex-col overflow-hidden rounded-xl border-2 border-brand-200 bg-white shadow-[5px_5px_0_0_rgba(192,94,14,0.15)] transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-400 hover:shadow-[8px_8px_0_0_rgba(192,94,14,0.30)]"
     >
-      <div className="relative bg-gradient-to-b from-brand-100/70 via-white to-white p-3">
-        <div className="relative cursor-pointer overflow-hidden rounded-2xl ring-1 ring-brand-200" onClick={() => onQuickView(p)}>
+      <div className="relative bg-brand-50 p-3">
+        <div className="relative cursor-pointer overflow-hidden rounded-lg border-2 border-brand-100" onClick={() => onQuickView(p)}>
           <ProductImage product={p} />
           {p.badge === "New" && (
-            <span className="absolute left-3 top-3 rounded-full bg-brand-900 px-2.5 py-1 text-[11px] font-black uppercase tracking-wider text-white shadow-md shadow-brand-950/30">New</span>
+            <span className="absolute left-3 top-3 rounded-md bg-brand-950 px-2.5 py-1 text-[11px] font-black uppercase tracking-wider text-white">New</span>
           )}
           {discountPct(p) > 0 && (
-            <span className="absolute right-3 top-3 -rotate-3 rounded-full bg-brand-600 px-2.5 py-1 text-[11px] font-black text-white shadow-md shadow-brand-700/30">-{discountPct(p)}%</span>
+            <span className="absolute right-3 top-3 -rotate-3 rounded-md bg-brand-600 px-2.5 py-1 text-[11px] font-black text-white shadow-[3px_3px_0_0_rgba(55,26,5,0.35)]">-{discountPct(p)}%</span>
           )}
         </div>
       </div>
       <div className="flex flex-1 flex-col items-start gap-1.5 px-5 pb-4 pt-1 text-left">
-        <span className="rounded-md bg-brand-100 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-[0.16em] text-brand-800 ring-1 ring-brand-200">{p.category}</span>
+        <span className="rounded-md border border-brand-300 bg-brand-100 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-[0.16em] text-brand-800">{p.category}</span>
         <h3 className="cursor-pointer text-[15px] font-bold leading-snug tracking-tight text-slate-900 hover:text-brand-700" onClick={() => onQuickView(p)}>{p.name}</h3>
         <div className="flex items-center gap-1"><Stars rating={p.rating} /><span className="text-xs font-medium text-slate-500">{p.rating} ({p.reviews.toLocaleString()})</span></div>
-        <span className={`w-fit rounded-md px-2.5 py-1 text-[11px] font-bold ${p.stock === "In Stock" ? "bg-brand-50 text-brand-700 ring-1 ring-brand-200" : "bg-slate-100 text-slate-600 ring-1 ring-slate-200"}`}>{p.stock === "In Stock" ? "● In Stock" : "⚠ " + p.stock}</span>
+        <span className={`w-fit rounded-md border px-2.5 py-1 text-[11px] font-bold ${p.stock === "In Stock" ? "border-brand-300 bg-brand-50 text-brand-700" : "border-slate-200 bg-slate-100 text-slate-600"}`}>{p.stock === "In Stock" ? "● In Stock" : "⚠ " + p.stock}</span>
         <p className="line-clamp-2 text-[13px] leading-relaxed text-slate-500">{p.desc}</p>
         <div className="mt-auto flex w-full items-end justify-between gap-2 pt-2.5">
           <span className="text-[22px] font-black tracking-tight text-brand-700">{tk(p.price)}</span>
@@ -51,19 +51,19 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
           whileTap={{ scale: 0.98 }}
           onClick={() => onAddToCart(p.id)}
           aria-label={`Add ${p.name} to cart`}
-          className="flex w-full items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-brand-700 to-brand-500 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-lg shadow-brand-600/30 transition hover:shadow-xl hover:shadow-brand-600/40 active:scale-[0.98]"
+          className="flex w-full items-center justify-center gap-1.5 rounded-lg bg-brand-600 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-[4px_4px_0_0_rgba(55,26,5,0.35)] transition hover:bg-brand-700 hover:shadow-[5px_5px_0_0_rgba(55,26,5,0.40)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
         >
           🛒 Add
         </motion.button>
         <button
           onClick={() => onQuickView(p)}
-          className="flex w-full items-center justify-center rounded-full bg-white px-4 py-2 text-xs font-black uppercase tracking-wider text-brand-700 ring-1 ring-brand-300 transition hover:bg-brand-50 active:scale-[0.98]"
+          className="flex w-full items-center justify-center rounded-lg border-2 border-brand-300 bg-white px-4 py-2 text-xs font-black uppercase tracking-wider text-brand-700 transition hover:border-brand-500 hover:bg-brand-50 active:scale-[0.98]"
         >
           View →
         </button>
       </div>
-      {/* tide gradient tide-mark */}
-      <div aria-hidden className="h-2 bg-gradient-to-r from-brand-300 via-brand-600 to-brand-300" />
+      {/* ember harvest solid ember strip */}
+      <div aria-hidden className="h-2 bg-brand-600" />
     </motion.div>
   );
 }
