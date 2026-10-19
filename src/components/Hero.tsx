@@ -20,9 +20,9 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-const SPARKS = ["#e8a020", "#f6dfa8", "#b97a0c", "#e8c258", "#d98f14", "#f2c14e"];
+const GLINTS = ["#67e8f9", "#ff6b4a", "#a5f3fc", "#ff9d7e", "#22d3ee", "#ffc9b5"];
 
-// Deterministic rising-spark positions (client component, but stable across renders).
+// Deterministic rising-glint positions (client component, but stable across renders).
 const RISING = [
   { left: "4%", size: 7, delay: "0s", dur: "12s" },
   { left: "12%", size: 5, delay: "-4s", dur: "15s" },
@@ -41,63 +41,69 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* sundarban lantern: warm dusk glows + rising gold sparks over sandpaper */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#f6f0df] via-[#f8f3e4] to-[#f6f0df]" />
+      {/* neon night market: deep indigo night with cyan haze and coral glints */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#0f1130] via-[#141640] to-[#0f1130]" />
       <div
         aria-hidden
-        className="firefly-drift pointer-events-none absolute -top-28 right-[-4rem] h-[24rem] w-[24rem] rounded-full bg-[radial-gradient(circle_at_center,rgba(232,160,32,0.34),rgba(232,160,32,0.1)_60%,transparent_72%)] blur-[12px]"
+        className="orb-float pointer-events-none absolute -top-28 right-[-4rem] h-[24rem] w-[24rem] rounded-full bg-[radial-gradient(circle_at_center,rgba(34,211,238,0.32),rgba(34,211,238,0.1)_60%,transparent_72%)] blur-[12px]"
       />
       <div
         aria-hidden
-        className="firefly-drift pointer-events-none absolute -top-20 left-[-6rem] h-[18rem] w-[18rem] rounded-full bg-[radial-gradient(circle_at_center,rgba(30,122,88,0.2),transparent_70%)] blur-[20px]"
-        style={{ animationDelay: "-8s" }}
+        className="orb-float pointer-events-none absolute -top-20 left-[-6rem] h-[18rem] w-[18rem] rounded-full bg-[radial-gradient(circle_at_center,rgba(255,107,74,0.22),transparent_70%)] blur-[20px]"
+        style={{ animationDelay: "-7s" }}
       />
       <div
         aria-hidden
-        className="firefly-drift pointer-events-none absolute bottom-[-6rem] left-1/3 h-[16rem] w-[16rem] rounded-full bg-[radial-gradient(circle_at_center,rgba(232,160,32,0.22),transparent_70%)] blur-[18px]"
-        style={{ animationDelay: "-4s" }}
+        className="orb-float pointer-events-none absolute bottom-[-6rem] left-1/3 h-[16rem] w-[16rem] rounded-full bg-[radial-gradient(circle_at_center,rgba(139,92,246,0.22),transparent_70%)] blur-[18px]"
+        style={{ animationDelay: "-3.5s" }}
       />
 
-      {/* rising spark shower */}
+      {/* rising glint shower */}
       <div aria-hidden className="pointer-events-none absolute inset-0 z-10 overflow-hidden">
         {RISING.map((p, i) => (
           <span
             key={i}
-            className="spark-rise absolute bottom-0 block rounded-full"
+            className="glint-rise absolute bottom-0 block rounded-full"
             style={{
               left: p.left,
               width: p.size,
               height: p.size,
               animationDelay: p.delay,
               animationDuration: p.dur,
-              background: SPARKS[i % SPARKS.length],
+              background: GLINTS[i % GLINTS.length],
               opacity: 0.7,
-              boxShadow: "0 0 10px 2px rgba(232,160,32,0.55)",
+              boxShadow: `0 0 10px 2px ${GLINTS[i % GLINTS.length]}88`,
             }}
           />
         ))}
       </div>
 
-      {/* hanging lantern string across the hero */}
+      {/* market-wire: a glowing string of neon nodes across the hero */}
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-10 hidden sm:block">
-        <svg viewBox="0 0 1440 84" preserveAspectRatio="none" className="block h-[5.25rem] w-full">
-          <path d="M-20,2 Q 720,96 1460,2" fill="none" stroke="#125539" strokeWidth="2.5" opacity="0.5" />
+        <svg viewBox="0 0 1440 96" preserveAspectRatio="none" className="block h-24 w-full">
+          <path d="M-20,4 Q 360,92 720,40 Q 1080,-12 1460,44" fill="none" stroke="#22d3ee" strokeWidth="2.5" opacity="0.45" />
+          <path d="M-20,4 Q 360,92 720,40 Q 1080,-12 1460,44" fill="none" stroke="#22d3ee" strokeWidth="7" opacity="0.08" />
         </svg>
         <div className="absolute inset-x-0 top-0 mx-auto flex max-w-6xl justify-between px-12">
           {Array.from({ length: 10 }).map((_, i) => {
-            const droop = 18 + Math.sin((i / 9) * Math.PI) * 40;
+            const droop = 12 + Math.sin((i / 9) * Math.PI) * 46;
+            const coral = i % 3 === 1;
             return (
-              <span key={i} className="lantern-sway flex flex-col items-center" style={{ animationDelay: `${-i * 0.6}s`, marginTop: 6 }}>
-                <span className="block w-px" style={{ height: droop, background: "#125539", opacity: 0.5 }} />
+              <span key={i} className="flex flex-col items-center" style={{ marginTop: 4 }}>
+                <span className="block w-px" style={{ height: droop, background: "linear-gradient(180deg,#22d3ee66,#22d3ee22)" }} />
                 <span
-                  className="block"
+                  className="wire-pulse block"
                   style={{
-                    width: 22,
-                    height: 28,
-                    background: `linear-gradient(180deg, #f6dfa8, ${SPARKS[i % SPARKS.length]})`,
-                    borderRadius: "45% 45% 50% 50% / 55% 55% 45% 45%",
-                    opacity: 0.9,
-                    boxShadow: "0 0 16px 3px rgba(232,160,32,0.5), inset 0 -4px 6px rgba(185,122,12,0.4)",
+                    width: 18,
+                    height: 18,
+                    borderRadius: "9999px",
+                    animationDelay: `${-i * 0.32}s`,
+                    background: coral
+                      ? "radial-gradient(circle at 35% 35%, #ffc9b5, #ff6b4a 60%, #e0522e)"
+                      : "radial-gradient(circle at 35% 35%, #a5f3fc, #22d3ee 60%, #0e7490)",
+                    boxShadow: coral
+                      ? "0 0 18px 4px rgba(255,107,74,0.55)"
+                      : "0 0 18px 4px rgba(34,211,238,0.55)",
                   }}
                 />
               </span>
@@ -121,11 +127,11 @@ export default function Hero({ onQuickView }: HeroProps) {
               { v: "50K+", l: "Happy Customers" },
               { v: "COD", l: "Available" },
             ].map((s) => (
-              <div key={s.l} className="lantern-lift cut-corners-sm relative overflow-hidden border-2 border-brand-800 bg-gradient-to-br from-brand-800 to-brand-950 p-4">
-                <span aria-hidden className="absolute -right-4 -top-4 h-16 w-16 rotate-45 bg-gold/20" />
-                <span aria-hidden className="absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-gold-deep via-gold to-gold-deep" />
-                <span className="block text-2xl font-black tracking-tight text-gold-soft">{s.v}</span>
-                <span className="mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-brand-200">{s.l}</span>
+              <div key={s.l} className="neon-lift relative overflow-hidden rounded-2xl border border-cyan-300/20 bg-white/[0.05] p-4 backdrop-blur-sm">
+                <span aria-hidden className="absolute -right-4 -top-4 h-16 w-16 rotate-45 bg-gradient-to-br from-[#ff6b4a]/25 to-transparent" />
+                <span aria-hidden className="absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-[#22d3ee] via-[#ff6b4a] to-[#22d3ee]" />
+                <span className="block text-2xl font-black tracking-tight text-[#a5f3fc]">{s.v}</span>
+                <span className="mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#a7abc9]">{s.l}</span>
               </div>
             ))}
           </motion.div>
@@ -133,12 +139,12 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="text-xs font-extrabold uppercase tracking-[0.28em] text-brand-700">Handpicked for you</p>
-            <h2 className="mt-1.5 text-3xl font-black tracking-tight text-[#22301f]">Featured <span className="bg-gradient-to-r from-gold-deep to-brand-600 bg-clip-text text-transparent">Picks</span></h2>
+            <p className="text-xs font-extrabold uppercase tracking-[0.28em] text-[#67e8f9]">Handpicked for you</p>
+            <h2 className="mt-1.5 text-3xl font-black tracking-tight text-[#eef0ff]">Featured <span className="bg-gradient-to-r from-[#ff6b4a] to-[#22d3ee] bg-clip-text text-transparent">Picks</span></h2>
             <span className="mt-3 flex items-center gap-1.5" aria-hidden>
-              <span className="block h-1.5 w-16 bg-gold-deep" style={{ clipPath: "polygon(0 0, 100% 0, calc(100% - 8px) 100%, 0 100%)" }} />
-              <span className="block h-1.5 w-10 bg-brand-500" style={{ clipPath: "polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%)" }} />
-              <span className="block h-1.5 w-6 bg-brand-800" style={{ clipPath: "polygon(8px 0, 100% 0, 100% 100%, 0 100%)" }} />
+              <span className="block h-1.5 w-16 rounded-full bg-gradient-to-r from-[#ff6b4a] to-[#ff9d7e]" />
+              <span className="block h-1.5 w-10 rounded-full bg-gradient-to-r from-[#22d3ee] to-[#a5f3fc]" />
+              <span className="block h-1.5 w-6 rounded-full bg-[#8b5cf6]" />
             </span>
           </div>
           <div className="grid grid-cols-2 gap-5 md:grid-cols-4">
@@ -149,29 +155,30 @@ export default function Hero({ onQuickView }: HeroProps) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45, delay: 0.2 + i * 0.08, ease: "easeOut" }}
                 whileHover={{ y: -6 }}
-                className="cut-corners group lantern-lift cursor-pointer overflow-hidden border-2 border-brand-800 bg-[#fefdf7] transition-all hover:-translate-y-2 hover:border-gold-deep"
+                className="neon-lift group cursor-pointer overflow-hidden rounded-3xl border border-white/10 bg-[#1c1f45] transition-all hover:-translate-y-2 hover:border-[#22d3ee]/60"
                 onClick={() => onQuickView(p)}
               >
                 <div className="relative">
                   <div className="overflow-hidden">
                     <ProductImage product={p} />
                   </div>
-                  <span className="cut-corners-sm absolute right-2.5 top-2.5 bg-gradient-to-r from-gold-deep to-gold px-2.5 py-1 text-[11px] font-black text-brand-950 shadow-[0_4px_14px_-4px_rgba(232,160,32,0.6)]">-{discountPct(p)}%</span>
-                  <span aria-hidden className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-brand-700 via-gold to-brand-700" />
+                  <span className="absolute right-2.5 top-2.5 rounded-full bg-gradient-to-r from-[#e0522e] to-[#ff6b4a] px-2.5 py-1 text-[11px] font-black text-white shadow-[0_4px_14px_-4px_rgba(255,107,74,0.7)]">-{discountPct(p)}%</span>
+                  <span aria-hidden className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#22d3ee] via-[#ff6b4a] to-[#22d3ee]" />
                 </div>
-                <div className="border-t-2 border-dashed border-[#e3d9bd] p-3.5 text-left"><p className="truncate text-sm font-bold tracking-tight text-[#22301f]">{p.name}</p><p className="mt-1 text-base font-extrabold tracking-tight text-brand-700">{tk(p.price)} <span className="text-xs font-medium text-[#75705f] line-through">{tk(p.oldPrice)}</span></p></div>
+                <div className="border-t border-dashed border-white/15 p-3.5 text-left"><p className="truncate text-sm font-bold tracking-tight text-[#eef0ff]">{p.name}</p><p className="mt-1 text-base font-extrabold tracking-tight text-[#67e8f9]">{tk(p.price)} <span className="text-xs font-medium text-[#a7abc9] line-through">{tk(p.oldPrice)}</span></p></div>
               </motion.div>
             ))}
           </div>
-          <span className="cut-corners-sm absolute -top-5 right-2 bg-gradient-to-r from-brand-700 to-brand-900 px-5 py-2 text-sm font-black tracking-wide text-gold-soft shadow-[0_8px_20px_-8px_rgba(18,85,57,0.6)] ring-1 ring-gold/60">-45% TODAY</span>
+          <span className="absolute -top-5 right-2 rounded-full bg-gradient-to-r from-[#0e7490] to-[#155e75] px-5 py-2 text-sm font-black tracking-wide text-[#a5f3fc] shadow-[0_8px_20px_-8px_rgba(34,211,238,0.6)] ring-1 ring-[#22d3ee]/50">-45% TODAY</span>
         </div>
       </div>
 
-      {/* zigzag chevron divider into the page */}
+      {/* neon wave divider into the page */}
       <div aria-hidden className="absolute bottom-0 left-0 h-12 w-full">
         <svg viewBox="0 0 1440 48" preserveAspectRatio="none" className="block h-full w-full">
-          <path d="M0,26 L60,44 L120,26 L180,44 L240,26 L300,44 L360,26 L420,44 L480,26 L540,44 L600,26 L660,44 L720,26 L780,44 L840,26 L900,44 L960,26 L1020,44 L1080,26 L1140,44 L1200,26 L1260,44 L1320,26 L1380,44 L1440,26 L1440,48 L0,48 Z" fill="#166747" opacity="0.9" />
-          <path d="M0,26 L60,44 L120,26 L180,44 L240,26 L300,44 L360,26 L420,44 L480,26 L540,44 L600,26 L660,44 L720,26 L780,44 L840,26 L900,44 L960,26 L1020,44 L1080,26 L1140,44 L1200,26 L1260,44 L1320,26 L1380,44 L1440,26" fill="none" stroke="#e8a020" strokeWidth="3" />
+          <path d="M0,30 Q 90,10 180,28 T 360,28 T 540,28 T 720,28 T 900,28 T 1080,28 T 1260,28 T 1440,28 L1440,48 L0,48 Z" fill="#22d3ee" opacity="0.12" />
+          <path d="M0,30 Q 90,10 180,28 T 360,28 T 540,28 T 720,28 T 900,28 T 1080,28 T 1260,28 T 1440,28" fill="none" stroke="#22d3ee" strokeWidth="2.5" opacity="0.8" />
+          <path d="M0,40 Q 120,22 240,38 T 480,38 T 720,38 T 960,38 T 1200,38 T 1440,38" fill="none" stroke="#ff6b4a" strokeWidth="2" opacity="0.6" />
         </svg>
       </div>
     </section>

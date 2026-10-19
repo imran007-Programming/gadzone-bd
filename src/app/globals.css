@@ -1,24 +1,24 @@
 @import "tailwindcss";
 
 @theme {
-  /* sundarban lantern: deep jungle green over warm sandpaper — original palette */
-  --color-brand-50: #f0f7f2;
-  --color-brand-100: #dcebe1;
-  --color-brand-200: #bcd7c7;
-  --color-brand-300: #8fbca1;
-  --color-brand-400: #5f9c7a;
-  --color-brand-500: #1e7a58;
-  --color-brand-600: #166747;
-  --color-brand-700: #125539;
-  --color-brand-800: #0f4530;
-  --color-brand-900: #0d3828;
-  --color-brand-950: #071f17;
-  --color-brand: #1e7a58;
-  --color-brand-dark: #166747;
-  --color-brand-deep: #0f4530;
-  --color-gold: #e8a020;
-  --color-gold-deep: #b97a0c;
-  --color-gold-soft: #f6dfa8;
+  /* neon night market: electric cyan over midnight indigo, coral sparks — original palette */
+  --color-brand-50: #ecfeff;
+  --color-brand-100: #cffafe;
+  --color-brand-200: #a5f3fc;
+  --color-brand-300: #67e8f9;
+  --color-brand-400: #22d3ee;
+  --color-brand-500: #06b6d4;
+  --color-brand-600: #0891b2;
+  --color-brand-700: #0e7490;
+  --color-brand-800: #155e75;
+  --color-brand-900: #164e63;
+  --color-brand-950: #083344;
+  --color-brand: #22d3ee;
+  --color-brand-dark: #0891b2;
+  --color-brand-deep: #155e75;
+  --color-gold: #ff6b4a;
+  --color-gold-deep: #e0522e;
+  --color-gold-soft: #ffc9b5;
 }
 
 html { scroll-behavior: smooth; }
@@ -33,56 +33,56 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #f6f0df;
+  background: #0f1130;
   background-image:
-    radial-gradient(ellipse 90% 38% at 50% -12%, rgba(232, 160, 32, 0.13), transparent),
-    radial-gradient(ellipse 45% 30% at 90% 16%, rgba(30, 122, 88, 0.08), transparent),
-    radial-gradient(ellipse 45% 30% at 6% 32%, rgba(232, 160, 32, 0.06), transparent),
-    repeating-linear-gradient(45deg, rgba(18, 85, 57, 0.028) 0 1.5px, transparent 1.5px 26px),
-    repeating-linear-gradient(-45deg, rgba(18, 85, 57, 0.028) 0 1.5px, transparent 1.5px 26px);
-  color: #22301f;
+    radial-gradient(ellipse 90% 38% at 50% -12%, rgba(34, 211, 238, 0.14), transparent),
+    radial-gradient(ellipse 45% 30% at 92% 16%, rgba(255, 107, 74, 0.1), transparent),
+    radial-gradient(ellipse 45% 30% at 6% 32%, rgba(139, 92, 246, 0.1), transparent),
+    radial-gradient(rgba(165, 243, 252, 0.05) 1px, transparent 1.6px);
+  background-size: auto, auto, auto, 26px 26px;
+  color: #eef0ff;
 }
-::selection { background: #1e7a58; color: #f6f0df; }
+::selection { background: #22d3ee; color: #0f1130; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: #166747; border-radius: 4px; }
-::-webkit-scrollbar-track { background: #ece2c4; }
+::-webkit-scrollbar-thumb { background: #155e75; border-radius: 4px; }
+::-webkit-scrollbar-track { background: #141733; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Firefly keyframes: gentle drift for floating lights in the hero. */
-@keyframes firefly-drift {
-  0%, 100% { transform: translate3d(0, 0, 0); opacity: 0.55; }
-  33% { transform: translate3d(3%, -5%, 0); opacity: 1; }
-  66% { transform: translate3d(-3%, 2%, 0); opacity: 0.7; }
+/* Neon orb drift: slow floating glows in the hero. */
+@keyframes orb-float {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.6; }
+  33% { transform: translate3d(4%, -6%, 0) scale(1.12); opacity: 1; }
+  66% { transform: translate3d(-4%, 3%, 0) scale(0.94); opacity: 0.75; }
 }
-.firefly-drift { animation: firefly-drift 16s ease-in-out infinite; }
+.orb-float { animation: orb-float 14s ease-in-out infinite; }
 
-@keyframes spark-rise {
+/* Glint rise: tiny light specks drifting up through the night air. */
+@keyframes glint-rise {
   0% { transform: translate3d(0, 6vh, 0) scale(0.7); opacity: 0; }
-  14% { opacity: 0.9; }
+  14% { opacity: 0.95; }
   86% { opacity: 0.5; }
-  100% { transform: translate3d(4vw, -96vh, 0) scale(1.15); opacity: 0; }
+  100% { transform: translate3d(3vw, -96vh, 0) scale(1.2); opacity: 0; }
 }
-.spark-rise { animation: spark-rise 13s linear infinite; }
+.glint-rise { animation: glint-rise 13s linear infinite; }
 
-@keyframes lantern-sway {
-  0%, 100% { transform: rotate(-2.5deg); }
-  50% { transform: rotate(2.5deg); }
+/* Neon node pulse for the market-wire ornament. */
+@keyframes wire-pulse {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
 }
-.lantern-sway { animation: lantern-sway 6s ease-in-out infinite; transform-origin: top center; }
+.wire-pulse { animation: wire-pulse 3.2s ease-in-out infinite; }
 
-/* Lantern lift used on cards and buttons: warm paper glow with green depth. */
-.lantern-lift {
+/* Neon lift used on cards and buttons: cyan glow with a coral edge. */
+.neon-lift {
   box-shadow:
-    0 1px 0 0 rgba(255, 255, 255, 0.7) inset,
-    0 16px 36px -16px rgba(18, 85, 57, 0.38),
-    0 4px 14px -6px rgba(232, 160, 32, 0.22);
+    0 1px 0 0 rgba(255, 255, 255, 0.09) inset,
+    0 18px 40px -18px rgba(34, 211, 238, 0.35),
+    0 6px 18px -8px rgba(255, 107, 74, 0.28);
 }
 
-/* Chamfered "lantern-cut" corners for angular cards. */
-.cut-corners {
-  clip-path: polygon(18px 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%, 0 18px);
-}
-.cut-corners-sm {
-  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+/* Glassy dark panel shared by modals and drawers. */
+.night-glass {
+  background: linear-gradient(180deg, rgba(28, 31, 69, 0.92), rgba(20, 23, 51, 0.96));
+  backdrop-filter: blur(14px);
 }
