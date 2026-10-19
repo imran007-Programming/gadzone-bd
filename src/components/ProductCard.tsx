@@ -22,7 +22,7 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.45, delay, ease: "easeOut" }}
       whileHover={reduce ? undefined : { y: -5 }}
-      className="rounded-3xl neon-lift group relative flex h-full flex-col overflow-hidden border-2 border-brand-800 bg-[#1c1f45] transition-all duration-300 hover:-translate-y-1.5 hover:border-gold-deep"
+      className="rounded-3xl neon-lift group relative flex h-full flex-col overflow-hidden border-2 border-brand-800 bg-[#ffffff] transition-all duration-300 hover:-translate-y-1.5 hover:border-gold-deep"
     >
       {/* neon coral top edge */}
       <div aria-hidden className="h-1.5 bg-gradient-to-r from-brand-700 via-gold to-brand-700" />
@@ -33,19 +33,19 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
             <span className="rounded-xl absolute left-3 top-3 bg-gradient-to-r from-brand-600 to-brand-800 px-2.5 py-1 text-[11px] font-black uppercase tracking-wider text-white shadow-[0_4px_14px_-4px_rgba(30,122,88,0.55)]">New</span>
           )}
           {discountPct(p) > 0 && (
-            <span className="rounded-xl absolute right-3 top-3 bg-gradient-to-r from-gold-deep to-gold px-2.5 py-1 text-[11px] font-black text-brand-950 shadow-[0_4px_14px_-4px_rgba(255,107,74,0.6)]">-{discountPct(p)}%</span>
+            <span className="rounded-xl absolute right-3 top-3 bg-gradient-to-r from-gold-deep to-gold px-2.5 py-1 text-[11px] font-black text-brand-950 shadow-[0_4px_14px_-4px_rgba(245,158,11,0.6)]">-{discountPct(p)}%</span>
           )}
         </div>
       </div>
       <div className="flex flex-1 flex-col items-start gap-1.5 px-5 pb-4 pt-1 text-left">
         <span className="rounded-xl border border-gold-deep/50 bg-gold/15 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-[0.16em] text-gold-deep">{p.category}</span>
-        <h3 className="cursor-pointer text-[15px] font-bold leading-snug tracking-tight text-[#eef0ff] hover:text-brand-600" onClick={() => onQuickView(p)}>{p.name}</h3>
-        <div className="flex items-center gap-1"><Stars rating={p.rating} /><span className="text-xs font-medium text-[#a7abc9]">{p.rating} ({p.reviews.toLocaleString()})</span></div>
-        <span className={`w-fit px-2.5 py-1 text-[11px] font-bold ${p.stock === "In Stock" ? "rounded-xl border border-brand-600/40 bg-brand-600/10 text-brand-700" : "rounded-xl border border-[#343a70] bg-[#1c1f45] text-[#a7abc9]"}`}>{p.stock === "In Stock" ? "● In Stock" : "⚠ " + p.stock}</span>
-        <p className="line-clamp-2 text-[13px] leading-relaxed text-[#a7abc9]">{p.desc}</p>
+        <h3 className="cursor-pointer text-[15px] font-bold leading-snug tracking-tight text-[#1f2a20] hover:text-brand-600" onClick={() => onQuickView(p)}>{p.name}</h3>
+        <div className="flex items-center gap-1"><Stars rating={p.rating} /><span className="text-xs font-medium text-[#6b6c5f]">{p.rating} ({p.reviews.toLocaleString()})</span></div>
+        <span className={`w-fit px-2.5 py-1 text-[11px] font-bold ${p.stock === "In Stock" ? "rounded-xl border border-brand-600/40 bg-brand-600/10 text-brand-700" : "rounded-xl border border-[#d9cba8] bg-[#ffffff] text-[#6b6c5f]"}`}>{p.stock === "In Stock" ? "● In Stock" : "⚠ " + p.stock}</span>
+        <p className="line-clamp-2 text-[13px] leading-relaxed text-[#6b6c5f]">{p.desc}</p>
         <div className="mt-auto flex w-full items-end justify-between gap-2 pt-2.5">
           <span className="text-[22px] font-black tracking-tight text-brand-700">{tk(p.price)}</span>
-          <span className="text-xs font-bold text-[#a7abc9] line-through">{tk(p.oldPrice)}</span>
+          <span className="text-xs font-bold text-[#6b6c5f] line-through">{tk(p.oldPrice)}</span>
         </div>
       </div>
       <div className="flex flex-col gap-2 px-5 pb-5">

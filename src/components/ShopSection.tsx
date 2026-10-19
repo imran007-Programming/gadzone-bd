@@ -24,10 +24,10 @@ export default function ShopSection({ filtered, category, sort, onSortChange, ma
       <Reveal>
         <span className="text-xs font-bold uppercase tracking-widest text-brand-600">Full Catalogue</span>
         <div className="mt-1 flex flex-wrap items-end justify-between gap-3">
-          <div><h2 className="text-[2rem] font-black leading-tight tracking-tight text-[#eef0ff]">All Products</h2><p className="mt-1.5 text-sm text-[#a7abc9]">{filtered.length} products found {category !== "All" && `in ${category}`}</p></div>
+          <div><h2 className="text-[2rem] font-black leading-tight tracking-tight text-[#1f2a20]">All Products</h2><p className="mt-1.5 text-sm text-[#6b6c5f]">{filtered.length} products found {category !== "All" && `in ${category}`}</p></div>
           <div className="flex flex-wrap items-center gap-2">
-            <label className="text-sm font-bold text-[#a7abc9]">Sort:</label>
-            <select value={sort} onChange={(e) => onSortChange(e.target.value as SortKey)} className="rounded-full border border-[#343a70] bg-[#1c1f45] px-4 py-2.5 text-sm font-medium text-[#c3c8ea] shadow-sm outline-none transition focus:border-brand-400 focus:ring-2 focus:ring-brand-400/30">
+            <label className="text-sm font-bold text-[#6b6c5f]">Sort:</label>
+            <select value={sort} onChange={(e) => onSortChange(e.target.value as SortKey)} className="rounded-full border border-[#d9cba8] bg-[#ffffff] px-4 py-2.5 text-sm font-medium text-[#a3a084] shadow-sm outline-none transition focus:border-brand-400 focus:ring-2 focus:ring-brand-400/30">
               <option value="featured">Featured</option><option value="low">Price: Low → High</option>
               <option value="high">Price: High → Low</option><option value="rating">Top Rated</option><option value="discount">Biggest Discount</option>
             </select>
@@ -35,15 +35,15 @@ export default function ShopSection({ filtered, category, sort, onSortChange, ma
         </div>
       </Reveal>
       <Reveal delay={0.08}>
-        <div className="mt-6 flex flex-wrap items-center gap-3 rounded-2xl border border-[#343a70] bg-[#1c1f45] p-4 backdrop-blur-sm sm:p-5">
-          <span className="text-sm font-bold text-[#eef0ff]">Max Price: <span className="text-brand-600">{tk(maxPrice)}</span></span>
+        <div className="mt-6 flex flex-wrap items-center gap-3 rounded-2xl border border-[#d9cba8] bg-[#ffffff] p-4 backdrop-blur-sm sm:p-5">
+          <span className="text-sm font-bold text-[#1f2a20]">Max Price: <span className="text-brand-600">{tk(maxPrice)}</span></span>
           <input type="range" min={400} max={5000} step={50} value={maxPrice} onChange={(e) => onMaxPriceChange(Number(e.target.value))} className="w-48 cursor-pointer accent-brand-400" />
-          <span className="text-xs text-[#a7abc9]">৳400 — ৳5,000</span>
-          <button onClick={onReset} className="ml-auto rounded-full border border-[#343a70] bg-[#1c1f45] px-4 py-2 text-sm font-bold text-[#c3c8ea] shadow-sm transition hover:border-brand-400/50 hover:text-brand-600 active:scale-[0.98]">Reset Filters</button>
+          <span className="text-xs text-[#6b6c5f]">৳400 — ৳5,000</span>
+          <button onClick={onReset} className="ml-auto rounded-full border border-[#d9cba8] bg-[#ffffff] px-4 py-2 text-sm font-bold text-[#a3a084] shadow-sm transition hover:border-brand-400/50 hover:text-brand-600 active:scale-[0.98]">Reset Filters</button>
         </div>
       </Reveal>
       {filtered.length === 0 ? (
-        <p className="mt-10 rounded-2xl border border-[#343a70] bg-[#1c1f45] p-10 text-center font-semibold text-[#a7abc9]">No products found 😔 — Try a different search or filter.</p>
+        <p className="mt-10 rounded-2xl border border-[#d9cba8] bg-[#ffffff] p-10 text-center font-semibold text-[#6b6c5f]">No products found 😔 — Try a different search or filter.</p>
       ) : (
         <div className="mt-8 grid gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">{filtered.map((p, i) => <ProductCard key={p.id} product={p} onQuickView={onQuickView} onAddToCart={onAddToCart} delay={(i % 4) * 0.05} />)}</div>
       )}
