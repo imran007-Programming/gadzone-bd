@@ -1,24 +1,24 @@
 @import "tailwindcss";
 
 @theme {
-  /* espresso noir: caramel toffee & chili on dark roast — original palette */
-  --color-brand-50: #fbf3e4;
-  --color-brand-100: #f6e6c9;
-  --color-brand-200: #eecb96;
-  --color-brand-300: #e5ab63;
-  --color-brand-400: #dd9040;
-  --color-brand-500: #d47c26;
-  --color-brand-600: #b8621c;
-  --color-brand-700: #944c1a;
-  --color-brand-800: #763e1b;
-  --color-brand-900: #5f321a;
-  --color-brand-950: #3a1f10;
-  --color-brand: #dd9040;
-  --color-brand-dark: #b8621c;
-  --color-brand-deep: #3a1f10;
-  --color-gold: #ff6a3d;
-  --color-gold-deep: #d63d1f;
-  --color-gold-soft: #ffb59d;
+  /* tidal porcelain: sea-glass teal on bright porcelain — original palette */
+  --color-brand-50: #effaf8;
+  --color-brand-100: #d7f2ee;
+  --color-brand-200: #b0e5dd;
+  --color-brand-300: #7ed3c7;
+  --color-brand-400: #4abdae;
+  --color-brand-500: #0d9488;
+  --color-brand-600: #0f766e;
+  --color-brand-700: #115e59;
+  --color-brand-800: #134e4a;
+  --color-brand-900: #173f3b;
+  --color-brand-950: #0b2422;
+  --color-brand: #0d9488;
+  --color-brand-dark: #0f766e;
+  --color-brand-deep: #0b2422;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #d97706;
+  --color-gold-soft: #fcd34d;
 }
 
 html { scroll-behavior: smooth; }
@@ -33,86 +33,86 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #161110;
+  background: #f6faf9;
   background-image:
-    radial-gradient(ellipse 90% 34% at 50% -12%, rgba(221, 144, 64, 0.14), transparent),
-    radial-gradient(ellipse 42% 28% at 92% 14%, rgba(255, 106, 61, 0.07), transparent),
-    radial-gradient(ellipse 42% 28% at 6% 30%, rgba(184, 98, 28, 0.10), transparent),
-    radial-gradient(rgba(221, 144, 64, 0.07) 1px, transparent 1.6px);
+    radial-gradient(ellipse 90% 34% at 50% -12%, rgba(13, 148, 136, 0.10), transparent),
+    radial-gradient(ellipse 42% 28% at 92% 14%, rgba(245, 158, 11, 0.06), transparent),
+    radial-gradient(ellipse 42% 28% at 6% 30%, rgba(13, 148, 136, 0.08), transparent),
+    radial-gradient(rgba(13, 148, 136, 0.10) 1px, transparent 1.6px);
   background-size: auto, auto, auto, 26px 26px;
-  color: #f5ead9;
+  color: #0f2e2b;
 }
-::selection { background: #ff6a3d; color: #1a120b; }
+::selection { background: #f59e0b; color: #0f2e2b; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: #6b543a; border-radius: 5px; }
-::-webkit-scrollbar-track { background: #221a14; }
+::-webkit-scrollbar-thumb { background: #9fc2bc; border-radius: 5px; }
+::-webkit-scrollbar-track { background: #e8f1ef; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Steam rise: wavy vertical drift of the hero's steam wisps. */
-@keyframes steam-rise {
-  0% { transform: translate3d(0, 4vh, 0) scaleY(0.9); opacity: 0; }
-  18% { opacity: 0.75; }
-  70% { opacity: 0.5; }
-  100% { transform: translate3d(-2.5vw, -70vh, 0) scaleY(1.15); opacity: 0; }
+/* Tide rise: bubbles drifting upward through the hero. */
+@keyframes tide-rise {
+  0% { transform: translate3d(0, 6vh, 0) scale(0.7); opacity: 0; }
+  18% { opacity: 0.8; }
+  70% { opacity: 0.55; }
+  100% { transform: translate3d(2.5vw, -72vh, 0) scale(1.2); opacity: 0; }
 }
-.steam-rise { animation: steam-rise 13s linear infinite; }
+.tide-rise { animation: tide-rise 14s linear infinite; }
 
-/* Bean drift: slow bobbing of the hero's floating roast beans. */
-@keyframes bean-drift {
-  0%, 100% { transform: translate3d(0, 0, 0) rotate(-8deg); }
-  50% { transform: translate3d(1rem, -1.8rem, 0) rotate(10deg); }
+/* Chip drift: slow bobbing of the hero's floating sea-glass chips. */
+@keyframes chip-drift {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(-10deg); }
+  50% { transform: translate3d(-1rem, -1.6rem, 0) rotate(12deg); }
 }
-.bean-drift { animation: bean-drift 10s ease-in-out infinite; }
+.chip-drift { animation: chip-drift 11s ease-in-out infinite; }
 
-/* Glow pulse: breathing of the hero's roast-glow orbs. */
-@keyframes glow-pulse {
-  0%, 100% { opacity: 0.55; transform: scale(1); }
-  50% { opacity: 0.9; transform: scale(1.12); }
+/* Pool pulse: breathing of the hero's sunlight-through-water pools. */
+@keyframes pool-pulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.12); }
 }
-.glow-pulse { animation: glow-pulse 7s ease-in-out infinite; }
+.pool-pulse { animation: pool-pulse 7.5s ease-in-out infinite; }
 
-/* Ember glow: soft caramel ambient shadow used by cards in the espresso theme. */
+/* Porcelain lift: soft sea-tinted shadow used by cards in the tidal theme. */
 .ember-glow {
   box-shadow:
-    0 18px 40px -18px rgba(0, 0, 0, 0.7),
-    0 0 0 1px rgba(221, 144, 64, 0.14);
+    0 18px 40px -20px rgba(11, 36, 34, 0.18),
+    0 0 0 1px rgba(13, 148, 136, 0.12);
 }
 .ember-glow:hover {
   box-shadow:
-    0 22px 48px -16px rgba(0, 0, 0, 0.75),
-    0 0 0 1px rgba(221, 144, 64, 0.45),
-    0 0 32px -6px rgba(221, 144, 64, 0.35);
+    0 24px 52px -18px rgba(11, 36, 34, 0.22),
+    0 0 0 1px rgba(13, 148, 136, 0.35),
+    0 0 36px -8px rgba(13, 148, 136, 0.30);
 }
 
-/* Espresso glass shared by modals and drawers. */
+/* Porcelain glass shared by modals and drawers. */
 .espresso-glass {
-  background: linear-gradient(180deg, rgba(43, 33, 24, 0.96), rgba(22, 17, 16, 0.98));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(239, 250, 248, 0.98));
   backdrop-filter: blur(14px);
 }
 
 /* Legacy aliases kept so untouched components still render. */
 .sticker-lift {
   box-shadow:
-    0 18px 40px -18px rgba(0, 0, 0, 0.7),
-    0 0 0 1px rgba(221, 144, 64, 0.14);
+    0 18px 40px -20px rgba(11, 36, 34, 0.18),
+    0 0 0 1px rgba(13, 148, 136, 0.12);
 }
 .sticker-lift:hover {
   box-shadow:
-    0 22px 48px -16px rgba(0, 0, 0, 0.75),
-    0 0 0 1px rgba(221, 144, 64, 0.45),
-    0 0 32px -6px rgba(221, 144, 64, 0.35);
+    0 24px 52px -18px rgba(11, 36, 34, 0.22),
+    0 0 0 1px rgba(13, 148, 136, 0.35),
+    0 0 36px -8px rgba(13, 148, 136, 0.30);
 }
 .twilight-glass {
-  background: linear-gradient(180deg, rgba(43, 33, 24, 0.96), rgba(22, 17, 16, 0.98));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(239, 250, 248, 0.98));
   backdrop-filter: blur(14px);
 }
 .neon-lift {
   box-shadow:
-    0 18px 40px -18px rgba(0, 0, 0, 0.7),
-    0 0 0 1px rgba(221, 144, 64, 0.14);
+    0 18px 40px -20px rgba(11, 36, 34, 0.18),
+    0 0 0 1px rgba(13, 148, 136, 0.12);
 }
 .night-glass {
-  background: linear-gradient(180deg, rgba(43, 33, 24, 0.96), rgba(22, 17, 16, 0.98));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(239, 250, 248, 0.98));
   backdrop-filter: blur(14px);
 }
