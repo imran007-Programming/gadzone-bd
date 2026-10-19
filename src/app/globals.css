@@ -1,24 +1,24 @@
 @import "tailwindcss";
 
 @theme {
-  /* emerald grove: deep forest greens on soft ivory, warm amber sun sparks — original palette */
-  --color-brand-50: #ecfdf5;
-  --color-brand-100: #d1fae5;
-  --color-brand-200: #a7f3d0;
-  --color-brand-300: #6ee7b7;
-  --color-brand-400: #34d399;
-  --color-brand-500: #10b981;
-  --color-brand-600: #059669;
-  --color-brand-700: #047857;
-  --color-brand-800: #065f46;
-  --color-brand-900: #064e3b;
-  --color-brand-950: #022c22;
-  --color-brand: #047857;
-  --color-brand-dark: #065f46;
-  --color-brand-deep: #064e3b;
-  --color-gold: #f59e0b;
-  --color-gold-deep: #d97706;
-  --color-gold-soft: #fde68a;
+  /* indigo twilight: royal indigo & violet on soft lavender-white, ember-coral sparks — original palette */
+  --color-brand-50: #f4f0fe;
+  --color-brand-100: #e9defc;
+  --color-brand-200: #d4bdf8;
+  --color-brand-300: #b891f1;
+  --color-brand-400: #9a63e6;
+  --color-brand-500: #7c3ed4;
+  --color-brand-600: #6428b8;
+  --color-brand-700: #521f97;
+  --color-brand-800: #421c76;
+  --color-brand-900: #33155c;
+  --color-brand-950: #1d0b38;
+  --color-brand: #521f97;
+  --color-brand-dark: #421c76;
+  --color-brand-deep: #33155c;
+  --color-gold: #ff6f3c;
+  --color-gold-deep: #d9481b;
+  --color-gold-soft: #ffc9ae;
 }
 
 html { scroll-behavior: smooth; }
@@ -33,55 +33,77 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #fafdf9;
+  background: #faf7fe;
   background-image:
-    radial-gradient(ellipse 90% 34% at 50% -12%, rgba(52, 211, 153, 0.20), transparent),
-    radial-gradient(ellipse 42% 28% at 92% 14%, rgba(245, 158, 11, 0.09), transparent),
-    radial-gradient(ellipse 42% 28% at 6% 30%, rgba(4, 120, 87, 0.09), transparent),
-    radial-gradient(rgba(4, 120, 87, 0.07) 1px, transparent 1.6px);
+    radial-gradient(ellipse 90% 34% at 50% -12%, rgba(154, 99, 230, 0.22), transparent),
+    radial-gradient(ellipse 42% 28% at 92% 14%, rgba(255, 111, 60, 0.10), transparent),
+    radial-gradient(ellipse 42% 28% at 6% 30%, rgba(82, 31, 151, 0.10), transparent),
+    radial-gradient(rgba(82, 31, 151, 0.08) 1px, transparent 1.6px);
   background-size: auto, auto, auto, 26px 26px;
-  color: #152a20;
+  color: #241a36;
 }
-::selection { background: #f59e0b; color: #152a20; }
+::selection { background: #ff6f3c; color: #241a36; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: #a9c4b6; border-radius: 5px; }
-::-webkit-scrollbar-track { background: #e2efe7; }
+::-webkit-scrollbar-thumb { background: #b9a3e3; border-radius: 5px; }
+::-webkit-scrollbar-track { background: #e9defc; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Leaf drift: slow horizontal float of the hero's ivy leaves. */
-@keyframes leaf-drift {
-  0%, 100% { transform: translate3d(0, 0, 0) rotate(-8deg); opacity: 0.8; }
-  50% { transform: translate3d(5vw, -1.4rem, 0) rotate(10deg); opacity: 1; }
+/* Orb float: slow vertical bobbing of the hero's comet orbs. */
+@keyframes orb-float {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(1.2rem, -2.2rem, 0) scale(1.06); }
 }
-.leaf-drift { animation: leaf-drift 24s ease-in-out infinite; }
+.orb-float { animation: orb-float 11s ease-in-out infinite; }
 
-/* Petal sway: gentle rocking of the hero's falling blossom leaves. */
-@keyframes petal-sway {
-  0%, 100% { transform: translate3d(0, 0, 0) rotate(-14deg); }
-  50% { transform: translate3d(1rem, -1.8rem, 0) rotate(14deg); }
+/* Comet orbit: a tilted ellipse ring sweeping around an orb. */
+@keyframes comet-orbit {
+  0% { transform: rotateX(66deg) rotateZ(0deg); }
+  100% { transform: rotateX(66deg) rotateZ(360deg); }
 }
-.petal-sway { animation: petal-sway 8s ease-in-out infinite; }
+.comet-orbit { animation: comet-orbit 14s linear infinite; }
 
-/* Dew rise: tiny emerald and amber motes lifting off the page. */
-@keyframes dew-rise {
+/* Spark float: gentle drift of the hero's ember sparks. */
+@keyframes spark-float {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(-10deg); opacity: 0.85; }
+  50% { transform: translate3d(-1.4rem, -2rem, 0) rotate(12deg); opacity: 1; }
+}
+.spark-float { animation: spark-float 9s ease-in-out infinite; }
+
+/* Mote rise: tiny indigo and ember sparks lifting off the page. */
+@keyframes mote-rise {
   0% { transform: translate3d(0, 6vh, 0) scale(0.7); opacity: 0; }
-  14% { opacity: 0.85; }
+  14% { opacity: 0.9; }
   86% { opacity: 0.45; }
-  100% { transform: translate3d(-3vw, -96vh, 0) scale(1.2); opacity: 0; }
+  100% { transform: translate3d(3vw, -96vh, 0) scale(1.25); opacity: 0; }
 }
-.dew-rise { animation: dew-rise 15s linear infinite; }
+.mote-rise { animation: mote-rise 16s linear infinite; }
 
-/* Grovelift used on cards and buttons: deep forest glow with an amber edge. */
+/* Sticker lift: hard offset shadow used by cards in the twilight theme. */
+.sticker-lift {
+  box-shadow:
+    0 1px 0 0 rgba(255, 255, 255, 0.9) inset,
+    6px 6px 0 0 rgba(51, 21, 92, 0.9);
+}
+.sticker-lift:hover {
+  box-shadow:
+    0 1px 0 0 rgba(255, 255, 255, 0.9) inset,
+    8px 8px 0 0 rgba(217, 72, 27, 0.85);
+}
+
+/* Twilight glass shared by modals and drawers. */
+.twilight-glass {
+  background: linear-gradient(180deg, rgba(244, 240, 254, 0.96), rgba(233, 222, 252, 0.98));
+  backdrop-filter: blur(14px);
+}
+
+/* Legacy aliases kept so untouched components still render. */
 .neon-lift {
   box-shadow:
     0 1px 0 0 rgba(255, 255, 255, 0.9) inset,
-    0 16px 34px -18px rgba(4, 120, 87, 0.30),
-    0 6px 16px -8px rgba(217, 119, 6, 0.20);
+    6px 6px 0 0 rgba(51, 21, 92, 0.9);
 }
-
-/* Ivy glass shared by modals and drawers. */
 .night-glass {
-  background: linear-gradient(180deg, rgba(236, 253, 245, 0.96), rgba(220, 242, 230, 0.98));
+  background: linear-gradient(180deg, rgba(244, 240, 254, 0.96), rgba(233, 222, 252, 0.98));
   backdrop-filter: blur(14px);
 }
