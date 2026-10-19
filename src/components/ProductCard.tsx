@@ -22,30 +22,30 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.45, delay, ease: "easeOut" }}
       whileHover={reduce ? undefined : { y: -5 }}
-      className="rounded-3xl neon-lift group relative flex h-full flex-col overflow-hidden border-2 border-brand-800 bg-[#ffffff] transition-all duration-300 hover:-translate-y-1.5 hover:border-gold-deep"
+      className="rounded-[20px] neon-lift group relative flex h-full flex-col overflow-hidden border border-brand-700/25 bg-[#ffffff] transition-all duration-300 hover:-translate-y-1.5 hover:border-gold-deep/70 hover:shadow-[0_20px_44px_-18px_rgba(4,120,87,0.45)]"
     >
-      {/* neon coral top edge */}
+      {/* grove leaf top edge */}
       <div aria-hidden className="h-1.5 bg-gradient-to-r from-brand-700 via-gold to-brand-700" />
       <div className="relative p-3">
         <div className="rounded-xl relative cursor-pointer overflow-hidden ring-2 ring-brand-800/20" onClick={() => onQuickView(p)}>
           <ProductImage product={p} />
           {p.badge === "New" && (
-            <span className="rounded-xl absolute left-3 top-3 bg-gradient-to-r from-brand-600 to-brand-800 px-2.5 py-1 text-[11px] font-black uppercase tracking-wider text-white shadow-[0_4px_14px_-4px_rgba(37,99,235,0.55)]">New</span>
+            <span className="rounded-xl absolute left-3 top-3 bg-gradient-to-r from-brand-600 to-brand-800 px-2.5 py-1 text-[11px] font-black uppercase tracking-wider text-white shadow-[0_4px_14px_-4px_rgba(4,120,87,0.55)]">New</span>
           )}
           {discountPct(p) > 0 && (
-            <span className="rounded-xl absolute right-3 top-3 bg-gradient-to-r from-gold-deep to-gold px-2.5 py-1 text-[11px] font-black text-brand-950 shadow-[0_4px_14px_-4px_rgba(251,146,60,0.6)]">-{discountPct(p)}%</span>
+            <span className="rounded-xl absolute right-3 top-3 bg-gradient-to-r from-gold-deep to-gold px-2.5 py-1 text-[11px] font-black text-brand-950 shadow-[0_4px_14px_-4px_rgba(245,158,11,0.6)]">-{discountPct(p)}%</span>
           )}
         </div>
       </div>
       <div className="flex flex-1 flex-col items-start gap-1.5 px-5 pb-4 pt-1 text-left">
         <span className="rounded-xl border border-gold-deep/50 bg-gold/15 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-[0.16em] text-gold-deep">{p.category}</span>
-        <h3 className="cursor-pointer text-[15px] font-bold leading-snug tracking-tight text-[#17233c] hover:text-brand-600" onClick={() => onQuickView(p)}>{p.name}</h3>
-        <div className="flex items-center gap-1"><Stars rating={p.rating} /><span className="text-xs font-medium text-[#5d6b82]">{p.rating} ({p.reviews.toLocaleString()})</span></div>
-        <span className={`w-fit px-2.5 py-1 text-[11px] font-bold ${p.stock === "In Stock" ? "rounded-xl border border-brand-600/40 bg-brand-600/10 text-brand-700" : "rounded-xl border border-[#d3e0f2] bg-[#ffffff] text-[#5d6b82]"}`}>{p.stock === "In Stock" ? "● In Stock" : "⚠ " + p.stock}</span>
-        <p className="line-clamp-2 text-[13px] leading-relaxed text-[#5d6b82]">{p.desc}</p>
+        <h3 className="cursor-pointer text-[15px] font-bold leading-snug tracking-tight text-[#152a20] hover:text-brand-600" onClick={() => onQuickView(p)}>{p.name}</h3>
+        <div className="flex items-center gap-1"><Stars rating={p.rating} /><span className="text-xs font-medium text-[#5a6f63]">{p.rating} ({p.reviews.toLocaleString()})</span></div>
+        <span className={`w-fit px-2.5 py-1 text-[11px] font-bold ${p.stock === "In Stock" ? "rounded-xl border border-brand-600/40 bg-brand-600/10 text-brand-700" : "rounded-xl border border-[#d2e4d9] bg-[#ffffff] text-[#5a6f63]"}`}>{p.stock === "In Stock" ? "● In Stock" : "⚠ " + p.stock}</span>
+        <p className="line-clamp-2 text-[13px] leading-relaxed text-[#5a6f63]">{p.desc}</p>
         <div className="mt-auto flex w-full items-end justify-between gap-2 pt-2.5">
           <span className="text-[22px] font-black tracking-tight text-brand-700">{tk(p.price)}</span>
-          <span className="text-xs font-bold text-[#5d6b82] line-through">{tk(p.oldPrice)}</span>
+          <span className="text-xs font-bold text-[#5a6f63] line-through">{tk(p.oldPrice)}</span>
         </div>
       </div>
       <div className="flex flex-col gap-2 px-5 pb-5">
@@ -53,7 +53,7 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
           whileTap={{ scale: 0.98 }}
           onClick={() => onAddToCart(p.id)}
           aria-label={`Add ${p.name} to cart`}
-          className="rounded-xl flex w-full items-center justify-center gap-1.5 bg-gradient-to-r from-brand-600 to-brand-800 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-[0_8px_24px_-8px_rgba(30,58,138,0.5)] transition hover:brightness-110 active:scale-[0.98]"
+          className="rounded-xl flex w-full items-center justify-center gap-1.5 bg-gradient-to-r from-brand-600 to-brand-800 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-[0_8px_24px_-8px_rgba(6,78,59,0.5)] transition hover:brightness-110 active:scale-[0.98]"
         >
           🛒 Add
         </motion.button>

@@ -1,24 +1,24 @@
 @import "tailwindcss";
 
 @theme {
-  /* azure kites: cobalt blue over pale sky, tangerine kite-paper sparks — original palette */
-  --color-brand-50: #eff6ff;
-  --color-brand-100: #dbeafe;
-  --color-brand-200: #bfdbfe;
-  --color-brand-300: #93c5fd;
-  --color-brand-400: #60a5fa;
-  --color-brand-500: #3b82f6;
-  --color-brand-600: #2563eb;
-  --color-brand-700: #1d4ed8;
-  --color-brand-800: #1e40af;
-  --color-brand-900: #1e3a8a;
-  --color-brand-950: #172554;
-  --color-brand: #1d4ed8;
-  --color-brand-dark: #1e40af;
-  --color-brand-deep: #1e3a8a;
-  --color-gold: #fb923c;
-  --color-gold-deep: #ea580c;
-  --color-gold-soft: #fed7aa;
+  /* emerald grove: deep forest greens on soft ivory, warm amber sun sparks — original palette */
+  --color-brand-50: #ecfdf5;
+  --color-brand-100: #d1fae5;
+  --color-brand-200: #a7f3d0;
+  --color-brand-300: #6ee7b7;
+  --color-brand-400: #34d399;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-brand-900: #064e3b;
+  --color-brand-950: #022c22;
+  --color-brand: #047857;
+  --color-brand-dark: #065f46;
+  --color-brand-deep: #064e3b;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #d97706;
+  --color-gold-soft: #fde68a;
 }
 
 html { scroll-behavior: smooth; }
@@ -33,55 +33,55 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #f2f8ff;
+  background: #fafdf9;
   background-image:
-    radial-gradient(ellipse 90% 34% at 50% -12%, rgba(96, 165, 250, 0.22), transparent),
-    radial-gradient(ellipse 42% 28% at 92% 14%, rgba(251, 146, 60, 0.10), transparent),
-    radial-gradient(ellipse 42% 28% at 6% 30%, rgba(37, 99, 235, 0.10), transparent),
-    radial-gradient(rgba(37, 99, 235, 0.07) 1px, transparent 1.6px);
-  background-size: auto, auto, auto, 24px 24px;
-  color: #17233c;
+    radial-gradient(ellipse 90% 34% at 50% -12%, rgba(52, 211, 153, 0.20), transparent),
+    radial-gradient(ellipse 42% 28% at 92% 14%, rgba(245, 158, 11, 0.09), transparent),
+    radial-gradient(ellipse 42% 28% at 6% 30%, rgba(4, 120, 87, 0.09), transparent),
+    radial-gradient(rgba(4, 120, 87, 0.07) 1px, transparent 1.6px);
+  background-size: auto, auto, auto, 26px 26px;
+  color: #152a20;
 }
-::selection { background: #fb923c; color: #17233c; }
+::selection { background: #f59e0b; color: #152a20; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: #b9cbe4; border-radius: 4px; }
-::-webkit-scrollbar-track { background: #e3ebf7; }
+::-webkit-scrollbar-thumb { background: #a9c4b6; border-radius: 5px; }
+::-webkit-scrollbar-track { background: #e2efe7; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Cloud drift: slow horizontal sail of the hero's paper clouds. */
-@keyframes cloud-drift {
-  0%, 100% { transform: translate3d(0, 0, 0); opacity: 0.75; }
-  50% { transform: translate3d(6vw, -1.2rem, 0); opacity: 1; }
+/* Leaf drift: slow horizontal float of the hero's ivy leaves. */
+@keyframes leaf-drift {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(-8deg); opacity: 0.8; }
+  50% { transform: translate3d(5vw, -1.4rem, 0) rotate(10deg); opacity: 1; }
 }
-.cloud-drift { animation: cloud-drift 22s ease-in-out infinite; }
+.leaf-drift { animation: leaf-drift 24s ease-in-out infinite; }
 
-/* Kite sway: gentle rocking of the hero kites on the breeze. */
-@keyframes kite-sway {
-  0%, 100% { transform: translate3d(0, 0, 0) rotate(-6deg); }
-  50% { transform: translate3d(1.2rem, -1.6rem, 0) rotate(6deg); }
+/* Petal sway: gentle rocking of the hero's falling blossom leaves. */
+@keyframes petal-sway {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(-14deg); }
+  50% { transform: translate3d(1rem, -1.8rem, 0) rotate(14deg); }
 }
-.kite-sway { animation: kite-sway 7s ease-in-out infinite; }
+.petal-sway { animation: petal-sway 8s ease-in-out infinite; }
 
-/* Spark rise: tiny sky-blue and tangerine motes lifting off the page. */
-@keyframes spark-rise {
+/* Dew rise: tiny emerald and amber motes lifting off the page. */
+@keyframes dew-rise {
   0% { transform: translate3d(0, 6vh, 0) scale(0.7); opacity: 0; }
   14% { opacity: 0.85; }
   86% { opacity: 0.45; }
-  100% { transform: translate3d(3vw, -96vh, 0) scale(1.2); opacity: 0; }
+  100% { transform: translate3d(-3vw, -96vh, 0) scale(1.2); opacity: 0; }
 }
-.spark-rise { animation: spark-rise 13s linear infinite; }
+.dew-rise { animation: dew-rise 15s linear infinite; }
 
-/* Kitelift used on cards and buttons: sky glow with a tangerine edge. */
+/* Grovelift used on cards and buttons: deep forest glow with an amber edge. */
 .neon-lift {
   box-shadow:
     0 1px 0 0 rgba(255, 255, 255, 0.9) inset,
-    0 16px 34px -18px rgba(251, 146, 60, 0.28),
-    0 6px 16px -8px rgba(37, 99, 235, 0.18);
+    0 16px 34px -18px rgba(4, 120, 87, 0.30),
+    0 6px 16px -8px rgba(217, 119, 6, 0.20);
 }
 
-/* Sky panel shared by modals and drawers. */
+/* Ivy glass shared by modals and drawers. */
 .night-glass {
-  background: linear-gradient(180deg, rgba(239, 246, 255, 0.96), rgba(227, 238, 250, 0.98));
+  background: linear-gradient(180deg, rgba(236, 253, 245, 0.96), rgba(220, 242, 230, 0.98));
   backdrop-filter: blur(14px);
 }
