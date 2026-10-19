@@ -22,76 +22,77 @@ export default function Footer({ onCategoryChange }: FooterProps) {
     else document.getElementById(target)?.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <footer id="contact" className="relative overflow-hidden bg-[#ffffff] text-brand-100/70">
+    <footer id="contact" className="relative overflow-hidden bg-[#14100d] text-[#c4ab8a]">
       <div aria-hidden className="pointer-events-none absolute -top-24 left-1/3 h-64 w-64 rounded-full bg-brand-500/15 blur-[100px]" />
-      <div aria-hidden className="pointer-events-none absolute bottom-0 right-1/4 h-56 w-56 rounded-full bg-brand-400/10 blur-[90px]" />
+      <div aria-hidden className="pointer-events-none absolute bottom-0 right-1/4 h-56 w-56 rounded-full bg-gold/10 blur-[90px]" />
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-brand-400 to-transparent opacity-60" />
       <div className="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-16">
-        <p className="text-2xl font-black tracking-tight text-[#152a20]">Gad<span className="text-brand-600">Zone</span> BD</p>
-        <p className="mt-2.5 max-w-xl text-sm leading-relaxed text-[#5a6f63]">
+        <p className="text-2xl font-black tracking-tight text-[#f5ead9]">Gad<span className="text-brand-300">Zone</span> BD</p>
+        <p className="mt-2.5 max-w-xl text-sm leading-relaxed text-[#c4ab8a]">
           Discover original gadgets, smart devices, audio products, mobile accessories and electronics at competitive prices with nationwide delivery across Bangladesh.
         </p>
         <div className="mt-5 grid gap-3 sm:grid-cols-2">
-          <div className="flex items-center gap-3 rounded-2xl border border-[#d2e4d9] bg-[#ffffff] p-4 shadow-[0_10px_30px_-12px_rgba(245,158,11,0.25)]">
+          <div className="ember-glow flex items-center gap-3 rounded-[18px] border border-brand-400/25 bg-[#221a14] p-4">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-brand-500/15 text-xl ring-1 ring-brand-400/30">💬</span>
             <div>
-              <p className="text-xs text-[#5a6f63]">WhatsApp</p>
-              <p className="font-bold text-[#152a20]">+880 1700-000000</p>
+              <p className="text-xs text-[#c4ab8a]">WhatsApp</p>
+              <p className="font-bold text-[#f5ead9]">+880 1700-000000</p>
             </div>
           </div>
-          <div className="flex items-center gap-3 rounded-2xl border border-[#d2e4d9] bg-[#ffffff] p-4 shadow-[0_10px_30px_-12px_rgba(245,158,11,0.25)]">
+          <div className="ember-glow flex items-center gap-3 rounded-[18px] border border-brand-400/25 bg-[#221a14] p-4">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-brand-500/15 text-xl ring-1 ring-brand-400/30">📞</span>
             <div>
-              <p className="text-xs text-[#5a6f63]">Customer Care</p>
-              <p className="font-bold text-[#152a20]">+880 1700-000000</p>
+              <p className="text-xs text-[#c4ab8a]">Customer Care</p>
+              <p className="font-bold text-[#f5ead9]">+880 1700-000000</p>
             </div>
           </div>
         </div>
 
         <div className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           <div>
-            <p className="text-xs font-bold uppercase tracking-widest text-brand-600">Explore</p>
-            <h3 className="mt-1.5 text-lg font-black tracking-tight text-[#152a20]">GadZone BD</h3>
+            <p className="text-xs font-bold uppercase tracking-widest text-brand-300">Explore</p>
+            <h3 className="mt-1.5 text-lg font-black tracking-tight text-[#f5ead9]">GadZone BD</h3>
             <ul className="mt-3 space-y-2 text-sm">
               {EXPLORE_LINKS.map((link) => (
                 <li key={link.label}>
-                  <button onClick={() => scrollTo(link.target)} className="transition hover:text-brand-600">› {link.label}</button>
+                  <button onClick={() => scrollTo(link.target)} className="transition hover:text-brand-300">› {link.label}</button>
                 </li>
               ))}
             </ul>
-            <p className="mt-5 text-xs font-bold uppercase tracking-widest text-[#5a6f63]">Categories</p>
+            <p className="mt-5 text-xs font-bold uppercase tracking-widest text-[#c4ab8a]">Categories</p>
             <div className="mt-2 flex flex-wrap gap-1.5">
               {CATEGORIES.filter((c) => c !== "All").map((c) => (
-                <button key={c} onClick={() => { onCategoryChange(c); document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" }); }} className="rounded-full bg-[#f4faf6] px-3 py-1.5 text-xs font-semibold ring-1 ring-[#d2e4d9] transition hover:bg-brand-600 hover:text-white">{c}</button>
+                <button key={c} onClick={() => { onCategoryChange(c); document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" }); }} className="rounded-full bg-[#2b2118] px-3 py-1.5 text-xs font-semibold text-[#c4ab8a] ring-1 ring-brand-400/25 transition hover:bg-brand-500 hover:text-[#1a120b]">{c}</button>
               ))}
             </div>
           </div>
           <div>
-            <p className="text-xs font-bold uppercase tracking-widest text-brand-600">Support</p>
-            <h3 className="mt-1.5 text-lg font-black tracking-tight text-[#152a20]">Customer Care</h3>
+            <p className="text-xs font-bold uppercase tracking-widest text-brand-300">Support</p>
+            <h3 className="mt-1.5 text-lg font-black tracking-tight text-[#f5ead9]">Customer Care</h3>
             <ul className="mt-3 space-y-2 text-sm">
               {SUPPORT_LINKS.map((link) => (
                 <li key={link}>
-                  <button onClick={() => scrollTo("faq")} className="transition hover:text-brand-600">› {link}</button>
+                  <button onClick={() => scrollTo("faq")} className="transition hover:text-brand-300">› {link}</button>
                 </li>
               ))}
             </ul>
           </div>
           <div>
-            <p className="text-xs font-bold uppercase tracking-widest text-brand-600">Get in Touch</p>
-            <h3 className="mt-1.5 text-lg font-black tracking-tight text-[#152a20]">We&apos;re Here to Help</h3>
-            <div className="mt-3 rounded-2xl border border-[#d2e4d9] bg-[#ffffff] p-5 shadow-[0_10px_30px_-12px_rgba(245,158,11,0.25)]">
-              <p className="text-xs text-[#5a6f63]">Warranty Support</p>
-              <p className="mt-1 font-bold text-[#152a20]">📞 +880 1700-000000</p>
+            <p className="text-xs font-bold uppercase tracking-widest text-brand-300">Get in Touch</p>
+            <h3 className="mt-1.5 text-lg font-black tracking-tight text-[#f5ead9]">We&apos;re Here to Help</h3>
+            <div className="ember-glow mt-3 rounded-[18px] border border-brand-400/25 bg-[#221a14] p-5">
+              <p className="text-xs text-[#c4ab8a]">Warranty Support</p>
+              <p className="mt-1 font-bold text-[#f5ead9]">📞 +880 1700-000000</p>
               <p className="mt-1 text-sm">✉️ hello@gadzonebd.example</p>
               <p className="mt-1 text-sm">📍 Dhaka, Bangladesh</p>
             </div>
-            <p className="mt-4 text-sm font-bold text-[#152a20]">We Accept</p>
-            <div className="mt-2 flex flex-wrap gap-2">{["bKash", "Nagad", "Rocket", "Visa", "Mastercard", "COD"].map((p) => <span key={p} className="rounded-full bg-[#f4faf6] px-3 py-1.5 text-xs font-bold ring-1 ring-[#d2e4d9]">{p}</span>)}</div>
-            <p className="mt-3 text-xs text-[#5a6f63]">100% secure payments</p>
+            <p className="mt-4 text-sm font-bold text-[#f5ead9]">We Accept</p>
+            <div className="mt-2 flex flex-wrap gap-2">{["bKash", "Nagad", "Rocket", "Visa", "Mastercard", "COD"].map((p) => <span key={p} className="rounded-full bg-[#2b2118] px-3 py-1.5 text-xs font-bold text-[#c4ab8a] ring-1 ring-brand-400/25">{p}</span>)}</div>
+            <p className="mt-3 text-xs text-[#c4ab8a]">100% secure payments</p>
           </div>
         </div>
       </div>
-      <div className="border-t border-[#d2e4d9] py-5 text-center text-xs text-[#5a6f63]">© 2026 GadZone BD — All rights reserved. Made with ❤️ in Bangladesh.</div>
+      <div className="border-t border-brand-400/15 py-5 text-center text-xs text-[#a08b6d]">© 2026 GadZone BD — All rights reserved. Made with ❤️ in Bangladesh.</div>
     </footer>
   );
 }
