@@ -19,16 +19,16 @@ export default function OrderCard({ order, showCustomer, statusEditable, onStatu
   const summary = order.items.slice(0, 2).map((it) => `${it.name} × ${it.qty}`).join(" · ") + (order.items.length > 2 ? ` +${order.items.length - 2} more` : "");
 
   return (
-    <article className="rounded-2xl bg-[#ffffff] p-5 shadow-sm ring-1 ring-[#e8dcc8] transition hover:shadow-md">
+    <article className="rounded-2xl bg-[#ffffff] p-5 shadow-sm ring-1 ring-[#d2e4d8] transition hover:shadow-md">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="min-w-0">
-          <p className="font-black text-[#241a12]">{order.id}</p>
-          <p className="mt-0.5 text-sm text-[#6b5a45]">
+          <p className="font-black text-[#0e2b22]">{order.id}</p>
+          <p className="mt-0.5 text-sm text-[#5c7268]">
             {formatOrderDate(order.date)} · {itemCount} item{itemCount === 1 ? "" : "s"} · {order.payment}
           </p>
           {showCustomer && (
-            <p className="mt-1 text-sm font-semibold text-[#6b5a45]">
-              {order.name} <span className="font-normal text-[#6b5a45]">· {order.email}</span>
+            <p className="mt-1 text-sm font-semibold text-[#5c7268]">
+              {order.name} <span className="font-normal text-[#5c7268]">· {order.email}</span>
             </p>
           )}
         </div>
@@ -38,7 +38,7 @@ export default function OrderCard({ order, showCustomer, statusEditable, onStatu
             <select
               value={order.status}
               onChange={(e) => onStatusChange?.(order.id, e.target.value as OrderStatus)}
-              className="cursor-pointer rounded-full border border-[#e8dcc8] bg-[#ffffff] px-3 py-1.5 text-xs font-bold text-[#6b5a45] outline-none"
+              className="cursor-pointer rounded-full border border-[#d2e4d8] bg-[#ffffff] px-3 py-1.5 text-xs font-bold text-[#5c7268] outline-none"
             >
               {STATUSES.map((s) => (
                 <option key={s} value={s}>{s}</option>
@@ -50,13 +50,13 @@ export default function OrderCard({ order, showCustomer, statusEditable, onStatu
         )}
       </div>
 
-      <p className="mt-3 truncate text-sm text-[#6b5a45]">{summary || "No items"}</p>
+      <p className="mt-3 truncate text-sm text-[#5c7268]">{summary || "No items"}</p>
 
       <div className="mt-3 flex flex-wrap items-center justify-between gap-3 border-t border-[#ffffff] pt-3">
         <button onClick={() => setExpanded((v) => !v)} aria-expanded={expanded} className="text-sm font-bold text-brand-800 hover:text-brand-700">
           {expanded ? "Hide details ↑" : "View details ↓"}
         </button>
-        <p className="text-sm font-bold text-[#241a12]">
+        <p className="text-sm font-bold text-[#0e2b22]">
           Total <span className="ml-1 text-base text-brand-800">{tk(order.total)}</span>
         </p>
       </div>
@@ -66,24 +66,24 @@ export default function OrderCard({ order, showCustomer, statusEditable, onStatu
           <ul className="space-y-2 text-sm">
             {order.items.map((it, i) => (
               <li key={i} className="flex justify-between gap-3">
-                <span className="text-[#6b5a45]">{it.name} <span className="text-[#6b5a45]">× {it.qty}</span></span>
-                <span className="shrink-0 font-semibold text-[#241a12]">{tk(it.price * it.qty)}</span>
+                <span className="text-[#5c7268]">{it.name} <span className="text-[#5c7268]">× {it.qty}</span></span>
+                <span className="shrink-0 font-semibold text-[#0e2b22]">{tk(it.price * it.qty)}</span>
               </li>
             ))}
           </ul>
-          <div className="grid gap-3 border-t border-[#e8dcc8] pt-3 text-sm sm:grid-cols-2">
+          <div className="grid gap-3 border-t border-[#d2e4d8] pt-3 text-sm sm:grid-cols-2">
             <div>
-              <p className="text-xs font-bold tracking-wide text-[#6b5a45] uppercase">Delivery address</p>
-              <p className="mt-1 font-semibold text-[#6b5a45]">{order.name}</p>
-              <p className="text-[#6b5a45]">{order.address}</p>
-              <p className="text-[#6b5a45]">{order.district}</p>
-              <p className="text-[#6b5a45]">{order.phone}</p>
+              <p className="text-xs font-bold tracking-wide text-[#5c7268] uppercase">Delivery address</p>
+              <p className="mt-1 font-semibold text-[#5c7268]">{order.name}</p>
+              <p className="text-[#5c7268]">{order.address}</p>
+              <p className="text-[#5c7268]">{order.district}</p>
+              <p className="text-[#5c7268]">{order.phone}</p>
             </div>
             <div>
-              <p className="text-xs font-bold tracking-wide text-[#6b5a45] uppercase">Order info</p>
-              <p className="mt-1 text-[#6b5a45]">Payment: <span className="font-semibold text-[#6b5a45]">{order.payment}</span></p>
-              <p className="text-[#6b5a45]">Email: <span className="font-semibold text-[#6b5a45]">{order.email}</span></p>
-              <p className="text-[#6b5a45]">Status: <span className="font-semibold text-[#6b5a45]">{order.status}</span></p>
+              <p className="text-xs font-bold tracking-wide text-[#5c7268] uppercase">Order info</p>
+              <p className="mt-1 text-[#5c7268]">Payment: <span className="font-semibold text-[#5c7268]">{order.payment}</span></p>
+              <p className="text-[#5c7268]">Email: <span className="font-semibold text-[#5c7268]">{order.email}</span></p>
+              <p className="text-[#5c7268]">Status: <span className="font-semibold text-[#5c7268]">{order.status}</span></p>
             </div>
           </div>
         </div>

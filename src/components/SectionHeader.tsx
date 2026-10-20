@@ -14,13 +14,13 @@ export default function SectionHeader({ accent, rest, subtitle, showViewAll = tr
     <Reveal>
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div className="max-w-xl">
-          <h2 className="flex items-center gap-3 text-[1.65rem] font-black leading-tight tracking-tight text-[#241a12] sm:text-[2rem]">
+          <h2 className="flex items-center gap-3 text-[1.65rem] font-black leading-tight tracking-tight text-[#0e2b22] sm:text-[2rem]">
             <span className="starburst pop-bob relative inline-flex h-10 w-10 shrink-0 items-center justify-center" aria-hidden>
-              <span className="text-sm font-black text-[#2a1a0e]">★</span>
+              <span className="text-sm font-black text-[#071f14]">★</span>
             </span>
             <span><span className="bg-gradient-to-r from-brand-700 to-gold-deep bg-clip-text text-transparent">{accent}</span> {rest}</span>
           </h2>
-          {subtitle && <p className="mt-2.5 text-[15px] leading-relaxed text-[#6b5a45]">{subtitle}</p>}
+          {subtitle && <p className="mt-2.5 text-[15px] leading-relaxed text-[#5c7268]">{subtitle}</p>}
           <span aria-hidden className="mt-3 flex items-center gap-1.5">
             <span className="inline-block h-2.5 w-2.5 rounded-full bg-brand-500 shadow-[0_2px_8px_-1px_rgba(221,83,17,0.7)] ring-2 ring-white/70" />
             <span className="inline-block h-2.5 w-2.5 rounded-full bg-gold shadow-[0_2px_8px_-1px_rgba(232,150,58,0.7)] ring-2 ring-white/70" />

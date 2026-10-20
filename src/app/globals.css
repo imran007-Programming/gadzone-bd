@@ -1,29 +1,29 @@
 @import "tailwindcss";
 
 @theme {
-  /* Ember Hearth: burnt orange + amber + caramel on warm cream. */
-  --color-brand-50: #fef6ee;
-  --color-brand-100: #fdebd7;
-  --color-brand-200: #fad3ab;
-  --color-brand-300: #f6b474;
-  --color-brand-400: #f1883c;
-  --color-brand-500: #ec6a15;
-  --color-brand-600: #dd5311;
-  --color-brand-700: #b74312;
-  --color-brand-800: #93371a;
-  --color-brand-900: #783017;
-  --color-brand-950: #421809;
-  --color-brand: #dd5311;
-  --color-brand-dark: #b74312;
-  --color-brand-deep: #421809;
+  /* Glacier Pine: deep pine + mint ice + glacier blue + harvest gold. */
+  --color-brand-50: #f0fdf4;
+  --color-brand-100: #dcfce7;
+  --color-brand-200: #bbf7d0;
+  --color-brand-300: #86efac;
+  --color-brand-400: #4ade80;
+  --color-brand-500: #22c55e;
+  --color-brand-600: #16a34a;
+  --color-brand-700: #15803d;
+  --color-brand-800: #166534;
+  --color-brand-900: #14532d;
+  --color-brand-950: #052e16;
+  --color-brand: #16a34a;
+  --color-brand-dark: #15803d;
+  --color-brand-deep: #052e16;
   --color-gold: #f59e0b;
   --color-gold-deep: #92400e;
   --color-gold-soft: #fef3c7;
-  --color-ink: #241a12;
-  --color-paper: #faf4e8;
-  --color-popblue: #d97706;
-  --color-popblue-deep: #92400e;
-  --color-popblue-soft: #fde8cd;
+  --color-ink: #0e2b22;
+  --color-paper: #eef7f1;
+  --color-popblue: #0891b2;
+  --color-popblue-deep: #155e75;
+  --color-popblue-soft: #cffafe;
 }
 
 html { scroll-behavior: smooth; }
@@ -38,224 +38,224 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #faf4e8;
+  background: #eef7f1;
   background-image:
-    radial-gradient(ellipse 90% 32% at 50% -12%, rgba(236, 106, 21, 0.16), transparent),
-    radial-gradient(ellipse 60% 26% at 94% 104%, rgba(245, 158, 11, 0.12), transparent),
-    radial-gradient(ellipse 52% 24% at 4% 58%, rgba(217, 119, 6, 0.10), transparent),
-    radial-gradient(rgba(183, 67, 18, 0.07) 1.5px, transparent 2px);
+    radial-gradient(ellipse 90% 32% at 50% -12%, rgba(34, 197, 94, 0.14), transparent),
+    radial-gradient(ellipse 60% 26% at 94% 104%, rgba(8, 145, 178, 0.12), transparent),
+    radial-gradient(ellipse 52% 24% at 4% 58%, rgba(22, 163, 74, 0.10), transparent),
+    radial-gradient(rgba(21, 128, 61, 0.08) 1.5px, transparent 2px);
   background-size: auto, auto, auto, 30px 30px;
-  color: #241a12;
+  color: #0e2b22;
 }
-::selection { background: #dd5311; color: #ffffff; }
+::selection { background: #16a34a; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: #dd5311; border-radius: 8px; border: 2px solid #faf4e8; }
-::-webkit-scrollbar-track { background: #eadfc9; }
+::-webkit-scrollbar-thumb { background: #16a34a; border-radius: 8px; border: 2px solid #eef7f1; }
+::-webkit-scrollbar-track { background: #d5e2d9; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Ember rings: heat waves expanding and fading. */
+/* Frost rings: pine mist waves expanding and fading. */
 @keyframes ember-ring {
   0% { transform: scale(0.55); opacity: 0.85; }
   100% { transform: scale(1.5); opacity: 0; }
 }
 .pop-fall { animation: ember-ring 5.2s ease-out infinite; }
 
-/* Ember sway: slow lateral drift for glow washes. */
+/* Frost sway: slow lateral drift for mist washes. */
 @keyframes ember-drift {
   0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.55; }
   50% { transform: translate3d(3vw, -1rem, 0) scale(1.12); opacity: 0.9; }
 }
 .pop-drift { animation: ember-drift 14s ease-in-out infinite; }
 
-/* Ember bob: gentle rise with a soft tilt. */
+/* Frost bob: gentle rise with a soft tilt. */
 @keyframes ember-bob {
   0%, 100% { transform: translateY(0) rotate(1.5deg); }
   50% { transform: translateY(-10px) rotate(-1.5deg); }
 }
 .pop-bob { animation: ember-bob 5.5s ease-in-out infinite; }
 
-/* Ember orbit: slow rotation for the hero's ring stack. */
+/* Frost orbit: slow rotation for the hero's ring stack. */
 @keyframes ember-spin {
   to { transform: rotate(-360deg); }
 }
 .pop-spin { animation: ember-spin 60s linear infinite; }
 
-/* Ember ticker: infinite marquee for the hearth strip. */
+/* Frost ticker: infinite marquee for the glacier strip. */
 @keyframes ember-ticker {
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: ember-ticker 26s linear infinite; }
 
-/* Ember band: flowing burnt orange → amber → caramel gradient. */
+/* Frost band: flowing pine → mint → glacier gradient. */
 .pop-stripes {
-  background-image: linear-gradient(120deg, #dd5311, #f59e0b 48%, #b45309 92%);
+  background-image: linear-gradient(120deg, #166534, #22c55e 48%, #0891b2 92%);
 }
 
-/* Ember card: warm cream card with cozy layered shadows. */
+/* Frost card: crisp white card with cool forest shadows. */
 .pop-lift {
-  border: 1px solid rgba(183, 67, 18, 0.16);
-  border-radius: 1.25rem;
-  background: #fffdf7;
-  box-shadow: 0 1px 2px rgba(66, 24, 9, 0.05), 0 12px 32px -12px rgba(221, 83, 17, 0.22);
+  border: 1px solid rgba(21, 128, 61, 0.16);
+  border-radius: 1.5rem;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(5, 46, 22, 0.05), 0 12px 32px -12px rgba(22, 163, 74, 0.22);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
 }
 .pop-lift:hover {
   transform: translateY(-4px);
-  border-color: rgba(232, 150, 58, 0.5);
-  box-shadow: 0 2px 4px rgba(66, 24, 9, 0.06), 0 24px 48px -16px rgba(232, 150, 58, 0.4);
+  border-color: rgba(52, 211, 153, 0.55);
+  box-shadow: 0 2px 4px rgba(5, 46, 22, 0.06), 0 24px 48px -16px rgba(8, 145, 178, 0.4);
 }
 
-/* Ember panel: shared by modals and drawers. */
+/* Frost panel: shared by modals and drawers. */
 .pop-glass {
-  background: rgba(255, 253, 247, 0.9);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(183, 67, 18, 0.2);
-  border-radius: 1.25rem;
-  box-shadow: 0 24px 64px -24px rgba(183, 67, 18, 0.35);
+  border: 1px solid rgba(21, 128, 61, 0.2);
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 64px -24px rgba(21, 128, 61, 0.32);
 }
 
-/* Ember badge: round amber medallion with an espresso dashed ring. */
+/* Frost badge: round glacier medallion with a pine dashed ring. */
 .starburst {
   border-radius: 9999px;
-  border: 2px solid #2a1a0e;
-  outline: 3px dashed rgba(221, 83, 17, 0.55);
+  border: 2px solid #071f14;
+  outline: 3px dashed rgba(8, 145, 178, 0.6);
   outline-offset: 3px;
-  background: radial-gradient(circle at 32% 28%, #fcd34d, #f59e0b 60%, #b45309);
+  background: radial-gradient(circle at 32% 28%, #67e8f9, #0891b2 60%, #155e75);
   color: #ffffff;
-  box-shadow: 0 12px 26px -10px rgba(221, 83, 17, 0.8);
+  box-shadow: 0 12px 26px -10px rgba(8, 145, 178, 0.8);
 }
 
-/* Ember grain: fine warm dot texture for hero bands. */
+/* Frost grain: fine pine dot texture for hero bands. */
 .halftone {
-  background-image: radial-gradient(rgba(183, 67, 18, 0.12) 1.6px, transparent 2.2px);
+  background-image: radial-gradient(rgba(21, 128, 61, 0.12) 1.6px, transparent 2.2px);
   background-size: 20px 20px;
 }
 
-/* Ember dot divider: warm dotted band. */
+/* Frost dot divider: pine dotted band. */
 .zigzag {
   height: 10px;
-  background-image: radial-gradient(rgba(183, 67, 18, 0.5) 2.2px, transparent 2.8px);
+  background-image: radial-gradient(rgba(21, 128, 61, 0.5) 2.2px, transparent 2.8px);
   background-size: 18px 10px;
   opacity: 0.6;
 }
 
-/* Ember sheen: soft amber band over warm cream. */
+/* Frost sheen: soft mint band over ice white. */
 .bazaar-awning {
   background-image:
-    linear-gradient(180deg, rgba(245, 158, 11, 0.22), rgba(245, 158, 11, 0) 60%),
-    linear-gradient(180deg, #fffdf7, #fef6ee);
+    linear-gradient(180deg, rgba(34, 197, 94, 0.14), rgba(34, 197, 94, 0) 60%),
+    linear-gradient(180deg, #ffffff, #f4faf7);
 }
 
-/* Legacy aliases kept so untouched components still render — all ember-styled. */
+/* Legacy aliases kept so untouched components still render — all frost-styled. */
 .lagoon-lift {
-  border: 1px solid rgba(183, 67, 18, 0.16);
-  border-radius: 1.25rem;
-  background: #fffdf7;
-  box-shadow: 0 1px 2px rgba(66, 24, 9, 0.05), 0 12px 32px -12px rgba(221, 83, 17, 0.22);
+  border: 1px solid rgba(21, 128, 61, 0.16);
+  border-radius: 1.5rem;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(5, 46, 22, 0.05), 0 12px 32px -12px rgba(22, 163, 74, 0.22);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
 }
 .lagoon-lift:hover {
   transform: translateY(-4px);
-  border-color: rgba(232, 150, 58, 0.5);
-  box-shadow: 0 2px 4px rgba(66, 24, 9, 0.06), 0 24px 48px -16px rgba(232, 150, 58, 0.4);
+  border-color: rgba(52, 211, 153, 0.55);
+  box-shadow: 0 2px 4px rgba(5, 46, 22, 0.06), 0 24px 48px -16px rgba(8, 145, 178, 0.4);
 }
 .stamp-perf {
-  border: 2px dashed #92400e;
-  background: #fffdf7;
-  border-radius: 1rem;
-  box-shadow: 0 8px 24px -12px rgba(221, 83, 17, 0.3);
+  border: 2px dashed #14532d;
+  background: #ffffff;
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 24px -12px rgba(22, 163, 74, 0.3);
 }
 .ember-glow {
-  border: 1px solid rgba(183, 67, 18, 0.16);
-  border-radius: 1.25rem;
-  background: #fffdf7;
-  box-shadow: 0 1px 2px rgba(66, 24, 9, 0.05), 0 12px 32px -12px rgba(241, 136, 60, 0.35);
+  border: 1px solid rgba(21, 128, 61, 0.16);
+  border-radius: 1.5rem;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(5, 46, 22, 0.05), 0 12px 32px -12px rgba(74, 222, 128, 0.35);
   transition: transform 0.24s ease, box-shadow 0.24s ease;
 }
 .ember-glow:hover {
   transform: translateY(-4px);
-  box-shadow: 0 2px 4px rgba(66, 24, 9, 0.06), 0 20px 44px -16px rgba(232, 150, 58, 0.5);
+  box-shadow: 0 2px 4px rgba(5, 46, 22, 0.06), 0 20px 44px -16px rgba(52, 211, 153, 0.5);
 }
 .ripple-glow {
-  border: 1px solid rgba(183, 67, 18, 0.14);
-  border-radius: 1.25rem;
-  background: #fffdf7;
-  box-shadow: 0 1px 2px rgba(66, 24, 9, 0.05), 0 10px 28px -12px rgba(221, 83, 17, 0.25);
+  border: 1px solid rgba(21, 128, 61, 0.14);
+  border-radius: 1.5rem;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(5, 46, 22, 0.05), 0 10px 28px -12px rgba(22, 163, 74, 0.25);
   transition: transform 0.24s ease, box-shadow 0.24s ease;
 }
 .ripple-glow:hover {
   transform: translateY(-4px);
-  box-shadow: 0 2px 4px rgba(66, 24, 9, 0.06), 0 22px 44px -16px rgba(217, 119, 6, 0.4);
+  box-shadow: 0 2px 4px rgba(5, 46, 22, 0.06), 0 22px 44px -16px rgba(8, 145, 178, 0.4);
 }
 .lagoon-glow {
-  border: 1px solid rgba(183, 67, 18, 0.14);
-  border-radius: 1.25rem;
-  background: #fffdf7;
-  box-shadow: 0 1px 2px rgba(66, 24, 9, 0.05), 0 10px 28px -12px rgba(221, 83, 17, 0.25);
+  border: 1px solid rgba(21, 128, 61, 0.14);
+  border-radius: 1.5rem;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(5, 46, 22, 0.05), 0 10px 28px -12px rgba(22, 163, 74, 0.25);
   transition: transform 0.24s ease, box-shadow 0.24s ease;
 }
 .lagoon-glow:hover {
   transform: translateY(-4px);
-  box-shadow: 0 2px 4px rgba(66, 24, 9, 0.06), 0 22px 44px -16px rgba(232, 150, 58, 0.42);
+  box-shadow: 0 2px 4px rgba(5, 46, 22, 0.06), 0 22px 44px -16px rgba(52, 211, 153, 0.42);
 }
 .sticker-lift {
-  border: 1px solid rgba(183, 67, 18, 0.18);
-  border-radius: 1.15rem;
-  background: #fffdf7;
-  box-shadow: 0 8px 24px -12px rgba(221, 83, 17, 0.28);
+  border: 1px solid rgba(21, 128, 61, 0.18);
+  border-radius: 1.25rem;
+  background: #ffffff;
+  box-shadow: 0 8px 24px -12px rgba(22, 163, 74, 0.28);
   transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 .sticker-lift:hover {
   transform: translateY(-3px);
-  box-shadow: 0 16px 36px -12px rgba(232, 150, 58, 0.45);
+  box-shadow: 0 16px 36px -12px rgba(8, 145, 178, 0.45);
 }
 .neon-lift {
-  border: 1px solid rgba(232, 150, 58, 0.4);
-  border-radius: 1.25rem;
-  background: #fffdf7;
-  box-shadow: 0 1px 2px rgba(66, 24, 9, 0.05), 0 12px 32px -12px rgba(232, 150, 58, 0.45);
+  border: 1px solid rgba(52, 211, 153, 0.4);
+  border-radius: 1.5rem;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(5, 46, 22, 0.05), 0 12px 32px -12px rgba(52, 211, 153, 0.45);
 }
 .lagoon-glass {
-  background: rgba(255, 253, 247, 0.88);
+  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(183, 67, 18, 0.2);
-  border-radius: 1.25rem;
-  box-shadow: 0 24px 64px -24px rgba(183, 67, 18, 0.32);
+  border: 1px solid rgba(21, 128, 61, 0.2);
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 64px -24px rgba(21, 128, 61, 0.32);
 }
 .espresso-glass {
-  background: rgba(255, 253, 247, 0.88);
+  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(183, 67, 18, 0.2);
-  border-radius: 1.25rem;
-  box-shadow: 0 24px 64px -24px rgba(183, 67, 18, 0.32);
+  border: 1px solid rgba(21, 128, 61, 0.2);
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 64px -24px rgba(21, 128, 61, 0.32);
 }
 .twilight-glass {
-  background: rgba(255, 253, 247, 0.88);
+  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(183, 67, 18, 0.2);
-  border-radius: 1.25rem;
-  box-shadow: 0 24px 64px -24px rgba(183, 67, 18, 0.32);
+  border: 1px solid rgba(21, 128, 61, 0.2);
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 64px -24px rgba(21, 128, 61, 0.32);
 }
 .night-glass {
-  background: rgba(42, 26, 14, 0.94);
+  background: rgba(7, 31, 20, 0.94);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(241, 136, 60, 0.45);
-  border-radius: 1.25rem;
-  box-shadow: 0 24px 64px -24px rgba(42, 26, 14, 0.6);
+  border: 1px solid rgba(74, 222, 128, 0.45);
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 64px -24px rgba(7, 31, 20, 0.6);
 }
 .mist-glass {
-  background: rgba(255, 253, 247, 0.66);
+  background: rgba(255, 255, 255, 0.66);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(183, 67, 18, 0.14);
-  border-radius: 1.25rem;
-  box-shadow: 0 12px 32px -16px rgba(183, 67, 18, 0.28);
+  border: 1px solid rgba(21, 128, 61, 0.14);
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 32px -16px rgba(21, 128, 61, 0.28);
 }
 .rain-fall { animation: ember-ring 5.2s ease-out infinite; }
 .rain-fleck { animation: ember-ring 5.2s ease-out infinite; }
