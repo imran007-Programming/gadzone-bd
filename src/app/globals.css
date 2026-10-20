@@ -1,24 +1,29 @@
 @import "tailwindcss";
 
 @theme {
-  /* crimson postmark: rubber-stamp crimson on kraft paper with ink press shadows — original palette */
-  --color-brand-50: #fdeeed;
-  --color-brand-100: #f9d3cc;
-  --color-brand-200: #f0958b;
-  --color-brand-300: #e5534b;
-  --color-brand-400: #d92b33;
-  --color-brand-500: #c1121f;
-  --color-brand-600: #a30e19;
-  --color-brand-700: #850c15;
-  --color-brand-800: #6a0a12;
-  --color-brand-900: #520810;
-  --color-brand-950: #38060c;
-  --color-brand: #a30e19;
-  --color-brand-dark: #850c15;
-  --color-brand-deep: #38060c;
-  --color-gold: #d99a2b;
-  --color-gold-deep: #a86e12;
-  --color-gold-soft: #f7ead0;
+  /* halftone pop: sunshine yellow + ink outlines + hot pink — original comic pop-art palette */
+  --color-brand-50: #fff8e1;
+  --color-brand-100: #ffefc0;
+  --color-brand-200: #ffdf8e;
+  --color-brand-300: #ffcf5c;
+  --color-brand-400: #ffc234;
+  --color-brand-500: #f5a300;
+  --color-brand-600: #cf8a00;
+  --color-brand-700: #a66d00;
+  --color-brand-800: #7a4f00;
+  --color-brand-900: #4f3400;
+  --color-brand-950: #2e1f00;
+  --color-brand: #f5a300;
+  --color-brand-dark: #a66d00;
+  --color-brand-deep: #2e1f00;
+  --color-gold: #f0447c;
+  --color-gold-deep: #c2275b;
+  --color-gold-soft: #fde3ec;
+  --color-ink: #211a12;
+  --color-paper: #fffdf6;
+  --color-popblue: #2aa8f2;
+  --color-popblue-deep: #1573b8;
+  --color-popblue-soft: #ddf1fd;
 }
 
 html { scroll-behavior: smooth; }
@@ -33,157 +38,176 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #f8f2e7;
+  background: #fffdf6;
   background-image:
-    radial-gradient(ellipse 90% 34% at 50% -12%, rgba(193, 18, 31, 0.09), transparent),
-    radial-gradient(ellipse 42% 28% at 92% 14%, rgba(217, 154, 43, 0.14), transparent),
-    radial-gradient(ellipse 42% 28% at 6% 30%, rgba(163, 14, 25, 0.07), transparent),
-    radial-gradient(circle at 1px 1px, rgba(163, 14, 25, 0.10) 1px, transparent 0);
-  background-size: auto, auto, auto, 26px 26px;
-  color: #261d1a;
+    radial-gradient(ellipse 80% 30% at 50% -10%, rgba(245, 163, 0, 0.12), transparent),
+    radial-gradient(circle at 2px 2px, rgba(166, 109, 0, 0.13) 1.6px, transparent 2.2px);
+  background-size: auto, 22px 22px;
+  color: #211a12;
 }
-::selection { background: #a30e19; color: #fdf6ea; }
+::selection { background: #f5a300; color: #211a12; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: #c1121f; border-radius: 5px; }
-::-webkit-scrollbar-track { background: #e7dcc6; }
+::-webkit-scrollbar-thumb { background: #cf8a00; border-radius: 5px; border: 2px solid #fffdf6; }
+::-webkit-scrollbar-track { background: #f3ead3; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Stamp flutter: paper confetti tumbling down, swaying sideways. */
-@keyframes rain-fall {
-  0% { transform: translate3d(0, -12vh, 0) rotate(0deg); opacity: 0; }
-  18% { opacity: 0.9; }
-  50% { transform: translate3d(-2.6vw, 40vh, 0) rotate(160deg); }
-  85% { opacity: 0.7; }
-  100% { transform: translate3d(2.2vw, 92vh, 0) rotate(320deg); opacity: 0; }
+/* Pop dots: comic confetti dots tumbling down. */
+@keyframes pop-fall {
+  0% { transform: translate3d(0, -10vh, 0) rotate(0deg); opacity: 0; }
+  15% { opacity: 0.9; }
+  50% { transform: translate3d(-2vw, 42vh, 0) rotate(170deg); }
+  85% { opacity: 0.75; }
+  100% { transform: translate3d(2.4vw, 94vh, 0) rotate(330deg); opacity: 0; }
 }
-.rain-fall { animation: rain-fall 12s ease-in-out infinite; }
+.pop-fall { animation: pop-fall 11s ease-in-out infinite; }
 
-/* Postmark sway: soft ink glides drifting sideways. */
-@keyframes lagoon-drift {
-  0%, 100% { transform: translate3d(-6vw, 0, 0); opacity: 0.3; }
-  50% { transform: translate3d(6vw, -0.7rem, 0); opacity: 0.75; }
+/* Pop drift: soft sideways float for glow blobs. */
+@keyframes pop-drift {
+  0%, 100% { transform: translate3d(-5vw, 0, 0); opacity: 0.35; }
+  50% { transform: translate3d(5vw, -0.6rem, 0); opacity: 0.8; }
 }
-.lagoon-drift { animation: lagoon-drift 18s ease-in-out infinite; }
+.pop-drift { animation: pop-drift 16s ease-in-out infinite; }
 
-/* Ink breathe: gentle pulsing of the stamped glow spots. */
-@keyframes buoy-breathe {
-  0%, 100% { opacity: 0.3; transform: scale(1); }
-  50% { opacity: 0.8; transform: scale(1.2); }
+/* Pop bob: gentle vertical bob for starbursts. */
+@keyframes pop-bob {
+  0%, 100% { transform: translateY(0) rotate(-4deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
 }
-.buoy-breathe { animation: buoy-breathe 9s ease-in-out infinite; }
+.pop-bob { animation: pop-bob 7s ease-in-out infinite; }
 
-/* Postmark spin: slow rotation used by the hero's postmark rings. */
-@keyframes tide-spin {
+/* Pop spin: slow rotation for the hero's starburst medallion. */
+@keyframes pop-spin {
   to { transform: rotate(360deg); }
 }
-.tide-spin { animation: tide-spin 60s linear infinite; }
+.pop-spin { animation: pop-spin 46s linear infinite; }
 
-/* Ink press: solid offset stamp shadow used by cards in the postmark theme. */
-.lagoon-lift {
-  box-shadow:
-    5px 5px 0 0 rgba(56, 6, 12, 0.85),
-    0 0 0 1px rgba(82, 8, 16, 0.55);
+/* Pop lift: thick ink border + hard offset shadow, the signature card treatment. */
+.pop-lift {
+  border: 2px solid #211a12;
+  box-shadow: 6px 6px 0 0 #211a12;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-.lagoon-lift:hover {
-  box-shadow:
-    8px 8px 0 0 rgba(56, 6, 12, 0.9),
-    0 0 0 1px rgba(193, 18, 31, 0.75),
-    0 18px 36px -18px rgba(56, 6, 12, 0.4);
+.pop-lift:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 9px 9px 0 0 #211a12;
 }
 
-/* Paper glass shared by modals and drawers. */
-.lagoon-glass {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 242, 231, 0.97));
+/* Pop glass shared by modals and drawers. */
+.pop-glass {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(255, 248, 225, 0.97));
   backdrop-filter: blur(14px);
+  border: 2px solid #211a12;
 }
 
-/* Stamp perforation: punches stamp-edge notches around any frame. */
-.stamp-perf {
-  -webkit-mask-image: radial-gradient(circle 7px at 12px 12px, transparent 7px, black 8px);
-  -webkit-mask-size: 26px 26px;
-  -webkit-mask-position: -13px -13px;
-  mask-image: radial-gradient(circle 7px at 12px 12px, transparent 7px, black 8px);
-  mask-size: 26px 26px;
-  mask-position: -13px -13px;
+/* Starburst badge: 12-point comic burst via clip-path. */
+.starburst {
+  clip-path: polygon(50% 0%, 58% 12%, 70% 4%, 72% 17%, 85% 13%, 82% 26%, 95% 27%, 88% 38%, 100% 44%, 89% 52%, 97% 63%, 84% 64%, 87% 77%, 74% 73%, 72% 87%, 61% 78%, 53% 91%, 46% 78%, 35% 86%, 35% 73%, 22% 76%, 27% 64%, 14% 62%, 23% 52%, 12% 46%, 25% 41%, 20% 29%, 33% 30%, 33% 16%, 45% 21%);
+}
+
+/* Halftone panel: dotted comic texture for hero bands. */
+.halftone {
+  background-image: radial-gradient(rgba(33, 26, 18, 0.16) 1.8px, transparent 2.4px);
+  background-size: 18px 18px;
+}
+
+/* Zigzag divider edge. */
+.zigzag {
+  height: 14px;
+  background:
+    linear-gradient(135deg, #211a12 25%, transparent 25%) -7px 0 / 14px 14px repeat-x,
+    linear-gradient(225deg, #211a12 25%, transparent 25%) -7px 0 / 14px 14px repeat-x;
 }
 
 /* Legacy aliases kept so untouched components still render. */
+.lagoon-lift {
+  border: 2px solid #211a12;
+  box-shadow: 6px 6px 0 0 #211a12;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.lagoon-lift:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 9px 9px 0 0 #211a12;
+}
+.stamp-perf {
+  border: 3px solid #211a12;
+  box-shadow: 8px 8px 0 0 #211a12;
+}
 .ember-glow {
-  box-shadow:
-    5px 5px 0 0 rgba(56, 6, 12, 0.85),
-    0 0 0 1px rgba(82, 8, 16, 0.55);
+  border: 2px solid #211a12;
+  box-shadow: 6px 6px 0 0 #211a12;
 }
 .ember-glow:hover {
-  box-shadow:
-    8px 8px 0 0 rgba(56, 6, 12, 0.9),
-    0 0 0 1px rgba(193, 18, 31, 0.75),
-    0 18px 36px -18px rgba(56, 6, 12, 0.4);
+  transform: translate(-2px, -2px);
+  box-shadow: 9px 9px 0 0 #211a12;
 }
-.ember-rise { animation: rain-fall 12s ease-in-out infinite; }
 .ripple-glow {
-  box-shadow:
-    5px 5px 0 0 rgba(56, 6, 12, 0.85),
-    0 0 0 1px rgba(82, 8, 16, 0.55);
+  border: 2px solid #211a12;
+  box-shadow: 6px 6px 0 0 #211a12;
 }
 .ripple-glow:hover {
-  box-shadow:
-    8px 8px 0 0 rgba(56, 6, 12, 0.9),
-    0 0 0 1px rgba(193, 18, 31, 0.75),
-    0 18px 36px -18px rgba(56, 6, 12, 0.4);
+  transform: translate(-2px, -2px);
+  box-shadow: 9px 9px 0 0 #211a12;
 }
 .lagoon-glow {
-  box-shadow:
-    5px 5px 0 0 rgba(56, 6, 12, 0.85),
-    0 0 0 1px rgba(82, 8, 16, 0.55);
+  border: 2px solid #211a12;
+  box-shadow: 6px 6px 0 0 #211a12;
 }
 .lagoon-glow:hover {
-  box-shadow:
-    8px 8px 0 0 rgba(56, 6, 12, 0.9),
-    0 0 0 1px rgba(193, 18, 31, 0.75),
-    0 18px 36px -18px rgba(56, 6, 12, 0.4);
+  transform: translate(-2px, -2px);
+  box-shadow: 9px 9px 0 0 #211a12;
 }
 .sticker-lift {
-  box-shadow:
-    5px 5px 0 0 rgba(56, 6, 12, 0.85),
-    0 0 0 1px rgba(82, 8, 16, 0.55);
+  border: 2px solid #211a12;
+  box-shadow: 5px 5px 0 0 #211a12;
 }
 .sticker-lift:hover {
-  box-shadow:
-    5px 5px 0 0 rgba(56, 6, 12, 0.85),
-    0 0 0 1px rgba(193, 18, 31, 0.75),
-    0 18px 36px -18px rgba(56, 6, 12, 0.4);
-}
-.espresso-glass {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 242, 231, 0.97));
-  backdrop-filter: blur(14px);
-}
-.twilight-glass {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 242, 231, 0.97));
-  backdrop-filter: blur(14px);
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0 0 #211a12;
 }
 .neon-lift {
-  box-shadow:
-    5px 5px 0 0 rgba(56, 6, 12, 0.85),
-    0 0 0 1px rgba(82, 8, 16, 0.55);
+  border: 2px solid #211a12;
+  box-shadow: 6px 6px 0 0 #211a12;
+}
+.lagoon-glass {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(255, 248, 225, 0.97));
+  backdrop-filter: blur(14px);
+  border: 2px solid #211a12;
+}
+.espresso-glass {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(255, 248, 225, 0.97));
+  backdrop-filter: blur(14px);
+  border: 2px solid #211a12;
+}
+.twilight-glass {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(255, 248, 225, 0.97));
+  backdrop-filter: blur(14px);
+  border: 2px solid #211a12;
 }
 .night-glass {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 242, 231, 0.97));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(255, 248, 225, 0.97));
   backdrop-filter: blur(14px);
+  border: 2px solid #211a12;
 }
 .mist-glass {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 242, 231, 0.97));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(255, 248, 225, 0.97));
   backdrop-filter: blur(14px);
+  border: 2px solid #211a12;
 }
-.bubble-rise { animation: rain-fall 12s ease-in-out infinite; }
-.current-drift { animation: lagoon-drift 18s ease-in-out infinite; }
-.tide-breathe { animation: buoy-breathe 9s ease-in-out infinite; }
-.spark-rise { animation: rain-fall 12s ease-in-out infinite; }
-.zephyr-drift { animation: lagoon-drift 18s ease-in-out infinite; }
-.hearth-breathe { animation: buoy-breathe 9s ease-in-out infinite; }
-.sun-spin { animation: tide-spin 60s linear infinite; }
-.mist-drift { animation: lagoon-drift 18s ease-in-out infinite; }
-.pool-breathe { animation: buoy-breathe 9s ease-in-out infinite; }
-.ripple-spin { animation: tide-spin 60s linear infinite; }
-.ring-orbit { animation: tide-spin 60s linear infinite; }
-.bazaar-drift { animation: lagoon-drift 18s ease-in-out infinite; }
+.rain-fall { animation: pop-fall 11s ease-in-out infinite; }
+.ember-rise { animation: pop-fall 11s ease-in-out infinite; }
+.bubble-rise { animation: pop-fall 11s ease-in-out infinite; }
+.spark-rise { animation: pop-fall 11s ease-in-out infinite; }
+.lagoon-drift { animation: pop-drift 16s ease-in-out infinite; }
+.current-drift { animation: pop-drift 16s ease-in-out infinite; }
+.zephyr-drift { animation: pop-drift 16s ease-in-out infinite; }
+.mist-drift { animation: pop-drift 16s ease-in-out infinite; }
+.bazaar-drift { animation: pop-drift 16s ease-in-out infinite; }
+.buoy-breathe { animation: pop-bob 7s ease-in-out infinite; }
+.tide-breathe { animation: pop-bob 7s ease-in-out infinite; }
+.hearth-breathe { animation: pop-bob 7s ease-in-out infinite; }
+.pool-breathe { animation: pop-bob 7s ease-in-out infinite; }
+.tide-spin { animation: pop-spin 46s linear infinite; }
+.sun-spin { animation: pop-spin 46s linear infinite; }
+.ripple-spin { animation: pop-spin 46s linear infinite; }
+.ring-orbit { animation: pop-spin 46s linear infinite; }
