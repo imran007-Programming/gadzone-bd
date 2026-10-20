@@ -1,30 +1,30 @@
 @import "tailwindcss";
 
 @theme {
-  /* Ember Market: chili-paprika brand, saffron accents and sunset-pink
-     sparks on warm cream. Light-first theme. */
-  --color-brand-50: #fff3e2;
-  --color-brand-100: #ffe3c2;
-  --color-brand-200: #ffc98f;
-  --color-brand-300: #ffab5e;
-  --color-brand-400: #fb8a2e;
-  --color-brand-500: #f97316;
-  --color-brand-600: #ea580c;
-  --color-brand-700: #c2410c;
-  --color-brand-800: #9a3412;
-  --color-brand-900: #7c2d12;
-  --color-brand-950: #431407;
-  --color-brand: #ea580c;
-  --color-brand-dark: #c2410c;
-  --color-brand-deep: #431407;
-  --color-gold: #d97706;
-  --color-gold-deep: #92400e;
-  --color-gold-soft: #fdeed3;
-  --color-ink: #2c1a0e;
-  --color-paper: #fdf5e9;
-  --color-popblue: #db2777;
-  --color-popblue-deep: #9d174d;
-  --color-popblue-soft: #fce7f1;
+  /* Cobalt Monsoon: deep cobalt brand, sky accents and violet pops on
+     cool slate. Light-first theme. */
+  --color-brand-50: #eef4ff;
+  --color-brand-100: #dce7fd;
+  --color-brand-200: #c0d4fc;
+  --color-brand-300: #93b4fa;
+  --color-brand-400: #608dfa;
+  --color-brand-500: #3b69f6;
+  --color-brand-600: #2555eb;
+  --color-brand-700: #1d42d8;
+  --color-brand-800: #1f3775;
+  --color-brand-900: #1a2c60;
+  --color-brand-950: #172450;
+  --color-brand: #2555eb;
+  --color-brand-dark: #1d42d8;
+  --color-brand-deep: #172450;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #b45309;
+  --color-gold-soft: #fef3d9;
+  --color-ink: #14213d;
+  --color-paper: #f2f5fb;
+  --color-popblue: #7c3aed;
+  --color-popblue-deep: #5b21b6;
+  --color-popblue-soft: #ede9fe;
 }
 
 html { scroll-behavior: smooth; }
@@ -39,281 +39,278 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #fdf5e9;
+  background: #f2f5fb;
   background-image:
-    radial-gradient(ellipse 90% 34% at 50% -14%, rgba(249, 115, 22, 0.18), transparent),
-    radial-gradient(ellipse 62% 28% at 92% 102%, rgba(219, 39, 119, 0.10), transparent),
-    radial-gradient(ellipse 54% 26% at 6% 60%, rgba(217, 119, 6, 0.12), transparent),
-    radial-gradient(rgba(234, 88, 12, 0.10) 1.2px, transparent 1.3px);
+    radial-gradient(ellipse 90% 34% at 50% -14%, rgba(59, 105, 246, 0.16), transparent),
+    radial-gradient(ellipse 62% 28% at 92% 102%, rgba(124, 58, 237, 0.10), transparent),
+    radial-gradient(ellipse 54% 26% at 6% 60%, rgba(147, 180, 250, 0.14), transparent),
+    radial-gradient(rgba(37, 85, 235, 0.08) 1.2px, transparent 1.3px);
   background-size: auto, auto, auto, 26px 26px;
-  color: #2c1a0e;
+  color: #14213d;
 }
-::selection { background: #ea580c; color: #ffffff; }
+::selection { background: #2555eb; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: #f97316; border-radius: 8px; border: 2px solid #fdf5e9; }
-::-webkit-scrollbar-track { background: #ffe3c2; }
+::-webkit-scrollbar-thumb { background: #3b69f6; border-radius: 8px; border: 2px solid #f2f5fb; }
+::-webkit-scrollbar-track { background: #dce7fd; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Ember rise: warm sparks drifting up with a sway and fade. */
-@keyframes ember-rise {
-  0% { transform: translate3d(0, 0, 0) scale(0.5); opacity: 0; }
-  18% { opacity: 0.85; }
-  100% { transform: translate3d(-12px, -72px, 0) scale(1.05); opacity: 0; }
+/* Rain fall: soft drops drifting down through the monsoon air. */
+@keyframes rain-fall {
+  0% { transform: translate3d(4px, -90px, 0); opacity: 0; }
+  22% { opacity: 0.8; }
+  100% { transform: translate3d(-16px, 110px, 0); opacity: 0; }
 }
-.pop-fall { animation: ember-rise 7.2s ease-out infinite; }
+.pop-fall { animation: rain-fall 7.2s ease-in infinite; }
 
-/* Heat drift: slow lateral sway for the warm glow washes. */
-@keyframes dusk-drift {
+/* Cloud drift: slow lateral sway for the cool glow washes. */
+@keyframes cloud-drift {
   0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.5; }
-  50% { transform: translate3d(3vw, 0.75rem, 0) scale(1.12); opacity: 0.85; }
+  50% { transform: translate3d(3vw, -0.75rem, 0) scale(1.12); opacity: 0.85; }
 }
-.pop-drift { animation: dusk-drift 19s ease-in-out infinite; }
+.pop-drift { animation: cloud-drift 19s ease-in-out infinite; }
 
-/* Ember bob: gentle rise with a sway. */
-@keyframes hearth-bob {
+/* Buoy bob: gentle float on the water. */
+@keyframes buoy-bob {
   0%, 100% { transform: translateY(0) rotate(-1deg); }
   50% { transform: translateY(-7px) rotate(1deg); }
 }
-.pop-bob { animation: hearth-bob 6.4s ease-in-out infinite; }
+.pop-bob { animation: buoy-bob 6.4s ease-in-out infinite; }
 
-/* Ray spin: steady rotation for the hero's sun rays. */
-@keyframes sun-wheel {
+/* Ripple spin: steady rotation for the hero's storm rings. */
+@keyframes ripple-wheel {
   to { transform: rotate(360deg); }
 }
-.pop-spin { animation: sun-wheel 60s linear infinite; }
+.pop-spin { animation: ripple-wheel 60s linear infinite; }
 
-/* Market ticker: infinite marquee for the offer strip (rightward drift). */
-@keyframes dusk-ticker {
+/* Monsoon ticker: infinite marquee for the offer strip (rightward drift). */
+@keyframes cloud-ticker {
   from { transform: translateX(-50%); }
   to { transform: translateX(0); }
 }
-.pop-ticker { animation: dusk-ticker 32s linear infinite; }
+.pop-ticker { animation: cloud-ticker 32s linear infinite; }
 
-/* Sunset band: flowing chili → tangerine → saffron → sunset-pink gradient. */
+/* Storm band: flowing cobalt → sky → violet gradient. */
 .pop-stripes {
-  background-image: linear-gradient(115deg, #c2410c, #f97316 30%, #d97706 58%, #db2777 96%);
+  background-image: linear-gradient(115deg, #1d42d8, #3b69f6 30%, #7c3aed 58%, #608dfa 96%);
 }
 
-/* Market card: cream editorial panel, espresso edge and a hard offset
-   shadow; hover presses the shadow flatter and lifts the card. */
+/* Monsoon card: crisp white panel on cool slate, hairline border and a
+   soft diffuse shadow; hover lifts the card into a deeper soft shadow. */
 .pop-lift {
   position: relative;
-  border: 2px solid #2c1a0e;
-  border-radius: 1.25rem;
-  background: linear-gradient(180deg, #fffdf8 0%, #fff7ea 100%);
+  border: 1px solid #d5e0f5;
+  border-radius: 1.5rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.9),
-    7px 7px 0 rgba(44, 26, 14, 0.92);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    0 1px 2px rgba(20, 33, 61, 0.06),
+    0 18px 40px -18px rgba(37, 85, 235, 0.28);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
 }
 .pop-lift::before {
   content: "";
   position: absolute;
   inset: 0 0 auto 0;
-  height: 5px;
-  border-radius: 1.25rem 1.25rem 0 0;
-  background: linear-gradient(90deg, #ea580c, #d97706, #db2777);
-  opacity: 0.9;
+  height: 4px;
+  border-radius: 1.5rem 1.5rem 0 0;
+  background: linear-gradient(90deg, #2555eb, #608dfa, #7c3aed);
+  opacity: 0.85;
 }
 .pop-lift:hover {
-  transform: translate(-2px, -2px);
-  border-color: #c2410c;
+  transform: translateY(-6px);
+  border-color: #93b4fa;
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.9),
-    10px 10px 0 rgba(194, 65, 12, 0.85);
+    0 2px 4px rgba(20, 33, 61, 0.06),
+    0 30px 60px -20px rgba(37, 85, 235, 0.4);
 }
 
-/* Market panel: shared by modals and drawers — frosted cream glass. */
+/* Monsoon panel: shared by modals and drawers — frosted cool glass. */
 .pop-glass {
-  background: rgba(255, 250, 241, 0.94);
+  background: rgba(247, 250, 255, 0.94);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 2px solid #2c1a0e;
-  border-radius: 1.25rem;
+  border: 1px solid #d5e0f5;
+  border-radius: 1.5rem;
   box-shadow:
-    0 24px 64px -18px rgba(67, 20, 7, 0.32),
-    8px 8px 0 rgba(44, 26, 14, 0.85);
+    0 24px 64px -18px rgba(23, 36, 80, 0.3),
+    0 8px 24px -12px rgba(37, 85, 235, 0.25);
 }
 
-/* Ember seal medallion: round chili seal with a dashed saffron halo. */
+/* Storm seal medallion: round cobalt seal with a dashed sky halo. */
 .starburst {
   border-radius: 9999px;
-  border: 2px solid #fffaf1;
-  outline: 3px dashed rgba(234, 88, 12, 0.65);
+  border: 2px solid #f7faff;
+  outline: 3px dashed rgba(37, 85, 235, 0.55);
   outline-offset: 3px;
-  background: radial-gradient(circle at 32% 28%, #ffab5e, #f97316 55%, #c2410c);
-  color: #fffaf1;
-  box-shadow: 0 10px 26px -8px rgba(234, 88, 12, 0.55);
+  background: radial-gradient(circle at 32% 28%, #93b4fa, #3b69f6 55%, #1d42d8);
+  color: #f7faff;
+  box-shadow: 0 10px 26px -8px rgba(37, 85, 235, 0.5);
 }
 
-/* Ember dot field: fine warm dot texture for hero bands. */
+/* Rain dot field: fine cool dot texture for hero bands. */
 .halftone {
-  background-image: radial-gradient(rgba(234, 88, 12, 0.12) 1.4px, transparent 1.5px);
+  background-image: radial-gradient(rgba(37, 85, 235, 0.1) 1.4px, transparent 1.5px);
   background-size: 22px 22px;
 }
 
-/* Ember wave divider: scallop wave band. */
+/* Monsoon wave divider: scallop wave band. */
 .zigzag {
   height: 14px;
-  background-image: radial-gradient(circle at 10px -4px, transparent 12px, rgba(234, 88, 12, 0.45) 13px, transparent 14px);
+  background-image: radial-gradient(circle at 10px -4px, transparent 12px, rgba(37, 85, 235, 0.4) 13px, transparent 14px);
   background-size: 20px 14px;
   background-repeat: repeat-x;
   opacity: 0.85;
 }
 
-/* Market sheen: warm glow band over cream. */
+/* Monsoon sheen: cool glow band over white. */
 .bazaar-awning {
   background-image:
-    linear-gradient(180deg, rgba(249, 115, 22, 0.10), rgba(249, 115, 22, 0) 62%),
-    linear-gradient(180deg, #fffdf8, #fdf5e9);
+    linear-gradient(180deg, rgba(59, 105, 246, 0.08), rgba(59, 105, 246, 0) 62%),
+    linear-gradient(180deg, #ffffff, #f2f5fb);
 }
 
-/* Sunset sun disc: layered warm radial for the hero's sun. */
+/* Storm glow: layered cool radial for the hero's storm halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 171, 94, 0.95) 0%, rgba(249, 115, 22, 0.85) 34%, rgba(194, 65, 12, 0.55) 58%, rgba(194, 65, 12, 0) 72%);
+    radial-gradient(circle at 50% 42%, rgba(147, 180, 250, 0.9) 0%, rgba(59, 105, 246, 0.8) 34%, rgba(29, 66, 216, 0.5) 58%, rgba(29, 66, 216, 0) 72%);
 }
 
-/* Sun rays: conic ray ring around the disc. */
+/* Ripple rings: concentric monsoon rings around the halo. */
 .sun-rays {
-  background: repeating-conic-gradient(
-    from 0deg,
-    rgba(217, 119, 6, 0.35) 0deg 6deg,
-    transparent 6deg 18deg
+  background: repeating-radial-gradient(
+    circle at center,
+    rgba(96, 141, 250, 0.28) 0 5px,
+    transparent 5px 26px
   );
-  -webkit-mask: radial-gradient(circle, transparent 58%, black 59%);
-  mask: radial-gradient(circle, transparent 58%, black 59%);
+  -webkit-mask: radial-gradient(circle, black 40%, transparent 88%);
+  mask: radial-gradient(circle, black 40%, transparent 88%);
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all ember-styled. */
+/* Legacy aliases kept so untouched components still render — all storm-styled. */
 .lagoon-lift {
-  border: 2px solid #2c1a0e;
-  border-radius: 1.25rem;
-  background: linear-gradient(180deg, #fffdf8 0%, #fff7ea 100%);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.9),
-    7px 7px 0 rgba(44, 26, 14, 0.92);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  border: 1px solid #d5e0f5;
+  border-radius: 1.5rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  box-shadow: 0 18px 40px -18px rgba(37, 85, 235, 0.28);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
 }
 .lagoon-lift:hover {
-  transform: translate(-2px, -2px);
-  border-color: #db2777;
-  box-shadow:
-    10px 10px 0 rgba(219, 39, 119, 0.75);
+  transform: translateY(-6px);
+  border-color: #7c3aed;
+  box-shadow: 0 30px 60px -20px rgba(124, 58, 237, 0.4);
 }
 .stamp-perf {
-  border: 2px dashed #f97316;
+  border: 2px dashed #3b69f6;
   background: #ffffff;
   border-radius: 1rem;
-  box-shadow: 6px 6px 0 rgba(44, 26, 14, 0.85);
+  box-shadow: 0 12px 28px -12px rgba(37, 85, 235, 0.3);
 }
 .ember-glow {
-  border: 2px solid #2c1a0e;
-  border-radius: 1.25rem;
-  background: linear-gradient(180deg, #fffdf8 0%, #fff7ea 100%);
-  box-shadow: 6px 6px 0 rgba(44, 26, 14, 0.85);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid #d5e0f5;
+  border-radius: 1.5rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  box-shadow: 0 14px 34px -14px rgba(37, 85, 235, 0.28);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
 }
 .ember-glow:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 10px 10px 0 rgba(217, 119, 6, 0.8);
+  transform: translateY(-5px);
+  box-shadow: 0 26px 52px -18px rgba(245, 158, 11, 0.45);
 }
 .ripple-glow {
-  border: 2px solid #2c1a0e;
-  border-radius: 1.25rem;
-  background: linear-gradient(180deg, #fffdf8 0%, #fff7ea 100%);
-  box-shadow: 6px 6px 0 rgba(44, 26, 14, 0.85);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid #d5e0f5;
+  border-radius: 1.5rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  box-shadow: 0 14px 34px -14px rgba(37, 85, 235, 0.28);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
 }
 .ripple-glow:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 10px 10px 0 rgba(219, 39, 119, 0.75);
+  transform: translateY(-5px);
+  box-shadow: 0 26px 52px -18px rgba(124, 58, 237, 0.4);
 }
 .lagoon-glow {
-  border: 2px solid #2c1a0e;
-  border-radius: 1.25rem;
-  background: linear-gradient(180deg, #fffdf8 0%, #fff7ea 100%);
-  box-shadow: 6px 6px 0 rgba(44, 26, 14, 0.85);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid #d5e0f5;
+  border-radius: 1.5rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  box-shadow: 0 14px 34px -14px rgba(37, 85, 235, 0.28);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
 }
 .lagoon-glow:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 10px 10px 0 rgba(234, 88, 12, 0.8);
+  transform: translateY(-5px);
+  box-shadow: 0 26px 52px -18px rgba(37, 85, 235, 0.42);
 }
 .sticker-lift {
-  border: 2px solid #2c1a0e;
+  border: 1px solid #d5e0f5;
   border-radius: 1rem;
   background: #ffffff;
-  box-shadow: 5px 5px 0 rgba(44, 26, 14, 0.85);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 10px 24px -12px rgba(37, 85, 235, 0.3);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
 }
 .sticker-lift:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 8px 8px 0 rgba(234, 88, 12, 0.7);
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px -14px rgba(37, 85, 235, 0.42);
 }
 .neon-lift {
-  border: 2px solid rgba(217, 119, 6, 0.6);
-  border-radius: 1.25rem;
-  background: linear-gradient(180deg, #fffdf8 0%, #fff7ea 100%);
-  box-shadow: 6px 6px 0 rgba(44, 26, 14, 0.85);
+  border: 1px solid rgba(147, 180, 250, 0.7);
+  border-radius: 1.5rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  box-shadow: 0 14px 34px -14px rgba(37, 85, 235, 0.28);
 }
 .lagoon-glass {
-  background: rgba(255, 250, 241, 0.92);
+  background: rgba(247, 250, 255, 0.92);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 2px solid #2c1a0e;
-  border-radius: 1.25rem;
-  box-shadow: 0 24px 64px -18px rgba(67, 20, 7, 0.3);
+  border: 1px solid #d5e0f5;
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 64px -18px rgba(23, 36, 80, 0.28);
 }
 .espresso-glass {
-  background: rgba(255, 250, 241, 0.92);
+  background: rgba(247, 250, 255, 0.92);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 2px solid #2c1a0e;
-  border-radius: 1.25rem;
-  box-shadow: 0 24px 64px -18px rgba(67, 20, 7, 0.3);
+  border: 1px solid #d5e0f5;
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 64px -18px rgba(23, 36, 80, 0.28);
 }
 .twilight-glass {
-  background: rgba(255, 250, 241, 0.92);
+  background: rgba(247, 250, 255, 0.92);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 2px solid #2c1a0e;
-  border-radius: 1.25rem;
-  box-shadow: 0 24px 64px -18px rgba(67, 20, 7, 0.3);
+  border: 1px solid #d5e0f5;
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 64px -18px rgba(23, 36, 80, 0.28);
 }
 .night-glass {
-  background: rgba(255, 250, 241, 0.96);
+  background: rgba(247, 250, 255, 0.96);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 2px solid rgba(219, 39, 119, 0.5);
-  border-radius: 1.25rem;
-  box-shadow: 0 24px 64px -18px rgba(67, 20, 7, 0.3);
+  border: 1px solid rgba(124, 58, 237, 0.4);
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 64px -18px rgba(23, 36, 80, 0.28);
 }
 .mist-glass {
-  background: rgba(255, 250, 241, 0.72);
+  background: rgba(247, 250, 255, 0.72);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 2px solid #f2d8ae;
+  border: 1px solid #c0d4fc;
   border-radius: 1rem;
-  box-shadow: 5px 5px 0 rgba(44, 26, 14, 0.7);
+  box-shadow: 0 10px 24px -12px rgba(37, 85, 235, 0.3);
 }
-.rain-fall { animation: ember-rise 7.2s ease-out infinite; }
-.rain-fleck { animation: ember-rise 7.2s ease-out infinite; }
-.ember-rise { animation: ember-rise 7.2s ease-out infinite; }
-.bubble-rise { animation: ember-rise 7.2s ease-out infinite; }
-.spark-rise { animation: ember-rise 7.2s ease-out infinite; }
-.lagoon-drift { animation: dusk-drift 19s ease-in-out infinite; }
-.current-drift { animation: dusk-drift 19s ease-in-out infinite; }
-.zephyr-drift { animation: dusk-drift 19s ease-in-out infinite; }
-.mist-drift { animation: dusk-drift 19s ease-in-out infinite; }
-.bazaar-drift { animation: dusk-drift 19s ease-in-out infinite; }
-.buoy-breathe { animation: hearth-bob 6.4s ease-in-out infinite; }
-.tide-breathe { animation: hearth-bob 6.4s ease-in-out infinite; }
-.hearth-breathe { animation: hearth-bob 6.4s ease-in-out infinite; }
-.pool-breathe { animation: hearth-bob 6.4s ease-in-out infinite; }
-.tide-spin { animation: sun-wheel 60s linear infinite; }
-.sun-spin { animation: sun-wheel 60s linear infinite; }
-.ripple-spin { animation: sun-wheel 60s linear infinite; }
-.ring-orbit { animation: sun-wheel 60s linear infinite; }
+.rain-fall { animation: rain-fall 7.2s ease-in infinite; }
+.rain-fleck { animation: rain-fall 7.2s ease-in infinite; }
+.ember-rise { animation: rain-fall 7.2s ease-in infinite; }
+.bubble-rise { animation: rain-fall 7.2s ease-in infinite; }
+.spark-rise { animation: rain-fall 7.2s ease-in infinite; }
+.lagoon-drift { animation: cloud-drift 19s ease-in-out infinite; }
+.current-drift { animation: cloud-drift 19s ease-in-out infinite; }
+.zephyr-drift { animation: cloud-drift 19s ease-in-out infinite; }
+.mist-drift { animation: cloud-drift 19s ease-in-out infinite; }
+.bazaar-drift { animation: cloud-drift 19s ease-in-out infinite; }
+.buoy-breathe { animation: buoy-bob 6.4s ease-in-out infinite; }
+.tide-breathe { animation: buoy-bob 6.4s ease-in-out infinite; }
+.hearth-breathe { animation: buoy-bob 6.4s ease-in-out infinite; }
+.pool-breathe { animation: buoy-bob 6.4s ease-in-out infinite; }
+.tide-spin { animation: ripple-wheel 60s linear infinite; }
+.sun-spin { animation: ripple-wheel 60s linear infinite; }
+.ripple-spin { animation: ripple-wheel 60s linear infinite; }
+.ring-orbit { animation: ripple-wheel 60s linear infinite; }
