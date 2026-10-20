@@ -1,29 +1,29 @@
 @import "tailwindcss";
 
 @theme {
-  /* Aurora Orchid: violet + orchid + cyan on lavender mist. */
-  --color-brand-50: #f5f3ff;
-  --color-brand-100: #ede9fe;
-  --color-brand-200: #ddd6fe;
-  --color-brand-300: #c4b5fd;
-  --color-brand-400: #a78bfa;
-  --color-brand-500: #8b5cf6;
-  --color-brand-600: #7c3aed;
-  --color-brand-700: #6d28d9;
-  --color-brand-800: #5b21b6;
-  --color-brand-900: #4c1d95;
-  --color-brand-950: #2e1065;
-  --color-brand: #7c3aed;
-  --color-brand-dark: #6d28d9;
-  --color-brand-deep: #2e1065;
-  --color-gold: #d946ef;
-  --color-gold-deep: #a21caf;
-  --color-gold-soft: #fae8ff;
-  --color-ink: #1e1b4b;
-  --color-paper: #f5f3fd;
-  --color-popblue: #06b6d4;
-  --color-popblue-deep: #0e7490;
-  --color-popblue-soft: #cffafe;
+  /* Ember Forge: amber + crimson + teal on warm cream paper. */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-brand-950: #431407;
+  --color-brand: #ea580c;
+  --color-brand-dark: #c2410c;
+  --color-brand-deep: #431407;
+  --color-gold: #dc2626;
+  --color-gold-deep: #991b1b;
+  --color-gold-soft: #fee2e2;
+  --color-ink: #431407;
+  --color-paper: #fff8f0;
+  --color-popblue: #0d9488;
+  --color-popblue-deep: #0f766e;
+  --color-popblue-soft: #ccfbf1;
 }
 
 html { scroll-behavior: smooth; }
@@ -38,231 +38,219 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #f5f3fd;
+  background: #fff8f0;
   background-image:
-    radial-gradient(ellipse 90% 32% at 50% -12%, rgba(124, 58, 237, 0.14), transparent),
-    radial-gradient(ellipse 70% 26% at 88% 108%, rgba(6, 182, 212, 0.12), transparent),
-    radial-gradient(ellipse 55% 24% at 8% 62%, rgba(217, 70, 239, 0.10), transparent),
-    radial-gradient(circle at 2px 2px, rgba(124, 58, 237, 0.10) 1.6px, transparent 2.2px);
-  background-size: auto, auto, auto, 26px 26px;
-  color: #1e1b4b;
+    radial-gradient(ellipse 90% 32% at 50% -12%, rgba(234, 88, 12, 0.16), transparent),
+    radial-gradient(ellipse 70% 26% at 88% 108%, rgba(13, 148, 136, 0.12), transparent),
+    radial-gradient(ellipse 55% 24% at 8% 62%, rgba(220, 38, 38, 0.10), transparent),
+    repeating-linear-gradient(45deg, rgba(234, 88, 12, 0.05) 0 2px, transparent 2px 26px);
+  color: #431407;
 }
-::selection { background: #7c3aed; color: #f5f3ff; }
+::selection { background: #ea580c; color: #fffdf8; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: #7c3aed; border-radius: 5px; border: 2px solid #f5f3fd; }
-::-webkit-scrollbar-track { background: #e3e0f4; }
+::-webkit-scrollbar-thumb { background: #ea580c; border-radius: 5px; border: 2px solid #fff8f0; }
+::-webkit-scrollbar-track { background: #eddfc9; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Aurora motes: light particles drifting upward with a cool sway. */
-@keyframes orchid-rise {
+/* Forge embers: warm sparks rising with a lazy sway. */
+@keyframes forge-rise {
   0% { transform: translate3d(0, 12vh, 0); opacity: 0; }
   18% { opacity: 0.9; }
   50% { transform: translate3d(3vw, -44vh, 0); }
   82% { opacity: 0.75; }
   100% { transform: translate3d(-3vw, -92vh, 0); opacity: 0; }
 }
-.pop-fall { animation: orchid-rise 11s ease-in-out infinite; }
+.pop-fall { animation: forge-rise 11s ease-in-out infinite; }
 
-/* Aurora drift: slow sideways float for violet glow washes. */
-@keyframes orchid-drift {
+/* Forge heat: slow sideways drift for warm glow washes. */
+@keyframes forge-drift {
   0%, 100% { transform: translate3d(-4vw, 0, 0); opacity: 0.35; }
   50% { transform: translate3d(4vw, -0.5rem, 0); opacity: 0.8; }
 }
-.pop-drift { animation: orchid-drift 16s ease-in-out infinite; }
+.pop-drift { animation: forge-drift 16s ease-in-out infinite; }
 
-/* Aurora bob: gentle bob for glowing badges. */
-@keyframes orchid-bob {
+/* Forge bob: gentle bob for sunburst badges. */
+@keyframes forge-bob {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
 }
-.pop-bob { animation: orchid-bob 6s ease-in-out infinite; }
+.pop-bob { animation: forge-bob 6s ease-in-out infinite; }
 
-/* Aurora spin: slow rotation for the hero's orchid halo. */
-@keyframes orchid-spin {
+/* Forge spin: slow rotation for the hero's sun disc. */
+@keyframes forge-spin {
   to { transform: rotate(360deg); }
 }
-.pop-spin { animation: orchid-spin 44s linear infinite; }
+.pop-spin { animation: forge-spin 44s linear infinite; }
 
-/* Aurora ticker: infinite marquee for the glow strip. */
-@keyframes orchid-ticker {
+/* Forge ticker: infinite marquee for the ember strip. */
+@keyframes forge-ticker {
   to { transform: translateX(-50%); }
 }
-.pop-ticker { animation: orchid-ticker 24s linear infinite; }
+.pop-ticker { animation: forge-ticker 24s linear infinite; }
 
-/* Aurora band: flowing violet → orchid → cyan gradient. */
+/* Forge band: flowing amber → crimson → teal gradient. */
 .pop-stripes {
-  background-image: linear-gradient(120deg, #7c3aed, #d946ef 45%, #06b6d4 90%);
+  background-image: linear-gradient(120deg, #ea580c, #dc2626 45%, #0d9488 90%);
 }
 
-/* Aurora lift: frosted glass card with a soft violet glow. */
+/* Forge card: solid cream card with a hard ink offset shadow. */
 .pop-lift {
-  border: 1px solid #cdc5ec;
-  border-radius: 1.25rem;
-  background: rgba(250, 249, 255, 0.85);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 18px 40px -18px rgba(124, 58, 237, 0.35);
+  border: 2px solid #431407;
+  border-radius: 1rem;
+  background: #fffdf8;
+  box-shadow: 6px 6px 0 #431407;
   transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 .pop-lift:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 26px 52px -18px rgba(124, 58, 237, 0.5);
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0 #431407;
 }
 
-/* Aurora glass shared by modals and drawers. */
+/* Forge panel: shared by modals and drawers. */
 .pop-glass {
-  background: linear-gradient(180deg, rgba(250, 249, 255, 0.97), rgba(245, 243, 253, 0.97));
-  backdrop-filter: blur(14px);
-  border: 1px solid #cdc5ec;
-  box-shadow: 0 18px 44px -18px rgba(124, 58, 237, 0.35);
+  background: #fffdf8;
+  border: 2px solid #431407;
+  box-shadow: 8px 8px 0 rgba(67, 20, 7, 0.9);
 }
 
-/* Aurora orb: round badge glowing violet → orchid → cyan. */
+/* Sunburst: round badge with amber → crimson → teal rays. */
 .starburst {
   border-radius: 9999px;
-  border: 2px solid rgba(255, 255, 255, 0.85);
-  background: conic-gradient(from 210deg, #7c3aed, #d946ef, #06b6d4, #7c3aed);
-  color: #faf9ff;
-  box-shadow: 0 10px 26px -8px rgba(124, 58, 237, 0.65);
+  border: 2px solid #431407;
+  background: conic-gradient(from 210deg, #f59e0b, #dc2626, #0d9488, #f59e0b);
+  color: #fffdf8;
+  box-shadow: 4px 4px 0 #431407;
 }
 
-/* Aurora grain: fine violet dot texture for hero bands. */
+/* Forge grain: fine amber dot texture for hero bands. */
 .halftone {
-  background-image: radial-gradient(rgba(124, 58, 237, 0.14) 1.8px, transparent 2.4px);
+  background-image: radial-gradient(rgba(234, 88, 12, 0.14) 1.8px, transparent 2.4px);
   background-size: 18px 18px;
 }
 
-/* Scallop divider: alternating violet/orchid scallops. */
+/* Stripe divider: alternating amber/crimson diagonal slashes. */
 .zigzag {
   height: 20px;
   background-image:
-    radial-gradient(circle at 10px 1px, #7c3aed 5px, transparent 6.5px),
-    radial-gradient(circle at 30px 1px, #d946ef 5px, transparent 6.5px);
-  background-size: 40px 20px;
-  background-repeat: repeat-x;
+    repeating-linear-gradient(115deg, #ea580c 0 10px, #dc2626 10px 20px, #0d9488 20px 30px);
 }
 
-/* Aurora awning: scalloped violet → orchid band. */
+/* Forge awning: scalloped amber → crimson band. */
 .bazaar-awning {
   background-image:
-    radial-gradient(circle at 10px 0px, #7c3aed 6px, transparent 7.5px),
-    radial-gradient(circle at 30px 0px, #d946ef 6px, transparent 7.5px),
-    linear-gradient(180deg, #ede9fe, #fae8ff);
+    radial-gradient(circle at 10px 0px, #ea580c 6px, transparent 7.5px),
+    radial-gradient(circle at 30px 0px, #dc2626 6px, transparent 7.5px),
+    linear-gradient(180deg, #ffedd5, #fee2e2);
   background-size: 40px 18px, 40px 18px, auto;
   background-repeat: repeat-x;
   background-position: 0 100%, 0 100%, 0 0;
 }
 
-/* Legacy aliases kept so untouched components still render — all orchid-styled. */
+/* Legacy aliases kept so untouched components still render — all forge-styled. */
 .lagoon-lift {
-  border: 1px solid #cdc5ec;
-  border-radius: 1.25rem;
-  background: rgba(250, 249, 255, 0.85);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 18px 40px -18px rgba(124, 58, 237, 0.35);
+  border: 2px solid #431407;
+  border-radius: 1rem;
+  background: #fffdf8;
+  box-shadow: 6px 6px 0 #431407;
   transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 .lagoon-lift:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 26px 52px -18px rgba(124, 58, 237, 0.5);
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0 #431407;
 }
 .stamp-perf {
-  border: 2px dashed #a21caf;
-  background: #faf9ff;
-  box-shadow: 0 18px 40px -18px rgba(124, 58, 237, 0.35);
+  border: 2px dashed #991b1b;
+  background: #fffdf8;
+  box-shadow: 6px 6px 0 #431407;
 }
 .ember-glow {
-  border: 1px solid #cdc5ec;
-  background: #faf9ff;
-  box-shadow: 0 18px 40px -18px rgba(124, 58, 237, 0.35), 0 10px 26px -10px rgba(124, 58, 237, 0.5);
+  border: 2px solid #431407;
+  background: #fffdf8;
+  box-shadow: 6px 6px 0 #431407, 0 10px 26px -10px rgba(234, 88, 12, 0.5);
   transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 .ember-glow:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 26px 52px -18px rgba(124, 58, 237, 0.5), 0 16px 34px -12px rgba(124, 58, 237, 0.55);
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0 #431407, 0 16px 34px -12px rgba(234, 88, 12, 0.55);
 }
 .ripple-glow {
-  border: 1px solid #cdc5ec;
-  border-radius: 1.25rem;
-  background: rgba(250, 249, 255, 0.85);
-  box-shadow: 0 18px 40px -18px rgba(124, 58, 237, 0.35);
+  border: 2px solid #431407;
+  border-radius: 1rem;
+  background: #fffdf8;
+  box-shadow: 6px 6px 0 #431407;
   transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 .ripple-glow:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 26px 52px -18px rgba(124, 58, 237, 0.5);
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0 #431407;
 }
 .lagoon-glow {
-  border: 1px solid #cdc5ec;
-  border-radius: 1.25rem;
-  background: rgba(250, 249, 255, 0.85);
-  box-shadow: 0 18px 40px -18px rgba(124, 58, 237, 0.35);
+  border: 2px solid #431407;
+  border-radius: 1rem;
+  background: #fffdf8;
+  box-shadow: 6px 6px 0 #431407;
   transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 .lagoon-glow:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 26px 52px -18px rgba(124, 58, 237, 0.5);
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0 #431407;
 }
 .sticker-lift {
-  border: 1px solid #cdc5ec;
-  background: #faf9ff;
-  box-shadow: 0 12px 30px -14px rgba(124, 58, 237, 0.4);
+  border: 2px solid #431407;
+  background: #fffdf8;
+  box-shadow: 4px 4px 0 #431407;
   transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 .sticker-lift:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 18px 36px -14px rgba(124, 58, 237, 0.5);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #431407;
 }
 .neon-lift {
-  border: 1px solid #cdc5ec;
-  background: #faf9ff;
-  box-shadow: 0 18px 40px -18px rgba(124, 58, 237, 0.35), 0 10px 26px -8px rgba(217, 70, 239, 0.45);
+  border: 2px solid #431407;
+  background: #fffdf8;
+  box-shadow: 6px 6px 0 #431407, 0 10px 26px -8px rgba(220, 38, 38, 0.45);
 }
 .lagoon-glass {
-  background: linear-gradient(180deg, rgba(250, 249, 255, 0.97), rgba(245, 243, 253, 0.97));
-  backdrop-filter: blur(14px);
-  border: 1px solid #cdc5ec;
-  box-shadow: 0 18px 44px -18px rgba(124, 58, 237, 0.35);
+  background: #fffdf8;
+  border: 2px solid #431407;
+  box-shadow: 8px 8px 0 rgba(67, 20, 7, 0.9);
 }
 .espresso-glass {
-  background: linear-gradient(180deg, rgba(250, 249, 255, 0.97), rgba(245, 243, 253, 0.97));
-  backdrop-filter: blur(14px);
-  border: 1px solid #cdc5ec;
-  box-shadow: 0 18px 44px -18px rgba(124, 58, 237, 0.35);
+  background: #fffdf8;
+  border: 2px solid #431407;
+  box-shadow: 8px 8px 0 rgba(67, 20, 7, 0.9);
 }
 .twilight-glass {
-  background: linear-gradient(180deg, rgba(250, 249, 255, 0.97), rgba(245, 243, 253, 0.97));
-  backdrop-filter: blur(14px);
-  border: 1px solid #cdc5ec;
-  box-shadow: 0 18px 44px -18px rgba(124, 58, 237, 0.35);
+  background: #fffdf8;
+  border: 2px solid #431407;
+  box-shadow: 8px 8px 0 rgba(67, 20, 7, 0.9);
 }
 .night-glass {
-  background: linear-gradient(180deg, rgba(250, 249, 255, 0.97), rgba(245, 243, 253, 0.97));
-  backdrop-filter: blur(14px);
-  border: 1px solid #cdc5ec;
-  box-shadow: 0 18px 44px -18px rgba(124, 58, 237, 0.35);
+  background: #fffdf8;
+  border: 2px solid #431407;
+  box-shadow: 8px 8px 0 rgba(67, 20, 7, 0.9);
 }
 .mist-glass {
-  background: linear-gradient(180deg, rgba(250, 249, 255, 0.97), rgba(245, 243, 253, 0.97));
-  backdrop-filter: blur(14px);
-  border: 1px solid #cdc5ec;
-  box-shadow: 0 18px 44px -18px rgba(124, 58, 237, 0.35);
+  background: #fffdf8;
+  border: 2px solid #431407;
+  box-shadow: 8px 8px 0 rgba(67, 20, 7, 0.9);
 }
-.rain-fall { animation: orchid-rise 11s ease-in-out infinite; }
-.rain-fleck { animation: orchid-rise 11s ease-in-out infinite; }
-.ember-rise { animation: orchid-rise 11s ease-in-out infinite; }
-.bubble-rise { animation: orchid-rise 11s ease-in-out infinite; }
-.spark-rise { animation: orchid-rise 11s ease-in-out infinite; }
-.lagoon-drift { animation: orchid-drift 16s ease-in-out infinite; }
-.current-drift { animation: orchid-drift 16s ease-in-out infinite; }
-.zephyr-drift { animation: orchid-drift 16s ease-in-out infinite; }
-.mist-drift { animation: orchid-drift 16s ease-in-out infinite; }
-.bazaar-drift { animation: orchid-drift 16s ease-in-out infinite; }
-.buoy-breathe { animation: orchid-bob 6s ease-in-out infinite; }
-.tide-breathe { animation: orchid-bob 6s ease-in-out infinite; }
-.hearth-breathe { animation: orchid-bob 6s ease-in-out infinite; }
-.pool-breathe { animation: orchid-bob 6s ease-in-out infinite; }
-.tide-spin { animation: orchid-spin 44s linear infinite; }
-.sun-spin { animation: orchid-spin 44s linear infinite; }
-.ripple-spin { animation: orchid-spin 44s linear infinite; }
-.ring-orbit { animation: orchid-spin 44s linear infinite; }
+.rain-fall { animation: forge-rise 11s ease-in-out infinite; }
+.rain-fleck { animation: forge-rise 11s ease-in-out infinite; }
+.ember-rise { animation: forge-rise 11s ease-in-out infinite; }
+.bubble-rise { animation: forge-rise 11s ease-in-out infinite; }
+.spark-rise { animation: forge-rise 11s ease-in-out infinite; }
+.lagoon-drift { animation: forge-drift 16s ease-in-out infinite; }
+.current-drift { animation: forge-drift 16s ease-in-out infinite; }
+.zephyr-drift { animation: forge-drift 16s ease-in-out infinite; }
+.mist-drift { animation: forge-drift 16s ease-in-out infinite; }
+.bazaar-drift { animation: forge-drift 16s ease-in-out infinite; }
+.buoy-breathe { animation: forge-bob 6s ease-in-out infinite; }
+.tide-breathe { animation: forge-bob 6s ease-in-out infinite; }
+.hearth-breathe { animation: forge-bob 6s ease-in-out infinite; }
+.pool-breathe { animation: forge-bob 6s ease-in-out infinite; }
+.tide-spin { animation: forge-spin 44s linear infinite; }
+.sun-spin { animation: forge-spin 44s linear infinite; }
+.ripple-spin { animation: forge-spin 44s linear infinite; }
+.ring-orbit { animation: forge-spin 44s linear infinite; }
