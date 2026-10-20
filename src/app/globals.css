@@ -1,24 +1,24 @@
 @import "tailwindcss";
 
 @theme {
-  /* orchid dusk: vivid grape on warm ivory with flame-coral pops — original palette */
-  --color-brand-50: #f7f2ff;
-  --color-brand-100: #efe2fc;
-  --color-brand-200: #dec7fa;
-  --color-brand-300: #c4a1f6;
-  --color-brand-400: #a677f1;
-  --color-brand-500: #8a56ec;
-  --color-brand-600: #7540da;
-  --color-brand-700: #6132b6;
-  --color-brand-800: #4e2a90;
-  --color-brand-900: #402573;
-  --color-brand-950: #261444;
-  --color-brand: #8a56ec;
-  --color-brand-dark: #7540da;
-  --color-brand-deep: #261444;
-  --color-gold: #ff6a3d;
-  --color-gold-deep: #e0441e;
-  --color-gold-soft: #ffb59b;
+  /* tidal pine: deep pine teal on seafoam paper with sunset-amber pops — original palette */
+  --color-brand-50: #effdfa;
+  --color-brand-100: #c9faf2;
+  --color-brand-200: #97f3e6;
+  --color-brand-300: #5fe7d7;
+  --color-brand-400: #2ad2c2;
+  --color-brand-500: #14b3a6;
+  --color-brand-600: #0f948a;
+  --color-brand-700: #0f766e;
+  --color-brand-800: #115e59;
+  --color-brand-900: #134e4a;
+  --color-brand-950: #042f2e;
+  --color-brand: #14b3a6;
+  --color-brand-dark: #0f948a;
+  --color-brand-deep: #042f2e;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #d97706;
+  --color-gold-soft: #fcd34d;
 }
 
 html { scroll-behavior: smooth; }
@@ -33,86 +33,86 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #faf7fd;
+  background: #f4faf8;
   background-image:
-    radial-gradient(ellipse 90% 34% at 50% -12%, rgba(138, 86, 236, 0.10), transparent),
-    radial-gradient(ellipse 42% 28% at 92% 14%, rgba(255, 106, 61, 0.07), transparent),
-    radial-gradient(ellipse 42% 28% at 6% 30%, rgba(166, 119, 241, 0.08), transparent),
-    radial-gradient(rgba(138, 86, 236, 0.10) 1px, transparent 1.6px);
-  background-size: auto, auto, auto, 26px 26px;
-  color: #2c1842;
+    radial-gradient(ellipse 90% 34% at 50% -12%, rgba(20, 179, 166, 0.10), transparent),
+    radial-gradient(ellipse 42% 28% at 92% 14%, rgba(245, 158, 11, 0.08), transparent),
+    radial-gradient(ellipse 42% 28% at 6% 30%, rgba(42, 210, 194, 0.08), transparent),
+    radial-gradient(rgba(20, 179, 166, 0.10) 1px, transparent 1.6px);
+  background-size: auto, auto, auto, 30px 30px;
+  color: #07302b;
 }
-::selection { background: #ff6a3d; color: #ffffff; }
+::selection { background: #f59e0b; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: #c0a6e8; border-radius: 5px; }
-::-webkit-scrollbar-track { background: #efe8fb; }
+::-webkit-scrollbar-thumb { background: #7fd6c9; border-radius: 5px; }
+::-webkit-scrollbar-track { background: #dcf3ec; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Firefly rise: warm glowing motes drifting upward through the hero. */
-@keyframes firefly-rise {
-  0% { transform: translate3d(0, 8vh, 0) scale(0.6); opacity: 0; }
-  15% { opacity: 0.9; }
-  60% { opacity: 0.65; }
-  100% { transform: translate3d(-2vw, -74vh, 0) scale(1.25); opacity: 0; }
+/* Bubble rise: hollow seafoam bubbles floating upward through the hero. */
+@keyframes bubble-rise {
+  0% { transform: translate3d(0, 6vh, 0) scale(0.7); opacity: 0; }
+  18% { opacity: 0.85; }
+  65% { opacity: 0.6; }
+  100% { transform: translate3d(1.6vw, -72vh, 0) scale(1.2); opacity: 0; }
 }
-.firefly-rise { animation: firefly-rise 13s linear infinite; }
+.bubble-rise { animation: bubble-rise 14s linear infinite; }
 
-/* Petal sway: orchid petals swaying side to side as they hover. */
-@keyframes petal-sway {
-  0%, 100% { transform: translate3d(0, 0, 0) rotate(-24deg); }
-  50% { transform: translate3d(1.4rem, -1rem, 0) rotate(20deg); }
+/* Current drift: thin current lines gliding horizontally across the hero. */
+@keyframes current-drift {
+  0%, 100% { transform: translate3d(-6vw, 0, 0); opacity: 0.35; }
+  50% { transform: translate3d(6vw, -0.6rem, 0); opacity: 0.9; }
 }
-.petal-sway { animation: petal-sway 10s ease-in-out infinite; }
+.current-drift { animation: current-drift 11s ease-in-out infinite; }
 
-/* Glow breathe: slow breathing of the hero's dusk light pools. */
-@keyframes glow-breathe {
+/* Tide breathe: slow breathing of the hero's shallow-water light pools. */
+@keyframes tide-breathe {
   0%, 100% { opacity: 0.45; transform: scale(1); }
   50% { opacity: 0.85; transform: scale(1.18); }
 }
-.glow-breathe { animation: glow-breathe 8s ease-in-out infinite; }
+.tide-breathe { animation: tide-breathe 8s ease-in-out infinite; }
 
-/* Orchid lift: soft grape-tinted shadow used by cards in the dusk theme. */
+/* Pine lift: soft pine-tinted shadow used by cards in the tidal theme. */
 .ember-glow {
   box-shadow:
-    0 20px 44px -20px rgba(44, 24, 66, 0.22),
-    0 0 0 1px rgba(138, 86, 236, 0.14);
+    0 18px 40px -20px rgba(7, 48, 43, 0.22),
+    0 0 0 1px rgba(20, 179, 166, 0.16);
 }
 .ember-glow:hover {
   box-shadow:
-    0 28px 58px -18px rgba(44, 24, 66, 0.26),
-    0 0 0 1px rgba(138, 86, 236, 0.38),
-    0 0 42px -8px rgba(138, 86, 236, 0.32);
+    0 26px 54px -18px rgba(7, 48, 43, 0.28),
+    0 0 0 1px rgba(20, 179, 166, 0.42),
+    0 0 40px -8px rgba(20, 179, 166, 0.30);
 }
 
-/* Ivory glass shared by modals and drawers. */
+/* Seafoam glass shared by modals and drawers. */
 .espresso-glass {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(247, 242, 255, 0.98));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(228, 246, 241, 0.98));
   backdrop-filter: blur(14px);
 }
 
 /* Legacy aliases kept so untouched components still render. */
 .sticker-lift {
   box-shadow:
-    0 20px 44px -20px rgba(44, 24, 66, 0.22),
-    0 0 0 1px rgba(138, 86, 236, 0.14);
+    0 18px 40px -20px rgba(7, 48, 43, 0.22),
+    0 0 0 1px rgba(20, 179, 166, 0.16);
 }
 .sticker-lift:hover {
   box-shadow:
-    0 28px 58px -18px rgba(44, 24, 66, 0.26),
-    0 0 0 1px rgba(138, 86, 236, 0.38),
-    0 0 42px -8px rgba(138, 86, 236, 0.32);
+    0 26px 54px -18px rgba(7, 48, 43, 0.28),
+    0 0 0 1px rgba(20, 179, 166, 0.42),
+    0 0 40px -8px rgba(20, 179, 166, 0.30);
 }
 .twilight-glass {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(247, 242, 255, 0.98));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(228, 246, 241, 0.98));
   backdrop-filter: blur(14px);
 }
 .neon-lift {
   box-shadow:
-    0 20px 44px -20px rgba(44, 24, 66, 0.22),
-    0 0 0 1px rgba(138, 86, 236, 0.14);
+    0 18px 40px -20px rgba(7, 48, 43, 0.22),
+    0 0 0 1px rgba(20, 179, 166, 0.16);
 }
 .night-glass {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(247, 242, 255, 0.98));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(228, 246, 241, 0.98));
   backdrop-filter: blur(14px);
 }
