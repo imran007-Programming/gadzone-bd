@@ -26,11 +26,11 @@ export default function CategoryGrid({ category, onCategoryChange }: { category:
               whileHover={{ y: -4 }}
               whileTap={{ scale: 0.97 }}
               onClick={() => { onCategoryChange(c); document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" }); }}
-              className={`flex h-full w-full flex-col items-center gap-1.5 rounded-xl border-2 p-3 text-center shadow-sm transition-all hover:shadow-[0_12px_32px_-12px_rgba(31,158,99,0.35)] hover:ring-1 hover:ring-brand-400/50 sm:p-5 ${category === c ? "border-brand-400/60 bg-gradient-to-b from-brand-400/20 to-brand-400/5 shadow-[0_12px_32px_-12px_rgba(31,158,99,0.45)] ring-1 ring-brand-400/40" : "border-[#cfe8d6] bg-[#ffffff] hover:border-gold-deep/60"}`}
+              className={`flex h-full w-full flex-col items-center gap-1.5 rounded-[22px] border-2 p-3 text-center shadow-sm transition-all hover:shadow-[0_12px_32px_-12px_rgba(217,93,34,0.35)] hover:ring-1 hover:ring-brand-400/50 sm:p-5 ${category === c ? "border-gold-deep/60 bg-gradient-to-b from-gold-soft to-brand-100 shadow-[0_12px_32px_-12px_rgba(217,93,34,0.45)] ring-1 ring-gold/50" : "border-[#ecd9c2] bg-[#ffffff] hover:border-gold-deep/60"}`}
             >
-              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-brand-600 to-brand-900 ring-1 ring-gold/60 text-2xl shadow-[0_6px_18px_-6px_rgba(31,158,99,0.4)] ring-1 ring-brand-300/40 sm:h-14 sm:w-14 sm:text-3xl">{categoryIcons[c]}</span>
-              <span className="text-xs font-bold leading-tight tracking-tight text-[#102b1f] sm:text-sm">{c === "All" ? "All" : c}</span>
-              <span className="hidden text-[11px] text-[#4c665b] sm:block">{categoryCounts[c]} products</span>
+              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-gold via-brand-500 to-brand-800 p-1 text-2xl shadow-[0_6px_18px_-6px_rgba(217,93,34,0.5)] ring-2 ring-gold-soft sm:h-14 sm:w-14 sm:text-3xl"><span className="flex h-full w-full items-center justify-center rounded-full bg-[#fffaf0]">{categoryIcons[c]}</span></span>
+              <span className="text-xs font-bold leading-tight tracking-tight text-[#2e1c12] sm:text-sm">{c === "All" ? "All" : c}</span>
+              <span className="hidden text-[11px] text-[#6b5343] sm:block">{categoryCounts[c]} products</span>
             </motion.button>
           </Reveal>
         ))}
