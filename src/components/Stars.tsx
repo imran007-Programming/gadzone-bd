@@ -1,7 +1,7 @@
 export default function Stars({ rating }: { rating: number }) {
   return (
     <span className="text-base leading-none text-orange-400">
-      {"★".repeat(Math.round(rating))}<span className="text-[#a48f7d]">{"★".repeat(5 - Math.round(rating))}</span>
+      {"★".repeat(Math.round(rating))}<span className="text-[#7d9b8b]">{"★".repeat(5 - Math.round(rating))}</span>
     </span>
   );
 }
