@@ -1,29 +1,29 @@
 @import "tailwindcss";
 
 @theme {
-  /* Glacier Aurora: glacial teal + aurora violet/pink over ice-white paper */
-  --color-brand-50: #f0faf9;
-  --color-brand-100: #dcf3f1;
-  --color-brand-200: #b9e8e2;
-  --color-brand-300: #8ad8ce;
-  --color-brand-400: #52c1b5;
-  --color-brand-500: #0d9488;
-  --color-brand-600: #0f766e;
-  --color-brand-700: #115e59;
-  --color-brand-800: #134e4a;
-  --color-brand-900: #143f3c;
-  --color-brand-950: #0b2422;
-  --color-brand: #0d9488;
-  --color-brand-dark: #115e59;
-  --color-brand-deep: #0b2422;
-  --color-gold: #8b5cf6;
-  --color-gold-deep: #6d28d9;
-  --color-gold-soft: #ede9fe;
-  --color-ink: #12262b;
-  --color-paper: #f2faf9;
-  --color-popblue: #ec4899;
-  --color-popblue-deep: #be185d;
-  --color-popblue-soft: #fbe3f0;
+  /* Ember Harvest: warm ember-orange + saffron + berry on cream paper. */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-brand-950: #431407;
+  --color-brand: #ea580c;
+  --color-brand-dark: #c2410c;
+  --color-brand-deep: #431407;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #b45309;
+  --color-gold-soft: #fef3c7;
+  --color-ink: #2b1a12;
+  --color-paper: #fdf8f1;
+  --color-popblue: #be123c;
+  --color-popblue-deep: #881337;
+  --color-popblue-soft: #ffe4e6;
 }
 
 html { scroll-behavior: smooth; }
@@ -38,225 +38,217 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #f2faf9;
+  background: #fdf8f1;
   background-image:
-    radial-gradient(ellipse 90% 32% at 50% -12%, rgba(20, 184, 166, 0.16), transparent),
-    radial-gradient(ellipse 70% 26% at 88% 108%, rgba(139, 92, 246, 0.10), transparent),
-    radial-gradient(ellipse 55% 24% at 8% 62%, rgba(236, 72, 153, 0.07), transparent),
-    radial-gradient(circle at 2px 2px, rgba(13, 148, 136, 0.09) 1.6px, transparent 2.2px);
+    radial-gradient(ellipse 90% 32% at 50% -12%, rgba(249, 115, 22, 0.16), transparent),
+    radial-gradient(ellipse 70% 26% at 88% 108%, rgba(245, 158, 11, 0.12), transparent),
+    radial-gradient(ellipse 55% 24% at 8% 62%, rgba(190, 18, 60, 0.08), transparent),
+    radial-gradient(circle at 2px 2px, rgba(194, 65, 12, 0.08) 1.6px, transparent 2.2px);
   background-size: auto, auto, auto, 26px 26px;
-  color: #12262b;
+  color: #2b1a12;
 }
-::selection { background: #0d9488; color: #f2faf9; }
+::selection { background: #ea580c; color: #fdf8f1; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: #0d9488; border-radius: 5px; border: 2px solid #f2faf9; }
-::-webkit-scrollbar-track { background: #d8edeb; }
+::-webkit-scrollbar-thumb { background: #c2410c; border-radius: 5px; border: 2px solid #fdf8f1; }
+::-webkit-scrollbar-track { background: #f3e2c7; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Aurora snowfall: ice crystals drifting gently down with a soft sway. */
-@keyframes aurora-fall {
-  0% { transform: translate3d(0, -10vh, 0); opacity: 0; }
+/* Ember rise: sparks drifting upward with a warm sway. */
+@keyframes ember-rise {
+  0% { transform: translate3d(0, 12vh, 0); opacity: 0; }
   18% { opacity: 0.9; }
-  50% { transform: translate3d(-3vw, 44vh, 0); }
+  50% { transform: translate3d(3vw, -44vh, 0); }
   82% { opacity: 0.75; }
-  100% { transform: translate3d(3vw, 94vh, 0); opacity: 0; }
+  100% { transform: translate3d(-3vw, -92vh, 0); opacity: 0; }
 }
-.pop-fall { animation: aurora-fall 12s ease-in-out infinite; }
+.pop-fall { animation: ember-rise 11s ease-in-out infinite; }
 
-/* Aurora drift: slow sideways float for cool aurora washes. */
-@keyframes aurora-drift {
-  0%, 100% { transform: translate3d(-4vw, 0, 0); opacity: 0.4; }
-  50% { transform: translate3d(4vw, -0.5rem, 0); opacity: 0.85; }
+/* Ember drift: slow sideways float for warm harvest washes. */
+@keyframes ember-drift {
+  0%, 100% { transform: translate3d(-4vw, 0, 0); opacity: 0.35; }
+  50% { transform: translate3d(4vw, -0.5rem, 0); opacity: 0.8; }
 }
-.pop-drift { animation: aurora-drift 17s ease-in-out infinite; }
+.pop-drift { animation: ember-drift 16s ease-in-out infinite; }
 
-/* Aurora bob: gentle bob for frost badges. */
-@keyframes aurora-bob {
+/* Ember bob: gentle bob for harvest badges. */
+@keyframes ember-bob {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
 }
-.pop-bob { animation: aurora-bob 7s ease-in-out infinite; }
+.pop-bob { animation: ember-bob 6s ease-in-out infinite; }
 
-/* Aurora spin: slow rotation for the hero's aurora halo ring. */
-@keyframes aurora-spin {
+/* Ember spin: slow rotation for the hero's harvest medallion. */
+@keyframes ember-spin {
   to { transform: rotate(360deg); }
 }
-.pop-spin { animation: aurora-spin 48s linear infinite; }
+.pop-spin { animation: ember-spin 44s linear infinite; }
 
-/* Frost lift: glacial card — crisp white inset highlight + cool teal drop shadow. */
+/* Ember ticker: infinite marquee for the harvest strip. */
+@keyframes ember-ticker {
+  to { transform: translateX(-50%); }
+}
+.pop-ticker { animation: ember-ticker 24s linear infinite; }
+
+/* Bazaar awning stripes. */
+.pop-stripes {
+  background-image: repeating-linear-gradient(-45deg, #ea580c 0 14px, #fffdf8 14px 28px);
+}
+
+/* Ticket lift: bazaar ticket card — ink border + hard offset shadow. */
 .pop-lift {
-  border: 1px solid #d3e8e4;
-  border-radius: 1.25rem;
-  box-shadow:
-    inset 2px 2px 0 rgba(255, 255, 255, 0.7),
-    inset -2px -2px 0 rgba(13, 148, 136, 0.06),
-    10px 14px 30px -12px rgba(15, 118, 110, 0.30);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 2px solid #2b1a12;
+  border-radius: 1rem;
+  background: #fffdf8;
+  box-shadow: 6px 6px 0 rgba(43, 26, 18, 0.92);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  box-shadow:
-    inset 2px 2px 0 rgba(255, 255, 255, 0.75),
-    inset -2px -2px 0 rgba(13, 148, 136, 0.08),
-    14px 20px 38px -12px rgba(15, 118, 110, 0.38);
+  transform: translate(-2px, -2px);
+  box-shadow: 9px 9px 0 rgba(43, 26, 18, 0.92);
 }
 
-/* Aurora glass shared by modals and drawers. */
+/* Ember glass shared by modals and drawers. */
 .pop-glass {
-  background: linear-gradient(180deg, rgba(252, 255, 255, 0.97), rgba(242, 250, 249, 0.97));
+  background: linear-gradient(180deg, rgba(255, 253, 248, 0.97), rgba(253, 248, 241, 0.97));
   backdrop-filter: blur(14px);
-  border: 1px solid #d3e8e4;
-  box-shadow: 0 18px 44px -18px rgba(15, 118, 110, 0.30);
+  border: 1px solid #e8cfae;
+  box-shadow: 0 18px 44px -18px rgba(194, 65, 12, 0.35);
 }
 
-/* Aurora seal: round badge sweeping teal → violet → pink (replaces the old starburst). */
+/* Ember seal: round badge sweeping orange → saffron → berry. */
 .starburst {
   border-radius: 9999px;
-  background: conic-gradient(from 210deg, #0d9488, #8b5cf6, #ec4899, #0d9488);
-  color: #fcffff;
-  box-shadow:
-    0 8px 18px -6px rgba(15, 118, 110, 0.5),
-    inset 0 2px 3px rgba(255, 255, 255, 0.5);
+  border: 2px solid #2b1a12;
+  background: conic-gradient(from 210deg, #ea580c, #f59e0b, #be123c, #ea580c);
+  color: #fffdf8;
+  box-shadow: 3px 3px 0 #2b1a12;
 }
 
-/* Frost grain: fine ice-crystal texture for hero bands. */
+/* Ember grain: fine spice texture for hero bands. */
 .halftone {
-  background-image: radial-gradient(rgba(13, 148, 136, 0.10) 1.8px, transparent 2.4px);
+  background-image: radial-gradient(rgba(194, 65, 12, 0.12) 1.8px, transparent 2.4px);
   background-size: 18px 18px;
 }
 
-/* Frost wave: cool aurora wave divider. */
+/* Scallop divider: alternating orange/saffron scallops. */
 .zigzag {
-  height: 22px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='22' viewBox='0 0 120 22'%3E%3Cpath d='M0 13 Q 15 5 30 13 T 60 13 T 90 13 T 120 13 V22 H0 Z' fill='%230d9488' opacity='0.45'/%3E%3Cpath d='M0 16 Q 15 9 30 16 T 60 16 T 90 16 T 120 16 V22 H0 Z' fill='%238b5cf6' opacity='0.55'/%3E%3C/svg%3E");
+  height: 20px;
+  background-image:
+    radial-gradient(circle at 10px 1px, #ea580c 5px, transparent 6.5px),
+    radial-gradient(circle at 30px 1px, #f59e0b 5px, transparent 6.5px);
+  background-size: 40px 20px;
   background-repeat: repeat-x;
-  background-size: 120px 22px;
 }
 
-/* Legacy aliases kept so untouched components still render — all aurora-styled. */
+/* Legacy aliases kept so untouched components still render — all harvest-styled. */
 .lagoon-lift {
-  border: 1px solid #d3e8e4;
-  border-radius: 1.25rem;
-  box-shadow:
-    inset 2px 2px 0 rgba(255, 255, 255, 0.7),
-    10px 14px 30px -12px rgba(15, 118, 110, 0.30);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 2px solid #2b1a12;
+  border-radius: 1rem;
+  background: #fffdf8;
+  box-shadow: 6px 6px 0 rgba(43, 26, 18, 0.92);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 .lagoon-lift:hover {
-  transform: translateY(-4px);
-  box-shadow:
-    inset 2px 2px 0 rgba(255, 255, 255, 0.75),
-    14px 20px 38px -12px rgba(15, 118, 110, 0.38);
+  transform: translate(-2px, -2px);
+  box-shadow: 9px 9px 0 rgba(43, 26, 18, 0.92);
 }
 .stamp-perf {
-  border: 1px dashed #9fc4bd;
-  box-shadow:
-    inset 2px 2px 0 rgba(255, 255, 255, 0.7),
-    10px 14px 30px -12px rgba(15, 118, 110, 0.30);
+  border: 2px dashed #b45309;
+  background: #fffdf8;
+  box-shadow: 6px 6px 0 rgba(43, 26, 18, 0.92);
 }
 .ember-glow {
-  border: 1px solid #d3e8e4;
-  box-shadow:
-    inset 2px 2px 0 rgba(255, 255, 255, 0.7),
-    0 10px 26px -10px rgba(236, 72, 153, 0.45);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 2px solid #2b1a12;
+  background: #fffdf8;
+  box-shadow: 6px 6px 0 rgba(43, 26, 18, 0.92), 0 10px 26px -10px rgba(234, 88, 12, 0.5);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 .ember-glow:hover {
-  transform: translateY(-4px);
-  box-shadow:
-    inset 2px 2px 0 rgba(255, 255, 255, 0.75),
-    0 16px 34px -12px rgba(236, 72, 153, 0.5);
+  transform: translate(-2px, -2px);
+  box-shadow: 9px 9px 0 rgba(43, 26, 18, 0.92), 0 16px 34px -12px rgba(234, 88, 12, 0.55);
 }
 .ripple-glow {
-  border: 1px solid #d3e8e4;
-  box-shadow:
-    inset 2px 2px 0 rgba(255, 255, 255, 0.7),
-    10px 14px 30px -12px rgba(15, 118, 110, 0.30);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 2px solid #2b1a12;
+  border-radius: 1rem;
+  background: #fffdf8;
+  box-shadow: 6px 6px 0 rgba(43, 26, 18, 0.92);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 .ripple-glow:hover {
-  transform: translateY(-4px);
-  box-shadow:
-    inset 2px 2px 0 rgba(255, 255, 255, 0.75),
-    14px 20px 38px -12px rgba(15, 118, 110, 0.38);
+  transform: translate(-2px, -2px);
+  box-shadow: 9px 9px 0 rgba(43, 26, 18, 0.92);
 }
 .lagoon-glow {
-  border: 1px solid #d3e8e4;
-  box-shadow:
-    inset 2px 2px 0 rgba(255, 255, 255, 0.7),
-    10px 14px 30px -12px rgba(15, 118, 110, 0.30);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 2px solid #2b1a12;
+  border-radius: 1rem;
+  background: #fffdf8;
+  box-shadow: 6px 6px 0 rgba(43, 26, 18, 0.92);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 .lagoon-glow:hover {
-  transform: translateY(-4px);
-  box-shadow:
-    inset 2px 2px 0 rgba(255, 255, 255, 0.75),
-    14px 20px 38px -12px rgba(15, 118, 110, 0.38);
+  transform: translate(-2px, -2px);
+  box-shadow: 9px 9px 0 rgba(43, 26, 18, 0.92);
 }
 .sticker-lift {
-  border: 1px solid #d3e8e4;
-  box-shadow:
-    inset 2px 2px 0 rgba(255, 255, 255, 0.7),
-    6px 10px 22px -8px rgba(15, 118, 110, 0.32);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 2px solid #2b1a12;
+  background: #fffdf8;
+  box-shadow: 4px 4px 0 rgba(43, 26, 18, 0.92);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 .sticker-lift:hover {
-  transform: translateY(-3px);
-  box-shadow:
-    inset 2px 2px 0 rgba(255, 255, 255, 0.75),
-    10px 14px 30px -10px rgba(15, 118, 110, 0.38);
+  transform: translate(-1px, -1px);
+  box-shadow: 6px 6px 0 rgba(43, 26, 18, 0.92);
 }
 .neon-lift {
-  border: 1px solid #d3e8e4;
-  box-shadow:
-    inset 2px 2px 0 rgba(255, 255, 255, 0.7),
-    0 10px 26px -8px rgba(139, 92, 246, 0.45);
+  border: 2px solid #2b1a12;
+  background: #fffdf8;
+  box-shadow: 6px 6px 0 rgba(43, 26, 18, 0.92), 0 10px 26px -8px rgba(190, 18, 60, 0.45);
 }
 .lagoon-glass {
-  background: linear-gradient(180deg, rgba(252, 255, 255, 0.97), rgba(242, 250, 249, 0.97));
+  background: linear-gradient(180deg, rgba(255, 253, 248, 0.97), rgba(253, 248, 241, 0.97));
   backdrop-filter: blur(14px);
-  border: 1px solid #d3e8e4;
-  box-shadow: 0 18px 44px -18px rgba(15, 118, 110, 0.30);
+  border: 1px solid #e8cfae;
+  box-shadow: 0 18px 44px -18px rgba(194, 65, 12, 0.35);
 }
 .espresso-glass {
-  background: linear-gradient(180deg, rgba(252, 255, 255, 0.97), rgba(242, 250, 249, 0.97));
+  background: linear-gradient(180deg, rgba(255, 253, 248, 0.97), rgba(253, 248, 241, 0.97));
   backdrop-filter: blur(14px);
-  border: 1px solid #d3e8e4;
-  box-shadow: 0 18px 44px -18px rgba(15, 118, 110, 0.30);
+  border: 1px solid #e8cfae;
+  box-shadow: 0 18px 44px -18px rgba(194, 65, 12, 0.35);
 }
 .twilight-glass {
-  background: linear-gradient(180deg, rgba(252, 255, 255, 0.97), rgba(242, 250, 249, 0.97));
+  background: linear-gradient(180deg, rgba(255, 253, 248, 0.97), rgba(253, 248, 241, 0.97));
   backdrop-filter: blur(14px);
-  border: 1px solid #d3e8e4;
-  box-shadow: 0 18px 44px -18px rgba(15, 118, 110, 0.30);
+  border: 1px solid #e8cfae;
+  box-shadow: 0 18px 44px -18px rgba(194, 65, 12, 0.35);
 }
 .night-glass {
-  background: linear-gradient(180deg, rgba(252, 255, 255, 0.97), rgba(242, 250, 249, 0.97));
+  background: linear-gradient(180deg, rgba(255, 253, 248, 0.97), rgba(253, 248, 241, 0.97));
   backdrop-filter: blur(14px);
-  border: 1px solid #d3e8e4;
-  box-shadow: 0 18px 44px -18px rgba(15, 118, 110, 0.30);
+  border: 1px solid #e8cfae;
+  box-shadow: 0 18px 44px -18px rgba(194, 65, 12, 0.35);
 }
 .mist-glass {
-  background: linear-gradient(180deg, rgba(252, 255, 255, 0.97), rgba(242, 250, 249, 0.97));
+  background: linear-gradient(180deg, rgba(255, 253, 248, 0.97), rgba(253, 248, 241, 0.97));
   backdrop-filter: blur(14px);
-  border: 1px solid #d3e8e4;
-  box-shadow: 0 18px 44px -18px rgba(15, 118, 110, 0.30);
+  border: 1px solid #e8cfae;
+  box-shadow: 0 18px 44px -18px rgba(194, 65, 12, 0.35);
 }
-.rain-fall { animation: aurora-fall 12s ease-in-out infinite; }
-.ember-rise { animation: aurora-fall 12s ease-in-out infinite; }
-.bubble-rise { animation: aurora-fall 12s ease-in-out infinite; }
-.spark-rise { animation: aurora-fall 12s ease-in-out infinite; }
-.lagoon-drift { animation: aurora-drift 17s ease-in-out infinite; }
-.current-drift { animation: aurora-drift 17s ease-in-out infinite; }
-.zephyr-drift { animation: aurora-drift 17s ease-in-out infinite; }
-.mist-drift { animation: aurora-drift 17s ease-in-out infinite; }
-.bazaar-drift { animation: aurora-drift 17s ease-in-out infinite; }
-.buoy-breathe { animation: aurora-bob 7s ease-in-out infinite; }
-.tide-breathe { animation: aurora-bob 7s ease-in-out infinite; }
-.hearth-breathe { animation: aurora-bob 7s ease-in-out infinite; }
-.pool-breathe { animation: aurora-bob 7s ease-in-out infinite; }
-.tide-spin { animation: aurora-spin 48s linear infinite; }
-.sun-spin { animation: aurora-spin 48s linear infinite; }
-.ripple-spin { animation: aurora-spin 48s linear infinite; }
-.ring-orbit { animation: aurora-spin 48s linear infinite; }
+.rain-fall { animation: ember-rise 11s ease-in-out infinite; }
+.ember-rise { animation: ember-rise 11s ease-in-out infinite; }
+.bubble-rise { animation: ember-rise 11s ease-in-out infinite; }
+.spark-rise { animation: ember-rise 11s ease-in-out infinite; }
+.lagoon-drift { animation: ember-drift 16s ease-in-out infinite; }
+.current-drift { animation: ember-drift 16s ease-in-out infinite; }
+.zephyr-drift { animation: ember-drift 16s ease-in-out infinite; }
+.mist-drift { animation: ember-drift 16s ease-in-out infinite; }
+.bazaar-drift { animation: ember-drift 16s ease-in-out infinite; }
+.buoy-breathe { animation: ember-bob 6s ease-in-out infinite; }
+.tide-breathe { animation: ember-bob 6s ease-in-out infinite; }
+.hearth-breathe { animation: ember-bob 6s ease-in-out infinite; }
+.pool-breathe { animation: ember-bob 6s ease-in-out infinite; }
+.tide-spin { animation: ember-spin 44s linear infinite; }
+.sun-spin { animation: ember-spin 44s linear infinite; }
+.ripple-spin { animation: ember-spin 44s linear infinite; }
+.ring-orbit { animation: ember-spin 44s linear infinite; }
