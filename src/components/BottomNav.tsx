@@ -18,19 +18,19 @@ export default function BottomNav({ cartCount, onCartOpen, onMenuOpen, onAccount
     { label: "Help", icon: "💬", onClick: onHelpOpen },
   ];
   return (
-    <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-[#c3d4f7] bg-[#ffffff]/95 shadow-[0_-8px_24px_rgba(20, 33, 61,0.25)] backdrop-blur md:hidden">
+    <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-[#d9edd9] bg-[#ffffff]/95 shadow-[0_-8px_24px_rgba(30, 42, 33,0.25)] backdrop-blur md:hidden">
       <div className="grid grid-cols-4 pb-[env(safe-area-inset-bottom)]">
         {items.map((item) => (
           <motion.button
             key={item.label}
             whileTap={{ scale: 0.94 }}
             onClick={item.onClick}
-            className="relative flex flex-col items-center gap-0.5 py-2.5 text-[11px] font-semibold tracking-tight text-[#5a6b8c] transition-colors active:text-brand-800"
+            className="relative flex flex-col items-center gap-0.5 py-2.5 text-[11px] font-semibold tracking-tight text-[#5f6b5c] transition-colors active:text-brand-800"
           >
             <span className="relative text-xl leading-none">
               {item.icon}
               {typeof item.badge === "number" && item.badge > 0 && (
-                <span className="absolute -right-3 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 px-1 text-[10px] font-black text-white shadow-sm ring-2 ring-[#c3d4f7]">
+                <span className="absolute -right-3 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 px-1 text-[10px] font-black text-white shadow-sm ring-2 ring-[#d9edd9]">
                   {item.badge}
                 </span>
               )}
