@@ -1,30 +1,30 @@
 @import "tailwindcss";
 
 @theme {
-  /* Sunrise Coral: warm morning light, coral brand, honey-amber accents and
-     seafoam teal sparks. Light-first theme. */
-  --color-brand-50: #fff1ec;
-  --color-brand-100: #ffe0d3;
-  --color-brand-200: #ffc2a8;
-  --color-brand-300: #ff9a76;
-  --color-brand-400: #ff6f47;
-  --color-brand-500: #f4502a;
-  --color-brand-600: #d93d1c;
-  --color-brand-700: #b42f15;
-  --color-brand-800: #8f2714;
-  --color-brand-900: #5c1c0f;
-  --color-brand-950: #3d130b;
-  --color-brand: #d93d1c;
-  --color-brand-dark: #b42f15;
-  --color-brand-deep: #3d130b;
-  --color-gold: #f59e0b;
-  --color-gold-deep: #b45309;
-  --color-gold-soft: #ffe9cf;
-  --color-ink: #38251d;
-  --color-paper: #fff6ee;
-  --color-popblue: #0d9488;
-  --color-popblue-deep: #0f766e;
-  --color-popblue-soft: #d9f2ee;
+  /* Emerald Vault: jewel emerald brand, violet leaf accents and sapphire
+     sparks on a pearl page. Light-first theme. */
+  --color-brand-50: #eff7f1;
+  --color-brand-100: #d9edde;
+  --color-brand-200: #a7f3d0;
+  --color-brand-300: #6ee7b7;
+  --color-brand-400: #34d399;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-brand-900: #064e3b;
+  --color-brand-950: #022c22;
+  --color-brand: #059669;
+  --color-brand-dark: #047857;
+  --color-brand-deep: #022c22;
+  --color-gold: #7c3aed;
+  --color-gold-deep: #5b21b6;
+  --color-gold-soft: #e6defc;
+  --color-ink: #132a20;
+  --color-paper: #f2f8f4;
+  --color-popblue: #2563eb;
+  --color-popblue-deep: #1d4ed8;
+  --color-popblue-soft: #dbe7fd;
 }
 
 html { scroll-behavior: smooth; }
@@ -39,23 +39,23 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #fff6ee;
+  background: #f2f8f4;
   background-image:
-    radial-gradient(ellipse 90% 34% at 50% -14%, rgba(244, 80, 42, 0.16), transparent),
-    radial-gradient(ellipse 62% 28% at 92% 102%, rgba(13, 148, 136, 0.10), transparent),
-    radial-gradient(ellipse 54% 26% at 6% 60%, rgba(245, 158, 11, 0.14), transparent),
-    radial-gradient(rgba(244, 80, 42, 0.10) 1.2px, transparent 1.3px);
+    radial-gradient(ellipse 90% 34% at 50% -14%, rgba(16, 185, 129, 0.16), transparent),
+    radial-gradient(ellipse 62% 28% at 92% 102%, rgba(37, 99, 235, 0.10), transparent),
+    radial-gradient(ellipse 54% 26% at 6% 60%, rgba(124, 58, 237, 0.12), transparent),
+    radial-gradient(rgba(5, 150, 105, 0.10) 1.2px, transparent 1.3px);
   background-size: auto, auto, auto, 26px 26px;
-  color: #38251d;
+  color: #132a20;
 }
-::selection { background: #d93d1c; color: #ffffff; }
+::selection { background: #059669; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: #f4502a; border-radius: 8px; border: 2px solid #fff6ee; }
-::-webkit-scrollbar-track { background: #ffe0d3; }
+::-webkit-scrollbar-thumb { background: #10b981; border-radius: 8px; border: 2px solid #f2f8f4; }
+::-webkit-scrollbar-track { background: #d9edde; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Sun motes: warm sparks drifting up with a sway and fade. */
+/* Firefly rise: emerald sparks drifting up with a sway and fade. */
 @keyframes ember-rise {
   0% { transform: translate3d(0, 0, 0) scale(0.5); opacity: 0; }
   18% { opacity: 0.85; }
@@ -63,223 +63,236 @@ body {
 }
 .pop-fall { animation: ember-rise 7.2s ease-out infinite; }
 
-/* Morning haze drift: slow lateral sway for the warm glow washes. */
+/* Canopy drift: slow lateral sway for the emerald glow washes. */
 @keyframes dusk-drift {
   0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(3vw, 0.75rem, 0) scale(1.12); opacity: 0.85; }
 }
 .pop-drift { animation: dusk-drift 19s ease-in-out infinite; }
 
-/* Sun bob: gentle rise with a sway. */
+/* Leaf bob: gentle rise with a sway. */
 @keyframes hearth-bob {
   0%, 100% { transform: translateY(0) rotate(-1deg); }
   50% { transform: translateY(-7px) rotate(1deg); }
 }
 .pop-bob { animation: hearth-bob 6.4s ease-in-out infinite; }
 
-/* Sun wheel: steady rotation for the hero's halo stack. */
+/* Orbit: steady rotation for the hero's halo rings. */
 @keyframes sun-wheel {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: sun-wheel 60s linear infinite; }
 
-/* Morning ticker: infinite marquee for the offer strip (rightward drift). */
+/* Vault ticker: infinite marquee for the offer strip (rightward drift). */
 @keyframes dusk-ticker {
   from { transform: translateX(-50%); }
   to { transform: translateX(0); }
 }
 .pop-ticker { animation: dusk-ticker 32s linear infinite; }
 
-/* Sunrise band: flowing coral → amber → teal gradient. */
+/* Emerald band: flowing emerald → violet → sapphire gradient. */
 .pop-stripes {
-  background-image: linear-gradient(115deg, #d93d1c, #f4502a 30%, #f59e0b 58%, #0d9488 96%);
+  background-image: linear-gradient(115deg, #059669, #10b981 30%, #7c3aed 58%, #2563eb 96%);
 }
 
-/* Sun card: warm white panel with a peach edge and soft morning shadow. */
+/* Vault card: crisp panel with an emerald edge, top sheen and layered shadow. */
 .pop-lift {
-  border: 1px solid #ffd9c2;
-  border-radius: 1.5rem;
-  background: linear-gradient(165deg, #ffffff 0%, #fffaf4 100%);
+  position: relative;
+  border: 1px solid #bfe3cc;
+  border-radius: 1rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbf8 100%);
   box-shadow:
-    0 1px 2px rgba(92, 28, 15, 0.06),
-    0 14px 34px -14px rgba(92, 28, 15, 0.18);
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 1px 2px rgba(6, 78, 59, 0.08),
+    0 16px 32px -16px rgba(6, 78, 59, 0.22);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.pop-lift::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  border-radius: 1rem 1rem 0 0;
+  background: linear-gradient(90deg, #059669, #7c3aed, #2563eb);
+  opacity: 0.85;
 }
 .pop-lift:hover {
   transform: translateY(-4px);
-  border-color: rgba(244, 80, 42, 0.55);
+  border-color: rgba(16, 185, 129, 0.6);
   box-shadow:
-    0 2px 4px rgba(92, 28, 15, 0.06),
-    0 24px 50px -16px rgba(217, 61, 28, 0.35),
-    0 0 0 6px rgba(244, 80, 42, 0.08);
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 2px 4px rgba(6, 78, 59, 0.08),
+    0 26px 48px -16px rgba(5, 150, 105, 0.38),
+    0 0 0 5px rgba(16, 185, 129, 0.10);
 }
 
-/* Sun panel: shared by modals and drawers — light frosted glass. */
+/* Vault panel: shared by modals and drawers — frosted mint glass. */
 .pop-glass {
-  background: rgba(255, 252, 248, 0.94);
+  background: rgba(247, 252, 249, 0.94);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid #ffd9c2;
-  border-radius: 1.75rem;
+  border: 1px solid #bfe3cc;
+  border-radius: 1.25rem;
   box-shadow:
-    0 24px 64px -18px rgba(92, 28, 15, 0.28),
-    0 0 0 8px rgba(244, 80, 42, 0.07);
+    0 24px 64px -18px rgba(6, 78, 59, 0.30),
+    0 0 0 8px rgba(16, 185, 129, 0.07);
 }
 
-/* Coral sun medallion: round coral sun with a dashed cream halo. */
+/* Emerald seal medallion: round emerald seal with a dashed violet halo. */
 .starburst {
   border-radius: 9999px;
-  border: 2px solid #fff7f2;
-  outline: 3px dashed rgba(217, 61, 28, 0.6);
+  border: 2px solid #f6faf7;
+  outline: 3px dashed rgba(5, 150, 105, 0.65);
   outline-offset: 3px;
-  background: radial-gradient(circle at 32% 28%, #ff9a76, #f4502a 55%, #b42f15);
-  color: #fff7f2;
-  box-shadow: 0 10px 26px -8px rgba(217, 61, 28, 0.55);
+  background: radial-gradient(circle at 32% 28%, #6ee7b7, #10b981 55%, #047857);
+  color: #f6faf7;
+  box-shadow: 0 10px 26px -8px rgba(5, 150, 105, 0.55);
 }
 
-/* Coral dot field: fine coral dot texture for hero bands. */
+/* Emerald dot field: fine emerald dot texture for hero bands. */
 .halftone {
-  background-image: radial-gradient(rgba(244, 80, 42, 0.12) 1.4px, transparent 1.5px);
+  background-image: radial-gradient(rgba(5, 150, 105, 0.12) 1.4px, transparent 1.5px);
   background-size: 22px 22px;
 }
 
-/* Sunrise wave divider: scallop wave band. */
+/* Emerald wave divider: scallop wave band. */
 .zigzag {
   height: 14px;
-  background-image: radial-gradient(circle at 10px -4px, transparent 12px, rgba(244, 80, 42, 0.45) 13px, transparent 14px);
+  background-image: radial-gradient(circle at 10px -4px, transparent 12px, rgba(5, 150, 105, 0.45) 13px, transparent 14px);
   background-size: 20px 14px;
   background-repeat: repeat-x;
   opacity: 0.85;
 }
 
-/* Morning sheen: warm glow band over cream. */
+/* Canopy sheen: cool emerald glow band over pearl. */
 .bazaar-awning {
   background-image:
-    linear-gradient(180deg, rgba(244, 80, 42, 0.10), rgba(244, 80, 42, 0) 62%),
-    linear-gradient(180deg, #fffdf9, #fff6ee);
+    linear-gradient(180deg, rgba(16, 185, 129, 0.10), rgba(16, 185, 129, 0) 62%),
+    linear-gradient(180deg, #fcfefd, #f2f8f4);
 }
 
-/* Legacy aliases kept so untouched components still render — all sunrise-styled. */
+/* Legacy aliases kept so untouched components still render — all emerald-styled. */
 .lagoon-lift {
-  border: 1px solid #ffc2a8;
-  border-radius: 1.5rem;
-  background: linear-gradient(165deg, #fff6ec 0%, #ffeee0 100%);
+  border: 1px solid #a7f3d0;
+  border-radius: 1rem;
+  background: linear-gradient(180deg, #f7fbf8 0%, #eff7f1 100%);
   box-shadow:
-    0 1px 2px rgba(92, 28, 15, 0.06),
-    0 14px 34px -14px rgba(92, 28, 15, 0.18);
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 1px 2px rgba(6, 78, 59, 0.08),
+    0 16px 32px -16px rgba(6, 78, 59, 0.22);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 .lagoon-lift:hover {
   transform: translateY(-4px);
-  border-color: rgba(13, 148, 136, 0.55);
+  border-color: rgba(37, 99, 235, 0.55);
   box-shadow:
-    0 2px 4px rgba(92, 28, 15, 0.06),
-    0 24px 50px -16px rgba(13, 148, 136, 0.35),
-    0 0 0 6px rgba(13, 148, 136, 0.08);
+    0 2px 4px rgba(6, 78, 59, 0.08),
+    0 26px 48px -16px rgba(37, 99, 235, 0.38),
+    0 0 0 5px rgba(37, 99, 235, 0.10);
 }
 .stamp-perf {
-  border: 2px dashed #f4502a;
+  border: 2px dashed #10b981;
   background: #ffffff;
-  border-radius: 1.5rem;
-  box-shadow: 0 14px 34px -14px rgba(92, 28, 15, 0.18);
+  border-radius: 1rem;
+  box-shadow: 0 16px 32px -16px rgba(6, 78, 59, 0.22);
 }
 .ember-glow {
-  border: 1px solid #ffd9c2;
-  border-radius: 1.5rem;
-  background: linear-gradient(165deg, #ffffff 0%, #fffaf4 100%);
-  box-shadow: 0 14px 34px -14px rgba(92, 28, 15, 0.18);
+  border: 1px solid #bfe3cc;
+  border-radius: 1rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbf8 100%);
+  box-shadow: 0 16px 32px -16px rgba(6, 78, 59, 0.22);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .ember-glow:hover {
   transform: translateY(-4px);
   box-shadow:
-    0 24px 50px -16px rgba(245, 158, 11, 0.5),
-    0 0 0 6px rgba(245, 158, 11, 0.12);
+    0 26px 48px -16px rgba(124, 58, 237, 0.5),
+    0 0 0 5px rgba(124, 58, 237, 0.12);
 }
 .ripple-glow {
-  border: 1px solid #ffd9c2;
-  border-radius: 1.5rem;
-  background: linear-gradient(165deg, #ffffff 0%, #fffaf4 100%);
-  box-shadow: 0 14px 34px -14px rgba(92, 28, 15, 0.18);
+  border: 1px solid #bfe3cc;
+  border-radius: 1rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbf8 100%);
+  box-shadow: 0 16px 32px -16px rgba(6, 78, 59, 0.22);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .ripple-glow:hover {
   transform: translateY(-4px);
   box-shadow:
-    0 24px 50px -16px rgba(13, 148, 136, 0.45),
-    0 0 0 6px rgba(13, 148, 136, 0.12);
+    0 26px 48px -16px rgba(37, 99, 235, 0.45),
+    0 0 0 5px rgba(37, 99, 235, 0.12);
 }
 .lagoon-glow {
-  border: 1px solid #ffd9c2;
-  border-radius: 1.5rem;
-  background: linear-gradient(165deg, #ffffff 0%, #fffaf4 100%);
-  box-shadow: 0 14px 34px -14px rgba(92, 28, 15, 0.18);
+  border: 1px solid #bfe3cc;
+  border-radius: 1rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbf8 100%);
+  box-shadow: 0 16px 32px -16px rgba(6, 78, 59, 0.22);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .lagoon-glow:hover {
   transform: translateY(-4px);
   box-shadow:
-    0 24px 50px -16px rgba(217, 61, 28, 0.45),
-    0 0 0 6px rgba(217, 61, 28, 0.12);
+    0 26px 48px -16px rgba(5, 150, 105, 0.45),
+    0 0 0 5px rgba(5, 150, 105, 0.12);
 }
 .sticker-lift {
-  border: 1px solid #ffe0d3;
-  border-radius: 1.5rem;
+  border: 1px solid #d9edde;
+  border-radius: 1rem;
   background: #ffffff;
-  box-shadow: 0 12px 28px -14px rgba(92, 28, 15, 0.16);
+  box-shadow: 0 12px 28px -14px rgba(6, 78, 59, 0.18);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .sticker-lift:hover {
   transform: translateY(-3px);
   box-shadow:
-    0 20px 42px -16px rgba(13, 148, 136, 0.4),
-    0 0 0 6px rgba(13, 148, 136, 0.1);
+    0 20px 42px -16px rgba(37, 99, 235, 0.4),
+    0 0 0 5px rgba(37, 99, 235, 0.1);
 }
 .neon-lift {
-  border: 1px solid rgba(245, 158, 11, 0.55);
-  border-radius: 1.5rem;
-  background: linear-gradient(165deg, #ffffff 0%, #fffaf4 100%);
-  box-shadow: 0 14px 34px -14px rgba(92, 28, 15, 0.18);
+  border: 1px solid rgba(124, 58, 237, 0.55);
+  border-radius: 1rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbf8 100%);
+  box-shadow: 0 16px 32px -16px rgba(6, 78, 59, 0.22);
 }
 .lagoon-glass {
-  background: rgba(255, 252, 248, 0.92);
+  background: rgba(247, 252, 249, 0.92);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid #ffd9c2;
-  border-radius: 1.75rem;
-  box-shadow: 0 24px 64px -18px rgba(92, 28, 15, 0.26);
+  border: 1px solid #bfe3cc;
+  border-radius: 1.25rem;
+  box-shadow: 0 24px 64px -18px rgba(6, 78, 59, 0.28);
 }
 .espresso-glass {
-  background: rgba(255, 252, 248, 0.92);
+  background: rgba(247, 252, 249, 0.92);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid #ffd9c2;
-  border-radius: 1.75rem;
-  box-shadow: 0 24px 64px -18px rgba(92, 28, 15, 0.26);
+  border: 1px solid #bfe3cc;
+  border-radius: 1.25rem;
+  box-shadow: 0 24px 64px -18px rgba(6, 78, 59, 0.28);
 }
 .twilight-glass {
-  background: rgba(255, 252, 248, 0.92);
+  background: rgba(247, 252, 249, 0.92);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid #ffd9c2;
-  border-radius: 1.75rem;
-  box-shadow: 0 24px 64px -18px rgba(92, 28, 15, 0.26);
+  border: 1px solid #bfe3cc;
+  border-radius: 1.25rem;
+  box-shadow: 0 24px 64px -18px rgba(6, 78, 59, 0.28);
 }
 .night-glass {
-  background: rgba(255, 248, 242, 0.96);
+  background: rgba(243, 250, 245, 0.96);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(13, 148, 136, 0.45);
-  border-radius: 1.75rem;
-  box-shadow: 0 24px 64px -18px rgba(92, 28, 15, 0.26);
+  border: 1px solid rgba(37, 99, 235, 0.45);
+  border-radius: 1.25rem;
+  box-shadow: 0 24px 64px -18px rgba(6, 78, 59, 0.28);
 }
 .mist-glass {
-  background: rgba(255, 252, 248, 0.72);
+  background: rgba(247, 252, 249, 0.72);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid #ffe0d3;
-  border-radius: 1.5rem;
-  box-shadow: 0 16px 40px -16px rgba(92, 28, 15, 0.2);
+  border: 1px solid #d9edde;
+  border-radius: 1rem;
+  box-shadow: 0 16px 40px -16px rgba(6, 78, 59, 0.22);
 }
 .rain-fall { animation: ember-rise 7.2s ease-out infinite; }
 .rain-fleck { animation: ember-rise 7.2s ease-out infinite; }
