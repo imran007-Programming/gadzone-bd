@@ -28,52 +28,52 @@ export default function Header({ query, onQueryChange, category, onCategoryChang
   }, []);
 
   return (
-    <header className={`sticky top-0 z-40 border-b border-brand-400/20 bg-[#eef5f4]/85 backdrop-blur-xl transition-shadow duration-300 ${scrolled ? "shadow-[0_12px_40px_-12px_rgba(0,0,0,0.8)]" : "shadow-none"}`}>
+    <header className={`sticky top-0 z-40 border-b border-brand-400/20 bg-[#faf1e6]/85 backdrop-blur-xl transition-shadow duration-300 ${scrolled ? "shadow-[0_12px_40px_-12px_rgba(0,0,0,0.8)]" : "shadow-none"}`}>
       <div className="mx-auto max-w-7xl px-4 pt-3 sm:px-6">
         <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-2">
           <div className="flex items-center gap-1">
-            <button onClick={onMenuOpen} className="rounded-full p-2 text-xl text-[#8aa5a0] transition hover:bg-[#e8f3f1] hover:text-brand-300" aria-label="Open menu">☰</button>
+            <button onClick={onMenuOpen} className="rounded-full p-2 text-xl text-[#a98f6f] transition hover:bg-[#f3e7d3] hover:text-brand-300" aria-label="Open menu">☰</button>
           </div>
           <a href="#" className="flex items-center justify-center gap-2">
-            <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-300 via-brand-500 to-brand-800 text-xl font-black text-[#14332e] shadow-[0_8px_24px_-8px_rgba(22,160,135,0.7)] ring-2 ring-gold/70">G</span>
-            <span className="leading-none"><span className="block text-lg font-black tracking-tight text-[#14332e] sm:text-xl">Gad<span className="text-brand-300">Zone</span> BD</span>
-            <span className="hidden text-[11px] font-medium text-[#55756f] sm:block">Gadgets in Bangladesh</span></span>
+            <span className="flex h-10 w-10 items-center justify-center rounded-lg border-[3px] border-brand-800/60 bg-gradient-to-br from-brand-300 via-brand-500 to-brand-700 text-xl font-black text-white shadow-[0_8px_24px_-8px_rgba(201,64,28,0.7)]">G</span>
+            <span className="leading-none"><span className="block text-lg font-black tracking-tight text-[#33210f] sm:text-xl">Gad<span className="text-brand-300">Zone</span> BD</span>
+            <span className="hidden text-[11px] font-medium text-[#7d6650] sm:block">Gadgets in Bangladesh</span></span>
           </a>
           <div className="flex items-center justify-end gap-1 sm:gap-2">
             {session?.user ? (
               <>
-                <Link href="/dashboard" className="flex items-center gap-2 rounded-full p-1 pr-2 hover:bg-[#e8f3f1] sm:pr-3" aria-label="My dashboard">
+                <Link href="/dashboard" className="flex items-center gap-2 rounded-full p-1 pr-2 hover:bg-[#f3e7d3] sm:pr-3" aria-label="My dashboard">
                   {session.user.image ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src={session.user.image} alt="" className="h-8 w-8 rounded-full object-cover" />
                   ) : (
-                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-brand-400 to-brand-700 text-sm font-black text-[#14332e]">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-brand-400 to-brand-700 text-sm font-black text-[#33210f]">
                       {(session.user.name ?? session.user.email ?? "G").slice(0, 1).toUpperCase()}
                     </span>
                   )}
-                  <span className="hidden max-w-28 truncate text-sm font-bold text-[#14332e] md:inline">{session.user.name ?? "My Account"}</span>
+                  <span className="hidden max-w-28 truncate text-sm font-bold text-[#33210f] md:inline">{session.user.name ?? "My Account"}</span>
                 </Link>
-                <Link href="/dashboard" className="hidden rounded-full px-3 py-1.5 text-xs font-bold text-[#55756f] hover:bg-[#e8f3f1] md:inline-flex">Dashboard</Link>
+                <Link href="/dashboard" className="hidden rounded-full px-3 py-1.5 text-xs font-bold text-[#7d6650] hover:bg-[#f3e7d3] md:inline-flex">Dashboard</Link>
                 {session.user.role === "admin" && (
-                  <Link href="/admin" className="hidden rounded-full bg-gradient-to-r from-gold-deep to-gold px-3 py-1.5 text-xs font-black text-white shadow-[0_4px_16px_-4px_rgba(192,127,13,0.6)] md:inline-flex">Admin</Link>
+                  <Link href="/admin" className="hidden rounded-full bg-gradient-to-r from-gold-deep to-gold px-3 py-1.5 text-xs font-black text-white shadow-[0_4px_16px_-4px_rgba(42,107,60,0.6)] md:inline-flex">Admin</Link>
                 )}
-                <button onClick={() => signOut({ callbackUrl: "/" })} className="hidden rounded-full px-3 py-1.5 text-xs font-bold text-[#55756f] hover:bg-[#e8f3f1] md:inline-flex">Sign out</button>
-                <button onClick={() => signOut({ callbackUrl: "/" })} className="rounded-full p-2 text-lg text-[#8aa5a0] hover:bg-[#e8f3f1] md:hidden" aria-label="Sign out">↪</button>
+                <button onClick={() => signOut({ callbackUrl: "/" })} className="hidden rounded-full px-3 py-1.5 text-xs font-bold text-[#7d6650] hover:bg-[#f3e7d3] md:inline-flex">Sign out</button>
+                <button onClick={() => signOut({ callbackUrl: "/" })} className="rounded-full p-2 text-lg text-[#a98f6f] hover:bg-[#f3e7d3] md:hidden" aria-label="Sign out">↪</button>
               </>
             ) : (
-              <button onClick={onAccountOpen} className="rounded-full bg-gradient-to-r from-brand-400 to-brand-600 px-5 py-2 text-sm font-bold text-[#14332e] shadow-[0_8px_24px_-8px_rgba(22,160,135,0.7)] transition hover:brightness-110 active:scale-[0.98]">Sign in</button>
+              <button onClick={onAccountOpen} className="rounded-full bg-gradient-to-r from-brand-400 to-brand-600 px-5 py-2 text-sm font-bold text-[#33210f] shadow-[0_8px_24px_-8px_rgba(201,64,28,0.7)] transition hover:brightness-110 active:scale-[0.98]">Sign in</button>
             )}
-            <span className="hidden rounded-full bg-[#e8f3f1] px-3 py-1.5 text-xs font-bold text-brand-300 ring-1 ring-brand-400/30 md:inline-flex">bKash ✓</span>
-            <span className="hidden rounded-full bg-[#e8f3f1] px-3 py-1.5 text-xs font-bold text-brand-300 ring-1 ring-brand-400/30 md:inline-flex">COD ✓</span>
-            <motion.button whileTap={{ scale: 0.94 }} onClick={onCartOpen} className="relative rounded-full bg-[#e8f3f1] px-3 py-2.5 text-sm font-bold text-[#14332e] shadow-sm ring-1 ring-brand-400/40 transition hover:ring-brand-400/70 active:scale-[0.98] sm:px-4">
+            <span className="hidden rounded-full bg-[#f3e7d3] px-3 py-1.5 text-xs font-bold text-brand-300 ring-1 ring-brand-400/30 md:inline-flex">bKash ✓</span>
+            <span className="hidden rounded-full bg-[#f3e7d3] px-3 py-1.5 text-xs font-bold text-brand-300 ring-1 ring-brand-400/30 md:inline-flex">COD ✓</span>
+            <motion.button whileTap={{ scale: 0.94 }} onClick={onCartOpen} className="relative rounded-full bg-[#f3e7d3] px-3 py-2.5 text-sm font-bold text-[#33210f] shadow-sm ring-1 ring-brand-400/40 transition hover:ring-brand-400/70 active:scale-[0.98] sm:px-4">
               <span className="hidden sm:inline">🛒 Cart</span>
               <span className="sm:hidden">🛒</span>
-              {cartCount > 0 && <span className="absolute -right-1.5 -top-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-gold-deep to-gold text-xs font-black text-white ring-2 ring-[#eef5f4]">{cartCount}</span>}
+              {cartCount > 0 && <span className="absolute -right-1.5 -top-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-gold-deep to-gold text-xs font-black text-white ring-2 ring-[#faf1e6]">{cartCount}</span>}
             </motion.button>
           </div>
         </div>
         <form
-          className="mt-3 flex items-center gap-2 rounded-xl border border-brand-400/30 bg-[#ffffff] p-1.5 pl-2 shadow-[0_8px_28px_-12px_rgba(0,0,0,0.7)] transition focus-within:border-brand-400/70 focus-within:shadow-[0_0_24px_-6px_rgba(22,160,135,0.5)]"
+          className="mt-3 flex items-center gap-2 rounded-xl border border-brand-400/30 bg-[#ffffff] p-1.5 pl-2 shadow-[0_8px_28px_-12px_rgba(0,0,0,0.7)] transition focus-within:border-brand-400/70 focus-within:shadow-[0_0_24px_-6px_rgba(201,64,28,0.5)]"
           onSubmit={(e) => {
             e.preventDefault();
             document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" });
@@ -83,17 +83,17 @@ export default function Header({ query, onQueryChange, category, onCategoryChang
             value={query}
             onChange={(e) => onQueryChange(e.target.value)}
             placeholder="Search for products"
-            className="min-w-0 flex-1 bg-transparent px-3 py-1.5 text-sm text-[#14332e] outline-none placeholder:text-[#8aa5a0]"
+            className="min-w-0 flex-1 bg-transparent px-3 py-1.5 text-sm text-[#33210f] outline-none placeholder:text-[#a98f6f]"
             aria-label="Search for products"
           />
-          <button type="submit" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-gold-deep to-gold text-base text-white shadow-[0_6px_18px_-6px_rgba(192,127,13,0.7)] transition hover:brightness-110 active:scale-[0.95]" aria-label="Search">🔍</button>
+          <button type="submit" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-gold-deep to-gold text-base text-white shadow-[0_6px_18px_-6px_rgba(42,107,60,0.7)] transition hover:brightness-110 active:scale-[0.95]" aria-label="Search">🔍</button>
         </form>
       </div>
       <nav className="mt-3 border-t border-brand-400/15">
         <div className="no-scrollbar mx-auto flex max-w-7xl gap-1.5 overflow-x-auto px-4 py-2.5 sm:px-6">
           {CATEGORIES.map((c) => (
             <motion.button whileTap={{ scale: 0.96 }} key={c} onClick={() => { onCategoryChange(c); document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" }); }}
-              className={`whitespace-nowrap rounded-full px-4 py-2 text-sm font-semibold transition active:scale-95 border ${category === c ? "border-transparent bg-gradient-to-r from-brand-400 to-brand-600 text-[#14332e] shadow-[0_6px_20px_-6px_rgba(22,160,135,0.7)]" : "border-transparent text-[#55756f] hover:bg-[#e8f3f1] hover:text-brand-300"}`}>{c}</motion.button>
+              className={`whitespace-nowrap rounded-full px-4 py-2 text-sm font-semibold transition active:scale-95 border ${category === c ? "border-transparent bg-gradient-to-r from-brand-400 to-brand-600 text-[#33210f] shadow-[0_6px_20px_-6px_rgba(201,64,28,0.7)]" : "border-transparent text-[#7d6650] hover:bg-[#f3e7d3] hover:text-brand-300"}`}>{c}</motion.button>
           ))}
         </div>
       </nav>
