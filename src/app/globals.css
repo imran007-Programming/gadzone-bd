@@ -1,29 +1,29 @@
 @import "tailwindcss";
 
 @theme {
-  /* Ember Hearth: sun-baked terracotta + honey glow + pomegranate pop on warm sand. */
-  --color-brand-50: #fdf6ec;
-  --color-brand-100: #fae9d2;
-  --color-brand-200: #f5d0a0;
-  --color-brand-300: #efae67;
-  --color-brand-400: #e8853a;
-  --color-brand-500: #dd671b;
-  --color-brand-600: #c24f10;
-  --color-brand-700: #a13c0e;
-  --color-brand-800: #843213;
-  --color-brand-900: #6b2b12;
-  --color-brand-950: #3d1c0a;
-  --color-brand: #c24f10;
-  --color-brand-dark: #a13c0e;
-  --color-brand-deep: #3d1c0a;
-  --color-gold: #e8930c;
-  --color-gold-deep: #92400e;
-  --color-gold-soft: #fdf0d5;
-  --color-ink: #2b1c12;
-  --color-paper: #faf3e6;
-  --color-popblue: #be123c;
-  --color-popblue-deep: #881337;
-  --color-popblue-soft: #ffe4e6;
+  /* Abyss Signal: deep-ocean teal + signal lime + violet pop on cool mist. */
+  --color-brand-50: #effdfa;
+  --color-brand-100: #d6f8f1;
+  --color-brand-200: #b0f0e3;
+  --color-brand-300: #7de4d2;
+  --color-brand-400: #40cfbc;
+  --color-brand-500: #12a89b;
+  --color-brand-600: #0c8579;
+  --color-brand-700: #0e6a62;
+  --color-brand-800: #11544e;
+  --color-brand-900: #134640;
+  --color-brand-950: #042a28;
+  --color-brand: #0c8579;
+  --color-brand-dark: #0e6a62;
+  --color-brand-deep: #042a28;
+  --color-gold: #a3e635;
+  --color-gold-deep: #4d7c0f;
+  --color-gold-soft: #f7fee7;
+  --color-ink: #0b2233;
+  --color-paper: #eef6f5;
+  --color-popblue: #7c3aed;
+  --color-popblue-deep: #5b21b6;
+  --color-popblue-soft: #ede9fe;
 }
 
 html { scroll-behavior: smooth; }
@@ -38,240 +38,240 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #faf3e6;
+  background: #eef6f5;
   background-image:
-    radial-gradient(ellipse 90% 32% at 50% -12%, rgba(221, 103, 27, 0.16), transparent),
-    radial-gradient(ellipse 60% 26% at 94% 104%, rgba(190, 18, 60, 0.10), transparent),
-    radial-gradient(ellipse 52% 24% at 4% 58%, rgba(232, 147, 12, 0.14), transparent),
-    radial-gradient(rgba(194, 79, 16, 0.09) 1.5px, transparent 2px);
-  background-size: auto, auto, auto, 28px 28px;
-  color: #2b1c12;
+    radial-gradient(ellipse 90% 32% at 50% -12%, rgba(18, 168, 155, 0.14), transparent),
+    radial-gradient(ellipse 60% 26% at 94% 104%, rgba(124, 58, 237, 0.10), transparent),
+    radial-gradient(ellipse 52% 24% at 4% 58%, rgba(163, 230, 53, 0.14), transparent),
+    linear-gradient(rgba(12, 133, 121, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(12, 133, 121, 0.055) 1px, transparent 1px);
+  background-size: auto, auto, auto, 30px 30px, 30px 30px;
+  color: #0b2233;
 }
-::selection { background: #c24f10; color: #ffffff; }
+::selection { background: #0c8579; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: #c24f10; border-radius: 8px; border: 2px solid #faf3e6; }
-::-webkit-scrollbar-track { background: #e8d9c0; }
+::-webkit-scrollbar-thumb { background: #0c8579; border-radius: 8px; border: 2px solid #eef6f5; }
+::-webkit-scrollbar-track { background: #d4e9e7; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Hearth embers: rising sparks that expand and fade as they climb. */
-@keyframes hearth-rise {
-  0% { transform: translateY(0) scale(0.55); opacity: 0.85; }
-  100% { transform: translateY(-46px) scale(1.5); opacity: 0; }
+/* Abyss ping: sonar rings that expand and fade as they climb. */
+@keyframes abyss-ping {
+  0% { transform: translateY(0) scale(0.45); opacity: 0.85; }
+  100% { transform: translateY(-52px) scale(1.65); opacity: 0; }
 }
-.pop-fall { animation: hearth-rise 5.6s ease-out infinite; }
+.pop-fall { animation: abyss-ping 5.8s ease-out infinite; }
 
-/* Hearth sway: slow lateral drift for heat washes. */
-@keyframes hearth-drift {
-  0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.55; }
-  50% { transform: translate3d(3vw, -1rem, 0) scale(1.12); opacity: 0.9; }
+/* Abyss tide: slow lateral drift for sea-mist washes. */
+@keyframes abyss-tide {
+  0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.5; }
+  50% { transform: translate3d(3vw, -0.75rem, 0) scale(1.1); opacity: 0.85; }
 }
-.pop-drift { animation: hearth-drift 14s ease-in-out infinite; }
+.pop-drift { animation: abyss-tide 16s ease-in-out infinite; }
 
-/* Hearth bob: gentle rise with a soft tilt. */
-@keyframes hearth-bob {
-  0%, 100% { transform: translateY(0) rotate(1.5deg); }
-  50% { transform: translateY(-10px) rotate(-1.5deg); }
+/* Abyss buoy: gentle rise with a soft tilt. */
+@keyframes abyss-buoy {
+  0%, 100% { transform: translateY(0) rotate(-1.5deg); }
+  50% { transform: translateY(-8px) rotate(1.5deg); }
 }
-.pop-bob { animation: hearth-bob 5.5s ease-in-out infinite; }
+.pop-bob { animation: abyss-buoy 6s ease-in-out infinite; }
 
-/* Hearth orbit: steady rotation for the hero's sun-disc stack. */
-@keyframes hearth-spin {
+/* Abyss current: steady rotation for the hero's sonar-ring stack. */
+@keyframes abyss-current {
   to { transform: rotate(360deg); }
 }
-.pop-spin { animation: hearth-spin 44s linear infinite; }
+.pop-spin { animation: abyss-current 46s linear infinite; }
 
-/* Hearth ticker: infinite marquee for the ember strip. */
-@keyframes hearth-ticker {
+/* Abyss ticker: infinite marquee for the signal strip. */
+@keyframes abyss-ticker {
   to { transform: translateX(-50%); }
 }
-.pop-ticker { animation: hearth-ticker 26s linear infinite; }
+.pop-ticker { animation: abyss-ticker 24s linear infinite; }
 
-/* Hearth band: flowing terracotta → ember → honey → pomegranate gradient. */
+/* Abyss signal band: flowing teal → seafoam → lime → violet gradient. */
 .pop-stripes {
-  background-image: linear-gradient(115deg, #a13c0e, #dd671b 34%, #e8930c 62%, #be123c 96%);
+  background-image: linear-gradient(115deg, #0c8579, #12a89b 34%, #a3e635 62%, #7c3aed 96%);
 }
 
-/* Hearth card: warm card with clay edge and ember glow on hover. */
+/* Abyss card: crisp sticker card with a hard offset shadow and teal edge. */
 .pop-lift {
-  border: 2px solid rgba(194, 79, 16, 0.16);
-  border-radius: 1.25rem;
-  background: #fffdf8;
-  box-shadow: 0 1px 2px rgba(61, 28, 10, 0.06), 0 14px 34px -14px rgba(194, 79, 16, 0.28);
-  transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+  border: 2px solid rgba(11, 34, 51, 0.9);
+  border-radius: 0.875rem;
+  background: #f6fbfb;
+  box-shadow: 5px 5px 0 rgba(11, 34, 51, 0.9);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .pop-lift:hover {
-  transform: translateY(-6px);
-  border-color: rgba(221, 103, 27, 0.5);
-  box-shadow: 0 2px 4px rgba(61, 28, 10, 0.07), 0 26px 52px -16px rgba(221, 103, 27, 0.45);
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0 rgba(12, 133, 121, 0.85);
 }
 
-/* Hearth panel: shared by modals and drawers. */
+/* Abyss panel: shared by modals and drawers. */
 .pop-glass {
-  background: rgba(255, 253, 248, 0.92);
+  background: rgba(246, 251, 251, 0.94);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(194, 79, 16, 0.22);
-  border-radius: 1.25rem;
-  box-shadow: 0 24px 64px -24px rgba(161, 60, 14, 0.35);
+  border: 2px solid rgba(11, 34, 51, 0.9);
+  border-radius: 1rem;
+  box-shadow: 8px 8px 0 rgba(11, 34, 51, 0.9);
 }
 
-/* Hearth badge: round terracotta medallion with a dashed honey ring. */
+/* Abyss badge: round lime medallion with a teal ring and violet rim. */
 .starburst {
   border-radius: 9999px;
-  border: 2px solid #2b1c12;
-  outline: 3px dashed rgba(232, 147, 12, 0.75);
+  border: 2px solid #0b2233;
+  outline: 3px dashed rgba(12, 133, 121, 0.8);
   outline-offset: 3px;
-  background: radial-gradient(circle at 32% 28%, #efae67, #c24f10 60%, #843213);
-  color: #ffffff;
-  box-shadow: 0 12px 26px -10px rgba(194, 79, 16, 0.8);
+  background: radial-gradient(circle at 32% 28%, #d9f99d, #a3e635 55%, #4d7c0f);
+  color: #0b2233;
+  box-shadow: 5px 5px 0 rgba(11, 34, 51, 0.9);
 }
 
-/* Hearth grain: fine clay dot texture for hero bands. */
+/* Abyss grid: fine cool grid texture for hero bands. */
 .halftone {
-  background-image: radial-gradient(rgba(194, 79, 16, 0.13) 1.6px, transparent 2.2px);
+  background-image:
+    linear-gradient(rgba(12, 133, 121, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(12, 133, 121, 0.10) 1px, transparent 1px);
   background-size: 20px 20px;
 }
 
-/* Hearth dot divider: ember dotted band. */
+/* Abyss dash divider: signal-dash band. */
 .zigzag {
   height: 10px;
-  background-image: radial-gradient(rgba(194, 79, 16, 0.55) 2.2px, transparent 2.8px);
-  background-size: 18px 10px;
-  opacity: 0.6;
+  background-image: repeating-linear-gradient(90deg, rgba(12, 133, 121, 0.65) 0 10px, transparent 10px 20px);
+  opacity: 0.7;
 }
 
-/* Hearth sheen: soft honey band over warm white. */
+/* Abyss sheen: cool sea-mist band over frost white. */
 .bazaar-awning {
   background-image:
-    linear-gradient(180deg, rgba(221, 103, 27, 0.14), rgba(221, 103, 27, 0) 60%),
-    linear-gradient(180deg, #fffdf8, #faf3e6);
+    linear-gradient(180deg, rgba(18, 168, 155, 0.13), rgba(18, 168, 155, 0) 60%),
+    linear-gradient(180deg, #f6fbfb, #eef6f5);
 }
 
-/* Legacy aliases kept so untouched components still render — all hearth-styled. */
+/* Legacy aliases kept so untouched components still render — all abyss-styled. */
 .lagoon-lift {
-  border: 2px solid rgba(194, 79, 16, 0.16);
-  border-radius: 1.25rem;
-  background: #fffdf8;
-  box-shadow: 0 1px 2px rgba(61, 28, 10, 0.06), 0 14px 34px -14px rgba(194, 79, 16, 0.28);
-  transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+  border: 2px solid rgba(11, 34, 51, 0.9);
+  border-radius: 0.875rem;
+  background: #f6fbfb;
+  box-shadow: 5px 5px 0 rgba(11, 34, 51, 0.9);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .lagoon-lift:hover {
-  transform: translateY(-6px);
-  border-color: rgba(221, 103, 27, 0.5);
-  box-shadow: 0 2px 4px rgba(61, 28, 10, 0.07), 0 26px 52px -16px rgba(221, 103, 27, 0.45);
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0 rgba(12, 133, 121, 0.85);
 }
 .stamp-perf {
-  border: 2px dashed #a13c0e;
-  background: #fffdf8;
-  border-radius: 1.25rem;
-  box-shadow: 0 8px 24px -12px rgba(194, 79, 16, 0.32);
+  border: 2px dashed #0c8579;
+  background: #f6fbfb;
+  border-radius: 0.875rem;
+  box-shadow: 5px 5px 0 rgba(11, 34, 51, 0.9);
 }
 .ember-glow {
-  border: 2px solid rgba(194, 79, 16, 0.16);
-  border-radius: 1.25rem;
-  background: #fffdf8;
-  box-shadow: 0 1px 2px rgba(61, 28, 10, 0.06), 0 14px 34px -14px rgba(232, 147, 12, 0.4);
-  transition: transform 0.24s ease, box-shadow 0.24s ease;
+  border: 2px solid rgba(11, 34, 51, 0.9);
+  border-radius: 0.875rem;
+  background: #f6fbfb;
+  box-shadow: 5px 5px 0 rgba(11, 34, 51, 0.9);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .ember-glow:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 2px 4px rgba(61, 28, 10, 0.07), 0 22px 46px -16px rgba(221, 103, 27, 0.5);
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0 rgba(163, 230, 53, 0.9);
 }
 .ripple-glow {
-  border: 2px solid rgba(194, 79, 16, 0.14);
-  border-radius: 1.25rem;
-  background: #fffdf8;
-  box-shadow: 0 1px 2px rgba(61, 28, 10, 0.06), 0 12px 30px -12px rgba(194, 79, 16, 0.3);
-  transition: transform 0.24s ease, box-shadow 0.24s ease;
+  border: 2px solid rgba(11, 34, 51, 0.9);
+  border-radius: 0.875rem;
+  background: #f6fbfb;
+  box-shadow: 5px 5px 0 rgba(11, 34, 51, 0.9);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .ripple-glow:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 2px 4px rgba(61, 28, 10, 0.07), 0 24px 48px -16px rgba(190, 18, 60, 0.4);
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0 rgba(124, 58, 237, 0.8);
 }
 .lagoon-glow {
-  border: 2px solid rgba(194, 79, 16, 0.14);
-  border-radius: 1.25rem;
-  background: #fffdf8;
-  box-shadow: 0 1px 2px rgba(61, 28, 10, 0.06), 0 12px 30px -12px rgba(194, 79, 16, 0.3);
-  transition: transform 0.24s ease, box-shadow 0.24s ease;
+  border: 2px solid rgba(11, 34, 51, 0.9);
+  border-radius: 0.875rem;
+  background: #f6fbfb;
+  box-shadow: 5px 5px 0 rgba(11, 34, 51, 0.9);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .lagoon-glow:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 2px 4px rgba(61, 28, 10, 0.07), 0 24px 48px -16px rgba(232, 147, 12, 0.45);
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0 rgba(18, 168, 155, 0.9);
 }
 .sticker-lift {
-  border: 2px solid rgba(194, 79, 16, 0.18);
-  border-radius: 1.25rem;
-  background: #fffdf8;
-  box-shadow: 0 8px 24px -12px rgba(194, 79, 16, 0.3);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  border: 2px solid rgba(11, 34, 51, 0.9);
+  border-radius: 0.875rem;
+  background: #f6fbfb;
+  box-shadow: 4px 4px 0 rgba(11, 34, 51, 0.9);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .sticker-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 36px -12px rgba(190, 18, 60, 0.45);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 rgba(124, 58, 237, 0.8);
 }
 .neon-lift {
-  border: 2px solid rgba(221, 103, 27, 0.4);
-  border-radius: 1.25rem;
-  background: #fffdf8;
-  box-shadow: 0 1px 2px rgba(61, 28, 10, 0.06), 0 14px 34px -14px rgba(221, 103, 27, 0.5);
+  border: 2px solid rgba(12, 133, 121, 0.5);
+  border-radius: 0.875rem;
+  background: #f6fbfb;
+  box-shadow: 5px 5px 0 rgba(11, 34, 51, 0.9);
 }
 .lagoon-glass {
-  background: rgba(255, 253, 248, 0.9);
+  background: rgba(246, 251, 251, 0.92);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(194, 79, 16, 0.22);
-  border-radius: 1.25rem;
-  box-shadow: 0 24px 64px -24px rgba(161, 60, 14, 0.35);
+  border: 2px solid rgba(11, 34, 51, 0.9);
+  border-radius: 1rem;
+  box-shadow: 8px 8px 0 rgba(11, 34, 51, 0.9);
 }
 .espresso-glass {
-  background: rgba(255, 253, 248, 0.9);
+  background: rgba(246, 251, 251, 0.92);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(194, 79, 16, 0.22);
-  border-radius: 1.25rem;
-  box-shadow: 0 24px 64px -24px rgba(161, 60, 14, 0.35);
+  border: 2px solid rgba(11, 34, 51, 0.9);
+  border-radius: 1rem;
+  box-shadow: 8px 8px 0 rgba(11, 34, 51, 0.9);
 }
 .twilight-glass {
-  background: rgba(255, 253, 248, 0.9);
+  background: rgba(246, 251, 251, 0.92);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(194, 79, 16, 0.22);
-  border-radius: 1.25rem;
-  box-shadow: 0 24px 64px -24px rgba(161, 60, 14, 0.35);
+  border: 2px solid rgba(11, 34, 51, 0.9);
+  border-radius: 1rem;
+  box-shadow: 8px 8px 0 rgba(11, 34, 51, 0.9);
 }
 .night-glass {
-  background: rgba(43, 28, 18, 0.96);
+  background: rgba(11, 34, 51, 0.96);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(232, 147, 12, 0.45);
-  border-radius: 1.25rem;
-  box-shadow: 0 24px 64px -24px rgba(43, 28, 18, 0.6);
+  border: 2px solid rgba(163, 230, 53, 0.6);
+  border-radius: 1rem;
+  box-shadow: 8px 8px 0 rgba(11, 34, 51, 0.7);
 }
 .mist-glass {
-  background: rgba(255, 253, 248, 0.68);
+  background: rgba(246, 251, 251, 0.72);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(194, 79, 16, 0.14);
-  border-radius: 1.25rem;
-  box-shadow: 0 12px 32px -16px rgba(194, 79, 16, 0.3);
+  border: 2px solid rgba(11, 34, 51, 0.55);
+  border-radius: 1rem;
+  box-shadow: 6px 6px 0 rgba(11, 34, 51, 0.75);
 }
-.rain-fall { animation: hearth-rise 5.6s ease-out infinite; }
-.rain-fleck { animation: hearth-rise 5.6s ease-out infinite; }
-.ember-rise { animation: hearth-rise 5.6s ease-out infinite; }
-.bubble-rise { animation: hearth-rise 5.6s ease-out infinite; }
-.spark-rise { animation: hearth-rise 5.6s ease-out infinite; }
-.lagoon-drift { animation: hearth-drift 14s ease-in-out infinite; }
-.current-drift { animation: hearth-drift 14s ease-in-out infinite; }
-.zephyr-drift { animation: hearth-drift 14s ease-in-out infinite; }
-.mist-drift { animation: hearth-drift 14s ease-in-out infinite; }
-.bazaar-drift { animation: hearth-drift 14s ease-in-out infinite; }
-.buoy-breathe { animation: hearth-bob 5.5s ease-in-out infinite; }
-.tide-breathe { animation: hearth-bob 5.5s ease-in-out infinite; }
-.hearth-breathe { animation: hearth-bob 5.5s ease-in-out infinite; }
-.pool-breathe { animation: hearth-bob 5.5s ease-in-out infinite; }
-.tide-spin { animation: hearth-spin 44s linear infinite; }
-.sun-spin { animation: hearth-spin 44s linear infinite; }
-.ripple-spin { animation: hearth-spin 44s linear infinite; }
-.ring-orbit { animation: hearth-spin 44s linear infinite; }
+.rain-fall { animation: abyss-ping 5.8s ease-out infinite; }
+.rain-fleck { animation: abyss-ping 5.8s ease-out infinite; }
+.ember-rise { animation: abyss-ping 5.8s ease-out infinite; }
+.bubble-rise { animation: abyss-ping 5.8s ease-out infinite; }
+.spark-rise { animation: abyss-ping 5.8s ease-out infinite; }
+.lagoon-drift { animation: abyss-tide 16s ease-in-out infinite; }
+.current-drift { animation: abyss-tide 16s ease-in-out infinite; }
+.zephyr-drift { animation: abyss-tide 16s ease-in-out infinite; }
+.mist-drift { animation: abyss-tide 16s ease-in-out infinite; }
+.bazaar-drift { animation: abyss-tide 16s ease-in-out infinite; }
+.buoy-breathe { animation: abyss-buoy 6s ease-in-out infinite; }
+.tide-breathe { animation: abyss-buoy 6s ease-in-out infinite; }
+.hearth-breathe { animation: abyss-buoy 6s ease-in-out infinite; }
+.pool-breathe { animation: abyss-buoy 6s ease-in-out infinite; }
+.tide-spin { animation: abyss-current 46s linear infinite; }
+.sun-spin { animation: abyss-current 46s linear infinite; }
+.ripple-spin { animation: abyss-current 46s linear infinite; }
+.ring-orbit { animation: abyss-current 46s linear infinite; }
