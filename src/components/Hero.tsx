@@ -69,14 +69,14 @@ export default function Hero({ onQuickView }: HeroProps) {
     <section className="relative overflow-hidden">
       {/* aurora dot grid + violet gradient washes + pulse rings */}
       <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
-      <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#e0f2fe]/70 via-gold-soft/30 to-transparent" />
+      <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#d8f3ef]/70 via-gold-soft/30 to-transparent" />
 
       {/* aurora core: a slowly orbiting stack of violet, lime and cyan rings */}
       <div aria-hidden className="pointer-events-none absolute -right-40 -top-16 z-0 hidden opacity-90 sm:block">
         <div className="relative h-[560px] w-[560px]">
-          <div className="pop-spin absolute inset-0 rounded-full bg-[conic-gradient(from_20deg,#6f5cec,#84cc16,#06b6d4,#6f5cec)] opacity-70 blur-2xl" />
+          <div className="pop-spin absolute inset-0 rounded-full bg-[conic-gradient(from_20deg,#e48a48,#f59e0b,#0d9488,#e48a48)] opacity-70 blur-2xl" />
           <div className="absolute inset-16 rounded-full border-[3px] border-dashed border-brand-500/60" />
-          <div className="absolute inset-32 rounded-full border-2 border-[#221d54]/40 bg-gradient-to-br from-brand-300/70 via-gold/40 to-popblue/50 blur-xl" />
+          <div className="absolute inset-32 rounded-full border-2 border-[#2c1a0e]/40 bg-gradient-to-br from-brand-300/70 via-gold/40 to-popblue/50 blur-xl" />
           <div className="absolute inset-48 rounded-full bg-gradient-to-br from-brand-600 via-brand-400 to-popblue opacity-90 blur-sm" />
         </div>
       </div>
@@ -114,11 +114,11 @@ export default function Hero({ onQuickView }: HeroProps) {
       </div>
 
       {/* aurora ticker: infinite marquee of the shop's own promises */}
-      <div aria-hidden className="relative z-10 mt-8 -rotate-1 border-y border-brand-400/30 bg-gradient-to-r from-brand-950 via-brand-800 to-brand-950 py-2.5 shadow-[0_18px_44px_-20px_rgba(90,67,216,0.7)]">
+      <div aria-hidden className="relative z-10 mt-8 -rotate-1 border-y border-brand-400/30 bg-gradient-to-r from-brand-950 via-brand-800 to-brand-950 py-2.5 shadow-[0_18px_44px_-20px_rgba(192,90,22,0.7)]">
         <div className="overflow-hidden">
           <div className="pop-ticker flex w-max items-center gap-8 pr-8">
             {[...TICKER, ...TICKER].map((t, i) => (
-              <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#f3f2fa]">
+              <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#faf4e8]">
                 {t} <span className="text-gold">✦</span>
               </span>
             ))}
@@ -138,7 +138,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             ].map((s) => (
               <div key={s.l} className="pop-lift relative overflow-hidden bg-[#ffffff] p-4 pb-3 text-center">
                 <span className="block text-2xl font-black tracking-tight text-brand-700">{s.v}</span>
-                <span className="mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#5b5f85]">{s.l}</span>
+                <span className="mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#7c5c43]">{s.l}</span>
                 <span aria-hidden className="mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-brand-600 via-gold to-popblue" />
               </div>
             ))}
@@ -147,8 +147,8 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full bg-gradient-to-r from-brand-600 via-gold to-popblue px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-white shadow-[0_16px_38px_-14px_rgba(90,67,216,0.6)]">Handpicked for you</p>
-            <h2 className="mt-3 text-3xl font-black tracking-tight text-[#221d54]">Featured <span className="bg-gradient-to-r from-brand-700 to-popblue-deep bg-clip-text text-transparent">Picks</span></h2>
+            <p className="inline-block rounded-full bg-gradient-to-r from-brand-600 via-gold to-popblue px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-white shadow-[0_16px_38px_-14px_rgba(192,90,22,0.6)]">Handpicked for you</p>
+            <h2 className="mt-3 text-3xl font-black tracking-tight text-[#2c1a0e]">Featured <span className="bg-gradient-to-r from-brand-700 to-popblue-deep bg-clip-text text-transparent">Picks</span></h2>
             <span className="zigzag mt-3 block w-44" aria-hidden />
           </div>
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
@@ -169,7 +169,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                   <span className="starburst absolute -right-1 -top-1 flex h-16 w-16 items-center justify-center p-4 text-center text-[11px] font-black leading-tight">-{discountPct(p)}%</span>
                   <span aria-hidden className="pop-stripes absolute inset-x-0 bottom-0 h-2 border-t border-brand-600/20" />
                 </div>
-                <div className="p-3.5 text-left"><p className="truncate text-sm font-bold tracking-tight text-[#221d54]">{p.name}</p><p className="mt-1 text-base font-extrabold tracking-tight text-brand-700">{tk(p.price)} <span className="text-xs font-medium text-[#5b5f85] line-through">{tk(p.oldPrice)}</span></p></div>
+                <div className="p-3.5 text-left"><p className="truncate text-sm font-bold tracking-tight text-[#2c1a0e]">{p.name}</p><p className="mt-1 text-base font-extrabold tracking-tight text-brand-700">{tk(p.price)} <span className="text-xs font-medium text-[#7c5c43] line-through">{tk(p.oldPrice)}</span></p></div>
               </motion.div>
             ))}
           </div>

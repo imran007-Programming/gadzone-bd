@@ -1,29 +1,29 @@
 @import "tailwindcss";
 
 @theme {
-  /* Aurora Pulse: violet + electric lime + cyan on cool pearl. */
-  --color-brand-50: #f4f3ff;
-  --color-brand-100: #e9e7ff;
-  --color-brand-200: #d9d4fe;
-  --color-brand-300: #b7a8fc;
-  --color-brand-400: #937cf9;
-  --color-brand-500: #6f5cec;
-  --color-brand-600: #5a43d8;
-  --color-brand-700: #4a34b3;
-  --color-brand-800: #3d2c94;
-  --color-brand-900: #332a72;
-  --color-brand-950: #221b52;
-  --color-brand: #5a43d8;
-  --color-brand-dark: #4a34b3;
-  --color-brand-deep: #1c1747;
-  --color-gold: #84cc16;
-  --color-gold-deep: #4d7c0f;
-  --color-gold-soft: #ecfccb;
-  --color-ink: #221d54;
-  --color-paper: #f3f2fa;
-  --color-popblue: #06b6d4;
-  --color-popblue-deep: #0e7490;
-  --color-popblue-soft: #d3f4fd;
+  /* Ember Kiln: burnt orange + honey amber + glaze teal on warm cream. */
+  --color-brand-50: #fdf4e9;
+  --color-brand-100: #fae6d0;
+  --color-brand-200: #f5cfa4;
+  --color-brand-300: #eeb276;
+  --color-brand-400: #e48a48;
+  --color-brand-500: #d96f26;
+  --color-brand-600: #c05a16;
+  --color-brand-700: #9c4612;
+  --color-brand-800: #7d3a13;
+  --color-brand-900: #652f14;
+  --color-brand-950: #3f1d0b;
+  --color-brand: #c05a16;
+  --color-brand-dark: #9c4612;
+  --color-brand-deep: #3f1d0b;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #b45309;
+  --color-gold-soft: #fef3c7;
+  --color-ink: #2c1a0e;
+  --color-paper: #faf4e8;
+  --color-popblue: #0d9488;
+  --color-popblue-deep: #0f766e;
+  --color-popblue-soft: #ccfbf1;
 }
 
 html { scroll-behavior: smooth; }
@@ -38,252 +38,243 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #f3f2fa;
+  background: #faf4e8;
   background-image:
-    radial-gradient(ellipse 85% 30% at 50% -10%, rgba(111, 92, 236, 0.18), transparent),
-    radial-gradient(ellipse 65% 24% at 92% 106%, rgba(6, 182, 212, 0.12), transparent),
-    radial-gradient(ellipse 50% 22% at 6% 60%, rgba(132, 204, 22, 0.10), transparent),
-    radial-gradient(rgba(90, 67, 216, 0.10) 1.4px, transparent 2px);
-  background-size: auto, auto, auto, 26px 26px;
-  color: #221d54;
+    radial-gradient(ellipse 90% 32% at 50% -12%, rgba(217, 111, 38, 0.20), transparent),
+    radial-gradient(ellipse 60% 26% at 94% 104%, rgba(13, 148, 136, 0.10), transparent),
+    radial-gradient(ellipse 52% 24% at 4% 58%, rgba(245, 158, 11, 0.12), transparent),
+    radial-gradient(rgba(192, 90, 22, 0.10) 1.5px, transparent 2px);
+  background-size: auto, auto, auto, 30px 30px;
+  color: #2c1a0e;
 }
-::selection { background: #5a43d8; color: #ffffff; }
+::selection { background: #c05a16; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: #5a43d8; border-radius: 8px; border: 2px solid #f3f2fa; }
-::-webkit-scrollbar-track { background: #d5d3ee; }
+::-webkit-scrollbar-thumb { background: #c05a16; border-radius: 8px; border: 2px solid #faf4e8; }
+::-webkit-scrollbar-track { background: #e9dcc6; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Pulse rings: concentric aurora waves expanding and fading. */
-@keyframes aurora-pulse {
+/* Kiln rings: concentric ember waves expanding and fading. */
+@keyframes ember-ring {
   0% { transform: scale(0.55); opacity: 0.85; }
   100% { transform: scale(1.5); opacity: 0; }
 }
-.pop-fall { animation: aurora-pulse 5.2s ease-out infinite; }
+.pop-fall { animation: ember-ring 5.2s ease-out infinite; }
 
-/* Aurora drift: slow lateral shimmer for glow washes. */
-@keyframes aurora-drift {
+/* Kiln shimmer: slow lateral sway for glow washes. */
+@keyframes ember-drift {
   0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.55; }
   50% { transform: translate3d(3vw, -1rem, 0) scale(1.12); opacity: 0.9; }
 }
-.pop-drift { animation: aurora-drift 14s ease-in-out infinite; }
+.pop-drift { animation: ember-drift 14s ease-in-out infinite; }
 
-/* Aurora bob: gentle vertical float for badges. */
-@keyframes aurora-bob {
-  0%, 100% { transform: translateY(0) rotate(-2deg); }
-  50% { transform: translateY(-10px) rotate(2deg); }
+/* Kiln flicker: gentle bob with a warm tilt. */
+@keyframes ember-bob {
+  0%, 100% { transform: translateY(0) rotate(2deg); }
+  50% { transform: translateY(-10px) rotate(-2deg); }
 }
-.pop-bob { animation: aurora-bob 5.5s ease-in-out infinite; }
+.pop-bob { animation: ember-bob 5.5s ease-in-out infinite; }
 
-/* Aurora orbit: slow rotation for the hero's ring stack. */
-@keyframes aurora-spin {
+/* Kiln orbit: slow rotation for the hero's ring stack. */
+@keyframes ember-spin {
   to { transform: rotate(-360deg); }
 }
-.pop-spin { animation: aurora-spin 60s linear infinite; }
+.pop-spin { animation: ember-spin 60s linear infinite; }
 
-/* Aurora ticker: infinite marquee for the pulse strip. */
-@keyframes aurora-ticker {
+/* Kiln ticker: infinite marquee for the ember strip. */
+@keyframes ember-ticker {
   to { transform: translateX(-50%); }
 }
-.pop-ticker { animation: aurora-ticker 26s linear infinite; }
+.pop-ticker { animation: ember-ticker 26s linear infinite; }
 
-/* Pulse band: flowing violet → purple → cyan gradient. */
+/* Kiln band: flowing terracotta → amber → teal gradient. */
 .pop-stripes {
-  background-image: linear-gradient(120deg, #5a43d8, #7c3aed 45%, #06b6d4 90%);
+  background-image: linear-gradient(120deg, #c05a16, #f59e0b 48%, #0d9488 92%);
 }
 
-/* Pulse card: frosted glass card with a soft aurora shadow. */
+/* Kiln card: solid warm-white card with an offset brick shadow. */
 .pop-lift {
-  border: 1px solid rgba(90, 67, 216, 0.16);
-  border-radius: 1.375rem;
-  background: rgba(255, 255, 255, 0.78);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  box-shadow: 0 18px 40px -22px rgba(58, 48, 168, 0.35), 0 2px 6px -2px rgba(58, 48, 168, 0.12);
+  border: 2px solid rgba(124, 58, 19, 0.28);
+  border-radius: 1rem;
+  background: #fffdf8;
+  box-shadow: 5px 5px 0 0 rgba(124, 58, 19, 0.9), 0 18px 34px -20px rgba(124, 58, 19, 0.4);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
 }
 .pop-lift:hover {
-  transform: translateY(-5px);
-  border-color: rgba(90, 67, 216, 0.38);
-  box-shadow: 0 28px 56px -24px rgba(90, 67, 216, 0.5), 0 0 0 1px rgba(132, 204, 22, 0.25);
+  transform: translate(-2px, -4px);
+  border-color: rgba(192, 90, 22, 0.55);
+  box-shadow: 7px 7px 0 0 rgba(192, 90, 22, 0.9), 0 24px 44px -20px rgba(192, 90, 22, 0.5);
 }
 
-/* Pulse panel: shared by modals and drawers. */
+/* Kiln panel: shared by modals and drawers. */
 .pop-glass {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 253, 248, 0.94);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(90, 67, 216, 0.2);
-  box-shadow: 0 32px 70px -28px rgba(58, 48, 168, 0.5);
+  border: 2px solid rgba(124, 58, 19, 0.3);
+  border-radius: 1rem;
+  box-shadow: 6px 6px 0 0 rgba(124, 58, 19, 0.55), 0 30px 60px -28px rgba(124, 58, 19, 0.5);
 }
 
-/* Pulse badge: round electric-lime badge with violet ring text. */
+/* Kiln badge: round honey-amber medallion with cocoa double ring. */
 .starburst {
   border-radius: 9999px;
-  border: 2px solid #221d54;
-  background: radial-gradient(circle at 30% 28%, #bef264, #84cc16 62%, #4d7c0f);
-  color: #1c1747;
-  box-shadow: 0 12px 26px -10px rgba(132, 204, 22, 0.8);
+  border: 2px solid #2c1a0e;
+  outline: 3px dashed rgba(180, 83, 9, 0.55);
+  outline-offset: 3px;
+  background: radial-gradient(circle at 32% 28%, #fde68a, #f59e0b 60%, #b45309);
+  color: #2c1a0e;
+  box-shadow: 0 12px 26px -10px rgba(245, 158, 11, 0.85);
 }
 
-/* Pulse grain: fine violet dot texture for hero bands. */
+/* Kiln grain: fine terracotta dot texture for hero bands. */
 .halftone {
-  background-image: radial-gradient(rgba(90, 67, 216, 0.12) 1.6px, transparent 2.2px);
+  background-image: radial-gradient(rgba(192, 90, 22, 0.14) 1.6px, transparent 2.2px);
   background-size: 20px 20px;
 }
 
-/* Wave divider: alternating violet/lime/cyan diagonal slashes. */
+/* Kiln tile divider: alternating terracotta/amber/teal diagonal slashes. */
 .zigzag {
   height: 18px;
   background-image:
-    repeating-linear-gradient(115deg, #5a43d8 0 10px, #84cc16 10px 20px, #06b6d4 20px 30px);
+    repeating-linear-gradient(115deg, #c05a16 0 10px, #f59e0b 10px 20px, #0d9488 20px 30px);
 }
 
-/* Pulse awning: scalloped violet → lime band. */
+/* Kiln awning: scalloped terracotta → amber band. */
 .bazaar-awning {
   background-image:
-    radial-gradient(circle at 10px 0px, #6f5cec 6px, transparent 7.5px),
-    radial-gradient(circle at 30px 0px, #84cc16 6px, transparent 7.5px),
-    linear-gradient(180deg, #e9e7ff, #ecfccb);
+    radial-gradient(circle at 10px 0px, #d96f26 6px, transparent 7.5px),
+    radial-gradient(circle at 30px 0px, #f59e0b 6px, transparent 7.5px),
+    linear-gradient(180deg, #fae6d0, #fef3c7);
   background-size: 40px 18px, 40px 18px, auto;
   background-repeat: repeat-x;
   background-position: 0 100%, 0 100%, 0 0;
 }
 
-/* Legacy aliases kept so untouched components still render — all pulse-styled. */
+/* Legacy aliases kept so untouched components still render — all kiln-styled. */
 .lagoon-lift {
-  border: 1px solid rgba(90, 67, 216, 0.16);
-  border-radius: 1.375rem;
-  background: rgba(255, 255, 255, 0.78);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  box-shadow: 0 18px 40px -22px rgba(58, 48, 168, 0.35), 0 2px 6px -2px rgba(58, 48, 168, 0.12);
+  border: 2px solid rgba(124, 58, 19, 0.28);
+  border-radius: 1rem;
+  background: #fffdf8;
+  box-shadow: 5px 5px 0 0 rgba(124, 58, 19, 0.9), 0 18px 34px -20px rgba(124, 58, 19, 0.4);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
 }
 .lagoon-lift:hover {
-  transform: translateY(-5px);
-  border-color: rgba(90, 67, 216, 0.38);
-  box-shadow: 0 28px 56px -24px rgba(90, 67, 216, 0.5), 0 0 0 1px rgba(132, 204, 22, 0.25);
+  transform: translate(-2px, -4px);
+  border-color: rgba(192, 90, 22, 0.55);
+  box-shadow: 7px 7px 0 0 rgba(192, 90, 22, 0.9), 0 24px 44px -20px rgba(192, 90, 22, 0.5);
 }
 .stamp-perf {
-  border: 2px dashed #4d7c0f;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 1rem;
-  box-shadow: 0 14px 30px -18px rgba(58, 48, 168, 0.4);
+  border: 2px dashed #b45309;
+  background: #fffdf8;
+  border-radius: 0.875rem;
+  box-shadow: 4px 4px 0 0 rgba(124, 58, 19, 0.7);
 }
 .ember-glow {
-  border: 1px solid rgba(90, 67, 216, 0.16);
-  border-radius: 1.375rem;
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  box-shadow: 0 18px 40px -22px rgba(58, 48, 168, 0.35), 0 8px 28px -12px rgba(90, 67, 216, 0.45);
-  transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+  border: 2px solid rgba(124, 58, 19, 0.28);
+  border-radius: 1rem;
+  background: #fffdf8;
+  box-shadow: 5px 5px 0 0 rgba(124, 58, 19, 0.9), 0 16px 36px -18px rgba(217, 111, 38, 0.55);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
 }
 .ember-glow:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 30px 60px -24px rgba(90, 67, 216, 0.55), 0 0 0 1px rgba(6, 182, 212, 0.3);
+  transform: translate(-2px, -4px);
+  box-shadow: 7px 7px 0 0 rgba(192, 90, 22, 0.9), 0 0 0 1px rgba(13, 148, 136, 0.35);
 }
 .ripple-glow {
-  border: 1px solid rgba(90, 67, 216, 0.16);
-  border-radius: 1.375rem;
-  background: rgba(255, 255, 255, 0.78);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  box-shadow: 0 18px 40px -22px rgba(58, 48, 168, 0.35);
-  transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+  border: 2px solid rgba(124, 58, 19, 0.24);
+  border-radius: 1rem;
+  background: #fffdf8;
+  box-shadow: 5px 5px 0 0 rgba(124, 58, 19, 0.8);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
 }
 .ripple-glow:hover {
-  transform: translateY(-5px);
-  border-color: rgba(90, 67, 216, 0.38);
-  box-shadow: 0 28px 56px -24px rgba(90, 67, 216, 0.5);
+  transform: translate(-2px, -4px);
+  box-shadow: 7px 7px 0 0 rgba(192, 90, 22, 0.9);
 }
 .lagoon-glow {
-  border: 1px solid rgba(90, 67, 216, 0.16);
-  border-radius: 1.375rem;
-  background: rgba(255, 255, 255, 0.78);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  box-shadow: 0 18px 40px -22px rgba(58, 48, 168, 0.35);
-  transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+  border: 2px solid rgba(124, 58, 19, 0.24);
+  border-radius: 1rem;
+  background: #fffdf8;
+  box-shadow: 5px 5px 0 0 rgba(124, 58, 19, 0.8);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
 }
 .lagoon-glow:hover {
-  transform: translateY(-5px);
-  border-color: rgba(90, 67, 216, 0.38);
-  box-shadow: 0 28px 56px -24px rgba(90, 67, 216, 0.5);
+  transform: translate(-2px, -4px);
+  box-shadow: 7px 7px 0 0 rgba(192, 90, 22, 0.9);
 }
 .sticker-lift {
-  border: 1px solid rgba(90, 67, 216, 0.22);
-  border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 12px 26px -16px rgba(58, 48, 168, 0.45);
+  border: 2px solid rgba(124, 58, 19, 0.3);
+  border-radius: 0.875rem;
+  background: #fffdf8;
+  box-shadow: 4px 4px 0 0 rgba(124, 58, 19, 0.8);
   transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 .sticker-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 38px -18px rgba(90, 67, 216, 0.5);
+  transform: translate(-2px, -3px);
+  box-shadow: 6px 6px 0 0 rgba(192, 90, 22, 0.9);
 }
 .neon-lift {
-  border: 1px solid rgba(90, 67, 216, 0.16);
-  border-radius: 1.375rem;
-  background: rgba(255, 255, 255, 0.82);
-  box-shadow: 0 18px 40px -22px rgba(58, 48, 168, 0.35), 0 10px 30px -12px rgba(132, 204, 22, 0.5);
+  border: 2px solid rgba(124, 58, 19, 0.24);
+  border-radius: 1rem;
+  background: #fffdf8;
+  box-shadow: 5px 5px 0 0 rgba(124, 58, 19, 0.8), 0 10px 30px -12px rgba(245, 158, 11, 0.55);
 }
 .lagoon-glass {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 253, 248, 0.92);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(90, 67, 216, 0.2);
-  border-radius: 1.375rem;
-  box-shadow: 0 32px 70px -28px rgba(58, 48, 168, 0.5);
+  border: 2px solid rgba(124, 58, 19, 0.3);
+  border-radius: 1rem;
+  box-shadow: 6px 6px 0 0 rgba(124, 58, 19, 0.55);
 }
 .espresso-glass {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 253, 248, 0.92);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(90, 67, 216, 0.2);
-  border-radius: 1.375rem;
-  box-shadow: 0 32px 70px -28px rgba(58, 48, 168, 0.5);
+  border: 2px solid rgba(124, 58, 19, 0.3);
+  border-radius: 1rem;
+  box-shadow: 6px 6px 0 0 rgba(124, 58, 19, 0.55);
 }
 .twilight-glass {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 253, 248, 0.92);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(90, 67, 216, 0.2);
-  border-radius: 1.375rem;
-  box-shadow: 0 32px 70px -28px rgba(58, 48, 168, 0.5);
+  border: 2px solid rgba(124, 58, 19, 0.3);
+  border-radius: 1rem;
+  box-shadow: 6px 6px 0 0 rgba(124, 58, 19, 0.55);
 }
 .night-glass {
-  background: rgba(28, 23, 71, 0.72);
+  background: rgba(63, 29, 11, 0.88);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(147, 124, 249, 0.35);
-  border-radius: 1.375rem;
-  box-shadow: 0 32px 70px -28px rgba(28, 23, 71, 0.7);
+  border: 2px solid rgba(228, 138, 72, 0.4);
+  border-radius: 1rem;
+  box-shadow: 6px 6px 0 0 rgba(0, 0, 0, 0.45);
 }
 .mist-glass {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 253, 248, 0.72);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(90, 67, 216, 0.16);
-  border-radius: 1.375rem;
-  box-shadow: 0 24px 54px -26px rgba(58, 48, 168, 0.45);
+  border: 2px solid rgba(124, 58, 19, 0.22);
+  border-radius: 1rem;
+  box-shadow: 4px 4px 0 0 rgba(124, 58, 19, 0.5);
 }
-.rain-fall { animation: aurora-pulse 5.2s ease-out infinite; }
-.rain-fleck { animation: aurora-pulse 5.2s ease-out infinite; }
-.ember-rise { animation: aurora-pulse 5.2s ease-out infinite; }
-.bubble-rise { animation: aurora-pulse 5.2s ease-out infinite; }
-.spark-rise { animation: aurora-pulse 5.2s ease-out infinite; }
-.lagoon-drift { animation: aurora-drift 14s ease-in-out infinite; }
-.current-drift { animation: aurora-drift 14s ease-in-out infinite; }
-.zephyr-drift { animation: aurora-drift 14s ease-in-out infinite; }
-.mist-drift { animation: aurora-drift 14s ease-in-out infinite; }
-.bazaar-drift { animation: aurora-drift 14s ease-in-out infinite; }
-.buoy-breathe { animation: aurora-bob 5.5s ease-in-out infinite; }
-.tide-breathe { animation: aurora-bob 5.5s ease-in-out infinite; }
-.hearth-breathe { animation: aurora-bob 5.5s ease-in-out infinite; }
-.pool-breathe { animation: aurora-bob 5.5s ease-in-out infinite; }
-.tide-spin { animation: aurora-spin 60s linear infinite; }
-.sun-spin { animation: aurora-spin 60s linear infinite; }
-.ripple-spin { animation: aurora-spin 60s linear infinite; }
-.ring-orbit { animation: aurora-spin 60s linear infinite; }
+.rain-fall { animation: ember-ring 5.2s ease-out infinite; }
+.rain-fleck { animation: ember-ring 5.2s ease-out infinite; }
+.ember-rise { animation: ember-ring 5.2s ease-out infinite; }
+.bubble-rise { animation: ember-ring 5.2s ease-out infinite; }
+.spark-rise { animation: ember-ring 5.2s ease-out infinite; }
+.lagoon-drift { animation: ember-drift 14s ease-in-out infinite; }
+.current-drift { animation: ember-drift 14s ease-in-out infinite; }
+.zephyr-drift { animation: ember-drift 14s ease-in-out infinite; }
+.mist-drift { animation: ember-drift 14s ease-in-out infinite; }
+.bazaar-drift { animation: ember-drift 14s ease-in-out infinite; }
+.buoy-breathe { animation: ember-bob 5.5s ease-in-out infinite; }
+.tide-breathe { animation: ember-bob 5.5s ease-in-out infinite; }
+.hearth-breathe { animation: ember-bob 5.5s ease-in-out infinite; }
+.pool-breathe { animation: ember-bob 5.5s ease-in-out infinite; }
+.tide-spin { animation: ember-spin 60s linear infinite; }
+.sun-spin { animation: ember-spin 60s linear infinite; }
+.ripple-spin { animation: ember-spin 60s linear infinite; }
+.ring-orbit { animation: ember-spin 60s linear infinite; }
