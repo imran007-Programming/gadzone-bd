@@ -1,29 +1,29 @@
 @import "tailwindcss";
 
 @theme {
-  /* Sunbaked Clay: terracotta + sand + olive — original earthy palette */
-  --color-brand-50: #faf0e2;
-  --color-brand-100: #f6e3c8;
-  --color-brand-200: #efcfa4;
-  --color-brand-300: #e4b07c;
-  --color-brand-400: #e0784a;
-  --color-brand-500: #2563eb;
-  --color-brand-600: #96421e;
-  --color-brand-700: #8a3a1a;
-  --color-brand-800: #1e3a8a;
-  --color-brand-900: #5e2210;
-  --color-brand-950: #0f172a;
-  --color-brand: #2563eb;
-  --color-brand-dark: #1e3a8a;
-  --color-brand-deep: #0f172a;
-  --color-gold: #7a8b3f;
-  --color-gold-deep: #5c6c2c;
-  --color-gold-soft: #eef0dd;
-  --color-ink: #2b1d14;
-  --color-paper: #faf3e8;
-  --color-popblue: #d9a441;
-  --color-popblue-deep: #a87c24;
-  --color-popblue-soft: #f8ecd4;
+  /* Glacier Aurora: glacial teal + aurora violet/pink over ice-white paper */
+  --color-brand-50: #f0faf9;
+  --color-brand-100: #dcf3f1;
+  --color-brand-200: #b9e8e2;
+  --color-brand-300: #8ad8ce;
+  --color-brand-400: #52c1b5;
+  --color-brand-500: #0d9488;
+  --color-brand-600: #0f766e;
+  --color-brand-700: #115e59;
+  --color-brand-800: #134e4a;
+  --color-brand-900: #143f3c;
+  --color-brand-950: #0b2422;
+  --color-brand: #0d9488;
+  --color-brand-dark: #115e59;
+  --color-brand-deep: #0b2422;
+  --color-gold: #8b5cf6;
+  --color-gold-deep: #6d28d9;
+  --color-gold-soft: #ede9fe;
+  --color-ink: #12262b;
+  --color-paper: #f2faf9;
+  --color-popblue: #ec4899;
+  --color-popblue-deep: #be185d;
+  --color-popblue-soft: #fbe3f0;
 }
 
 html { scroll-behavior: smooth; }
@@ -38,220 +38,225 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #faf3e8;
+  background: #f2faf9;
   background-image:
-    radial-gradient(ellipse 90% 32% at 50% -12%, rgba(224, 120, 74, 0.14), transparent),
-    radial-gradient(ellipse 70% 26% at 88% 108%, rgba(217, 164, 65, 0.10), transparent),
-    radial-gradient(circle at 2px 2px, rgba(180, 83, 42, 0.08) 1.6px, transparent 2.2px);
-  background-size: auto, auto, 24px 24px;
-  color: #2b1d14;
+    radial-gradient(ellipse 90% 32% at 50% -12%, rgba(20, 184, 166, 0.16), transparent),
+    radial-gradient(ellipse 70% 26% at 88% 108%, rgba(139, 92, 246, 0.10), transparent),
+    radial-gradient(ellipse 55% 24% at 8% 62%, rgba(236, 72, 153, 0.07), transparent),
+    radial-gradient(circle at 2px 2px, rgba(13, 148, 136, 0.09) 1.6px, transparent 2.2px);
+  background-size: auto, auto, auto, 26px 26px;
+  color: #12262b;
 }
-::selection { background: #2563eb; color: #faf3e8; }
+::selection { background: #0d9488; color: #f2faf9; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 5px; border: 2px solid #faf3e8; }
-::-webkit-scrollbar-track { background: #f3e2c9; }
+::-webkit-scrollbar-thumb { background: #0d9488; border-radius: 5px; border: 2px solid #f2faf9; }
+::-webkit-scrollbar-track { background: #d8edeb; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Clay fall: sun-mote sand grains drifting gently down with a soft sway. */
-@keyframes clay-fall {
+/* Aurora snowfall: ice crystals drifting gently down with a soft sway. */
+@keyframes aurora-fall {
   0% { transform: translate3d(0, -10vh, 0); opacity: 0; }
-  18% { opacity: 0.85; }
+  18% { opacity: 0.9; }
   50% { transform: translate3d(-3vw, 44vh, 0); }
-  82% { opacity: 0.7; }
+  82% { opacity: 0.75; }
   100% { transform: translate3d(3vw, 94vh, 0); opacity: 0; }
 }
-.pop-fall { animation: clay-fall 12s ease-in-out infinite; }
+.pop-fall { animation: aurora-fall 12s ease-in-out infinite; }
 
-/* Clay drift: slow sideways float for warm gradient washes. */
-@keyframes clay-drift {
+/* Aurora drift: slow sideways float for cool aurora washes. */
+@keyframes aurora-drift {
   0%, 100% { transform: translate3d(-4vw, 0, 0); opacity: 0.4; }
   50% { transform: translate3d(4vw, -0.5rem, 0); opacity: 0.85; }
 }
-.pop-drift { animation: clay-drift 17s ease-in-out infinite; }
+.pop-drift { animation: aurora-drift 17s ease-in-out infinite; }
 
-/* Clay bob: gentle bob for clay-seal badges. */
-@keyframes clay-bob {
+/* Aurora bob: gentle bob for frost badges. */
+@keyframes aurora-bob {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
 }
-.pop-bob { animation: clay-bob 7s ease-in-out infinite; }
+.pop-bob { animation: aurora-bob 7s ease-in-out infinite; }
 
-/* Clay spin: slow rotation for the hero's clay medallion. */
-@keyframes clay-spin {
+/* Aurora spin: slow rotation for the hero's aurora halo ring. */
+@keyframes aurora-spin {
   to { transform: rotate(360deg); }
 }
-.pop-spin { animation: clay-spin 48s linear infinite; }
+.pop-spin { animation: aurora-spin 48s linear infinite; }
 
-/* Clay lift: embossed clay-tile card — soft inner highlight + warm drop shadow. */
+/* Frost lift: glacial card — crisp white inset highlight + cool teal drop shadow. */
 .pop-lift {
-  border: 1px solid #e8d3b0;
+  border: 1px solid #d3e8e4;
+  border-radius: 1.25rem;
   box-shadow:
-    inset 2px 2px 0 rgba(255, 255, 255, 0.45),
-    8px 12px 28px -10px rgba(124, 45, 18, 0.35);
+    inset 2px 2px 0 rgba(255, 255, 255, 0.7),
+    inset -2px -2px 0 rgba(13, 148, 136, 0.06),
+    10px 14px 30px -12px rgba(15, 118, 110, 0.30);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .pop-lift:hover {
   transform: translateY(-4px);
   box-shadow:
-    inset 2px 2px 0 rgba(255, 255, 255, 0.5),
-    12px 18px 36px -12px rgba(124, 45, 18, 0.45);
+    inset 2px 2px 0 rgba(255, 255, 255, 0.75),
+    inset -2px -2px 0 rgba(13, 148, 136, 0.08),
+    14px 20px 38px -12px rgba(15, 118, 110, 0.38);
 }
 
-/* Clay glass shared by modals and drawers. */
+/* Aurora glass shared by modals and drawers. */
 .pop-glass {
-  background: linear-gradient(180deg, rgba(255, 253, 248, 0.97), rgba(250, 243, 232, 0.97));
+  background: linear-gradient(180deg, rgba(252, 255, 255, 0.97), rgba(242, 250, 249, 0.97));
   backdrop-filter: blur(14px);
-  border: 1px solid #e8d3b0;
-  box-shadow: 0 18px 44px -18px rgba(124, 45, 18, 0.35);
+  border: 1px solid #d3e8e4;
+  box-shadow: 0 18px 44px -18px rgba(15, 118, 110, 0.30);
 }
 
-/* Clay seal: round terracotta seal badge (replaces the old starburst). */
+/* Aurora seal: round badge sweeping teal → violet → pink (replaces the old starburst). */
 .starburst {
   border-radius: 9999px;
-  background: radial-gradient(circle at 32% 28%, #e0784a, #2563eb 62%, #8a3a1a);
-  color: #faf3e8;
+  background: conic-gradient(from 210deg, #0d9488, #8b5cf6, #ec4899, #0d9488);
+  color: #fcffff;
   box-shadow:
-    0 8px 18px -6px rgba(124, 45, 18, 0.55),
+    0 8px 18px -6px rgba(15, 118, 110, 0.5),
     inset 0 2px 3px rgba(255, 255, 255, 0.5);
 }
 
-/* Sand grain: subtle baked-clay texture for hero bands. */
+/* Frost grain: fine ice-crystal texture for hero bands. */
 .halftone {
-  background-image: radial-gradient(rgba(180, 83, 42, 0.10) 1.8px, transparent 2.4px);
+  background-image: radial-gradient(rgba(13, 148, 136, 0.10) 1.8px, transparent 2.4px);
   background-size: 18px 18px;
 }
 
-/* Dune divider: soft sand-dune wave strip. */
+/* Frost wave: cool aurora wave divider. */
 .zigzag {
   height: 22px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='22' viewBox='0 0 120 22'%3E%3Cpath d='M0 13 Q 15 5 30 13 T 60 13 T 90 13 T 120 13 V22 H0 Z' fill='%23e0784a' opacity='0.5'/%3E%3Cpath d='M0 16 Q 15 9 30 16 T 60 16 T 90 16 T 120 16 V22 H0 Z' fill='%23b4532a' opacity='0.7'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='22' viewBox='0 0 120 22'%3E%3Cpath d='M0 13 Q 15 5 30 13 T 60 13 T 90 13 T 120 13 V22 H0 Z' fill='%230d9488' opacity='0.45'/%3E%3Cpath d='M0 16 Q 15 9 30 16 T 60 16 T 90 16 T 120 16 V22 H0 Z' fill='%238b5cf6' opacity='0.55'/%3E%3C/svg%3E");
   background-repeat: repeat-x;
   background-size: 120px 22px;
 }
 
-/* Legacy aliases kept so untouched components still render — all clay-styled. */
+/* Legacy aliases kept so untouched components still render — all aurora-styled. */
 .lagoon-lift {
-  border: 1px solid #e8d3b0;
+  border: 1px solid #d3e8e4;
+  border-radius: 1.25rem;
   box-shadow:
-    inset 2px 2px 0 rgba(255, 255, 255, 0.45),
-    8px 12px 28px -10px rgba(124, 45, 18, 0.35);
+    inset 2px 2px 0 rgba(255, 255, 255, 0.7),
+    10px 14px 30px -12px rgba(15, 118, 110, 0.30);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .lagoon-lift:hover {
   transform: translateY(-4px);
   box-shadow:
-    inset 2px 2px 0 rgba(255, 255, 255, 0.5),
-    12px 18px 36px -12px rgba(124, 45, 18, 0.45);
+    inset 2px 2px 0 rgba(255, 255, 255, 0.75),
+    14px 20px 38px -12px rgba(15, 118, 110, 0.38);
 }
 .stamp-perf {
-  border: 1px dashed #c9a06e;
+  border: 1px dashed #9fc4bd;
   box-shadow:
-    inset 2px 2px 0 rgba(255, 255, 255, 0.45),
-    8px 12px 28px -10px rgba(124, 45, 18, 0.35);
+    inset 2px 2px 0 rgba(255, 255, 255, 0.7),
+    10px 14px 30px -12px rgba(15, 118, 110, 0.30);
 }
 .ember-glow {
-  border: 1px solid #e8d3b0;
+  border: 1px solid #d3e8e4;
   box-shadow:
-    inset 2px 2px 0 rgba(255, 255, 255, 0.45),
-    0 10px 26px -10px rgba(180, 83, 42, 0.55);
+    inset 2px 2px 0 rgba(255, 255, 255, 0.7),
+    0 10px 26px -10px rgba(236, 72, 153, 0.45);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .ember-glow:hover {
   transform: translateY(-4px);
   box-shadow:
-    inset 2px 2px 0 rgba(255, 255, 255, 0.5),
-    0 16px 34px -12px rgba(180, 83, 42, 0.6);
+    inset 2px 2px 0 rgba(255, 255, 255, 0.75),
+    0 16px 34px -12px rgba(236, 72, 153, 0.5);
 }
 .ripple-glow {
-  border: 1px solid #e8d3b0;
+  border: 1px solid #d3e8e4;
   box-shadow:
-    inset 2px 2px 0 rgba(255, 255, 255, 0.45),
-    8px 12px 28px -10px rgba(124, 45, 18, 0.35);
+    inset 2px 2px 0 rgba(255, 255, 255, 0.7),
+    10px 14px 30px -12px rgba(15, 118, 110, 0.30);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .ripple-glow:hover {
   transform: translateY(-4px);
   box-shadow:
-    inset 2px 2px 0 rgba(255, 255, 255, 0.5),
-    12px 18px 36px -12px rgba(124, 45, 18, 0.45);
+    inset 2px 2px 0 rgba(255, 255, 255, 0.75),
+    14px 20px 38px -12px rgba(15, 118, 110, 0.38);
 }
 .lagoon-glow {
-  border: 1px solid #e8d3b0;
+  border: 1px solid #d3e8e4;
   box-shadow:
-    inset 2px 2px 0 rgba(255, 255, 255, 0.45),
-    8px 12px 28px -10px rgba(124, 45, 18, 0.35);
+    inset 2px 2px 0 rgba(255, 255, 255, 0.7),
+    10px 14px 30px -12px rgba(15, 118, 110, 0.30);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .lagoon-glow:hover {
   transform: translateY(-4px);
   box-shadow:
-    inset 2px 2px 0 rgba(255, 255, 255, 0.5),
-    12px 18px 36px -12px rgba(124, 45, 18, 0.45);
+    inset 2px 2px 0 rgba(255, 255, 255, 0.75),
+    14px 20px 38px -12px rgba(15, 118, 110, 0.38);
 }
 .sticker-lift {
-  border: 1px solid #e8d3b0;
+  border: 1px solid #d3e8e4;
   box-shadow:
-    inset 2px 2px 0 rgba(255, 255, 255, 0.45),
-    6px 10px 22px -8px rgba(124, 45, 18, 0.38);
+    inset 2px 2px 0 rgba(255, 255, 255, 0.7),
+    6px 10px 22px -8px rgba(15, 118, 110, 0.32);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .sticker-lift:hover {
   transform: translateY(-3px);
   box-shadow:
-    inset 2px 2px 0 rgba(255, 255, 255, 0.5),
-    10px 14px 30px -10px rgba(124, 45, 18, 0.45);
+    inset 2px 2px 0 rgba(255, 255, 255, 0.75),
+    10px 14px 30px -10px rgba(15, 118, 110, 0.38);
 }
 .neon-lift {
-  border: 1px solid #e8d3b0;
+  border: 1px solid #d3e8e4;
   box-shadow:
-    inset 2px 2px 0 rgba(255, 255, 255, 0.45),
-    0 10px 26px -8px rgba(224, 120, 74, 0.55);
+    inset 2px 2px 0 rgba(255, 255, 255, 0.7),
+    0 10px 26px -8px rgba(139, 92, 246, 0.45);
 }
 .lagoon-glass {
-  background: linear-gradient(180deg, rgba(255, 253, 248, 0.97), rgba(250, 243, 232, 0.97));
+  background: linear-gradient(180deg, rgba(252, 255, 255, 0.97), rgba(242, 250, 249, 0.97));
   backdrop-filter: blur(14px);
-  border: 1px solid #e8d3b0;
-  box-shadow: 0 18px 44px -18px rgba(124, 45, 18, 0.35);
+  border: 1px solid #d3e8e4;
+  box-shadow: 0 18px 44px -18px rgba(15, 118, 110, 0.30);
 }
 .espresso-glass {
-  background: linear-gradient(180deg, rgba(255, 253, 248, 0.97), rgba(250, 243, 232, 0.97));
+  background: linear-gradient(180deg, rgba(252, 255, 255, 0.97), rgba(242, 250, 249, 0.97));
   backdrop-filter: blur(14px);
-  border: 1px solid #e8d3b0;
-  box-shadow: 0 18px 44px -18px rgba(124, 45, 18, 0.35);
+  border: 1px solid #d3e8e4;
+  box-shadow: 0 18px 44px -18px rgba(15, 118, 110, 0.30);
 }
 .twilight-glass {
-  background: linear-gradient(180deg, rgba(255, 253, 248, 0.97), rgba(250, 243, 232, 0.97));
+  background: linear-gradient(180deg, rgba(252, 255, 255, 0.97), rgba(242, 250, 249, 0.97));
   backdrop-filter: blur(14px);
-  border: 1px solid #e8d3b0;
-  box-shadow: 0 18px 44px -18px rgba(124, 45, 18, 0.35);
+  border: 1px solid #d3e8e4;
+  box-shadow: 0 18px 44px -18px rgba(15, 118, 110, 0.30);
 }
 .night-glass {
-  background: linear-gradient(180deg, rgba(255, 253, 248, 0.97), rgba(250, 243, 232, 0.97));
+  background: linear-gradient(180deg, rgba(252, 255, 255, 0.97), rgba(242, 250, 249, 0.97));
   backdrop-filter: blur(14px);
-  border: 1px solid #e8d3b0;
-  box-shadow: 0 18px 44px -18px rgba(124, 45, 18, 0.35);
+  border: 1px solid #d3e8e4;
+  box-shadow: 0 18px 44px -18px rgba(15, 118, 110, 0.30);
 }
 .mist-glass {
-  background: linear-gradient(180deg, rgba(255, 253, 248, 0.97), rgba(250, 243, 232, 0.97));
+  background: linear-gradient(180deg, rgba(252, 255, 255, 0.97), rgba(242, 250, 249, 0.97));
   backdrop-filter: blur(14px);
-  border: 1px solid #e8d3b0;
-  box-shadow: 0 18px 44px -18px rgba(124, 45, 18, 0.35);
+  border: 1px solid #d3e8e4;
+  box-shadow: 0 18px 44px -18px rgba(15, 118, 110, 0.30);
 }
-.rain-fall { animation: clay-fall 12s ease-in-out infinite; }
-.ember-rise { animation: clay-fall 12s ease-in-out infinite; }
-.bubble-rise { animation: clay-fall 12s ease-in-out infinite; }
-.spark-rise { animation: clay-fall 12s ease-in-out infinite; }
-.lagoon-drift { animation: clay-drift 17s ease-in-out infinite; }
-.current-drift { animation: clay-drift 17s ease-in-out infinite; }
-.zephyr-drift { animation: clay-drift 17s ease-in-out infinite; }
-.mist-drift { animation: clay-drift 17s ease-in-out infinite; }
-.bazaar-drift { animation: clay-drift 17s ease-in-out infinite; }
-.buoy-breathe { animation: clay-bob 7s ease-in-out infinite; }
-.tide-breathe { animation: clay-bob 7s ease-in-out infinite; }
-.hearth-breathe { animation: clay-bob 7s ease-in-out infinite; }
-.pool-breathe { animation: clay-bob 7s ease-in-out infinite; }
-.tide-spin { animation: clay-spin 48s linear infinite; }
-.sun-spin { animation: clay-spin 48s linear infinite; }
-.ripple-spin { animation: clay-spin 48s linear infinite; }
-.ring-orbit { animation: clay-spin 48s linear infinite; }
+.rain-fall { animation: aurora-fall 12s ease-in-out infinite; }
+.ember-rise { animation: aurora-fall 12s ease-in-out infinite; }
+.bubble-rise { animation: aurora-fall 12s ease-in-out infinite; }
+.spark-rise { animation: aurora-fall 12s ease-in-out infinite; }
+.lagoon-drift { animation: aurora-drift 17s ease-in-out infinite; }
+.current-drift { animation: aurora-drift 17s ease-in-out infinite; }
+.zephyr-drift { animation: aurora-drift 17s ease-in-out infinite; }
+.mist-drift { animation: aurora-drift 17s ease-in-out infinite; }
+.bazaar-drift { animation: aurora-drift 17s ease-in-out infinite; }
+.buoy-breathe { animation: aurora-bob 7s ease-in-out infinite; }
+.tide-breathe { animation: aurora-bob 7s ease-in-out infinite; }
+.hearth-breathe { animation: aurora-bob 7s ease-in-out infinite; }
+.pool-breathe { animation: aurora-bob 7s ease-in-out infinite; }
+.tide-spin { animation: aurora-spin 48s linear infinite; }
+.sun-spin { animation: aurora-spin 48s linear infinite; }
+.ripple-spin { animation: aurora-spin 48s linear infinite; }
+.ring-orbit { animation: aurora-spin 48s linear infinite; }
