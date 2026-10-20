@@ -26,11 +26,11 @@ export default function CategoryGrid({ category, onCategoryChange }: { category:
               whileHover={{ y: -4 }}
               whileTap={{ scale: 0.97 }}
               onClick={() => { onCategoryChange(c); document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" }); }}
-              className={`flex h-full w-full flex-col items-center gap-1.5 rounded-xl border-2 p-3 text-center shadow-sm transition-all hover:shadow-[0_12px_32px_-12px_rgba(20, 179, 166,0.35)] hover:ring-1 hover:ring-brand-400/50 sm:p-5 ${category === c ? "border-brand-400/60 bg-gradient-to-b from-brand-400/20 to-brand-400/5 shadow-[0_12px_32px_-12px_rgba(20, 179, 166,0.45)] ring-1 ring-brand-400/40" : "border-[#b9e4da] bg-[#ffffff] hover:border-gold-deep/60"}`}
+              className={`flex h-full w-full flex-col items-center gap-1.5 rounded-xl border-2 p-3 text-center shadow-sm transition-all hover:shadow-[0_12px_32px_-12px_rgba(214, 109, 42,0.35)] hover:ring-1 hover:ring-brand-400/50 sm:p-5 ${category === c ? "border-brand-400/60 bg-gradient-to-b from-brand-400/20 to-brand-400/5 shadow-[0_12px_32px_-12px_rgba(214, 109, 42,0.45)] ring-1 ring-brand-400/40" : "border-[#f0d3b3] bg-[#ffffff] hover:border-gold-deep/60"}`}
             >
-              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-brand-600 to-brand-900 ring-1 ring-gold/60 text-2xl shadow-[0_6px_18px_-6px_rgba(20, 179, 166,0.4)] ring-1 ring-brand-300/40 sm:h-14 sm:w-14 sm:text-3xl">{categoryIcons[c]}</span>
-              <span className="text-xs font-bold leading-tight tracking-tight text-[#07302b] sm:text-sm">{c === "All" ? "All" : c}</span>
-              <span className="hidden text-[11px] text-[#5a7570] sm:block">{categoryCounts[c]} products</span>
+              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-brand-600 to-brand-900 ring-1 ring-gold/60 text-2xl shadow-[0_6px_18px_-6px_rgba(214, 109, 42,0.4)] ring-1 ring-brand-300/40 sm:h-14 sm:w-14 sm:text-3xl">{categoryIcons[c]}</span>
+              <span className="text-xs font-bold leading-tight tracking-tight text-[#3a2318] sm:text-sm">{c === "All" ? "All" : c}</span>
+              <span className="hidden text-[11px] text-[#6f5a4b] sm:block">{categoryCounts[c]} products</span>
             </motion.button>
           </Reveal>
         ))}

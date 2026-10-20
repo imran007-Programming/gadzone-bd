@@ -1,24 +1,24 @@
 @import "tailwindcss";
 
 @theme {
-  /* tidal pine: deep pine teal on seafoam paper with sunset-amber pops — original palette */
-  --color-brand-50: #effdfa;
-  --color-brand-100: #c9faf2;
-  --color-brand-200: #97f3e6;
-  --color-brand-300: #5fe7d7;
-  --color-brand-400: #2ad2c2;
-  --color-brand-500: #14b3a6;
-  --color-brand-600: #0f948a;
-  --color-brand-700: #0f766e;
-  --color-brand-800: #115e59;
-  --color-brand-900: #134e4a;
-  --color-brand-950: #042f2e;
-  --color-brand: #14b3a6;
-  --color-brand-dark: #0f948a;
-  --color-brand-deep: #042f2e;
-  --color-gold: #f59e0b;
-  --color-gold-deep: #d97706;
-  --color-gold-soft: #fcd34d;
+  /* ember orchard: rust orange on warm cream paper with marigold pops — original palette */
+  --color-brand-50: #fdf5ef;
+  --color-brand-100: #f9e7d8;
+  --color-brand-200: #f3cdaa;
+  --color-brand-300: #ecae78;
+  --color-brand-400: #e28a4c;
+  --color-brand-500: #d66d2a;
+  --color-brand-600: #b8551e;
+  --color-brand-700: #93441c;
+  --color-brand-800: #75371d;
+  --color-brand-900: #5f2f1c;
+  --color-brand-950: #331608;
+  --color-brand: #d66d2a;
+  --color-brand-dark: #b8551e;
+  --color-brand-deep: #331608;
+  --color-gold: #f2a41f;
+  --color-gold-deep: #d97e06;
+  --color-gold-soft: #ffd166;
 }
 
 html { scroll-behavior: smooth; }
@@ -33,86 +33,89 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #f4faf8;
+  background: #fdf8f2;
   background-image:
-    radial-gradient(ellipse 90% 34% at 50% -12%, rgba(20, 179, 166, 0.10), transparent),
-    radial-gradient(ellipse 42% 28% at 92% 14%, rgba(245, 158, 11, 0.08), transparent),
-    radial-gradient(ellipse 42% 28% at 6% 30%, rgba(42, 210, 194, 0.08), transparent),
-    radial-gradient(rgba(20, 179, 166, 0.10) 1px, transparent 1.6px);
+    radial-gradient(ellipse 90% 34% at 50% -12%, rgba(214, 109, 42, 0.10), transparent),
+    radial-gradient(ellipse 42% 28% at 92% 14%, rgba(242, 164, 31, 0.10), transparent),
+    radial-gradient(ellipse 42% 28% at 6% 30%, rgba(226, 138, 76, 0.08), transparent),
+    radial-gradient(rgba(214, 109, 42, 0.10) 1px, transparent 1.6px);
   background-size: auto, auto, auto, 30px 30px;
-  color: #07302b;
+  color: #3a2318;
 }
-::selection { background: #f59e0b; color: #ffffff; }
+::selection { background: #f2a41f; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: #7fd6c9; border-radius: 5px; }
-::-webkit-scrollbar-track { background: #dcf3ec; }
+::-webkit-scrollbar-thumb { background: #e8a76f; border-radius: 5px; }
+::-webkit-scrollbar-track { background: #f7e6d4; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Bubble rise: hollow seafoam bubbles floating upward through the hero. */
-@keyframes bubble-rise {
-  0% { transform: translate3d(0, 6vh, 0) scale(0.7); opacity: 0; }
-  18% { opacity: 0.85; }
-  65% { opacity: 0.6; }
-  100% { transform: translate3d(1.6vw, -72vh, 0) scale(1.2); opacity: 0; }
+/* Spark rise: tiny ember sparks drifting upward through the hero. */
+@keyframes spark-rise {
+  0% { transform: translate3d(0, 5vh, 0) scale(0.6); opacity: 0; }
+  20% { opacity: 0.9; }
+  70% { opacity: 0.55; }
+  100% { transform: translate3d(-1.4vw, -68vh, 0) scale(1.15); opacity: 0; }
 }
-.bubble-rise { animation: bubble-rise 14s linear infinite; }
+.spark-rise { animation: spark-rise 13s linear infinite; }
 
-/* Current drift: thin current lines gliding horizontally across the hero. */
-@keyframes current-drift {
-  0%, 100% { transform: translate3d(-6vw, 0, 0); opacity: 0.35; }
-  50% { transform: translate3d(6vw, -0.6rem, 0); opacity: 0.9; }
+/* Zephyr drift: thin warm streaks gliding sideways like a harvest breeze. */
+@keyframes zephyr-drift {
+  0%, 100% { transform: translate3d(6vw, 0, 0); opacity: 0.35; }
+  50% { transform: translate3d(-6vw, -0.6rem, 0); opacity: 0.9; }
 }
-.current-drift { animation: current-drift 11s ease-in-out infinite; }
+.zephyr-drift { animation: zephyr-drift 10s ease-in-out infinite; }
 
-/* Tide breathe: slow breathing of the hero's shallow-water light pools. */
-@keyframes tide-breathe {
+/* Hearth breathe: slow breathing of the hero's warm hearth-light pools. */
+@keyframes hearth-breathe {
   0%, 100% { opacity: 0.45; transform: scale(1); }
-  50% { opacity: 0.85; transform: scale(1.18); }
+  50% { opacity: 0.9; transform: scale(1.16); }
 }
-.tide-breathe { animation: tide-breathe 8s ease-in-out infinite; }
+.hearth-breathe { animation: hearth-breathe 8.5s ease-in-out infinite; }
 
-/* Pine lift: soft pine-tinted shadow used by cards in the tidal theme. */
+/* Ember lift: warm cocoa-tinted shadow used by cards in the orchard theme. */
 .ember-glow {
   box-shadow:
-    0 18px 40px -20px rgba(7, 48, 43, 0.22),
-    0 0 0 1px rgba(20, 179, 166, 0.16);
+    0 18px 40px -20px rgba(51, 22, 8, 0.24),
+    0 0 0 1px rgba(214, 109, 42, 0.18);
 }
 .ember-glow:hover {
   box-shadow:
-    0 26px 54px -18px rgba(7, 48, 43, 0.28),
-    0 0 0 1px rgba(20, 179, 166, 0.42),
-    0 0 40px -8px rgba(20, 179, 166, 0.30);
+    0 26px 54px -18px rgba(51, 22, 8, 0.30),
+    0 0 0 1px rgba(214, 109, 42, 0.44),
+    0 0 40px -8px rgba(214, 109, 42, 0.30);
 }
 
-/* Seafoam glass shared by modals and drawers. */
+/* Cream glass shared by modals and drawers. */
 .espresso-glass {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(228, 246, 241, 0.98));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(251, 238, 226, 0.98));
   backdrop-filter: blur(14px);
 }
 
 /* Legacy aliases kept so untouched components still render. */
 .sticker-lift {
   box-shadow:
-    0 18px 40px -20px rgba(7, 48, 43, 0.22),
-    0 0 0 1px rgba(20, 179, 166, 0.16);
+    0 18px 40px -20px rgba(51, 22, 8, 0.24),
+    0 0 0 1px rgba(214, 109, 42, 0.18);
 }
 .sticker-lift:hover {
   box-shadow:
-    0 26px 54px -18px rgba(7, 48, 43, 0.28),
-    0 0 0 1px rgba(20, 179, 166, 0.42),
-    0 0 40px -8px rgba(20, 179, 166, 0.30);
+    0 26px 54px -18px rgba(51, 22, 8, 0.30),
+    0 0 0 1px rgba(214, 109, 42, 0.44),
+    0 0 40px -8px rgba(214, 109, 42, 0.30);
 }
 .twilight-glass {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(228, 246, 241, 0.98));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(251, 238, 226, 0.98));
   backdrop-filter: blur(14px);
 }
 .neon-lift {
   box-shadow:
-    0 18px 40px -20px rgba(7, 48, 43, 0.22),
-    0 0 0 1px rgba(20, 179, 166, 0.16);
+    0 18px 40px -20px rgba(51, 22, 8, 0.24),
+    0 0 0 1px rgba(214, 109, 42, 0.18);
 }
 .night-glass {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(228, 246, 241, 0.98));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(251, 238, 226, 0.98));
   backdrop-filter: blur(14px);
 }
+.bubble-rise { animation: spark-rise 13s linear infinite; }
+.current-drift { animation: zephyr-drift 10s ease-in-out infinite; }
+.tide-breathe { animation: hearth-breathe 8.5s ease-in-out infinite; }
