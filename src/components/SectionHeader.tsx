@@ -14,14 +14,20 @@ export default function SectionHeader({ accent, rest, subtitle, showViewAll = tr
     <Reveal>
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div className="max-w-xl">
-          <h2 className="flex items-center gap-3 text-[1.65rem] font-black leading-tight tracking-tight text-[#2e2118] sm:text-[2rem]">
+          <h2 className="flex items-center gap-3 text-[1.65rem] font-black leading-tight tracking-tight text-[#261d1a] sm:text-[2rem]">
             <span className="relative inline-flex h-5 w-5 items-center justify-center" aria-hidden>
               <span className="absolute h-5 w-5 rounded-full border-2 border-brand-400" />
               <span className="absolute h-2.5 w-2.5 rounded-full bg-gradient-to-br from-brand-400 to-brand-700 shadow-[0_0_12px_1px_rgba(149,83,196,0.6)]" />
             </span>
             <span><span className="bg-gradient-to-r from-brand-500 to-gold-deep bg-clip-text text-transparent">{accent}</span> {rest}</span>
           </h2>
-          {subtitle && <p className="mt-2.5 text-[15px] leading-relaxed text-[#8a7a63]">{subtitle}</p>}
+          {subtitle && <p className="mt-2.5 text-[15px] leading-relaxed text-[#8a7666]">{subtitle}</p>}
+          <span aria-hidden className="mt-3 flex items-center gap-1.5">
+            {["#c1121f", "#d99a2b", "#a30e19", "#d99a2b", "#c1121f"].map((c, i) => (
+              <span key={i} className="inline-block h-2 w-2 rounded-full" style={{ background: c }} />
+            ))}
+            <span className="ml-1 h-0 w-24 border-t-2 border-dashed border-brand-600/50" />
+          </span>
         </div>
         {showViewAll && (
           <button

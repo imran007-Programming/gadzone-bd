@@ -24,12 +24,12 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
       whileHover={reduce ? undefined : { y: -5 }}
       className="lagoon-glow group relative flex h-full flex-col overflow-hidden rounded-2xl border-2 border-brand-700/30 bg-[#ffffff] transition-all duration-300 hover:-translate-y-1.5"
     >
-      {/* sunband: alternating marigold, pine and terracotta tiles along the card's top edge */}
-      <div aria-hidden className="flex items-center gap-1.5 rounded-t-[14px] bg-white px-5 pt-3">
-        {["#f59e0b", "#1f8a74", "#c2410c", "#1f8a74", "#f59e0b"].map((c, i) => (
-          <span key={i} className="inline-block" style={{ width: 10 - Math.abs(i - 2) * 1.5, height: 10 - Math.abs(i - 2) * 1.5, borderRadius: 3, background: `linear-gradient(135deg, ${c}, ${c}77)` }} />
+      {/* perforation strip: crimson and kraft dots along the card's top edge */}
+      <div aria-hidden className="flex items-center gap-2 rounded-t-[14px] bg-white px-5 pt-3">
+        {["#c1121f", "#d99a2b", "#a30e19", "#d99a2b", "#c1121f"].map((c, i) => (
+          <span key={i} className="inline-block rounded-full" style={{ width: 10 - Math.abs(i - 2) * 1.5, height: 10 - Math.abs(i - 2) * 1.5, background: c, opacity: 0.9 }} />
         ))}
-        <span className="ml-1 h-[3px] flex-1 rounded-full bg-gradient-to-r from-brand-600 via-gold to-transparent opacity-70" />
+        <span className="ml-1 h-0 flex-1 border-t-2 border-dashed border-brand-600/50" />
       </div>
       <div className="relative p-3">
         <div className="relative cursor-pointer overflow-hidden rounded-xl ring-2 ring-brand-700/25" onClick={() => onQuickView(p)}>
@@ -38,19 +38,19 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
             <span className="absolute left-3 top-3 rounded-full bg-gradient-to-r from-brand-500 to-brand-700 px-2.5 py-1 text-[11px] font-black uppercase tracking-wider text-white shadow-[0_4px_14px_-4px_rgba(101,47,134,0.8)]">New</span>
           )}
           {discountPct(p) > 0 && (
-            <span className="absolute right-3 top-3 rounded-full bg-gradient-to-r from-gold-deep to-gold px-2.5 py-1 text-[11px] font-black text-white shadow-[0_4px_14px_-4px_rgba(180,83,9,0.8)]">-{discountPct(p)}%</span>
+            <span className="absolute right-3 top-3 flex h-12 w-12 rotate-12 items-center justify-center rounded-full bg-brand-600 text-[11px] font-black text-white shadow-[0_4px_14px_-4px_rgba(133,12,21,0.9)] ring-2 ring-dashed ring-gold">-{discountPct(p)}%</span>
           )}
         </div>
       </div>
       <div className="flex flex-1 flex-col items-start gap-1.5 px-5 pb-4 pt-1 text-left">
         <span className="rounded-full bg-gradient-to-r from-gold-deep/15 to-brand-400/15 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.16em] text-brand-600 ring-1 ring-gold-deep/40">{p.category}</span>
-        <h3 className="cursor-pointer text-[15px] font-bold leading-snug tracking-tight text-[#2e2118] hover:text-brand-300" onClick={() => onQuickView(p)}>{p.name}</h3>
-        <div className="flex items-center gap-1"><Stars rating={p.rating} /><span className="text-xs font-medium text-[#8a7a63]">{p.rating} ({p.reviews.toLocaleString()})</span></div>
-        <span className={`w-fit px-2.5 py-1 text-[11px] font-bold ${p.stock === "In Stock" ? "rounded-full bg-brand-500/12 text-brand-600 ring-1 ring-brand-500/45" : "rounded-full bg-[#f3ead8] text-[#8a7a63] ring-1 ring-brand-400/20"}`}>{p.stock === "In Stock" ? "● In Stock" : "⚠ " + p.stock}</span>
-        <p className="line-clamp-2 text-[13px] leading-relaxed text-[#8a7a63]">{p.desc}</p>
+        <h3 className="cursor-pointer text-[15px] font-bold leading-snug tracking-tight text-[#261d1a] hover:text-brand-300" onClick={() => onQuickView(p)}>{p.name}</h3>
+        <div className="flex items-center gap-1"><Stars rating={p.rating} /><span className="text-xs font-medium text-[#8a7666]">{p.rating} ({p.reviews.toLocaleString()})</span></div>
+        <span className={`w-fit px-2.5 py-1 text-[11px] font-bold ${p.stock === "In Stock" ? "rounded-full bg-brand-500/12 text-brand-600 ring-1 ring-brand-500/45" : "rounded-full bg-[#efe4cf] text-[#8a7666] ring-1 ring-brand-400/20"}`}>{p.stock === "In Stock" ? "● In Stock" : "⚠ " + p.stock}</span>
+        <p className="line-clamp-2 text-[13px] leading-relaxed text-[#8a7666]">{p.desc}</p>
         <div className="mt-auto flex w-full items-end justify-between gap-2 pt-2.5">
           <span className="text-[22px] font-black tracking-tight text-brand-300">{tk(p.price)}</span>
-          <span className="text-xs font-bold text-[#8a7a63] line-through">{tk(p.oldPrice)}</span>
+          <span className="text-xs font-bold text-[#8a7666] line-through">{tk(p.oldPrice)}</span>
         </div>
       </div>
       <div className="flex flex-col gap-2 px-5 pb-5">

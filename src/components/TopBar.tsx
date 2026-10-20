@@ -1,6 +1,6 @@
 export default function TopBar() {
   return (
-    <div className="relative overflow-hidden border-b border-brand-400/20 bg-gradient-to-r from-[#042a23] via-[#ffffff] to-[#042a23] px-4 py-2.5 text-center text-xs font-bold tracking-wide text-[#2e2118] sm:text-sm">
+    <div className="relative overflow-hidden border-b border-brand-400/20 bg-gradient-to-r from-[#38060c] via-[#ffffff] to-[#38060c] px-4 py-2.5 text-center text-xs font-bold tracking-wide text-[#261d1a] sm:text-sm">
       {/* kiln haze: drifting sun-mote dots */}
       <div
         aria-hidden
