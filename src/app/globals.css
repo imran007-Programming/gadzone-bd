@@ -1,24 +1,24 @@
 @import "tailwindcss";
 
 @theme {
-  /* orchid dusk: deep plum violet on warm ivory with a rose-pink bloom pop — original palette */
-  --color-brand-50: #faf5fd;
-  --color-brand-100: #f3e8fb;
-  --color-brand-200: #e8d3f5;
-  --color-brand-300: #d0a9e8;
-  --color-brand-400: #b37cd9;
-  --color-brand-500: #9553c4;
-  --color-brand-600: #7c3aa6;
-  --color-brand-700: #652f86;
-  --color-brand-800: #52286d;
-  --color-brand-900: #45255a;
-  --color-brand-950: #2a1238;
-  --color-brand: #7c3aa6;
-  --color-brand-dark: #652f86;
-  --color-brand-deep: #2a1238;
-  --color-gold: #ec4c8c;
-  --color-gold-deep: #c23470;
-  --color-gold-soft: #fbe3ee;
+  /* sunbaked clay: deep pine teal on warm desert sand with marigold + terracotta — original palette */
+  --color-brand-50: #eef7f4;
+  --color-brand-100: #d8ece6;
+  --color-brand-200: #b2d9cc;
+  --color-brand-300: #80bfae;
+  --color-brand-400: #4da48d;
+  --color-brand-500: #1f8a74;
+  --color-brand-600: #14705e;
+  --color-brand-700: #0f5a4b;
+  --color-brand-800: #0d493d;
+  --color-brand-900: #0b3a32;
+  --color-brand-950: #042a23;
+  --color-brand: #14705e;
+  --color-brand-dark: #0f5a4b;
+  --color-brand-deep: #042a23;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #b45309;
+  --color-gold-soft: #fdf0d5;
 }
 
 html { scroll-behavior: smooth; }
@@ -33,147 +33,147 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #f7f2f5;
+  background: #faf4e9;
   background-image:
-    radial-gradient(ellipse 90% 34% at 50% -12%, rgba(124, 58, 166, 0.10), transparent),
-    radial-gradient(ellipse 42% 28% at 92% 14%, rgba(179, 124, 217, 0.16), transparent),
-    radial-gradient(ellipse 42% 28% at 6% 30%, rgba(236, 76, 140, 0.10), transparent),
-    radial-gradient(circle at 1px 1px, rgba(124, 58, 166, 0.12) 1px, transparent 0);
+    radial-gradient(ellipse 90% 34% at 50% -12%, rgba(20, 112, 94, 0.10), transparent),
+    radial-gradient(ellipse 42% 28% at 92% 14%, rgba(245, 158, 11, 0.14), transparent),
+    radial-gradient(ellipse 42% 28% at 6% 30%, rgba(194, 65, 12, 0.08), transparent),
+    radial-gradient(circle at 1px 1px, rgba(20, 112, 94, 0.12) 1px, transparent 0);
   background-size: auto, auto, auto, 26px 26px;
-  color: #2a1c33;
+  color: #2e2118;
 }
-::selection { background: #7c3aa6; color: #faf5fb; }
+::selection { background: #14705e; color: #fdf8ec; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: #b37cd9; border-radius: 5px; }
-::-webkit-scrollbar-track { background: #e9dfe8; }
+::-webkit-scrollbar-thumb { background: #4da48d; border-radius: 5px; }
+::-webkit-scrollbar-track { background: #e6d9c2; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Petal fall: orchid petals drifting and swaying down through dusk air. */
+/* Ember drift: warm sun motes tumbling down through kiln air, swaying sideways. */
 @keyframes rain-fall {
-  0% { transform: translate3d(0, -12vh, 0) rotate(-18deg); opacity: 0; }
+  0% { transform: translate3d(0, -12vh, 0) rotate(0deg); opacity: 0; }
   18% { opacity: 0.9; }
-  50% { transform: translate3d(2.4vw, 38vh, 0) rotate(14deg); }
+  50% { transform: translate3d(-2.6vw, 40vh, 0) rotate(160deg); }
   85% { opacity: 0.7; }
-  100% { transform: translate3d(-1.6vw, 88vh, 0) rotate(-22deg); opacity: 0; }
+  100% { transform: translate3d(2.2vw, 92vh, 0) rotate(320deg); opacity: 0; }
 }
-.rain-fall { animation: rain-fall 11s ease-in-out infinite; }
+.rain-fall { animation: rain-fall 12s ease-in-out infinite; }
 
-/* Dusk drift: warm violet shimmer gliding sideways over the hero. */
+/* Heat shimmer: warm marigold shimmer gliding sideways over the hero. */
 @keyframes lagoon-drift {
-  0%, 100% { transform: translate3d(6vw, 0, 0); opacity: 0.35; }
-  50% { transform: translate3d(-6vw, 0.7rem, 0); opacity: 0.8; }
+  0%, 100% { transform: translate3d(-6vw, 0, 0); opacity: 0.3; }
+  50% { transform: translate3d(6vw, -0.7rem, 0); opacity: 0.75; }
 }
-.lagoon-drift { animation: lagoon-drift 16s ease-in-out infinite; }
+.lagoon-drift { animation: lagoon-drift 18s ease-in-out infinite; }
 
-/* Bloom breathe: gentle pulsing of the dusk garden's glow spots. */
+/* Kiln breathe: gentle pulsing of the sunbaked glow spots. */
 @keyframes buoy-breathe {
-  0%, 100% { opacity: 0.35; transform: scale(1); }
-  50% { opacity: 0.85; transform: scale(1.26); }
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.2); }
 }
-.buoy-breathe { animation: buoy-breathe 8s ease-in-out infinite; }
+.buoy-breathe { animation: buoy-breathe 9s ease-in-out infinite; }
 
-/* Arc orbit: slow rotation used by the hero's arc rings. */
+/* Sun orbit: slow rotation used by the hero's arc rings. */
 @keyframes tide-spin {
   to { transform: rotate(360deg); }
 }
-.tide-spin { animation: tide-spin 52s linear infinite; }
+.tide-spin { animation: tide-spin 60s linear infinite; }
 
-/* Dusk lift: soft plum shadow used by cards in the orchid theme. */
+/* Clay tile: hard offset sunbaked shadow used by cards in the clay theme. */
 .lagoon-lift {
   box-shadow:
-    0 18px 40px -20px rgba(42, 18, 56, 0.24),
-    0 0 0 1px rgba(124, 58, 166, 0.20);
+    6px 6px 0 -1px rgba(15, 90, 75, 0.14),
+    0 0 0 1px rgba(15, 90, 75, 0.20);
 }
 .lagoon-lift:hover {
   box-shadow:
-    0 26px 54px -18px rgba(42, 18, 56, 0.30),
-    0 0 0 1px rgba(124, 58, 166, 0.42),
-    0 0 42px -8px rgba(179, 124, 217, 0.40);
+    10px 10px 0 -2px rgba(15, 90, 75, 0.20),
+    0 0 0 1px rgba(15, 90, 75, 0.38),
+    0 18px 36px -18px rgba(4, 42, 35, 0.35);
 }
 
-/* Petal glass shared by modals and drawers. */
+/* Sun glass shared by modals and drawers. */
 .lagoon-glass {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(247, 242, 245, 0.98));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(250, 244, 233, 0.97));
   backdrop-filter: blur(14px);
 }
 
 /* Legacy aliases kept so untouched components still render. */
 .ember-glow {
   box-shadow:
-    0 18px 40px -20px rgba(42, 18, 56, 0.24),
-    0 0 0 1px rgba(124, 58, 166, 0.20);
+    6px 6px 0 -1px rgba(15, 90, 75, 0.14),
+    0 0 0 1px rgba(15, 90, 75, 0.20);
 }
 .ember-glow:hover {
   box-shadow:
-    0 26px 54px -18px rgba(42, 18, 56, 0.30),
-    0 0 0 1px rgba(124, 58, 166, 0.42),
-    0 0 42px -8px rgba(179, 124, 217, 0.40);
+    10px 10px 0 -2px rgba(15, 90, 75, 0.20),
+    0 0 0 1px rgba(15, 90, 75, 0.38),
+    0 18px 36px -18px rgba(4, 42, 35, 0.35);
 }
-.ember-rise { animation: rain-fall 11s ease-in-out infinite; }
+.ember-rise { animation: rain-fall 12s ease-in-out infinite; }
 .ripple-glow {
   box-shadow:
-    0 18px 40px -20px rgba(42, 18, 56, 0.24),
-    0 0 0 1px rgba(124, 58, 166, 0.20);
+    6px 6px 0 -1px rgba(15, 90, 75, 0.14),
+    0 0 0 1px rgba(15, 90, 75, 0.20);
 }
 .ripple-glow:hover {
   box-shadow:
-    0 26px 54px -18px rgba(42, 18, 56, 0.30),
-    0 0 0 1px rgba(124, 58, 166, 0.42),
-    0 0 42px -8px rgba(179, 124, 217, 0.40);
+    10px 10px 0 -2px rgba(15, 90, 75, 0.20),
+    0 0 0 1px rgba(15, 90, 75, 0.38),
+    0 18px 36px -18px rgba(4, 42, 35, 0.35);
 }
 .lagoon-glow {
   box-shadow:
-    0 18px 40px -20px rgba(42, 18, 56, 0.24),
-    0 0 0 1px rgba(124, 58, 166, 0.20);
+    6px 6px 0 -1px rgba(15, 90, 75, 0.14),
+    0 0 0 1px rgba(15, 90, 75, 0.20);
 }
 .lagoon-glow:hover {
   box-shadow:
-    0 26px 54px -18px rgba(42, 18, 56, 0.30),
-    0 0 0 1px rgba(124, 58, 166, 0.42),
-    0 0 42px -8px rgba(179, 124, 217, 0.40);
+    10px 10px 0 -2px rgba(15, 90, 75, 0.20),
+    0 0 0 1px rgba(15, 90, 75, 0.38),
+    0 18px 36px -18px rgba(4, 42, 35, 0.35);
 }
 .sticker-lift {
   box-shadow:
-    0 18px 40px -20px rgba(42, 18, 56, 0.24),
-    0 0 0 1px rgba(124, 58, 166, 0.20);
+    6px 6px 0 -1px rgba(15, 90, 75, 0.14),
+    0 0 0 1px rgba(15, 90, 75, 0.20);
 }
 .sticker-lift:hover {
   box-shadow:
-    0 18px 40px -20px rgba(42, 18, 56, 0.24),
-    0 0 0 1px rgba(124, 58, 166, 0.42),
-    0 0 42px -8px rgba(179, 124, 217, 0.40);
+    6px 6px 0 -1px rgba(15, 90, 75, 0.14),
+    0 0 0 1px rgba(15, 90, 75, 0.38),
+    0 18px 36px -18px rgba(4, 42, 35, 0.35);
 }
 .espresso-glass {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(247, 242, 245, 0.98));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(250, 244, 233, 0.97));
   backdrop-filter: blur(14px);
 }
 .twilight-glass {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(247, 242, 245, 0.98));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(250, 244, 233, 0.97));
   backdrop-filter: blur(14px);
 }
 .neon-lift {
   box-shadow:
-    0 18px 40px -20px rgba(42, 18, 56, 0.24),
-    0 0 0 1px rgba(124, 58, 166, 0.20);
+    6px 6px 0 -1px rgba(15, 90, 75, 0.14),
+    0 0 0 1px rgba(15, 90, 75, 0.20);
 }
 .night-glass {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(247, 242, 245, 0.98));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(250, 244, 233, 0.97));
   backdrop-filter: blur(14px);
 }
 .mist-glass {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(247, 242, 245, 0.98));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(250, 244, 233, 0.97));
   backdrop-filter: blur(14px);
 }
-.bubble-rise { animation: rain-fall 11s ease-in-out infinite; }
-.current-drift { animation: lagoon-drift 16s ease-in-out infinite; }
-.tide-breathe { animation: buoy-breathe 8s ease-in-out infinite; }
-.spark-rise { animation: rain-fall 11s ease-in-out infinite; }
-.zephyr-drift { animation: lagoon-drift 16s ease-in-out infinite; }
-.hearth-breathe { animation: buoy-breathe 8s ease-in-out infinite; }
-.sun-spin { animation: tide-spin 52s linear infinite; }
-.mist-drift { animation: lagoon-drift 16s ease-in-out infinite; }
-.pool-breathe { animation: buoy-breathe 8s ease-in-out infinite; }
-.ripple-spin { animation: tide-spin 52s linear infinite; }
-.ring-orbit { animation: tide-spin 52s linear infinite; }
-.bazaar-drift { animation: lagoon-drift 16s ease-in-out infinite; }
+.bubble-rise { animation: rain-fall 12s ease-in-out infinite; }
+.current-drift { animation: lagoon-drift 18s ease-in-out infinite; }
+.tide-breathe { animation: buoy-breathe 9s ease-in-out infinite; }
+.spark-rise { animation: rain-fall 12s ease-in-out infinite; }
+.zephyr-drift { animation: lagoon-drift 18s ease-in-out infinite; }
+.hearth-breathe { animation: buoy-breathe 9s ease-in-out infinite; }
+.sun-spin { animation: tide-spin 60s linear infinite; }
+.mist-drift { animation: lagoon-drift 18s ease-in-out infinite; }
+.pool-breathe { animation: buoy-breathe 9s ease-in-out infinite; }
+.ripple-spin { animation: tide-spin 60s linear infinite; }
+.ring-orbit { animation: tide-spin 60s linear infinite; }
+.bazaar-drift { animation: lagoon-drift 18s ease-in-out infinite; }

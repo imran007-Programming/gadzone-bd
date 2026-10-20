@@ -1,10 +1,10 @@
 export default function TopBar() {
   return (
-    <div className="relative overflow-hidden border-b border-brand-400/20 bg-gradient-to-r from-[#1e0f2b] via-[#ffffff] to-[#1e0f2b] px-4 py-2.5 text-center text-xs font-bold tracking-wide text-[#2a1c33] sm:text-sm">
-      {/* dusk mist: drifting petal-flecked dots */}
+    <div className="relative overflow-hidden border-b border-brand-400/20 bg-gradient-to-r from-[#042a23] via-[#ffffff] to-[#042a23] px-4 py-2.5 text-center text-xs font-bold tracking-wide text-[#2e2118] sm:text-sm">
+      {/* kiln haze: drifting sun-mote dots */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-40 [background-image:radial-gradient(rgba(208,169,232,0.35)_1px,transparent_1.5px)] [background-size:20px_20px]"
+        className="pointer-events-none absolute inset-0 opacity-40 [background-image:radial-gradient(rgba(245,158,11,0.35)_1px,transparent_1.5px)] [background-size:20px_20px]"
       />
       <div aria-hidden className="pointer-events-none absolute -left-12 top-1/2 h-28 w-28 -translate-y-1/2 rounded-full bg-gold/25 blur-2xl" />
       <div aria-hidden className="pointer-events-none absolute -right-12 top-1/2 h-28 w-28 -translate-y-1/2 rounded-full bg-brand-400/25 blur-2xl" />
