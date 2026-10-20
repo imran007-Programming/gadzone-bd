@@ -37,24 +37,24 @@ export default function HelpSheet({ open, onClose, onViewAllFaq }: HelpSheetProp
           >
             <div className="mx-auto mb-4 h-1.5 w-12 rounded-full bg-[#ffffff]" />
             <div className="flex items-start justify-between">
-              <h3 className="text-xl font-black text-[#0b2233]">How can we help?</h3>
-              <button onClick={onClose} className="text-2xl leading-none text-[#4f6a7a] hover:text-[#0b2233]" aria-label="Close help sheet">×</button>
+              <h3 className="text-xl font-black text-[#2a1a2e]">How can we help?</h3>
+              <button onClick={onClose} className="text-2xl leading-none text-[#7a5c52] hover:text-[#2a1a2e]" aria-label="Close help sheet">×</button>
             </div>
             <div className="mt-4 space-y-3">
               {QUICK_FAQS.map((f) => (
                 <div key={f.q} className="rounded-2xl border border-[#c3dde0] bg-[#ffffff] p-4 shadow-sm">
-                  <p className="font-bold text-[#0b2233]">{f.q}</p>
-                  <p className="mt-1 text-sm text-[#4f6a7a]">{f.a}</p>
+                  <p className="font-bold text-[#2a1a2e]">{f.q}</p>
+                  <p className="mt-1 text-sm text-[#7a5c52]">{f.a}</p>
                 </div>
               ))}
             </div>
             <div className="mt-4 rounded-2xl bg-brand-400/10 p-4 ring-1 ring-brand-400/30">
-              <p className="font-bold text-[#0b2233]">Still need help?</p>
-              <p className="mt-1 text-sm text-[#4f6a7a]">📞 +880 1700-000000<br />✉️ hello@gadzonebd.example</p>
+              <p className="font-bold text-[#2a1a2e]">Still need help?</p>
+              <p className="mt-1 text-sm text-[#7a5c52]">📞 +880 1700-000000<br />✉️ hello@gadzonebd.example</p>
             </div>
             <button
               onClick={onViewAllFaq}
-              className="mt-4 w-full rounded-xl bg-gradient-to-r from-brand-600 to-brand-800 py-3 font-bold text-white shadow-[0_8px_24px_-8px_rgba(13,148,136,0.4)] transition hover:brightness-110 active:scale-[0.99]"
+              className="mt-4 w-full rounded-xl bg-gradient-to-r from-brand-600 to-brand-800 py-3 font-bold text-white shadow-[0_8px_24px_-8px_rgba(194,65,12,0.4)] transition hover:brightness-110 active:scale-[0.99]"
             >
               View all FAQs
             </button>

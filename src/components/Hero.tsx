@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Signal washes: teal, lime and violet glows drifting over the cool mist.
+// Warm haze washes: amber, rose and terracotta glows drifting over the cream.
 const GLOWS = [
-  { left: "4%", top: "10%", size: 150, delay: "0s", dur: "14s", c: "rgba(20,160,143, 0.30)" },
-  { left: "72%", top: "4%", size: 200, delay: "-4s", dur: "15s", c: "rgba(109,40,217, 0.18)" },
-  { left: "44%", top: "44%", size: 120, delay: "-7s", dur: "13s", c: "rgba(190,242,100, 0.20)" },
-  { left: "86%", top: "50%", size: 110, delay: "-2s", dur: "14s", c: "rgba(15,101,92, 0.24)" },
+  { left: "4%", top: "10%", size: 150, delay: "0s", dur: "14s", c: "rgba(217,86,31, 0.30)" },
+  { left: "72%", top: "4%", size: 200, delay: "-4s", dur: "15s", c: "rgba(225,29,72, 0.16)" },
+  { left: "44%", top: "44%", size: 120, delay: "-7s", dur: "13s", c: "rgba(245,158,11, 0.20)" },
+  { left: "86%", top: "50%", size: 110, delay: "-2s", dur: "14s", c: "rgba(154,52,18, 0.24)" },
 ];
 
-// Rising pings: sonar rings climbing from the abyss floor.
+// Rising embers: soft sparks climbing from the hearth.
 const DOTS = [
-  { left: "8%", delay: "0s", dur: "5.6s", s: 60, c: "rgba(20,160,143, 0.35)" },
-  { left: "21%", delay: "-1.4s", dur: "6.2s", s: 46, c: "rgba(190,242,100, 0.35)" },
-  { left: "36%", delay: "-2.6s", dur: "5.8s", s: 66, c: "rgba(132,204,22, 0.30)" },
-  { left: "53%", delay: "-0.8s", dur: "6.4s", s: 52, c: "rgba(109,40,217, 0.30)" },
-  { left: "68%", delay: "-3.2s", dur: "5.9s", s: 62, c: "rgba(15,101,92, 0.32)" },
-  { left: "82%", delay: "-2s", dur: "6.3s", s: 44, c: "rgba(190,242,100, 0.32)" },
-  { left: "93%", delay: "-0.4s", dur: "5.7s", s: 56, c: "rgba(20,160,143, 0.30)" },
+  { left: "8%", delay: "0s", dur: "6.2s", s: 60, c: "rgba(217,86,31, 0.35)" },
+  { left: "21%", delay: "-1.4s", dur: "6.8s", s: 46, c: "rgba(245,158,11, 0.35)" },
+  { left: "36%", delay: "-2.6s", dur: "6.4s", s: 66, c: "rgba(217,119,6, 0.30)" },
+  { left: "53%", delay: "-0.8s", dur: "7s", s: 52, c: "rgba(225,29,72, 0.28)" },
+  { left: "68%", delay: "-3.2s", dur: "6.5s", s: 62, c: "rgba(154,52,18, 0.32)" },
+  { left: "82%", delay: "-2s", dur: "6.9s", s: 44, c: "rgba(245,158,11, 0.32)" },
+  { left: "93%", delay: "-0.4s", dur: "6.3s", s: 56, c: "rgba(217,86,31, 0.30)" },
 ];
 
 // Ticker phrases reuse the hero's existing stats copy.
@@ -54,8 +54,8 @@ function Dot({ left, delay, dur, s, c }: (typeof DOTS)[number]) {
           width: s,
           height: s,
           borderRadius: 9999,
-          border: `3px solid ${c}`,
-          opacity: 0.85,
+          background: `radial-gradient(circle, ${c} 0%, transparent 70%)`,
+          filter: "blur(2px)",
         }}
       />
     </div>
@@ -67,21 +67,22 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* cool grid + sea-mist gradient wash + rising pings */}
+      {/* warm dot field + sunset wash + rising embers */}
       <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
-      <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#cde7e5]/70 via-gold-soft/30 to-transparent" />
+      <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#f5dfc8]/70 via-gold-soft/30 to-transparent" />
 
-      {/* abyss sonar: a slowly orbiting stack of teal, lime and violet rings */}
-      <div aria-hidden className="pointer-events-none absolute -right-40 -top-16 z-0 hidden opacity-90 sm:block">
-        <div className="relative h-[560px] w-[560px]">
-          <div className="pop-spin absolute inset-0 rounded-full bg-[conic-gradient(from_200deg,#a3e635,#0d9488,#7c3aed,#a3e635)] opacity-70 blur-2xl" />
-          <div className="absolute inset-16 rounded-full border-[3px] border-dashed border-brand-500/60" />
-          <div className="absolute inset-32 rounded-full border-2 border-[#0b2233]/40 bg-gradient-to-br from-brand-300/70 via-gold/40 to-popblue/50 blur-xl" />
-          <div className="absolute inset-48 rounded-full bg-gradient-to-br from-brand-600 via-brand-400 to-popblue opacity-90 blur-sm" />
+      {/* setting sun: a warm halo of concentric arcs glowing over the hero */}
+      <div aria-hidden className="pointer-events-none absolute -right-48 -top-24 z-0 hidden opacity-90 sm:block">
+        <div className="relative h-[620px] w-[620px]">
+          <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_50%_62%,rgba(245,158,11,0.5),rgba(217,86,31,0.2)_45%,transparent_68%)] blur-2xl" />
+          <div className="pop-spin absolute inset-10 rounded-full border-[3px] border-dashed border-gold/50" />
+          <div className="absolute inset-24 rounded-full border-2 border-brand-500/40" />
+          <div className="absolute inset-40 rounded-full bg-[conic-gradient(from_180deg,#f59e0b,#e11d48,#c2410c,#f59e0b)] opacity-60 blur-xl" />
+          <div className="absolute inset-56 rounded-full bg-gradient-to-br from-gold via-brand-400 to-popblue shadow-[0_0_90px_30px_rgba(245,158,11,0.35)]" />
         </div>
       </div>
 
-      {/* drifting signal washes */}
+      {/* drifting ember haze */}
       <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
         {GLOWS.map((g, i) => (
           <div
@@ -92,14 +93,14 @@ export default function Hero({ onQuickView }: HeroProps) {
         ))}
       </div>
 
-      {/* rising motes */}
+      {/* rising embers */}
       <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden overflow-hidden sm:block">
         {DOTS.map((r, i) => (
           <Dot key={i} {...r} />
         ))}
       </div>
 
-      {/* 4-banner carousel in a frosted glass frame with an aurora top edge */}
+      {/* 4-banner carousel in a warm frame with a sunset top edge */}
       <div className="relative">
         <div className="mx-auto max-w-7xl px-4 pt-8 sm:px-6">
           <div className="pop-lift overflow-hidden bg-[#ffffff]">
@@ -113,12 +114,12 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* signal ticker: infinite marquee of the shop's own promises */}
-      <div aria-hidden className="relative z-10 mt-8 rotate-1 border-y border-brand-400/30 bg-gradient-to-r from-brand-950 via-brand-800 to-brand-950 py-2.5 shadow-[0_18px_44px_-20px_rgba(13,148,136,0.7)]">
+      {/* ember ticker: infinite marquee of the shop's own promises */}
+      <div aria-hidden className="relative z-10 mt-8 rotate-1 border-y border-brand-400/30 bg-gradient-to-r from-brand-950 via-brand-800 to-brand-950 py-2.5 shadow-[0_18px_44px_-20px_rgba(194,65,12,0.7)]">
         <div className="overflow-hidden">
           <div className="pop-ticker flex w-max items-center gap-8 pr-8">
             {[...TICKER, ...TICKER].map((t, i) => (
-              <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#eef6f5]">
+              <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#fdf7ef]">
                 {t} <span className="text-gold">✦</span>
               </span>
             ))}
@@ -138,7 +139,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             ].map((s) => (
               <div key={s.l} className="pop-lift relative overflow-hidden bg-[#ffffff] p-4 pb-3 text-center">
                 <span className="block text-2xl font-black tracking-tight text-brand-700">{s.v}</span>
-                <span className="mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#4f6a7a]">{s.l}</span>
+                <span className="mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#7a5c52]">{s.l}</span>
                 <span aria-hidden className="mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-brand-600 via-gold to-popblue" />
               </div>
             ))}
@@ -147,8 +148,8 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full bg-gradient-to-r from-brand-600 via-gold to-popblue px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-white shadow-[0_16px_38px_-14px_rgba(13,148,136,0.6)]">Handpicked for you</p>
-            <h2 className="mt-3 text-3xl font-black tracking-tight text-[#0b2233]">Featured <span className="bg-gradient-to-r from-brand-700 to-popblue-deep bg-clip-text text-transparent">Picks</span></h2>
+            <p className="inline-block rounded-full bg-gradient-to-r from-brand-600 via-gold to-popblue px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-white shadow-[0_16px_38px_-14px_rgba(194,65,12,0.6)]">Handpicked for you</p>
+            <h2 className="mt-3 text-3xl font-black tracking-tight text-[#2a1a2e]">Featured <span className="bg-gradient-to-r from-brand-700 to-popblue-deep bg-clip-text text-transparent">Picks</span></h2>
             <span className="zigzag mt-3 block w-44" aria-hidden />
           </div>
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
@@ -169,7 +170,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                   <span className="starburst absolute -right-1 -top-1 flex h-16 w-16 items-center justify-center p-4 text-center text-[11px] font-black leading-tight">-{discountPct(p)}%</span>
                   <span aria-hidden className="pop-stripes absolute inset-x-0 bottom-0 h-2 border-t border-brand-600/20" />
                 </div>
-                <div className="p-3.5 text-left"><p className="truncate text-sm font-bold tracking-tight text-[#0b2233]">{p.name}</p><p className="mt-1 text-base font-extrabold tracking-tight text-brand-700">{tk(p.price)} <span className="text-xs font-medium text-[#4f6a7a] line-through">{tk(p.oldPrice)}</span></p></div>
+                <div className="p-3.5 text-left"><p className="truncate text-sm font-bold tracking-tight text-[#2a1a2e]">{p.name}</p><p className="mt-1 text-base font-extrabold tracking-tight text-brand-700">{tk(p.price)} <span className="text-xs font-medium text-[#7a5c52] line-through">{tk(p.oldPrice)}</span></p></div>
               </motion.div>
             ))}
           </div>

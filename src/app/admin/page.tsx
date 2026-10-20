@@ -124,7 +124,7 @@ export default function AdminPage() {
               <span className="text-base font-black tracking-tight">Gad<span className="text-brand-800">Zone</span> BD</span>
             </Link>
             <div className="min-w-0 flex-1">
-              <p className="flex flex-wrap items-center gap-2 truncate text-sm font-bold text-[#0b2233] sm:text-base">
+              <p className="flex flex-wrap items-center gap-2 truncate text-sm font-bold text-[#2a1a2e] sm:text-base">
                 Admin Dashboard
                 <span className="rounded-full bg-[#ffffff] px-2 py-0.5 text-[11px] font-black text-brand-700">ADMIN</span>
               </p>
@@ -137,7 +137,7 @@ export default function AdminPage() {
                   // eslint-disable-next-line @next/next/no-img-element
                   <img src={session.user.image} alt="" className="h-10 w-10 shrink-0 rounded-full object-cover ring-2 ring-brand-200" />
                 ) : (
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#ffffff] font-black text-[#0b2233]">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#ffffff] font-black text-[#2a1a2e]">
                     {initials(session.user.name, session.user.email)}
                   </span>
                 )}
@@ -158,7 +158,7 @@ export default function AdminPage() {
           ) : !isAdmin ? (
             <div className="mx-auto max-w-md rounded-2xl bg-[#ffffff] p-8 text-center shadow-sm ring-1 ring-[#c6e9e6]">
               <p className="text-4xl" aria-hidden="true">🔒</p>
-              <h1 className="mt-2 text-2xl font-black text-[#0b2233]">Access denied — admin only</h1>
+              <h1 className="mt-2 text-2xl font-black text-[#2a1a2e]">Access denied — admin only</h1>
               <p className="mt-2 text-sm text-[#3f7a8c]">You are signed in as {session.user.email}, but this account does not have admin access.</p>
               <Link href="/" className="mt-5 inline-block rounded-full bg-brand-500 px-6 py-3 text-sm font-bold text-white transition hover:bg-brand-600">Back to Shop</Link>
             </div>
@@ -187,7 +187,7 @@ export default function AdminPage() {
                     </div>
                     <section className="rounded-2xl bg-[#ffffff] p-5 shadow-sm ring-1 ring-[#c6e9e6] lg:col-span-2">
                       <div className="flex items-center justify-between">
-                        <h3 className="font-black text-[#0b2233]">Low-stock products</h3>
+                        <h3 className="font-black text-[#2a1a2e]">Low-stock products</h3>
                         <button onClick={() => setTab("products")} className="text-sm font-bold text-brand-800 hover:text-brand-700">View all →</button>
                       </div>
                       {lowStock.length === 0 ? (
@@ -207,7 +207,7 @@ export default function AdminPage() {
 
                   <section>
                     <div className="mb-3 flex items-center justify-between">
-                      <h2 className="text-lg font-black text-[#0b2233]">Recent Orders</h2>
+                      <h2 className="text-lg font-black text-[#2a1a2e]">Recent Orders</h2>
                       <button onClick={() => setTab("orders")} className="text-sm font-bold text-brand-800 hover:text-brand-700">View all →</button>
                     </div>
                     {!loaded ? (
@@ -219,7 +219,7 @@ export default function AdminPage() {
                         {recentOrders.map((o) => (
                           <div key={o.id} className="flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-[#ffffff] p-4 shadow-sm ring-1 ring-[#c6e9e6]">
                             <div className="min-w-0">
-                              <p className="font-black text-[#0b2233]">{o.id}</p>
+                              <p className="font-black text-[#2a1a2e]">{o.id}</p>
                               <p className="truncate text-sm text-[#3f7a8c]">{o.name} · {o.email}</p>
                             </div>
                             <div className="flex items-center gap-3">
@@ -238,7 +238,7 @@ export default function AdminPage() {
                 <div className="space-y-5 pt-5">
                   <div className="flex flex-wrap items-end justify-between gap-3">
                     <div>
-                      <h1 className="text-2xl font-black text-[#0b2233]">Orders</h1>
+                      <h1 className="text-2xl font-black text-[#2a1a2e]">Orders</h1>
                       <p className="mt-1 text-sm text-[#3f7a8c]">{filteredOrders.length} order{filteredOrders.length === 1 ? "" : "s"} shown</p>
                     </div>
                     {(orderSearch.trim() || statusFilter !== "All") && (
@@ -277,7 +277,7 @@ export default function AdminPage() {
                 <div className="space-y-5 pt-5">
                   <div className="flex flex-wrap items-end justify-between gap-3">
                     <div>
-                      <h1 className="text-2xl font-black text-[#0b2233]">Products</h1>
+                      <h1 className="text-2xl font-black text-[#2a1a2e]">Products</h1>
                       <p className="mt-1 text-sm text-[#3f7a8c]">{filteredProducts.length} product{filteredProducts.length === 1 ? "" : "s"} in the catalogue</p>
                     </div>
                     <button onClick={() => setShowAddNote((v) => !v)} className="rounded-full bg-brand-500 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-brand-600">+ Add Product</button>
@@ -310,7 +310,7 @@ export default function AdminPage() {
                           <img src={p.img} alt={p.name} loading="lazy" className="h-40 w-full object-cover" />
                           <div className="p-4">
                             <div className="flex items-start justify-between gap-2">
-                              <h3 className="min-w-0 font-black text-[#0b2233]">{p.name}</h3>
+                              <h3 className="min-w-0 font-black text-[#2a1a2e]">{p.name}</h3>
                               <span className={`shrink-0 rounded-full px-2.5 py-1 text-[11px] font-bold ${STOCK_STYLES[p.stock] ?? "bg-[#ffffff] text-[#3f7a8c]"}`}>{p.stock}</span>
                             </div>
                             <p className="mt-1 text-xs font-semibold tracking-wide text-[#3f7a8c] uppercase">{p.category}</p>
@@ -328,7 +328,7 @@ export default function AdminPage() {
 
               {tab === "customers" && (
                 <div className="space-y-5 pt-5">
-                  <h1 className="text-2xl font-black text-[#0b2233]">Customers</h1>
+                  <h1 className="text-2xl font-black text-[#2a1a2e]">Customers</h1>
                   <p className="text-sm text-[#3f7a8c]">Derived from orders placed in this browser. Guest checkouts are not listed here.</p>
                   {!loaded ? (
                     <p className="text-sm text-[#3f7a8c]">Loading customers…</p>
@@ -343,7 +343,7 @@ export default function AdminPage() {
                               {initials(c.name, c.email)}
                             </span>
                             <div className="min-w-0">
-                              <p className="truncate font-black text-[#0b2233]">{c.name}</p>
+                              <p className="truncate font-black text-[#2a1a2e]">{c.name}</p>
                               <p className="truncate text-sm text-[#3f7a8c]">{c.email}</p>
                             </div>
                           </div>

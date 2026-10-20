@@ -27,21 +27,21 @@ export default function WeeklyChart({ orders }: { orders: StoredOrder[] }) {
   return (
     <div className="rounded-2xl bg-[#ffffff] p-5 shadow-sm ring-1 ring-[#c3dde0]">
       <div className="flex items-baseline justify-between gap-3">
-        <h3 className="font-black text-[#0b2233]">Orders — last 7 days</h3>
+        <h3 className="font-black text-[#2a1a2e]">Orders — last 7 days</h3>
         <p className="text-sm font-bold text-brand-800">{total} order{total === 1 ? "" : "s"}</p>
       </div>
       {total === 0 ? (
-        <p className="mt-4 text-sm text-[#4f6a7a]">No orders in the last 7 days yet. New orders will appear here as bars.</p>
+        <p className="mt-4 text-sm text-[#7a5c52]">No orders in the last 7 days yet. New orders will appear here as bars.</p>
       ) : null}
       <div className="mt-5 flex h-36 items-end gap-2 sm:gap-3" role="img" aria-label={`Bar chart of orders over the last 7 days, ${total} orders total`}>
         {days.map((d, i) => (
           <div key={i} className="flex flex-1 flex-col items-center gap-2">
-            <span className="text-xs font-bold text-[#4f6a7a]">{d.count}</span>
+            <span className="text-xs font-bold text-[#7a5c52]">{d.count}</span>
             <div
               className={`w-full max-w-10 rounded-t-xl transition-all ${i === days.length - 1 ? "bg-brand-500" : "bg-[#ffffff]/80"}`}
               style={{ height: `${Math.max(d.count === 0 ? 4 : (d.count / max) * 100, 4)}%` }}
             />
-            <span className="text-xs font-semibold text-[#4f6a7a]">{d.label}</span>
+            <span className="text-xs font-semibold text-[#7a5c52]">{d.label}</span>
           </div>
         ))}
       </div>
