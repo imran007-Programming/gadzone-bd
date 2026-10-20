@@ -22,28 +22,28 @@ export default function Footer({ onCategoryChange }: FooterProps) {
     else document.getElementById(target)?.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <footer id="contact" className="relative overflow-hidden bg-[#fffdfd] text-[#6f565e]">
+    <footer id="contact" className="relative overflow-hidden bg-[#fffefa] text-[#847a6a]">
       <div aria-hidden className="pointer-events-none absolute -top-24 left-1/3 h-64 w-64 rounded-full bg-brand-500/15 blur-[100px]" />
       <div aria-hidden className="pointer-events-none absolute bottom-0 right-1/4 h-56 w-56 rounded-full bg-gold/10 blur-[90px]" />
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-brand-400 to-transparent opacity-60" />
       <div className="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-16">
-        <p className="text-2xl font-black tracking-tight text-[#2b1b21]">Gad<span className="text-brand-700">Zone</span> BD</p>
-        <p className="mt-2.5 max-w-xl text-sm leading-relaxed text-[#6f565e]">
+        <p className="text-2xl font-black tracking-tight text-[#2b1d12]">Gad<span className="text-brand-700">Zone</span> BD</p>
+        <p className="mt-2.5 max-w-xl text-sm leading-relaxed text-[#847a6a]">
           Discover original gadgets, smart devices, audio products, mobile accessories and electronics at competitive prices with nationwide delivery across Bangladesh.
         </p>
         <div className="mt-5 grid gap-3 sm:grid-cols-2">
-          <div className="lagoon-glow flex items-center gap-3 rounded-[18px] border border-brand-400/25 bg-[#fffdfd] p-4">
+          <div className="lagoon-glow flex items-center gap-3 rounded-[18px] border border-brand-400/25 bg-[#fffefa] p-4">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-brand-500/15 text-xl ring-1 ring-brand-400/30">💬</span>
             <div>
-              <p className="text-xs text-[#6f565e]">WhatsApp</p>
-              <p className="font-bold text-[#2b1b21]">+880 1700-000000</p>
+              <p className="text-xs text-[#847a6a]">WhatsApp</p>
+              <p className="font-bold text-[#2b1d12]">+880 1700-000000</p>
             </div>
           </div>
-          <div className="lagoon-glow flex items-center gap-3 rounded-[18px] border border-brand-400/25 bg-[#fffdfd] p-4">
+          <div className="lagoon-glow flex items-center gap-3 rounded-[18px] border border-brand-400/25 bg-[#fffefa] p-4">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-brand-500/15 text-xl ring-1 ring-brand-400/30">📞</span>
             <div>
-              <p className="text-xs text-[#6f565e]">Customer Care</p>
-              <p className="font-bold text-[#2b1b21]">+880 1700-000000</p>
+              <p className="text-xs text-[#847a6a]">Customer Care</p>
+              <p className="font-bold text-[#2b1d12]">+880 1700-000000</p>
             </div>
           </div>
         </div>
@@ -51,7 +51,7 @@ export default function Footer({ onCategoryChange }: FooterProps) {
         <div className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-brand-700">Explore</p>
-            <h3 className="mt-1.5 text-lg font-black tracking-tight text-[#2b1b21]">GadZone BD</h3>
+            <h3 className="mt-1.5 text-lg font-black tracking-tight text-[#2b1d12]">GadZone BD</h3>
             <ul className="mt-3 space-y-2 text-sm">
               {EXPLORE_LINKS.map((link) => (
                 <li key={link.label}>
@@ -59,16 +59,16 @@ export default function Footer({ onCategoryChange }: FooterProps) {
                 </li>
               ))}
             </ul>
-            <p className="mt-5 text-xs font-bold uppercase tracking-widest text-[#6f565e]">Categories</p>
+            <p className="mt-5 text-xs font-bold uppercase tracking-widest text-[#847a6a]">Categories</p>
             <div className="mt-2 flex flex-wrap gap-1.5">
               {CATEGORIES.filter((c) => c !== "All").map((c) => (
-                <button key={c} onClick={() => { onCategoryChange(c); document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" }); }} className="rounded-full bg-[#ffe9ef] px-3 py-1.5 text-xs font-semibold text-[#6f565e] ring-1 ring-brand-400/25 transition hover:bg-brand-500 hover:text-white">{c}</button>
+                <button key={c} onClick={() => { onCategoryChange(c); document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" }); }} className="rounded-full bg-[#fdf0e2] px-3 py-1.5 text-xs font-semibold text-[#847a6a] ring-1 ring-brand-400/25 transition hover:bg-brand-500 hover:text-white">{c}</button>
               ))}
             </div>
           </div>
           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-brand-700">Support</p>
-            <h3 className="mt-1.5 text-lg font-black tracking-tight text-[#2b1b21]">Customer Care</h3>
+            <h3 className="mt-1.5 text-lg font-black tracking-tight text-[#2b1d12]">Customer Care</h3>
             <ul className="mt-3 space-y-2 text-sm">
               {SUPPORT_LINKS.map((link) => (
                 <li key={link}>
@@ -79,20 +79,20 @@ export default function Footer({ onCategoryChange }: FooterProps) {
           </div>
           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-brand-700">Get in Touch</p>
-            <h3 className="mt-1.5 text-lg font-black tracking-tight text-[#2b1b21]">We&apos;re Here to Help</h3>
-            <div className="lagoon-glow mt-3 rounded-[18px] border border-brand-400/25 bg-[#fffdfd] p-5">
-              <p className="text-xs text-[#6f565e]">Warranty Support</p>
-              <p className="mt-1 font-bold text-[#2b1b21]">📞 +880 1700-000000</p>
+            <h3 className="mt-1.5 text-lg font-black tracking-tight text-[#2b1d12]">We&apos;re Here to Help</h3>
+            <div className="lagoon-glow mt-3 rounded-[18px] border border-brand-400/25 bg-[#fffefa] p-5">
+              <p className="text-xs text-[#847a6a]">Warranty Support</p>
+              <p className="mt-1 font-bold text-[#2b1d12]">📞 +880 1700-000000</p>
               <p className="mt-1 text-sm">✉️ hello@gadzonebd.example</p>
               <p className="mt-1 text-sm">📍 Dhaka, Bangladesh</p>
             </div>
-            <p className="mt-4 text-sm font-bold text-[#2b1b21]">We Accept</p>
-            <div className="mt-2 flex flex-wrap gap-2">{["bKash", "Nagad", "Rocket", "Visa", "Mastercard", "COD"].map((p) => <span key={p} className="rounded-full bg-[#ffe9ef] px-3 py-1.5 text-xs font-bold text-[#6f565e] ring-1 ring-brand-400/25">{p}</span>)}</div>
-            <p className="mt-3 text-xs text-[#6f565e]">100% secure payments</p>
+            <p className="mt-4 text-sm font-bold text-[#2b1d12]">We Accept</p>
+            <div className="mt-2 flex flex-wrap gap-2">{["bKash", "Nagad", "Rocket", "Visa", "Mastercard", "COD"].map((p) => <span key={p} className="rounded-full bg-[#fdf0e2] px-3 py-1.5 text-xs font-bold text-[#847a6a] ring-1 ring-brand-400/25">{p}</span>)}</div>
+            <p className="mt-3 text-xs text-[#847a6a]">100% secure payments</p>
           </div>
         </div>
       </div>
-      <div className="border-t border-brand-400/15 py-5 text-center text-xs text-[#6f565e]">© 2026 GadZone BD — All rights reserved. Made with ❤️ in Bangladesh.</div>
+      <div className="border-t border-brand-400/15 py-5 text-center text-xs text-[#847a6a]">© 2026 GadZone BD — All rights reserved. Made with ❤️ in Bangladesh.</div>
     </footer>
   );
 }
