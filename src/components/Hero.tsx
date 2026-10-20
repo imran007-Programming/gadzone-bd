@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Pop glow blobs: yellow, pink and blue ink blooming over the paper.
+// Warm kiln washes: terracotta, ochre and olive glows blooming over the paper.
 const GLOWS = [
-  { left: "4%", top: "10%", size: 140, delay: "0s", dur: "10s", c: "rgba(245,163,0, 0.25)" },
-  { left: "74%", top: "4%", size: 190, delay: "-4s", dur: "12s", c: "rgba(240,68,124, 0.18)" },
-  { left: "44%", top: "44%", size: 110, delay: "-7s", dur: "9s", c: "rgba(42,168,242, 0.18)" },
-  { left: "86%", top: "50%", size: 100, delay: "-2s", dur: "11s", c: "rgba(245,163,0, 0.2)" },
+  { left: "4%", top: "10%", size: 150, delay: "0s", dur: "11s", c: "rgba(224,120,74, 0.28)" },
+  { left: "72%", top: "4%", size: 200, delay: "-4s", dur: "13s", c: "rgba(217,164,65, 0.22)" },
+  { left: "44%", top: "44%", size: 120, delay: "-7s", dur: "10s", c: "rgba(122,139,63, 0.18)" },
+  { left: "86%", top: "50%", size: 110, delay: "-2s", dur: "12s", c: "rgba(180,83,42, 0.22)" },
 ];
 
-// Falling pop dots: comic confetti tumbling down through the hero.
+// Drifting sand dots: fine kiln motes sinking softly through the hero.
 const DOTS = [
-  { left: "8%", delay: "0s", dur: "11s", s: 12, c: "#f5a300" },
-  { left: "21%", delay: "-3s", dur: "12s", s: 9, c: "#f0447c" },
-  { left: "36%", delay: "-6s", dur: "11.5s", s: 14, c: "#2aa8f2" },
-  { left: "53%", delay: "-2s", dur: "12.5s", s: 10, c: "#c2275b" },
-  { left: "68%", delay: "-7.5s", dur: "11.2s", s: 13, c: "#f5a300" },
-  { left: "82%", delay: "-4.5s", dur: "12.2s", s: 9, c: "#f0447c" },
-  { left: "93%", delay: "-1s", dur: "10.6s", s: 11, c: "#2aa8f2" },
+  { left: "8%", delay: "0s", dur: "12s", s: 7, c: "#e0784a" },
+  { left: "21%", delay: "-3s", dur: "13s", s: 5, c: "#d9a441" },
+  { left: "36%", delay: "-6s", dur: "12.5s", s: 8, c: "#b4532a" },
+  { left: "53%", delay: "-2s", dur: "13.5s", s: 6, c: "#7a8b3f" },
+  { left: "68%", delay: "-7.5s", dur: "12.2s", s: 7, c: "#e0784a" },
+  { left: "82%", delay: "-4.5s", dur: "13.2s", s: 5, c: "#d9a441" },
+  { left: "93%", delay: "-1s", dur: "11.6s", s: 6, c: "#b4532a" },
 ];
 
 function Dot({ left, delay, dur, s, c }: (typeof DOTS)[number]) {
@@ -52,8 +52,7 @@ function Dot({ left, delay, dur, s, c }: (typeof DOTS)[number]) {
           height: s,
           borderRadius: 9999,
           background: c,
-          border: "2px solid #211a12",
-          opacity: 0.9,
+          opacity: 0.85,
         }}
       />
     </div>
@@ -65,22 +64,20 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* halftone pop: dotted paper with ink glow blobs and falling pop dots */}
-      <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-60" />
-      <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#fff8e1]/70 via-transparent to-transparent" />
+      {/* sand grain texture + warm gradient washes + drifting sand dots */}
+      <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
+      <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#f6e3c8]/60 via-transparent to-transparent" />
 
-      {/* rotating starburst medallion */}
-      <div aria-hidden className="pointer-events-none absolute -right-36 -top-36 z-0 hidden opacity-30 sm:block">
-        <div className="pop-spin relative h-[440px] w-[440px]">
-          <div className="starburst absolute inset-0 bg-brand-500" />
-          <div className="starburst absolute inset-8 bg-gold" />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-6xl font-black text-[#211a12]">★</span>
-          </div>
+      {/* terracotta sun-arch rising behind the content */}
+      <div aria-hidden className="pointer-events-none absolute -right-32 top-10 z-0 hidden opacity-90 sm:block">
+        <div className="relative h-[420px] w-[420px]">
+          <div className="absolute inset-0 rounded-t-full bg-gradient-to-b from-[#e0784a] via-[#b4532a] to-[#7c2d12] shadow-[0_24px_60px_-20px_rgba(124,45,18,0.5)]" />
+          <div className="absolute inset-6 rounded-t-full border-2 border-[#faf3e8]/40" />
+          <div className="absolute inset-12 rounded-t-full bg-[#faf3e8]/25 blur-sm" />
         </div>
       </div>
 
-      {/* drifting pop glows */}
+      {/* drifting kiln washes */}
       <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
         {GLOWS.map((g, i) => (
           <div
@@ -91,18 +88,18 @@ export default function Hero({ onQuickView }: HeroProps) {
         ))}
       </div>
 
-      {/* falling pop dots */}
+      {/* drifting sand dots */}
       <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden overflow-hidden sm:block">
         {DOTS.map((r, i) => (
           <Dot key={i} {...r} />
         ))}
       </div>
 
-      {/* 4-banner carousel (image-only slides) in a thick ink frame */}
+      {/* 4-banner carousel (image-only slides) in a clay-tile frame */}
       <div className="relative">
         <div className="mx-auto max-w-7xl px-4 pt-8 sm:px-6">
-          <div className="pop-lift rounded-2xl bg-[#211a12] p-2.5">
-            <div className="overflow-hidden rounded-xl border-2 border-[#211a12]">
+          <div className="pop-lift rounded-3xl bg-gradient-to-br from-[#f6e3c8] to-[#efcfa4] p-2.5">
+            <div className="overflow-hidden rounded-2xl ring-1 ring-[#e8d3b0]">
               <BannerCarousel />
             </div>
           </div>
@@ -119,9 +116,9 @@ export default function Hero({ onQuickView }: HeroProps) {
               { v: "50K+", l: "Happy Customers" },
               { v: "COD", l: "Available" },
             ].map((s) => (
-              <div key={s.l} className="pop-lift relative overflow-hidden rounded-2xl bg-white p-4 pb-3 text-center">
-                <span className="block text-2xl font-black tracking-tight text-brand-800">{s.v}</span>
-                <span className="mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#7a6a58]">{s.l}</span>
+              <div key={s.l} className="pop-lift relative overflow-hidden rounded-3xl bg-[#fffdfb] p-4 pb-3 text-center">
+                <span className="block text-2xl font-black tracking-tight text-brand-700">{s.v}</span>
+                <span className="mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#8a6f5c]">{s.l}</span>
                 <span aria-hidden className="mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-brand-500 via-gold to-popblue" />
               </div>
             ))}
@@ -130,8 +127,8 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block -rotate-1 rounded-lg border-2 border-[#211a12] bg-gold px-3 py-1 text-xs font-black uppercase tracking-[0.28em] text-white shadow-[3px_3px_0_0_#211a12]">Handpicked for you</p>
-            <h2 className="mt-3 text-3xl font-black tracking-tight text-[#211a12]">Featured <span className="bg-gradient-to-r from-brand-700 to-gold-deep bg-clip-text text-transparent">Picks</span></h2>
+            <p className="inline-block rounded-full bg-gradient-to-r from-brand-600 to-brand-400 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-white shadow-[0_8px_20px_-6px_rgba(180,83,42,0.6)]">Handpicked for you</p>
+            <h2 className="mt-3 text-3xl font-black tracking-tight text-[#2b1d14]">Featured <span className="bg-gradient-to-r from-brand-700 to-popblue-deep bg-clip-text text-transparent">Picks</span></h2>
             <span className="zigzag mt-3 block w-44" aria-hidden />
           </div>
           <div className="grid grid-cols-2 gap-5 md:grid-cols-4">
@@ -142,25 +139,25 @@ export default function Hero({ onQuickView }: HeroProps) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45, delay: 0.2 + i * 0.08, ease: "easeOut" }}
                 whileHover={{ y: -6 }}
-                className="pop-lift group cursor-pointer overflow-hidden rounded-2xl bg-white"
+                className="pop-lift group cursor-pointer overflow-hidden rounded-3xl bg-[#fffdfb]"
                 onClick={() => onQuickView(p)}
               >
                 <div className="relative">
-                  <div className="overflow-hidden border-b-2 border-[#211a12]">
+                  <div className="overflow-hidden ring-1 ring-inset ring-[#e8d3b0]">
                     <ProductImage product={p} />
                   </div>
-                  <span className="starburst absolute -right-1 -top-1 flex h-16 w-16 items-center justify-center bg-gold p-4 text-center text-[11px] font-black leading-tight text-white">-{discountPct(p)}%</span>
+                  <span className="starburst absolute -right-1 -top-1 flex h-16 w-16 items-center justify-center p-4 text-center text-[11px] font-black leading-tight">-{discountPct(p)}%</span>
                   <span aria-hidden className="absolute inset-x-0 bottom-0 h-1.5 bg-gradient-to-r from-brand-500 via-gold to-popblue" />
                 </div>
-                <div className="p-3.5 text-left"><p className="truncate text-sm font-bold tracking-tight text-[#211a12]">{p.name}</p><p className="mt-1 text-base font-extrabold tracking-tight text-brand-800">{tk(p.price)} <span className="text-xs font-medium text-[#7a6a58] line-through">{tk(p.oldPrice)}</span></p></div>
+                <div className="p-3.5 text-left"><p className="truncate text-sm font-bold tracking-tight text-[#2b1d14]">{p.name}</p><p className="mt-1 text-base font-extrabold tracking-tight text-brand-700">{tk(p.price)} <span className="text-xs font-medium text-[#8a6f5c] line-through">{tk(p.oldPrice)}</span></p></div>
               </motion.div>
             ))}
           </div>
-          <span className="starburst pop-bob absolute -top-9 right-2 flex h-28 w-28 items-center justify-center bg-brand-500 p-6 text-center text-[13px] font-black leading-tight text-[#211a12]">-45%<br />TODAY</span>
+          <span className="starburst pop-bob absolute -top-9 right-2 flex h-28 w-28 items-center justify-center p-6 text-center text-[13px] font-black leading-tight">-45%<br />TODAY</span>
         </div>
       </div>
 
-      {/* zigzag divider into the page */}
+      {/* dune-wave divider into the page */}
       <div aria-hidden className="zigzag absolute bottom-0 left-0 w-full opacity-90" />
     </section>
   );
