@@ -20,12 +20,12 @@ export default function FaqSection({ openFaq, onToggleFaq }: FaqSectionProps) {
   const reduce = useReducedMotion();
   return (
     <Reveal>
-      <span className="text-xs font-bold uppercase tracking-widest text-brand-800">Need Help?</span>
-      <h2 className="mt-2 text-3xl font-black leading-tight tracking-tight text-[#2b2019] sm:text-[2rem]">❓ Frequently Asked Questions</h2>
+      <span className="text-xs font-bold uppercase tracking-widest text-brand-300">Need Help?</span>
+      <h2 className="mt-2 text-3xl font-black leading-tight tracking-tight text-[#e9edff] sm:text-[2rem]">❓ Frequently Asked Questions</h2>
       <div className="mt-5 space-y-3">
         {FAQS.map((f, i) => (
-          <div key={i} className="overflow-hidden rounded-2xl border border-[#fab070] bg-[#fef6f0] shadow-sm backdrop-blur-sm">
-            <button onClick={() => onToggleFaq(openFaq === i ? null : i)} className="flex w-full items-center justify-between gap-3 px-5 py-4 text-left text-[15px] font-bold tracking-tight text-[#2b2019] transition hover:bg-[#fef6f0] sm:px-6">{f.q}<span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-400/15 text-base text-brand-800">{openFaq === i ? "−" : "+"}</span></button>
+          <div key={i} className="overflow-hidden rounded-2xl border border-[#a5f3fc] bg-[#ecfeff] shadow-sm backdrop-blur-sm">
+            <button onClick={() => onToggleFaq(openFaq === i ? null : i)} className="flex w-full items-center justify-between gap-3 px-5 py-4 text-left text-[15px] font-bold tracking-tight text-[#e9edff] transition hover:bg-brand-400/10 sm:px-6">{f.q}<span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-400/15 text-base text-brand-300">{openFaq === i ? "−" : "+"}</span></button>
             <AnimatePresence initial={false}>
               {openFaq === i && (
                 <motion.div
@@ -35,7 +35,7 @@ export default function FaqSection({ openFaq, onToggleFaq }: FaqSectionProps) {
                   transition={{ duration: 0.25, ease: "easeOut" }}
                   className="overflow-hidden"
                 >
-                  <p className="bg-[#fef6f0] px-5 pb-4 pt-1 text-sm leading-relaxed text-[#a39e93] sm:px-6">{f.a}</p>
+                  <p className="bg-[#ecfeff] px-5 pb-4 pt-1 text-sm leading-relaxed text-[#8b93b8] sm:px-6">{f.a}</p>
                 </motion.div>
               )}
             </AnimatePresence>
