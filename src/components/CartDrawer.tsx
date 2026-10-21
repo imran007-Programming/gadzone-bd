@@ -42,21 +42,21 @@ export default function CartDrawer({ open, cartDetailed, cartCount, promo, promo
             animate={{ x: 0, opacity: 1 }}
             exit={reduce ? { opacity: 0 } : { x: "100%" }}
             transition={{ type: "tween", duration: 0.3, ease: "easeOut" }}
-            className="absolute right-0 top-0 flex h-full w-full max-w-md flex-col border-l border-[#e6f3fa] bg-[#f7fbfe] shadow-2xl"
+            className="absolute right-0 top-0 flex h-full w-full max-w-md flex-col border-l border-[#fbeed3] bg-[#fffbf4] shadow-2xl"
           >
-            <div className="flex items-center justify-between border-b border-[#e6f3fa] px-5 py-4"><h3 className="text-lg font-black tracking-tight text-[#0e1b2c]">🛒 Your Cart ({cartCount})</h3><button onClick={onClose} className="rounded-full px-2 text-2xl text-[#5f7a8d] transition hover:bg-[#e6f3fa] hover:text-[#0e1b2c]">×</button></div>
+            <div className="flex items-center justify-between border-b border-[#fbeed3] px-5 py-4"><h3 className="text-lg font-black tracking-tight text-[#3f2a14]">🛒 Your Cart ({cartCount})</h3><button onClick={onClose} className="rounded-full px-2 text-2xl text-[#8a6f5c] transition hover:bg-[#fbeed3] hover:text-[#3f2a14]">×</button></div>
             <div className="flex-1 overflow-y-auto p-4 sm:p-5">
               {cartDetailed.length === 0 ? (
-                <p className="mt-10 text-center text-[#5f7a8d]">Your cart is empty 🛍️<br /><button onClick={onClose} className="mt-3 font-bold text-brand-800">Continue Shopping →</button></p>
+                <p className="mt-10 text-center text-[#8a6f5c]">Your cart is empty 🛍️<br /><button onClick={onClose} className="mt-3 font-bold text-brand-800">Continue Shopping →</button></p>
               ) : cartDetailed.map((i) => (
-                <div key={i.id} className="mb-3 flex gap-3 rounded-2xl border border-[#e6f3fa] bg-[#f7fbfe] p-3 shadow-sm">
-                  <div className="h-20 w-20 shrink-0 overflow-hidden rounded-xl ring-1 ring-[#e6f3fa]"><ProductImage product={i} /></div>
+                <div key={i.id} className="mb-3 flex gap-3 rounded-2xl border border-[#fbeed3] bg-[#fffbf4] p-3 shadow-sm">
+                  <div className="h-20 w-20 shrink-0 overflow-hidden rounded-xl ring-1 ring-[#fbeed3]"><ProductImage product={i} /></div>
                   <div className="min-w-0 flex-1">
-                    <p className="truncate text-sm font-bold tracking-tight text-[#0e1b2c]">{i.name}</p>
+                    <p className="truncate text-sm font-bold tracking-tight text-[#3f2a14]">{i.name}</p>
                     <p className="text-sm font-extrabold text-brand-800">{tk(i.price)}</p>
                     <div className="mt-1.5 flex items-center gap-2">
-                      <div className="flex items-center rounded-full border border-[#e6f3fa] bg-[#f7fbfe] text-[#5f7a8d]"><button onClick={() => onQtyChange(i.id, i.qty - 1)} className="px-2.5 py-0.5">−</button><span className="w-6 text-center text-sm font-bold">{i.qty}</span><button onClick={() => onQtyChange(i.id, i.qty + 1)} className="px-2.5 py-0.5">+</button></div>
-                      <span className="text-sm font-bold text-[#0e1b2c]">= {tk(i.price * i.qty)}</span>
+                      <div className="flex items-center rounded-full border border-[#fbeed3] bg-[#fffbf4] text-[#8a6f5c]"><button onClick={() => onQtyChange(i.id, i.qty - 1)} className="px-2.5 py-0.5">−</button><span className="w-6 text-center text-sm font-bold">{i.qty}</span><button onClick={() => onQtyChange(i.id, i.qty + 1)} className="px-2.5 py-0.5">+</button></div>
+                      <span className="text-sm font-bold text-[#3f2a14]">= {tk(i.price * i.qty)}</span>
                       <button onClick={() => onQtyChange(i.id, 0)} className="ml-auto text-red-500 text-sm">🗑️</button>
                     </div>
                   </div>
@@ -64,15 +64,15 @@ export default function CartDrawer({ open, cartDetailed, cartCount, promo, promo
               ))}
             </div>
             {cartDetailed.length > 0 && (
-              <div className="border-t border-[#e6f3fa] bg-[#f7fbfe] p-4 sm:p-5">
-                <div className="mb-3 flex gap-2"><input value={promo} onChange={(e) => onPromoChange(e.target.value)} placeholder="Promo code (try GADZONE10)" className="flex-1 rounded-full border border-[#e6f3fa] bg-[#f7fbfe] px-4 py-2.5 text-sm text-[#0e1b2c] shadow-sm outline-none transition placeholder:text-[#5f7a8d] focus:border-brand-400 focus:ring-2 focus:ring-brand-400/30" /><button onClick={onApplyPromo} className="rounded-full bg-gradient-to-r from-brand-500 to-brand-700 px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:brightness-110 active:scale-[0.98]">Apply</button></div>
-                {promoMsg && <p className="mb-2 text-xs font-semibold text-[#5f7a8d]">{promoMsg}</p>}
-                <div className="space-y-1 text-sm text-[#5f7a8d]"><div className="flex justify-between"><span>Subtotal</span><span className="font-bold">{tk(subtotal)}</span></div>
+              <div className="border-t border-[#fbeed3] bg-[#fffbf4] p-4 sm:p-5">
+                <div className="mb-3 flex gap-2"><input value={promo} onChange={(e) => onPromoChange(e.target.value)} placeholder="Promo code (try GADZONE10)" className="flex-1 rounded-full border border-[#fbeed3] bg-[#fffbf4] px-4 py-2.5 text-sm text-[#3f2a14] shadow-sm outline-none transition placeholder:text-[#8a6f5c] focus:border-brand-400 focus:ring-2 focus:ring-brand-400/30" /><button onClick={onApplyPromo} className="rounded-full bg-gradient-to-r from-brand-500 to-brand-700 px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:brightness-110 active:scale-[0.98]">Apply</button></div>
+                {promoMsg && <p className="mb-2 text-xs font-semibold text-[#8a6f5c]">{promoMsg}</p>}
+                <div className="space-y-1 text-sm text-[#8a6f5c]"><div className="flex justify-between"><span>Subtotal</span><span className="font-bold">{tk(subtotal)}</span></div>
                 {discountAmt > 0 && <div className="flex justify-between text-brand-800"><span>Promo discount</span><span className="font-bold">−{tk(discountAmt)}</span></div>}
                 <div className="flex justify-between"><span>Delivery ({district})</span><span className="font-bold">{delivery === 0 ? "FREE 🎉" : tk(delivery)}</span></div>
-                <div className="flex justify-between border-t border-[#e6f3fa] pt-2 text-base font-black text-[#0e1b2c]"><span>Total</span><span className="text-brand-800">{tk(total)}</span></div></div>
+                <div className="flex justify-between border-t border-[#fbeed3] pt-2 text-base font-black text-[#3f2a14]"><span>Total</span><span className="text-brand-800">{tk(total)}</span></div></div>
                 {subtotal - discountAmt < 2000 && <p className="mt-2 rounded-xl bg-brand-400/10 p-2.5 text-center text-xs font-semibold text-brand-700 ring-1 ring-brand-400/30">Add {tk(2000 - (subtotal - discountAmt))} more for FREE delivery! 🚚</p>}
-                <motion.button whileTap={{ scale: 0.98 }} onClick={onCheckout} className="mt-3 w-full rounded-full bg-gradient-to-r from-brand-500 to-brand-700 py-3 font-bold text-white shadow-[0_10px_28px_-8px_rgba(2, 132, 199,0.4)] transition hover:brightness-110 active:scale-[0.99]">Proceed to Checkout →</motion.button>
+                <motion.button whileTap={{ scale: 0.98 }} onClick={onCheckout} className="mt-3 w-full rounded-full bg-gradient-to-r from-brand-500 to-brand-700 py-3 font-bold text-white shadow-[0_10px_28px_-8px_rgba(217, 119, 6,0.4)] transition hover:brightness-110 active:scale-[0.99]">Proceed to Checkout →</motion.button>
               </div>
             )}
           </motion.div>
