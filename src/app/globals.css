@@ -1,33 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-  /* Sahara Ember: warm cream canvas, burnt-terracotta primary,
-     honey-amber secondary, olive-harvest accent. */
+  /* Glacier Drift: icy porcelain canvas, glacier-sky primary,
+     aurora-mint secondary, fjord-navy ink, amber glint accent. */
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
-  --color-brand-50: #fdf3ec;
-  --color-brand-100: #fae5d5;
-  --color-brand-200: #f4c9a8;
-  --color-brand-300: #eda572;
-  --color-brand-400: #e37a3d;
-  --color-brand-500: #d55f1f;
-  --color-brand-600: #c2410c;
-  --color-brand-700: #9a3412;
-  --color-brand-800: #7c2d12;
-  --color-brand-900: #652b15;
-  --color-brand-950: #441a0c;
-  --color-brand: #c2410c;
-  --color-brand-dark: #9a3412;
-  --color-brand-deep: #441a0c;
+  --color-brand-50: #effbff;
+  --color-brand-100: #d8f3fc;
+  --color-brand-200: #b3e7f9;
+  --color-brand-300: #7dd3fc;
+  --color-brand-400: #38bdf8;
+  --color-brand-500: #0ea5e9;
+  --color-brand-600: #0284c7;
+  --color-brand-700: #0369a1;
+  --color-brand-800: #075985;
+  --color-brand-900: #0c4a6e;
+  --color-brand-950: #082f49;
+  --color-brand: #0284c7;
+  --color-brand-dark: #0369a1;
+  --color-brand-deep: #082f49;
   --color-gold: #f59e0b;
   --color-gold-deep: #b45309;
   --color-gold-soft: #fef3c7;
-  --color-ink: #2f1710;
-  --color-paper: #faf3e8;
-  --color-mute: #8a6a52;
-  --color-popblue: #8a9a3a;
-  --color-popblue-deep: #5c661f;
-  --color-popblue-soft: #f0f3d8;
+  --color-ink: #102a43;
+  --color-paper: #f2f7fd;
+  --color-mute: #5f7d99;
+  --color-popblue: #059669;
+  --color-popblue-deep: #047857;
+  --color-popblue-soft: #d1fae5;
 }
 
 html { scroll-behavior: smooth; }
@@ -42,73 +42,73 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #faf3e8;
+  background: #f2f7fd;
   background-image:
-    linear-gradient(118deg, rgba(194, 65, 12, 0.09) 0%, rgba(245, 158, 11, 0.08) 36%, rgba(138, 154, 58, 0.07) 70%, transparent 100%),
-    radial-gradient(ellipse 58% 24% at 90% 6%, rgba(245, 158, 11, 0.14), transparent),
-    radial-gradient(ellipse 50% 22% at 8% 94%, rgba(194, 65, 12, 0.10), transparent),
-    radial-gradient(rgba(154, 52, 18, 0.10) 1.3px, transparent 1.3px);
+    linear-gradient(118deg, rgba(2, 132, 199, 0.08) 0%, rgba(56, 189, 248, 0.07) 36%, rgba(16, 185, 129, 0.06) 70%, transparent 100%),
+    radial-gradient(ellipse 58% 24% at 90% 6%, rgba(56, 189, 248, 0.13), transparent),
+    radial-gradient(ellipse 50% 22% at 8% 94%, rgba(2, 132, 199, 0.09), transparent),
+    radial-gradient(rgba(2, 132, 199, 0.10) 1.3px, transparent 1.3px);
   background-size: auto, auto, auto, 26px 26px;
-  color: #2f1710;
+  color: #102a43;
 }
-::selection { background: #c2410c; color: #ffffff; }
+::selection { background: #0284c7; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: #9a3412; border-radius: 8px; border: 2px solid #faf3e8; }
-::-webkit-scrollbar-track { background: #f0e2cd; }
+::-webkit-scrollbar-thumb { background: #0369a1; border-radius: 8px; border: 2px solid #f2f7fd; }
+::-webkit-scrollbar-track { background: #dcebfb; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Ember rise: glowing embers drifting upward through warm air. */
+/* Snowfall: soft flakes drifting down through the frost air. */
 @keyframes volt-fall-anim {
-  0% { transform: translate3d(10px, 120px, 0) rotate(0deg) scale(0.5); opacity: 0; }
-  25% { opacity: 0.85; }
-  60% { transform: translate3d(-12px, -6px, 0) rotate(-90deg) scale(1); opacity: 0.65; }
-  100% { transform: translate3d(10px, -120px, 0) rotate(-200deg) scale(0.7); opacity: 0; }
+  0% { transform: translate3d(8px, -140px, 0) rotate(0deg) scale(0.55); opacity: 0; }
+  28% { opacity: 0.9; }
+  62% { transform: translate3d(-14px, 30px, 0) rotate(120deg) scale(1); opacity: 0.7; }
+  100% { transform: translate3d(8px, 140px, 0) rotate(240deg) scale(0.75); opacity: 0; }
 }
-.pop-fall { animation: volt-fall-anim 12.4s ease-in infinite; }
+.pop-fall { animation: volt-fall-anim 11.8s ease-in infinite; }
 
-/* Ember drift: slow lateral sway of the heat haze. */
+/* Glacier drift: slow lateral sway of the cold haze. */
 @keyframes volt-drift {
   0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.55; }
   50% { transform: translate3d(3vw, 0.75rem, 0) scale(1.08); opacity: 0.9; }
 }
 .pop-drift { animation: volt-drift 26s ease-in-out infinite; }
 
-/* Warm bob: gentle lift with a soft settle. */
+/* Frost bob: gentle lift with a soft settle. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-7px) scale(1.03); }
 }
 .pop-bob { animation: signal-bob 8s ease-in-out infinite; }
 
-/* Sun wheel: steady rotation for the desert sun. */
+/* Aurora wheel: steady rotation for the glacier beacon. */
 @keyframes orbit-wheel {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: orbit-wheel 80s linear infinite; }
 
-/* Ember ticker: infinite marquee for the promo strip (rightward drift). */
+/* Frost ticker: infinite marquee for the promo strip (rightward drift). */
 @keyframes volt-ticker {
   from { transform: translateX(-50%); }
   to { transform: translateX(0); }
 }
 .pop-ticker { animation: volt-ticker 32s linear infinite; }
 
-/* Ember ribbon: burnt terracotta -> honey amber -> olive harvest. */
+/* Aurora ribbon: glacier sky -> ice blue -> aurora mint. */
 .pop-stripes {
-  background-image: linear-gradient(135deg, #c2410c 0%, #c2410c 22%, #f59e0b 22%, #f59e0b 48%, #8a9a3a 48%, #8a9a3a 72%, #c2410c 72%);
+  background-image: linear-gradient(135deg, #0284c7 0%, #0284c7 22%, #38bdf8 22%, #38bdf8 48%, #10b981 48%, #10b981 72%, #0284c7 72%);
   background-size: 64px 64px;
 }
 
-/* Ember card: warm cream-to-sand panel with a terracotta hairline,
-   an amber-to-terracotta left spine, and a warm earth shadow; hover
-   lifts it into an amber-tinged glow. */
+/* Glacier card: frosted white-to-ice panel with a glacier hairline,
+   an aurora top edge, and a cold blue shadow; hover lifts it into
+   an ice-blue glow. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(154, 52, 18, 0.22);
-  background: linear-gradient(170deg, #fffdf7 0%, #f9edd9 100%);
-  border-radius: 1.1rem;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 16px 38px -22px rgba(124, 45, 18, 0.40), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(2, 132, 199, 0.22);
+  background: linear-gradient(168deg, #ffffff 0%, #e9f4fd 100%);
+  border-radius: 1.25rem;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 18px 40px -24px rgba(2, 132, 199, 0.38), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   overflow: hidden;
 }
@@ -116,11 +116,11 @@ body {
   content: "";
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
-  width: 6px;
-  background: linear-gradient(180deg, #f59e0b, #c2410c 60%, #9a3412);
-  border-radius: 1.1rem 0 0 1.1rem;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9 35%, #10b981 70%, #f59e0b);
+  border-radius: 1.25rem 1.25rem 0 0;
 }
 .pop-lift::after {
   content: "";
@@ -128,72 +128,72 @@ body {
   inset: 0;
   border-radius: inherit;
   pointer-events: none;
-  background: linear-gradient(180deg, rgba(245, 158, 11, 0.08), transparent 55%);
+  background: linear-gradient(180deg, rgba(56, 189, 248, 0.09), transparent 55%);
 }
 .pop-lift:hover {
-  transform: translateY(-4px) rotate(-0.25deg);
-  border-color: rgba(245, 158, 11, 0.55);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 26px 52px -22px rgba(194, 65, 12, 0.45), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  transform: translateY(-5px);
+  border-color: rgba(56, 189, 248, 0.6);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 28px 54px -24px rgba(2, 132, 199, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
 }
 
-/* Ember glass: shared by modals and drawers — warm frosted glass. */
+/* Frost glass: shared by modals and drawers — cool frosted glass. */
 .pop-glass {
-  background: rgba(250, 243, 232, 0.92);
+  background: rgba(242, 247, 253, 0.92);
   backdrop-filter: blur(20px) saturate(1.2);
   -webkit-backdrop-filter: blur(20px) saturate(1.2);
-  border: 1px solid rgba(154, 52, 18, 0.28);
-  border-radius: 1.1rem;
-  box-shadow: 0 30px 80px -22px rgba(68, 26, 12, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(2, 132, 199, 0.28);
+  border-radius: 1.25rem;
+  box-shadow: 0 30px 80px -22px rgba(8, 47, 73, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
-/* Ember seal: tilted amber pill stamp with a terracotta dashed halo. */
+/* Frost seal: tilted ice-blue pill stamp with a glacier dashed halo. */
 .starburst {
   border-radius: 9999px;
-  border: 2px dashed rgba(255, 255, 255, 0.9);
-  outline: 2px solid rgba(194, 65, 12, 0.65);
+  border: 2px dashed rgba(255, 255, 255, 0.95);
+  outline: 2px solid rgba(2, 132, 199, 0.55);
   outline-offset: 2px;
-  background: radial-gradient(circle at 50% 32%, #fde68a 0%, #f59e0b 55%, #b45309 100%);
-  color: #441a0c;
-  transform: rotate(6deg);
-  box-shadow: 0 0 24px 2px rgba(245, 158, 11, 0.55);
+  background: radial-gradient(circle at 50% 32%, #bae6fd 0%, #38bdf8 55%, #0369a1 100%);
+  color: #082f49;
+  transform: rotate(-6deg);
+  box-shadow: 0 0 24px 2px rgba(56, 189, 248, 0.5);
 }
 
-/* Dune dots: warm dot-grid texture for hero bands. */
+/* Frost dots: cool dot-grid texture for hero bands. */
 .halftone {
-  background-image: radial-gradient(rgba(154, 52, 18, 0.12) 1.6px, transparent 1.6px);
+  background-image: radial-gradient(rgba(2, 132, 199, 0.12) 1.6px, transparent 1.6px);
   background-size: 22px 22px;
 }
 
-/* Ember wave: terracotta chevron teeth, a desert divider. */
+/* Glacier wave: ice-blue chevron teeth, a frost divider. */
 .zigzag {
   height: 14px;
   background-image:
-    linear-gradient(135deg, rgba(194, 65, 12, 0.85) 25%, transparent 25%),
-    linear-gradient(225deg, rgba(194, 65, 12, 0.85) 25%, transparent 25%);
+    linear-gradient(135deg, rgba(2, 132, 199, 0.8) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(2, 132, 199, 0.8) 25%, transparent 25%);
   background-size: 24px 24px;
   background-repeat: repeat-x;
   background-position: 0 0, 0 0;
   opacity: 0.9;
 }
 
-/* Harvest awning: amber diagonal shade band over the dune field. */
+/* Frost awning: ice-blue diagonal shade band over the frost field. */
 .bazaar-awning {
   background-image:
-    repeating-linear-gradient(45deg, rgba(245, 158, 11, 0.18) 0 12px, transparent 12px 24px),
-    linear-gradient(180deg, #f9edd9, #faf3e8);
+    repeating-linear-gradient(45deg, rgba(56, 189, 248, 0.16) 0 12px, transparent 12px 24px),
+    linear-gradient(180deg, #e9f4fd, #f2f7fd);
 }
 
-/* Desert sun: layered cream-to-amber radial for the hero's beacon heart. */
+/* Glacier beacon: layered white-to-ice radial for the hero's frost heart. */
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 253, 247, 0.95) 0%, rgba(254, 243, 199, 0.55) 34%, rgba(245, 158, 11, 0.32) 58%, rgba(194, 65, 12, 0) 72%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(186, 230, 253, 0.55) 34%, rgba(56, 189, 248, 0.30) 58%, rgba(2, 132, 199, 0) 72%);
 }
 
-/* Heat rays: rotating conic rays around the desert sun. */
+/* Ice rays: rotating conic rays around the glacier beacon. */
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg,
-    rgba(194, 65, 12, 0.20) 0deg 5deg,
+    rgba(2, 132, 199, 0.18) 0deg 5deg,
     transparent 5deg 20deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 88%);
@@ -201,66 +201,66 @@ body {
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all ember-styled. */
+/* Legacy aliases kept so untouched components still render — all glacier-styled. */
 .lagoon-lift {
   position: relative;
-  border: 1px solid rgba(154, 52, 18, 0.22);
-  background: linear-gradient(170deg, #fffdf7 0%, #f9edd9 100%);
-  border-radius: 1.1rem;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 16px 38px -22px rgba(124, 45, 18, 0.40), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(2, 132, 199, 0.22);
+  background: linear-gradient(168deg, #ffffff 0%, #e9f4fd 100%);
+  border-radius: 1.25rem;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 18px 40px -24px rgba(2, 132, 199, 0.38), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   overflow: hidden;
 }
 .lagoon-lift:hover {
-  transform: translateY(-4px) rotate(-0.25deg);
-  border-color: rgba(245, 158, 11, 0.55);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 26px 52px -22px rgba(194, 65, 12, 0.45), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  transform: translateY(-5px);
+  border-color: rgba(56, 189, 248, 0.6);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 28px 54px -24px rgba(2, 132, 199, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
 }
 .stamp-perf {
-  border: 2px dashed #b45309;
-  background: rgba(254, 243, 199, 0.9);
-  border-radius: 1.1rem;
-  box-shadow: 0 20px 50px -20px rgba(124, 45, 18, 0.45);
+  border: 2px dashed #0284c7;
+  background: rgba(224, 242, 254, 0.9);
+  border-radius: 1.25rem;
+  box-shadow: 0 20px 50px -20px rgba(2, 132, 199, 0.4);
 }
 .ember-glow {
   position: relative;
-  border: 1px solid rgba(154, 52, 18, 0.22);
-  background: linear-gradient(170deg, #fffdf7 0%, #f9edd9 100%);
-  border-radius: 1.1rem;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 16px 38px -22px rgba(124, 45, 18, 0.40), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(2, 132, 199, 0.22);
+  background: linear-gradient(168deg, #ffffff 0%, #e9f4fd 100%);
+  border-radius: 1.25rem;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 18px 40px -24px rgba(2, 132, 199, 0.38), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
-  transform: translateY(-4px) rotate(-0.25deg);
-  border-color: rgba(245, 158, 11, 0.55);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 26px 52px -22px rgba(194, 65, 12, 0.45), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  transform: translateY(-5px);
+  border-color: rgba(56, 189, 248, 0.6);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 28px 54px -24px rgba(2, 132, 199, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
 }
 .ripple-glow {
   position: relative;
-  border: 1px solid rgba(154, 52, 18, 0.22);
-  background: linear-gradient(170deg, #fffdf7 0%, #f9edd9 100%);
-  border-radius: 1.1rem;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 16px 38px -22px rgba(124, 45, 18, 0.40), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(2, 132, 199, 0.22);
+  background: linear-gradient(168deg, #ffffff 0%, #e9f4fd 100%);
+  border-radius: 1.25rem;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 18px 40px -24px rgba(2, 132, 199, 0.38), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
-  transform: translateY(-4px) rotate(-0.25deg);
-  border-color: rgba(245, 158, 11, 0.55);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 26px 52px -22px rgba(194, 65, 12, 0.45), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  transform: translateY(-5px);
+  border-color: rgba(56, 189, 248, 0.6);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 28px 54px -24px rgba(2, 132, 199, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
 }
 .lagoon-glow {
   position: relative;
-  border: 1px solid rgba(154, 52, 18, 0.22);
-  background: linear-gradient(170deg, #fffdf7 0%, #f9edd9 100%);
-  border-radius: 1.1rem;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 16px 38px -22px rgba(124, 45, 18, 0.40), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(2, 132, 199, 0.22);
+  background: linear-gradient(168deg, #ffffff 0%, #e9f4fd 100%);
+  border-radius: 1.25rem;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 18px 40px -24px rgba(2, 132, 199, 0.38), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
-  transform: translateY(-4px) rotate(-0.25deg);
-  border-color: rgba(245, 158, 11, 0.55);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 26px 52px -22px rgba(194, 65, 12, 0.45), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  transform: translateY(-5px);
+  border-color: rgba(56, 189, 248, 0.6);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 28px 54px -24px rgba(2, 132, 199, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
 }

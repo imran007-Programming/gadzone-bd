@@ -1,6 +1,6 @@
 export default function TopBar() {
   return (
-    <div className="relative overflow-hidden border-b-2 border-[#d4dbf5] bg-gradient-to-r from-brand-200 via-brand-100 to-brand-200 px-4 py-2.5 text-center text-xs font-bold tracking-wide text-[#2f1710] sm:text-sm">
+    <div className="relative overflow-hidden border-b-2 border-[#d4dbf5] bg-gradient-to-r from-brand-200 via-brand-100 to-brand-200 px-4 py-2.5 text-center text-xs font-bold tracking-wide text-[#102a43] sm:text-sm">
       {/* firefly haze: rising spark dots */}
       <div
         aria-hidden
