@@ -18,14 +18,14 @@ export default function BottomNav({ cartCount, onCartOpen, onMenuOpen, onAccount
     { label: "Help", icon: "💬", onClick: onHelpOpen },
   ];
   return (
-    <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-[#cdd6f7] bg-[#f3f5ff]/95 shadow-[0_-8px_24px_rgba(28,25,23, 0.25)] backdrop-blur md:hidden">
+    <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-[#cdd6f7] bg-[#faf3e8]/95 shadow-[0_-8px_24px_rgba(28,25,23, 0.25)] backdrop-blur md:hidden">
       <div className="grid grid-cols-4 pb-[env(safe-area-inset-bottom)]">
         {items.map((item) => (
           <motion.button
             key={item.label}
             whileTap={{ scale: 0.94 }}
             onClick={item.onClick}
-            className="relative flex flex-col items-center gap-0.5 py-2.5 text-[11px] font-semibold tracking-tight text-[#5c658f] transition-colors active:text-brand-700"
+            className="relative flex flex-col items-center gap-0.5 py-2.5 text-[11px] font-semibold tracking-tight text-[#8a6a52] transition-colors active:text-brand-700"
           >
             <span className="relative text-xl leading-none">
               {item.icon}
