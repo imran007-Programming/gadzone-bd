@@ -1,30 +1,30 @@
 @import "tailwindcss";
 
 @theme {
-  /* Emerald Grove Market: emerald greens, lime leaf accents,
-     misty mint paper, teal dewdrop secondary accents. Fresh-first theme. */
-  --color-brand-50: #ecfdf5;
-  --color-brand-100: #d1fae5;
-  --color-brand-200: #a7f3d0;
-  --color-brand-300: #6ee7b7;
-  --color-brand-400: #34d399;
-  --color-brand-500: #10b981;
-  --color-brand-600: #059669;
-  --color-brand-700: #047857;
-  --color-brand-800: #065f46;
-  --color-brand-900: #064e3b;
-  --color-brand-950: #022c22;
-  --color-brand: #059669;
-  --color-brand-dark: #047857;
-  --color-brand-deep: #064e3b;
-  --color-gold: #65a30d;
-  --color-gold-deep: #3f6212;
-  --color-gold-soft: #f4fde4;
-  --color-ink: #10231c;
-  --color-paper: #f4fbf6;
-  --color-popblue: #0d9488;
-  --color-popblue-deep: #0f766e;
-  --color-popblue-soft: #ccfbf1;
+  /* Saffron Ember Souk: burnt-orange brand, crimson pop accents,
+     warm cream paper, cocoa ink. A dusk-market theme. */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-brand-950: #431407;
+  --color-brand: #ea580c;
+  --color-brand-dark: #c2410c;
+  --color-brand-deep: #7c2d12;
+  --color-gold: #dc2626;
+  --color-gold-deep: #991b1b;
+  --color-gold-soft: #fee2e2;
+  --color-ink: #2b1a12;
+  --color-paper: #fffaf3;
+  --color-popblue: #b91c1c;
+  --color-popblue-deep: #7f1d1d;
+  --color-popblue-soft: #fee2e2;
 }
 
 html { scroll-behavior: smooth; }
@@ -39,23 +39,23 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #f4fbf6;
+  background: #fffaf3;
   background-image:
-    radial-gradient(ellipse 90% 34% at 50% -14%, rgba(16, 185, 129, 0.16), transparent),
-    radial-gradient(ellipse 62% 28% at 92% 102%, rgba(101, 163, 13, 0.12), transparent),
-    radial-gradient(ellipse 54% 26% at 6% 60%, rgba(13, 148, 136, 0.12), transparent),
-    radial-gradient(rgba(4, 120, 87, 0.12) 1.2px, transparent 1.3px);
-  background-size: auto, auto, auto, 30px 30px;
-  color: #10231c;
+    radial-gradient(ellipse 90% 34% at 50% -14%, rgba(249, 115, 22, 0.16), transparent),
+    radial-gradient(ellipse 62% 28% at 92% 102%, rgba(220, 38, 38, 0.10), transparent),
+    radial-gradient(ellipse 54% 26% at 6% 60%, rgba(251, 146, 60, 0.12), transparent),
+    radial-gradient(rgba(194, 65, 12, 0.10) 1.6px, transparent 1.7px);
+  background-size: auto, auto, auto, 34px 34px;
+  color: #2b1a12;
 }
-::selection { background: #059669; color: #ffffff; }
+::selection { background: #ea580c; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: #10b981; border-radius: 8px; border: 2px solid #f4fbf6; }
-::-webkit-scrollbar-track { background: #def0e4; }
+::-webkit-scrollbar-thumb { background: #f97316; border-radius: 8px; border: 2px solid #fffaf3; }
+::-webkit-scrollbar-track { background: #f7e6d3; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Dew motes: tiny spores drifting upward through cool grove air. */
+/* Ember sparks: tiny sparks drifting upward through warm dusk air. */
 @keyframes spark-rise-anim {
   0% { transform: translate3d(-6px, 120px, 0) scale(0.7); opacity: 0; }
   25% { opacity: 0.95; }
@@ -64,21 +64,21 @@ body {
 }
 .pop-fall { animation: spark-rise-anim 9.4s ease-in infinite; }
 
-/* Canopy sway: slow lateral sway for the cool leaf-light washes. */
+/* Dusk sway: slow lateral sway for the warm ember-light washes. */
 @keyframes heat-shimmer {
   0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(3vw, 0.75rem, 0) scale(1.14); opacity: 0.85; }
 }
 .pop-drift { animation: heat-shimmer 19s ease-in-out infinite; }
 
-/* Leaf bob: gentle lift with a soft settle. */
+/* Lantern bob: gentle lift with a soft settle. */
 @keyframes kiln-throb {
   0%, 100% { transform: translateY(0) rotate(-1.2deg) scale(1); }
   50% { transform: translateY(-7px) rotate(1.2deg) scale(1.03); }
 }
 .pop-bob { animation: kiln-throb 7.4s ease-in-out infinite; }
 
-/* Grove wheel: steady rotation for the leaf rings. */
+/* Souk wheel: steady rotation for the spice rings. */
 @keyframes circuit-wheel {
   to { transform: rotate(360deg); }
 }
@@ -91,22 +91,21 @@ body {
 }
 .pop-ticker { animation: kiln-ticker 32s linear infinite; }
 
-/* Grove ribbon: flowing emerald → lime → amber gradient. */
+/* Souk ribbon: flowing crimson → saffron → amber gradient. */
 .pop-stripes {
-  background-image: linear-gradient(115deg, #047857, #10b981 30%, #a3e635 58%, #fbbf24 96%);
+  background-image: linear-gradient(115deg, #7f1d1d, #dc2626 30%, #f97316 58%, #fbbf24 96%);
 }
 
-/* Grove card: soft mint card with a deep rounded frame and layered
-   feathered shadows; hover lifts it into a fresh dewy aura. */
+/* Souk ticket card: cream ticket with a cocoa frame, dashed perforation
+   along the left edge, and a hard offset shadow; hover snaps it into a
+   crisper pose with a deeper shadow. */
 .pop-lift {
   position: relative;
-  border: 2px solid #a7f3d0;
-  border-radius: 1.75rem;
-  background: linear-gradient(180deg, #ffffff 0%, #f0faf4 100%);
-  box-shadow:
-    0 2px 6px rgba(6, 78, 59, 0.08),
-    0 18px 40px -18px rgba(6, 95, 70, 0.28);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  border: 2px solid #2b1a12;
+  border-radius: 1.25rem;
+  background: linear-gradient(180deg, #ffffff 0%, #fff7ed 100%);
+  box-shadow: 5px 5px 0 rgba(43, 26, 18, 0.9);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
 .pop-lift::before {
   content: "";
@@ -116,80 +115,76 @@ body {
   width: 13px;
   height: 13px;
   border-radius: 9999px;
-  background: radial-gradient(circle at 35% 30%, #ffffff, #bef264 55%, #65a30d 100%);
-  border: 2px solid #ffffff;
-  box-shadow: 0 0 0 3px rgba(163, 230, 53, 0.35), 0 2px 8px rgba(101, 163, 13, 0.55);
+  background: radial-gradient(circle at 35% 30%, #ffffff, #fdba74 55%, #ea580c 100%);
+  border: 2px solid #2b1a12;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.30), 0 2px 8px rgba(234, 88, 12, 0.55);
   z-index: 1;
 }
 .pop-lift:hover {
-  transform: translateY(-7px) scale(1.01);
-  border-color: #34d399;
-  box-shadow:
-    0 4px 10px rgba(6, 78, 59, 0.10),
-    0 30px 52px -20px rgba(16, 185, 129, 0.50);
+  transform: translate(-2px, -2px);
+  border-color: #c2410c;
+  box-shadow: 8px 8px 0 rgba(43, 26, 18, 0.9);
 }
 .pop-lift:hover::before {
-  box-shadow: 0 0 0 4px rgba(163, 230, 53, 0.30), 0 0 14px 3px rgba(163, 230, 53, 0.50);
+  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.30), 0 0 14px 3px rgba(249, 115, 22, 0.55);
 }
 
-/* Grove glass: shared by modals and drawers — cool frosted glass. */
+/* Souk glass: shared by modals and drawers — warm frosted glass. */
 .pop-glass {
-  background: rgba(244, 251, 246, 0.94);
+  background: rgba(255, 250, 243, 0.94);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 2px solid #a7f3d0;
-  border-radius: 1.75rem;
-  box-shadow:
-    0 24px 64px -18px rgba(6, 78, 59, 0.30),
-    0 2px 10px rgba(5, 150, 105, 0.12);
+  border: 2px solid #2b1a12;
+  border-radius: 1.25rem;
+  box-shadow: 8px 8px 0 rgba(43, 26, 18, 0.85), 0 2px 10px rgba(234, 88, 12, 0.12);
 }
 
-/* Leaf seal: round lime medallion with a dashed forest halo. */
+/* Spice seal: round crimson medallion with a dashed saffron halo. */
 .starburst {
   border-radius: 9999px;
-  border: 2px solid #ffffff;
-  outline: 3px dashed rgba(63, 98, 18, 0.55);
+  border: 2px solid #2b1a12;
+  outline: 3px dashed rgba(153, 27, 27, 0.55);
   outline-offset: 3px;
-  background: radial-gradient(circle at 32% 28%, #d9f99d, #65a30d 40%, #3f6212 85%);
+  background: radial-gradient(circle at 32% 28%, #fca5a5, #dc2626 40%, #991b1b 85%);
   color: #ffffff;
-  box-shadow: 0 10px 26px -8px rgba(101, 163, 13, 0.55);
+  box-shadow: 0 10px 26px -8px rgba(220, 38, 38, 0.55);
 }
 
-/* Leaf-litter dots: fine emerald dot texture for hero bands. */
+/* Ember dots: coarse saffron dot texture for hero bands. */
 .halftone {
-  background-image: radial-gradient(rgba(4, 120, 87, 0.16) 1.3px, transparent 1.4px);
-  background-size: 22px 22px;
+  background-image: radial-gradient(rgba(194, 65, 12, 0.16) 1.8px, transparent 1.9px);
+  background-size: 26px 26px;
 }
 
-/* Dew trail: emerald dashes like morning droplets on a leaf. */
+/* Spice ribbon: chevron zigzag in warm ember tones. */
 .zigzag {
-  height: 12px;
-  background-image: repeating-linear-gradient(90deg, rgba(5, 150, 105, 0.85) 0 12px, transparent 12px 22px);
-  background-size: 22px 12px;
+  height: 14px;
+  background-image: repeating-linear-gradient(135deg, rgba(234, 88, 12, 0.9) 0 10px, transparent 10px 20px, rgba(220, 38, 38, 0.9) 20px 30px, transparent 30px 40px);
+  background-size: 40px 14px;
   background-repeat: repeat-x;
   background-position: center;
   opacity: 0.9;
   border-radius: 9999px;
 }
 
-/* Canopy shade: fresh glow band over the mint field. */
+/* Dusk shade: warm glow band over the cream field. */
 .bazaar-awning {
   background-image:
-    repeating-linear-gradient(115deg, rgba(16, 185, 129, 0.14) 0 26px, transparent 26px 52px),
-    linear-gradient(180deg, #ffffff, #f4fbf6);
+    repeating-linear-gradient(115deg, rgba(249, 115, 22, 0.14) 0 26px, transparent 26px 52px),
+    linear-gradient(180deg, #ffffff, #fffaf3);
 }
 
-/* Dew orb: layered lime radial for the hero's glowing core. */
+/* Ember orb: layered saffron radial for the hero's glowing core. */
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(190, 242, 100, 0.55) 34%, rgba(101, 163, 13, 0.42) 58%, rgba(101, 163, 13, 0) 72%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(251, 146, 60, 0.55) 34%, rgba(220, 38, 38, 0.42) 58%, rgba(220, 38, 38, 0) 72%);
 }
 
-/* Grove rings: concentric emerald rings around the orb. */
+/* Souk rings: concentric ember rings around the orb. */
 .sun-rays {
   background: repeating-radial-gradient(
     circle at center,
-    rgba(5, 150, 105, 0.26) 0 5px,
+    rgba(234, 88, 12, 0.26) 0 5px,
     transparent 5px 26px
   );
   -webkit-mask: radial-gradient(circle, black 40%, transparent 88%);
@@ -197,117 +192,117 @@ body {
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all grove-styled. */
+/* Legacy aliases kept so untouched components still render — all souk-styled. */
 .lagoon-lift {
-  border: 2px solid #a7f3d0;
-  border-radius: 1.75rem;
-  background: linear-gradient(180deg, #ffffff 0%, #f0faf4 100%);
-  box-shadow: 0 2px 6px rgba(6, 78, 59, 0.08), 0 18px 40px -18px rgba(6, 95, 70, 0.28);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  border: 2px solid #2b1a12;
+  border-radius: 1.25rem;
+  background: linear-gradient(180deg, #ffffff 0%, #fff7ed 100%);
+  box-shadow: 5px 5px 0 rgba(43, 26, 18, 0.9);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
 .lagoon-lift:hover {
-  transform: translateY(-6px) scale(1.01);
-  border-color: #34d399;
-  box-shadow: 0 4px 10px rgba(6, 78, 59, 0.10), 0 30px 52px -20px rgba(16, 185, 129, 0.50);
+  transform: translate(-2px, -2px);
+  border-color: #c2410c;
+  box-shadow: 8px 8px 0 rgba(43, 26, 18, 0.9);
 }
 .stamp-perf {
-  border: 2px dashed #10b981;
+  border: 2px dashed #f97316;
   background: #ffffff;
-  border-radius: 1.75rem;
-  box-shadow: 0 12px 28px -12px rgba(5, 150, 105, 0.30);
+  border-radius: 1.25rem;
+  box-shadow: 5px 5px 0 rgba(43, 26, 18, 0.55);
 }
 .ember-glow {
-  border: 2px solid #a7f3d0;
-  border-radius: 1.75rem;
-  background: linear-gradient(180deg, #ffffff 0%, #f0faf4 100%);
-  box-shadow: 0 2px 6px rgba(6, 78, 59, 0.08), 0 18px 40px -18px rgba(6, 95, 70, 0.28);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  border: 2px solid #2b1a12;
+  border-radius: 1.25rem;
+  background: linear-gradient(180deg, #ffffff 0%, #fff7ed 100%);
+  box-shadow: 5px 5px 0 rgba(43, 26, 18, 0.9);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
 .ember-glow:hover {
-  transform: translateY(-6px) scale(1.01);
-  border-color: #34d399;
-  box-shadow: 0 4px 10px rgba(6, 78, 59, 0.10), 0 30px 52px -20px rgba(16, 185, 129, 0.50);
+  transform: translate(-2px, -2px);
+  border-color: #c2410c;
+  box-shadow: 8px 8px 0 rgba(43, 26, 18, 0.9);
 }
 .ripple-glow {
-  border: 2px solid #a7f3d0;
-  border-radius: 1.75rem;
-  background: linear-gradient(180deg, #ffffff 0%, #f0faf4 100%);
-  box-shadow: 0 2px 6px rgba(6, 78, 59, 0.08), 0 18px 40px -18px rgba(6, 95, 70, 0.28);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  border: 2px solid #2b1a12;
+  border-radius: 1.25rem;
+  background: linear-gradient(180deg, #ffffff 0%, #fff7ed 100%);
+  box-shadow: 5px 5px 0 rgba(43, 26, 18, 0.9);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
 .ripple-glow:hover {
-  transform: translateY(-6px) scale(1.01);
-  border-color: #34d399;
-  box-shadow: 0 4px 10px rgba(6, 78, 59, 0.10), 0 30px 52px -20px rgba(16, 185, 129, 0.50);
+  transform: translate(-2px, -2px);
+  border-color: #c2410c;
+  box-shadow: 8px 8px 0 rgba(43, 26, 18, 0.9);
 }
 .lagoon-glow {
-  border: 2px solid #a7f3d0;
-  border-radius: 1.75rem;
-  background: linear-gradient(180deg, #ffffff 0%, #f0faf4 100%);
-  box-shadow: 0 2px 6px rgba(6, 78, 59, 0.08), 0 18px 40px -18px rgba(6, 95, 70, 0.28);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  border: 2px solid #2b1a12;
+  border-radius: 1.25rem;
+  background: linear-gradient(180deg, #ffffff 0%, #fff7ed 100%);
+  box-shadow: 5px 5px 0 rgba(43, 26, 18, 0.9);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
 .lagoon-glow:hover {
-  transform: translateY(-6px) scale(1.01);
-  border-color: #34d399;
-  box-shadow: 0 4px 10px rgba(6, 78, 59, 0.10), 0 30px 52px -20px rgba(16, 185, 129, 0.50);
+  transform: translate(-2px, -2px);
+  border-color: #c2410c;
+  box-shadow: 8px 8px 0 rgba(43, 26, 18, 0.9);
 }
 .sticker-lift {
-  border: 2px solid #a7f3d0;
+  border: 2px solid #2b1a12;
   border-radius: 0.9rem;
   background: #ffffff;
-  box-shadow: 0 6px 18px -8px rgba(6, 95, 70, 0.30);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 4px 4px 0 rgba(43, 26, 18, 0.85);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 .sticker-lift:hover {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 12px 26px -8px rgba(16, 185, 129, 0.42);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 rgba(234, 88, 12, 0.9);
 }
 .neon-lift {
-  border: 2px solid rgba(101, 163, 13, 0.7);
-  border-radius: 1.75rem;
-  background: linear-gradient(180deg, #ffffff 0%, #f0faf4 100%);
-  box-shadow: 0 18px 40px -18px rgba(101, 163, 13, 0.30);
+  border: 2px solid rgba(220, 38, 38, 0.7);
+  border-radius: 1.25rem;
+  background: linear-gradient(180deg, #ffffff 0%, #fff7ed 100%);
+  box-shadow: 5px 5px 0 rgba(220, 38, 38, 0.35);
 }
 .lagoon-glass {
-  background: rgba(244, 251, 246, 0.92);
+  background: rgba(255, 250, 243, 0.92);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 2px solid #a7f3d0;
-  border-radius: 1.75rem;
-  box-shadow: 0 24px 64px -18px rgba(6, 78, 59, 0.26);
+  border: 2px solid #2b1a12;
+  border-radius: 1.25rem;
+  box-shadow: 8px 8px 0 rgba(43, 26, 18, 0.85);
 }
 .espresso-glass {
-  background: rgba(244, 251, 246, 0.92);
+  background: rgba(255, 250, 243, 0.92);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 2px solid #a7f3d0;
-  border-radius: 1.75rem;
-  box-shadow: 0 24px 64px -18px rgba(6, 78, 59, 0.26);
+  border: 2px solid #2b1a12;
+  border-radius: 1.25rem;
+  box-shadow: 8px 8px 0 rgba(43, 26, 18, 0.85);
 }
 .twilight-glass {
-  background: rgba(244, 251, 246, 0.92);
+  background: rgba(255, 250, 243, 0.92);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 2px solid #a7f3d0;
-  border-radius: 1.75rem;
-  box-shadow: 0 24px 64px -18px rgba(6, 78, 59, 0.26);
+  border: 2px solid #2b1a12;
+  border-radius: 1.25rem;
+  box-shadow: 8px 8px 0 rgba(43, 26, 18, 0.85);
 }
 .night-glass {
-  background: rgba(244, 251, 246, 0.96);
+  background: rgba(255, 250, 243, 0.96);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 2px solid rgba(16, 185, 129, 0.55);
-  border-radius: 1.75rem;
-  box-shadow: 0 24px 64px -18px rgba(6, 78, 59, 0.26);
+  border: 2px solid rgba(234, 88, 12, 0.55);
+  border-radius: 1.25rem;
+  box-shadow: 8px 8px 0 rgba(43, 26, 18, 0.85);
 }
 .mist-glass {
-  background: rgba(244, 251, 246, 0.72);
+  background: rgba(255, 250, 243, 0.72);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 2px solid #a7f3d0;
+  border: 2px solid #2b1a12;
   border-radius: 0.9rem;
-  box-shadow: 0 10px 24px -12px rgba(5, 150, 105, 0.28);
+  box-shadow: 4px 4px 0 rgba(234, 88, 12, 0.55);
 }
 .rain-fall { animation: spark-rise-anim 9.4s ease-in infinite; }
 .rain-fleck { animation: spark-rise-anim 9.4s ease-in infinite; }
