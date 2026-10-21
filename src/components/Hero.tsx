@@ -22,21 +22,21 @@ const item: Variants = {
 
 // Kiln glow: forge-orange, ember-rose and saffron heat clouds drifting over the cocoa weave.
 const GLOWS = [
-  { left: "4%", top: "10%", size: 150, delay: "0s", dur: "14s", c: "rgba(109, 79, 232, 0.28)" },
-  { left: "72%", top: "4%", size: 200, delay: "-4s", dur: "15s", c: "rgba(14, 165, 233, 0.14)" },
-  { left: "44%", top: "44%", size: 120, delay: "-7s", dur: "13s", c: "rgba(196, 181, 253, 0.24)" },
-  { left: "86%", top: "50%", size: 110, delay: "-2s", dur: "14s", c: "rgba(132, 204, 22, 0.2)" },
+  { left: "4%", top: "10%", size: 150, delay: "0s", dur: "14s", c: "rgba(194, 84, 10, 0.28)" },
+  { left: "72%", top: "4%", size: 200, delay: "-4s", dur: "15s", c: "rgba(225, 29, 72, 0.14)" },
+  { left: "44%", top: "44%", size: 120, delay: "-7s", dur: "13s", c: "rgba(243, 177, 131, 0.24)" },
+  { left: "86%", top: "50%", size: 110, delay: "-2s", dur: "14s", c: "rgba(245, 158, 11, 0.2)" },
 ];
 
 // ember sparks: warm motes rising through the kiln wash.
 const DOTS = [
-  { left: "8%", delay: "0s", dur: "7.2s", s: 22, c: "#6d4fe8" },
-  { left: "21%", delay: "-1.4s", dur: "7.8s", s: 16, c: "#ddd6fe" },
-  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 24, c: "#0ea5e9" },
-  { left: "53%", delay: "-0.8s", dur: "8s", s: 18, c: "#84cc16" },
-  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 22, c: "#84cc16" },
-  { left: "82%", delay: "-2s", dur: "7.9s", s: 15, c: "#a78bfa" },
-  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 20, c: "#6d4fe8" },
+  { left: "8%", delay: "0s", dur: "7.2s", s: 22, c: "#c2540a" },
+  { left: "21%", delay: "-1.4s", dur: "7.8s", s: 16, c: "#f7d9bd" },
+  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 24, c: "#e11d48" },
+  { left: "53%", delay: "-0.8s", dur: "8s", s: 18, c: "#f59e0b" },
+  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 22, c: "#f59e0b" },
+  { left: "82%", delay: "-2s", dur: "7.9s", s: 15, c: "#e0703f" },
+  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 20, c: "#c2540a" },
 ];
 
 // Ticker phrases reuse the hero's existing stats copy.
@@ -88,7 +88,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 height: `${34 - r * 4}%`,
                 transform: `translate(-50%, -50%) scaleY(0.5)`,
                 top: `${50 + r * 9}%`,
-                boxShadow: "0 0 24px 2px rgba(109, 79, 232, 0.35)",
+                boxShadow: "0 0 24px 2px rgba(194, 84, 10, 0.35)",
                 opacity: 1 - r * 0.18,
               }}
             />
@@ -100,13 +100,13 @@ export default function Hero({ onQuickView }: HeroProps) {
             return (
               <span
                 key={i}
-                className="pop-bob absolute h-4 w-4 rounded-full bg-gold shadow-[0_0_18px_4px_rgba(132, 204, 22,0.55)] ring-2 ring-white/60"
+                className="pop-bob absolute h-4 w-4 rounded-full bg-gold shadow-[0_0_18px_4px_rgba(245, 158, 11,0.55)] ring-2 ring-white/60"
                 style={{ left: `${x}%`, top: `${y}%`, animationDelay: `${-i * 0.7}s` }}
               />
             );
           })}
           {/* the ember sun itself */}
-          <div className="absolute inset-44 rounded-full border-2 border-brand-200/80 bg-[radial-gradient(circle_at_50%_62%,#f5f9ff_0%,#c4b5fd_30%,#6d4fe8_55%,#3b2294_82%,#1b123f_100%)] shadow-[0_0_90px_28px_rgba(109, 79, 232,0.4)]" />
+          <div className="absolute inset-44 rounded-full border-2 border-brand-200/80 bg-[radial-gradient(circle_at_50%_62%,#fffaf0_0%,#f3b183_30%,#c2540a_55%,#6e2c0d_82%,#381607_100%)] shadow-[0_0_90px_28px_rgba(194, 84, 10,0.4)]" />
           <div className="absolute inset-44 rounded-full border border-white/40" />
           {/* flame tongues licking the lower half */}
           <div className="absolute inset-44 overflow-hidden rounded-full">
@@ -150,7 +150,7 @@ export default function Hero({ onQuickView }: HeroProps) {
       </div>
 
       {/* ember ticker: ribbon band, marquee of the shop's own promises */}
-      <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/40 bg-gradient-to-r from-brand-400 via-gold to-popblue py-3 shadow-[0_18px_44px_-20px_rgba(14, 165, 233, 0.6)]">
+      <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/40 bg-gradient-to-r from-brand-400 via-gold to-popblue py-3 shadow-[0_18px_44px_-20px_rgba(225, 29, 72, 0.6)]">
         <div className="overflow-hidden py-2">
           <div className="pop-ticker flex w-max items-center gap-8 pr-8">
             {[...TICKER, ...TICKER].map((t, i) => (
@@ -183,7 +183,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full bg-gradient-to-r from-brand-400 via-gold to-popblue px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-950 shadow-[0_16px_38px_-14px_rgba(14, 165, 233, 0.6)]">Handpicked for you</p>
+            <p className="inline-block rounded-full bg-gradient-to-r from-brand-400 via-gold to-popblue px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-950 shadow-[0_16px_38px_-14px_rgba(225, 29, 72, 0.6)]">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="bg-gradient-to-r from-brand-300 to-gold bg-clip-text text-transparent">Picks</span></h2>
             <span className="zigzag mt-3 block w-44" aria-hidden />
           </div>
