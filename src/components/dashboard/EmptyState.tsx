@@ -13,10 +13,10 @@ type EmptyStateProps = {
 
 export default function EmptyState({ icon, title, text, actionLabel, actionHref, onAction }: EmptyStateProps) {
   return (
-    <div className="rounded-2xl bg-[#fff1f2] p-8 text-center shadow-sm ring-1 ring-[#fda4af]">
+    <div className="rounded-2xl bg-[#fff7ed] p-8 text-center shadow-sm ring-1 ring-[#fdba74]">
       <p className="text-4xl" aria-hidden="true">{icon}</p>
-      <p className="mt-3 font-black text-[#27131d]">{title}</p>
-      <p className="mx-auto mt-1 max-w-sm text-sm text-[#9c7482]">{text}</p>
+      <p className="mt-3 font-black text-[#1c1917]">{title}</p>
+      <p className="mx-auto mt-1 max-w-sm text-sm text-[#a8a29e]">{text}</p>
       {actionLabel && actionHref && (
         <Link href={actionHref} className="mt-4 inline-block rounded-full bg-brand-500 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-brand-600">
           {actionLabel}

@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Tide drift: ocean blue, seafoam and coral glows over the harbor.
+// Zest drift: tangerine and amber glows drifting over the grove.
 const GLOWS = [
-  { left: "4%", top: "10%", size: 150, delay: "0s", dur: "14s", c: "rgba(225,29,72, 0.28)" },
-  { left: "72%", top: "4%", size: 200, delay: "-4s", dur: "15s", c: "rgba(244,63,94, 0.16)" },
-  { left: "44%", top: "44%", size: 120, delay: "-7s", dur: "13s", c: "rgba(253,164,175, 0.22)" },
-  { left: "86%", top: "50%", size: 110, delay: "-2s", dur: "14s", c: "rgba(251, 113, 133, 0.24)" },
+  { left: "4%", top: "10%", size: 150, delay: "0s", dur: "14s", c: "rgba(234,88,12, 0.28)" },
+  { left: "72%", top: "4%", size: 200, delay: "-4s", dur: "15s", c: "rgba(249,115,22, 0.16)" },
+  { left: "44%", top: "44%", size: 120, delay: "-7s", dur: "13s", c: "rgba(253,186,116, 0.22)" },
+  { left: "86%", top: "50%", size: 110, delay: "-2s", dur: "14s", c: "rgba(251, 146, 60, 0.24)" },
 ];
 
-// Rising bubbles: ocean blue, seafoam and coral bubbles swirling on a sea breeze.
+// Rising zest: citrus sparkles swirling on a monsoon breeze.
 const DOTS = [
-  { left: "8%", delay: "0s", dur: "7.2s", s: 22, c: "#e11d48" },
-  { left: "21%", delay: "-1.4s", dur: "7.8s", s: 16, c: "#fb7185" },
-  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 24, c: "#f43f5e" },
-  { left: "53%", delay: "-0.8s", dur: "8s", s: 18, c: "#fda4af" },
-  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 22, c: "#be123c" },
-  { left: "82%", delay: "-2s", dur: "7.9s", s: 15, c: "#fb7185" },
-  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 20, c: "#f43f5e" },
+  { left: "8%", delay: "0s", dur: "7.2s", s: 22, c: "#ea580c" },
+  { left: "21%", delay: "-1.4s", dur: "7.8s", s: 16, c: "#fb923c" },
+  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 24, c: "#f97316" },
+  { left: "53%", delay: "-0.8s", dur: "8s", s: 18, c: "#fdba74" },
+  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 22, c: "#c2410c" },
+  { left: "82%", delay: "-2s", dur: "7.9s", s: 15, c: "#fb923c" },
+  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 20, c: "#f97316" },
 ];
 
 // Ticker phrases reuse the hero's existing stats copy.
@@ -68,17 +68,17 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* harbor bubbles + sea-mist wash + rising bubbles */}
+      {/* harbor bubbles + citrus-wash + rising zest */}
       <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
       <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-brand-100/70 via-popblue-soft/30 to-transparent" />
 
-      {/* tide vortex: a glowing deep-sea vortex ringed by orbiting
-          foam bubbles and radiating current traces, offset right */}
+      {/* citrus sun: a glowing tangerine sun ringed by orbiting
+          zest sparkles and radiating grove traces, offset right */}
       <div aria-hidden className="pointer-events-none absolute -right-44 -top-36 z-0 hidden opacity-90 sm:block">
         <div className="relative h-[600px] w-[600px]">
           <div className="sun-disc absolute inset-8 rounded-full blur-2xl" />
           <div className="sun-rays pop-spin absolute inset-0" />
-          {/* radiating current traces */}
+          {/* radiating grove traces */}
           {[0, 45, 90, 135].map((r) => (
             <span
               key={r}
@@ -86,7 +86,7 @@ export default function Hero({ onQuickView }: HeroProps) {
               style={{ transform: `rotate(${r}deg)` }}
             />
           ))}
-          {/* orbiting foam bubbles */}
+          {/* orbiting zest sparkles */}
           {Array.from({ length: 8 }).map((_, i) => {
             const a = (i / 8) * Math.PI * 2;
             const x = 50 + 38 * Math.cos(a);
@@ -94,19 +94,19 @@ export default function Hero({ onQuickView }: HeroProps) {
             return (
               <span
                 key={i}
-                className="pop-bob absolute h-5 w-5 bg-gold shadow-[0_0_18px_4px_rgba(244,63,94, 0.55)] ring-2 ring-white/60"
+                className="pop-bob absolute h-5 w-5 bg-gold shadow-[0_0_18px_4px_rgba(249,115,22, 0.55)] ring-2 ring-white/60"
                 style={{ left: `${x}%`, top: `${y}%`, animationDelay: `${-i * 0.8}s`, borderRadius: "9999px" }}
               />
             );
           })}
-          <div className="absolute inset-44 rounded-full border-2 border-brand-200/80 bg-gradient-to-br from-brand-400 via-brand-600 to-brand-800 shadow-[0_0_90px_28px_rgba(225,29,72, 0.35)]" />
+          <div className="absolute inset-44 rounded-full border-2 border-brand-200/80 bg-gradient-to-br from-brand-400 via-brand-600 to-brand-800 shadow-[0_0_90px_28px_rgba(234,88,12, 0.35)]" />
           <div className="absolute inset-44 rounded-full border border-white/40" />
-          {/* vortex ribs */}
+          {/* sun ribs */}
           <div className="absolute inset-44 rounded-full border-x-8 border-brand-950/30" />
         </div>
       </div>
 
-      {/* drifting sea swell */}
+      {/* drifting citrus swell */}
       <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
         {GLOWS.map((g, i) => (
           <div
@@ -138,17 +138,19 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* harbor ticker: deep-sea-gradient band marquee of the shop's own promises */}
-      <div aria-hidden className="relative z-10 mt-8 border-y-4 border-double border-brand-deep bg-gradient-to-r from-brand-800 via-brand-600 to-popblue-deep py-2.5 shadow-[0_18px_44px_-20px_rgba(39,19,29, 0.55)]">
-        <div className="overflow-hidden">
+      {/* citrus ticker: deep-bark band with zest-stripe edges, marquee of the shop's own promises */}
+      <div aria-hidden className="relative z-10 mt-8 border-y-2 border-ink bg-ink py-2.5 shadow-[0_18px_44px_-20px_rgba(28,25,23, 0.55)]">
+        <div aria-hidden className="pop-stripes h-1.5" />
+        <div className="overflow-hidden py-2">
           <div className="pop-ticker flex w-max items-center gap-8 pr-8">
             {[...TICKER, ...TICKER].map((t, i) => (
               <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-white/95">
-                {t} <span className="text-brand-200">✿</span>
+                {t} <span className="text-brand-400">✿</span>
               </span>
             ))}
           </div>
         </div>
+        <div aria-hidden className="pop-stripes h-1.5" />
       </div>
 
       {/* Stats + featured picks */}
@@ -172,7 +174,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full bg-gradient-to-r from-brand-600 via-gold to-popblue px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-white shadow-[0_16px_38px_-14px_rgba(225,29,72, 0.6)]">Handpicked for you</p>
+            <p className="inline-block rounded-full bg-gradient-to-r from-brand-600 via-gold to-popblue px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-white shadow-[0_16px_38px_-14px_rgba(234,88,12, 0.6)]">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="bg-gradient-to-r from-brand-700 to-popblue-deep bg-clip-text text-transparent">Picks</span></h2>
             <span className="zigzag mt-3 block w-44" aria-hidden />
           </div>

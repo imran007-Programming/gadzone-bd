@@ -1,31 +1,31 @@
 @import "tailwindcss";
 
 @theme {
-  /* Sakura Stamp: cherry-blossom reds on porcelain, plum-ink text, leaf-green
+  /* Citrus Monsoon: tangerine zest on warm cream, pine-ink text, leaf-lime
      secondary accents. */
-  --color-brand-50: #fff1f2;
-  --color-brand-100: #ffe4e6;
-  --color-brand-200: #fecdd3;
-  --color-brand-300: #fda4af;
-  --color-brand-400: #fb7185;
-  --color-brand-500: #f43f5e;
-  --color-brand-600: #e11d48;
-  --color-brand-700: #be123c;
-  --color-brand-800: #9f1239;
-  --color-brand-900: #881337;
-  --color-brand-950: #4c0519;
-  --color-brand: #e11d48;
-  --color-brand-dark: #9f1239;
-  --color-brand-deep: #4c0519;
-  --color-gold: #f43f5e;
-  --color-gold-deep: #9f1239;
-  --color-gold-soft: #ffe4e6;
-  --color-ink: #27131d;
-  --color-paper: #fdf7f8;
-  --color-mute: #9c7482;
-  --color-popblue: #22c55e;
-  --color-popblue-deep: #15803d;
-  --color-popblue-soft: #dcfce7;
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-brand-950: #431407;
+  --color-brand: #ea580c;
+  --color-brand-dark: #9a3412;
+  --color-brand-deep: #431407;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #b45309;
+  --color-gold-soft: #fef3c7;
+  --color-ink: #1c1917;
+  --color-paper: #fffdf6;
+  --color-mute: #a8a29e;
+  --color-popblue: #65a30d;
+  --color-popblue-deep: #4d7c0f;
+  --color-popblue-soft: #ecfccb;
 }
 
 html { scroll-behavior: smooth; }
@@ -40,23 +40,23 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #fdf7f8;
+  background: #fffdf6;
   background-image:
-    radial-gradient(ellipse 90% 34% at 50% -12%, rgba(225, 29, 72, 0.13), transparent),
-    radial-gradient(ellipse 60% 26% at 94% 100%, rgba(251, 113, 133, 0.10), transparent),
-    radial-gradient(ellipse 52% 24% at 4% 62%, rgba(34, 197, 94, 0.07), transparent),
-    repeating-linear-gradient(90deg, rgba(225, 29, 72, 0.045) 0 2px, transparent 2px 54px);
+    radial-gradient(ellipse 90% 34% at 50% -12%, rgba(234, 88, 12, 0.12), transparent),
+    radial-gradient(ellipse 60% 26% at 94% 100%, rgba(245, 158, 11, 0.10), transparent),
+    radial-gradient(ellipse 52% 24% at 4% 62%, rgba(101, 163, 13, 0.08), transparent),
+    repeating-linear-gradient(135deg, rgba(234, 88, 12, 0.04) 0 2px, transparent 2px 60px);
   background-size: auto, auto, auto, auto;
-  color: #27131d;
+  color: #1c1917;
 }
-::selection { background: #e11d48; color: #ffffff; }
+::selection { background: #ea580c; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: #be123c; border-radius: 8px; border: 2px solid #fdf7f8; }
-::-webkit-scrollbar-track { background: #ffe4e6; }
+::-webkit-scrollbar-thumb { background: #c2410c; border-radius: 8px; border: 2px solid #fffdf6; }
+::-webkit-scrollbar-track { background: #ffedd5; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Petal drift: cherry petals drifting down the spring air. */
+/* Zest drift: citrus sparkles rising through the monsoon air. */
 @keyframes bubble-rise-anim {
   0% { transform: translate3d(-10px, -120px, 0) rotate(0deg) scale(0.7); opacity: 0; }
   25% { opacity: 0.9; }
@@ -65,119 +65,116 @@ body {
 }
 .pop-fall { animation: bubble-rise-anim 11.4s ease-in infinite; }
 
-/* Sakura haze: slow lateral drift of the blossom glow. */
+/* Citrus haze: slow lateral drift of the tangerine glow. */
 @keyframes swell-drift {
   0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(3vw, -0.75rem, 0) scale(1.14); opacity: 0.85; }
 }
 .pop-drift { animation: swell-drift 21s ease-in-out infinite; }
 
-/* Bloom throb: gentle lift with a soft settle. */
+/* Grove throb: gentle lift with a soft settle. */
 @keyframes buoy-throb {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-7px) scale(1.03); }
 }
 .pop-bob { animation: buoy-throb 6.6s ease-in-out infinite; }
 
-/* Petal ring: steady rotation for the blossom ring. */
+/* Zest ring: steady rotation for the citrus ring. */
 @keyframes tide-wheel {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: tide-wheel 60s linear infinite; }
 
-/* Blossom ticker: infinite marquee for the offer strip (leftward drift). */
+/* Monsoon ticker: infinite marquee for the offer strip (leftward drift). */
 @keyframes harbor-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: harbor-ticker 30s linear infinite; }
 
-/* Blossom ribbon: plum -> cherry -> petal -> leaf gradient. */
+/* Citrus ribbon: deep bark -> tangerine -> amber -> leaf gradient. */
 .pop-stripes {
-  background-image: linear-gradient(115deg, #4c0519, #e11d48 32%, #fb7185 58%, #22c55e 96%);
+  background-image: linear-gradient(115deg, #431407, #ea580c 32%, #f59e0b 58%, #65a30d 96%);
 }
 
-/* Petal slab: porcelain card with a cherry keyline, sunlit top light and
-   layered blossom shadows; hover lifts it with a deeper cherry shadow. */
+/* Citrus card: crisp cream slab with a bold tangerine keyline and a hard
+   offset sticker shadow; hover presses it down and deepens the shadow. */
 .pop-lift {
   position: relative;
-  border: 1.5px solid rgba(225, 29, 72, 0.25);
-  border-radius: 1.75rem;
-  background: linear-gradient(165deg, #ffffff 0%, #fffbfc 55%, #ffe4e6 130%);
+  border: 2px solid rgba(234, 88, 12, 0.45);
+  border-radius: 1.25rem;
+  background: linear-gradient(170deg, #ffffff 0%, #fffdf6 60%, #ffedd5 135%);
   box-shadow:
     inset 0 2px 0 0 rgba(255, 255, 255, 0.95),
-    inset 0 0 0 5px rgba(255, 255, 255, 0.55),
-    0 22px 44px -18px rgba(225, 29, 72, 0.30),
-    0 5px 12px -6px rgba(76, 5, 25, 0.14);
-  transition: transform 0.24s ease, box-shadow 0.24s ease;
+    6px 6px 0 0 rgba(234, 88, 12, 0.18),
+    0 18px 34px -20px rgba(124, 45, 18, 0.30);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 .pop-lift:hover {
-  transform: translateY(-6px);
+  transform: translate(-2px, -2px);
   box-shadow:
     inset 0 2px 0 0 rgba(255, 255, 255, 0.95),
-    inset 0 0 0 5px rgba(255, 255, 255, 0.55),
-    0 32px 56px -18px rgba(225, 29, 72, 0.42),
-    0 10px 20px -8px rgba(76, 5, 25, 0.18);
+    9px 9px 0 0 rgba(234, 88, 12, 0.26),
+    0 26px 46px -20px rgba(124, 45, 18, 0.42);
 }
 
-/* Blossom glass: shared by modals and drawers — petal-tinted frosted glass. */
+/* Citrus glass: shared by modals and drawers — cream-tinted frosted glass. */
 .pop-glass {
-  background: rgba(253, 247, 248, 0.94);
+  background: rgba(255, 253, 246, 0.94);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1.5px solid rgba(225, 29, 72, 0.30);
+  border: 2px solid rgba(234, 88, 12, 0.40);
   border-radius: 1.25rem;
   box-shadow:
-    0 24px 60px -20px rgba(225, 29, 72, 0.32),
-    0 6px 18px -8px rgba(76, 5, 25, 0.24);
+    6px 6px 0 0 rgba(234, 88, 12, 0.16),
+    0 24px 60px -20px rgba(234, 88, 12, 0.32);
 }
 
-/* Blossom seal: round cherry badge with a dashed petal halo, tilted like a
-   hanami market tag. */
+/* Citrus seal: round tangerine badge with a dashed cream halo, tilted like a
+   monsoon market price tag. */
 .starburst {
   border-radius: 9999px;
   border: 2px dashed #ffffff;
-  outline: 3px solid rgba(251, 113, 133, 0.70);
+  outline: 3px solid rgba(251, 146, 60, 0.70);
   outline-offset: 3px;
-  background: radial-gradient(circle at 50% 32%, #fb7185 0%, #e11d48 58%, #9f1239 100%);
+  background: radial-gradient(circle at 50% 32%, #fb923c 0%, #ea580c 58%, #9a3412 100%);
   color: #ffffff;
-  transform: rotate(-6deg);
-  box-shadow: 0 10px 26px -8px rgba(225, 29, 72, 0.60);
+  transform: rotate(6deg);
+  box-shadow: 0 10px 26px -8px rgba(234, 88, 12, 0.60);
 }
 
-/* Petal print: fine diagonal blush lines for hero bands. */
+/* Grove print: fine diagonal amber lines for hero bands. */
 .halftone {
-  background-image: repeating-linear-gradient(-45deg, rgba(225, 29, 72, 0.10) 0 1.5px, transparent 1.5px 22px);
+  background-image: repeating-linear-gradient(45deg, rgba(234, 88, 12, 0.10) 0 1.5px, transparent 1.5px 24px);
 }
 
-/* Petal scallops: a soft cherry-edge scallop divider. */
+/* Citrus zigzag: bold diagonal tangerine stripe divider. */
 .zigzag {
-  height: 16px;
-  background-image: radial-gradient(circle at 50% 0%, rgba(225, 29, 72, 0.55) 7px, transparent 8px);
-  background-size: 28px 16px;
+  height: 14px;
+  background-image: repeating-linear-gradient(-55deg, rgba(234, 88, 12, 0.55) 0 10px, transparent 10px 22px);
   background-repeat: repeat-x;
   background-position: center;
   opacity: 0.9;
 }
 
-/* Blossom shade: petal-striped shade band over the porcelain field. */
+/* Harvest shade: citrus-striped shade band over the cream field. */
 .bazaar-awning {
   background-image:
-    repeating-linear-gradient(115deg, rgba(225, 29, 72, 0.08) 0 26px, transparent 26px 52px),
-    linear-gradient(180deg, #fffbfc, #fdf7f8);
+    repeating-linear-gradient(115deg, rgba(234, 88, 12, 0.08) 0 26px, transparent 26px 52px),
+    linear-gradient(180deg, #ffffff, #fffdf6);
 }
 
-/* Blossom core: layered cherry-to-petal radial for the hero's bloom heart. */
+/* Citrus core: layered tangerine-to-cream radial for the hero's sun heart. */
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.98) 0%, rgba(253, 164, 175, 0.55) 34%, rgba(225, 29, 72, 0.38) 58%, rgba(225, 29, 72, 0) 72%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.98) 0%, rgba(253, 186, 116, 0.55) 34%, rgba(234, 88, 12, 0.38) 58%, rgba(234, 88, 12, 0) 72%);
 }
 
-/* Blossom rings: concentric cherry rings around the bloom core. */
+/* Citrus rings: concentric tangerine rings around the sun core. */
 .sun-rays {
   background: repeating-radial-gradient(
     circle at center,
-    rgba(225, 29, 72, 0.24) 0 5px,
+    rgba(234, 88, 12, 0.24) 0 5px,
     transparent 5px 26px
   );
   -webkit-mask: radial-gradient(circle, black 40%, transparent 88%);
@@ -185,86 +182,78 @@ body {
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all sakura-styled. */
+/* Legacy aliases kept so untouched components still render — all citrus-styled. */
 .lagoon-lift {
-  border: 1.5px solid rgba(225, 29, 72, 0.25);
-  border-radius: 1.75rem;
-  background: linear-gradient(165deg, #ffffff 0%, #fffbfc 55%, #ffe4e6 130%);
+  border: 2px solid rgba(234, 88, 12, 0.45);
+  border-radius: 1.25rem;
+  background: linear-gradient(170deg, #ffffff 0%, #fffdf6 60%, #ffedd5 135%);
   box-shadow:
     inset 0 2px 0 0 rgba(255, 255, 255, 0.95),
-    inset 0 0 0 5px rgba(255, 255, 255, 0.55),
-    0 22px 44px -18px rgba(225, 29, 72, 0.30),
-    0 5px 12px -6px rgba(76, 5, 25, 0.14);
-  transition: transform 0.24s ease, box-shadow 0.24s ease;
+    6px 6px 0 0 rgba(234, 88, 12, 0.18),
+    0 18px 34px -20px rgba(124, 45, 18, 0.30);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 .lagoon-lift:hover {
-  transform: translateY(-6px);
+  transform: translate(-2px, -2px);
   box-shadow:
     inset 0 2px 0 0 rgba(255, 255, 255, 0.95),
-    inset 0 0 0 5px rgba(255, 255, 255, 0.55),
-    0 32px 56px -18px rgba(225, 29, 72, 0.42),
-    0 10px 20px -8px rgba(76, 5, 25, 0.18);
+    9px 9px 0 0 rgba(234, 88, 12, 0.26),
+    0 26px 46px -20px rgba(124, 45, 18, 0.42);
 }
 .stamp-perf {
-  border: 2px dashed #e11d48;
-  background: #fffbfc;
+  border: 2px dashed #ea580c;
+  background: #fffdf6;
   border-radius: 1.25rem;
-  box-shadow: 0 14px 30px -14px rgba(225, 29, 72, 0.30);
+  box-shadow: 4px 4px 0 0 rgba(234, 88, 12, 0.16), 0 14px 30px -14px rgba(234, 88, 12, 0.30);
 }
 .ember-glow {
-  border: 1.5px solid rgba(225, 29, 72, 0.25);
-  border-radius: 1.75rem;
-  background: linear-gradient(165deg, #ffffff 0%, #fffbfc 55%, #ffe4e6 130%);
+  border: 2px solid rgba(234, 88, 12, 0.45);
+  border-radius: 1.25rem;
+  background: linear-gradient(170deg, #ffffff 0%, #fffdf6 60%, #ffedd5 135%);
   box-shadow:
     inset 0 2px 0 0 rgba(255, 255, 255, 0.95),
-    inset 0 0 0 5px rgba(255, 255, 255, 0.55),
-    0 22px 44px -18px rgba(225, 29, 72, 0.30),
-    0 5px 12px -6px rgba(76, 5, 25, 0.14);
-  transition: transform 0.24s ease, box-shadow 0.24s ease;
+    6px 6px 0 0 rgba(234, 88, 12, 0.18),
+    0 18px 34px -20px rgba(124, 45, 18, 0.30);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 .ember-glow:hover {
-  transform: translateY(-6px);
+  transform: translate(-2px, -2px);
   box-shadow:
     inset 0 2px 0 0 rgba(255, 255, 255, 0.95),
-    inset 0 0 0 5px rgba(255, 255, 255, 0.55),
-    0 32px 56px -18px rgba(225, 29, 72, 0.42),
-    0 10px 20px -8px rgba(76, 5, 25, 0.18);
+    9px 9px 0 0 rgba(234, 88, 12, 0.26),
+    0 26px 46px -20px rgba(124, 45, 18, 0.42);
 }
 .ripple-glow {
-  border: 1.5px solid rgba(225, 29, 72, 0.25);
-  border-radius: 1.75rem;
-  background: linear-gradient(165deg, #ffffff 0%, #fffbfc 55%, #ffe4e6 130%);
+  border: 2px solid rgba(234, 88, 12, 0.45);
+  border-radius: 1.25rem;
+  background: linear-gradient(170deg, #ffffff 0%, #fffdf6 60%, #ffedd5 135%);
   box-shadow:
     inset 0 2px 0 0 rgba(255, 255, 255, 0.95),
-    inset 0 0 0 5px rgba(255, 255, 255, 0.55),
-    0 22px 44px -18px rgba(225, 29, 72, 0.30),
-    0 5px 12px -6px rgba(76, 5, 25, 0.14);
-  transition: transform 0.24s ease, box-shadow 0.24s ease;
+    6px 6px 0 0 rgba(234, 88, 12, 0.18),
+    0 18px 34px -20px rgba(124, 45, 18, 0.30);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 .ripple-glow:hover {
-  transform: translateY(-6px);
+  transform: translate(-2px, -2px);
   box-shadow:
     inset 0 2px 0 0 rgba(255, 255, 255, 0.95),
-    inset 0 0 0 5px rgba(255, 255, 255, 0.55),
-    0 32px 56px -18px rgba(225, 29, 72, 0.42),
-    0 10px 20px -8px rgba(76, 5, 25, 0.18);
+    9px 9px 0 0 rgba(234, 88, 12, 0.26),
+    0 26px 46px -20px rgba(124, 45, 18, 0.42);
 }
 .lagoon-glow {
-  border: 1.5px solid rgba(225, 29, 72, 0.25);
-  border-radius: 1.75rem;
-  background: linear-gradient(165deg, #ffffff 0%, #fffbfc 55%, #ffe4e6 130%);
+  border: 2px solid rgba(234, 88, 12, 0.45);
+  border-radius: 1.25rem;
+  background: linear-gradient(170deg, #ffffff 0%, #fffdf6 60%, #ffedd5 135%);
   box-shadow:
     inset 0 2px 0 0 rgba(255, 255, 255, 0.95),
-    inset 0 0 0 5px rgba(255, 255, 255, 0.55),
-    0 22px 44px -18px rgba(225, 29, 72, 0.30),
-    0 5px 12px -6px rgba(76, 5, 25, 0.14);
-  transition: transform 0.24s ease, box-shadow 0.24s ease;
+    6px 6px 0 0 rgba(234, 88, 12, 0.18),
+    0 18px 34px -20px rgba(124, 45, 18, 0.30);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 .lagoon-glow:hover {
-  transform: translateY(-6px);
+  transform: translate(-2px, -2px);
   box-shadow:
     inset 0 2px 0 0 rgba(255, 255, 255, 0.95),
-    inset 0 0 0 5px rgba(255, 255, 255, 0.55),
-    0 32px 56px -18px rgba(225, 29, 72, 0.42),
-    0 10px 20px -8px rgba(76, 5, 25, 0.18);
+    9px 9px 0 0 rgba(234, 88, 12, 0.26),
+    0 26px 46px -20px rgba(124, 45, 18, 0.42);
 }
