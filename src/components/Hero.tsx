@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Aurora drift: glacier and mint glows drifting over the ice field.
+// Star glow: violet and magenta nebula clouds drifting over the lavender field.
 const GLOWS = [
-  { left: "4%", top: "10%", size: 150, delay: "0s", dur: "14s", c: "rgba(4, 120, 87, 0.22)" },
-  { left: "72%", top: "4%", size: 200, delay: "-4s", dur: "15s", c: "rgba(56, 189, 248, 0.16)" },
-  { left: "44%", top: "44%", size: 120, delay: "-7s", dur: "13s", c: "rgba(125, 211, 252, 0.22)" },
-  { left: "86%", top: "50%", size: 110, delay: "-2s", dur: "14s", c: "rgba(16, 185, 129, 0.18)" },
+  { left: "4%", top: "10%", size: 150, delay: "0s", dur: "14s", c: "rgba(124, 58, 237, 0.22)" },
+  { left: "72%", top: "4%", size: 200, delay: "-4s", dur: "15s", c: "rgba(34, 211, 238, 0.16)" },
+  { left: "44%", top: "44%", size: 120, delay: "-7s", dur: "13s", c: "rgba(167, 139, 250, 0.22)" },
+  { left: "86%", top: "50%", size: 110, delay: "-2s", dur: "14s", c: "rgba(236, 72, 153, 0.18)" },
 ];
 
-// leaf fall: green motes drifting down through the field air.
+// star drift: violet motes drifting down through the night sky.
 const DOTS = [
-  { left: "8%", delay: "0s", dur: "7.2s", s: 22, c: "#059669" },
-  { left: "21%", delay: "-1.4s", dur: "7.8s", s: 16, c: "#6ee7b7" },
-  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 24, c: "#34d399" },
-  { left: "53%", delay: "-0.8s", dur: "8s", s: 18, c: "#a7f3d0" },
-  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 22, c: "#0284c7" },
-  { left: "82%", delay: "-2s", dur: "7.9s", s: 15, c: "#6ee7b7" },
-  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 20, c: "#34d399" },
+  { left: "8%", delay: "0s", dur: "7.2s", s: 22, c: "#7c3aed" },
+  { left: "21%", delay: "-1.4s", dur: "7.8s", s: 16, c: "#c4b5fd" },
+  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 24, c: "#a78bfa" },
+  { left: "53%", delay: "-0.8s", dur: "8s", s: 18, c: "#ddd6fe" },
+  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 22, c: "#06b6d4" },
+  { left: "82%", delay: "-2s", dur: "7.9s", s: 15, c: "#c4b5fd" },
+  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 20, c: "#ec4899" },
 ];
 
 // Ticker phrases reuse the hero's existing stats copy.
@@ -68,25 +68,25 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* leaf motes + emerald wash + terrace dots */}
+      {/* starfield + violet wash */}
       <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
       <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-brand-100/70 via-popblue-soft/30 to-transparent" />
 
-      {/* terrace sun: a glowing pond ringed by contour ripples and
-          drifting seed sparks, offset left */}
+      {/* nebula planet: a violet gas giant with tilted orbit rings and
+          drifting comet sparks, offset left */}
       <div aria-hidden className="pointer-events-none absolute -left-44 -top-36 z-0 hidden opacity-90 sm:block">
         <div className="relative h-[600px] w-[600px]">
-          <div className="sun-disc absolute inset-8 rounded-full blur-2xl" />
-          <div className="sun-rays pop-spin absolute inset-0" />
-          {/* radiating light traces */}
-          {[0, 45, 90, 135].map((r) => (
+          <div className="nebula-core absolute inset-8 rounded-full blur-2xl" />
+          <div className="orbit-rings pop-spin absolute inset-0" />
+          {/* tilted ring system */}
+          {[0, 60, 120].map((r) => (
             <span
               key={r}
-              className="absolute left-1/2 top-1/2 h-1 w-[46%] origin-left bg-gradient-to-r from-gold/70 to-transparent [mask-image:repeating-linear-gradient(90deg,black_0_8px,transparent_8px_14px)]"
-              style={{ transform: `rotate(${r}deg)` }}
+              className="absolute left-1/2 top-1/2 h-[46%] w-[88%] origin-center -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-brand-300/60"
+              style={{ transform: `translate(-50%, -50%) rotate(${r}deg) scaleY(0.42)`, boxShadow: "0 0 24px 2px rgba(139, 92, 246, 0.4)" }}
             />
           ))}
-          {/* orbiting frost sparks */}
+          {/* orbiting comet sparks */}
           {Array.from({ length: 8 }).map((_, i) => {
             const a = (i / 8) * Math.PI * 2;
             const x = 50 + 38 * Math.cos(a);
@@ -94,19 +94,23 @@ export default function Hero({ onQuickView }: HeroProps) {
             return (
               <span
                 key={i}
-                className="pop-bob absolute h-5 w-5 bg-popblue shadow-[0_0_18px_4px_rgba(249, 115, 22, 0.55)] ring-2 ring-white/60"
-                style={{ left: `${x}%`, top: `${y}%`, animationDelay: `${-i * 0.8}s`, borderRadius: "9999px" }}
+                className="pop-bob absolute h-5 w-5 rounded-full bg-gold shadow-[0_0_18px_4px_rgba(236,72,153,0.55)] ring-2 ring-white/60"
+                style={{ left: `${x}%`, top: `${y}%`, animationDelay: `${-i * 0.8}s` }}
               />
             );
           })}
-          <div className="absolute inset-44 rounded-full border-2 border-brand-200/80 bg-gradient-to-br from-brand-400 via-brand-600 to-brand-800 shadow-[0_0_90px_28px_rgba(4, 120, 87, 0.35)]" />
+          {/* the planet itself */}
+          <div className="absolute inset-44 rounded-full border-2 border-brand-200/80 bg-[radial-gradient(circle_at_38%_32%,#c4b5fd_0%,#8b5cf6_38%,#6d28d9_68%,#2e1065_100%)] shadow-[0_0_90px_28px_rgba(124,58,237,0.35)]" />
           <div className="absolute inset-44 rounded-full border border-white/40" />
-          {/* orb ribs */}
-          <div className="absolute inset-44 rounded-full border-x-8 border-brand-950/30" />
+          {/* crater bands */}
+          <div className="absolute inset-44 overflow-hidden rounded-full">
+            <div className="absolute left-[8%] right-[8%] top-[30%] h-6 rounded-full bg-brand-950/25 blur-md" />
+            <div className="absolute left-[18%] right-[18%] top-[58%] h-4 rounded-full bg-gold/25 blur-md" />
+          </div>
         </div>
       </div>
 
-      {/* drifting field swell */}
+      {/* drifting nebula swell */}
       <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
         {GLOWS.map((g, i) => (
           <div
@@ -117,14 +121,14 @@ export default function Hero({ onQuickView }: HeroProps) {
         ))}
       </div>
 
-      {/* falling leaves */}
+      {/* falling star motes */}
       <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden overflow-hidden sm:block">
         {DOTS.map((r, i) => (
           <Dot key={i} {...r} />
         ))}
       </div>
 
-      {/* 4-banner carousel in a terrace frame with a harvest ribbon top edge */}
+      {/* 4-banner carousel in a nebula frame with a comet-ribbon top edge */}
       <div className="relative">
         <div className="mx-auto max-w-7xl px-4 pt-8 sm:px-6">
           <div className="pop-lift overflow-hidden bg-paper">
@@ -138,8 +142,8 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* harvest ticker: terrace ribbon band with emerald edges, marquee of the shop's own promises */}
-      <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/40 bg-gradient-to-r from-brand-400 via-gold to-popblue py-3 shadow-[0_18px_44px_-20px_rgba(3, 105, 161, 0.6)]">
+      {/* nebula ticker: comet ribbon band with violet edges, marquee of the shop's own promises */}
+      <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/40 bg-gradient-to-r from-brand-400 via-gold to-popblue py-3 shadow-[0_18px_44px_-20px_rgba(14, 116, 144, 0.6)]">
         <div className="overflow-hidden py-2">
           <div className="pop-ticker flex w-max items-center gap-8 pr-8">
             {[...TICKER, ...TICKER].map((t, i) => (
@@ -172,7 +176,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full bg-gradient-to-r from-brand-400 via-gold to-popblue px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-950 shadow-[0_16px_38px_-14px_rgba(3, 105, 161, 0.6)]">Handpicked for you</p>
+            <p className="inline-block rounded-full bg-gradient-to-r from-brand-400 via-gold to-popblue px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-950 shadow-[0_16px_38px_-14px_rgba(14, 116, 144, 0.6)]">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="bg-gradient-to-r from-brand-300 to-gold bg-clip-text text-transparent">Picks</span></h2>
             <span className="zigzag mt-3 block w-44" aria-hidden />
           </div>
@@ -202,7 +206,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* terrace scallop divider into the page */}
+      {/* comet signal-wave divider into the page */}
       <div aria-hidden className="zigzag absolute bottom-0 left-0 w-full opacity-90" />
     </section>
   );

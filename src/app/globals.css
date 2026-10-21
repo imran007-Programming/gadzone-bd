@@ -1,33 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-  /* Emerald Terraces: mint-cream paper, deep emerald primary,
-     copper-orange accent, sky river secondary, forest ink. */
+  /* Violet Nebula: lavender paper, deep-violet primary,
+     comet-magenta accent, cyan comet-tail secondary, midnight ink. */
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
-  --color-brand-50: #ecfdf5;
-  --color-brand-100: #d1fae5;
-  --color-brand-200: #a7f3d0;
-  --color-brand-300: #6ee7b7;
-  --color-brand-400: #34d399;
-  --color-brand-500: #10b981;
-  --color-brand-600: #059669;
-  --color-brand-700: #047857;
-  --color-brand-800: #065f46;
-  --color-brand-900: #064e3b;
-  --color-brand-950: #022c22;
-  --color-brand: #059669;
-  --color-brand-dark: #047857;
-  --color-brand-deep: #022c22;
-  --color-gold: #f97316;
-  --color-gold-deep: #9a3412;
-  --color-gold-soft: #ffedd5;
-  --color-ink: #1b2a21;
-  --color-paper: #f7faf4;
-  --color-mute: #667a6b;
-  --color-popblue: #0284c7;
-  --color-popblue-deep: #0369a1;
-  --color-popblue-soft: #e0f2fe;
+  --color-brand-50: #f5f3ff;
+  --color-brand-100: #ede9fe;
+  --color-brand-200: #ddd6fe;
+  --color-brand-300: #c4b5fd;
+  --color-brand-400: #a78bfa;
+  --color-brand-500: #8b5cf6;
+  --color-brand-600: #7c3aed;
+  --color-brand-700: #6d28d9;
+  --color-brand-800: #5b21b6;
+  --color-brand-900: #4c1d95;
+  --color-brand-950: #2e1065;
+  --color-brand: #7c3aed;
+  --color-brand-dark: #6d28d9;
+  --color-brand-deep: #2e1065;
+  --color-gold: #ec4899;
+  --color-gold-deep: #be185d;
+  --color-gold-soft: #fce7f3;
+  --color-ink: #1e1b34;
+  --color-paper: #faf8ff;
+  --color-mute: #6f6a8c;
+  --color-popblue: #06b6d4;
+  --color-popblue-deep: #0e7490;
+  --color-popblue-soft: #cffafe;
 }
 
 html { scroll-behavior: smooth; }
@@ -42,73 +42,75 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #f7faf4;
+  background: #faf8ff;
   background-image:
-    linear-gradient(118deg, rgba(5, 150, 105, 0.09) 0%, rgba(52, 211, 153, 0.07) 36%, rgba(2, 132, 199, 0.06) 66%, transparent 100%),
-    radial-gradient(ellipse 62% 28% at 90% 2%, rgba(16, 185, 129, 0.13), transparent),
-    radial-gradient(ellipse 54% 24% at 6% 98%, rgba(249, 115, 22, 0.09), transparent),
-    repeating-linear-gradient(0deg, rgba(5, 150, 105, 0.045) 0 1px, transparent 1px 15px);
-  background-size: auto, auto, auto, auto;
-  color: #1b2a21;
+    linear-gradient(118deg, rgba(124, 58, 237, 0.08) 0%, rgba(167, 139, 250, 0.06) 36%, rgba(6, 182, 212, 0.06) 66%, transparent 100%),
+    radial-gradient(ellipse 62% 28% at 90% 2%, rgba(139, 92, 246, 0.12), transparent),
+    radial-gradient(ellipse 54% 24% at 6% 98%, rgba(236, 72, 153, 0.08), transparent),
+    radial-gradient(circle, rgba(124, 58, 237, 0.35) 1.1px, transparent 1.2px),
+    radial-gradient(circle, rgba(6, 182, 212, 0.28) 1px, transparent 1.1px);
+  background-size: auto, auto, auto, 340px 340px, 520px 520px;
+  background-position: 0 0, 0 0, 0 0, 0 0, 120px 180px;
+  color: #1e1b34;
 }
-::selection { background: #059669; color: #ffffff; }
+::selection { background: #ec4899; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: #047857; border-radius: 9999px; border: 2px solid #f7faf4; }
-::-webkit-scrollbar-track { background: #dcebe2; }
+::-webkit-scrollbar-thumb { background: #7c3aed; border-radius: 9999px; border: 2px solid #faf8ff; }
+::-webkit-scrollbar-track { background: #e4def5; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Leaf drift: emerald leaves swaying down through the field air. */
+/* Star drift: violet star motes twinkling down through the nebula. */
 @keyframes volt-fall-anim {
-  0% { transform: translate3d(8px, -150px, 0) rotate(0deg) scale(0.5); opacity: 0; }
-  30% { opacity: 0.8; }
-  65% { transform: translate3d(-14px, 40px, 0) rotate(150deg) scale(1.05); opacity: 0.65; }
-  100% { transform: translate3d(8px, 150px, 0) rotate(280deg) scale(0.7); opacity: 0; }
+  0% { transform: translate3d(8px, -150px, 0) rotate(0deg) scale(0.4); opacity: 0; }
+  30% { opacity: 0.85; }
+  65% { transform: translate3d(-14px, 40px, 0) rotate(140deg) scale(1.1); opacity: 0.6; }
+  100% { transform: translate3d(8px, 150px, 0) rotate(270deg) scale(0.6); opacity: 0; }
 }
 .pop-fall { animation: volt-fall-anim 12.4s ease-in infinite; }
 
-/* Field haze: slow lateral sway of the sunlit mist. */
+/* Nebula swell: slow lateral drift of the cosmic mist. */
 @keyframes volt-drift {
   0%, 100% { transform: translate3d(3vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(-3vw, -0.75rem, 0) scale(1.1); opacity: 0.85; }
 }
 .pop-drift { animation: volt-drift 24s ease-in-out infinite; }
 
-/* Breeze bob: gentle lift with a soft settle. */
+/* Comet bob: gentle lift with a soft settle. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-9px) scale(1.04); }
 }
 .pop-bob { animation: signal-bob 7s ease-in-out infinite; }
 
-/* Terrace wheel: steady rotation for the sun dial. */
+/* Orbit wheel: steady rotation for the planet's ring system. */
 @keyframes orbit-wheel {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: orbit-wheel 90s linear infinite; }
 
-/* Harvest ticker: infinite marquee for the promo strip (leftward drift). */
+/* Nebula ticker: infinite marquee for the promo strip (leftward drift). */
 @keyframes volt-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: volt-ticker 36s linear infinite; }
 
-/* Terrace ribbon: emerald -> mint -> sky -> copper. */
+/* Comet ribbon: violet -> lavender -> cyan -> magenta. */
 .pop-stripes {
-  background-image: linear-gradient(135deg, #047857 0%, #047857 20%, #10b981 20%, #10b981 44%, #0284c7 44%, #0284c7 68%, #f97316 68%);
+  background-image: linear-gradient(135deg, #6d28d9 0%, #6d28d9 20%, #8b5cf6 20%, #8b5cf6 44%, #06b6d4 44%, #06b6d4 68%, #ec4899 68%);
   background-size: 72px 72px;
 }
 
-/* Terrace card: white-to-mint panel with an emerald hairline,
-   a field-step ribbon along the top edge, and a soft forest shadow;
-   hover lifts it into an emerald glow. */
+/* Orbit card: lavender panel with a violet hairline,
+   a comet-trail ribbon along the top edge, and a deep-space shadow;
+   hover lifts it into a violet-magenta glow. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(5, 150, 105, 0.24);
-  background: linear-gradient(165deg, #ffffff 0%, #eef7f0 100%);
-  border-radius: 1.4rem;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 20px 42px -26px rgba(6, 78, 59, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(124, 58, 237, 0.26);
+  background: linear-gradient(165deg, #ffffff 0%, #f1ecfd 100%);
+  border-radius: 1.1rem;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 22px 44px -26px rgba(46, 16, 101, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   overflow: hidden;
 }
@@ -119,8 +121,8 @@ body {
   left: 0;
   right: 0;
   height: 6px;
-  background: linear-gradient(90deg, #047857, #10b981 38%, #0284c7 68%, #f97316);
-  border-radius: 1.4rem 1.4rem 0 0;
+  background: linear-gradient(90deg, #06b6d4, #8b5cf6 42%, #a78bfa 62%, #ec4899);
+  border-radius: 1.1rem 1.1rem 0 0;
 }
 .pop-lift::after {
   content: "";
@@ -128,138 +130,157 @@ body {
   inset: 0;
   border-radius: inherit;
   pointer-events: none;
-  background: linear-gradient(180deg, rgba(52, 211, 153, 0.08), transparent 55%);
+  background: radial-gradient(ellipse 90% 46% at 50% -10%, rgba(167, 139, 250, 0.18), transparent 60%);
 }
 .pop-lift:hover {
-  transform: translateY(-6px) rotate(0.35deg);
-  border-color: rgba(16, 185, 129, 0.55);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 30px 56px -26px rgba(4, 120, 87, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.65);
+  transform: translateY(-6px) rotate(-0.35deg);
+  border-color: rgba(167, 139, 250, 0.6);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 32px 60px -26px rgba(124, 58, 237, 0.55), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
 }
 
-/* Pond glass: shared by modals and drawers — mint frosted glass. */
+/* Stardust glass: shared by modals and drawers — lavender frosted glass. */
 .pop-glass {
-  background: rgba(247, 250, 244, 0.94);
-  backdrop-filter: blur(20px) saturate(1.25);
-  -webkit-backdrop-filter: blur(20px) saturate(1.25);
-  border: 1px solid rgba(5, 150, 105, 0.32);
-  border-radius: 1.4rem;
-  box-shadow: 0 30px 80px -22px rgba(2, 44, 34, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  background: rgba(250, 248, 255, 0.94);
+  backdrop-filter: blur(20px) saturate(1.3);
+  -webkit-backdrop-filter: blur(20px) saturate(1.3);
+  border: 1px solid rgba(124, 58, 237, 0.34);
+  border-radius: 1.1rem;
+  box-shadow: 0 30px 80px -22px rgba(46, 16, 101, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
-/* Sun seal: copper-orange pill stamp with a cream dashed halo. */
+/* Comet seal: magenta pill stamp with a cyan star-dust halo. */
 .starburst {
   border-radius: 9999px;
   border: 2px dashed rgba(255, 255, 255, 0.95);
-  outline: 2px solid rgba(5, 150, 105, 0.6);
+  outline: 2px solid rgba(124, 58, 237, 0.6);
   outline-offset: 2px;
-  background: radial-gradient(circle at 50% 32%, #fdba74 0%, #f97316 55%, #9a3412 100%);
-  color: #022c22;
-  transform: rotate(-6deg);
-  box-shadow: 0 0 26px 2px rgba(249, 115, 22, 0.55);
+  background: radial-gradient(circle at 50% 32%, #f9a8d4 0%, #ec4899 55%, #be185d 100%);
+  color: #2e1065;
+  transform: rotate(6deg);
+  box-shadow: 0 0 26px 2px rgba(236, 72, 153, 0.55);
 }
 
-/* Terrace dots: emerald dot-grid texture for hero bands. */
+/* Starfield: violet star-dot texture for hero bands. */
 .halftone {
-  background-image: radial-gradient(rgba(5, 150, 105, 0.15) 1.8px, transparent 1.8px);
-  background-size: 26px 26px;
+  background-image:
+    radial-gradient(rgba(124, 58, 237, 0.18) 1.6px, transparent 1.7px),
+    radial-gradient(rgba(236, 72, 153, 0.16) 1.2px, transparent 1.3px);
+  background-size: 26px 26px, 42px 42px;
+  background-position: 0 0, 13px 21px;
 }
 
-/* Terrace scallops: rounded emerald steps, a field divider. */
+/* Signal wave: rounded violet pulses, a cosmic divider. */
 .zigzag {
   height: 18px;
-  background-image: radial-gradient(circle at 50% 0%, rgba(4, 120, 87, 0.85) 9px, transparent 10px);
+  background-image: radial-gradient(circle at 50% 0%, rgba(109, 40, 217, 0.85) 9px, transparent 10px);
   background-size: 36px 18px;
   background-repeat: repeat-x;
   opacity: 0.9;
 }
 
-/* Field bands: emerald diagonal shade stripes over the mint field. */
+/* Nebula haze: violet diagonal shade stripes over the lavender field. */
 .bazaar-awning {
   background-image:
-    repeating-linear-gradient(-45deg, rgba(52, 211, 153, 0.13) 0 14px, transparent 14px 28px),
-    linear-gradient(180deg, #eef7f0, #f7faf4);
+    repeating-linear-gradient(-45deg, rgba(167, 139, 250, 0.13) 0 14px, transparent 14px 28px),
+    linear-gradient(180deg, #f1ecfd, #faf8ff);
 }
 
-/* Sunlit pond: layered white-to-mint radial for the hero's heart. */
+/* Nebula core: layered violet-to-magenta radial for the hero planet's heart. */
+.nebula-core {
+  background:
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.9) 0%, rgba(196, 181, 253, 0.5) 34%, rgba(139, 92, 246, 0.3) 58%, rgba(236, 72, 153, 0) 74%);
+}
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(167, 243, 208, 0.55) 34%, rgba(52, 211, 153, 0.32) 58%, rgba(249, 115, 22, 0) 74%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.9) 0%, rgba(196, 181, 253, 0.5) 34%, rgba(139, 92, 246, 0.3) 58%, rgba(236, 72, 153, 0) 74%);
 }
 
-/* Contour rings: rotating rings around the sun dial. */
+/* Orbit rings: concentric violet rings around the hero planet. */
+.orbit-rings {
+  background: repeating-radial-gradient(
+    circle at 50% 50%,
+    rgba(124, 58, 237, 0.24) 0px,
+    rgba(124, 58, 237, 0.24) 5px,
+    transparent 5px,
+    transparent 26px
+  );
+  -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 88%);
+  mask: radial-gradient(circle, transparent 32%, black 58%, transparent 88%);
+  border-radius: 9999px;
+}
 .sun-rays {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(5, 150, 105, 0.22) 0px,
-    rgba(5, 150, 105, 0.22) 6px,
-    transparent 6px,
-    transparent 24px
+    rgba(124, 58, 237, 0.24) 0px,
+    rgba(124, 58, 237, 0.24) 5px,
+    transparent 5px,
+    transparent 26px
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 88%);
   mask: radial-gradient(circle, transparent 32%, black 58%, transparent 88%);
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all terrace-styled. */
+/* Legacy aliases kept so untouched components still render — all nebula-styled. */
 .lagoon-lift {
   position: relative;
-  border: 1px solid rgba(5, 150, 105, 0.24);
-  background: linear-gradient(165deg, #ffffff 0%, #eef7f0 100%);
-  border-radius: 1.4rem;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 20px 42px -26px rgba(6, 78, 59, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(124, 58, 237, 0.26);
+  background: linear-gradient(165deg, #ffffff 0%, #f1ecfd 100%);
+  border-radius: 1.1rem;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 22px 44px -26px rgba(46, 16, 101, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   overflow: hidden;
 }
 .lagoon-lift:hover {
-  transform: translateY(-6px) rotate(0.35deg);
-  border-color: rgba(16, 185, 129, 0.55);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 30px 56px -26px rgba(4, 120, 87, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.65);
+  transform: translateY(-6px) rotate(-0.35deg);
+  border-color: rgba(167, 139, 250, 0.6);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 32px 60px -26px rgba(124, 58, 237, 0.55), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
 }
 .stamp-perf {
-  border: 2px dashed #059669;
-  background: rgba(232, 245, 238, 0.9);
-  border-radius: 1.4rem;
-  box-shadow: 0 20px 50px -20px rgba(4, 120, 87, 0.4);
+  border: 2px dashed #7c3aed;
+  background: rgba(237, 233, 254, 0.9);
+  border-radius: 1.1rem;
+  box-shadow: 0 20px 50px -20px rgba(109, 40, 217, 0.45);
 }
 .ember-glow {
   position: relative;
-  border: 1px solid rgba(5, 150, 105, 0.24);
-  background: linear-gradient(165deg, #ffffff 0%, #eef7f0 100%);
-  border-radius: 1.4rem;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 20px 42px -26px rgba(6, 78, 59, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(124, 58, 237, 0.26);
+  background: linear-gradient(165deg, #ffffff 0%, #f1ecfd 100%);
+  border-radius: 1.1rem;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 22px 44px -26px rgba(46, 16, 101, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
-  transform: translateY(-6px) rotate(0.35deg);
-  border-color: rgba(16, 185, 129, 0.55);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 30px 56px -26px rgba(4, 120, 87, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.65);
+  transform: translateY(-6px) rotate(-0.35deg);
+  border-color: rgba(167, 139, 250, 0.6);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 32px 60px -26px rgba(124, 58, 237, 0.55), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
 }
 .ripple-glow {
   position: relative;
-  border: 1px solid rgba(5, 150, 105, 0.24);
-  background: linear-gradient(165deg, #ffffff 0%, #eef7f0 100%);
-  border-radius: 1.4rem;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 20px 42px -26px rgba(6, 78, 59, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(124, 58, 237, 0.26);
+  background: linear-gradient(165deg, #ffffff 0%, #f1ecfd 100%);
+  border-radius: 1.1rem;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 22px 44px -26px rgba(46, 16, 101, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
-  transform: translateY(-6px) rotate(0.35deg);
-  border-color: rgba(16, 185, 129, 0.55);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 30px 56px -26px rgba(4, 120, 87, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.65);
+  transform: translateY(-6px) rotate(-0.35deg);
+  border-color: rgba(167, 139, 250, 0.6);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 32px 60px -26px rgba(124, 58, 237, 0.55), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
 }
 .lagoon-glow {
   position: relative;
-  border: 1px solid rgba(5, 150, 105, 0.24);
-  background: linear-gradient(165deg, #ffffff 0%, #eef7f0 100%);
-  border-radius: 1.4rem;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 20px 42px -26px rgba(6, 78, 59, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(124, 58, 237, 0.26);
+  background: linear-gradient(165deg, #ffffff 0%, #f1ecfd 100%);
+  border-radius: 1.1rem;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 22px 44px -26px rgba(46, 16, 101, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
-  transform: translateY(-6px) rotate(0.35deg);
-  border-color: rgba(16, 185, 129, 0.55);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 30px 56px -26px rgba(4, 120, 87, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.65);
+  transform: translateY(-6px) rotate(-0.35deg);
+  border-color: rgba(167, 139, 250, 0.6);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 32px 60px -26px rgba(124, 58, 237, 0.55), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
 }
