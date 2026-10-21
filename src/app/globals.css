@@ -1,33 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-  /* Porcelain Ink: warm porcelain paper, ink-black editorial headers,
-     persimmon-red primary, mustard-gold secondary, spruce-teal tertiary. */
+  /* Emerald Grove: soft mint paper, deep-forest editorial headers,
+     emerald primary, sky-blue secondary, violet tertiary. */
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
-  --color-brand-50: #fdf1ec;
-  --color-brand-100: #fae2d6;
-  --color-brand-200: #f4c4ad;
-  --color-brand-300: #ec9d7c;
-  --color-brand-400: #e4714a;
-  --color-brand-500: #e8481f;
-  --color-brand-600: #c93a14;
-  --color-brand-700: #a62e12;
-  --color-brand-800: #862817;
-  --color-brand-900: #6e2416;
-  --color-brand-950: #3d1109;
-  --color-brand: #e8481f;
-  --color-brand-dark: #c93a14;
-  --color-brand-deep: #3d1109;
-  --color-gold: #f0a916;
-  --color-gold-deep: #b57a06;
-  --color-gold-soft: #fdf3dc;
-  --color-ink: #1c1710;
-  --color-paper: #faf7f2;
-  --color-mute: #6b6355;
-  --color-popblue: #0f766e;
-  --color-popblue-deep: #0b5a54;
-  --color-popblue-soft: #d8f3ef;
+  --color-brand-50: #ecfdf5;
+  --color-brand-100: #d1fae5;
+  --color-brand-200: #a7f3d0;
+  --color-brand-300: #6ee7b7;
+  --color-brand-400: #34d399;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-brand-900: #064e3b;
+  --color-brand-950: #022c22;
+  --color-brand: #059669;
+  --color-brand-dark: #047857;
+  --color-brand-deep: #022c22;
+  --color-gold: #38bdf8;
+  --color-gold-deep: #0284c7;
+  --color-gold-soft: #e0f2fe;
+  --color-ink: #0d231a;
+  --color-paper: #f3faf5;
+  --color-mute: #5e7a6a;
+  --color-popblue: #7c3aed;
+  --color-popblue-deep: #5b21b6;
+  --color-popblue-soft: #ede9fe;
 }
 
 html { scroll-behavior: smooth; }
@@ -42,25 +42,25 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #faf7f2;
+  background: #f3faf5;
   background-image:
-    linear-gradient(115deg, rgba(232, 72, 31, 0.05) 0%, rgba(240, 169, 22, 0.04) 38%, rgba(15, 118, 110, 0.03) 68%, transparent 100%),
-    radial-gradient(ellipse 55% 24% at 86% 2%, rgba(240, 169, 22, 0.1), transparent),
-    radial-gradient(ellipse 50% 22% at 6% 98%, rgba(15, 118, 110, 0.07), transparent),
-    linear-gradient(rgba(28, 23, 16, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(28, 23, 16, 0.045) 1px, transparent 1px);
-  background-size: auto, auto, auto, 44px 44px, 44px 44px;
-  background-position: 0 0, 0 0, 0 0, 0 0, 0 0;
-  color: #1c1710;
+    linear-gradient(120deg, rgba(5, 150, 105, 0.06) 0%, rgba(56, 189, 248, 0.05) 40%, rgba(124, 58, 237, 0.04) 70%, transparent 100%),
+    radial-gradient(ellipse 58% 26% at 84% 0%, rgba(52, 211, 153, 0.16), transparent),
+    radial-gradient(ellipse 52% 24% at 8% 100%, rgba(56, 189, 248, 0.12), transparent),
+    radial-gradient(rgba(13, 35, 26, 0.05) 1px, transparent 1.4px),
+    radial-gradient(rgba(13, 35, 26, 0.05) 1px, transparent 1.4px);
+  background-size: auto, auto, auto, 46px 46px, 46px 46px;
+  background-position: 0 0, 0 0, 0 0, 0 0, 23px 23px;
+  color: #0d231a;
 }
-::selection { background: #e8481f; color: #faf7f2; }
+::selection { background: #059669; color: #f3faf5; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #1c1710, #e8481f); border-radius: 9999px; border: 2px solid #faf7f2; }
-::-webkit-scrollbar-track { background: #efe8d8; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #059669, #7c3aed); border-radius: 9999px; border: 2px solid #f3faf5; }
+::-webkit-scrollbar-track { background: #e2f0e7; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Ink confetti: paper flecks drifting down the sunlit page. */
+/* Grove motes: pollen flecks drifting down the sunlit page. */
 @keyframes ink-fall-anim {
   0% { transform: translate3d(-6px, -160px, 0) rotate(0deg) scale(0.5); opacity: 0; }
   30% { opacity: 0.8; }
@@ -69,47 +69,47 @@ body {
 }
 .pop-fall { animation: ink-fall-anim 12.8s ease-in infinite; }
 
-/* Sun haze: slow lateral drift of the warm page glow. */
+/* Meadow haze: slow lateral drift of the fresh page glow. */
 @keyframes ink-drift {
   0%, 100% { transform: translate3d(3vw, 0, 0) scale(1); opacity: 0.45; }
   50% { transform: translate3d(-3vw, -0.9rem, 0) scale(1.12); opacity: 0.8; }
 }
 .pop-drift { animation: ink-drift 24s ease-in-out infinite; }
 
-/* Stamp bob: gentle lift with a soft settle. */
+/* Leaf bob: gentle lift with a soft settle. */
 @keyframes seal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-8px) scale(1.04); }
 }
 .pop-bob { animation: seal-bob 7.2s ease-in-out infinite; }
 
-/* Print wheel: steady rotation for the hero sun's ray system. */
+/* Grove orbit: steady rotation for the hero bloom's ray system. */
 @keyframes orbit-wheel {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: orbit-wheel 95s linear infinite; }
 
-/* Ink ticker: infinite marquee for the promo strip (leftward drift). */
+/* Grove ticker: infinite marquee for the promo strip (leftward drift). */
 @keyframes ink-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: ink-ticker 38s linear infinite; }
 
-/* Ink awning: ink -> persimmon -> mustard shop stripes. */
+/* Grove ribbons: emerald -> sky -> violet diagonal stripes. */
 .pop-stripes {
-  background-image: linear-gradient(115deg, #1c1710 0%, #1c1710 18%, #e8481f 18%, #e8481f 42%, #f0a916 42%, #f0a916 66%, #0f766e 66%);
+  background-image: linear-gradient(115deg, #047857 0%, #047857 18%, #059669 18%, #059669 42%, #38bdf8 42%, #38bdf8 66%, #7c3aed 66%);
   background-size: 84px 84px;
 }
 
-/* Ink card: porcelain paper panel with a 2px ink border and a hard
-   offset press shadow; hover presses it upward with a red edge kiss. */
+/* Grove card: soft mint panel with a sage ring and an airy emerald
+   shadow; hover lifts it into a soft emerald glow. */
 .pop-lift {
   position: relative;
-  border: 2px solid #1c1710;
-  background: linear-gradient(180deg, #ffffff 0%, #faf7f2 100%);
-  border-radius: 0.75rem;
-  box-shadow: 7px 7px 0 -1px rgba(28, 23, 16, 0.9), 0 18px 34px -22px rgba(28, 23, 16, 0.35);
+  border: 1px solid rgba(5, 150, 105, 0.16);
+  background: linear-gradient(180deg, #ffffff 0%, #eef8f1 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 18px 38px -20px rgba(4, 120, 87, 0.35), 0 2px 6px -2px rgba(13, 35, 26, 0.08);
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
   overflow: hidden;
 }
@@ -119,8 +119,10 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #e8481f, #f0a916 50%, #0f766e);
+  height: 5px;
+  background: linear-gradient(90deg, #059669, #38bdf8 50%, #7c3aed);
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
 }
 .pop-lift::after {
   content: "";
@@ -128,80 +130,80 @@ body {
   inset: 0;
   border-radius: inherit;
   pointer-events: none;
-  background: radial-gradient(ellipse 90% 40% at 50% -12%, rgba(240, 169, 22, 0.14), transparent 60%);
+  background: radial-gradient(ellipse 90% 40% at 50% -12%, rgba(52, 211, 153, 0.18), transparent 60%);
 }
 .pop-lift:hover {
-  transform: translate(-2px, -5px);
-  border-color: #e8481f;
-  box-shadow: 10px 12px 0 -1px rgba(232, 72, 31, 0.85), 0 26px 44px -22px rgba(232, 72, 31, 0.4);
+  transform: translateY(-6px);
+  border-color: rgba(5, 150, 105, 0.45);
+  box-shadow: 0 28px 52px -20px rgba(5, 150, 105, 0.5), 0 4px 10px -4px rgba(13, 35, 26, 0.1);
 }
 
-/* Ink glass: shared by modals and drawers — frosted porcelain. */
+/* Grove glass: shared by modals and drawers — frosted mint. */
 .pop-glass {
-  background: rgba(250, 247, 242, 0.94);
+  background: rgba(243, 250, 245, 0.94);
   backdrop-filter: blur(20px) saturate(1.15);
   -webkit-backdrop-filter: blur(20px) saturate(1.15);
-  border: 2px solid #1c1710;
-  border-radius: 0.75rem;
-  box-shadow: 8px 8px 0 -1px rgba(28, 23, 16, 0.85), 0 28px 54px -24px rgba(28, 23, 16, 0.4);
+  border: 1px solid rgba(5, 150, 105, 0.22);
+  border-radius: 1.5rem;
+  box-shadow: 0 32px 64px -28px rgba(4, 120, 87, 0.45), 0 4px 12px -4px rgba(13, 35, 26, 0.1);
 }
 
-/* Ink seal: persimmon postage stamp with a dashed ink border. */
+/* Grove seal: lime postage stamp with a dashed forest border. */
 .starburst {
   border-radius: 9999px;
-  border: 2px dashed rgba(28, 23, 16, 0.9);
-  outline: 2px solid rgba(201, 58, 20, 0.7);
+  border: 2px dashed rgba(13, 35, 26, 0.9);
+  outline: 2px solid rgba(5, 150, 105, 0.7);
   outline-offset: 2px;
-  background: radial-gradient(circle at 50% 32%, #f4a08a 0%, #e8481f 55%, #a62e12 100%);
+  background: radial-gradient(circle at 50% 32%, #a7f3d0 0%, #10b981 55%, #047857 100%);
   color: #ffffff;
   transform: rotate(-6deg);
-  box-shadow: 5px 5px 0 -1px rgba(28, 23, 16, 0.85), 0 12px 24px -12px rgba(232, 72, 31, 0.6);
+  box-shadow: 0 12px 24px -12px rgba(5, 150, 105, 0.6);
 }
 
-/* Ink dots: persimmon-dot texture for hero bands. */
+/* Grove dots: emerald-dot texture for hero bands. */
 .halftone {
   background-image:
-    radial-gradient(rgba(232, 72, 31, 0.2) 1.6px, transparent 1.7px),
-    radial-gradient(rgba(240, 169, 22, 0.18) 1.2px, transparent 1.3px);
+    radial-gradient(rgba(5, 150, 105, 0.22) 1.6px, transparent 1.7px),
+    radial-gradient(rgba(56, 189, 248, 0.2) 1.2px, transparent 1.3px);
   background-size: 32px 32px, 52px 52px;
   background-position: 0 0, 16px 26px;
 }
 
-/* Ink chevrons: angular persimmon pulses, an editorial divider. */
+/* Grove chevrons: angular emerald pulses, a meadow divider. */
 .zigzag {
   height: 18px;
-  background-image: linear-gradient(135deg, rgba(232, 72, 31, 0.9) 25%, transparent 25%),
-    linear-gradient(225deg, rgba(232, 72, 31, 0.9) 25%, transparent 25%);
+  background-image: linear-gradient(135deg, rgba(5, 150, 105, 0.9) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(5, 150, 105, 0.9) 25%, transparent 25%);
   background-size: 30px 18px;
   background-position: 0 0, 15px 0;
   background-repeat: repeat-x;
   opacity: 0.85;
-  filter: drop-shadow(0 2px 3px rgba(28, 23, 16, 0.25));
+  filter: drop-shadow(0 2px 3px rgba(13, 35, 26, 0.25));
 }
 
-/* Ledger shade: ink diagonal trace stripes over the warm paper field. */
+/* Meadow shade: emerald diagonal trace stripes over the mint field. */
 .bazaar-awning {
   background-image:
-    repeating-linear-gradient(45deg, rgba(28, 23, 16, 0.07) 0 16px, transparent 16px 32px),
-    linear-gradient(180deg, #ffffff, #f3ede1);
+    repeating-linear-gradient(45deg, rgba(5, 150, 105, 0.08) 0 16px, transparent 16px 32px),
+    linear-gradient(180deg, #ffffff, #e6f4eb);
 }
 
-/* Paper sun: layered persimmon-to-mustard radial for the hero sun's heart. */
+/* Grove bloom: layered emerald-to-sky radial for the hero sun's heart. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.9) 0%, rgba(247, 217, 138, 0.55) 34%, rgba(232, 72, 31, 0.35) 58%, rgba(240, 169, 22, 0) 74%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.9) 0%, rgba(167, 243, 208, 0.55) 34%, rgba(5, 150, 105, 0.35) 58%, rgba(56, 189, 248, 0) 74%);
 }
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.9) 0%, rgba(247, 217, 138, 0.55) 34%, rgba(232, 72, 31, 0.35) 58%, rgba(240, 169, 22, 0) 74%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.9) 0%, rgba(167, 243, 208, 0.55) 34%, rgba(5, 150, 105, 0.35) 58%, rgba(56, 189, 248, 0) 74%);
 }
 
-/* Ink rings: concentric mustard rings around the hero sun. */
+/* Grove rings: concentric sky rings around the hero bloom. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(240, 169, 22, 0.32) 0px,
-    rgba(240, 169, 22, 0.32) 5px,
+    rgba(56, 189, 248, 0.32) 0px,
+    rgba(56, 189, 248, 0.32) 5px,
     transparent 5px,
     transparent 30px
   );
@@ -212,8 +214,8 @@ body {
 .sun-rays {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(240, 169, 22, 0.32) 0px,
-    rgba(240, 169, 22, 0.32) 5px,
+    rgba(56, 189, 248, 0.32) 0px,
+    rgba(56, 189, 248, 0.32) 5px,
     transparent 5px,
     transparent 30px
   );
@@ -222,66 +224,66 @@ body {
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all ink-styled. */
+/* Legacy aliases kept so untouched components still render — all grove-styled. */
 .lagoon-lift {
   position: relative;
-  border: 2px solid #1c1710;
-  background: linear-gradient(180deg, #ffffff 0%, #faf7f2 100%);
-  border-radius: 0.75rem;
-  box-shadow: 7px 7px 0 -1px rgba(28, 23, 16, 0.9), 0 18px 34px -22px rgba(28, 23, 16, 0.35);
+  border: 1px solid rgba(5, 150, 105, 0.16);
+  background: linear-gradient(180deg, #ffffff 0%, #eef8f1 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 18px 38px -20px rgba(4, 120, 87, 0.35), 0 2px 6px -2px rgba(13, 35, 26, 0.08);
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
   overflow: hidden;
 }
 .lagoon-lift:hover {
-  transform: translate(-2px, -5px);
-  border-color: #e8481f;
-  box-shadow: 10px 12px 0 -1px rgba(232, 72, 31, 0.85), 0 26px 44px -22px rgba(232, 72, 31, 0.4);
+  transform: translateY(-6px);
+  border-color: rgba(5, 150, 105, 0.45);
+  box-shadow: 0 28px 52px -20px rgba(5, 150, 105, 0.5), 0 4px 10px -4px rgba(13, 35, 26, 0.1);
 }
 .stamp-perf {
-  border: 2px dashed #e8481f;
-  background: rgba(232, 72, 31, 0.08);
-  border-radius: 0.75rem;
-  box-shadow: 6px 6px 0 -1px rgba(28, 23, 16, 0.85);
+  border: 2px dashed #059669;
+  background: rgba(5, 150, 105, 0.08);
+  border-radius: 1.5rem;
+  box-shadow: 0 14px 28px -16px rgba(4, 120, 87, 0.4);
 }
 .ember-glow {
   position: relative;
-  border: 2px solid #1c1710;
-  background: linear-gradient(180deg, #ffffff 0%, #faf7f2 100%);
-  border-radius: 0.75rem;
-  box-shadow: 7px 7px 0 -1px rgba(28, 23, 16, 0.9), 0 18px 34px -22px rgba(28, 23, 16, 0.35);
+  border: 1px solid rgba(5, 150, 105, 0.16);
+  background: linear-gradient(180deg, #ffffff 0%, #eef8f1 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 18px 38px -20px rgba(4, 120, 87, 0.35), 0 2px 6px -2px rgba(13, 35, 26, 0.08);
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
-  transform: translate(-2px, -5px);
-  border-color: #e8481f;
-  box-shadow: 10px 12px 0 -1px rgba(232, 72, 31, 0.85), 0 26px 44px -22px rgba(232, 72, 31, 0.4);
+  transform: translateY(-6px);
+  border-color: rgba(5, 150, 105, 0.45);
+  box-shadow: 0 28px 52px -20px rgba(5, 150, 105, 0.5), 0 4px 10px -4px rgba(13, 35, 26, 0.1);
 }
 .ripple-glow {
   position: relative;
-  border: 2px solid #1c1710;
-  background: linear-gradient(180deg, #ffffff 0%, #faf7f2 100%);
-  border-radius: 0.75rem;
-  box-shadow: 7px 7px 0 -1px rgba(28, 23, 16, 0.9), 0 18px 34px -22px rgba(28, 23, 16, 0.35);
+  border: 1px solid rgba(5, 150, 105, 0.16);
+  background: linear-gradient(180deg, #ffffff 0%, #eef8f1 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 18px 38px -20px rgba(4, 120, 87, 0.35), 0 2px 6px -2px rgba(13, 35, 26, 0.08);
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
-  transform: translate(-2px, -5px);
-  border-color: #e8481f;
-  box-shadow: 10px 12px 0 -1px rgba(232, 72, 31, 0.85), 0 26px 44px -22px rgba(232, 72, 31, 0.4);
+  transform: translateY(-6px);
+  border-color: rgba(5, 150, 105, 0.45);
+  box-shadow: 0 28px 52px -20px rgba(5, 150, 105, 0.5), 0 4px 10px -4px rgba(13, 35, 26, 0.1);
 }
 .lagoon-glow {
   position: relative;
-  border: 2px solid #1c1710;
-  background: linear-gradient(180deg, #ffffff 0%, #faf7f2 100%);
-  border-radius: 0.75rem;
-  box-shadow: 7px 7px 0 -1px rgba(28, 23, 16, 0.9), 0 18px 34px -22px rgba(28, 23, 16, 0.35);
+  border: 1px solid rgba(5, 150, 105, 0.16);
+  background: linear-gradient(180deg, #ffffff 0%, #eef8f1 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 18px 38px -20px rgba(4, 120, 87, 0.35), 0 2px 6px -2px rgba(13, 35, 26, 0.08);
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
-  transform: translate(-2px, -5px);
-  border-color: #e8481f;
-  box-shadow: 10px 12px 0 -1px rgba(232, 72, 31, 0.85), 0 26px 44px -22px rgba(232, 72, 31, 0.4);
+  transform: translateY(-6px);
+  border-color: rgba(5, 150, 105, 0.45);
+  box-shadow: 0 28px 52px -20px rgba(5, 150, 105, 0.5), 0 4px 10px -4px rgba(13, 35, 26, 0.1);
 }
