@@ -1,33 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-  /* Violet Nebula: lavender paper, deep-violet primary,
-     comet-magenta accent, cyan comet-tail secondary, midnight ink. */
+  /* Ember Lantern: warm cream paper, ember-orange primary,
+     marigold-amber accent, teal pond secondary, espresso ink. */
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
-  --color-brand-50: #f5f3ff;
-  --color-brand-100: #ede9fe;
-  --color-brand-200: #ddd6fe;
-  --color-brand-300: #c4b5fd;
-  --color-brand-400: #a78bfa;
-  --color-brand-500: #8b5cf6;
-  --color-brand-600: #7c3aed;
-  --color-brand-700: #6d28d9;
-  --color-brand-800: #5b21b6;
-  --color-brand-900: #4c1d95;
-  --color-brand-950: #2e1065;
-  --color-brand: #7c3aed;
-  --color-brand-dark: #6d28d9;
-  --color-brand-deep: #2e1065;
-  --color-gold: #ec4899;
-  --color-gold-deep: #be185d;
-  --color-gold-soft: #fce7f3;
-  --color-ink: #1e1b34;
-  --color-paper: #faf8ff;
-  --color-mute: #6f6a8c;
-  --color-popblue: #06b6d4;
-  --color-popblue-deep: #0e7490;
-  --color-popblue-soft: #cffafe;
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-brand-950: #431407;
+  --color-brand: #ea580c;
+  --color-brand-dark: #c2410c;
+  --color-brand-deep: #431407;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #b45309;
+  --color-gold-soft: #fef3c7;
+  --color-ink: #2a1a12;
+  --color-paper: #fff9f2;
+  --color-mute: #8a6d5c;
+  --color-popblue: #0d9488;
+  --color-popblue-deep: #0f766e;
+  --color-popblue-soft: #ccfbf1;
 }
 
 html { scroll-behavior: smooth; }
@@ -42,75 +42,75 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #faf8ff;
+  background: #fff9f2;
   background-image:
-    linear-gradient(118deg, rgba(124, 58, 237, 0.08) 0%, rgba(167, 139, 250, 0.06) 36%, rgba(6, 182, 212, 0.06) 66%, transparent 100%),
-    radial-gradient(ellipse 62% 28% at 90% 2%, rgba(139, 92, 246, 0.12), transparent),
-    radial-gradient(ellipse 54% 24% at 6% 98%, rgba(236, 72, 153, 0.08), transparent),
-    radial-gradient(circle, rgba(124, 58, 237, 0.35) 1.1px, transparent 1.2px),
-    radial-gradient(circle, rgba(6, 182, 212, 0.28) 1px, transparent 1.1px);
+    linear-gradient(118deg, rgba(234, 88, 12, 0.08) 0%, rgba(251, 146, 60, 0.06) 36%, rgba(13, 148, 136, 0.05) 66%, transparent 100%),
+    radial-gradient(ellipse 62% 28% at 90% 2%, rgba(245, 158, 11, 0.14), transparent),
+    radial-gradient(ellipse 54% 24% at 6% 98%, rgba(234, 88, 12, 0.09), transparent),
+    radial-gradient(circle, rgba(234, 88, 12, 0.32) 1.1px, transparent 1.2px),
+    radial-gradient(circle, rgba(180, 83, 9, 0.26) 1px, transparent 1.1px);
   background-size: auto, auto, auto, 340px 340px, 520px 520px;
   background-position: 0 0, 0 0, 0 0, 0 0, 120px 180px;
-  color: #1e1b34;
+  color: #2a1a12;
 }
-::selection { background: #ec4899; color: #ffffff; }
+::selection { background: #f59e0b; color: #431407; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: #7c3aed; border-radius: 9999px; border: 2px solid #faf8ff; }
-::-webkit-scrollbar-track { background: #e4def5; }
+::-webkit-scrollbar-thumb { background: #ea580c; border-radius: 9999px; border: 2px solid #fff9f2; }
+::-webkit-scrollbar-track { background: #f3e7d8; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Star drift: violet star motes twinkling down through the nebula. */
+/* Ember rise: ember sparks floating up through the lantern glow. */
 @keyframes volt-fall-anim {
-  0% { transform: translate3d(8px, -150px, 0) rotate(0deg) scale(0.4); opacity: 0; }
+  0% { transform: translate3d(8px, 150px, 0) rotate(0deg) scale(0.4); opacity: 0; }
   30% { opacity: 0.85; }
-  65% { transform: translate3d(-14px, 40px, 0) rotate(140deg) scale(1.1); opacity: 0.6; }
-  100% { transform: translate3d(8px, 150px, 0) rotate(270deg) scale(0.6); opacity: 0; }
+  65% { transform: translate3d(-14px, -40px, 0) rotate(140deg) scale(1.1); opacity: 0.6; }
+  100% { transform: translate3d(8px, -150px, 0) rotate(270deg) scale(0.6); opacity: 0; }
 }
 .pop-fall { animation: volt-fall-anim 12.4s ease-in infinite; }
 
-/* Nebula swell: slow lateral drift of the cosmic mist. */
+/* Lantern haze: slow lateral drift of the warm mist. */
 @keyframes volt-drift {
   0%, 100% { transform: translate3d(3vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(-3vw, -0.75rem, 0) scale(1.1); opacity: 0.85; }
 }
 .pop-drift { animation: volt-drift 24s ease-in-out infinite; }
 
-/* Comet bob: gentle lift with a soft settle. */
+/* Lantern bob: gentle lift with a soft settle. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-9px) scale(1.04); }
 }
 .pop-bob { animation: signal-bob 7s ease-in-out infinite; }
 
-/* Orbit wheel: steady rotation for the planet's ring system. */
+/* Ember wheel: steady rotation for the lantern sun's ring system. */
 @keyframes orbit-wheel {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: orbit-wheel 90s linear infinite; }
 
-/* Nebula ticker: infinite marquee for the promo strip (leftward drift). */
+/* Lantern ticker: infinite marquee for the promo strip (leftward drift). */
 @keyframes volt-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: volt-ticker 36s linear infinite; }
 
-/* Comet ribbon: violet -> lavender -> cyan -> magenta. */
+/* Ember ribbon: charred ember -> flame orange -> marigold -> espresso. */
 .pop-stripes {
-  background-image: linear-gradient(135deg, #6d28d9 0%, #6d28d9 20%, #8b5cf6 20%, #8b5cf6 44%, #06b6d4 44%, #06b6d4 68%, #ec4899 68%);
+  background-image: linear-gradient(135deg, #c2410c 0%, #c2410c 20%, #ea580c 20%, #ea580c 44%, #f59e0b 44%, #f59e0b 68%, #431407 68%);
   background-size: 72px 72px;
 }
 
-/* Orbit card: lavender panel with a violet hairline,
-   a comet-trail ribbon along the top edge, and a deep-space shadow;
-   hover lifts it into a violet-magenta glow. */
+/* Lantern card: warm panel with a thick espresso frame,
+   an ember ribbon along the top edge, and a hard offset shadow;
+   hover lifts it with a bigger flame shadow. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(124, 58, 237, 0.26);
-  background: linear-gradient(165deg, #ffffff 0%, #f1ecfd 100%);
-  border-radius: 1.1rem;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 22px 44px -26px rgba(46, 16, 101, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  border: 2px solid #431407;
+  background: linear-gradient(165deg, #ffffff 0%, #fff4e8 100%);
+  border-radius: 0.9rem;
+  box-shadow: 6px 6px 0 rgba(67, 20, 7, 0.9), 0 22px 44px -26px rgba(194, 65, 12, 0.4);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   overflow: hidden;
 }
@@ -120,9 +120,9 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 6px;
-  background: linear-gradient(90deg, #06b6d4, #8b5cf6 42%, #a78bfa 62%, #ec4899);
-  border-radius: 1.1rem 1.1rem 0 0;
+  height: 8px;
+  background: linear-gradient(90deg, #c2410c, #ea580c 42%, #f59e0b 62%, #0d9488);
+  border-bottom: 2px solid #431407;
 }
 .pop-lift::after {
   content: "";
@@ -130,77 +130,77 @@ body {
   inset: 0;
   border-radius: inherit;
   pointer-events: none;
-  background: radial-gradient(ellipse 90% 46% at 50% -10%, rgba(167, 139, 250, 0.18), transparent 60%);
+  background: radial-gradient(ellipse 90% 46% at 50% -10%, rgba(245, 158, 11, 0.18), transparent 60%);
 }
 .pop-lift:hover {
-  transform: translateY(-6px) rotate(-0.35deg);
-  border-color: rgba(167, 139, 250, 0.6);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 32px 60px -26px rgba(124, 58, 237, 0.55), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  transform: translate(-3px, -6px) rotate(-0.35deg);
+  border-color: #2a1a12;
+  box-shadow: 10px 10px 0 rgba(67, 20, 7, 0.9), 0 32px 60px -26px rgba(234, 88, 12, 0.55);
 }
 
-/* Stardust glass: shared by modals and drawers — lavender frosted glass. */
+/* Ember glass: shared by modals and drawers — warm frosted glass. */
 .pop-glass {
-  background: rgba(250, 248, 255, 0.94);
+  background: rgba(255, 249, 242, 0.94);
   backdrop-filter: blur(20px) saturate(1.3);
   -webkit-backdrop-filter: blur(20px) saturate(1.3);
-  border: 1px solid rgba(124, 58, 237, 0.34);
-  border-radius: 1.1rem;
-  box-shadow: 0 30px 80px -22px rgba(46, 16, 101, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(67, 20, 7, 0.8);
+  border-radius: 0.9rem;
+  box-shadow: 8px 8px 0 rgba(67, 20, 7, 0.55), 0 30px 80px -22px rgba(194, 65, 12, 0.5);
 }
 
-/* Comet seal: magenta pill stamp with a cyan star-dust halo. */
+/* Lantern seal: marigold pill stamp with an ember halo. */
 .starburst {
   border-radius: 9999px;
   border: 2px dashed rgba(255, 255, 255, 0.95);
-  outline: 2px solid rgba(124, 58, 237, 0.6);
+  outline: 2px solid rgba(194, 65, 12, 0.7);
   outline-offset: 2px;
-  background: radial-gradient(circle at 50% 32%, #f9a8d4 0%, #ec4899 55%, #be185d 100%);
-  color: #2e1065;
+  background: radial-gradient(circle at 50% 32%, #fde68a 0%, #f59e0b 55%, #b45309 100%);
+  color: #431407;
   transform: rotate(6deg);
-  box-shadow: 0 0 26px 2px rgba(236, 72, 153, 0.55);
+  box-shadow: 0 0 26px 2px rgba(245, 158, 11, 0.55);
 }
 
-/* Starfield: violet star-dot texture for hero bands. */
+/* Ember field: warm ember-dot texture for hero bands. */
 .halftone {
   background-image:
-    radial-gradient(rgba(124, 58, 237, 0.18) 1.6px, transparent 1.7px),
-    radial-gradient(rgba(236, 72, 153, 0.16) 1.2px, transparent 1.3px);
+    radial-gradient(rgba(234, 88, 12, 0.18) 1.6px, transparent 1.7px),
+    radial-gradient(rgba(180, 83, 9, 0.16) 1.2px, transparent 1.3px);
   background-size: 26px 26px, 42px 42px;
   background-position: 0 0, 13px 21px;
 }
 
-/* Signal wave: rounded violet pulses, a cosmic divider. */
+/* Ember wave: rounded terracotta pulses, a warm divider. */
 .zigzag {
   height: 18px;
-  background-image: radial-gradient(circle at 50% 0%, rgba(109, 40, 217, 0.85) 9px, transparent 10px);
+  background-image: radial-gradient(circle at 50% 0%, rgba(194, 65, 12, 0.85) 9px, transparent 10px);
   background-size: 36px 18px;
   background-repeat: repeat-x;
   opacity: 0.9;
 }
 
-/* Nebula haze: violet diagonal shade stripes over the lavender field. */
+/* Lantern haze: ember diagonal shade stripes over the cream field. */
 .bazaar-awning {
   background-image:
-    repeating-linear-gradient(-45deg, rgba(167, 139, 250, 0.13) 0 14px, transparent 14px 28px),
-    linear-gradient(180deg, #f1ecfd, #faf8ff);
+    repeating-linear-gradient(-45deg, rgba(251, 146, 60, 0.14) 0 14px, transparent 14px 28px),
+    linear-gradient(180deg, #fff4e8, #fff9f2);
 }
 
-/* Nebula core: layered violet-to-magenta radial for the hero planet's heart. */
+/* Lantern core: layered ember-to-marigold radial for the hero sun's heart. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.9) 0%, rgba(196, 181, 253, 0.5) 34%, rgba(139, 92, 246, 0.3) 58%, rgba(236, 72, 153, 0) 74%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.9) 0%, rgba(253, 186, 116, 0.5) 34%, rgba(249, 115, 22, 0.32) 58%, rgba(245, 158, 11, 0) 74%);
 }
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.9) 0%, rgba(196, 181, 253, 0.5) 34%, rgba(139, 92, 246, 0.3) 58%, rgba(236, 72, 153, 0) 74%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.9) 0%, rgba(253, 186, 116, 0.5) 34%, rgba(249, 115, 22, 0.32) 58%, rgba(245, 158, 11, 0) 74%);
 }
 
-/* Orbit rings: concentric violet rings around the hero planet. */
+/* Ember rings: concentric ember rings around the hero sun. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(124, 58, 237, 0.24) 0px,
-    rgba(124, 58, 237, 0.24) 5px,
+    rgba(234, 88, 12, 0.24) 0px,
+    rgba(234, 88, 12, 0.24) 5px,
     transparent 5px,
     transparent 26px
   );
@@ -211,8 +211,8 @@ body {
 .sun-rays {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(124, 58, 237, 0.24) 0px,
-    rgba(124, 58, 237, 0.24) 5px,
+    rgba(234, 88, 12, 0.24) 0px,
+    rgba(234, 88, 12, 0.24) 5px,
     transparent 5px,
     transparent 26px
   );
@@ -221,66 +221,66 @@ body {
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all nebula-styled. */
+/* Legacy aliases kept so untouched components still render — all lantern-styled. */
 .lagoon-lift {
   position: relative;
-  border: 1px solid rgba(124, 58, 237, 0.26);
-  background: linear-gradient(165deg, #ffffff 0%, #f1ecfd 100%);
-  border-radius: 1.1rem;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 22px 44px -26px rgba(46, 16, 101, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  border: 2px solid #431407;
+  background: linear-gradient(165deg, #ffffff 0%, #fff4e8 100%);
+  border-radius: 0.9rem;
+  box-shadow: 6px 6px 0 rgba(67, 20, 7, 0.9), 0 22px 44px -26px rgba(194, 65, 12, 0.4);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   overflow: hidden;
 }
 .lagoon-lift:hover {
-  transform: translateY(-6px) rotate(-0.35deg);
-  border-color: rgba(167, 139, 250, 0.6);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 32px 60px -26px rgba(124, 58, 237, 0.55), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  transform: translate(-3px, -6px) rotate(-0.35deg);
+  border-color: #2a1a12;
+  box-shadow: 10px 10px 0 rgba(67, 20, 7, 0.9), 0 32px 60px -26px rgba(234, 88, 12, 0.55);
 }
 .stamp-perf {
-  border: 2px dashed #7c3aed;
-  background: rgba(237, 233, 254, 0.9);
-  border-radius: 1.1rem;
-  box-shadow: 0 20px 50px -20px rgba(109, 40, 217, 0.45);
+  border: 2px dashed #c2410c;
+  background: rgba(255, 247, 237, 0.9);
+  border-radius: 0.9rem;
+  box-shadow: 5px 5px 0 rgba(67, 20, 7, 0.6), 0 20px 50px -20px rgba(194, 65, 12, 0.45);
 }
 .ember-glow {
   position: relative;
-  border: 1px solid rgba(124, 58, 237, 0.26);
-  background: linear-gradient(165deg, #ffffff 0%, #f1ecfd 100%);
-  border-radius: 1.1rem;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 22px 44px -26px rgba(46, 16, 101, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  border: 2px solid #431407;
+  background: linear-gradient(165deg, #ffffff 0%, #fff4e8 100%);
+  border-radius: 0.9rem;
+  box-shadow: 6px 6px 0 rgba(67, 20, 7, 0.9), 0 22px 44px -26px rgba(194, 65, 12, 0.4);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
-  transform: translateY(-6px) rotate(-0.35deg);
-  border-color: rgba(167, 139, 250, 0.6);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 32px 60px -26px rgba(124, 58, 237, 0.55), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  transform: translate(-3px, -6px) rotate(-0.35deg);
+  border-color: #2a1a12;
+  box-shadow: 10px 10px 0 rgba(67, 20, 7, 0.9), 0 32px 60px -26px rgba(234, 88, 12, 0.55);
 }
 .ripple-glow {
   position: relative;
-  border: 1px solid rgba(124, 58, 237, 0.26);
-  background: linear-gradient(165deg, #ffffff 0%, #f1ecfd 100%);
-  border-radius: 1.1rem;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 22px 44px -26px rgba(46, 16, 101, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  border: 2px solid #431407;
+  background: linear-gradient(165deg, #ffffff 0%, #fff4e8 100%);
+  border-radius: 0.9rem;
+  box-shadow: 6px 6px 0 rgba(67, 20, 7, 0.9), 0 22px 44px -26px rgba(194, 65, 12, 0.4);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
-  transform: translateY(-6px) rotate(-0.35deg);
-  border-color: rgba(167, 139, 250, 0.6);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 32px 60px -26px rgba(124, 58, 237, 0.55), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  transform: translate(-3px, -6px) rotate(-0.35deg);
+  border-color: #2a1a12;
+  box-shadow: 10px 10px 0 rgba(67, 20, 7, 0.9), 0 32px 60px -26px rgba(234, 88, 12, 0.55);
 }
 .lagoon-glow {
   position: relative;
-  border: 1px solid rgba(124, 58, 237, 0.26);
-  background: linear-gradient(165deg, #ffffff 0%, #f1ecfd 100%);
-  border-radius: 1.1rem;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 22px 44px -26px rgba(46, 16, 101, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  border: 2px solid #431407;
+  background: linear-gradient(165deg, #ffffff 0%, #fff4e8 100%);
+  border-radius: 0.9rem;
+  box-shadow: 6px 6px 0 rgba(67, 20, 7, 0.9), 0 22px 44px -26px rgba(194, 65, 12, 0.4);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
-  transform: translateY(-6px) rotate(-0.35deg);
-  border-color: rgba(167, 139, 250, 0.6);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 32px 60px -26px rgba(124, 58, 237, 0.55), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  transform: translate(-3px, -6px) rotate(-0.35deg);
+  border-color: #2a1a12;
+  box-shadow: 10px 10px 0 rgba(67, 20, 7, 0.9), 0 32px 60px -26px rgba(234, 88, 12, 0.55);
 }
