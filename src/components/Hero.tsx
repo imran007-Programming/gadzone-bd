@@ -30,13 +30,13 @@ const GLOWS = [
 
 // Falling snow: cool flakes drifting down through the frost air.
 const DOTS = [
-  { left: "8%", delay: "0s", dur: "7.2s", s: 22, c: "#0284c7" },
-  { left: "21%", delay: "-1.4s", dur: "7.8s", s: 16, c: "#7dd3fc" },
-  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 24, c: "#22d3ee" },
-  { left: "53%", delay: "-0.8s", dur: "8s", s: 18, c: "#a5f3fc" },
-  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 22, c: "#0e7490" },
-  { left: "82%", delay: "-2s", dur: "7.9s", s: 15, c: "#7dd3fc" },
-  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 20, c: "#22d3ee" },
+  { left: "8%", delay: "0s", dur: "7.2s", s: 22, c: "#9333ea" },
+  { left: "21%", delay: "-1.4s", dur: "7.8s", s: 16, c: "#d8b4fe" },
+  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 24, c: "#c084fc" },
+  { left: "53%", delay: "-0.8s", dur: "8s", s: 18, c: "#e9d5ff" },
+  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 22, c: "#0d9488" },
+  { left: "82%", delay: "-2s", dur: "7.9s", s: 15, c: "#d8b4fe" },
+  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 20, c: "#c084fc" },
 ];
 
 // Ticker phrases reuse the hero's existing stats copy.

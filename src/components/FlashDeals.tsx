@@ -17,7 +17,7 @@ export default function FlashDeals({ products, countdown, onQuickView, onAddToCa
   const { hh, mm, ss } = countdown;
   const reduce = useReducedMotion();
   return (
-    <section id="flash" className="relative overflow-hidden bg-[#f2f7fd] py-14 text-[#0e7490] sm:py-16">
+    <section id="flash" className="relative overflow-hidden bg-[#faf7fc] py-14 text-[#0d9488] sm:py-16">
       <div aria-hidden className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-brand-400/20 blur-[100px]" />
       <div aria-hidden className="pointer-events-none absolute -bottom-24 -left-16 h-72 w-72 rounded-full bg-brand-600/20 blur-[100px]" />
       {/* delta rain-fleck dots */}
@@ -30,7 +30,7 @@ export default function FlashDeals({ products, countdown, onQuickView, onAddToCa
                 <span className="text-brand-700">Trending</span> New Arrivals
               </h2>
               <span className="mt-2.5 block h-1 w-16 rounded-full bg-gradient-to-r from-brand-600 via-gold to-popblue" aria-hidden />
-              <p className="mt-2.5 text-sm leading-relaxed text-[#5f7d99]">Fresh picks, latest tech — handpicked for you.</p>
+              <p className="mt-2.5 text-sm leading-relaxed text-[#7a6a8f]">Fresh picks, latest tech — handpicked for you.</p>
             </div>
             <div className="flex items-center gap-2 text-sm font-bold tracking-wide">
               <span className="text-brand-700/80">Ends in</span>

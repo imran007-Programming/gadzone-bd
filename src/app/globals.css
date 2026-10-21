@@ -1,33 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-  /* Glacier Drift: icy porcelain canvas, glacier-sky primary,
-     aurora-mint secondary, fjord-navy ink, amber glint accent. */
+  /* Royal Amethyst: warm lavender-cream canvas, deep violet primary,
+     golden amber accent, teal glint secondary, plum-black ink. */
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
-  --color-brand-50: #effbff;
-  --color-brand-100: #d8f3fc;
-  --color-brand-200: #b3e7f9;
-  --color-brand-300: #7dd3fc;
-  --color-brand-400: #38bdf8;
-  --color-brand-500: #0ea5e9;
-  --color-brand-600: #0284c7;
-  --color-brand-700: #0369a1;
-  --color-brand-800: #075985;
-  --color-brand-900: #0c4a6e;
-  --color-brand-950: #082f49;
-  --color-brand: #0284c7;
-  --color-brand-dark: #0369a1;
-  --color-brand-deep: #082f49;
+  --color-brand-50: #faf5ff;
+  --color-brand-100: #f3e8ff;
+  --color-brand-200: #e9d5ff;
+  --color-brand-300: #d8b4fe;
+  --color-brand-400: #c084fc;
+  --color-brand-500: #a855f7;
+  --color-brand-600: #9333ea;
+  --color-brand-700: #7e22ce;
+  --color-brand-800: #6b21a8;
+  --color-brand-900: #581c87;
+  --color-brand-950: #3b0764;
+  --color-brand: #9333ea;
+  --color-brand-dark: #7e22ce;
+  --color-brand-deep: #3b0764;
   --color-gold: #f59e0b;
-  --color-gold-deep: #b45309;
+  --color-gold-deep: #92400e;
   --color-gold-soft: #fef3c7;
-  --color-ink: #102a43;
-  --color-paper: #f2f7fd;
-  --color-mute: #5f7d99;
-  --color-popblue: #059669;
-  --color-popblue-deep: #047857;
-  --color-popblue-soft: #d1fae5;
+  --color-ink: #231233;
+  --color-paper: #faf7fc;
+  --color-mute: #7a6a8f;
+  --color-popblue: #0d9488;
+  --color-popblue-deep: #0f766e;
+  --color-popblue-soft: #ccfbf1;
 }
 
 html { scroll-behavior: smooth; }
@@ -42,73 +42,73 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #f2f7fd;
+  background: #faf7fc;
   background-image:
-    linear-gradient(118deg, rgba(2, 132, 199, 0.08) 0%, rgba(56, 189, 248, 0.07) 36%, rgba(16, 185, 129, 0.06) 70%, transparent 100%),
-    radial-gradient(ellipse 58% 24% at 90% 6%, rgba(56, 189, 248, 0.13), transparent),
-    radial-gradient(ellipse 50% 22% at 8% 94%, rgba(2, 132, 199, 0.09), transparent),
-    radial-gradient(rgba(2, 132, 199, 0.10) 1.3px, transparent 1.3px);
-  background-size: auto, auto, auto, 26px 26px;
-  color: #102a43;
+    linear-gradient(115deg, rgba(147, 51, 234, 0.09) 0%, rgba(192, 132, 252, 0.08) 38%, rgba(13, 148, 136, 0.06) 72%, transparent 100%),
+    radial-gradient(ellipse 60% 26% at 88% 4%, rgba(168, 85, 247, 0.14), transparent),
+    radial-gradient(ellipse 52% 24% at 10% 96%, rgba(245, 158, 11, 0.10), transparent),
+    repeating-linear-gradient(-45deg, rgba(147, 51, 234, 0.05) 0 2px, transparent 2px 14px);
+  background-size: auto, auto, auto, auto;
+  color: #231233;
 }
-::selection { background: #0284c7; color: #ffffff; }
+::selection { background: #9333ea; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: #0369a1; border-radius: 8px; border: 2px solid #f2f7fd; }
-::-webkit-scrollbar-track { background: #dcebfb; }
+::-webkit-scrollbar-thumb { background: #7e22ce; border-radius: 9999px; border: 2px solid #faf7fc; }
+::-webkit-scrollbar-track { background: #e6dcf5; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Snowfall: soft flakes drifting down through the frost air. */
+/* Petal drift: violet petals floating down through warm air. */
 @keyframes volt-fall-anim {
-  0% { transform: translate3d(8px, -140px, 0) rotate(0deg) scale(0.55); opacity: 0; }
-  28% { opacity: 0.9; }
-  62% { transform: translate3d(-14px, 30px, 0) rotate(120deg) scale(1); opacity: 0.7; }
-  100% { transform: translate3d(8px, 140px, 0) rotate(240deg) scale(0.75); opacity: 0; }
+  0% { transform: translate3d(-10px, -150px, 0) rotate(0deg) scale(0.5); opacity: 0; }
+  30% { opacity: 0.85; }
+  65% { transform: translate3d(12px, 40px, 0) rotate(-140deg) scale(1.05); opacity: 0.7; }
+  100% { transform: translate3d(-10px, 150px, 0) rotate(-260deg) scale(0.7); opacity: 0; }
 }
-.pop-fall { animation: volt-fall-anim 11.8s ease-in infinite; }
+.pop-fall { animation: volt-fall-anim 12.4s ease-in infinite; }
 
-/* Glacier drift: slow lateral sway of the cold haze. */
+/* Amethyst haze: slow lateral sway of the warm mist. */
 @keyframes volt-drift {
-  0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.55; }
-  50% { transform: translate3d(3vw, 0.75rem, 0) scale(1.08); opacity: 0.9; }
+  0%, 100% { transform: translate3d(3vw, 0, 0) scale(1); opacity: 0.5; }
+  50% { transform: translate3d(-3vw, -0.75rem, 0) scale(1.1); opacity: 0.85; }
 }
-.pop-drift { animation: volt-drift 26s ease-in-out infinite; }
+.pop-drift { animation: volt-drift 24s ease-in-out infinite; }
 
-/* Frost bob: gentle lift with a soft settle. */
+/* Velvet bob: gentle lift with a soft settle. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-7px) scale(1.03); }
+  50% { transform: translateY(-9px) scale(1.04); }
 }
-.pop-bob { animation: signal-bob 8s ease-in-out infinite; }
+.pop-bob { animation: signal-bob 7s ease-in-out infinite; }
 
-/* Aurora wheel: steady rotation for the glacier beacon. */
+/* Amethyst wheel: steady rotation for the royal beacon. */
 @keyframes orbit-wheel {
-  to { transform: rotate(360deg); }
+  to { transform: rotate(-360deg); }
 }
-.pop-spin { animation: orbit-wheel 80s linear infinite; }
+.pop-spin { animation: orbit-wheel 90s linear infinite; }
 
-/* Frost ticker: infinite marquee for the promo strip (rightward drift). */
+/* Royal ticker: infinite marquee for the promo strip (leftward drift). */
 @keyframes volt-ticker {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
-.pop-ticker { animation: volt-ticker 32s linear infinite; }
+.pop-ticker { animation: volt-ticker 36s linear infinite; }
 
-/* Aurora ribbon: glacier sky -> ice blue -> aurora mint. */
+/* Amethyst ribbon: violet -> lavender -> teal -> gold. */
 .pop-stripes {
-  background-image: linear-gradient(135deg, #0284c7 0%, #0284c7 22%, #38bdf8 22%, #38bdf8 48%, #10b981 48%, #10b981 72%, #0284c7 72%);
-  background-size: 64px 64px;
+  background-image: linear-gradient(135deg, #7e22ce 0%, #7e22ce 20%, #a855f7 20%, #a855f7 44%, #0d9488 44%, #0d9488 68%, #f59e0b 68%);
+  background-size: 72px 72px;
 }
 
-/* Glacier card: frosted white-to-ice panel with a glacier hairline,
-   an aurora top edge, and a cold blue shadow; hover lifts it into
-   an ice-blue glow. */
+/* Amethyst card: warm white-to-lavender panel with a violet hairline,
+   a golden left-edge ribbon, and a soft plum shadow; hover lifts it
+   into a violet glow. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(2, 132, 199, 0.22);
-  background: linear-gradient(168deg, #ffffff 0%, #e9f4fd 100%);
-  border-radius: 1.25rem;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 18px 40px -24px rgba(2, 132, 199, 0.38), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(147, 51, 234, 0.22);
+  background: linear-gradient(165deg, #ffffff 0%, #f4edfb 100%);
+  border-radius: 0.9rem;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 20px 42px -26px rgba(88, 28, 135, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.65);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   overflow: hidden;
 }
@@ -116,11 +116,11 @@ body {
   content: "";
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 0;
-  right: 0;
-  height: 5px;
-  background: linear-gradient(90deg, #38bdf8, #0ea5e9 35%, #10b981 70%, #f59e0b);
-  border-radius: 1.25rem 1.25rem 0 0;
+  width: 5px;
+  background: linear-gradient(180deg, #f59e0b, #a855f7 45%, #0d9488);
+  border-radius: 0.9rem 0 0 0.9rem;
 }
 .pop-lift::after {
   content: "";
@@ -128,139 +128,139 @@ body {
   inset: 0;
   border-radius: inherit;
   pointer-events: none;
-  background: linear-gradient(180deg, rgba(56, 189, 248, 0.09), transparent 55%);
+  background: linear-gradient(180deg, rgba(168, 85, 247, 0.08), transparent 55%);
 }
 .pop-lift:hover {
-  transform: translateY(-5px);
-  border-color: rgba(56, 189, 248, 0.6);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 28px 54px -24px rgba(2, 132, 199, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  transform: translateY(-6px) rotate(-0.4deg);
+  border-color: rgba(168, 85, 247, 0.55);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 30px 56px -26px rgba(126, 34, 206, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.65);
 }
 
-/* Frost glass: shared by modals and drawers — cool frosted glass. */
+/* Velvet glass: shared by modals and drawers — warm frosted glass. */
 .pop-glass {
-  background: rgba(242, 247, 253, 0.92);
-  backdrop-filter: blur(20px) saturate(1.2);
-  -webkit-backdrop-filter: blur(20px) saturate(1.2);
-  border: 1px solid rgba(2, 132, 199, 0.28);
-  border-radius: 1.25rem;
-  box-shadow: 0 30px 80px -22px rgba(8, 47, 73, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  background: rgba(250, 247, 252, 0.94);
+  backdrop-filter: blur(20px) saturate(1.25);
+  -webkit-backdrop-filter: blur(20px) saturate(1.25);
+  border: 1px solid rgba(147, 51, 234, 0.3);
+  border-radius: 0.9rem;
+  box-shadow: 0 30px 80px -22px rgba(59, 7, 100, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
-/* Frost seal: tilted ice-blue pill stamp with a glacier dashed halo. */
+/* Royal seal: tilted golden pill stamp with a violet dashed halo. */
 .starburst {
   border-radius: 9999px;
   border: 2px dashed rgba(255, 255, 255, 0.95);
-  outline: 2px solid rgba(2, 132, 199, 0.55);
+  outline: 2px solid rgba(147, 51, 234, 0.6);
   outline-offset: 2px;
-  background: radial-gradient(circle at 50% 32%, #bae6fd 0%, #38bdf8 55%, #0369a1 100%);
-  color: #082f49;
-  transform: rotate(-6deg);
-  box-shadow: 0 0 24px 2px rgba(56, 189, 248, 0.5);
+  background: radial-gradient(circle at 50% 32%, #fde68a 0%, #f59e0b 55%, #92400e 100%);
+  color: #3b0764;
+  transform: rotate(6deg);
+  box-shadow: 0 0 26px 2px rgba(245, 158, 11, 0.55);
 }
 
-/* Frost dots: cool dot-grid texture for hero bands. */
+/* Amethyst dots: violet dot-grid texture for hero bands. */
 .halftone {
-  background-image: radial-gradient(rgba(2, 132, 199, 0.12) 1.6px, transparent 1.6px);
-  background-size: 22px 22px;
+  background-image: radial-gradient(rgba(147, 51, 234, 0.14) 1.8px, transparent 1.8px);
+  background-size: 26px 26px;
 }
 
-/* Glacier wave: ice-blue chevron teeth, a frost divider. */
+/* Royal wave: violet chevron teeth, a regal divider. */
 .zigzag {
-  height: 14px;
+  height: 16px;
   background-image:
-    linear-gradient(135deg, rgba(2, 132, 199, 0.8) 25%, transparent 25%),
-    linear-gradient(225deg, rgba(2, 132, 199, 0.8) 25%, transparent 25%);
-  background-size: 24px 24px;
+    linear-gradient(135deg, rgba(126, 34, 206, 0.85) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(126, 34, 206, 0.85) 25%, transparent 25%);
+  background-size: 28px 28px;
   background-repeat: repeat-x;
   background-position: 0 0, 0 0;
   opacity: 0.9;
 }
 
-/* Frost awning: ice-blue diagonal shade band over the frost field. */
+/* Royal awning: violet diagonal shade band over the cream field. */
 .bazaar-awning {
   background-image:
-    repeating-linear-gradient(45deg, rgba(56, 189, 248, 0.16) 0 12px, transparent 12px 24px),
-    linear-gradient(180deg, #e9f4fd, #f2f7fd);
+    repeating-linear-gradient(-45deg, rgba(168, 85, 247, 0.14) 0 14px, transparent 14px 28px),
+    linear-gradient(180deg, #f4edfb, #faf7fc);
 }
 
-/* Glacier beacon: layered white-to-ice radial for the hero's frost heart. */
+/* Royal beacon: layered white-to-lavender radial for the hero's heart. */
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(186, 230, 253, 0.55) 34%, rgba(56, 189, 248, 0.30) 58%, rgba(2, 132, 199, 0) 72%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(233, 213, 255, 0.55) 34%, rgba(168, 85, 247, 0.32) 58%, rgba(245, 158, 11, 0) 74%);
 }
 
-/* Ice rays: rotating conic rays around the glacier beacon. */
+/* Golden rays: rotating conic rays around the royal beacon. */
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg,
-    rgba(2, 132, 199, 0.18) 0deg 5deg,
-    transparent 5deg 20deg
+    rgba(245, 158, 11, 0.20) 0deg 6deg,
+    transparent 6deg 24deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 88%);
   mask: radial-gradient(circle, transparent 32%, black 58%, transparent 88%);
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all glacier-styled. */
+/* Legacy aliases kept so untouched components still render — all amethyst-styled. */
 .lagoon-lift {
   position: relative;
-  border: 1px solid rgba(2, 132, 199, 0.22);
-  background: linear-gradient(168deg, #ffffff 0%, #e9f4fd 100%);
-  border-radius: 1.25rem;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 18px 40px -24px rgba(2, 132, 199, 0.38), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(147, 51, 234, 0.22);
+  background: linear-gradient(165deg, #ffffff 0%, #f4edfb 100%);
+  border-radius: 0.9rem;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 20px 42px -26px rgba(88, 28, 135, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.65);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   overflow: hidden;
 }
 .lagoon-lift:hover {
-  transform: translateY(-5px);
-  border-color: rgba(56, 189, 248, 0.6);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 28px 54px -24px rgba(2, 132, 199, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  transform: translateY(-6px) rotate(-0.4deg);
+  border-color: rgba(168, 85, 247, 0.55);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 30px 56px -26px rgba(126, 34, 206, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.65);
 }
 .stamp-perf {
-  border: 2px dashed #0284c7;
-  background: rgba(224, 242, 254, 0.9);
-  border-radius: 1.25rem;
-  box-shadow: 0 20px 50px -20px rgba(2, 132, 199, 0.4);
+  border: 2px dashed #9333ea;
+  background: rgba(243, 232, 255, 0.9);
+  border-radius: 0.9rem;
+  box-shadow: 0 20px 50px -20px rgba(126, 34, 206, 0.4);
 }
 .ember-glow {
   position: relative;
-  border: 1px solid rgba(2, 132, 199, 0.22);
-  background: linear-gradient(168deg, #ffffff 0%, #e9f4fd 100%);
-  border-radius: 1.25rem;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 18px 40px -24px rgba(2, 132, 199, 0.38), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(147, 51, 234, 0.22);
+  background: linear-gradient(165deg, #ffffff 0%, #f4edfb 100%);
+  border-radius: 0.9rem;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 20px 42px -26px rgba(88, 28, 135, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.65);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
-  transform: translateY(-5px);
-  border-color: rgba(56, 189, 248, 0.6);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 28px 54px -24px rgba(2, 132, 199, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  transform: translateY(-6px) rotate(-0.4deg);
+  border-color: rgba(168, 85, 247, 0.55);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 30px 56px -26px rgba(126, 34, 206, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.65);
 }
 .ripple-glow {
   position: relative;
-  border: 1px solid rgba(2, 132, 199, 0.22);
-  background: linear-gradient(168deg, #ffffff 0%, #e9f4fd 100%);
-  border-radius: 1.25rem;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 18px 40px -24px rgba(2, 132, 199, 0.38), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(147, 51, 234, 0.22);
+  background: linear-gradient(165deg, #ffffff 0%, #f4edfb 100%);
+  border-radius: 0.9rem;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 20px 42px -26px rgba(88, 28, 135, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.65);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
-  transform: translateY(-5px);
-  border-color: rgba(56, 189, 248, 0.6);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 28px 54px -24px rgba(2, 132, 199, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  transform: translateY(-6px) rotate(-0.4deg);
+  border-color: rgba(168, 85, 247, 0.55);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 30px 56px -26px rgba(126, 34, 206, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.65);
 }
 .lagoon-glow {
   position: relative;
-  border: 1px solid rgba(2, 132, 199, 0.22);
-  background: linear-gradient(168deg, #ffffff 0%, #e9f4fd 100%);
-  border-radius: 1.25rem;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 18px 40px -24px rgba(2, 132, 199, 0.38), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(147, 51, 234, 0.22);
+  background: linear-gradient(165deg, #ffffff 0%, #f4edfb 100%);
+  border-radius: 0.9rem;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 20px 42px -26px rgba(88, 28, 135, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.65);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
-  transform: translateY(-5px);
-  border-color: rgba(56, 189, 248, 0.6);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 28px 54px -24px rgba(2, 132, 199, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  transform: translateY(-6px) rotate(-0.4deg);
+  border-color: rgba(168, 85, 247, 0.55);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 30px 56px -26px rgba(126, 34, 206, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.65);
 }
