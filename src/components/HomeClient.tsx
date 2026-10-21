@@ -167,7 +167,7 @@ export default function HomeClient() {
   const handleCheckout = () => { setCartOpen(false); setCheckoutOpen(true); };
 
   return (
-    <div className="min-h-screen bg-[#faf6ef] pb-20 font-sans text-[#7d6a5e] md:pb-0">
+    <div className="min-h-screen bg-[#f4f7fe] pb-20 font-sans text-[#64748b] md:pb-0">
       <TopBar />
       <Header query={query} onQueryChange={setQuery} category={category} onCategoryChange={setCategory} cartCount={cartCount} onCartOpen={() => setCartOpen(true)} onMenuOpen={() => setMenuOpen(true)} onAccountOpen={() => setAccountOpen(true)} />
       {selectedProduct ? (
