@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Kiln haze: terracotta, olive and saffron glows drifting over the yard.
+// Glacier drift: azure, violet and cyan frost-glows over the ice field.
 const GLOWS = [
-  { left: "4%", top: "10%", size: 150, delay: "0s", dur: "14s", c: "rgba(217, 119, 6, 0.28)" },
-  { left: "72%", top: "4%", size: 200, delay: "-4s", dur: "15s", c: "rgba(126, 34, 206, 0.16)" },
-  { left: "44%", top: "44%", size: 120, delay: "-7s", dur: "13s", c: "rgba(251, 113, 133, 0.22)" },
-  { left: "86%", top: "50%", size: 110, delay: "-2s", dur: "14s", c: "rgba(159, 18, 57, 0.24)" },
+  { left: "4%", top: "10%", size: 150, delay: "0s", dur: "14s", c: "rgba(2, 132, 199, 0.28)" },
+  { left: "72%", top: "4%", size: 200, delay: "-4s", dur: "15s", c: "rgba(79, 70, 229, 0.16)" },
+  { left: "44%", top: "44%", size: 120, delay: "-7s", dur: "13s", c: "rgba(167, 139, 250, 0.22)" },
+  { left: "86%", top: "50%", size: 110, delay: "-2s", dur: "14s", c: "rgba(91, 33, 182, 0.24)" },
 ];
 
-// Rising kiln sparks: lime and ember sparks lifting through warm air.
+// Rising frost crystals: azure and violet shards lifting through cold air.
 const DOTS = [
-  { left: "8%", delay: "0s", dur: "7.2s", s: 22, c: "#e11d48" },
-  { left: "21%", delay: "-1.4s", dur: "7.8s", s: 16, c: "#fb7185" },
-  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 24, c: "#f59e0b" },
-  { left: "53%", delay: "-0.8s", dur: "8s", s: 18, c: "#fda4af" },
-  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 22, c: "#9f1239" },
-  { left: "82%", delay: "-2s", dur: "7.9s", s: 15, c: "#f43f5e" },
-  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 20, c: "#fb923c" },
+  { left: "8%", delay: "0s", dur: "7.2s", s: 22, c: "#7c3aed" },
+  { left: "21%", delay: "-1.4s", dur: "7.8s", s: 16, c: "#a78bfa" },
+  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 24, c: "#0ea5e9" },
+  { left: "53%", delay: "-0.8s", dur: "8s", s: 18, c: "#c4b5fd" },
+  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 22, c: "#5b21b6" },
+  { left: "82%", delay: "-2s", dur: "7.9s", s: 15, c: "#8b5cf6" },
+  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 20, c: "#38bdf8" },
 ];
 
 // Ticker phrases reuse the hero's existing stats copy.
@@ -52,10 +52,10 @@ function Dot({ left, delay, dur, s, c }: (typeof DOTS)[number]) {
       <div
         style={{
           width: s,
-          height: Math.round(s * 1.25),
-          borderRadius: "62% 4% 62% 4%",
-          transform: "rotate(24deg)",
-          background: `radial-gradient(circle at 35% 30%, #ffffff88, ${c} 60%)`,
+          height: s,
+          borderRadius: "8px",
+          transform: "rotate(45deg)",
+          background: `linear-gradient(135deg, #ffffffcc, ${c} 60%)`,
           filter: "blur(0.6px)",
           boxShadow: `0 0 12px 2px ${c}66`,
         }}
@@ -69,12 +69,12 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* sand field + amber wash + rising sparks */}
+      {/* frost field + azure wash + rising crystals */}
       <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
-      <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#fbeed3]/70 via-gold-soft/30 to-transparent" />
+      <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#e6f1fe]/70 via-popblue-soft/30 to-transparent" />
 
-      {/* kiln core: a terracotta desert sun ringed by orbiting circuit
-          sparks and radiating wire traces, offset right */}
+      {/* glacier core: an azure frost orb ringed by orbiting circuit
+          shards and radiating frost traces, offset right */}
       <div aria-hidden className="pointer-events-none absolute -right-44 -top-36 z-0 hidden opacity-90 sm:block">
         <div className="relative h-[600px] w-[600px]">
           <div className="sun-disc absolute inset-8 rounded-full blur-2xl" />
@@ -95,14 +95,14 @@ export default function Hero({ onQuickView }: HeroProps) {
             return (
               <span
                 key={i}
-                className="pop-bob absolute h-5 w-4 bg-gold shadow-[0_0_18px_4px_rgba(225, 29, 72,0.55)] ring-2 ring-white/60"
-                style={{ left: `${x}%`, top: `${y}%`, animationDelay: `${-i * 0.8}s`, borderRadius: "62% 4% 62% 4%", transform: "rotate(24deg)" }}
+                className="pop-bob absolute h-5 w-5 bg-gold shadow-[0_0_18px_4px_rgba(124, 58, 237,0.55)] ring-2 ring-white/60"
+                style={{ left: `${x}%`, top: `${y}%`, animationDelay: `${-i * 0.8}s`, borderRadius: "6px", transform: "rotate(45deg)" }}
               />
             );
           })}
-          <div className="absolute inset-44 rounded-full border-2 border-brand-200/80 bg-gradient-to-br from-brand-400 via-brand-600 to-brand-800 shadow-[0_0_90px_28px_rgba(217, 119, 6,0.35)]" />
+          <div className="absolute inset-44 rounded-full border-2 border-brand-200/80 bg-gradient-to-br from-brand-400 via-brand-600 to-brand-800 shadow-[0_0_90px_28px_rgba(2, 132, 199,0.35)]" />
           <div className="absolute inset-44 rounded-full border border-white/40" />
-          {/* kiln ribs */}
+          {/* frost ribs */}
           <div className="absolute inset-44 rounded-full border-x-8 border-brand-950/30" />
         </div>
       </div>
@@ -118,7 +118,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         ))}
       </div>
 
-      {/* rising kiln sparks */}
+      {/* rising frost crystals */}
       <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden overflow-hidden sm:block">
         {DOTS.map((r, i) => (
           <Dot key={i} {...r} />
@@ -128,7 +128,7 @@ export default function Hero({ onQuickView }: HeroProps) {
       {/* 4-banner carousel in a sand frame with a circuit ribbon top edge */}
       <div className="relative">
         <div className="mx-auto max-w-7xl px-4 pt-8 sm:px-6">
-          <div className="pop-lift overflow-hidden bg-[#fffbf4]">
+          <div className="pop-lift overflow-hidden bg-[#f7fbff]">
             <div aria-hidden className="pop-stripes h-4 border-b border-brand-600/20" />
             <div className="overflow-hidden p-2">
               <div className="overflow-hidden rounded-2xl ring-1 ring-brand-600/25">
@@ -139,8 +139,8 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* market ticker: kiln-gradient band marquee of the shop's own promises */}
-      <div aria-hidden className="relative z-10 mt-8 border-y-4 border-double border-brand-deep bg-gradient-to-r from-brand-700 via-brand-600 to-popblue-deep py-2.5 shadow-[0_18px_44px_-20px_rgba(124, 45, 18,0.55)]">
+      {/* market ticker: glacier-gradient band marquee of the shop's own promises */}
+      <div aria-hidden className="relative z-10 mt-8 border-y-4 border-double border-brand-deep bg-gradient-to-r from-brand-700 via-brand-600 to-popblue-deep py-2.5 shadow-[0_18px_44px_-20px_rgba(12, 74, 110,0.55)]">
         <div className="overflow-hidden">
           <div className="pop-ticker flex w-max items-center gap-8 pr-8">
             {[...TICKER, ...TICKER].map((t, i) => (
@@ -162,9 +162,9 @@ export default function Hero({ onQuickView }: HeroProps) {
               { v: "50K+", l: "Happy Customers" },
               { v: "COD", l: "Available" },
             ].map((s) => (
-              <div key={s.l} className="pop-lift relative overflow-hidden bg-[#fffbf4] p-4 pb-3 text-center">
+              <div key={s.l} className="pop-lift relative overflow-hidden bg-[#f7fbff] p-4 pb-3 text-center">
                 <span className="block text-2xl font-black tracking-tight text-brand-700">{s.v}</span>
-                <span className="mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#8a6f5c]">{s.l}</span>
+                <span className="mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#5b7290]">{s.l}</span>
                 <span aria-hidden className="mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-brand-600 via-gold to-popblue" />
               </div>
             ))}
@@ -173,8 +173,8 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full bg-gradient-to-r from-brand-600 via-gold to-popblue px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-white shadow-[0_16px_38px_-14px_rgba(217, 119, 6,0.6)]">Handpicked for you</p>
-            <h2 className="mt-3 text-3xl font-black tracking-tight text-[#3f2a14]">Featured <span className="bg-gradient-to-r from-brand-700 to-popblue-deep bg-clip-text text-transparent">Picks</span></h2>
+            <p className="inline-block rounded-full bg-gradient-to-r from-brand-600 via-gold to-popblue px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-white shadow-[0_16px_38px_-14px_rgba(2, 132, 199,0.6)]">Handpicked for you</p>
+            <h2 className="mt-3 text-3xl font-black tracking-tight text-[#0f2440]">Featured <span className="bg-gradient-to-r from-brand-700 to-popblue-deep bg-clip-text text-transparent">Picks</span></h2>
             <span className="zigzag mt-3 block w-44" aria-hidden />
           </div>
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
@@ -185,7 +185,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45, delay: 0.2 + i * 0.08, ease: "easeOut" }}
                 whileHover={{ y: -6 }}
-                className="pop-lift group cursor-pointer overflow-hidden bg-[#fffbf4]"
+                className="pop-lift group cursor-pointer overflow-hidden bg-[#f7fbff]"
                 onClick={() => onQuickView(p)}
               >
                 <div className="relative">
@@ -195,7 +195,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                   <span className="starburst absolute -right-1 -top-1 flex h-16 w-16 items-center justify-center p-4 text-center text-[11px] font-black leading-tight">-{discountPct(p)}%</span>
                   <span aria-hidden className="pop-stripes absolute inset-x-0 bottom-0 h-2 border-t border-brand-600/20" />
                 </div>
-                <div className="p-3.5 text-left"><p className="truncate text-sm font-bold tracking-tight text-[#3f2a14]">{p.name}</p><p className="mt-1 text-base font-extrabold tracking-tight text-brand-700">{tk(p.price)} <span className="text-xs font-medium text-[#8a6f5c] line-through">{tk(p.oldPrice)}</span></p></div>
+                <div className="p-3.5 text-left"><p className="truncate text-sm font-bold tracking-tight text-[#0f2440]">{p.name}</p><p className="mt-1 text-base font-extrabold tracking-tight text-brand-700">{tk(p.price)} <span className="text-xs font-medium text-[#5b7290] line-through">{tk(p.oldPrice)}</span></p></div>
               </motion.div>
             ))}
           </div>

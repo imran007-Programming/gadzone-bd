@@ -5,13 +5,13 @@ import Reveal from "./Reveal";
 
 export default function WhyShop() {
   return (
-    <section className="relative overflow-hidden border-y border-[#fbeed3] bg-gradient-to-b from-[#fffbf4] to-[#fdf3e3] py-16 sm:py-20">
+    <section className="relative overflow-hidden border-y border-[#e6f1fe] bg-gradient-to-b from-[#f7fbff] to-[#eef5ff] py-16 sm:py-20">
       <div aria-hidden className="pointer-events-none absolute -left-20 top-0 h-64 w-64 rounded-full bg-brand-500/12 blur-[100px]" />
       <div aria-hidden className="pointer-events-none absolute -right-20 bottom-0 h-64 w-64 rounded-full bg-brand-400/10 blur-[100px]" />
       <div className="relative mx-auto max-w-7xl px-4">
         <Reveal className="text-center">
           <span className="text-xs font-bold uppercase tracking-widest text-brand-800">Why Us</span>
-          <h2 className="mt-2 text-3xl font-black leading-tight tracking-tight text-[#3f2a14] sm:text-4xl">Why Shop With GadZone BD?</h2>
+          <h2 className="mt-2 text-3xl font-black leading-tight tracking-tight text-[#0f2440] sm:text-4xl">Why Shop With GadZone BD?</h2>
         </Reveal>
         <div className="mt-10 grid gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {[
@@ -23,9 +23,9 @@ export default function WhyShop() {
             <Reveal key={f.t} delay={i * 0.07}>
               <motion.div
                 whileHover={{ y: -4 }}
-                className="rounded-2xl border border-[#fbeed3] bg-[#fffbf4] p-6 text-center shadow-[0_12px_36px_-12px_rgba(63, 42, 20,0.2)] backdrop-blur-sm transition-all hover:border-brand-400/40 hover:shadow-[0_16px_44px_-12px_rgba(217, 119, 6,0.35)] sm:p-7"
+                className="rounded-2xl border border-[#e6f1fe] bg-[#f7fbff] p-6 text-center shadow-[0_12px_36px_-12px_rgba(15, 36, 64,0.2)] backdrop-blur-sm transition-all hover:border-brand-400/40 hover:shadow-[0_16px_44px_-12px_rgba(2, 132, 199,0.35)] sm:p-7"
               >
-                <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-brand-400/15 text-3xl shadow-[0_0_24px_rgba(217, 119, 6,0.25)] ring-1 ring-brand-400/40">{f.e}</span><h3 className="mt-4 text-[15px] font-bold tracking-tight text-[#3f2a14]">{f.t}</h3><p className="mt-1.5 text-sm leading-relaxed text-[#8a6f5c]">{f.d}</p>
+                <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-brand-400/15 text-3xl shadow-[0_0_24px_rgba(2, 132, 199,0.25)] ring-1 ring-brand-400/40">{f.e}</span><h3 className="mt-4 text-[15px] font-bold tracking-tight text-[#0f2440]">{f.t}</h3><p className="mt-1.5 text-sm leading-relaxed text-[#5b7290]">{f.d}</p>
               </motion.div>
             </Reveal>
           ))}
