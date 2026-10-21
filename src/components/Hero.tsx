@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Volt glows: violet, cyan and pink neon clouds drifting over the night grid.
+// Kiln embers: terracotta, amber and pomegranate heat clouds drifting over the warm field.
 const GLOWS = [
-  { left: "4%", top: "10%", size: 150, delay: "0s", dur: "14s", c: "rgba(5, 150, 105, 0.28)" },
-  { left: "72%", top: "4%", size: 200, delay: "-4s", dur: "15s", c: "rgba(124, 58, 237, 0.14)" },
-  { left: "44%", top: "44%", size: 120, delay: "-7s", dur: "13s", c: "rgba(167, 243, 208, 0.24)" },
-  { left: "86%", top: "50%", size: 110, delay: "-2s", dur: "14s", c: "rgba(56, 189, 248, 0.2)" },
+  { left: "4%", top: "10%", size: 150, delay: "0s", dur: "14s", c: "rgba(209, 78, 18, 0.28)" },
+  { left: "72%", top: "4%", size: 200, delay: "-4s", dur: "15s", c: "rgba(156, 61, 46, 0.14)" },
+  { left: "44%", top: "44%", size: 120, delay: "-7s", dur: "13s", c: "rgba(246, 178, 121, 0.24)" },
+  { left: "86%", top: "50%", size: 110, delay: "-2s", dur: "14s", c: "rgba(240, 164, 49, 0.2)" },
 ];
 
-// volt sparks: charged motes rising through the neon wash.
+// kiln sparks: clay motes drifting through the warm wash.
 const DOTS = [
-  { left: "8%", delay: "0s", dur: "7.2s", s: 22, c: "#059669" },
-  { left: "21%", delay: "-1.4s", dur: "7.8s", s: 16, c: "#a7f3d0" },
-  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 24, c: "#7c3aed" },
-  { left: "53%", delay: "-0.8s", dur: "8s", s: 18, c: "#0d231a" },
-  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 22, c: "#38bdf8" },
-  { left: "82%", delay: "-2s", dur: "7.9s", s: 15, c: "#6ee7b7" },
-  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 20, c: "#34d399" },
+  { left: "8%", delay: "0s", dur: "7.2s", s: 22, c: "#d14e12" },
+  { left: "21%", delay: "-1.4s", dur: "7.8s", s: 16, c: "#f6b279" },
+  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 24, c: "#9c3d2e" },
+  { left: "53%", delay: "-0.8s", dur: "8s", s: 18, c: "#2b1708" },
+  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 22, c: "#f0a431" },
+  { left: "82%", delay: "-2s", dur: "7.9s", s: 15, c: "#f18f41" },
+  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 20, c: "#ec6d1e" },
 ];
 
 // Ticker phrases reuse the hero's existing stats copy.
@@ -68,12 +68,12 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* starfield + bloom wash */}
+      {/* clay dust + sun wash */}
       <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
       <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-brand-100/70 via-popblue-soft/30 to-transparent" />
 
-      {/* bloom core: a violet bloom with tilted neon rings and
-          drifting petal motes, offset left */}
+      {/* kiln sun: a terracotta sun with tilted ember rings and
+          drifting clay motes, offset left */}
       <div aria-hidden className="pointer-events-none absolute -left-44 -top-36 z-0 hidden opacity-90 sm:block">
         <div className="relative h-[600px] w-[600px]">
           <div className="nebula-core absolute inset-8 rounded-full blur-2xl" />
@@ -83,7 +83,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             <span
               key={r}
               className="absolute left-1/2 top-1/2 h-[46%] w-[88%] origin-center -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-brand-300/60"
-              style={{ transform: `translate(-50%, -50%) rotate(${r}deg) scaleY(0.42)`, boxShadow: "0 0 24px 2px rgba(167, 243, 208, 0.4)" }}
+              style={{ transform: `translate(-50%, -50%) rotate(${r}deg) scaleY(0.42)`, boxShadow: "0 0 24px 2px rgba(246, 178, 121, 0.4)" }}
             />
           ))}
           {/* orbiting comet sparks */}
@@ -94,15 +94,15 @@ export default function Hero({ onQuickView }: HeroProps) {
             return (
               <span
                 key={i}
-                className="pop-bob absolute h-5 w-5 rounded-full bg-gold shadow-[0_0_18px_4px_rgba(56, 189, 248,0.55)] ring-2 ring-white/60"
+                className="pop-bob absolute h-5 w-5 rounded-full bg-gold shadow-[0_0_18px_4px_rgba(240, 164, 49,0.55)] ring-2 ring-white/60"
                 style={{ left: `${x}%`, top: `${y}%`, animationDelay: `${-i * 0.8}s` }}
               />
             );
           })}
-          {/* the planet itself */}
-          <div className="absolute inset-44 rounded-full border-2 border-brand-200/80 bg-[radial-gradient(circle_at_38%_32%,#cde4d5_0%,#059669_38%,#065f46_68%,#064e3b_100%)] shadow-[0_0_90px_28px_rgba(167, 243, 208,0.35)]" />
+          {/* the kiln sun itself */}
+          <div className="absolute inset-44 rounded-full border-2 border-brand-200/80 bg-[radial-gradient(circle_at_38%_32%,#f0dfc4_0%,#d14e12_38%,#87320f_68%,#6f2c10_100%)] shadow-[0_0_90px_28px_rgba(246, 178, 121,0.35)]" />
           <div className="absolute inset-44 rounded-full border border-white/40" />
-          {/* crater bands */}
+          {/* heat bands */}
           <div className="absolute inset-44 overflow-hidden rounded-full">
             <div className="absolute left-[8%] right-[8%] top-[30%] h-6 rounded-full bg-brand-950/25 blur-md" />
             <div className="absolute left-[18%] right-[18%] top-[58%] h-4 rounded-full bg-gold/25 blur-md" />
@@ -110,7 +110,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* drifting bloom swell */}
+      {/* drifting ember swell */}
       <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
         {GLOWS.map((g, i) => (
           <div
@@ -121,20 +121,20 @@ export default function Hero({ onQuickView }: HeroProps) {
         ))}
       </div>
 
-      {/* falling star motes */}
+      {/* ember motes drifting down over the kiln sun */}
       <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden overflow-hidden sm:block">
         {DOTS.map((r, i) => (
           <Dot key={i} {...r} />
         ))}
       </div>
 
-      {/* 4-banner carousel in a bloom frame with a neon-ribbon top edge */}
+      {/* 4-banner carousel in a kiln frame with a clay-ribbon top edge */}
       <div className="relative">
         <div className="mx-auto max-w-7xl px-4 pt-8 sm:px-6">
           <div className="pop-lift overflow-hidden bg-paper">
             <div aria-hidden className="pop-stripes h-4 border-b border-brand-600/20" />
             <div className="overflow-hidden p-2">
-              <div className="overflow-hidden rounded-[2rem] ring-2 ring-brand-500/20">
+              <div className="overflow-hidden rounded-lg ring-2 ring-brand-500/20">
                 <BannerCarousel />
               </div>
             </div>
@@ -142,8 +142,8 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* bloom ticker: neon ribbon band, marquee of the shop's own promises */}
-      <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/40 bg-gradient-to-r from-brand-400 via-gold to-popblue py-3 shadow-[0_18px_44px_-20px_rgba(124, 58, 237, 0.6)]">
+      {/* kiln ticker: clay ribbon band, marquee of the shop's own promises */}
+      <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/40 bg-gradient-to-r from-brand-400 via-gold to-popblue py-3 shadow-[0_18px_44px_-20px_rgba(156, 61, 46, 0.6)]">
         <div className="overflow-hidden py-2">
           <div className="pop-ticker flex w-max items-center gap-8 pr-8">
             {[...TICKER, ...TICKER].map((t, i) => (
@@ -176,7 +176,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full bg-gradient-to-r from-brand-400 via-gold to-popblue px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-950 shadow-[0_16px_38px_-14px_rgba(124, 58, 237, 0.6)]">Handpicked for you</p>
+            <p className="inline-block rounded-full bg-gradient-to-r from-brand-400 via-gold to-popblue px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-950 shadow-[0_16px_38px_-14px_rgba(156, 61, 46, 0.6)]">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="bg-gradient-to-r from-brand-300 to-gold bg-clip-text text-transparent">Picks</span></h2>
             <span className="zigzag mt-3 block w-44" aria-hidden />
           </div>
@@ -206,7 +206,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* chevron divider into the page */}
+      {/* kiln divider into the page */}
       <div aria-hidden className="zigzag absolute bottom-0 left-0 w-full opacity-90" />
     </section>
   );

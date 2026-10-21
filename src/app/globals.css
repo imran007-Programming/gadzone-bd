@@ -1,33 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-  /* Emerald Grove: soft mint paper, deep-forest editorial headers,
-     emerald primary, sky-blue secondary, violet tertiary. */
+  /* Terracotta Kiln: sun-baked cream paper, deep clay editorial headers,
+     burnt-orange primary, amber secondary, pomegranate tertiary. */
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
-  --color-brand-50: #ecfdf5;
-  --color-brand-100: #d1fae5;
-  --color-brand-200: #a7f3d0;
-  --color-brand-300: #6ee7b7;
-  --color-brand-400: #34d399;
-  --color-brand-500: #10b981;
-  --color-brand-600: #059669;
-  --color-brand-700: #047857;
-  --color-brand-800: #065f46;
-  --color-brand-900: #064e3b;
-  --color-brand-950: #022c22;
-  --color-brand: #059669;
-  --color-brand-dark: #047857;
-  --color-brand-deep: #022c22;
-  --color-gold: #38bdf8;
-  --color-gold-deep: #0284c7;
-  --color-gold-soft: #e0f2fe;
-  --color-ink: #0d231a;
-  --color-paper: #f3faf5;
-  --color-mute: #5e7a6a;
-  --color-popblue: #7c3aed;
-  --color-popblue-deep: #5b21b6;
-  --color-popblue-soft: #ede9fe;
+  --color-brand-50: #fef6ed;
+  --color-brand-100: #fdebd7;
+  --color-brand-200: #fad3ae;
+  --color-brand-300: #f6b279;
+  --color-brand-400: #f18f41;
+  --color-brand-500: #ec6d1e;
+  --color-brand-600: #d14e12;
+  --color-brand-700: #a93c0f;
+  --color-brand-800: #87320f;
+  --color-brand-900: #6f2c10;
+  --color-brand-950: #3c1708;
+  --color-brand: #d14e12;
+  --color-brand-dark: #a93c0f;
+  --color-brand-deep: #3c1708;
+  --color-gold: #f0a431;
+  --color-gold-deep: #c97e1b;
+  --color-gold-soft: #fbeed3;
+  --color-ink: #2b1708;
+  --color-paper: #faf5ea;
+  --color-mute: #8a6b4d;
+  --color-popblue: #9c3d2e;
+  --color-popblue-deep: #7a2c22;
+  --color-popblue-soft: #f7e3d8;
 }
 
 html { scroll-behavior: smooth; }
@@ -42,75 +42,75 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #f3faf5;
+  background: #faf5ea;
   background-image:
-    linear-gradient(120deg, rgba(5, 150, 105, 0.06) 0%, rgba(56, 189, 248, 0.05) 40%, rgba(124, 58, 237, 0.04) 70%, transparent 100%),
-    radial-gradient(ellipse 58% 26% at 84% 0%, rgba(52, 211, 153, 0.16), transparent),
-    radial-gradient(ellipse 52% 24% at 8% 100%, rgba(56, 189, 248, 0.12), transparent),
-    radial-gradient(rgba(13, 35, 26, 0.05) 1px, transparent 1.4px),
-    radial-gradient(rgba(13, 35, 26, 0.05) 1px, transparent 1.4px);
-  background-size: auto, auto, auto, 46px 46px, 46px 46px;
-  background-position: 0 0, 0 0, 0 0, 0 0, 23px 23px;
-  color: #0d231a;
+    linear-gradient(115deg, rgba(209, 78, 18, 0.05) 0%, rgba(240, 164, 49, 0.06) 38%, rgba(156, 61, 46, 0.04) 72%, transparent 100%),
+    radial-gradient(ellipse 60% 28% at 86% -2%, rgba(241, 143, 65, 0.22), transparent),
+    radial-gradient(ellipse 54% 26% at 6% 102%, rgba(156, 61, 46, 0.14), transparent),
+    radial-gradient(rgba(43, 23, 8, 0.055) 1px, transparent 1.5px),
+    radial-gradient(rgba(43, 23, 8, 0.055) 1px, transparent 1.5px);
+  background-size: auto, auto, auto, 40px 40px, 40px 40px;
+  background-position: 0 0, 0 0, 0 0, 0 0, 20px 20px;
+  color: #2b1708;
 }
-::selection { background: #059669; color: #f3faf5; }
+::selection { background: #d14e12; color: #faf5ea; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #059669, #7c3aed); border-radius: 9999px; border: 2px solid #f3faf5; }
-::-webkit-scrollbar-track { background: #e2f0e7; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #d14e12, #9c3d2e); border-radius: 4px; border: 2px solid #faf5ea; }
+::-webkit-scrollbar-track { background: #f0e4cd; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Grove motes: pollen flecks drifting down the sunlit page. */
+/* Kiln embers: clay motes drifting down the sun-warmed page. */
 @keyframes ink-fall-anim {
-  0% { transform: translate3d(-6px, -160px, 0) rotate(0deg) scale(0.5); opacity: 0; }
-  30% { opacity: 0.8; }
-  65% { transform: translate3d(12px, 50px, 0) rotate(140deg) scale(1.1); opacity: 0.55; }
-  100% { transform: translate3d(-6px, 160px, 0) rotate(260deg) scale(0.65); opacity: 0; }
+  0% { transform: translate3d(6px, -160px, 0) rotate(0deg) scale(0.5); opacity: 0; }
+  30% { opacity: 0.85; }
+  65% { transform: translate3d(-12px, 50px, 0) rotate(-140deg) scale(1.1); opacity: 0.55; }
+  100% { transform: translate3d(6px, 160px, 0) rotate(-260deg) scale(0.65); opacity: 0; }
 }
 .pop-fall { animation: ink-fall-anim 12.8s ease-in infinite; }
 
-/* Meadow haze: slow lateral drift of the fresh page glow. */
+/* Kiln haze: slow lateral drift of the warm page glow. */
 @keyframes ink-drift {
-  0%, 100% { transform: translate3d(3vw, 0, 0) scale(1); opacity: 0.45; }
-  50% { transform: translate3d(-3vw, -0.9rem, 0) scale(1.12); opacity: 0.8; }
+  0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.45; }
+  50% { transform: translate3d(3vw, -0.9rem, 0) scale(1.12); opacity: 0.8; }
 }
 .pop-drift { animation: ink-drift 24s ease-in-out infinite; }
 
-/* Leaf bob: gentle lift with a soft settle. */
+/* Ember bob: gentle lift with a soft settle. */
 @keyframes seal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-8px) scale(1.04); }
 }
 .pop-bob { animation: seal-bob 7.2s ease-in-out infinite; }
 
-/* Grove orbit: steady rotation for the hero bloom's ray system. */
+/* Kiln orbit: steady rotation for the hero sun's ray system. */
 @keyframes orbit-wheel {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: orbit-wheel 95s linear infinite; }
 
-/* Grove ticker: infinite marquee for the promo strip (leftward drift). */
+/* Kiln ticker: infinite marquee for the promo strip (leftward drift). */
 @keyframes ink-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: ink-ticker 38s linear infinite; }
 
-/* Grove ribbons: emerald -> sky -> violet diagonal stripes. */
+/* Kiln ribbons: terracotta -> amber -> pomegranate diagonal stripes. */
 .pop-stripes {
-  background-image: linear-gradient(115deg, #047857 0%, #047857 18%, #059669 18%, #059669 42%, #38bdf8 42%, #38bdf8 66%, #7c3aed 66%);
+  background-image: linear-gradient(115deg, #a93c0f 0%, #a93c0f 18%, #d14e12 18%, #d14e12 42%, #f0a431 42%, #f0a431 66%, #9c3d2e 66%);
   background-size: 84px 84px;
 }
 
-/* Grove card: soft mint panel with a sage ring and an airy emerald
-   shadow; hover lifts it into a soft emerald glow. */
+/* Kiln card: crisp cream panel with a clay ring and a hard offset
+   shadow; hover kicks it up-left into a deeper clay shadow. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(5, 150, 105, 0.16);
-  background: linear-gradient(180deg, #ffffff 0%, #eef8f1 100%);
-  border-radius: 1.5rem;
-  box-shadow: 0 18px 38px -20px rgba(4, 120, 87, 0.35), 0 2px 6px -2px rgba(13, 35, 26, 0.08);
-  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  border: 2px solid rgba(169, 60, 15, 0.28);
+  background: linear-gradient(180deg, #fffdf8 0%, #f8f0de 100%);
+  border-radius: 0.75rem;
+  box-shadow: 5px 5px 0 rgba(169, 60, 15, 0.22), 0 2px 6px -2px rgba(43, 23, 8, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   overflow: hidden;
 }
 .pop-lift::before {
@@ -120,7 +120,7 @@ body {
   left: 0;
   right: 0;
   height: 5px;
-  background: linear-gradient(90deg, #059669, #38bdf8 50%, #7c3aed);
+  background: linear-gradient(90deg, #d14e12, #f0a431 50%, #9c3d2e);
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
 }
@@ -130,80 +130,80 @@ body {
   inset: 0;
   border-radius: inherit;
   pointer-events: none;
-  background: radial-gradient(ellipse 90% 40% at 50% -12%, rgba(52, 211, 153, 0.18), transparent 60%);
+  background: radial-gradient(ellipse 90% 40% at 50% -12%, rgba(241, 143, 65, 0.16), transparent 60%);
 }
 .pop-lift:hover {
-  transform: translateY(-6px);
-  border-color: rgba(5, 150, 105, 0.45);
-  box-shadow: 0 28px 52px -20px rgba(5, 150, 105, 0.5), 0 4px 10px -4px rgba(13, 35, 26, 0.1);
+  transform: translate(-2px, -4px);
+  border-color: rgba(169, 60, 15, 0.55);
+  box-shadow: 8px 8px 0 rgba(169, 60, 15, 0.3), 0 4px 10px -4px rgba(43, 23, 8, 0.14);
 }
 
-/* Grove glass: shared by modals and drawers — frosted mint. */
+/* Kiln glass: shared by modals and drawers — frosted cream. */
 .pop-glass {
-  background: rgba(243, 250, 245, 0.94);
+  background: rgba(250, 245, 234, 0.94);
   backdrop-filter: blur(20px) saturate(1.15);
   -webkit-backdrop-filter: blur(20px) saturate(1.15);
-  border: 1px solid rgba(5, 150, 105, 0.22);
-  border-radius: 1.5rem;
-  box-shadow: 0 32px 64px -28px rgba(4, 120, 87, 0.45), 0 4px 12px -4px rgba(13, 35, 26, 0.1);
+  border: 2px solid rgba(169, 60, 15, 0.3);
+  border-radius: 0.75rem;
+  box-shadow: 8px 8px 0 rgba(169, 60, 15, 0.24), 0 4px 12px -4px rgba(43, 23, 8, 0.12);
 }
 
-/* Grove seal: lime postage stamp with a dashed forest border. */
+/* Kiln seal: pomegranate wax stamp with a dashed cream border. */
 .starburst {
-  border-radius: 9999px;
-  border: 2px dashed rgba(13, 35, 26, 0.9);
-  outline: 2px solid rgba(5, 150, 105, 0.7);
+  border-radius: 0.5rem;
+  border: 2px dashed rgba(250, 245, 234, 0.9);
+  outline: 2px solid rgba(169, 60, 15, 0.7);
   outline-offset: 2px;
-  background: radial-gradient(circle at 50% 32%, #a7f3d0 0%, #10b981 55%, #047857 100%);
-  color: #ffffff;
+  background: linear-gradient(135deg, #c2523a 0%, #9c3d2e 55%, #7a2c22 100%);
+  color: #fffdf8;
   transform: rotate(-6deg);
-  box-shadow: 0 12px 24px -12px rgba(5, 150, 105, 0.6);
+  box-shadow: 4px 4px 0 rgba(122, 44, 34, 0.45);
 }
 
-/* Grove dots: emerald-dot texture for hero bands. */
+/* Kiln dots: clay-dot texture for hero bands. */
 .halftone {
   background-image:
-    radial-gradient(rgba(5, 150, 105, 0.22) 1.6px, transparent 1.7px),
-    radial-gradient(rgba(56, 189, 248, 0.2) 1.2px, transparent 1.3px);
+    radial-gradient(rgba(209, 78, 18, 0.22) 1.6px, transparent 1.7px),
+    radial-gradient(rgba(240, 164, 49, 0.2) 1.2px, transparent 1.3px);
   background-size: 32px 32px, 52px 52px;
   background-position: 0 0, 16px 26px;
 }
 
-/* Grove chevrons: angular emerald pulses, a meadow divider. */
+/* Kiln chevrons: angular terracotta pulses, a sun-baked divider. */
 .zigzag {
   height: 18px;
-  background-image: linear-gradient(135deg, rgba(5, 150, 105, 0.9) 25%, transparent 25%),
-    linear-gradient(225deg, rgba(5, 150, 105, 0.9) 25%, transparent 25%);
+  background-image: linear-gradient(135deg, rgba(209, 78, 18, 0.9) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(209, 78, 18, 0.9) 25%, transparent 25%);
   background-size: 30px 18px;
   background-position: 0 0, 15px 0;
   background-repeat: repeat-x;
   opacity: 0.85;
-  filter: drop-shadow(0 2px 3px rgba(13, 35, 26, 0.25));
+  filter: drop-shadow(0 2px 3px rgba(43, 23, 8, 0.25));
 }
 
-/* Meadow shade: emerald diagonal trace stripes over the mint field. */
+/* Kiln shade: classic bazaar awning stripes over the warm field. */
 .bazaar-awning {
   background-image:
-    repeating-linear-gradient(45deg, rgba(5, 150, 105, 0.08) 0 16px, transparent 16px 32px),
-    linear-gradient(180deg, #ffffff, #e6f4eb);
+    repeating-linear-gradient(90deg, rgba(209, 78, 18, 0.14) 0 26px, rgba(250, 245, 234, 0.6) 26px 52px),
+    linear-gradient(180deg, #fffdf8, #f4e7cd);
 }
 
-/* Grove bloom: layered emerald-to-sky radial for the hero sun's heart. */
+/* Kiln bloom: layered terracotta-to-amber radial for the hero sun's heart. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.9) 0%, rgba(167, 243, 208, 0.55) 34%, rgba(5, 150, 105, 0.35) 58%, rgba(56, 189, 248, 0) 74%);
+    radial-gradient(circle at 50% 42%, rgba(255, 253, 248, 0.9) 0%, rgba(246, 178, 121, 0.55) 34%, rgba(209, 78, 18, 0.35) 58%, rgba(240, 164, 49, 0) 74%);
 }
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.9) 0%, rgba(167, 243, 208, 0.55) 34%, rgba(5, 150, 105, 0.35) 58%, rgba(56, 189, 248, 0) 74%);
+    radial-gradient(circle at 50% 42%, rgba(255, 253, 248, 0.9) 0%, rgba(246, 178, 121, 0.55) 34%, rgba(209, 78, 18, 0.35) 58%, rgba(240, 164, 49, 0) 74%);
 }
 
-/* Grove rings: concentric sky rings around the hero bloom. */
+/* Kiln rings: concentric amber rings around the hero sun. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(56, 189, 248, 0.32) 0px,
-    rgba(56, 189, 248, 0.32) 5px,
+    rgba(240, 164, 49, 0.32) 0px,
+    rgba(240, 164, 49, 0.32) 5px,
     transparent 5px,
     transparent 30px
   );
@@ -214,8 +214,8 @@ body {
 .sun-rays {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(56, 189, 248, 0.32) 0px,
-    rgba(56, 189, 248, 0.32) 5px,
+    rgba(240, 164, 49, 0.32) 0px,
+    rgba(240, 164, 49, 0.32) 5px,
     transparent 5px,
     transparent 30px
   );
@@ -224,66 +224,66 @@ body {
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all grove-styled. */
+/* Legacy aliases kept so untouched components still render — all kiln-styled. */
 .lagoon-lift {
   position: relative;
-  border: 1px solid rgba(5, 150, 105, 0.16);
-  background: linear-gradient(180deg, #ffffff 0%, #eef8f1 100%);
-  border-radius: 1.5rem;
-  box-shadow: 0 18px 38px -20px rgba(4, 120, 87, 0.35), 0 2px 6px -2px rgba(13, 35, 26, 0.08);
-  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  border: 2px solid rgba(169, 60, 15, 0.28);
+  background: linear-gradient(180deg, #fffdf8 0%, #f8f0de 100%);
+  border-radius: 0.75rem;
+  box-shadow: 5px 5px 0 rgba(169, 60, 15, 0.22), 0 2px 6px -2px rgba(43, 23, 8, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   overflow: hidden;
 }
 .lagoon-lift:hover {
-  transform: translateY(-6px);
-  border-color: rgba(5, 150, 105, 0.45);
-  box-shadow: 0 28px 52px -20px rgba(5, 150, 105, 0.5), 0 4px 10px -4px rgba(13, 35, 26, 0.1);
+  transform: translate(-2px, -4px);
+  border-color: rgba(169, 60, 15, 0.55);
+  box-shadow: 8px 8px 0 rgba(169, 60, 15, 0.3), 0 4px 10px -4px rgba(43, 23, 8, 0.14);
 }
 .stamp-perf {
-  border: 2px dashed #059669;
-  background: rgba(5, 150, 105, 0.08);
-  border-radius: 1.5rem;
-  box-shadow: 0 14px 28px -16px rgba(4, 120, 87, 0.4);
+  border: 2px dashed #d14e12;
+  background: rgba(209, 78, 18, 0.08);
+  border-radius: 0.75rem;
+  box-shadow: 4px 4px 0 rgba(169, 60, 15, 0.22);
 }
 .ember-glow {
   position: relative;
-  border: 1px solid rgba(5, 150, 105, 0.16);
-  background: linear-gradient(180deg, #ffffff 0%, #eef8f1 100%);
-  border-radius: 1.5rem;
-  box-shadow: 0 18px 38px -20px rgba(4, 120, 87, 0.35), 0 2px 6px -2px rgba(13, 35, 26, 0.08);
-  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  border: 2px solid rgba(169, 60, 15, 0.28);
+  background: linear-gradient(180deg, #fffdf8 0%, #f8f0de 100%);
+  border-radius: 0.75rem;
+  box-shadow: 5px 5px 0 rgba(169, 60, 15, 0.22), 0 2px 6px -2px rgba(43, 23, 8, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
-  transform: translateY(-6px);
-  border-color: rgba(5, 150, 105, 0.45);
-  box-shadow: 0 28px 52px -20px rgba(5, 150, 105, 0.5), 0 4px 10px -4px rgba(13, 35, 26, 0.1);
+  transform: translate(-2px, -4px);
+  border-color: rgba(169, 60, 15, 0.55);
+  box-shadow: 8px 8px 0 rgba(169, 60, 15, 0.3), 0 4px 10px -4px rgba(43, 23, 8, 0.14);
 }
 .ripple-glow {
   position: relative;
-  border: 1px solid rgba(5, 150, 105, 0.16);
-  background: linear-gradient(180deg, #ffffff 0%, #eef8f1 100%);
-  border-radius: 1.5rem;
-  box-shadow: 0 18px 38px -20px rgba(4, 120, 87, 0.35), 0 2px 6px -2px rgba(13, 35, 26, 0.08);
-  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  border: 2px solid rgba(169, 60, 15, 0.28);
+  background: linear-gradient(180deg, #fffdf8 0%, #f8f0de 100%);
+  border-radius: 0.75rem;
+  box-shadow: 5px 5px 0 rgba(169, 60, 15, 0.22), 0 2px 6px -2px rgba(43, 23, 8, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
-  transform: translateY(-6px);
-  border-color: rgba(5, 150, 105, 0.45);
-  box-shadow: 0 28px 52px -20px rgba(5, 150, 105, 0.5), 0 4px 10px -4px rgba(13, 35, 26, 0.1);
+  transform: translate(-2px, -4px);
+  border-color: rgba(169, 60, 15, 0.55);
+  box-shadow: 8px 8px 0 rgba(169, 60, 15, 0.3), 0 4px 10px -4px rgba(43, 23, 8, 0.14);
 }
 .lagoon-glow {
   position: relative;
-  border: 1px solid rgba(5, 150, 105, 0.16);
-  background: linear-gradient(180deg, #ffffff 0%, #eef8f1 100%);
-  border-radius: 1.5rem;
-  box-shadow: 0 18px 38px -20px rgba(4, 120, 87, 0.35), 0 2px 6px -2px rgba(13, 35, 26, 0.08);
-  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  border: 2px solid rgba(169, 60, 15, 0.28);
+  background: linear-gradient(180deg, #fffdf8 0%, #f8f0de 100%);
+  border-radius: 0.75rem;
+  box-shadow: 5px 5px 0 rgba(169, 60, 15, 0.22), 0 2px 6px -2px rgba(43, 23, 8, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
-  transform: translateY(-6px);
-  border-color: rgba(5, 150, 105, 0.45);
-  box-shadow: 0 28px 52px -20px rgba(5, 150, 105, 0.5), 0 4px 10px -4px rgba(13, 35, 26, 0.1);
+  transform: translate(-2px, -4px);
+  border-color: rgba(169, 60, 15, 0.55);
+  box-shadow: 8px 8px 0 rgba(169, 60, 15, 0.3), 0 4px 10px -4px rgba(43, 23, 8, 0.14);
 }
