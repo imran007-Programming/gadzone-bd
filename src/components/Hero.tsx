@@ -22,7 +22,7 @@ const item: Variants = {
 
 // Ember drift: terracotta and amber glows drifting over the harvest kiln.
 const GLOWS = [
-  { left: "4%", top: "10%", size: 150, delay: "0s", dur: "14s", c: "rgba(212, 74, 29, 0.28)" },
+  { left: "4%", top: "10%", size: 150, delay: "0s", dur: "14s", c: "rgba(11, 110, 104, 0.28)" },
   { left: "72%", top: "4%", size: 200, delay: "-4s", dur: "15s", c: "rgba(227, 91, 46, 0.16)" },
   { left: "44%", top: "44%", size: 120, delay: "-7s", dur: "13s", c: "rgba(253, 186, 116, 0.22)" },
   { left: "86%", top: "50%", size: 110, delay: "-2s", dur: "14s", c: "rgba(251, 146, 60, 0.24)" },
@@ -30,13 +30,13 @@ const GLOWS = [
 
 // Rising embers: warm sparks swirling on a summer breeze.
 const DOTS = [
-  { left: "8%", delay: "0s", dur: "7.2s", s: 22, c: "#d44a1d" },
-  { left: "21%", delay: "-1.4s", dur: "7.8s", s: 16, c: "#f2a381" },
-  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 24, c: "#ec7c52" },
-  { left: "53%", delay: "-0.8s", dur: "8s", s: 18, c: "#f7c7ae" },
-  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 22, c: "#b23a16" },
-  { left: "82%", delay: "-2s", dur: "7.9s", s: 15, c: "#f2a381" },
-  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 20, c: "#ec7c52" },
+  { left: "8%", delay: "0s", dur: "7.2s", s: 22, c: "#0b6e68" },
+  { left: "21%", delay: "-1.4s", dur: "7.8s", s: 16, c: "#7fd1cb" },
+  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 24, c: "#3ab3aa" },
+  { left: "53%", delay: "-0.8s", dur: "8s", s: 18, c: "#b0e5e1" },
+  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 22, c: "#0d544f" },
+  { left: "82%", delay: "-2s", dur: "7.9s", s: 15, c: "#7fd1cb" },
+  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 20, c: "#3ab3aa" },
 ];
 
 // Ticker phrases reuse the hero's existing stats copy.
@@ -99,7 +99,7 @@ export default function Hero({ onQuickView }: HeroProps) {
               />
             );
           })}
-          <div className="absolute inset-44 rounded-full border-2 border-brand-200/80 bg-gradient-to-br from-brand-400 via-brand-600 to-brand-800 shadow-[0_0_90px_28px_rgba(212, 74, 29, 0.35)]" />
+          <div className="absolute inset-44 rounded-full border-2 border-brand-200/80 bg-gradient-to-br from-brand-400 via-brand-600 to-brand-800 shadow-[0_0_90px_28px_rgba(11, 110, 104, 0.35)]" />
           <div className="absolute inset-44 rounded-full border border-white/40" />
           {/* orb ribs */}
           <div className="absolute inset-44 rounded-full border-x-8 border-brand-950/30" />
@@ -139,7 +139,7 @@ export default function Hero({ onQuickView }: HeroProps) {
       </div>
 
       {/* signal ticker: volt ribbon band with circuit edges, marquee of the shop's own promises */}
-      <div aria-hidden className="relative z-10 mt-8 border-y-2 border-brand-300/40 bg-gradient-to-r from-brand-400 via-gold to-popblue py-2.5 shadow-[0_18px_44px_-20px_rgba(212, 74, 29, 0.6)]">
+      <div aria-hidden className="relative z-10 mt-8 border-y-2 border-brand-300/40 bg-gradient-to-r from-brand-400 via-gold to-popblue py-2.5 shadow-[0_18px_44px_-20px_rgba(11, 110, 104, 0.6)]">
         <div className="overflow-hidden py-2">
           <div className="pop-ticker flex w-max items-center gap-8 pr-8">
             {[...TICKER, ...TICKER].map((t, i) => (
@@ -172,7 +172,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full bg-gradient-to-r from-brand-400 via-gold to-popblue px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-950 shadow-[0_16px_38px_-14px_rgba(212, 74, 29, 0.6)]">Handpicked for you</p>
+            <p className="inline-block rounded-full bg-gradient-to-r from-brand-400 via-gold to-popblue px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-950 shadow-[0_16px_38px_-14px_rgba(11, 110, 104, 0.6)]">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="bg-gradient-to-r from-brand-300 to-gold bg-clip-text text-transparent">Picks</span></h2>
             <span className="zigzag mt-3 block w-44" aria-hidden />
           </div>
