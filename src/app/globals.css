@@ -1,33 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-  /* Monsoon Verdant: pale mint canvas, deep forest primary,
-     leaf-lime accent, river-sky secondary, fern depth. */
+  /* Ember Dusk: warm sand canvas, burnt-terracotta primary,
+     golden amber accent, plum-dusk secondary, ember depth. */
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
-  --color-brand-50: #f2fbf6;
-  --color-brand-100: #e4f6ec;
-  --color-brand-200: #c9ecd7;
-  --color-brand-300: #93dcb4;
-  --color-brand-400: #5cc78d;
-  --color-brand-500: #17a56f;
-  --color-brand-600: #0d8a5b;
-  --color-brand-700: #0b6f4b;
-  --color-brand-800: #0a573c;
-  --color-brand-900: #084530;
-  --color-brand-950: #04241a;
-  --color-brand: #17a56f;
-  --color-brand-dark: #0d8a5b;
-  --color-brand-deep: #04241a;
-  --color-gold: #84cc16;
-  --color-gold-deep: #a3e635;
-  --color-gold-soft: #1c2b12;
-  --color-ink: #0b2419;
-  --color-paper: #f2faf5;
-  --color-mute: #5f7a68;
-  --color-popblue: #0ea5e9;
-  --color-popblue-deep: #38bdf8;
-  --color-popblue-soft: #e0f2fe;
+  --color-brand-50: #fdf5ec;
+  --color-brand-100: #fae8d2;
+  --color-brand-200: #f4d0a3;
+  --color-brand-300: #eeb06b;
+  --color-brand-400: #e7883f;
+  --color-brand-500: #d95f14;
+  --color-brand-600: #b8490e;
+  --color-brand-700: #94380f;
+  --color-brand-800: #772e13;
+  --color-brand-900: #622713;
+  --color-brand-950: #361306;
+  --color-brand: #d95f14;
+  --color-brand-dark: #b8490e;
+  --color-brand-deep: #361306;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #fbbf24;
+  --color-gold-soft: #38240e;
+  --color-ink: #2a1510;
+  --color-paper: #fdf8f0;
+  --color-mute: #8a6f5c;
+  --color-popblue: #7c3aed;
+  --color-popblue-deep: #a78bfa;
+  --color-popblue-soft: #ece7fd;
 }
 
 html { scroll-behavior: smooth; }
@@ -42,72 +42,72 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #f2faf5;
+  background: #fdf8f0;
   background-image:
-    linear-gradient(112deg, rgba(23, 165, 111, 0.09) 0%, rgba(132, 204, 22, 0.08) 38%, rgba(14, 165, 233, 0.07) 68%, transparent 100%),
-    radial-gradient(ellipse 60% 30% at 90% -4%, rgba(132, 204, 22, 0.16), transparent),
-    radial-gradient(ellipse 56% 28% at 4% 104%, rgba(23, 165, 111, 0.13), transparent),
-    repeating-linear-gradient(24deg, rgba(13, 138, 91, 0.05) 0 2px, transparent 2px 44px);
-  color: #0b2419;
+    linear-gradient(112deg, rgba(217, 95, 20, 0.1) 0%, rgba(245, 158, 11, 0.08) 38%, rgba(124, 58, 237, 0.07) 68%, transparent 100%),
+    radial-gradient(ellipse 60% 30% at 90% -4%, rgba(245, 158, 11, 0.16), transparent),
+    radial-gradient(ellipse 56% 28% at 4% 104%, rgba(124, 58, 237, 0.12), transparent),
+    repeating-linear-gradient(-24deg, rgba(184, 73, 14, 0.05) 0 2px, transparent 2px 44px);
+  color: #2a1510;
 }
-::selection { background: #a3e635; color: #04241a; }
+::selection { background: #fbbf24; color: #361306; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #17a56f, #0ea5e9); border-radius: 8px; border: 2px solid #f2faf5; }
-::-webkit-scrollbar-track { background: #d8e8dd; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #d95f14, #7c3aed); border-radius: 8px; border: 2px solid #fdf8f0; }
+::-webkit-scrollbar-track { background: #ecdfcf; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Rain drift: monsoon drops sliding down through the leaf canopy. */
+/* Ember rise: warm sparks drifting upward through the dusk. */
 @keyframes ink-fall-anim {
-  0% { transform: translate3d(-8px, -60px, 0) rotate(0deg) scale(0.5); opacity: 0; }
+  0% { transform: translate3d(-8px, 200px, 0) rotate(0deg) scale(0.5); opacity: 0; }
   25% { opacity: 0.9; }
-  60% { transform: translate3d(10px, 70px, 0) rotate(-120deg) scale(1); opacity: 0.6; }
-  100% { transform: translate3d(-6px, 200px, 0) rotate(-240deg) scale(0.65); opacity: 0; }
+  60% { transform: translate3d(10px, 70px, 0) rotate(120deg) scale(1); opacity: 0.6; }
+  100% { transform: translate3d(-6px, -60px, 0) rotate(240deg) scale(0.65); opacity: 0; }
 }
 .pop-fall { animation: ink-fall-anim 9.6s ease-in infinite; }
 
-/* Canopy sway: slow lateral slide of monsoon light. */
+/* Dusk sway: slow lateral slide of evening light. */
 @keyframes ink-drift {
   0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.4; }
   50% { transform: translate3d(3vw, 1rem, 0) scale(1.08); opacity: 0.72; }
 }
 .pop-drift { animation: ink-drift 22s ease-in-out infinite; }
 
-/* Leaf bob: a gentle lively bounce. */
+/* Ember bob: a gentle lively bounce. */
 @keyframes seal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-8px) scale(1.04); }
 }
 .pop-bob { animation: seal-bob 6s ease-in-out infinite; }
 
-/* Pond ripple wheel: steady rotation for the monsoon orb's rings. */
+/* Dusk wheel: steady rotation for the ember sun's rings. */
 @keyframes orbit-wheel {
-  to { transform: rotate(-360deg); }
+  to { transform: rotate(360deg); }
 }
 .pop-spin { animation: orbit-wheel 84s linear infinite; }
 
-/* Monsoon ticker: infinite marquee (leftward drift). */
+/* Ember ticker: infinite marquee (leftward drift). */
 @keyframes ink-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: ink-ticker 28s linear infinite; }
 
-/* Monsoon reed bed: forest -> emerald -> lime -> river diagonal reeds. */
+/* Ember bands: ember-deep -> terracotta -> amber -> plum diagonal bands. */
 .pop-stripes {
-  background-image: linear-gradient(115deg, #04241a 0%, #04241a 18%, #0d8a5b 18%, #0d8a5b 42%, #84cc16 42%, #84cc16 66%, #0ea5e9 66%);
+  background-image: linear-gradient(115deg, #361306 0%, #361306 18%, #b8490e 18%, #b8490e 42%, #f59e0b 42%, #f59e0b 66%, #7c3aed 66%);
   background-size: 110px 110px;
 }
 
-/* Lotus tile: mint-fired card with a soft rounded silhouette, a living
-   stem bar down the left edge, forest hairline and a cool resting shadow;
-   hover lifts it with an emerald glow and lime ring. */
+/* Ember stamp: chunky sand-fired card with a hard offset shadow, an ember
+   ribbon bar across the top, and a terracotta hairline; hover punches it
+   upward with a deeper ember shadow. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(13, 138, 91, 0.26);
-  background: linear-gradient(180deg, #fbfffb 0%, #f2faf5 100%);
-  border-radius: 1.5rem;
-  box-shadow: 0 2px 0 rgba(13, 138, 91, 0.1), 0 22px 44px -26px rgba(8, 69, 48, 0.4);
+  border: 2px solid rgba(119, 46, 19, 0.55);
+  background: linear-gradient(180deg, #fffdf9 0%, #fdf8f0 100%);
+  border-radius: 1.25rem;
+  box-shadow: 6px 6px 0 rgba(54, 19, 6, 0.14);
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
   overflow: hidden;
 }
@@ -115,85 +115,85 @@ body {
   content: "";
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
-  width: 6px;
-  border-radius: 0 9999px 9999px 0;
-  background: linear-gradient(180deg, #a3e635 0%, #5cc78d 40%, #0d8a5b 70%, #0ea5e9 100%);
+  right: 0;
+  height: 6px;
+  border-radius: 0;
+  background: linear-gradient(90deg, #d95f14 0%, #f59e0b 45%, #7c3aed 100%);
   pointer-events: none;
 }
 .pop-lift:hover {
-  transform: translateY(-5px);
-  border-color: rgba(23, 165, 111, 0.65);
-  box-shadow: 0 2px 0 rgba(13, 138, 91, 0.12), 0 30px 56px -26px rgba(23, 165, 111, 0.55);
+  transform: translate(-3px, -3px);
+  border-color: rgba(184, 73, 14, 0.85);
+  box-shadow: 10px 10px 0 rgba(54, 19, 6, 0.2);
 }
 
-/* Monsoon glass: shared by modals and drawers — cool frosted mint. */
+/* Ember glass: shared by modals and drawers — warm frosted sand. */
 .pop-glass {
-  background: rgba(242, 250, 245, 0.93);
+  background: rgba(253, 248, 240, 0.93);
   backdrop-filter: blur(20px) saturate(1.2);
   -webkit-backdrop-filter: blur(20px) saturate(1.2);
-  border: 1px solid rgba(13, 138, 91, 0.3);
-  border-radius: 1.5rem;
-  box-shadow: 0 2px 0 rgba(13, 138, 91, 0.1), 0 28px 64px -26px rgba(8, 69, 48, 0.5);
+  border: 2px solid rgba(184, 73, 14, 0.35);
+  border-radius: 1.25rem;
+  box-shadow: 6px 6px 0 rgba(54, 19, 6, 0.16), 0 28px 64px -26px rgba(54, 19, 6, 0.5);
 }
 
-/* Lotus seal: round leaf badge with a mint double ring, slight tilt. */
+/* Ember seal: round terracotta badge with an amber dashed ring, slight tilt. */
 .starburst {
   border-radius: 9999px;
-  border: 3px solid #fbfffb;
-  outline: 2px dashed #84cc16;
+  border: 3px solid #fffdf9;
+  outline: 2px dashed #f59e0b;
   outline-offset: 3px;
-  background: radial-gradient(circle at 34% 28%, #5cc78d 0%, #17a56f 55%, #0b6f4b 100%);
-  color: #fbfffb;
-  transform: rotate(4deg);
-  box-shadow: 0 8px 22px -6px rgba(23, 165, 111, 0.7);
+  background: radial-gradient(circle at 34% 28%, #e7883f 0%, #d95f14 55%, #94380f 100%);
+  color: #fffdf9;
+  transform: rotate(-4deg);
+  box-shadow: 0 8px 22px -6px rgba(217, 95, 20, 0.7);
 }
 
-/* Rain dots: fine emerald dot grid for hero bands. */
+/* Ember dots: fine terracotta dot grid for hero bands. */
 .halftone {
   background-image:
-    radial-gradient(rgba(23, 165, 111, 0.15) 1.4px, transparent 1.5px),
-    radial-gradient(rgba(14, 165, 233, 0.13) 1px, transparent 1.1px);
+    radial-gradient(rgba(217, 95, 20, 0.15) 1.4px, transparent 1.5px),
+    radial-gradient(rgba(124, 58, 237, 0.13) 1px, transparent 1.1px);
   background-size: 28px 28px, 46px 46px;
   background-position: 0 0, 14px 23px;
 }
 
-/* Pond scallops: soft rounded emerald/lime row divider. */
+/* Dusk scallops: soft rounded terracotta/amber row divider. */
 .zigzag {
   height: 18px;
   background-image:
-    radial-gradient(circle at 12px -4px, rgba(23, 165, 111, 0.9) 12px, transparent 13px),
-    radial-gradient(circle at 36px -4px, rgba(132, 204, 22, 0.9) 12px, transparent 13px);
+    radial-gradient(circle at 12px -4px, rgba(217, 95, 20, 0.9) 12px, transparent 13px),
+    radial-gradient(circle at 36px -4px, rgba(245, 158, 11, 0.9) 12px, transparent 13px);
   background-size: 48px 18px;
   background-position: 0 0, 24px 0;
   background-repeat: repeat-x;
   opacity: 0.9;
 }
 
-/* Reed awning repeat: vertical emerald stripes over pale mint. */
+/* Ember awning repeat: vertical terracotta stripes over warm sand. */
 .bazaar-awning {
   background-image:
-    repeating-linear-gradient(90deg, rgba(23, 165, 111, 0.09) 0 26px, rgba(242, 250, 245, 0.6) 26px 52px),
-    linear-gradient(180deg, #d8e8dd, #f2faf5);
+    repeating-linear-gradient(90deg, rgba(217, 95, 20, 0.09) 0 26px, rgba(253, 248, 240, 0.6) 26px 52px),
+    linear-gradient(180deg, #ecdfcf, #fdf8f0);
 }
 
-/* Monsoon orb: layered lime-to-river radial for the hero pond sun. */
+/* Ember sun: layered amber-to-plum radial for the hero dusk sun. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(248, 253, 250, 0.95) 0%, rgba(163, 230, 53, 0.5) 34%, rgba(92, 199, 141, 0.35) 58%, rgba(14, 165, 233, 0) 74%);
+    radial-gradient(circle at 50% 42%, rgba(255, 253, 249, 0.95) 0%, rgba(251, 191, 36, 0.5) 34%, rgba(231, 136, 63, 0.35) 58%, rgba(124, 58, 237, 0) 74%);
 }
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 42%, rgba(248, 253, 250, 0.95) 0%, rgba(163, 230, 53, 0.5) 34%, rgba(92, 199, 141, 0.35) 58%, rgba(14, 165, 233, 0) 74%);
+    radial-gradient(circle at 50% 42%, rgba(255, 253, 249, 0.95) 0%, rgba(251, 191, 36, 0.5) 34%, rgba(231, 136, 63, 0.35) 58%, rgba(124, 58, 237, 0) 74%);
 }
 
-/* Pond ripples: concentric emerald rings around the monsoon orb. */
+/* Ember rings: concentric terracotta rings around the dusk sun. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(23, 165, 111, 0.32) 0px,
-    rgba(23, 165, 111, 0.32) 4px,
+    rgba(217, 95, 20, 0.32) 0px,
+    rgba(217, 95, 20, 0.32) 4px,
     transparent 4px,
     transparent 28px
   );
@@ -204,8 +204,8 @@ body {
 .sun-rays {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(132, 204, 22, 0.34) 0px,
-    rgba(132, 204, 22, 0.34) 4px,
+    rgba(245, 158, 11, 0.34) 0px,
+    rgba(245, 158, 11, 0.34) 4px,
     transparent 4px,
     transparent 28px
   );
@@ -214,66 +214,66 @@ body {
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all verdant-styled. */
+/* Legacy aliases kept so untouched components still render — all ember-styled. */
 .lagoon-lift {
   position: relative;
-  border: 1px solid rgba(13, 138, 91, 0.26);
-  background: linear-gradient(180deg, #fbfffb 0%, #f2faf5 100%);
-  border-radius: 1.5rem;
-  box-shadow: 0 2px 0 rgba(13, 138, 91, 0.1), 0 22px 44px -26px rgba(8, 69, 48, 0.4);
+  border: 2px solid rgba(119, 46, 19, 0.55);
+  background: linear-gradient(180deg, #fffdf9 0%, #fdf8f0 100%);
+  border-radius: 1.25rem;
+  box-shadow: 6px 6px 0 rgba(54, 19, 6, 0.14);
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
   overflow: hidden;
 }
 .lagoon-lift:hover {
-  transform: translateY(-5px);
-  border-color: rgba(23, 165, 111, 0.65);
-  box-shadow: 0 2px 0 rgba(13, 138, 91, 0.12), 0 30px 56px -26px rgba(23, 165, 111, 0.55);
+  transform: translate(-3px, -3px);
+  border-color: rgba(184, 73, 14, 0.85);
+  box-shadow: 10px 10px 0 rgba(54, 19, 6, 0.2);
 }
 .stamp-perf {
-  border: 2px dashed #0d8a5b;
-  background: rgba(23, 165, 111, 0.07);
-  border-radius: 1.5rem;
-  box-shadow: 0 2px 0 rgba(13, 138, 91, 0.1);
+  border: 2px dashed #b8490e;
+  background: rgba(217, 95, 20, 0.07);
+  border-radius: 1.25rem;
+  box-shadow: 4px 4px 0 rgba(54, 19, 6, 0.12);
 }
 .ember-glow {
   position: relative;
-  border: 1px solid rgba(13, 138, 91, 0.26);
-  background: linear-gradient(180deg, #fbfffb 0%, #f2faf5 100%);
-  border-radius: 1.5rem;
-  box-shadow: 0 2px 0 rgba(13, 138, 91, 0.1), 0 22px 44px -26px rgba(8, 69, 48, 0.4);
+  border: 2px solid rgba(119, 46, 19, 0.55);
+  background: linear-gradient(180deg, #fffdf9 0%, #fdf8f0 100%);
+  border-radius: 1.25rem;
+  box-shadow: 6px 6px 0 rgba(54, 19, 6, 0.14);
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
-  transform: translateY(-5px);
-  border-color: rgba(23, 165, 111, 0.65);
-  box-shadow: 0 2px 0 rgba(13, 138, 91, 0.12), 0 30px 56px -26px rgba(23, 165, 111, 0.55);
+  transform: translate(-3px, -3px);
+  border-color: rgba(184, 73, 14, 0.85);
+  box-shadow: 10px 10px 0 rgba(54, 19, 6, 0.2);
 }
 .ripple-glow {
   position: relative;
-  border: 1px solid rgba(13, 138, 91, 0.26);
-  background: linear-gradient(180deg, #fbfffb 0%, #f2faf5 100%);
-  border-radius: 1.5rem;
-  box-shadow: 0 2px 0 rgba(13, 138, 91, 0.1), 0 22px 44px -26px rgba(8, 69, 48, 0.4);
+  border: 2px solid rgba(119, 46, 19, 0.55);
+  background: linear-gradient(180deg, #fffdf9 0%, #fdf8f0 100%);
+  border-radius: 1.25rem;
+  box-shadow: 6px 6px 0 rgba(54, 19, 6, 0.14);
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
-  transform: translateY(-5px);
-  border-color: rgba(23, 165, 111, 0.65);
-  box-shadow: 0 2px 0 rgba(13, 138, 91, 0.12), 0 30px 56px -26px rgba(23, 165, 111, 0.55);
+  transform: translate(-3px, -3px);
+  border-color: rgba(184, 73, 14, 0.85);
+  box-shadow: 10px 10px 0 rgba(54, 19, 6, 0.2);
 }
 .lagoon-glow {
   position: relative;
-  border: 1px solid rgba(13, 138, 91, 0.26);
-  background: linear-gradient(180deg, #fbfffb 0%, #f2faf5 100%);
-  border-radius: 1.5rem;
-  box-shadow: 0 2px 0 rgba(13, 138, 91, 0.1), 0 22px 44px -26px rgba(8, 69, 48, 0.4);
+  border: 2px solid rgba(119, 46, 19, 0.55);
+  background: linear-gradient(180deg, #fffdf9 0%, #fdf8f0 100%);
+  border-radius: 1.25rem;
+  box-shadow: 6px 6px 0 rgba(54, 19, 6, 0.14);
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
-  transform: translateY(-5px);
-  border-color: rgba(23, 165, 111, 0.65);
-  box-shadow: 0 2px 0 rgba(13, 138, 91, 0.12), 0 30px 56px -26px rgba(23, 165, 111, 0.55);
+  transform: translate(-3px, -3px);
+  border-color: rgba(184, 73, 14, 0.85);
+  box-shadow: 10px 10px 0 rgba(54, 19, 6, 0.2);
 }
