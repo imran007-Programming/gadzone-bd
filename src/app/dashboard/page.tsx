@@ -73,7 +73,7 @@ export default function DashboardPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#55bd72] font-sans text-[#127a42] lg:flex">
+    <div className="min-h-screen bg-[#14b8a6] font-sans text-[#127a42] lg:flex">
       <DashboardSidebar
         nav={NAV}
         active={tab}
@@ -86,14 +86,14 @@ export default function DashboardPage() {
 
       <div className="min-w-0 flex-1">
         {/* Top header */}
-        <header className="sticky top-0 z-20 border-b border-[#55bd72] bg-[#f2faf0]/90 backdrop-blur lg:static">
+        <header className="sticky top-0 z-20 border-b border-[#14b8a6] bg-[#eef7fa]/90 backdrop-blur lg:static">
           <div className="mx-auto flex max-w-5xl items-center gap-3 px-4 py-3">
             <Link href="/" className="flex shrink-0 items-center gap-2 lg:hidden">
               <span className="flex h-9 w-9 items-center justify-center rounded-2xl bg-brand-500 text-xl font-black text-white">G</span>
               <span className="text-base font-black tracking-tight">Gad<span className="text-brand-800">Zone</span> BD</span>
             </Link>
             <div className="min-w-0 flex-1">
-              <p className="truncate text-sm font-bold text-[#0d231a] sm:text-base">Hello, {session?.user?.name ?? "Guest"} 👋</p>
+              <p className="truncate text-sm font-bold text-[#0b2239] sm:text-base">Hello, {session?.user?.name ?? "Guest"} 👋</p>
               <p className="hidden text-xs text-[#127a42] sm:block">Track your orders and manage your account.</p>
             </div>
             {session?.user && (
@@ -105,10 +105,10 @@ export default function DashboardPage() {
                     value={search}
                     onChange={(e) => handleSearch(e.target.value)}
                     placeholder="Search orders by id or item…"
-                    className="w-full rounded-full border border-[#55bd72] bg-[#f2faf0] py-2 pr-3 pl-9 text-sm outline-none focus:border-brand-400 focus:bg-[#f2faf0]"
+                    className="w-full rounded-full border border-[#14b8a6] bg-[#eef7fa] py-2 pr-3 pl-9 text-sm outline-none focus:border-brand-400 focus:bg-[#eef7fa]"
                   />
                 </label>
-                <Link href="/" className="relative shrink-0 rounded-full bg-[#f2faf0] px-4 py-2 text-sm font-bold text-[#0d231a] transition hover:bg-[#f2faf0]">
+                <Link href="/" className="relative shrink-0 rounded-full bg-[#eef7fa] px-4 py-2 text-sm font-bold text-[#0b2239] transition hover:bg-[#eef7fa]">
                   🛒 <span className="hidden sm:inline">Cart</span>
                 </Link>
                 {session.user.image ? (
@@ -132,7 +132,7 @@ export default function DashboardPage() {
                   value={search}
                   onChange={(e) => handleSearch(e.target.value)}
                   placeholder="Search orders by id or item…"
-                  className="w-full rounded-full border border-[#55bd72] bg-[#f2faf0] py-2 pr-3 pl-9 text-sm outline-none focus:border-brand-400 focus:bg-[#f2faf0]"
+                  className="w-full rounded-full border border-[#14b8a6] bg-[#eef7fa] py-2 pr-3 pl-9 text-sm outline-none focus:border-brand-400 focus:bg-[#eef7fa]"
                 />
               </label>
             </div>
@@ -164,8 +164,8 @@ export default function DashboardPage() {
                           : `You have ${orders.length} order${orders.length === 1 ? "" : "s"} with us. ${processing > 0 ? `${processing} still processing.` : "Nothing is waiting to ship right now."}`}
                       </p>
                       <div className="mt-5 flex flex-wrap gap-2">
-                        <Link href="/" className="rounded-full bg-[#f2faf0] px-5 py-2.5 text-sm font-black text-brand-700 transition hover:bg-brand-50">Shop Now →</Link>
-                        <button onClick={() => setTab("orders")} className="rounded-full bg-[#f2faf0]/15 px-5 py-2.5 text-sm font-bold text-white ring-1 ring-white/30 transition hover:bg-[#f2faf0]/25">Track Order</button>
+                        <Link href="/" className="rounded-full bg-[#eef7fa] px-5 py-2.5 text-sm font-black text-brand-700 transition hover:bg-brand-50">Shop Now →</Link>
+                        <button onClick={() => setTab("orders")} className="rounded-full bg-[#eef7fa]/15 px-5 py-2.5 text-sm font-bold text-white ring-1 ring-white/30 transition hover:bg-[#eef7fa]/25">Track Order</button>
                       </div>
                     </section>
                   </Reveal>
@@ -179,7 +179,7 @@ export default function DashboardPage() {
 
                   <section>
                     <div className="mb-3 flex items-center justify-between">
-                      <h2 className="text-lg font-black text-[#0d231a]">Recent Orders</h2>
+                      <h2 className="text-lg font-black text-[#0b2239]">Recent Orders</h2>
                       <button onClick={() => setTab("orders")} className="text-sm font-bold text-brand-800 hover:text-brand-700">View all →</button>
                     </div>
                     {!loaded ? (
@@ -189,9 +189,9 @@ export default function DashboardPage() {
                     ) : (
                       <div className="space-y-3">
                         {recent.map((o) => (
-                          <div key={o.id} className="flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-[#f2faf0] p-4 shadow-sm ring-1 ring-[#55bd72]">
+                          <div key={o.id} className="flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-[#eef7fa] p-4 shadow-sm ring-1 ring-[#14b8a6]">
                             <div className="min-w-0">
-                              <p className="font-black text-[#0d231a]">{o.id}</p>
+                              <p className="font-black text-[#0b2239]">{o.id}</p>
                               <p className="truncate text-sm text-[#127a42]">{o.items.map((it) => `${it.name} × ${it.qty}`).join(" · ")}</p>
                             </div>
                             <div className="flex items-center gap-3">
@@ -205,21 +205,21 @@ export default function DashboardPage() {
                   </section>
 
                   <section>
-                    <h2 className="mb-3 text-lg font-black text-[#0d231a]">Quick actions</h2>
+                    <h2 className="mb-3 text-lg font-black text-[#0b2239]">Quick actions</h2>
                     <div className="grid gap-3 sm:grid-cols-3">
-                      <Link href="/" className="rounded-2xl bg-[#f2faf0] p-5 shadow-sm ring-1 ring-[#55bd72] transition hover:shadow-md">
+                      <Link href="/" className="rounded-2xl bg-[#eef7fa] p-5 shadow-sm ring-1 ring-[#14b8a6] transition hover:shadow-md">
                         <p className="text-2xl" aria-hidden="true">🛍️</p>
-                        <p className="mt-2 font-black text-[#0d231a]">Shop Now</p>
+                        <p className="mt-2 font-black text-[#0b2239]">Shop Now</p>
                         <p className="text-sm text-[#127a42]">Browse deals and new arrivals.</p>
                       </Link>
-                      <button onClick={() => setTab("orders")} className="rounded-2xl bg-[#f2faf0] p-5 text-left shadow-sm ring-1 ring-[#55bd72] transition hover:shadow-md">
+                      <button onClick={() => setTab("orders")} className="rounded-2xl bg-[#eef7fa] p-5 text-left shadow-sm ring-1 ring-[#14b8a6] transition hover:shadow-md">
                         <p className="text-2xl" aria-hidden="true">🚚</p>
-                        <p className="mt-2 font-black text-[#0d231a]">Track Order</p>
+                        <p className="mt-2 font-black text-[#0b2239]">Track Order</p>
                         <p className="text-sm text-[#127a42]">See the status of every order.</p>
                       </button>
-                      <Link href="/#faq" className="rounded-2xl bg-[#f2faf0] p-5 shadow-sm ring-1 ring-[#55bd72] transition hover:shadow-md">
+                      <Link href="/#faq" className="rounded-2xl bg-[#eef7fa] p-5 shadow-sm ring-1 ring-[#14b8a6] transition hover:shadow-md">
                         <p className="text-2xl" aria-hidden="true">💬</p>
-                        <p className="mt-2 font-black text-[#0d231a]">Support</p>
+                        <p className="mt-2 font-black text-[#0b2239]">Support</p>
                         <p className="text-sm text-[#127a42]">Answers to common questions.</p>
                       </Link>
                     </div>
@@ -231,13 +231,13 @@ export default function DashboardPage() {
                 <div className="space-y-5 pt-4">
                   <div className="flex flex-wrap items-end justify-between gap-3">
                     <div>
-                      <h1 className="text-2xl font-black text-[#0d231a]">My Orders</h1>
+                      <h1 className="text-2xl font-black text-[#0b2239]">My Orders</h1>
                       <p className="mt-1 text-sm text-[#127a42]">{filtered.length} order{filtered.length === 1 ? "" : "s"} shown</p>
                     </div>
                     {(search.trim() || statusFilter !== "All") && (
                       <button
                         onClick={() => { setSearch(""); setStatusFilter("All"); }}
-                        className="rounded-full bg-[#f2faf0] px-4 py-2 text-sm font-bold text-[#127a42] ring-1 ring-[#55bd72] hover:bg-[#f2faf0]"
+                        className="rounded-full bg-[#eef7fa] px-4 py-2 text-sm font-bold text-[#127a42] ring-1 ring-[#14b8a6] hover:bg-[#eef7fa]"
                       >
                         Clear filters ✕
                       </button>
@@ -268,9 +268,9 @@ export default function DashboardPage() {
 
               {tab === "profile" && (
                 <div className="space-y-5 pt-4">
-                  <h1 className="text-2xl font-black text-[#0d231a]">Profile</h1>
+                  <h1 className="text-2xl font-black text-[#0b2239]">Profile</h1>
                   <Reveal>
-                    <section className="flex flex-col items-start gap-4 rounded-2xl bg-[#f2faf0] p-6 shadow-sm ring-1 ring-[#55bd72] sm:flex-row sm:items-center">
+                    <section className="flex flex-col items-start gap-4 rounded-2xl bg-[#eef7fa] p-6 shadow-sm ring-1 ring-[#14b8a6] sm:flex-row sm:items-center">
                       {session.user.image ? (
                         // eslint-disable-next-line @next/next/no-img-element
                         <img src={session.user.image} alt="" className="h-20 w-20 rounded-full object-cover ring-4 ring-brand-100" />
@@ -280,7 +280,7 @@ export default function DashboardPage() {
                         </span>
                       )}
                       <div className="min-w-0 flex-1">
-                        <h2 className="truncate text-xl font-black text-[#0d231a]">{session.user.name ?? "GadZone customer"}</h2>
+                        <h2 className="truncate text-xl font-black text-[#0b2239]">{session.user.name ?? "GadZone customer"}</h2>
                         <p className="truncate text-sm text-[#127a42]">{session.user.email}</p>
                         <span className="mt-2 inline-block rounded-full bg-brand-100 px-3 py-1 text-xs font-bold text-brand-700 capitalize">{session.user.role ?? "customer"}</span>
                       </div>
@@ -288,8 +288,8 @@ export default function DashboardPage() {
                     </section>
                   </Reveal>
 
-                  <section className="rounded-2xl bg-[#f2faf0] p-6 shadow-sm ring-1 ring-[#55bd72]">
-                    <h2 className="font-black text-[#0d231a]">Account info</h2>
+                  <section className="rounded-2xl bg-[#eef7fa] p-6 shadow-sm ring-1 ring-[#14b8a6]">
+                    <h2 className="font-black text-[#0b2239]">Account info</h2>
                     <dl className="mt-4 grid gap-4 text-sm sm:grid-cols-2">
                       <div><dt className="font-semibold text-[#127a42]">Full name</dt><dd className="mt-0.5 font-bold text-[#127a42]">{session.user.name ?? "—"}</dd></div>
                       <div><dt className="font-semibold text-[#127a42]">Email</dt><dd className="mt-0.5 truncate font-bold text-[#127a42]">{session.user.email ?? "—"}</dd></div>
