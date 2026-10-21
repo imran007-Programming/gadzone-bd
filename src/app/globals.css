@@ -1,31 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-  /* Citrus Monsoon: tangerine zest on warm cream, pine-ink text, leaf-lime
-     secondary accents. */
-  --color-brand-50: #fff7ed;
-  --color-brand-100: #ffedd5;
-  --color-brand-200: #fed7aa;
-  --color-brand-300: #fdba74;
-  --color-brand-400: #fb923c;
-  --color-brand-500: #f97316;
-  --color-brand-600: #ea580c;
-  --color-brand-700: #c2410c;
-  --color-brand-800: #9a3412;
-  --color-brand-900: #7c2d12;
-  --color-brand-950: #431407;
-  --color-brand: #ea580c;
-  --color-brand-dark: #9a3412;
-  --color-brand-deep: #431407;
+  /* Duskberry Night Market: plum-fuchsia bloom on pale lavender paper,
+     ember-amber secondary, mint-teal tertiary accents. */
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-50: #fdf4ff;
+  --color-brand-100: #fae8ff;
+  --color-brand-200: #f5d0fe;
+  --color-brand-300: #f0abfc;
+  --color-brand-400: #e879f9;
+  --color-brand-500: #d946ef;
+  --color-brand-600: #c026d3;
+  --color-brand-700: #a21caf;
+  --color-brand-800: #86198f;
+  --color-brand-900: #701a75;
+  --color-brand-950: #4a044e;
+  --color-brand: #c026d3;
+  --color-brand-dark: #86198f;
+  --color-brand-deep: #4a044e;
   --color-gold: #f59e0b;
   --color-gold-deep: #b45309;
   --color-gold-soft: #fef3c7;
-  --color-ink: #1c1917;
-  --color-paper: #fffdf6;
-  --color-mute: #a8a29e;
-  --color-popblue: #65a30d;
-  --color-popblue-deep: #4d7c0f;
-  --color-popblue-soft: #ecfccb;
+  --color-ink: #241b2e;
+  --color-paper: #fbfaff;
+  --color-mute: #9d94ab;
+  --color-popblue: #14b8a6;
+  --color-popblue-deep: #0f766e;
+  --color-popblue-soft: #ccfbf1;
 }
 
 html { scroll-behavior: smooth; }
@@ -40,220 +42,222 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #fffdf6;
+  background: #fbfaff;
   background-image:
-    radial-gradient(ellipse 90% 34% at 50% -12%, rgba(234, 88, 12, 0.12), transparent),
-    radial-gradient(ellipse 60% 26% at 94% 100%, rgba(245, 158, 11, 0.10), transparent),
-    radial-gradient(ellipse 52% 24% at 4% 62%, rgba(101, 163, 13, 0.08), transparent),
-    repeating-linear-gradient(135deg, rgba(234, 88, 12, 0.04) 0 2px, transparent 2px 60px);
-  background-size: auto, auto, auto, auto;
-  color: #1c1917;
+    radial-gradient(ellipse 90% 34% at 50% -12%, rgba(192, 38, 211, 0.10), transparent),
+    radial-gradient(ellipse 60% 26% at 94% 100%, rgba(245, 158, 11, 0.08), transparent),
+    radial-gradient(ellipse 52% 24% at 4% 62%, rgba(20, 184, 166, 0.07), transparent),
+    radial-gradient(rgba(192, 38, 211, 0.07) 1.2px, transparent 1.2px);
+  background-size: auto, auto, auto, 26px 26px;
+  color: #241b2e;
 }
-::selection { background: #ea580c; color: #ffffff; }
+::selection { background: #c026d3; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: #c2410c; border-radius: 8px; border: 2px solid #fffdf6; }
-::-webkit-scrollbar-track { background: #ffedd5; }
+::-webkit-scrollbar-thumb { background: #a21caf; border-radius: 8px; border: 2px solid #fbfaff; }
+::-webkit-scrollbar-track { background: #fae8ff; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Zest drift: citrus sparkles rising through the monsoon air. */
+/* Berry drift: fireflies rising through the night-market air. */
 @keyframes bubble-rise-anim {
-  0% { transform: translate3d(-10px, -120px, 0) rotate(0deg) scale(0.7); opacity: 0; }
-  25% { opacity: 0.9; }
-  60% { transform: translate3d(12px, 10px, 0) rotate(120deg) scale(1.1); opacity: 0.7; }
-  100% { transform: translate3d(-8px, 130px, 0) rotate(260deg) scale(0.8); opacity: 0; }
+  0% { transform: translate3d(8px, 130px, 0) rotate(0deg) scale(0.6); opacity: 0; }
+  25% { opacity: 0.85; }
+  60% { transform: translate3d(-12px, -8px, 0) rotate(-120deg) scale(1.15); opacity: 0.7; }
+  100% { transform: translate3d(10px, -130px, 0) rotate(-260deg) scale(0.75); opacity: 0; }
 }
-.pop-fall { animation: bubble-rise-anim 11.4s ease-in infinite; }
+.pop-fall { animation: bubble-rise-anim 12.8s ease-in infinite; }
 
-/* Citrus haze: slow lateral drift of the tangerine glow. */
+/* Berry haze: slow lateral drift of the plum glow. */
 @keyframes swell-drift {
-  0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.5; }
-  50% { transform: translate3d(3vw, -0.75rem, 0) scale(1.14); opacity: 0.85; }
+  0%, 100% { transform: translate3d(3vw, 0, 0) scale(1.12); opacity: 0.45; }
+  50% { transform: translate3d(-3vw, 0.75rem, 0) scale(1); opacity: 0.8; }
 }
-.pop-drift { animation: swell-drift 21s ease-in-out infinite; }
+.pop-drift { animation: swell-drift 24s ease-in-out infinite; }
 
-/* Grove throb: gentle lift with a soft settle. */
+/* Market bob: gentle lift with a soft settle. */
 @keyframes buoy-throb {
   0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-7px) scale(1.03); }
+  50% { transform: translateY(-5px) scale(1.02); }
 }
-.pop-bob { animation: buoy-throb 6.6s ease-in-out infinite; }
+.pop-bob { animation: buoy-throb 7.4s ease-in-out infinite; }
 
-/* Zest ring: steady rotation for the citrus ring. */
+/* Lantern ring: steady rotation for the berry ring. */
 @keyframes tide-wheel {
-  to { transform: rotate(360deg); }
+  to { transform: rotate(-360deg); }
 }
-.pop-spin { animation: tide-wheel 60s linear infinite; }
+.pop-spin { animation: tide-wheel 70s linear infinite; }
 
-/* Monsoon ticker: infinite marquee for the offer strip (leftward drift). */
+/* Night ticker: infinite marquee for the offer strip (rightward drift). */
 @keyframes harbor-ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
 }
-.pop-ticker { animation: harbor-ticker 30s linear infinite; }
+.pop-ticker { animation: harbor-ticker 34s linear infinite; }
 
-/* Citrus ribbon: deep bark -> tangerine -> amber -> leaf gradient. */
+/* Berry ribbon: plum -> fuchsia -> amber -> mint gradient. */
 .pop-stripes {
-  background-image: linear-gradient(115deg, #431407, #ea580c 32%, #f59e0b 58%, #65a30d 96%);
+  background-image: linear-gradient(115deg, #4a044e, #c026d3 34%, #f59e0b 62%, #14b8a6 98%);
 }
 
-/* Citrus card: crisp cream slab with a bold tangerine keyline and a hard
-   offset sticker shadow; hover presses it down and deepens the shadow. */
+/* Duskberry card: pillowed slab with a soft fuchsia halo; hover lifts it
+   toward the viewer and deepens the glow. */
 .pop-lift {
   position: relative;
-  border: 2px solid rgba(234, 88, 12, 0.45);
-  border-radius: 1.25rem;
-  background: linear-gradient(170deg, #ffffff 0%, #fffdf6 60%, #ffedd5 135%);
+  border: 1px solid rgba(192, 38, 211, 0.22);
+  border-radius: 2rem;
+  background: linear-gradient(165deg, #ffffff 0%, #fbfaff 55%, #fae8ff 130%);
   box-shadow:
-    inset 0 2px 0 0 rgba(255, 255, 255, 0.95),
-    6px 6px 0 0 rgba(234, 88, 12, 0.18),
-    0 18px 34px -20px rgba(124, 45, 18, 0.30);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.9),
+    0 2px 6px -2px rgba(192, 38, 211, 0.18),
+    0 22px 44px -24px rgba(112, 26, 117, 0.38);
+  transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
 }
 .pop-lift:hover {
-  transform: translate(-2px, -2px);
+  transform: translateY(-5px);
+  border-color: rgba(192, 38, 211, 0.4);
   box-shadow:
-    inset 0 2px 0 0 rgba(255, 255, 255, 0.95),
-    9px 9px 0 0 rgba(234, 88, 12, 0.26),
-    0 26px 46px -20px rgba(124, 45, 18, 0.42);
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.9),
+    0 4px 10px -2px rgba(192, 38, 211, 0.28),
+    0 34px 60px -24px rgba(192, 38, 211, 0.5);
 }
 
-/* Citrus glass: shared by modals and drawers — cream-tinted frosted glass. */
+/* Berry glass: shared by modals and drawers — lavender frosted glass. */
 .pop-glass {
-  background: rgba(255, 253, 246, 0.94);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 2px solid rgba(234, 88, 12, 0.40);
-  border-radius: 1.25rem;
+  background: rgba(251, 250, 255, 0.92);
+  backdrop-filter: blur(20px) saturate(1.2);
+  -webkit-backdrop-filter: blur(20px) saturate(1.2);
+  border: 1px solid rgba(192, 38, 211, 0.28);
+  border-radius: 2rem;
   box-shadow:
-    6px 6px 0 0 rgba(234, 88, 12, 0.16),
-    0 24px 60px -20px rgba(234, 88, 12, 0.32);
+    0 1px 0 0 rgba(255, 255, 255, 0.8) inset,
+    0 30px 70px -24px rgba(192, 38, 211, 0.42);
 }
 
-/* Citrus seal: round tangerine badge with a dashed cream halo, tilted like a
-   monsoon market price tag. */
+/* Berry seal: round deep-plum badge with a gold dashed halo, tilted like a
+   night-market lantern tag. */
 .starburst {
   border-radius: 9999px;
-  border: 2px dashed #ffffff;
-  outline: 3px solid rgba(251, 146, 60, 0.70);
+  border: 2px dashed #f59e0b;
+  outline: 3px solid rgba(192, 38, 211, 0.55);
   outline-offset: 3px;
-  background: radial-gradient(circle at 50% 32%, #fb923c 0%, #ea580c 58%, #9a3412 100%);
+  background: radial-gradient(circle at 50% 32%, #d946ef 0%, #a21caf 58%, #4a044e 100%);
   color: #ffffff;
-  transform: rotate(6deg);
-  box-shadow: 0 10px 26px -8px rgba(234, 88, 12, 0.60);
+  transform: rotate(-6deg);
+  box-shadow: 0 12px 28px -8px rgba(162, 28, 175, 0.6);
 }
 
-/* Grove print: fine diagonal amber lines for hero bands. */
+/* Market print: fine diagonal fuchsia lines for hero bands. */
 .halftone {
-  background-image: repeating-linear-gradient(45deg, rgba(234, 88, 12, 0.10) 0 1.5px, transparent 1.5px 24px);
+  background-image: repeating-linear-gradient(-45deg, rgba(192, 38, 211, 0.09) 0 1.5px, transparent 1.5px 24px);
 }
 
-/* Citrus zigzag: bold diagonal tangerine stripe divider. */
+/* Berry wave: soft scalloped fuchsia divider. */
 .zigzag {
-  height: 14px;
-  background-image: repeating-linear-gradient(-55deg, rgba(234, 88, 12, 0.55) 0 10px, transparent 10px 22px);
+  height: 16px;
+  background-image: radial-gradient(circle at 11px -4px, rgba(192, 38, 211, 0.5) 9px, transparent 10px);
+  background-size: 22px 16px;
   background-repeat: repeat-x;
-  background-position: center;
   opacity: 0.9;
 }
 
-/* Harvest shade: citrus-striped shade band over the cream field. */
+/* Lantern shade: plum-dotted shade band over the lavender field. */
 .bazaar-awning {
   background-image:
-    repeating-linear-gradient(115deg, rgba(234, 88, 12, 0.08) 0 26px, transparent 26px 52px),
-    linear-gradient(180deg, #ffffff, #fffdf6);
+    radial-gradient(rgba(192, 38, 211, 0.10) 1.6px, transparent 1.6px),
+    linear-gradient(180deg, #ffffff, #fbfaff);
+  background-size: 30px 30px, auto;
 }
 
-/* Citrus core: layered tangerine-to-cream radial for the hero's sun heart. */
+/* Berry moon: layered fuchsia-to-lavender radial for the hero's lantern heart. */
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.98) 0%, rgba(253, 186, 116, 0.55) 34%, rgba(234, 88, 12, 0.38) 58%, rgba(234, 88, 12, 0) 72%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.98) 0%, rgba(240, 171, 252, 0.5) 34%, rgba(192, 38, 211, 0.34) 58%, rgba(192, 38, 211, 0) 72%);
 }
 
-/* Citrus rings: concentric tangerine rings around the sun core. */
+/* Berry glow rings: concentric fuchsia rings around the lantern heart. */
 .sun-rays {
   background: repeating-radial-gradient(
     circle at center,
-    rgba(234, 88, 12, 0.24) 0 5px,
-    transparent 5px 26px
+    rgba(192, 38, 211, 0.20) 0 5px,
+    transparent 5px 30px
   );
   -webkit-mask: radial-gradient(circle, black 40%, transparent 88%);
   mask: radial-gradient(circle, black 40%, transparent 88%);
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all citrus-styled. */
+/* Legacy aliases kept so untouched components still render — all berry-styled. */
 .lagoon-lift {
-  border: 2px solid rgba(234, 88, 12, 0.45);
-  border-radius: 1.25rem;
-  background: linear-gradient(170deg, #ffffff 0%, #fffdf6 60%, #ffedd5 135%);
+  border: 1px solid rgba(192, 38, 211, 0.22);
+  border-radius: 2rem;
+  background: linear-gradient(165deg, #ffffff 0%, #fbfaff 55%, #fae8ff 130%);
   box-shadow:
-    inset 0 2px 0 0 rgba(255, 255, 255, 0.95),
-    6px 6px 0 0 rgba(234, 88, 12, 0.18),
-    0 18px 34px -20px rgba(124, 45, 18, 0.30);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.9),
+    0 2px 6px -2px rgba(192, 38, 211, 0.18),
+    0 22px 44px -24px rgba(112, 26, 117, 0.38);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
 }
 .lagoon-lift:hover {
-  transform: translate(-2px, -2px);
+  transform: translateY(-5px);
   box-shadow:
-    inset 0 2px 0 0 rgba(255, 255, 255, 0.95),
-    9px 9px 0 0 rgba(234, 88, 12, 0.26),
-    0 26px 46px -20px rgba(124, 45, 18, 0.42);
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.9),
+    0 4px 10px -2px rgba(192, 38, 211, 0.28),
+    0 34px 60px -24px rgba(192, 38, 211, 0.5);
 }
 .stamp-perf {
-  border: 2px dashed #ea580c;
-  background: #fffdf6;
-  border-radius: 1.25rem;
-  box-shadow: 4px 4px 0 0 rgba(234, 88, 12, 0.16), 0 14px 30px -14px rgba(234, 88, 12, 0.30);
+  border: 2px dashed #c026d3;
+  background: #fbfaff;
+  border-radius: 2rem;
+  box-shadow: 0 2px 6px -2px rgba(192, 38, 211, 0.2), 0 18px 36px -16px rgba(192, 38, 211, 0.32);
 }
 .ember-glow {
-  border: 2px solid rgba(234, 88, 12, 0.45);
-  border-radius: 1.25rem;
-  background: linear-gradient(170deg, #ffffff 0%, #fffdf6 60%, #ffedd5 135%);
+  border: 1px solid rgba(192, 38, 211, 0.22);
+  border-radius: 2rem;
+  background: linear-gradient(165deg, #ffffff 0%, #fbfaff 55%, #fae8ff 130%);
   box-shadow:
-    inset 0 2px 0 0 rgba(255, 255, 255, 0.95),
-    6px 6px 0 0 rgba(234, 88, 12, 0.18),
-    0 18px 34px -20px rgba(124, 45, 18, 0.30);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.9),
+    0 2px 6px -2px rgba(192, 38, 211, 0.18),
+    0 22px 44px -24px rgba(112, 26, 117, 0.38);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
 }
 .ember-glow:hover {
-  transform: translate(-2px, -2px);
+  transform: translateY(-5px);
   box-shadow:
-    inset 0 2px 0 0 rgba(255, 255, 255, 0.95),
-    9px 9px 0 0 rgba(234, 88, 12, 0.26),
-    0 26px 46px -20px rgba(124, 45, 18, 0.42);
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.9),
+    0 4px 10px -2px rgba(192, 38, 211, 0.28),
+    0 34px 60px -24px rgba(192, 38, 211, 0.5);
 }
 .ripple-glow {
-  border: 2px solid rgba(234, 88, 12, 0.45);
-  border-radius: 1.25rem;
-  background: linear-gradient(170deg, #ffffff 0%, #fffdf6 60%, #ffedd5 135%);
+  border: 1px solid rgba(192, 38, 211, 0.22);
+  border-radius: 2rem;
+  background: linear-gradient(165deg, #ffffff 0%, #fbfaff 55%, #fae8ff 130%);
   box-shadow:
-    inset 0 2px 0 0 rgba(255, 255, 255, 0.95),
-    6px 6px 0 0 rgba(234, 88, 12, 0.18),
-    0 18px 34px -20px rgba(124, 45, 18, 0.30);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.9),
+    0 2px 6px -2px rgba(192, 38, 211, 0.18),
+    0 22px 44px -24px rgba(112, 26, 117, 0.38);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
 }
 .ripple-glow:hover {
-  transform: translate(-2px, -2px);
+  transform: translateY(-5px);
   box-shadow:
-    inset 0 2px 0 0 rgba(255, 255, 255, 0.95),
-    9px 9px 0 0 rgba(234, 88, 12, 0.26),
-    0 26px 46px -20px rgba(124, 45, 18, 0.42);
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.9),
+    0 4px 10px -2px rgba(192, 38, 211, 0.28),
+    0 34px 60px -24px rgba(192, 38, 211, 0.5);
 }
 .lagoon-glow {
-  border: 2px solid rgba(234, 88, 12, 0.45);
-  border-radius: 1.25rem;
-  background: linear-gradient(170deg, #ffffff 0%, #fffdf6 60%, #ffedd5 135%);
+  border: 1px solid rgba(192, 38, 211, 0.22);
+  border-radius: 2rem;
+  background: linear-gradient(165deg, #ffffff 0%, #fbfaff 55%, #fae8ff 130%);
   box-shadow:
-    inset 0 2px 0 0 rgba(255, 255, 255, 0.95),
-    6px 6px 0 0 rgba(234, 88, 12, 0.18),
-    0 18px 34px -20px rgba(124, 45, 18, 0.30);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.9),
+    0 2px 6px -2px rgba(192, 38, 211, 0.18),
+    0 22px 44px -24px rgba(112, 26, 117, 0.38);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
 }
 .lagoon-glow:hover {
-  transform: translate(-2px, -2px);
+  transform: translateY(-5px);
   box-shadow:
-    inset 0 2px 0 0 rgba(255, 255, 255, 0.95),
-    9px 9px 0 0 rgba(234, 88, 12, 0.26),
-    0 26px 46px -20px rgba(124, 45, 18, 0.42);
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.9),
+    0 4px 10px -2px rgba(192, 38, 211, 0.28),
+    0 34px 60px -24px rgba(192, 38, 211, 0.5);
 }

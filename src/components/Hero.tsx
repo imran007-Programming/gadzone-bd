@@ -22,21 +22,21 @@ const item: Variants = {
 
 // Zest drift: tangerine and amber glows drifting over the grove.
 const GLOWS = [
-  { left: "4%", top: "10%", size: 150, delay: "0s", dur: "14s", c: "rgba(234,88,12, 0.28)" },
+  { left: "4%", top: "10%", size: 150, delay: "0s", dur: "14s", c: "rgba(192,38,211, 0.28)" },
   { left: "72%", top: "4%", size: 200, delay: "-4s", dur: "15s", c: "rgba(249,115,22, 0.16)" },
-  { left: "44%", top: "44%", size: 120, delay: "-7s", dur: "13s", c: "rgba(253,186,116, 0.22)" },
-  { left: "86%", top: "50%", size: 110, delay: "-2s", dur: "14s", c: "rgba(251, 146, 60, 0.24)" },
+  { left: "44%", top: "44%", size: 120, delay: "-7s", dur: "13s", c: "rgba(240,171,252, 0.22)" },
+  { left: "86%", top: "50%", size: 110, delay: "-2s", dur: "14s", c: "rgba(232,121,249, 0.24)" },
 ];
 
 // Rising zest: citrus sparkles swirling on a monsoon breeze.
 const DOTS = [
-  { left: "8%", delay: "0s", dur: "7.2s", s: 22, c: "#ea580c" },
-  { left: "21%", delay: "-1.4s", dur: "7.8s", s: 16, c: "#fb923c" },
-  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 24, c: "#f97316" },
-  { left: "53%", delay: "-0.8s", dur: "8s", s: 18, c: "#fdba74" },
-  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 22, c: "#c2410c" },
-  { left: "82%", delay: "-2s", dur: "7.9s", s: 15, c: "#fb923c" },
-  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 20, c: "#f97316" },
+  { left: "8%", delay: "0s", dur: "7.2s", s: 22, c: "#c026d3" },
+  { left: "21%", delay: "-1.4s", dur: "7.8s", s: 16, c: "#e879f9" },
+  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 24, c: "#d946ef" },
+  { left: "53%", delay: "-0.8s", dur: "8s", s: 18, c: "#f0abfc" },
+  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 22, c: "#a21caf" },
+  { left: "82%", delay: "-2s", dur: "7.9s", s: 15, c: "#e879f9" },
+  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 20, c: "#d946ef" },
 ];
 
 // Ticker phrases reuse the hero's existing stats copy.
@@ -99,7 +99,7 @@ export default function Hero({ onQuickView }: HeroProps) {
               />
             );
           })}
-          <div className="absolute inset-44 rounded-full border-2 border-brand-200/80 bg-gradient-to-br from-brand-400 via-brand-600 to-brand-800 shadow-[0_0_90px_28px_rgba(234,88,12, 0.35)]" />
+          <div className="absolute inset-44 rounded-full border-2 border-brand-200/80 bg-gradient-to-br from-brand-400 via-brand-600 to-brand-800 shadow-[0_0_90px_28px_rgba(192,38,211, 0.35)]" />
           <div className="absolute inset-44 rounded-full border border-white/40" />
           {/* sun ribs */}
           <div className="absolute inset-44 rounded-full border-x-8 border-brand-950/30" />
@@ -174,7 +174,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full bg-gradient-to-r from-brand-600 via-gold to-popblue px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-white shadow-[0_16px_38px_-14px_rgba(234,88,12, 0.6)]">Handpicked for you</p>
+            <p className="inline-block rounded-full bg-gradient-to-r from-brand-600 via-gold to-popblue px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-white shadow-[0_16px_38px_-14px_rgba(192,38,211, 0.6)]">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="bg-gradient-to-r from-brand-700 to-popblue-deep bg-clip-text text-transparent">Picks</span></h2>
             <span className="zigzag mt-3 block w-44" aria-hidden />
           </div>
