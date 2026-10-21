@@ -1,33 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-  /* Kiln Ember: warm sand canvas, fired copper primary,
-     goldenrod secondary, ember-rose glow accent. */
+  /* Volt Night: deep indigo night canvas, electric indigo primary,
+     cyan volt secondary, lime spark accent. */
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
-  --color-brand-50: #fdf4ec;
-  --color-brand-100: #fae6d3;
-  --color-brand-200: #f5cba6;
-  --color-brand-300: #efa876;
-  --color-brand-400: #e87d45;
-  --color-brand-500: #dd6128;
-  --color-brand-600: #c2410c;
-  --color-brand-700: #a1340b;
-  --color-brand-800: #83300f;
-  --color-brand-900: #6a2810;
-  --color-brand-950: #3a1506;
-  --color-brand: #c2410c;
-  --color-brand-dark: #a1340b;
-  --color-brand-deep: #3a1506;
-  --color-gold: #eab308;
-  --color-gold-deep: #b45309;
-  --color-gold-soft: #fef3c7;
-  --color-ink: #2b1d16;
-  --color-paper: #faf6ef;
-  --color-mute: #8a6f5c;
-  --color-popblue: #be123c;
-  --color-popblue-deep: #881337;
-  --color-popblue-soft: #ffe4e6;
+  --color-brand-50: #eef1ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-200: #c9d3fe;
+  --color-brand-300: #a7b6fc;
+  --color-brand-400: #7f90f7;
+  --color-brand-500: #5f6ff0;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+  --color-brand-800: #3a33a8;
+  --color-brand-900: #312e81;
+  --color-brand-950: #1d1a4b;
+  --color-brand: #4f46e5;
+  --color-brand-dark: #4338ca;
+  --color-brand-deep: #1d1a4b;
+  --color-gold: #06b6d4;
+  --color-gold-deep: #0e7490;
+  --color-gold-soft: #cffafe;
+  --color-ink: #151a3d;
+  --color-paper: #f3f5ff;
+  --color-mute: #5c658f;
+  --color-popblue: #84cc16;
+  --color-popblue-deep: #4d7c0f;
+  --color-popblue-soft: #ecfccb;
 }
 
 html { scroll-behavior: smooth; }
@@ -42,72 +42,73 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #faf6ef;
+  background: #f3f5ff;
   background-image:
-    linear-gradient(115deg, rgba(194, 65, 12, 0.10) 0%, rgba(234, 179, 8, 0.08) 38%, rgba(190, 18, 60, 0.08) 72%, transparent 100%),
-    radial-gradient(ellipse 60% 26% at 92% 8%, rgba(234, 179, 8, 0.12), transparent),
-    radial-gradient(ellipse 52% 24% at 6% 92%, rgba(194, 65, 12, 0.10), transparent),
-    radial-gradient(rgba(161, 52, 11, 0.08) 1px, transparent 1px);
-  background-size: auto, auto, auto, 26px 26px;
-  color: #2b1d16;
+    linear-gradient(115deg, rgba(79, 70, 229, 0.10) 0%, rgba(6, 182, 212, 0.08) 38%, rgba(132, 204, 22, 0.08) 72%, transparent 100%),
+    radial-gradient(ellipse 60% 26% at 92% 8%, rgba(6, 182, 212, 0.12), transparent),
+    radial-gradient(ellipse 52% 24% at 6% 92%, rgba(79, 70, 229, 0.10), transparent),
+    linear-gradient(rgba(67, 56, 202, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(67, 56, 202, 0.07) 1px, transparent 1px);
+  background-size: auto, auto, auto, 30px 30px, 30px 30px;
+  color: #151a3d;
 }
-::selection { background: #c2410c; color: #ffffff; }
+::selection { background: #4f46e5; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: #a1340b; border-radius: 8px; border: 2px solid #faf6ef; }
-::-webkit-scrollbar-track { background: #f3e8d8; }
+::-webkit-scrollbar-thumb { background: #4338ca; border-radius: 8px; border: 2px solid #f3f5ff; }
+::-webkit-scrollbar-track { background: #dfe4fb; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Ember drift: warm sparks rising from a summer kiln. */
-@keyframes bubble-rise-anim {
-  0% { transform: translate3d(14px, 120px, 0) rotate(0deg) scale(0.5); opacity: 0; }
+/* Volt rain: data packets drifting down through the night grid. */
+@keyframes volt-fall-anim {
+  0% { transform: translate3d(-12px, -120px, 0) rotate(0deg) scale(0.5); opacity: 0; }
   25% { opacity: 0.85; }
-  60% { transform: translate3d(-14px, -6px, 0) rotate(90deg) scale(1); opacity: 0.65; }
-  100% { transform: translate3d(10px, -120px, 0) rotate(200deg) scale(0.7); opacity: 0; }
+  60% { transform: translate3d(12px, 6px, 0) rotate(90deg) scale(1); opacity: 0.65; }
+  100% { transform: translate3d(-10px, 120px, 0) rotate(200deg) scale(0.7); opacity: 0; }
 }
-.pop-fall { animation: bubble-rise-anim 13.2s ease-in infinite; }
+.pop-fall { animation: volt-fall-anim 13.2s ease-in infinite; }
 
-/* Heat shimmer: slow lateral drift of the ember glow. */
-@keyframes swell-drift {
+/* Volt drift: slow lateral drift of the night-grid glow. */
+@keyframes volt-drift {
   0%, 100% { transform: translate3d(3vw, 0, 0) scale(1); opacity: 0.55; }
   50% { transform: translate3d(-3vw, 0.75rem, 0) scale(1.08); opacity: 0.9; }
 }
-.pop-drift { animation: swell-drift 24s ease-in-out infinite; }
+.pop-drift { animation: volt-drift 24s ease-in-out infinite; }
 
-/* Kiln throb: gentle lift with a warm settle. */
-@keyframes buoy-throb {
+/* Signal bob: gentle lift with a soft settle. */
+@keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-6px) scale(1.02); }
 }
-.pop-bob { animation: buoy-throb 7.4s ease-in-out infinite; }
+.pop-bob { animation: signal-bob 7.4s ease-in-out infinite; }
 
-/* Forge wheel: steady rotation for the kiln ring. */
-@keyframes tide-wheel {
+/* Orbit wheel: steady rotation for the signal sweep. */
+@keyframes orbit-wheel {
   to { transform: rotate(-360deg); }
 }
-.pop-spin { animation: tide-wheel 70s linear infinite; }
+.pop-spin { animation: orbit-wheel 70s linear infinite; }
 
 /* Offer ticker: infinite marquee for the promo strip (rightward drift). */
-@keyframes harbor-ticker {
+@keyframes volt-ticker {
   from { transform: translateX(-50%); }
   to { transform: translateX(0); }
 }
-.pop-ticker { animation: harbor-ticker 30s linear infinite; }
+.pop-ticker { animation: volt-ticker 30s linear infinite; }
 
-/* Kiln ribbon: fired copper -> goldenrod -> ember rose gradient. */
+/* Volt ribbon: electric indigo -> cyan volt -> lime spark gradient. */
 .pop-stripes {
-  background-image: linear-gradient(295deg, #c2410c, #eab308 52%, #be123c 98%);
+  background-image: linear-gradient(295deg, #4f46e5, #06b6d4 52%, #84cc16 98%);
 }
 
-/* Kiln card: warm parchment panel with a copper hairline, an ember
-   top accent strip, and a toasted clay shadow; hover lifts it into
-   a goldenrod-tinged glow. */
+/* Volt card: cool white-to-indigo panel with a cyan hairline, a
+   lime-to-cyan top ribbon, and a night-blue shadow; hover lifts it
+   into a cyan-tinged glow. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(161, 52, 11, 0.22);
-  background: linear-gradient(170deg, #fffdf8 0%, #f7ecdc 100%);
-  border-radius: 1.25rem;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 18px 42px -24px rgba(161, 52, 11, 0.40), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(67, 56, 202, 0.22);
+  background: linear-gradient(165deg, #ffffff 0%, #edf0ff 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 18px 42px -24px rgba(67, 56, 202, 0.42), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   overflow: hidden;
 }
@@ -118,8 +119,8 @@ body {
   left: 0;
   right: 0;
   height: 5px;
-  background: linear-gradient(90deg, #c2410c, #eab308 55%, #be123c);
-  border-radius: 1.25rem 1.25rem 0 0;
+  background: linear-gradient(90deg, #4f46e5, #06b6d4 55%, #84cc16);
+  border-radius: 1.5rem 1.5rem 0 0;
 }
 .pop-lift::after {
   content: "";
@@ -127,136 +128,139 @@ body {
   inset: 0;
   border-radius: inherit;
   pointer-events: none;
-  background: linear-gradient(180deg, rgba(234, 179, 8, 0.08), transparent 55%);
+  background: linear-gradient(180deg, rgba(6, 182, 212, 0.07), transparent 55%);
 }
 .pop-lift:hover {
   transform: translateY(-5px) scale(1.01);
-  border-color: rgba(190, 18, 60, 0.45);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 30px 60px -24px rgba(194, 65, 12, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border-color: rgba(6, 182, 212, 0.5);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 30px 60px -24px rgba(79, 70, 229, 0.45), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
 }
 
-/* Kiln glass: shared by modals and drawers — warm frosted glass. */
+/* Volt glass: shared by modals and drawers — cool frosted glass. */
 .pop-glass {
-  background: rgba(250, 246, 239, 0.92);
+  background: rgba(243, 245, 255, 0.9);
   backdrop-filter: blur(20px) saturate(1.2);
   -webkit-backdrop-filter: blur(20px) saturate(1.2);
-  border: 1px solid rgba(161, 52, 11, 0.28);
-  border-radius: 1.25rem;
-  box-shadow: 0 30px 80px -22px rgba(122, 40, 16, 0.40), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(67, 56, 202, 0.28);
+  border-radius: 1.5rem;
+  box-shadow: 0 30px 80px -22px rgba(49, 46, 129, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
-/* Fired seal: tilted copper pill stamp with a goldenrod dashed halo. */
+/* Volt seal: tilted lime pill stamp with a cyan dashed halo. */
 .starburst {
   border-radius: 9999px;
   border: 2px dashed rgba(255, 255, 255, 0.9);
-  outline: 2px solid rgba(136, 19, 55, 0.55);
+  outline: 2px solid rgba(6, 182, 212, 0.65);
   outline-offset: 2px;
-  background: radial-gradient(circle at 50% 32%, #fdba74 0%, #c2410c 55%, #83300f 100%);
-  color: #ffffff;
+  background: radial-gradient(circle at 50% 32%, #d9f99d 0%, #84cc16 55%, #4d7c0f 100%);
+  color: #1d1a4b;
   transform: rotate(-6deg);
-  box-shadow: 0 0 24px 2px rgba(194, 65, 12, 0.5);
+  box-shadow: 0 0 24px 2px rgba(132, 204, 22, 0.5);
 }
 
-/* Score lines: fine diagonal copper lines for hero bands. */
+/* Circuit grid: fine indigo grid lines for hero bands. */
 .halftone {
-  background-image: repeating-linear-gradient(45deg, rgba(161, 52, 11, 0.09) 0 1.5px, transparent 1.5px 22px);
+  background-image:
+    linear-gradient(rgba(67, 56, 202, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(67, 56, 202, 0.08) 1px, transparent 1px);
+  background-size: 30px 30px;
 }
 
-/* Kiln arch: scalloped ember band, a warm market divider. */
+/* Volt arch: scalloped cyan band, a night-market divider. */
 .zigzag {
   height: 16px;
-  background-image: radial-gradient(circle at 14px 16px, rgba(194, 65, 12, 0.8) 12px, transparent 13px);
+  background-image: radial-gradient(circle at 14px 16px, rgba(6, 182, 212, 0.75) 12px, transparent 13px);
   background-size: 28px 16px;
   background-repeat: repeat-x;
   opacity: 0.9;
 }
 
-/* Spice shade: goldenrod-dotted shade band over the kiln field. */
+/* Volt awning: cyan-dotted shade band over the night field. */
 .bazaar-awning {
   background-image:
-    radial-gradient(rgba(234, 179, 8, 0.18) 1.6px, transparent 1.6px),
-    linear-gradient(180deg, #f3e5d3, #faf6ef);
+    radial-gradient(rgba(6, 182, 212, 0.20) 1.6px, transparent 1.6px),
+    linear-gradient(180deg, #dfe4fb, #f3f5ff);
   background-size: 28px 28px, auto;
 }
 
-/* Sun orb: layered white-to-copper radial for the hero's forge heart. */
+/* Signal orb: layered white-to-cyan radial for the hero's beacon heart. */
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(254, 243, 199, 0.55) 34%, rgba(194, 65, 12, 0.30) 58%, rgba(190, 18, 60, 0) 72%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(207, 250, 254, 0.55) 34%, rgba(6, 182, 212, 0.30) 58%, rgba(132, 204, 22, 0) 72%);
 }
 
-/* Forge rings: concentric copper rings around the forge heart. */
+/* Signal sweep: rotating conic rays around the beacon heart. */
 .sun-rays {
-  background: repeating-radial-gradient(
-    circle at center,
-    rgba(194, 65, 12, 0.24) 0 5px,
-    transparent 5px 30px
+  background: repeating-conic-gradient(
+    from 0deg,
+    rgba(79, 70, 229, 0.22) 0deg 6deg,
+    transparent 6deg 24deg
   );
-  -webkit-mask: radial-gradient(circle, black 40%, transparent 88%);
-  mask: radial-gradient(circle, black 40%, transparent 88%);
+  -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 88%);
+  mask: radial-gradient(circle, transparent 32%, black 58%, transparent 88%);
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all kiln-styled. */
+/* Legacy aliases kept so untouched components still render — all volt-styled. */
 .lagoon-lift {
   position: relative;
-  border: 1px solid rgba(161, 52, 11, 0.22);
-  background: linear-gradient(170deg, #fffdf8 0%, #f7ecdc 100%);
-  border-radius: 1.25rem;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 18px 42px -24px rgba(161, 52, 11, 0.40), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(67, 56, 202, 0.22);
+  background: linear-gradient(165deg, #ffffff 0%, #edf0ff 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 18px 42px -24px rgba(67, 56, 202, 0.42), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   overflow: hidden;
 }
 .lagoon-lift:hover {
   transform: translateY(-5px) scale(1.01);
-  border-color: rgba(190, 18, 60, 0.45);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 30px 60px -24px rgba(194, 65, 12, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border-color: rgba(6, 182, 212, 0.5);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 30px 60px -24px rgba(79, 70, 229, 0.45), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
 }
 .stamp-perf {
-  border: 2px dashed #881337;
-  background: rgba(253, 244, 236, 0.9);
-  border-radius: 1.25rem;
-  box-shadow: 0 20px 50px -20px rgba(161, 52, 11, 0.45);
+  border: 2px dashed #4d7c0f;
+  background: rgba(236, 252, 203, 0.9);
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 50px -20px rgba(67, 56, 202, 0.45);
 }
 .ember-glow {
   position: relative;
-  border: 1px solid rgba(161, 52, 11, 0.22);
-  background: linear-gradient(170deg, #fffdf8 0%, #f7ecdc 100%);
-  border-radius: 1.25rem;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 18px 42px -24px rgba(161, 52, 11, 0.40), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(67, 56, 202, 0.22);
+  background: linear-gradient(165deg, #ffffff 0%, #edf0ff 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 18px 42px -24px rgba(67, 56, 202, 0.42), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
   transform: translateY(-5px) scale(1.01);
-  border-color: rgba(190, 18, 60, 0.45);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 30px 60px -24px rgba(194, 65, 12, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border-color: rgba(6, 182, 212, 0.5);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 30px 60px -24px rgba(79, 70, 229, 0.45), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
 }
 .ripple-glow {
   position: relative;
-  border: 1px solid rgba(161, 52, 11, 0.22);
-  background: linear-gradient(170deg, #fffdf8 0%, #f7ecdc 100%);
-  border-radius: 1.25rem;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 18px 42px -24px rgba(161, 52, 11, 0.40), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(67, 56, 202, 0.22);
+  background: linear-gradient(165deg, #ffffff 0%, #edf0ff 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 18px 42px -24px rgba(67, 56, 202, 0.42), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
   transform: translateY(-5px) scale(1.01);
-  border-color: rgba(190, 18, 60, 0.45);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 30px 60px -24px rgba(194, 65, 12, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border-color: rgba(6, 182, 212, 0.5);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 30px 60px -24px rgba(79, 70, 229, 0.45), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
 }
 .lagoon-glow {
   position: relative;
-  border: 1px solid rgba(161, 52, 11, 0.22);
-  background: linear-gradient(170deg, #fffdf8 0%, #f7ecdc 100%);
-  border-radius: 1.25rem;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 18px 42px -24px rgba(161, 52, 11, 0.40), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(67, 56, 202, 0.22);
+  background: linear-gradient(165deg, #ffffff 0%, #edf0ff 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 18px 42px -24px rgba(67, 56, 202, 0.42), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
   transform: translateY(-5px) scale(1.01);
-  border-color: rgba(190, 18, 60, 0.45);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 30px 60px -24px rgba(194, 65, 12, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border-color: rgba(6, 182, 212, 0.5);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 30px 60px -24px rgba(79, 70, 229, 0.45), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
 }

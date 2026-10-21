@@ -33,31 +33,31 @@ export default function QuickViewModal({ product, qty, onQtyChange, onClose, onA
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.96, y: 8 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="flex max-h-[92vh] w-full max-w-2xl flex-col overflow-hidden rounded-t-[2rem] border border-[#cdeeea] bg-[#fdf6ee] shadow-2xl sm:rounded-[2rem]"
+            className="flex max-h-[92vh] w-full max-w-2xl flex-col overflow-hidden rounded-t-[2rem] border border-[#cdd6f7] bg-[#f3f5ff] shadow-2xl sm:rounded-[2rem]"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex-1 overflow-y-auto">
               <div className="grid sm:grid-cols-2">
-                <div className="relative"><ProductImage product={product} big /><span className="absolute left-0 top-3 -skew-x-6 rounded-r-full bg-gradient-to-r from-brand-500 to-brand-700 px-3 py-1 text-xs font-black text-brand-950 shadow-[0_6px_18px_-6px_rgba(194, 65, 12, 0.45)]">-{discountPct(product)}% OFF</span></div>
+                <div className="relative"><ProductImage product={product} big /><span className="absolute left-0 top-3 -skew-x-6 rounded-r-full bg-gradient-to-r from-brand-500 to-brand-700 px-3 py-1 text-xs font-black text-brand-950 shadow-[0_6px_18px_-6px_rgba(79, 70, 229, 0.45)]">-{discountPct(product)}% OFF</span></div>
                 <div className="p-5 sm:p-6">
-                  <div className="flex items-start justify-between gap-2"><h3 className="text-xl font-black tracking-tight text-[#a1340b]">{product.name}</h3><button onClick={onClose} className="text-2xl leading-none text-[#8a6f5c] hover:text-[#a1340b]">×</button></div>
+                  <div className="flex items-start justify-between gap-2"><h3 className="text-xl font-black tracking-tight text-[#4338ca]">{product.name}</h3><button onClick={onClose} className="text-2xl leading-none text-[#5c658f] hover:text-[#4338ca]">×</button></div>
                   <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-brand-800">{product.category}</p>
-                  <div className="mt-2 flex items-center gap-1.5"><Stars rating={product.rating} /><span className="text-sm text-[#8a6f5c]">{product.rating} ({product.reviews.toLocaleString()} reviews)</span></div>
-                  <p className="mt-3 text-sm text-[#8a6f5c]">{product.desc}</p>
-                  <ul className="mt-3 space-y-1">{product.specs.map((s) => <li key={s} className="text-sm text-[#8a6f5c]">✓ {s}</li>)}</ul>
-                  <div className="mt-4 flex items-end gap-2"><span className="text-2xl font-extrabold tracking-tight text-brand-800">{tk(product.price)}</span><span className="text-[#8a6f5c] line-through">{tk(product.oldPrice)}</span><span className="rounded-full bg-brand-400/10 px-2 py-0.5 text-xs font-bold text-brand-800 ring-1 ring-brand-400/30">You save {tk(product.oldPrice - product.price)}</span></div>
-                  <p className="mt-3 text-xs text-[#8a6f5c]">🚚 {district === "Dhaka" ? "Inside Dhaka: ৳60" : "Outside Dhaka: ৳120"} · Free over ৳2,000 · 7-day replacement warranty</p>
+                  <div className="mt-2 flex items-center gap-1.5"><Stars rating={product.rating} /><span className="text-sm text-[#5c658f]">{product.rating} ({product.reviews.toLocaleString()} reviews)</span></div>
+                  <p className="mt-3 text-sm text-[#5c658f]">{product.desc}</p>
+                  <ul className="mt-3 space-y-1">{product.specs.map((s) => <li key={s} className="text-sm text-[#5c658f]">✓ {s}</li>)}</ul>
+                  <div className="mt-4 flex items-end gap-2"><span className="text-2xl font-extrabold tracking-tight text-brand-800">{tk(product.price)}</span><span className="text-[#5c658f] line-through">{tk(product.oldPrice)}</span><span className="rounded-full bg-brand-400/10 px-2 py-0.5 text-xs font-bold text-brand-800 ring-1 ring-brand-400/30">You save {tk(product.oldPrice - product.price)}</span></div>
+                  <p className="mt-3 text-xs text-[#5c658f]">🚚 {district === "Dhaka" ? "Inside Dhaka: ৳60" : "Outside Dhaka: ৳120"} · Free over ৳2,000 · 7-day replacement warranty</p>
                 </div>
               </div>
             </div>
-            <div className="sticky bottom-0 flex items-center gap-3 border-t border-[#cdeeea] bg-[#fdf6ee] p-3 sm:p-4">
-              <div className="flex shrink-0 items-center rounded-full border border-[#cdeeea] bg-[#fdf6ee] text-[#8a6f5c]">
+            <div className="sticky bottom-0 flex items-center gap-3 border-t border-[#cdd6f7] bg-[#f3f5ff] p-3 sm:p-4">
+              <div className="flex shrink-0 items-center rounded-full border border-[#cdd6f7] bg-[#f3f5ff] text-[#5c658f]">
                 <button onClick={() => onQtyChange(Math.max(1, qty - 1))} className="px-3 py-2 text-lg" aria-label="Decrease quantity">−</button>
                 <span className="w-8 text-center font-bold">{qty}</span>
                 <button onClick={() => onQtyChange(qty + 1)} className="px-3 py-2 text-lg" aria-label="Increase quantity">+</button>
               </div>
-              <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(product.id, qty)} className="flex-1 rounded-full bg-gradient-to-r from-brand-500 to-brand-700 py-3 font-bold text-brand-950 shadow-[0_8px_24px_-8px_rgba(194, 65, 12, 0.4)] transition hover:brightness-110 active:scale-[0.99]">Add To Cart</motion.button>
-              <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(product.id, qty, true)} className="shrink-0 rounded-full bg-[#fdf6ee] px-4 py-3 text-sm font-bold text-[#a1340b] shadow-sm ring-1 ring-brand-400/40 transition hover:bg-[#e2efed] active:scale-[0.98]">Buy Now</motion.button>
+              <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(product.id, qty)} className="flex-1 rounded-full bg-gradient-to-r from-brand-500 to-brand-700 py-3 font-bold text-brand-950 shadow-[0_8px_24px_-8px_rgba(79, 70, 229, 0.4)] transition hover:brightness-110 active:scale-[0.99]">Add To Cart</motion.button>
+              <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(product.id, qty, true)} className="shrink-0 rounded-full bg-[#f3f5ff] px-4 py-3 text-sm font-bold text-[#4338ca] shadow-sm ring-1 ring-brand-400/40 transition hover:bg-[#dfe4fb] active:scale-[0.98]">Buy Now</motion.button>
             </div>
           </motion.div>
         </motion.div>

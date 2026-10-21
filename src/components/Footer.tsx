@@ -32,15 +32,15 @@ export default function Footer({ onCategoryChange }: FooterProps) {
           Discover original gadgets, smart devices, audio products, mobile accessories and electronics at competitive prices with nationwide delivery across Bangladesh.
         </p>
         <div className="mt-5 grid gap-3 sm:grid-cols-2">
-          <div className="lagoon-glow flex items-center gap-3 rounded-[18px] border border-brand-400/25 bg-paper p-4">
-            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-brand-500/15 text-xl ring-1 ring-brand-400/30">💬</span>
+          <div className="lagoon-glow flex items-center gap-3 rounded-[1.75rem] border border-brand-400/25 bg-paper p-4">
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-500/15 text-xl ring-1 ring-brand-400/30">💬</span>
             <div>
               <p className="text-xs text-mute">WhatsApp</p>
               <p className="font-bold text-ink">+880 1700-000000</p>
             </div>
           </div>
-          <div className="lagoon-glow flex items-center gap-3 rounded-[18px] border border-brand-400/25 bg-paper p-4">
-            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-brand-500/15 text-xl ring-1 ring-brand-400/30">📞</span>
+          <div className="lagoon-glow flex items-center gap-3 rounded-[1.75rem] border border-brand-400/25 bg-paper p-4">
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-500/15 text-xl ring-1 ring-brand-400/30">📞</span>
             <div>
               <p className="text-xs text-mute">Customer Care</p>
               <p className="font-bold text-ink">+880 1700-000000</p>
@@ -80,7 +80,7 @@ export default function Footer({ onCategoryChange }: FooterProps) {
           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-brand-700">Get in Touch</p>
             <h3 className="mt-1.5 text-lg font-black tracking-tight text-ink">We&apos;re Here to Help</h3>
-            <div className="lagoon-glow mt-3 rounded-[18px] border border-brand-400/25 bg-paper p-5">
+            <div className="lagoon-glow mt-3 rounded-[1.75rem] border border-brand-400/25 bg-paper p-5">
               <p className="text-xs text-mute">Warranty Support</p>
               <p className="mt-1 font-bold text-ink">📞 +880 1700-000000</p>
               <p className="mt-1 text-sm">✉️ hello@gadzonebd.example</p>
