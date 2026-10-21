@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Signal beacon: cyan, lime and violet light clouds drifting over the midnight grid.
+// Kiln glow: forge-orange, ember-rose and saffron heat clouds drifting over the cocoa weave.
 const GLOWS = [
-  { left: "4%", top: "10%", size: 150, delay: "0s", dur: "14s", c: "rgba(6, 182, 212, 0.28)" },
-  { left: "72%", top: "4%", size: 200, delay: "-4s", dur: "15s", c: "rgba(139, 92, 246, 0.14)" },
-  { left: "44%", top: "44%", size: 120, delay: "-7s", dur: "13s", c: "rgba(125, 211, 252, 0.24)" },
-  { left: "86%", top: "50%", size: 110, delay: "-2s", dur: "14s", c: "rgba(163, 230, 53, 0.2)" },
+  { left: "4%", top: "10%", size: 150, delay: "0s", dur: "14s", c: "rgba(249, 115, 22, 0.28)" },
+  { left: "72%", top: "4%", size: 200, delay: "-4s", dur: "15s", c: "rgba(244, 63, 94, 0.14)" },
+  { left: "44%", top: "44%", size: 120, delay: "-7s", dur: "13s", c: "rgba(253, 186, 116, 0.24)" },
+  { left: "86%", top: "50%", size: 110, delay: "-2s", dur: "14s", c: "rgba(251, 191, 36, 0.2)" },
 ];
 
-// signal sparks: light motes drifting through the night wash.
+// ember sparks: warm motes rising through the kiln wash.
 const DOTS = [
-  { left: "8%", delay: "0s", dur: "7.2s", s: 22, c: "#06b6d4" },
-  { left: "21%", delay: "-1.4s", dur: "7.8s", s: 16, c: "#7dd3fc" },
-  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 24, c: "#8b5cf6" },
-  { left: "53%", delay: "-0.8s", dur: "8s", s: 18, c: "#a3e635" },
-  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 22, c: "#a3e635" },
-  { left: "82%", delay: "-2s", dur: "7.9s", s: 15, c: "#38bdf8" },
-  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 20, c: "#0ea5e9" },
+  { left: "8%", delay: "0s", dur: "7.2s", s: 22, c: "#f97316" },
+  { left: "21%", delay: "-1.4s", dur: "7.8s", s: 16, c: "#fed7aa" },
+  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 24, c: "#f43f5e" },
+  { left: "53%", delay: "-0.8s", dur: "8s", s: 18, c: "#fbbf24" },
+  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 22, c: "#fbbf24" },
+  { left: "82%", delay: "-2s", dur: "7.9s", s: 15, c: "#fb923c" },
+  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 20, c: "#f97316" },
 ];
 
 // Ticker phrases reuse the hero's existing stats copy.
@@ -68,49 +68,56 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* night grid + signal wash */}
+      {/* cocoa weave + kiln wash */}
       <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
       <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-brand-950/60 via-popblue-soft/40 to-transparent" />
 
-      {/* signal beacon: a cyan beacon with tilted neon rings and
-          drifting light motes, offset left */}
-      <div aria-hidden className="pointer-events-none absolute -left-44 -top-36 z-0 hidden opacity-90 sm:block">
+      {/* kiln ember: a forge-orange ember sun with stacked horizontal
+          heat rings and rising sparks, offset right */}
+      <div aria-hidden className="pointer-events-none absolute -right-40 -top-32 z-0 hidden opacity-90 sm:block">
         <div className="relative h-[600px] w-[600px]">
           <div className="nebula-core absolute inset-8 rounded-full blur-2xl" />
           <div className="orbit-rings pop-spin absolute inset-0" />
-          {/* tilted ring system */}
-          {[0, 60, 120].map((r) => (
+          {/* stacked heat rings: flattened ellipses, like warmth pooling outward */}
+          {[0, 1, 2, 3].map((r) => (
             <span
               key={r}
-              className="absolute left-1/2 top-1/2 h-[46%] w-[88%] origin-center -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-brand-300/60"
-              style={{ transform: `translate(-50%, -50%) rotate(${r}deg) scaleY(0.42)`, boxShadow: "0 0 24px 2px rgba(125, 211, 252, 0.4)" }}
+              className="absolute left-1/2 top-1/2 origin-center -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-brand-400/50"
+              style={{
+                width: `${92 - r * 14}%`,
+                height: `${34 - r * 4}%`,
+                transform: `translate(-50%, -50%) scaleY(0.5)`,
+                top: `${50 + r * 9}%`,
+                boxShadow: "0 0 24px 2px rgba(249, 115, 22, 0.35)",
+                opacity: 1 - r * 0.18,
+              }}
             />
           ))}
-          {/* orbiting comet sparks */}
-          {Array.from({ length: 8 }).map((_, i) => {
-            const a = (i / 8) * Math.PI * 2;
-            const x = 50 + 38 * Math.cos(a);
-            const y = 50 + 38 * Math.sin(a);
+          {/* rising ember sparks */}
+          {Array.from({ length: 10 }).map((_, i) => {
+            const x = 12 + ((i * 37) % 76);
+            const y = 8 + ((i * 53) % 70);
             return (
               <span
                 key={i}
-                className="pop-bob absolute h-5 w-5 rounded-full bg-gold shadow-[0_0_18px_4px_rgba(163, 230, 53,0.55)] ring-2 ring-white/60"
-                style={{ left: `${x}%`, top: `${y}%`, animationDelay: `${-i * 0.8}s` }}
+                className="pop-bob absolute h-4 w-4 rounded-full bg-gold shadow-[0_0_18px_4px_rgba(251, 191, 36,0.55)] ring-2 ring-white/60"
+                style={{ left: `${x}%`, top: `${y}%`, animationDelay: `${-i * 0.7}s` }}
               />
             );
           })}
-          {/* the signal beacon itself */}
-          <div className="absolute inset-44 rounded-full border-2 border-brand-200/80 bg-[radial-gradient(circle_at_38%_32%,#e0f2fe_0%,#06b6d4_38%,#155e75_68%,#164e63_100%)] shadow-[0_0_90px_28px_rgba(125, 211, 252,0.35)]" />
+          {/* the ember sun itself */}
+          <div className="absolute inset-44 rounded-full border-2 border-brand-200/80 bg-[radial-gradient(circle_at_50%_62%,#fff7ed_0%,#fdba74_30%,#f97316_55%,#9a3412_82%,#431407_100%)] shadow-[0_0_90px_28px_rgba(249, 115, 22,0.4)]" />
           <div className="absolute inset-44 rounded-full border border-white/40" />
-          {/* heat bands */}
+          {/* flame tongues licking the lower half */}
           <div className="absolute inset-44 overflow-hidden rounded-full">
-            <div className="absolute left-[8%] right-[8%] top-[30%] h-6 rounded-full bg-brand-950/25 blur-md" />
-            <div className="absolute left-[18%] right-[18%] top-[58%] h-4 rounded-full bg-gold/25 blur-md" />
+            <div className="absolute bottom-[6%] left-[30%] h-16 w-10 rounded-t-full bg-gold/40 blur-md" />
+            <div className="absolute bottom-[10%] left-[55%] h-12 w-8 rounded-t-full bg-brand-400/50 blur-md" />
+            <div className="absolute bottom-[8%] left-[70%] h-14 w-9 rounded-t-full bg-popblue/30 blur-md" />
           </div>
         </div>
       </div>
 
-      {/* drifting signal swell */}
+      {/* drifting kiln swell */}
       <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
         {GLOWS.map((g, i) => (
           <div
@@ -121,14 +128,14 @@ export default function Hero({ onQuickView }: HeroProps) {
         ))}
       </div>
 
-      {/* signal motes drifting down over the beacon */}
+      {/* ember motes rising over the kiln */}
       <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden overflow-hidden sm:block">
         {DOTS.map((r, i) => (
           <Dot key={i} {...r} />
         ))}
       </div>
 
-      {/* 4-banner carousel in a signal frame with a neon top edge */}
+      {/* 4-banner carousel in an ember frame with a glowing left edge */}
       <div className="relative">
         <div className="mx-auto max-w-7xl px-4 pt-8 sm:px-6">
           <div className="pop-lift overflow-hidden bg-paper">
@@ -142,8 +149,8 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* signal ticker: neon ribbon band, marquee of the shop's own promises */}
-      <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/40 bg-gradient-to-r from-brand-400 via-gold to-popblue py-3 shadow-[0_18px_44px_-20px_rgba(139, 92, 246, 0.6)]">
+      {/* ember ticker: ribbon band, marquee of the shop's own promises */}
+      <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/40 bg-gradient-to-r from-brand-400 via-gold to-popblue py-3 shadow-[0_18px_44px_-20px_rgba(244, 63, 94, 0.6)]">
         <div className="overflow-hidden py-2">
           <div className="pop-ticker flex w-max items-center gap-8 pr-8">
             {[...TICKER, ...TICKER].map((t, i) => (
@@ -176,7 +183,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full bg-gradient-to-r from-brand-400 via-gold to-popblue px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-950 shadow-[0_16px_38px_-14px_rgba(139, 92, 246, 0.6)]">Handpicked for you</p>
+            <p className="inline-block rounded-full bg-gradient-to-r from-brand-400 via-gold to-popblue px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-950 shadow-[0_16px_38px_-14px_rgba(244, 63, 94, 0.6)]">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="bg-gradient-to-r from-brand-300 to-gold bg-clip-text text-transparent">Picks</span></h2>
             <span className="zigzag mt-3 block w-44" aria-hidden />
           </div>
@@ -206,7 +213,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* signal divider into the page */}
+      {/* ember divider into the page */}
       <div aria-hidden className="zigzag absolute bottom-0 left-0 w-full opacity-90" />
     </section>
   );

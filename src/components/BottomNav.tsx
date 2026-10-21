@@ -18,7 +18,7 @@ export default function BottomNav({ cartCount, onCartOpen, onMenuOpen, onAccount
     { label: "Help", icon: "💬", onClick: onHelpOpen },
   ];
   return (
-    <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-[#ead8bf] bg-[#0b1120]/95 shadow-[0_-8px_24px_rgba(2, 6, 18, 0.25)] backdrop-blur md:hidden">
+    <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-[#ead8bf] bg-[#160f0a]/95 shadow-[0_-8px_24px_rgba(20, 12, 8, 0.25)] backdrop-blur md:hidden">
       <div className="grid grid-cols-4 pb-[env(safe-area-inset-bottom)]">
         {items.map((item) => (
           <motion.button
