@@ -25,9 +25,9 @@ export default function WeeklyChart({ orders }: { orders: StoredOrder[] }) {
   const total = days.reduce((s, d) => s + d.count, 0);
 
   return (
-    <div className="rounded-lg bg-[#faf5ea] p-5 shadow-sm ring-1 ring-[#ead8bf]">
+    <div className="rounded-lg bg-[#0b1120] p-5 shadow-sm ring-1 ring-[#ead8bf]">
       <div className="flex items-baseline justify-between gap-3">
-        <h3 className="font-black text-[#2b1708]">Orders — last 7 days</h3>
+        <h3 className="font-black text-[#082f49]">Orders — last 7 days</h3>
         <p className="text-sm font-bold text-brand-400">{total} order{total === 1 ? "" : "s"}</p>
       </div>
       {total === 0 ? (
@@ -38,7 +38,7 @@ export default function WeeklyChart({ orders }: { orders: StoredOrder[] }) {
           <div key={i} className="flex flex-1 flex-col items-center gap-2">
             <span className="text-xs font-bold text-[#8a6b4d]">{d.count}</span>
             <div
-              className={`w-full max-w-10 rounded-t-xl transition-all ${i === days.length - 1 ? "bg-brand-500" : "bg-[#faf5ea]/80"}`}
+              className={`w-full max-w-10 rounded-t-xl transition-all ${i === days.length - 1 ? "bg-brand-500" : "bg-[#0b1120]/80"}`}
               style={{ height: `${Math.max(d.count === 0 ? 4 : (d.count / max) * 100, 4)}%` }}
             />
             <span className="text-xs font-semibold text-[#8a6b4d]">{d.label}</span>

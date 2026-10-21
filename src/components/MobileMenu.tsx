@@ -46,10 +46,10 @@ export default function MobileMenu({ open, onClose, category, onCategoryChange }
             animate={{ x: 0, opacity: 1 }}
             exit={reduce ? { opacity: 0 } : { x: "-100%" }}
             transition={{ type: "tween", duration: 0.28, ease: "easeOut" }}
-            className="absolute left-0 top-0 flex h-full w-4/5 max-w-xs flex-col rounded-r-3xl border-r border-[#ead8bf] bg-[#faf5ea] shadow-2xl"
+            className="absolute left-0 top-0 flex h-full w-4/5 max-w-xs flex-col rounded-r-3xl border-r border-[#ead8bf] bg-[#0b1120] shadow-2xl"
           >
             <div className="flex items-center justify-between border-b border-[#ead8bf] px-5 py-4">
-              <span className="text-lg font-black text-[#9c3d2e]">
+              <span className="text-lg font-black text-[#8b5cf6]">
                 Gad<span className="text-brand-400">Zone</span> BD
               </span>
               <button onClick={onClose} className="rounded-full px-2 text-2xl text-[#8a6b4d] transition hover:bg-[#f7efdd] hover:text-brand-400" aria-label="Close menu">×</button>
@@ -76,7 +76,7 @@ export default function MobileMenu({ open, onClose, category, onCategoryChange }
                           document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" });
                           onClose();
                         }}
-                        className={`flex w-full items-center justify-between px-5 py-4 text-left text-[15px] font-semibold transition hover:bg-[#faf5ea] ${category === c ? "text-brand-800 hover:text-brand-800" : "text-[#8a6b4d]"}`}
+                        className={`flex w-full items-center justify-between px-5 py-4 text-left text-[15px] font-semibold transition hover:bg-[#0b1120] ${category === c ? "text-brand-800 hover:text-brand-800" : "text-[#8a6b4d]"}`}
                       >
                         {c === "All" ? "All Products" : c}
                         <span className="text-[#8a6b4d]">›</span>
@@ -90,7 +90,7 @@ export default function MobileMenu({ open, onClose, category, onCategoryChange }
                     <li key={link.label}>
                       <button
                         onClick={() => scrollTo(link.target)}
-                        className="flex w-full items-center justify-between px-5 py-4 text-left text-[15px] font-semibold text-[#8a6b4d] transition hover:bg-[#faf5ea]"
+                        className="flex w-full items-center justify-between px-5 py-4 text-left text-[15px] font-semibold text-[#8a6b4d] transition hover:bg-[#0b1120]"
                       >
                         {link.label}
                         <span className="text-[#8a6b4d]">›</span>
