@@ -58,19 +58,19 @@ export default function AccountModal({ open, onClose }: AccountModalProps) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.96, y: 8 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="max-h-[92vh] w-full max-w-md overflow-y-auto rounded-t-3xl border border-[#f0abfc] bg-[#fdf4ff] p-6 shadow-2xl sm:rounded-2xl"
+            className="max-h-[92vh] w-full max-w-md overflow-y-auto rounded-t-3xl border border-[#fab070] bg-[#fef6f0] p-6 shadow-2xl sm:rounded-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-start justify-between">
-              <h3 className="text-2xl font-black text-[#241b2e]">My Account</h3>
-              <button onClick={close} className="text-2xl leading-none text-[#9d94ab] hover:text-[#241b2e]" aria-label="Close account dialog">×</button>
+              <h3 className="text-2xl font-black text-[#2b2019]">My Account</h3>
+              <button onClick={close} className="text-2xl leading-none text-[#a39e93] hover:text-[#2b2019]" aria-label="Close account dialog">×</button>
             </div>
 
             {status === "loading" ? (
-              <p className="mt-6 text-center text-sm text-[#9d94ab]">Checking your session…</p>
+              <p className="mt-6 text-center text-sm text-[#a39e93]">Checking your session…</p>
             ) : session?.user ? (
               <div className="mt-5">
-                <div className="flex items-center gap-3 rounded-2xl bg-[#fdf4ff] p-4 ring-1 ring-[#f0abfc]">
+                <div className="flex items-center gap-3 rounded-2xl bg-[#fef6f0] p-4 ring-1 ring-[#fab070]">
                   {session.user.image ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src={session.user.image} alt="" className="h-12 w-12 rounded-full object-cover" />
@@ -80,40 +80,40 @@ export default function AccountModal({ open, onClose }: AccountModalProps) {
                     </span>
                   )}
                   <div className="min-w-0">
-                    <p className="truncate font-bold text-[#241b2e]">{session.user.name ?? "Signed in"}</p>
-                    <p className="truncate text-sm text-[#9d94ab]">{session.user.email}</p>
+                    <p className="truncate font-bold text-[#2b2019]">{session.user.name ?? "Signed in"}</p>
+                    <p className="truncate text-sm text-[#a39e93]">{session.user.email}</p>
                     <span className="mt-1 inline-block rounded-full bg-brand-400/15 px-2.5 py-0.5 text-xs font-bold text-brand-800 ring-1 ring-brand-400/30 capitalize">{session.user.role ?? "customer"}</span>
                   </div>
                 </div>
-                <Link href="/dashboard" onClick={close} className="mt-4 block rounded-full bg-gradient-to-r from-brand-500 to-brand-700 py-3 text-center font-bold text-white shadow-[0_8px_24px_-8px_rgba(192,38,211, 0.4)] transition hover:brightness-110 active:scale-[0.99]">
+                <Link href="/dashboard" onClick={close} className="mt-4 block rounded-full bg-gradient-to-r from-brand-500 to-brand-700 py-3 text-center font-bold text-white shadow-[0_8px_24px_-8px_rgba(224,74,24, 0.4)] transition hover:brightness-110 active:scale-[0.99]">
                   Go to My Dashboard
                 </Link>
                 {session.user.role === "admin" && (
-                  <Link href="/admin" onClick={close} className="mt-3 block rounded-full bg-[#fdf4ff] py-3 text-center font-black text-brand-800 shadow-sm ring-1 ring-brand-400/40 transition hover:bg-[#f0abfc] active:scale-[0.99]">
+                  <Link href="/admin" onClick={close} className="mt-3 block rounded-full bg-[#fef6f0] py-3 text-center font-black text-brand-800 shadow-sm ring-1 ring-brand-400/40 transition hover:bg-[#fab070] active:scale-[0.99]">
                     Go to Admin Dashboard
                   </Link>
                 )}
-                <button onClick={() => signOut({ callbackUrl: "/" })} className="mt-3 w-full rounded-full border border-[#f0abfc] py-3 font-bold text-[#9d94ab] shadow-sm transition hover:bg-[#fdf4ff] active:scale-[0.99]">
+                <button onClick={() => signOut({ callbackUrl: "/" })} className="mt-3 w-full rounded-full border border-[#fab070] py-3 font-bold text-[#a39e93] shadow-sm transition hover:bg-[#fef6f0] active:scale-[0.99]">
                   Sign out
                 </button>
               </div>
             ) : (
               <div className="mt-5">
-                <p className="text-sm text-[#9d94ab]">
+                <p className="text-sm text-[#a39e93]">
                   Sign in with Google to track your orders and view your dashboard. No password needed.
                 </p>
                 <button
                   onClick={handleGoogle}
                   disabled={loading}
-                  className="mt-4 flex w-full items-center justify-center gap-3 rounded-full border border-[#f0abfc] bg-[#fdf4ff] py-3 font-bold text-[#241b2e] shadow-sm ring-1 ring-[#f0abfc] transition hover:bg-[#f0abfc] active:scale-[0.99] disabled:opacity-60"
+                  className="mt-4 flex w-full items-center justify-center gap-3 rounded-full border border-[#fab070] bg-[#fef6f0] py-3 font-bold text-[#2b2019] shadow-sm ring-1 ring-[#fab070] transition hover:bg-[#fab070] active:scale-[0.99] disabled:opacity-60"
                 >
-                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#fdf4ff] text-base font-black text-[#9d94ab] shadow">G</span>
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#fef6f0] text-base font-black text-[#a39e93] shadow">G</span>
                   {loading ? "Connecting to Google…" : "Continue with Google"}
                 </button>
                 {error && (
                   <p className="mt-4 rounded-2xl bg-brand-400/10 p-4 text-center text-sm font-semibold text-brand-700 ring-1 ring-brand-400/30">{error}</p>
                 )}
-                <p className="mt-4 text-center text-xs text-[#9d94ab]">
+                <p className="mt-4 text-center text-xs text-[#a39e93]">
                   By continuing you agree to use your Google profile only for sign-in on this store.
                 </p>
               </div>
