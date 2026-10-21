@@ -27,7 +27,7 @@ export default function Footer({ onCategoryChange }: FooterProps) {
       <div aria-hidden className="pointer-events-none absolute bottom-0 right-1/4 h-56 w-56 rounded-full bg-gold/10 blur-[90px]" />
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-brand-400 to-transparent opacity-60" />
       <div className="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-16">
-        <p className="text-2xl font-black tracking-tight text-ink">Gad<span className="text-brand-700">Zone</span> BD</p>
+        <p className="text-2xl font-black tracking-tight text-ink">Gad<span className="text-brand-300">Zone</span> BD</p>
         <p className="mt-2.5 max-w-xl text-sm leading-relaxed text-mute">
           Discover original gadgets, smart devices, audio products, mobile accessories and electronics at competitive prices with nationwide delivery across Bangladesh.
         </p>
@@ -50,35 +50,35 @@ export default function Footer({ onCategoryChange }: FooterProps) {
 
         <div className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           <div>
-            <p className="text-xs font-bold uppercase tracking-widest text-brand-700">Explore</p>
+            <p className="text-xs font-bold uppercase tracking-widest text-brand-300">Explore</p>
             <h3 className="mt-1.5 text-lg font-black tracking-tight text-ink">GadZone BD</h3>
             <ul className="mt-3 space-y-2 text-sm">
               {EXPLORE_LINKS.map((link) => (
                 <li key={link.label}>
-                  <button onClick={() => scrollTo(link.target)} className="transition hover:text-brand-700">› {link.label}</button>
+                  <button onClick={() => scrollTo(link.target)} className="transition hover:text-brand-300">› {link.label}</button>
                 </li>
               ))}
             </ul>
             <p className="mt-5 text-xs font-bold uppercase tracking-widest text-mute">Categories</p>
             <div className="mt-2 flex flex-wrap gap-1.5">
               {CATEGORIES.filter((c) => c !== "All").map((c) => (
-                <button key={c} onClick={() => { onCategoryChange(c); document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" }); }} className="rounded-full bg-brand-100 px-3 py-1.5 text-xs font-semibold text-mute ring-1 ring-brand-400/25 transition hover:bg-brand-500 hover:text-white">{c}</button>
+                <button key={c} onClick={() => { onCategoryChange(c); document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" }); }} className="rounded-full bg-brand-100 px-3 py-1.5 text-xs font-semibold text-brand-800 ring-1 ring-brand-400/25 transition hover:bg-brand-500 hover:text-white">{c}</button>
               ))}
             </div>
           </div>
           <div>
-            <p className="text-xs font-bold uppercase tracking-widest text-brand-700">Support</p>
+            <p className="text-xs font-bold uppercase tracking-widest text-brand-300">Support</p>
             <h3 className="mt-1.5 text-lg font-black tracking-tight text-ink">Customer Care</h3>
             <ul className="mt-3 space-y-2 text-sm">
               {SUPPORT_LINKS.map((link) => (
                 <li key={link}>
-                  <button onClick={() => scrollTo("faq")} className="transition hover:text-brand-700">› {link}</button>
+                  <button onClick={() => scrollTo("faq")} className="transition hover:text-brand-300">› {link}</button>
                 </li>
               ))}
             </ul>
           </div>
           <div>
-            <p className="text-xs font-bold uppercase tracking-widest text-brand-700">Get in Touch</p>
+            <p className="text-xs font-bold uppercase tracking-widest text-brand-300">Get in Touch</p>
             <h3 className="mt-1.5 text-lg font-black tracking-tight text-ink">We&apos;re Here to Help</h3>
             <div className="lagoon-glow mt-3 rounded-[1.75rem] border border-brand-400/25 bg-paper p-5">
               <p className="text-xs text-mute">Warranty Support</p>
@@ -87,7 +87,7 @@ export default function Footer({ onCategoryChange }: FooterProps) {
               <p className="mt-1 text-sm">📍 Dhaka, Bangladesh</p>
             </div>
             <p className="mt-4 text-sm font-bold text-ink">We Accept</p>
-            <div className="mt-2 flex flex-wrap gap-2">{["bKash", "Nagad", "Rocket", "Visa", "Mastercard", "COD"].map((p) => <span key={p} className="rounded-full bg-brand-100 px-3 py-1.5 text-xs font-bold text-mute ring-1 ring-brand-400/25">{p}</span>)}</div>
+            <div className="mt-2 flex flex-wrap gap-2">{["bKash", "Nagad", "Rocket", "Visa", "Mastercard", "COD"].map((p) => <span key={p} className="rounded-full bg-brand-100 px-3 py-1.5 text-xs font-bold text-brand-800 ring-1 ring-brand-400/25">{p}</span>)}</div>
             <p className="mt-3 text-xs text-mute">100% secure payments</p>
           </div>
         </div>

@@ -32,7 +32,7 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
         <div className="relative cursor-pointer overflow-hidden rounded-[1rem] ring-1 ring-brand-200" onClick={() => onQuickView(p)}>
           <ProductImage product={p} />
           {p.badge === "New" && (
-            <span className="absolute left-3 top-3 rounded-full bg-gradient-to-r from-gold-deep to-gold px-3 py-1 text-[11px] font-black uppercase tracking-wider text-white shadow-[0_6px_16px_-6px_rgba(5,_150,_105, 0.7)]">New</span>
+            <span className="absolute left-3 top-3 rounded-full bg-gradient-to-r from-gold-deep to-gold px-3 py-1 text-[11px] font-black uppercase tracking-wider text-white shadow-[0_6px_16px_-6px_rgba(139,_92,_246, 0.7)]">New</span>
           )}
           {discountPct(p) > 0 && (
             <span className="starburst absolute -right-2 -top-2 flex h-16 w-16 items-center justify-center p-4 text-center text-[11px] font-black leading-tight">-{discountPct(p)}%</span>
@@ -41,12 +41,12 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
       </div>
       <div className="flex flex-1 flex-col items-start gap-1.5 px-5 pb-4 pt-1 text-left">
         <span className="rounded-full bg-brand-100 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.16em] text-brand-700 ring-1 ring-brand-200">{p.category}</span>
-        <h3 className="cursor-pointer text-[15px] font-bold leading-snug tracking-tight text-ink hover:text-brand-700" onClick={() => onQuickView(p)}>{p.name}</h3>
+        <h3 className="cursor-pointer text-[15px] font-bold leading-snug tracking-tight text-ink hover:text-brand-300" onClick={() => onQuickView(p)}>{p.name}</h3>
         <div className="flex items-center gap-1"><Stars rating={p.rating} /><span className="text-xs font-medium text-mute">{p.rating} ({p.reviews.toLocaleString()})</span></div>
-        <span className={`w-fit px-2.5 py-1 text-[11px] font-bold ${p.stock === "In Stock" ? "rounded-full bg-gold-soft text-gold-deep ring-1 ring-gold/30" : "rounded-full bg-brand-100 text-mute ring-1 ring-brand-200"}`}>{p.stock === "In Stock" ? "● In Stock" : "⚠ " + p.stock}</span>
+        <span className={`w-fit px-2.5 py-1 text-[11px] font-bold ${p.stock === "In Stock" ? "rounded-full bg-gold-soft text-gold-deep ring-1 ring-gold/30" : "rounded-full bg-brand-100 text-brand-800 ring-1 ring-brand-200"}`}>{p.stock === "In Stock" ? "● In Stock" : "⚠ " + p.stock}</span>
         <p className="line-clamp-2 text-[13px] leading-relaxed text-mute">{p.desc}</p>
         <div className="mt-auto flex w-full items-end justify-between gap-2 pt-2.5">
-          <span className="text-[22px] font-black tracking-tight text-brand-700">{tk(p.price)}</span>
+          <span className="text-[22px] font-black tracking-tight text-brand-300">{tk(p.price)}</span>
           <span className="text-xs font-bold text-mute line-through">{tk(p.oldPrice)}</span>
         </div>
       </div>
@@ -55,7 +55,7 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
           whileTap={{ scale: 0.98 }}
           onClick={() => onAddToCart(p.id)}
           aria-label={`Add ${p.name} to cart`}
-          className="flex w-full items-center justify-center gap-1.5 rounded-full bg-gradient-to-br from-brand-600 via-brand-500 to-gold-deep px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-[0_10px_24px_-8px_rgba(5,_150,_105, 0.65)] transition hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0 active:shadow-none"
+          className="flex w-full items-center justify-center gap-1.5 rounded-full bg-gradient-to-br from-brand-600 via-brand-500 to-gold-deep px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-[0_10px_24px_-8px_rgba(139,_92,_246, 0.65)] transition hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0 active:shadow-none"
         >
           🛒 Add
         </motion.button>
