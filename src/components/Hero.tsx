@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Cool mist wash: lagoon teal, seafoam mint and coral light across the hero.
+// Dusk aurora: violet, amber and sky light blooms across the hero.
 const GLOWS = [
-  { left: "4%", top: "8%", size: 170, delay: "0s", dur: "14s", c: "rgba(63, 178, 189, 0.28)" },
-  { left: "70%", top: "2%", size: 220, delay: "-4s", dur: "15s", c: "rgba(52, 211, 153, 0.20)" },
-  { left: "42%", top: "46%", size: 130, delay: "-7s", dur: "13s", c: "rgba(244, 93, 51, 0.14)" },
-  { left: "84%", top: "52%", size: 120, delay: "-2s", dur: "14s", c: "rgba(63, 178, 189, 0.18)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(124, 58, 237, 0.30)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(14, 165, 233, 0.22)" },
+  { left: "42%", top: "46%", size: 140, delay: "-7s", dur: "13s", c: "rgba(245, 158, 11, 0.16)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(139, 92, 246, 0.20)" },
 ];
 
-// Diagonal monsoon rain streaks slanting over the hero.
+// Fireflies rising through the evening air.
 const DOTS = [
-  { left: "8%", delay: "0s", dur: "7.2s", s: 34, c: "#3fb2bd" },
-  { left: "21%", delay: "-1.4s", dur: "7.8s", s: 46, c: "#a7f3d0" },
-  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 40, c: "#7dccd4" },
-  { left: "53%", delay: "-0.8s", dur: "8s", s: 52, c: "#f45d33" },
-  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 36, c: "#3fb2bd" },
-  { left: "82%", delay: "-2s", dur: "7.9s", s: 44, c: "#34d399" },
-  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 38, c: "#d7f2f2" },
+  { left: "8%", delay: "0s", dur: "7.2s", s: 10, c: "#a78bfa" },
+  { left: "21%", delay: "-1.4s", dur: "7.8s", s: 14, c: "#fcd34d" },
+  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 12, c: "#7dd3fc" },
+  { left: "53%", delay: "-0.8s", dur: "8s", s: 15, c: "#f59e0b" },
+  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 11, c: "#8b5cf6" },
+  { left: "82%", delay: "-2s", dur: "7.9s", s: 13, c: "#38bdf8" },
+  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 9, c: "#ddd6fe" },
 ];
 
 // Ticker phrases reuse the hero's existing stats copy.
@@ -46,16 +46,16 @@ function Dot({ left, delay, dur, s, c }: (typeof DOTS)[number]) {
   return (
     <div
       aria-hidden
-      className="pop-fall pointer-events-none absolute top-0"
+      className="pop-fall pointer-events-none absolute bottom-0"
       style={{ left, animationDelay: delay, animationDuration: dur }}
     >
       <div
         style={{
-          width: 3,
+          width: s,
           height: s,
           borderRadius: "9999px",
-          background: `linear-gradient(180deg, transparent 0%, ${c} 60%, ${c} 100%)`,
-          boxShadow: `0 0 10px 1px ${c}55`,
+          background: `radial-gradient(circle at 38% 34%, #ffffff 0%, ${c} 55%, ${c} 100%)`,
+          boxShadow: `0 0 14px 3px ${c}66`,
         }}
       />
     </div>
@@ -67,17 +67,17 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* droplet texture + river wash */}
+      {/* firefly texture + dusk wash */}
       <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-60" />
       <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-brand-200/30 via-transparent to-transparent" />
 
-      {/* monsoon moon: a pale luminous disc offset right, ringed by slow
-          mint swirls and expanding tide rings, with falling rain */}
+      {/* dusk sun: a warm violet disc low on the horizon, ringed by slow
+          amber rays and violet orbit rings, with fireflies rising */}
       <div aria-hidden className="pointer-events-none absolute -right-40 -top-32 z-0 hidden opacity-90 sm:block">
         <div className="relative h-[600px] w-[600px]">
           <div className="sun-disc absolute inset-8 rounded-full blur-xl" />
           <div className="sun-rays pop-spin absolute inset-0" />
-          {/* expanding tide rings around the moonpool */}
+          {/* orbit rings around the dusk sun */}
           {[0, 1, 2].map((r) => (
             <span
               key={r}
@@ -85,16 +85,16 @@ export default function Hero({ onQuickView }: HeroProps) {
               style={{
                 width: `${96 - r * 20}%`,
                 height: `${96 - r * 20}%`,
-                boxShadow: "0 0 24px 2px rgba(63, 178, 189, 0.35), inset 0 0 18px rgba(16, 185, 129, 0.12)",
+                boxShadow: "0 0 24px 2px rgba(124, 58, 237, 0.35), inset 0 0 18px rgba(245, 158, 11, 0.14)",
                 opacity: 1 - r * 0.22,
               }}
             />
           ))}
-          {/* sea-spray motes */}
+          {/* ember motes */}
           {Array.from({ length: 10 }).map((_, i) => {
             const x = 12 + ((i * 37) % 76);
             const y = 8 + ((i * 53) % 70);
-            const colors = ["#7dccd4", "#a7f3d0", "#34d399", "#ffffff"];
+            const colors = ["#c4b5fd", "#fcd34d", "#7dd3fc", "#ffffff"];
             return (
               <span
                 key={i}
@@ -109,25 +109,25 @@ export default function Hero({ onQuickView }: HeroProps) {
               />
             );
           })}
-          {/* wave silhouettes the moon glows across */}
+          {/* dusk ridge silhouettes the sun sinks behind */}
           <div aria-hidden className="absolute inset-x-10 bottom-24 h-40 rounded-t-[100%] bg-gradient-to-t from-brand-900/50 via-brand-700/25 to-transparent" />
           <div aria-hidden className="absolute inset-x-24 bottom-16 h-32 rounded-t-[100%] bg-gradient-to-t from-brand-800/40 via-brand-600/20 to-transparent" />
-          {/* coral shimmer peeking from behind the moon */}
+          {/* amber shimmer peeking from behind the sun */}
           <div className="absolute inset-44 translate-x-8 translate-y-7 rotate-[10deg] rounded-full bg-gold-400/60 blur-md" />
-          {/* the monsoon moon itself: pale sea-glass disc with a mint halo */}
-          <div className="absolute inset-44 rounded-full border-[3px] border-white/80 bg-[radial-gradient(circle_at_38%_34%,#ffffff_0%,#d7f2f2_40%,#7dccd4_70%,#1496a3_100%)] shadow-[0_0_80px_-8px_rgba(63,178,189,0.7),inset_0_0_40px_rgba(255,255,255,0.6)]" />
-          {/* moon texture speckle */}
+          {/* the dusk sun itself: warm violet disc with an amber halo */}
+          <div className="absolute inset-44 rounded-full border-[3px] border-white/80 bg-[radial-gradient(circle_at_38%_34%,#ffffff_0%,#ede9fe_40%,#c4b5fd_70%,#7c3aed_100%)] shadow-[0_0_80px_-8px_rgba(124,58,237,0.7),inset_0_0_40px_rgba(255,255,255,0.6)]" />
+          {/* sun texture speckle */}
           <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
             {[{l:"30%",t:"34%",s:46},{l:"58%",t:"52%",s:34},{l:"44%",t:"66%",s:24},{l:"64%",t:"30%",s:20}].map((crat, i) => (
               <span key={i} className="absolute rounded-full bg-brand-200/60" style={{ left: crat.l, top: crat.t, width: crat.s, height: crat.s }} />
             ))}
           </div>
-          {/* sea pearl */}
-          <div className="absolute inset-[250px] rounded-full bg-[radial-gradient(circle_at_40%_35%,#ffffff_0%,#a7f3d0_55%,#1496a3_100%)] shadow-[0_0_50px_-6px_rgba(52,211,153,0.9)]" />
+          {/* ember pearl */}
+          <div className="absolute inset-[250px] rounded-full bg-[radial-gradient(circle_at_40%_35%,#ffffff_0%,#fcd34d_55%,#f59e0b_100%)] shadow-[0_0_50px_-6px_rgba(245,158,11,0.9)]" />
         </div>
       </div>
 
-      {/* rising cool glow */}
+      {/* rising dusk glow */}
       <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
         {GLOWS.map((g, i) => (
           <div
@@ -138,17 +138,17 @@ export default function Hero({ onQuickView }: HeroProps) {
         ))}
       </div>
 
-      {/* rain streaks slanting through the hero */}
+      {/* fireflies drifting up through the hero */}
       <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden overflow-hidden sm:block">
         {DOTS.map((r, i) => (
           <Dot key={i} {...r} />
         ))}
       </div>
 
-      {/* 4-banner carousel in a tide frame edged with lagoon light */}
+      {/* 4-banner carousel in a dusk frame edged with violet light */}
       <div className="relative">
         <div className="mx-auto max-w-7xl px-4 pt-8 sm:px-6">
-          <div className="rounded-[2rem] bg-gradient-to-r from-brand-600 via-popblue-500 to-gold-500 p-1 shadow-[0_30px_60px_-24px_rgba(13,125,136,0.55)] ring-4 ring-brand-200/50">
+          <div className="rounded-[2.5rem] bg-gradient-to-r from-brand-600 via-popblue-500 to-gold-500 p-1 shadow-[0_30px_60px_-24px_rgba(124,58,237,0.55)] ring-4 ring-brand-200/50">
             <div className="overflow-hidden rounded-[calc(2rem-4px)] bg-white/70 backdrop-blur-xl">
               <div className="overflow-hidden p-2">
                 <div className="overflow-hidden rounded-[1.6rem] ring-1 ring-white/70">
@@ -160,8 +160,8 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* river ticker: deep-signal bar with the shop's own promises */}
-      <div aria-hidden className="relative z-10 mt-8 border-y border-white/40 bg-gradient-to-r from-brand-800/95 via-brand-950/95 to-brand-800/95 py-3 shadow-[0_18px_40px_-18px_rgba(13,125,136,0.6)] backdrop-blur-md">
+      {/* dusk ticker: deep-signal bar with the shop's own promises */}
+      <div aria-hidden className="relative z-10 mt-8 border-y border-white/40 bg-gradient-to-r from-brand-800/95 via-brand-950/95 to-brand-800/95 py-3 shadow-[0_18px_40px_-18px_rgba(124,58,237,0.6)] backdrop-blur-md">
         <div className="overflow-hidden py-2">
           <div className="pop-ticker flex w-max items-center gap-8 pr-8">
             {[...TICKER, ...TICKER].map((t, i) => (
@@ -187,7 +187,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 <span aria-hidden className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-brand-400 via-gold-400 to-popblue-400" />
                 <span className="relative block bg-gradient-to-br from-brand-600 to-popblue-600 bg-clip-text text-2xl font-black tracking-tight text-transparent">{s.v}</span>
                 <span className="relative mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-mute">{s.l}</span>
-                <span aria-hidden className="relative mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-brand-300 via-popblue-300 to-gold-300 shadow-[0_0_12px_rgba(62, 211, 195,0.6)]" />
+                <span aria-hidden className="relative mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-brand-300 via-popblue-300 to-gold-300 shadow-[0_0_12px_rgba(56,189,248,0.6)]" />
               </div>
             ))}
           </motion.div>
@@ -195,7 +195,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full border border-white/70 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-gold-700 shadow-[0_10px_24px_-12px_rgba(14, 103, 92,0.5)] backdrop-blur-md">Handpicked for you</p>
+            <p className="inline-block rounded-full border border-white/70 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-gold-700 shadow-[0_10px_24px_-12px_rgba(124,58,237,0.5)] backdrop-blur-md">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="relative bg-gradient-to-r from-brand-600 to-popblue-600 bg-clip-text text-transparent">Picks<span aria-hidden className="absolute inset-x-0 -bottom-1 h-2 rounded-full bg-gradient-to-r from-brand-300 to-popblue-300 opacity-70 blur-[3px]" /></span></h2>
             <span className="zigzag mt-4 block w-44" aria-hidden />
           </div>
@@ -225,7 +225,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* ember line into the page */}
+      {/* dusk line into the page */}
       <div aria-hidden className="zigzag absolute bottom-0 left-0 w-full opacity-90" />
     </section>
   );

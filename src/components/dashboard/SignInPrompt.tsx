@@ -11,15 +11,15 @@ type SignInPromptProps = {
 
 export default function SignInPrompt({ title, text, callbackUrl }: SignInPromptProps) {
   return (
-    <div className="mx-auto max-w-md rounded-lg bg-[#f4f9f8] p-8 text-center shadow-sm ring-1 ring-[#e0efed]">
+    <div className="mx-auto max-w-md rounded-lg bg-[#faf7ff] p-8 text-center shadow-sm ring-1 ring-[#ede9fe]">
       <p className="text-4xl" aria-hidden="true">👋</p>
-      <h1 className="mt-3 text-2xl font-black text-[#0d2231]">{title}</h1>
-      <p className="mt-2 text-sm text-[#93b8c4]">{text}</p>
+      <h1 className="mt-3 text-2xl font-black text-[#221a38]">{title}</h1>
+      <p className="mt-2 text-sm text-[#a8a3c7]">{text}</p>
       <button
         onClick={() => signIn("google", { callbackUrl })}
-        className="mt-5 flex w-full items-center justify-center gap-3 rounded-full border border-slate-300 bg-[#f4f9f8] py-3 font-bold text-[#93b8c4] shadow-sm transition hover:bg-[#f4f9f8]"
+        className="mt-5 flex w-full items-center justify-center gap-3 rounded-full border border-slate-300 bg-[#faf7ff] py-3 font-bold text-[#a8a3c7] shadow-sm transition hover:bg-[#faf7ff]"
       >
-        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#f4f9f8] text-base font-black shadow">G</span>
+        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#faf7ff] text-base font-black shadow">G</span>
         Continue with Google
       </button>
       <Link href="/" className="mt-4 inline-block text-sm font-bold text-brand-700">← Back to shop</Link>
