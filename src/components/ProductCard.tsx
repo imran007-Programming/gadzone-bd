@@ -32,7 +32,7 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
         <div className="relative cursor-pointer overflow-hidden rounded-[1rem] ring-1 ring-brand-200" onClick={() => onQuickView(p)}>
           <ProductImage product={p} />
           {p.badge === "New" && (
-            <span className="absolute left-3 top-3 rounded-full border-2 border-ink bg-gradient-to-r from-gold-deep to-gold px-3 py-1 text-[11px] font-black uppercase tracking-wider text-white shadow-[3px_3px_0_rgba(58,33,19,0.85)]">New</span>
+            <span className="absolute left-3 top-3 rounded-full border-2 border-ink bg-gradient-to-r from-gold-deep to-gold px-3 py-1 text-[11px] font-black uppercase tracking-wider text-white shadow-[3px_3px_0_rgba(19,42,33,0.85)]">New</span>
           )}
           {discountPct(p) > 0 && (
             <span className="starburst absolute -right-2 -top-2 flex h-16 w-16 items-center justify-center p-4 text-center text-[11px] font-black leading-tight">-{discountPct(p)}%</span>
@@ -55,7 +55,7 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
           whileTap={{ scale: 0.98 }}
           onClick={() => onAddToCart(p.id)}
           aria-label={`Add ${p.name} to cart`}
-          className="flex w-full items-center justify-center gap-1.5 rounded-full border-2 border-ink bg-gradient-to-br from-brand-600 via-brand-500 to-gold-deep px-4 py-2.5 text-xs font-black uppercase tracking-wider text-[#fdf8f1] shadow-[3px_3px_0_rgba(58,33,19,0.85)] transition hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0 active:shadow-none"
+          className="flex w-full items-center justify-center gap-1.5 rounded-full border-2 border-ink bg-gradient-to-br from-brand-600 via-brand-500 to-gold-deep px-4 py-2.5 text-xs font-black uppercase tracking-wider text-[#f1f8f3] shadow-[3px_3px_0_rgba(19,42,33,0.85)] transition hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0 active:shadow-none"
         >
           🛒 Add
         </motion.button>
