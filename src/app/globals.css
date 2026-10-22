@@ -1,62 +1,62 @@
 @import "tailwindcss";
 
 @theme {
-  /* Neon Bloom: deep-violet brand, hot-pink spark, electric-blue pop on
-     soft lavender paper. Frosted-glass cards with neon glows, aurora
-     gradient bands, floating light orbs, a rising sparkle field. */
+  /* Marigold Souk: burnt-terracotta brand, marigold spark, leaf-green pop
+     on warm ivory paper. Chunky ticket cards with hard offset shadows, a
+     rising souk sun, drifting marigold petals, woven-stripe texture. */
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = violet scale */
-  --color-brand-50: #f5f3ff;
-  --color-brand-100: #ede9fe;
-  --color-brand-200: #ddd6fe;
-  --color-brand-300: #c4b5fd;
-  --color-brand-400: #a78bfa;
-  --color-brand-500: #8b5cf6;
-  --color-brand-600: #7c3aed;
-  --color-brand-700: #6d28d9;
-  --color-brand-800: #5b21b6;
-  --color-brand-900: #4c1d95;
-  --color-brand-950: #2e1065;
-  --color-brand: #7c3aed;
-  --color-brand-dark: #6d28d9;
-  --color-brand-deep: #1e1b4b;
+  /* brand = terracotta scale */
+  --color-brand-50: #fdf5ef;
+  --color-brand-100: #fae8d9;
+  --color-brand-200: #f5cfae;
+  --color-brand-300: #efa87c;
+  --color-brand-400: #e67c45;
+  --color-brand-500: #d95d27;
+  --color-brand-600: #c24a1c;
+  --color-brand-700: #a03a18;
+  --color-brand-800: #7f2f19;
+  --color-brand-900: #5c2314;
+  --color-brand-950: #331307;
+  --color-brand: #c24a1c;
+  --color-brand-dark: #a03a18;
+  --color-brand-deep: #3a1a0e;
 
-  /* gold = hot-pink spark scale */
-  --color-gold-50: #fdf2f8;
-  --color-gold-100: #fce7f3;
-  --color-gold-200: #fbcfe8;
-  --color-gold-300: #f9a8d4;
-  --color-gold-400: #f472b6;
-  --color-gold-500: #ec4899;
-  --color-gold-600: #db2777;
-  --color-gold-700: #be185d;
-  --color-gold-800: #9d174d;
-  --color-gold-900: #831843;
-  --color-gold-950: #500724;
-  --color-gold: #ec4899;
-  --color-gold-deep: #be185d;
-  --color-gold-soft: #fce7f3;
+  /* gold = marigold scale */
+  --color-gold-50: #fffbf0;
+  --color-gold-100: #fef3d8;
+  --color-gold-200: #fde5a8;
+  --color-gold-300: #fbd26e;
+  --color-gold-400: #f9bd38;
+  --color-gold-500: #f5a623;
+  --color-gold-600: #d98a12;
+  --color-gold-700: #b36f0e;
+  --color-gold-800: #8f5812;
+  --color-gold-900: #6b4210;
+  --color-gold-950: #3f2608;
+  --color-gold: #f5a623;
+  --color-gold-deep: #b36f0e;
+  --color-gold-soft: #fef3d8;
 
-  /* popblue = electric-blue pop scale */
-  --color-popblue-50: #f0f9ff;
-  --color-popblue-100: #e0f2fe;
-  --color-popblue-200: #bae6fd;
-  --color-popblue-300: #7dd3fc;
-  --color-popblue-400: #38bdf8;
-  --color-popblue-500: #0ea5e9;
-  --color-popblue-600: #0284c7;
-  --color-popblue-700: #0369a1;
-  --color-popblue-800: #075985;
-  --color-popblue-900: #0c4a6e;
-  --color-popblue-950: #082f49;
-  --color-popblue: #38bdf8;
-  --color-popblue-deep: #0369a1;
-  --color-popblue-soft: #e0f2fe;
+  /* popblue token now carries souk leaf-green */
+  --color-popblue-50: #f3f9f0;
+  --color-popblue-100: #e2f1dc;
+  --color-popblue-200: #c4e2b9;
+  --color-popblue-300: #99ca89;
+  --color-popblue-400: #6aae57;
+  --color-popblue-500: #489232;
+  --color-popblue-600: #367a27;
+  --color-popblue-700: #2c6222;
+  --color-popblue-800: #274f1f;
+  --color-popblue-900: #20401b;
+  --color-popblue-950: #0f220d;
+  --color-popblue: #489232;
+  --color-popblue-deep: #2c6222;
+  --color-popblue-soft: #e2f1dc;
 
-  --color-ink: #16173a;
-  --color-paper: #faf9ff;
-  --color-mute: #6d7194;
+  --color-ink: #2b1a10;
+  --color-paper: #fdf8ef;
+  --color-mute: #8a7360;
 }
 
 html { scroll-behavior: smooth; }
@@ -71,83 +71,81 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #faf9ff;
+  background-color: #fdf8ef;
   background-image:
-    radial-gradient(circle, rgba(124, 58, 237, 0.09) 1.3px, transparent 1.9px),
-    radial-gradient(ellipse 56% 30% at 88% -4%, rgba(56, 189, 248, 0.18), transparent 70%),
-    radial-gradient(ellipse 48% 28% at 8% 104%, rgba(236, 72, 153, 0.13), transparent 70%),
-    radial-gradient(ellipse 40% 26% at 52% 112%, rgba(139, 92, 246, 0.14), transparent 70%);
-  background-size: 26px 26px, auto, auto, auto;
-  color: #16173a;
+    repeating-linear-gradient(45deg, rgba(194, 74, 28, 0.045) 0 2px, transparent 2px 14px),
+    repeating-linear-gradient(-45deg, rgba(245, 166, 35, 0.05) 0 2px, transparent 2px 14px),
+    radial-gradient(ellipse 60% 34% at 85% -6%, rgba(245, 166, 35, 0.16), transparent 70%),
+    radial-gradient(ellipse 50% 30% at 6% 106%, rgba(194, 74, 28, 0.12), transparent 70%);
+  color: #2b1a10;
 }
-::selection { background: #f9a8d4; color: #2e1065; }
+::selection { background: #fbd26e; color: #3a1a0e; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #7c3aed, #ec4899); border-radius: 8px; border: 2px solid #faf9ff; }
-::-webkit-scrollbar-track { background: #eef0fb; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #c24a1c, #f5a623); border-radius: 8px; border: 2px solid #fdf8ef; }
+::-webkit-scrollbar-track { background: #f5ecdd; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Spark rise: tiny neon sparks drifting upward through the aurora. */
-@keyframes bloom-rise-anim {
-  0% { transform: translate3d(-8px, 140px, 0) scale(0.6); opacity: 0; }
-  25% { opacity: 0.95; }
-  70% { opacity: 0.7; }
-  100% { transform: translate3d(14px, -140px, 0) scale(1.05); opacity: 0; }
+/* Petal fall: marigold petals drifting down through the souk air. */
+@keyframes souk-petal-fall {
+  0% { transform: translate3d(-10px, -130px, 0) rotate(-18deg) scale(0.7); opacity: 0; }
+  18% { opacity: 0.9; }
+  55% { transform: translate3d(10px, 10px, 0) rotate(14deg) scale(1); }
+  82% { opacity: 0.75; }
+  100% { transform: translate3d(-8px, 150px, 0) rotate(-12deg) scale(0.9); opacity: 0; }
 }
-.pop-fall { animation: bloom-rise-anim 7.5s ease-in infinite; }
+.pop-fall { animation: souk-petal-fall 9s linear infinite; }
 
-/* Orb drift: slow lateral sway of the aurora orbs. */
+/* Heat drift: slow lateral sway of the warm haze. */
 @keyframes orb-drift {
   0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.75; }
   50% { transform: translate3d(3vw, -0.8rem, 0) scale(1.12); opacity: 1; }
 }
 .pop-drift { animation: orb-drift 30s ease-in-out infinite; }
 
-/* Float: a gentle hovering pulse for neon accents. */
+/* Bob: a gentle hovering pulse for sun accents. */
 @keyframes bloom-float {
   0%, 100% { transform: translateY(0) scale(1); opacity: 0.85; }
   50% { transform: translateY(-10px) scale(1.06); opacity: 1; }
 }
 .pop-bob { animation: bloom-float 3.6s ease-in-out infinite; }
 
-/* Halo ring: steady rotation for the aurora ring disc. */
+/* Sun wheel: steady rotation for the souk sun disc. */
 @keyframes halo-wheel {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: halo-wheel 48s linear infinite; }
 
-/* Bloom ticker: infinite marquee (rightward drift). */
+/* Souk ticker: infinite marquee (rightward drift). */
 @keyframes bloom-ticker {
   from { transform: translateX(-50%); }
   to { transform: translateX(0); }
 }
 .pop-ticker { animation: bloom-ticker 34s linear infinite; }
 
-/* Bloom bands: violet -> pink -> blue neon signal bands. */
+/* Souk ribbon: terracotta -> marigold -> leaf diagonal ticket bands. */
 .pop-stripes {
-  background-image: linear-gradient(115deg, #7c3aed 0%, #7c3aed 22%, #ec4899 22%, #ec4899 48%, #38bdf8 48%, #38bdf8 74%, #6d28d9 74%);
-  background-size: 120px 120px;
+  background-image: repeating-linear-gradient(-55deg, #c24a1c 0 14px, #f5a623 14px 28px, #489232 28px 42px);
 }
 
-/* Bloom card: frosted-glass card with a neon gradient border, soft
-   violet glow underneath, and a pink shimmer that washes over on hover. */
+/* Souk ticket card: thick terracotta border, hard offset shadow, and a
+   woven ribbon stub across the top edge; the whole ticket hops on hover. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(167, 139, 250, 0.45);
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-radius: 2rem;
-  box-shadow: 0 18px 44px -18px rgba(124, 58, 237, 0.35), 0 4px 14px -6px rgba(236, 72, 153, 0.18);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 2px solid #efa87c;
+  background: #fffdf7;
+  border-radius: 1.25rem;
+  box-shadow: 7px 7px 0 rgba(194, 74, 28, 0.9);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .pop-lift::before {
   content: "";
   position: absolute;
   inset: 0 0 auto 0;
-  height: 4px;
-  background: linear-gradient(90deg, #7c3aed, #ec4899 45%, #38bdf8 80%, #6d28d9);
+  height: 9px;
+  background: repeating-linear-gradient(-55deg, #c24a1c 0 14px, #f5a623 14px 28px, #489232 28px 42px);
+  border-bottom: 2px solid #efa87c;
   pointer-events: none;
 }
 .pop-lift::after {
@@ -155,79 +153,78 @@ body {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: radial-gradient(circle at 84% 10%, rgba(236, 72, 153, 0.2), transparent 55%);
+  background: radial-gradient(circle at 84% 10%, rgba(245, 166, 35, 0.22), transparent 55%);
   opacity: 0;
-  transition: opacity 0.25s ease;
+  transition: opacity 0.22s ease;
   pointer-events: none;
 }
 .pop-lift:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 30px 60px -18px rgba(124, 58, 237, 0.5), 0 8px 24px -8px rgba(236, 72, 153, 0.35);
+  transform: translate(-3px, -3px);
+  box-shadow: 11px 11px 0 rgba(194, 74, 28, 0.9);
 }
 .pop-lift:hover::after { opacity: 1; }
 
-/* Bloom glass: shared by modals and drawers — a cool lavender mist sheet. */
+/* Souk glass: shared by modals and drawers — a warm parchment mist sheet. */
 .pop-glass {
-  background: rgba(250, 249, 255, 0.82);
-  backdrop-filter: blur(22px) saturate(1.25);
-  -webkit-backdrop-filter: blur(22px) saturate(1.25);
-  border: 1px solid rgba(167, 139, 250, 0.5);
-  border-radius: 1.75rem;
-  box-shadow: 0 24px 60px -20px rgba(124, 58, 237, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  background: rgba(253, 248, 239, 0.86);
+  backdrop-filter: blur(22px) saturate(1.15);
+  -webkit-backdrop-filter: blur(22px) saturate(1.15);
+  border: 2px solid rgba(239, 168, 124, 0.7);
+  border-radius: 1.5rem;
+  box-shadow: 8px 8px 0 rgba(194, 74, 28, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
-/* Neon badge: a glowing pink-to-violet discount bubble with a dashed
-   white ring, floating at a jaunty tilt. */
+/* Sun seal: a glowing marigold-to-terracotta discount medallion with a
+   dashed white ring, floating at a jaunty tilt. */
 .starburst {
-  background: radial-gradient(circle at 36% 30%, #f9a8d4 0%, #ec4899 52%, #7c3aed 115%);
+  background: radial-gradient(circle at 36% 30%, #fbd26e 0%, #f5a623 52%, #c24a1c 118%);
   color: #ffffff;
-  text-shadow: 0 1px 4px rgba(80, 7, 36, 0.6);
+  text-shadow: 0 1px 4px rgba(63, 38, 8, 0.65);
   border-radius: 9999px;
   transform: rotate(-6deg);
-  box-shadow: 0 12px 26px -10px rgba(236, 72, 153, 0.8), 0 0 18px rgba(167, 139, 250, 0.45);
+  box-shadow: 4px 4px 0 rgba(160, 58, 24, 0.85);
   outline: 2px dashed rgba(255, 255, 255, 0.95);
   outline-offset: -5px;
 }
 
-/* Violet-dot texture for hero bands. */
+/* Terracotta-dot texture for hero bands. */
 .halftone {
-  background-image: radial-gradient(circle, rgba(124, 58, 237, 0.13) 1.4px, transparent 2px);
+  background-image: radial-gradient(circle, rgba(194, 74, 28, 0.14) 1.4px, transparent 2px);
   background-size: 26px 26px;
 }
 
-/* Bloom divider: a neon shimmer line across the page. */
+/* Souk divider: a woven ribbon line across the page. */
 .zigzag {
-  height: 4px;
-  background: linear-gradient(90deg, transparent 2%, #7c3aed 28%, #ec4899 52%, #38bdf8 76%, transparent 98%);
+  height: 8px;
+  background: repeating-linear-gradient(-55deg, #c24a1c 0 16px, #f5a623 16px 32px, #489232 32px 48px);
   border-radius: 9999px;
-  opacity: 0.95;
-  box-shadow: 0 0 14px rgba(236, 72, 153, 0.4);
+  border: 1px solid rgba(160, 58, 24, 0.4);
 }
 
-/* Bloom awning: aurora canopy stripes with a neon hem. */
+/* Souk awning: terracotta canopy stripes with a marigold hem. */
 .bazaar-awning {
   background-image:
-    repeating-linear-gradient(90deg, rgba(124, 58, 237, 0.14) 0 26px, rgba(255, 255, 255, 0.55) 26px 52px),
-    linear-gradient(180deg, #ede9fe, #faf9ff);
-  border-bottom: 3px solid #ec4899;
+    repeating-linear-gradient(90deg, rgba(194, 74, 28, 0.16) 0 26px, rgba(255, 253, 247, 0.6) 26px 52px),
+    linear-gradient(180deg, #fae8d9, #fdf8ef);
+  border-bottom: 3px solid #f5a623;
 }
 
-/* Aurora core: layered cool radial for the neon sky. */
+/* Sunrise core: layered warm radial for the souk sun. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(56, 189, 248, 0.4) 0%, rgba(236, 72, 153, 0.28) 36%, rgba(124, 58, 237, 0.2) 60%, rgba(124, 58, 237, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(245, 166, 35, 0.5) 0%, rgba(217, 93, 39, 0.32) 38%, rgba(194, 74, 28, 0.18) 62%, rgba(194, 74, 28, 0) 76%);
 }
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(224, 242, 254, 0.9) 38%, rgba(125, 211, 252, 0.55) 62%, rgba(236, 72, 153, 0.28) 80%);
+    radial-gradient(circle at 50% 42%, #fffdf7 0%, #fef3d8 42%, #fbd26e 66%, #f5a623 88%);
 }
 
-/* Halo rings: concentric neon rings around the aurora orb. */
+/* Sun rays: warm marigold rays around the souk sun. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(236, 72, 153, 0.45) 0px,
-    rgba(236, 72, 153, 0.45) 4px,
+    rgba(245, 166, 35, 0.5) 0px,
+    rgba(245, 166, 35, 0.5) 4px,
     transparent 4px,
     transparent 30px
   );
@@ -238,8 +235,8 @@ body {
 .sun-rays {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(56, 189, 248, 0.4) 0px,
-    rgba(56, 189, 248, 0.4) 4px,
+    rgba(217, 93, 39, 0.42) 0px,
+    rgba(217, 93, 39, 0.42) 4px,
     transparent 4px,
     transparent 30px
   );
@@ -248,70 +245,62 @@ body {
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all bloom-styled. */
+/* Legacy aliases kept so untouched components still render — all souk-styled. */
 .lagoon-lift {
   position: relative;
-  border: 1px solid rgba(167, 139, 250, 0.45);
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-radius: 2rem;
-  box-shadow: 0 18px 44px -18px rgba(124, 58, 237, 0.35);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 2px solid #efa87c;
+  background: #fffdf7;
+  border-radius: 1.25rem;
+  box-shadow: 6px 6px 0 rgba(194, 74, 28, 0.75);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .lagoon-lift:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 30px 60px -18px rgba(124, 58, 237, 0.5);
+  transform: translate(-2px, -2px);
+  box-shadow: 9px 9px 0 rgba(194, 74, 28, 0.75);
 }
 .stamp-perf {
-  border: 2px dashed rgba(109, 40, 217, 0.55);
-  background: rgba(124, 58, 237, 0.06);
-  border-radius: 1.75rem;
-  box-shadow: 0 18px 44px -20px rgba(124, 58, 237, 0.4);
+  border: 2px dashed rgba(194, 74, 28, 0.55);
+  background: rgba(245, 166, 35, 0.07);
+  border-radius: 1.25rem;
+  box-shadow: 5px 5px 0 rgba(245, 166, 35, 0.35);
 }
 .ember-glow {
   position: relative;
-  border: 1px solid rgba(167, 139, 250, 0.45);
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-radius: 2rem;
-  box-shadow: 0 18px 44px -18px rgba(124, 58, 237, 0.35);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 2px solid #efa87c;
+  background: #fffdf7;
+  border-radius: 1.25rem;
+  box-shadow: 6px 6px 0 rgba(217, 93, 39, 0.7);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 30px 60px -18px rgba(236, 72, 153, 0.5);
+  transform: translate(-2px, -2px);
+  box-shadow: 9px 9px 0 rgba(217, 93, 39, 0.7);
 }
 .ripple-glow {
   position: relative;
-  border: 1px solid rgba(167, 139, 250, 0.45);
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-radius: 2rem;
-  box-shadow: 0 18px 44px -18px rgba(124, 58, 237, 0.35);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 2px solid #efa87c;
+  background: #fffdf7;
+  border-radius: 1.25rem;
+  box-shadow: 6px 6px 0 rgba(72, 146, 50, 0.55);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 30px 60px -18px rgba(56, 189, 248, 0.5);
+  transform: translate(-2px, -2px);
+  box-shadow: 9px 9px 0 rgba(72, 146, 50, 0.55);
 }
 .lagoon-glow {
   position: relative;
-  border: 1px solid rgba(167, 139, 250, 0.45);
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-radius: 2rem;
-  box-shadow: 0 18px 44px -18px rgba(124, 58, 237, 0.35);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 2px solid #c4e2b9;
+  background: #fffdf7;
+  border-radius: 1.25rem;
+  box-shadow: 6px 6px 0 rgba(72, 146, 50, 0.5);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 30px 60px -18px rgba(124, 58, 237, 0.5);
+  transform: translate(-2px, -2px);
+  box-shadow: 9px 9px 0 rgba(72, 146, 50, 0.5);
 }
