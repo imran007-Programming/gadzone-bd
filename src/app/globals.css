@@ -1,33 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-  /* Saffron Caravan: burnt-orange primary, marigold + roseberry accents,
-     warm cream canvas. */
+  /* Emerald Night Canopy: deep forest-night canvas, jade primary,
+     firefly-lime accent, teal mist highlights. */
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
-  --color-brand-50: #fef7ed;
-  --color-brand-100: #feefd7;
-  --color-brand-200: #fcdbab;
-  --color-brand-300: #fbc174;
-  --color-brand-400: #f8a13c;
-  --color-brand-500: #f68316;
-  --color-brand-600: #e96808;
-  --color-brand-700: #c25409;
-  --color-brand-800: #9a4310;
-  --color-brand-900: #7c3710;
-  --color-brand-950: #431c05;
-  --color-brand: #e96808;
-  --color-brand-dark: #9a4310;
-  --color-brand-deep: #431c05;
-  --color-gold: #fbbf24;
-  --color-gold-deep: #92400e;
-  --color-gold-soft: #fef3c7;
-  --color-ink: #42221b;
-  --color-paper: #fdf6ea;
-  --color-mute: #96705f;
-  --color-popblue: #f43f5e;
-  --color-popblue-deep: #9f1239;
-  --color-popblue-soft: #ffe4e6;
+  --color-brand-50: #ecfdf5;
+  --color-brand-100: #d1fae5;
+  --color-brand-200: #a7f3d0;
+  --color-brand-300: #6ee7b7;
+  --color-brand-400: #34d399;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-brand-900: #064e3b;
+  --color-brand-950: #022c22;
+  --color-brand: #059669;
+  --color-brand-dark: #065f46;
+  --color-brand-deep: #022c22;
+  --color-gold: #a3e635;
+  --color-gold-deep: #3f6212;
+  --color-gold-soft: #ecfccb;
+  --color-ink: #eaf7ef;
+  --color-paper: #03170f;
+  --color-mute: #8ea89b;
+  --color-popblue: #2dd4bf;
+  --color-popblue-deep: #0f766e;
+  --color-popblue-soft: #ccfbf1;
 }
 
 html { scroll-behavior: smooth; }
@@ -42,84 +42,84 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #fdf6ea;
+  background: #03170f;
   background-image:
-    linear-gradient(122deg, rgba(233, 104, 8, 0.10) 0%, rgba(251, 191, 36, 0.12) 42%, rgba(244, 63, 94, 0.07) 68%, transparent 100%),
-    radial-gradient(ellipse 56% 30% at 88% -6%, rgba(248, 161, 60, 0.22), transparent),
-    radial-gradient(ellipse 52% 28% at 4% 104%, rgba(251, 191, 36, 0.16), transparent),
-    repeating-linear-gradient(115deg, rgba(194, 84, 9, 0.05) 0 1px, transparent 1px 46px);
-  color: #42221b;
+    linear-gradient(118deg, rgba(16, 185, 129, 0.10) 0%, rgba(163, 230, 53, 0.07) 42%, rgba(45, 212, 191, 0.08) 68%, transparent 100%),
+    radial-gradient(ellipse 58% 30% at 88% -6%, rgba(52, 211, 153, 0.16), transparent),
+    radial-gradient(ellipse 54% 28% at 4% 104%, rgba(163, 230, 53, 0.10), transparent),
+    repeating-linear-gradient(115deg, rgba(52, 211, 153, 0.05) 0 1px, transparent 1px 48px);
+  color: #eaf7ef;
 }
-::selection { background: #fbbf24; color: #431c05; }
+::selection { background: #a3e635; color: #022c22; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #e96808, #f43f5e); border-radius: 8px; border: 2px solid #fdf6ea; }
-::-webkit-scrollbar-track { background: #f7e6c8; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #059669, #2dd4bf); border-radius: 8px; border: 2px solid #03170f; }
+::-webkit-scrollbar-track { background: #0b2e22; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Ember fall: spice motes drifting down over the warm canvas. */
+/* Firefly rise: glowing spores drifting upward through the canopy. */
 @keyframes ink-fall-anim {
-  0% { transform: translate3d(-8px, -60px, 0) rotate(20deg) scale(0.5); opacity: 0; }
-  25% { opacity: 0.85; }
-  60% { transform: translate3d(12px, 70px, 0) rotate(140deg) scale(1); opacity: 0.55; }
-  100% { transform: translate3d(-6px, 200px, 0) rotate(260deg) scale(0.65); opacity: 0; }
+  0% { transform: translate3d(6px, 90px, 0) scale(0.5); opacity: 0; }
+  25% { opacity: 0.9; }
+  60% { transform: translate3d(-10px, -60px, 0) scale(1); opacity: 0.6; }
+  100% { transform: translate3d(8px, -190px, 0) scale(0.6); opacity: 0; }
 }
 .pop-fall { animation: ink-fall-anim 10.4s ease-in infinite; }
 
-/* Caravan sway: slow lateral drift of warm air. */
+/* Canopy sway: slow lateral drift of night mist. */
 @keyframes ink-drift {
   0%, 100% { transform: translate3d(3vw, 0, 0) scale(1); opacity: 0.4; }
   50% { transform: translate3d(-3vw, -1rem, 0) scale(1.08); opacity: 0.72; }
 }
 .pop-drift { animation: ink-drift 22s ease-in-out infinite; }
 
-/* Lantern bob: a gentle lively float. */
+/* Firefly bob: a gentle lively float. */
 @keyframes seal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(10px) scale(0.97); }
 }
 .pop-bob { animation: seal-bob 5.2s ease-in-out infinite; }
 
-/* Compass wheel: steady rotation for the caravan rings. */
+/* Canopy wheel: steady rotation for the moon rings. */
 @keyframes orbit-wheel {
-  to { transform: rotate(-360deg); }
+  to { transform: rotate(360deg); }
 }
 .pop-spin { animation: orbit-wheel 96s linear infinite; }
 
-/* Market ticker: infinite marquee (rightward drift). */
+/* Night ticker: infinite marquee (rightward drift). */
 @keyframes ink-ticker {
   from { transform: translateX(-50%); }
   to { transform: translateX(0); }
 }
 .pop-ticker { animation: ink-ticker 30s linear infinite; }
 
-/* Market ribbon: cocoa -> saffron -> marigold -> berry diagonal bands,
-   like festival bunting strung over the bazaar lane. */
+/* Canopy ribbon: deep forest -> jade -> firefly -> teal diagonal bands,
+   like moonlight striping through leaves. */
 .pop-stripes {
-  background-image: linear-gradient(115deg, #431c05 0%, #431c05 18%, #e96808 18%, #e96808 42%, #fbbf24 42%, #fbbf24 66%, #f43f5e 66%);
+  background-image: linear-gradient(115deg, #022c22 0%, #022c22 18%, #059669 18%, #059669 42%, #a3e635 42%, #a3e635 66%, #2dd4bf 66%);
   background-size: 120px 120px;
 }
 
-/* Caravan card: warm cream panel with a cocoa frame and a burnt-orange
-   hard shadow, like a market stall sign; hover lifts it off the wall. */
+/* Canopy card: dark glassy panel with a jade rim and soft mist glow;
+   hover lifts it into the moonlight. */
 .pop-lift {
   position: relative;
-  border: 2px solid rgba(66, 34, 27, 0.85);
-  background: linear-gradient(180deg, #fffdf8 0%, #fdf6ea 100%);
+  border: 1px solid rgba(52, 211, 153, 0.22);
+  background: linear-gradient(180deg, rgba(14, 46, 33, 0.92) 0%, rgba(4, 24, 17, 0.96) 100%);
   border-radius: 1.75rem;
-  box-shadow: 7px 7px 0 rgba(154, 67, 16, 0.9), 0 1px 2px rgba(66, 34, 27, 0.10);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 24px 48px -20px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(167, 243, 208, 0.14);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
   overflow: hidden;
 }
 .pop-lift::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
-  height: 6px;
-  background: repeating-linear-gradient(90deg, #e96808 0 22px, #f43f5e 22px 44px);
-  border-bottom: 2px dashed rgba(66, 34, 27, 0.6);
+  left: 8%;
+  right: 8%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(52, 211, 153, 0.9), rgba(163, 230, 53, 0.9), transparent);
+  border-radius: 9999px;
   pointer-events: none;
 }
 .pop-lift::after {
@@ -127,80 +127,78 @@ body {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: radial-gradient(120% 60% at 50% -10%, rgba(248, 161, 60, 0.14), transparent 60%);
+  background: radial-gradient(120% 60% at 50% -10%, rgba(52, 211, 153, 0.12), transparent 60%);
   pointer-events: none;
 }
 .pop-lift:hover {
-  transform: translate(-2px, -4px);
-  border-color: #c25409;
-  box-shadow: 10px 10px 0 rgba(244, 63, 94, 0.85), 0 2px 4px rgba(66, 34, 27, 0.12);
+  transform: translateY(-5px);
+  border-color: rgba(52, 211, 153, 0.55);
+  box-shadow: 0 32px 60px -22px rgba(0, 0, 0, 0.65), 0 0 36px -8px rgba(16, 185, 129, 0.45), inset 0 1px 0 rgba(167, 243, 208, 0.2);
 }
 
-/* Spice glass: shared by modals and drawers — warm frosted glass. */
+/* Mist glass: shared by modals and drawers — deep frosted canopy glass. */
 .pop-glass {
-  background: rgba(253, 246, 234, 0.92);
+  background: rgba(6, 30, 22, 0.86);
   backdrop-filter: blur(20px) saturate(1.25);
   -webkit-backdrop-filter: blur(20px) saturate(1.25);
-  border: 2px solid rgba(66, 34, 27, 0.55);
+  border: 1px solid rgba(52, 211, 153, 0.28);
   border-radius: 1.75rem;
-  box-shadow: 7px 7px 0 rgba(154, 67, 16, 0.9), 0 28px 64px -26px rgba(233, 104, 8, 0.4);
+  box-shadow: 0 28px 64px -26px rgba(0, 0, 0, 0.7), 0 0 44px -12px rgba(16, 185, 129, 0.35);
 }
 
-/* Market rosette: roseberry medallion with a cream dashed ring, slight
-   counter-tilt, like a stall price token. */
+/* Firefly seal: lime medallion with a dark dashed ring, slight tilt,
+   like a glowing leaf token. */
 .starburst {
   border-radius: 9999px;
-  border: 2px dashed #fdf6ea;
-  outline: 2px solid rgba(233, 104, 8, 0.7);
+  border: 2px dashed #022c22;
+  outline: 2px solid rgba(163, 230, 53, 0.7);
   outline-offset: 3px;
-  background: radial-gradient(circle at 34% 28%, #ffe4e6 0%, #f43f5e 55%, #9f1239 100%);
-  color: #fdf6ea;
-  transform: rotate(-6deg);
-  box-shadow: 4px 4px 0 rgba(154, 67, 16, 0.85);
+  background: radial-gradient(circle at 34% 28%, #ecfccb 0%, #a3e635 55%, #4d7c0f 100%);
+  color: #022c22;
+  transform: rotate(6deg);
+  box-shadow: 0 0 18px 2px rgba(163, 230, 53, 0.55);
 }
 
-/* Spice field: fine saffron/berry dot weave for hero bands. */
+/* Spore field: fine jade/teal dot weave for hero bands. */
 .halftone {
   background-image:
-    radial-gradient(rgba(194, 84, 9, 0.20) 1.4px, transparent 1.5px),
-    radial-gradient(rgba(244, 63, 94, 0.14) 1px, transparent 1.1px);
+    radial-gradient(rgba(52, 211, 153, 0.20) 1.4px, transparent 1.5px),
+    radial-gradient(rgba(45, 212, 191, 0.14) 1px, transparent 1.1px);
   background-size: 28px 28px, 46px 46px;
   background-position: 0 0, 14px 23px;
 }
 
-/* Tent scallop: saffron/berry scalloped row divider, like a perforated
-   market ticket edge. */
+/* Canopy teeth: jade triangle-tooth divider, like leaf serration. */
 .zigzag {
   height: 16px;
   background:
-    radial-gradient(circle at 50% 100%, rgba(194, 84, 9, 0.9) 9px, transparent 10px) 0 0 / 40px 16px repeat-x,
-    radial-gradient(circle at 50% 0%, rgba(244, 63, 94, 0.75) 9px, transparent 10px) 20px 0 / 40px 16px repeat-x;
+    conic-gradient(from -45deg at 50% 100%, rgba(52, 211, 153, 0.55) 90deg, transparent 0) 0 0 / 36px 16px repeat-x;
   opacity: 0.9;
 }
 
-/* Market awning: saffron/cream striped canvas. */
+/* Night awning: jade/mist striped canopy. */
 .bazaar-awning {
   background-image:
-    repeating-linear-gradient(90deg, rgba(233, 104, 8, 0.12) 0 26px, rgba(253, 246, 234, 0.6) 26px 52px),
-    linear-gradient(180deg, #f7e6c8, #fdf6ea);
+    repeating-linear-gradient(90deg, rgba(16, 185, 129, 0.12) 0 26px, rgba(4, 24, 17, 0.6) 26px 52px),
+    linear-gradient(180deg, #0b2e22, #03170f);
 }
 
-/* Harvest sun: layered saffron-to-marigold radial for the hero glow. */
+/* Moon halo: layered jade-to-lime radial for the hero glow. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(254, 247, 237, 0.95) 0%, rgba(252, 219, 171, 0.5) 34%, rgba(251, 191, 36, 0.30) 58%, rgba(233, 104, 8, 0) 74%);
+    radial-gradient(circle at 50% 42%, rgba(167, 243, 208, 0.5) 0%, rgba(52, 211, 153, 0.28) 34%, rgba(163, 230, 53, 0.16) 58%, rgba(16, 185, 129, 0) 74%);
 }
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 42%, rgba(254, 247, 237, 0.95) 0%, rgba(252, 219, 171, 0.5) 34%, rgba(251, 191, 36, 0.30) 58%, rgba(233, 104, 8, 0) 74%);
+    radial-gradient(circle at 50% 42%, rgba(167, 243, 208, 0.5) 0%, rgba(52, 211, 153, 0.28) 34%, rgba(163, 230, 53, 0.16) 58%, rgba(16, 185, 129, 0) 74%);
 }
 
-/* Caravan rings: concentric saffron rings around the glow. */
+/* Moon rings: concentric jade rings around the glow. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(233, 104, 8, 0.30) 0px,
-    rgba(233, 104, 8, 0.30) 4px,
+    rgba(52, 211, 153, 0.30) 0px,
+    rgba(52, 211, 153, 0.30) 4px,
     transparent 4px,
     transparent 28px
   );
@@ -211,8 +209,8 @@ body {
 .sun-rays {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(251, 191, 36, 0.28) 0px,
-    rgba(251, 191, 36, 0.28) 4px,
+    rgba(163, 230, 53, 0.28) 0px,
+    rgba(163, 230, 53, 0.28) 4px,
     transparent 4px,
     transparent 28px
   );
@@ -221,66 +219,66 @@ body {
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all caravan-styled. */
+/* Legacy aliases kept so untouched components still render — all canopy-styled. */
 .lagoon-lift {
   position: relative;
-  border: 2px solid rgba(66, 34, 27, 0.85);
-  background: linear-gradient(180deg, #fffdf8 0%, #fdf6ea 100%);
+  border: 1px solid rgba(52, 211, 153, 0.22);
+  background: linear-gradient(180deg, rgba(14, 46, 33, 0.92) 0%, rgba(4, 24, 17, 0.96) 100%);
   border-radius: 1.75rem;
-  box-shadow: 7px 7px 0 rgba(154, 67, 16, 0.9), 0 1px 2px rgba(66, 34, 27, 0.10);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 24px 48px -20px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(167, 243, 208, 0.14);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
   overflow: hidden;
 }
 .lagoon-lift:hover {
-  transform: translate(-2px, -4px);
-  border-color: #c25409;
-  box-shadow: 10px 10px 0 rgba(244, 63, 94, 0.85), 0 2px 4px rgba(66, 34, 27, 0.12);
+  transform: translateY(-5px);
+  border-color: rgba(52, 211, 153, 0.55);
+  box-shadow: 0 32px 60px -22px rgba(0, 0, 0, 0.65), 0 0 36px -8px rgba(16, 185, 129, 0.45), inset 0 1px 0 rgba(167, 243, 208, 0.2);
 }
 .stamp-perf {
-  border: 2px dashed #c25409;
-  background: rgba(251, 193, 116, 0.12);
+  border: 2px dashed #047857;
+  background: rgba(16, 185, 129, 0.10);
   border-radius: 1.75rem;
-  box-shadow: 4px 4px 0 rgba(154, 67, 16, 0.85);
+  box-shadow: 0 18px 40px -18px rgba(0, 0, 0, 0.6), 0 0 28px -10px rgba(16, 185, 129, 0.4);
 }
 .ember-glow {
   position: relative;
-  border: 2px solid rgba(66, 34, 27, 0.85);
-  background: linear-gradient(180deg, #fffdf8 0%, #fdf6ea 100%);
+  border: 1px solid rgba(52, 211, 153, 0.22);
+  background: linear-gradient(180deg, rgba(14, 46, 33, 0.92) 0%, rgba(4, 24, 17, 0.96) 100%);
   border-radius: 1.75rem;
-  box-shadow: 7px 7px 0 rgba(154, 67, 16, 0.9), 0 1px 2px rgba(66, 34, 27, 0.10);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 24px 48px -20px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(167, 243, 208, 0.14);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
-  transform: translate(-2px, -4px);
-  border-color: #c25409;
-  box-shadow: 10px 10px 0 rgba(244, 63, 94, 0.85), 0 2px 4px rgba(66, 34, 27, 0.12);
+  transform: translateY(-5px);
+  border-color: rgba(52, 211, 153, 0.55);
+  box-shadow: 0 32px 60px -22px rgba(0, 0, 0, 0.65), 0 0 36px -8px rgba(16, 185, 129, 0.45), inset 0 1px 0 rgba(167, 243, 208, 0.2);
 }
 .ripple-glow {
   position: relative;
-  border: 2px solid rgba(66, 34, 27, 0.85);
-  background: linear-gradient(180deg, #fffdf8 0%, #fdf6ea 100%);
+  border: 1px solid rgba(52, 211, 153, 0.22);
+  background: linear-gradient(180deg, rgba(14, 46, 33, 0.92) 0%, rgba(4, 24, 17, 0.96) 100%);
   border-radius: 1.75rem;
-  box-shadow: 7px 7px 0 rgba(154, 67, 16, 0.9), 0 1px 2px rgba(66, 34, 27, 0.10);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 24px 48px -20px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(167, 243, 208, 0.14);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
-  transform: translate(-2px, -4px);
-  border-color: #c25409;
-  box-shadow: 10px 10px 0 rgba(244, 63, 94, 0.85), 0 2px 4px rgba(66, 34, 27, 0.12);
+  transform: translateY(-5px);
+  border-color: rgba(52, 211, 153, 0.55);
+  box-shadow: 0 32px 60px -22px rgba(0, 0, 0, 0.65), 0 0 36px -8px rgba(16, 185, 129, 0.45), inset 0 1px 0 rgba(167, 243, 208, 0.2);
 }
 .lagoon-glow {
   position: relative;
-  border: 2px solid rgba(66, 34, 27, 0.85);
-  background: linear-gradient(180deg, #fffdf8 0%, #fdf6ea 100%);
+  border: 1px solid rgba(52, 211, 153, 0.22);
+  background: linear-gradient(180deg, rgba(14, 46, 33, 0.92) 0%, rgba(4, 24, 17, 0.96) 100%);
   border-radius: 1.75rem;
-  box-shadow: 7px 7px 0 rgba(154, 67, 16, 0.9), 0 1px 2px rgba(66, 34, 27, 0.10);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 24px 48px -20px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(167, 243, 208, 0.14);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
-  transform: translate(-2px, -4px);
-  border-color: #c25409;
-  box-shadow: 10px 10px 0 rgba(244, 63, 94, 0.85), 0 2px 4px rgba(66, 34, 27, 0.12);
+  transform: translateY(-5px);
+  border-color: rgba(52, 211, 153, 0.55);
+  box-shadow: 0 32px 60px -22px rgba(0, 0, 0, 0.65), 0 0 36px -8px rgba(16, 185, 129, 0.45), inset 0 1px 0 rgba(167, 243, 208, 0.2);
 }
