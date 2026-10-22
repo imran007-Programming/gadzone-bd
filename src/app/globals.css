@@ -1,63 +1,63 @@
 @import "tailwindcss";
 
 @theme {
-  /* River Indigo: night-market on the river — cool porcelain-lavender
-     paper, deep indigo ink, violet primary, cyan secondary, magenta
-     signal accents; crisp glass-slab cards with violet hairlines and a
-     slow-orbit beacon treatment in the hero. */
+  /* Ember Souk: a warm spice-market — sun-baked cream paper, espresso
+     ink, chili primary, turmeric secondary, coriander signal accents;
+     stall-ticket cards with hard espresso shadows and perforated
+     edges, a big harvest-sun treatment in the hero. */
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = violet scale */
-  --color-brand-50: #f5f1ff;
-  --color-brand-100: #ece3ff;
-  --color-brand-200: #d9c7ff;
-  --color-brand-300: #bfa3ff;
-  --color-brand-400: #a27bff;
-  --color-brand-500: #8056f2;
-  --color-brand-600: #6a3de0;
-  --color-brand-700: #5733b5;
-  --color-brand-800: #452c8f;
-  --color-brand-900: #372771;
-  --color-brand-950: #1f1540;
-  --color-brand: #6a3de0;
-  --color-brand-dark: #5733b5;
-  --color-brand-deep: #372771;
+  /* brand = chili scale */
+  --color-brand-50: #fdf1e6;
+  --color-brand-100: #fae0c9;
+  --color-brand-200: #f6c39a;
+  --color-brand-300: #f09a62;
+  --color-brand-400: #e97134;
+  --color-brand-500: #d9481f;
+  --color-brand-600: #c03a14;
+  --color-brand-700: #962d10;
+  --color-brand-800: #75230d;
+  --color-brand-900: #5c1d0b;
+  --color-brand-950: #331007;
+  --color-brand: #c03a14;
+  --color-brand-dark: #962d10;
+  --color-brand-deep: #5c1d0b;
 
-  /* gold = cyan scale */
-  --color-gold-50: #ecfeff;
-  --color-gold-100: #cffafe;
-  --color-gold-200: #a5f3fc;
-  --color-gold-300: #67e8f9;
-  --color-gold-400: #22d3ee;
-  --color-gold-500: #06b6d4;
-  --color-gold-600: #0891b2;
-  --color-gold-700: #0e7490;
-  --color-gold-800: #155e75;
-  --color-gold-900: #164e63;
-  --color-gold-950: #083344;
-  --color-gold: #0891b2;
-  --color-gold-deep: #155e75;
-  --color-gold-soft: #cffafe;
+  /* gold = turmeric scale */
+  --color-gold-50: #fcf5e3;
+  --color-gold-100: #f7e7bf;
+  --color-gold-200: #f0d18c;
+  --color-gold-300: #e8bc55;
+  --color-gold-400: #e0a92e;
+  --color-gold-500: #d9930d;
+  --color-gold-600: #b8780a;
+  --color-gold-700: #94600a;
+  --color-gold-800: #755006;
+  --color-gold-900: #5c4007;
+  --color-gold-950: #382803;
+  --color-gold: #b8780a;
+  --color-gold-deep: #755006;
+  --color-gold-soft: #f7e7bf;
 
-  /* popblue = magenta signal scale */
-  --color-popblue-50: #fdf2f8;
-  --color-popblue-100: #fce7f3;
-  --color-popblue-200: #fbcfe8;
-  --color-popblue-300: #f9a8d4;
-  --color-popblue-400: #f472b6;
-  --color-popblue-500: #ec4899;
-  --color-popblue-600: #db2777;
-  --color-popblue-700: #be185d;
-  --color-popblue-800: #9d174d;
-  --color-popblue-900: #831843;
-  --color-popblue-950: #500724;
-  --color-popblue: #db2777;
-  --color-popblue-deep: #be185d;
-  --color-popblue-soft: #fce7f3;
+  /* popblue = coriander scale */
+  --color-popblue-50: #ecf9f1;
+  --color-popblue-100: #d1f0de;
+  --color-popblue-200: #a3ddbb;
+  --color-popblue-300: #6fca92;
+  --color-popblue-400: #43b96e;
+  --color-popblue-500: #2e9e5b;
+  --color-popblue-600: #238247;
+  --color-popblue-700: #1d6b3b;
+  --color-popblue-800: #175c33;
+  --color-popblue-900: #12482a;
+  --color-popblue-950: #082e18;
+  --color-popblue: #238247;
+  --color-popblue-deep: #1d6b3b;
+  --color-popblue-soft: #d1f0de;
 
-  --color-ink: #171430;
-  --color-paper: #fbfbff;
-  --color-mute: #6f6a8a;
+  --color-ink: #2b1a10;
+  --color-paper: #fdf8ef;
+  --color-mute: #8a7561;
 }
 
 html { scroll-behavior: smooth; }
@@ -72,149 +72,153 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #f1edfb;
+  background: #f7ecd7;
   background-image:
-    radial-gradient(ellipse 60% 34% at 86% -6%, rgba(106, 61, 224, 0.10), transparent 70%),
-    radial-gradient(ellipse 52% 30% at 6% 102%, rgba(8, 145, 178, 0.10), transparent 70%),
-    radial-gradient(ellipse 44% 28% at 50% 112%, rgba(236, 72, 153, 0.10), transparent 70%),
-    linear-gradient(rgba(106, 61, 224, 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(106, 61, 224, 0.055) 1px, transparent 1px);
-  background-size: auto, auto, auto, 34px 34px, 34px 34px;
-  color: #171430;
+    radial-gradient(ellipse 60% 34% at 86% -6%, rgba(217, 72, 31, 0.10), transparent 70%),
+    radial-gradient(ellipse 52% 30% at 6% 102%, rgba(184, 120, 10, 0.12), transparent 70%),
+    radial-gradient(ellipse 44% 28% at 50% 112%, rgba(46, 158, 91, 0.10), transparent 70%),
+    repeating-linear-gradient(45deg, rgba(43, 26, 16, 0.028) 0 2px, transparent 2px 9px),
+    repeating-linear-gradient(-45deg, rgba(43, 26, 16, 0.028) 0 2px, transparent 2px 9px);
+  color: #2b1a10;
 }
-::selection { background: #a5f3fc; color: #1f1540; }
+::selection { background: #f0d18c; color: #331007; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #6a3de0, #0891b2); border-radius: 8px; border: 2px solid #f1edfb; }
-::-webkit-scrollbar-track { background: #e6def7; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #c03a14, #b8780a); border-radius: 8px; border: 2px solid #f7ecd7; }
+::-webkit-scrollbar-track { background: #ecdfc9; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Signal pips: bright motes drifting upward through the cool haze. */
+/* Spice motes: warm motes drifting upward through the market air. */
 @keyframes bubble-rise-anim {
-  0% { transform: translate3d(-6px, 60px, 0) scale(0.6) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(6px, 60px, 0) scale(0.6) rotate(0deg); opacity: 0; }
   30% { opacity: 0.85; }
-  60% { transform: translate3d(8px, -70px, 0) scale(1.05) rotate(90deg); opacity: 0.55; }
-  100% { transform: translate3d(-6px, -200px, 0) scale(0.5) rotate(180deg); opacity: 0; }
+  60% { transform: translate3d(-8px, -70px, 0) scale(1.05) rotate(90deg); opacity: 0.55; }
+  100% { transform: translate3d(6px, -200px, 0) scale(0.5) rotate(180deg); opacity: 0; }
 }
 .pop-fall { animation: bubble-rise-anim 9.2s ease-in infinite; }
 
-/* Current drift: slow lateral drift of the cool haze layer. */
+/* Heat shimmer: slow lateral drift of the warm haze layer. */
 @keyframes tide-drift {
   0%, 100% { transform: translate3d(3vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(-3vw, 1rem, 0) scale(1.12); opacity: 0.8; }
 }
 .pop-drift { animation: tide-drift 26s ease-in-out infinite; }
 
-/* Beacon bob: a gentle lively float. */
+/* Lantern sway: a gentle lively swing. */
 @keyframes tide-bob {
-  0%, 100% { transform: translateY(0) rotate(4deg); }
-  50% { transform: translateY(-12px) rotate(0deg); }
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-10px) rotate(3deg); }
 }
 .pop-bob { animation: tide-bob 6.1s ease-in-out infinite; }
 
-/* Orbit wheel: steady rotation for the beacon rings. */
+/* Harvest spin: steady rotation for the sun rays. */
 @keyframes sonar-wheel {
   to { transform: rotate(360deg); }
 }
-.pop-spin { animation: sonar-wheel 64s linear infinite; }
+.pop-spin { animation: sonar-wheel 72s linear infinite; }
 
-/* Night-market ticker: infinite marquee (rightward drift). */
+/* Souk ticker: infinite marquee (rightward drift). */
 @keyframes tide-ticker {
   from { transform: translateX(-50%); }
   to { transform: translateX(0); }
 }
 .pop-ticker { animation: tide-ticker 34s linear infinite; }
 
-/* Signal bands: violet -> cyan -> magenta diagonal stripes. */
+/* Spice bands: chili -> turmeric -> coriander diagonal stripes. */
 .pop-stripes {
-  background-image: linear-gradient(115deg, #6a3de0 0%, #6a3de0 22%, #0891b2 22%, #0891b2 48%, #db2777 48%, #db2777 74%, #f1edfb 74%);
+  background-image: linear-gradient(115deg, #c03a14 0%, #c03a14 22%, #b8780a 22%, #b8780a 48%, #238247 48%, #238247 74%, #f7ecd7 74%);
   background-size: 120px 120px;
 }
 
-/* Signal slab: cool porcelain sheet with a violet hairline border and a
-   crisp cool shadow; hover lifts it and rims the edge in cyan. */
+/* Stall ticket: sun-baked cream card with a hard espresso shadow and a
+   perforated dashed inner edge; hover lifts it and rims the edge in chili. */
 .pop-lift {
   position: relative;
-  border: 1.5px solid #dcd3f5;
-  background: linear-gradient(155deg, #fbfbff 0%, #f3efff 100%);
-  border-radius: 1.75rem;
-  box-shadow: 0 16px 34px -18px rgba(55, 39, 113, 0.35), 0 2px 8px -2px rgba(55, 39, 113, 0.10);
-  transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+  border: 2px solid #2b1a10;
+  background: linear-gradient(155deg, #fffdf7 0%, #faf0dc 100%);
+  border-radius: 1.1rem;
+  box-shadow: 6px 6px 0 rgba(43, 26, 16, 0.9);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
+.pop-lift::after {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1.5px dashed rgba(43, 26, 16, 0.22);
+  border-radius: 0.8rem;
+  pointer-events: none;
+}
 .pop-lift:hover {
-  transform: translateY(-6px);
-  border-color: rgba(8, 145, 178, 0.55);
-  box-shadow: 0 26px 44px -18px rgba(55, 39, 113, 0.42), 0 0 34px -12px rgba(8, 145, 178, 0.4);
+  transform: translate(-2px, -4px);
+  box-shadow: 9px 10px 0 rgba(192, 58, 20, 0.85);
 }
 
-/* Cool glass: shared by modals and drawers — porcelain frosted sheet. */
+/* Warm glass: shared by modals and drawers — turmeric frosted sheet. */
 .pop-glass {
-  background: rgba(251, 251, 255, 0.9);
+  background: rgba(253, 248, 239, 0.94);
   backdrop-filter: blur(22px) saturate(1.15);
   -webkit-backdrop-filter: blur(22px) saturate(1.15);
-  border: 1.5px solid #dcd3f5;
-  border-radius: 1.75rem;
-  box-shadow: 0 28px 52px -22px rgba(55, 39, 113, 0.45), 0 0 34px -12px rgba(106, 61, 224, 0.3);
+  border: 2px solid #2b1a10;
+  border-radius: 1.1rem;
+  box-shadow: 8px 8px 0 rgba(43, 26, 16, 0.85), 0 0 40px -12px rgba(192, 58, 20, 0.35);
 }
 
-/* Beacon seal: magenta signal disc with a dashed cyan ring, slight tilt,
-   like a stamp pressed onto the night-market crate. */
+/* Pepper seal: scalloped chili-red discount stamp with a turmeric ring,
+   pressed onto the stall ticket at a jaunty tilt. */
 .starburst {
-  border-radius: 9999px;
-  border: 2px dashed #cffafe;
-  outline: 2px solid rgba(219, 39, 119, 0.6);
-  outline-offset: 3px;
-  background: radial-gradient(circle at 34% 28%, #f472b6 0%, #db2777 55%, #9d174d 100%);
-  color: #f5f3ff;
-  transform: rotate(6deg);
-  box-shadow: 0 8px 18px -8px rgba(55, 39, 113, 0.6), 0 0 24px -8px rgba(236, 72, 153, 0.55);
+  clip-path: polygon(50.00% 0.00%, 55.55% 7.86%, 62.94% 1.70%, 66.26% 10.74%, 75.00% 6.70%, 75.87% 16.28%, 85.36% 14.64%, 83.72% 24.13%, 93.30% 25.00%, 89.26% 33.74%, 98.30% 37.06%, 92.14% 44.45%, 100.00% 50.00%, 92.14% 55.55%, 98.30% 62.94%, 89.26% 66.26%, 93.30% 75.00%, 83.72% 75.87%, 85.36% 85.36%, 75.87% 83.72%, 75.00% 93.30%, 66.26% 89.26%, 62.94% 98.30%, 55.55% 92.14%, 50.00% 100.00%, 44.45% 92.14%, 37.06% 98.30%, 33.74% 89.26%, 25.00% 93.30%, 24.13% 83.72%, 14.64% 85.36%, 16.28% 75.87%, 6.70% 75.00%, 10.74% 66.26%, 1.70% 62.94%, 7.86% 55.55%, 0.00% 50.00%, 7.86% 44.45%, 1.70% 37.06%, 10.74% 33.74%, 6.70% 25.00%, 16.28% 24.13%, 14.64% 14.64%, 24.13% 16.28%, 25.00% 6.70%, 33.74% 10.74%, 37.06% 1.70%, 44.45% 7.86%);
+  background: radial-gradient(circle at 36% 30%, #e97134 0%, #c03a14 55%, #75230d 100%);
+  color: #fff8ec;
+  transform: rotate(-8deg);
+  box-shadow: 0 10px 20px -10px rgba(43, 26, 16, 0.7);
+  border: none;
 }
 
-/* River grid: faint violet grid texture for hero bands. */
+/* Woven grid: faint chili grid texture for hero bands. */
 .halftone {
   background-image:
-    linear-gradient(rgba(106, 61, 224, 0.10) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(106, 61, 224, 0.10) 1px, transparent 1px),
-    linear-gradient(rgba(8, 145, 178, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(8, 145, 178, 0.07) 1px, transparent 1px);
+    linear-gradient(rgba(192, 58, 20, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(192, 58, 20, 0.10) 1px, transparent 1px),
+    linear-gradient(rgba(184, 120, 10, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(184, 120, 10, 0.07) 1px, transparent 1px);
   background-size: 30px 30px, 30px 30px, 120px 120px, 120px 120px;
 }
 
-/* Signal divider: dotted violet line across the page. */
+/* Ticket perforation: dotted espresso tear-line across the page. */
 .zigzag {
-  height: 14px;
-  background-image: radial-gradient(circle, #6a3de0 2.4px, transparent 2.7px);
-  background-size: 20px 14px;
+  height: 12px;
+  background-image: radial-gradient(circle, #2b1a10 2px, transparent 2.6px);
+  background-size: 18px 12px;
   background-repeat: repeat-x;
   background-position: center;
-  opacity: 0.85;
+  opacity: 0.5;
 }
 
-/* Night canopy: indigo striped awning with a cyan hem. */
+/* Market canopy: turmeric-striped awning with a chili hem. */
 .bazaar-awning {
   background-image:
-    repeating-linear-gradient(90deg, rgba(106, 61, 224, 0.14) 0 26px, rgba(241, 237, 251, 0.5) 26px 52px),
-    linear-gradient(180deg, #ece3ff, #f1edfb);
-  border-bottom: 3px solid #0891b2;
+    repeating-linear-gradient(90deg, rgba(184, 120, 10, 0.16) 0 26px, rgba(253, 248, 239, 0.5) 26px 52px),
+    linear-gradient(180deg, #f7e7bf, #f7ecd7);
+  border-bottom: 3px solid #c03a14;
 }
 
-/* Beacon core: layered violet-to-cyan radial for the hero light. */
+/* Harvest glow: layered chili-to-turmeric radial for the hero sun. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(106, 61, 224, 0.42) 0%, rgba(8, 145, 178, 0.28) 34%, rgba(236, 72, 153, 0.16) 58%, rgba(8, 145, 178, 0) 74%);
+    radial-gradient(circle at 50% 42%, rgba(217, 72, 31, 0.45) 0%, rgba(184, 120, 10, 0.3) 34%, rgba(46, 158, 91, 0.14) 58%, rgba(184, 120, 10, 0) 74%);
 }
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 42%, rgba(106, 61, 224, 0.42) 0%, rgba(8, 145, 178, 0.28) 34%, rgba(236, 72, 153, 0.16) 58%, rgba(8, 145, 178, 0) 74%);
+    radial-gradient(circle at 50% 42%, rgba(217, 72, 31, 0.45) 0%, rgba(184, 120, 10, 0.3) 34%, rgba(46, 158, 91, 0.14) 58%, rgba(184, 120, 10, 0) 74%);
 }
 
-/* Beacon rings: concentric cyan rings around the signal. */
+/* Harvest rays: concentric turmeric rings around the sun. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(8, 145, 178, 0.34) 0px,
-    rgba(8, 145, 178, 0.34) 4px,
+    rgba(184, 120, 10, 0.4) 0px,
+    rgba(184, 120, 10, 0.4) 4px,
     transparent 4px,
     transparent 30px
   );
@@ -225,8 +229,8 @@ body {
 .sun-rays {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(106, 61, 224, 0.3) 0px,
-    rgba(106, 61, 224, 0.3) 4px,
+    rgba(192, 58, 20, 0.34) 0px,
+    rgba(192, 58, 20, 0.34) 4px,
     transparent 4px,
     transparent 30px
   );
@@ -235,66 +239,62 @@ body {
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all river-styled. */
+/* Legacy aliases kept so untouched components still render — all souk-styled. */
 .lagoon-lift {
   position: relative;
-  border: 1.5px solid #dcd3f5;
-  background: linear-gradient(155deg, #fbfbff 0%, #f3efff 100%);
-  border-radius: 1.75rem;
-  box-shadow: 0 16px 34px -18px rgba(55, 39, 113, 0.35), 0 2px 8px -2px rgba(55, 39, 113, 0.10);
-  transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+  border: 2px solid #2b1a10;
+  background: linear-gradient(155deg, #fffdf7 0%, #faf0dc 100%);
+  border-radius: 1.1rem;
+  box-shadow: 6px 6px 0 rgba(43, 26, 16, 0.9);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .lagoon-lift:hover {
-  transform: translateY(-6px);
-  border-color: rgba(236, 72, 153, 0.5);
-  box-shadow: 0 26px 44px -18px rgba(55, 39, 113, 0.42), 0 0 34px -12px rgba(236, 72, 153, 0.4);
+  transform: translate(-2px, -4px);
+  box-shadow: 9px 10px 0 rgba(46, 158, 91, 0.8);
 }
 .stamp-perf {
-  border: 2px dashed #0e7490;
-  background: rgba(106, 61, 224, 0.06);
-  border-radius: 1.75rem;
-  box-shadow: 0 8px 20px -12px rgba(55, 39, 113, 0.4);
+  border: 2px dashed #94600a;
+  background: rgba(217, 72, 31, 0.06);
+  border-radius: 1.1rem;
+  box-shadow: 4px 4px 0 rgba(43, 26, 16, 0.7);
 }
 .ember-glow {
   position: relative;
-  border: 1.5px solid #dcd3f5;
-  background: linear-gradient(155deg, #fbfbff 0%, #f3efff 100%);
-  border-radius: 1.75rem;
-  box-shadow: 0 16px 34px -18px rgba(55, 39, 113, 0.35), 0 2px 8px -2px rgba(55, 39, 113, 0.10);
-  transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+  border: 2px solid #2b1a10;
+  background: linear-gradient(155deg, #fffdf7 0%, #faf0dc 100%);
+  border-radius: 1.1rem;
+  box-shadow: 6px 6px 0 rgba(43, 26, 16, 0.9);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
-  transform: translateY(-6px);
-  border-color: rgba(106, 61, 224, 0.5);
-  box-shadow: 0 26px 44px -18px rgba(55, 39, 113, 0.42), 0 0 34px -12px rgba(106, 61, 224, 0.45);
+  transform: translate(-2px, -4px);
+  box-shadow: 9px 10px 0 rgba(192, 58, 20, 0.85);
 }
 .ripple-glow {
   position: relative;
-  border: 1.5px solid #dcd3f5;
-  background: linear-gradient(155deg, #fbfbff 0%, #f3efff 100%);
-  border-radius: 1.75rem;
-  box-shadow: 0 16px 34px -18px rgba(55, 39, 113, 0.35), 0 2px 8px -2px rgba(55, 39, 113, 0.10);
-  transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+  border: 2px solid #2b1a10;
+  background: linear-gradient(155deg, #fffdf7 0%, #faf0dc 100%);
+  border-radius: 1.1rem;
+  box-shadow: 6px 6px 0 rgba(43, 26, 16, 0.9);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
-  transform: translateY(-6px);
-  border-color: rgba(8, 145, 178, 0.55);
-  box-shadow: 0 26px 44px -18px rgba(55, 39, 113, 0.42), 0 0 34px -12px rgba(8, 145, 178, 0.4);
+  transform: translate(-2px, -4px);
+  box-shadow: 9px 10px 0 rgba(184, 120, 10, 0.8);
 }
 .lagoon-glow {
   position: relative;
-  border: 1.5px solid #dcd3f5;
-  background: linear-gradient(155deg, #fbfbff 0%, #f3efff 100%);
-  border-radius: 1.75rem;
-  box-shadow: 0 16px 34px -18px rgba(55, 39, 113, 0.35), 0 2px 8px -2px rgba(55, 39, 113, 0.10);
-  transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+  border: 2px solid #2b1a10;
+  background: linear-gradient(155deg, #fffdf7 0%, #faf0dc 100%);
+  border-radius: 1.1rem;
+  box-shadow: 6px 6px 0 rgba(43, 26, 16, 0.9);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
-  transform: translateY(-6px);
-  border-color: rgba(8, 145, 178, 0.55);
-  box-shadow: 0 26px 44px -18px rgba(55, 39, 113, 0.42), 0 0 34px -12px rgba(8, 145, 178, 0.4);
+  transform: translate(-2px, -4px);
+  box-shadow: 9px 10px 0 rgba(46, 158, 91, 0.8);
 }
