@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Dusk warmth: rust, amber and rose light washing the hero.
+// Cool river wash: teal, aqua and tide-blue light across the hero.
 const GLOWS = [
-  { left: "4%", top: "8%", size: 170, delay: "0s", dur: "14s", c: "rgba(251, 146, 60, 0.30)" },
-  { left: "70%", top: "2%", size: 220, delay: "-4s", dur: "15s", c: "rgba(251, 146, 60, 0.22)" },
-  { left: "42%", top: "46%", size: 130, delay: "-7s", dur: "13s", c: "rgba(244, 63, 94, 0.16)" },
-  { left: "84%", top: "52%", size: 120, delay: "-2s", dur: "14s", c: "rgba(251, 146, 60, 0.20)" },
+  { left: "4%", top: "8%", size: 170, delay: "0s", dur: "14s", c: "rgba(62, 211, 195, 0.30)" },
+  { left: "70%", top: "2%", size: 220, delay: "-4s", dur: "15s", c: "rgba(62, 211, 195, 0.22)" },
+  { left: "42%", top: "46%", size: 130, delay: "-7s", dur: "13s", c: "rgba(59, 130, 246, 0.16)" },
+  { left: "84%", top: "52%", size: 120, delay: "-2s", dur: "14s", c: "rgba(62, 211, 195, 0.20)" },
 ];
 
-// Rising ember sparks: tiny glowing flecks drifting up over the dusk market.
+// Falling monsoon rain streaks over the river.
 const DOTS = [
-  { left: "8%", delay: "0s", dur: "8.2s", s: 20, c: "#f97316" },
-  { left: "21%", delay: "-1.4s", dur: "8.8s", s: 14, c: "#f0e2c9" },
-  { left: "36%", delay: "-2.6s", dur: "8.4s", s: 22, c: "#fb923c" },
-  { left: "53%", delay: "-0.8s", dur: "9s", s: 16, c: "#e11d48" },
-  { left: "68%", delay: "-3.2s", dur: "8.5s", s: 20, c: "#f97316" },
-  { left: "82%", delay: "-2s", dur: "8.9s", s: 13, c: "#fcd34d" },
-  { left: "93%", delay: "-0.4s", dur: "8.3s", s: 18, c: "#f0e2c9" },
+  { left: "8%", delay: "0s", dur: "8.2s", s: 20, c: "#12a18f" },
+  { left: "21%", delay: "-1.4s", dur: "8.8s", s: 14, c: "#e0efed" },
+  { left: "36%", delay: "-2.6s", dur: "8.4s", s: 22, c: "#2bbfad" },
+  { left: "53%", delay: "-0.8s", dur: "9s", s: 16, c: "#2563eb" },
+  { left: "68%", delay: "-3.2s", dur: "8.5s", s: 20, c: "#12a18f" },
+  { left: "82%", delay: "-2s", dur: "8.9s", s: 13, c: "#53f5e4" },
+  { left: "93%", delay: "-0.4s", dur: "8.3s", s: 18, c: "#e0efed" },
 ];
 
 // Ticker phrases reuse the hero's existing stats copy.
@@ -68,17 +68,17 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* sand-dot texture + dusk wash */}
+      {/* droplet texture + river wash */}
       <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-60" />
       <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-brand-200/30 via-transparent to-transparent" />
 
-      {/* lantern sun: a low dusk sun half-sunk behind dune contour rings,
-          ringed by slow ember rings and rising spark flecks, offset right */}
+      {/* moonpool tide: a cool luminous pool offset right, ringed by slow
+          tide swirls and expanding ripple rings, with floating dewdrops */}
       <div aria-hidden className="pointer-events-none absolute -right-40 -top-32 z-0 hidden opacity-90 sm:block">
         <div className="relative h-[600px] w-[600px]">
           <div className="sun-disc absolute inset-8 rounded-full blur-xl" />
           <div className="sun-rays pop-spin absolute inset-0" />
-          {/* dune contour rings: wide warm rings around the low sun */}
+          {/* expanding ripple rings around the moonpool */}
           {[0, 1, 2].map((r) => (
             <span
               key={r}
@@ -86,16 +86,16 @@ export default function Hero({ onQuickView }: HeroProps) {
               style={{
                 width: `${96 - r * 20}%`,
                 height: `${96 - r * 20}%`,
-                boxShadow: "0 0 24px 2px rgba(251, 146, 60, 0.35), inset 0 0 18px rgba(244, 63, 94, 0.12)",
+                boxShadow: "0 0 24px 2px rgba(62, 211, 195, 0.35), inset 0 0 18px rgba(59, 130, 246, 0.12)",
                 opacity: 1 - r * 0.22,
               }}
             />
           ))}
-          {/* rising ember flecks */}
+          {/* floating dewdrops */}
           {Array.from({ length: 10 }).map((_, i) => {
             const x = 12 + ((i * 37) % 76);
             const y = 8 + ((i * 53) % 70);
-            const colors = ["#f59e0b", "#fdba74", "#fbbf24", "#ffffff"];
+            const colors = ["#03d0bc", "#8debe0", "#1fe9d6", "#ffffff"];
             return (
               <span
                 key={i}
@@ -110,25 +110,25 @@ export default function Hero({ onQuickView }: HeroProps) {
               />
             );
           })}
-          {/* dune silhouettes the sun is sinking behind */}
+          {/* wave silhouettes the moonpool ripples across */}
           <div aria-hidden className="absolute inset-x-10 bottom-24 h-40 rounded-t-[100%] bg-gradient-to-t from-brand-900/50 via-brand-700/25 to-transparent" />
           <div aria-hidden className="absolute inset-x-24 bottom-16 h-32 rounded-t-[100%] bg-gradient-to-t from-brand-800/40 via-brand-600/20 to-transparent" />
-          {/* warm aura peeking from behind the sun */}
+          {/* aqua shimmer peeking from behind the pool */}
           <div className="absolute inset-44 translate-x-8 translate-y-7 rotate-[10deg] rounded-full bg-gold-400/60 blur-md" />
-          {/* the sun itself: ember disc with a rose halo */}
-          <div className="absolute inset-44 rounded-full border-[3px] border-white/80 bg-[radial-gradient(circle_at_38%_34%,#ffffff_0%,#ffedd5_40%,#fdba74_70%,#c2410c_100%)] shadow-[0_0_80px_-8px_rgba(251, 146, 60,0.7),inset_0_0_40px_rgba(255,255,255,0.6)]" />
-          {/* sun texture speckle */}
+          {/* the moonpool itself: cool tide disc with a blue halo */}
+          <div className="absolute inset-44 rounded-full border-[3px] border-white/80 bg-[radial-gradient(circle_at_38%_34%,#ffffff_0%,#c9f5ee_40%,#8debe0_70%,#0c826f_100%)] shadow-[0_0_80px_-8px_rgba(62, 211, 195,0.7),inset_0_0_40px_rgba(255,255,255,0.6)]" />
+          {/* tide texture speckle */}
           <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
             {[{l:"30%",t:"34%",s:46},{l:"58%",t:"52%",s:34},{l:"44%",t:"66%",s:24},{l:"64%",t:"30%",s:20}].map((crat, i) => (
               <span key={i} className="absolute rounded-full bg-gold-300/50" style={{ left: crat.l, top: crat.t, width: crat.s, height: crat.s }} />
             ))}
           </div>
-          {/* hot ember core */}
-          <div className="absolute inset-[250px] rounded-full bg-[radial-gradient(circle_at_40%_35%,#ffffff_0%,#fcd34d_55%,#e11d48_100%)] shadow-[0_0_50px_-6px_rgba(244, 63, 94,0.9)]" />
+          {/* deep tide core */}
+          <div className="absolute inset-[250px] rounded-full bg-[radial-gradient(circle_at_40%_35%,#ffffff_0%,#53f5e4_55%,#2563eb_100%)] shadow-[0_0_50px_-6px_rgba(59, 130, 246,0.9)]" />
         </div>
       </div>
 
-      {/* rising dusk glow */}
+      {/* rising cool glow */}
       <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
         {GLOWS.map((g, i) => (
           <div
@@ -139,17 +139,17 @@ export default function Hero({ onQuickView }: HeroProps) {
         ))}
       </div>
 
-      {/* motes drifting through the warm dusk air */}
+      {/* rain falling through the cool river air */}
       <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden overflow-hidden sm:block">
         {DOTS.map((r, i) => (
           <Dot key={i} {...r} />
         ))}
       </div>
 
-      {/* 4-banner carousel in a lantern frame edged with ember light */}
+      {/* 4-banner carousel in a tide frame edged with aqua light */}
       <div className="relative">
         <div className="mx-auto max-w-7xl px-4 pt-8 sm:px-6">
-          <div className="rounded-[2.5rem] bg-gradient-to-r from-brand-600 via-gold-500 to-popblue-600 p-1 shadow-[0_30px_60px_-24px_rgba(194, 65, 12,0.55)] ring-4 ring-brand-200/50">
+          <div className="rounded-[2.5rem] bg-gradient-to-r from-brand-600 via-gold-500 to-popblue-600 p-1 shadow-[0_30px_60px_-24px_rgba(12, 130, 111,0.55)] ring-4 ring-brand-200/50">
             <div className="overflow-hidden rounded-[calc(2.5rem-4px)] bg-white/70 backdrop-blur-xl">
               <div className="overflow-hidden p-2">
                 <div className="overflow-hidden rounded-[2rem] ring-1 ring-white/70">
@@ -161,8 +161,8 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* caravan ticker: ember-signal bar with the shop's own promises */}
-      <div aria-hidden className="relative z-10 mt-8 border-y border-white/40 bg-gradient-to-r from-brand-600/90 via-gold-600/90 to-popblue-600/90 py-3 shadow-[0_18px_40px_-18px_rgba(194, 65, 12,0.6)] backdrop-blur-md">
+      {/* river ticker: cool-signal bar with the shop's own promises */}
+      <div aria-hidden className="relative z-10 mt-8 border-y border-white/40 bg-gradient-to-r from-brand-600/90 via-gold-600/90 to-popblue-600/90 py-3 shadow-[0_18px_40px_-18px_rgba(12, 130, 111,0.6)] backdrop-blur-md">
         <div className="overflow-hidden py-2">
           <div className="pop-ticker flex w-max items-center gap-8 pr-8">
             {[...TICKER, ...TICKER].map((t, i) => (
@@ -186,9 +186,9 @@ export default function Hero({ onQuickView }: HeroProps) {
             ].map((s) => (
               <div key={s.l} className="pop-lift relative overflow-hidden bg-white/80 p-4 pb-3 text-center backdrop-blur-sm">
                 <span aria-hidden className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-brand-400 via-gold-400 to-popblue-400" />
-                <span className="relative block bg-gradient-to-br from-brand-600 to-gold-600 bg-clip-text text-2xl font-black tracking-tight text-transparent">{s.v}</span>
+                <span className="relative block bg-gradient-to-br from-brand-600 to-popblue-600 bg-clip-text text-2xl font-black tracking-tight text-transparent">{s.v}</span>
                 <span className="relative mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-mute">{s.l}</span>
-                <span aria-hidden className="relative mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-brand-300 via-popblue-300 to-gold-300 shadow-[0_0_12px_rgba(251, 146, 60,0.6)]" />
+                <span aria-hidden className="relative mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-brand-300 via-popblue-300 to-gold-300 shadow-[0_0_12px_rgba(62, 211, 195,0.6)]" />
               </div>
             ))}
           </motion.div>
@@ -196,8 +196,8 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full border border-white/70 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-gold-700 shadow-[0_10px_24px_-12px_rgba(234, 88, 12,0.5)] backdrop-blur-md">Handpicked for you</p>
-            <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="relative bg-gradient-to-r from-brand-600 to-gold-600 bg-clip-text text-transparent">Picks<span aria-hidden className="absolute inset-x-0 -bottom-1 h-2 rounded-full bg-gradient-to-r from-brand-300 to-popblue-300 opacity-70 blur-[3px]" /></span></h2>
+            <p className="inline-block rounded-full border border-white/70 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-gold-700 shadow-[0_10px_24px_-12px_rgba(14, 103, 92,0.5)] backdrop-blur-md">Handpicked for you</p>
+            <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="relative bg-gradient-to-r from-brand-600 to-popblue-600 bg-clip-text text-transparent">Picks<span aria-hidden className="absolute inset-x-0 -bottom-1 h-2 rounded-full bg-gradient-to-r from-brand-300 to-popblue-300 opacity-70 blur-[3px]" /></span></h2>
             <span className="zigzag mt-4 block w-44" aria-hidden />
           </div>
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
@@ -226,7 +226,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* ember line into the page */}
+      {/* tide line into the page */}
       <div aria-hidden className="zigzag absolute bottom-0 left-0 w-full opacity-90" />
     </section>
   );
