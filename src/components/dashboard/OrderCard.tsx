@@ -19,7 +19,7 @@ export default function OrderCard({ order, showCustomer, statusEditable, onStatu
   const summary = order.items.slice(0, 2).map((it) => `${it.name} × ${it.qty}`).join(" · ") + (order.items.length > 2 ? ` +${order.items.length - 2} more` : "");
 
   return (
-    <article className="rounded-lg bg-[#2b1a10] p-5 shadow-sm ring-1 ring-[#6b4526] transition hover:shadow-md">
+    <article className="rounded-lg bg-[#2b1a10] p-5 shadow-sm ring-1 ring-[#1e40af] transition hover:shadow-md">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="min-w-0">
           <p className="font-black text-[#fbf3e6]">{order.id}</p>
@@ -38,7 +38,7 @@ export default function OrderCard({ order, showCustomer, statusEditable, onStatu
             <select
               value={order.status}
               onChange={(e) => onStatusChange?.(order.id, e.target.value as OrderStatus)}
-              className="cursor-pointer rounded-full border border-[#6b4526] bg-[#2b1a10] px-3 py-1.5 text-xs font-bold text-[#a68b74] outline-none"
+              className="cursor-pointer rounded-full border border-[#1e40af] bg-[#2b1a10] px-3 py-1.5 text-xs font-bold text-[#a68b74] outline-none"
             >
               {STATUSES.map((s) => (
                 <option key={s} value={s}>{s}</option>
@@ -52,7 +52,7 @@ export default function OrderCard({ order, showCustomer, statusEditable, onStatu
 
       <p className="mt-3 truncate text-sm text-[#a68b74]">{summary || "No items"}</p>
 
-      <div className="mt-3 flex flex-wrap items-center justify-between gap-3 border-t border-[#e8a13c] pt-3">
+      <div className="mt-3 flex flex-wrap items-center justify-between gap-3 border-t border-[#7dd3fc] pt-3">
         <button onClick={() => setExpanded((v) => !v)} aria-expanded={expanded} className="text-sm font-bold text-brand-600 hover:text-brand-700">
           {expanded ? "Hide details ↑" : "View details ↓"}
         </button>
@@ -71,7 +71,7 @@ export default function OrderCard({ order, showCustomer, statusEditable, onStatu
               </li>
             ))}
           </ul>
-          <div className="grid gap-3 border-t border-[#6b4526] pt-3 text-sm sm:grid-cols-2">
+          <div className="grid gap-3 border-t border-[#1e40af] pt-3 text-sm sm:grid-cols-2">
             <div>
               <p className="text-xs font-bold tracking-wide text-[#a68b74] uppercase">Delivery address</p>
               <p className="mt-1 font-semibold text-[#a68b74]">{order.name}</p>

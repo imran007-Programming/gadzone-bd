@@ -66,7 +66,7 @@ export default function ProductDetails({
     >
       {/* Breadcrumb + back */}
       <div className="flex flex-wrap items-center gap-2 text-sm">
-        <button onClick={onBack} className="rounded-full border border-[#6b4526] bg-[#2b1a10] px-3 py-1.5 font-semibold text-[#fbf3e6] shadow-sm transition hover:border-brand-400/50 hover:text-brand-600">
+        <button onClick={onBack} className="rounded-full border border-[#1e40af] bg-[#2b1a10] px-3 py-1.5 font-semibold text-[#fbf3e6] shadow-sm transition hover:border-brand-400/50 hover:text-brand-600">
           ← Back
         </button>
         <button onClick={onHome} className="text-[#a68b74] hover:text-brand-700">Home</button>
@@ -79,7 +79,7 @@ export default function ProductDetails({
       <div className="mt-5 grid gap-8 lg:grid-cols-2">
         {/* Gallery */}
         <div>
-          <div className="relative overflow-hidden rounded-[2rem] border border-[#6b4526] bg-[#2b1a10] shadow-[0_20px_50px_-16px_rgba(42, 37, 27, 0.25)]">
+          <div className="relative overflow-hidden rounded-[2rem] border border-[#1e40af] bg-[#2b1a10] shadow-[0_20px_50px_-16px_rgba(15, 23, 66, 0.25)]">
             {imgErr ? (
               <div className="flex h-80 items-center justify-center bg-gradient-to-br from-brand-100 via-brand-50 to-brand-100 sm:h-96">
                 <span className="text-6xl">🔌</span>
@@ -95,7 +95,7 @@ export default function ProductDetails({
               />
             )}
             {p.badge && (
-              <span className="absolute left-0 top-4 -skew-x-6 rounded-r-md bg-[#c95f28] px-3 py-1 text-xs font-black uppercase tracking-wide text-white shadow">
+              <span className="absolute left-0 top-4 -skew-x-6 rounded-r-md bg-[#2563eb] px-3 py-1 text-xs font-black uppercase tracking-wide text-white shadow">
                 {p.badge}
               </span>
             )}
@@ -111,7 +111,7 @@ export default function ProductDetails({
                 key={v.label}
                 onClick={() => setView(i)}
                 aria-label={`View ${v.label}`}
-                className={`overflow-hidden rounded-lg bg-[#2b1a10] shadow-sm ring-2 transition ${view === i ? "ring-brand-400" : "ring-[#6b4526] hover:ring-brand-400/40"}`}
+                className={`overflow-hidden rounded-lg bg-[#2b1a10] shadow-sm ring-2 transition ${view === i ? "ring-brand-400" : "ring-[#1e40af] hover:ring-brand-400/40"}`}
               >
                 {imgErr ? (
                   <div className="flex h-20 items-center justify-center bg-gradient-to-br from-brand-100 via-brand-50 to-brand-100"><span className="text-2xl">🔌</span></div>
@@ -166,7 +166,7 @@ export default function ProductDetails({
                     key={c}
                     onClick={() => setColour(c)}
                     aria-pressed={colour === c}
-                    className={`rounded-full border px-4 py-2 text-sm font-semibold transition ${colour === c ? "border-brand-400/60 bg-brand-400/10 text-brand-800 ring-1 ring-brand-400/40" : "border-[#6b4526] bg-[#2b1a10] text-[#a68b74] hover:border-brand-400/50"}`}
+                    className={`rounded-full border px-4 py-2 text-sm font-semibold transition ${colour === c ? "border-brand-400/60 bg-brand-400/10 text-brand-800 ring-1 ring-brand-400/40" : "border-[#1e40af] bg-[#2b1a10] text-[#a68b74] hover:border-brand-400/50"}`}
                   >
                     {c}
                   </button>
@@ -181,7 +181,7 @@ export default function ProductDetails({
                     key={o}
                     onClick={() => setOption(o)}
                     aria-pressed={option === o}
-                    className={`rounded-full border px-4 py-2 text-sm font-semibold transition ${option === o ? "border-brand-400/60 bg-brand-400/10 text-brand-800 ring-1 ring-brand-400/40" : "border-[#6b4526] bg-[#2b1a10] text-[#a68b74] hover:border-brand-400/50"}`}
+                    className={`rounded-full border px-4 py-2 text-sm font-semibold transition ${option === o ? "border-brand-400/60 bg-brand-400/10 text-brand-800 ring-1 ring-brand-400/40" : "border-[#1e40af] bg-[#2b1a10] text-[#a68b74] hover:border-brand-400/50"}`}
                   >
                     {o}
                   </button>
@@ -192,21 +192,21 @@ export default function ProductDetails({
 
           {/* Quantity + actions */}
           <div className="mt-6 flex flex-wrap items-center gap-3">
-            <div className="flex items-center rounded-full border border-[#6b4526] bg-[#2b1a10] text-[#0f766e]">
+            <div className="flex items-center rounded-full border border-[#1e40af] bg-[#2b1a10] text-[#0e7490]">
               <button onClick={() => setQty(Math.max(1, qty - 1))} className="px-4 py-3 text-lg" aria-label="Decrease quantity">−</button>
               <span className="w-8 text-center font-bold">{qty}</span>
               <button onClick={() => setQty(Math.min(99, qty + 1))} className="px-4 py-3 text-lg" aria-label="Increase quantity">+</button>
             </div>
-            <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty)} className="rounded-full bg-gradient-to-r from-brand-500 to-brand-700 px-7 py-3 font-bold text-white shadow-[0_8px_24px_-8px_rgba(201, 95, 40, 0.4)] transition hover:brightness-110">
+            <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty)} className="rounded-full bg-gradient-to-r from-brand-500 to-brand-700 px-7 py-3 font-bold text-white shadow-[0_8px_24px_-8px_rgba(37, 99, 235, 0.4)] transition hover:brightness-110">
               Add To Cart
             </motion.button>
-            <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty, true)} className="rounded-full bg-[#2b1a10] px-7 py-3 font-bold text-[#0f766e] transition ring-1 ring-brand-400/40 hover:bg-[#2b1a10]">
+            <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty, true)} className="rounded-full bg-[#2b1a10] px-7 py-3 font-bold text-[#0e7490] transition ring-1 ring-brand-400/40 hover:bg-[#2b1a10]">
               Buy Now
             </motion.button>
           </div>
 
           {/* Delivery box */}
-          <div className="mt-6 rounded-lg border border-[#6b4526] bg-[#2b1a10] p-4 shadow-sm">
+          <div className="mt-6 rounded-lg border border-[#1e40af] bg-[#2b1a10] p-4 shadow-sm">
             <h2 className="text-sm font-bold text-[#fbf3e6]">🚚 Delivery & Returns</h2>
             <ul className="mt-2 space-y-1.5 text-sm text-[#a68b74]">
               <li>Cash on Delivery available across Bangladesh.</li>
@@ -220,8 +220,8 @@ export default function ProductDetails({
       </div>
 
       {/* Tabs */}
-      <div className="mt-10 rounded-lg border border-[#6b4526] bg-[#2b1a10] p-5 shadow-sm sm:p-6">
-        <div className="flex flex-wrap gap-2 border-b border-[#6b4526] pb-3" role="tablist" aria-label="Product information">
+      <div className="mt-10 rounded-lg border border-[#1e40af] bg-[#2b1a10] p-5 shadow-sm sm:p-6">
+        <div className="flex flex-wrap gap-2 border-b border-[#1e40af] pb-3" role="tablist" aria-label="Product information">
           {TABS.map((t) => (
             <button
               key={t}
@@ -259,12 +259,12 @@ export default function ProductDetails({
             )}
             {tab === "Additional Information" && (
               <dl className="grid gap-x-8 gap-y-2 sm:grid-cols-2">
-                <div className="flex justify-between border-b border-[#6b4526] py-2"><dt className="font-semibold text-[#fbf3e6]">Category</dt><dd>{p.category}</dd></div>
-                <div className="flex justify-between border-b border-[#6b4526] py-2"><dt className="font-semibold text-[#fbf3e6]">Availability</dt><dd>{p.stock}</dd></div>
-                <div className="flex justify-between border-b border-[#6b4526] py-2"><dt className="font-semibold text-[#fbf3e6]">Rating</dt><dd>{p.rating} / 5 ({p.reviews.toLocaleString()} reviews)</dd></div>
-                <div className="flex justify-between border-b border-[#6b4526] py-2"><dt className="font-semibold text-[#fbf3e6]">In the box</dt><dd>Product + quick-start guide</dd></div>
-                <div className="flex justify-between border-b border-[#6b4526] py-2"><dt className="font-semibold text-[#fbf3e6]">Payment</dt><dd>COD, bKash, Nagad, Card</dd></div>
-                <div className="flex justify-between border-b border-[#6b4526] py-2"><dt className="font-semibold text-[#fbf3e6]">Warranty</dt><dd>7-day easy return + warranty support</dd></div>
+                <div className="flex justify-between border-b border-[#1e40af] py-2"><dt className="font-semibold text-[#fbf3e6]">Category</dt><dd>{p.category}</dd></div>
+                <div className="flex justify-between border-b border-[#1e40af] py-2"><dt className="font-semibold text-[#fbf3e6]">Availability</dt><dd>{p.stock}</dd></div>
+                <div className="flex justify-between border-b border-[#1e40af] py-2"><dt className="font-semibold text-[#fbf3e6]">Rating</dt><dd>{p.rating} / 5 ({p.reviews.toLocaleString()} reviews)</dd></div>
+                <div className="flex justify-between border-b border-[#1e40af] py-2"><dt className="font-semibold text-[#fbf3e6]">In the box</dt><dd>Product + quick-start guide</dd></div>
+                <div className="flex justify-between border-b border-[#1e40af] py-2"><dt className="font-semibold text-[#fbf3e6]">Payment</dt><dd>COD, bKash, Nagad, Card</dd></div>
+                <div className="flex justify-between border-b border-[#1e40af] py-2"><dt className="font-semibold text-[#fbf3e6]">Warranty</dt><dd>7-day easy return + warranty support</dd></div>
               </dl>
             )}
             {tab === "Shipping & Delivery" && (
@@ -291,7 +291,7 @@ export default function ProductDetails({
               <p className="text-xs font-bold uppercase tracking-widest text-brand-700">You may also like</p>
               <h2 className="mt-1 text-2xl font-black tracking-tight text-[#fbf3e6]">Related Products</h2>
             </div>
-            <button onClick={() => onCategory(p.category)} className="rounded-full border border-[#6b4526] bg-[#2b1a10] px-4 py-2 text-sm font-semibold text-[#a68b74] transition hover:border-brand-400/50 hover:text-brand-600">
+            <button onClick={() => onCategory(p.category)} className="rounded-full border border-[#1e40af] bg-[#2b1a10] px-4 py-2 text-sm font-semibold text-[#a68b74] transition hover:border-brand-400/50 hover:text-brand-600">
               All {p.category} →
             </button>
           </div>
@@ -304,13 +304,13 @@ export default function ProductDetails({
       )}
 
       {/* Sticky bottom bar */}
-      <div className="fixed inset-x-0 bottom-16 z-40 border-t border-[#6b4526] bg-[#2b1a10]/95 shadow-[0_-8px_24px_rgba(0,0,0,0.4)] backdrop-blur md:bottom-0">
+      <div className="fixed inset-x-0 bottom-16 z-40 border-t border-[#1e40af] bg-[#2b1a10]/95 shadow-[0_-8px_24px_rgba(0,0,0,0.4)] backdrop-blur md:bottom-0">
         <div className="mx-auto flex max-w-7xl items-center gap-3 px-4 py-3">
           {imgErr ? (
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-gradient-to-br from-brand-100 via-brand-50 to-brand-100"><span className="text-xl">🔌</span></div>
           ) : (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={p.img} alt="" aria-hidden className="h-12 w-12 shrink-0 rounded-md object-cover ring-1 ring-[#6b4526]" onError={() => setImgErr(true)} />
+            <img src={p.img} alt="" aria-hidden className="h-12 w-12 shrink-0 rounded-md object-cover ring-1 ring-[#1e40af]" onError={() => setImgErr(true)} />
           )}
           <div className="min-w-0 flex-1">
             <p className="truncate text-sm font-bold text-[#fbf3e6]">{p.name}</p>
@@ -319,7 +319,7 @@ export default function ProductDetails({
           <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty)} className="shrink-0 rounded-full bg-gradient-to-r from-brand-500 to-brand-700 px-4 py-2.5 text-sm font-bold text-white transition hover:brightness-110 sm:px-6">
             Add to Cart
           </motion.button>
-          <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty, true)} className="hidden shrink-0 rounded-full bg-[#2b1a10] px-5 py-2.5 text-sm font-bold text-[#0f766e] transition ring-1 ring-brand-400/40 hover:bg-[#2b1a10] sm:block">
+          <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty, true)} className="hidden shrink-0 rounded-full bg-[#2b1a10] px-5 py-2.5 text-sm font-bold text-[#0e7490] transition ring-1 ring-brand-400/40 hover:bg-[#2b1a10] sm:block">
             Buy Now
           </motion.button>
         </div>

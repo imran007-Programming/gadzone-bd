@@ -20,24 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Garden wash replaced — clay wash: terracotta, olive and teal drifting
-// over the warm paper sheet.
+// Glacier wash: cobalt, cyan and mint drifting over the pale ice sheet.
 const GLOWS = [
-  { left: "4%", top: "10%", size: 150, delay: "0s", dur: "14s", c: "rgba(201, 95, 40, 0.28)" },
-  { left: "72%", top: "4%", size: 200, delay: "-4s", dur: "15s", c: "rgba(244, 114, 182, 0.16)" },
-  { left: "44%", top: "44%", size: 120, delay: "-7s", dur: "13s", c: "rgba(244, 114, 182, 0.5)" },
-  { left: "86%", top: "50%", size: 110, delay: "-2s", dur: "14s", c: "rgba(45, 212, 191, 0.18)" },
+  { left: "4%", top: "10%", size: 150, delay: "0s", dur: "14s", c: "rgba(37, 99, 235, 0.28)" },
+  { left: "72%", top: "4%", size: 200, delay: "-4s", dur: "15s", c: "rgba(34, 211, 238, 0.16)" },
+  { left: "44%", top: "44%", size: 120, delay: "-7s", dur: "13s", c: "rgba(34, 211, 238, 0.5)" },
+  { left: "86%", top: "50%", size: 110, delay: "-2s", dur: "14s", c: "rgba(34, 211, 238, 0.18)" },
 ];
 
-// clay drift: clay chips rising on a warm breeze.
+// glacier drift: ice crystals falling through the cold light.
 const DOTS = [
-  { left: "8%", delay: "0s", dur: "7.2s", s: 22, c: "#e08a4e" },
-  { left: "21%", delay: "-1.4s", dur: "7.8s", s: 16, c: "#f2c57c" },
-  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 24, c: "#0f766e" },
-  { left: "53%", delay: "-0.8s", dur: "8s", s: 18, c: "#e8a13c" },
-  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 22, c: "#0f766e" },
-  { left: "82%", delay: "-2s", dur: "7.9s", s: 15, c: "#f2c57c" },
-  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 20, c: "#e08a4e" },
+  { left: "8%", delay: "0s", dur: "7.2s", s: 22, c: "#60a5fa" },
+  { left: "21%", delay: "-1.4s", dur: "7.8s", s: 16, c: "#bfdbfe" },
+  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 24, c: "#0e7490" },
+  { left: "53%", delay: "-0.8s", dur: "8s", s: 18, c: "#7dd3fc" },
+  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 22, c: "#0e7490" },
+  { left: "82%", delay: "-2s", dur: "7.9s", s: 15, c: "#bfdbfe" },
+  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 20, c: "#60a5fa" },
 ];
 
 // Ticker phrases reuse the hero's existing stats copy.
@@ -56,7 +55,7 @@ function Dot({ left, delay, dur, s, c }: (typeof DOTS)[number]) {
           height: s,
           borderRadius: "3px",
           background: c,
-          boxShadow: `3px 3px 0 rgba(42, 37, 27, 0.55)`,
+          boxShadow: `3px 3px 0 rgba(15, 23, 66, 0.55)`,
         }}
       />
     </div>
@@ -68,12 +67,12 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* clay wash */}
+      {/* glacier wash */}
       <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
       <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-brand-200/50 via-popblue-soft/40 to-transparent" />
 
-      {/* kiln arch: a sun-fired terracotta arch ringed by clay rings, with
-          drifting clay chips and a teal offset layer, offset right */}
+      {/* aurora arch: an ice-blue arch ringed by frost rings, with
+          drifting ice crystals and a cyan offset layer, offset right */}
       <div aria-hidden className="pointer-events-none absolute -right-40 -top-32 z-0 hidden opacity-90 sm:block">
         <div className="relative h-[600px] w-[600px]">
           <div className="nebula-core absolute inset-8 rounded-full blur-2xl" />
@@ -86,7 +85,7 @@ export default function Hero({ onQuickView }: HeroProps) {
               style={{
                 width: `${88 - r * 13}%`,
                 height: `${88 - r * 13}%`,
-                boxShadow: "0 0 24px 2px rgba(201, 95, 40, 0.35)",
+                boxShadow: "0 0 24px 2px rgba(37, 99, 235, 0.35)",
                 opacity: 1 - r * 0.18,
               }}
             />
@@ -98,7 +97,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             return (
               <span
                 key={i}
-                className="pop-bob absolute h-4 w-4 rounded-full bg-gold shadow-[0_6px_14px_-6px_rgba(244,126,108,0.7)] ring-2 ring-[#6b4526]/25"
+                className="pop-bob absolute h-4 w-4 rounded-full bg-gold shadow-[0_6px_14px_-6px_rgba(59,130,246,0.7)] ring-2 ring-[#1e40af]/25"
                 style={{ left: `${x}%`, top: `${y}%`, animationDelay: `${-i * 0.7}s` }}
               />
             );
@@ -106,7 +105,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           {/* teal layer peeking from behind */}
           <div className="absolute inset-44 translate-x-7 translate-y-5 rounded-t-full bg-popblue" />
           {/* the arch itself */}
-          <div className="absolute inset-44 rounded-t-full border-[3px] border-[#6b4526] bg-[radial-gradient(circle_at_38%_34%,#f2c57c_0%,#e8a13c_55%,#527a32_100%)] shadow-[0_24px_48px_-20px_rgba(201,95,40,0.55)]" />
+          <div className="absolute inset-44 rounded-t-full border-[3px] border-[#1e40af] bg-[radial-gradient(circle_at_38%_34%,#bfdbfe_0%,#7dd3fc_55%,#059669_100%)] shadow-[0_24px_48px_-20px_rgba(37,99,235,0.55)]" />
           {/* sand texture over the arch */}
           <div className="halftone absolute inset-44 overflow-hidden rounded-t-full opacity-60" />
         </div>
@@ -145,7 +144,7 @@ export default function Hero({ onQuickView }: HeroProps) {
       </div>
 
       {/* sunbaked ticker: ribbon band, marquee of the shop's own promises */}
-      <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/40 bg-gradient-to-r from-brand-500 via-gold-600 to-popblue-700 py-3 shadow-[0_18px_44px_-20px_rgba(201, 95, 40, 0.6)]">
+      <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/40 bg-gradient-to-r from-brand-500 via-gold-600 to-popblue-700 py-3 shadow-[0_18px_44px_-20px_rgba(37, 99, 235, 0.6)]">
         <div className="overflow-hidden py-2">
           <div className="pop-ticker flex w-max items-center gap-8 pr-8">
             {[...TICKER, ...TICKER].map((t, i) => (
@@ -179,7 +178,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full border-2 border-popblue-700/50 bg-popblue-500/10 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-popblue-800 shadow-[4px_4px_0_rgba(44,26,16,0.15)]">Handpicked for you</p>
+            <p className="inline-block rounded-full border-2 border-popblue-700/50 bg-popblue-500/10 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-popblue-800 shadow-[4px_4px_0_rgba(15,23,66,0.15)]">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="relative text-brand-600">Picks<span aria-hidden className="absolute inset-x-0 -bottom-1 h-2 rounded-full bg-gradient-to-r from-gold-500 to-brand-500 opacity-80 blur-[3px]" /></span></h2>
             <span className="zigzag mt-4 block w-44" aria-hidden />
           </div>
