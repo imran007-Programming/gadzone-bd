@@ -24,7 +24,7 @@ export default function SectionHeader({ accent, rest, subtitle, showViewAll = tr
           <span aria-hidden className="mt-3 flex items-center gap-2">
             <span className="inline-block h-2.5 w-2.5 rounded-full bg-brand-500 shadow-[0_2px_8px_-1px_rgba(124,58,237,0.7)]" />
             <span className="inline-block h-2.5 w-2.5 rounded-full bg-popblue-500 shadow-[0_2px_8px_-1px_rgba(14,165,233,0.7)]" />
-            <span className="inline-block h-2.5 w-2.5 rounded-full bg-gold-500 shadow-[0_2px_8px_-1px_rgba(245,158,11,0.7)]" />
+            <span className="inline-block h-2.5 w-2.5 rounded-full bg-gold-500 shadow-[0_2px_8px_-1px_rgba(236,72,153,0.7)]" />
             <span className="zigzag ml-1 w-32" />
           </span>
         </div>
