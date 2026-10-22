@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Rising aurora: teal, emerald and sky light washing the hero.
+// Dusk warmth: rust, amber and rose light washing the hero.
 const GLOWS = [
-  { left: "4%", top: "8%", size: 170, delay: "0s", dur: "14s", c: "rgba(45, 212, 191, 0.30)" },
-  { left: "70%", top: "2%", size: 220, delay: "-4s", dur: "15s", c: "rgba(45, 212, 191, 0.22)" },
-  { left: "42%", top: "46%", size: 130, delay: "-7s", dur: "13s", c: "rgba(2, 132, 199, 0.16)" },
-  { left: "84%", top: "52%", size: 120, delay: "-2s", dur: "14s", c: "rgba(45, 212, 191, 0.20)" },
+  { left: "4%", top: "8%", size: 170, delay: "0s", dur: "14s", c: "rgba(251, 146, 60, 0.30)" },
+  { left: "70%", top: "2%", size: 220, delay: "-4s", dur: "15s", c: "rgba(251, 146, 60, 0.22)" },
+  { left: "42%", top: "46%", size: 130, delay: "-7s", dur: "13s", c: "rgba(244, 63, 94, 0.16)" },
+  { left: "84%", top: "52%", size: 120, delay: "-2s", dur: "14s", c: "rgba(251, 146, 60, 0.20)" },
 ];
 
-// Drifting ice motes: tiny aurora sparks rising over the fjord market.
+// Rising ember sparks: tiny glowing flecks drifting up over the dusk market.
 const DOTS = [
-  { left: "8%", delay: "0s", dur: "8.2s", s: 20, c: "#14b8a6" },
-  { left: "21%", delay: "-1.4s", dur: "8.8s", s: 14, c: "#dceee9" },
-  { left: "36%", delay: "-2.6s", dur: "8.4s", s: 22, c: "#2dd4bf" },
-  { left: "53%", delay: "-0.8s", dur: "9s", s: 16, c: "#0284c7" },
-  { left: "68%", delay: "-3.2s", dur: "8.5s", s: 20, c: "#14b8a6" },
+  { left: "8%", delay: "0s", dur: "8.2s", s: 20, c: "#f97316" },
+  { left: "21%", delay: "-1.4s", dur: "8.8s", s: 14, c: "#f0e2c9" },
+  { left: "36%", delay: "-2.6s", dur: "8.4s", s: 22, c: "#fb923c" },
+  { left: "53%", delay: "-0.8s", dur: "9s", s: 16, c: "#e11d48" },
+  { left: "68%", delay: "-3.2s", dur: "8.5s", s: 20, c: "#f97316" },
   { left: "82%", delay: "-2s", dur: "8.9s", s: 13, c: "#fcd34d" },
-  { left: "93%", delay: "-0.4s", dur: "8.3s", s: 18, c: "#dceee9" },
+  { left: "93%", delay: "-0.4s", dur: "8.3s", s: 18, c: "#f0e2c9" },
 ];
 
 // Ticker phrases reuse the hero's existing stats copy.
@@ -68,34 +68,34 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* ice-dot texture + aurora wash */}
+      {/* sand-dot texture + dusk wash */}
       <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-60" />
       <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-brand-200/30 via-transparent to-transparent" />
 
-      {/* aurora orb: an aurora orb ringed by slow sonar rings
-          and drifting sparks, offset right */}
+      {/* lantern sun: a low dusk sun half-sunk behind dune contour rings,
+          ringed by slow ember rings and rising spark flecks, offset right */}
       <div aria-hidden className="pointer-events-none absolute -right-40 -top-32 z-0 hidden opacity-90 sm:block">
         <div className="relative h-[600px] w-[600px]">
           <div className="sun-disc absolute inset-8 rounded-full blur-xl" />
           <div className="sun-rays pop-spin absolute inset-0" />
-          {/* concentric sonar rings */}
-          {[0, 1, 2, 3].map((r) => (
+          {/* dune contour rings: wide warm rings around the low sun */}
+          {[0, 1, 2].map((r) => (
             <span
               key={r}
-              className="absolute left-1/2 top-1/2 origin-center -translate-x-1/2 -translate-y-1/2 rounded-full border border-brand-300/70"
+              className="absolute left-1/2 top-1/2 origin-center -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-brand-300/60"
               style={{
-                width: `${88 - r * 13}%`,
-                height: `${88 - r * 13}%`,
-                boxShadow: "0 0 24px 2px rgba(45, 212, 191, 0.35)",
-                opacity: 1 - r * 0.18,
+                width: `${96 - r * 20}%`,
+                height: `${96 - r * 20}%`,
+                boxShadow: "0 0 24px 2px rgba(251, 146, 60, 0.35), inset 0 0 18px rgba(244, 63, 94, 0.12)",
+                opacity: 1 - r * 0.22,
               }}
             />
           ))}
-          {/* drifting sparks */}
+          {/* rising ember flecks */}
           {Array.from({ length: 10 }).map((_, i) => {
             const x = 12 + ((i * 37) % 76);
             const y = 8 + ((i * 53) % 70);
-            const colors = ["#f59e0b", "#5eead4", "#fbbf24", "#ffffff"];
+            const colors = ["#f59e0b", "#fdba74", "#fbbf24", "#ffffff"];
             return (
               <span
                 key={i}
@@ -110,22 +110,25 @@ export default function Hero({ onQuickView }: HeroProps) {
               />
             );
           })}
-          {/* warm aura peeking from behind the orb */}
+          {/* dune silhouettes the sun is sinking behind */}
+          <div aria-hidden className="absolute inset-x-10 bottom-24 h-40 rounded-t-[100%] bg-gradient-to-t from-brand-900/50 via-brand-700/25 to-transparent" />
+          <div aria-hidden className="absolute inset-x-24 bottom-16 h-32 rounded-t-[100%] bg-gradient-to-t from-brand-800/40 via-brand-600/20 to-transparent" />
+          {/* warm aura peeking from behind the sun */}
           <div className="absolute inset-44 translate-x-8 translate-y-7 rotate-[10deg] rounded-full bg-gold-400/60 blur-md" />
-          {/* the orb itself: aurora disc with a sky halo */}
-          <div className="absolute inset-44 rounded-full border-[3px] border-white/80 bg-[radial-gradient(circle_at_38%_34%,#ffffff_0%,#f0fdfa_40%,#dceee9_70%,#5eead4_100%)] shadow-[0_0_80px_-8px_rgba(45, 212, 191,0.7),inset_0_0_40px_rgba(255,255,255,0.6)]" />
-          {/* pale orb-speckle */}
+          {/* the sun itself: ember disc with a rose halo */}
+          <div className="absolute inset-44 rounded-full border-[3px] border-white/80 bg-[radial-gradient(circle_at_38%_34%,#ffffff_0%,#ffedd5_40%,#fdba74_70%,#c2410c_100%)] shadow-[0_0_80px_-8px_rgba(251, 146, 60,0.7),inset_0_0_40px_rgba(255,255,255,0.6)]" />
+          {/* sun texture speckle */}
           <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
             {[{l:"30%",t:"34%",s:46},{l:"58%",t:"52%",s:34},{l:"44%",t:"66%",s:24},{l:"64%",t:"30%",s:20}].map((crat, i) => (
               <span key={i} className="absolute rounded-full bg-gold-300/50" style={{ left: crat.l, top: crat.t, width: crat.s, height: crat.s }} />
             ))}
           </div>
-          {/* bright signal core */}
-          <div className="absolute inset-[250px] rounded-full bg-[radial-gradient(circle_at_40%_35%,#ffffff_0%,#fcd34d_55%,#2dd4bf_100%)] shadow-[0_0_50px_-6px_rgba(2, 132, 199,0.9)]" />
+          {/* hot ember core */}
+          <div className="absolute inset-[250px] rounded-full bg-[radial-gradient(circle_at_40%_35%,#ffffff_0%,#fcd34d_55%,#e11d48_100%)] shadow-[0_0_50px_-6px_rgba(244, 63, 94,0.9)]" />
         </div>
       </div>
 
-      {/* rising aurora */}
+      {/* rising dusk glow */}
       <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
         {GLOWS.map((g, i) => (
           <div
@@ -136,20 +139,20 @@ export default function Hero({ onQuickView }: HeroProps) {
         ))}
       </div>
 
-      {/* motes drifting through the fjord air */}
+      {/* motes drifting through the warm dusk air */}
       <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden overflow-hidden sm:block">
         {DOTS.map((r, i) => (
           <Dot key={i} {...r} />
         ))}
       </div>
 
-      {/* 4-banner carousel in an ice frame edged with aurora light */}
+      {/* 4-banner carousel in a lantern frame edged with ember light */}
       <div className="relative">
         <div className="mx-auto max-w-7xl px-4 pt-8 sm:px-6">
-          <div className="rounded-[2rem] bg-gradient-to-r from-brand-400 via-gold-400 to-popblue-400 p-[3px] shadow-[0_30px_60px_-24px_rgba(15, 118, 110,0.45)]">
-            <div className="overflow-hidden rounded-[calc(2rem-3px)] bg-white/70 backdrop-blur-xl">
+          <div className="rounded-[2.5rem] bg-gradient-to-r from-brand-600 via-gold-500 to-popblue-600 p-1 shadow-[0_30px_60px_-24px_rgba(194, 65, 12,0.55)] ring-4 ring-brand-200/50">
+            <div className="overflow-hidden rounded-[calc(2.5rem-4px)] bg-white/70 backdrop-blur-xl">
               <div className="overflow-hidden p-2">
-                <div className="overflow-hidden rounded-[1.5rem] ring-1 ring-white/70">
+                <div className="overflow-hidden rounded-[2rem] ring-1 ring-white/70">
                   <BannerCarousel />
                 </div>
               </div>
@@ -158,8 +161,8 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* fjord ticker: aurora-signal bar with the shop's own promises */}
-      <div aria-hidden className="relative z-10 mt-8 border-y border-white/40 bg-gradient-to-r from-brand-600/90 via-gold-600/90 to-popblue-600/90 py-3 shadow-[0_18px_40px_-18px_rgba(15, 118, 110,0.6)] backdrop-blur-md">
+      {/* caravan ticker: ember-signal bar with the shop's own promises */}
+      <div aria-hidden className="relative z-10 mt-8 border-y border-white/40 bg-gradient-to-r from-brand-600/90 via-gold-600/90 to-popblue-600/90 py-3 shadow-[0_18px_40px_-18px_rgba(194, 65, 12,0.6)] backdrop-blur-md">
         <div className="overflow-hidden py-2">
           <div className="pop-ticker flex w-max items-center gap-8 pr-8">
             {[...TICKER, ...TICKER].map((t, i) => (
@@ -185,7 +188,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 <span aria-hidden className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-brand-400 via-gold-400 to-popblue-400" />
                 <span className="relative block bg-gradient-to-br from-brand-600 to-gold-600 bg-clip-text text-2xl font-black tracking-tight text-transparent">{s.v}</span>
                 <span className="relative mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-mute">{s.l}</span>
-                <span aria-hidden className="relative mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-brand-300 via-popblue-300 to-gold-300 shadow-[0_0_12px_rgba(45, 212, 191,0.6)]" />
+                <span aria-hidden className="relative mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-brand-300 via-popblue-300 to-gold-300 shadow-[0_0_12px_rgba(251, 146, 60,0.6)]" />
               </div>
             ))}
           </motion.div>
@@ -193,7 +196,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full border border-white/70 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-gold-700 shadow-[0_10px_24px_-12px_rgba(13, 148, 136,0.5)] backdrop-blur-md">Handpicked for you</p>
+            <p className="inline-block rounded-full border border-white/70 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-gold-700 shadow-[0_10px_24px_-12px_rgba(234, 88, 12,0.5)] backdrop-blur-md">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="relative bg-gradient-to-r from-brand-600 to-gold-600 bg-clip-text text-transparent">Picks<span aria-hidden className="absolute inset-x-0 -bottom-1 h-2 rounded-full bg-gradient-to-r from-brand-300 to-popblue-300 opacity-70 blur-[3px]" /></span></h2>
             <span className="zigzag mt-4 block w-44" aria-hidden />
           </div>
@@ -223,7 +226,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* aurora line into the page */}
+      {/* ember line into the page */}
       <div aria-hidden className="zigzag absolute bottom-0 left-0 w-full opacity-90" />
     </section>
   );
