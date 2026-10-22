@@ -23,21 +23,21 @@ const item: Variants = {
 // Garden wash: forest, terracotta and lime drifting
 // over the warm paper sheet.
 const GLOWS = [
-  { left: "4%", top: "10%", size: 150, delay: "0s", dur: "14s", c: "rgba(249, 126, 28, 0.28)" },
-  { left: "72%", top: "4%", size: 200, delay: "-4s", dur: "15s", c: "rgba(244, 126, 108, 0.16)" },
-  { left: "44%", top: "44%", size: 120, delay: "-7s", dur: "13s", c: "rgba(244, 126, 108, 0.5)" },
-  { left: "86%", top: "50%", size: 110, delay: "-2s", dur: "14s", c: "rgba(74, 222, 128, 0.18)" },
+  { left: "4%", top: "10%", size: 150, delay: "0s", dur: "14s", c: "rgba(139, 92, 246, 0.28)" },
+  { left: "72%", top: "4%", size: 200, delay: "-4s", dur: "15s", c: "rgba(244, 114, 182, 0.16)" },
+  { left: "44%", top: "44%", size: 120, delay: "-7s", dur: "13s", c: "rgba(244, 114, 182, 0.5)" },
+  { left: "86%", top: "50%", size: 110, delay: "-2s", dur: "14s", c: "rgba(103, 232, 249, 0.18)" },
 ];
 
 // petal drift: petals rising on a warm breeze.
 const DOTS = [
-  { left: "8%", delay: "0s", dur: "7.2s", s: 22, c: "#ffa04a" },
-  { left: "21%", delay: "-1.4s", dur: "7.8s", s: 16, c: "#f8aca0" },
-  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 24, c: "#15803d" },
-  { left: "53%", delay: "-0.8s", dur: "8s", s: 18, c: "#f47e6c" },
-  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 22, c: "#15803d" },
-  { left: "82%", delay: "-2s", dur: "7.9s", s: 15, c: "#f8aca0" },
-  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 20, c: "#ffa04a" },
+  { left: "8%", delay: "0s", dur: "7.2s", s: 22, c: "#a78bfa" },
+  { left: "21%", delay: "-1.4s", dur: "7.8s", s: 16, c: "#f9a8d4" },
+  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 24, c: "#0e7490" },
+  { left: "53%", delay: "-0.8s", dur: "8s", s: 18, c: "#f472b6" },
+  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 22, c: "#0e7490" },
+  { left: "82%", delay: "-2s", dur: "7.9s", s: 15, c: "#f9a8d4" },
+  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 20, c: "#a78bfa" },
 ];
 
 // Ticker phrases reuse the hero's existing stats copy.
@@ -86,7 +86,7 @@ export default function Hero({ onQuickView }: HeroProps) {
               style={{
                 width: `${88 - r * 13}%`,
                 height: `${88 - r * 13}%`,
-                boxShadow: "0 0 24px 2px rgba(249, 126, 28, 0.35)",
+                boxShadow: "0 0 24px 2px rgba(139, 92, 246, 0.35)",
                 opacity: 1 - r * 0.18,
               }}
             />
@@ -98,7 +98,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             return (
               <span
                 key={i}
-                className="pop-bob absolute h-4 w-4 rounded-full bg-gold shadow-[0_6px_14px_-6px_rgba(244,126,108,0.7)] ring-2 ring-[#e9dbc0]/25"
+                className="pop-bob absolute h-4 w-4 rounded-full bg-gold shadow-[0_6px_14px_-6px_rgba(244,126,108,0.7)] ring-2 ring-[#232a5e]/25"
                 style={{ left: `${x}%`, top: `${y}%`, animationDelay: `${-i * 0.7}s` }}
               />
             );
@@ -106,7 +106,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           {/* leaf-lime layer peeking from behind */}
           <div className="absolute inset-44 translate-x-7 translate-y-5 rounded-t-full bg-popblue" />
           {/* the arch itself */}
-          <div className="absolute inset-44 rounded-t-full border-[3px] border-[#e9dbc0] bg-[radial-gradient(circle_at_38%_34%,#f8aca0_0%,#f47e6c_55%,#b02e1d_100%)] shadow-[0_24px_48px_-20px_rgba(249,126,28,0.55)]" />
+          <div className="absolute inset-44 rounded-t-full border-[3px] border-[#232a5e] bg-[radial-gradient(circle_at_38%_34%,#f9a8d4_0%,#f472b6_55%,#be185d_100%)] shadow-[0_24px_48px_-20px_rgba(139,92,246,0.55)]" />
           {/* leaf texture over the arch */}
           <div className="halftone absolute inset-44 overflow-hidden rounded-t-full opacity-60" />
         </div>
@@ -145,7 +145,7 @@ export default function Hero({ onQuickView }: HeroProps) {
       </div>
 
       {/* bazaar ticker: ribbon band, marquee of the shop's own promises */}
-      <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/40 bg-gradient-to-r from-brand-500 via-gold-600 to-popblue-700 py-3 shadow-[0_18px_44px_-20px_rgba(249, 126, 28, 0.6)]">
+      <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/40 bg-gradient-to-r from-brand-500 via-gold-600 to-popblue-700 py-3 shadow-[0_18px_44px_-20px_rgba(139, 92, 246, 0.6)]">
         <div className="overflow-hidden py-2">
           <div className="pop-ticker flex w-max items-center gap-8 pr-8">
             {[...TICKER, ...TICKER].map((t, i) => (
@@ -167,10 +167,11 @@ export default function Hero({ onQuickView }: HeroProps) {
               { v: "50K+", l: "Happy Customers" },
               { v: "COD", l: "Available" },
             ].map((s) => (
-              <div key={s.l} className="pop-lift relative overflow-hidden bg-paper p-4 pb-3 text-center">
-                <span className="block text-2xl font-black tracking-tight text-brand-700">{s.v}</span>
-                <span className="mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-mute">{s.l}</span>
-                <span aria-hidden className="mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-brand-600 via-gold to-popblue" />
+              <div key={s.l} className="pop-lift relative overflow-hidden border-t-2 border-t-popblue-400 bg-paper p-4 pb-3 text-center">
+                <span aria-hidden className="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-popblue-400/25 to-transparent" />
+                <span className="relative block text-2xl font-black tracking-tight text-popblue-300 drop-shadow-[0_0_12px_rgba(34,211,238,0.55)]">{s.v}</span>
+                <span className="relative mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-mute">{s.l}</span>
+                <span aria-hidden className="relative mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-popblue-400 via-brand-500 to-gold-500 shadow-[0_0_10px_rgba(139,92,246,0.7)]" />
               </div>
             ))}
           </motion.div>
@@ -178,9 +179,9 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full bg-gradient-to-r from-brand-500 via-gold-600 to-popblue-700 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-white shadow-[0_16px_38px_-14px_rgba(249, 126, 28, 0.6)]">Handpicked for you</p>
-            <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="bg-gradient-to-r from-brand-600 to-gold-600 bg-clip-text text-transparent">Picks</span></h2>
-            <span className="zigzag mt-3 block w-44" aria-hidden />
+            <p className="inline-block rounded-full border border-popblue-400/60 bg-popblue-500/10 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-popblue-300 shadow-[0_0_18px_rgba(34,211,238,0.35)]">Handpicked for you</p>
+            <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="relative text-gold-400">Picks<span aria-hidden className="absolute inset-x-0 -bottom-1 h-2 rounded-full bg-gradient-to-r from-gold-500 to-brand-500 opacity-80 blur-[3px]" /></span></h2>
+            <span className="zigzag mt-4 block w-44" aria-hidden />
           </div>
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
             {[PRODUCTS[0], PRODUCTS[1], PRODUCTS[2], PRODUCTS[4]].map((p, i) => (
