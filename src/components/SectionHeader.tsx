@@ -23,9 +23,9 @@ export default function SectionHeader({ accent, rest, subtitle, showViewAll = tr
           {subtitle && <p className="mt-2.5 text-[15px] leading-relaxed text-mute">{subtitle}</p>}
           <span aria-hidden className="mt-3 flex items-center gap-1.5">
             <span className="inline-block h-2.5 w-2.5 rounded-full bg-brand-500 shadow-[0_2px_8px_-1px_rgba(8,_145,_178, 0.7)] ring-2 ring-white/70" />
-            <span className="inline-block h-2.5 w-2.5 rounded-full bg-gold shadow-[0_2px_8px_-1px_rgba(34, 211, 238, 0.7)] ring-2 ring-white/70" />
+            <span className="inline-block h-2.5 w-2.5 rounded-full bg-gold shadow-[0_2px_8px_-1px_rgba(248, 161, 60, 0.7)] ring-2 ring-white/70" />
             <span className="inline-block h-2.5 w-2.5 rounded-full bg-popblue shadow-[0_2px_8px_-1px_rgba(8,_145,_178, 0.7)] ring-2 ring-white/70" />
-            <span className="inline-block h-2.5 w-2.5 rounded-full bg-gold shadow-[0_2px_8px_-1px_rgba(34, 211, 238, 0.7)] ring-2 ring-white/70" />
+            <span className="inline-block h-2.5 w-2.5 rounded-full bg-gold shadow-[0_2px_8px_-1px_rgba(248, 161, 60, 0.7)] ring-2 ring-white/70" />
             <span className="inline-block h-2.5 w-2.5 rounded-full bg-brand-500 shadow-[0_2px_8px_-1px_rgba(8,_145,_178, 0.7)] ring-2 ring-white/70" />
             <span className="zigzag ml-1 w-24 rounded-sm opacity-90" />
           </span>
