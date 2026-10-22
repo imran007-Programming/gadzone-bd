@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Cool river wash: teal, aqua and tide-blue light across the hero.
+// Warm dusk wash: terracotta, marigold and ember-rose light across the hero.
 const GLOWS = [
-  { left: "4%", top: "8%", size: 170, delay: "0s", dur: "14s", c: "rgba(62, 211, 195, 0.30)" },
-  { left: "70%", top: "2%", size: 220, delay: "-4s", dur: "15s", c: "rgba(62, 211, 195, 0.22)" },
-  { left: "42%", top: "46%", size: 130, delay: "-7s", dur: "13s", c: "rgba(59, 130, 246, 0.16)" },
-  { left: "84%", top: "52%", size: 120, delay: "-2s", dur: "14s", c: "rgba(62, 211, 195, 0.20)" },
+  { left: "4%", top: "8%", size: 170, delay: "0s", dur: "14s", c: "rgba(237, 133, 53, 0.30)" },
+  { left: "70%", top: "2%", size: 220, delay: "-4s", dur: "15s", c: "rgba(237, 133, 53, 0.22)" },
+  { left: "42%", top: "46%", size: 130, delay: "-7s", dur: "13s", c: "rgba(232, 61, 138, 0.16)" },
+  { left: "84%", top: "52%", size: 120, delay: "-2s", dur: "14s", c: "rgba(237, 133, 53, 0.20)" },
 ];
 
-// Falling monsoon rain streaks over the river.
+// Rising ember sparks over the kiln.
 const DOTS = [
-  { left: "8%", delay: "0s", dur: "8.2s", s: 20, c: "#12a18f" },
-  { left: "21%", delay: "-1.4s", dur: "8.8s", s: 14, c: "#e0efed" },
-  { left: "36%", delay: "-2.6s", dur: "8.4s", s: 22, c: "#2bbfad" },
-  { left: "53%", delay: "-0.8s", dur: "9s", s: 16, c: "#2563eb" },
-  { left: "68%", delay: "-3.2s", dur: "8.5s", s: 20, c: "#12a18f" },
-  { left: "82%", delay: "-2s", dur: "8.9s", s: 13, c: "#53f5e4" },
-  { left: "93%", delay: "-0.4s", dur: "8.3s", s: 18, c: "#e0efed" },
+  { left: "8%", delay: "0s", dur: "8.2s", s: 20, c: "#c44d12" },
+  { left: "21%", delay: "-1.4s", dur: "8.8s", s: 14, c: "#fde8d3" },
+  { left: "36%", delay: "-2.6s", dur: "8.4s", s: 22, c: "#ed8535" },
+  { left: "53%", delay: "-0.8s", dur: "9s", s: 16, c: "#e83d8a" },
+  { left: "68%", delay: "-3.2s", dur: "8.5s", s: 20, c: "#c44d12" },
+  { left: "82%", delay: "-2s", dur: "8.9s", s: 13, c: "#fbbf2c" },
+  { left: "93%", delay: "-0.4s", dur: "8.3s", s: 18, c: "#fde8d3" },
 ];
 
 // Ticker phrases reuse the hero's existing stats copy.
@@ -72,8 +72,8 @@ export default function Hero({ onQuickView }: HeroProps) {
       <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-60" />
       <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-brand-200/30 via-transparent to-transparent" />
 
-      {/* moonpool tide: a cool luminous pool offset right, ringed by slow
-          tide swirls and expanding ripple rings, with floating dewdrops */}
+      {/* kiln sun: a warm luminous disc offset right, ringed by slow
+          ember swirls and expanding ember rings, with floating embers */}
       <div aria-hidden className="pointer-events-none absolute -right-40 -top-32 z-0 hidden opacity-90 sm:block">
         <div className="relative h-[600px] w-[600px]">
           <div className="sun-disc absolute inset-8 rounded-full blur-xl" />
@@ -86,16 +86,16 @@ export default function Hero({ onQuickView }: HeroProps) {
               style={{
                 width: `${96 - r * 20}%`,
                 height: `${96 - r * 20}%`,
-                boxShadow: "0 0 24px 2px rgba(62, 211, 195, 0.35), inset 0 0 18px rgba(59, 130, 246, 0.12)",
+                boxShadow: "0 0 24px 2px rgba(237, 133, 53, 0.35), inset 0 0 18px rgba(232, 61, 138, 0.12)",
                 opacity: 1 - r * 0.22,
               }}
             />
           ))}
-          {/* floating dewdrops */}
+          {/* floating ember motes */}
           {Array.from({ length: 10 }).map((_, i) => {
             const x = 12 + ((i * 37) % 76);
             const y = 8 + ((i * 53) % 70);
-            const colors = ["#03d0bc", "#8debe0", "#1fe9d6", "#ffffff"];
+            const colors = ["#ed8535", "#f4af6d", "#e83d8a", "#ffffff"];
             return (
               <span
                 key={i}
@@ -110,25 +110,25 @@ export default function Hero({ onQuickView }: HeroProps) {
               />
             );
           })}
-          {/* wave silhouettes the moonpool ripples across */}
+          {/* dune silhouettes the kiln sun glows across */}
           <div aria-hidden className="absolute inset-x-10 bottom-24 h-40 rounded-t-[100%] bg-gradient-to-t from-brand-900/50 via-brand-700/25 to-transparent" />
           <div aria-hidden className="absolute inset-x-24 bottom-16 h-32 rounded-t-[100%] bg-gradient-to-t from-brand-800/40 via-brand-600/20 to-transparent" />
-          {/* aqua shimmer peeking from behind the pool */}
+          {/* marigold shimmer peeking from behind the sun */}
           <div className="absolute inset-44 translate-x-8 translate-y-7 rotate-[10deg] rounded-full bg-gold-400/60 blur-md" />
-          {/* the moonpool itself: cool tide disc with a blue halo */}
-          <div className="absolute inset-44 rounded-full border-[3px] border-white/80 bg-[radial-gradient(circle_at_38%_34%,#ffffff_0%,#c9f5ee_40%,#8debe0_70%,#0c826f_100%)] shadow-[0_0_80px_-8px_rgba(62, 211, 195,0.7),inset_0_0_40px_rgba(255,255,255,0.6)]" />
-          {/* tide texture speckle */}
+          {/* the kiln sun itself: warm ember disc with a rose halo */}
+          <div className="absolute inset-44 rounded-full border-[3px] border-white/80 bg-[radial-gradient(circle_at_38%_34%,#ffffff_0%,#fde8d3_40%,#f4af6d_70%,#c44d12_100%)] shadow-[0_0_80px_-8px_rgba(237, 133, 53,0.7),inset_0_0_40px_rgba(255,255,255,0.6)]" />
+          {/* ember texture speckle */}
           <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
             {[{l:"30%",t:"34%",s:46},{l:"58%",t:"52%",s:34},{l:"44%",t:"66%",s:24},{l:"64%",t:"30%",s:20}].map((crat, i) => (
               <span key={i} className="absolute rounded-full bg-gold-300/50" style={{ left: crat.l, top: crat.t, width: crat.s, height: crat.s }} />
             ))}
           </div>
-          {/* deep tide core */}
-          <div className="absolute inset-[250px] rounded-full bg-[radial-gradient(circle_at_40%_35%,#ffffff_0%,#53f5e4_55%,#2563eb_100%)] shadow-[0_0_50px_-6px_rgba(59, 130, 246,0.9)]" />
+          {/* ember heart */}
+          <div className="absolute inset-[250px] rounded-full bg-[radial-gradient(circle_at_40%_35%,#ffffff_0%,#fbbf2c_55%,#e83d8a_100%)] shadow-[0_0_50px_-6px_rgba(232, 61, 138,0.9)]" />
         </div>
       </div>
 
-      {/* rising cool glow */}
+      {/* rising warm glow */}
       <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
         {GLOWS.map((g, i) => (
           <div
@@ -139,14 +139,14 @@ export default function Hero({ onQuickView }: HeroProps) {
         ))}
       </div>
 
-      {/* rain falling through the cool river air */}
+      {/* embers rising through the warm dusk air */}
       <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden overflow-hidden sm:block">
         {DOTS.map((r, i) => (
           <Dot key={i} {...r} />
         ))}
       </div>
 
-      {/* 4-banner carousel in a tide frame edged with aqua light */}
+      {/* 4-banner carousel in a kiln frame edged with ember light */}
       <div className="relative">
         <div className="mx-auto max-w-7xl px-4 pt-8 sm:px-6">
           <div className="rounded-[2.5rem] bg-gradient-to-r from-brand-600 via-gold-500 to-popblue-600 p-1 shadow-[0_30px_60px_-24px_rgba(12, 130, 111,0.55)] ring-4 ring-brand-200/50">
@@ -161,7 +161,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* river ticker: cool-signal bar with the shop's own promises */}
+      {/* ember ticker: warm-signal bar with the shop's own promises */}
       <div aria-hidden className="relative z-10 mt-8 border-y border-white/40 bg-gradient-to-r from-brand-600/90 via-gold-600/90 to-popblue-600/90 py-3 shadow-[0_18px_40px_-18px_rgba(12, 130, 111,0.6)] backdrop-blur-md">
         <div className="overflow-hidden py-2">
           <div className="pop-ticker flex w-max items-center gap-8 pr-8">
@@ -226,7 +226,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* tide line into the page */}
+      {/* ember line into the page */}
       <div aria-hidden className="zigzag absolute bottom-0 left-0 w-full opacity-90" />
     </section>
   );
