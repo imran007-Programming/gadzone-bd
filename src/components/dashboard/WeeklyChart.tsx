@@ -25,23 +25,23 @@ export default function WeeklyChart({ orders }: { orders: StoredOrder[] }) {
   const total = days.reduce((s, d) => s + d.count, 0);
 
   return (
-    <div className="rounded-lg bg-[#2b1a10] p-5 shadow-sm ring-1 ring-[#7c2d12]">
+    <div className="rounded-lg bg-[#071728] p-5 shadow-sm ring-1 ring-[#155e75]">
       <div className="flex items-baseline justify-between gap-3">
-        <h3 className="font-black text-[#fbf3e6]">Orders — last 7 days</h3>
+        <h3 className="font-black text-[#eaf7fb]">Orders — last 7 days</h3>
         <p className="text-sm font-bold text-brand-700">{total} order{total === 1 ? "" : "s"}</p>
       </div>
       {total === 0 ? (
-        <p className="mt-4 text-sm text-[#a68b74]">No orders in the last 7 days yet. New orders will appear here as bars.</p>
+        <p className="mt-4 text-sm text-[#93a9bd]">No orders in the last 7 days yet. New orders will appear here as bars.</p>
       ) : null}
       <div className="mt-5 flex h-36 items-end gap-2 sm:gap-3" role="img" aria-label={`Bar chart of orders over the last 7 days, ${total} orders total`}>
         {days.map((d, i) => (
           <div key={i} className="flex flex-1 flex-col items-center gap-2">
-            <span className="text-xs font-bold text-[#a68b74]">{d.count}</span>
+            <span className="text-xs font-bold text-[#93a9bd]">{d.count}</span>
             <div
               className={`w-full max-w-10 rounded-t-xl transition-all ${i === days.length - 1 ? "bg-brand-500" : "bg-popblue-200"}`}
               style={{ height: `${Math.max(d.count === 0 ? 4 : (d.count / max) * 100, 4)}%` }}
             />
-            <span className="text-xs font-semibold text-[#a68b74]">{d.label}</span>
+            <span className="text-xs font-semibold text-[#93a9bd]">{d.label}</span>
           </div>
         ))}
       </div>

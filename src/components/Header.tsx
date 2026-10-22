@@ -28,16 +28,16 @@ export default function Header({ query, onQueryChange, category, onCategoryChang
   }, []);
 
   return (
-    <header className={`sticky top-0 z-40 border-b-2 border-[#7c2d12]/15 bg-[#2b1a10]/85 backdrop-blur-xl transition-shadow duration-300 ${scrolled ? "shadow-[0_10px_30px_-12px_rgba(234, 88, 12, 0.5)]" : "shadow-none"}`}>
+    <header className={`sticky top-0 z-40 border-b border-brand-400/20 bg-[#071728]/85 backdrop-blur-xl transition-shadow duration-300 ${scrolled ? "shadow-[0_10px_30px_-12px_rgba(6,182,212,0.5)]" : "shadow-none"}`}>
       <div className="mx-auto max-w-7xl px-4 pt-3 sm:px-6">
         <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-2">
           <div className="flex items-center gap-1">
-            <button onClick={onMenuOpen} className="rounded-full p-2 text-xl text-[#a68b74] transition hover:bg-brand-500/15 hover:text-brand-600" aria-label="Open menu">☰</button>
+            <button onClick={onMenuOpen} className="rounded-full p-2 text-xl text-mute transition hover:bg-brand-500/15 hover:text-brand-300" aria-label="Open menu">☰</button>
           </div>
           <a href="#" className="flex items-center justify-center gap-2">
-            <span className="flex h-10 w-10 items-center justify-center rounded-lg border-2 border-[#fdba74] bg-gradient-to-br from-brand-400 via-brand-600 to-brand-800 text-xl font-black text-white shadow-[0_14px_34px_-14px_rgba(234, 88, 12, 0.5)]">G</span>
-            <span className="leading-none"><span className="block text-lg font-black tracking-tight text-[#fbf3e6] sm:text-xl">Gad<span className="text-brand-700">Zone</span> BD</span>
-            <span className="hidden text-[11px] font-medium text-[#a68b74] sm:block">Gadgets in Bangladesh</span></span>
+            <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-brand-300/50 bg-gradient-to-br from-brand-400 via-brand-600 to-gold-700 text-xl font-black text-[#06121f] shadow-[0_0_24px_-6px_rgba(56,213,245,0.8)]">G</span>
+            <span className="leading-none"><span className="block text-lg font-black tracking-tight text-ink sm:text-xl">Gad<span className="text-brand-400">Zone</span> BD</span>
+            <span className="hidden text-[11px] font-medium text-mute sm:block">Gadgets in Bangladesh</span></span>
           </a>
           <div className="flex items-center justify-end gap-1 sm:gap-2">
             {session?.user ? (
@@ -47,33 +47,33 @@ export default function Header({ query, onQueryChange, category, onCategoryChang
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src={session.user.image} alt="" className="h-8 w-8 rounded-full object-cover" />
                   ) : (
-                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-brand-400 to-brand-700 text-sm font-black text-white">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-brand-400 to-gold-600 text-sm font-black text-[#06121f]">
                       {(session.user.name ?? session.user.email ?? "G").slice(0, 1).toUpperCase()}
                     </span>
                   )}
-                  <span className="hidden max-w-28 truncate text-sm font-bold text-[#fbf3e6] md:inline">{session.user.name ?? "My Account"}</span>
+                  <span className="hidden max-w-28 truncate text-sm font-bold text-ink md:inline">{session.user.name ?? "My Account"}</span>
                 </Link>
-                <Link href="/dashboard" className="hidden rounded-full px-3 py-1.5 text-xs font-bold text-[#a68b74] hover:bg-brand-500/15 md:inline-flex">Dashboard</Link>
+                <Link href="/dashboard" className="hidden rounded-full px-3 py-1.5 text-xs font-bold text-mute hover:bg-brand-500/15 md:inline-flex">Dashboard</Link>
                 {session.user.role === "admin" && (
-                  <Link href="/admin" className="hidden rounded-full border-2 border-[#fdba74] bg-gradient-to-r from-gold-deep to-gold px-3 py-1.5 text-xs font-black text-white shadow-[0_10px_26px_-12px_rgba(234, 88, 12, 0.45)] md:inline-flex">Admin</Link>
+                  <Link href="/admin" className="hidden rounded-full border border-gold-400/60 bg-gradient-to-r from-gold-600 to-gold-500 px-3 py-1.5 text-xs font-black text-white shadow-[0_0_20px_-6px_rgba(139,92,246,0.7)] md:inline-flex">Admin</Link>
                 )}
-                <button onClick={() => signOut({ callbackUrl: "/" })} className="hidden rounded-full px-3 py-1.5 text-xs font-bold text-[#a68b74] hover:bg-brand-500/15 md:inline-flex">Sign out</button>
-                <button onClick={() => signOut({ callbackUrl: "/" })} className="rounded-full p-2 text-lg text-[#a68b74] hover:bg-brand-500/15 md:hidden" aria-label="Sign out">↪</button>
+                <button onClick={() => signOut({ callbackUrl: "/" })} className="hidden rounded-full px-3 py-1.5 text-xs font-bold text-mute hover:bg-brand-500/15 md:inline-flex">Sign out</button>
+                <button onClick={() => signOut({ callbackUrl: "/" })} className="rounded-full p-2 text-lg text-mute hover:bg-brand-500/15 md:hidden" aria-label="Sign out">↪</button>
               </>
             ) : (
-              <button onClick={onAccountOpen} className="rounded-full border-2 border-[#fdba74] bg-gradient-to-r from-brand-500 to-brand-700 px-5 py-2 text-sm font-bold text-white shadow-[0_14px_34px_-14px_rgba(234, 88, 12, 0.5)] transition hover:brightness-110 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none">Sign in</button>
+              <button onClick={onAccountOpen} className="rounded-full border border-brand-300/60 bg-gradient-to-r from-brand-500 to-brand-700 px-5 py-2 text-sm font-bold text-[#06121f] shadow-[0_0_24px_-6px_rgba(56,213,245,0.8)] transition hover:brightness-110 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none">Sign in</button>
             )}
-            <span className="hidden rounded-full bg-[#452c18] px-3 py-1.5 text-xs font-bold text-brand-600 ring-1 ring-brand-400/30 md:inline-flex">bKash ✓</span>
-            <span className="hidden rounded-full bg-[#452c18] px-3 py-1.5 text-xs font-bold text-brand-600 ring-1 ring-brand-400/30 md:inline-flex">COD ✓</span>
-            <motion.button whileTap={{ scale: 0.94 }} onClick={onCartOpen} className="relative rounded-lg border-2 border-[#fdba74] bg-[#452c18] px-3 py-2.5 text-sm font-bold text-[#c2410c] shadow-[0_14px_34px_-14px_rgba(234, 88, 12, 0.5)] transition active:translate-x-[2px] active:translate-y-[2px] active:shadow-none sm:px-4">
+            <span className="hidden rounded-full bg-[#0f2c46] px-3 py-1.5 text-xs font-bold text-brand-300 ring-1 ring-brand-400/30 md:inline-flex">bKash ✓</span>
+            <span className="hidden rounded-full bg-[#0f2c46] px-3 py-1.5 text-xs font-bold text-brand-300 ring-1 ring-brand-400/30 md:inline-flex">COD ✓</span>
+            <motion.button whileTap={{ scale: 0.94 }} onClick={onCartOpen} className="relative rounded-lg border border-brand-300/50 bg-[#0f2c46] px-3 py-2.5 text-sm font-bold text-brand-300 shadow-[0_0_20px_-8px_rgba(56,213,245,0.6)] transition active:translate-x-[2px] active:translate-y-[2px] active:shadow-none sm:px-4">
               <span className="hidden sm:inline">🛒 Cart</span>
               <span className="sm:hidden">🛒</span>
-              {cartCount > 0 && <span className="absolute -right-1.5 -top-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-gold-deep to-gold text-xs font-black text-white ring-2 ring-[#452c18]">{cartCount}</span>}
+              {cartCount > 0 && <span className="absolute -right-1.5 -top-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-popblue-300 to-popblue-500 text-xs font-black text-[#0c1a02] ring-2 ring-[#0f2c46]">{cartCount}</span>}
             </motion.button>
           </div>
         </div>
         <form
-          className="mt-3 flex items-center gap-2 rounded-xl border-2 border-[#fdba74]/20 bg-[#452c18] p-1.5 pl-3 shadow-[5px_5px_0_rgba(234, 88, 12,0.18)] transition focus-within:border-brand-600/60"
+          className="mt-3 flex items-center gap-2 rounded-xl border border-brand-400/20 bg-[#0f2c46] p-1.5 pl-3 shadow-[0_0_18px_-6px_rgba(6,182,212,0.4)] transition focus-within:border-brand-400/60"
           onSubmit={(e) => {
             e.preventDefault();
             document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" });
@@ -83,17 +83,17 @@ export default function Header({ query, onQueryChange, category, onCategoryChang
             value={query}
             onChange={(e) => onQueryChange(e.target.value)}
             placeholder="Search for products"
-            className="min-w-0 flex-1 bg-transparent px-3 py-1.5 text-sm text-[#fbf3e6] outline-none placeholder:text-[#a68b74]"
+            className="min-w-0 flex-1 bg-transparent px-3 py-1.5 text-sm text-ink outline-none placeholder:text-mute"
             aria-label="Search for products"
           />
-          <button type="submit" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border-2 border-[#fdba74] bg-gradient-to-br from-gold-deep to-gold text-base text-white shadow-[4px_4px_0_rgba(234, 88, 12,0.25)] transition hover:brightness-110 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none" aria-label="Search">🔍</button>
+          <button type="submit" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-brand-300/50 bg-gradient-to-br from-brand-400 to-brand-700 text-base text-[#06121f] shadow-[0_0_16px_-4px_rgba(56,213,245,0.7)] transition hover:brightness-110 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none" aria-label="Search">🔍</button>
         </form>
       </div>
       <nav className="mt-3 border-t border-brand-400/15">
         <div className="no-scrollbar mx-auto flex max-w-7xl gap-1.5 overflow-x-auto px-4 py-2.5 sm:px-6">
           {CATEGORIES.map((c) => (
             <motion.button whileTap={{ scale: 0.96 }} key={c} onClick={() => { onCategoryChange(c); document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" }); }}
-              className={`whitespace-nowrap rounded-lg px-4 py-2 text-sm font-semibold transition active:scale-95 border ${category === c ? "border-transparent bg-gradient-to-r from-brand-400 to-brand-600 text-white shadow-[4px_4px_0_rgba(234, 88, 12,0.3)]" : "border-transparent text-[#a68b74] hover:bg-brand-500/15 hover:text-brand-700"}`}>{c}</motion.button>
+              className={`whitespace-nowrap rounded-lg px-4 py-2 text-sm font-semibold transition active:scale-95 border ${category === c ? "border-transparent bg-gradient-to-r from-brand-500 to-gold-600 text-[#06121f] shadow-[0_0_18px_-4px_rgba(56,213,245,0.7)]" : "border-transparent text-mute hover:bg-brand-500/15 hover:text-brand-300"}`}>{c}</motion.button>
           ))}
         </div>
       </nav>
