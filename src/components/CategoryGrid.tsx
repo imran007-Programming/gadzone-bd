@@ -26,11 +26,11 @@ export default function CategoryGrid({ category, onCategoryChange }: { category:
               whileHover={{ y: -4 }}
               whileTap={{ scale: 0.97 }}
               onClick={() => { onCategoryChange(c); document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" }); }}
-              className={`flex h-full w-full flex-col items-center gap-1.5 rounded-[22px] border-2 p-3 text-center shadow-sm transition-all hover:shadow-[0_12px_32px_-12px_rgba(4,120,87, 0.35)] hover:ring-1 hover:ring-brand-400/50 sm:p-5 ${category === c ? "border-gold-deep/60 bg-gradient-to-b from-gold-soft to-brand-100 shadow-[0_12px_32px_-12px_rgba(4,120,87, 0.45)] ring-1 ring-gold/50" : "border-[#d7f2e0] bg-[#f1f8f3] hover:border-gold-deep/60"}`}
+              className={`flex h-full w-full flex-col items-center gap-1.5 rounded-[22px] border-2 p-3 text-center shadow-sm transition-all hover:shadow-[0_12px_32px_-12px_rgba(109,40,217, 0.35)] hover:ring-1 hover:ring-brand-400/50 sm:p-5 ${category === c ? "border-gold-deep/60 bg-gradient-to-b from-gold-soft to-brand-100 shadow-[0_12px_32px_-12px_rgba(109,40,217, 0.45)] ring-1 ring-gold/50" : "border-[#f6ead3] bg-[#faf6ef] hover:border-gold-deep/60"}`}
             >
-              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-gold via-brand-500 to-brand-800 p-1 text-2xl shadow-[0_6px_18px_-6px_rgba(4,120,87, 0.5)] ring-2 ring-gold-soft sm:h-14 sm:w-14 sm:text-3xl"><span className="flex h-full w-full items-center justify-center rounded-full bg-[#f1f8f3]">{categoryIcons[c]}</span></span>
-              <span className="text-xs font-bold leading-tight tracking-tight text-[#132a21] sm:text-sm">{c === "All" ? "All" : c}</span>
-              <span className="hidden text-[11px] text-[#a8ccb8] sm:block">{categoryCounts[c]} products</span>
+              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-gold via-brand-500 to-brand-800 p-1 text-2xl shadow-[0_6px_18px_-6px_rgba(109,40,217, 0.5)] ring-2 ring-gold-soft sm:h-14 sm:w-14 sm:text-3xl"><span className="flex h-full w-full items-center justify-center rounded-full bg-[#faf6ef]">{categoryIcons[c]}</span></span>
+              <span className="text-xs font-bold leading-tight tracking-tight text-[#241627] sm:text-sm">{c === "All" ? "All" : c}</span>
+              <span className="hidden text-[11px] text-[#c9b39a] sm:block">{categoryCounts[c]} products</span>
             </motion.button>
           </Reveal>
         ))}
