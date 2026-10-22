@@ -43,45 +43,45 @@ export default function CheckoutModal({ open, orderPlaced, orderId, form, distri
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.96, y: 8 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="max-h-[92vh] w-full max-w-lg overflow-y-auto rounded-t-3xl border border-[#064e3b] bg-[#eaf7ef] p-6 shadow-2xl sm:rounded-lg sm:p-7"
+            className="max-h-[92vh] w-full max-w-lg overflow-y-auto rounded-t-3xl border border-[#8f174c] bg-[#faf6ee] p-6 shadow-2xl sm:rounded-lg sm:p-7"
             onClick={(e) => e.stopPropagation()}
           >
             {orderPlaced ? (
               <div className="py-6 text-center">
                 <span className="text-6xl">🎉</span>
-                <h3 className="mt-3 text-2xl font-black text-[#2dd4bf]">Order Placed Successfully!</h3>
-                <p className="mt-2 text-[#0b2e22]">Dhonnobad, {form.name}! Apnar order confirm hoyeche.</p>
-                <div className="mx-auto mt-4 max-w-xs rounded-lg bg-brand-400/10 p-4 ring-1 ring-brand-400/30"><p className="text-sm text-[#0b2e22]">Order ID</p><p className="text-2xl font-black text-brand-400">{orderId}</p><p className="mt-1 text-sm text-[#0b2e22]">Payment: {payMethod === "COD" ? "Cash on Delivery" : payMethod} · Delivery to {district}</p></div>
-                <p className="mt-3 text-sm text-[#0b2e22]">Amra shighroi phone-e confirm korbo. Tracking link SMS-e pathano hobe.</p>
-                <button onClick={onContinueShopping} className="mt-5 rounded-full bg-gradient-to-r from-brand-500 to-brand-700 px-8 py-3 font-bold text-brand-950 shadow-[0_10px_28px_-8px_rgba(5, 150, 105, 0.4)] transition hover:brightness-110 active:scale-[0.98]">Continue Shopping</button>
+                <h3 className="mt-3 text-2xl font-black text-[#4f63e8]">Order Placed Successfully!</h3>
+                <p className="mt-2 text-[#2a2545]">Dhonnobad, {form.name}! Apnar order confirm hoyeche.</p>
+                <div className="mx-auto mt-4 max-w-xs rounded-lg bg-brand-400/10 p-4 ring-1 ring-brand-400/30"><p className="text-sm text-[#2a2545]">Order ID</p><p className="text-2xl font-black text-brand-600">{orderId}</p><p className="mt-1 text-sm text-[#2a2545]">Payment: {payMethod === "COD" ? "Cash on Delivery" : payMethod} · Delivery to {district}</p></div>
+                <p className="mt-3 text-sm text-[#2a2545]">Amra shighroi phone-e confirm korbo. Tracking link SMS-e pathano hobe.</p>
+                <button onClick={onContinueShopping} className="mt-5 rounded-full bg-gradient-to-r from-brand-500 to-brand-700 px-8 py-3 font-bold text-brand-950 shadow-[0_10px_28px_-8px_rgba(214, 31, 105, 0.4)] transition hover:brightness-110 active:scale-[0.98]">Continue Shopping</button>
               </div>
             ) : (
               <form onSubmit={onPlaceOrder}>
-                <div className="flex items-start justify-between"><h3 className="text-xl font-black text-[#2dd4bf]">Checkout 🧾</h3><button type="button" onClick={onClose} className="text-2xl text-[#0b2e22] hover:text-[#2dd4bf]">×</button></div>
-                <label className="mt-4 block text-sm font-bold text-[#0b2e22]">Full Name *</label>
-                <input required value={form.name} onChange={(e) => onFormChange("name", e.target.value)} placeholder="e.g. Imran Hasan" className="mt-1 w-full rounded-lg border border-[#064e3b] bg-[#064e3b] px-4 py-2.5 text-sm text-[#2dd4bf] shadow-sm outline-none transition placeholder:text-[#8ea89b] focus:border-brand-400 focus:ring-2 focus:ring-brand-400/30" />
-                <label className="mt-3 block text-sm font-bold text-[#0b2e22]">Phone Number *</label>
-                <input required type="tel" value={form.phone} onChange={(e) => onFormChange("phone", e.target.value)} placeholder="01XXXXXXXXX" className="mt-1 w-full rounded-lg border border-[#064e3b] bg-[#064e3b] px-4 py-2.5 text-sm text-[#2dd4bf] shadow-sm outline-none transition placeholder:text-[#8ea89b] focus:border-brand-400 focus:ring-2 focus:ring-brand-400/30" />
-                <label className="mt-3 block text-sm font-bold text-[#0b2e22]">District *</label>
-                <select value={district} onChange={(e) => onDistrictChange(e.target.value)} className="mt-1 w-full rounded-lg border border-[#064e3b] bg-[#064e3b] px-4 py-2.5 text-sm text-[#2dd4bf] shadow-sm outline-none transition focus:border-brand-400 focus:ring-2 focus:ring-brand-400/30">{DISTRICTS.map((d) => <option key={d}>{d}</option>)}</select>
-                <label className="mt-3 block text-sm font-bold text-[#0b2e22]">Full Address *</label>
-                <textarea required value={form.address} onChange={(e) => onFormChange("address", e.target.value)} placeholder="House, road, area…" rows={2} className="mt-1 w-full rounded-lg border border-[#064e3b] bg-[#064e3b] px-4 py-2.5 text-sm text-[#2dd4bf] shadow-sm outline-none transition placeholder:text-[#8ea89b] focus:border-brand-400 focus:ring-2 focus:ring-brand-400/30" />
-                <p className="mt-4 text-sm font-bold text-[#0b2e22]">Payment Method</p>
+                <div className="flex items-start justify-between"><h3 className="text-xl font-black text-[#4f63e8]">Checkout 🧾</h3><button type="button" onClick={onClose} className="text-2xl text-[#2a2545] hover:text-[#4f63e8]">×</button></div>
+                <label className="mt-4 block text-sm font-bold text-[#2a2545]">Full Name *</label>
+                <input required value={form.name} onChange={(e) => onFormChange("name", e.target.value)} placeholder="e.g. Imran Hasan" className="mt-1 w-full rounded-lg border border-[#8f174c] bg-[#8f174c] px-4 py-2.5 text-sm text-[#4f63e8] shadow-sm outline-none transition placeholder:text-[#7d7896] focus:border-brand-400 focus:ring-2 focus:ring-brand-400/30" />
+                <label className="mt-3 block text-sm font-bold text-[#2a2545]">Phone Number *</label>
+                <input required type="tel" value={form.phone} onChange={(e) => onFormChange("phone", e.target.value)} placeholder="01XXXXXXXXX" className="mt-1 w-full rounded-lg border border-[#8f174c] bg-[#8f174c] px-4 py-2.5 text-sm text-[#4f63e8] shadow-sm outline-none transition placeholder:text-[#7d7896] focus:border-brand-400 focus:ring-2 focus:ring-brand-400/30" />
+                <label className="mt-3 block text-sm font-bold text-[#2a2545]">District *</label>
+                <select value={district} onChange={(e) => onDistrictChange(e.target.value)} className="mt-1 w-full rounded-lg border border-[#8f174c] bg-[#8f174c] px-4 py-2.5 text-sm text-[#4f63e8] shadow-sm outline-none transition focus:border-brand-400 focus:ring-2 focus:ring-brand-400/30">{DISTRICTS.map((d) => <option key={d}>{d}</option>)}</select>
+                <label className="mt-3 block text-sm font-bold text-[#2a2545]">Full Address *</label>
+                <textarea required value={form.address} onChange={(e) => onFormChange("address", e.target.value)} placeholder="House, road, area…" rows={2} className="mt-1 w-full rounded-lg border border-[#8f174c] bg-[#8f174c] px-4 py-2.5 text-sm text-[#4f63e8] shadow-sm outline-none transition placeholder:text-[#7d7896] focus:border-brand-400 focus:ring-2 focus:ring-brand-400/30" />
+                <p className="mt-4 text-sm font-bold text-[#2a2545]">Payment Method</p>
                 <div className="mt-2 grid grid-cols-2 gap-2">
                   {([["COD", "💵 Cash on Delivery"], ["bKash", "📱 bKash"], ["Nagad", "🟠 Nagad"], ["Card", "💳 Card"]] as [PayMethod, string][]).map(([v, label]) => (
-                    <label key={v} className={`cursor-pointer rounded-lg border px-3 py-2.5 text-sm font-semibold transition ${payMethod === v ? "border-brand-400/60 bg-brand-400/10 text-brand-800 shadow-sm ring-1 ring-brand-400/40" : "border-[#064e3b] text-[#0b2e22] hover:border-brand-400/40"}`}>
+                    <label key={v} className={`cursor-pointer rounded-lg border px-3 py-2.5 text-sm font-semibold transition ${payMethod === v ? "border-brand-400/60 bg-brand-400/10 text-brand-800 shadow-sm ring-1 ring-brand-400/40" : "border-[#8f174c] text-[#2a2545] hover:border-brand-400/40"}`}>
                       <input type="radio" name="pay" checked={payMethod === v} onChange={() => onPayMethodChange(v)} className="mr-2 accent-brand-400" />{label}
                     </label>
                   ))}
                 </div>
                 {payMethod !== "COD" && <p className="mt-2 rounded-md bg-brand-400/10 p-2.5 text-xs text-brand-400 ring-1 ring-brand-400/30">Demo checkout — {payMethod} payment is simulated. No real money is charged.</p>}
-                <div className="mt-4 space-y-1 rounded-lg bg-[#064e3b] p-4 text-sm text-[#0b2e22] ring-1 ring-[#064e3b]">
+                <div className="mt-4 space-y-1 rounded-lg bg-[#8f174c] p-4 text-sm text-[#2a2545] ring-1 ring-[#8f174c]">
                   <div className="flex justify-between"><span>Subtotal</span><span className="font-bold">{tk(subtotal)}</span></div>
                   {discountAmt > 0 && <div className="flex justify-between text-brand-400"><span>Promo discount</span><span>−{tk(discountAmt)}</span></div>}
                   <div className="flex justify-between"><span>Delivery</span><span className="font-bold">{delivery === 0 ? "FREE" : tk(delivery)}</span></div>
-                  <div className="flex justify-between border-t border-[#064e3b] pt-2 text-base font-black text-[#2dd4bf]"><span>Total</span><span className="text-brand-400">{tk(total)}</span></div>
+                  <div className="flex justify-between border-t border-[#8f174c] pt-2 text-base font-black text-[#4f63e8]"><span>Total</span><span className="text-brand-400">{tk(total)}</span></div>
                 </div>
-                <motion.button whileTap={{ scale: 0.98 }} type="submit" className="mt-4 w-full rounded-full bg-gradient-to-r from-brand-500 to-brand-700 py-3.5 font-bold text-brand-950 shadow-[0_10px_28px_-8px_rgba(5, 150, 105, 0.4)] transition hover:brightness-110 active:scale-[0.99]">Place Order • {tk(total)} →</motion.button>
+                <motion.button whileTap={{ scale: 0.98 }} type="submit" className="mt-4 w-full rounded-full bg-gradient-to-r from-brand-500 to-brand-700 py-3.5 font-bold text-brand-950 shadow-[0_10px_28px_-8px_rgba(214, 31, 105, 0.4)] transition hover:brightness-110 active:scale-[0.99]">Place Order • {tk(total)} →</motion.button>
               </form>
             )}
           </motion.div>
