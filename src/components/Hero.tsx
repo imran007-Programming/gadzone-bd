@@ -23,21 +23,21 @@ const item: Variants = {
 // Harvest sun: marigold, ember-orange and leaf-green embers drifting
 // over the sunbaked sky.
 const GLOWS = [
-  { left: "4%", top: "10%", size: 150, delay: "0s", dur: "14s", c: "rgba(194, 65, 12, 0.28)" },
-  { left: "72%", top: "4%", size: 200, delay: "-4s", dur: "15s", c: "rgba(245, 158, 11, 0.16)" },
-  { left: "44%", top: "44%", size: 120, delay: "-7s", dur: "13s", c: "rgba(254, 215, 170, 0.5)" },
-  { left: "86%", top: "50%", size: 110, delay: "-2s", dur: "14s", c: "rgba(101, 163, 13, 0.18)" },
+  { left: "4%", top: "10%", size: 150, delay: "0s", dur: "14s", c: "rgba(8, 145, 178, 0.28)" },
+  { left: "72%", top: "4%", size: 200, delay: "-4s", dur: "15s", c: "rgba(163, 230, 53, 0.16)" },
+  { left: "44%", top: "44%", size: 120, delay: "-7s", dur: "13s", c: "rgba(165, 243, 252, 0.5)" },
+  { left: "86%", top: "50%", size: 110, delay: "-2s", dur: "14s", c: "rgba(251, 113, 133, 0.18)" },
 ];
 
 // marigold petals: warm sparks drifting over the woven dusk wash.
 const DOTS = [
-  { left: "8%", delay: "0s", dur: "7.2s", s: 22, c: "#c2410c" },
+  { left: "8%", delay: "0s", dur: "7.2s", s: 22, c: "#0e7490" },
   { left: "21%", delay: "-1.4s", dur: "7.8s", s: 16, c: "#bef264" },
-  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 24, c: "#65a30d" },
-  { left: "53%", delay: "-0.8s", dur: "8s", s: 18, c: "#65a30d" },
-  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 22, c: "#65a30d" },
-  { left: "82%", delay: "-2s", dur: "7.9s", s: 15, c: "#fed7aa" },
-  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 20, c: "#c2410c" },
+  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 24, c: "#fb7185" },
+  { left: "53%", delay: "-0.8s", dur: "8s", s: 18, c: "#fb7185" },
+  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 22, c: "#fb7185" },
+  { left: "82%", delay: "-2s", dur: "7.9s", s: 15, c: "#a5f3fc" },
+  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 20, c: "#0e7490" },
 ];
 
 // Ticker phrases reuse the hero's existing stats copy.
@@ -89,7 +89,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 height: `${34 - r * 4}%`,
                 transform: `translate(-50%, -50%) scaleY(0.5)`,
                 top: `${50 + r * 9}%`,
-                boxShadow: "0 0 24px 2px rgba(194, 65, 12, 0.35)",
+                boxShadow: "0 0 24px 2px rgba(8, 145, 178, 0.35)",
                 opacity: 1 - r * 0.18,
               }}
             />
@@ -107,7 +107,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             );
           })}
           {/* the nova orb itself */}
-          <div className="absolute inset-44 rounded-full border-2 border-brand-200/80 bg-[radial-gradient(circle_at_50%_62%,#fffbeb_0%,#fef3c7_30%,#fbbf24_55%,#ea580c_82%,#7c2d12_100%)] shadow-[0_0_90px_28px_rgba(194, 65, 12,0.4)]" />
+          <div className="absolute inset-44 rounded-full border-2 border-brand-200/80 bg-[radial-gradient(circle_at_50%_62%,#ecfeff_0%,#ecfccb_30%,#22d3ee_55%,#0891b2_82%,#164e63_100%)] shadow-[0_0_90px_28px_rgba(8, 145, 178,0.4)]" />
           <div className="absolute inset-44 rounded-full border border-white/40" />
           {/* ripple shimmer along the lower half */}
           <div className="absolute inset-44 overflow-hidden rounded-full">

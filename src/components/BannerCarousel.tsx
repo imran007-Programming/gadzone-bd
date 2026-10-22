@@ -115,7 +115,7 @@ export default function BannerCarousel() {
       aria-roledescription="carousel"
       aria-label="Featured offers"
     >
-      <div className="relative overflow-hidden rounded-[1.75rem] border-2 border-[#fdf7ee] shadow-[0_24px_70px_-18px_rgba(194, 65, 12, 0.45)] ring-1 ring-[#fdf7ee]">
+      <div className="relative overflow-hidden rounded-[1.75rem] border-2 border-[#f2fbfa] shadow-[0_24px_70px_-18px_rgba(8, 145, 178, 0.45)] ring-1 ring-[#f2fbfa]">
         <AnimatePresence initial={false} custom={direction} mode="wait">
           <motion.div
             key={slide.id}
@@ -155,13 +155,13 @@ export default function BannerCarousel() {
             {/* Ink-night overlay so the pop copy reads over any banner art */}
             <div
               aria-hidden
-              className="absolute inset-0 bg-gradient-to-br from-[#fff7ed]/92 via-[#fff7ed]/55 to-[#fff7ed]/20"
+              className="absolute inset-0 bg-gradient-to-br from-[#ecfeff]/92 via-[#ecfeff]/55 to-[#ecfeff]/20"
             />
-            <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_82%_18%,rgba(194, 65, 12, 0.25),transparent)]" />
-            <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#fff7ed]/70 via-transparent to-transparent" />
+            <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_82%_18%,rgba(8, 145, 178, 0.25),transparent)]" />
+            <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#ecfeff]/70 via-transparent to-transparent" />
             {/* Slide copy */}
             <div className="absolute inset-0 flex flex-col justify-center px-6 text-white sm:px-10 lg:px-14">
-              <span className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-gold-deep to-gold px-5 py-1.5 text-xs font-black uppercase tracking-[0.18em] text-[#92400e] shadow-[0_0_22px_rgba(194, 65, 12, 0.6)] ring-2 ring-white/20">
+              <span className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-gold-deep to-gold px-5 py-1.5 text-xs font-black uppercase tracking-[0.18em] text-[#365314] shadow-[0_0_22px_rgba(8, 145, 178, 0.6)] ring-2 ring-white/20">
                 {slide.eyebrow}
               </span>
               <h2 className="mt-5 max-w-xl text-4xl font-black leading-[1.05] tracking-tight drop-shadow-sm sm:text-5xl">
@@ -172,13 +172,13 @@ export default function BannerCarousel() {
               <div className="mt-7 flex flex-wrap gap-3">
                 <a
                   href="#shop"
-                  className="rounded-full bg-gradient-to-r from-brand-600 to-brand-400 px-7 py-3.5 font-black text-white shadow-[0_12px_28px_-8px_rgba(194, 65, 12, 0.65)] transition hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0 active:shadow-none"
+                  className="rounded-full bg-gradient-to-r from-brand-600 to-brand-400 px-7 py-3.5 font-black text-white shadow-[0_12px_28px_-8px_rgba(8, 145, 178, 0.65)] transition hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0 active:shadow-none"
                 >
                   Shop Now →
                 </a>
                 <a
                   href="#flash"
-                  className="rounded-full border border-white/25 bg-[#2b1d12] px-7 py-3.5 font-bold text-[#65a30d] backdrop-blur-sm transition hover:bg-[#2b1d12] active:scale-[0.98]"
+                  className="rounded-full border border-white/25 bg-[#0c2e35] px-7 py-3.5 font-bold text-[#fb7185] backdrop-blur-sm transition hover:bg-[#0c2e35] active:scale-[0.98]"
                 >
                   ⚡ Flash Deals
                 </a>
@@ -192,7 +192,7 @@ export default function BannerCarousel() {
           type="button"
           onClick={prev}
           aria-label="Previous banner"
-          className="absolute left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 text-lg font-black text-brand-950 shadow-[0_8px_20px_-6px_rgba(194, 65, 12, 0.6)] transition hover:-translate-y-[calc(50%+2px)] hover:brightness-110 active:translate-y-[-50%] active:shadow-none sm:left-4"
+          className="absolute left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 text-lg font-black text-brand-950 shadow-[0_8px_20px_-6px_rgba(8, 145, 178, 0.6)] transition hover:-translate-y-[calc(50%+2px)] hover:brightness-110 active:translate-y-[-50%] active:shadow-none sm:left-4"
         >
           ‹
         </button>
@@ -200,7 +200,7 @@ export default function BannerCarousel() {
           type="button"
           onClick={next}
           aria-label="Next banner"
-          className="absolute right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 text-lg font-black text-brand-950 shadow-[0_8px_20px_-6px_rgba(194, 65, 12, 0.6)] transition hover:-translate-y-[calc(50%+2px)] hover:brightness-110 active:translate-y-[-50%] active:shadow-none sm:right-4"
+          className="absolute right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 text-lg font-black text-brand-950 shadow-[0_8px_20px_-6px_rgba(8, 145, 178, 0.6)] transition hover:-translate-y-[calc(50%+2px)] hover:brightness-110 active:translate-y-[-50%] active:shadow-none sm:right-4"
         >
           ›
         </button>
@@ -217,7 +217,7 @@ export default function BannerCarousel() {
             aria-label={`Go to slide ${i + 1}: ${s.eyebrow}`}
             onClick={() => goTo(i, i > index ? 1 : -1)}
             className={`h-2.5 rounded-full transition-all ${
-              i === index ? "w-10 border border-[#fdf7ee] bg-gradient-to-r from-brand-500 to-[#65a30d]" : "w-2.5 bg-white/25 hover:bg-white/50"
+              i === index ? "w-10 border border-[#f2fbfa] bg-gradient-to-r from-brand-500 to-[#fb7185]" : "w-2.5 bg-white/25 hover:bg-white/50"
             }`}
           />
         ))}
