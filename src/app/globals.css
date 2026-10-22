@@ -1,33 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-  /* Glacier Aurora: arctic-white canvas, glacier-cyan primary,
-     aurora-lime accent, deep-fjord ink, electric-fjord secondary. */
+  /* Sunset Paper: warm-cream canvas, terracotta primary,
+     marigold accent, espresso ink, dusty-plum secondary. */
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
-  --color-brand-50: #ecfeff;
-  --color-brand-100: #cffafe;
-  --color-brand-200: #a5f3fc;
-  --color-brand-300: #67e8f9;
-  --color-brand-400: #22d3ee;
-  --color-brand-500: #06b6d4;
-  --color-brand-600: #0e7490;
-  --color-brand-700: #155e75;
-  --color-brand-800: #164e63;
-  --color-brand-900: #164e63;
-  --color-brand-950: #083344;
-  --color-brand: #06b6d4;
-  --color-brand-dark: #0e7490;
-  --color-brand-deep: #083344;
-  --color-gold: #84cc16;
-  --color-gold-deep: #d9f99d;
-  --color-gold-soft: #26350f;
-  --color-ink: #0b2436;
-  --color-paper: #f3f9fd;
-  --color-mute: #5b7a8c;
-  --color-popblue: #2563eb;
-  --color-popblue-deep: #93c5fd;
-  --color-popblue-soft: #dbeafe;
+  --color-brand-50: #fdf0e7;
+  --color-brand-100: #fae2cf;
+  --color-brand-200: #f4c8a3;
+  --color-brand-300: #eba76f;
+  --color-brand-400: #e08344;
+  --color-brand-500: #c9632a;
+  --color-brand-600: #b34e1e;
+  --color-brand-700: #8f3f14;
+  --color-brand-800: #6e3211;
+  --color-brand-900: #5a2e12;
+  --color-brand-950: #3a2413;
+  --color-brand: #c9632a;
+  --color-brand-dark: #8f3f14;
+  --color-brand-deep: #3a2413;
+  --color-gold: #e8a13d;
+  --color-gold-deep: #f6d38b;
+  --color-gold-soft: #3d2a12;
+  --color-ink: #33220f;
+  --color-paper: #faf3ea;
+  --color-mute: #8d7a64;
+  --color-popblue: #8c4a72;
+  --color-popblue-deep: #c99bb5;
+  --color-popblue-soft: #f2dfe9;
 }
 
 html { scroll-behavior: smooth; }
@@ -42,22 +42,22 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #f3f9fd;
+  background: #faf3ea;
   background-image:
-    linear-gradient(115deg, rgba(6, 182, 212, 0.1) 0%, rgba(132, 204, 22, 0.07) 38%, rgba(37, 99, 235, 0.08) 68%, transparent 100%),
-    radial-gradient(ellipse 58% 30% at 88% -4%, rgba(34, 211, 238, 0.18), transparent),
-    radial-gradient(ellipse 54% 28% at 4% 104%, rgba(132, 204, 22, 0.14), transparent),
-    repeating-linear-gradient(30deg, rgba(14, 116, 144, 0.05) 0 2px, transparent 2px 46px);
-  color: #0b2436;
+    linear-gradient(115deg, rgba(201, 99, 42, 0.1) 0%, rgba(232, 161, 61, 0.08) 38%, rgba(140, 74, 114, 0.08) 68%, transparent 100%),
+    radial-gradient(ellipse 58% 30% at 88% -4%, rgba(224, 131, 68, 0.18), transparent),
+    radial-gradient(ellipse 54% 28% at 4% 104%, rgba(232, 161, 61, 0.14), transparent),
+    repeating-linear-gradient(30deg, rgba(143, 63, 20, 0.05) 0 2px, transparent 2px 46px);
+  color: #33220f;
 }
-::selection { background: #d9f99d; color: #083344; }
+::selection { background: #f6d38b; color: #3a2413; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #06b6d4, #2563eb); border-radius: 8px; border: 2px solid #f3f9fd; }
-::-webkit-scrollbar-track { background: #dbe9f2; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #c9632a, #8c4a72); border-radius: 8px; border: 2px solid #faf3ea; }
+::-webkit-scrollbar-track { background: #eee1cc; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Glacier drift: pale frost motes floating upward through the aurora. */
+/* Sunset drift: warm dust motes floating upward through the marigold haze. */
 @keyframes ink-fall-anim {
   0% { transform: translate3d(6px, 200px, 0) rotate(0deg) scale(0.5); opacity: 0; }
   25% { opacity: 0.9; }
@@ -66,47 +66,47 @@ body {
 }
 .pop-fall { animation: ink-fall-anim 10.4s ease-in infinite; }
 
-/* Aurora sway: slow lateral slide of northern light. */
+/* Sunset sway: slow lateral slide of the evening light. */
 @keyframes ink-drift {
   0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.4; }
   50% { transform: translate3d(3vw, -1rem, 0) scale(1.08); opacity: 0.72; }
 }
 .pop-drift { animation: ink-drift 22s ease-in-out infinite; }
 
-/* Glacier bob: a gentle lively float. */
+/* Ember bob: a gentle lively float. */
 @keyframes seal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-10px) scale(1.03); }
 }
 .pop-bob { animation: seal-bob 5.2s ease-in-out infinite; }
 
-/* Aurora wheel: steady rotation for the glacier rings. */
+/* Sundial wheel: steady rotation for the terracotta rings. */
 @keyframes orbit-wheel {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: orbit-wheel 96s linear infinite; }
 
-/* Glacier ticker: infinite marquee (leftward drift). */
+/* Sunset ticker: infinite marquee (leftward drift). */
 @keyframes ink-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: ink-ticker 30s linear infinite; }
 
-/* Glacier bands: fjord-deep -> cyan -> lime -> electric-blue diagonal bands. */
+/* Sunset bands: espresso -> terracotta -> marigold -> plum diagonal bands. */
 .pop-stripes {
-  background-image: linear-gradient(115deg, #083344 0%, #083344 18%, #0e7490 18%, #0e7490 42%, #84cc16 42%, #84cc16 66%, #2563eb 66%);
+  background-image: linear-gradient(115deg, #3a2413 0%, #3a2413 18%, #8f3f14 18%, #8f3f14 42%, #e8a13d 42%, #e8a13d 66%, #8c4a72 66%);
   background-size: 120px 120px;
 }
 
-/* Glacier glass-card: frosted arctic card with a lime top hairline and
-   layered soft shadow; hover lifts it with a cyan glow. */
+/* Sunset card: warm-cream card with a marigold top hairline and
+   layered soft shadow; hover lifts it with a terracotta glow. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(14, 116, 144, 0.28);
-  background: linear-gradient(180deg, #fbfeff 0%, #f3f9fd 100%);
+  border: 1px solid rgba(143, 63, 20, 0.28);
+  background: linear-gradient(180deg, #fffdf8 0%, #faf3ea 100%);
   border-radius: 0.9rem;
-  box-shadow: 0 1px 2px rgba(8, 51, 68, 0.08), 0 12px 32px -12px rgba(8, 51, 68, 0.28);
+  box-shadow: 0 1px 2px rgba(58, 36, 19, 0.08), 0 12px 32px -12px rgba(58, 36, 19, 0.28);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   overflow: hidden;
 }
@@ -118,81 +118,81 @@ body {
   right: 0;
   height: 4px;
   border-radius: 0;
-  background: linear-gradient(90deg, #06b6d4 0%, #84cc16 50%, #2563eb 100%);
+  background: linear-gradient(90deg, #c9632a 0%, #e8a13d 50%, #8c4a72 100%);
   pointer-events: none;
 }
 .pop-lift:hover {
   transform: translateY(-4px);
-  border-color: rgba(6, 182, 212, 0.6);
-  box-shadow: 0 2px 4px rgba(8, 51, 68, 0.1), 0 22px 44px -14px rgba(6, 182, 212, 0.45);
+  border-color: rgba(201, 99, 42, 0.6);
+  box-shadow: 0 2px 4px rgba(58, 36, 19, 0.1), 0 22px 44px -14px rgba(201, 99, 42, 0.45);
 }
 
-/* Glacier glass: shared by modals and drawers — frosted arctic glass. */
+/* Sunset glass: shared by modals and drawers — frosted warm glass. */
 .pop-glass {
-  background: rgba(243, 249, 253, 0.92);
+  background: rgba(250, 243, 234, 0.92);
   backdrop-filter: blur(20px) saturate(1.25);
   -webkit-backdrop-filter: blur(20px) saturate(1.25);
-  border: 1px solid rgba(6, 182, 212, 0.35);
+  border: 1px solid rgba(201, 99, 42, 0.35);
   border-radius: 0.9rem;
-  box-shadow: 0 2px 6px rgba(8, 51, 68, 0.12), 0 28px 64px -26px rgba(8, 51, 68, 0.5);
+  box-shadow: 0 2px 6px rgba(58, 36, 19, 0.12), 0 28px 64px -26px rgba(58, 36, 19, 0.5);
 }
 
-/* Glacier seal: round cyan badge with a lime dashed ring, slight tilt. */
+/* Sunset seal: round terracotta badge with a marigold dashed ring, slight tilt. */
 .starburst {
   border-radius: 9999px;
-  border: 3px solid #fbfeff;
-  outline: 2px dashed #84cc16;
+  border: 3px solid #fffdf8;
+  outline: 2px dashed #e8a13d;
   outline-offset: 3px;
-  background: radial-gradient(circle at 34% 28%, #22d3ee 0%, #06b6d4 55%, #155e75 100%);
-  color: #fbfeff;
+  background: radial-gradient(circle at 34% 28%, #e08344 0%, #c9632a 55%, #8f3f14 100%);
+  color: #fffdf8;
   transform: rotate(4deg);
-  box-shadow: 0 8px 22px -6px rgba(6, 182, 212, 0.7);
+  box-shadow: 0 8px 22px -6px rgba(201, 99, 42, 0.7);
 }
 
-/* Glacier dots: fine cyan frost-dot grid for hero bands. */
+/* Sunset dots: fine terracotta dust-dot grid for hero bands. */
 .halftone {
   background-image:
-    radial-gradient(rgba(6, 182, 212, 0.16) 1.4px, transparent 1.5px),
-    radial-gradient(rgba(37, 99, 235, 0.12) 1px, transparent 1.1px);
+    radial-gradient(rgba(201, 99, 42, 0.16) 1.4px, transparent 1.5px),
+    radial-gradient(rgba(140, 74, 114, 0.12) 1px, transparent 1.1px);
   background-size: 28px 28px, 46px 46px;
   background-position: 0 0, 14px 23px;
 }
 
-/* Aurora scallops: soft rounded cyan/lime row divider. */
+/* Sunset scallops: soft rounded terracotta/marigold row divider. */
 .zigzag {
   height: 18px;
   background-image:
-    radial-gradient(circle at 12px -4px, rgba(6, 182, 212, 0.9) 12px, transparent 13px),
-    radial-gradient(circle at 36px -4px, rgba(132, 204, 22, 0.9) 12px, transparent 13px);
+    radial-gradient(circle at 12px -4px, rgba(201, 99, 42, 0.9) 12px, transparent 13px),
+    radial-gradient(circle at 36px -4px, rgba(232, 161, 61, 0.9) 12px, transparent 13px);
   background-size: 48px 18px;
   background-position: 0 0, 24px 0;
   background-repeat: repeat-x;
   opacity: 0.9;
 }
 
-/* Glacier stripes: vertical cyan stripes over arctic white. */
+/* Sunset awning: vertical terracotta stripes over warm cream. */
 .bazaar-awning {
   background-image:
-    repeating-linear-gradient(90deg, rgba(6, 182, 212, 0.08) 0 26px, rgba(243, 249, 253, 0.6) 26px 52px),
-    linear-gradient(180deg, #dbe9f2, #f3f9fd);
+    repeating-linear-gradient(90deg, rgba(201, 99, 42, 0.08) 0 26px, rgba(250, 243, 234, 0.6) 26px 52px),
+    linear-gradient(180deg, #eee1cc, #faf3ea);
 }
 
-/* Aurora core: layered lime-to-cyan radial for the hero aurora. */
+/* Sunset core: layered marigold-to-terracotta radial for the hero glow. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(251, 254, 255, 0.95) 0%, rgba(217, 249, 157, 0.5) 34%, rgba(34, 211, 238, 0.35) 58%, rgba(37, 99, 235, 0) 74%);
+    radial-gradient(circle at 50% 42%, rgba(255, 253, 248, 0.95) 0%, rgba(246, 211, 139, 0.5) 34%, rgba(224, 131, 68, 0.35) 58%, rgba(140, 74, 114, 0) 74%);
 }
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 42%, rgba(251, 254, 255, 0.95) 0%, rgba(217, 249, 157, 0.5) 34%, rgba(34, 211, 238, 0.35) 58%, rgba(37, 99, 235, 0) 74%);
+    radial-gradient(circle at 50% 42%, rgba(255, 253, 248, 0.95) 0%, rgba(246, 211, 139, 0.5) 34%, rgba(224, 131, 68, 0.35) 58%, rgba(140, 74, 114, 0) 74%);
 }
 
-/* Glacier rings: concentric cyan rings around the aurora. */
+/* Sunset rings: concentric terracotta rings around the glow. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(6, 182, 212, 0.32) 0px,
-    rgba(6, 182, 212, 0.32) 4px,
+    rgba(201, 99, 42, 0.32) 0px,
+    rgba(201, 99, 42, 0.32) 4px,
     transparent 4px,
     transparent 28px
   );
@@ -203,8 +203,8 @@ body {
 .sun-rays {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(132, 204, 22, 0.3) 0px,
-    rgba(132, 204, 22, 0.3) 4px,
+    rgba(232, 161, 61, 0.3) 0px,
+    rgba(232, 161, 61, 0.3) 4px,
     transparent 4px,
     transparent 28px
   );
@@ -213,66 +213,66 @@ body {
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all glacier-styled. */
+/* Legacy aliases kept so untouched components still render — all sunset-styled. */
 .lagoon-lift {
   position: relative;
-  border: 1px solid rgba(14, 116, 144, 0.28);
-  background: linear-gradient(180deg, #fbfeff 0%, #f3f9fd 100%);
+  border: 1px solid rgba(143, 63, 20, 0.28);
+  background: linear-gradient(180deg, #fffdf8 0%, #faf3ea 100%);
   border-radius: 0.9rem;
-  box-shadow: 0 1px 2px rgba(8, 51, 68, 0.08), 0 12px 32px -12px rgba(8, 51, 68, 0.28);
+  box-shadow: 0 1px 2px rgba(58, 36, 19, 0.08), 0 12px 32px -12px rgba(58, 36, 19, 0.28);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   overflow: hidden;
 }
 .lagoon-lift:hover {
   transform: translateY(-4px);
-  border-color: rgba(6, 182, 212, 0.6);
-  box-shadow: 0 2px 4px rgba(8, 51, 68, 0.1), 0 22px 44px -14px rgba(6, 182, 212, 0.45);
+  border-color: rgba(201, 99, 42, 0.6);
+  box-shadow: 0 2px 4px rgba(58, 36, 19, 0.1), 0 22px 44px -14px rgba(201, 99, 42, 0.45);
 }
 .stamp-perf {
-  border: 2px dashed #0e7490;
-  background: rgba(6, 182, 212, 0.07);
+  border: 2px dashed #8f3f14;
+  background: rgba(201, 99, 42, 0.07);
   border-radius: 0.9rem;
-  box-shadow: 0 4px 14px -4px rgba(8, 51, 68, 0.18);
+  box-shadow: 0 4px 14px -4px rgba(58, 36, 19, 0.18);
 }
 .ember-glow {
   position: relative;
-  border: 1px solid rgba(14, 116, 144, 0.28);
-  background: linear-gradient(180deg, #fbfeff 0%, #f3f9fd 100%);
+  border: 1px solid rgba(143, 63, 20, 0.28);
+  background: linear-gradient(180deg, #fffdf8 0%, #faf3ea 100%);
   border-radius: 0.9rem;
-  box-shadow: 0 1px 2px rgba(8, 51, 68, 0.08), 0 12px 32px -12px rgba(8, 51, 68, 0.28);
+  box-shadow: 0 1px 2px rgba(58, 36, 19, 0.08), 0 12px 32px -12px rgba(58, 36, 19, 0.28);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
   transform: translateY(-4px);
-  border-color: rgba(6, 182, 212, 0.6);
-  box-shadow: 0 2px 4px rgba(8, 51, 68, 0.1), 0 22px 44px -14px rgba(6, 182, 212, 0.45);
+  border-color: rgba(201, 99, 42, 0.6);
+  box-shadow: 0 2px 4px rgba(58, 36, 19, 0.1), 0 22px 44px -14px rgba(201, 99, 42, 0.45);
 }
 .ripple-glow {
   position: relative;
-  border: 1px solid rgba(14, 116, 144, 0.28);
-  background: linear-gradient(180deg, #fbfeff 0%, #f3f9fd 100%);
+  border: 1px solid rgba(143, 63, 20, 0.28);
+  background: linear-gradient(180deg, #fffdf8 0%, #faf3ea 100%);
   border-radius: 0.9rem;
-  box-shadow: 0 1px 2px rgba(8, 51, 68, 0.08), 0 12px 32px -12px rgba(8, 51, 68, 0.28);
+  box-shadow: 0 1px 2px rgba(58, 36, 19, 0.08), 0 12px 32px -12px rgba(58, 36, 19, 0.28);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
   transform: translateY(-4px);
-  border-color: rgba(6, 182, 212, 0.6);
-  box-shadow: 0 2px 4px rgba(8, 51, 68, 0.1), 0 22px 44px -14px rgba(6, 182, 212, 0.45);
+  border-color: rgba(201, 99, 42, 0.6);
+  box-shadow: 0 2px 4px rgba(58, 36, 19, 0.1), 0 22px 44px -14px rgba(201, 99, 42, 0.45);
 }
 .lagoon-glow {
   position: relative;
-  border: 1px solid rgba(14, 116, 144, 0.28);
-  background: linear-gradient(180deg, #fbfeff 0%, #f3f9fd 100%);
+  border: 1px solid rgba(143, 63, 20, 0.28);
+  background: linear-gradient(180deg, #fffdf8 0%, #faf3ea 100%);
   border-radius: 0.9rem;
-  box-shadow: 0 1px 2px rgba(8, 51, 68, 0.08), 0 12px 32px -12px rgba(8, 51, 68, 0.28);
+  box-shadow: 0 1px 2px rgba(58, 36, 19, 0.08), 0 12px 32px -12px rgba(58, 36, 19, 0.28);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
   transform: translateY(-4px);
-  border-color: rgba(6, 182, 212, 0.6);
-  box-shadow: 0 2px 4px rgba(8, 51, 68, 0.1), 0 22px 44px -14px rgba(6, 182, 212, 0.45);
+  border-color: rgba(201, 99, 42, 0.6);
+  box-shadow: 0 2px 4px rgba(58, 36, 19, 0.1), 0 22px 44px -14px rgba(201, 99, 42, 0.45);
 }
