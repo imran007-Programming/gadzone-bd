@@ -19,7 +19,7 @@ type DashboardSidebarProps = {
 
 export default function DashboardSidebar({ nav, active, onSelect, badge, userName, userEmail, userImage, userRole }: DashboardSidebarProps) {
   return (
-    <aside className="sticky top-0 hidden h-screen w-72 shrink-0 flex-col border-r border-[#4a2c17] bg-[#1b1f3b] p-5 text-[#e9d8c4] lg:flex">
+    <aside className="sticky top-0 hidden h-screen w-72 shrink-0 flex-col border-r border-[#4a2c17] bg-[#2b1d12] p-5 text-[#e9d8c4] lg:flex">
       <Link href="/" className="flex items-center gap-2">
         <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-500 text-xl font-black text-white">G</span>
         <span className="text-lg font-black tracking-tight">
@@ -37,7 +37,7 @@ export default function DashboardSidebar({ nav, active, onSelect, badge, userNam
               onClick={() => onSelect(item.id)}
               aria-current={isActive ? "page" : undefined}
               className={`flex w-full items-center gap-3 rounded-lg px-4 py-3 text-left text-sm font-bold transition ${
-                isActive ? "bg-brand-500 text-white shadow-lg shadow-brand-500/30" : "text-[#e9d8c4] hover:bg-[#4a2c17] hover:text-[#ede9fe]"
+                isActive ? "bg-brand-500 text-white shadow-lg shadow-brand-500/30" : "text-[#e9d8c4] hover:bg-[#4a2c17] hover:text-[#fff7ed]"
               }`}
             >
               <span className="text-lg" aria-hidden="true">{item.icon}</span>
@@ -48,12 +48,12 @@ export default function DashboardSidebar({ nav, active, onSelect, badge, userNam
       </nav>
 
       <div className="mt-auto space-y-2 border-t border-[#4a2c17] pt-4">
-        <Link href="/" className="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-bold text-[#e9d8c4] transition hover:bg-[#4a2c17] hover:text-[#ede9fe]">
+        <Link href="/" className="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-bold text-[#e9d8c4] transition hover:bg-[#4a2c17] hover:text-[#fff7ed]">
           <span aria-hidden="true">🛍️</span> Back to Shop
         </Link>
         <button
           onClick={() => signOut({ callbackUrl: "/" })}
-          className="flex w-full items-center gap-3 rounded-lg px-4 py-3 text-left text-sm font-bold text-[#e9d8c4] transition hover:bg-[#4a2c17] hover:text-[#ede9fe]"
+          className="flex w-full items-center gap-3 rounded-lg px-4 py-3 text-left text-sm font-bold text-[#e9d8c4] transition hover:bg-[#4a2c17] hover:text-[#fff7ed]"
         >
           <span aria-hidden="true">🚪</span> Sign out
         </button>
