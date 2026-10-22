@@ -104,7 +104,7 @@ export default function AdminPage() {
   const isAdmin = session?.user?.role === "admin";
 
   return (
-    <div className="min-h-screen bg-[#faf7ff] font-sans text-[#6d28d9] lg:flex">
+    <div className="min-h-screen bg-[#f9fefb] font-sans text-[#047857] lg:flex">
       <DashboardSidebar
         nav={NAV}
         active={tab}
@@ -117,27 +117,27 @@ export default function AdminPage() {
       />
 
       <div className="min-w-0 flex-1">
-        <header className="sticky top-0 z-20 border-b border-[#ddd6fe] bg-[#faf7ff]/90 backdrop-blur lg:static">
+        <header className="sticky top-0 z-20 border-b border-[#a7f3d0] bg-[#f9fefb]/90 backdrop-blur lg:static">
           <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3">
             <Link href="/" className="flex shrink-0 items-center gap-2 lg:hidden">
               <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-500 text-xl font-black text-white">G</span>
               <span className="text-base font-black tracking-tight">Gad<span className="text-brand-700">Zone</span> BD</span>
             </Link>
             <div className="min-w-0 flex-1">
-              <p className="flex flex-wrap items-center gap-2 truncate text-sm font-bold text-[#221a38] sm:text-base">
+              <p className="flex flex-wrap items-center gap-2 truncate text-sm font-bold text-[#1c2a21] sm:text-base">
                 Admin Dashboard
-                <span className="rounded-full bg-[#faf7ff] px-2 py-0.5 text-[11px] font-black text-brand-700">ADMIN</span>
+                <span className="rounded-full bg-[#f9fefb] px-2 py-0.5 text-[11px] font-black text-brand-700">ADMIN</span>
               </p>
-              <p className="hidden text-xs text-[#6d28d9] sm:block">Manage orders, products and customers.</p>
+              <p className="hidden text-xs text-[#047857] sm:block">Manage orders, products and customers.</p>
             </div>
             {session?.user && (
               <>
-                <Link href="/dashboard" className="hidden shrink-0 rounded-full px-3 py-2 text-sm font-bold text-[#6d28d9] hover:bg-[#faf7ff] sm:block">My Dashboard</Link>
+                <Link href="/dashboard" className="hidden shrink-0 rounded-full px-3 py-2 text-sm font-bold text-[#047857] hover:bg-[#f9fefb] sm:block">My Dashboard</Link>
                 {session.user.image ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img src={session.user.image} alt="" className="h-10 w-10 shrink-0 rounded-full object-cover ring-2 ring-brand-200" />
                 ) : (
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#faf7ff] font-black text-[#221a38]">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f9fefb] font-black text-[#1c2a21]">
                     {initials(session.user.name, session.user.email)}
                   </span>
                 )}
@@ -148,7 +148,7 @@ export default function AdminPage() {
 
         <main className="mx-auto max-w-6xl px-4 py-6">
           {status === "loading" ? (
-            <p className="py-16 text-center text-[#6d28d9]">Checking your session…</p>
+            <p className="py-16 text-center text-[#047857]">Checking your session…</p>
           ) : !session?.user ? (
             <SignInPrompt
               title="Admin Dashboard"
@@ -156,10 +156,10 @@ export default function AdminPage() {
               callbackUrl="/admin"
             />
           ) : !isAdmin ? (
-            <div className="mx-auto max-w-md rounded-lg bg-[#faf7ff] p-8 text-center shadow-sm ring-1 ring-[#ddd6fe]">
+            <div className="mx-auto max-w-md rounded-lg bg-[#f9fefb] p-8 text-center shadow-sm ring-1 ring-[#a7f3d0]">
               <p className="text-4xl" aria-hidden="true">🔒</p>
-              <h1 className="mt-2 text-2xl font-black text-[#221a38]">Access denied — admin only</h1>
-              <p className="mt-2 text-sm text-[#6d28d9]">You are signed in as {session.user.email}, but this account does not have admin access.</p>
+              <h1 className="mt-2 text-2xl font-black text-[#1c2a21]">Access denied — admin only</h1>
+              <p className="mt-2 text-sm text-[#047857]">You are signed in as {session.user.email}, but this account does not have admin access.</p>
               <Link href="/" className="mt-5 inline-block rounded-full bg-brand-500 px-6 py-3 text-sm font-bold text-white transition hover:bg-brand-600">Back to Shop</Link>
             </div>
           ) : (
@@ -185,19 +185,19 @@ export default function AdminPage() {
                     <div className="lg:col-span-3">
                       <WeeklyChart orders={orders} />
                     </div>
-                    <section className="rounded-lg bg-[#faf7ff] p-5 shadow-sm ring-1 ring-[#ddd6fe] lg:col-span-2">
+                    <section className="rounded-lg bg-[#f9fefb] p-5 shadow-sm ring-1 ring-[#a7f3d0] lg:col-span-2">
                       <div className="flex items-center justify-between">
-                        <h3 className="font-black text-[#221a38]">Low-stock products</h3>
+                        <h3 className="font-black text-[#1c2a21]">Low-stock products</h3>
                         <button onClick={() => setTab("products")} className="text-sm font-bold text-brand-700 hover:text-brand-700">View all →</button>
                       </div>
                       {lowStock.length === 0 ? (
-                        <p className="mt-4 text-sm text-[#6d28d9]">All products are well stocked. 🎉</p>
+                        <p className="mt-4 text-sm text-[#047857]">All products are well stocked. 🎉</p>
                       ) : (
                         <ul className="mt-4 space-y-3">
                           {lowStock.map((p) => (
                             <li key={p.id} className="flex items-center justify-between gap-3">
-                              <span className="min-w-0 truncate text-sm font-semibold text-[#6d28d9]">{p.name}</span>
-                              <span className={`shrink-0 rounded-full px-2.5 py-1 text-xs font-bold ${STOCK_STYLES[p.stock] ?? "bg-[#faf7ff] text-[#5b21b6]"}`}>{p.stock}</span>
+                              <span className="min-w-0 truncate text-sm font-semibold text-[#047857]">{p.name}</span>
+                              <span className={`shrink-0 rounded-full px-2.5 py-1 text-xs font-bold ${STOCK_STYLES[p.stock] ?? "bg-[#f9fefb] text-[#065f46]"}`}>{p.stock}</span>
                             </li>
                           ))}
                         </ul>
@@ -207,24 +207,24 @@ export default function AdminPage() {
 
                   <section>
                     <div className="mb-3 flex items-center justify-between">
-                      <h2 className="text-lg font-black text-[#221a38]">Recent Orders</h2>
+                      <h2 className="text-lg font-black text-[#1c2a21]">Recent Orders</h2>
                       <button onClick={() => setTab("orders")} className="text-sm font-bold text-brand-700 hover:text-brand-700">View all →</button>
                     </div>
                     {!loaded ? (
-                      <p className="text-sm text-[#6d28d9]">Loading orders…</p>
+                      <p className="text-sm text-[#047857]">Loading orders…</p>
                     ) : recentOrders.length === 0 ? (
                       <EmptyState icon="📦" title="No orders yet" text="Place a test order from the shop to see it here." actionLabel="Go to shop" actionHref="/" />
                     ) : (
                       <div className="space-y-3">
                         {recentOrders.map((o) => (
-                          <div key={o.id} className="flex flex-wrap items-center justify-between gap-3 rounded-lg bg-[#faf7ff] p-4 shadow-sm ring-1 ring-[#ddd6fe]">
+                          <div key={o.id} className="flex flex-wrap items-center justify-between gap-3 rounded-lg bg-[#f9fefb] p-4 shadow-sm ring-1 ring-[#a7f3d0]">
                             <div className="min-w-0">
-                              <p className="font-black text-[#221a38]">{o.id}</p>
-                              <p className="truncate text-sm text-[#6d28d9]">{o.name} · {o.email}</p>
+                              <p className="font-black text-[#1c2a21]">{o.id}</p>
+                              <p className="truncate text-sm text-[#047857]">{o.name} · {o.email}</p>
                             </div>
                             <div className="flex items-center gap-3">
                               <span className="font-black text-brand-700">{tk(o.total)}</span>
-                              <span className="rounded-full bg-[#faf7ff] px-3 py-1 text-xs font-bold text-[#6d28d9]">{o.status}</span>
+                              <span className="rounded-full bg-[#f9fefb] px-3 py-1 text-xs font-bold text-[#047857]">{o.status}</span>
                             </div>
                           </div>
                         ))}
@@ -238,29 +238,29 @@ export default function AdminPage() {
                 <div className="space-y-5 pt-5">
                   <div className="flex flex-wrap items-end justify-between gap-3">
                     <div>
-                      <h1 className="text-2xl font-black text-[#221a38]">Orders</h1>
-                      <p className="mt-1 text-sm text-[#6d28d9]">{filteredOrders.length} order{filteredOrders.length === 1 ? "" : "s"} shown</p>
+                      <h1 className="text-2xl font-black text-[#1c2a21]">Orders</h1>
+                      <p className="mt-1 text-sm text-[#047857]">{filteredOrders.length} order{filteredOrders.length === 1 ? "" : "s"} shown</p>
                     </div>
                     {(orderSearch.trim() || statusFilter !== "All") && (
-                      <button onClick={() => { setOrderSearch(""); setStatusFilter("All"); }} className="rounded-full bg-[#faf7ff] px-4 py-2 text-sm font-bold text-[#6d28d9] ring-1 ring-[#ddd6fe] hover:bg-[#faf7ff]">Clear filters ✕</button>
+                      <button onClick={() => { setOrderSearch(""); setStatusFilter("All"); }} className="rounded-full bg-[#f9fefb] px-4 py-2 text-sm font-bold text-[#047857] ring-1 ring-[#a7f3d0] hover:bg-[#f9fefb]">Clear filters ✕</button>
                     )}
                   </div>
 
                   <label className="relative block max-w-md">
                     <span className="sr-only">Search orders</span>
-                    <span className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-[#6d28d9]" aria-hidden="true">🔍</span>
+                    <span className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-[#047857]" aria-hidden="true">🔍</span>
                     <input
                       value={orderSearch}
                       onChange={(e) => setOrderSearch(e.target.value)}
                       placeholder="Search by order id, name or email…"
-                      className="w-full rounded-full border border-[#ddd6fe] bg-[#faf7ff] py-2.5 pr-3 pl-9 text-sm outline-none focus:border-brand-400"
+                      className="w-full rounded-full border border-[#a7f3d0] bg-[#f9fefb] py-2.5 pr-3 pl-9 text-sm outline-none focus:border-brand-400"
                     />
                   </label>
 
                   <FilterPills options={STATUS_OPTIONS} value={statusFilter} onChange={(v) => setStatusFilter(v as StatusFilter)} counts={statusCounts} />
 
                   {!loaded ? (
-                    <p className="text-sm text-[#6d28d9]">Loading orders…</p>
+                    <p className="text-sm text-[#047857]">Loading orders…</p>
                   ) : filteredOrders.length === 0 ? (
                     <EmptyState icon="🔍" title={orders.length === 0 ? "No orders yet" : "No orders match your filters"} text={orders.length === 0 ? "Place a test order from the shop to see it here." : "Try a different search or status filter."} actionLabel={orders.length === 0 ? "Go to shop" : undefined} actionHref={orders.length === 0 ? "/" : undefined} />
                   ) : (
@@ -277,8 +277,8 @@ export default function AdminPage() {
                 <div className="space-y-5 pt-5">
                   <div className="flex flex-wrap items-end justify-between gap-3">
                     <div>
-                      <h1 className="text-2xl font-black text-[#221a38]">Products</h1>
-                      <p className="mt-1 text-sm text-[#6d28d9]">{filteredProducts.length} product{filteredProducts.length === 1 ? "" : "s"} in the catalogue</p>
+                      <h1 className="text-2xl font-black text-[#1c2a21]">Products</h1>
+                      <p className="mt-1 text-sm text-[#047857]">{filteredProducts.length} product{filteredProducts.length === 1 ? "" : "s"} in the catalogue</p>
                     </div>
                     <button onClick={() => setShowAddNote((v) => !v)} className="rounded-full bg-brand-500 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-brand-600">+ Add Product</button>
                   </div>
@@ -291,12 +291,12 @@ export default function AdminPage() {
 
                   <label className="relative block max-w-md">
                     <span className="sr-only">Search products</span>
-                    <span className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-[#6d28d9]" aria-hidden="true">🔍</span>
+                    <span className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-[#047857]" aria-hidden="true">🔍</span>
                     <input
                       value={productSearch}
                       onChange={(e) => setProductSearch(e.target.value)}
                       placeholder="Search by product name or category…"
-                      className="w-full rounded-full border border-[#ddd6fe] bg-[#faf7ff] py-2.5 pr-3 pl-9 text-sm outline-none focus:border-brand-400"
+                      className="w-full rounded-full border border-[#a7f3d0] bg-[#f9fefb] py-2.5 pr-3 pl-9 text-sm outline-none focus:border-brand-400"
                     />
                   </label>
 
@@ -305,18 +305,18 @@ export default function AdminPage() {
                   ) : (
                     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                       {filteredProducts.map((p) => (
-                        <article key={p.id} className="overflow-hidden rounded-lg bg-[#faf7ff] shadow-sm ring-1 ring-[#ddd6fe] transition hover:shadow-md">
+                        <article key={p.id} className="overflow-hidden rounded-lg bg-[#f9fefb] shadow-sm ring-1 ring-[#a7f3d0] transition hover:shadow-md">
                           {/* eslint-disable-next-line @next/next/no-img-element */}
                           <img src={p.img} alt={p.name} loading="lazy" className="h-40 w-full object-cover" />
                           <div className="p-4">
                             <div className="flex items-start justify-between gap-2">
-                              <h3 className="min-w-0 font-black text-[#221a38]">{p.name}</h3>
-                              <span className={`shrink-0 rounded-full px-2.5 py-1 text-[11px] font-bold ${STOCK_STYLES[p.stock] ?? "bg-[#faf7ff] text-[#5b21b6]"}`}>{p.stock}</span>
+                              <h3 className="min-w-0 font-black text-[#1c2a21]">{p.name}</h3>
+                              <span className={`shrink-0 rounded-full px-2.5 py-1 text-[11px] font-bold ${STOCK_STYLES[p.stock] ?? "bg-[#f9fefb] text-[#065f46]"}`}>{p.stock}</span>
                             </div>
-                            <p className="mt-1 text-xs font-semibold tracking-wide text-[#6d28d9] uppercase">{p.category}</p>
+                            <p className="mt-1 text-xs font-semibold tracking-wide text-[#047857] uppercase">{p.category}</p>
                             <div className="mt-3 flex items-center justify-between">
-                              <p className="font-black text-brand-700">{tk(p.price)} <span className="text-xs font-semibold text-[#6d28d9] line-through">{tk(p.oldPrice)}</span></p>
-                              <p className="text-sm font-bold text-[#6d28d9]">⭐ {p.rating} <span className="font-normal text-[#6d28d9]">({p.reviews})</span></p>
+                              <p className="font-black text-brand-700">{tk(p.price)} <span className="text-xs font-semibold text-[#047857] line-through">{tk(p.oldPrice)}</span></p>
+                              <p className="text-sm font-bold text-[#047857]">⭐ {p.rating} <span className="font-normal text-[#047857]">({p.reviews})</span></p>
                             </div>
                           </div>
                         </article>
@@ -328,27 +328,27 @@ export default function AdminPage() {
 
               {tab === "customers" && (
                 <div className="space-y-5 pt-5">
-                  <h1 className="text-2xl font-black text-[#221a38]">Customers</h1>
-                  <p className="text-sm text-[#6d28d9]">Derived from orders placed in this browser. Guest checkouts are not listed here.</p>
+                  <h1 className="text-2xl font-black text-[#1c2a21]">Customers</h1>
+                  <p className="text-sm text-[#047857]">Derived from orders placed in this browser. Guest checkouts are not listed here.</p>
                   {!loaded ? (
-                    <p className="text-sm text-[#6d28d9]">Loading customers…</p>
+                    <p className="text-sm text-[#047857]">Loading customers…</p>
                   ) : customers.length === 0 ? (
                     <EmptyState icon="👥" title="No customers yet" text="When a signed-in customer places an order, they will appear here." actionLabel="Go to shop" actionHref="/" />
                   ) : (
                     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                       {customers.map((c) => (
-                        <article key={c.email} className="rounded-lg bg-[#faf7ff] p-5 shadow-sm ring-1 ring-[#ddd6fe]">
+                        <article key={c.email} className="rounded-lg bg-[#f9fefb] p-5 shadow-sm ring-1 ring-[#a7f3d0]">
                           <div className="flex items-center gap-3">
                             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-500 text-base font-black text-white">
                               {initials(c.name, c.email)}
                             </span>
                             <div className="min-w-0">
-                              <p className="truncate font-black text-[#221a38]">{c.name}</p>
-                              <p className="truncate text-sm text-[#6d28d9]">{c.email}</p>
+                              <p className="truncate font-black text-[#1c2a21]">{c.name}</p>
+                              <p className="truncate text-sm text-[#047857]">{c.email}</p>
                             </div>
                           </div>
                           <div className="mt-4 flex items-center justify-between border-t border-[#0f9787] pt-3 text-sm">
-                            <span className="font-semibold text-[#6d28d9]">{c.orders} order{c.orders === 1 ? "" : "s"}</span>
+                            <span className="font-semibold text-[#047857]">{c.orders} order{c.orders === 1 ? "" : "s"}</span>
                             <span className="font-black text-brand-700">{tk(c.spent)}</span>
                           </div>
                         </article>
