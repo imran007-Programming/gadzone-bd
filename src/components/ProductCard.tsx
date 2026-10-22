@@ -24,7 +24,7 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
       whileHover={reduce ? undefined : { y: -5 }}
       className="pop-lift group relative flex h-full flex-col overflow-hidden rounded-[1.5rem] bg-paper"
     >
-      {/* harbor ribbon strip along the card's top edge */}
+      {/* garden ribbon strip along the card's top edge */}
       <div aria-hidden className="pop-stripes flex items-center justify-center gap-2 px-5 py-2">
         <span className="text-[10px] font-black uppercase tracking-[0.28em] text-white drop-shadow">GadZone pick</span>
       </div>
@@ -41,12 +41,12 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
       </div>
       <div className="flex flex-1 flex-col items-start gap-1.5 px-5 pb-4 pt-1 text-left">
         <span className="rounded-full bg-brand-100 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.16em] text-brand-700 ring-1 ring-brand-200">{p.category}</span>
-        <h3 className="cursor-pointer text-[15px] font-bold leading-snug tracking-tight text-ink hover:text-brand-700" onClick={() => onQuickView(p)}>{p.name}</h3>
+        <h3 className="cursor-pointer text-[15px] font-bold leading-snug tracking-tight text-ink hover:text-brand-300" onClick={() => onQuickView(p)}>{p.name}</h3>
         <div className="flex items-center gap-1"><Stars rating={p.rating} /><span className="text-xs font-medium text-mute">{p.rating} ({p.reviews.toLocaleString()})</span></div>
         <span className={`w-fit px-2.5 py-1 text-[11px] font-bold ${p.stock === "In Stock" ? "rounded-full bg-gold-soft text-gold-deep ring-1 ring-gold/30" : "rounded-full bg-brand-100 text-brand-800 ring-1 ring-brand-200"}`}>{p.stock === "In Stock" ? "● In Stock" : "⚠ " + p.stock}</span>
         <p className="line-clamp-2 text-[13px] leading-relaxed text-mute">{p.desc}</p>
         <div className="mt-auto flex w-full items-end justify-between gap-2 pt-2.5">
-          <span className="text-[22px] font-black tracking-tight text-brand-700">{tk(p.price)}</span>
+          <span className="text-[22px] font-black tracking-tight text-brand-300">{tk(p.price)}</span>
           <span className="text-xs font-bold text-mute line-through">{tk(p.oldPrice)}</span>
         </div>
       </div>
@@ -55,7 +55,7 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
           whileTap={{ scale: 0.98 }}
           onClick={() => onAddToCart(p.id)}
           aria-label={`Add ${p.name} to cart`}
-          className="flex w-full items-center justify-center gap-1.5 rounded-full bg-gradient-to-br from-brand-600 via-brand-500 to-gold-deep px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-[0_10px_24px_-8px_rgba(201,_95,_40, 0.65)] transition hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0 active:shadow-none"
+          className="flex w-full items-center justify-center gap-1.5 rounded-full bg-gradient-to-br from-brand-600 via-brand-500 to-gold-deep px-4 py-2.5 text-xs font-black uppercase tracking-wider text-[#17220a] shadow-[0_10px_24px_-8px_rgba(201,_95,_40, 0.65)] transition hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0 active:shadow-none"
         >
           🛒 Add
         </motion.button>

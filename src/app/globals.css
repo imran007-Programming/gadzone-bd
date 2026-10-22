@@ -1,42 +1,44 @@
 @import "tailwindcss";
 
 @theme {
-  /* Sunlit Paper Studio: warm cream paper canvas, persimmon-orange
-     primary, deep-teal secondary, sunny-amber accents; chunky ink
-     outlines and hard offset shadows on every card. */
+  /* Midnight Botanica: deep plum-violet night garden, lime-chartreuse
+     primary, fuchsia secondary, apricot accents; glass cards with a
+     soft bloom glow and gradient garden-ribbon trim. */
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
-  --color-brand-50: #fff7ee;
-  --color-brand-100: #ffedd6;
-  --color-brand-200: #ffd7a8;
-  --color-brand-300: #ffbd7a;
-  --color-brand-400: #fb9a3c;
-  --color-brand-500: #f97316;
-  --color-brand-600: #ea580c;
-  --color-brand-700: #c2410c;
-  --color-brand-800: #9a3412;
-  --color-brand-900: #7c2d12;
-  --color-brand-950: #431407;
-  --color-brand: #ea580c;
-  --color-brand-dark: #c2410c;
-  --color-brand-deep: #9a3412;
-  --color-gold-50: #effaf7;
-  --color-gold-100: #d7f0ea;
-  --color-gold-200: #b0e1d6;
-  --color-gold-300: #7dccbd;
-  --color-gold-400: #45b09d;
-  --color-gold-500: #14a08a;
-  --color-gold-600: #0f766e;
-  --color-gold-700: #115e59;
-  --color-gold-800: #134e4a;
-  --color-gold-900: #0f3d38;
-  --color-gold-950: #042e2a;
-  --color-gold: #0f766e;
-  --color-gold-deep: #115e59;
-  --color-gold-soft: #d7f0ea;
-  --color-ink: #2f2118;
-  --color-paper: #fdf4e6;
-  --color-mute: #93765c;
+  /* brand = lime scale */
+  --color-brand-50: #f7fee7;
+  --color-brand-100: #ecfccb;
+  --color-brand-200: #d9f99d;
+  --color-brand-300: #bef264;
+  --color-brand-400: #a3e635;
+  --color-brand-500: #84cc16;
+  --color-brand-600: #65a30d;
+  --color-brand-700: #4d7c0f;
+  --color-brand-800: #3f6212;
+  --color-brand-900: #365314;
+  --color-brand-950: #1a2e05;
+  --color-brand: #84cc16;
+  --color-brand-dark: #4d7c0f;
+  --color-brand-deep: #3f6212;
+
+  /* gold = fuchsia scale */
+  --color-gold-50: #fdf4ff;
+  --color-gold-100: #fae8ff;
+  --color-gold-200: #f5d0fe;
+  --color-gold-300: #f0abfc;
+  --color-gold-400: #e879f9;
+  --color-gold-500: #d946ef;
+  --color-gold-600: #c026d3;
+  --color-gold-700: #a21caf;
+  --color-gold-800: #86198f;
+  --color-gold-900: #701a75;
+  --color-gold-950: #4a044e;
+  --color-gold: #d946ef;
+  --color-gold-deep: #a21caf;
+  --color-gold-soft: #fae8ff;
+
+  /* popblue = apricot scale */
   --color-popblue-50: #fffbeb;
   --color-popblue-100: #fef3c7;
   --color-popblue-200: #fde68a;
@@ -51,6 +53,10 @@
   --color-popblue: #f59e0b;
   --color-popblue-deep: #b45309;
   --color-popblue-soft: #fef3c7;
+
+  --color-ink: #efecfd;
+  --color-paper: #1d1440;
+  --color-mute: #a8a1c9;
 }
 
 html { scroll-behavior: smooth; }
@@ -65,146 +71,147 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background: #fdf4e6;
+  background: #150f2b;
   background-image:
-    radial-gradient(ellipse 62% 36% at 88% -6%, rgba(249, 115, 22, 0.16), transparent 70%),
-    radial-gradient(ellipse 54% 32% at 4% 104%, rgba(15, 118, 110, 0.12), transparent 70%),
-    radial-gradient(ellipse 44% 28% at 52% 112%, rgba(245, 158, 11, 0.10), transparent 70%),
-    radial-gradient(rgba(234, 88, 12, 0.10) 1.2px, transparent 1.3px);
+    radial-gradient(ellipse 60% 34% at 86% -6%, rgba(163, 230, 53, 0.12), transparent 70%),
+    radial-gradient(ellipse 52% 30% at 6% 102%, rgba(217, 70, 239, 0.14), transparent 70%),
+    radial-gradient(ellipse 44% 28% at 50% 112%, rgba(139, 92, 246, 0.16), transparent 70%),
+    radial-gradient(rgba(163, 230, 53, 0.07) 1.2px, transparent 1.3px);
   background-size: auto, auto, auto, 30px 30px;
-  color: #2f2118;
+  color: #efecfd;
 }
-::selection { background: #ea580c; color: #fff7ee; }
+::selection { background: #a3e635; color: #17220a; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #f97316, #0f766e); border-radius: 8px; border: 2px solid #fdf4e6; }
-::-webkit-scrollbar-track { background: #f7ead4; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #a3e635, #d946ef); border-radius: 8px; border: 2px solid #150f2b; }
+::-webkit-scrollbar-track { background: #1a1038; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Sun flecks: warm flecks drifting upward like paper confetti. */
+/* Firefly rise: glowing motes drifting upward through the garden. */
 @keyframes bubble-rise-anim {
   0% { transform: translate3d(6px, 60px, 0) scale(0.5); opacity: 0; }
-  25% { opacity: 0.85; }
-  60% { transform: translate3d(-8px, -60px, 0) scale(1) ; opacity: 0.55; }
+  25% { opacity: 0.9; }
+  60% { transform: translate3d(-8px, -60px, 0) scale(1); opacity: 0.6; }
   100% { transform: translate3d(6px, -190px, 0) scale(0.6); opacity: 0; }
 }
 .pop-fall { animation: bubble-rise-anim 10.4s ease-in infinite; }
 
-/* Breeze drift: slow lateral drift of the warm light layer. */
+/* Night air drift: slow lateral drift of the aurora layer. */
 @keyframes tide-drift {
   0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.45; }
   50% { transform: translate3d(3vw, -1rem, 0) scale(1.1); opacity: 0.75; }
 }
 .pop-drift { animation: tide-drift 22s ease-in-out infinite; }
 
-/* Paper kite bob: a gentle lively float. */
+/* Firefly bob: a gentle lively float. */
 @keyframes tide-bob {
   0%, 100% { transform: translateY(0) rotate(-5deg); }
   50% { transform: translateY(-10px) rotate(-1deg); }
 }
 .pop-bob { animation: tide-bob 5.2s ease-in-out infinite; }
 
-/* Sun wheel: steady rotation for the warm rings. */
+/* Bloom wheel: steady rotation for the garden rings. */
 @keyframes sonar-wheel {
   to { transform: rotate(-360deg); }
 }
 .pop-spin { animation: sonar-wheel 96s linear infinite; }
 
-/* Sun ticker: infinite marquee (leftward drift). */
+/* Garden ticker: infinite marquee (leftward drift). */
 @keyframes tide-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: tide-ticker 30s linear infinite; }
 
-/* Warm ribbon: persimmon -> teal -> amber diagonal bands. */
+/* Garden ribbon: lime -> fuchsia -> violet diagonal bands. */
 .pop-stripes {
-  background-image: linear-gradient(115deg, #ea580c 0%, #ea580c 22%, #0f766e 22%, #0f766e 48%, #f59e0b 48%, #f59e0b 74%, #fdf4e6 74%);
+  background-image: linear-gradient(115deg, #a3e635 0%, #a3e635 22%, #d946ef 22%, #d946ef 48%, #8b5cf6 48%, #8b5cf6 74%, #150f2b 74%);
   background-size: 120px 120px;
 }
 
-/* Paper card: crisp white sheet with a chunky ink outline and a hard
-   offset shadow; hover lifts it and stamps the shadow in persimmon. */
+/* Botanica card: deep-violet glass sheet with a lime hairline border
+   and a soft bloom glow; hover lifts it and blooms fuchsia light. */
 .pop-lift {
   position: relative;
-  border: 2px solid #2f2118;
-  background: #fffdf8;
-  border-radius: 1.5rem;
-  box-shadow: 6px 6px 0 #2f2118;
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  border: 1px solid rgba(163, 230, 53, 0.22);
+  background: linear-gradient(160deg, rgba(43, 32, 96, 0.92), rgba(21, 15, 43, 0.94));
+  border-radius: 1.75rem;
+  box-shadow: 0 18px 40px -18px rgba(10, 6, 24, 0.9), 0 0 34px -10px rgba(163, 230, 53, 0.22);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translate(-2px, -5px);
-  box-shadow: 10px 10px 0 #ea580c;
+  transform: translateY(-5px);
+  border-color: rgba(163, 230, 53, 0.45);
+  box-shadow: 0 26px 52px -18px rgba(10, 6, 24, 0.95), 0 0 46px -8px rgba(217, 70, 239, 0.42);
 }
 
-/* Sunlit glass: shared by modals and drawers — warm frosted sheet. */
+/* Midnight glass: shared by modals and drawers — plum frosted sheet. */
 .pop-glass {
-  background: rgba(255, 248, 232, 0.9);
+  background: rgba(29, 20, 64, 0.9);
   backdrop-filter: blur(22px) saturate(1.25);
   -webkit-backdrop-filter: blur(22px) saturate(1.25);
-  border: 2px solid #2f2118;
-  border-radius: 1.5rem;
-  box-shadow: 8px 8px 0 rgba(47, 33, 24, 0.9), 0 24px 48px -20px rgba(234, 88, 12, 0.45);
+  border: 1px solid rgba(163, 230, 53, 0.25);
+  border-radius: 1.75rem;
+  box-shadow: 0 0 42px -10px rgba(217, 70, 239, 0.5), 0 24px 48px -20px rgba(10, 6, 24, 0.9);
 }
 
-/* Sun badge: amber disc with a dashed persimmon ring, slight tilt,
-   like a sticker slapped onto the paper. */
+/* Bloom badge: lime disc with a dashed fuchsia ring, slight tilt,
+   like a firefly pressed into a sticker. */
 .starburst {
   border-radius: 9999px;
-  border: 2px dashed #c2410c;
-  outline: 2px solid #2f2118;
+  border: 2px dashed #a21caf;
+  outline: 2px solid rgba(163, 230, 53, 0.7);
   outline-offset: 3px;
-  background: radial-gradient(circle at 34% 28%, #fde68a 0%, #f59e0b 55%, #d97706 100%);
-  color: #431407;
+  background: radial-gradient(circle at 34% 28%, #ecfccb 0%, #a3e635 55%, #65a30d 100%);
+  color: #17220a;
   transform: rotate(-6deg);
-  box-shadow: 0 0 22px -2px rgba(245, 158, 11, 0.7), 4px 4px 0 #2f2118;
+  box-shadow: 0 0 22px -2px rgba(163, 230, 53, 0.7), 0 0 30px -6px rgba(217, 70, 239, 0.55);
 }
 
-/* Paper grain: fine warm dot texture for hero bands. */
+/* Firefly dust: fine lime dot texture for hero bands. */
 .halftone {
   background-image:
-    radial-gradient(rgba(234, 88, 12, 0.16) 1.4px, transparent 1.5px),
-    radial-gradient(rgba(15, 118, 110, 0.12) 1px, transparent 1.1px);
+    radial-gradient(rgba(163, 230, 53, 0.14) 1.4px, transparent 1.5px),
+    radial-gradient(rgba(217, 70, 239, 0.12) 1px, transparent 1.1px);
   background-size: 28px 28px, 46px 46px;
   background-position: 0 0, 14px 23px;
 }
 
-/* Confetti divider: dotted persimmon line across the page. */
+/* Bloom divider: dotted lime line across the page. */
 .zigzag {
   height: 14px;
-  background-image: radial-gradient(circle, #f97316 2.4px, transparent 2.7px);
+  background-image: radial-gradient(circle, #a3e635 2.4px, transparent 2.7px);
   background-size: 20px 14px;
   background-repeat: repeat-x;
   background-position: center;
   opacity: 0.85;
 }
 
-/* Market awning: persimmon striped canopy with a teal hem. */
+/* Garden trellis: lime striped canopy with a fuchsia hem. */
 .bazaar-awning {
   background-image:
-    repeating-linear-gradient(90deg, rgba(234, 88, 12, 0.18) 0 26px, rgba(253, 244, 230, 0.7) 26px 52px),
-    linear-gradient(180deg, #ffedd6, #fdf4e6);
-  border-bottom: 3px solid #0f766e;
+    repeating-linear-gradient(90deg, rgba(163, 230, 53, 0.14) 0 26px, rgba(21, 15, 43, 0.6) 26px 52px),
+    linear-gradient(180deg, #2b2060, #150f2b);
+  border-bottom: 3px solid #c026d3;
 }
 
-/* Sun glow: layered amber-to-orange radial for the hero light. */
+/* Aurora bloom: layered lime-to-fuchsia radial for the hero light. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(251, 191, 36, 0.55) 0%, rgba(249, 115, 22, 0.35) 34%, rgba(15, 118, 110, 0.18) 58%, rgba(249, 115, 22, 0) 74%);
+    radial-gradient(circle at 50% 42%, rgba(163, 230, 53, 0.5) 0%, rgba(217, 70, 239, 0.32) 34%, rgba(139, 92, 246, 0.2) 58%, rgba(217, 70, 239, 0) 74%);
 }
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 42%, rgba(251, 191, 36, 0.55) 0%, rgba(249, 115, 22, 0.35) 34%, rgba(15, 118, 110, 0.18) 58%, rgba(249, 115, 22, 0) 74%);
+    radial-gradient(circle at 50% 42%, rgba(163, 230, 53, 0.5) 0%, rgba(217, 70, 239, 0.32) 34%, rgba(139, 92, 246, 0.2) 58%, rgba(217, 70, 239, 0) 74%);
 }
 
-/* Sun rings: concentric amber rings around the glow. */
+/* Bloom rings: concentric lime rings around the glow. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(245, 158, 11, 0.4) 0px,
-    rgba(245, 158, 11, 0.4) 4px,
+    rgba(163, 230, 53, 0.38) 0px,
+    rgba(163, 230, 53, 0.38) 4px,
     transparent 4px,
     transparent 28px
   );
@@ -215,8 +222,8 @@ body {
 .sun-rays {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(234, 88, 12, 0.36) 0px,
-    rgba(234, 88, 12, 0.36) 4px,
+    rgba(217, 70, 239, 0.34) 0px,
+    rgba(217, 70, 239, 0.34) 4px,
     transparent 4px,
     transparent 28px
   );
@@ -225,62 +232,66 @@ body {
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all sunlit-styled. */
+/* Legacy aliases kept so untouched components still render — all botanica-styled. */
 .lagoon-lift {
   position: relative;
-  border: 2px solid #2f2118;
-  background: #fffdf8;
-  border-radius: 1.5rem;
-  box-shadow: 6px 6px 0 #2f2118;
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  border: 1px solid rgba(163, 230, 53, 0.22);
+  background: linear-gradient(160deg, rgba(43, 32, 96, 0.92), rgba(21, 15, 43, 0.94));
+  border-radius: 1.75rem;
+  box-shadow: 0 18px 40px -18px rgba(10, 6, 24, 0.9), 0 0 34px -10px rgba(163, 230, 53, 0.22);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
   overflow: hidden;
 }
 .lagoon-lift:hover {
-  transform: translate(-2px, -5px);
-  box-shadow: 10px 10px 0 #0f766e;
+  transform: translateY(-5px);
+  border-color: rgba(139, 92, 246, 0.5);
+  box-shadow: 0 26px 52px -18px rgba(10, 6, 24, 0.95), 0 0 46px -8px rgba(139, 92, 246, 0.45);
 }
 .stamp-perf {
-  border: 2px dashed #c2410c;
-  background: rgba(249, 115, 22, 0.08);
-  border-radius: 1.5rem;
-  box-shadow: 4px 4px 0 #2f2118;
+  border: 2px dashed #a21caf;
+  background: rgba(163, 230, 53, 0.07);
+  border-radius: 1.75rem;
+  box-shadow: 0 0 30px -8px rgba(163, 230, 53, 0.35);
 }
 .ember-glow {
   position: relative;
-  border: 2px solid #2f2118;
-  background: #fffdf8;
-  border-radius: 1.5rem;
-  box-shadow: 6px 6px 0 #2f2118;
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  border: 1px solid rgba(163, 230, 53, 0.22);
+  background: linear-gradient(160deg, rgba(43, 32, 96, 0.92), rgba(21, 15, 43, 0.94));
+  border-radius: 1.75rem;
+  box-shadow: 0 18px 40px -18px rgba(10, 6, 24, 0.9), 0 0 34px -10px rgba(163, 230, 53, 0.22);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
-  transform: translate(-2px, -5px);
-  box-shadow: 10px 10px 0 #ea580c;
+  transform: translateY(-5px);
+  border-color: rgba(163, 230, 53, 0.45);
+  box-shadow: 0 26px 52px -18px rgba(10, 6, 24, 0.95), 0 0 46px -8px rgba(163, 230, 53, 0.45);
 }
 .ripple-glow {
   position: relative;
-  border: 2px solid #2f2118;
-  background: #fffdf8;
-  border-radius: 1.5rem;
-  box-shadow: 6px 6px 0 #2f2118;
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  border: 1px solid rgba(163, 230, 53, 0.22);
+  background: linear-gradient(160deg, rgba(43, 32, 96, 0.92), rgba(21, 15, 43, 0.94));
+  border-radius: 1.75rem;
+  box-shadow: 0 18px 40px -18px rgba(10, 6, 24, 0.9), 0 0 34px -10px rgba(163, 230, 53, 0.22);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
-  transform: translate(-2px, -5px);
-  box-shadow: 10px 10px 0 #f59e0b;
+  transform: translateY(-5px);
+  border-color: rgba(245, 158, 11, 0.5);
+  box-shadow: 0 26px 52px -18px rgba(10, 6, 24, 0.95), 0 0 46px -8px rgba(245, 158, 11, 0.45);
 }
 .lagoon-glow {
   position: relative;
-  border: 2px solid #2f2118;
-  background: #fffdf8;
-  border-radius: 1.5rem;
-  box-shadow: 6px 6px 0 #2f2118;
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  border: 1px solid rgba(163, 230, 53, 0.22);
+  background: linear-gradient(160deg, rgba(43, 32, 96, 0.92), rgba(21, 15, 43, 0.94));
+  border-radius: 1.75rem;
+  box-shadow: 0 18px 40px -18px rgba(10, 6, 24, 0.9), 0 0 34px -10px rgba(163, 230, 53, 0.22);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
-  transform: translate(-2px, -5px);
-  box-shadow: 10px 10px 0 #0f766e;
+  transform: translateY(-5px);
+  border-color: rgba(217, 70, 239, 0.5);
+  box-shadow: 0 26px 52px -18px rgba(10, 6, 24, 0.95), 0 0 46px -8px rgba(217, 70, 239, 0.45);
 }

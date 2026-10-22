@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Bioluminescent wash: cyan, violet and lime drifting through the dark water.
+// Firefly wash: lime, fuchsia and violet drifting through the night garden.
 const GLOWS = [
-  { left: "4%", top: "10%", size: 150, delay: "0s", dur: "14s", c: "rgba(6, 182, 212, 0.28)" },
-  { left: "72%", top: "4%", size: 200, delay: "-4s", dur: "15s", c: "rgba(139, 92, 246, 0.16)" },
+  { left: "4%", top: "10%", size: 150, delay: "0s", dur: "14s", c: "rgba(163, 230, 53, 0.28)" },
+  { left: "72%", top: "4%", size: 200, delay: "-4s", dur: "15s", c: "rgba(217, 70, 239, 0.16)" },
   { left: "44%", top: "44%", size: 120, delay: "-7s", dur: "13s", c: "rgba(163, 230, 53, 0.12)" },
-  { left: "86%", top: "50%", size: 110, delay: "-2s", dur: "14s", c: "rgba(34, 211, 238, 0.18)" },
+  { left: "86%", top: "50%", size: 110, delay: "-2s", dur: "14s", c: "rgba(139, 92, 246, 0.18)" },
 ];
 
-// Rising bubbles: glowing plankton bubbles floating upward.
+// Rising fireflies: glowing motes floating upward through the garden.
 const DOTS = [
-  { left: "8%", delay: "0s", dur: "7.2s", s: 22, c: "#22d3ee" },
-  { left: "21%", delay: "-1.4s", dur: "7.8s", s: 16, c: "#a5f3fc" },
-  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 24, c: "#a3e635" },
-  { left: "53%", delay: "-0.8s", dur: "8s", s: 18, c: "#67e8f9" },
-  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 22, c: "#8b5cf6" },
-  { left: "82%", delay: "-2s", dur: "7.9s", s: 15, c: "#a5f3fc" },
-  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 20, c: "#22d3ee" },
+  { left: "8%", delay: "0s", dur: "7.2s", s: 22, c: "#a3e635" },
+  { left: "21%", delay: "-1.4s", dur: "7.8s", s: 16, c: "#f0abfc" },
+  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 24, c: "#bef264" },
+  { left: "53%", delay: "-0.8s", dur: "8s", s: 18, c: "#d946ef" },
+  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 22, c: "#a3e635" },
+  { left: "82%", delay: "-2s", dur: "7.9s", s: 15, c: "#c4b5fd" },
+  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 20, c: "#f0abfc" },
 ];
 
 // Ticker phrases reuse the hero's existing stats copy.
@@ -68,17 +68,17 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* bioluminescent wash */}
+      {/* firefly wash */}
       <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
       <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-brand-300/20 via-gold-500/10 to-transparent" />
 
-      {/* sonar dome: a luminous cyan dome ringed by sonar rings, with
-          rising bubbles and a violet underlayer, offset right */}
+      {/* terrarium moon: a glowing lime moonseed dome ringed by bloom rings,
+          with rising fireflies and a fuchsia underlayer, offset right */}
       <div aria-hidden className="pointer-events-none absolute -right-40 -top-32 z-0 hidden opacity-90 sm:block">
         <div className="relative h-[600px] w-[600px]">
           <div className="nebula-core absolute inset-8 rounded-full blur-2xl" />
           <div className="orbit-rings pop-spin absolute inset-0" />
-          {/* sonar rings: concentric circles pulsing outward */}
+          {/* bloom rings: concentric circles pulsing outward */}
           {[0, 1, 2, 3].map((r) => (
             <span
               key={r}
@@ -86,33 +86,33 @@ export default function Hero({ onQuickView }: HeroProps) {
               style={{
                 width: `${88 - r * 13}%`,
                 height: `${88 - r * 13}%`,
-                boxShadow: "0 0 24px 2px rgba(6, 182, 212, 0.35)",
+                boxShadow: "0 0 24px 2px rgba(163, 230, 53, 0.35)",
                 opacity: 1 - r * 0.18,
               }}
             />
           ))}
-          {/* drifting plankton blooms */}
+          {/* drifting firefly blooms */}
           {Array.from({ length: 10 }).map((_, i) => {
             const x = 12 + ((i * 37) % 76);
             const y = 8 + ((i * 53) % 70);
             return (
               <span
                 key={i}
-                className="pop-bob absolute h-4 w-4 rounded-full bg-popblue-400 shadow-[0_0_16px_4px_rgba(163,230,53,0.5)] ring-2 ring-[#0c1a02]/25"
+                className="pop-bob absolute h-4 w-4 rounded-full bg-popblue-400 shadow-[0_0_16px_4px_rgba(163,230,53,0.5)] ring-2 ring-[#17220a]/25"
                 style={{ left: `${x}%`, top: `${y}%`, animationDelay: `${-i * 0.7}s` }}
               />
             );
           })}
-          {/* violet layer peeking from behind */}
+          {/* fuchsia layer peeking from behind */}
           <div className="absolute inset-44 translate-x-7 translate-y-5 rounded-t-full bg-gold-600" />
-          {/* the dome itself */}
-          <div className="absolute inset-44 rounded-t-full border-[3px] border-[#155e75] bg-[radial-gradient(circle_at_38%_34%,#a5f3fc_0%,#38d5f5_55%,#155e75_100%)] shadow-[0_0_60px_-8px_rgba(56,213,245,0.7)]" />
-          {/* plankton texture over the dome */}
+          {/* the moonseed dome itself */}
+          <div className="absolute inset-44 rounded-t-full border-[3px] border-[#34256e] bg-[radial-gradient(circle_at_38%_34%,#f7fee7_0%,#a3e635_55%,#65a30d_100%)] shadow-[0_0_70px_-8px_rgba(163,230,53,0.75),0_0_120px_-20px_rgba(217,70,239,0.5)]" />
+          {/* firefly-dust texture over the dome */}
           <div className="halftone absolute inset-44 overflow-hidden rounded-t-full opacity-60" />
         </div>
       </div>
 
-      {/* drifting deep light */}
+      {/* drifting garden light */}
       <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
         {GLOWS.map((g, i) => (
           <div
@@ -123,7 +123,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         ))}
       </div>
 
-      {/* bubbles rising on the current */}
+      {/* fireflies rising through the garden */}
       <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden overflow-hidden sm:block">
         {DOTS.map((r, i) => (
           <Dot key={i} {...r} />
@@ -144,13 +144,13 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* abyss ticker: wave ribbon band, marquee of the shop's own promises */}
-      <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/40 bg-gradient-to-r from-brand-500 via-gold-600 to-popblue-500 py-3 shadow-[0_0_40px_-8px_rgba(6,182,212,0.5)]">
+      {/* meadow ticker: garden-ribbon band, marquee of the shop's own promises */}
+      <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/40 bg-gradient-to-r from-brand-500 via-gold-600 to-popblue-500 py-3 shadow-[0_0_40px_-8px_rgba(163,230,53,0.5)]">
         <div className="overflow-hidden py-2">
           <div className="pop-ticker flex w-max items-center gap-8 pr-8">
             {[...TICKER, ...TICKER].map((t, i) => (
-              <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#06121f]">
-                {t} <span className="text-[#06121f]/60">✦</span>
+              <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#100a24]">
+                {t} <span className="text-[#100a24]/60">✦</span>
               </span>
             ))}
           </div>
@@ -171,7 +171,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 <span aria-hidden className="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-brand-400/15 to-transparent" />
                 <span className="relative block text-2xl font-black tracking-tight text-brand-300">{s.v}</span>
                 <span className="relative mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-mute">{s.l}</span>
-                <span aria-hidden className="relative mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-brand-400 via-popblue-400 to-gold-400 shadow-[0_0_12px_rgba(56,213,245,0.6)]" />
+                <span aria-hidden className="relative mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-brand-400 via-popblue-400 to-gold-400 shadow-[0_0_12px_rgba(163,230,53,0.6)]" />
               </div>
             ))}
           </motion.div>
@@ -209,7 +209,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* bubble-trail divider into the page */}
+      {/* firefly-trail divider into the page */}
       <div aria-hidden className="zigzag absolute bottom-0 left-0 w-full opacity-90" />
     </section>
   );
