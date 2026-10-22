@@ -10,7 +10,7 @@ type MobileTabsProps = {
 
 export default function MobileTabs({ nav, active, onSelect }: MobileTabsProps) {
   return (
-    <div className="sticky top-0 z-10 -mx-4 overflow-x-auto bg-[#faf6ee]/95 px-4 py-3 backdrop-blur lg:hidden">
+    <div className="sticky top-0 z-10 -mx-4 overflow-x-auto bg-[#f7f5ec]/95 px-4 py-3 backdrop-blur lg:hidden">
       <div className="flex gap-2" role="tablist" aria-label="Dashboard sections">
         {nav.map((item) => {
           const isActive = active === item.id;
@@ -21,7 +21,7 @@ export default function MobileTabs({ nav, active, onSelect }: MobileTabsProps) {
               aria-selected={isActive}
               onClick={() => onSelect(item.id)}
               className={`flex shrink-0 items-center gap-2 rounded-full px-4 py-2.5 text-sm font-bold whitespace-nowrap transition ${
-                isActive ? "bg-gradient-to-r from-brand-500 to-brand-700 text-white font-black shadow-[0_0_18px_-4px_rgba(214, 31, 105, 0.7)]" : "bg-[#faf6ee] text-[#7d7896] ring-1 ring-[#2a2545]"
+                isActive ? "bg-gradient-to-r from-brand-500 to-brand-700 text-white font-black shadow-[0_0_18px_-4px_rgba(22, 163, 74, 0.7)]" : "bg-[#f7f5ec] text-[#7a8a78] ring-1 ring-[#243b2f]"
               }`}
             >
               <span aria-hidden="true">{item.icon}</span>
