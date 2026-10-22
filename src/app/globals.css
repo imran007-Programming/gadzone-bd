@@ -1,62 +1,62 @@
 @import "tailwindcss";
 
 @theme {
-  /* Marigold Souk: burnt-terracotta brand, marigold spark, leaf-green pop
-     on warm ivory paper. Chunky ticket cards with hard offset shadows, a
-     rising souk sun, drifting marigold petals, woven-stripe texture. */
+  /* Aurora Harbour: deep-navy night harbour, aurora mint/cyan glow,
+     icy paper. Soft floating glass cards, aurora ribbons, a glowing
+     harbour beacon, rising lanterns, twinkling stars. */
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = terracotta scale */
-  --color-brand-50: #fdf5ef;
-  --color-brand-100: #fae8d9;
-  --color-brand-200: #f5cfae;
-  --color-brand-300: #efa87c;
-  --color-brand-400: #e67c45;
-  --color-brand-500: #d95d27;
-  --color-brand-600: #c24a1c;
-  --color-brand-700: #a03a18;
-  --color-brand-800: #7f2f19;
-  --color-brand-900: #5c2314;
-  --color-brand-950: #331307;
-  --color-brand: #c24a1c;
-  --color-brand-dark: #a03a18;
-  --color-brand-deep: #3a1a0e;
+  /* brand = harbour navy scale */
+  --color-brand-50: #eef1ff;
+  --color-brand-100: #dfe4fd;
+  --color-brand-200: #c3ccfb;
+  --color-brand-300: #9aa9f7;
+  --color-brand-400: #6d80f0;
+  --color-brand-500: #4a5fe3;
+  --color-brand-600: #3446c7;
+  --color-brand-700: #2a389f;
+  --color-brand-800: #243179;
+  --color-brand-900: #1d2659;
+  --color-brand-950: #12173a;
+  --color-brand: #3446c7;
+  --color-brand-dark: #2a389f;
+  --color-brand-deep: #12173a;
 
-  /* gold = marigold scale */
-  --color-gold-50: #fffbf0;
-  --color-gold-100: #fef3d8;
-  --color-gold-200: #fde5a8;
-  --color-gold-300: #fbd26e;
-  --color-gold-400: #f9bd38;
-  --color-gold-500: #f5a623;
-  --color-gold-600: #d98a12;
-  --color-gold-700: #b36f0e;
-  --color-gold-800: #8f5812;
-  --color-gold-900: #6b4210;
-  --color-gold-950: #3f2608;
-  --color-gold: #f5a623;
-  --color-gold-deep: #b36f0e;
-  --color-gold-soft: #fef3d8;
+  /* gold = aurora mint scale */
+  --color-gold-50: #ecfdf5;
+  --color-gold-100: #d1fae5;
+  --color-gold-200: #a7f3d0;
+  --color-gold-300: #6ee7b7;
+  --color-gold-400: #34d399;
+  --color-gold-500: #10b981;
+  --color-gold-600: #059669;
+  --color-gold-700: #047857;
+  --color-gold-800: #065f46;
+  --color-gold-900: #064e3b;
+  --color-gold-950: #022c22;
+  --color-gold: #10b981;
+  --color-gold-deep: #047857;
+  --color-gold-soft: #d1fae5;
 
-  /* popblue token now carries souk leaf-green */
-  --color-popblue-50: #f3f9f0;
-  --color-popblue-100: #e2f1dc;
-  --color-popblue-200: #c4e2b9;
-  --color-popblue-300: #99ca89;
-  --color-popblue-400: #6aae57;
-  --color-popblue-500: #489232;
-  --color-popblue-600: #367a27;
-  --color-popblue-700: #2c6222;
-  --color-popblue-800: #274f1f;
-  --color-popblue-900: #20401b;
-  --color-popblue-950: #0f220d;
-  --color-popblue: #489232;
-  --color-popblue-deep: #2c6222;
-  --color-popblue-soft: #e2f1dc;
+  /* popblue = glacial cyan scale */
+  --color-popblue-50: #ecfeff;
+  --color-popblue-100: #cffafe;
+  --color-popblue-200: #a5f3fc;
+  --color-popblue-300: #67e8f9;
+  --color-popblue-400: #22d3ee;
+  --color-popblue-500: #06b6d4;
+  --color-popblue-600: #0891b2;
+  --color-popblue-700: #0e7490;
+  --color-popblue-800: #155e75;
+  --color-popblue-900: #164e63;
+  --color-popblue-950: #083344;
+  --color-popblue: #06b6d4;
+  --color-popblue-deep: #0e7490;
+  --color-popblue-soft: #cffafe;
 
-  --color-ink: #2b1a10;
-  --color-paper: #fdf8ef;
-  --color-mute: #8a7360;
+  --color-ink: #101a3a;
+  --color-paper: #f4f7ff;
+  --color-mute: #66739a;
 }
 
 html { scroll-behavior: smooth; }
@@ -71,81 +71,87 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fdf8ef;
+  background-color: #f4f7ff;
   background-image:
-    repeating-linear-gradient(45deg, rgba(194, 74, 28, 0.045) 0 2px, transparent 2px 14px),
-    repeating-linear-gradient(-45deg, rgba(245, 166, 35, 0.05) 0 2px, transparent 2px 14px),
-    radial-gradient(ellipse 60% 34% at 85% -6%, rgba(245, 166, 35, 0.16), transparent 70%),
-    radial-gradient(ellipse 50% 30% at 6% 106%, rgba(194, 74, 28, 0.12), transparent 70%);
-  color: #2b1a10;
+    repeating-linear-gradient(45deg, rgba(52, 70, 199, 0.045) 0 2px, transparent 2px 16px),
+    repeating-linear-gradient(-45deg, rgba(16, 185, 129, 0.05) 0 2px, transparent 2px 16px),
+    radial-gradient(ellipse 60% 34% at 85% -6%, rgba(34, 211, 238, 0.16), transparent 70%),
+    radial-gradient(ellipse 50% 30% at 6% 106%, rgba(52, 70, 199, 0.12), transparent 70%);
+  color: #101a3a;
 }
-::selection { background: #fbd26e; color: #3a1a0e; }
+::selection { background: #6ee7b7; color: #022c22; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #c24a1c, #f5a623); border-radius: 8px; border: 2px solid #fdf8ef; }
-::-webkit-scrollbar-track { background: #f5ecdd; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #3446c7, #22d3ee); border-radius: 8px; border: 2px solid #f4f7ff; }
+::-webkit-scrollbar-track { background: #e6ebfb; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Petal fall: marigold petals drifting down through the souk air. */
-@keyframes souk-petal-fall {
-  0% { transform: translate3d(-10px, -130px, 0) rotate(-18deg) scale(0.7); opacity: 0; }
-  18% { opacity: 0.9; }
-  55% { transform: translate3d(10px, 10px, 0) rotate(14deg) scale(1); }
-  82% { opacity: 0.75; }
-  100% { transform: translate3d(-8px, 150px, 0) rotate(-12deg) scale(0.9); opacity: 0; }
+/* Lantern rise: harbour lanterns floating upward into the night sky. */
+@keyframes harbour-lantern-rise {
+  0% { transform: translate3d(8px, 150px, 0) scale(0.7); opacity: 0; }
+  18% { opacity: 0.95; }
+  55% { transform: translate3d(-10px, 10px, 0) scale(1); }
+  82% { opacity: 0.7; }
+  100% { transform: translate3d(6px, -140px, 0) scale(0.9); opacity: 0; }
 }
-.pop-fall { animation: souk-petal-fall 9s linear infinite; }
+.pop-fall { animation: harbour-lantern-rise 10s linear infinite; }
 
-/* Heat drift: slow lateral sway of the warm haze. */
+/* Mist drift: slow lateral sway of the harbour haze. */
 @keyframes orb-drift {
   0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.75; }
   50% { transform: translate3d(3vw, -0.8rem, 0) scale(1.12); opacity: 1; }
 }
 .pop-drift { animation: orb-drift 30s ease-in-out infinite; }
 
-/* Bob: a gentle hovering pulse for sun accents. */
+/* Bob: a gentle hovering pulse for beacon accents. */
 @keyframes bloom-float {
   0%, 100% { transform: translateY(0) scale(1); opacity: 0.85; }
   50% { transform: translateY(-10px) scale(1.06); opacity: 1; }
 }
 .pop-bob { animation: bloom-float 3.6s ease-in-out infinite; }
 
-/* Sun wheel: steady rotation for the souk sun disc. */
+/* Beacon wheel: steady rotation for the harbour beacon halo. */
 @keyframes halo-wheel {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: halo-wheel 48s linear infinite; }
 
-/* Souk ticker: infinite marquee (rightward drift). */
+/* Star twinkle for the harbour night sky. */
+@keyframes harbour-twinkle {
+  0%, 100% { opacity: 0.15; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.25); }
+}
+.pop-twinkle { animation: harbour-twinkle 3.2s ease-in-out infinite; }
+
+/* Harbour ticker: infinite marquee (rightward drift). */
 @keyframes bloom-ticker {
   from { transform: translateX(-50%); }
   to { transform: translateX(0); }
 }
 .pop-ticker { animation: bloom-ticker 34s linear infinite; }
 
-/* Souk ribbon: terracotta -> marigold -> leaf diagonal ticket bands. */
+/* Aurora ribbon: mint -> cyan -> violet shimmer bands. */
 .pop-stripes {
-  background-image: repeating-linear-gradient(-55deg, #c24a1c 0 14px, #f5a623 14px 28px, #489232 28px 42px);
+  background-image: repeating-linear-gradient(-55deg, #34d399 0 14px, #22d3ee 14px 28px, #a78bfa 28px 42px);
 }
 
-/* Souk ticket card: thick terracotta border, hard offset shadow, and a
-   woven ribbon stub across the top edge; the whole ticket hops on hover. */
+/* Harbour float card: soft glassy card with an aurora glow seam on the
+   top edge; it lifts into a brighter glow on hover. */
 .pop-lift {
   position: relative;
-  border: 2px solid #efa87c;
-  background: #fffdf7;
-  border-radius: 1.25rem;
-  box-shadow: 7px 7px 0 rgba(194, 74, 28, 0.9);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  border: 1.5px solid rgba(74, 95, 227, 0.28);
+  background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
+  border-radius: 1.75rem;
+  box-shadow: 0 26px 52px -26px rgba(52, 70, 199, 0.38), 0 10px 20px -12px rgba(16, 185, 129, 0.2);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
   overflow: hidden;
 }
 .pop-lift::before {
   content: "";
   position: absolute;
   inset: 0 0 auto 0;
-  height: 9px;
-  background: repeating-linear-gradient(-55deg, #c24a1c 0 14px, #f5a623 14px 28px, #489232 28px 42px);
-  border-bottom: 2px solid #efa87c;
+  height: 6px;
+  background: linear-gradient(90deg, #34d399, #22d3ee, #a78bfa, #34d399);
   pointer-events: none;
 }
 .pop-lift::after {
@@ -153,78 +159,78 @@ body {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: radial-gradient(circle at 84% 10%, rgba(245, 166, 35, 0.22), transparent 55%);
+  background: radial-gradient(circle at 50% 0%, rgba(34, 211, 238, 0.2), transparent 55%);
   opacity: 0;
-  transition: opacity 0.22s ease;
+  transition: opacity 0.24s ease;
   pointer-events: none;
 }
 .pop-lift:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 11px 11px 0 rgba(194, 74, 28, 0.9);
+  transform: translateY(-6px);
+  box-shadow: 0 34px 64px -26px rgba(52, 70, 199, 0.5), 0 0 28px -6px rgba(34, 211, 238, 0.45);
 }
 .pop-lift:hover::after { opacity: 1; }
 
-/* Souk glass: shared by modals and drawers — a warm parchment mist sheet. */
+/* Harbour glass: shared by modals and drawers — a frosted ice sheet. */
 .pop-glass {
-  background: rgba(253, 248, 239, 0.86);
+  background: rgba(244, 247, 255, 0.86);
   backdrop-filter: blur(22px) saturate(1.15);
   -webkit-backdrop-filter: blur(22px) saturate(1.15);
-  border: 2px solid rgba(239, 168, 124, 0.7);
+  border: 1.5px solid rgba(154, 169, 247, 0.7);
   border-radius: 1.5rem;
-  box-shadow: 8px 8px 0 rgba(194, 74, 28, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  box-shadow: 0 26px 52px -26px rgba(52, 70, 199, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
-/* Sun seal: a glowing marigold-to-terracotta discount medallion with a
-   dashed white ring, floating at a jaunty tilt. */
+/* Beacon medallion: a deep-navy discount seal with a neon mint dashed
+   ring, glowing like a harbour lantern. */
 .starburst {
-  background: radial-gradient(circle at 36% 30%, #fbd26e 0%, #f5a623 52%, #c24a1c 118%);
-  color: #ffffff;
-  text-shadow: 0 1px 4px rgba(63, 38, 8, 0.65);
+  background: radial-gradient(circle at 36% 30%, #243179 0%, #1d2659 58%, #12173a 100%);
+  color: #ecfdf5;
+  text-shadow: 0 1px 4px rgba(2, 44, 34, 0.65);
   border-radius: 9999px;
   transform: rotate(-6deg);
-  box-shadow: 4px 4px 0 rgba(160, 58, 24, 0.85);
-  outline: 2px dashed rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 22px -2px rgba(52, 211, 153, 0.75), inset 0 0 14px rgba(34, 211, 238, 0.25);
+  outline: 2px dashed rgba(110, 231, 183, 0.95);
   outline-offset: -5px;
 }
 
-/* Terracotta-dot texture for hero bands. */
+/* Frost-dot texture for hero bands. */
 .halftone {
-  background-image: radial-gradient(circle, rgba(194, 74, 28, 0.14) 1.4px, transparent 2px);
+  background-image: radial-gradient(circle, rgba(52, 70, 199, 0.14) 1.4px, transparent 2px);
   background-size: 26px 26px;
 }
 
-/* Souk divider: a woven ribbon line across the page. */
+/* Aurora divider: a shimmering mint -> cyan -> violet bar. */
 .zigzag {
   height: 8px;
-  background: repeating-linear-gradient(-55deg, #c24a1c 0 16px, #f5a623 16px 32px, #489232 32px 48px);
+  background: linear-gradient(90deg, #34d399, #22d3ee, #a78bfa, #34d399);
   border-radius: 9999px;
-  border: 1px solid rgba(160, 58, 24, 0.4);
+  box-shadow: 0 4px 16px -4px rgba(34, 211, 238, 0.55);
 }
 
-/* Souk awning: terracotta canopy stripes with a marigold hem. */
+/* Harbour awning: deep-navy canopy stripes with a mint hem. */
 .bazaar-awning {
   background-image:
-    repeating-linear-gradient(90deg, rgba(194, 74, 28, 0.16) 0 26px, rgba(255, 253, 247, 0.6) 26px 52px),
-    linear-gradient(180deg, #fae8d9, #fdf8ef);
-  border-bottom: 3px solid #f5a623;
+    repeating-linear-gradient(90deg, rgba(52, 70, 199, 0.16) 0 26px, rgba(244, 247, 255, 0.6) 26px 52px),
+    linear-gradient(180deg, #dfe4fd, #f4f7ff);
+  border-bottom: 3px solid #34d399;
 }
 
-/* Sunrise core: layered warm radial for the souk sun. */
+/* Beacon core: layered cool radial for the harbour beacon. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(245, 166, 35, 0.5) 0%, rgba(217, 93, 39, 0.32) 38%, rgba(194, 74, 28, 0.18) 62%, rgba(194, 74, 28, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(34, 211, 238, 0.5) 0%, rgba(74, 95, 227, 0.32) 38%, rgba(52, 211, 153, 0.18) 62%, rgba(52, 70, 199, 0) 76%);
 }
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 42%, #fffdf7 0%, #fef3d8 42%, #fbd26e 66%, #f5a623 88%);
+    radial-gradient(circle at 50% 42%, #ffffff 0%, #cffafe 42%, #67e8f9 66%, #22d3ee 88%);
 }
 
-/* Sun rays: warm marigold rays around the souk sun. */
+/* Beacon halo rings. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(245, 166, 35, 0.5) 0px,
-    rgba(245, 166, 35, 0.5) 4px,
+    rgba(34, 211, 238, 0.5) 0px,
+    rgba(34, 211, 238, 0.5) 4px,
     transparent 4px,
     transparent 30px
   );
@@ -235,8 +241,8 @@ body {
 .sun-rays {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(217, 93, 39, 0.42) 0px,
-    rgba(217, 93, 39, 0.42) 4px,
+    rgba(34, 211, 238, 0.42) 0px,
+    rgba(34, 211, 238, 0.42) 4px,
     transparent 4px,
     transparent 30px
   );
@@ -245,62 +251,62 @@ body {
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all souk-styled. */
+/* Legacy aliases kept so untouched components still render — all harbour-styled. */
 .lagoon-lift {
   position: relative;
-  border: 2px solid #efa87c;
-  background: #fffdf7;
-  border-radius: 1.25rem;
-  box-shadow: 6px 6px 0 rgba(194, 74, 28, 0.75);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  border: 1.5px solid rgba(74, 95, 227, 0.28);
+  background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
+  border-radius: 1.75rem;
+  box-shadow: 0 24px 48px -26px rgba(52, 70, 199, 0.34);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
   overflow: hidden;
 }
 .lagoon-lift:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 9px 9px 0 rgba(194, 74, 28, 0.75);
+  transform: translateY(-4px);
+  box-shadow: 0 32px 60px -26px rgba(52, 70, 199, 0.48);
 }
 .stamp-perf {
-  border: 2px dashed rgba(194, 74, 28, 0.55);
-  background: rgba(245, 166, 35, 0.07);
+  border: 2px dashed rgba(74, 95, 227, 0.55);
+  background: rgba(34, 211, 238, 0.07);
   border-radius: 1.25rem;
-  box-shadow: 5px 5px 0 rgba(245, 166, 35, 0.35);
+  box-shadow: 0 18px 36px -18px rgba(34, 211, 238, 0.4);
 }
 .ember-glow {
   position: relative;
-  border: 2px solid #efa87c;
-  background: #fffdf7;
-  border-radius: 1.25rem;
-  box-shadow: 6px 6px 0 rgba(217, 93, 39, 0.7);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  border: 1.5px solid rgba(74, 95, 227, 0.28);
+  background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
+  border-radius: 1.75rem;
+  box-shadow: 0 24px 48px -26px rgba(74, 95, 227, 0.4);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 9px 9px 0 rgba(217, 93, 39, 0.7);
+  transform: translateY(-4px);
+  box-shadow: 0 32px 60px -26px rgba(74, 95, 227, 0.52);
 }
 .ripple-glow {
   position: relative;
-  border: 2px solid #efa87c;
-  background: #fffdf7;
-  border-radius: 1.25rem;
-  box-shadow: 6px 6px 0 rgba(72, 146, 50, 0.55);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  border: 1.5px solid rgba(34, 211, 238, 0.4);
+  background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
+  border-radius: 1.75rem;
+  box-shadow: 0 24px 48px -26px rgba(6, 182, 212, 0.36);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 9px 9px 0 rgba(72, 146, 50, 0.55);
+  transform: translateY(-4px);
+  box-shadow: 0 32px 60px -26px rgba(6, 182, 212, 0.5);
 }
 .lagoon-glow {
   position: relative;
-  border: 2px solid #c4e2b9;
-  background: #fffdf7;
-  border-radius: 1.25rem;
-  box-shadow: 6px 6px 0 rgba(72, 146, 50, 0.5);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  border: 1.5px solid rgba(34, 211, 238, 0.4);
+  background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
+  border-radius: 1.75rem;
+  box-shadow: 0 24px 48px -26px rgba(6, 182, 212, 0.3);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 9px 9px 0 rgba(72, 146, 50, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 32px 60px -26px rgba(6, 182, 212, 0.44);
 }
