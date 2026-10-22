@@ -1,16 +1,16 @@
 export default function TopBar() {
   return (
-    <div className="relative overflow-hidden border-b border-brand-400/30 bg-gradient-to-r from-[#2b1a10] via-[#241209] to-[#241209] px-4 py-2.5 text-center text-xs font-bold tracking-wide text-[#faf3e8] sm:text-sm">
+    <div className="relative overflow-hidden border-b border-brand-400/30 bg-gradient-to-r from-[#e9efff] via-[#060a20] to-[#060a20] px-4 py-2.5 text-center text-xs font-bold tracking-wide text-[#0b1033] sm:text-sm">
       {/* drifting firefly flecks */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-40 [background-image:radial-gradient(rgba(194,74,28,0.4)_1px,transparent_1.5px)] [background-size:20px_20px]"
+        className="pointer-events-none absolute inset-0 opacity-40 [background-image:radial-gradient(rgba(6,182,212,0.4)_1px,transparent_1.5px)] [background-size:20px_20px]"
       />
       <div aria-hidden className="pointer-events-none absolute -left-12 top-1/2 h-28 w-28 -translate-y-1/2 rounded-full bg-popblue-400/25 blur-2xl" />
       <div aria-hidden className="pointer-events-none absolute -right-12 top-1/2 h-28 w-28 -translate-y-1/2 rounded-full bg-brand-400/25 blur-2xl" />
       <p className="relative">
         🎉 Eid Mega Sale — Extra 10% off with code{" "}
-        <b className="rounded-md border border-popblue-300/60 bg-gradient-to-r from-popblue-500 to-popblue-400 px-3 py-0.5 font-black tracking-wide text-[#faf3e8] shadow-[0_0_18px_-4px_rgba(194,74,28,0.8)]">
+        <b className="rounded-md border border-popblue-300/60 bg-gradient-to-r from-popblue-500 to-popblue-400 px-3 py-0.5 font-black tracking-wide text-[#0b1033] shadow-[0_0_18px_-4px_rgba(6,182,212,0.8)]">
           GADZONE10
         </b>{" "}
         &nbsp;|&nbsp; Free delivery on orders over ৳2,000
