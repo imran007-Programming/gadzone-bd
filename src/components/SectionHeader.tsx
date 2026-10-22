@@ -22,18 +22,18 @@ export default function SectionHeader({ accent, rest, subtitle, showViewAll = tr
           </h2>
           {subtitle && <p className="mt-2.5 text-[15px] leading-relaxed text-mute">{subtitle}</p>}
           <span aria-hidden className="mt-3 flex items-center gap-1.5">
-            <span className="inline-block h-2.5 w-2.5 rounded-full bg-brand-500 shadow-[0_2px_8px_-1px_rgba(178,55,10,0.7)] ring-2 ring-ink/20" />
-            <span className="inline-block h-2.5 w-2.5 rounded-full bg-gold shadow-[0_2px_8px_-1px_rgba(217,140,2,0.7)] ring-2 ring-ink/20" />
-            <span className="inline-block h-2.5 w-2.5 rounded-full bg-popblue shadow-[0_2px_8px_-1px_rgba(194,37,92,0.7)] ring-2 ring-ink/20" />
-            <span className="inline-block h-2.5 w-2.5 rounded-full bg-gold shadow-[0_2px_8px_-1px_rgba(217,140,2,0.7)] ring-2 ring-ink/20" />
-            <span className="inline-block h-2.5 w-2.5 rounded-full bg-brand-500 shadow-[0_2px_8px_-1px_rgba(178,55,10,0.7)] ring-2 ring-ink/20" />
+            <span className="inline-block h-2.5 w-2.5 rounded-full bg-brand-500 shadow-[0_2px_8px_-1px_rgba(20,101,90,0.7)] ring-2 ring-ink/20" />
+            <span className="inline-block h-2.5 w-2.5 rounded-full bg-gold shadow-[0_2px_8px_-1px_rgba(221,112,18,0.7)] ring-2 ring-ink/20" />
+            <span className="inline-block h-2.5 w-2.5 rounded-full bg-popblue shadow-[0_2px_8px_-1px_rgba(212,53,88,0.7)] ring-2 ring-ink/20" />
+            <span className="inline-block h-2.5 w-2.5 rounded-full bg-gold shadow-[0_2px_8px_-1px_rgba(221,112,18,0.7)] ring-2 ring-ink/20" />
+            <span className="inline-block h-2.5 w-2.5 rounded-full bg-brand-500 shadow-[0_2px_8px_-1px_rgba(20,101,90,0.7)] ring-2 ring-ink/20" />
             <span className="zigzag ml-1 w-24 rounded-sm opacity-90" />
           </span>
         </div>
         {showViewAll && (
           <button
             onClick={() => document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" })}
-            className="rounded-full border-2 border-ink bg-gradient-to-r from-brand-600 to-brand-500 px-6 py-2.5 text-sm font-black text-[#fff8ef] shadow-[4px_4px_0_rgba(51,36,26,0.85)] transition hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0 active:shadow-none"
+            className="rounded-full border-2 border-ink bg-gradient-to-r from-brand-600 to-brand-500 px-6 py-2.5 text-sm font-black text-[#f2faf8] shadow-[4px_4px_0_rgba(16,60,54,0.85)] transition hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0 active:shadow-none"
           >
             All Products →
           </button>
