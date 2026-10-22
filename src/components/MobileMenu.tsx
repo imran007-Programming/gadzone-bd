@@ -46,10 +46,10 @@ export default function MobileMenu({ open, onClose, category, onCategoryChange }
             animate={{ x: 0, opacity: 1 }}
             exit={reduce ? { opacity: 0 } : { x: "-100%" }}
             transition={{ type: "tween", duration: 0.28, ease: "easeOut" }}
-            className="absolute left-0 top-0 flex h-full w-4/5 max-w-xs flex-col rounded-r-3xl border-r border-[#4a2c17] bg-[#3b2417] shadow-2xl"
+            className="absolute left-0 top-0 flex h-full w-4/5 max-w-xs flex-col rounded-r-3xl border-r border-[#4a2c17] bg-[#1b1f3b] shadow-2xl"
           >
             <div className="flex items-center justify-between border-b border-[#4a2c17] px-5 py-4">
-              <span className="text-lg font-black text-[#16a34a]">
+              <span className="text-lg font-black text-[#22d3ee]">
                 Gad<span className="text-brand-400">Zone</span> BD
               </span>
               <button onClick={onClose} className="rounded-full px-2 text-2xl text-[#e9d8c4] transition hover:bg-[#4a2c17] hover:text-brand-400" aria-label="Close menu">×</button>
@@ -67,7 +67,7 @@ export default function MobileMenu({ open, onClose, category, onCategoryChange }
             </div>
             <div className="flex-1 overflow-y-auto">
               {tab === "categories" ? (
-                <ul className="divide-y divide-[#fffaf2]">
+                <ul className="divide-y divide-[#f8faff]">
                   {CATEGORIES.map((c) => (
                     <li key={c}>
                       <button
@@ -85,7 +85,7 @@ export default function MobileMenu({ open, onClose, category, onCategoryChange }
                   ))}
                 </ul>
               ) : (
-                <ul className="divide-y divide-[#fffaf2]">
+                <ul className="divide-y divide-[#f8faff]">
                   {MENU_LINKS.map((link) => (
                     <li key={link.label}>
                       <button

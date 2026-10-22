@@ -23,21 +23,21 @@ const item: Variants = {
 // Harvest sun: marigold, ember-orange and leaf-green embers drifting
 // over the sunbaked sky.
 const GLOWS = [
-  { left: "4%", top: "10%", size: 150, delay: "0s", dur: "14s", c: "rgba(249, 115, 22, 0.28)" },
-  { left: "72%", top: "4%", size: 200, delay: "-4s", dur: "15s", c: "rgba(245, 158, 11, 0.14)" },
-  { left: "44%", top: "44%", size: 120, delay: "-7s", dur: "13s", c: "rgba(253, 186, 116, 0.5)" },
-  { left: "86%", top: "50%", size: 110, delay: "-2s", dur: "14s", c: "rgba(22, 163, 74, 0.2)" },
+  { left: "4%", top: "10%", size: 150, delay: "0s", dur: "14s", c: "rgba(124, 58, 237, 0.28)" },
+  { left: "72%", top: "4%", size: 200, delay: "-4s", dur: "15s", c: "rgba(45, 212, 191, 0.14)" },
+  { left: "44%", top: "44%", size: 120, delay: "-7s", dur: "13s", c: "rgba(196, 181, 253, 0.5)" },
+  { left: "86%", top: "50%", size: 110, delay: "-2s", dur: "14s", c: "rgba(34, 211, 238, 0.2)" },
 ];
 
 // star motes: cool sparks drifting through the nebula wash.
 const DOTS = [
-  { left: "8%", delay: "0s", dur: "7.2s", s: 22, c: "#c2410c" },
-  { left: "21%", delay: "-1.4s", dur: "7.8s", s: 16, c: "#bbf7d0" },
-  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 24, c: "#16a34a" },
-  { left: "53%", delay: "-0.8s", dur: "8s", s: 18, c: "#16a34a" },
-  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 22, c: "#16a34a" },
-  { left: "82%", delay: "-2s", dur: "7.9s", s: 15, c: "#fdba74" },
-  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 20, c: "#c2410c" },
+  { left: "8%", delay: "0s", dur: "7.2s", s: 22, c: "#6d28d9" },
+  { left: "21%", delay: "-1.4s", dur: "7.8s", s: 16, c: "#a5f3fc" },
+  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 24, c: "#22d3ee" },
+  { left: "53%", delay: "-0.8s", dur: "8s", s: 18, c: "#22d3ee" },
+  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 22, c: "#22d3ee" },
+  { left: "82%", delay: "-2s", dur: "7.9s", s: 15, c: "#c4b5fd" },
+  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 20, c: "#6d28d9" },
 ];
 
 // Ticker phrases reuse the hero's existing stats copy.
@@ -89,7 +89,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 height: `${34 - r * 4}%`,
                 transform: `translate(-50%, -50%) scaleY(0.5)`,
                 top: `${50 + r * 9}%`,
-                boxShadow: "0 0 24px 2px rgba(249, 115, 22, 0.35)",
+                boxShadow: "0 0 24px 2px rgba(124, 58, 237, 0.35)",
                 opacity: 1 - r * 0.18,
               }}
             />
@@ -101,13 +101,13 @@ export default function Hero({ onQuickView }: HeroProps) {
             return (
               <span
                 key={i}
-                className="pop-bob absolute h-4 w-4 rounded-full bg-gold shadow-[0_0_18px_4px_rgba(22, 163, 74,0.55)] ring-2 ring-white/60"
+                className="pop-bob absolute h-4 w-4 rounded-full bg-gold shadow-[0_0_18px_4px_rgba(34, 211, 238,0.55)] ring-2 ring-white/60"
                 style={{ left: `${x}%`, top: `${y}%`, animationDelay: `${-i * 0.7}s` }}
               />
             );
           })}
           {/* the nova orb itself */}
-          <div className="absolute inset-44 rounded-full border-2 border-brand-200/80 bg-[radial-gradient(circle_at_50%_62%,#fff7ed_0%,#fde68a_30%,#f59e0b_55%,#ea580c_82%,#7c2d12_100%)] shadow-[0_0_90px_28px_rgba(249, 115, 22,0.4)]" />
+          <div className="absolute inset-44 rounded-full border-2 border-brand-200/80 bg-[radial-gradient(circle_at_50%_62%,#f5f3ff_0%,#ccfbf1_30%,#2dd4bf_55%,#7c3aed_82%,#4c1d95_100%)] shadow-[0_0_90px_28px_rgba(124, 58, 237,0.4)]" />
           <div className="absolute inset-44 rounded-full border border-white/40" />
           {/* ripple shimmer along the lower half */}
           <div className="absolute inset-44 overflow-hidden rounded-full">
@@ -151,7 +151,7 @@ export default function Hero({ onQuickView }: HeroProps) {
       </div>
 
       {/* nebula ticker: ribbon band, marquee of the shop's own promises */}
-      <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/40 bg-gradient-to-r from-brand-400 via-gold to-popblue py-3 shadow-[0_18px_44px_-20px_rgba(245, 158, 11, 0.6)]">
+      <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/40 bg-gradient-to-r from-brand-400 via-gold to-popblue py-3 shadow-[0_18px_44px_-20px_rgba(45, 212, 191, 0.6)]">
         <div className="overflow-hidden py-2">
           <div className="pop-ticker flex w-max items-center gap-8 pr-8">
             {[...TICKER, ...TICKER].map((t, i) => (
@@ -184,7 +184,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full bg-gradient-to-r from-brand-400 via-gold to-popblue px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-950 shadow-[0_16px_38px_-14px_rgba(245, 158, 11, 0.6)]">Handpicked for you</p>
+            <p className="inline-block rounded-full bg-gradient-to-r from-brand-400 via-gold to-popblue px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-950 shadow-[0_16px_38px_-14px_rgba(45, 212, 191, 0.6)]">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="bg-gradient-to-r from-brand-300 to-gold bg-clip-text text-transparent">Picks</span></h2>
             <span className="zigzag mt-3 block w-44" aria-hidden />
           </div>

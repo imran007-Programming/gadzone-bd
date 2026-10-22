@@ -33,14 +33,14 @@ export default function QuickViewModal({ product, qty, onQtyChange, onClose, onA
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.96, y: 8 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="flex max-h-[92vh] w-full max-w-2xl flex-col overflow-hidden rounded-t-[2rem] border border-[#4a2c17] bg-[#3b2417] shadow-2xl sm:rounded-[2rem]"
+            className="flex max-h-[92vh] w-full max-w-2xl flex-col overflow-hidden rounded-t-[2rem] border border-[#4a2c17] bg-[#1b1f3b] shadow-2xl sm:rounded-[2rem]"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex-1 overflow-y-auto">
               <div className="grid sm:grid-cols-2">
-                <div className="relative"><ProductImage product={product} big /><span className="absolute left-0 top-3 -skew-x-6 rounded-r-full bg-gradient-to-r from-brand-500 to-brand-700 px-3 py-1 text-xs font-black text-brand-950 shadow-[0_6px_18px_-6px_rgba(249, 115, 22, 0.45)]">-{discountPct(product)}% OFF</span></div>
+                <div className="relative"><ProductImage product={product} big /><span className="absolute left-0 top-3 -skew-x-6 rounded-r-full bg-gradient-to-r from-brand-500 to-brand-700 px-3 py-1 text-xs font-black text-brand-950 shadow-[0_6px_18px_-6px_rgba(124, 58, 237, 0.45)]">-{discountPct(product)}% OFF</span></div>
                 <div className="p-5 sm:p-6">
-                  <div className="flex items-start justify-between gap-2"><h3 className="text-xl font-black tracking-tight text-[#16a34a]">{product.name}</h3><button onClick={onClose} className="text-2xl leading-none text-[#e9d8c4] hover:text-[#16a34a]">×</button></div>
+                  <div className="flex items-start justify-between gap-2"><h3 className="text-xl font-black tracking-tight text-[#22d3ee]">{product.name}</h3><button onClick={onClose} className="text-2xl leading-none text-[#e9d8c4] hover:text-[#22d3ee]">×</button></div>
                   <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-brand-400">{product.category}</p>
                   <div className="mt-2 flex items-center gap-1.5"><Stars rating={product.rating} /><span className="text-sm text-[#e9d8c4]">{product.rating} ({product.reviews.toLocaleString()} reviews)</span></div>
                   <p className="mt-3 text-sm text-[#e9d8c4]">{product.desc}</p>
@@ -56,8 +56,8 @@ export default function QuickViewModal({ product, qty, onQtyChange, onClose, onA
                 <span className="w-8 text-center font-bold">{qty}</span>
                 <button onClick={() => onQtyChange(qty + 1)} className="px-3 py-2 text-lg" aria-label="Increase quantity">+</button>
               </div>
-              <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(product.id, qty)} className="flex-1 rounded-full bg-gradient-to-r from-brand-500 to-brand-700 py-3 font-bold text-brand-950 shadow-[0_8px_24px_-8px_rgba(249, 115, 22, 0.4)] transition hover:brightness-110 active:scale-[0.99]">Add To Cart</motion.button>
-              <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(product.id, qty, true)} className="shrink-0 rounded-full bg-[#4a2c17] px-4 py-3 text-sm font-bold text-[#16a34a] shadow-sm ring-1 ring-brand-400/40 transition hover:bg-[#4a2c17] active:scale-[0.98]">Buy Now</motion.button>
+              <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(product.id, qty)} className="flex-1 rounded-full bg-gradient-to-r from-brand-500 to-brand-700 py-3 font-bold text-brand-950 shadow-[0_8px_24px_-8px_rgba(124, 58, 237, 0.4)] transition hover:brightness-110 active:scale-[0.99]">Add To Cart</motion.button>
+              <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(product.id, qty, true)} className="shrink-0 rounded-full bg-[#4a2c17] px-4 py-3 text-sm font-bold text-[#22d3ee] shadow-sm ring-1 ring-brand-400/40 transition hover:bg-[#4a2c17] active:scale-[0.98]">Buy Now</motion.button>
             </div>
           </motion.div>
         </motion.div>

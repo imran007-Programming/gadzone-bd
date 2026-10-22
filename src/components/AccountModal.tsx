@@ -58,12 +58,12 @@ export default function AccountModal({ open, onClose }: AccountModalProps) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.96, y: 8 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="max-h-[92vh] w-full max-w-md overflow-y-auto rounded-t-3xl border border-[#4a2c17] bg-[#3b2417] p-6 shadow-2xl sm:rounded-lg"
+            className="max-h-[92vh] w-full max-w-md overflow-y-auto rounded-t-3xl border border-[#4a2c17] bg-[#1b1f3b] p-6 shadow-2xl sm:rounded-lg"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-start justify-between">
-              <h3 className="text-2xl font-black text-[#16a34a]">My Account</h3>
-              <button onClick={close} className="text-2xl leading-none text-[#e9d8c4] hover:text-[#16a34a]" aria-label="Close account dialog">×</button>
+              <h3 className="text-2xl font-black text-[#22d3ee]">My Account</h3>
+              <button onClick={close} className="text-2xl leading-none text-[#e9d8c4] hover:text-[#22d3ee]" aria-label="Close account dialog">×</button>
             </div>
 
             {status === "loading" ? (
@@ -80,12 +80,12 @@ export default function AccountModal({ open, onClose }: AccountModalProps) {
                     </span>
                   )}
                   <div className="min-w-0">
-                    <p className="truncate font-bold text-[#16a34a]">{session.user.name ?? "Signed in"}</p>
+                    <p className="truncate font-bold text-[#22d3ee]">{session.user.name ?? "Signed in"}</p>
                     <p className="truncate text-sm text-[#e9d8c4]">{session.user.email}</p>
                     <span className="mt-1 inline-block rounded-full bg-brand-400/15 px-2.5 py-0.5 text-xs font-bold text-brand-400 ring-1 ring-brand-400/30 capitalize">{session.user.role ?? "customer"}</span>
                   </div>
                 </div>
-                <Link href="/dashboard" onClick={close} className="mt-4 block rounded-full bg-gradient-to-r from-brand-500 to-brand-700 py-3 text-center font-bold text-white shadow-[0_8px_24px_-8px_rgba(249, 115, 22, 0.4)] transition hover:brightness-110 active:scale-[0.99]">
+                <Link href="/dashboard" onClick={close} className="mt-4 block rounded-full bg-gradient-to-r from-brand-500 to-brand-700 py-3 text-center font-bold text-white shadow-[0_8px_24px_-8px_rgba(124, 58, 237, 0.4)] transition hover:brightness-110 active:scale-[0.99]">
                   Go to My Dashboard
                 </Link>
                 {session.user.role === "admin" && (
@@ -105,7 +105,7 @@ export default function AccountModal({ open, onClose }: AccountModalProps) {
                 <button
                   onClick={handleGoogle}
                   disabled={loading}
-                  className="mt-4 flex w-full items-center justify-center gap-3 rounded-full border border-[#4a2c17] bg-[#4a2c17] py-3 font-bold text-[#16a34a] shadow-sm ring-1 ring-[#4a2c17] transition hover:bg-[#4a2c17] active:scale-[0.99] disabled:opacity-60"
+                  className="mt-4 flex w-full items-center justify-center gap-3 rounded-full border border-[#4a2c17] bg-[#4a2c17] py-3 font-bold text-[#22d3ee] shadow-sm ring-1 ring-[#4a2c17] transition hover:bg-[#4a2c17] active:scale-[0.99] disabled:opacity-60"
                 >
                   <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#4a2c17] text-base font-black text-[#e9d8c4] shadow">G</span>
                   {loading ? "Connecting to Google…" : "Continue with Google"}
