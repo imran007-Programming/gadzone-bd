@@ -22,21 +22,21 @@ const item: Variants = {
 
 // Signal haze clouds drifting across the midnight market sky.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(163,230,53, 0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(34,211,238, 0.30)" },
-  { left: "42%", top: "46%", size: 140, delay: "-7s", dur: "13s", c: "rgba(217,70,239, 0.20)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(190,242,100, 0.28)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(34,197,94,0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(251,146,60,0.30)" },
+  { left: "42%", top: "46%", size: 140, delay: "-7s", dur: "13s", c: "rgba(236,72,153,0.20)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(74,222,128,0.28)" },
 ];
 
 // Neon signal motes rising off the midnight market floor.
 const PETALS = [
-  { left: "8%", delay: "0s", dur: "8.2s", s: 12, c: "#a3e635" },
-  { left: "21%", delay: "-1.4s", dur: "9.8s", s: 16, c: "#d946ef" },
-  { left: "36%", delay: "-2.6s", dur: "8.8s", s: 13, c: "#bef264" },
-  { left: "53%", delay: "-0.8s", dur: "9.4s", s: 17, c: "#22d3ee" },
-  { left: "68%", delay: "-3.2s", dur: "8.6s", s: 12, c: "#d9f99d" },
-  { left: "82%", delay: "-2s", dur: "9.2s", s: 14, c: "#67e8f9" },
-  { left: "93%", delay: "-0.4s", dur: "8.4s", s: 10, c: "#e879f9" },
+  { left: "8%", delay: "0s", dur: "8.2s", s: 12, c: "#f97316" },
+  { left: "21%", delay: "-1.4s", dur: "9.8s", s: 16, c: "#ec4899" },
+  { left: "36%", delay: "-2.6s", dur: "8.8s", s: 13, c: "#fb923c" },
+  { left: "53%", delay: "-0.8s", dur: "9.4s", s: 17, c: "#f97316" },
+  { left: "68%", delay: "-3.2s", dur: "8.6s", s: 12, c: "#fdba74" },
+  { left: "82%", delay: "-2s", dur: "9.2s", s: 14, c: "#fbbf24" },
+  { left: "93%", delay: "-0.4s", dur: "8.4s", s: 10, c: "#f472b6" },
 ];
 
 // Night sparkles scattered over the midnight sky.
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* midnight market sky */}
-      <div className="relative bg-gradient-to-b from-[#0f1650] via-[#0c1236] to-[#0b1033]">
+      <div className="relative bg-gradient-to-b from-[#fff7ed] via-[#faf3e6] to-[#fffdf7]">
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-60" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-900/30" />
 
@@ -99,13 +99,13 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(163,230,53, 0.45), inset 0 0 18px rgba(217,70,239, 0.2)",
+                  boxShadow: "0 0 28px 2px rgba(34,197,94,0.45), inset 0 0 18px rgba(236,72,153,0.2)",
                   opacity: 1 - r * 0.22,
                 }}
               />
             ))}
             {/* the beacon itself: a volt-lime signal orb */}
-            <div className="absolute inset-44 rounded-full border-[3px] border-white/90 bg-[radial-gradient(circle_at_38%_34%,#ffffff_0%,#ecfccb_40%,#d9f99d_70%,#a3e635_100%)] shadow-[0_0_80px_-8px_rgba(163,230,53,0.7),inset_0_0_40px_rgba(255,255,255,0.6)]" />
+            <div className="absolute inset-44 rounded-full border-[3px] border-white/90 bg-[radial-gradient(circle_at_38%_34%,#ffffff_0%,#ffedd5_40%,#fdba74_70%,#f97316_100%)] shadow-[0_0_80px_-8px_rgba(249,115,22,0.7),inset_0_0_40px_rgba(255,255,255,0.6)]" />
             {/* beacon glints */}
             <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
               {[{l:"30%",t:"34%",s:46},{l:"58%",t:"52%",s:34},{l:"44%",t:"66%",s:24},{l:"64%",t:"30%",s:20}].map((glint, i) => (
@@ -124,7 +124,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#a3e635", "#d946ef", "#bef264", "#22d3ee"];
+              const colors = ["#f97316", "#ec4899", "#fb923c", "#22c55e"];
               return (
                 <span
                   key={i}
@@ -158,7 +158,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           {STARS.map((s, i) => (
             <span
               key={i}
-              className="pop-twinkle absolute rounded-full bg-white"
+              className="pop-twinkle absolute rounded-full bg-[#ea580c]"
               style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
             />
           ))}
@@ -174,9 +174,9 @@ export default function Hero({ onQuickView }: HeroProps) {
         {/* 4-banner carousel in a neon signal frame */}
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-8 sm:px-6">
-            <div className="rounded-[1.75rem] border-2 border-[#164e63] bg-[#10174a] p-2 shadow-[6px_6px_0_rgba(3,7,20,0.9)]">
-              <div className="rounded-[1.25rem] bg-gradient-to-r from-gold-400 via-brand-500 to-popblue-500 p-1.5 shadow-[0_0_30px_-6px_rgba(163,230,53,0.5)]">
-                <div className="overflow-hidden rounded-[1rem] border-2 border-[#164e63] bg-brand-100">
+            <div className="rounded-[1.75rem] border-2 border-[#2b2118] bg-[#2b2118] p-2 shadow-[6px_6px_0_rgba(3,7,20,0.9)]">
+              <div className="rounded-[1.25rem] bg-gradient-to-r from-gold-400 via-brand-500 to-popblue-500 p-1.5 shadow-[0_0_30px_-6px_rgba(34,197,94,0.5)]">
+                <div className="overflow-hidden rounded-[1rem] border-2 border-[#2b2118] bg-brand-100">
                   <BannerCarousel />
                 </div>
               </div>
@@ -185,11 +185,11 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
 
         {/* signal ticker: magenta ribbon, lime type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#164e63] bg-popblue-700/95 py-3 shadow-[0_18px_40px_-18px_rgba(217,70,239,0.6)]">
+        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#2b2118] bg-popblue-700/95 py-3 shadow-[0_18px_40px_-18px_rgba(236,72,153,0.6)]">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
-                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-gold-200 drop-shadow-[0_0_12px_rgba(217,249,157,0.6)]">
+                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-gold-200 drop-shadow-[0_0_12px_rgba(187,247,208,0.6)]">
                   {t} <span className="text-gold-400">✦</span>
                 </span>
               ))}
@@ -214,7 +214,7 @@ export default function Hero({ onQuickView }: HeroProps) {
               <div key={s.l} className="pop-lift relative overflow-hidden p-4 pb-3 pt-5 text-center">
                 <span className="relative block bg-gradient-to-br from-brand-700 via-popblue-600 to-gold-600 bg-clip-text text-2xl font-black tracking-tight text-transparent">{s.v}</span>
                 <span className="relative mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-mute">{s.l}</span>
-                <span aria-hidden className="relative mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-gold-400 via-brand-500 to-popblue-500 shadow-[0_0_12px_rgba(163,230,53,0.6)]" />
+                <span aria-hidden className="relative mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-gold-400 via-brand-500 to-popblue-500 shadow-[0_0_12px_rgba(34,197,94,0.6)]" />
               </div>
             ))}
           </motion.div>
@@ -222,7 +222,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full border-2 border-[#164e63] bg-white/80 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[3px_3px_0_rgba(3,7,20,0.9)]">Handpicked for you</p>
+            <p className="inline-block rounded-full border-2 border-[#2b2118] bg-white/80 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[3px_3px_0_rgba(3,7,20,0.9)]">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="relative bg-gradient-to-r from-brand-600 via-popblue-500 to-gold-600 bg-clip-text text-transparent">Picks<span aria-hidden className="absolute inset-x-0 -bottom-1 h-2 rounded-full bg-gradient-to-r from-popblue-400 to-gold-400 opacity-70 blur-[3px]" /></span></h2>
             <span className="zigzag mt-4 block w-44" aria-hidden />
           </div>
@@ -238,7 +238,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 onClick={() => onQuickView(p)}
               >
                 <div className="relative">
-                  <div className="overflow-hidden border-b-2 border-[#164e63]/10">
+                  <div className="overflow-hidden border-b-2 border-[#2b2118]/10">
                     <ProductImage product={p} />
                   </div>
                   <span className="starburst absolute -right-1 -top-1 flex h-16 w-16 items-center justify-center p-4 text-center text-[11px] font-black leading-tight">-{discountPct(p)}%</span>
