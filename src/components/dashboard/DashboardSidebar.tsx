@@ -19,13 +19,13 @@ type DashboardSidebarProps = {
 
 export default function DashboardSidebar({ nav, active, onSelect, badge, userName, userEmail, userImage, userRole }: DashboardSidebarProps) {
   return (
-    <aside className="sticky top-0 hidden h-screen w-72 shrink-0 flex-col border-r border-[#166534] bg-[#f7f5ec] p-5 text-[#243b2f] lg:flex">
+    <aside className="sticky top-0 hidden h-screen w-72 shrink-0 flex-col border-r border-[#155e75] bg-[#141a36] p-5 text-[#e9ecf8] lg:flex">
       <Link href="/" className="flex items-center gap-2">
         <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-500 text-xl font-black text-white">G</span>
         <span className="text-lg font-black tracking-tight">
-          Gad<span className="text-brand-600">Zone</span> BD
+          Gad<span className="text-brand-300">Zone</span> BD
         </span>
-        {badge && <span className="rounded-full bg-[#166534] px-2 py-0.5 text-[11px] font-black text-brand-300">{badge}</span>}
+        {badge && <span className="rounded-full bg-[#155e75] px-2 py-0.5 text-[11px] font-black text-brand-300">{badge}</span>}
       </Link>
 
       <nav className="mt-8 space-y-1" aria-label="Dashboard navigation">
@@ -37,7 +37,7 @@ export default function DashboardSidebar({ nav, active, onSelect, badge, userNam
               onClick={() => onSelect(item.id)}
               aria-current={isActive ? "page" : undefined}
               className={`flex w-full items-center gap-3 rounded-lg px-4 py-3 text-left text-sm font-bold transition ${
-                isActive ? "bg-brand-500 text-white shadow-lg shadow-brand-500/30" : "text-[#243b2f] hover:bg-[#166534] hover:text-[#f1f4ea]"
+                isActive ? "bg-brand-500 text-white shadow-lg shadow-brand-500/30" : "text-[#e9ecf8] hover:bg-[#155e75] hover:text-[#eef1ff]"
               }`}
             >
               <span className="text-lg" aria-hidden="true">{item.icon}</span>
@@ -47,17 +47,17 @@ export default function DashboardSidebar({ nav, active, onSelect, badge, userNam
         })}
       </nav>
 
-      <div className="mt-auto space-y-2 border-t border-[#166534] pt-4">
-        <Link href="/" className="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-bold text-[#243b2f] transition hover:bg-[#166534] hover:text-[#f1f4ea]">
+      <div className="mt-auto space-y-2 border-t border-[#155e75] pt-4">
+        <Link href="/" className="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-bold text-[#e9ecf8] transition hover:bg-[#155e75] hover:text-[#eef1ff]">
           <span aria-hidden="true">🛍️</span> Back to Shop
         </Link>
         <button
           onClick={() => signOut({ callbackUrl: "/" })}
-          className="flex w-full items-center gap-3 rounded-lg px-4 py-3 text-left text-sm font-bold text-[#243b2f] transition hover:bg-[#166534] hover:text-[#f1f4ea]"
+          className="flex w-full items-center gap-3 rounded-lg px-4 py-3 text-left text-sm font-bold text-[#e9ecf8] transition hover:bg-[#155e75] hover:text-[#eef1ff]"
         >
           <span aria-hidden="true">🚪</span> Sign out
         </button>
-        <div className="flex items-center gap-3 rounded-lg bg-[#166534] px-3 py-3 text-[#f1f4ea]">
+        <div className="flex items-center gap-3 rounded-lg bg-[#155e75] px-3 py-3 text-[#eef1ff]">
           {userImage ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img src={userImage} alt="" className="h-10 w-10 shrink-0 rounded-full object-cover" />
@@ -68,7 +68,7 @@ export default function DashboardSidebar({ nav, active, onSelect, badge, userNam
           )}
           <div className="min-w-0">
             <p className="truncate text-sm font-bold">{userName ?? "Account"}</p>
-            <p className="truncate text-xs text-[#f1f4ea]/80">{userEmail ?? ""}</p>
+            <p className="truncate text-xs text-[#eef1ff]/80">{userEmail ?? ""}</p>
             {userRole && <p className="mt-0.5 text-[11px] font-bold tracking-wide text-brand-400 uppercase">{userRole}</p>}
           </div>
         </div>
