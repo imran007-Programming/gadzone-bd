@@ -20,7 +20,8 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Nova glow: violet, orchid-pink and cyan star motes drifting over the starfield.
+// Harvest sun: marigold, ember-orange and leaf-green embers drifting
+// over the sunbaked sky.
 const GLOWS = [
   { left: "4%", top: "10%", size: 150, delay: "0s", dur: "14s", c: "rgba(249, 115, 22, 0.28)" },
   { left: "72%", top: "4%", size: 200, delay: "-4s", dur: "15s", c: "rgba(245, 158, 11, 0.14)" },
@@ -30,13 +31,13 @@ const GLOWS = [
 
 // star motes: cool sparks drifting through the nebula wash.
 const DOTS = [
-  { left: "8%", delay: "0s", dur: "7.2s", s: 22, c: "#0284c7" },
+  { left: "8%", delay: "0s", dur: "7.2s", s: 22, c: "#c2410c" },
   { left: "21%", delay: "-1.4s", dur: "7.8s", s: 16, c: "#bbf7d0" },
-  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 24, c: "#8b5cf6" },
-  { left: "53%", delay: "-0.8s", dur: "8s", s: 18, c: "#8b5cf6" },
-  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 22, c: "#8b5cf6" },
+  { left: "36%", delay: "-2.6s", dur: "7.4s", s: 24, c: "#16a34a" },
+  { left: "53%", delay: "-0.8s", dur: "8s", s: 18, c: "#16a34a" },
+  { left: "68%", delay: "-3.2s", dur: "7.5s", s: 22, c: "#16a34a" },
   { left: "82%", delay: "-2s", dur: "7.9s", s: 15, c: "#fdba74" },
-  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 20, c: "#0284c7" },
+  { left: "93%", delay: "-0.4s", dur: "7.3s", s: 20, c: "#c2410c" },
 ];
 
 // Ticker phrases reuse the hero's existing stats copy.
@@ -106,7 +107,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             );
           })}
           {/* the nova orb itself */}
-          <div className="absolute inset-44 rounded-full border-2 border-brand-200/80 bg-[radial-gradient(circle_at_50%_62%,#fff7ed_0%,#fde68a_30%,#0284c7_55%,#c2410c_82%,#9f1239_100%)] shadow-[0_0_90px_28px_rgba(249, 115, 22,0.4)]" />
+          <div className="absolute inset-44 rounded-full border-2 border-brand-200/80 bg-[radial-gradient(circle_at_50%_62%,#fff7ed_0%,#fde68a_30%,#f59e0b_55%,#ea580c_82%,#7c2d12_100%)] shadow-[0_0_90px_28px_rgba(249, 115, 22,0.4)]" />
           <div className="absolute inset-44 rounded-full border border-white/40" />
           {/* ripple shimmer along the lower half */}
           <div className="absolute inset-44 overflow-hidden rounded-full">
