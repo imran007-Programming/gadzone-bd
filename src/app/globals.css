@@ -1,63 +1,63 @@
 @import "tailwindcss";
 
 @theme {
-  /* Terracotta Souk: a sunlit clay-market morning — warm sand paper,
-     burnt-terracotta headlines, deep-olive foliage, marigold sparks.
-     Cards are warm-paper tiles with a clay hairline; they lift into
-     a marigold glow on hover. */
+  /* Monsoon Lagoon: a rain-washed gadget bazaar on still lagoon water —
+     crisp white cards, deep-teal headlines, ocean-blue details, coral sparks.
+     Cards are glass-crisp tiles with a teal hairline; they lift into a
+     coral glow on hover. */
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = burnt terracotta scale */
-  --color-brand-50: #fdf4ec;
-  --color-brand-100: #fae2cd;
-  --color-brand-200: #f4c39c;
-  --color-brand-300: #ec9c64;
-  --color-brand-400: #e4743a;
-  --color-brand-500: #d95a20;
-  --color-brand-600: #bd4718;
-  --color-brand-700: #983716;
-  --color-brand-800: #772c14;
-  --color-brand-900: #5e2412;
-  --color-brand-950: #341107;
-  --color-brand: #d95a20;
-  --color-brand-dark: #983716;
-  --color-brand-deep: #772c14;
+  /* brand = deep teal scale */
+  --color-brand-50: #f0fdfa;
+  --color-brand-100: #ccfbf1;
+  --color-brand-200: #99f6e4;
+  --color-brand-300: #5eead4;
+  --color-brand-400: #2dd4bf;
+  --color-brand-500: #14b8a6;
+  --color-brand-600: #0d9488;
+  --color-brand-700: #0f766e;
+  --color-brand-800: #115e59;
+  --color-brand-900: #134e4a;
+  --color-brand-950: #042f2e;
+  --color-brand: #0d9488;
+  --color-brand-dark: #0f766e;
+  --color-brand-deep: #115e59;
 
-  /* gold = deep olive scale (name kept for legacy class refs) */
-  --color-gold-50: #f5f7ec;
-  --color-gold-100: #e5ebd2;
-  --color-gold-200: #cbd8a4;
-  --color-gold-300: #aabd74;
-  --color-gold-400: #8aa352;
-  --color-gold-500: #6d8c3d;
-  --color-gold-600: #536f2e;
-  --color-gold-700: #415726;
-  --color-gold-800: #354620;
-  --color-gold-900: #2d3a1c;
-  --color-gold-950: #161d0c;
-  --color-gold: #6d8c3d;
-  --color-gold-deep: #415726;
-  --color-gold-soft: #e5ebd2;
+  /* gold = ocean blue scale (name kept for legacy class refs) */
+  --color-gold-50: #f0f9ff;
+  --color-gold-100: #e0f2fe;
+  --color-gold-200: #bae6fd;
+  --color-gold-300: #7dd3fc;
+  --color-gold-400: #38bdf8;
+  --color-gold-500: #0ea5e9;
+  --color-gold-600: #0284c7;
+  --color-gold-700: #0369a1;
+  --color-gold-800: #075985;
+  --color-gold-900: #0c4a6e;
+  --color-gold-950: #082f49;
+  --color-gold: #0284c7;
+  --color-gold-deep: #0369a1;
+  --color-gold-soft: #e0f2fe;
 
-  /* popblue = marigold amber scale (name kept for legacy class refs) */
-  --color-popblue-50: #fffaef;
-  --color-popblue-100: #fef3da;
-  --color-popblue-200: #fde5b3;
-  --color-popblue-300: #fbd386;
-  --color-popblue-400: #f9be54;
-  --color-popblue-500: #f6a832;
-  --color-popblue-600: #e08619;
-  --color-popblue-700: #b46813;
-  --color-popblue-800: #905313;
-  --color-popblue-900: #764313;
-  --color-popblue-950: #42250a;
-  --color-popblue: #f6a832;
-  --color-popblue-deep: #905313;
-  --color-popblue-soft: #fef3da;
+  /* popblue = coral scale (name kept for legacy class refs) */
+  --color-popblue-50: #fff1f2;
+  --color-popblue-100: #ffe4e6;
+  --color-popblue-200: #fecdd3;
+  --color-popblue-300: #fda4af;
+  --color-popblue-400: #fb7185;
+  --color-popblue-500: #f43f5e;
+  --color-popblue-600: #e11d48;
+  --color-popblue-700: #be123c;
+  --color-popblue-800: #9f1239;
+  --color-popblue-900: #881337;
+  --color-popblue-950: #4c0519;
+  --color-popblue: #f43f5e;
+  --color-popblue-deep: #9f1239;
+  --color-popblue-soft: #ffe4e6;
 
-  --color-ink: #2e2115;
-  --color-paper: #faf4e8;
-  --color-mute: #8b7a63;
+  --color-ink: #0e2a30;
+  --color-paper: #eef7f4;
+  --color-mute: #5b7a80;
 }
 
 html { scroll-behavior: smooth; }
@@ -72,23 +72,23 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #faf4e8;
+  background-color: #eef7f4;
   background-image:
-    radial-gradient(circle, rgba(217, 90, 32, 0.10) 1px, transparent 1.6px),
-    radial-gradient(ellipse 56% 30% at 88% -4%, rgba(246, 168, 50, 0.20), transparent 70%),
-    radial-gradient(ellipse 48% 28% at 4% 102%, rgba(109, 140, 61, 0.14), transparent 70%),
-    radial-gradient(ellipse 40% 24% at 52% 52%, rgba(217, 90, 32, 0.06), transparent 70%);
+    radial-gradient(circle, rgba(13, 148, 136, 0.12) 1px, transparent 1.6px),
+    radial-gradient(ellipse 56% 30% at 88% -4%, rgba(2, 132, 199, 0.16), transparent 70%),
+    radial-gradient(ellipse 48% 28% at 4% 102%, rgba(244, 63, 94, 0.10), transparent 70%),
+    radial-gradient(ellipse 40% 24% at 52% 52%, rgba(13, 148, 136, 0.07), transparent 70%);
   background-size: 26px 26px, auto, auto, auto;
-  color: #2e2115;
+  color: #0e2a30;
 }
-::selection { background: #d95a20; color: #fffaf0; }
+::selection { background: #0d9488; color: #f0fdfa; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #d95a20, #f6a832); border-radius: 8px; border: 2px solid #faf4e8; }
-::-webkit-scrollbar-track { background: #f0e4cd; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0d9488, #f43f5e); border-radius: 8px; border: 2px solid #eef7f4; }
+::-webkit-scrollbar-track { background: #d9e9e5; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Clay motes: sunlit dust drifting down through the souk. */
+/* Rain flecks: droplets slipping down the lagoon glass. */
 @keyframes ember-fall {
   0% { transform: translate3d(4px, -60px, 0) rotate(0deg) scale(0.7); opacity: 0; }
   18% { opacity: 0.9; }
@@ -98,7 +98,7 @@ body {
 }
 .pop-fall { animation: ember-fall 12s linear infinite; }
 
-/* Heat-haze drift: slow lateral float of the warm air. */
+/* Tide drift: slow lateral float of the lagoon water. */
 @keyframes ember-sway {
   0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.55; }
   50% { transform: translate3d(3vw, 0.8rem, 0) scale(1.1); opacity: 0.85; }
@@ -112,39 +112,39 @@ body {
 }
 .pop-bob { animation: ember-bob 4s ease-in-out infinite; }
 
-/* Slow rotation for the sun halo. */
+/* Slow rotation for the lagoon halo. */
 @keyframes ember-wheel {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: ember-wheel 56s linear infinite; }
 
-/* Sun glint: marigold sparkle. */
+/* Coral glint: sparkling rain catch. */
 @keyframes ember-glint {
   0%, 100% { opacity: 0.3; transform: scale(0.85); }
   50% { opacity: 1; transform: scale(1.2); }
 }
 .pop-twinkle { animation: ember-glint 3.6s ease-in-out infinite; }
 
-/* Souk ticker: infinite marquee (leftward drift). */
+/* Lagoon ticker: infinite marquee (leftward drift). */
 @keyframes ember-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: ember-ticker 30s linear infinite; }
 
-/* Clay light-strips: terracotta -> marigold -> olive diagonal bars. */
+/* Monsoon light-strips: teal -> coral -> ocean diagonal bars. */
 .pop-stripes {
-  background-image: repeating-linear-gradient(-55deg, #d95a20 0 10px, #f6a832 10px 20px, #6d8c3d 20px 30px);
+  background-image: repeating-linear-gradient(-55deg, #0d9488 0 10px, #f43f5e 10px 20px, #0284c7 20px 30px);
 }
 
-/* Clay tile card: warm paper, terracotta hairline, soft sun-baked shadow;
-   it lifts into a marigold glow on hover. */
+/* Lagoon glass tile: crisp white, teal hairline, cool watery shadow;
+   it lifts into a coral glow on hover. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(217, 90, 32, 0.28);
-  background: linear-gradient(180deg, #fffdf7 0%, #faf1de 100%);
-  border-radius: 1.75rem;
-  box-shadow: 0 12px 30px -14px rgba(152, 55, 22, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(13, 148, 136, 0.28);
+  background: linear-gradient(180deg, #ffffff 0%, #f2faf8 100%);
+  border-radius: 1rem;
+  box-shadow: 0 1px 0 rgba(13, 148, 136, 0.12), 0 14px 34px -18px rgba(2, 132, 199, 0.45);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   overflow: hidden;
 }
@@ -153,76 +153,76 @@ body {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: linear-gradient(115deg, rgba(246, 168, 50, 0.16) 0%, transparent 38%);
+  background: linear-gradient(115deg, rgba(45, 212, 191, 0.14) 0%, transparent 38%);
   pointer-events: none;
 }
 .pop-lift:hover {
   transform: translateY(-4px);
-  border-color: #e08619;
-  box-shadow: 0 20px 40px -14px rgba(246, 168, 50, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border-color: #e11d48;
+  box-shadow: 0 1px 0 rgba(244, 63, 94, 0.2), 0 20px 42px -14px rgba(244, 63, 94, 0.5);
 }
 
-/* Sunlit glass: shared by modals and drawers — a warm frosted panel. */
+/* Lagoon glass: shared by modals and drawers — a cool frosted panel. */
 .pop-glass {
-  background: rgba(255, 253, 247, 0.86);
+  background: rgba(255, 255, 255, 0.86);
   backdrop-filter: blur(20px) saturate(1.1);
   -webkit-backdrop-filter: blur(20px) saturate(1.1);
-  border: 1px solid rgba(217, 90, 32, 0.3);
-  border-radius: 1.75rem;
-  box-shadow: 0 24px 60px -18px rgba(152, 55, 22, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(13, 148, 136, 0.3);
+  border-radius: 1rem;
+  box-shadow: 0 24px 60px -18px rgba(2, 132, 199, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
-/* Kiln seal: a terracotta medallion with a dashed marigold ring. */
+/* Coral seal: a coral medallion with a dashed sea-foam ring. */
 .starburst {
-  background: radial-gradient(circle at 35% 30%, #ec9c64 0%, #d95a20 55%, #772c14 100%);
-  color: #fffaf0;
-  text-shadow: 0 1px 0 rgba(52, 17, 7, 0.5);
+  background: radial-gradient(circle at 35% 30%, #fb7185 0%, #f43f5e 55%, #9f1239 100%);
+  color: #fff1f2;
+  text-shadow: 0 1px 0 rgba(76, 5, 25, 0.5);
   border-radius: 9999px;
-  transform: rotate(-6deg);
-  box-shadow: 0 0 22px -4px rgba(217, 90, 32, 0.65), inset 0 2px 6px rgba(255, 255, 255, 0.3);
-  outline: 2px dashed #f6a832;
+  transform: rotate(6deg);
+  box-shadow: 0 0 22px -4px rgba(244, 63, 94, 0.65), inset 0 2px 6px rgba(255, 255, 255, 0.3);
+  outline: 2px dashed #fda4af;
   outline-offset: -6px;
 }
 
-/* Clay dots: faint terracotta trace texture for hero bands. */
+/* Sea-mist dots: faint teal trace texture for hero bands. */
 .halftone {
-  background-image: radial-gradient(circle, rgba(217, 90, 32, 0.16) 1px, transparent 1.6px);
+  background-image: radial-gradient(circle, rgba(13, 148, 136, 0.16) 1px, transparent 1.6px);
   background-size: 14px 14px;
 }
 
-/* Souk ribbon: a terracotta -> marigold -> olive band. */
+/* Tide ribbon: a teal -> coral -> ocean band. */
 .zigzag {
   height: 6px;
-  background: repeating-linear-gradient(135deg, #d95a20 0 12px, #f6a832 12px 24px, #6d8c3d 24px 36px);
+  background: repeating-linear-gradient(135deg, #0d9488 0 12px, #f43f5e 12px 24px, #0284c7 24px 36px);
   border-radius: 9999px;
-  box-shadow: 0 2px 10px rgba(217, 90, 32, 0.35);
+  box-shadow: 0 2px 10px rgba(13, 148, 136, 0.35);
 }
 
-/* Market canopy: terracotta and cream stripes with a marigold hem. */
+/* Monsoon canopy: teal and mist stripes with a coral hem. */
 .bazaar-awning {
   background-image:
-    repeating-linear-gradient(90deg, #d95a20 0 28px, #faf4e8 28px 56px);
-  border-bottom: 3px solid #f6a832;
-  box-shadow: 0 6px 18px -4px rgba(217, 90, 32, 0.45);
+    repeating-linear-gradient(90deg, #0d9488 0 28px, #eef7f4 28px 56px);
+  border-bottom: 3px solid #f43f5e;
+  box-shadow: 0 6px 18px -4px rgba(13, 148, 136, 0.45);
 }
 
-/* Sun wash: layered terracotta/marigold glow for the day orb. */
+/* Lagoon wash: layered teal/coral glow for the tide orb. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(246, 168, 50, 0.5) 0%, rgba(217, 90, 32, 0.38) 42%, rgba(109, 140, 61, 0.14) 62%, rgba(109, 140, 61, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(45, 212, 191, 0.5) 0%, rgba(13, 148, 136, 0.38) 42%, rgba(244, 63, 94, 0.14) 62%, rgba(244, 63, 94, 0) 76%);
 }
 .sun-disc {
   background:
-    conic-gradient(from 40deg, #fbd386, #f6a832, #f9be54, #e4743a, #fbd386);
-  box-shadow: 0 0 70px -8px rgba(246, 168, 50, 0.6), 0 0 30px -6px rgba(217, 90, 32, 0.5);
+    conic-gradient(from 40deg, #7dd3fc, #38bdf8, #2dd4bf, #fda4af, #7dd3fc);
+  box-shadow: 0 0 70px -8px rgba(2, 132, 199, 0.55), 0 0 30px -6px rgba(13, 148, 136, 0.5);
 }
 
-/* Sun halo rings. */
+/* Tide halo rings. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(217, 90, 32, 0.5) 0px,
-    rgba(217, 90, 32, 0.5) 4px,
+    rgba(13, 148, 136, 0.5) 0px,
+    rgba(13, 148, 136, 0.5) 4px,
     transparent 4px,
     transparent 30px
   );
@@ -233,8 +233,8 @@ body {
 .sun-rays {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(246, 168, 50, 0.55) 0px,
-    rgba(246, 168, 50, 0.55) 4px,
+    rgba(45, 212, 191, 0.55) 0px,
+    rgba(45, 212, 191, 0.55) 4px,
     transparent 4px,
     transparent 30px
   );
@@ -243,63 +243,63 @@ body {
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all sunlit-styled. */
+/* Legacy aliases kept so untouched components still render — all lagoon-styled. */
 .lagoon-lift {
   position: relative;
-  border: 1px solid rgba(109, 140, 61, 0.35);
-  background: linear-gradient(180deg, #fffdf7 0%, #f3ecdb 100%);
-  border-radius: 1.75rem;
-  box-shadow: 0 12px 30px -14px rgba(109, 140, 61, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(2, 132, 199, 0.35);
+  background: linear-gradient(180deg, #ffffff 0%, #eef8fb 100%);
+  border-radius: 1rem;
+  box-shadow: 0 1px 0 rgba(2, 132, 199, 0.12), 0 14px 34px -18px rgba(2, 132, 199, 0.45);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   overflow: hidden;
 }
 .lagoon-lift:hover {
   transform: translateY(-4px);
-  border-color: #e08619;
-  box-shadow: 0 20px 40px -14px rgba(246, 168, 50, 0.5);
+  border-color: #e11d48;
+  box-shadow: 0 20px 42px -14px rgba(244, 63, 94, 0.5);
 }
 .stamp-perf {
-  border: 2px dashed #bd4718;
-  background: rgba(217, 90, 32, 0.07);
+  border: 2px dashed #0f766e;
+  background: rgba(13, 148, 136, 0.07);
   border-radius: 1rem;
-  box-shadow: 0 0 18px -6px rgba(217, 90, 32, 0.4);
+  box-shadow: 0 0 18px -6px rgba(13, 148, 136, 0.4);
 }
 .ember-glow {
   position: relative;
-  border: 1px solid rgba(217, 90, 32, 0.3);
-  background: linear-gradient(180deg, #fae2cd 0%, #f6e7cd 100%);
-  border-radius: 1.75rem;
-  box-shadow: 0 12px 30px -14px rgba(217, 90, 32, 0.45);
+  border: 1px solid rgba(244, 63, 94, 0.3);
+  background: linear-gradient(180deg, #ffe4e6 0%, #f0fdfa 100%);
+  border-radius: 1rem;
+  box-shadow: 0 1px 0 rgba(244, 63, 94, 0.12), 0 14px 34px -18px rgba(244, 63, 94, 0.45);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px -14px rgba(217, 90, 32, 0.55);
+  box-shadow: 0 20px 42px -14px rgba(244, 63, 94, 0.55);
 }
 .ripple-glow {
   position: relative;
-  border: 1px solid rgba(109, 140, 61, 0.35);
-  background: linear-gradient(180deg, #e5ebd2 0%, #faf4e8 100%);
-  border-radius: 1.75rem;
-  box-shadow: 0 12px 30px -14px rgba(109, 140, 61, 0.45);
+  border: 1px solid rgba(2, 132, 199, 0.35);
+  background: linear-gradient(180deg, #e0f2fe 0%, #eef7f4 100%);
+  border-radius: 1rem;
+  box-shadow: 0 1px 0 rgba(2, 132, 199, 0.12), 0 14px 34px -18px rgba(2, 132, 199, 0.45);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px -14px rgba(109, 140, 61, 0.55);
+  box-shadow: 0 20px 42px -14px rgba(2, 132, 199, 0.55);
 }
 .lagoon-glow {
   position: relative;
-  border: 1px solid rgba(217, 90, 32, 0.28);
-  background: linear-gradient(180deg, #fffdf7 0%, #faf1de 100%);
-  border-radius: 1.75rem;
-  box-shadow: 0 12px 30px -14px rgba(217, 90, 32, 0.4);
+  border: 1px solid rgba(13, 148, 136, 0.28);
+  background: linear-gradient(180deg, #ffffff 0%, #f2faf8 100%);
+  border-radius: 1rem;
+  box-shadow: 0 1px 0 rgba(13, 148, 136, 0.12), 0 14px 34px -18px rgba(13, 148, 136, 0.4);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px -14px rgba(217, 90, 32, 0.55);
+  box-shadow: 0 20px 42px -14px rgba(13, 148, 136, 0.55);
 }
