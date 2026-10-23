@@ -25,12 +25,12 @@ export default function BottomNav({ cartCount, onCartOpen, onMenuOpen, onAccount
             key={item.label}
             whileTap={{ scale: 0.94 }}
             onClick={item.onClick}
-            className="relative flex flex-col items-center gap-0.5 py-2.5 text-[11px] font-semibold tracking-tight text-[#2b2118] transition-colors active:text-gold-700"
+            className="relative flex flex-col items-center gap-0.5 py-2.5 text-[11px] font-semibold tracking-tight text-[#16233c] transition-colors active:text-gold-700"
           >
             <span className="relative text-xl leading-none">
               {item.icon}
               {typeof item.badge === "number" && item.badge > 0 && (
-                <span className="absolute -right-3 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 px-1 text-[10px] font-black text-[#fffdf7] shadow-sm ring-2 ring-[#2b2118]">
+                <span className="absolute -right-3 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 px-1 text-[10px] font-black text-[#f8fcff] shadow-sm ring-2 ring-[#16233c]">
                   {item.badge}
                 </span>
               )}
