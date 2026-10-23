@@ -1,63 +1,63 @@
 @import "tailwindcss";
 
 @theme {
-  /* Volt Foundry: a neon-indigo signal hall on cool lavender paper.
-     Cards are frosted white tiles with a violet hairline and a signal
-     bar; they lift into a volt-violet glow on hover. Lime sparks and
-     cyan relays carry the accent work. */
+  /* Terracotta Kiln: a warm clay workshop on sun-baked cream paper.
+     Cards are ivory clay tiles with a terracotta hairline and an
+     ember sun-tab; they settle into a warm amber glow on hover.
+     Deep teal springs and saffron sparks carry the accent work. */
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = electric violet scale */
-  --color-brand-50: #f5f2ff;
-  --color-brand-100: #ece6fd;
-  --color-brand-200: #dbccfb;
-  --color-brand-300: #c3a6f8;
-  --color-brand-400: #a678f3;
-  --color-brand-500: #8b5cf6;
-  --color-brand-600: #7c3aed;
-  --color-brand-700: #6d28d9;
-  --color-brand-800: #5b21b6;
-  --color-brand-900: #4c1d95;
-  --color-brand-950: #2e1065;
-  --color-brand: #6d28d9;
-  --color-brand-dark: #5b21b6;
-  --color-brand-deep: #4c1d95;
+  /* brand = burnt terracotta scale */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-brand-950: #431407;
+  --color-brand: #c2410c;
+  --color-brand-dark: #9a3412;
+  --color-brand-deep: #7c2d12;
 
-  /* gold = lime / volt scale (name kept for legacy class refs) */
-  --color-gold-50: #f7fee7;
-  --color-gold-100: #ecfccb;
-  --color-gold-200: #d9f99d;
-  --color-gold-300: #bef264;
-  --color-gold-400: #a3e635;
-  --color-gold-500: #84cc16;
-  --color-gold-600: #65a30d;
-  --color-gold-700: #4d7c0f;
-  --color-gold-800: #3f6212;
-  --color-gold-900: #365314;
-  --color-gold-950: #1a2e05;
-  --color-gold: #a3e635;
-  --color-gold-deep: #65a30d;
-  --color-gold-soft: #ecfccb;
+  /* gold = saffron / ember scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #b45309;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = cyan / relay scale (name kept for legacy class refs) */
-  --color-popblue-50: #ecfeff;
-  --color-popblue-100: #cffafe;
-  --color-popblue-200: #a5f3fc;
-  --color-popblue-300: #67e8f9;
-  --color-popblue-400: #22d3ee;
-  --color-popblue-500: #06b6d4;
-  --color-popblue-600: #0891b2;
-  --color-popblue-700: #0e7490;
-  --color-popblue-800: #155e75;
-  --color-popblue-900: #164e63;
-  --color-popblue-950: #083344;
-  --color-popblue: #06b6d4;
-  --color-popblue-deep: #155e75;
-  --color-popblue-soft: #cffafe;
+  /* popblue = deep teal / spring scale (name kept for legacy class refs) */
+  --color-popblue-50: #f0fdfa;
+  --color-popblue-100: #ccfbf1;
+  --color-popblue-200: #99f6e4;
+  --color-popblue-300: #5eead4;
+  --color-popblue-400: #2dd4bf;
+  --color-popblue-500: #14b8a6;
+  --color-popblue-600: #0d9488;
+  --color-popblue-700: #0f766e;
+  --color-popblue-800: #115e59;
+  --color-popblue-900: #134e4a;
+  --color-popblue-950: #042f2e;
+  --color-popblue: #0d9488;
+  --color-popblue-deep: #0f766e;
+  --color-popblue-soft: #ccfbf1;
 
-  --color-ink: #191430;
-  --color-paper: #f6f5fd;
-  --color-mute: #7d7499;
+  --color-ink: #2b1a10;
+  --color-paper: #fdf8f0;
+  --color-mute: #8a7a6a;
 }
 
 html { scroll-behavior: smooth; }
@@ -72,36 +72,36 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f6f5fd;
+  background-color: #fdf8f0;
   background-image:
-    radial-gradient(circle, rgba(109, 40, 217, 0.10) 1px, transparent 1.7px),
-    radial-gradient(ellipse 60% 32% at 90% -6%, rgba(139, 92, 246, 0.16), transparent 70%),
-    radial-gradient(ellipse 46% 26% at 2% 104%, rgba(6, 182, 212, 0.10), transparent 70%),
-    radial-gradient(ellipse 38% 24% at 56% 46%, rgba(163, 230, 53, 0.10), transparent 70%);
-  background-size: 30px 30px, auto, auto, auto;
-  color: #191430;
+    radial-gradient(circle, rgba(194, 65, 12, 0.08) 1px, transparent 1.7px),
+    radial-gradient(ellipse 62% 34% at 88% -8%, rgba(249, 115, 22, 0.18), transparent 70%),
+    radial-gradient(ellipse 48% 28% at 4% 102%, rgba(13, 148, 136, 0.10), transparent 70%),
+    radial-gradient(ellipse 40% 26% at 58% 48%, rgba(245, 158, 11, 0.10), transparent 70%);
+  background-size: 32px 32px, auto, auto, auto;
+  color: #2b1a10;
 }
-::selection { background: #6d28d9; color: #f5f2ff; }
+::selection { background: #c2410c; color: #fff7ed; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #7c3aed, #06b6d4); border-radius: 8px; border: 2px solid #f6f5fd; }
-::-webkit-scrollbar-track { background: #e2def6; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ea580c, #0d9488); border-radius: 8px; border: 2px solid #fdf8f0; }
+::-webkit-scrollbar-track { background: #f1e3cb; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Signal fall: circuit confetti drifting down through the signal hall. */
+/* Ember fall: fired clay embers drifting down through the kiln room. */
 @keyframes signal-fall {
-  0% { transform: translate3d(6px, -60px, 0) rotate(0deg) scale(0.75); opacity: 0; }
+  0% { transform: translate3d(-6px, -60px, 0) rotate(0deg) scale(0.75); opacity: 0; }
   18% { opacity: 0.9; }
-  50% { transform: translate3d(-10px, 120px, 0) rotate(140deg) scale(1); }
+  50% { transform: translate3d(10px, 120px, 0) rotate(-140deg) scale(1); }
   82% { opacity: 0.7; }
-  100% { transform: translate3d(8px, 300px, 0) rotate(260deg) scale(0.9); opacity: 0; }
+  100% { transform: translate3d(-8px, 300px, 0) rotate(-260deg) scale(0.9); opacity: 0; }
 }
 .pop-fall { animation: signal-fall 12s linear infinite; }
 
-/* Relay drift: slow lateral float of the cool signal air. */
+/* Spring drift: slow lateral float of the warm kiln air. */
 @keyframes signal-sway {
-  0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.55; }
-  50% { transform: translate3d(3vw, 0.8rem, 0) scale(1.1); opacity: 0.85; }
+  0%, 100% { transform: translate3d(3vw, 0, 0) scale(1); opacity: 0.55; }
+  50% { transform: translate3d(-3vw, -0.8rem, 0) scale(1.1); opacity: 0.85; }
 }
 .pop-drift { animation: signal-sway 30s ease-in-out infinite; }
 
@@ -112,49 +112,51 @@ body {
 }
 .pop-bob { animation: signal-bob 4s ease-in-out infinite; }
 
-/* Slow rotation for the volt halo. */
+/* Slow rotation for the ember halo. */
 @keyframes signal-wheel {
-  to { transform: rotate(360deg); }
+  to { transform: rotate(-360deg); }
 }
 .pop-spin { animation: signal-wheel 56s linear infinite; }
 
-/* Volt glint: sparkling relay catch. */
+/* Ember glint: sparkling kiln catch. */
 @keyframes signal-glint {
   0%, 100% { opacity: 0.3; transform: scale(0.85); }
   50% { opacity: 1; transform: scale(1.2); }
 }
 .pop-twinkle { animation: signal-glint 3.6s ease-in-out infinite; }
 
-/* Signal ticker: infinite marquee (leftward drift). */
+/* Ember ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Signal bars: violet -> cyan -> lime diagonal relays. */
+/* Ember bars: terracotta -> teal -> saffron diagonal springs. */
 .pop-stripes {
-  background-image: repeating-linear-gradient(-55deg, #6d28d9 0 10px, #5b21b6 10px 20px, #06b6d4 20px 30px);
+  background-image: repeating-linear-gradient(-55deg, #c2410c 0 10px, #9a3412 10px 20px, #0d9488 20px 30px);
 }
 
-/* Signal tile: frosted white card, violet hairline, top relay bar;
-   it lifts into a volt glow on hover. */
+/* Clay tile: ivory card with terracotta hairline and an ember sun-tab
+   in the corner; it settles into a warm amber glow on hover. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(109, 40, 217, 0.26);
-  background: linear-gradient(180deg, #ffffff 0%, #f2f0fd 100%);
-  border-radius: 1rem;
-  box-shadow: 0 1px 0 rgba(109, 40, 217, 0.12), 0 14px 34px -18px rgba(91, 33, 182, 0.45);
+  border: 1px solid rgba(194, 65, 12, 0.28);
+  background: linear-gradient(180deg, #fffdf8 0%, #faf1e4 100%);
+  border-radius: 1.1rem 2.2rem 1.1rem 2.2rem;
+  box-shadow: 0 1px 0 rgba(194, 65, 12, 0.12), 0 16px 36px -20px rgba(154, 52, 18, 0.5);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   overflow: hidden;
 }
 .pop-lift::before {
   content: "";
   position: absolute;
-  inset: 0 auto auto 0;
-  height: 4px;
-  width: 100%;
-  background: linear-gradient(90deg, #6d28d9, #06b6d4 55%, #a3e635);
+  top: 0;
+  right: 0;
+  width: 84px;
+  height: 44px;
+  background: linear-gradient(135deg, #f97316 0%, #c2410c 70%);
+  border-bottom-left-radius: 2.2rem;
   pointer-events: none;
 }
 .pop-lift::after {
@@ -162,76 +164,76 @@ body {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: linear-gradient(115deg, rgba(139, 92, 246, 0.14) 0%, transparent 38%);
+  background: radial-gradient(ellipse 60% 40% at 50% 108%, rgba(245, 158, 11, 0.20) 0%, transparent 65%);
   pointer-events: none;
 }
 .pop-lift:hover {
   transform: translateY(-4px);
-  border-color: #7c3aed;
-  box-shadow: 0 1px 0 rgba(139, 92, 246, 0.2), 0 20px 42px -14px rgba(139, 92, 246, 0.55);
+  border-color: #ea580c;
+  box-shadow: 0 1px 0 rgba(249, 115, 22, 0.2), 0 22px 44px -16px rgba(234, 88, 12, 0.55);
 }
 
-/* Volt glass: shared by modals and drawers — a frosted lavender panel. */
+/* Kiln glass: shared by modals and drawers — a frosted clay panel. */
 .pop-glass {
-  background: rgba(250, 249, 255, 0.88);
+  background: rgba(255, 251, 243, 0.9);
   backdrop-filter: blur(20px) saturate(1.15);
   -webkit-backdrop-filter: blur(20px) saturate(1.15);
-  border: 1px solid rgba(109, 40, 217, 0.3);
-  border-radius: 1rem;
-  box-shadow: 0 24px 60px -18px rgba(91, 33, 182, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(194, 65, 12, 0.3);
+  border-radius: 1.25rem;
+  box-shadow: 0 24px 60px -18px rgba(154, 52, 18, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
-/* Volt seal: a violet medallion with a dashed lime ring. */
+/* Ember seal: a terracotta medallion with a dashed saffron ring. */
 .starburst {
-  background: radial-gradient(circle at 35% 30%, #a678f3 0%, #6d28d9 55%, #2e1065 100%);
-  color: #f5f2ff;
-  text-shadow: 0 1px 0 rgba(46, 16, 101, 0.5);
+  background: radial-gradient(circle at 35% 30%, #fb923c 0%, #c2410c 55%, #431407 100%);
+  color: #fff7ed;
+  text-shadow: 0 1px 0 rgba(67, 20, 7, 0.5);
   border-radius: 9999px;
-  transform: rotate(-6deg);
-  box-shadow: 0 0 22px -4px rgba(124, 58, 237, 0.65), inset 0 2px 6px rgba(255, 255, 255, 0.3);
-  outline: 2px dashed #bef264;
+  transform: rotate(6deg);
+  box-shadow: 0 0 22px -4px rgba(234, 88, 12, 0.65), inset 0 2px 6px rgba(255, 255, 255, 0.3);
+  outline: 2px dashed #fde68a;
   outline-offset: -6px;
 }
 
-/* Volt dots: faint signal-trace texture for hero bands. */
+/* Clay dots: faint ember-trace texture for hero bands. */
 .halftone {
-  background-image: radial-gradient(circle, rgba(109, 40, 217, 0.14) 1px, transparent 1.7px);
+  background-image: radial-gradient(circle, rgba(194, 65, 12, 0.14) 1px, transparent 1.7px);
   background-size: 14px 14px;
 }
 
-/* Signal band: a violet -> cyan -> lime relay bar. */
+/* Ember band: a terracotta -> teal -> saffron spring bar. */
 .zigzag {
   height: 6px;
-  background: repeating-linear-gradient(135deg, #6d28d9 0 12px, #06b6d4 12px 24px, #a3e635 24px 36px);
+  background: repeating-linear-gradient(135deg, #c2410c 0 12px, #0d9488 12px 24px, #f59e0b 24px 36px);
   border-radius: 9999px;
-  box-shadow: 0 2px 10px rgba(109, 40, 217, 0.35);
+  box-shadow: 0 2px 10px rgba(194, 65, 12, 0.35);
 }
 
-/* Signal canopy: violet and lavender stripes with a lime hem. */
+/* Kiln canopy: terracotta and cream stripes with a teal hem. */
 .bazaar-awning {
   background-image:
-    repeating-linear-gradient(90deg, #6d28d9 0 28px, #f6f5fd 28px 56px);
-  border-bottom: 3px solid #a3e635;
-  box-shadow: 0 6px 18px -4px rgba(109, 40, 217, 0.45);
+    repeating-linear-gradient(90deg, #c2410c 0 28px, #fdf8f0 28px 56px);
+  border-bottom: 3px solid #0d9488;
+  box-shadow: 0 6px 18px -4px rgba(194, 65, 12, 0.45);
 }
 
-/* Volt wash: layered violet/cyan glow for the signal orb. */
+/* Ember wash: layered terracotta/teal glow for the ember orb. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(139, 92, 246, 0.5) 0%, rgba(109, 40, 217, 0.38) 42%, rgba(6, 182, 212, 0.14) 62%, rgba(6, 182, 212, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(249, 115, 22, 0.5) 0%, rgba(194, 65, 12, 0.38) 42%, rgba(13, 148, 136, 0.14) 62%, rgba(13, 148, 136, 0) 76%);
 }
 .sun-disc {
   background:
-    conic-gradient(from 40deg, #a3e635, #67e8f9, #8b5cf6, #a3e635);
-  box-shadow: 0 0 70px -8px rgba(139, 92, 246, 0.55), 0 0 30px -6px rgba(6, 182, 212, 0.5);
+    conic-gradient(from 40deg, #f59e0b, #5eead4, #f97316, #f59e0b);
+  box-shadow: 0 0 70px -8px rgba(234, 88, 12, 0.55), 0 0 30px -6px rgba(13, 148, 136, 0.5);
 }
 
-/* Volt halo rings. */
+/* Ember halo rings. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(109, 40, 217, 0.5) 0px,
-    rgba(109, 40, 217, 0.5) 4px,
+    rgba(194, 65, 12, 0.5) 0px,
+    rgba(194, 65, 12, 0.5) 4px,
     transparent 4px,
     transparent 30px
   );
@@ -242,8 +244,8 @@ body {
 .sun-rays {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(34, 211, 238, 0.55) 0px,
-    rgba(34, 211, 238, 0.55) 4px,
+    rgba(45, 212, 191, 0.55) 0px,
+    rgba(45, 212, 191, 0.55) 4px,
     transparent 4px,
     transparent 30px
   );
@@ -252,63 +254,63 @@ body {
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all volt-styled. */
+/* Legacy aliases kept so untouched components still render — all kiln-styled. */
 .lagoon-lift {
   position: relative;
-  border: 1px solid rgba(91, 33, 182, 0.35);
-  background: linear-gradient(180deg, #ffffff 0%, #f0edfd 100%);
-  border-radius: 1rem;
-  box-shadow: 0 1px 0 rgba(91, 33, 182, 0.12), 0 14px 34px -18px rgba(91, 33, 182, 0.45);
+  border: 1px solid rgba(154, 52, 18, 0.35);
+  background: linear-gradient(180deg, #fffdf8 0%, #faf0e1 100%);
+  border-radius: 1.1rem 2.2rem 1.1rem 2.2rem;
+  box-shadow: 0 1px 0 rgba(154, 52, 18, 0.12), 0 16px 36px -20px rgba(154, 52, 18, 0.5);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   overflow: hidden;
 }
 .lagoon-lift:hover {
   transform: translateY(-4px);
-  border-color: #7c3aed;
-  box-shadow: 0 20px 42px -14px rgba(91, 33, 182, 0.5);
+  border-color: #ea580c;
+  box-shadow: 0 22px 44px -16px rgba(154, 52, 18, 0.5);
 }
 .stamp-perf {
-  border: 2px dashed #5b21b6;
-  background: rgba(109, 40, 217, 0.07);
-  border-radius: 1rem;
-  box-shadow: 0 0 18px -6px rgba(109, 40, 217, 0.4);
+  border: 2px dashed #9a3412;
+  background: rgba(194, 65, 12, 0.07);
+  border-radius: 1.1rem;
+  box-shadow: 0 0 18px -6px rgba(194, 65, 12, 0.4);
 }
 .ember-glow {
   position: relative;
-  border: 1px solid rgba(91, 33, 182, 0.3);
-  background: linear-gradient(180deg, #ece6fd 0%, #f6f5fd 100%);
-  border-radius: 1rem;
-  box-shadow: 0 1px 0 rgba(91, 33, 182, 0.12), 0 14px 34px -18px rgba(91, 33, 182, 0.45);
+  border: 1px solid rgba(154, 52, 18, 0.3);
+  background: linear-gradient(180deg, #ffedd5 0%, #fdf8f0 100%);
+  border-radius: 1.1rem 2.2rem 1.1rem 2.2rem;
+  box-shadow: 0 1px 0 rgba(154, 52, 18, 0.12), 0 16px 36px -20px rgba(154, 52, 18, 0.5);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 42px -14px rgba(91, 33, 182, 0.55);
+  box-shadow: 0 22px 44px -16px rgba(154, 52, 18, 0.55);
 }
 .ripple-glow {
   position: relative;
-  border: 1px solid rgba(91, 33, 182, 0.35);
-  background: linear-gradient(180deg, #ecfccb 0%, #f6f5fd 100%);
-  border-radius: 1rem;
-  box-shadow: 0 1px 0 rgba(91, 33, 182, 0.12), 0 14px 34px -18px rgba(91, 33, 182, 0.45);
+  border: 1px solid rgba(154, 52, 18, 0.35);
+  background: linear-gradient(180deg, #fef3c7 0%, #fdf8f0 100%);
+  border-radius: 1.1rem 2.2rem 1.1rem 2.2rem;
+  box-shadow: 0 1px 0 rgba(154, 52, 18, 0.12), 0 16px 36px -20px rgba(154, 52, 18, 0.5);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 42px -14px rgba(91, 33, 182, 0.55);
+  box-shadow: 0 22px 44px -16px rgba(154, 52, 18, 0.55);
 }
 .lagoon-glow {
   position: relative;
-  border: 1px solid rgba(109, 40, 217, 0.28);
-  background: linear-gradient(180deg, #ffffff 0%, #f2f0fd 100%);
-  border-radius: 1rem;
-  box-shadow: 0 1px 0 rgba(109, 40, 217, 0.12), 0 14px 34px -18px rgba(109, 40, 217, 0.4);
+  border: 1px solid rgba(194, 65, 12, 0.28);
+  background: linear-gradient(180deg, #fffdf8 0%, #faf1e4 100%);
+  border-radius: 1.1rem 2.2rem 1.1rem 2.2rem;
+  box-shadow: 0 1px 0 rgba(194, 65, 12, 0.12), 0 16px 36px -20px rgba(194, 65, 12, 0.45);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 42px -14px rgba(109, 40, 217, 0.55);
+  box-shadow: 0 22px 44px -16px rgba(194, 65, 12, 0.55);
 }
