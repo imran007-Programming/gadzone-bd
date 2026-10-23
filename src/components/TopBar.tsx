@@ -10,7 +10,7 @@ export default function TopBar() {
       <div aria-hidden className="pointer-events-none absolute -right-12 top-1/2 h-28 w-28 -translate-y-1/2 rounded-full bg-brand-500/30 blur-2xl" />
       <p className="relative">
         🎉 Eid Mega Sale — Extra 10% off with code{" "}
-        <b className="rounded-sm border border-[#fffdf7]/60 bg-[#fffdf7] px-3 py-0.5 font-black tracking-wide text-brand-700 shadow-[2px_2px_0_#431407]">
+        <b className="rounded-sm border border-[#ffffff]/60 bg-[#ffffff] px-3 py-0.5 font-black tracking-wide text-brand-700 shadow-[2px_2px_0_#172554]">
           GADZONE10
         </b>{" "}
         &nbsp;|&nbsp; Free delivery on orders over ৳2,000
