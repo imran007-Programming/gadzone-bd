@@ -1,66 +1,66 @@
 @import "tailwindcss";
 
 @theme {
-  /* Citrus Soda Pop: a fizzy soda-fountain market where every card is a
-     chilled bubble-glass panel floating in sparkling citrus. Panels are
-     big soft rounded bubbles with a tangerine rim light and a fizzy
-     glow underneath; they bob up on hover. Tangerine carries the brand,
-     lime fizz is the fresh accent, blueberry the cool structure. */
+  /* Neon Night Market: a late-night electronics bazaar glowing under
+     cyan signage. Panels are dark smoked-glass slabs with chamfered
+     corners, a cyan rim light, and a magenta under-glow; they lift on
+     hover like signboards swinging in the night air. Cyan carries the
+     brand, hot magenta is the deal accent, violet the cool structure. */
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = tangerine scale */
-  --color-brand-50: #fff7ed;
-  --color-brand-100: #ffedd5;
-  --color-brand-200: #fed7aa;
-  --color-brand-300: #fdba74;
-  --color-brand-400: #fb923c;
-  --color-brand-500: #e0620f;
-  --color-brand-600: #c24e0a;
-  --color-brand-700: #9a3f08;
-  --color-brand-800: #7c350b;
-  --color-brand-900: #65300f;
-  --color-brand-950: #3d1a05;
-  --color-brand: #c24e0a;
-  --color-brand-dark: #9a3f08;
-  --color-brand-deep: #7c350b;
+  /* brand = neon cyan scale */
+  --color-brand-50: #ecfeff;
+  --color-brand-100: #cffafe;
+  --color-brand-200: #a5f3fc;
+  --color-brand-300: #67e8f9;
+  --color-brand-400: #22d3ee;
+  --color-brand-500: #06b6d4;
+  --color-brand-600: #0891b2;
+  --color-brand-700: #22d3ee;
+  --color-brand-800: #67e8f9;
+  --color-brand-900: #a5f3fc;
+  --color-brand-950: #083344;
+  --color-brand: #06b6d4;
+  --color-brand-dark: #0891b2;
+  --color-brand-deep: #164e63;
 
-  /* gold = lime fizz scale (name kept for legacy class refs) */
-  --color-gold-50: #f7fee7;
-  --color-gold-100: #ecfccb;
-  --color-gold-200: #d9f99d;
-  --color-gold-300: #bef264;
-  --color-gold-400: #a3e635;
-  --color-gold-500: #84cc16;
-  --color-gold-600: #65a30d;
-  --color-gold-700: #4d7c0f;
-  --color-gold-800: #3f6212;
-  --color-gold-900: #365314;
-  --color-gold-950: #1a2e05;
-  --color-gold: #65a30d;
-  --color-gold-deep: #3f6212;
-  --color-gold-soft: #ecfccb;
+  /* gold = hot magenta scale (name kept for legacy class refs) */
+  --color-gold-50: #fdf2f8;
+  --color-gold-100: #fce7f3;
+  --color-gold-200: #fbcfe8;
+  --color-gold-300: #f9a8d4;
+  --color-gold-400: #f472b6;
+  --color-gold-500: #ec4899;
+  --color-gold-600: #db2777;
+  --color-gold-700: #f472b6;
+  --color-gold-800: #f9a8d4;
+  --color-gold-900: #fbcfe8;
+  --color-gold-950: #500724;
+  --color-gold: #db2777;
+  --color-gold-deep: #9d174d;
+  --color-gold-soft: #3a0f26;
 
-  /* popblue = blueberry scale (name kept for legacy class refs) */
-  --color-popblue-50: #eff6ff;
-  --color-popblue-100: #dbeafe;
-  --color-popblue-200: #bfdbfe;
-  --color-popblue-300: #93c5fd;
-  --color-popblue-400: #60a5fa;
-  --color-popblue-500: #3b82f6;
-  --color-popblue-600: #2563eb;
-  --color-popblue-700: #1d4ed8;
-  --color-popblue-800: #1e40af;
-  --color-popblue-900: #1e3a8a;
-  --color-popblue-950: #172554;
-  --color-popblue: #2563eb;
-  --color-popblue-deep: #1e3a8a;
-  --color-popblue-soft: #dbeafe;
+  /* popblue = violet scale (name kept for legacy class refs) */
+  --color-popblue-50: #f5f3ff;
+  --color-popblue-100: #ede9fe;
+  --color-popblue-200: #ddd6fe;
+  --color-popblue-300: #c4b5fd;
+  --color-popblue-400: #a78bfa;
+  --color-popblue-500: #8b5cf6;
+  --color-popblue-600: #7c3aed;
+  --color-popblue-700: #a78bfa;
+  --color-popblue-800: #c4b5fd;
+  --color-popblue-900: #ddd6fe;
+  --color-popblue-950: #2e1065;
+  --color-popblue: #7c3aed;
+  --color-popblue-deep: #5b21b6;
+  --color-popblue-soft: #221240;
 
-  --color-ink: #232838;
-  --color-paper: #fff8ec;
-  --color-mute: #6d7280;
-  --color-card: #ffffff;
-  --color-deep: #7c2d12;
+  --color-ink: #eef2fb;
+  --color-paper: #080d1c;
+  --color-mute: #9aa5c0;
+  --color-card: #101a30;
+  --color-deep: #03060f;
 }
 
 html { scroll-behavior: smooth; }
@@ -75,23 +75,24 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fff8ec;
+  background-color: #080d1c;
   background-image:
-    radial-gradient(circle, rgba(224, 98, 15, 0.10) 1.2px, transparent 1.8px),
-    radial-gradient(ellipse 52% 26% at 88% -4%, rgba(251, 146, 60, 0.22), transparent 70%),
-    radial-gradient(ellipse 40% 24% at 6% 104%, rgba(37, 99, 235, 0.14), transparent 70%),
-    radial-gradient(ellipse 28% 18% at 52% 44%, rgba(132, 204, 22, 0.10), transparent 70%);
-  background-size: 26px 26px, auto, auto, auto;
-  color: #232838;
+    linear-gradient(rgba(34, 211, 238, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 211, 238, 0.05) 1px, transparent 1px),
+    radial-gradient(ellipse 52% 26% at 88% -4%, rgba(6, 182, 212, 0.20), transparent 70%),
+    radial-gradient(ellipse 40% 24% at 6% 104%, rgba(124, 58, 237, 0.22), transparent 70%),
+    radial-gradient(ellipse 28% 18% at 52% 44%, rgba(219, 39, 119, 0.10), transparent 70%);
+  background-size: 34px 34px, 34px 34px, auto, auto, auto;
+  color: #eef2fb;
 }
-::selection { background: #e0620f; color: #ffffff; }
+::selection { background: #06b6d4; color: #04121a; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #fb923c, #2563eb); border-radius: 999px; border: 2px solid #fff8ec; }
-::-webkit-scrollbar-track { background: #f7ead3; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #22d3ee, #db2777); border-radius: 999px; border: 2px solid #080d1c; }
+::-webkit-scrollbar-track { background: #0b1124; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Fizz rising through the soda. */
+/* Neon motes rising through the night air. */
 @keyframes signal-fall {
   0% { transform: translate3d(4px, 60px, 0) scale(0.7); opacity: 0; }
   18% { opacity: 0.9; }
@@ -101,174 +102,178 @@ body {
 }
 .pop-fall { animation: signal-fall 11s linear infinite; }
 
-/* Condensation drift: slow lateral float of mist. */
+/* Signboard sway: slow lateral float of light haze. */
 @keyframes signal-sway {
   0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(3vw, -0.8rem, 0) scale(1.08); opacity: 0.8; }
 }
 .pop-drift { animation: signal-sway 30s ease-in-out infinite; }
 
-/* Bubble bob: gentle floating hover. */
+/* Neon swing: gentle floating hover. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-9px) scale(1.04); }
 }
 .pop-bob { animation: signal-bob 3.8s ease-in-out infinite; }
 
-/* Slow rotation for the fizz sun. */
+/* Slow rotation for the signal moon. */
 @keyframes signal-wheel {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: signal-wheel 60s linear infinite; }
 
-/* Fizz sparkle: glinting catchlight on bubbles. */
+/* Neon flicker: glinting catchlight on signage. */
 @keyframes signal-glint {
   0%, 100% { opacity: 0.35; transform: scale(0.85); }
   50% { opacity: 1; transform: scale(1.25); }
 }
 .pop-twinkle { animation: signal-glint 3.4s ease-in-out infinite; }
 
-/* Soda ticker: infinite marquee (leftward drift). */
+/* Night-market ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 28s linear infinite; }
 
-/* Citrus stripes: tangerine -> blueberry -> lime diagonal weave. */
+/* Neon stripes: cyan -> violet -> magenta diagonal weave. */
 .pop-stripes {
-  background-image: repeating-linear-gradient(-55deg, #e0620f 0 10px, #2563eb 10px 20px, #84cc16 20px 30px);
+  background-image: repeating-linear-gradient(-55deg, #06b6d4 0 10px, #7c3aed 10px 20px, #db2777 20px 30px);
 }
 
-/* Bubble-glass card: a chilled soda bubble panel with a tangerine rim
-   light and a fizzy glow underneath; it bobs up on hover. */
+/* Smoked-glass signboard: a dark neon panel with a cyan rim light and
+   a magenta under-glow; it swings up on hover. */
 .pop-lift {
   position: relative;
-  border: 2px solid #fed7aa;
+  border: 1.5px solid rgba(34, 211, 238, 0.35);
   background:
-    radial-gradient(circle at 82% 8%, rgba(251, 146, 60, 0.14) 0%, transparent 46%),
-    linear-gradient(160deg, #ffffff 0%, #fffaf0 55%, #fff3df 100%);
-  border-radius: 1.75rem;
+    radial-gradient(circle at 82% 8%, rgba(34, 211, 238, 0.10) 0%, transparent 46%),
+    linear-gradient(160deg, #101a30 0%, #0d1528 55%, #0a1020 100%);
+  border-radius: 0.9rem;
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
   box-shadow:
-    0 22px 44px -20px rgba(224, 98, 15, 0.38),
-    0 6px 18px -8px rgba(37, 99, 235, 0.20),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    0 22px 44px -20px rgba(6, 182, 212, 0.35),
+    0 6px 18px -8px rgba(219, 39, 119, 0.25),
+    inset 0 1px 0 rgba(103, 232, 249, 0.15);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   overflow: hidden;
 }
 .pop-lift::before {
-  /* fizz bubble cluster clinging to the top-right rim */
+  /* signal LEDs blinking along the top-right chamfer */
   content: "";
   position: absolute;
-  top: 14px;
-  right: 16px;
-  width: 26px;
-  height: 26px;
+  top: 12px;
+  right: 20px;
+  width: 30px;
+  height: 12px;
   background:
-    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9) 0 22%, transparent 24%),
-    radial-gradient(circle, rgba(251, 146, 60, 0.55) 0 34%, transparent 36%),
-    radial-gradient(circle at 78% 72%, rgba(37, 99, 235, 0.4) 0 26%, transparent 28%);
-  background-size: 12px 12px, 16px 16px, 11px 11px;
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.95) 0 22%, transparent 24%),
+    radial-gradient(circle, rgba(34, 211, 238, 0.9) 0 34%, transparent 36%),
+    radial-gradient(circle at 78% 72%, rgba(219, 39, 119, 0.85) 0 26%, transparent 28%);
+  background-size: 12px 12px, 14px 14px, 12px 12px;
   background-repeat: no-repeat;
-  background-position: 2px 0, 8px 8px, 14px 2px;
+  background-position: 0 0, 10px 0, 20px 1px;
   pointer-events: none;
 }
 .pop-lift::after {
-  /* citrus highlight sweeping the top edge */
+  /* cyan scanline sweeping the top edge */
   content: "";
   position: absolute;
   top: 0;
-  left: 8%;
-  right: 8%;
-  height: 3px;
+  left: 6%;
+  right: 12%;
+  height: 2px;
   border-radius: 999px;
-  background: linear-gradient(90deg, transparent, #fb923c 30%, #fde68a 50%, #fb923c 70%, transparent);
-  opacity: 0.8;
+  background: linear-gradient(90deg, transparent, #22d3ee 30%, #a5f3fc 50%, #22d3ee 70%, transparent);
+  box-shadow: 0 0 12px 2px rgba(34, 211, 238, 0.7);
+  opacity: 0.9;
   pointer-events: none;
 }
 .pop-lift:hover {
   transform: translateY(-6px) scale(1.01);
-  border-color: #fdba74;
+  border-color: rgba(34, 211, 238, 0.75);
   box-shadow:
-    0 32px 58px -20px rgba(224, 98, 15, 0.5),
-    0 10px 24px -8px rgba(37, 99, 235, 0.28),
-    0 0 26px -6px rgba(251, 146, 60, 0.45),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    0 32px 58px -20px rgba(6, 182, 212, 0.5),
+    0 10px 24px -8px rgba(219, 39, 119, 0.3),
+    0 0 26px -6px rgba(34, 211, 238, 0.55),
+    inset 0 1px 0 rgba(103, 232, 249, 0.2);
 }
 
-/* Soda glass: shared by modals and drawers — frosted citrus glass
-   with a tangerine rim and a cool blueberry base glow. */
+/* Smoked glass: shared by modals and drawers — dark neon glass with a
+   cyan rim and a magenta base glow. */
 .pop-glass {
-  background: rgba(255, 248, 236, 0.9);
+  background: rgba(16, 26, 48, 0.92);
   backdrop-filter: blur(20px) saturate(1.15);
   -webkit-backdrop-filter: blur(20px) saturate(1.15);
-  border: 2px solid #fed7aa;
-  border-radius: 1.75rem;
+  border: 1.5px solid rgba(34, 211, 238, 0.35);
+  border-radius: 0.9rem;
   box-shadow:
-    0 28px 60px -20px rgba(224, 98, 15, 0.4),
-    0 8px 22px -10px rgba(37, 99, 235, 0.22),
-    inset 0 0 0 4px rgba(251, 146, 60, 0.07);
+    0 28px 60px -20px rgba(6, 182, 212, 0.4),
+    0 8px 22px -10px rgba(219, 39, 119, 0.3),
+    inset 0 0 0 4px rgba(34, 211, 238, 0.05);
 }
 
-/* Price pop: a tangerine soda-cap badge with a fizzy white ring. */
+/* Price beacon: a hot-magenta neon badge with a white ring. */
 .starburst {
-  background: radial-gradient(circle at 35% 30%, #fdba74 0%, #e0620f 55%, #9a3f08 100%);
+  background: radial-gradient(circle at 35% 30%, #f472b6 0%, #db2777 55%, #9d174d 100%);
   color: #ffffff;
-  text-shadow: 0 1px 2px rgba(61, 26, 5, 0.55);
+  text-shadow: 0 1px 2px rgba(80, 7, 36, 0.6);
   border-radius: 9999px;
   transform: rotate(5deg);
-  box-shadow: 0 0 22px -4px rgba(224, 98, 15, 0.75), inset 0 2px 6px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 22px -4px rgba(219, 39, 119, 0.85), inset 0 2px 6px rgba(255, 255, 255, 0.4);
   outline: 2px dashed rgba(255, 255, 255, 0.85);
   outline-offset: -6px;
-  border: 2px solid #e0620f;
+  border: 2px solid #db2777;
 }
 
-/* Fizz dots: sparkling citrus-dot texture for soda bands. */
+/* Neon dots: glowing cyan/violet dot texture for night bands. */
 .halftone {
   background-image:
-    radial-gradient(circle, rgba(224, 98, 15, 0.20) 1.2px, transparent 1.9px),
-    radial-gradient(circle, rgba(37, 99, 235, 0.12) 1px, transparent 1.6px);
+    radial-gradient(circle, rgba(34, 211, 238, 0.22) 1.2px, transparent 1.9px),
+    radial-gradient(circle, rgba(167, 139, 250, 0.16) 1px, transparent 1.6px);
   background-size: 15px 15px, 23px 23px;
   background-position: 0 0, 7px 9px;
 }
 
-/* Soda scallop: a row of bubble scallops dividing sections. */
+/* Neon dashes: a row of glowing dashes dividing sections. */
 .zigzag {
   height: 14px;
-  background-image: radial-gradient(circle at 12px 0px, #e0620f 9px, transparent 10px);
+  background-image: radial-gradient(circle at 12px 0px, #22d3ee 9px, transparent 10px);
   background-size: 28px 14px;
   background-repeat: repeat-x;
-  opacity: 0.85;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 6px rgba(34, 211, 238, 0.7));
   -webkit-mask: linear-gradient(180deg, black 55%, transparent 100%);
   mask: linear-gradient(180deg, black 55%, transparent 100%);
 }
 
-/* Soda awning: tangerine/cream/blueberry candy stripes with an orange hem. */
+/* Night-market awning: dark cyan/magenta candy stripes with a cyan hem. */
 .bazaar-awning {
   background-image:
-    repeating-linear-gradient(45deg, rgba(224, 98, 15, 0.85) 0 26px, rgba(255, 248, 236, 0.95) 26px 52px, rgba(37, 99, 235, 0.35) 52px 58px, rgba(255, 248, 236, 0.95) 58px 84px);
-  border-bottom: 3px solid #e0620f;
-  box-shadow: 0 8px 20px -8px rgba(224, 98, 15, 0.5);
+    repeating-linear-gradient(45deg, rgba(6, 182, 212, 0.28) 0 26px, rgba(8, 13, 28, 0.96) 26px 52px, rgba(219, 39, 119, 0.22) 52px 58px, rgba(8, 13, 28, 0.96) 58px 84px);
+  border-bottom: 3px solid #06b6d4;
+  box-shadow: 0 8px 20px -8px rgba(6, 182, 212, 0.55), 0 0 18px -4px rgba(219, 39, 119, 0.4);
 }
 
-/* Fizz sun: layered tangerine glow for the soda core. */
+/* Signal halo: layered cyan/violet glow for the night beacon. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(251, 146, 60, 0.55) 0%, rgba(224, 98, 15, 0.34) 42%, rgba(132, 204, 22, 0.14) 62%, rgba(132, 204, 22, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(34, 211, 238, 0.5) 0%, rgba(6, 182, 212, 0.3) 42%, rgba(124, 58, 237, 0.22) 62%, rgba(124, 58, 237, 0) 76%);
 }
+/* Signal moon: neon orb with a violet halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #fdba74 0%, #e0620f 52%, #9a3f08 100%);
-  box-shadow: 0 0 70px -8px rgba(224, 98, 15, 0.65), 0 0 28px -6px rgba(194, 78, 10, 0.5), inset 0 3px 12px rgba(255, 255, 255, 0.4);
-  border: 2px solid #fed7aa;
+    radial-gradient(circle at 38% 34%, #a5f3fc 0%, #06b6d4 52%, #155e75 100%);
+  box-shadow: 0 0 70px -8px rgba(34, 211, 238, 0.7), 0 0 28px -6px rgba(124, 58, 237, 0.55), inset 0 3px 12px rgba(255, 255, 255, 0.35);
+  border: 2px solid rgba(103, 232, 249, 0.6);
 }
 
-/* Mist rings around the fizz sun. */
+/* Signal rings around the night beacon. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(224, 98, 15, 0.4) 0px,
-    rgba(224, 98, 15, 0.4) 3px,
+    rgba(34, 211, 238, 0.45) 0px,
+    rgba(34, 211, 238, 0.45) 3px,
     transparent 3px,
     transparent 28px
   );
@@ -279,8 +284,8 @@ body {
 .sun-rays {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(251, 146, 60, 0.5) 0px,
-    rgba(251, 146, 60, 0.5) 3px,
+    rgba(219, 39, 119, 0.5) 0px,
+    rgba(219, 39, 119, 0.5) 3px,
     transparent 3px,
     transparent 28px
   );
@@ -289,62 +294,66 @@ body {
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all soda-styled. */
+/* Legacy aliases kept so untouched components still render — all neon-styled. */
 .lagoon-lift {
   position: relative;
-  border: 2px solid #bfdbfe;
-  background: linear-gradient(160deg, #ffffff 0%, #f4f8ff 60%, #e8f1fe 100%);
-  border-radius: 1.75rem;
-  box-shadow: 0 22px 44px -20px rgba(37, 99, 235, 0.35), 0 6px 18px -8px rgba(37, 99, 235, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border: 1.5px solid rgba(167, 139, 250, 0.4);
+  background: linear-gradient(160deg, #151d38 0%, #111830 60%, #0e1428 100%);
+  border-radius: 0.9rem;
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+  box-shadow: 0 22px 44px -20px rgba(124, 58, 237, 0.4), 0 6px 18px -8px rgba(124, 58, 237, 0.22), inset 0 1px 0 rgba(167, 139, 250, 0.15);
   transition: transform 0.24s ease, box-shadow 0.24s ease;
   overflow: hidden;
 }
 .lagoon-lift:hover {
   transform: translateY(-6px) scale(1.01);
-  box-shadow: 0 32px 58px -20px rgba(37, 99, 235, 0.45), 0 10px 24px -8px rgba(37, 99, 235, 0.26);
+  box-shadow: 0 32px 58px -20px rgba(124, 58, 237, 0.5), 0 10px 24px -8px rgba(124, 58, 237, 0.3), 0 0 24px -6px rgba(167, 139, 250, 0.5);
 }
 .stamp-perf {
-  border: 2px dashed #9a3f08;
-  background: rgba(224, 98, 15, 0.08);
-  border-radius: 1.25rem;
-  box-shadow: 0 18px 36px -18px rgba(224, 98, 15, 0.4);
+  border: 2px dashed #db2777;
+  background: rgba(219, 39, 119, 0.08);
+  border-radius: 0.9rem;
+  box-shadow: 0 18px 36px -18px rgba(219, 39, 119, 0.45), 0 0 16px -6px rgba(219, 39, 119, 0.4);
 }
 .ember-glow {
   position: relative;
-  border: 2px solid #fed7aa;
-  background: linear-gradient(160deg, #ffffff 0%, #fffaf0 60%, rgba(251, 146, 60, 0.14) 100%);
-  border-radius: 1.75rem;
-  box-shadow: 0 22px 44px -20px rgba(224, 98, 15, 0.42), 0 6px 18px -8px rgba(224, 98, 15, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border: 1.5px solid rgba(244, 114, 182, 0.4);
+  background: linear-gradient(160deg, #1c1226 0%, #160e20 60%, rgba(219, 39, 119, 0.10) 100%);
+  border-radius: 0.9rem;
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+  box-shadow: 0 22px 44px -20px rgba(219, 39, 119, 0.45), 0 6px 18px -8px rgba(219, 39, 119, 0.25), inset 0 1px 0 rgba(244, 114, 182, 0.15);
   transition: transform 0.24s ease, box-shadow 0.24s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
   transform: translateY(-6px) scale(1.01);
-  box-shadow: 0 32px 58px -20px rgba(224, 98, 15, 0.52), 0 10px 24px -8px rgba(224, 98, 15, 0.28);
+  box-shadow: 0 32px 58px -20px rgba(219, 39, 119, 0.55), 0 10px 24px -8px rgba(219, 39, 119, 0.32), 0 0 24px -6px rgba(244, 114, 182, 0.5);
 }
 .ripple-glow {
   position: relative;
-  border: 2px solid #d9f99d;
-  background: linear-gradient(160deg, #ffffff 0%, #fbfef3 60%, rgba(132, 204, 22, 0.14) 100%);
-  border-radius: 1.75rem;
-  box-shadow: 0 22px 44px -20px rgba(101, 163, 13, 0.35), 0 6px 18px -8px rgba(101, 163, 13, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border: 1.5px solid rgba(34, 211, 238, 0.4);
+  background: linear-gradient(160deg, #0f1a30 0%, #0d1628 60%, rgba(6, 182, 212, 0.10) 100%);
+  border-radius: 0.9rem;
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+  box-shadow: 0 22px 44px -20px rgba(6, 182, 212, 0.4), 0 6px 18px -8px rgba(6, 182, 212, 0.22), inset 0 1px 0 rgba(103, 232, 249, 0.15);
   transition: transform 0.24s ease, box-shadow 0.24s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
   transform: translateY(-6px) scale(1.01);
-  box-shadow: 0 32px 58px -20px rgba(101, 163, 13, 0.45), 0 10px 24px -8px rgba(101, 163, 13, 0.26);
+  box-shadow: 0 32px 58px -20px rgba(6, 182, 212, 0.5), 0 10px 24px -8px rgba(6, 182, 212, 0.3), 0 0 24px -6px rgba(34, 211, 238, 0.55);
 }
 .lagoon-glow {
   position: relative;
-  border: 2px solid #bfdbfe;
-  background: linear-gradient(160deg, #ffffff 0%, #f4f8ff 60%, rgba(37, 99, 235, 0.08) 100%);
-  border-radius: 1.75rem;
-  box-shadow: 0 22px 44px -20px rgba(37, 99, 235, 0.32), 0 6px 18px -8px rgba(37, 99, 235, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border: 1.5px solid rgba(167, 139, 250, 0.35);
+  background: linear-gradient(160deg, #141b36 0%, #111830 60%, rgba(124, 58, 237, 0.08) 100%);
+  border-radius: 0.9rem;
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+  box-shadow: 0 22px 44px -20px rgba(124, 58, 237, 0.35), 0 6px 18px -8px rgba(124, 58, 237, 0.2), inset 0 1px 0 rgba(167, 139, 250, 0.12);
   transition: transform 0.24s ease, box-shadow 0.24s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
   transform: translateY(-6px) scale(1.01);
-  box-shadow: 0 32px 58px -20px rgba(37, 99, 235, 0.42), 0 10px 24px -8px rgba(37, 99, 235, 0.24);
+  box-shadow: 0 32px 58px -20px rgba(124, 58, 237, 0.45), 0 10px 24px -8px rgba(124, 58, 237, 0.26), 0 0 24px -6px rgba(167, 139, 250, 0.5);
 }

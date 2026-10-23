@@ -21,11 +21,11 @@ export default function FaqSection({ openFaq, onToggleFaq }: FaqSectionProps) {
   return (
     <Reveal>
       <span className="text-xs font-bold uppercase tracking-widest text-brand-700">Need Help?</span>
-      <h2 className="mt-2 text-3xl font-black leading-tight tracking-tight text-[#1c1c20] sm:text-[2rem]">❓ Frequently Asked Questions</h2>
+      <h2 className="mt-2 text-3xl font-black leading-tight tracking-tight text-[#eef2fb] sm:text-[2rem]">❓ Frequently Asked Questions</h2>
       <div className="mt-5 space-y-3">
         {FAQS.map((f, i) => (
-          <div key={i} className="overflow-hidden rounded-lg border border-[#ffffff] bg-[#faf6ef] shadow-sm backdrop-blur-sm">
-            <button onClick={() => onToggleFaq(openFaq === i ? null : i)} className="flex w-full items-center justify-between gap-3 px-5 py-4 text-left text-[15px] font-bold tracking-tight text-[#1c1c20] transition hover:bg-brand-400/10 sm:px-6">{f.q}<span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-400/15 text-base text-brand-700">{openFaq === i ? "−" : "+"}</span></button>
+          <div key={i} className="overflow-hidden rounded-lg border border-[#1b2745] bg-[#0b1526] shadow-sm backdrop-blur-sm">
+            <button onClick={() => onToggleFaq(openFaq === i ? null : i)} className="flex w-full items-center justify-between gap-3 px-5 py-4 text-left text-[15px] font-bold tracking-tight text-[#eef2fb] transition hover:bg-brand-400/10 sm:px-6">{f.q}<span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-400/15 text-base text-brand-700">{openFaq === i ? "−" : "+"}</span></button>
             <AnimatePresence initial={false}>
               {openFaq === i && (
                 <motion.div
@@ -35,7 +35,7 @@ export default function FaqSection({ openFaq, onToggleFaq }: FaqSectionProps) {
                   transition={{ duration: 0.25, ease: "easeOut" }}
                   className="overflow-hidden"
                 >
-                  <p className="bg-[#faf6ef] px-5 pb-4 pt-1 text-sm leading-relaxed text-[#6b6f76] sm:px-6">{f.a}</p>
+                  <p className="bg-[#0b1526] px-5 pb-4 pt-1 text-sm leading-relaxed text-[#9aa5c0] sm:px-6">{f.a}</p>
                 </motion.div>
               )}
             </AnimatePresence>

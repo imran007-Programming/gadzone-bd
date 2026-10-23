@@ -1,6 +1,6 @@
 export default function TopBar() {
   return (
-    <div className="relative overflow-hidden border-b-2 border-brand-600 bg-ink px-4 py-2.5 text-center text-xs font-bold tracking-wide text-white sm:text-sm">
+    <div className="relative overflow-hidden border-b-2 border-brand-600 bg-[#0b1526] px-4 py-2.5 text-center text-xs font-bold tracking-wide text-white sm:text-sm">
       {/* drifting paper-dust flecks */}
       <div
         aria-hidden
@@ -10,7 +10,7 @@ export default function TopBar() {
       <div aria-hidden className="pointer-events-none absolute -right-12 top-1/2 h-28 w-28 -translate-y-1/2 rounded-full bg-brand-500/30 blur-2xl" />
       <p className="relative">
         🎉 Eid Mega Sale — Extra 10% off with code{" "}
-        <b className="rounded-sm border border-ink bg-brand-600 px-3 py-0.5 font-black tracking-wide text-white shadow-[2px_2px_0_#faf6ef]">
+        <b className="rounded-sm border border-[#22d3ee]/40 bg-brand-600 px-3 py-0.5 font-black tracking-wide text-white shadow-[2px_2px_0_#03060f]">
           GADZONE10
         </b>{" "}
         &nbsp;|&nbsp; Free delivery on orders over ৳2,000
