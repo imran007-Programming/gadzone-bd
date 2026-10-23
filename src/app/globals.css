@@ -1,67 +1,66 @@
 @import "tailwindcss";
 
 @theme {
-  /* Emerald Workshop: a gadget workbench at dawn. Warm parchment is the
-     bench top, deep emerald is the tool-steel primary, amber is the lamp
-     glow, terracotta is the rust patina. Cards are workshop tags: cream
-     stock with a stitched seam across the top, an amber tab along the
-     bottom edge, and a hard offset shadow like a stamped work order;
-     they lift on hover under the lamp light. */
+  /* Neon Night Market: a gadget souk after dark. Deep midnight is the
+     sky, electric cyan is the neon signage, magenta is the stall-glow,
+     and violet is the haze between booths. Cards are dark glass panes
+     with a neon top edge and a magenta glow tab along the bottom;
+     they lift on hover under the sign light. */
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = deep emerald scale */
-  --color-brand-50: #eef7f1;
-  --color-brand-100: #d9f0e1;
-  --color-brand-200: #b4e1c6;
-  --color-brand-300: #81cba4;
-  --color-brand-400: #4db180;
-  --color-brand-500: #27a065;
-  --color-brand-600: #148556;
-  --color-brand-700: #116a46;
-  --color-brand-800: #0f573b;
-  --color-brand-900: #0d4631;
-  --color-brand-950: #062418;
-  --color-brand: #148556;
-  --color-brand-dark: #116a46;
-  --color-brand-deep: #0f573b;
+  /* brand = electric cyan scale */
+  --color-brand-50: #ecfeff;
+  --color-brand-100: #cffafe;
+  --color-brand-200: #a5f3fc;
+  --color-brand-300: #67e8f9;
+  --color-brand-400: #22d3ee;
+  --color-brand-500: #06b6d4;
+  --color-brand-600: #0891b2;
+  --color-brand-700: #0e7490;
+  --color-brand-800: #155e75;
+  --color-brand-900: #164e63;
+  --color-brand-950: #083344;
+  --color-brand: #0891b2;
+  --color-brand-dark: #0e7490;
+  --color-brand-deep: #155e75;
 
-  /* gold = amber lamp scale (name kept for legacy class refs) */
-  --color-gold-50: #fff8eb;
-  --color-gold-100: #feefc7;
-  --color-gold-200: #fddd8a;
-  --color-gold-300: #fbc44d;
-  --color-gold-400: #f9ae24;
-  --color-gold-500: #f39206;
-  --color-gold-600: #d46d02;
-  --color-gold-700: #b04f04;
-  --color-gold-800: #923e07;
-  --color-gold-900: #782f0a;
-  --color-gold-950: #451702;
-  --color-gold: #f9ae24;
-  --color-gold-deep: #d46d02;
-  --color-gold-soft: #feefc7;
+  /* gold = magenta neon scale (name kept for legacy class refs) */
+  --color-gold-50: #fdf4ff;
+  --color-gold-100: #fae8ff;
+  --color-gold-200: #f5d0fe;
+  --color-gold-300: #f0abfc;
+  --color-gold-400: #e879f9;
+  --color-gold-500: #d946ef;
+  --color-gold-600: #c026d3;
+  --color-gold-700: #a21caf;
+  --color-gold-800: #86198f;
+  --color-gold-900: #701a75;
+  --color-gold-950: #4a044e;
+  --color-gold: #e879f9;
+  --color-gold-deep: #c026d3;
+  --color-gold-soft: #fae8ff;
 
-  /* popblue = terracotta rust scale (name kept for legacy class refs) */
-  --color-popblue-50: #fdf3ee;
-  --color-popblue-100: #fbe4d7;
-  --color-popblue-200: #f7c6ae;
-  --color-popblue-300: #f19e77;
-  --color-popblue-400: #e96f4a;
-  --color-popblue-500: #db5630;
-  --color-popblue-600: #c2421f;
-  --color-popblue-700: #9e3719;
-  --color-popblue-800: #7f2f1b;
-  --color-popblue-900: #67291b;
-  --color-popblue-950: #38130c;
-  --color-popblue: #e96f4a;
-  --color-popblue-deep: #c2421f;
-  --color-popblue-soft: #fbe4d7;
+  /* popblue = violet haze scale (name kept for legacy class refs) */
+  --color-popblue-50: #eef2ff;
+  --color-popblue-100: #e0e7ff;
+  --color-popblue-200: #c7d2fe;
+  --color-popblue-300: #a5b4fc;
+  --color-popblue-400: #818cf8;
+  --color-popblue-500: #6366f1;
+  --color-popblue-600: #4f46e5;
+  --color-popblue-700: #4338ca;
+  --color-popblue-800: #3730a3;
+  --color-popblue-900: #312e81;
+  --color-popblue-950: #1e1b4b;
+  --color-popblue: #818cf8;
+  --color-popblue-deep: #4f46e5;
+  --color-popblue-soft: #e0e7ff;
 
-  --color-ink: #20271f;
-  --color-paper: #faf6ec;
-  --color-mute: #6b705f;
-  --color-card: #fffdf7;
-  --color-deep: #0d2b20;
+  --color-ink: #eef2ff;
+  --color-paper: #0a0f24;
+  --color-mute: #8b93b8;
+  --color-card: #111a3a;
+  --color-deep: #04061a;
 }
 
 html { scroll-behavior: smooth; }
@@ -76,103 +75,104 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #faf6ec;
+  background-color: #0a0f24;
   background-image:
-    radial-gradient(circle, rgba(20, 133, 86, 0.10) 1.2px, transparent 1.9px),
-    radial-gradient(circle, rgba(243, 146, 6, 0.09) 1px, transparent 1.6px),
-    radial-gradient(ellipse 46% 26% at 90% -4%, rgba(39, 160, 101, 0.14), transparent 70%),
-    radial-gradient(ellipse 42% 26% at 6% 104%, rgba(249, 174, 36, 0.12), transparent 70%),
-    radial-gradient(ellipse 30% 20% at 50% 40%, rgba(233, 111, 74, 0.08), transparent 70%);
-  background-size: 26px 26px, 40px 40px, auto, auto, auto;
-  background-position: 0 0, 12px 14px, 0 0, 0 0, 0 0;
-  color: #20271f;
+    radial-gradient(circle, rgba(34, 211, 238, 0.16) 1.1px, transparent 1.8px),
+    radial-gradient(circle, rgba(232, 121, 249, 0.13) 1px, transparent 1.7px),
+    radial-gradient(ellipse 48% 28% at 88% -6%, rgba(99, 102, 241, 0.20), transparent 70%),
+    radial-gradient(ellipse 44% 28% at 8% 106%, rgba(6, 182, 212, 0.16), transparent 70%),
+    radial-gradient(ellipse 34% 22% at 52% 38%, rgba(217, 70, 239, 0.10), transparent 70%);
+  background-size: 30px 30px, 46px 46px, auto, auto, auto;
+  background-position: 0 0, 14px 16px, 0 0, 0 0, 0 0;
+  color: #eef2ff;
 }
-::selection { background: #148556; color: #faf6ec; }
+::selection { background: #22d3ee; color: #04061a; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #148556, #f9ae24); border-radius: 999px; border: 2px solid #faf6ec; }
-::-webkit-scrollbar-track { background: #d9f0e1; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #22d3ee, #e879f9); border-radius: 999px; border: 2px solid #0a0f24; }
+::-webkit-scrollbar-track { background: #111a3a; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Sawdust: tiny shavings drifting down through the lamplight. */
-@keyframes workshop-fall {
+/* Neon motes: tiny sparks drifting down through the sign glow. */
+@keyframes neon-fall {
   0% { transform: translate3d(6px, -20px, 0) scale(0.7) rotate(0deg); opacity: 0; }
   18% { opacity: 0.9; }
   50% { transform: translate3d(-10px, 90px, 0) scale(1) rotate(120deg); }
   82% { opacity: 0.6; }
   100% { transform: translate3d(8px, 220px, 0) scale(0.85) rotate(260deg); opacity: 0; }
 }
-.pop-fall { animation: workshop-fall 11s linear infinite; }
+.pop-fall { animation: neon-fall 11s linear infinite; }
 
-/* Lamp sway: slow lateral drift of the warm haze. */
-@keyframes workshop-sway {
+/* Sign sway: slow lateral drift of the neon haze. */
+@keyframes neon-sway {
   0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(3vw, -0.8rem, 0) scale(1.08); opacity: 0.8; }
 }
-.pop-drift { animation: workshop-sway 30s ease-in-out infinite; }
+.pop-drift { animation: neon-sway 30s ease-in-out infinite; }
 
-/* Tag bob: gentle bobbing of the hanging workshop tags. */
-@keyframes workshop-bob {
+/* Stall bob: gentle bobbing of the hanging neon tags. */
+@keyframes neon-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-9px) scale(1.04); }
 }
-.pop-bob { animation: workshop-bob 3.8s ease-in-out infinite; }
+.pop-bob { animation: neon-bob 3.8s ease-in-out infinite; }
 
-/* Slow rotation for the lamp halo. */
-@keyframes workshop-wheel {
+/* Slow rotation for the neon halo. */
+@keyframes neon-wheel {
   to { transform: rotate(360deg); }
 }
-.pop-spin { animation: workshop-wheel 60s linear infinite; }
+.pop-spin { animation: neon-wheel 60s linear infinite; }
 
-/* Lamp flicker: wavering catchlight of the workbench lamp. */
-@keyframes workshop-glint {
+/* Sign flicker: wavering catchlight of the neon tube. */
+@keyframes neon-glint {
   0%, 100% { opacity: 0.35; transform: scale(0.85); }
   50% { opacity: 1; transform: scale(1.25); }
 }
-.pop-twinkle { animation: workshop-glint 3.4s ease-in-out infinite; }
+.pop-twinkle { animation: neon-glint 3.4s ease-in-out infinite; }
 
-/* Bench ticker: infinite marquee (leftward drift). */
-@keyframes workshop-ticker {
+/* Market ticker: infinite marquee (leftward drift). */
+@keyframes neon-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
-.pop-ticker { animation: workshop-ticker 28s linear infinite; }
+.pop-ticker { animation: neon-ticker 28s linear infinite; }
 
-/* Hazard stripes: deep emerald -> amber -> terracotta diagonal stripes. */
+/* Neon hazard stripes: midnight -> cyan -> magenta diagonal stripes. */
 .pop-stripes {
-  background-image: repeating-linear-gradient(-55deg, #0d2b20 0 10px, #148556 10px 20px, #f9ae24 20px 30px);
+  background-image: repeating-linear-gradient(-55deg, #04061a 0 10px, #0891b2 10px 20px, #c026d3 20px 30px);
 }
 
-/* Workshop tag: a cream work-order card with a stitched seam across its
-   top edge and an amber tab along its bottom edge; it lifts on hover
-   under the lamp light with a hard offset shadow. */
+/* Glass stall card: a dark glass pane with a neon scan-line across its
+   top edge and a magenta glow tab along its bottom edge; it lifts on
+   hover under the sign light with a cyan halo. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(20, 133, 86, 0.28);
+  border: 1px solid rgba(34, 211, 238, 0.28);
   background:
-    radial-gradient(circle at 8% 10%, rgba(249, 174, 36, 0.10) 0%, transparent 46%),
-    linear-gradient(165deg, #fffdf7 0%, #faf6ec 60%, #feefc7 100%);
+    radial-gradient(circle at 8% 10%, rgba(232, 121, 249, 0.12) 0%, transparent 46%),
+    linear-gradient(165deg, rgba(17, 26, 58, 0.95) 0%, rgba(10, 15, 36, 0.98) 60%, rgba(30, 27, 75, 0.9) 100%);
   border-radius: 1rem;
   box-shadow:
-    5px 5px 0 rgba(13, 43, 32, 0.10),
-    0 18px 30px -22px rgba(20, 133, 86, 0.45),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    0 0 0 1px rgba(34, 211, 238, 0.08),
+    0 18px 30px -22px rgba(34, 211, 238, 0.5),
+    inset 0 1px 0 rgba(238, 242, 255, 0.08);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   overflow: hidden;
 }
 .pop-lift::before {
-  /* stitched seam running across the tag's top edge */
+  /* neon scan-line running across the card's top edge */
   content: "";
   position: absolute;
-  top: 7px;
+  top: 0;
   left: 6%;
   right: 6%;
-  height: 0;
-  border-top: 2px dashed rgba(17, 106, 70, 0.45);
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #22d3ee 25%, #e879f9 75%, transparent 100%);
+  box-shadow: 0 0 10px 1px rgba(34, 211, 238, 0.7);
   pointer-events: none;
 }
 .pop-lift::after {
-  /* amber tab along the tag's bottom edge */
+  /* magenta glow tab along the card's bottom edge */
   content: "";
   position: absolute;
   left: 10%;
@@ -180,93 +180,93 @@ body {
   bottom: 0;
   height: 5px;
   border-radius: 999px 999px 0 0;
-  background: linear-gradient(90deg, transparent 0%, #fbc44d 20%, #f9ae24 50%, #fbc44d 80%, transparent 100%);
-  box-shadow: 0 0 12px 2px rgba(249, 174, 36, 0.45);
+  background: linear-gradient(90deg, transparent 0%, #f0abfc 20%, #e879f9 50%, #f0abfc 80%, transparent 100%);
+  box-shadow: 0 0 12px 2px rgba(232, 121, 249, 0.55);
   pointer-events: none;
 }
 .pop-lift:hover {
   transform: translateY(-6px);
-  border-color: rgba(20, 133, 86, 0.6);
+  border-color: rgba(34, 211, 238, 0.6);
   box-shadow:
-    8px 10px 0 rgba(13, 43, 32, 0.12),
-    0 24px 40px -20px rgba(20, 133, 86, 0.5),
-    0 0 22px -6px rgba(249, 174, 36, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    0 0 0 1px rgba(232, 121, 249, 0.18),
+    0 24px 40px -20px rgba(34, 211, 238, 0.55),
+    0 0 26px -6px rgba(232, 121, 249, 0.5),
+    inset 0 1px 0 rgba(238, 242, 255, 0.1);
 }
 
-/* Lamp glass: shared by modals and drawers — warm parchment glass with
-   an emerald rim and an amber base shadow. */
+/* Neon glass: shared by modals and drawers — dark glass with a cyan
+   rim and a magenta base shadow. */
 .pop-glass {
-  background: rgba(250, 246, 236, 0.94);
+  background: rgba(10, 15, 36, 0.94);
   backdrop-filter: blur(20px) saturate(1.2);
   -webkit-backdrop-filter: blur(20px) saturate(1.2);
-  border: 1px solid rgba(20, 133, 86, 0.28);
+  border: 1px solid rgba(34, 211, 238, 0.28);
   border-radius: 1rem;
   box-shadow:
-    0 28px 54px -24px rgba(13, 43, 32, 0.35),
-    0 0 0 1px rgba(249, 174, 36, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    0 28px 54px -24px rgba(4, 6, 26, 0.8),
+    0 0 0 1px rgba(232, 121, 249, 0.12),
+    inset 0 1px 0 rgba(238, 242, 255, 0.08);
 }
 
-/* Lamp seal: an amber pulse badge with an emerald core. */
+/* Neon seal: a magenta pulse badge with a cyan core. */
 .starburst {
-  background: radial-gradient(circle at 35% 30%, #fddd8a 0%, #f9ae24 55%, #0f573b 100%);
-  color: #faf6ec;
-  text-shadow: 0 1px 2px rgba(13, 43, 32, 0.7);
+  background: radial-gradient(circle at 35% 30%, #f5d0fe 0%, #e879f9 55%, #155e75 100%);
+  color: #04061a;
+  text-shadow: 0 1px 2px rgba(238, 242, 255, 0.5);
   border-radius: 9999px;
   transform: rotate(-6deg);
-  box-shadow: 0 0 22px -4px rgba(249, 174, 36, 0.8), inset 0 2px 6px rgba(255, 255, 255, 0.35);
-  outline: 2px dashed rgba(250, 246, 236, 0.85);
+  box-shadow: 0 0 22px -4px rgba(232, 121, 249, 0.9), inset 0 2px 6px rgba(255, 255, 255, 0.3);
+  outline: 2px dashed rgba(238, 242, 255, 0.7);
   outline-offset: -6px;
-  border: 2px solid #f9ae24;
+  border: 2px solid #e879f9;
 }
 
-/* Pegboard: emerald-and-amber peg-hole texture for bench bands. */
+/* Dot grid: cyan-and-magenta peg-hole texture for market bands. */
 .halftone {
   background-image:
-    radial-gradient(circle, rgba(20, 133, 86, 0.14) 1.2px, transparent 1.9px),
-    radial-gradient(circle, rgba(243, 146, 6, 0.13) 1px, transparent 1.6px);
+    radial-gradient(circle, rgba(34, 211, 238, 0.16) 1.2px, transparent 1.9px),
+    radial-gradient(circle, rgba(232, 121, 249, 0.15) 1px, transparent 1.6px);
   background-size: 15px 15px, 23px 23px;
   background-position: 0 0, 7px 9px;
 }
 
-/* Tape measure: a row of amber ruler ticks dividing sections. */
+/* Neon ticks: a row of cyan ruler ticks dividing sections. */
 .zigzag {
   height: 14px;
-  background-image: repeating-linear-gradient(90deg, #f9ae24 0 3px, transparent 3px 10px, #b04f04 10px 11px, transparent 11px 20px);
+  background-image: repeating-linear-gradient(90deg, #22d3ee 0 3px, transparent 3px 10px, #a21caf 10px 11px, transparent 11px 20px);
   background-repeat: repeat-x;
   opacity: 0.9;
   -webkit-mask: linear-gradient(180deg, black 60%, transparent 100%);
   mask: linear-gradient(180deg, black 60%, transparent 100%);
 }
 
-/* Workbench edge: emerald/amber/terracotta tool stripes with a dark hem. */
+/* Sign bar: cyan/magenta/violet neon light strip with a dark hem. */
 .bazaar-awning {
   background-image:
-    repeating-linear-gradient(45deg, rgba(250, 246, 236, 0.9) 0 26px, rgba(20, 133, 86, 0.55) 26px 52px, rgba(249, 174, 36, 0.5) 52px 58px, rgba(233, 111, 74, 0.45) 58px 84px);
-  border-bottom: 3px solid #0d2b20;
-  box-shadow: 0 8px 24px -8px rgba(20, 133, 86, 0.45);
+    repeating-linear-gradient(45deg, rgba(238, 242, 255, 0.85) 0 26px, rgba(34, 211, 238, 0.5) 26px 52px, rgba(232, 121, 249, 0.5) 52px 58px, rgba(129, 140, 248, 0.45) 58px 84px);
+  border-bottom: 3px solid #04061a;
+  box-shadow: 0 8px 24px -8px rgba(34, 211, 238, 0.5);
 }
 
-/* Lamp glow: layered emerald/amber glow for the workshop halo. */
+/* Aurora glow: layered cyan/magenta glow for the sign halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(249, 174, 36, 0.45) 0%, rgba(243, 146, 6, 0.3) 42%, rgba(20, 133, 86, 0.22) 62%, rgba(20, 133, 86, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(232, 121, 249, 0.45) 0%, rgba(217, 70, 239, 0.3) 42%, rgba(34, 211, 238, 0.22) 62%, rgba(34, 211, 238, 0) 76%);
 }
-/* Lamp disc: a glowing amber disc with an emerald halo. */
+/* Neon moon: a glowing cyan orb with a magenta halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #fff8eb 0%, #f9ae24 52%, #b04f04 100%);
-  box-shadow: 0 0 70px -8px rgba(249, 174, 36, 0.55), 0 0 28px -6px rgba(20, 133, 86, 0.4), inset 0 3px 12px rgba(255, 255, 255, 0.5);
-  border: 2px solid rgba(129, 203, 164, 0.9);
+    radial-gradient(circle at 38% 34%, #fdf4ff 0%, #22d3ee 52%, #a21caf 100%);
+  box-shadow: 0 0 70px -8px rgba(34, 211, 238, 0.6), 0 0 28px -6px rgba(232, 121, 249, 0.5), inset 0 3px 12px rgba(255, 255, 255, 0.4);
+  border: 2px solid rgba(165, 243, 252, 0.9);
 }
 
-/* Orbit rings around the lamp disc. */
+/* Orbit rings around the neon moon. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(20, 133, 86, 0.4) 0px,
-    rgba(20, 133, 86, 0.4) 3px,
+    rgba(34, 211, 238, 0.4) 0px,
+    rgba(34, 211, 238, 0.4) 3px,
     transparent 3px,
     transparent 28px
   );
@@ -277,8 +277,8 @@ body {
 .sun-rays {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(249, 174, 36, 0.45) 0px,
-    rgba(249, 174, 36, 0.45) 3px,
+    rgba(232, 121, 249, 0.45) 0px,
+    rgba(232, 121, 249, 0.45) 3px,
     transparent 3px,
     transparent 28px
   );
@@ -287,62 +287,62 @@ body {
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all workshop styled. */
+/* Legacy aliases kept so untouched components still render — all neon styled. */
 .lagoon-lift {
   position: relative;
-  border: 1px solid rgba(20, 133, 86, 0.28);
-  background: linear-gradient(165deg, #fffdf7 0%, #faf6ec 60%, #feefc7 100%);
+  border: 1px solid rgba(34, 211, 238, 0.28);
+  background: linear-gradient(165deg, rgba(17, 26, 58, 0.95) 0%, rgba(10, 15, 36, 0.98) 60%, rgba(30, 27, 75, 0.9) 100%);
   border-radius: 1rem;
-  box-shadow: 5px 5px 0 rgba(13, 43, 32, 0.10), 0 18px 30px -22px rgba(20, 133, 86, 0.45);
+  box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.08), 0 18px 30px -22px rgba(34, 211, 238, 0.5);
   transition: transform 0.24s ease, box-shadow 0.24s ease;
   overflow: hidden;
 }
 .lagoon-lift:hover {
   transform: translateY(-6px);
-  box-shadow: 8px 10px 0 rgba(13, 43, 32, 0.12), 0 24px 40px -20px rgba(20, 133, 86, 0.5);
+  box-shadow: 0 0 0 1px rgba(232, 121, 249, 0.18), 0 24px 40px -20px rgba(34, 211, 238, 0.55);
 }
 .stamp-perf {
-  border: 2px dashed #148556;
-  background: rgba(20, 133, 86, 0.08);
+  border: 2px dashed #0891b2;
+  background: rgba(34, 211, 238, 0.08);
   border-radius: 1rem;
-  box-shadow: 0 14px 28px -18px rgba(20, 133, 86, 0.45);
+  box-shadow: 0 14px 28px -18px rgba(34, 211, 238, 0.5);
 }
 .ember-glow {
   position: relative;
-  border: 1px solid rgba(194, 66, 31, 0.4);
-  background: linear-gradient(165deg, #fdf3ee 0%, #fbe4d7 60%, rgba(194, 66, 31, 0.12) 100%);
+  border: 1px solid rgba(79, 70, 229, 0.4);
+  background: linear-gradient(165deg, rgba(30, 27, 75, 0.9) 0%, rgba(10, 15, 36, 0.98) 60%, rgba(79, 70, 229, 0.16) 100%);
   border-radius: 1rem;
-  box-shadow: 0 0 0 1px rgba(194, 66, 31, 0.15), 0 20px 34px -22px rgba(194, 66, 31, 0.5);
+  box-shadow: 0 0 0 1px rgba(79, 70, 229, 0.15), 0 20px 34px -22px rgba(79, 70, 229, 0.55);
   transition: transform 0.24s ease, box-shadow 0.24s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
   transform: translateY(-6px);
-  box-shadow: 0 0 0 1px rgba(194, 66, 31, 0.25), 0 26px 44px -20px rgba(194, 66, 31, 0.6);
+  box-shadow: 0 0 0 1px rgba(79, 70, 229, 0.25), 0 26px 44px -20px rgba(79, 70, 229, 0.65);
 }
 .ripple-glow {
   position: relative;
-  border: 1px solid rgba(243, 146, 6, 0.4);
-  background: linear-gradient(165deg, #fff8eb 0%, #feefc7 60%, rgba(243, 146, 6, 0.12) 100%);
+  border: 1px solid rgba(217, 70, 239, 0.4);
+  background: linear-gradient(165deg, rgba(74, 4, 78, 0.55) 0%, rgba(10, 15, 36, 0.98) 60%, rgba(217, 70, 239, 0.14) 100%);
   border-radius: 1rem;
-  box-shadow: 0 0 0 1px rgba(243, 146, 6, 0.15), 0 20px 34px -22px rgba(243, 146, 6, 0.5);
+  box-shadow: 0 0 0 1px rgba(217, 70, 239, 0.15), 0 20px 34px -22px rgba(217, 70, 239, 0.55);
   transition: transform 0.24s ease, box-shadow 0.24s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
   transform: translateY(-6px);
-  box-shadow: 0 0 0 1px rgba(243, 146, 6, 0.25), 0 26px 44px -20px rgba(243, 146, 6, 0.6);
+  box-shadow: 0 0 0 1px rgba(217, 70, 239, 0.25), 0 26px 44px -20px rgba(217, 70, 239, 0.65);
 }
 .lagoon-glow {
   position: relative;
-  border: 1px solid rgba(20, 133, 86, 0.3);
-  background: linear-gradient(165deg, #fffdf7 0%, #eef7f1 60%, rgba(20, 133, 86, 0.1) 100%);
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  background: linear-gradient(165deg, rgba(17, 26, 58, 0.95) 0%, rgba(10, 15, 36, 0.98) 60%, rgba(34, 211, 238, 0.12) 100%);
   border-radius: 1rem;
-  box-shadow: 0 0 0 1px rgba(20, 133, 86, 0.12), 0 20px 34px -22px rgba(20, 133, 86, 0.4);
+  box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.12), 0 20px 34px -22px rgba(34, 211, 238, 0.45);
   transition: transform 0.24s ease, box-shadow 0.24s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
   transform: translateY(-6px);
-  box-shadow: 0 0 0 1px rgba(20, 133, 86, 0.22), 0 26px 44px -20px rgba(20, 133, 86, 0.5);
+  box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.22), 0 26px 44px -20px rgba(34, 211, 238, 0.5);
 }
