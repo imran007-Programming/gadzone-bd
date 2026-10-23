@@ -30,13 +30,13 @@ const ORBS = [
 
 // Night sparks rising off the bazaar floor.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "8.2s", s: 12, c: "#22d3ee" },
-  { left: "21%", delay: "-1.4s", dur: "9.8s", s: 16, c: "#a78bfa" },
-  { left: "36%", delay: "-2.6s", dur: "8.8s", s: 13, c: "#f9a8d4" },
-  { left: "53%", delay: "-0.8s", dur: "9.4s", s: 17, c: "#ec4899" },
+  { left: "8%", delay: "0s", dur: "8.2s", s: 12, c: "#34d399" },
+  { left: "21%", delay: "-1.4s", dur: "9.8s", s: 16, c: "#fb7185" },
+  { left: "36%", delay: "-2.6s", dur: "8.8s", s: 13, c: "#fecdd3" },
+  { left: "53%", delay: "-0.8s", dur: "9.4s", s: 17, c: "#fb7185" },
   { left: "68%", delay: "-3.2s", dur: "8.6s", s: 12, c: "#fde68a" },
-  { left: "82%", delay: "-2s", dur: "9.2s", s: 14, c: "#67e8f9" },
-  { left: "93%", delay: "-0.4s", dur: "8.4s", s: 10, c: "#cffafe" },
+  { left: "82%", delay: "-2s", dur: "9.2s", s: 14, c: "#6ee7b7" },
+  { left: "93%", delay: "-0.4s", dur: "8.4s", s: 10, c: "#d1fae5" },
 ];
 
 // Ripple sparkles scattered over the night water.
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* midnight sky */}
-      <div className="relative bg-gradient-to-b from-[#070b1f] via-[#0d1330] to-[#1a2350]">
+      <div className="relative bg-gradient-to-b from-[#06100b] via-[#0a1811] to-[#16281d]">
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-60" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gold-500/20" />
 
@@ -124,7 +124,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#f59e0b", "#7c3aed", "#67e8f9", "#22d3ee"];
+              const colors = ["#f59e0b", "#e11d48", "#6ee7b7", "#34d399"];
               return (
                 <span
                   key={i}
@@ -222,7 +222,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full border border-brand-300 bg-white/90 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-800 shadow-[0_12px_28px_-12px_rgba(6,182,212,0.6)]">Handpicked for you</p>
+            <p className="inline-block rounded-full border border-brand-300 bg-white/90 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-800 shadow-[0_12px_28px_-12px_rgba(52,211,153,0.6)]">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="relative bg-gradient-to-r from-brand-300 via-popblue-300 to-gold-300 bg-clip-text text-transparent">Picks<span aria-hidden className="absolute inset-x-0 -bottom-1 h-2 rounded-full bg-gradient-to-r from-brand-500 to-gold-500 opacity-60 blur-[3px]" /></span></h2>
             <span className="zigzag mt-4 block w-44" aria-hidden />
           </div>

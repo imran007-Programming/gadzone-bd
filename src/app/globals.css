@@ -1,28 +1,28 @@
 @import "tailwindcss";
 
 @theme {
-  /* Neon Night Bazaar: a midnight electronics souk — deep indigo night,
-     neon-cyan brand, amber sparks, electric-violet pops. Glass panels
-     with neon rims and soft glows; everything feels after-hours. */
+  /* Emerald Monsoon: a midnight rainforest canopy — deep moss night,
+     jade brand, firefly amber, blossom-coral sparks. Cards are
+     river-stone panels with moss rims and soft monsoon glows. */
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = neon cyan scale */
-  --color-brand-50: #ecfeff;
-  --color-brand-100: #cffafe;
-  --color-brand-200: #a5f3fc;
-  --color-brand-300: #67e8f9;
-  --color-brand-400: #22d3ee;
-  --color-brand-500: #06b6d4;
-  --color-brand-600: #0891b2;
-  --color-brand-700: #0e7490;
-  --color-brand-800: #155e75;
-  --color-brand-900: #164e63;
-  --color-brand-950: #083344;
-  --color-brand: #22d3ee;
-  --color-brand-dark: #0e7490;
-  --color-brand-deep: #164e63;
+  /* brand = jade scale */
+  --color-brand-50: #ecfdf5;
+  --color-brand-100: #d1fae5;
+  --color-brand-200: #a7f3d0;
+  --color-brand-300: #6ee7b7;
+  --color-brand-400: #34d399;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-brand-900: #064e3b;
+  --color-brand-950: #022c22;
+  --color-brand: #34d399;
+  --color-brand-dark: #047857;
+  --color-brand-deep: #065f46;
 
-  /* gold = amber spark scale (unchanged family, retuned for night) */
+  /* gold = firefly amber scale */
   --color-gold-50: #fffbeb;
   --color-gold-100: #fef3c7;
   --color-gold-200: #fde68a;
@@ -38,25 +38,25 @@
   --color-gold-deep: #b45309;
   --color-gold-soft: #fef3c7;
 
-  /* popblue = electric violet scale */
-  --color-popblue-50: #f5f3ff;
-  --color-popblue-100: #ede9fe;
-  --color-popblue-200: #ddd6fe;
-  --color-popblue-300: #c4b5fd;
-  --color-popblue-400: #a78bfa;
-  --color-popblue-500: #8b5cf6;
-  --color-popblue-600: #7c3aed;
-  --color-popblue-700: #6d28d9;
-  --color-popblue-800: #5b21b6;
-  --color-popblue-900: #4c1d95;
-  --color-popblue-950: #2e1065;
-  --color-popblue: #a78bfa;
-  --color-popblue-deep: #7c3aed;
-  --color-popblue-soft: #ede9fe;
+  /* popblue = blossom coral scale (name kept for legacy class refs) */
+  --color-popblue-50: #fff1f2;
+  --color-popblue-100: #ffe4e6;
+  --color-popblue-200: #fecdd3;
+  --color-popblue-300: #fda4af;
+  --color-popblue-400: #fb7185;
+  --color-popblue-500: #f43f5e;
+  --color-popblue-600: #e11d48;
+  --color-popblue-700: #be123c;
+  --color-popblue-800: #9f1239;
+  --color-popblue-900: #881337;
+  --color-popblue-950: #4c0519;
+  --color-popblue: #fb7185;
+  --color-popblue-deep: #e11d48;
+  --color-popblue-soft: #ffe4e6;
 
-  --color-ink: #edf1ff;
-  --color-paper: #070b1f;
-  --color-mute: #93a0c9;
+  --color-ink: #eaf5ec;
+  --color-paper: #06100b;
+  --color-mute: #9db3a4;
 }
 
 html { scroll-behavior: smooth; }
@@ -71,152 +71,152 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #070b1f;
+  background-color: #06100b;
   background-image:
-    radial-gradient(circle, rgba(34, 211, 238, 0.10) 1.1px, transparent 1.7px),
-    radial-gradient(ellipse 55% 32% at 88% -4%, rgba(34, 211, 238, 0.16), transparent 70%),
-    radial-gradient(ellipse 48% 30% at 4% 104%, rgba(167, 139, 250, 0.14), transparent 70%),
-    radial-gradient(ellipse 40% 26% at 60% 50%, rgba(236, 72, 153, 0.05), transparent 70%);
+    radial-gradient(circle, rgba(52, 211, 153, 0.08) 1.1px, transparent 1.7px),
+    radial-gradient(ellipse 55% 32% at 88% -4%, rgba(52, 211, 153, 0.14), transparent 70%),
+    radial-gradient(ellipse 48% 30% at 4% 104%, rgba(251, 191, 36, 0.10), transparent 70%),
+    radial-gradient(ellipse 40% 26% at 60% 50%, rgba(251, 113, 133, 0.06), transparent 70%);
   background-size: 26px 26px, auto, auto, auto;
-  color: #edf1ff;
+  color: #eaf5ec;
 }
-::selection { background: #22d3ee; color: #06202b; }
+::selection { background: #34d399; color: #04241a; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #22d3ee, #a78bfa); border-radius: 8px; border: 2px solid #070b1f; }
-::-webkit-scrollbar-track { background: #0d1330; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #34d399, #fbbf24); border-radius: 8px; border: 2px solid #06100b; }
+::-webkit-scrollbar-track { background: #0a1811; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Night sparks: fireflies rising off the bazaar floor. */
-@keyframes forge-ember-rise {
+/* Monsoon rain: fireflies drifting up through the canopy rain. */
+@keyframes grove-rain-rise {
   0% { transform: translate3d(-8px, 170px, 0) scale(0.7) rotate(0deg); opacity: 0; }
   18% { opacity: 0.95; }
   55% { transform: translate3d(10px, 20px, 0) scale(1) rotate(120deg); }
   82% { opacity: 0.7; }
   100% { transform: translate3d(-6px, -140px, 0) scale(0.9) rotate(240deg); opacity: 0; }
 }
-.pop-fall { animation: forge-ember-rise 10s linear infinite; }
+.pop-fall { animation: grove-rain-rise 10s linear infinite; }
 
-/* Aurora drift: slow lateral sweep of the night glow. */
-@keyframes forge-drift {
+/* Canopy sway: slow lateral drift of the forest glow. */
+@keyframes grove-sway {
   0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.7; }
   50% { transform: translate3d(3vw, -0.8rem, 0) scale(1.12); opacity: 1; }
 }
-.pop-drift { animation: forge-drift 30s ease-in-out infinite; }
+.pop-drift { animation: grove-sway 30s ease-in-out infinite; }
 
-/* Neon bob: gentle floating pulse. */
-@keyframes forge-float {
+/* Leaf bob: gentle floating pulse. */
+@keyframes grove-bob {
   0%, 100% { transform: translateY(0) scale(1); opacity: 0.85; }
   50% { transform: translateY(-10px) scale(1.06); opacity: 1; }
 }
-.pop-bob { animation: forge-float 3.6s ease-in-out infinite; }
+.pop-bob { animation: grove-bob 3.6s ease-in-out infinite; }
 
-/* Aurora wheel: steady rotation for the halo bloom. */
-@keyframes forge-wheel {
+/* Moon wheel: steady rotation for the halo bloom. */
+@keyframes grove-wheel {
   to { transform: rotate(360deg); }
 }
-.pop-spin { animation: forge-wheel 48s linear infinite; }
+.pop-spin { animation: grove-wheel 48s linear infinite; }
 
-/* Neon flicker. */
-@keyframes forge-shimmer {
+/* Firefly flicker. */
+@keyframes grove-flicker {
   0%, 100% { opacity: 0.15; transform: scale(0.8); }
   50% { opacity: 1; transform: scale(1.25); }
 }
-.pop-twinkle { animation: forge-shimmer 3.2s ease-in-out infinite; }
+.pop-twinkle { animation: grove-flicker 3.2s ease-in-out infinite; }
 
-/* Night ticker: infinite marquee (rightward drift). */
-@keyframes forge-ticker {
+/* Canopy ticker: infinite marquee (rightward drift). */
+@keyframes grove-ticker {
   from { transform: translateX(-50%); }
   to { transform: translateX(0); }
 }
-.pop-ticker { animation: forge-ticker 34s linear infinite; }
+.pop-ticker { animation: grove-ticker 34s linear infinite; }
 
-/* Neon stripes: cyan -> magenta -> violet band. */
+/* Monsoon stripes: jade -> amber -> coral band. */
 .pop-stripes {
-  background-image: repeating-linear-gradient(-55deg, #22d3ee 0 14px, #ec4899 14px 28px, #a78bfa 28px 42px);
+  background-image: repeating-linear-gradient(-55deg, #34d399 0 14px, #fbbf24 14px 28px, #fb7185 28px 42px);
 }
 
-/* Night card: a dark glass panel — frosted indigo face, neon rim,
+/* Canopy card: a river-stone panel — deep moss face, gold-tinged moss rim,
    soft under-glow; it lifts and brightens on hover. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(165, 243, 252, 0.22);
-  background: linear-gradient(180deg, rgba(30, 41, 82, 0.72) 0%, rgba(13, 19, 48, 0.86) 100%);
+  border: 1px solid rgba(251, 191, 36, 0.20);
+  background: linear-gradient(180deg, rgba(22, 48, 30, 0.72) 0%, rgba(10, 24, 17, 0.86) 100%);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border-radius: 1.75rem;
-  box-shadow: 0 0 0 1px rgba(7, 11, 31, 0.6), 0 24px 48px -20px rgba(34, 211, 238, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  border-radius: 1.75rem 0.5rem 1.75rem 0.5rem;
+  box-shadow: 0 0 0 1px rgba(6, 16, 11, 0.6), 0 24px 48px -20px rgba(52, 211, 153, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.07);
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
   transform: translateY(-5px);
-  border-color: rgba(103, 232, 249, 0.55);
-  box-shadow: 0 0 0 1px rgba(7, 11, 31, 0.6), 0 32px 60px -20px rgba(34, 211, 238, 0.5), 0 0 24px -6px rgba(167, 139, 250, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  border-color: rgba(110, 231, 183, 0.55);
+  box-shadow: 0 0 0 1px rgba(6, 16, 11, 0.6), 0 32px 60px -20px rgba(52, 211, 153, 0.45), 0 0 24px -6px rgba(251, 191, 36, 0.40), inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
-/* Night glass: shared by modals and drawers — a frosted midnight sheet. */
+/* Canopy glass: shared by modals and drawers — a frosted moss sheet. */
 .pop-glass {
-  background: rgba(10, 15, 38, 0.88);
+  background: rgba(8, 20, 13, 0.88);
   backdrop-filter: blur(22px) saturate(1.15);
   -webkit-backdrop-filter: blur(22px) saturate(1.15);
-  border: 1px solid rgba(165, 243, 252, 0.25);
-  border-radius: 1.5rem;
-  box-shadow: 0 30px 70px -28px rgba(34, 211, 238, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(110, 231, 183, 0.25);
+  border-radius: 1.5rem 0.75rem 1.5rem 0.75rem;
+  box-shadow: 0 30px 70px -28px rgba(52, 211, 153, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.07);
 }
 
-/* Neon seal: a glowing cyan medallion with a dashed neon ring. */
+/* Firefly seal: a glowing amber medallion with a dashed jade ring. */
 .starburst {
-  background: radial-gradient(circle at 36% 30%, #a5f3fc 0%, #22d3ee 58%, #0e7490 100%);
-  color: #06202b;
-  text-shadow: 0 1px 0 rgba(236, 254, 255, 0.6);
+  background: radial-gradient(circle at 36% 30%, #fde68a 0%, #fbbf24 58%, #d97706 100%);
+  color: #3d2503;
+  text-shadow: 0 1px 0 rgba(255, 251, 235, 0.6);
   border-radius: 9999px;
   transform: rotate(-8deg);
-  box-shadow: 0 0 22px -2px rgba(34, 211, 238, 0.85), inset 0 0 14px rgba(255, 255, 255, 0.35);
-  outline: 2px dashed #67e8f9;
+  box-shadow: 0 0 22px -2px rgba(251, 191, 36, 0.85), inset 0 0 14px rgba(255, 255, 255, 0.35);
+  outline: 2px dashed #6ee7b7;
   outline-offset: -5px;
 }
 
-/* Night dot texture for hero bands. */
+/* Rain dot texture for hero bands. */
 .halftone {
-  background-image: radial-gradient(circle, rgba(103, 232, 249, 0.14) 1.4px, transparent 2px);
+  background-image: radial-gradient(circle, rgba(110, 231, 183, 0.13) 1.4px, transparent 2px);
   background-size: 26px 26px;
 }
 
-/* Neon ribbon: a cyan -> magenta -> violet stream. */
+/* Monsoon ribbon: a jade -> amber -> coral stream. */
 .zigzag {
   height: 10px;
-  background: repeating-linear-gradient(135deg, #22d3ee 0 12px, #ec4899 12px 24px, #a78bfa 24px 36px);
+  background: repeating-linear-gradient(135deg, #34d399 0 12px, #fbbf24 12px 24px, #fb7185 24px 36px);
   border-radius: 0.25rem;
-  box-shadow: 0 0 18px -2px rgba(34, 211, 238, 0.55);
+  box-shadow: 0 0 18px -2px rgba(52, 211, 153, 0.5);
 }
 
-/* Night canopy: dark awning stripes with a neon hem. */
+/* Canopy awning: dark leaf stripes with a gold hem. */
 .bazaar-awning {
   background-image:
-    repeating-linear-gradient(90deg, rgba(34, 211, 238, 0.10) 0 26px, rgba(13, 19, 48, 0.55) 26px 52px),
-    linear-gradient(180deg, #0d1330, #070b1f);
-  border-bottom: 3px solid #22d3ee;
-  box-shadow: 0 6px 24px -8px rgba(34, 211, 238, 0.4);
+    repeating-linear-gradient(90deg, rgba(52, 211, 153, 0.09) 0 26px, rgba(10, 24, 17, 0.55) 26px 52px),
+    linear-gradient(180deg, #0a1811, #06100b);
+  border-bottom: 3px solid #fbbf24;
+  box-shadow: 0 6px 24px -8px rgba(251, 191, 36, 0.35);
 }
 
-/* Aurora core: layered cyan/magenta/violet glow for the night bloom. */
+/* Moonlit glade: layered jade/amber/coral glow for the bloom. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(34, 211, 238, 0.30) 0%, rgba(6, 182, 212, 0.32) 38%, rgba(167, 139, 250, 0.24) 62%, rgba(236, 72, 153, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(52, 211, 153, 0.28) 0%, rgba(16, 185, 129, 0.30) 38%, rgba(251, 191, 36, 0.20) 62%, rgba(251, 113, 133, 0) 76%);
 }
 .sun-disc {
   background:
-    conic-gradient(from 40deg, #a5f3fc, #22d3ee, #f9a8d4, #a78bfa, #a5f3fc);
-  box-shadow: 0 0 60px -6px rgba(34, 211, 238, 0.65);
+    conic-gradient(from 40deg, #a7f3d0, #34d399, #fcd34d, #fb7185, #a7f3d0);
+  box-shadow: 0 0 60px -6px rgba(52, 211, 153, 0.6);
 }
 
-/* Neon halo rings. */
+/* Moonlit halo rings. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(34, 211, 238, 0.55) 0px,
-    rgba(34, 211, 238, 0.55) 4px,
+    rgba(52, 211, 153, 0.5) 0px,
+    rgba(52, 211, 153, 0.5) 4px,
     transparent 4px,
     transparent 30px
   );
@@ -227,8 +227,8 @@ body {
 .sun-rays {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(167, 139, 250, 0.5) 0px,
-    rgba(167, 139, 250, 0.5) 4px,
+    rgba(251, 191, 36, 0.5) 0px,
+    rgba(251, 191, 36, 0.5) 4px,
     transparent 4px,
     transparent 30px
   );
@@ -237,74 +237,74 @@ body {
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all night-styled. */
+/* Legacy aliases kept so untouched components still render — all canopy-styled. */
 .lagoon-lift {
   position: relative;
-  border: 1px solid rgba(165, 243, 252, 0.22);
-  background: linear-gradient(180deg, rgba(30, 41, 82, 0.72) 0%, rgba(13, 19, 48, 0.86) 100%);
+  border: 1px solid rgba(251, 191, 36, 0.20);
+  background: linear-gradient(180deg, rgba(22, 48, 30, 0.72) 0%, rgba(10, 24, 17, 0.86) 100%);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border-radius: 1.75rem;
-  box-shadow: 0 0 0 1px rgba(7, 11, 31, 0.6), 0 24px 48px -20px rgba(34, 211, 238, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  border-radius: 1.75rem 0.5rem 1.75rem 0.5rem;
+  box-shadow: 0 0 0 1px rgba(6, 16, 11, 0.6), 0 24px 48px -20px rgba(52, 211, 153, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.07);
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
   overflow: hidden;
 }
 .lagoon-lift:hover {
   transform: translateY(-5px);
-  border-color: rgba(103, 232, 249, 0.55);
-  box-shadow: 0 0 0 1px rgba(7, 11, 31, 0.6), 0 32px 60px -20px rgba(34, 211, 238, 0.5), 0 0 24px -6px rgba(167, 139, 250, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  border-color: rgba(110, 231, 183, 0.55);
+  box-shadow: 0 0 0 1px rgba(6, 16, 11, 0.6), 0 32px 60px -20px rgba(52, 211, 153, 0.45), 0 0 24px -6px rgba(251, 191, 36, 0.40), inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 .stamp-perf {
-  border: 2px dashed #22d3ee;
-  background: rgba(34, 211, 238, 0.08);
-  border-radius: 1.25rem;
-  box-shadow: 0 18px 40px -20px rgba(34, 211, 238, 0.4);
+  border: 2px dashed #34d399;
+  background: rgba(52, 211, 153, 0.08);
+  border-radius: 1.25rem 0.5rem 1.25rem 0.5rem;
+  box-shadow: 0 18px 40px -20px rgba(52, 211, 153, 0.35);
 }
 .ember-glow {
   position: relative;
-  border: 1px solid rgba(165, 243, 252, 0.22);
-  background: linear-gradient(180deg, rgba(30, 41, 82, 0.72) 0%, rgba(13, 19, 48, 0.86) 100%);
+  border: 1px solid rgba(251, 191, 36, 0.20);
+  background: linear-gradient(180deg, rgba(22, 48, 30, 0.72) 0%, rgba(10, 24, 17, 0.86) 100%);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border-radius: 1.75rem;
-  box-shadow: 0 0 0 1px rgba(7, 11, 31, 0.6), 0 24px 48px -20px rgba(34, 211, 238, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  border-radius: 1.75rem 0.5rem 1.75rem 0.5rem;
+  box-shadow: 0 0 0 1px rgba(6, 16, 11, 0.6), 0 24px 48px -20px rgba(52, 211, 153, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.07);
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
   transform: translateY(-5px);
-  border-color: rgba(103, 232, 249, 0.55);
-  box-shadow: 0 0 0 1px rgba(7, 11, 31, 0.6), 0 32px 60px -20px rgba(34, 211, 238, 0.5), 0 0 24px -6px rgba(167, 139, 250, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  border-color: rgba(110, 231, 183, 0.55);
+  box-shadow: 0 0 0 1px rgba(6, 16, 11, 0.6), 0 32px 60px -20px rgba(52, 211, 153, 0.45), 0 0 24px -6px rgba(251, 191, 36, 0.40), inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 .ripple-glow {
   position: relative;
-  border: 1px solid rgba(196, 181, 253, 0.30);
-  background: linear-gradient(180deg, rgba(46, 36, 92, 0.72) 0%, rgba(20, 14, 48, 0.86) 100%);
+  border: 1px solid rgba(253, 164, 175, 0.30);
+  background: linear-gradient(180deg, rgba(76, 5, 25, 0.55) 0%, rgba(24, 8, 12, 0.86) 100%);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border-radius: 1.75rem;
-  box-shadow: 0 0 0 1px rgba(7, 11, 31, 0.6), 0 24px 48px -20px rgba(167, 139, 250, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  border-radius: 1.75rem 0.5rem 1.75rem 0.5rem;
+  box-shadow: 0 0 0 1px rgba(6, 16, 11, 0.6), 0 24px 48px -20px rgba(251, 113, 133, 0.30), inset 0 1px 0 rgba(255, 255, 255, 0.07);
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
   transform: translateY(-5px);
-  border-color: rgba(167, 139, 250, 0.6);
-  box-shadow: 0 0 0 1px rgba(7, 11, 31, 0.6), 0 32px 60px -20px rgba(167, 139, 250, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  border-color: rgba(251, 113, 133, 0.6);
+  box-shadow: 0 0 0 1px rgba(6, 16, 11, 0.6), 0 32px 60px -20px rgba(251, 113, 133, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 .lagoon-glow {
   position: relative;
-  border: 1px solid rgba(165, 243, 252, 0.22);
-  background: linear-gradient(180deg, rgba(30, 41, 82, 0.72) 0%, rgba(13, 19, 48, 0.86) 100%);
+  border: 1px solid rgba(251, 191, 36, 0.20);
+  background: linear-gradient(180deg, rgba(22, 48, 30, 0.72) 0%, rgba(10, 24, 17, 0.86) 100%);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border-radius: 1.75rem;
-  box-shadow: 0 0 0 1px rgba(7, 11, 31, 0.6), 0 24px 48px -20px rgba(34, 211, 238, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  border-radius: 1.75rem 0.5rem 1.75rem 0.5rem;
+  box-shadow: 0 0 0 1px rgba(6, 16, 11, 0.6), 0 24px 48px -20px rgba(52, 211, 153, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.07);
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
   transform: translateY(-5px);
-  border-color: rgba(103, 232, 249, 0.55);
-  box-shadow: 0 0 0 1px rgba(7, 11, 31, 0.6), 0 32px 60px -20px rgba(34, 211, 238, 0.5), 0 0 24px -6px rgba(167, 139, 250, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  border-color: rgba(110, 231, 183, 0.55);
+  box-shadow: 0 0 0 1px rgba(6, 16, 11, 0.6), 0 32px 60px -20px rgba(52, 211, 153, 0.45), 0 0 24px -6px rgba(251, 191, 36, 0.40), inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }

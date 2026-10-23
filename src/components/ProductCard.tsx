@@ -53,7 +53,7 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
           whileTap={{ scale: 0.98 }}
           onClick={() => onAddToCart(p.id)}
           aria-label={`Add ${p.name} to cart`}
-          className="flex w-full items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-brand-600 via-brand-500 to-gold-500 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-[0_14px_28px_-12px_rgba(6,182,212,0.7)] transition hover:-translate-y-0.5 hover:brightness-105 hover:shadow-[0_18px_32px_-12px_rgba(6,182,212,0.8)] active:translate-y-0 active:scale-[0.98]"
+          className="flex w-full items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-brand-600 via-brand-500 to-gold-500 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-[0_14px_28px_-12px_rgba(52,211,153,0.7)] transition hover:-translate-y-0.5 hover:brightness-105 hover:shadow-[0_18px_32px_-12px_rgba(52,211,153,0.8)] active:translate-y-0 active:scale-[0.98]"
         >
           🛒 Add
         </motion.button>
