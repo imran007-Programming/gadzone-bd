@@ -304,7 +304,7 @@ export default function ProductDetails({
       )}
 
       {/* Sticky bottom bar */}
-      <div className="fixed inset-x-0 bottom-16 z-40 border-t border-[#1d2a4a] bg-[#f7f4ec]/95 shadow-[0_-8px_24px_rgba(0,0,0,0.4)] backdrop-blur md:bottom-0">
+      <div className="fixed inset-x-0 bottom-16 z-40 border-t border-brand-400/40 bg-[#f2f8f4]/95 shadow-[0_-8px_24px_rgba(0,0,0,0.4)] backdrop-blur md:bottom-0">
         <div className="mx-auto flex max-w-7xl items-center gap-3 px-4 py-3">
           {imgErr ? (
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-gradient-to-br from-brand-100 via-brand-50 to-brand-100"><span className="text-xl">🔌</span></div>

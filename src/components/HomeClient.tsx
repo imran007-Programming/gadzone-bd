@@ -167,7 +167,7 @@ export default function HomeClient() {
   const handleCheckout = () => { setCartOpen(false); setCheckoutOpen(true); };
 
   return (
-    <div className="min-h-screen bg-[#f7f4ec] pb-20 font-sans text-[#6f7891] md:pb-0">
+    <div className="min-h-screen bg-[#070c18] pb-20 font-sans text-[#9db1c7] md:pb-0">
       <TopBar />
       <Header query={query} onQueryChange={setQuery} category={category} onCategoryChange={setCategory} cartCount={cartCount} onCartOpen={() => setCartOpen(true)} onMenuOpen={() => setMenuOpen(true)} onAccountOpen={() => setAccountOpen(true)} />
       {selectedProduct ? (
@@ -184,6 +184,8 @@ export default function HomeClient() {
       ) : (
         <>
           <Hero onQuickView={handleQuickView} />
+          {/* Neon Night Market: post-hero sections ride on a lit mint stage over the dark arcade floor. */}
+          <main className="relative z-10 mx-2.5 mt-10 rounded-[1.75rem] bg-[#f2f8f4] shadow-[0_0_70px_-18px_rgba(34,197,94,0.45)] ring-1 ring-brand-400/25 sm:mx-5 lg:mx-auto lg:max-w-[86rem]">
           <CategoryGrid category={category} onCategoryChange={setCategory} />
           <FlashDeals products={flash} countdown={countdown} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
           <ProductSection accent="Trending" rest="Audio Products" subtitle="Explore earbuds, headphones & speakers picked for better sound." products={audioProducts} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
@@ -195,6 +197,7 @@ export default function HomeClient() {
             <FaqSection openFaq={openFaq} onToggleFaq={setOpenFaq} />
             <Newsletter email={email} onEmailChange={setEmail} subscribed={subscribed} onSubscribe={handleSubscribe} />
           </section>
+          </main>
         </>
       )}
       <Footer onCategoryChange={setCategory} />

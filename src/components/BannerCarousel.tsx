@@ -152,16 +152,16 @@ export default function BannerCarousel() {
               className="absolute inset-0 h-full w-full object-cover"
               draggable={false}
             />
-            {/* Paper-wash overlay so the ink copy reads over any banner art */}
+            {/* Mint-wash overlay so the ink copy reads over any banner art */}
             <div
               aria-hidden
-              className="absolute inset-0 bg-gradient-to-br from-[#f1ecdf]/92 via-[#f1ecdf]/55 to-[#f1ecdf]/20"
+              className="absolute inset-0 bg-gradient-to-br from-[#edf7f0]/92 via-[#edf7f0]/55 to-[#edf7f0]/20"
             />
-            <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_82%_18%,rgba(59,98,246, 0.25),transparent)]" />
-            <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#f1ecdf]/70 via-transparent to-transparent" />
+            <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_82%_18%,rgba(34,197,94, 0.25),transparent)]" />
+            <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#edf7f0]/70 via-transparent to-transparent" />
             {/* Slide copy */}
             <div className="absolute inset-0 flex flex-col justify-center px-6 text-[#1d2a4a] sm:px-10 lg:px-14">
-              <span className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-gold-deep to-gold px-5 py-1.5 text-xs font-black uppercase tracking-[0.18em] text-white shadow-[0_0_22px_rgba(59,98,246, 0.6)] ring-2 ring-[#1d2a4a]/20">
+              <span className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-gold-700 to-gold-600 px-5 py-1.5 text-xs font-black uppercase tracking-[0.18em] text-white shadow-[0_0_22px_rgba(236,72,153, 0.6)] ring-2 ring-[#1d2a4a]/20">
                 {slide.eyebrow}
               </span>
               <h2 className="mt-5 max-w-xl text-4xl font-black leading-[1.05] tracking-tight drop-shadow-sm sm:text-5xl">
@@ -172,7 +172,7 @@ export default function BannerCarousel() {
               <div className="mt-7 flex flex-wrap gap-3">
                 <a
                   href="#shop"
-                  className="rounded-full bg-gradient-to-r from-brand-600 to-brand-400 px-7 py-3.5 font-black text-[#ffffff] shadow-[0_12px_28px_-8px_rgba(59,98,246, 0.65)] transition hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0 active:shadow-none"
+                  className="rounded-full bg-gradient-to-r from-brand-700 to-brand-500 px-7 py-3.5 font-black text-[#ffffff] shadow-[0_12px_28px_-8px_rgba(34,197,94, 0.65)] transition hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0 active:shadow-none"
                 >
                   Shop Now →
                 </a>
