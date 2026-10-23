@@ -19,7 +19,7 @@ type DashboardSidebarProps = {
 
 export default function DashboardSidebar({ nav, active, onSelect, badge, userName, userEmail, userImage, userRole }: DashboardSidebarProps) {
   return (
-    <aside className="sticky top-0 hidden h-screen w-72 shrink-0 flex-col border-r border-[#f1e6cf] bg-[#f8fcff] p-5 text-[#16233c] lg:flex">
+    <aside className="sticky top-0 hidden h-screen w-72 shrink-0 flex-col border-r border-[#f1e6cf] bg-[#fff7ed] p-5 text-[#2b1a10] lg:flex">
       <Link href="/" className="flex items-center gap-2">
         <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-500 text-xl font-black text-white">G</span>
         <span className="text-lg font-black tracking-tight">
@@ -37,7 +37,7 @@ export default function DashboardSidebar({ nav, active, onSelect, badge, userNam
               onClick={() => onSelect(item.id)}
               aria-current={isActive ? "page" : undefined}
               className={`flex w-full items-center gap-3 rounded-lg px-4 py-3 text-left text-sm font-bold transition ${
-                isActive ? "bg-brand-500 text-white shadow-lg shadow-brand-500/30" : "text-[#16233c] hover:bg-[#f1e6cf] hover:text-[#16233c]"
+                isActive ? "bg-brand-500 text-white shadow-lg shadow-brand-500/30" : "text-[#2b1a10] hover:bg-[#f1e6cf] hover:text-[#2b1a10]"
               }`}
             >
               <span className="text-lg" aria-hidden="true">{item.icon}</span>
@@ -48,16 +48,16 @@ export default function DashboardSidebar({ nav, active, onSelect, badge, userNam
       </nav>
 
       <div className="mt-auto space-y-2 border-t border-[#f1e6cf] pt-4">
-        <Link href="/" className="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-bold text-[#16233c] transition hover:bg-[#f1e6cf] hover:text-[#16233c]">
+        <Link href="/" className="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-bold text-[#2b1a10] transition hover:bg-[#f1e6cf] hover:text-[#2b1a10]">
           <span aria-hidden="true">🛍️</span> Back to Shop
         </Link>
         <button
           onClick={() => signOut({ callbackUrl: "/" })}
-          className="flex w-full items-center gap-3 rounded-lg px-4 py-3 text-left text-sm font-bold text-[#16233c] transition hover:bg-[#f1e6cf] hover:text-[#16233c]"
+          className="flex w-full items-center gap-3 rounded-lg px-4 py-3 text-left text-sm font-bold text-[#2b1a10] transition hover:bg-[#f1e6cf] hover:text-[#2b1a10]"
         >
           <span aria-hidden="true">🚪</span> Sign out
         </button>
-        <div className="flex items-center gap-3 rounded-lg bg-[#f1e6cf] px-3 py-3 text-[#16233c]">
+        <div className="flex items-center gap-3 rounded-lg bg-[#f1e6cf] px-3 py-3 text-[#2b1a10]">
           {userImage ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img src={userImage} alt="" className="h-10 w-10 shrink-0 rounded-full object-cover" />
@@ -68,7 +68,7 @@ export default function DashboardSidebar({ nav, active, onSelect, badge, userNam
           )}
           <div className="min-w-0">
             <p className="truncate text-sm font-bold">{userName ?? "Account"}</p>
-            <p className="truncate text-xs text-[#16233c]/80">{userEmail ?? ""}</p>
+            <p className="truncate text-xs text-[#2b1a10]/80">{userEmail ?? ""}</p>
             {userRole && <p className="mt-0.5 text-[11px] font-bold tracking-wide text-brand-700 uppercase">{userRole}</p>}
           </div>
         </div>

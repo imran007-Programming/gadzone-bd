@@ -15,7 +15,7 @@ export default function BestSellers({ products, onQuickView, onAddToCart }: Best
     <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-16">
       <Reveal>
         <span className="text-xs font-bold uppercase tracking-widest text-brand-700">Customer Favourites</span>
-        <h2 className="mt-2 text-3xl font-black leading-tight tracking-tight text-[#16233c]">🏆 Best Sellers</h2>
+        <h2 className="mt-2 text-3xl font-black leading-tight tracking-tight text-[#2b1a10]">🏆 Best Sellers</h2>
         <p className="mt-2 text-sm leading-relaxed text-[#85735f]">Customers der sobcheye pochonder products</p>
       </Reveal>
       <div className="mt-8 grid gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">{products.map((p, i) => <ProductCard key={p.id} product={p} onQuickView={onQuickView} onAddToCart={onAddToCart} delay={(i % 3) * 0.06} />)}</div>

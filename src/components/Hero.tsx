@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Glacier mist clouds drifting across the aurora sky.
+// Lantern haze drifting across the dusk bazaar sky.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(99,102,241,0.24)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(6,182,212,0.26)" },
-  { left: "42%", top: "46%", size: 140, delay: "-7s", dur: "13s", c: "rgba(168,85,247,0.20)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(129,140,248,0.28)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(245,158,11,0.28)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(234,88,12,0.30)" },
+  { left: "42%", top: "46%", size: 140, delay: "-7s", dur: "13s", c: "rgba(225,29,72,0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(251,146,60,0.32)" },
 ];
 
-// Ice crystals drifting down off the glacier sky.
+// Embers rising off the dusk bazaar.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "8.2s", s: 12, c: "#22d3ee" },
-  { left: "21%", delay: "-1.4s", dur: "9.8s", s: 16, c: "#a855f7" },
-  { left: "36%", delay: "-2.6s", dur: "8.8s", s: 13, c: "#818cf8" },
-  { left: "53%", delay: "-0.8s", dur: "9.4s", s: 17, c: "#6366f1" },
-  { left: "68%", delay: "-3.2s", dur: "8.6s", s: 12, c: "#67e8f9" },
-  { left: "82%", delay: "-2s", dur: "9.2s", s: 14, c: "#c084fc" },
-  { left: "93%", delay: "-0.4s", dur: "8.4s", s: 10, c: "#a5b4fc" },
+  { left: "8%", delay: "0s", dur: "8.2s", s: 12, c: "#f59e0b" },
+  { left: "21%", delay: "-1.4s", dur: "9.8s", s: 16, c: "#e11d48" },
+  { left: "36%", delay: "-2.6s", dur: "8.8s", s: 13, c: "#fb923c" },
+  { left: "53%", delay: "-0.8s", dur: "9.4s", s: 17, c: "#f97316" },
+  { left: "68%", delay: "-3.2s", dur: "8.6s", s: 12, c: "#fcd34d" },
+  { left: "82%", delay: "-2s", dur: "9.2s", s: 14, c: "#fb7185" },
+  { left: "93%", delay: "-0.4s", dur: "8.4s", s: 10, c: "#fdba74" },
 ];
 
-// Aurora sparkles scattered over the glacier sky.
+// Dusk sparkles scattered over the bazaar sky.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -51,7 +51,7 @@ function Flake({ left, delay, dur, s, c }: (typeof FLAKES)[number]) {
   return (
     <div
       aria-hidden
-      className="pop-fall pointer-events-none absolute bottom-0"
+      className="pop-fall pointer-events-none absolute top-0"
       style={{ left, animationDelay: delay, animationDuration: dur }}
     >
       <div
@@ -75,56 +75,56 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* aurora sky */}
-      <div className="relative bg-gradient-to-b from-[#e0e7ff] via-[#eef5fb] to-[#f8fcff]">
+      {/* dusk sky */}
+      <div className="relative bg-gradient-to-b from-[#3b1420] via-[#7c2d12] to-[#431407]">
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-60" />
-        <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-300/25" />
+        <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gold-500/20" />
 
-        {/* aurora curtains sweeping the glacier sky */}
+        {/* warm light washing across the dusk sky */}
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-0 hidden h-[560px] opacity-90 sm:block">
-          <div className="pop-drift absolute -left-24 top-6 h-72 w-[52rem] rotate-[-8deg] rounded-full bg-gradient-to-r from-brand-300/50 via-gold-300/40 to-popblue-300/35 blur-3xl" />
-          <div className="pop-drift absolute -right-24 top-40 h-64 w-[44rem] rotate-[10deg] rounded-full bg-gradient-to-r from-popblue-300/35 via-brand-300/40 to-gold-300/45 blur-3xl" style={{ animationDelay: "-12s" }} />
+          <div className="pop-drift absolute -left-24 top-6 h-72 w-[52rem] rotate-[-8deg] rounded-full bg-gradient-to-r from-brand-400/50 via-gold-400/40 to-popblue-400/35 blur-3xl" />
+          <div className="pop-drift absolute -right-24 top-40 h-64 w-[44rem] rotate-[10deg] rounded-full bg-gradient-to-r from-popblue-400/35 via-brand-400/40 to-gold-400/45 blur-3xl" style={{ animationDelay: "-12s" }} />
         </div>
 
-        {/* glacier beacon: a glowing aurora orb ringed by a slow-spinning halo */}
+        {/* dusk lantern: a glowing amber orb ringed by a slow-spinning halo */}
         <div aria-hidden className="pointer-events-none absolute -right-40 -top-32 z-0 hidden opacity-90 sm:block">
           <div className="relative h-[600px] w-[600px]">
             <div className="nebula-core absolute inset-8 rounded-full blur-xl" />
             <div className="sun-rays pop-spin absolute inset-0" />
-            {/* halo rings around the beacon */}
+            {/* halo rings around the lantern */}
             {[0, 1, 2].map((r) => (
               <span
                 key={r}
-                className="absolute left-1/2 top-1/2 origin-center -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-gold-300/70"
+                className="absolute left-1/2 top-1/2 origin-center -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-gold-400/70"
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(6,182,212,0.45), inset 0 0 18px rgba(168,85,247,0.2)",
+                  boxShadow: "0 0 28px 2px rgba(245,158,11,0.45), inset 0 0 18px rgba(225,29,72,0.2)",
                   opacity: 1 - r * 0.22,
                 }}
               />
             ))}
-            {/* the beacon itself: an icy aurora orb */}
-            <div className="absolute inset-44 rounded-full border-[3px] border-white/90 bg-[radial-gradient(circle_at_38%_34%,#ffffff_0%,#e0e7ff_40%,#a5b4fc_70%,#6366f1_100%)] shadow-[0_0_80px_-8px_rgba(99,102,241,0.7),inset_0_0_40px_rgba(255,255,255,0.6)]" />
-            {/* beacon glints */}
+            {/* the lantern itself: a glowing ember orb */}
+            <div className="absolute inset-44 rounded-full border-[3px] border-white/90 bg-[radial-gradient(circle_at_38%_34%,#ffffff_0%,#fef3c7_40%,#fcd34d_70%,#f59e0b_100%)] shadow-[0_0_80px_-8px_rgba(245,158,11,0.7),inset_0_0_40px_rgba(255,255,255,0.6)]" />
+            {/* lantern glints */}
             <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
               {[{l:"30%",t:"34%",s:46},{l:"58%",t:"52%",s:34},{l:"44%",t:"66%",s:24},{l:"64%",t:"30%",s:20}].map((glint, i) => (
                 <span key={i} className="absolute rounded-full bg-white/80" style={{ left: glint.l, top: glint.t, width: glint.s, height: glint.s }} />
               ))}
             </div>
-            {/* sweeping aurora beams */}
+            {/* sweeping ember beams */}
             {[0, 1, 2].map((b) => (
               <span
                 key={b}
-                className="pop-spin absolute left-1/2 top-1/2 origin-bottom rounded-full bg-gradient-to-t from-gold-300/50 to-transparent blur-md"
+                className="pop-spin absolute left-1/2 top-1/2 origin-bottom rounded-full bg-gradient-to-t from-gold-400/50 to-transparent blur-md"
                 style={{ width: 26, height: 240, transform: `translate(-50%, -100%) rotate(${b * 120}deg)`, animationDuration: "36s" }}
               />
             ))}
-            {/* aurora motes dancing around the beacon */}
+            {/* ember motes dancing around the lantern */}
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#6366f1", "#a855f7", "#818cf8", "#22d3ee"];
+              const colors = ["#f59e0b", "#e11d48", "#fb923c", "#f97316"];
               return (
                 <span
                   key={i}
@@ -142,7 +142,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* drifting glacier mist */}
+        {/* drifting lantern haze */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {ORBS.map((g, i) => (
             <div
@@ -153,29 +153,29 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* aurora sparkles */}
+        {/* dusk sparkles */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {STARS.map((s, i) => (
             <span
               key={i}
-              className="pop-twinkle absolute rounded-full bg-[#4f46e5]"
+              className="pop-twinkle absolute rounded-full bg-[#fcd34d]"
               style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
             />
           ))}
         </div>
 
-        {/* falling ice crystals */}
+        {/* rising embers */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden overflow-hidden sm:block">
           {FLAKES.map((r, i) => (
             <Flake key={i} {...r} />
           ))}
         </div>
 
-        {/* 4-banner carousel in a frosted ice frame */}
+        {/* 4-banner carousel in a wooden ticket frame */}
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-8 sm:px-6">
-            <div className="rounded-[2rem] border border-white/70 bg-white/50 p-2 shadow-[0_24px_60px_-18px_rgba(99,102,241,0.45)] backdrop-blur-md">
-              <div className="rounded-[1.5rem] bg-gradient-to-r from-brand-400 via-gold-400 to-popblue-400 p-1.5 shadow-[0_0_36px_-6px_rgba(6,182,212,0.55)]">
+            <div className="rounded-[2rem] border-2 border-brand-900 bg-[#2b1a10] p-2 shadow-[8px_8px_0_rgba(0,0,0,0.45)]">
+              <div className="pop-stripes rounded-[1.5rem] p-1.5">
                 <div className="overflow-hidden rounded-[1.1rem] bg-brand-100 ring-1 ring-white/50">
                   <BannerCarousel />
                 </div>
@@ -184,24 +184,24 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* aurora ticker: violet ribbon, ice type */}
-        <div aria-hidden className="relative z-10 mt-8 bg-gradient-to-r from-brand-600 via-popblue-600 to-brand-600 py-3 shadow-[0_18px_40px_-18px_rgba(99,102,241,0.65)]">
+        {/* dusk ticker: ember ribbon, honey type */}
+        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-gold-400/60 bg-[#2b1a10] py-3 shadow-[0_18px_40px_-18px_rgba(234,88,12,0.65)]">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
-                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-white drop-shadow-[0_0_12px_rgba(165,243,252,0.7)]">
-                  {t} <span className="text-gold-200">✦</span>
+                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-gold-300 drop-shadow-[0_0_12px_rgba(245,158,11,0.7)]">
+                  {t} <span className="text-brand-400">✦</span>
                 </span>
               ))}
             </div>
           </div>
         </div>
 
-        {/* aurora stream into the page */}
+        {/* flame ribbon into the page */}
         <div aria-hidden className="zigzag relative z-10 mx-auto mt-0 w-full max-w-7xl opacity-90" />
       </div>
 
-      {/* Stats + featured picks over glacier glass */}
+      {/* Stats + featured picks on cream paper */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 pb-24 pt-10 md:pb-28">
         <motion.div variants={container} initial="hidden" animate="show" {...anim}>
           <motion.div variants={item} className="grid grid-cols-2 gap-6 sm:grid-cols-4">
@@ -212,9 +212,9 @@ export default function Hero({ onQuickView }: HeroProps) {
               { v: "COD", l: "Available" },
             ].map((s) => (
               <div key={s.l} className="pop-lift relative overflow-hidden p-4 pb-3 pt-5 text-center">
-                <span className="relative block bg-gradient-to-br from-brand-600 via-popblue-500 to-gold-500 bg-clip-text text-2xl font-black tracking-tight text-transparent">{s.v}</span>
+                <span className="relative block bg-gradient-to-br from-brand-700 via-popblue-600 to-gold-600 bg-clip-text text-2xl font-black tracking-tight text-transparent">{s.v}</span>
                 <span className="relative mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-mute">{s.l}</span>
-                <span aria-hidden className="relative mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-brand-400 via-gold-400 to-popblue-400 shadow-[0_0_12px_rgba(6,182,212,0.6)]" />
+                <span aria-hidden className="relative mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-brand-500 via-gold-500 to-popblue-500 shadow-[0_0_12px_rgba(245,158,11,0.6)]" />
               </div>
             ))}
           </motion.div>
@@ -222,8 +222,8 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full border border-brand-200 bg-white/80 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_8px_20px_-8px_rgba(99,102,241,0.5)] backdrop-blur">Handpicked for you</p>
-            <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="relative bg-gradient-to-r from-brand-600 via-popblue-500 to-gold-500 bg-clip-text text-transparent">Picks<span aria-hidden className="absolute inset-x-0 -bottom-1 h-2 rounded-full bg-gradient-to-r from-brand-400 to-gold-400 opacity-60 blur-[3px]" /></span></h2>
+            <p className="inline-block rounded-full border-2 border-brand-800 bg-white/80 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-800 shadow-[4px_4px_0_rgba(43,26,16,0.9)]">Handpicked for you</p>
+            <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="relative bg-gradient-to-r from-brand-700 via-popblue-600 to-gold-600 bg-clip-text text-transparent">Picks<span aria-hidden className="absolute inset-x-0 -bottom-1 h-2 rounded-full bg-gradient-to-r from-brand-500 to-gold-500 opacity-60 blur-[3px]" /></span></h2>
             <span className="zigzag mt-4 block w-44" aria-hidden />
           </div>
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
@@ -238,13 +238,13 @@ export default function Hero({ onQuickView }: HeroProps) {
                 onClick={() => onQuickView(p)}
               >
                 <div className="relative">
-                  <div className="overflow-hidden border-b border-brand-100">
+                  <div className="overflow-hidden border-b-2 border-brand-800">
                     <ProductImage product={p} />
                   </div>
                   <span className="starburst absolute -right-1 -top-1 flex h-16 w-16 items-center justify-center p-4 text-center text-[11px] font-black leading-tight">-{discountPct(p)}%</span>
                   <span aria-hidden className="pop-stripes absolute inset-x-0 bottom-0 h-1.5" />
                 </div>
-                <div className="p-3.5 text-left"><p className="truncate text-sm font-bold tracking-tight text-ink">{p.name}</p><p className="mt-1 text-base font-extrabold tracking-tight text-brand-700">{tk(p.price)} <span className="text-xs font-medium text-mute line-through">{tk(p.oldPrice)}</span></p></div>
+                <div className="p-3.5 text-left"><p className="truncate text-sm font-bold tracking-tight text-ink">{p.name}</p><p className="mt-1 text-base font-extrabold tracking-tight text-brand-800">{tk(p.price)} <span className="text-xs font-medium text-mute line-through">{tk(p.oldPrice)}</span></p></div>
               </motion.div>
             ))}
           </div>
@@ -252,7 +252,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* aurora ribbon into the page */}
+      {/* flame ribbon into the page */}
       <div aria-hidden className="zigzag absolute bottom-0 left-0 w-full opacity-90" />
     </section>
   );

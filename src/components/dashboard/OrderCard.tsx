@@ -19,10 +19,10 @@ export default function OrderCard({ order, showCustomer, statusEditable, onStatu
   const summary = order.items.slice(0, 2).map((it) => `${it.name} × ${it.qty}`).join(" · ") + (order.items.length > 2 ? ` +${order.items.length - 2} more` : "");
 
   return (
-    <article className="rounded-lg bg-[#f8fcff] p-5 shadow-sm ring-1 ring-[#16233c] transition hover:shadow-md">
+    <article className="rounded-lg bg-[#fff7ed] p-5 shadow-sm ring-1 ring-[#2b1a10] transition hover:shadow-md">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="min-w-0">
-          <p className="font-black text-[#16233c]">{order.id}</p>
+          <p className="font-black text-[#2b1a10]">{order.id}</p>
           <p className="mt-0.5 text-sm text-[#85735f]">
             {formatOrderDate(order.date)} · {itemCount} item{itemCount === 1 ? "" : "s"} · {order.payment}
           </p>
@@ -38,7 +38,7 @@ export default function OrderCard({ order, showCustomer, statusEditable, onStatu
             <select
               value={order.status}
               onChange={(e) => onStatusChange?.(order.id, e.target.value as OrderStatus)}
-              className="cursor-pointer rounded-full border border-[#16233c] bg-[#f8fcff] px-3 py-1.5 text-xs font-bold text-[#85735f] outline-none"
+              className="cursor-pointer rounded-full border border-[#2b1a10] bg-[#fff7ed] px-3 py-1.5 text-xs font-bold text-[#85735f] outline-none"
             >
               {STATUSES.map((s) => (
                 <option key={s} value={s}>{s}</option>
@@ -52,26 +52,26 @@ export default function OrderCard({ order, showCustomer, statusEditable, onStatu
 
       <p className="mt-3 truncate text-sm text-[#85735f]">{summary || "No items"}</p>
 
-      <div className="mt-3 flex flex-wrap items-center justify-between gap-3 border-t border-[#4338ca] pt-3">
+      <div className="mt-3 flex flex-wrap items-center justify-between gap-3 border-t border-[#9a3412] pt-3">
         <button onClick={() => setExpanded((v) => !v)} aria-expanded={expanded} className="text-sm font-bold text-brand-700 hover:text-brand-700">
           {expanded ? "Hide details ↑" : "View details ↓"}
         </button>
-        <p className="text-sm font-bold text-[#16233c]">
+        <p className="text-sm font-bold text-[#2b1a10]">
           Total <span className="ml-1 text-base text-brand-700">{tk(order.total)}</span>
         </p>
       </div>
 
       {expanded && (
-        <div className="mt-4 space-y-4 rounded-lg bg-[#f8fcff] p-4">
+        <div className="mt-4 space-y-4 rounded-lg bg-[#fff7ed] p-4">
           <ul className="space-y-2 text-sm">
             {order.items.map((it, i) => (
               <li key={i} className="flex justify-between gap-3">
                 <span className="text-[#85735f]">{it.name} <span className="text-[#85735f]">× {it.qty}</span></span>
-                <span className="shrink-0 font-semibold text-[#16233c]">{tk(it.price * it.qty)}</span>
+                <span className="shrink-0 font-semibold text-[#2b1a10]">{tk(it.price * it.qty)}</span>
               </li>
             ))}
           </ul>
-          <div className="grid gap-3 border-t border-[#16233c] pt-3 text-sm sm:grid-cols-2">
+          <div className="grid gap-3 border-t border-[#2b1a10] pt-3 text-sm sm:grid-cols-2">
             <div>
               <p className="text-xs font-bold tracking-wide text-[#85735f] uppercase">Delivery address</p>
               <p className="mt-1 font-semibold text-[#85735f]">{order.name}</p>
