@@ -1,63 +1,63 @@
 @import "tailwindcss";
 
 @theme {
-  /* Garnet Noir: a moody wine cellar at midnight — deep plum-black air,
-     garnet-velvet panels, champagne-gold seams, copper embers drifting.
-     Cards are cellar velvet: deep plum, hairline garnet seam, soft
-     diffuse shadow; corners are generous and soft. */
+  /* Daylight Press: a bright press-room at noon — warm porcelain paper,
+     espresso ink, vermillion headlines, pine-green stamps and marigold
+     highlights. Cards are press cards: crisp white, hairline ink border,
+     tight corners, a firm offset shadow; they lift on hover. */
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = garnet scale */
-  --color-brand-50: #fdf2f5;
-  --color-brand-100: #fbe4ea;
-  --color-brand-200: #f6c6d4;
-  --color-brand-300: #ef99b5;
-  --color-brand-400: #e4638f;
-  --color-brand-500: #d63d70;
-  --color-brand-600: #b92758;
-  --color-brand-700: #952145;
-  --color-brand-800: #7a1e3a;
-  --color-brand-900: #5c1a30;
-  --color-brand-950: #3a0f1e;
-  --color-brand: #b92758;
-  --color-brand-dark: #952145;
-  --color-brand-deep: #7a1e3a;
+  /* brand = vermillion scale */
+  --color-brand-50: #fdf4ee;
+  --color-brand-100: #fbe5d4;
+  --color-brand-200: #f7c9a6;
+  --color-brand-300: #f0a06e;
+  --color-brand-400: #e8733c;
+  --color-brand-500: #dd5522;
+  --color-brand-600: #c23f16;
+  --color-brand-700: #9a3313;
+  --color-brand-800: #7c2b16;
+  --color-brand-900: #632515;
+  --color-brand-950: #361309;
+  --color-brand: #dd5522;
+  --color-brand-dark: #9a3313;
+  --color-brand-deep: #7c2b16;
 
-  /* gold = champagne scale (name kept for legacy class refs) */
-  --color-gold-50: #fbf6ec;
-  --color-gold-100: #f6ead3;
-  --color-gold-200: #ecd3a3;
-  --color-gold-300: #e0b76e;
-  --color-gold-400: #d4a24e;
-  --color-gold-500: #c98f3d;
-  --color-gold-600: #a97734;
-  --color-gold-700: #875e2d;
-  --color-gold-800: #6d4d28;
-  --color-gold-900: #574022;
-  --color-gold-950: #332412;
-  --color-gold: #d4a24e;
-  --color-gold-deep: #875e2d;
-  --color-gold-soft: #f6ead3;
+  /* gold = pine scale (name kept for legacy class refs) */
+  --color-gold-50: #f0f7f2;
+  --color-gold-100: #dcebe2;
+  --color-gold-200: #bbd7c6;
+  --color-gold-300: #8fbda4;
+  --color-gold-400: #5fa07f;
+  --color-gold-500: #3d8264;
+  --color-gold-600: #2c6750;
+  --color-gold-700: #245343;
+  --color-gold-800: #1e4537;
+  --color-gold-900: #193a2f;
+  --color-gold-950: #0d1f19;
+  --color-gold: #3d8264;
+  --color-gold-deep: #245343;
+  --color-gold-soft: #dcebe2;
 
-  /* popblue = copper scale (name kept for legacy class refs) */
-  --color-popblue-50: #fbf3ee;
-  --color-popblue-100: #f6e2d3;
-  --color-popblue-200: #ecc2a1;
-  --color-popblue-300: #e09d6c;
-  --color-popblue-400: #d47c42;
-  --color-popblue-500: #c4642c;
-  --color-popblue-600: #a5522a;
-  --color-popblue-700: #834225;
-  --color-popblue-800: #6a3723;
-  --color-popblue-900: #572e1f;
-  --color-popblue-950: #2f1810;
-  --color-popblue: #d47c42;
-  --color-popblue-deep: #834225;
-  --color-popblue-soft: #f6e2d3;
+  /* popblue = marigold scale (name kept for legacy class refs) */
+  --color-popblue-50: #fffaeb;
+  --color-popblue-100: #fff1c6;
+  --color-popblue-200: #ffe288;
+  --color-popblue-300: #ffce4a;
+  --color-popblue-400: #ffb920;
+  --color-popblue-500: #f99d07;
+  --color-popblue-600: #dd7602;
+  --color-popblue-700: #b75406;
+  --color-popblue-800: #94400c;
+  --color-popblue-900: #7a360d;
+  --color-popblue-950: #461e02;
+  --color-popblue: #ffb920;
+  --color-popblue-deep: #b75406;
+  --color-popblue-soft: #fff1c6;
 
-  --color-ink: #f6efe6;
-  --color-paper: #150f1c;
-  --color-mute: #a3908f;
+  --color-ink: #26201a;
+  --color-paper: #f7f3ea;
+  --color-mute: #8a7d6b;
 }
 
 html { scroll-behavior: smooth; }
@@ -72,23 +72,23 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #150f1c;
+  background-color: #f7f3ea;
   background-image:
-    repeating-linear-gradient(115deg, rgba(185, 39, 88, 0.06) 0 2px, transparent 2px 14px),
-    repeating-linear-gradient(65deg, rgba(212, 162, 78, 0.05) 0 2px, transparent 2px 14px),
-    radial-gradient(ellipse 56% 32% at 88% -4%, rgba(185, 39, 88, 0.22), transparent 70%),
-    radial-gradient(ellipse 48% 30% at 4% 102%, rgba(212, 124, 66, 0.16), transparent 70%),
-    radial-gradient(ellipse 42% 26% at 52% 52%, rgba(122, 30, 58, 0.35), transparent 70%);
-  color: #e8dccf;
+    radial-gradient(circle, rgba(38, 32, 26, 0.07) 1px, transparent 1.6px),
+    radial-gradient(ellipse 56% 30% at 88% -4%, rgba(221, 85, 34, 0.12), transparent 70%),
+    radial-gradient(ellipse 48% 28% at 4% 102%, rgba(61, 130, 100, 0.1), transparent 70%),
+    radial-gradient(ellipse 40% 24% at 52% 52%, rgba(255, 185, 32, 0.08), transparent 70%);
+  background-size: 22px 22px, auto, auto, auto;
+  color: #26201a;
 }
-::selection { background: #b92758; color: #f6ead3; }
+::selection { background: #dd5522; color: #fffaf2; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #b92758, #d4a24e); border-radius: 8px; border: 2px solid #150f1c; }
-::-webkit-scrollbar-track { background: #241a2e; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #dd5522, #ffb920); border-radius: 8px; border: 2px solid #f7f3ea; }
+::-webkit-scrollbar-track { background: #ece5d4; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Golden dust: fine champagne motes settling through the cellar air. */
+/* Confetti scraps: paper cuttings tumbling through the noon light. */
 @keyframes ember-fall {
   0% { transform: translate3d(4px, -60px, 0) rotate(0deg) scale(0.7); opacity: 0; }
   18% { opacity: 0.9; }
@@ -98,55 +98,53 @@ body {
 }
 .pop-fall { animation: ember-fall 12s linear infinite; }
 
-/* Cellar haze: slow lateral drift of the warm dark. */
+/* Sunbeam drift: slow lateral float of the daylight. */
 @keyframes ember-sway {
-  0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.7; }
-  50% { transform: translate3d(3vw, 0.8rem, 0) scale(1.1); opacity: 1; }
+  0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.55; }
+  50% { transform: translate3d(3vw, 0.8rem, 0) scale(1.1); opacity: 0.85; }
 }
 .pop-drift { animation: ember-sway 30s ease-in-out infinite; }
 
-/* Ember bob: gentle floating pulse. */
+/* Paper bob: gentle floating pulse. */
 @keyframes ember-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-8px) scale(1.04); }
 }
 .pop-bob { animation: ember-bob 4s ease-in-out infinite; }
 
-/* Slow rotation for the ember halo. */
+/* Slow rotation for the press halo. */
 @keyframes ember-wheel {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: ember-wheel 56s linear infinite; }
 
-/* Cellar glint: warm sparkle flicker. */
+/* Sun glint: warm sparkle flicker. */
 @keyframes ember-glint {
-  0%, 100% { opacity: 0.25; transform: scale(0.85); }
+  0%, 100% { opacity: 0.3; transform: scale(0.85); }
   50% { opacity: 1; transform: scale(1.2); }
 }
 .pop-twinkle { animation: ember-glint 3.6s ease-in-out infinite; }
 
-/* Cellar ticker: infinite marquee (leftward drift). */
+/* Press ticker: infinite marquee (leftward drift). */
 @keyframes ember-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: ember-ticker 30s linear infinite; }
 
-/* Velvet cords: garnet -> champagne -> copper diagonal pinstripes. */
+/* Press stripes: vermillion -> marigold -> pine diagonal pinstripes. */
 .pop-stripes {
-  background-image: repeating-linear-gradient(-55deg, #b92758 0 10px, #d4a24e 10px 20px, #d47c42 20px 30px);
+  background-image: repeating-linear-gradient(-55deg, #dd5522 0 10px, #ffb920 10px 20px, #3d8264 20px 30px);
 }
 
-/* Cellar velvet: a deep plum card with a hairline garnet seam and a
-   soft diffuse shadow; it lifts into a champagne glow on hover. */
+/* Press card: crisp white, hairline ink border, tight corners, a firm
+   offset shadow; it rises into a vermillion edge on hover. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(214, 61, 112, 0.35);
-  background: linear-gradient(180deg, rgba(36, 26, 46, 0.96) 0%, rgba(26, 18, 36, 0.94) 100%);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border-radius: 1.15rem;
-  box-shadow: 0 1px 2px rgba(10, 5, 10, 0.5), 0 12px 32px -12px rgba(185, 39, 88, 0.35);
+  border: 1px solid rgba(38, 32, 26, 0.9);
+  background: #fffdf8;
+  border-radius: 0.6rem;
+  box-shadow: 4px 4px 0 rgba(38, 32, 26, 0.9);
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
   overflow: hidden;
 }
@@ -155,77 +153,76 @@ body {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: linear-gradient(115deg, rgba(214, 61, 112, 0.14) 0%, transparent 32%);
+  background: linear-gradient(115deg, rgba(221, 85, 34, 0.08) 0%, transparent 32%);
   pointer-events: none;
 }
 .pop-lift:hover {
-  transform: translateY(-3px);
-  border-color: rgba(212, 162, 78, 0.6);
-  box-shadow: 0 2px 4px rgba(10, 5, 10, 0.5), 0 20px 44px -12px rgba(212, 162, 78, 0.4);
+  transform: translate(-2px, -2px);
+  border-color: #dd5522;
+  box-shadow: 6px 6px 0 rgba(221, 85, 34, 0.85);
 }
 
-/* Cellar glass: shared by modals and drawers — a dark smoked sheet. */
+/* Press glass: shared by modals and drawers — a frosted paper sheet. */
 .pop-glass {
-  background: rgba(21, 15, 28, 0.92);
-  backdrop-filter: blur(20px) saturate(1.15);
-  -webkit-backdrop-filter: blur(20px) saturate(1.15);
-  border: 1px solid rgba(214, 61, 112, 0.4);
-  border-radius: 1.15rem;
-  box-shadow: 0 24px 60px -24px rgba(185, 39, 88, 0.5), inset 0 1px 0 rgba(214, 61, 112, 0.25);
+  background: rgba(255, 253, 248, 0.92);
+  backdrop-filter: blur(20px) saturate(1.1);
+  -webkit-backdrop-filter: blur(20px) saturate(1.1);
+  border: 1px solid rgba(38, 32, 26, 0.9);
+  border-radius: 0.6rem;
+  box-shadow: 5px 5px 0 rgba(38, 32, 26, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
-/* Champagne seal: a gold medallion with a dashed garnet ring. */
+/* Press seal: a vermillion medallion with a dashed marigold ring. */
 .starburst {
-  background: radial-gradient(circle at 35% 30%, #ecd3a3 0%, #d4a24e 55%, #a97734 100%);
-  color: #3a0f1e;
-  text-shadow: 0 1px 0 rgba(251, 246, 236, 0.5);
+  background: radial-gradient(circle at 35% 30%, #e8733c 0%, #dd5522 55%, #9a3313 100%);
+  color: #fffaf2;
+  text-shadow: 0 1px 0 rgba(54, 19, 9, 0.5);
   border-radius: 9999px;
   transform: rotate(-6deg);
-  box-shadow: 0 6px 18px -6px rgba(212, 162, 78, 0.7), inset 0 2px 6px rgba(255, 255, 255, 0.35);
-  outline: 2px dashed rgba(214, 61, 112, 0.9);
+  box-shadow: 3px 3px 0 rgba(38, 32, 26, 0.9), inset 0 2px 6px rgba(255, 255, 255, 0.25);
+  outline: 2px dashed #ffb920;
   outline-offset: -6px;
 }
 
-/* Velvet cord texture for hero bands. */
+/* Press dots: warm newsprint texture for hero bands. */
 .halftone {
-  background-image:
-    repeating-linear-gradient(115deg, rgba(214, 61, 112, 0.1) 0 2px, transparent 2px 10px),
-    repeating-linear-gradient(65deg, rgba(212, 162, 78, 0.08) 0 2px, transparent 2px 10px);
+  background-image: radial-gradient(circle, rgba(38, 32, 26, 0.1) 1px, transparent 1.6px);
+  background-size: 14px 14px;
 }
 
-/* Cellar ribbon: a garnet -> champagne -> copper band. */
+/* Press ribbon: a vermillion -> marigold -> pine band. */
 .zigzag {
   height: 6px;
-  background: repeating-linear-gradient(135deg, #b92758 0 12px, #d4a24e 12px 24px, #d47c42 24px 36px);
+  background: repeating-linear-gradient(135deg, #dd5522 0 12px, #ffb920 12px 24px, #3d8264 24px 36px);
   border-radius: 9999px;
-  box-shadow: 0 3px 8px -2px rgba(185, 39, 88, 0.5);
+  box-shadow: 2px 2px 0 rgba(38, 32, 26, 0.8);
 }
 
-/* Cellar canopy: garnet and plum stripes with a champagne hem. */
+/* Press awning: vermillion and pine stripes with a marigold hem. */
 .bazaar-awning {
   background-image:
-    repeating-linear-gradient(90deg, #952145 0 28px, #1e1426 28px 56px);
-  border-bottom: 3px solid #d4a24e;
-  box-shadow: 0 6px 18px -6px rgba(185, 39, 88, 0.5);
+    repeating-linear-gradient(90deg, #dd5522 0 28px, #fffdf8 28px 56px);
+  border-bottom: 3px solid #ffb920;
+  box-shadow: 0 4px 0 rgba(38, 32, 26, 0.85);
 }
 
-/* Ember wash: layered garnet/copper glow for the ember moon. */
+/* Daylight wash: layered vermillion/marigold glow for the press sun. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(224, 183, 110, 0.35) 0%, rgba(185, 39, 88, 0.3) 42%, rgba(212, 124, 66, 0.18) 62%, rgba(212, 124, 66, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 206, 74, 0.5) 0%, rgba(221, 85, 34, 0.32) 42%, rgba(61, 130, 100, 0.18) 62%, rgba(61, 130, 100, 0) 76%);
 }
 .sun-disc {
   background:
-    conic-gradient(from 40deg, #f6ead3, #d4a24e, #e0b76e, #b92758, #f6ead3);
-  box-shadow: 0 0 60px -8px rgba(224, 183, 110, 0.6), 0 10px 30px -10px rgba(185, 39, 88, 0.6);
+    conic-gradient(from 40deg, #ffe288, #ffb920, #ffce4a, #e8733c, #ffe288);
+  box-shadow: 0 0 60px -8px rgba(255, 185, 32, 0.7), 3px 3px 0 rgba(38, 32, 26, 0.85);
 }
 
-/* Ember halo rings. */
+/* Sun halo rings. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(214, 61, 112, 0.5) 0px,
-    rgba(214, 61, 112, 0.5) 4px,
+    rgba(221, 85, 34, 0.5) 0px,
+    rgba(221, 85, 34, 0.5) 4px,
     transparent 4px,
     transparent 30px
   );
@@ -236,8 +233,8 @@ body {
 .sun-rays {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(224, 183, 110, 0.5) 0px,
-    rgba(224, 183, 110, 0.5) 4px,
+    rgba(255, 185, 32, 0.55) 0px,
+    rgba(255, 185, 32, 0.55) 4px,
     transparent 4px,
     transparent 30px
   );
@@ -246,65 +243,63 @@ body {
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all cellar-styled. */
+/* Legacy aliases kept so untouched components still render — all press-styled. */
 .lagoon-lift {
   position: relative;
-  border: 1px solid rgba(214, 61, 112, 0.35);
-  background: linear-gradient(180deg, rgba(36, 26, 46, 0.96) 0%, rgba(26, 18, 36, 0.94) 100%);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border-radius: 1.15rem;
-  box-shadow: 0 1px 2px rgba(10, 5, 10, 0.5), 0 12px 32px -12px rgba(185, 39, 88, 0.35);
+  border: 1px solid rgba(38, 32, 26, 0.9);
+  background: #fffdf8;
+  border-radius: 0.6rem;
+  box-shadow: 4px 4px 0 rgba(38, 32, 26, 0.9);
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
   overflow: hidden;
 }
 .lagoon-lift:hover {
-  transform: translateY(-3px);
-  border-color: rgba(212, 162, 78, 0.6);
-  box-shadow: 0 2px 4px rgba(10, 5, 10, 0.5), 0 20px 44px -12px rgba(212, 162, 78, 0.4);
+  transform: translate(-2px, -2px);
+  border-color: #dd5522;
+  box-shadow: 6px 6px 0 rgba(221, 85, 34, 0.85);
 }
 .stamp-perf {
-  border: 2px dashed #d4a24e;
-  background: rgba(212, 162, 78, 0.08);
-  border-radius: 1.15rem;
-  box-shadow: 0 8px 24px -12px rgba(212, 162, 78, 0.4);
+  border: 2px dashed #dd5522;
+  background: rgba(221, 85, 34, 0.06);
+  border-radius: 0.6rem;
+  box-shadow: 3px 3px 0 rgba(38, 32, 26, 0.85);
 }
 .ember-glow {
   position: relative;
-  border: 1px solid rgba(214, 61, 112, 0.35);
-  background: linear-gradient(180deg, rgba(58, 15, 30, 0.95) 0%, rgba(51, 36, 18, 0.9) 100%);
-  border-radius: 1.15rem;
-  box-shadow: 0 1px 2px rgba(10, 5, 10, 0.5), 0 12px 32px -12px rgba(214, 61, 112, 0.4);
+  border: 1px solid rgba(38, 32, 26, 0.9);
+  background: linear-gradient(180deg, #fff7ea 0%, #ffe9cf 100%);
+  border-radius: 0.6rem;
+  box-shadow: 4px 4px 0 rgba(38, 32, 26, 0.9);
   transition: transform 0.18s ease, box-shadow 0.18s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 2px 4px rgba(10, 5, 10, 0.5), 0 20px 44px -12px rgba(214, 61, 112, 0.55);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 rgba(221, 85, 34, 0.85);
 }
 .ripple-glow {
   position: relative;
-  border: 1px solid rgba(212, 124, 66, 0.35);
-  background: linear-gradient(180deg, rgba(47, 24, 16, 0.95) 0%, rgba(51, 36, 18, 0.9) 100%);
-  border-radius: 1.15rem;
-  box-shadow: 0 1px 2px rgba(10, 5, 10, 0.5), 0 12px 32px -12px rgba(212, 124, 66, 0.4);
+  border: 1px solid rgba(38, 32, 26, 0.9);
+  background: linear-gradient(180deg, #f0f7f2 0%, #dcebe2 100%);
+  border-radius: 0.6rem;
+  box-shadow: 4px 4px 0 rgba(38, 32, 26, 0.9);
   transition: transform 0.18s ease, box-shadow 0.18s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 2px 4px rgba(10, 5, 10, 0.5), 0 20px 44px -12px rgba(212, 124, 66, 0.55);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 rgba(61, 130, 100, 0.85);
 }
 .lagoon-glow {
   position: relative;
-  border: 1px solid rgba(214, 61, 112, 0.35);
-  background: linear-gradient(180deg, rgba(36, 26, 46, 0.96) 0%, rgba(26, 18, 36, 0.94) 100%);
-  border-radius: 1.15rem;
-  box-shadow: 0 1px 2px rgba(10, 5, 10, 0.5), 0 12px 32px -12px rgba(185, 39, 88, 0.35);
+  border: 1px solid rgba(38, 32, 26, 0.9);
+  background: #fffdf8;
+  border-radius: 0.6rem;
+  box-shadow: 4px 4px 0 rgba(38, 32, 26, 0.9);
   transition: transform 0.18s ease, box-shadow 0.18s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 2px 4px rgba(10, 5, 10, 0.5), 0 20px 44px -12px rgba(185, 39, 88, 0.5);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 rgba(221, 85, 34, 0.85);
 }
