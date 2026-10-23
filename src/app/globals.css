@@ -1,66 +1,65 @@
 @import "tailwindcss";
 
 @theme {
-  /* Porcelain Atelier: Delft-style white porcelain with hand-painted
-     cobalt brushwork. Porcelain mist background, cobalt blue carries
-     the brand, antique gold seals the deals, periwinkle is the soft
-     accent. Cards are porcelain tiles with cobalt rims and a painted
-     brush-stroke edge; they float on hover. */
+  /* Mosswood Foundry: deep forest greens under warm parchment light.
+     Terracotta clay seals the deals, sage is the soft accent. Cards are
+     timber tiles with a moss rim and a terracotta groove along their base;
+     they float on hover. */
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = cobalt blue scale */
-  --color-brand-50: #eff6ff;
-  --color-brand-100: #dbeafe;
-  --color-brand-200: #bfdbfe;
-  --color-brand-300: #93c5fd;
-  --color-brand-400: #60a5fa;
-  --color-brand-500: #3b82f6;
-  --color-brand-600: #2563eb;
-  --color-brand-700: #1d4ed8;
-  --color-brand-800: #1e40af;
-  --color-brand-900: #1e3a8a;
-  --color-brand-950: #172554;
-  --color-brand: #2563eb;
-  --color-brand-dark: #1d4ed8;
-  --color-brand-deep: #1e40af;
+  /* brand = moss green scale */
+  --color-brand-50: #f2f8f3;
+  --color-brand-100: #e4f0e7;
+  --color-brand-200: #cbe3d2;
+  --color-brand-300: #a8cfb5;
+  --color-brand-400: #7db98f;
+  --color-brand-500: #4c9168;
+  --color-brand-600: #34724d;
+  --color-brand-700: #2b5b3f;
+  --color-brand-800: #234731;
+  --color-brand-900: #203b2c;
+  --color-brand-950: #101f17;
+  --color-brand: #34724d;
+  --color-brand-dark: #2b5b3f;
+  --color-brand-deep: #234731;
 
-  /* gold = antique gold scale (name kept for legacy class refs) */
-  --color-gold-50: #fdf9ec;
-  --color-gold-100: #faf0d3;
-  --color-gold-200: #f4dfa6;
-  --color-gold-300: #edc86e;
-  --color-gold-400: #e6b038;
-  --color-gold-500: #d99f1f;
-  --color-gold-600: #b8860b;
-  --color-gold-700: #93700c;
-  --color-gold-800: #7a5c0e;
-  --color-gold-900: #6a4f10;
-  --color-gold-950: #3f2f05;
-  --color-gold: #b8860b;
-  --color-gold-deep: #7a5c0e;
-  --color-gold-soft: #faf0d3;
+  /* gold = terracotta clay scale (name kept for legacy class refs) */
+  --color-gold-50: #fdf6ef;
+  --color-gold-100: #f9ece2;
+  --color-gold-200: #f0d4b8;
+  --color-gold-300: #e6b184;
+  --color-gold-400: #dd9058;
+  --color-gold-500: #d2691e;
+  --color-gold-600: #c2603e;
+  --color-gold-700: #9e4a2c;
+  --color-gold-800: #7e3a22;
+  --color-gold-900: #682f1a;
+  --color-gold-950: #381610;
+  --color-gold: #c2603e;
+  --color-gold-deep: #7e3a22;
+  --color-gold-soft: #f9ece2;
 
-  /* popblue = periwinkle scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0f6ff;
-  --color-popblue-100: #e0eefc;
-  --color-popblue-200: #c6ddfb;
-  --color-popblue-300: #a1c3f8;
-  --color-popblue-400: #7ca4f4;
-  --color-popblue-500: #60a5fa;
-  --color-popblue-600: #4a86e8;
-  --color-popblue-700: #3b6cd4;
-  --color-popblue-800: #3458ad;
-  --color-popblue-900: #304a8a;
-  --color-popblue-950: #1e2c56;
-  --color-popblue: #60a5fa;
-  --color-popblue-deep: #3458ad;
-  --color-popblue-soft: #e0eefc;
+  /* popblue = sage scale (name kept for legacy class refs) */
+  --color-popblue-50: #f3f6f3;
+  --color-popblue-100: #e2ece2;
+  --color-popblue-200: #c5d9c5;
+  --color-popblue-300: #a0bfa0;
+  --color-popblue-400: #7ba97e;
+  --color-popblue-500: #5c8f63;
+  --color-popblue-600: #477151;
+  --color-popblue-700: #3a5b44;
+  --color-popblue-800: #32493a;
+  --color-popblue-900: #2a3c32;
+  --color-popblue-950: #15211b;
+  --color-popblue: #5c8f63;
+  --color-popblue-deep: #32493a;
+  --color-popblue-soft: #e2ece2;
 
-  --color-ink: #182743;
-  --color-paper: #f4f7fd;
-  --color-mute: #64748b;
+  --color-ink: #223226;
+  --color-paper: #f6f2e7;
+  --color-mute: #68796c;
   --color-card: #ffffff;
-  --color-deep: #0d1730;
+  --color-deep: #122019;
 }
 
 html { scroll-behavior: smooth; }
@@ -75,23 +74,23 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f4f7fd;
+  background-color: #f6f2e7;
   background-image:
-    radial-gradient(circle, rgba(37, 99, 235, 0.06) 1.2px, transparent 1.6px),
-    radial-gradient(ellipse 52% 26% at 88% -4%, rgba(59, 130, 246, 0.12), transparent 70%),
-    radial-gradient(ellipse 40% 24% at 6% 104%, rgba(96, 165, 250, 0.14), transparent 70%),
-    radial-gradient(ellipse 28% 18% at 52% 44%, rgba(184, 134, 11, 0.06), transparent 70%);
+    radial-gradient(circle, rgba(52, 114, 77, 0.07) 1.2px, transparent 1.6px),
+    radial-gradient(ellipse 52% 26% at 88% -4%, rgba(76, 145, 104, 0.12), transparent 70%),
+    radial-gradient(ellipse 40% 24% at 6% 104%, rgba(124, 185, 143, 0.14), transparent 70%),
+    radial-gradient(ellipse 28% 18% at 52% 44%, rgba(194, 96, 62, 0.07), transparent 70%);
   background-size: 26px 26px, auto, auto, auto;
-  color: #182743;
+  color: #223226;
 }
-::selection { background: #2563eb; color: #ffffff; }
+::selection { background: #34724d; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #3b82f6, #1d4ed8); border-radius: 999px; border: 2px solid #f4f7fd; }
-::-webkit-scrollbar-track { background: #dbe4f5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #4c9168, #2b5b3f); border-radius: 999px; border: 2px solid #f6f2e7; }
+::-webkit-scrollbar-track { background: #e6e2d4; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Porcelain brush chips drifting down through the kiln air. */
+/* Falling leaves drifting down through the forest air. */
 @keyframes porc-fall {
   0% { transform: translate3d(-4px, 60px, 0) scale(0.7) rotate(0deg); opacity: 0; }
   18% { opacity: 0.9; }
@@ -101,63 +100,64 @@ body {
 }
 .pop-fall { animation: porc-fall 11s linear infinite; }
 
-/* Kiln haze: slow lateral float of cool air. */
+/* Forest haze: slow lateral float of warm air. */
 @keyframes porc-sway {
   0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(3vw, -0.8rem, 0) scale(1.08); opacity: 0.8; }
 }
 .pop-drift { animation: porc-sway 30s ease-in-out infinite; }
 
-/* Porcelain float: gentle hovering motion. */
+/* Leaf float: gentle hovering motion. */
 @keyframes porc-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-9px) scale(1.04); }
 }
 .pop-bob { animation: porc-bob 3.8s ease-in-out infinite; }
 
-/* Slow rotation for the porcelain wheel. */
+/* Slow rotation for the foundry wheel. */
 @keyframes porc-wheel {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: porc-wheel 60s linear infinite; }
 
-/* Glaze glint: shimmering catchlight on porcelain tiles. */
+/* Sunlight glint: shimmering catchlight on timber tiles. */
 @keyframes porc-glint {
   0%, 100% { opacity: 0.35; transform: scale(0.85); }
   50% { opacity: 1; transform: scale(1.25); }
 }
 .pop-twinkle { animation: porc-glint 3.4s ease-in-out infinite; }
 
-/* Atelier ticker: infinite marquee (leftward drift). */
+/* Foundry ticker: infinite marquee (leftward drift). */
 @keyframes porc-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: porc-ticker 28s linear infinite; }
 
-/* Cobalt stripes: brand -> periwinkle -> gold diagonal weave. */
+/* Grove stripes: moss -> sage -> terracotta diagonal weave. */
 .pop-stripes {
-  background-image: repeating-linear-gradient(-55deg, #2563eb 0 10px, #60a5fa 10px 20px, #b8860b 20px 30px);
+  background-image: repeating-linear-gradient(-55deg, #34724d 0 10px, #5c8f63 10px 20px, #c2603e 20px 30px);
 }
 
-/* Porcelain tile: a white tile with a cobalt double rim and a
-   hand-painted brush stroke along its bottom edge; it floats on hover. */
+/* Timber tile: a parchment tile with a moss double rim and a
+   hand-chiselled terracotta groove along its base; it floats on hover. */
 .pop-lift {
   position: relative;
-  border: 2px solid #c9d6ee;
+  border: 2px solid #ccd8c6;
   background:
-    radial-gradient(circle at 82% 8%, rgba(59, 130, 246, 0.08) 0%, transparent 46%),
-    linear-gradient(160deg, #ffffff 0%, #f8faff 55%, #eef3fd 100%);
-  border-radius: 1.25rem;
+    radial-gradient(circle at 82% 8%, rgba(76, 145, 104, 0.10) 0%, transparent 46%),
+    linear-gradient(160deg, #ffffff 0%, #fbfbf3 55%, #f3eee0 100%);
+  border-radius: 1rem;
   box-shadow:
-    0 0 0 1px rgba(37, 99, 235, 0.10),
-    0 18px 34px -22px rgba(37, 99, 235, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    0 0 0 1px rgba(52, 114, 77, 0.12),
+    0 20px 34px -22px rgba(52, 114, 77, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 -8px 18px -14px rgba(158, 74, 44, 0.25);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   overflow: hidden;
 }
 .pop-lift::before {
-  /* cobalt brush dots painted along the tile's top-right corner */
+  /* moss leaf dots growing along the tile's top-right corner */
   content: "";
   position: absolute;
   top: 12px;
@@ -166,15 +166,15 @@ body {
   height: 12px;
   background:
     radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.95) 0 22%, transparent 24%),
-    radial-gradient(circle, rgba(37, 99, 235, 0.85) 0 34%, transparent 36%),
-    radial-gradient(circle at 78% 72%, rgba(29, 78, 216, 0.85) 0 26%, transparent 28%);
+    radial-gradient(circle, rgba(52, 114, 77, 0.85) 0 34%, transparent 36%),
+    radial-gradient(circle at 78% 72%, rgba(43, 91, 63, 0.85) 0 26%, transparent 28%);
   background-size: 12px 12px, 14px 14px, 12px 12px;
   background-repeat: no-repeat;
   background-position: 0 0, 10px 0, 20px 1px;
   pointer-events: none;
 }
 .pop-lift::after {
-  /* hand-painted cobalt brush stroke along the bottom edge */
+  /* terracotta chisel groove along the bottom edge */
   content: "";
   position: absolute;
   bottom: 0;
@@ -182,60 +182,61 @@ body {
   right: 12%;
   height: 4px;
   border-radius: 999px 999px 0 0;
-  background: linear-gradient(90deg, transparent, #2563eb 30%, #93c5fd 50%, #2563eb 70%, transparent);
-  box-shadow: 0 -1px 8px 1px rgba(37, 99, 235, 0.45);
+  background: linear-gradient(90deg, transparent, #c2603e 30%, #dd9058 50%, #c2603e 70%, transparent);
+  box-shadow: 0 -1px 8px 1px rgba(194, 96, 62, 0.45);
   opacity: 0.9;
   pointer-events: none;
 }
 .pop-lift:hover {
   transform: translateY(-5px);
-  border-color: #93c5fd;
+  border-color: #a8cfb5;
   box-shadow:
-    0 0 0 1px rgba(37, 99, 235, 0.18),
-    0 26px 44px -22px rgba(37, 99, 235, 0.45),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    0 0 0 1px rgba(52, 114, 77, 0.20),
+    0 26px 44px -22px rgba(52, 114, 77, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 -8px 18px -14px rgba(158, 74, 44, 0.3);
 }
 
-/* Porcelain glass: shared by modals and drawers — cool misted glass
-   with a cobalt rim and a soft blue base shadow. */
+/* Foundry glass: shared by modals and drawers — warm parchment glass
+   with a moss rim and a soft forest base shadow. */
 .pop-glass {
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(253, 252, 247, 0.94);
   backdrop-filter: blur(20px) saturate(1.1);
   -webkit-backdrop-filter: blur(20px) saturate(1.1);
-  border: 2px solid #c9d6ee;
-  border-radius: 1.25rem;
+  border: 2px solid #ccd8c6;
+  border-radius: 1rem;
   box-shadow:
-    0 28px 54px -24px rgba(30, 58, 138, 0.35),
-    0 0 0 1px rgba(37, 99, 235, 0.10),
+    0 28px 54px -24px rgba(18, 32, 25, 0.35),
+    0 0 0 1px rgba(52, 114, 77, 0.10),
     inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
-/* Gold wax seal: an antique-gold deal badge with a navy center. */
+/* Terracotta wax seal: a clay deal badge with a parchment center. */
 .starburst {
-  background: radial-gradient(circle at 35% 30%, #edc86e 0%, #d99f1f 55%, #b8860b 100%);
-  color: #0d1730;
+  background: radial-gradient(circle at 35% 30%, #e6b184 0%, #d2691e 55%, #c2603e 100%);
+  color: #122019;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   border-radius: 9999px;
   transform: rotate(-5deg);
-  box-shadow: 0 6px 18px -6px rgba(184, 134, 11, 0.7), inset 0 2px 6px rgba(255, 255, 255, 0.5);
-  outline: 2px dashed rgba(13, 23, 48, 0.55);
+  box-shadow: 0 6px 18px -6px rgba(194, 96, 62, 0.7), inset 0 2px 6px rgba(255, 255, 255, 0.5);
+  outline: 2px dashed rgba(18, 32, 25, 0.55);
   outline-offset: -6px;
-  border: 2px solid #b8860b;
+  border: 2px solid #c2603e;
 }
 
-/* Porcelain crackle: cobalt dot texture for day bands. */
+/* Moss stipple: forest dot texture for day bands. */
 .halftone {
   background-image:
-    radial-gradient(circle, rgba(37, 99, 235, 0.10) 1.2px, transparent 1.9px),
-    radial-gradient(circle, rgba(96, 165, 250, 0.08) 1px, transparent 1.6px);
+    radial-gradient(circle, rgba(52, 114, 77, 0.12) 1.2px, transparent 1.9px),
+    radial-gradient(circle, rgba(124, 185, 143, 0.10) 1px, transparent 1.6px);
   background-size: 15px 15px, 23px 23px;
   background-position: 0 0, 7px 9px;
 }
 
-/* Cobalt beads: a row of porcelain beads dividing sections. */
+/* Moss beads: a row of forest beads dividing sections. */
 .zigzag {
   height: 14px;
-  background-image: radial-gradient(circle at 12px 0px, #2563eb 9px, transparent 10px);
+  background-image: radial-gradient(circle at 12px 0px, #34724d 9px, transparent 10px);
   background-size: 28px 14px;
   background-repeat: repeat-x;
   opacity: 0.85;
@@ -243,33 +244,33 @@ body {
   mask: linear-gradient(180deg, black 55%, transparent 100%);
 }
 
-/* Porcelain awning: cobalt/periwinkle stripes with a cobalt hem. */
+/* Foundry awning: moss/sage stripes with a terracotta hem. */
 .bazaar-awning {
   background-image:
-    repeating-linear-gradient(45deg, rgba(37, 99, 235, 0.30) 0 26px, rgba(244, 247, 253, 0.96) 26px 52px, rgba(184, 134, 11, 0.20) 52px 58px, rgba(244, 247, 253, 0.96) 58px 84px);
-  border-bottom: 3px solid #2563eb;
-  box-shadow: 0 8px 20px -8px rgba(37, 99, 235, 0.35);
+    repeating-linear-gradient(45deg, rgba(52, 114, 77, 0.30) 0 26px, rgba(246, 242, 231, 0.96) 26px 52px, rgba(194, 96, 62, 0.22) 52px 58px, rgba(246, 242, 231, 0.96) 58px 84px);
+  border-bottom: 3px solid #34724d;
+  box-shadow: 0 8px 20px -8px rgba(52, 114, 77, 0.35);
 }
 
-/* Moon halo: layered cobalt/periwinkle glow for the porcelain moon. */
+/* Sun halo: layered moss/sage glow for the foundry sun. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(96, 165, 250, 0.5) 0%, rgba(59, 130, 246, 0.3) 42%, rgba(96, 165, 250, 0.22) 62%, rgba(96, 165, 250, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(124, 185, 143, 0.5) 0%, rgba(76, 145, 104, 0.3) 42%, rgba(124, 185, 143, 0.22) 62%, rgba(124, 185, 143, 0) 76%);
 }
-/* Porcelain moon: a pale-blue disc with a cobalt halo. */
+/* Foundry sun: a warm clay disc with a terracotta halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #eff6ff 0%, #93c5fd 52%, #1d4ed8 100%);
-  box-shadow: 0 0 70px -8px rgba(96, 165, 250, 0.6), 0 0 28px -6px rgba(37, 99, 235, 0.5), inset 0 3px 12px rgba(255, 255, 255, 0.45);
-  border: 2px solid rgba(147, 197, 253, 0.8);
+    radial-gradient(circle at 38% 34%, #f9ece2 0%, #dd9058 52%, #9e4a2c 100%);
+  box-shadow: 0 0 70px -8px rgba(210, 105, 30, 0.55), 0 0 28px -6px rgba(194, 96, 62, 0.5), inset 0 3px 12px rgba(255, 255, 255, 0.45);
+  border: 2px solid rgba(240, 212, 184, 0.8);
 }
 
-/* Cobalt rings around the porcelain beacon. */
+/* Moss rings around the foundry beacon. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(37, 99, 235, 0.4) 0px,
-    rgba(37, 99, 235, 0.4) 3px,
+    rgba(52, 114, 77, 0.4) 0px,
+    rgba(52, 114, 77, 0.4) 3px,
     transparent 3px,
     transparent 28px
   );
@@ -280,8 +281,8 @@ body {
 .sun-rays {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(96, 165, 250, 0.45) 0px,
-    rgba(96, 165, 250, 0.45) 3px,
+    rgba(194, 96, 62, 0.4) 0px,
+    rgba(194, 96, 62, 0.4) 3px,
     transparent 3px,
     transparent 28px
   );
@@ -290,62 +291,62 @@ body {
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all porcelain-styled. */
+/* Legacy aliases kept so untouched components still render — all timber-styled. */
 .lagoon-lift {
   position: relative;
-  border: 2px solid #c9d6ee;
-  background: linear-gradient(160deg, #ffffff 0%, #f8faff 60%, #eef3fd 100%);
-  border-radius: 1.25rem;
-  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.10), 0 18px 34px -22px rgba(37, 99, 235, 0.35);
+  border: 2px solid #ccd8c6;
+  background: linear-gradient(160deg, #ffffff 0%, #fbfbf3 60%, #f3eee0 100%);
+  border-radius: 1rem;
+  box-shadow: 0 0 0 1px rgba(52, 114, 77, 0.12), 0 20px 34px -22px rgba(52, 114, 77, 0.4);
   transition: transform 0.24s ease, box-shadow 0.24s ease;
   overflow: hidden;
 }
 .lagoon-lift:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.18), 0 26px 44px -22px rgba(37, 99, 235, 0.45);
+  box-shadow: 0 0 0 1px rgba(52, 114, 77, 0.20), 0 26px 44px -22px rgba(52, 114, 77, 0.5);
 }
 .stamp-perf {
-  border: 2px dashed #b8860b;
-  background: rgba(184, 134, 11, 0.08);
-  border-radius: 1.25rem;
-  box-shadow: 0 14px 28px -18px rgba(184, 134, 11, 0.4);
+  border: 2px dashed #c2603e;
+  background: rgba(194, 96, 62, 0.08);
+  border-radius: 1rem;
+  box-shadow: 0 14px 28px -18px rgba(194, 96, 62, 0.4);
 }
 .ember-glow {
   position: relative;
-  border: 2px solid #93c5fd;
-  background: linear-gradient(160deg, #eff6ff 0%, #dbeafe 60%, rgba(59, 130, 246, 0.10) 100%);
-  border-radius: 1.25rem;
-  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.10), 0 18px 34px -22px rgba(37, 99, 235, 0.4);
+  border: 2px solid #a8cfb5;
+  background: linear-gradient(160deg, #f2f8f3 0%, #e4f0e7 60%, rgba(76, 145, 104, 0.10) 100%);
+  border-radius: 1rem;
+  box-shadow: 0 0 0 1px rgba(52, 114, 77, 0.12), 0 20px 34px -22px rgba(52, 114, 77, 0.4);
   transition: transform 0.24s ease, box-shadow 0.24s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.18), 0 26px 44px -22px rgba(37, 99, 235, 0.5);
+  box-shadow: 0 0 0 1px rgba(52, 114, 77, 0.20), 0 26px 44px -22px rgba(52, 114, 77, 0.5);
 }
 .ripple-glow {
   position: relative;
-  border: 2px solid #f4dfa6;
-  background: linear-gradient(160deg, #fdf9ec 0%, #faf0d3 60%, rgba(217, 159, 31, 0.10) 100%);
-  border-radius: 1.25rem;
-  box-shadow: 0 0 0 1px rgba(184, 134, 11, 0.10), 0 18px 34px -22px rgba(184, 134, 11, 0.4);
+  border: 2px solid #f0d4b8;
+  background: linear-gradient(160deg, #fdf6ef 0%, #f9ece2 60%, rgba(210, 105, 30, 0.10) 100%);
+  border-radius: 1rem;
+  box-shadow: 0 0 0 1px rgba(194, 96, 62, 0.12), 0 20px 34px -22px rgba(194, 96, 62, 0.4);
   transition: transform 0.24s ease, box-shadow 0.24s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 0 1px rgba(184, 134, 11, 0.18), 0 26px 44px -22px rgba(217, 159, 31, 0.5);
+  box-shadow: 0 0 0 1px rgba(194, 96, 62, 0.20), 0 26px 44px -22px rgba(210, 105, 30, 0.5);
 }
 .lagoon-glow {
   position: relative;
-  border: 2px solid #c9d6ee;
-  background: linear-gradient(160deg, #ffffff 0%, #f8faff 60%, rgba(59, 130, 246, 0.06) 100%);
-  border-radius: 1.25rem;
-  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.10), 0 18px 34px -22px rgba(37, 99, 235, 0.3);
+  border: 2px solid #ccd8c6;
+  background: linear-gradient(160deg, #ffffff 0%, #fbfbf3 60%, rgba(76, 145, 104, 0.08) 100%);
+  border-radius: 1rem;
+  box-shadow: 0 0 0 1px rgba(52, 114, 77, 0.12), 0 20px 34px -22px rgba(52, 114, 77, 0.3);
   transition: transform 0.24s ease, box-shadow 0.24s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.18), 0 26px 44px -22px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 0 0 1px rgba(52, 114, 77, 0.20), 0 26px 44px -22px rgba(52, 114, 77, 0.4);
 }
