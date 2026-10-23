@@ -15,7 +15,7 @@ export default function Newsletter({ email, onEmailChange, subscribed, onSubscri
   return (
     <Reveal>
       <div className="relative flex flex-col justify-center overflow-hidden rounded-[2rem] bg-gradient-to-br from-brand-700 via-brand-600 to-brand-800 p-8 text-white shadow-xl shadow-brand-900/30 sm:p-10">
-        <div aria-hidden className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[#0e2a30]/20 blur-3xl" />
+        <div aria-hidden className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[#2e1c10]/20 blur-3xl" />
         <div aria-hidden className="pointer-events-none absolute -bottom-20 -left-10 h-48 w-48 rounded-full bg-brand-500/30 blur-3xl" />
         <div
           aria-hidden
@@ -29,8 +29,8 @@ export default function Newsletter({ email, onEmailChange, subscribed, onSubscri
             <p className="mt-5 rounded-lg bg-white/15 p-4 font-bold text-white ring-1 ring-white/25">✅ Subscribed! Welcome to GadZone BD family.</p>
           ) : (
             <form className="mt-5 flex flex-col gap-3 sm:flex-row" onSubmit={onSubscribe}>
-              <input type="email" required value={email} onChange={(e) => onEmailChange(e.target.value)} placeholder="Your email address" className="flex-1 rounded-full bg-[#d9f0ec] px-5 py-3.5 text-sm text-[#0e2a30] outline-none ring-1 ring-white/40 placeholder:text-[#5b7a80] transition focus:ring-2 focus:ring-white/80" />
-              <motion.button whileTap={{ scale: 0.96 }} className="rounded-full bg-[#d9f0ec] px-6 py-3 font-bold text-[#0f766e] shadow-lg ring-1 ring-[#0f766e]/40 transition hover:bg-[#fda4af] hover:text-[#06231f] active:scale-[0.98]">Subscribe</motion.button>
+              <input type="email" required value={email} onChange={(e) => onEmailChange(e.target.value)} placeholder="Your email address" className="flex-1 rounded-full bg-[#f7e6c9] px-5 py-3.5 text-sm text-[#2e1c10] outline-none ring-1 ring-white/40 placeholder:text-[#8a6a4d] transition focus:ring-2 focus:ring-white/80" />
+              <motion.button whileTap={{ scale: 0.96 }} className="rounded-full bg-[#f7e6c9] px-6 py-3 font-bold text-[#9c430d] shadow-lg ring-1 ring-[#9c430d]/40 transition hover:bg-[#fdba74] hover:text-[#2b1a0c] active:scale-[0.98]">Subscribe</motion.button>
             </form>
           )}
           <p className="mt-3.5 text-xs text-white/80">No spam, only deals. Unsubscribe anytime.</p>
