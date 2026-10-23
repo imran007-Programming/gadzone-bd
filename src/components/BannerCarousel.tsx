@@ -115,7 +115,7 @@ export default function BannerCarousel() {
       aria-roledescription="carousel"
       aria-label="Featured offers"
     >
-      <div className="relative overflow-hidden rounded-[1.75rem] border-2 border-brand-400/30 shadow-[0_24px_70px_-18px_rgba(36, 86, 240, 0.45)] ring-1 ring-brand-400/20">
+      <div className="relative overflow-hidden rounded-[1.75rem] border-2 border-brand-400/30 shadow-[0_24px_70px_-18px_rgba(234, 88, 12, 0.45)] ring-1 ring-brand-400/20">
         <AnimatePresence initial={false} custom={direction} mode="wait">
           <motion.div
             key={slide.id}
@@ -155,10 +155,10 @@ export default function BannerCarousel() {
             {/* Clay-wash overlay so the cream copy reads over any banner art */}
             <div
               aria-hidden
-              className="absolute inset-0 bg-gradient-to-br from-[#0a1428]/92 via-[#0a1428]/55 to-[#0a1428]/20"
+              className="absolute inset-0 bg-gradient-to-br from-[#1e0f08]/92 via-[#1e0f08]/55 to-[#1e0f08]/20"
             />
-            <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_82%_18%,rgba(36, 86, 240, 0.25),transparent)]" />
-            <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#0a1428]/70 via-transparent to-transparent" />
+            <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_82%_18%,rgba(234, 88, 12, 0.25),transparent)]" />
+            <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#1e0f08]/70 via-transparent to-transparent" />
             {/* Slide copy */}
             <div className="absolute inset-0 flex flex-col justify-center px-6 text-white sm:px-10 lg:px-14">
               <span className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-gold-700 to-gold-600 px-5 py-1.5 text-xs font-black uppercase tracking-[0.18em] text-white shadow-[0_0_22px_rgba(167, 139, 250, 0.6)] ring-2 ring-white/30">
@@ -166,19 +166,19 @@ export default function BannerCarousel() {
               </span>
               <h2 className="mt-5 max-w-xl text-4xl font-black leading-[1.05] tracking-tight drop-shadow-sm sm:text-5xl">
                 {slide.headline}
-                <span className="mt-2.5 block text-xl font-bold tracking-tight text-[#1d44d8] drop-shadow-sm sm:text-2xl">{slide.accent}</span>
+                <span className="mt-2.5 block text-xl font-bold tracking-tight text-[#c2410c] drop-shadow-sm sm:text-2xl">{slide.accent}</span>
               </h2>
               <p className="mt-4 max-w-md text-base leading-relaxed text-white/85 drop-shadow-sm">{slide.subtext}</p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <a
                   href="#shop"
-                  className="rounded-full bg-gradient-to-r from-brand-700 to-brand-500 px-7 py-3.5 font-black text-white shadow-[0_12px_28px_-8px_rgba(36, 86, 240, 0.6)] transition hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0 active:shadow-none"
+                  className="rounded-full bg-gradient-to-r from-brand-700 to-brand-500 px-7 py-3.5 font-black text-white shadow-[0_12px_28px_-8px_rgba(234, 88, 12, 0.6)] transition hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0 active:shadow-none"
                 >
                   Shop Now →
                 </a>
                 <a
                   href="#flash"
-                  className="rounded-full border-2 border-white/40 bg-[#0a1428]/70 px-7 py-3.5 font-bold text-white backdrop-blur-sm transition hover:bg-[#1e348a] active:scale-[0.98]"
+                  className="rounded-full border-2 border-white/40 bg-[#1e0f08]/70 px-7 py-3.5 font-bold text-white backdrop-blur-sm transition hover:bg-[#7c2d12] active:scale-[0.98]"
                 >
                   ⚡ Flash Deals
                 </a>
@@ -192,7 +192,7 @@ export default function BannerCarousel() {
           type="button"
           onClick={prev}
           aria-label="Previous banner"
-          className="absolute left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 text-lg font-black text-white shadow-[0_8px_20px_-6px_rgba(36, 86, 240, 0.6)] transition hover:-translate-y-[calc(50%+2px)] hover:brightness-110 active:translate-y-[-50%] active:shadow-none sm:left-4"
+          className="absolute left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 text-lg font-black text-white shadow-[0_8px_20px_-6px_rgba(234, 88, 12, 0.6)] transition hover:-translate-y-[calc(50%+2px)] hover:brightness-110 active:translate-y-[-50%] active:shadow-none sm:left-4"
         >
           ‹
         </button>
@@ -200,7 +200,7 @@ export default function BannerCarousel() {
           type="button"
           onClick={next}
           aria-label="Next banner"
-          className="absolute right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 text-lg font-black text-white shadow-[0_8px_20px_-6px_rgba(36, 86, 240, 0.6)] transition hover:-translate-y-[calc(50%+2px)] hover:brightness-110 active:translate-y-[-50%] active:shadow-none sm:right-4"
+          className="absolute right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 text-lg font-black text-white shadow-[0_8px_20px_-6px_rgba(234, 88, 12, 0.6)] transition hover:-translate-y-[calc(50%+2px)] hover:brightness-110 active:translate-y-[-50%] active:shadow-none sm:right-4"
         >
           ›
         </button>
@@ -217,7 +217,7 @@ export default function BannerCarousel() {
             aria-label={`Go to slide ${i + 1}: ${s.eyebrow}`}
             onClick={() => goTo(i, i > index ? 1 : -1)}
             className={`h-2.5 rounded-full transition-all ${
-              i === index ? "w-10 border border-[#d8e6ff]/40 bg-gradient-to-r from-brand-500 to-white" : "w-2.5 bg-[#0a1428]/20 hover:bg-[#0a1428]/45"
+              i === index ? "w-10 border border-[#f3e2c9]/40 bg-gradient-to-r from-brand-500 to-white" : "w-2.5 bg-[#1e0f08]/20 hover:bg-[#1e0f08]/45"
             }`}
           />
         ))}
