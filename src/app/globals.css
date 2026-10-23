@@ -1,66 +1,66 @@
 @import "tailwindcss";
 
 @theme {
-  /* Emerald Dawn Bazaar: a warm morning market where the day's fresh
-     stock arrives. Cards are crisp paper tickets with a hard emerald
-     offset shadow and a tri-colour ribbon header; they lift on hover.
-     Emerald carries the brand, marigold the highlight, terracotta
-     the warm pop. */
+  /* Origami Ink Studio: a paper-folding studio where every card is a
+     freshly creased sheet of rice paper. Cards are crisp folded-paper
+     panels with a thin sumi-ink border, a red corner fold and a hard
+     ink offset shadow; they unfold on hover. Cinnabar red carries the
+     brand, bamboo green the fresh accent, sumi ink the structure. */
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = emerald scale */
-  --color-brand-50: #ecfdf5;
-  --color-brand-100: #d1fae5;
-  --color-brand-200: #a7f3d0;
-  --color-brand-300: #6ee7b7;
-  --color-brand-400: #34d399;
-  --color-brand-500: #10b981;
-  --color-brand-600: #059669;
-  --color-brand-700: #047857;
-  --color-brand-800: #065f46;
-  --color-brand-900: #064e3b;
-  --color-brand-950: #022c22;
-  --color-brand: #059669;
-  --color-brand-dark: #047857;
-  --color-brand-deep: #065f46;
+  /* brand = cinnabar red scale */
+  --color-brand-50: #fdf0ec;
+  --color-brand-100: #faddd4;
+  --color-brand-200: #f6b3a3;
+  --color-brand-300: #ef8470;
+  --color-brand-400: #e4573d;
+  --color-brand-500: #d2361f;
+  --color-brand-600: #b42a19;
+  --color-brand-700: #942214;
+  --color-brand-800: #761c12;
+  --color-brand-900: #5e1810;
+  --color-brand-950: #330d08;
+  --color-brand: #b42a19;
+  --color-brand-dark: #942214;
+  --color-brand-deep: #5e1810;
 
-  /* gold = marigold scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #f59e0b;
-  --color-gold-deep: #b45309;
-  --color-gold-soft: #fef3c7;
+  /* gold = bamboo green scale (name kept for legacy class refs) */
+  --color-gold-50: #f4f8ec;
+  --color-gold-100: #e5efcf;
+  --color-gold-200: #ccdfa6;
+  --color-gold-300: #adc874;
+  --color-gold-400: #8db14e;
+  --color-gold-500: #719533;
+  --color-gold-600: #57792a;
+  --color-gold-700: #455f24;
+  --color-gold-800: #3a4c21;
+  --color-gold-900: #33411f;
+  --color-gold-950: #18220d;
+  --color-gold: #719533;
+  --color-gold-deep: #455f24;
+  --color-gold-soft: #e5efcf;
 
-  /* popblue = terracotta coral scale (name kept for legacy class refs) */
-  --color-popblue-50: #fff5f2;
-  --color-popblue-100: #ffe8e0;
-  --color-popblue-200: #ffd1c4;
-  --color-popblue-300: #ffab96;
-  --color-popblue-400: #ff7f63;
-  --color-popblue-500: #f9613f;
-  --color-popblue-600: #e04a2a;
-  --color-popblue-700: #b93720;
-  --color-popblue-800: #96301e;
-  --color-popblue-900: #7a2a1d;
-  --color-popblue-950: #42140c;
-  --color-popblue: #f9613f;
-  --color-popblue-deep: #b93720;
-  --color-popblue-soft: #ffe8e0;
+  /* popblue = sumi ink-gray scale (name kept for legacy class refs) */
+  --color-popblue-50: #f4f4f6;
+  --color-popblue-100: #e6e7ec;
+  --color-popblue-200: #c9ccd6;
+  --color-popblue-300: #a4a9b8;
+  --color-popblue-400: #7a8296;
+  --color-popblue-500: #5b6377;
+  --color-popblue-600: #484f61;
+  --color-popblue-700: #3c424f;
+  --color-popblue-800: #23262e;
+  --color-popblue-900: #1c1c20;
+  --color-popblue-950: #101012;
+  --color-popblue: #484f61;
+  --color-popblue-deep: #1c1c20;
+  --color-popblue-soft: #e6e7ec;
 
-  --color-ink: #1f2d26;
-  --color-paper: #fffbf3;
-  --color-mute: #64756c;
+  --color-ink: #1c1c20;
+  --color-paper: #faf6ef;
+  --color-mute: #6b6f76;
   --color-card: #ffffff;
-  --color-deep: #123c2d;
+  --color-deep: #3d1210;
 }
 
 html { scroll-behavior: smooth; }
@@ -75,164 +75,183 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fffbf3;
+  background-color: #faf6ef;
   background-image:
-    linear-gradient(rgba(5, 150, 105, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(5, 150, 105, 0.05) 1px, transparent 1px),
-    radial-gradient(ellipse 60% 32% at 88% -8%, rgba(245, 158, 11, 0.20), transparent 70%),
-    radial-gradient(ellipse 46% 26% at 4% 102%, rgba(16, 185, 129, 0.12), transparent 70%),
-    radial-gradient(ellipse 34% 22% at 58% 48%, rgba(249, 97, 63, 0.07), transparent 70%);
-  background-size: 44px 44px, 44px 44px, auto, auto, auto;
-  color: #1f2d26;
+    linear-gradient(rgba(28, 28, 32, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(28, 28, 32, 0.045) 1px, transparent 1px),
+    radial-gradient(ellipse 56% 30% at 90% -6%, rgba(210, 54, 31, 0.10), transparent 70%),
+    radial-gradient(ellipse 44% 26% at 4% 102%, rgba(113, 149, 51, 0.10), transparent 70%),
+    radial-gradient(ellipse 30% 20% at 56% 46%, rgba(28, 28, 32, 0.05), transparent 70%);
+  background-size: 40px 40px, 40px 40px, auto, auto, auto;
+  color: #1c1c20;
 }
-::selection { background: #fbbf24; color: #1f2d26; }
+::selection { background: #d2361f; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #059669, #f59e0b); border-radius: 8px; border: 2px solid #fffbf3; }
-::-webkit-scrollbar-track { background: #f7efdf; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #b42a19, #1c1c20); border-radius: 8px; border: 2px solid #faf6ef; }
+::-webkit-scrollbar-track { background: #f0e9da; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Petal drift: marigold petals falling through the morning air. */
+/* Paper scraps settling through the studio air. */
 @keyframes signal-fall {
-  0% { transform: translate3d(-6px, -60px, 0) rotate(0deg) scale(0.75); opacity: 0; }
-  18% { opacity: 0.9; }
-  50% { transform: translate3d(10px, 120px, 0) rotate(-140deg) scale(1); }
-  82% { opacity: 0.7; }
-  100% { transform: translate3d(-8px, 300px, 0) rotate(-260deg) scale(0.9); opacity: 0; }
+  0% { transform: translate3d(6px, -60px, 0) rotate(0deg) scale(0.8); opacity: 0; }
+  18% { opacity: 0.85; }
+  50% { transform: translate3d(-10px, 120px, 0) rotate(140deg) scale(1); }
+  82% { opacity: 0.65; }
+  100% { transform: translate3d(8px, 300px, 0) rotate(260deg) scale(0.9); opacity: 0; }
 }
-.pop-fall { animation: signal-fall 12s linear infinite; }
+.pop-fall { animation: signal-fall 13s linear infinite; }
 
-/* Breeze drift: slow lateral float of the warm morning air. */
+/* Crease drift: slow lateral float of paper dust. */
 @keyframes signal-sway {
-  0%, 100% { transform: translate3d(3vw, 0, 0) scale(1); opacity: 0.55; }
-  50% { transform: translate3d(-3vw, -0.8rem, 0) scale(1.1); opacity: 0.85; }
+  0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.5; }
+  50% { transform: translate3d(3vw, -0.8rem, 0) scale(1.08); opacity: 0.8; }
 }
-.pop-drift { animation: signal-sway 30s ease-in-out infinite; }
+.pop-drift { animation: signal-sway 32s ease-in-out infinite; }
 
-/* Levitation pulse: gentle floating glow. */
+/* Unfold pulse: gentle floating hover. */
 @keyframes signal-bob {
-  0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-8px) scale(1.04); }
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-7px) rotate(-2deg); }
 }
-.pop-bob { animation: signal-bob 4s ease-in-out infinite; }
+.pop-bob { animation: signal-bob 4.2s ease-in-out infinite; }
 
-/* Slow rotation for the morning sun halo. */
+/* Slow rotation for the paper sun. */
 @keyframes signal-wheel {
-  to { transform: rotate(-360deg); }
+  to { transform: rotate(360deg); }
 }
-.pop-spin { animation: signal-wheel 56s linear infinite; }
+.pop-spin { animation: signal-wheel 60s linear infinite; }
 
-/* Dew glint: sparkling catchlight. */
+/* Crease glint: sparkling catchlight on folded paper. */
 @keyframes signal-glint {
-  0%, 100% { opacity: 0.3; transform: scale(0.85); }
+  0%, 100% { opacity: 0.35; transform: scale(0.85); }
   50% { opacity: 1; transform: scale(1.2); }
 }
-.pop-twinkle { animation: signal-glint 3.6s ease-in-out infinite; }
+.pop-twinkle { animation: signal-glint 3.8s ease-in-out infinite; }
 
-/* Morning ticker: infinite marquee (leftward drift). */
+/* Studio ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
-.pop-ticker { animation: signal-ticker 30s linear infinite; }
+.pop-ticker { animation: signal-ticker 28s linear infinite; }
 
-/* Awning stripes: emerald -> marigold -> terracotta diagonal weave. */
+/* Fold stripes: cinnabar -> ink -> bamboo diagonal weave. */
 .pop-stripes {
-  background-image: repeating-linear-gradient(-55deg, #059669 0 10px, #047857 10px 20px, #f59e0b 20px 30px);
+  background-image: repeating-linear-gradient(-55deg, #b42a19 0 10px, #1c1c20 10px 20px, #719533 20px 30px);
 }
 
-/* Market ticket: a crisp paper card with a hard emerald offset shadow
-   and a tri-colour ribbon header; lifts on hover. */
+/* Folded paper card: a crisp creased sheet with a thin sumi border,
+   a cinnabar corner fold and a hard ink offset shadow; unfolds on hover. */
 .pop-lift {
   position: relative;
-  border: 2px solid #059669;
-  background: linear-gradient(180deg, #ffffff 0%, #fffdf7 100%);
-  border-radius: 1rem;
-  box-shadow: 4px 4px 0 #065f46, 0 18px 30px -18px rgba(6, 95, 70, 0.45);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  border: 1.5px solid #1c1c20;
+  background:
+    linear-gradient(135deg, #ffffff 0%, #ffffff 62%, rgba(28, 28, 32, 0.05) 62.5%, rgba(28, 28, 32, 0.10) 100%);
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 0 #1c1c20, 0 16px 28px -18px rgba(28, 28, 32, 0.4);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .pop-lift::before {
+  /* the red corner fold */
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
   right: 0;
-  height: 6px;
-  background: linear-gradient(90deg, #059669 0%, #f59e0b 55%, #f9613f 100%);
-  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.5);
+  width: 34px;
+  height: 34px;
+  background: linear-gradient(225deg, #d2361f 0 48%, rgba(210, 54, 31, 0.25) 49%, transparent 50%);
+  border-left: 1.5px solid #1c1c20;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  pointer-events: none;
+}
+.pop-lift::after {
+  /* the crease line down the diagonal */
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 16px;
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(180deg, rgba(28, 28, 32, 0.35), transparent);
+  transform: rotate(45deg);
+  transform-origin: top;
   pointer-events: none;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  border-color: #047857;
-  box-shadow: 6px 6px 0 #065f46, 0 26px 40px -16px rgba(6, 95, 70, 0.55), 0 0 20px -8px rgba(249, 97, 63, 0.45);
+  transform: translateY(-4px) rotate(-0.4deg);
+  box-shadow: 5px 5px 0 #1c1c20, 0 24px 38px -16px rgba(28, 28, 32, 0.5), 0 0 18px -8px rgba(210, 54, 31, 0.5);
 }
 
-/* Morning glass: shared by modals and drawers — a warm frosted panel. */
+/* Studio glass: shared by modals and drawers — a frosted paper panel
+   with a sumi border and cinnabar stitch. */
 .pop-glass {
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(20px) saturate(1.15);
-  -webkit-backdrop-filter: blur(20px) saturate(1.15);
-  border: 2px solid #059669;
-  border-radius: 1.25rem;
-  box-shadow: 4px 4px 0 #065f46, 0 24px 60px -18px rgba(6, 95, 70, 0.4), 0 0 28px -12px rgba(245, 158, 11, 0.5);
+  background: rgba(250, 246, 239, 0.92);
+  backdrop-filter: blur(20px) saturate(1.1);
+  -webkit-backdrop-filter: blur(20px) saturate(1.1);
+  border: 1.5px solid #1c1c20;
+  border-radius: 0.75rem;
+  box-shadow: 3px 3px 0 #1c1c20, 0 24px 56px -18px rgba(28, 28, 32, 0.4), inset 0 0 0 3px rgba(210, 54, 31, 0.08);
 }
 
-/* Sun seal: a marigold medallion with a dashed emerald ring. */
+/* Hanko seal: a cinnabar stamp medallion with a dashed ink ring. */
 .starburst {
-  background: radial-gradient(circle at 35% 30%, #fde68a 0%, #fbbf24 55%, #d97706 100%);
-  color: #1f2d26;
-  text-shadow: none;
+  background: radial-gradient(circle at 35% 30%, #e4573d 0%, #d2361f 55%, #942214 100%);
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(51, 13, 8, 0.6);
   border-radius: 9999px;
-  transform: rotate(6deg);
-  box-shadow: 0 0 22px -4px rgba(251, 191, 36, 0.8), inset 0 2px 6px rgba(255, 255, 255, 0.55);
-  outline: 2px dashed #059669;
+  transform: rotate(-6deg);
+  box-shadow: 0 0 20px -4px rgba(210, 54, 31, 0.7), inset 0 2px 6px rgba(255, 255, 255, 0.35);
+  outline: 2px dashed #1c1c20;
   outline-offset: -6px;
+  border: 2px solid #d2361f;
 }
 
-/* Market dots: faint marigold-dot texture for hero bands. */
+/* Crease dots: faint cinnabar-dot texture for studio bands. */
 .halftone {
-  background-image: radial-gradient(circle, rgba(217, 119, 6, 0.14) 1px, transparent 1.7px);
-  background-size: 14px 14px;
+  background-image: radial-gradient(circle, rgba(180, 42, 25, 0.16) 1px, transparent 1.7px);
+  background-size: 13px 13px;
 }
 
-/* Dawn band: an emerald -> marigold -> terracotta ribbon. */
+/* Crease band: a cinnabar chevron fold divider. */
 .zigzag {
-  height: 6px;
-  background: repeating-linear-gradient(135deg, #059669 0 12px, #f59e0b 12px 24px, #f9613f 24px 36px);
-  border-radius: 9999px;
-  box-shadow: 0 2px 10px rgba(5, 150, 105, 0.4);
+  height: 8px;
+  background: repeating-linear-gradient(135deg, #d2361f 0 12px, transparent 12px 24px),
+    repeating-linear-gradient(45deg, #1c1c20 0 12px, transparent 12px 24px);
+  background-color: rgba(210, 54, 31, 0.12);
+  border-top: 1.5px solid #1c1c20;
+  border-bottom: 1.5px solid #1c1c20;
 }
 
-/* Dawn canopy: warm panel with an emerald-marigold stripe and a
-   terracotta hem. */
+/* Studio ribbon: folded paper awning with a cinnabar hem. */
 .bazaar-awning {
   background-image:
-    repeating-linear-gradient(90deg, rgba(5, 150, 105, 0.55) 0 28px, rgba(255, 251, 243, 0.9) 28px 56px);
-  border-bottom: 3px solid #f9613f;
-  box-shadow: 0 6px 18px -6px rgba(5, 150, 105, 0.45);
+    repeating-linear-gradient(45deg, rgba(28, 28, 32, 0.5) 0 26px, rgba(250, 246, 239, 0.92) 26px 52px);
+  border-bottom: 3px solid #d2361f;
+  box-shadow: 0 6px 16px -6px rgba(28, 28, 32, 0.4);
 }
 
-/* Dawn wash: layered emerald/amber glow for the morning core. */
+/* Paper sun: layered cinnabar wash for the studio core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(251, 191, 36, 0.55) 0%, rgba(245, 158, 11, 0.38) 42%, rgba(16, 185, 129, 0.16) 62%, rgba(16, 185, 129, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(228, 87, 61, 0.5) 0%, rgba(210, 54, 31, 0.32) 42%, rgba(113, 149, 51, 0.12) 62%, rgba(113, 149, 51, 0) 76%);
 }
 .sun-disc {
   background:
-    conic-gradient(from 40deg, #fbbf24, #34d399, #f9613f, #fbbf24);
-  box-shadow: 0 0 70px -8px rgba(245, 158, 11, 0.65), 0 0 30px -6px rgba(249, 97, 63, 0.5);
+    radial-gradient(circle at 38% 34%, #e4573d 0%, #d2361f 52%, #942214 100%);
+  box-shadow: 0 0 64px -8px rgba(210, 54, 31, 0.6), 0 0 26px -6px rgba(180, 42, 25, 0.5), inset 0 3px 10px rgba(255, 255, 255, 0.3);
+  border: 2px solid #1c1c20;
 }
 
-/* Sun halo rings. */
+/* Ink halo rings around the paper sun. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(5, 150, 105, 0.5) 0px,
-    rgba(5, 150, 105, 0.5) 4px,
-    transparent 4px,
-    transparent 30px
+    rgba(28, 28, 32, 0.5) 0px,
+    rgba(28, 28, 32, 0.5) 3px,
+    transparent 3px,
+    transparent 28px
   );
   -webkit-mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
   mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
@@ -241,73 +260,72 @@ body {
 .sun-rays {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(245, 158, 11, 0.5) 0px,
-    rgba(245, 158, 11, 0.5) 4px,
-    transparent 4px,
-    transparent 30px
+    rgba(210, 54, 31, 0.5) 0px,
+    rgba(210, 54, 31, 0.5) 3px,
+    transparent 3px,
+    transparent 28px
   );
   -webkit-mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
   mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all dawn-styled. */
+/* Legacy aliases kept so untouched components still render — all ink-styled. */
 .lagoon-lift {
   position: relative;
-  border: 2px solid #059669;
-  background: linear-gradient(180deg, #ffffff 0%, #fffdf7 100%);
-  border-radius: 1rem;
-  box-shadow: 4px 4px 0 #065f46, 0 18px 30px -18px rgba(6, 95, 70, 0.45);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  border: 1.5px solid #1c1c20;
+  background: linear-gradient(135deg, #ffffff 0%, #ffffff 62%, rgba(28, 28, 32, 0.06) 100%);
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 0 #1c1c20, 0 16px 28px -18px rgba(28, 28, 32, 0.4);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .lagoon-lift:hover {
-  transform: translateY(-4px);
-  border-color: #047857;
-  box-shadow: 6px 6px 0 #065f46, 0 26px 40px -16px rgba(6, 95, 70, 0.55);
+  transform: translateY(-4px) rotate(-0.4deg);
+  box-shadow: 5px 5px 0 #1c1c20, 0 24px 38px -16px rgba(28, 28, 32, 0.5);
 }
 .stamp-perf {
-  border: 2px dashed #047857;
-  background: rgba(5, 150, 105, 0.08);
-  border-radius: 1rem;
-  box-shadow: 4px 4px 0 rgba(6, 95, 70, 0.25), 0 14px 26px -16px rgba(5, 150, 105, 0.45);
+  border: 2px dashed #942214;
+  background: rgba(210, 54, 31, 0.07);
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 0 rgba(28, 28, 32, 0.3), 0 14px 24px -16px rgba(210, 54, 31, 0.4);
 }
 .ember-glow {
   position: relative;
-  border: 2px solid #f59e0b;
-  background: linear-gradient(180deg, #ffffff 0%, #fffdf7 100%);
-  border-radius: 1rem;
-  box-shadow: 4px 4px 0 #b45309, 0 18px 30px -18px rgba(245, 158, 11, 0.5);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1.5px solid #1c1c20;
+  background: linear-gradient(135deg, #ffffff 0%, #ffffff 62%, rgba(113, 149, 51, 0.10) 100%);
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 0 #1c1c20, 0 16px 28px -18px rgba(113, 149, 51, 0.45);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
-  transform: translateY(-4px);
-  box-shadow: 6px 6px 0 #b45309, 0 26px 40px -16px rgba(245, 158, 11, 0.6);
+  transform: translateY(-4px) rotate(-0.4deg);
+  box-shadow: 5px 5px 0 #1c1c20, 0 24px 38px -16px rgba(113, 149, 51, 0.55);
 }
 .ripple-glow {
   position: relative;
-  border: 2px solid #f9613f;
-  background: linear-gradient(180deg, #ffffff 0%, #fffdf7 100%);
-  border-radius: 1rem;
-  box-shadow: 4px 4px 0 #b93720, 0 18px 30px -18px rgba(249, 97, 63, 0.45);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1.5px solid #1c1c20;
+  background: linear-gradient(135deg, #ffffff 0%, #ffffff 62%, rgba(210, 54, 31, 0.10) 100%);
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 0 #1c1c20, 0 16px 28px -18px rgba(210, 54, 31, 0.45);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
-  transform: translateY(-4px);
-  box-shadow: 6px 6px 0 #b93720, 0 26px 40px -16px rgba(249, 97, 63, 0.55);
+  transform: translateY(-4px) rotate(-0.4deg);
+  box-shadow: 5px 5px 0 #1c1c20, 0 24px 38px -16px rgba(210, 54, 31, 0.55);
 }
 .lagoon-glow {
   position: relative;
-  border: 2px solid #059669;
-  background: linear-gradient(180deg, #ffffff 0%, #fffdf7 100%);
-  border-radius: 1rem;
-  box-shadow: 4px 4px 0 #065f46, 0 18px 30px -18px rgba(6, 95, 70, 0.45);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1.5px solid #1c1c20;
+  background: linear-gradient(135deg, #ffffff 0%, #ffffff 62%, rgba(28, 28, 32, 0.06) 100%);
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 0 #1c1c20, 0 16px 28px -18px rgba(28, 28, 32, 0.4);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
-  transform: translateY(-4px);
-  box-shadow: 6px 6px 0 #065f46, 0 26px 40px -16px rgba(6, 95, 70, 0.55);
+  transform: translateY(-4px) rotate(-0.4deg);
+  box-shadow: 5px 5px 0 #1c1c20, 0 24px 38px -16px rgba(28, 28, 32, 0.5);
 }
