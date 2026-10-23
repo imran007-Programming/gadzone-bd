@@ -1,66 +1,66 @@
 @import "tailwindcss";
 
 @theme {
-  /* Origami Ink Studio: a paper-folding studio where every card is a
-     freshly creased sheet of rice paper. Cards are crisp folded-paper
-     panels with a thin sumi-ink border, a red corner fold and a hard
-     ink offset shadow; they unfold on hover. Cinnabar red carries the
-     brand, bamboo green the fresh accent, sumi ink the structure. */
+  /* Citrus Soda Pop: a fizzy soda-fountain market where every card is a
+     chilled bubble-glass panel floating in sparkling citrus. Panels are
+     big soft rounded bubbles with a tangerine rim light and a fizzy
+     glow underneath; they bob up on hover. Tangerine carries the brand,
+     lime fizz is the fresh accent, blueberry the cool structure. */
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = cinnabar red scale */
-  --color-brand-50: #fdf0ec;
-  --color-brand-100: #faddd4;
-  --color-brand-200: #f6b3a3;
-  --color-brand-300: #ef8470;
-  --color-brand-400: #e4573d;
-  --color-brand-500: #d2361f;
-  --color-brand-600: #b42a19;
-  --color-brand-700: #942214;
-  --color-brand-800: #761c12;
-  --color-brand-900: #5e1810;
-  --color-brand-950: #330d08;
-  --color-brand: #b42a19;
-  --color-brand-dark: #942214;
-  --color-brand-deep: #5e1810;
+  /* brand = tangerine scale */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #e0620f;
+  --color-brand-600: #c24e0a;
+  --color-brand-700: #9a3f08;
+  --color-brand-800: #7c350b;
+  --color-brand-900: #65300f;
+  --color-brand-950: #3d1a05;
+  --color-brand: #c24e0a;
+  --color-brand-dark: #9a3f08;
+  --color-brand-deep: #7c350b;
 
-  /* gold = bamboo green scale (name kept for legacy class refs) */
-  --color-gold-50: #f4f8ec;
-  --color-gold-100: #e5efcf;
-  --color-gold-200: #ccdfa6;
-  --color-gold-300: #adc874;
-  --color-gold-400: #8db14e;
-  --color-gold-500: #719533;
-  --color-gold-600: #57792a;
-  --color-gold-700: #455f24;
-  --color-gold-800: #3a4c21;
-  --color-gold-900: #33411f;
-  --color-gold-950: #18220d;
-  --color-gold: #719533;
-  --color-gold-deep: #455f24;
-  --color-gold-soft: #e5efcf;
+  /* gold = lime fizz scale (name kept for legacy class refs) */
+  --color-gold-50: #f7fee7;
+  --color-gold-100: #ecfccb;
+  --color-gold-200: #d9f99d;
+  --color-gold-300: #bef264;
+  --color-gold-400: #a3e635;
+  --color-gold-500: #84cc16;
+  --color-gold-600: #65a30d;
+  --color-gold-700: #4d7c0f;
+  --color-gold-800: #3f6212;
+  --color-gold-900: #365314;
+  --color-gold-950: #1a2e05;
+  --color-gold: #65a30d;
+  --color-gold-deep: #3f6212;
+  --color-gold-soft: #ecfccb;
 
-  /* popblue = sumi ink-gray scale (name kept for legacy class refs) */
-  --color-popblue-50: #f4f4f6;
-  --color-popblue-100: #e6e7ec;
-  --color-popblue-200: #c9ccd6;
-  --color-popblue-300: #a4a9b8;
-  --color-popblue-400: #7a8296;
-  --color-popblue-500: #5b6377;
-  --color-popblue-600: #484f61;
-  --color-popblue-700: #3c424f;
-  --color-popblue-800: #23262e;
-  --color-popblue-900: #1c1c20;
-  --color-popblue-950: #101012;
-  --color-popblue: #484f61;
-  --color-popblue-deep: #1c1c20;
-  --color-popblue-soft: #e6e7ec;
+  /* popblue = blueberry scale (name kept for legacy class refs) */
+  --color-popblue-50: #eff6ff;
+  --color-popblue-100: #dbeafe;
+  --color-popblue-200: #bfdbfe;
+  --color-popblue-300: #93c5fd;
+  --color-popblue-400: #60a5fa;
+  --color-popblue-500: #3b82f6;
+  --color-popblue-600: #2563eb;
+  --color-popblue-700: #1d4ed8;
+  --color-popblue-800: #1e40af;
+  --color-popblue-900: #1e3a8a;
+  --color-popblue-950: #172554;
+  --color-popblue: #2563eb;
+  --color-popblue-deep: #1e3a8a;
+  --color-popblue-soft: #dbeafe;
 
-  --color-ink: #1c1c20;
-  --color-paper: #faf6ef;
-  --color-mute: #6b6f76;
+  --color-ink: #232838;
+  --color-paper: #fff8ec;
+  --color-mute: #6d7280;
   --color-card: #ffffff;
-  --color-deep: #3d1210;
+  --color-deep: #7c2d12;
 }
 
 html { scroll-behavior: smooth; }
@@ -75,181 +75,200 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #faf6ef;
+  background-color: #fff8ec;
   background-image:
-    linear-gradient(rgba(28, 28, 32, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(28, 28, 32, 0.045) 1px, transparent 1px),
-    radial-gradient(ellipse 56% 30% at 90% -6%, rgba(210, 54, 31, 0.10), transparent 70%),
-    radial-gradient(ellipse 44% 26% at 4% 102%, rgba(113, 149, 51, 0.10), transparent 70%),
-    radial-gradient(ellipse 30% 20% at 56% 46%, rgba(28, 28, 32, 0.05), transparent 70%);
-  background-size: 40px 40px, 40px 40px, auto, auto, auto;
-  color: #1c1c20;
+    radial-gradient(circle, rgba(224, 98, 15, 0.10) 1.2px, transparent 1.8px),
+    radial-gradient(ellipse 52% 26% at 88% -4%, rgba(251, 146, 60, 0.22), transparent 70%),
+    radial-gradient(ellipse 40% 24% at 6% 104%, rgba(37, 99, 235, 0.14), transparent 70%),
+    radial-gradient(ellipse 28% 18% at 52% 44%, rgba(132, 204, 22, 0.10), transparent 70%);
+  background-size: 26px 26px, auto, auto, auto;
+  color: #232838;
 }
-::selection { background: #d2361f; color: #ffffff; }
+::selection { background: #e0620f; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #b42a19, #1c1c20); border-radius: 8px; border: 2px solid #faf6ef; }
-::-webkit-scrollbar-track { background: #f0e9da; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #fb923c, #2563eb); border-radius: 999px; border: 2px solid #fff8ec; }
+::-webkit-scrollbar-track { background: #f7ead3; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Paper scraps settling through the studio air. */
+/* Fizz rising through the soda. */
 @keyframes signal-fall {
-  0% { transform: translate3d(6px, -60px, 0) rotate(0deg) scale(0.8); opacity: 0; }
-  18% { opacity: 0.85; }
-  50% { transform: translate3d(-10px, 120px, 0) rotate(140deg) scale(1); }
-  82% { opacity: 0.65; }
-  100% { transform: translate3d(8px, 300px, 0) rotate(260deg) scale(0.9); opacity: 0; }
+  0% { transform: translate3d(4px, 60px, 0) scale(0.7); opacity: 0; }
+  18% { opacity: 0.9; }
+  50% { transform: translate3d(-8px, -120px, 0) scale(1); }
+  82% { opacity: 0.6; }
+  100% { transform: translate3d(6px, -300px, 0) scale(0.85); opacity: 0; }
 }
-.pop-fall { animation: signal-fall 13s linear infinite; }
+.pop-fall { animation: signal-fall 11s linear infinite; }
 
-/* Crease drift: slow lateral float of paper dust. */
+/* Condensation drift: slow lateral float of mist. */
 @keyframes signal-sway {
   0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(3vw, -0.8rem, 0) scale(1.08); opacity: 0.8; }
 }
-.pop-drift { animation: signal-sway 32s ease-in-out infinite; }
+.pop-drift { animation: signal-sway 30s ease-in-out infinite; }
 
-/* Unfold pulse: gentle floating hover. */
+/* Bubble bob: gentle floating hover. */
 @keyframes signal-bob {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-7px) rotate(-2deg); }
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-9px) scale(1.04); }
 }
-.pop-bob { animation: signal-bob 4.2s ease-in-out infinite; }
+.pop-bob { animation: signal-bob 3.8s ease-in-out infinite; }
 
-/* Slow rotation for the paper sun. */
+/* Slow rotation for the fizz sun. */
 @keyframes signal-wheel {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: signal-wheel 60s linear infinite; }
 
-/* Crease glint: sparkling catchlight on folded paper. */
+/* Fizz sparkle: glinting catchlight on bubbles. */
 @keyframes signal-glint {
   0%, 100% { opacity: 0.35; transform: scale(0.85); }
-  50% { opacity: 1; transform: scale(1.2); }
+  50% { opacity: 1; transform: scale(1.25); }
 }
-.pop-twinkle { animation: signal-glint 3.8s ease-in-out infinite; }
+.pop-twinkle { animation: signal-glint 3.4s ease-in-out infinite; }
 
-/* Studio ticker: infinite marquee (leftward drift). */
+/* Soda ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 28s linear infinite; }
 
-/* Fold stripes: cinnabar -> ink -> bamboo diagonal weave. */
+/* Citrus stripes: tangerine -> blueberry -> lime diagonal weave. */
 .pop-stripes {
-  background-image: repeating-linear-gradient(-55deg, #b42a19 0 10px, #1c1c20 10px 20px, #719533 20px 30px);
+  background-image: repeating-linear-gradient(-55deg, #e0620f 0 10px, #2563eb 10px 20px, #84cc16 20px 30px);
 }
 
-/* Folded paper card: a crisp creased sheet with a thin sumi border,
-   a cinnabar corner fold and a hard ink offset shadow; unfolds on hover. */
+/* Bubble-glass card: a chilled soda bubble panel with a tangerine rim
+   light and a fizzy glow underneath; it bobs up on hover. */
 .pop-lift {
   position: relative;
-  border: 1.5px solid #1c1c20;
+  border: 2px solid #fed7aa;
   background:
-    linear-gradient(135deg, #ffffff 0%, #ffffff 62%, rgba(28, 28, 32, 0.05) 62.5%, rgba(28, 28, 32, 0.10) 100%);
-  border-radius: 0.5rem;
-  box-shadow: 3px 3px 0 #1c1c20, 0 16px 28px -18px rgba(28, 28, 32, 0.4);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+    radial-gradient(circle at 82% 8%, rgba(251, 146, 60, 0.14) 0%, transparent 46%),
+    linear-gradient(160deg, #ffffff 0%, #fffaf0 55%, #fff3df 100%);
+  border-radius: 1.75rem;
+  box-shadow:
+    0 22px 44px -20px rgba(224, 98, 15, 0.38),
+    0 6px 18px -8px rgba(37, 99, 235, 0.20),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   overflow: hidden;
 }
 .pop-lift::before {
-  /* the red corner fold */
+  /* fizz bubble cluster clinging to the top-right rim */
   content: "";
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 34px;
-  height: 34px;
-  background: linear-gradient(225deg, #d2361f 0 48%, rgba(210, 54, 31, 0.25) 49%, transparent 50%);
-  border-left: 1.5px solid #1c1c20;
-  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  top: 14px;
+  right: 16px;
+  width: 26px;
+  height: 26px;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9) 0 22%, transparent 24%),
+    radial-gradient(circle, rgba(251, 146, 60, 0.55) 0 34%, transparent 36%),
+    radial-gradient(circle at 78% 72%, rgba(37, 99, 235, 0.4) 0 26%, transparent 28%);
+  background-size: 12px 12px, 16px 16px, 11px 11px;
+  background-repeat: no-repeat;
+  background-position: 2px 0, 8px 8px, 14px 2px;
   pointer-events: none;
 }
 .pop-lift::after {
-  /* the crease line down the diagonal */
+  /* citrus highlight sweeping the top edge */
   content: "";
   position: absolute;
   top: 0;
-  right: 16px;
-  width: 1px;
-  height: 48px;
-  background: linear-gradient(180deg, rgba(28, 28, 32, 0.35), transparent);
-  transform: rotate(45deg);
-  transform-origin: top;
+  left: 8%;
+  right: 8%;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, #fb923c 30%, #fde68a 50%, #fb923c 70%, transparent);
+  opacity: 0.8;
   pointer-events: none;
 }
 .pop-lift:hover {
-  transform: translateY(-4px) rotate(-0.4deg);
-  box-shadow: 5px 5px 0 #1c1c20, 0 24px 38px -16px rgba(28, 28, 32, 0.5), 0 0 18px -8px rgba(210, 54, 31, 0.5);
+  transform: translateY(-6px) scale(1.01);
+  border-color: #fdba74;
+  box-shadow:
+    0 32px 58px -20px rgba(224, 98, 15, 0.5),
+    0 10px 24px -8px rgba(37, 99, 235, 0.28),
+    0 0 26px -6px rgba(251, 146, 60, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
-/* Studio glass: shared by modals and drawers — a frosted paper panel
-   with a sumi border and cinnabar stitch. */
+/* Soda glass: shared by modals and drawers — frosted citrus glass
+   with a tangerine rim and a cool blueberry base glow. */
 .pop-glass {
-  background: rgba(250, 246, 239, 0.92);
-  backdrop-filter: blur(20px) saturate(1.1);
-  -webkit-backdrop-filter: blur(20px) saturate(1.1);
-  border: 1.5px solid #1c1c20;
-  border-radius: 0.75rem;
-  box-shadow: 3px 3px 0 #1c1c20, 0 24px 56px -18px rgba(28, 28, 32, 0.4), inset 0 0 0 3px rgba(210, 54, 31, 0.08);
+  background: rgba(255, 248, 236, 0.9);
+  backdrop-filter: blur(20px) saturate(1.15);
+  -webkit-backdrop-filter: blur(20px) saturate(1.15);
+  border: 2px solid #fed7aa;
+  border-radius: 1.75rem;
+  box-shadow:
+    0 28px 60px -20px rgba(224, 98, 15, 0.4),
+    0 8px 22px -10px rgba(37, 99, 235, 0.22),
+    inset 0 0 0 4px rgba(251, 146, 60, 0.07);
 }
 
-/* Hanko seal: a cinnabar stamp medallion with a dashed ink ring. */
+/* Price pop: a tangerine soda-cap badge with a fizzy white ring. */
 .starburst {
-  background: radial-gradient(circle at 35% 30%, #e4573d 0%, #d2361f 55%, #942214 100%);
+  background: radial-gradient(circle at 35% 30%, #fdba74 0%, #e0620f 55%, #9a3f08 100%);
   color: #ffffff;
-  text-shadow: 0 1px 2px rgba(51, 13, 8, 0.6);
+  text-shadow: 0 1px 2px rgba(61, 26, 5, 0.55);
   border-radius: 9999px;
-  transform: rotate(-6deg);
-  box-shadow: 0 0 20px -4px rgba(210, 54, 31, 0.7), inset 0 2px 6px rgba(255, 255, 255, 0.35);
-  outline: 2px dashed #1c1c20;
+  transform: rotate(5deg);
+  box-shadow: 0 0 22px -4px rgba(224, 98, 15, 0.75), inset 0 2px 6px rgba(255, 255, 255, 0.4);
+  outline: 2px dashed rgba(255, 255, 255, 0.85);
   outline-offset: -6px;
-  border: 2px solid #d2361f;
+  border: 2px solid #e0620f;
 }
 
-/* Crease dots: faint cinnabar-dot texture for studio bands. */
+/* Fizz dots: sparkling citrus-dot texture for soda bands. */
 .halftone {
-  background-image: radial-gradient(circle, rgba(180, 42, 25, 0.16) 1px, transparent 1.7px);
-  background-size: 13px 13px;
+  background-image:
+    radial-gradient(circle, rgba(224, 98, 15, 0.20) 1.2px, transparent 1.9px),
+    radial-gradient(circle, rgba(37, 99, 235, 0.12) 1px, transparent 1.6px);
+  background-size: 15px 15px, 23px 23px;
+  background-position: 0 0, 7px 9px;
 }
 
-/* Crease band: a cinnabar chevron fold divider. */
+/* Soda scallop: a row of bubble scallops dividing sections. */
 .zigzag {
-  height: 8px;
-  background: repeating-linear-gradient(135deg, #d2361f 0 12px, transparent 12px 24px),
-    repeating-linear-gradient(45deg, #1c1c20 0 12px, transparent 12px 24px);
-  background-color: rgba(210, 54, 31, 0.12);
-  border-top: 1.5px solid #1c1c20;
-  border-bottom: 1.5px solid #1c1c20;
+  height: 14px;
+  background-image: radial-gradient(circle at 12px 0px, #e0620f 9px, transparent 10px);
+  background-size: 28px 14px;
+  background-repeat: repeat-x;
+  opacity: 0.85;
+  -webkit-mask: linear-gradient(180deg, black 55%, transparent 100%);
+  mask: linear-gradient(180deg, black 55%, transparent 100%);
 }
 
-/* Studio ribbon: folded paper awning with a cinnabar hem. */
+/* Soda awning: tangerine/cream/blueberry candy stripes with an orange hem. */
 .bazaar-awning {
   background-image:
-    repeating-linear-gradient(45deg, rgba(28, 28, 32, 0.5) 0 26px, rgba(250, 246, 239, 0.92) 26px 52px);
-  border-bottom: 3px solid #d2361f;
-  box-shadow: 0 6px 16px -6px rgba(28, 28, 32, 0.4);
+    repeating-linear-gradient(45deg, rgba(224, 98, 15, 0.85) 0 26px, rgba(255, 248, 236, 0.95) 26px 52px, rgba(37, 99, 235, 0.35) 52px 58px, rgba(255, 248, 236, 0.95) 58px 84px);
+  border-bottom: 3px solid #e0620f;
+  box-shadow: 0 8px 20px -8px rgba(224, 98, 15, 0.5);
 }
 
-/* Paper sun: layered cinnabar wash for the studio core. */
+/* Fizz sun: layered tangerine glow for the soda core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(228, 87, 61, 0.5) 0%, rgba(210, 54, 31, 0.32) 42%, rgba(113, 149, 51, 0.12) 62%, rgba(113, 149, 51, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(251, 146, 60, 0.55) 0%, rgba(224, 98, 15, 0.34) 42%, rgba(132, 204, 22, 0.14) 62%, rgba(132, 204, 22, 0) 76%);
 }
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #e4573d 0%, #d2361f 52%, #942214 100%);
-  box-shadow: 0 0 64px -8px rgba(210, 54, 31, 0.6), 0 0 26px -6px rgba(180, 42, 25, 0.5), inset 0 3px 10px rgba(255, 255, 255, 0.3);
-  border: 2px solid #1c1c20;
+    radial-gradient(circle at 38% 34%, #fdba74 0%, #e0620f 52%, #9a3f08 100%);
+  box-shadow: 0 0 70px -8px rgba(224, 98, 15, 0.65), 0 0 28px -6px rgba(194, 78, 10, 0.5), inset 0 3px 12px rgba(255, 255, 255, 0.4);
+  border: 2px solid #fed7aa;
 }
 
-/* Ink halo rings around the paper sun. */
+/* Mist rings around the fizz sun. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(28, 28, 32, 0.5) 0px,
-    rgba(28, 28, 32, 0.5) 3px,
+    rgba(224, 98, 15, 0.4) 0px,
+    rgba(224, 98, 15, 0.4) 3px,
     transparent 3px,
     transparent 28px
   );
@@ -260,8 +279,8 @@ body {
 .sun-rays {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(210, 54, 31, 0.5) 0px,
-    rgba(210, 54, 31, 0.5) 3px,
+    rgba(251, 146, 60, 0.5) 0px,
+    rgba(251, 146, 60, 0.5) 3px,
     transparent 3px,
     transparent 28px
   );
@@ -270,62 +289,62 @@ body {
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all ink-styled. */
+/* Legacy aliases kept so untouched components still render — all soda-styled. */
 .lagoon-lift {
   position: relative;
-  border: 1.5px solid #1c1c20;
-  background: linear-gradient(135deg, #ffffff 0%, #ffffff 62%, rgba(28, 28, 32, 0.06) 100%);
-  border-radius: 0.5rem;
-  box-shadow: 3px 3px 0 #1c1c20, 0 16px 28px -18px rgba(28, 28, 32, 0.4);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  border: 2px solid #bfdbfe;
+  background: linear-gradient(160deg, #ffffff 0%, #f4f8ff 60%, #e8f1fe 100%);
+  border-radius: 1.75rem;
+  box-shadow: 0 22px 44px -20px rgba(37, 99, 235, 0.35), 0 6px 18px -8px rgba(37, 99, 235, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
   overflow: hidden;
 }
 .lagoon-lift:hover {
-  transform: translateY(-4px) rotate(-0.4deg);
-  box-shadow: 5px 5px 0 #1c1c20, 0 24px 38px -16px rgba(28, 28, 32, 0.5);
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 32px 58px -20px rgba(37, 99, 235, 0.45), 0 10px 24px -8px rgba(37, 99, 235, 0.26);
 }
 .stamp-perf {
-  border: 2px dashed #942214;
-  background: rgba(210, 54, 31, 0.07);
-  border-radius: 0.5rem;
-  box-shadow: 3px 3px 0 rgba(28, 28, 32, 0.3), 0 14px 24px -16px rgba(210, 54, 31, 0.4);
+  border: 2px dashed #9a3f08;
+  background: rgba(224, 98, 15, 0.08);
+  border-radius: 1.25rem;
+  box-shadow: 0 18px 36px -18px rgba(224, 98, 15, 0.4);
 }
 .ember-glow {
   position: relative;
-  border: 1.5px solid #1c1c20;
-  background: linear-gradient(135deg, #ffffff 0%, #ffffff 62%, rgba(113, 149, 51, 0.10) 100%);
-  border-radius: 0.5rem;
-  box-shadow: 3px 3px 0 #1c1c20, 0 16px 28px -18px rgba(113, 149, 51, 0.45);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  border: 2px solid #fed7aa;
+  background: linear-gradient(160deg, #ffffff 0%, #fffaf0 60%, rgba(251, 146, 60, 0.14) 100%);
+  border-radius: 1.75rem;
+  box-shadow: 0 22px 44px -20px rgba(224, 98, 15, 0.42), 0 6px 18px -8px rgba(224, 98, 15, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
-  transform: translateY(-4px) rotate(-0.4deg);
-  box-shadow: 5px 5px 0 #1c1c20, 0 24px 38px -16px rgba(113, 149, 51, 0.55);
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 32px 58px -20px rgba(224, 98, 15, 0.52), 0 10px 24px -8px rgba(224, 98, 15, 0.28);
 }
 .ripple-glow {
   position: relative;
-  border: 1.5px solid #1c1c20;
-  background: linear-gradient(135deg, #ffffff 0%, #ffffff 62%, rgba(210, 54, 31, 0.10) 100%);
-  border-radius: 0.5rem;
-  box-shadow: 3px 3px 0 #1c1c20, 0 16px 28px -18px rgba(210, 54, 31, 0.45);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  border: 2px solid #d9f99d;
+  background: linear-gradient(160deg, #ffffff 0%, #fbfef3 60%, rgba(132, 204, 22, 0.14) 100%);
+  border-radius: 1.75rem;
+  box-shadow: 0 22px 44px -20px rgba(101, 163, 13, 0.35), 0 6px 18px -8px rgba(101, 163, 13, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
-  transform: translateY(-4px) rotate(-0.4deg);
-  box-shadow: 5px 5px 0 #1c1c20, 0 24px 38px -16px rgba(210, 54, 31, 0.55);
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 32px 58px -20px rgba(101, 163, 13, 0.45), 0 10px 24px -8px rgba(101, 163, 13, 0.26);
 }
 .lagoon-glow {
   position: relative;
-  border: 1.5px solid #1c1c20;
-  background: linear-gradient(135deg, #ffffff 0%, #ffffff 62%, rgba(28, 28, 32, 0.06) 100%);
-  border-radius: 0.5rem;
-  box-shadow: 3px 3px 0 #1c1c20, 0 16px 28px -18px rgba(28, 28, 32, 0.4);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  border: 2px solid #bfdbfe;
+  background: linear-gradient(160deg, #ffffff 0%, #f4f8ff 60%, rgba(37, 99, 235, 0.08) 100%);
+  border-radius: 1.75rem;
+  box-shadow: 0 22px 44px -20px rgba(37, 99, 235, 0.32), 0 6px 18px -8px rgba(37, 99, 235, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
-  transform: translateY(-4px) rotate(-0.4deg);
-  box-shadow: 5px 5px 0 #1c1c20, 0 24px 38px -16px rgba(28, 28, 32, 0.5);
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 32px 58px -20px rgba(37, 99, 235, 0.42), 0 10px 24px -8px rgba(37, 99, 235, 0.24);
 }

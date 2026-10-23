@@ -38,7 +38,7 @@ export default function QuickViewModal({ product, qty, onQtyChange, onClose, onA
           >
             <div className="flex-1 overflow-y-auto">
               <div className="grid sm:grid-cols-2">
-                <div className="relative"><ProductImage product={product} big /><span className="absolute left-0 top-3 -skew-x-6 rounded-r-full bg-gradient-to-r from-brand-500 to-brand-700 px-3 py-1 text-xs font-black text-white shadow-[0_6px_18px_-6px_rgba(210, 54, 31, 0.45)]">-{discountPct(product)}% OFF</span></div>
+                <div className="relative"><ProductImage product={product} big /><span className="absolute left-0 top-3 -skew-x-6 rounded-r-full bg-gradient-to-r from-brand-500 to-brand-700 px-3 py-1 text-xs font-black text-white shadow-[0_6px_18px_-6px_rgba(224, 98, 15, 0.45)]">-{discountPct(product)}% OFF</span></div>
                 <div className="p-5 sm:p-6">
                   <div className="flex items-start justify-between gap-2"><h3 className="text-xl font-black tracking-tight text-[#1c1c20]">{product.name}</h3><button onClick={onClose} className="text-2xl leading-none text-[#1c1c20] hover:text-[#1c1c20]">×</button></div>
                   <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-brand-700">{product.category}</p>
@@ -56,7 +56,7 @@ export default function QuickViewModal({ product, qty, onQtyChange, onClose, onA
                 <span className="w-8 text-center font-bold">{qty}</span>
                 <button onClick={() => onQtyChange(qty + 1)} className="px-3 py-2 text-lg" aria-label="Increase quantity">+</button>
               </div>
-              <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(product.id, qty)} className="flex-1 rounded-full bg-gradient-to-r from-brand-500 to-brand-700 py-3 font-bold text-white shadow-[0_8px_24px_-8px_rgba(210, 54, 31, 0.4)] transition hover:brightness-110 active:scale-[0.99]">Add To Cart</motion.button>
+              <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(product.id, qty)} className="flex-1 rounded-full bg-gradient-to-r from-brand-500 to-brand-700 py-3 font-bold text-white shadow-[0_8px_24px_-8px_rgba(224, 98, 15, 0.4)] transition hover:brightness-110 active:scale-[0.99]">Add To Cart</motion.button>
               <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(product.id, qty, true)} className="shrink-0 rounded-full bg-[#ffffff] px-4 py-3 text-sm font-bold text-[#1c1c20] shadow-sm ring-1 ring-brand-400/40 transition hover:bg-[#ffffff] active:scale-[0.98]">Buy Now</motion.button>
             </div>
           </motion.div>

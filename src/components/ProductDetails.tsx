@@ -197,10 +197,10 @@ export default function ProductDetails({
               <span className="w-8 text-center font-bold">{qty}</span>
               <button onClick={() => setQty(Math.min(99, qty + 1))} className="px-4 py-3 text-lg" aria-label="Increase quantity">+</button>
             </div>
-            <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty)} className="rounded-full bg-gradient-to-r from-brand-500 to-brand-700 px-7 py-3 font-bold text-white shadow-[0_8px_24px_-8px_rgba(210, 54, 31, 0.4)] transition hover:brightness-110">
+            <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty)} className="rounded-full bg-gradient-to-r from-brand-500 to-brand-700 px-7 py-3 font-bold text-white shadow-[0_8px_24px_-8px_rgba(224, 98, 15, 0.4)] transition hover:brightness-110">
               Add To Cart
             </motion.button>
-            <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty, true)} className="rounded-full bg-[#faf6ef] px-7 py-3 font-bold text-[#1c1c20] transition ring-1 ring-brand-400/40 hover:bg-[#f3e5cd]">
+            <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty, true)} className="rounded-full bg-[#faf6ef] px-7 py-3 font-bold text-[#1c1c20] transition ring-1 ring-brand-400/40 hover:bg-[#ffe3bd]">
               Buy Now
             </motion.button>
           </div>
@@ -319,7 +319,7 @@ export default function ProductDetails({
           <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty)} className="shrink-0 rounded-full bg-gradient-to-r from-brand-500 to-brand-700 px-4 py-2.5 text-sm font-bold text-white transition hover:brightness-110 sm:px-6">
             Add to Cart
           </motion.button>
-          <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty, true)} className="hidden shrink-0 rounded-full bg-[#faf6ef] px-5 py-2.5 text-sm font-bold text-[#1c1c20] transition ring-1 ring-brand-400/40 hover:bg-[#f3e5cd] sm:block">
+          <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty, true)} className="hidden shrink-0 rounded-full bg-[#faf6ef] px-5 py-2.5 text-sm font-bold text-[#1c1c20] transition ring-1 ring-brand-400/40 hover:bg-[#ffe3bd] sm:block">
             Buy Now
           </motion.button>
         </div>

@@ -108,7 +108,7 @@ export default function DashboardPage() {
                     className="w-full rounded-full border border-[#ffffff] bg-[#faf6ef] py-2 pr-3 pl-9 text-sm outline-none focus:border-brand-400 focus:bg-[#faf6ef]"
                   />
                 </label>
-                <Link href="/" className="relative shrink-0 rounded-full bg-[#faf6ef] px-4 py-2 text-sm font-bold text-[#1c1c20] transition hover:bg-[#ffab96]">
+                <Link href="/" className="relative shrink-0 rounded-full bg-[#faf6ef] px-4 py-2 text-sm font-bold text-[#1c1c20] transition hover:bg-[#fdba74]">
                   🛒 <span className="hidden sm:inline">Cart</span>
                 </Link>
                 {session.user.image ? (
@@ -165,7 +165,7 @@ export default function DashboardPage() {
                       </p>
                       <div className="mt-5 flex flex-wrap gap-2">
                         <Link href="/" className="rounded-full bg-brand-600 px-5 py-2.5 text-sm font-black text-white transition hover:bg-brand-100 hover:text-ink">Shop Now →</Link>
-                        <button onClick={() => setTab("orders")} className="rounded-full bg-[#faf6ef]/15 px-5 py-2.5 text-sm font-bold text-white ring-1 ring-white/30 transition hover:bg-[#f3e5cd]/25">Track Order</button>
+                        <button onClick={() => setTab("orders")} className="rounded-full bg-[#faf6ef]/15 px-5 py-2.5 text-sm font-bold text-white ring-1 ring-white/30 transition hover:bg-[#ffe3bd]/25">Track Order</button>
                       </div>
                     </section>
                   </Reveal>
@@ -237,7 +237,7 @@ export default function DashboardPage() {
                     {(search.trim() || statusFilter !== "All") && (
                       <button
                         onClick={() => { setSearch(""); setStatusFilter("All"); }}
-                        className="rounded-full bg-[#faf6ef] px-4 py-2 text-sm font-bold text-[#1c1c20] ring-1 ring-[#ffffff] hover:bg-[#f3e5cd]"
+                        className="rounded-full bg-[#faf6ef] px-4 py-2 text-sm font-bold text-[#1c1c20] ring-1 ring-[#ffffff] hover:bg-[#ffe3bd]"
                       >
                         Clear filters ✕
                       </button>
