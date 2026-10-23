@@ -14,8 +14,8 @@ type NewsletterProps = {
 export default function Newsletter({ email, onEmailChange, subscribed, onSubscribe }: NewsletterProps) {
   return (
     <Reveal>
-      <div className="relative flex flex-col justify-center overflow-hidden rounded-[2rem] bg-gradient-to-br from-brand-700 via-brand-600 to-brand-800 p-8 text-[#fff9f0] shadow-xl shadow-brand-900/30 sm:p-10">
-        <div aria-hidden className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[#d9551f]/20 blur-3xl" />
+      <div className="relative flex flex-col justify-center overflow-hidden rounded-[2rem] bg-gradient-to-br from-brand-700 via-brand-600 to-brand-800 p-8 text-[#0d1330] shadow-xl shadow-brand-900/30 sm:p-10">
+        <div aria-hidden className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[#06b6d4]/20 blur-3xl" />
         <div aria-hidden className="pointer-events-none absolute -bottom-20 -left-10 h-48 w-48 rounded-full bg-brand-500/30 blur-3xl" />
         <div
           aria-hidden
@@ -29,8 +29,8 @@ export default function Newsletter({ email, onEmailChange, subscribed, onSubscri
             <p className="mt-5 rounded-lg bg-white/15 p-4 font-bold text-white ring-1 ring-white/25">✅ Subscribed! Welcome to GadZone BD family.</p>
           ) : (
             <form className="mt-5 flex flex-col gap-3 sm:flex-row" onSubmit={onSubscribe}>
-              <input type="email" required value={email} onChange={(e) => onEmailChange(e.target.value)} placeholder="Your email address" className="flex-1 rounded-full bg-[#2a1a0f] px-5 py-3.5 text-sm text-[#fff9f0] outline-none ring-1 ring-white/40 placeholder:text-[#a08a6f] transition focus:ring-2 focus:ring-white/80" />
-              <motion.button whileTap={{ scale: 0.96 }} className="rounded-full bg-[#2a1a0f] px-6 py-3 font-bold text-[#f3c3a0] shadow-lg ring-1 ring-[#f3c3a0]/40 transition hover:bg-[#e8d9bd] hover:text-[#933212] active:scale-[0.98]">Subscribe</motion.button>
+              <input type="email" required value={email} onChange={(e) => onEmailChange(e.target.value)} placeholder="Your email address" className="flex-1 rounded-full bg-[#edf1ff] px-5 py-3.5 text-sm text-[#0d1330] outline-none ring-1 ring-white/40 placeholder:text-[#7d86ad] transition focus:ring-2 focus:ring-white/80" />
+              <motion.button whileTap={{ scale: 0.96 }} className="rounded-full bg-[#edf1ff] px-6 py-3 font-bold text-[#a5f3fc] shadow-lg ring-1 ring-[#a5f3fc]/40 transition hover:bg-[#232c55] hover:text-[#0e7490] active:scale-[0.98]">Subscribe</motion.button>
             </form>
           )}
           <p className="mt-3.5 text-xs text-white/80">No spam, only deals. Unsubscribe anytime.</p>
