@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Neon haze drifting through the night market.
+// Warm haze drifting through the courtyard.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(6, 182, 212, 0.18)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(124, 58, 237, 0.20)" },
-  { left: "42%", top: "46%", size: 140, delay: "-7s", dur: "13s", c: "rgba(219, 39, 119, 0.16)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(34, 211, 238, 0.14)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(194, 65, 12, 0.18)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(217, 119, 6, 0.20)" },
+  { left: "42%", top: "46%", size: 140, delay: "-7s", dur: "13s", c: "rgba(101, 163, 13, 0.16)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(234, 88, 12, 0.14)" },
 ];
 
-// Neon motes settling through the night air.
+// Marigold petals settling through the warm air.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#7c3aed" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#22d3ee" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#db2777" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#06b6d4" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#a78bfa" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#f472b6" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#67e8f9" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#d97706" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#ea580c" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#65a30d" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#c2410c" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#fbbf24" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#a3e635" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#fdba74" },
 ];
 
-// Neon glints scattered through the night.
+// Sun glints scattered through the day.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -75,19 +75,19 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* studio daylight under a folded paper canopy */}
-      <div className="relative bg-gradient-to-b from-[#0b1526] via-[#12303f] to-[#0b1526]">
+      {/* courtyard daylight under a striped awning */}
+      <div className="relative bg-gradient-to-b from-[#fffdf7] via-[#fbeed3] to-[#fffdf7]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
 
-        {/* cinnabar wash sweeping the studio */}
+        {/* terracotta wash sweeping the courtyard */}
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-0 hidden h-[560px] opacity-90 sm:block">
           <div className="pop-drift absolute -left-24 top-6 h-72 w-[52rem] rotate-[-8deg] rounded-full bg-gradient-to-r from-brand-400/35 via-popblue-300/20 to-transparent blur-3xl" />
           <div className="pop-drift absolute -right-24 top-40 h-64 w-[44rem] rotate-[10deg] rounded-full bg-gradient-to-r from-transparent via-gold-300/25 to-brand-400/30 blur-3xl" style={{ animationDelay: "-12s" }} />
         </div>
 
-        {/* paper sun: a cinnabar disc ringed by a slow-spinning ink halo */}
+        {/* courtyard sun: a marigold disc ringed by a slow-spinning clay halo */}
         <div aria-hidden className="pointer-events-none absolute -right-40 -top-32 z-0 hidden opacity-90 sm:block">
           <div className="relative h-[600px] w-[600px]">
             <div className="nebula-core absolute inset-8 rounded-full blur-xl" />
@@ -96,16 +96,16 @@ export default function Hero({ onQuickView }: HeroProps) {
             {[0, 1, 2].map((r) => (
               <span
                 key={r}
-                className="absolute left-1/2 top-1/2 origin-center -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-[#22d3ee]/40"
+                className="absolute left-1/2 top-1/2 origin-center -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-[#ea580c]/40"
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(34, 211, 238, 0.45), inset 0 0 18px rgba(3, 6, 15, 0.45)",
+                  boxShadow: "0 0 28px 2px rgba(234, 88, 12, 0.45), inset 0 0 18px rgba(3, 6, 15, 0.45)",
                   opacity: 1 - r * 0.22,
                 }}
               />
             ))}
-            {/* the sun itself: a layered cinnabar disc */}
+            {/* the sun itself: a layered marigold disc */}
             <div className="sun-disc pop-spin absolute inset-44 rounded-full" style={{ animationDuration: "60s" }} />
             {/* sun glints */}
             <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
@@ -121,11 +121,11 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{ width: 26, height: 240, transform: `translate(-50%, -100%) rotate(${b * 120}deg)`, animationDuration: "36s" }}
               />
             ))}
-            {/* paper cutouts dancing around the sun */}
+            {/* clay chips dancing around the sun */}
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#7c3aed", "#22d3ee", "#db2777", "#06b6d4"];
+              const colors = ["#d97706", "#ea580c", "#65a30d", "#c2410c"];
               return (
                 <span
                   key={i}
@@ -143,7 +143,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* drifting daylight haze */}
+        {/* drifting warm haze */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {ORBS.map((g, i) => (
             <div
@@ -154,12 +154,12 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* crease glints */}
+        {/* sun glints */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {STARS.map((s, i) => (
             <span
               key={i}
-              className="pop-twinkle absolute rounded-full bg-[#22d3ee]"
+              className="pop-twinkle absolute rounded-full bg-[#ea580c]"
               style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
             />
           ))}
@@ -172,11 +172,11 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* 4-banner carousel in a folded-paper frame */}
+        {/* 4-banner carousel in a clay-tile frame */}
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
-              <div className="rounded-md bg-gradient-to-r from-[#101a30] via-brand-600 to-[#101a30] p-[3px] shadow-[3px_3px_0_#1c1c20]">
+              <div className="rounded-md bg-gradient-to-r from-[#fff8ec] via-brand-600 to-[#fff8ec] p-[3px] shadow-[3px_3px_0_#3a2d1e]">
                 <div className="overflow-hidden rounded-sm bg-paper ring-1 ring-ink/30">
                   <BannerCarousel />
                 </div>
@@ -185,8 +185,8 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* studio ticker: ink band with cinnabar type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#22d3ee]/40 bg-gradient-to-r from-brand-700 via-brand-600 to-brand-800 py-3 shadow-[0_14px_30px_-14px_rgba(6,182,212,0.5)]">
+        {/* courtyard ticker: terracotta band with cream type */}
+        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#ea580c]/40 bg-gradient-to-r from-brand-700 via-brand-600 to-brand-800 py-3 shadow-[0_14px_30px_-14px_rgba(6,182,212,0.5)]">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
@@ -198,11 +198,11 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* press ribbon into the page */}
+        {/* sun-dash ribbon into the page */}
         <div aria-hidden className="zigzag relative z-10 mx-auto mt-0 w-full max-w-7xl opacity-90" />
       </div>
 
-      {/* Stats + featured picks under the paper sun */}
+      {/* Stats + featured picks under the courtyard sun */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 pb-24 pt-10 md:pb-28">
         <motion.div variants={container} initial="hidden" animate="show" {...anim}>
           <motion.div variants={item} className="grid grid-cols-2 gap-6 sm:grid-cols-4">
@@ -215,7 +215,7 @@ export default function Hero({ onQuickView }: HeroProps) {
               <div key={s.l} className="pop-lift relative overflow-hidden p-4 pb-3 pt-5 text-center">
                 <span className="relative block bg-gradient-to-br from-brand-600 via-gold-600 to-popblue-600 bg-clip-text text-2xl font-black tracking-tight text-transparent">{s.v}</span>
                 <span className="relative mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-mute">{s.l}</span>
-                <span aria-hidden className="relative mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-brand-500 via-brand-400 to-[#101a30] shadow-[0_2px_6px_rgba(34,211,238,0.5)]" />
+                <span aria-hidden className="relative mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-brand-500 via-brand-400 to-[#fff8ec] shadow-[0_2px_6px_rgba(34,211,238,0.5)]" />
               </div>
             ))}
           </motion.div>
@@ -223,7 +223,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-sm border-2 border-[#22d3ee]/40 bg-[#0b1526]/90 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-300 shadow-[3px_3px_0_#03060f,0_0_18px_-4px_rgba(34,211,238,0.6)]">Handpicked for you</p>
+            <p className="inline-block rounded-sm border-2 border-[#ea580c]/40 bg-[#fffdf7]/90 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[3px_3px_0_#221708,0_0_18px_-4px_rgba(34,211,238,0.6)]">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="relative bg-gradient-to-r from-brand-500 via-brand-600 to-ink bg-clip-text text-transparent">Picks<span aria-hidden className="absolute inset-x-0 -bottom-1 h-2 rounded-full bg-gradient-to-r from-brand-500 to-brand-700 opacity-60 blur-[3px]" /></span></h2>
             <span className="zigzag mt-4 block w-44" aria-hidden />
           </div>
@@ -253,7 +253,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* crease ribbon into the page */}
+      {/* sun-dash ribbon into the page */}
       <div aria-hidden className="zigzag absolute bottom-0 left-0 w-full opacity-90" />
     </section>
   );
