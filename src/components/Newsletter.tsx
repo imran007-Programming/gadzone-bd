@@ -29,8 +29,8 @@ export default function Newsletter({ email, onEmailChange, subscribed, onSubscri
             <p className="mt-5 rounded-lg bg-white/15 p-4 font-bold text-white ring-1 ring-white/25">✅ Subscribed! Welcome to GadZone BD family.</p>
           ) : (
             <form className="mt-5 flex flex-col gap-3 sm:flex-row" onSubmit={onSubscribe}>
-              <input type="email" required value={email} onChange={(e) => onEmailChange(e.target.value)} placeholder="Your email address" className="flex-1 rounded-full bg-[#1d2a4a] px-5 py-3.5 text-sm text-[#ffffff] outline-none ring-1 ring-white/40 placeholder:text-[#6f7891] transition focus:ring-2 focus:ring-white/80" />
-              <motion.button whileTap={{ scale: 0.96 }} className="rounded-full bg-[#1d2a4a] px-6 py-3 font-bold text-[#bcd0ff] shadow-lg ring-1 ring-[#bcd0ff]/40 transition hover:bg-[#d5dbee] hover:text-[#1e39b8] active:scale-[0.98]">Subscribe</motion.button>
+              <input type="email" required value={email} onChange={(e) => onEmailChange(e.target.value)} placeholder="Your email address" className="flex-1 rounded-full bg-[#3a2a1a] px-5 py-3.5 text-sm text-[#ffffff] outline-none ring-1 ring-white/40 placeholder:text-[#8a7a63] transition focus:ring-2 focus:ring-white/80" />
+              <motion.button whileTap={{ scale: 0.96 }} className="rounded-full bg-[#3a2a1a] px-6 py-3 font-bold text-[#bcd0ff] shadow-lg ring-1 ring-[#bcd0ff]/40 transition hover:bg-[#d5dbee] hover:text-[#1e39b8] active:scale-[0.98]">Subscribe</motion.button>
             </form>
           )}
           <p className="mt-3.5 text-xs text-white/80">No spam, only deals. Unsubscribe anytime.</p>
