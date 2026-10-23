@@ -17,11 +17,11 @@ export default function FlashDeals({ products, countdown, onQuickView, onAddToCa
   const { hh, mm, ss } = countdown;
   const reduce = useReducedMotion();
   return (
-    <section id="flash" className="relative overflow-hidden bg-[#1e0f08] py-14 text-[#2b1a12] ring-1 ring-inset ring-brand-400/20 sm:py-16">
+    <section id="flash" className="relative overflow-hidden bg-[#07040f] py-14 text-[#f4f1ff] ring-1 ring-inset ring-brand-400/20 sm:py-16">
       <div aria-hidden className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-brand-400/20 blur-[100px]" />
       <div aria-hidden className="pointer-events-none absolute -bottom-24 -left-16 h-72 w-72 rounded-full bg-brand-600/20 blur-[100px]" />
       {/* delta rain-fleck dots */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 opacity-40 [background-image:radial-gradient(rgba(234, 88, 12, 0.14)_1px,transparent_1.5px)] [background-size:30px_30px]" />
+      <div aria-hidden className="pointer-events-none absolute inset-0 opacity-40 [background-image:radial-gradient(rgba(139, 92, 246, 0.14)_1px,transparent_1.5px)] [background-size:30px_30px]" />
       <div className="relative mx-auto max-w-7xl px-4">
         <Reveal>
           <div className="flex flex-wrap items-end justify-between gap-3">
@@ -30,15 +30,15 @@ export default function FlashDeals({ products, countdown, onQuickView, onAddToCa
                 <span className="text-brand-400">Trending</span> New Arrivals
               </h2>
               <span className="mt-2.5 block h-1 w-16 rounded-full bg-gradient-to-r from-brand-600 via-gold to-popblue" aria-hidden />
-              <p className="mt-2.5 text-sm leading-relaxed text-[#fed7aa]">Fresh picks, latest tech — handpicked for you.</p>
+              <p className="mt-2.5 text-sm leading-relaxed text-[#d9c8ff]">Fresh picks, latest tech — handpicked for you.</p>
             </div>
             <div className="flex items-center gap-2 text-sm font-bold tracking-wide">
               <span className="text-brand-400/80">Ends in</span>
-              {[hh, mm].map((v, i) => <span key={i} className="rounded-lg bg-gradient-to-b from-brand-700 to-brand-900 px-3.5 py-2 text-lg font-black tabular-nums text-white shadow-[0_0_18px_rgba(234, 88, 12, 0.5)] ring-1 ring-brand-200/50">{v}</span>)}
+              {[hh, mm].map((v, i) => <span key={i} className="rounded-lg bg-gradient-to-b from-brand-700 to-brand-900 px-3.5 py-2 text-lg font-black tabular-nums text-white shadow-[0_0_18px_rgba(139, 92, 246, 0.5)] ring-1 ring-brand-200/50">{v}</span>)}
               <motion.span
                 animate={reduce ? undefined : { scale: [1, 1.08, 1] }}
                 transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
-                className="rounded-lg bg-gradient-to-b from-brand-700 to-brand-900 px-3.5 py-2 text-lg font-black tabular-nums text-white shadow-[0_0_22px_rgba(234, 88, 12, 0.6)] ring-2 ring-brand-200/60"
+                className="rounded-lg bg-gradient-to-b from-brand-700 to-brand-900 px-3.5 py-2 text-lg font-black tabular-nums text-white shadow-[0_0_22px_rgba(139, 92, 246, 0.6)] ring-2 ring-brand-200/60"
               >
                 {ss}
               </motion.span>
