@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Lamp haze drifting over the workbench.
+// Sea-mist drifting over the tide.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(249, 115, 22, 0.18)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(20, 184, 166, 0.20)" },
-  { left: "42%", top: "46%", size: 140, delay: "-7s", dur: "13s", c: "rgba(20, 184, 166, 0.16)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(249, 115, 22, 0.14)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(14, 165, 233, 0.18)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(99, 102, 241, 0.20)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(244, 63, 94, 0.14)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(14, 165, 233, 0.14)" },
 ];
 
-// Sawdust settling through the lamplight.
+// Sea-spray settling through the aurora.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#14b8a6" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f97316" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#0f766e" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#14b8a6" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#0d9488" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#22d3ee" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#f0abfc" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#6366f1" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#0ea5e9" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#0369a1" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#6366f1" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#f43f5e" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#38bdf8" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#a5b4fc" },
 ];
 
-// Tool glints scattered through the workshop.
+// Signal glints scattered through the mist.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -75,37 +75,37 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* workshop glow under a bench awning */}
-      <div className="relative bg-gradient-to-b from-[#fff9f0] via-[#fff9f0] to-[#fff9f0]">
+      {/* aurora wash under the ribbon */}
+      <div className="relative bg-gradient-to-b from-[#eef4f9] via-[#eef4f9] to-[#eef4f9]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
 
-        {/* lamp haze sweeping the bench top */}
+        {/* aurora wash sweeping the shore */}
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-0 hidden h-[560px] opacity-90 sm:block">
           <div className="pop-drift absolute -left-24 top-6 h-72 w-[52rem] rotate-[-8deg] rounded-full bg-gradient-to-r from-brand-400/35 via-popblue-300/20 to-transparent blur-3xl" />
           <div className="pop-drift absolute -right-24 top-40 h-64 w-[44rem] rotate-[10deg] rounded-full bg-gradient-to-r from-transparent via-gold-300/25 to-brand-400/30 blur-3xl" style={{ animationDelay: "-12s" }} />
         </div>
 
-        {/* brass lamp: a warm amber disc ringed by a slow-spinning emerald halo */}
+        {/* tide beacon: a glowing azure orb ringed by a slow-spinning indigo halo */}
         <div aria-hidden className="pointer-events-none absolute -right-40 -top-32 z-0 hidden opacity-90 sm:block">
           <div className="relative h-[600px] w-[600px]">
             <div className="nebula-core absolute inset-8 rounded-full blur-xl" />
             <div className="sun-rays pop-spin absolute inset-0" />
-            {/* halo rings around the moon */}
+            {/* ripple rings around the beacon */}
             {[0, 1, 2].map((r) => (
               <span
                 key={r}
-                className="absolute left-1/2 top-1/2 origin-center -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-[#f97316]/40"
+                className="absolute left-1/2 top-1/2 origin-center -translate-x-1/2 -translate-y-1/2 rounded-full border border-brand-300/70"
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(249, 115, 22, 0.45), inset 0 0 18px rgba(28, 25, 23, 0.45)",
+                  boxShadow: "0 0 28px 2px rgba(14, 165, 233, 0.45), inset 0 0 18px rgba(14, 165, 233, 0.25)",
                   opacity: 1 - r * 0.22,
                 }}
               />
             ))}
-            {/* the lamp itself: a layered brass disc */}
+            {/* the beacon itself: a layered tide disc */}
             <div className="sun-disc pop-spin absolute inset-44 rounded-full" style={{ animationDuration: "60s" }} />
             {/* signal glints */}
             <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
@@ -113,7 +113,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 <span key={i} className="absolute rounded-full bg-white/80" style={{ left: glint.l, top: glint.t, width: glint.s, height: glint.s }} />
               ))}
             </div>
-            {/* sweeping lamp beams */}
+            {/* sweeping tide beams */}
             {[0, 1, 2].map((b) => (
               <span
                 key={b}
@@ -121,15 +121,15 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{ width: 26, height: 240, transform: `translate(-50%, -100%) rotate(${b * 120}deg)`, animationDuration: "36s" }}
               />
             ))}
-            {/* brass chips dancing around the lamp */}
+            {/* glass buoys dancing around the beacon */}
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#14b8a6", "#f97316", "#0f766e", "#14b8a6"];
+              const colors = ["#0ea5e9", "#6366f1", "#f43f5e", "#38bdf8"];
               return (
                 <span
                   key={i}
-                  className="pop-bob absolute h-3.5 w-3.5 rounded-[35%] ring-2 ring-ink/20"
+                  className="pop-bob absolute h-3.5 w-3.5 rounded-[35%] ring-1 ring-white/60"
                   style={{
                     left: `${x}%`,
                     top: `${y}%`,
@@ -143,7 +143,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* drifting lamp haze */}
+        {/* drifting sea-mist */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {ORBS.map((g, i) => (
             <div
@@ -159,24 +159,24 @@ export default function Hero({ onQuickView }: HeroProps) {
           {STARS.map((s, i) => (
             <span
               key={i}
-              className="pop-twinkle absolute rounded-full bg-[#f97316]"
+              className="pop-twinkle absolute rounded-full bg-[#0ea5e9]"
               style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
             />
           ))}
         </div>
 
-        {/* settling data rain */}
+        {/* settling sea-spray */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden overflow-hidden sm:block">
           {FLAKES.map((r, i) => (
             <Flake key={i} {...r} />
           ))}
         </div>
 
-        {/* 4-banner carousel in a workbench frame */}
+        {/* 4-banner carousel in a glass frame */}
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
-              <div className="rounded-[2rem] bg-gradient-to-r from-gold-300 via-brand-600 to-gold-300 p-[4px] shadow-[0_18px_40px_-18px_rgba(249, 115, 22,0.55)]">
+              <div className="rounded-[2rem] bg-gradient-to-r from-brand-400 via-popblue-400 to-gold-400 p-[3px] shadow-[0_24px_56px_-18px_rgba(2,132,199,0.55)]">
                 <div className="overflow-hidden rounded-[1.7rem] bg-paper ring-1 ring-ink/30">
                   <BannerCarousel />
                 </div>
@@ -185,12 +185,12 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* bench ticker: emerald band with white type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#f97316]/40 bg-gradient-to-r from-brand-700 via-brand-600 to-brand-800 py-3 shadow-[0_14px_30px_-14px_rgba(20, 184, 166,0.5)]">
+        {/* tide ticker: aurora band with white type */}
+        <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/60 bg-gradient-to-r from-brand-600/95 via-popblue-600/95 to-brand-700/95 py-3 shadow-[0_14px_30px_-14px_rgba(99,102,241,0.5)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
-                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-white drop-shadow-[0_1px_0_rgba(28, 25, 23, 0.6)]">
+                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-white drop-shadow-[0_1px_0_rgba(13, 27, 42, 0.6)]">
                   {t} <span className="text-white/70">✦</span>
                 </span>
               ))}
@@ -198,11 +198,11 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* pulse divider into the page */}
+        {/* tide divider into the page */}
         <div aria-hidden className="zigzag relative z-10 mx-auto mt-0 w-full max-w-7xl opacity-90" />
       </div>
 
-      {/* Stats + featured picks under the brass lamp */}
+      {/* Stats + featured picks under the tide beacon */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 pb-24 pt-10 md:pb-28">
         <motion.div variants={container} initial="hidden" animate="show" {...anim}>
           <motion.div variants={item} className="grid grid-cols-2 gap-6 sm:grid-cols-4">
@@ -215,7 +215,7 @@ export default function Hero({ onQuickView }: HeroProps) {
               <div key={s.l} className="pop-lift relative overflow-hidden p-4 pb-3 pt-5 text-center">
                 <span className="relative block bg-gradient-to-br from-brand-600 via-gold-600 to-popblue-600 bg-clip-text text-2xl font-black tracking-tight text-transparent">{s.v}</span>
                 <span className="relative mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-mute">{s.l}</span>
-                <span aria-hidden className="relative mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-gold-500 via-gold-400 to-gold-200 shadow-[0_2px_6px_rgba(20, 184, 166,0.5)]" />
+                <span aria-hidden className="relative mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-gold-500 via-gold-400 to-gold-200 shadow-[0_2px_6px_rgba(99, 102, 241,0.5)]" />
               </div>
             ))}
           </motion.div>
@@ -223,7 +223,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-sm border-2 border-[#f97316]/50 bg-[#f5f5f4]/90 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-[#14b8a6] shadow-[3px_3px_0_#0d9488,0_0_18px_-4px_rgba(8, 145, 178,0.6)]">Handpicked for you</p>
+            <p className="inline-block rounded-full border border-brand-400/60 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_8px_24px_-8px_rgba(14,165,233,0.6)] backdrop-blur">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="relative bg-gradient-to-r from-brand-500 via-brand-600 to-ink bg-clip-text text-transparent">Picks<span aria-hidden className="absolute inset-x-0 -bottom-1 h-2 rounded-full bg-gradient-to-r from-brand-500 to-brand-700 opacity-60 blur-[3px]" /></span></h2>
             <span className="zigzag mt-4 block w-44" aria-hidden />
           </div>

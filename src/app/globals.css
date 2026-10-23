@@ -1,65 +1,66 @@
 @import "tailwindcss";
 
 @theme {
-  /* Sunpaper Citrus: a bright stationery-desk morning. Warm paper is the
-     desk, citrus orange is the marker ink, fresh teal is the highlighter,
-     and fuchsia is the sticky-note pop. Cards are chunky paper stickers
-     with a hard offset shadow; they hop on hover. */
+  /* Tidal Glass: an arctic storefront lit by aurora. Ice-blue paper is the
+     sea-mist, deep navy is the ink, azure is the current, coral is the
+     buoy pop, and indigo is the deep-water shimmer. Cards are frosted
+     glass panes with hairline borders and soft colored glows; they rise
+     on hover. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = citrus orange scale */
-  --color-brand-50: #fff7ed;
-  --color-brand-100: #ffedd5;
-  --color-brand-200: #fed7aa;
-  --color-brand-300: #fdba74;
-  --color-brand-400: #fb923c;
-  --color-brand-500: #f97316;
-  --color-brand-600: #ea580c;
-  --color-brand-700: #c2410c;
-  --color-brand-800: #9a3412;
-  --color-brand-900: #7c2d12;
-  --color-brand-950: #431407;
-  --color-brand: #f97316;
-  --color-brand-dark: #ea580c;
-  --color-brand-deep: #9a3412;
+  /* brand = azure current scale */
+  --color-brand-50: #f0f9ff;
+  --color-brand-100: #e0f2fe;
+  --color-brand-200: #bae6fd;
+  --color-brand-300: #7dd3fc;
+  --color-brand-400: #38bdf8;
+  --color-brand-500: #0ea5e9;
+  --color-brand-600: #0284c7;
+  --color-brand-700: #0369a1;
+  --color-brand-800: #075985;
+  --color-brand-900: #0c4a6e;
+  --color-brand-950: #082f49;
+  --color-brand: #0ea5e9;
+  --color-brand-dark: #0284c7;
+  --color-brand-deep: #075985;
 
-  /* gold = fresh teal scale (name kept for legacy class refs) */
-  --color-gold-50: #f0fdfa;
-  --color-gold-100: #ccfbf1;
-  --color-gold-200: #99f6e4;
-  --color-gold-300: #5eead4;
-  --color-gold-400: #2dd4bf;
-  --color-gold-500: #14b8a6;
-  --color-gold-600: #0d9488;
-  --color-gold-700: #0f766e;
-  --color-gold-800: #115e59;
-  --color-gold-900: #134e4a;
-  --color-gold-950: #042f2e;
-  --color-gold: #14b8a6;
-  --color-gold-deep: #0f766e;
-  --color-gold-soft: #ccfbf1;
+  /* gold = coral buoy scale (name kept for legacy class refs) */
+  --color-gold-50: #fff1f2;
+  --color-gold-100: #ffe4e6;
+  --color-gold-200: #fecdd3;
+  --color-gold-300: #fda4af;
+  --color-gold-400: #fb7185;
+  --color-gold-500: #f43f5e;
+  --color-gold-600: #e11d48;
+  --color-gold-700: #be123c;
+  --color-gold-800: #9f1239;
+  --color-gold-900: #881337;
+  --color-gold-950: #4c0519;
+  --color-gold: #f43f5e;
+  --color-gold-deep: #be123c;
+  --color-gold-soft: #ffe4e6;
 
-  /* popblue = fuchsia pop scale (name kept for legacy class refs) */
-  --color-popblue-50: #fdf4ff;
-  --color-popblue-100: #fae8ff;
-  --color-popblue-200: #f5d0fe;
-  --color-popblue-300: #f0abfc;
-  --color-popblue-400: #e879f9;
-  --color-popblue-500: #d946ef;
-  --color-popblue-600: #c026d3;
-  --color-popblue-700: #a21caf;
-  --color-popblue-800: #86198f;
-  --color-popblue-900: #701a75;
-  --color-popblue-950: #4a044e;
-  --color-popblue: #d946ef;
-  --color-popblue-deep: #c026d3;
-  --color-popblue-soft: #fae8ff;
+  /* popblue = deep indigo shimmer scale (name kept for legacy class refs) */
+  --color-popblue-50: #eef2ff;
+  --color-popblue-100: #e0e7ff;
+  --color-popblue-200: #c7d2fe;
+  --color-popblue-300: #a5b4fc;
+  --color-popblue-400: #818cf8;
+  --color-popblue-500: #6366f1;
+  --color-popblue-600: #4f46e5;
+  --color-popblue-700: #4338ca;
+  --color-popblue-800: #3730a3;
+  --color-popblue-900: #312e81;
+  --color-popblue-950: #1e1b4b;
+  --color-popblue: #6366f1;
+  --color-popblue-deep: #4f46e5;
+  --color-popblue-soft: #e0e7ff;
 
-  --color-ink: #1c1917;
-  --color-paper: #fff9f0;
-  --color-mute: #78716c;
+  --color-ink: #0d1b2a;
+  --color-paper: #eef4f9;
+  --color-mute: #5b6b7f;
   --color-card: #ffffff;
-  --color-deep: #1c1917;
+  --color-deep: #0d1b2a;
 }
 
 html { scroll-behavior: smooth; }
@@ -74,171 +75,181 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fff9f0;
+  background-color: #eef4f9;
   background-image:
-    radial-gradient(circle, rgba(249, 115, 22, 0.10) 1.1px, transparent 1.8px),
-    radial-gradient(circle, rgba(20, 184, 166, 0.08) 1px, transparent 1.7px),
-    radial-gradient(ellipse 48% 28% at 88% -6%, rgba(253, 186, 116, 0.35), transparent 70%),
-    radial-gradient(ellipse 44% 28% at 8% 106%, rgba(153, 246, 228, 0.30), transparent 70%);
-  background-size: 30px 30px, 46px 46px, auto, auto;
-  background-position: 0 0, 14px 16px, 0 0, 0 0;
-  color: #1c1917;
+    linear-gradient(rgba(2, 132, 199, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(2, 132, 199, 0.055) 1px, transparent 1px),
+    radial-gradient(ellipse 52% 30% at 92% -6%, rgba(56, 189, 248, 0.28), transparent 70%),
+    radial-gradient(ellipse 48% 30% at 4% 106%, rgba(129, 140, 248, 0.24), transparent 70%),
+    radial-gradient(ellipse 30% 22% at 50% 52%, rgba(251, 113, 133, 0.07), transparent 70%);
+  background-size: 34px 34px, 34px 34px, auto, auto, auto;
+  background-position: 0 0, 0 0, 0 0, 0 0, 0 0;
+  color: #0d1b2a;
 }
-::selection { background: #f97316; color: #fff9f0; }
+::selection { background: #0ea5e9; color: #f0f9ff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #fb923c, #14b8a6); border-radius: 999px; border: 2px solid #fff9f0; }
-::-webkit-scrollbar-track { background: #ffedd5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #38bdf8, #6366f1); border-radius: 999px; border: 2px solid #eef4f9; }
+::-webkit-scrollbar-track { background: #e0f2fe; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Citrus rain: paper confetti falling over the desk. */
-@keyframes neon-fall {
-  0% { transform: translate3d(6px, -20px, 0) scale(0.7) rotate(0deg); opacity: 0; }
-  18% { opacity: 0.9; }
-  50% { transform: translate3d(-10px, 90px, 0) scale(1) rotate(120deg); }
-  82% { opacity: 0.6; }
-  100% { transform: translate3d(8px, 220px, 0) scale(0.85) rotate(260deg); opacity: 0; }
+/* Tide fall: sea-spray motes drifting down through the aurora. */
+@keyframes tide-fall {
+  0% { transform: translate3d(4px, -20px, 0) scale(0.7) rotate(0deg); opacity: 0; }
+  18% { opacity: 0.85; }
+  50% { transform: translate3d(-8px, 90px, 0) scale(1) rotate(120deg); }
+  82% { opacity: 0.55; }
+  100% { transform: translate3d(6px, 220px, 0) scale(0.85) rotate(260deg); opacity: 0; }
 }
-.pop-fall { animation: neon-fall 11s linear infinite; }
+.pop-fall { animation: tide-fall 12s linear infinite; }
 
-/* Paper sway: slow lateral drift of the warm haze. */
-@keyframes neon-sway {
+/* Current sway: slow lateral drift of the aurora wash. */
+@keyframes tide-sway {
   0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(3vw, -0.8rem, 0) scale(1.08); opacity: 0.8; }
 }
-.pop-drift { animation: neon-sway 30s ease-in-out infinite; }
+.pop-drift { animation: tide-sway 32s ease-in-out infinite; }
 
-/* Sticker bob: gentle bobbing of the hanging citrus tags. */
-@keyframes neon-bob {
+/* Buoy bob: gentle bobbing of the floating glass orbs. */
+@keyframes tide-bob {
   0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-9px) scale(1.04); }
+  50% { transform: translateY(-10px) scale(1.04); }
 }
-.pop-bob { animation: neon-bob 3.8s ease-in-out infinite; }
+.pop-bob { animation: tide-bob 4.2s ease-in-out infinite; }
 
-/* Slow rotation for the citrus halo. */
-@keyframes neon-wheel {
+/* Slow rotation for the aurora halo. */
+@keyframes tide-wheel {
   to { transform: rotate(360deg); }
 }
-.pop-spin { animation: neon-wheel 60s linear infinite; }
+.pop-spin { animation: tide-wheel 70s linear infinite; }
 
-/* Citrus glint: wavering catchlight of the paper sun. */
-@keyframes neon-glint {
+/* Shimmer glint: wavering catchlight on the tide disc. */
+@keyframes tide-glint {
   0%, 100% { opacity: 0.35; transform: scale(0.85); }
   50% { opacity: 1; transform: scale(1.25); }
 }
-.pop-twinkle { animation: neon-glint 3.4s ease-in-out infinite; }
+.pop-twinkle { animation: tide-glint 3.8s ease-in-out infinite; }
 
-/* Citrus ticker: infinite marquee (leftward drift). */
-@keyframes neon-ticker {
+/* Tide ticker: infinite marquee (leftward drift). */
+@keyframes tide-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
-.pop-ticker { animation: neon-ticker 28s linear infinite; }
+.pop-ticker { animation: tide-ticker 30s linear infinite; }
 
-/* Citrus hazard stripes: paper -> orange -> fuchsia diagonal stripes. */
+/* Aurora stripes: ice -> azure -> indigo -> coral diagonal stripes. */
 .pop-stripes {
-  background-image: repeating-linear-gradient(-55deg, #fff9f0 0 10px, #f97316 10px 20px, #d946ef 20px 30px);
+  background-image: repeating-linear-gradient(-55deg, #eef4f9 0 10px, #0ea5e9 10px 20px, #6366f1 20px 30px, #f43f5e 30px 40px);
 }
 
-/* Citrus sticker: a chunky paper card with a citrus top edge and a hard
-   offset shadow; it hops on hover. */
+/* Tidal glass card: a frosted pane with a hairline border, an aurora top
+   edge and a soft colored glow; it rises on hover. */
 .pop-lift {
   position: relative;
-  border: 2px solid #1c1917;
-  background: #ffffff;
-  border-radius: 1.25rem;
-  box-shadow: 5px 5px 0 #1c1917;
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  border: 1px solid rgba(13, 27, 42, 0.10);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px) saturate(1.15);
+  -webkit-backdrop-filter: blur(14px) saturate(1.15);
+  border-radius: 1.75rem;
+  box-shadow:
+    0 18px 40px -18px rgba(2, 132, 199, 0.35),
+    0 2px 8px -2px rgba(13, 27, 42, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift::before {
-  /* citrus top edge of the sticker */
+  /* aurora top edge of the glass pane */
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 6px;
-  background: linear-gradient(90deg, #f97316 0%, #fb923c 45%, #d946ef 100%);
+  height: 4px;
+  background: linear-gradient(90deg, #0ea5e9 0%, #38bdf8 35%, #6366f1 70%, #f43f5e 100%);
   pointer-events: none;
 }
 .pop-lift:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 8px 8px 0 #1c1917;
-}
-
-/* Citrus glass: shared by modals and drawers — frosted paper with an
-   orange rim. */
-.pop-glass {
-  background: rgba(255, 249, 240, 0.94);
-  backdrop-filter: blur(20px) saturate(1.1);
-  -webkit-backdrop-filter: blur(20px) saturate(1.1);
-  border: 2px solid #fdba74;
-  border-radius: 1rem;
+  transform: translateY(-6px);
+  border-color: rgba(14, 165, 233, 0.45);
   box-shadow:
-    8px 8px 0 rgba(28, 25, 23, 0.9),
-    0 28px 54px -24px rgba(194, 65, 12, 0.35);
+    0 28px 56px -18px rgba(2, 132, 199, 0.5),
+    0 8px 20px -8px rgba(99, 102, 241, 0.35);
 }
 
-/* Citrus seal: an orange stamp badge with warm charcoal type. */
+/* Tide glass: shared by modals and drawers — frosted ice with an azure rim. */
+.pop-glass {
+  background: rgba(238, 244, 249, 0.92);
+  backdrop-filter: blur(22px) saturate(1.2);
+  -webkit-backdrop-filter: blur(22px) saturate(1.2);
+  border: 1px solid rgba(14, 165, 233, 0.35);
+  border-radius: 1.5rem;
+  box-shadow:
+    0 32px 64px -24px rgba(2, 132, 199, 0.45),
+    0 4px 16px -4px rgba(13, 27, 42, 0.12);
+}
+
+/* Coral seal: a buoy-red stamp badge with ice-white type. */
 .starburst {
-  background: radial-gradient(circle at 35% 30%, #fed7aa 0%, #fb923c 55%, #ea580c 100%);
-  color: #1c1917;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background: radial-gradient(circle at 35% 30%, #fda4af 0%, #f43f5e 55%, #be123c 100%);
+  color: #fff1f2;
+  text-shadow: 0 1px 2px rgba(76, 5, 25, 0.55);
   border-radius: 9999px;
   transform: rotate(-6deg);
-  box-shadow: 4px 4px 0 #1c1917, inset 0 2px 6px rgba(255, 255, 255, 0.5);
-  outline: 2px dashed rgba(255, 249, 240, 0.9);
+  box-shadow: 0 10px 24px -8px rgba(225, 29, 72, 0.65), inset 0 2px 6px rgba(255, 255, 255, 0.45);
+  outline: 2px dashed rgba(255, 241, 242, 0.9);
   outline-offset: -6px;
-  border: 2px solid #1c1917;
+  border: 1px solid rgba(190, 18, 60, 0.6);
 }
 
-/* Dot grid: orange-and-teal confetti texture for citrus bands. */
+/* Fine grid: faint azure survey lines for aurora bands. */
 .halftone {
   background-image:
-    radial-gradient(circle, rgba(249, 115, 22, 0.20) 1.2px, transparent 1.9px),
-    radial-gradient(circle, rgba(20, 184, 166, 0.18) 1px, transparent 1.6px);
-  background-size: 15px 15px, 23px 23px;
-  background-position: 0 0, 7px 9px;
+    linear-gradient(rgba(2, 132, 199, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(2, 132, 199, 0.10) 1px, transparent 1px);
+  background-size: 22px 22px;
+  background-position: 0 0, 0 0;
 }
 
-/* Citrus ticks: a row of orange ruler ticks dividing sections. */
+/* Tide scallops: a row of soft azure wave marks dividing sections. */
 .zigzag {
-  height: 14px;
-  background-image: repeating-linear-gradient(90deg, #f97316 0 3px, transparent 3px 10px, #14b8a6 10px 11px, transparent 11px 20px);
+  height: 18px;
+  background-image: radial-gradient(circle at 18px 2px, rgba(14, 165, 233, 0.4) 9px, transparent 10px);
+  background-size: 36px 18px;
   background-repeat: repeat-x;
   opacity: 0.9;
-  -webkit-mask: linear-gradient(180deg, black 60%, transparent 100%);
-  mask: linear-gradient(180deg, black 60%, transparent 100%);
+  -webkit-mask: linear-gradient(180deg, black 65%, transparent 100%);
+  mask: linear-gradient(180deg, black 65%, transparent 100%);
 }
 
-/* Citrus awning: orange/teal/fuchsia paper strip with a charcoal hem. */
+/* Aurora ribbon: azure/indigo/coral light band with a soft glow. */
 .bazaar-awning {
-  background-image:
-    repeating-linear-gradient(45deg, rgba(255, 249, 240, 0.95) 0 26px, rgba(249, 115, 22, 0.55) 26px 52px, rgba(20, 184, 166, 0.55) 52px 58px, rgba(217, 70, 239, 0.45) 58px 84px);
-  border-bottom: 3px solid #1c1917;
-  box-shadow: 0 8px 24px -8px rgba(249, 115, 22, 0.5);
+  background-image: linear-gradient(90deg,
+    rgba(14, 165, 233, 0.9) 0%,
+    rgba(56, 189, 248, 0.75) 30%,
+    rgba(99, 102, 241, 0.8) 62%,
+    rgba(244, 63, 94, 0.75) 100%);
+  box-shadow: 0 6px 22px -6px rgba(14, 165, 233, 0.6);
 }
 
-/* Citrus glow: layered orange/teal glow for the paper sun. */
+/* Aurora core: layered azure/indigo/coral glow for the tide halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(251, 146, 60, 0.55) 0%, rgba(249, 115, 22, 0.35) 42%, rgba(20, 184, 166, 0.28) 62%, rgba(20, 184, 166, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(56, 189, 248, 0.5) 0%, rgba(14, 165, 233, 0.32) 42%, rgba(99, 102, 241, 0.26) 62%, rgba(99, 102, 241, 0) 76%);
 }
-/* Citrus sun: a glowing orange disc with a teal halo. */
+/* Tide disc: a glowing azure orb with an indigo halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #fff7ed 0%, #fb923c 52%, #ea580c 100%);
-  box-shadow: 0 0 70px -8px rgba(249, 115, 22, 0.6), 0 0 28px -6px rgba(20, 184, 166, 0.5), inset 0 3px 12px rgba(255, 255, 255, 0.5);
-  border: 2px solid #1c1917;
+    radial-gradient(circle at 38% 34%, #f0f9ff 0%, #38bdf8 52%, #0284c7 100%);
+  box-shadow: 0 0 70px -8px rgba(14, 165, 233, 0.55), 0 0 28px -6px rgba(99, 102, 241, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(2, 132, 199, 0.5);
 }
 
-/* Orbit rings around the citrus sun. */
+/* Ripple rings around the tide disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(249, 115, 22, 0.5) 0px,
-    rgba(249, 115, 22, 0.5) 3px,
+    rgba(14, 165, 233, 0.45) 0px,
+    rgba(14, 165, 233, 0.45) 3px,
     transparent 3px,
     transparent 28px
   );
@@ -249,8 +260,8 @@ body {
 .sun-rays {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(20, 184, 166, 0.5) 0px,
-    rgba(20, 184, 166, 0.5) 3px,
+    rgba(99, 102, 241, 0.45) 0px,
+    rgba(99, 102, 241, 0.45) 3px,
     transparent 3px,
     transparent 28px
   );
@@ -259,62 +270,75 @@ body {
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all citrus styled. */
+/* Legacy aliases kept so untouched components still render — all tidal styled. */
 .lagoon-lift {
   position: relative;
-  border: 2px solid #1c1917;
-  background: #ffffff;
-  border-radius: 1.25rem;
-  box-shadow: 5px 5px 0 #1c1917;
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  border: 1px solid rgba(13, 27, 42, 0.10);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px) saturate(1.15);
+  -webkit-backdrop-filter: blur(14px) saturate(1.15);
+  border-radius: 1.75rem;
+  box-shadow:
+    0 18px 40px -18px rgba(2, 132, 199, 0.35),
+    0 2px 8px -2px rgba(13, 27, 42, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .lagoon-lift:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 8px 8px 0 #1c1917;
+  transform: translateY(-6px);
+  border-color: rgba(14, 165, 233, 0.45);
+  box-shadow:
+    0 28px 56px -18px rgba(2, 132, 199, 0.5),
+    0 8px 20px -8px rgba(99, 102, 241, 0.35);
 }
 .stamp-perf {
-  border: 2px dashed #ea580c;
-  background: rgba(249, 115, 22, 0.10);
-  border-radius: 1.25rem;
-  box-shadow: 5px 5px 0 rgba(28, 25, 23, 0.85);
+  border: 1px dashed rgba(2, 132, 199, 0.6);
+  background: rgba(14, 165, 233, 0.08);
+  border-radius: 1.75rem;
+  box-shadow: 0 18px 40px -20px rgba(2, 132, 199, 0.4);
 }
 .ember-glow {
   position: relative;
-  border: 2px solid #1c1917;
-  background: linear-gradient(165deg, #fff7ed 0%, #ffffff 60%, #ffedd5 100%);
-  border-radius: 1.25rem;
-  box-shadow: 5px 5px 0 #1c1917;
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  border: 1px solid rgba(13, 27, 42, 0.10);
+  background: linear-gradient(165deg, rgba(240, 249, 255, 0.85) 0%, rgba(255, 255, 255, 0.75) 60%, rgba(224, 242, 254, 0.85) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 1.75rem;
+  box-shadow: 0 18px 40px -18px rgba(2, 132, 199, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 8px 8px 0 #1c1917;
+  transform: translateY(-6px);
+  box-shadow: 0 28px 56px -18px rgba(2, 132, 199, 0.5);
 }
 .ripple-glow {
   position: relative;
-  border: 2px solid #1c1917;
-  background: linear-gradient(165deg, #f0fdfa 0%, #ffffff 60%, #ccfbf1 100%);
-  border-radius: 1.25rem;
-  box-shadow: 5px 5px 0 #1c1917;
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  border: 1px solid rgba(13, 27, 42, 0.10);
+  background: linear-gradient(165deg, rgba(238, 242, 255, 0.85) 0%, rgba(255, 255, 255, 0.75) 60%, rgba(224, 231, 255, 0.85) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 1.75rem;
+  box-shadow: 0 18px 40px -18px rgba(99, 102, 241, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 8px 8px 0 #1c1917;
+  transform: translateY(-6px);
+  box-shadow: 0 28px 56px -18px rgba(99, 102, 241, 0.5);
 }
 .lagoon-glow {
   position: relative;
-  border: 2px solid #1c1917;
-  background: linear-gradient(165deg, #fff7ed 0%, #ffffff 60%, #ffedd5 100%);
-  border-radius: 1.25rem;
-  box-shadow: 5px 5px 0 #1c1917;
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  border: 1px solid rgba(13, 27, 42, 0.10);
+  background: linear-gradient(165deg, rgba(240, 249, 255, 0.85) 0%, rgba(255, 255, 255, 0.75) 60%, rgba(224, 242, 254, 0.85) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 1.75rem;
+  box-shadow: 0 18px 40px -18px rgba(2, 132, 199, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 8px 8px 0 #1c1917;
+  transform: translateY(-6px);
+  box-shadow: 0 28px 56px -18px rgba(2, 132, 199, 0.5);
 }
