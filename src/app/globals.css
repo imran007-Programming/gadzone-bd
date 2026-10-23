@@ -1,63 +1,65 @@
 @import "tailwindcss";
 
 @theme {
-  /* Morning Craft Bazaar: a sunlit craft-paper market.
-     Cards are hand-stitched paper tiles with a terracotta rim and a warm
-     drop shadow; they lift into a sun-glow on hover.
-     Terracotta carries the brand, deep teal the hem, marigold the spark. */
+  /* Midnight Circuit Lab: a dark electronics workbench after hours.
+     Cards are smoked-glass panels with a neon violet rim and a
+     cyan-lime charge line; they lift into a violet glow on hover.
+     Violet carries the brand, lime the spark, cyan the current. */
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = terracotta ember scale */
-  --color-brand-50: #fff7ed;
-  --color-brand-100: #ffedd5;
-  --color-brand-200: #fed7aa;
-  --color-brand-300: #fdba74;
-  --color-brand-400: #fb923c;
-  --color-brand-500: #f97316;
-  --color-brand-600: #ea580c;
-  --color-brand-700: #c2410c;
-  --color-brand-800: #9a3412;
-  --color-brand-900: #7c2d12;
-  --color-brand-950: #431407;
-  --color-brand: #ea580c;
-  --color-brand-dark: #9a3412;
-  --color-brand-deep: #7c2d12;
+  /* brand = electric violet scale */
+  --color-brand-50: #f5f3ff;
+  --color-brand-100: #ede9fe;
+  --color-brand-200: #ddd6fe;
+  --color-brand-300: #c4b5fd;
+  --color-brand-400: #a78bfa;
+  --color-brand-500: #8b5cf6;
+  --color-brand-600: #7c3aed;
+  --color-brand-700: #6d28d9;
+  --color-brand-800: #5b21b6;
+  --color-brand-900: #4c1d95;
+  --color-brand-950: #2e1065;
+  --color-brand: #7c3aed;
+  --color-brand-dark: #5b21b6;
+  --color-brand-deep: #4c1d95;
 
-  /* gold = deep teal scale (name kept for legacy class refs) */
-  --color-gold-50: #f0fdfa;
-  --color-gold-100: #ccfbf1;
-  --color-gold-200: #99f6e4;
-  --color-gold-300: #5eead4;
-  --color-gold-400: #2dd4bf;
-  --color-gold-500: #14b8a6;
-  --color-gold-600: #0d9488;
-  --color-gold-700: #0f766e;
-  --color-gold-800: #115e59;
-  --color-gold-900: #134e4a;
-  --color-gold-950: #042f2e;
-  --color-gold: #0d9488;
-  --color-gold-deep: #0f766e;
-  --color-gold-soft: #ccfbf1;
+  /* gold = neon lime scale (name kept for legacy class refs) */
+  --color-gold-50: #f7fee7;
+  --color-gold-100: #ecfccb;
+  --color-gold-200: #d9f99d;
+  --color-gold-300: #bef264;
+  --color-gold-400: #a3e635;
+  --color-gold-500: #84cc16;
+  --color-gold-600: #65a30d;
+  --color-gold-700: #4d7c0f;
+  --color-gold-800: #3f6212;
+  --color-gold-900: #365314;
+  --color-gold-950: #1a2e05;
+  --color-gold: #84cc16;
+  --color-gold-deep: #4d7c0f;
+  --color-gold-soft: #ecfccb;
 
-  /* popblue = marigold amber scale (name kept for legacy class refs) */
-  --color-popblue-50: #fffbeb;
-  --color-popblue-100: #fef3c7;
-  --color-popblue-200: #fde68a;
-  --color-popblue-300: #fcd34d;
-  --color-popblue-400: #fbbf24;
-  --color-popblue-500: #f59e0b;
-  --color-popblue-600: #d97706;
-  --color-popblue-700: #b45309;
-  --color-popblue-800: #92400e;
-  --color-popblue-900: #78350f;
-  --color-popblue-950: #451a03;
-  --color-popblue: #d97706;
-  --color-popblue-deep: #b45309;
-  --color-popblue-soft: #fef3c7;
+  /* popblue = electric cyan scale (name kept for legacy class refs) */
+  --color-popblue-50: #ecfeff;
+  --color-popblue-100: #cffafe;
+  --color-popblue-200: #a5f3fc;
+  --color-popblue-300: #67e8f9;
+  --color-popblue-400: #22d3ee;
+  --color-popblue-500: #06b6d4;
+  --color-popblue-600: #0891b2;
+  --color-popblue-700: #0e7490;
+  --color-popblue-800: #155e75;
+  --color-popblue-900: #164e63;
+  --color-popblue-950: #083344;
+  --color-popblue: #06b6d4;
+  --color-popblue-deep: #0e7490;
+  --color-popblue-soft: #cffafe;
 
-  --color-ink: #33241a;
-  --color-paper: #fdf6ea;
-  --color-mute: #8a7a66;
+  --color-ink: #eef1ff;
+  --color-paper: #0a0e1a;
+  --color-mute: #9aa4c7;
+  --color-card: #141b31;
+  --color-deep: #05080f;
 }
 
 html { scroll-behavior: smooth; }
@@ -72,23 +74,24 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fdf6ea;
+  background-color: #0a0e1a;
   background-image:
-    radial-gradient(circle, rgba(234, 88, 12, 0.08) 1px, transparent 1.7px),
-    radial-gradient(ellipse 60% 32% at 90% -10%, rgba(13, 148, 136, 0.12), transparent 70%),
-    radial-gradient(ellipse 46% 26% at 2% 104%, rgba(234, 88, 12, 0.12), transparent 70%),
-    radial-gradient(ellipse 38% 24% at 60% 46%, rgba(245, 158, 11, 0.10), transparent 70%);
-  background-size: 30px 30px, auto, auto, auto;
-  color: #33241a;
+    linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px),
+    radial-gradient(ellipse 60% 32% at 88% -8%, rgba(124, 58, 237, 0.22), transparent 70%),
+    radial-gradient(ellipse 46% 26% at 4% 102%, rgba(6, 182, 212, 0.14), transparent 70%),
+    radial-gradient(ellipse 34% 22% at 58% 48%, rgba(132, 204, 22, 0.08), transparent 70%);
+  background-size: 44px 44px, 44px 44px, auto, auto, auto;
+  color: #eef1ff;
 }
-::selection { background: #ea580c; color: #fff7ed; }
+::selection { background: #a3e635; color: #0a0e1a; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #f97316, #0d9488); border-radius: 8px; border: 2px solid #fdf6ea; }
-::-webkit-scrollbar-track { background: #f7e8d2; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #8b5cf6, #06b6d4); border-radius: 8px; border: 2px solid #0a0e1a; }
+::-webkit-scrollbar-track { background: #0d1226; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Paper scraps: warm flecks drifting down through the morning market air. */
+/* Circuit sparks: neon motes drifting down through the dark lab. */
 @keyframes signal-fall {
   0% { transform: translate3d(-6px, -60px, 0) rotate(0deg) scale(0.75); opacity: 0; }
   18% { opacity: 0.9; }
@@ -98,53 +101,53 @@ body {
 }
 .pop-fall { animation: signal-fall 12s linear infinite; }
 
-/* Bazaar drift: slow lateral float of the warm morning air. */
+/* Ion drift: slow lateral float of the charged lab air. */
 @keyframes signal-sway {
   0%, 100% { transform: translate3d(3vw, 0, 0) scale(1); opacity: 0.55; }
   50% { transform: translate3d(-3vw, -0.8rem, 0) scale(1.1); opacity: 0.85; }
 }
 .pop-drift { animation: signal-sway 30s ease-in-out infinite; }
 
-/* Sun bob: gentle floating pulse. */
+/* Levitation pulse: gentle floating glow. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-8px) scale(1.04); }
 }
 .pop-bob { animation: signal-bob 4s ease-in-out infinite; }
 
-/* Slow rotation for the sun halo. */
+/* Slow rotation for the reactor halo. */
 @keyframes signal-wheel {
   to { transform: rotate(-360deg); }
 }
 .pop-spin { animation: signal-wheel 56s linear infinite; }
 
-/* Sun glint: sparkling catchlight. */
+/* Neon glint: sparkling catchlight. */
 @keyframes signal-glint {
   0%, 100% { opacity: 0.3; transform: scale(0.85); }
   50% { opacity: 1; transform: scale(1.2); }
 }
 .pop-twinkle { animation: signal-glint 3.6s ease-in-out infinite; }
 
-/* Day ticker: infinite marquee (leftward drift). */
+/* Night ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Sun bars: terracotta -> deep teal -> marigold diagonal charge. */
+/* Charge bars: violet -> cyan -> lime diagonal current. */
 .pop-stripes {
-  background-image: repeating-linear-gradient(-55deg, #ea580c 0 10px, #c2410c 10px 20px, #0d9488 20px 30px);
+  background-image: repeating-linear-gradient(-55deg, #7c3aed 0 10px, #6d28d9 10px 20px, #06b6d4 20px 30px);
 }
 
-/* Stitched paper tile: a hand-stitched craft card with a terracotta rim
-   and a warm drop shadow; it lifts into a sun-glow on hover. */
+/* Smoked-glass panel: a neon-rimmed circuit card that lifts
+   into a violet glow on hover. */
 .pop-lift {
   position: relative;
-  border: 2px solid rgba(234, 88, 12, 0.45);
-  background: linear-gradient(180deg, #fffdf8 0%, #fff6e6 100%);
+  border: 1.5px solid rgba(139, 92, 246, 0.4);
+  background: linear-gradient(180deg, rgba(24, 33, 61, 0.92) 0%, rgba(12, 17, 33, 0.96) 100%);
   border-radius: 1.25rem;
-  box-shadow: 0 3px 0 rgba(194, 65, 12, 0.22), 0 14px 28px -14px rgba(234, 88, 12, 0.35);
+  box-shadow: 0 3px 0 rgba(109, 40, 217, 0.35), 0 16px 32px -16px rgba(124, 58, 237, 0.55), inset 0 1px 0 rgba(167, 139, 250, 0.18);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   overflow: hidden;
 }
@@ -154,9 +157,9 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 6px;
-  background: linear-gradient(90deg, #ea580c 0%, #0d9488 55%, #d97706 100%);
-  box-shadow: 0 2px 8px rgba(234, 88, 12, 0.4);
+  height: 5px;
+  background: linear-gradient(90deg, #7c3aed 0%, #06b6d4 55%, #a3e635 100%);
+  box-shadow: 0 2px 10px rgba(124, 58, 237, 0.6);
   pointer-events: none;
 }
 .pop-lift::after {
@@ -164,76 +167,76 @@ body {
   position: absolute;
   inset: 6px;
   border-radius: 0.9rem;
-  border: 1.5px dashed rgba(194, 65, 12, 0.3);
+  border: 1.5px dashed rgba(103, 232, 249, 0.22);
   pointer-events: none;
 }
 .pop-lift:hover {
   transform: translateY(-4px);
-  border-color: #fb923c;
-  box-shadow: 0 4px 0 rgba(194, 65, 12, 0.25), 0 22px 40px -14px rgba(234, 88, 12, 0.5);
+  border-color: #8b5cf6;
+  box-shadow: 0 4px 0 rgba(109, 40, 217, 0.4), 0 24px 44px -14px rgba(124, 58, 237, 0.7), 0 0 24px -8px rgba(6, 182, 212, 0.5);
 }
 
-/* Craft glass: shared by modals and drawers — a frosted cream panel. */
+/* Dark glass: shared by modals and drawers — a frosted midnight panel. */
 .pop-glass {
-  background: rgba(255, 253, 248, 0.92);
+  background: rgba(13, 18, 38, 0.9);
   backdrop-filter: blur(20px) saturate(1.15);
   -webkit-backdrop-filter: blur(20px) saturate(1.15);
-  border: 2px solid rgba(234, 88, 12, 0.4);
+  border: 1.5px solid rgba(139, 92, 246, 0.45);
   border-radius: 1.25rem;
-  box-shadow: 0 24px 60px -18px rgba(124, 45, 18, 0.35), 0 0 32px -12px rgba(234, 88, 12, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  box-shadow: 0 24px 60px -18px rgba(3, 6, 16, 0.8), 0 0 32px -12px rgba(124, 58, 237, 0.55), inset 0 1px 0 rgba(167, 139, 250, 0.2);
 }
 
-/* Sun seal: a marigold medallion with a dashed teal ring. */
+/* Charge seal: a neon-lime medallion with a dashed violet ring. */
 .starburst {
-  background: radial-gradient(circle at 35% 30%, #fbbf24 0%, #f59e0b 55%, #b45309 100%);
-  color: #fffbeb;
-  text-shadow: 0 1px 0 rgba(124, 45, 18, 0.5);
+  background: radial-gradient(circle at 35% 30%, #d9f99d 0%, #a3e635 55%, #65a30d 100%);
+  color: #0a0e1a;
+  text-shadow: none;
   border-radius: 9999px;
   transform: rotate(6deg);
-  box-shadow: 0 0 22px -4px rgba(245, 158, 11, 0.7), inset 0 2px 6px rgba(255, 255, 255, 0.45);
-  outline: 2px dashed #0d9488;
+  box-shadow: 0 0 22px -4px rgba(163, 230, 53, 0.75), inset 0 2px 6px rgba(255, 255, 255, 0.4);
+  outline: 2px dashed #8b5cf6;
   outline-offset: -6px;
 }
 
-/* Sun dots: faint craft-dot texture for hero bands. */
+/* Circuit dots: faint neon-dot texture for hero bands. */
 .halftone {
-  background-image: radial-gradient(circle, rgba(234, 88, 12, 0.12) 1px, transparent 1.7px);
+  background-image: radial-gradient(circle, rgba(103, 232, 249, 0.14) 1px, transparent 1.7px);
   background-size: 14px 14px;
 }
 
-/* Day band: a terracotta -> teal -> marigold ribbon. */
+/* Night band: a violet -> cyan -> lime ribbon. */
 .zigzag {
   height: 6px;
-  background: repeating-linear-gradient(135deg, #ea580c 0 12px, #0d9488 12px 24px, #d97706 24px 36px);
+  background: repeating-linear-gradient(135deg, #7c3aed 0 12px, #06b6d4 12px 24px, #a3e635 24px 36px);
   border-radius: 9999px;
-  box-shadow: 0 2px 10px rgba(234, 88, 12, 0.35);
+  box-shadow: 0 2px 10px rgba(124, 58, 237, 0.45);
 }
 
-/* Market canopy: cream and terracotta stripes with a teal hem. */
+/* Circuit canopy: dark panel with a violet-lime current strip. */
 .bazaar-awning {
   background-image:
-    repeating-linear-gradient(90deg, #ea580c 0 28px, #fff7ed 28px 56px);
-  border-bottom: 3px solid #0d9488;
-  box-shadow: 0 6px 18px -6px rgba(234, 88, 12, 0.4);
+    repeating-linear-gradient(90deg, rgba(124, 58, 237, 0.5) 0 28px, rgba(13, 18, 38, 0.9) 28px 56px);
+  border-bottom: 3px solid #a3e635;
+  box-shadow: 0 6px 18px -6px rgba(124, 58, 237, 0.5);
 }
 
-/* Sun wash: layered terracotta/marigold glow for the morning orb. */
+/* Reactor wash: layered violet/lime glow for the midnight core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(251, 191, 36, 0.55) 0%, rgba(249, 115, 22, 0.38) 42%, rgba(13, 148, 136, 0.14) 62%, rgba(13, 148, 136, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(139, 92, 246, 0.55) 0%, rgba(124, 58, 237, 0.38) 42%, rgba(6, 182, 212, 0.16) 62%, rgba(6, 182, 212, 0) 76%);
 }
 .sun-disc {
   background:
-    conic-gradient(from 40deg, #fbbf24, #f97316, #ea580c, #fbbf24);
-  box-shadow: 0 0 70px -8px rgba(234, 88, 12, 0.6), 0 0 30px -6px rgba(245, 158, 11, 0.5);
+    conic-gradient(from 40deg, #a3e635, #06b6d4, #7c3aed, #a3e635);
+  box-shadow: 0 0 70px -8px rgba(124, 58, 237, 0.65), 0 0 30px -6px rgba(6, 182, 212, 0.5);
 }
 
-/* Sun halo rings. */
+/* Reactor halo rings. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(234, 88, 12, 0.5) 0px,
-    rgba(234, 88, 12, 0.5) 4px,
+    rgba(139, 92, 246, 0.5) 0px,
+    rgba(139, 92, 246, 0.5) 4px,
     transparent 4px,
     transparent 30px
   );
@@ -244,8 +247,8 @@ body {
 .sun-rays {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(245, 158, 11, 0.45) 0px,
-    rgba(245, 158, 11, 0.45) 4px,
+    rgba(103, 232, 249, 0.45) 0px,
+    rgba(103, 232, 249, 0.45) 4px,
     transparent 4px,
     transparent 30px
   );
@@ -254,63 +257,63 @@ body {
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all craft-styled. */
+/* Legacy aliases kept so untouched components still render — all lab-styled. */
 .lagoon-lift {
   position: relative;
-  border: 2px solid rgba(13, 148, 136, 0.5);
-  background: linear-gradient(180deg, #f0fdfa 0%, #fff6e6 100%);
+  border: 1.5px solid rgba(6, 182, 212, 0.5);
+  background: linear-gradient(180deg, rgba(24, 33, 61, 0.92) 0%, rgba(12, 17, 33, 0.96) 100%);
   border-radius: 1.25rem;
-  box-shadow: 0 3px 0 rgba(15, 118, 110, 0.2), 0 14px 28px -14px rgba(13, 148, 136, 0.35);
+  box-shadow: 0 3px 0 rgba(14, 116, 144, 0.35), 0 16px 32px -16px rgba(6, 182, 212, 0.5), inset 0 1px 0 rgba(103, 232, 249, 0.18);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   overflow: hidden;
 }
 .lagoon-lift:hover {
   transform: translateY(-4px);
-  border-color: #14b8a6;
-  box-shadow: 0 4px 0 rgba(15, 118, 110, 0.25), 0 22px 40px -14px rgba(13, 148, 136, 0.45);
+  border-color: #22d3ee;
+  box-shadow: 0 4px 0 rgba(14, 116, 144, 0.4), 0 24px 44px -14px rgba(6, 182, 212, 0.6);
 }
 .stamp-perf {
-  border: 2px dashed #c2410c;
-  background: rgba(234, 88, 12, 0.06);
+  border: 2px dashed #8b5cf6;
+  background: rgba(124, 58, 237, 0.08);
   border-radius: 1.25rem;
-  box-shadow: 0 3px 0 rgba(194, 65, 12, 0.18), 0 12px 24px -14px rgba(234, 88, 12, 0.4);
+  box-shadow: 0 3px 0 rgba(109, 40, 217, 0.3), 0 12px 24px -14px rgba(124, 58, 237, 0.5);
 }
 .ember-glow {
   position: relative;
-  border: 2px solid rgba(234, 88, 12, 0.45);
-  background: linear-gradient(180deg, #fffdf8 0%, #fff6e6 100%);
+  border: 1.5px solid rgba(139, 92, 246, 0.4);
+  background: linear-gradient(180deg, rgba(24, 33, 61, 0.92) 0%, rgba(12, 17, 33, 0.96) 100%);
   border-radius: 1.25rem;
-  box-shadow: 0 3px 0 rgba(194, 65, 12, 0.2), 0 14px 28px -14px rgba(234, 88, 12, 0.4);
+  box-shadow: 0 3px 0 rgba(109, 40, 217, 0.35), 0 16px 32px -16px rgba(124, 58, 237, 0.55);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
   transform: translateY(-4px);
-  box-shadow: 0 4px 0 rgba(194, 65, 12, 0.25), 0 22px 40px -14px rgba(234, 88, 12, 0.5);
+  box-shadow: 0 4px 0 rgba(109, 40, 217, 0.4), 0 24px 44px -14px rgba(124, 58, 237, 0.65);
 }
 .ripple-glow {
   position: relative;
-  border: 2px solid rgba(217, 119, 6, 0.5);
-  background: linear-gradient(180deg, #fffbeb 0%, #fff6e6 100%);
+  border: 1.5px solid rgba(6, 182, 212, 0.5);
+  background: linear-gradient(180deg, rgba(24, 33, 61, 0.92) 0%, rgba(12, 17, 33, 0.96) 100%);
   border-radius: 1.25rem;
-  box-shadow: 0 3px 0 rgba(180, 83, 9, 0.2), 0 14px 28px -14px rgba(217, 119, 6, 0.4);
+  box-shadow: 0 3px 0 rgba(14, 116, 144, 0.35), 0 16px 32px -16px rgba(6, 182, 212, 0.5);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
   transform: translateY(-4px);
-  box-shadow: 0 4px 0 rgba(180, 83, 9, 0.25), 0 22px 40px -14px rgba(217, 119, 6, 0.5);
+  box-shadow: 0 4px 0 rgba(14, 116, 144, 0.4), 0 24px 44px -14px rgba(6, 182, 212, 0.6);
 }
 .lagoon-glow {
   position: relative;
-  border: 2px solid rgba(234, 88, 12, 0.45);
-  background: linear-gradient(180deg, #fffdf8 0%, #fef3c7 100%);
+  border: 1.5px solid rgba(139, 92, 246, 0.4);
+  background: linear-gradient(180deg, rgba(24, 33, 61, 0.92) 0%, rgba(12, 17, 33, 0.96) 100%);
   border-radius: 1.25rem;
-  box-shadow: 0 3px 0 rgba(194, 65, 12, 0.2), 0 14px 28px -14px rgba(234, 88, 12, 0.4);
+  box-shadow: 0 3px 0 rgba(109, 40, 217, 0.35), 0 16px 32px -16px rgba(124, 58, 237, 0.55);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
   transform: translateY(-4px);
-  box-shadow: 0 4px 0 rgba(194, 65, 12, 0.25), 0 22px 40px -14px rgba(234, 88, 12, 0.5);
+  box-shadow: 0 4px 0 rgba(109, 40, 217, 0.4), 0 24px 44px -14px rgba(124, 58, 237, 0.65);
 }
