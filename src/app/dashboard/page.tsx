@@ -86,14 +86,14 @@ export default function DashboardPage() {
 
       <div className="min-w-0 flex-1">
         {/* Top header */}
-        <header className="sticky top-0 z-20 border-b border-[#eadfce] bg-[#ffffff]/90 backdrop-blur lg:static">
+        <header className="sticky top-0 z-20 border-b border-[#d9e9ee] bg-[#ffffff]/90 backdrop-blur lg:static">
           <div className="mx-auto flex max-w-5xl items-center gap-3 px-4 py-3">
             <Link href="/" className="flex shrink-0 items-center gap-2 lg:hidden">
               <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-500 text-xl font-black text-white">G</span>
               <span className="text-base font-black tracking-tight">Gad<span className="text-brand-700">Zone</span> BD</span>
             </Link>
             <div className="min-w-0 flex-1">
-              <p className="truncate text-sm font-bold text-[#3a2a1a] sm:text-base">Hello, {session?.user?.name ?? "Guest"} 👋</p>
+              <p className="truncate text-sm font-bold text-[#14343e] sm:text-base">Hello, {session?.user?.name ?? "Guest"} 👋</p>
               <p className="hidden text-xs text-[#2547e0] sm:block">Track your orders and manage your account.</p>
             </div>
             {session?.user && (
@@ -105,10 +105,10 @@ export default function DashboardPage() {
                     value={search}
                     onChange={(e) => handleSearch(e.target.value)}
                     placeholder="Search orders by id or item…"
-                    className="w-full rounded-full border border-[#eadfce] bg-[#ffffff] py-2 pr-3 pl-9 text-sm outline-none focus:border-brand-400 focus:bg-[#ffffff]"
+                    className="w-full rounded-full border border-[#d9e9ee] bg-[#ffffff] py-2 pr-3 pl-9 text-sm outline-none focus:border-brand-400 focus:bg-[#ffffff]"
                   />
                 </label>
-                <Link href="/" className="relative shrink-0 rounded-full bg-[#ffffff] px-4 py-2 text-sm font-bold text-[#3a2a1a] transition hover:bg-[#3a2a1a]">
+                <Link href="/" className="relative shrink-0 rounded-full bg-[#ffffff] px-4 py-2 text-sm font-bold text-[#14343e] transition hover:bg-[#14343e]">
                   🛒 <span className="hidden sm:inline">Cart</span>
                 </Link>
                 {session.user.image ? (
@@ -132,7 +132,7 @@ export default function DashboardPage() {
                   value={search}
                   onChange={(e) => handleSearch(e.target.value)}
                   placeholder="Search orders by id or item…"
-                  className="w-full rounded-full border border-[#eadfce] bg-[#ffffff] py-2 pr-3 pl-9 text-sm outline-none focus:border-brand-400 focus:bg-[#ffffff]"
+                  className="w-full rounded-full border border-[#d9e9ee] bg-[#ffffff] py-2 pr-3 pl-9 text-sm outline-none focus:border-brand-400 focus:bg-[#ffffff]"
                 />
               </label>
             </div>
@@ -179,7 +179,7 @@ export default function DashboardPage() {
 
                   <section>
                     <div className="mb-3 flex items-center justify-between">
-                      <h2 className="text-lg font-black text-[#3a2a1a]">Recent Orders</h2>
+                      <h2 className="text-lg font-black text-[#14343e]">Recent Orders</h2>
                       <button onClick={() => setTab("orders")} className="text-sm font-bold text-brand-700 hover:text-brand-700">View all →</button>
                     </div>
                     {!loaded ? (
@@ -189,9 +189,9 @@ export default function DashboardPage() {
                     ) : (
                       <div className="space-y-3">
                         {recent.map((o) => (
-                          <div key={o.id} className="flex flex-wrap items-center justify-between gap-3 rounded-lg bg-[#ffffff] p-4 shadow-sm ring-1 ring-[#eadfce]">
+                          <div key={o.id} className="flex flex-wrap items-center justify-between gap-3 rounded-lg bg-[#ffffff] p-4 shadow-sm ring-1 ring-[#d9e9ee]">
                             <div className="min-w-0">
-                              <p className="font-black text-[#3a2a1a]">{o.id}</p>
+                              <p className="font-black text-[#14343e]">{o.id}</p>
                               <p className="truncate text-sm text-[#2547e0]">{o.items.map((it) => `${it.name} × ${it.qty}`).join(" · ")}</p>
                             </div>
                             <div className="flex items-center gap-3">
@@ -205,21 +205,21 @@ export default function DashboardPage() {
                   </section>
 
                   <section>
-                    <h2 className="mb-3 text-lg font-black text-[#3a2a1a]">Quick actions</h2>
+                    <h2 className="mb-3 text-lg font-black text-[#14343e]">Quick actions</h2>
                     <div className="grid gap-3 sm:grid-cols-3">
-                      <Link href="/" className="rounded-lg bg-[#ffffff] p-5 shadow-sm ring-1 ring-[#eadfce] transition hover:shadow-md">
+                      <Link href="/" className="rounded-lg bg-[#ffffff] p-5 shadow-sm ring-1 ring-[#d9e9ee] transition hover:shadow-md">
                         <p className="text-2xl" aria-hidden="true">🛍️</p>
-                        <p className="mt-2 font-black text-[#3a2a1a]">Shop Now</p>
+                        <p className="mt-2 font-black text-[#14343e]">Shop Now</p>
                         <p className="text-sm text-[#2547e0]">Browse deals and new arrivals.</p>
                       </Link>
-                      <button onClick={() => setTab("orders")} className="rounded-lg bg-[#ffffff] p-5 text-left shadow-sm ring-1 ring-[#eadfce] transition hover:shadow-md">
+                      <button onClick={() => setTab("orders")} className="rounded-lg bg-[#ffffff] p-5 text-left shadow-sm ring-1 ring-[#d9e9ee] transition hover:shadow-md">
                         <p className="text-2xl" aria-hidden="true">🚚</p>
-                        <p className="mt-2 font-black text-[#3a2a1a]">Track Order</p>
+                        <p className="mt-2 font-black text-[#14343e]">Track Order</p>
                         <p className="text-sm text-[#2547e0]">See the status of every order.</p>
                       </button>
-                      <Link href="/#faq" className="rounded-lg bg-[#ffffff] p-5 shadow-sm ring-1 ring-[#eadfce] transition hover:shadow-md">
+                      <Link href="/#faq" className="rounded-lg bg-[#ffffff] p-5 shadow-sm ring-1 ring-[#d9e9ee] transition hover:shadow-md">
                         <p className="text-2xl" aria-hidden="true">💬</p>
-                        <p className="mt-2 font-black text-[#3a2a1a]">Support</p>
+                        <p className="mt-2 font-black text-[#14343e]">Support</p>
                         <p className="text-sm text-[#2547e0]">Answers to common questions.</p>
                       </Link>
                     </div>
@@ -231,13 +231,13 @@ export default function DashboardPage() {
                 <div className="space-y-5 pt-4">
                   <div className="flex flex-wrap items-end justify-between gap-3">
                     <div>
-                      <h1 className="text-2xl font-black text-[#3a2a1a]">My Orders</h1>
+                      <h1 className="text-2xl font-black text-[#14343e]">My Orders</h1>
                       <p className="mt-1 text-sm text-[#2547e0]">{filtered.length} order{filtered.length === 1 ? "" : "s"} shown</p>
                     </div>
                     {(search.trim() || statusFilter !== "All") && (
                       <button
                         onClick={() => { setSearch(""); setStatusFilter("All"); }}
-                        className="rounded-full bg-[#ffffff] px-4 py-2 text-sm font-bold text-[#2547e0] ring-1 ring-[#eadfce] hover:bg-[#ffffff]"
+                        className="rounded-full bg-[#ffffff] px-4 py-2 text-sm font-bold text-[#2547e0] ring-1 ring-[#d9e9ee] hover:bg-[#ffffff]"
                       >
                         Clear filters ✕
                       </button>
@@ -268,9 +268,9 @@ export default function DashboardPage() {
 
               {tab === "profile" && (
                 <div className="space-y-5 pt-4">
-                  <h1 className="text-2xl font-black text-[#3a2a1a]">Profile</h1>
+                  <h1 className="text-2xl font-black text-[#14343e]">Profile</h1>
                   <Reveal>
-                    <section className="flex flex-col items-start gap-4 rounded-lg bg-[#ffffff] p-6 shadow-sm ring-1 ring-[#eadfce] sm:flex-row sm:items-center">
+                    <section className="flex flex-col items-start gap-4 rounded-lg bg-[#ffffff] p-6 shadow-sm ring-1 ring-[#d9e9ee] sm:flex-row sm:items-center">
                       {session.user.image ? (
                         // eslint-disable-next-line @next/next/no-img-element
                         <img src={session.user.image} alt="" className="h-20 w-20 rounded-full object-cover ring-4 ring-brand-100" />
@@ -280,7 +280,7 @@ export default function DashboardPage() {
                         </span>
                       )}
                       <div className="min-w-0 flex-1">
-                        <h2 className="truncate text-xl font-black text-[#3a2a1a]">{session.user.name ?? "GadZone customer"}</h2>
+                        <h2 className="truncate text-xl font-black text-[#14343e]">{session.user.name ?? "GadZone customer"}</h2>
                         <p className="truncate text-sm text-[#2547e0]">{session.user.email}</p>
                         <span className="mt-2 inline-block rounded-full bg-brand-100 px-3 py-1 text-xs font-bold text-brand-700 capitalize">{session.user.role ?? "customer"}</span>
                       </div>
@@ -288,8 +288,8 @@ export default function DashboardPage() {
                     </section>
                   </Reveal>
 
-                  <section className="rounded-lg bg-[#ffffff] p-6 shadow-sm ring-1 ring-[#eadfce]">
-                    <h2 className="font-black text-[#3a2a1a]">Account info</h2>
+                  <section className="rounded-lg bg-[#ffffff] p-6 shadow-sm ring-1 ring-[#d9e9ee]">
+                    <h2 className="font-black text-[#14343e]">Account info</h2>
                     <dl className="mt-4 grid gap-4 text-sm sm:grid-cols-2">
                       <div><dt className="font-semibold text-[#2547e0]">Full name</dt><dd className="mt-0.5 font-bold text-[#2547e0]">{session.user.name ?? "—"}</dd></div>
                       <div><dt className="font-semibold text-[#2547e0]">Email</dt><dd className="mt-0.5 truncate font-bold text-[#2547e0]">{session.user.email ?? "—"}</dd></div>
