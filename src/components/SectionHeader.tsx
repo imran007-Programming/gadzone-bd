@@ -16,22 +16,22 @@ export default function SectionHeader({ accent, rest, subtitle, showViewAll = tr
         <div className="max-w-xl">
           <h2 className="flex items-center gap-3 text-[1.65rem] font-black leading-tight tracking-tight text-ink sm:text-[2rem]">
             <span className="starburst pop-bob relative inline-flex h-10 w-10 shrink-0 items-center justify-center" aria-hidden>
-              <span className="text-sm font-black text-[#e9edf9]">★</span>
+              <span className="text-sm font-black text-[#1c1917]">★</span>
             </span>
             <span><span className="bg-gradient-to-r from-brand-500 to-brand-700 bg-clip-text text-transparent">{accent}</span> {rest}</span>
           </h2>
           {subtitle && <p className="mt-2.5 text-[15px] leading-relaxed text-mute">{subtitle}</p>}
           <span aria-hidden className="mt-3 flex items-center gap-2">
-            <span className="inline-block h-2.5 w-2.5 rounded-full bg-brand-500 shadow-[0_2px_8px_-1px_rgba(34, 211, 238, 0.7)]" />
-            <span className="inline-block h-2.5 w-2.5 rounded-full bg-popblue-800 shadow-[0_2px_8px_-1px_rgba(4, 6, 14, 0.7)]" />
-            <span className="inline-block h-2.5 w-2.5 rounded-full bg-gold-500 shadow-[0_2px_8px_-1px_rgba(232, 121, 249, 0.7)]" />
+            <span className="inline-block h-2.5 w-2.5 rounded-full bg-brand-500 shadow-[0_2px_8px_-1px_rgba(217, 95, 38, 0.7)]" />
+            <span className="inline-block h-2.5 w-2.5 rounded-full bg-popblue-800 shadow-[0_2px_8px_-1px_rgba(67, 20, 7, 0.7)]" />
+            <span className="inline-block h-2.5 w-2.5 rounded-full bg-gold-500 shadow-[0_2px_8px_-1px_rgba(217, 119, 6, 0.7)]" />
             <span className="zigzag ml-1 w-32" />
           </span>
         </div>
         {showViewAll && (
           <button
             onClick={() => document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" })}
-            className="rounded-sm border border-brand-700 bg-brand-600 px-6 py-2.5 text-sm font-black text-white shadow-[3px_3px_0_#0e7490] transition hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-[4px_4px_0_#05070f] active:translate-y-0"
+            className="rounded-sm border border-brand-700 bg-brand-600 px-6 py-2.5 text-sm font-black text-white shadow-[3px_3px_0_#9a3412] transition hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-[4px_4px_0_#431407] active:translate-y-0"
           >
             All Products →
           </button>
