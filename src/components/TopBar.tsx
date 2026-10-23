@@ -4,7 +4,7 @@ export default function TopBar() {
       {/* drifting firefly flecks */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-40 [background-image:radial-gradient(rgba(139, 92, 246, 0.4)_1px,transparent_1.5px)] [background-size:20px_20px]"
+        className="pointer-events-none absolute inset-0 opacity-40 [background-image:radial-gradient(rgba(16, 185, 129, 0.4)_1px,transparent_1.5px)] [background-size:20px_20px]"
       />
       <div aria-hidden className="pointer-events-none absolute -left-12 top-1/2 h-28 w-28 -translate-y-1/2 rounded-full bg-popblue-400/25 blur-2xl" />
       <div aria-hidden className="pointer-events-none absolute -right-12 top-1/2 h-28 w-28 -translate-y-1/2 rounded-full bg-brand-400/25 blur-2xl" />
