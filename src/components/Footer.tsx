@@ -22,40 +22,40 @@ export default function Footer({ onCategoryChange }: FooterProps) {
     else document.getElementById(target)?.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <footer id="contact" className="relative overflow-hidden bg-[#04060f] text-[#164e63]">
+    <footer id="contact" className="relative overflow-hidden bg-[#ffedd5] text-[#7c2d12]">
       <div aria-hidden className="pointer-events-none absolute -top-24 left-1/3 h-64 w-64 rounded-full bg-brand-500/15 blur-[100px]" />
       <div aria-hidden className="pointer-events-none absolute bottom-0 right-1/4 h-56 w-56 rounded-full bg-gold/10 blur-[90px]" />
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-brand-400 to-transparent opacity-60" />
       <div className="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-16">
-        <p className="text-2xl font-black tracking-tight text-[#0f1629]">Gad<span className="text-brand-700">Zone</span> BD</p>
+        <p className="text-2xl font-black tracking-tight text-[#1c1917]">Gad<span className="text-brand-700">Zone</span> BD</p>
         <p className="mt-2.5 max-w-xl text-sm leading-relaxed text-mute">
           Discover original gadgets, smart devices, audio products, mobile accessories and electronics at competitive prices with nationwide delivery across Bangladesh.
         </p>
         <div className="mt-5 grid gap-3 sm:grid-cols-2">
-          <div className="flex items-center gap-3 rounded-[1.25rem] border border-[#6366f1]/30 bg-[#04060f] p-4 shadow-[4px_4px_0_rgba(0,0,0,0.35)]">
+          <div className="flex items-center gap-3 rounded-[1.25rem] border border-[#f97316]/40 bg-white p-4 shadow-[4px_4px_0_rgba(28,25,23,0.9)]">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-500/20 text-xl ring-1 ring-brand-400/40">💬</span>
             <div>
               <p className="text-xs text-mute">WhatsApp</p>
-              <p className="font-bold text-[#0f1629]">+880 1700-000000</p>
+              <p className="font-bold text-[#1c1917]">+880 1700-000000</p>
             </div>
           </div>
-          <div className="flex items-center gap-3 rounded-[1.25rem] border border-[#6366f1]/30 bg-[#04060f] p-4 shadow-[4px_4px_0_rgba(0,0,0,0.35)]">
+          <div className="flex items-center gap-3 rounded-[1.25rem] border border-[#f97316]/40 bg-white p-4 shadow-[4px_4px_0_rgba(28,25,23,0.9)]">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-500/20 text-xl ring-1 ring-brand-400/40">📞</span>
             <div>
               <p className="text-xs text-mute">Customer Care</p>
-              <p className="font-bold text-[#0f1629]">+880 1700-000000</p>
+              <p className="font-bold text-[#1c1917]">+880 1700-000000</p>
             </div>
           </div>
         </div>
 
         <div className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           <div>
-            <p className="text-xs font-bold uppercase tracking-widest text-brand-300">Explore</p>
-            <h3 className="mt-1.5 text-lg font-black tracking-tight text-[#0f1629]">GadZone BD</h3>
+            <p className="text-xs font-bold uppercase tracking-widest text-brand-700">Explore</p>
+            <h3 className="mt-1.5 text-lg font-black tracking-tight text-[#1c1917]">GadZone BD</h3>
             <ul className="mt-3 space-y-2 text-sm">
               {EXPLORE_LINKS.map((link) => (
                 <li key={link.label}>
-                  <button onClick={() => scrollTo(link.target)} className="transition hover:text-brand-300">› {link.label}</button>
+                  <button onClick={() => scrollTo(link.target)} className="transition hover:text-brand-700">› {link.label}</button>
                 </li>
               ))}
             </ul>
@@ -67,26 +67,26 @@ export default function Footer({ onCategoryChange }: FooterProps) {
             </div>
           </div>
           <div>
-            <p className="text-xs font-bold uppercase tracking-widest text-brand-300">Support</p>
-            <h3 className="mt-1.5 text-lg font-black tracking-tight text-[#0f1629]">Customer Care</h3>
+            <p className="text-xs font-bold uppercase tracking-widest text-brand-700">Support</p>
+            <h3 className="mt-1.5 text-lg font-black tracking-tight text-[#1c1917]">Customer Care</h3>
             <ul className="mt-3 space-y-2 text-sm">
               {SUPPORT_LINKS.map((link) => (
                 <li key={link}>
-                  <button onClick={() => scrollTo("faq")} className="transition hover:text-brand-300">› {link}</button>
+                  <button onClick={() => scrollTo("faq")} className="transition hover:text-brand-700">› {link}</button>
                 </li>
               ))}
             </ul>
           </div>
           <div>
-            <p className="text-xs font-bold uppercase tracking-widest text-brand-300">Get in Touch</p>
-            <h3 className="mt-1.5 text-lg font-black tracking-tight text-[#0f1629]">We&apos;re Here to Help</h3>
-            <div className="mt-3 rounded-[1.25rem] border border-[#6366f1]/30 bg-[#04060f] p-5 shadow-[4px_4px_0_rgba(0,0,0,0.35)]">
+            <p className="text-xs font-bold uppercase tracking-widest text-brand-700">Get in Touch</p>
+            <h3 className="mt-1.5 text-lg font-black tracking-tight text-[#1c1917]">We&apos;re Here to Help</h3>
+            <div className="mt-3 rounded-[1.25rem] border border-[#f97316]/40 bg-white p-5 shadow-[4px_4px_0_rgba(28,25,23,0.9)]">
               <p className="text-xs text-mute">Warranty Support</p>
-              <p className="mt-1 font-bold text-[#0f1629]">📞 +880 1700-000000</p>
+              <p className="mt-1 font-bold text-[#1c1917]">📞 +880 1700-000000</p>
               <p className="mt-1 text-sm">✉️ hello@gadzonebd.example</p>
               <p className="mt-1 text-sm">📍 Dhaka, Bangladesh</p>
             </div>
-            <p className="mt-4 text-sm font-bold text-[#0f1629]">We Accept</p>
+            <p className="mt-4 text-sm font-bold text-[#1c1917]">We Accept</p>
             <div className="mt-2 flex flex-wrap gap-2">{["bKash", "Nagad", "Rocket", "Visa", "Mastercard", "COD"].map((p) => <span key={p} className="rounded-full bg-brand-100 px-3 py-1.5 text-xs font-bold text-brand-800 ring-1 ring-brand-400/25">{p}</span>)}</div>
             <p className="mt-3 text-xs text-mute">100% secure payments</p>
           </div>

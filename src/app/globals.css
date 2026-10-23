@@ -1,46 +1,45 @@
 @import "tailwindcss";
 
 @theme {
-  /* Midnight Volt: a gadget lab after dark. The void is deep navy,
-     volt indigo is the live circuit, pulse cyan is the signal glow,
-     and magenta flare is the overdrive. Panels are dark glass slabs
-     with a volt top edge and a cyan tab along the bottom; they lift
-     on hover into the glow. */
+  /* Sunpaper Citrus: a bright stationery-desk morning. Warm paper is the
+     desk, citrus orange is the marker ink, fresh teal is the highlighter,
+     and fuchsia is the sticky-note pop. Cards are chunky paper stickers
+     with a hard offset shadow; they hop on hover. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = volt indigo scale */
-  --color-brand-50: #eef2ff;
-  --color-brand-100: #e0e7ff;
-  --color-brand-200: #c7d2fe;
-  --color-brand-300: #a5b4fc;
-  --color-brand-400: #818cf8;
-  --color-brand-500: #6366f1;
-  --color-brand-600: #4f46e5;
-  --color-brand-700: #4338ca;
-  --color-brand-800: #3730a3;
-  --color-brand-900: #312e81;
-  --color-brand-950: #1e1b4b;
-  --color-brand: #6366f1;
-  --color-brand-dark: #4f46e5;
-  --color-brand-deep: #3730a3;
+  /* brand = citrus orange scale */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-brand-950: #431407;
+  --color-brand: #f97316;
+  --color-brand-dark: #ea580c;
+  --color-brand-deep: #9a3412;
 
-  /* gold = pulse cyan scale (name kept for legacy class refs) */
-  --color-gold-50: #ecfeff;
-  --color-gold-100: #cffafe;
-  --color-gold-200: #a5f3fc;
-  --color-gold-300: #67e8f9;
-  --color-gold-400: #22d3ee;
-  --color-gold-500: #06b6d4;
-  --color-gold-600: #0891b2;
-  --color-gold-700: #0e7490;
-  --color-gold-800: #155e75;
-  --color-gold-900: #164e63;
-  --color-gold-950: #083344;
-  --color-gold: #22d3ee;
-  --color-gold-deep: #0891b2;
-  --color-gold-soft: #164e63;
+  /* gold = fresh teal scale (name kept for legacy class refs) */
+  --color-gold-50: #f0fdfa;
+  --color-gold-100: #ccfbf1;
+  --color-gold-200: #99f6e4;
+  --color-gold-300: #5eead4;
+  --color-gold-400: #2dd4bf;
+  --color-gold-500: #14b8a6;
+  --color-gold-600: #0d9488;
+  --color-gold-700: #0f766e;
+  --color-gold-800: #115e59;
+  --color-gold-900: #134e4a;
+  --color-gold-950: #042f2e;
+  --color-gold: #14b8a6;
+  --color-gold-deep: #0f766e;
+  --color-gold-soft: #ccfbf1;
 
-  /* popblue = magenta flare scale (name kept for legacy class refs) */
+  /* popblue = fuchsia pop scale (name kept for legacy class refs) */
   --color-popblue-50: #fdf4ff;
   --color-popblue-100: #fae8ff;
   --color-popblue-200: #f5d0fe;
@@ -52,15 +51,15 @@
   --color-popblue-800: #86198f;
   --color-popblue-900: #701a75;
   --color-popblue-950: #4a044e;
-  --color-popblue: #e879f9;
+  --color-popblue: #d946ef;
   --color-popblue-deep: #c026d3;
   --color-popblue-soft: #fae8ff;
 
-  --color-ink: #eef1ff;
-  --color-paper: #070b18;
-  --color-mute: #9aa3c7;
-  --color-card: #0f1629;
-  --color-deep: #04060f;
+  --color-ink: #1c1917;
+  --color-paper: #fff9f0;
+  --color-mute: #78716c;
+  --color-card: #ffffff;
+  --color-deep: #1c1917;
 }
 
 html { scroll-behavior: smooth; }
@@ -75,25 +74,24 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #070b18;
+  background-color: #fff9f0;
   background-image:
-    radial-gradient(circle, rgba(99, 102, 241, 0.16) 1.1px, transparent 1.8px),
-    radial-gradient(circle, rgba(34, 211, 238, 0.12) 1px, transparent 1.7px),
-    radial-gradient(ellipse 48% 28% at 88% -6%, rgba(99, 102, 241, 0.28), transparent 70%),
-    radial-gradient(ellipse 44% 28% at 8% 106%, rgba(34, 211, 238, 0.18), transparent 70%),
-    radial-gradient(ellipse 34% 22% at 52% 38%, rgba(217, 70, 239, 0.14), transparent 70%);
-  background-size: 30px 30px, 46px 46px, auto, auto, auto;
-  background-position: 0 0, 14px 16px, 0 0, 0 0, 0 0;
-  color: #eef1ff;
+    radial-gradient(circle, rgba(249, 115, 22, 0.10) 1.1px, transparent 1.8px),
+    radial-gradient(circle, rgba(20, 184, 166, 0.08) 1px, transparent 1.7px),
+    radial-gradient(ellipse 48% 28% at 88% -6%, rgba(253, 186, 116, 0.35), transparent 70%),
+    radial-gradient(ellipse 44% 28% at 8% 106%, rgba(153, 246, 228, 0.30), transparent 70%);
+  background-size: 30px 30px, 46px 46px, auto, auto;
+  background-position: 0 0, 14px 16px, 0 0, 0 0;
+  color: #1c1917;
 }
-::selection { background: #22d3ee; color: #04060f; }
+::selection { background: #f97316; color: #fff9f0; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #6366f1, #22d3ee); border-radius: 999px; border: 2px solid #070b18; }
-::-webkit-scrollbar-track { background: #0b1122; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #fb923c, #14b8a6); border-radius: 999px; border: 2px solid #fff9f0; }
+::-webkit-scrollbar-track { background: #ffedd5; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Volt rain: neon shards falling through the dark lab. */
+/* Citrus rain: paper confetti falling over the desk. */
 @keyframes neon-fall {
   0% { transform: translate3d(6px, -20px, 0) scale(0.7) rotate(0deg); opacity: 0; }
   18% { opacity: 0.9; }
@@ -103,169 +101,144 @@ body {
 }
 .pop-fall { animation: neon-fall 11s linear infinite; }
 
-/* Signal sway: slow lateral drift of the neon haze. */
+/* Paper sway: slow lateral drift of the warm haze. */
 @keyframes neon-sway {
   0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(3vw, -0.8rem, 0) scale(1.08); opacity: 0.8; }
 }
 .pop-drift { animation: neon-sway 30s ease-in-out infinite; }
 
-/* Charge bob: gentle bobbing of the hanging volt tags. */
+/* Sticker bob: gentle bobbing of the hanging citrus tags. */
 @keyframes neon-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-9px) scale(1.04); }
 }
 .pop-bob { animation: neon-bob 3.8s ease-in-out infinite; }
 
-/* Slow rotation for the volt halo. */
+/* Slow rotation for the citrus halo. */
 @keyframes neon-wheel {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: neon-wheel 60s linear infinite; }
 
-/* Signal glint: wavering catchlight of the volt beam. */
+/* Citrus glint: wavering catchlight of the paper sun. */
 @keyframes neon-glint {
   0%, 100% { opacity: 0.35; transform: scale(0.85); }
   50% { opacity: 1; transform: scale(1.25); }
 }
 .pop-twinkle { animation: neon-glint 3.4s ease-in-out infinite; }
 
-/* Volt ticker: infinite marquee (leftward drift). */
+/* Citrus ticker: infinite marquee (leftward drift). */
 @keyframes neon-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: neon-ticker 28s linear infinite; }
 
-/* Volt hazard stripes: void -> indigo -> magenta diagonal stripes. */
+/* Citrus hazard stripes: paper -> orange -> fuchsia diagonal stripes. */
 .pop-stripes {
-  background-image: repeating-linear-gradient(-55deg, #04060f 0 10px, #4f46e5 10px 20px, #c026d3 20px 30px);
+  background-image: repeating-linear-gradient(-55deg, #fff9f0 0 10px, #f97316 10px 20px, #d946ef 20px 30px);
 }
 
-/* Volt panel: a dark glass slab with a volt top edge and a cyan tab
-   along its bottom edge; it lifts on hover into the neon glow. */
+/* Citrus sticker: a chunky paper card with a citrus top edge and a hard
+   offset shadow; it hops on hover. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(99, 102, 241, 0.35);
-  background:
-    radial-gradient(circle at 8% 10%, rgba(34, 211, 238, 0.10) 0%, transparent 46%),
-    linear-gradient(165deg, rgba(23, 32, 62, 0.98) 0%, rgba(15, 22, 41, 0.98) 60%, rgba(8, 51, 68, 0.92) 100%);
+  border: 2px solid #1c1917;
+  background: #ffffff;
   border-radius: 1.25rem;
-  box-shadow:
-    0 0 0 1px rgba(99, 102, 241, 0.12),
-    0 18px 30px -22px rgba(4, 6, 15, 0.9),
-    inset 0 1px 0 rgba(165, 180, 252, 0.18);
-  transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+  box-shadow: 5px 5px 0 #1c1917;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .pop-lift::before {
-  /* volt top edge of the panel */
+  /* citrus top edge of the sticker */
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 5px;
-  background: linear-gradient(90deg, #22d3ee 0%, #6366f1 45%, #d946ef 100%);
-  box-shadow: 0 2px 12px 0 rgba(99, 102, 241, 0.7);
-  pointer-events: none;
-}
-.pop-lift::after {
-  /* cyan tab along the panel's bottom edge */
-  content: "";
-  position: absolute;
-  left: 10%;
-  right: 10%;
-  bottom: 0;
-  height: 5px;
-  border-radius: 999px 999px 0 0;
-  background: linear-gradient(90deg, transparent 0%, #67e8f9 20%, #06b6d4 50%, #67e8f9 80%, transparent 100%);
-  box-shadow: 0 0 14px 2px rgba(34, 211, 238, 0.55);
+  height: 6px;
+  background: linear-gradient(90deg, #f97316 0%, #fb923c 45%, #d946ef 100%);
   pointer-events: none;
 }
 .pop-lift:hover {
-  transform: translateY(-6px);
-  border-color: rgba(34, 211, 238, 0.6);
-  box-shadow:
-    0 0 0 1px rgba(34, 211, 238, 0.35),
-    0 24px 40px -20px rgba(4, 6, 15, 0.95),
-    0 0 30px -6px rgba(99, 102, 241, 0.65),
-    inset 0 1px 0 rgba(165, 180, 252, 0.25);
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0 #1c1917;
 }
 
-/* Volt glass: shared by modals and drawers — dark glass with an
-   indigo rim and a cyan base shadow. */
+/* Citrus glass: shared by modals and drawers — frosted paper with an
+   orange rim. */
 .pop-glass {
-  background: rgba(15, 22, 41, 0.94);
-  backdrop-filter: blur(20px) saturate(1.2);
-  -webkit-backdrop-filter: blur(20px) saturate(1.2);
-  border: 1px solid rgba(99, 102, 241, 0.4);
+  background: rgba(255, 249, 240, 0.94);
+  backdrop-filter: blur(20px) saturate(1.1);
+  -webkit-backdrop-filter: blur(20px) saturate(1.1);
+  border: 2px solid #fdba74;
   border-radius: 1rem;
   box-shadow:
-    0 28px 54px -24px rgba(4, 6, 15, 0.9),
-    0 0 0 1px rgba(34, 211, 238, 0.25),
-    inset 0 1px 0 rgba(165, 180, 252, 0.18);
+    8px 8px 0 rgba(28, 25, 23, 0.9),
+    0 28px 54px -24px rgba(194, 65, 12, 0.35);
 }
 
-/* Volt seal: a cyan pulse badge with an indigo core. */
+/* Citrus seal: an orange stamp badge with warm charcoal type. */
 .starburst {
-  background: radial-gradient(circle at 35% 30%, #cffafe 0%, #22d3ee 55%, #4f46e5 100%);
-  color: #04060f;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+  background: radial-gradient(circle at 35% 30%, #fed7aa 0%, #fb923c 55%, #ea580c 100%);
+  color: #1c1917;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   border-radius: 9999px;
   transform: rotate(-6deg);
-  box-shadow: 0 0 24px -4px rgba(34, 211, 238, 0.9), inset 0 2px 6px rgba(255, 255, 255, 0.4);
-  outline: 2px dashed rgba(15, 22, 41, 0.9);
+  box-shadow: 4px 4px 0 #1c1917, inset 0 2px 6px rgba(255, 255, 255, 0.5);
+  outline: 2px dashed rgba(255, 249, 240, 0.9);
   outline-offset: -6px;
-  border: 2px solid #06b6d4;
+  border: 2px solid #1c1917;
 }
 
-/* Dot grid: indigo-and-cyan node texture for volt bands. */
+/* Dot grid: orange-and-teal confetti texture for citrus bands. */
 .halftone {
   background-image:
-    radial-gradient(circle, rgba(99, 102, 241, 0.22) 1.2px, transparent 1.9px),
-    radial-gradient(circle, rgba(34, 211, 238, 0.2) 1px, transparent 1.6px);
+    radial-gradient(circle, rgba(249, 115, 22, 0.20) 1.2px, transparent 1.9px),
+    radial-gradient(circle, rgba(20, 184, 166, 0.18) 1px, transparent 1.6px);
   background-size: 15px 15px, 23px 23px;
   background-position: 0 0, 7px 9px;
 }
 
-/* Volt ticks: a row of indigo ruler ticks dividing sections. */
+/* Citrus ticks: a row of orange ruler ticks dividing sections. */
 .zigzag {
   height: 14px;
-  background-image: repeating-linear-gradient(90deg, #6366f1 0 3px, transparent 3px 10px, #22d3ee 10px 11px, transparent 11px 20px);
+  background-image: repeating-linear-gradient(90deg, #f97316 0 3px, transparent 3px 10px, #14b8a6 10px 11px, transparent 11px 20px);
   background-repeat: repeat-x;
   opacity: 0.9;
   -webkit-mask: linear-gradient(180deg, black 60%, transparent 100%);
   mask: linear-gradient(180deg, black 60%, transparent 100%);
 }
 
-/* Volt awning: indigo/cyan/magenta light strip with a void hem. */
+/* Citrus awning: orange/teal/fuchsia paper strip with a charcoal hem. */
 .bazaar-awning {
   background-image:
-    repeating-linear-gradient(45deg, rgba(4, 6, 15, 0.9) 0 26px, rgba(99, 102, 241, 0.55) 26px 52px, rgba(34, 211, 238, 0.55) 52px 58px, rgba(217, 70, 239, 0.5) 58px 84px);
-  border-bottom: 3px solid #04060f;
-  box-shadow: 0 8px 24px -8px rgba(99, 102, 241, 0.6);
+    repeating-linear-gradient(45deg, rgba(255, 249, 240, 0.95) 0 26px, rgba(249, 115, 22, 0.55) 26px 52px, rgba(20, 184, 166, 0.55) 52px 58px, rgba(217, 70, 239, 0.45) 58px 84px);
+  border-bottom: 3px solid #1c1917;
+  box-shadow: 0 8px 24px -8px rgba(249, 115, 22, 0.5);
 }
 
-/* Volt glow: layered indigo/cyan glow for the volt halo. */
+/* Citrus glow: layered orange/teal glow for the paper sun. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(99, 102, 241, 0.55) 0%, rgba(79, 70, 229, 0.4) 42%, rgba(34, 211, 238, 0.28) 62%, rgba(34, 211, 238, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(251, 146, 60, 0.55) 0%, rgba(249, 115, 22, 0.35) 42%, rgba(20, 184, 166, 0.28) 62%, rgba(20, 184, 166, 0) 76%);
 }
-/* Volt orb: a glowing indigo orb with a cyan halo. */
+/* Citrus sun: a glowing orange disc with a teal halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #ecfeff 0%, #22d3ee 52%, #4f46e5 100%);
-  box-shadow: 0 0 70px -8px rgba(34, 211, 238, 0.7), 0 0 28px -6px rgba(99, 102, 241, 0.6), inset 0 3px 12px rgba(255, 255, 255, 0.4);
-  border: 2px solid rgba(165, 180, 252, 0.9);
+    radial-gradient(circle at 38% 34%, #fff7ed 0%, #fb923c 52%, #ea580c 100%);
+  box-shadow: 0 0 70px -8px rgba(249, 115, 22, 0.6), 0 0 28px -6px rgba(20, 184, 166, 0.5), inset 0 3px 12px rgba(255, 255, 255, 0.5);
+  border: 2px solid #1c1917;
 }
 
-/* Orbit rings around the volt orb. */
+/* Orbit rings around the citrus sun. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(99, 102, 241, 0.5) 0px,
-    rgba(99, 102, 241, 0.5) 3px,
+    rgba(249, 115, 22, 0.5) 0px,
+    rgba(249, 115, 22, 0.5) 3px,
     transparent 3px,
     transparent 28px
   );
@@ -276,8 +249,8 @@ body {
 .sun-rays {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(34, 211, 238, 0.5) 0px,
-    rgba(34, 211, 238, 0.5) 3px,
+    rgba(20, 184, 166, 0.5) 0px,
+    rgba(20, 184, 166, 0.5) 3px,
     transparent 3px,
     transparent 28px
   );
@@ -286,62 +259,62 @@ body {
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all volt styled. */
+/* Legacy aliases kept so untouched components still render — all citrus styled. */
 .lagoon-lift {
   position: relative;
-  border: 1px solid rgba(99, 102, 241, 0.35);
-  background: linear-gradient(165deg, rgba(23, 32, 62, 0.98) 0%, rgba(15, 22, 41, 0.98) 60%, rgba(8, 51, 68, 0.92) 100%);
+  border: 2px solid #1c1917;
+  background: #ffffff;
   border-radius: 1.25rem;
-  box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.12), 0 18px 30px -22px rgba(4, 6, 15, 0.9);
-  transition: transform 0.24s ease, box-shadow 0.24s ease;
+  box-shadow: 5px 5px 0 #1c1917;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .lagoon-lift:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.35), 0 24px 40px -20px rgba(4, 6, 15, 0.95);
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0 #1c1917;
 }
 .stamp-perf {
-  border: 2px dashed #6366f1;
-  background: rgba(99, 102, 241, 0.12);
+  border: 2px dashed #ea580c;
+  background: rgba(249, 115, 22, 0.10);
   border-radius: 1.25rem;
-  box-shadow: 0 14px 28px -18px rgba(4, 6, 15, 0.9);
+  box-shadow: 5px 5px 0 rgba(28, 25, 23, 0.85);
 }
 .ember-glow {
   position: relative;
-  border: 1px solid rgba(217, 70, 239, 0.4);
-  background: linear-gradient(165deg, rgba(74, 4, 78, 0.55) 0%, rgba(15, 22, 41, 0.98) 60%, rgba(217, 70, 239, 0.18) 100%);
+  border: 2px solid #1c1917;
+  background: linear-gradient(165deg, #fff7ed 0%, #ffffff 60%, #ffedd5 100%);
   border-radius: 1.25rem;
-  box-shadow: 0 0 0 1px rgba(217, 70, 239, 0.15), 0 20px 34px -22px rgba(4, 6, 15, 0.9);
-  transition: transform 0.24s ease, box-shadow 0.24s ease;
+  box-shadow: 5px 5px 0 #1c1917;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 0 1px rgba(217, 70, 239, 0.3), 0 26px 44px -20px rgba(4, 6, 15, 0.95);
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0 #1c1917;
 }
 .ripple-glow {
   position: relative;
-  border: 1px solid rgba(34, 211, 238, 0.4);
-  background: linear-gradient(165deg, rgba(8, 51, 68, 0.6) 0%, rgba(15, 22, 41, 0.98) 60%, rgba(34, 211, 238, 0.16) 100%);
+  border: 2px solid #1c1917;
+  background: linear-gradient(165deg, #f0fdfa 0%, #ffffff 60%, #ccfbf1 100%);
   border-radius: 1.25rem;
-  box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.15), 0 20px 34px -22px rgba(4, 6, 15, 0.9);
-  transition: transform 0.24s ease, box-shadow 0.24s ease;
+  box-shadow: 5px 5px 0 #1c1917;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.3), 0 26px 44px -20px rgba(4, 6, 15, 0.95);
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0 #1c1917;
 }
 .lagoon-glow {
   position: relative;
-  border: 1px solid rgba(99, 102, 241, 0.35);
-  background: linear-gradient(165deg, rgba(23, 32, 62, 0.98) 0%, rgba(15, 22, 41, 0.98) 60%, rgba(99, 102, 241, 0.16) 100%);
+  border: 2px solid #1c1917;
+  background: linear-gradient(165deg, #fff7ed 0%, #ffffff 60%, #ffedd5 100%);
   border-radius: 1.25rem;
-  box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.12), 0 20px 34px -22px rgba(4, 6, 15, 0.9);
-  transition: transform 0.24s ease, box-shadow 0.24s ease;
+  box-shadow: 5px 5px 0 #1c1917;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.25), 0 26px 44px -20px rgba(4, 6, 15, 0.95);
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0 #1c1917;
 }
