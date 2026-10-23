@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Baloo_2, Geist_Mono } from "next/font/google";
+import { Space_Grotesk, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import SessionProviderLazy from "@/components/SessionProviderLazy";
 
-const balooSans = Baloo_2({
-  variable: "--font-baloo",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space",
   subsets: ["latin"],
 });
 
@@ -22,7 +22,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${balooSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${spaceGrotesk.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
         <SessionProviderLazy>{children}</SessionProviderLazy>

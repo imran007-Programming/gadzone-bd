@@ -46,20 +46,20 @@ export default function MobileMenu({ open, onClose, category, onCategoryChange }
             animate={{ x: 0, opacity: 1 }}
             exit={reduce ? { opacity: 0 } : { x: "-100%" }}
             transition={{ type: "tween", duration: 0.28, ease: "easeOut" }}
-            className="absolute left-0 top-0 flex h-full w-4/5 max-w-xs flex-col rounded-r-3xl border-r border-[#ffedd5] bg-[#fffdf8] shadow-2xl"
+            className="absolute left-0 top-0 flex h-full w-4/5 max-w-xs flex-col rounded-r-3xl border-r border-[#222b52] bg-[#0f1629] shadow-2xl"
           >
-            <div className="flex items-center justify-between border-b border-[#ffedd5] px-5 py-4">
-              <span className="text-lg font-black text-[#2c2318]">
+            <div className="flex items-center justify-between border-b border-[#222b52] px-5 py-4">
+              <span className="text-lg font-black text-[#eef1ff]">
                 Gad<span className="text-brand-700">Zone</span> BD
               </span>
-              <button onClick={onClose} className="rounded-full px-2 text-2xl text-[#2c2318] transition hover:bg-[#fffdf8] hover:text-brand-600" aria-label="Close menu">×</button>
+              <button onClick={onClose} className="rounded-full px-2 text-2xl text-[#eef1ff] transition hover:bg-[#0f1629] hover:text-brand-600" aria-label="Close menu">×</button>
             </div>
-            <div className="flex border-b border-[#ffedd5]">
+            <div className="flex border-b border-[#222b52]">
               {(["categories", "menu"] as const).map((t) => (
                 <button
                   key={t}
                   onClick={() => setTab(t)}
-                  className={`flex-1 py-3.5 text-sm font-bold uppercase tracking-wide transition-colors ${tab === t ? "border-b-2 border-brand-400 bg-brand-400/10 text-brand-700" : "text-[#2c2318] hover:text-[#2c2318]"}`}
+                  className={`flex-1 py-3.5 text-sm font-bold uppercase tracking-wide transition-colors ${tab === t ? "border-b-2 border-brand-400 bg-brand-400/10 text-brand-700" : "text-[#eef1ff] hover:text-[#eef1ff]"}`}
                 >
                   {t === "categories" ? "Categories" : "Menu"}
                 </button>
@@ -67,7 +67,7 @@ export default function MobileMenu({ open, onClose, category, onCategoryChange }
             </div>
             <div className="flex-1 overflow-y-auto">
               {tab === "categories" ? (
-                <ul className="divide-y divide-[#ffedd5]">
+                <ul className="divide-y divide-[#222b52]">
                   {CATEGORIES.map((c) => (
                     <li key={c}>
                       <button
@@ -76,24 +76,24 @@ export default function MobileMenu({ open, onClose, category, onCategoryChange }
                           document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" });
                           onClose();
                         }}
-                        className={`flex w-full items-center justify-between px-5 py-4 text-left text-[15px] font-semibold transition hover:bg-[#fffdf8] ${category === c ? "text-brand-700 hover:text-brand-700" : "text-[#2c2318] hover:text-[#2c2318]"}`}
+                        className={`flex w-full items-center justify-between px-5 py-4 text-left text-[15px] font-semibold transition hover:bg-[#0f1629] ${category === c ? "text-brand-700 hover:text-brand-700" : "text-[#eef1ff] hover:text-[#eef1ff]"}`}
                       >
                         {c === "All" ? "All Products" : c}
-                        <span className="text-[#2c2318]">›</span>
+                        <span className="text-[#eef1ff]">›</span>
                       </button>
                     </li>
                   ))}
                 </ul>
               ) : (
-                <ul className="divide-y divide-[#ffedd5]">
+                <ul className="divide-y divide-[#222b52]">
                   {MENU_LINKS.map((link) => (
                     <li key={link.label}>
                       <button
                         onClick={() => scrollTo(link.target)}
-                        className="flex w-full items-center justify-between px-5 py-4 text-left text-[15px] font-semibold text-[#2c2318] transition hover:bg-[#fffdf8] hover:text-[#2c2318]"
+                        className="flex w-full items-center justify-between px-5 py-4 text-left text-[15px] font-semibold text-[#eef1ff] transition hover:bg-[#0f1629] hover:text-[#eef1ff]"
                       >
                         {link.label}
-                        <span className="text-[#2c2318]">›</span>
+                        <span className="text-[#eef1ff]">›</span>
                       </button>
                     </li>
                   ))}
