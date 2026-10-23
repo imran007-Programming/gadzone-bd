@@ -1,66 +1,66 @@
 @import "tailwindcss";
 
 @theme {
-  /* Sun-Baked Bazaar: a gadget market at golden hour. Warm cream paper is
-     the midday sky, clay terracotta is the baked-earth stall signage, sun
-     amber is the glow of the lamps, palm green is the shade between stalls.
-     Cards are clay tiles: warm white with a sunbeam along the top edge and
-     a palm node tucked in the corner; they lift on hover trailing warm light. */
+  /* Glacier Aurora: a gadget harbor at first light. Pale violet mist is the
+     morning sky, deep indigo is the signal beacon, coral is the buoy light,
+     mint is the aurora ribbon. Cards are aurora slabs: cool white with an
+     aurora ribbon along the left edge and a coral diamond tucked in the
+     corner; they lift on hover trailing violet light. */
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = clay terracotta scale */
-  --color-brand-50: #fdf5ef;
-  --color-brand-100: #fae8da;
-  --color-brand-200: #f5cfb4;
-  --color-brand-300: #eeab7d;
-  --color-brand-400: #e5814d;
-  --color-brand-500: #d95f26;
-  --color-brand-600: #c2410c;
-  --color-brand-700: #9a3412;
-  --color-brand-800: #7c2d12;
-  --color-brand-900: #652b18;
-  --color-brand-950: #421608;
-  --color-brand: #d95f26;
-  --color-brand-dark: #9a3412;
-  --color-brand-deep: #7c2d12;
+  /* brand = deep indigo/violet scale */
+  --color-brand-50: #f4f1ff;
+  --color-brand-100: #ece5ff;
+  --color-brand-200: #d9cbff;
+  --color-brand-300: #bda6ff;
+  --color-brand-400: #9d7bff;
+  --color-brand-500: #7c4dff;
+  --color-brand-600: #6a32f2;
+  --color-brand-700: #5a24d6;
+  --color-brand-800: #4a1eae;
+  --color-brand-900: #3d1a8c;
+  --color-brand-950: #250b5c;
+  --color-brand: #6a32f2;
+  --color-brand-dark: #5a24d6;
+  --color-brand-deep: #4a1eae;
 
-  /* gold = sun amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #d97706;
-  --color-gold-deep: #92400e;
-  --color-gold-soft: #fef3c7;
+  /* gold = coral buoy scale (name kept for legacy class refs) */
+  --color-gold-50: #fff5f2;
+  --color-gold-100: #ffe8e0;
+  --color-gold-200: #ffc9b8;
+  --color-gold-300: #ffa183;
+  --color-gold-400: #ff7553;
+  --color-gold-500: #f94f2e;
+  --color-gold-600: #e03a1a;
+  --color-gold-700: #b92d13;
+  --color-gold-800: #962614;
+  --color-gold-900: #7a2113;
+  --color-gold-950: #421106;
+  --color-gold: #f94f2e;
+  --color-gold-deep: #962614;
+  --color-gold-soft: #ffe8e0;
 
-  /* popblue = palm green scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0fdf4;
-  --color-popblue-100: #dcfce7;
-  --color-popblue-200: #bbf7d0;
-  --color-popblue-300: #86efac;
-  --color-popblue-400: #4ade80;
-  --color-popblue-500: #22c55e;
-  --color-popblue-600: #16a34a;
-  --color-popblue-700: #15803d;
-  --color-popblue-800: #166534;
-  --color-popblue-900: #14532d;
-  --color-popblue-950: #052e16;
-  --color-popblue: #16a34a;
-  --color-popblue-deep: #166534;
-  --color-popblue-soft: #dcfce7;
+  /* popblue = aurora mint scale (name kept for legacy class refs) */
+  --color-popblue-50: #effff5;
+  --color-popblue-100: #d8ffe9;
+  --color-popblue-200: #b2fbd4;
+  --color-popblue-300: #7bf5ba;
+  --color-popblue-400: #42e89c;
+  --color-popblue-500: #1bcc7f;
+  --color-popblue-600: #0da665;
+  --color-popblue-700: #0c8653;
+  --color-popblue-800: #0e6a44;
+  --color-popblue-900: #0d5739;
+  --color-popblue-950: #043320;
+  --color-popblue: #0da665;
+  --color-popblue-deep: #0e6a44;
+  --color-popblue-soft: #d8ffe9;
 
-  --color-ink: #1c1917;
-  --color-paper: #fffaf0;
-  --color-mute: #78716c;
+  --color-ink: #1e1b2e;
+  --color-paper: #f7f7ff;
+  --color-mute: #6b6780;
   --color-card: #ffffff;
-  --color-deep: #431407;
+  --color-deep: #2a1656;
 }
 
 html { scroll-behavior: smooth; }
@@ -75,165 +75,166 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fffaf0;
+  background-color: #f7f7ff;
   background-image:
-    linear-gradient(rgba(194, 65, 12, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(194, 65, 12, 0.045) 1px, transparent 1px),
-    radial-gradient(ellipse 46% 26% at 90% -4%, rgba(217, 119, 6, 0.14), transparent 70%),
-    radial-gradient(ellipse 42% 26% at 6% 104%, rgba(217, 95, 38, 0.12), transparent 70%),
-    radial-gradient(ellipse 30% 20% at 50% 40%, rgba(22, 163, 74, 0.08), transparent 70%);
-  background-size: 34px 34px, 34px 34px, auto, auto, auto;
-  color: #1c1917;
+    radial-gradient(circle, rgba(106, 50, 242, 0.10) 1.2px, transparent 1.9px),
+    radial-gradient(circle, rgba(249, 79, 46, 0.08) 1px, transparent 1.6px),
+    radial-gradient(ellipse 46% 26% at 90% -4%, rgba(106, 50, 242, 0.12), transparent 70%),
+    radial-gradient(ellipse 42% 26% at 6% 104%, rgba(249, 79, 46, 0.10), transparent 70%),
+    radial-gradient(ellipse 30% 20% at 50% 40%, rgba(13, 166, 101, 0.08), transparent 70%);
+  background-size: 26px 26px, 40px 40px, auto, auto, auto;
+  background-position: 0 0, 12px 14px, 0 0, 0 0, 0 0;
+  color: #1e1b2e;
 }
-::selection { background: #d95f26; color: #fffaf0; }
+::selection { background: #6a32f2; color: #f7f7ff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #d95f26, #d97706); border-radius: 999px; border: 2px solid #fffaf0; }
-::-webkit-scrollbar-track { background: #fae8da; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #6a32f2, #f94f2e); border-radius: 999px; border: 2px solid #f7f7ff; }
+::-webkit-scrollbar-track { background: #ece5ff; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Grain motes: square dust drifting down through the midday light. */
-@keyframes kiln-petal {
+/* Ice motes: tiny crystals drifting down through the violet dawn. */
+@keyframes aurora-petal {
   0% { transform: translate3d(6px, -20px, 0) scale(0.7) rotate(0deg); opacity: 0; }
   18% { opacity: 0.9; }
   50% { transform: translate3d(-10px, 90px, 0) scale(1) rotate(120deg); }
   82% { opacity: 0.6; }
   100% { transform: translate3d(8px, 220px, 0) scale(0.85) rotate(260deg); opacity: 0; }
 }
-.pop-fall { animation: kiln-petal 11s linear infinite; }
+.pop-fall { animation: aurora-petal 11s linear infinite; }
 
-/* Heat shimmer: slow lateral drift of the warm haze. */
-@keyframes kiln-sway {
+/* Aurora drift: slow lateral drift of the violet haze. */
+@keyframes aurora-sway {
   0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(3vw, -0.8rem, 0) scale(1.08); opacity: 0.8; }
 }
-.pop-drift { animation: kiln-sway 30s ease-in-out infinite; }
+.pop-drift { animation: aurora-sway 30s ease-in-out infinite; }
 
-/* Stall sway: gentle bobbing of the hanging signs. */
-@keyframes kiln-bob {
+/* Buoy sway: gentle bobbing of the harbor lights. */
+@keyframes aurora-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-9px) scale(1.04); }
 }
-.pop-bob { animation: kiln-bob 3.8s ease-in-out infinite; }
+.pop-bob { animation: aurora-bob 3.8s ease-in-out infinite; }
 
-/* Slow rotation for the sun halo. */
-@keyframes kiln-wheel {
+/* Slow rotation for the aurora orb. */
+@keyframes aurora-wheel {
   to { transform: rotate(360deg); }
 }
-.pop-spin { animation: kiln-wheel 60s linear infinite; }
+.pop-spin { animation: aurora-wheel 60s linear infinite; }
 
-/* Lamp flicker: wavering catchlight of the stall lamps. */
-@keyframes kiln-glint {
+/* Buoy flicker: wavering catchlight of the harbor lamps. */
+@keyframes aurora-glint {
   0%, 100% { opacity: 0.35; transform: scale(0.85); }
   50% { opacity: 1; transform: scale(1.25); }
 }
-.pop-twinkle { animation: kiln-glint 3.4s ease-in-out infinite; }
+.pop-twinkle { animation: aurora-glint 3.4s ease-in-out infinite; }
 
-/* Day ticker: infinite marquee (leftward drift). */
-@keyframes kiln-ticker {
+/* Dawn ticker: infinite marquee (leftward drift). */
+@keyframes aurora-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
-.pop-ticker { animation: kiln-ticker 28s linear infinite; }
+.pop-ticker { animation: aurora-ticker 28s linear infinite; }
 
-/* Sun bands: deep clay -> terracotta -> amber diagonal stripes. */
+/* Aurora bands: deep indigo -> violet -> coral diagonal stripes. */
 .pop-stripes {
-  background-image: repeating-linear-gradient(-55deg, #431407 0 10px, #d95f26 10px 20px, #f59e0b 20px 30px);
+  background-image: repeating-linear-gradient(-55deg, #2a1656 0 10px, #6a32f2 10px 20px, #f94f2e 20px 30px);
 }
 
-/* Clay tile: a warm-white card with a sunbeam along its top edge and a
-   palm node tucked in the bottom-right corner; it lifts on hover trailing
-   warm light. */
+/* Aurora slab: a cool-white card with an aurora ribbon along its left edge
+   and a coral diamond tucked in the bottom-right corner; it lifts on hover
+   trailing violet light. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(194, 65, 12, 0.22);
+  border: 1px solid rgba(106, 50, 242, 0.22);
   background:
-    radial-gradient(circle at 82% 8%, rgba(217, 119, 6, 0.12) 0%, transparent 46%),
-    linear-gradient(165deg, #ffffff 0%, #fffaf0 55%, #fef3c7 100%);
-  border-radius: 1.5rem;
+    radial-gradient(circle at 8% 10%, rgba(13, 166, 101, 0.10) 0%, transparent 46%),
+    linear-gradient(165deg, #ffffff 0%, #f7f7ff 55%, #ffe8e0 100%);
+  border-radius: 1.25rem;
   box-shadow:
-    0 0 0 1px rgba(67, 20, 7, 0.06),
-    0 20px 34px -22px rgba(194, 65, 12, 0.4),
+    0 0 0 1px rgba(42, 22, 86, 0.06),
+    0 20px 34px -22px rgba(106, 50, 242, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.9);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   overflow: hidden;
 }
 .pop-lift::before {
-  /* sunbeam running along the tile's top edge */
+  /* aurora ribbon running along the slab's left edge */
   content: "";
   position: absolute;
-  top: 0;
-  left: 8%;
-  right: 8%;
-  height: 3px;
-  border-radius: 0 0 999px 999px;
-  background: linear-gradient(90deg, transparent 0%, #fbbf24 30%, #fde68a 50%, #fbbf24 70%, transparent 100%);
-  box-shadow: 0 2px 12px 2px rgba(251, 191, 36, 0.5);
+  top: 8%;
+  bottom: 8%;
+  left: 0;
+  width: 4px;
+  border-radius: 0 999px 999px 0;
+  background: linear-gradient(180deg, transparent 0%, #7bf5ba 25%, #9d7bff 50%, #ff7553 75%, transparent 100%);
+  box-shadow: 2px 0 12px 2px rgba(157, 123, 255, 0.5);
   pointer-events: none;
 }
 .pop-lift::after {
-  /* palm node tucked in the bottom-right corner */
+  /* coral diamond tucked in the bottom-right corner */
   content: "";
   position: absolute;
   bottom: 12px;
   right: 14px;
   width: 10px;
   height: 10px;
-  border-radius: 9999px;
-  background: radial-gradient(circle at 35% 35%, #bbf7d0 0%, #22c55e 60%, #15803d 100%);
-  box-shadow: 0 0 14px 4px rgba(34, 197, 94, 0.5);
+  transform: rotate(45deg);
+  background: linear-gradient(135deg, #ffc9b8 0%, #f94f2e 60%, #b92d13 100%);
+  box-shadow: 0 0 14px 4px rgba(249, 79, 46, 0.5);
   pointer-events: none;
 }
 .pop-lift:hover {
   transform: translateY(-6px);
-  border-color: rgba(217, 95, 38, 0.55);
+  border-color: rgba(106, 50, 242, 0.55);
   box-shadow:
-    0 0 0 1px rgba(217, 95, 38, 0.2),
-    0 26px 44px -20px rgba(194, 65, 12, 0.5),
-    0 0 24px -6px rgba(251, 191, 36, 0.35),
+    0 0 0 1px rgba(106, 50, 242, 0.2),
+    0 26px 44px -20px rgba(106, 50, 242, 0.5),
+    0 0 24px -6px rgba(255, 117, 83, 0.35),
     inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
-/* Day glass: shared by modals and drawers — warm paper glass with a clay
-   rim and an amber base shadow. */
+/* Dawn glass: shared by modals and drawers — cool mist glass with a violet
+   rim and a coral base shadow. */
 .pop-glass {
-  background: rgba(255, 250, 240, 0.94);
+  background: rgba(247, 247, 255, 0.94);
   backdrop-filter: blur(20px) saturate(1.2);
   -webkit-backdrop-filter: blur(20px) saturate(1.2);
-  border: 1px solid rgba(194, 65, 12, 0.25);
-  border-radius: 1.5rem;
+  border: 1px solid rgba(106, 50, 242, 0.25);
+  border-radius: 1.25rem;
   box-shadow:
-    0 28px 54px -24px rgba(67, 20, 7, 0.35),
-    0 0 0 1px rgba(217, 119, 6, 0.1),
+    0 28px 54px -24px rgba(42, 22, 86, 0.35),
+    0 0 0 1px rgba(249, 79, 46, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
-/* Sun seal: an amber pulse badge with a clay core. */
+/* Buoy seal: a coral pulse badge with a violet core. */
 .starburst {
-  background: radial-gradient(circle at 35% 30%, #fde68a 0%, #f59e0b 55%, #9a3412 100%);
-  color: #fffaf0;
-  text-shadow: 0 1px 2px rgba(67, 20, 7, 0.7);
+  background: radial-gradient(circle at 35% 30%, #ffc9b8 0%, #f94f2e 55%, #4a1eae 100%);
+  color: #f7f7ff;
+  text-shadow: 0 1px 2px rgba(42, 22, 86, 0.7);
   border-radius: 9999px;
   transform: rotate(-6deg);
-  box-shadow: 0 0 22px -4px rgba(217, 119, 6, 0.8), inset 0 2px 6px rgba(255, 255, 255, 0.35);
-  outline: 2px dashed rgba(217, 95, 38, 0.7);
+  box-shadow: 0 0 22px -4px rgba(249, 79, 46, 0.8), inset 0 2px 6px rgba(255, 255, 255, 0.35);
+  outline: 2px dashed rgba(106, 50, 242, 0.7);
   outline-offset: -6px;
-  border: 2px solid #d97706;
+  border: 2px solid #f94f2e;
 }
 
-/* Sun dust: clay-and-amber dot texture for day bands. */
+/* Ice dust: violet-and-coral dot texture for dawn bands. */
 .halftone {
   background-image:
-    radial-gradient(circle, rgba(194, 65, 12, 0.12) 1.2px, transparent 1.9px),
-    radial-gradient(circle, rgba(217, 119, 6, 0.12) 1px, transparent 1.6px);
+    radial-gradient(circle, rgba(106, 50, 242, 0.12) 1.2px, transparent 1.9px),
+    radial-gradient(circle, rgba(249, 79, 46, 0.12) 1px, transparent 1.6px);
   background-size: 15px 15px, 23px 23px;
   background-position: 0 0, 7px 9px;
 }
 
-/* Seed divider: a row of amber sun-seeds dividing sections. */
+/* Beacon divider: a row of coral beacon dots dividing sections. */
 .zigzag {
   height: 14px;
-  background-image: radial-gradient(circle at 12px 7px, #d97706 4px, rgba(217, 119, 6, 0.35) 7px, transparent 8px);
+  background-image: radial-gradient(circle at 12px 7px, #f94f2e 4px, rgba(249, 79, 46, 0.35) 7px, transparent 8px);
   background-size: 28px 14px;
   background-repeat: repeat-x;
   opacity: 0.9;
@@ -241,33 +242,33 @@ body {
   mask: linear-gradient(180deg, black 60%, transparent 100%);
 }
 
-/* Sun awning: clay/amber/cream stall stripes with a clay hem. */
+/* Aurora awning: indigo/mint/coral signal ribbons with a violet hem. */
 .bazaar-awning {
   background-image:
-    repeating-linear-gradient(45deg, rgba(255, 250, 240, 0.9) 0 26px, rgba(217, 95, 38, 0.55) 26px 52px, rgba(217, 119, 6, 0.5) 52px 58px, rgba(217, 95, 38, 0.55) 58px 84px);
-  border-bottom: 3px solid #9a3412;
-  box-shadow: 0 8px 24px -8px rgba(217, 119, 6, 0.45);
+    repeating-linear-gradient(45deg, rgba(247, 247, 255, 0.9) 0 26px, rgba(106, 50, 242, 0.55) 26px 52px, rgba(249, 79, 46, 0.5) 52px 58px, rgba(13, 166, 101, 0.45) 58px 84px);
+  border-bottom: 3px solid #4a1eae;
+  box-shadow: 0 8px 24px -8px rgba(106, 50, 242, 0.45);
 }
 
-/* Sun glow: layered amber/clay glow for the sun halo. */
+/* Aurora glow: layered violet/coral glow for the aurora halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(245, 158, 11, 0.45) 0%, rgba(217, 119, 6, 0.3) 42%, rgba(217, 95, 38, 0.22) 62%, rgba(217, 95, 38, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(157, 123, 255, 0.45) 0%, rgba(106, 50, 242, 0.3) 42%, rgba(249, 79, 46, 0.22) 62%, rgba(249, 79, 46, 0) 76%);
 }
-/* Midday sun: a glowing warm disc with a palm-green halo. */
+/* Dawn orb: a glowing violet disc with a mint halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #fffbeb 0%, #fbbf24 52%, #9a3412 100%);
-  box-shadow: 0 0 70px -8px rgba(251, 191, 36, 0.55), 0 0 28px -6px rgba(22, 163, 74, 0.4), inset 0 3px 12px rgba(255, 255, 255, 0.5);
-  border: 2px solid rgba(253, 230, 138, 0.9);
+    radial-gradient(circle at 38% 34%, #f4f1ff 0%, #9d7bff 52%, #4a1eae 100%);
+  box-shadow: 0 0 70px -8px rgba(157, 123, 255, 0.55), 0 0 28px -6px rgba(13, 166, 101, 0.4), inset 0 3px 12px rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(255, 201, 184, 0.9);
 }
 
-/* Orbit rings around the midday sun. */
+/* Orbit rings around the dawn orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(217, 119, 6, 0.4) 0px,
-    rgba(217, 119, 6, 0.4) 3px,
+    rgba(106, 50, 242, 0.4) 0px,
+    rgba(106, 50, 242, 0.4) 3px,
     transparent 3px,
     transparent 28px
   );
@@ -278,8 +279,8 @@ body {
 .sun-rays {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(217, 95, 38, 0.4) 0px,
-    rgba(217, 95, 38, 0.4) 3px,
+    rgba(106, 50, 242, 0.4) 0px,
+    rgba(106, 50, 242, 0.4) 3px,
     transparent 3px,
     transparent 28px
   );
@@ -288,62 +289,62 @@ body {
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all sun styled. */
+/* Legacy aliases kept so untouched components still render — all aurora styled. */
 .lagoon-lift {
   position: relative;
-  border: 1px solid rgba(194, 65, 12, 0.22);
-  background: linear-gradient(165deg, #ffffff 0%, #fffaf0 60%, #fef3c7 100%);
-  border-radius: 1.5rem;
-  box-shadow: 0 0 0 1px rgba(67, 20, 7, 0.06), 0 20px 34px -22px rgba(194, 65, 12, 0.4);
+  border: 1px solid rgba(106, 50, 242, 0.22);
+  background: linear-gradient(165deg, #ffffff 0%, #f7f7ff 60%, #ffe8e0 100%);
+  border-radius: 1.25rem;
+  box-shadow: 0 0 0 1px rgba(42, 22, 86, 0.06), 0 20px 34px -22px rgba(106, 50, 242, 0.4);
   transition: transform 0.24s ease, box-shadow 0.24s ease;
   overflow: hidden;
 }
 .lagoon-lift:hover {
   transform: translateY(-6px);
-  box-shadow: 0 0 0 1px rgba(217, 95, 38, 0.2), 0 26px 44px -20px rgba(194, 65, 12, 0.5);
+  box-shadow: 0 0 0 1px rgba(106, 50, 242, 0.2), 0 26px 44px -20px rgba(106, 50, 242, 0.5);
 }
 .stamp-perf {
-  border: 2px dashed #d95f26;
-  background: rgba(217, 95, 38, 0.08);
-  border-radius: 1.5rem;
-  box-shadow: 0 14px 28px -18px rgba(194, 65, 12, 0.45);
+  border: 2px dashed #6a32f2;
+  background: rgba(106, 50, 242, 0.08);
+  border-radius: 1.25rem;
+  box-shadow: 0 14px 28px -18px rgba(106, 50, 242, 0.45);
 }
 .ember-glow {
   position: relative;
-  border: 1px solid rgba(217, 119, 6, 0.4);
-  background: linear-gradient(165deg, #fffbeb 0%, #fef3c7 60%, rgba(217, 119, 6, 0.12) 100%);
-  border-radius: 1.5rem;
-  box-shadow: 0 0 0 1px rgba(217, 119, 6, 0.15), 0 20px 34px -22px rgba(217, 119, 6, 0.5);
+  border: 1px solid rgba(249, 79, 46, 0.4);
+  background: linear-gradient(165deg, #fff5f2 0%, #ffe8e0 60%, rgba(249, 79, 46, 0.12) 100%);
+  border-radius: 1.25rem;
+  box-shadow: 0 0 0 1px rgba(249, 79, 46, 0.15), 0 20px 34px -22px rgba(249, 79, 46, 0.5);
   transition: transform 0.24s ease, box-shadow 0.24s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
   transform: translateY(-6px);
-  box-shadow: 0 0 0 1px rgba(217, 119, 6, 0.25), 0 26px 44px -20px rgba(217, 119, 6, 0.6);
+  box-shadow: 0 0 0 1px rgba(249, 79, 46, 0.25), 0 26px 44px -20px rgba(249, 79, 46, 0.6);
 }
 .ripple-glow {
   position: relative;
-  border: 1px solid rgba(22, 163, 74, 0.4);
-  background: linear-gradient(165deg, #f0fdf4 0%, #dcfce7 60%, rgba(22, 163, 74, 0.12) 100%);
-  border-radius: 1.5rem;
-  box-shadow: 0 0 0 1px rgba(22, 163, 74, 0.15), 0 20px 34px -22px rgba(22, 163, 74, 0.5);
+  border: 1px solid rgba(13, 166, 101, 0.4);
+  background: linear-gradient(165deg, #effff5 0%, #d8ffe9 60%, rgba(13, 166, 101, 0.12) 100%);
+  border-radius: 1.25rem;
+  box-shadow: 0 0 0 1px rgba(13, 166, 101, 0.15), 0 20px 34px -22px rgba(13, 166, 101, 0.5);
   transition: transform 0.24s ease, box-shadow 0.24s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
   transform: translateY(-6px);
-  box-shadow: 0 0 0 1px rgba(22, 163, 74, 0.25), 0 26px 44px -20px rgba(22, 163, 74, 0.6);
+  box-shadow: 0 0 0 1px rgba(13, 166, 101, 0.25), 0 26px 44px -20px rgba(13, 166, 101, 0.6);
 }
 .lagoon-glow {
   position: relative;
-  border: 1px solid rgba(217, 95, 38, 0.3);
-  background: linear-gradient(165deg, #ffffff 0%, #fdf5ef 60%, rgba(217, 95, 38, 0.1) 100%);
-  border-radius: 1.5rem;
-  box-shadow: 0 0 0 1px rgba(217, 95, 38, 0.12), 0 20px 34px -22px rgba(217, 95, 38, 0.4);
+  border: 1px solid rgba(106, 50, 242, 0.3);
+  background: linear-gradient(165deg, #ffffff 0%, #f4f1ff 60%, rgba(106, 50, 242, 0.1) 100%);
+  border-radius: 1.25rem;
+  box-shadow: 0 0 0 1px rgba(106, 50, 242, 0.12), 0 20px 34px -22px rgba(106, 50, 242, 0.4);
   transition: transform 0.24s ease, box-shadow 0.24s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
   transform: translateY(-6px);
-  box-shadow: 0 0 0 1px rgba(217, 95, 38, 0.22), 0 26px 44px -20px rgba(217, 95, 38, 0.5);
+  box-shadow: 0 0 0 1px rgba(106, 50, 242, 0.22), 0 26px 44px -20px rgba(106, 50, 242, 0.5);
 }

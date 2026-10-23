@@ -22,21 +22,21 @@ const item: Variants = {
 
 // Neon haze drifting over the market.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(217, 95, 38, 0.18)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(217, 119, 6, 0.20)" },
-  { left: "42%", top: "46%", size: 140, delay: "-7s", dur: "13s", c: "rgba(217, 119, 6, 0.16)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(217, 95, 38, 0.14)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(106, 50, 242, 0.18)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(249, 79, 46, 0.20)" },
+  { left: "42%", top: "46%", size: 140, delay: "-7s", dur: "13s", c: "rgba(249, 79, 46, 0.16)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(106, 50, 242, 0.14)" },
 ];
 
 // Data pixels settling through the night air.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#9a3412" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#d95f26" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#b45309" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#9a3412" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#d97706" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fbbf24" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#bbf7d0" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#4a1eae" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#6a32f2" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#b92d13" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#4a1eae" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#e03a1a" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#ff7553" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#b2fbd4" },
 ];
 
 // Signal glints scattered through the night.
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* night glow under a neon awning */}
-      <div className="relative bg-gradient-to-b from-[#ffffff] via-[#fff7ed] to-[#ffffff]">
+      <div className="relative bg-gradient-to-b from-[#ffffff] via-[#f4f1ff] to-[#ffffff]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -96,11 +96,11 @@ export default function Hero({ onQuickView }: HeroProps) {
             {[0, 1, 2].map((r) => (
               <span
                 key={r}
-                className="absolute left-1/2 top-1/2 origin-center -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-[#d95f26]/40"
+                className="absolute left-1/2 top-1/2 origin-center -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-[#6a32f2]/40"
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(217, 95, 38, 0.45), inset 0 0 18px rgba(67, 20, 7, 0.45)",
+                  boxShadow: "0 0 28px 2px rgba(106, 50, 242, 0.45), inset 0 0 18px rgba(42, 22, 86, 0.45)",
                   opacity: 1 - r * 0.22,
                 }}
               />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#9a3412", "#d95f26", "#b45309", "#9a3412"];
+              const colors = ["#4a1eae", "#6a32f2", "#b92d13", "#4a1eae"];
               return (
                 <span
                   key={i}
@@ -159,7 +159,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           {STARS.map((s, i) => (
             <span
               key={i}
-              className="pop-twinkle absolute rounded-full bg-[#d95f26]"
+              className="pop-twinkle absolute rounded-full bg-[#6a32f2]"
               style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
             />
           ))}
@@ -186,11 +186,11 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
 
         {/* night ticker: cyan band with white type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#d95f26]/40 bg-gradient-to-r from-brand-700 via-brand-600 to-brand-800 py-3 shadow-[0_14px_30px_-14px_rgba(251, 191, 36,0.5)]">
+        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#6a32f2]/40 bg-gradient-to-r from-brand-700 via-brand-600 to-brand-800 py-3 shadow-[0_14px_30px_-14px_rgba(255, 117, 83,0.5)]">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
-                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-white drop-shadow-[0_1px_0_rgba(67, 20, 7, 0.6)]">
+                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-white drop-shadow-[0_1px_0_rgba(42, 22, 86, 0.6)]">
                   {t} <span className="text-white/70">✦</span>
                 </span>
               ))}
@@ -215,7 +215,7 @@ export default function Hero({ onQuickView }: HeroProps) {
               <div key={s.l} className="pop-lift relative overflow-hidden p-4 pb-3 pt-5 text-center">
                 <span className="relative block bg-gradient-to-br from-brand-600 via-gold-600 to-popblue-600 bg-clip-text text-2xl font-black tracking-tight text-transparent">{s.v}</span>
                 <span className="relative mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-mute">{s.l}</span>
-                <span aria-hidden className="relative mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-gold-500 via-gold-400 to-gold-200 shadow-[0_2px_6px_rgba(251, 191, 36,0.5)]" />
+                <span aria-hidden className="relative mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-gold-500 via-gold-400 to-gold-200 shadow-[0_2px_6px_rgba(255, 117, 83,0.5)]" />
               </div>
             ))}
           </motion.div>
@@ -223,7 +223,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-sm border-2 border-[#d95f26]/50 bg-[#fff7ed]/90 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-[#9a3412] shadow-[3px_3px_0_#d97706,0_0_18px_-4px_rgba(217,95,38,0.6)]">Handpicked for you</p>
+            <p className="inline-block rounded-sm border-2 border-[#6a32f2]/50 bg-[#f4f1ff]/90 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-[#4a1eae] shadow-[3px_3px_0_#e03a1a,0_0_18px_-4px_rgba(217,95,38,0.6)]">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="relative bg-gradient-to-r from-brand-500 via-brand-600 to-ink bg-clip-text text-transparent">Picks<span aria-hidden className="absolute inset-x-0 -bottom-1 h-2 rounded-full bg-gradient-to-r from-brand-500 to-brand-700 opacity-60 blur-[3px]" /></span></h2>
             <span className="zigzag mt-4 block w-44" aria-hidden />
           </div>
