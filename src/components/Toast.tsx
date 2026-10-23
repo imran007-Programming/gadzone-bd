@@ -12,7 +12,7 @@ export default function Toast({ message }: { message: string }) {
           animate={{ opacity: 1, y: 0 }}
           exit={reduce ? { opacity: 0 } : { opacity: 0, y: 8 }}
           transition={{ duration: 0.25, ease: "easeOut" }}
-          className="fixed bottom-24 left-1/2 z-[60] w-max max-w-[calc(100vw-2rem)] -translate-x-1/2 whitespace-normal rounded-md bg-[#14343e] px-5 py-2.5 text-center text-sm font-bold text-[#bcd0ff] shadow-2xl ring-1 ring-brand-300/20 md:bottom-5 md:whitespace-nowrap"
+          className="fixed bottom-24 left-1/2 z-[60] w-max max-w-[calc(100vw-2rem)] -translate-x-1/2 whitespace-normal rounded-md bg-[#2a1626] px-5 py-2.5 text-center text-sm font-bold text-[#e0b76e] shadow-2xl ring-1 ring-brand-300/20 md:bottom-5 md:whitespace-nowrap"
         >
           {message}
         </motion.div>
