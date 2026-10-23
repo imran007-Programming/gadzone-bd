@@ -5,7 +5,7 @@ import Reveal from "./Reveal";
 
 export default function WhyShop() {
   return (
-    <section className="relative overflow-hidden border-y border-brand-900 bg-gradient-to-b from-brand-900 via-[#9f1239] to-brand-950 py-16 sm:py-20">
+    <section className="relative overflow-hidden border-y border-brand-900 bg-gradient-to-b from-brand-900 via-[#166534] to-brand-950 py-16 sm:py-20">
       <div aria-hidden className="pointer-events-none absolute -left-20 top-0 h-64 w-64 rounded-full bg-brand-500/12 blur-[100px]" />
       <div aria-hidden className="pointer-events-none absolute -right-20 bottom-0 h-64 w-64 rounded-full bg-brand-400/10 blur-[100px]" />
       <div className="relative mx-auto max-w-7xl px-4">
@@ -23,9 +23,9 @@ export default function WhyShop() {
             <Reveal key={f.t} delay={i * 0.07}>
               <motion.div
                 whileHover={{ y: -4 }}
-                className="rounded-lg border border-[#f0d4cb] bg-[#ffffff] p-6 text-center shadow-[0_12px_36px_-12px_rgba(76, 5, 25, 0.2)] backdrop-blur-sm transition-all hover:border-brand-400/40 hover:shadow-[0_16px_44px_-12px_rgba(159, 18, 57, 0.35)] sm:p-7"
+                className="rounded-lg border border-[#d9e5cf] bg-[#ffffff] p-6 text-center shadow-[0_12px_36px_-12px_rgba(20, 33, 15, 0.2)] backdrop-blur-sm transition-all hover:border-brand-400/40 hover:shadow-[0_16px_44px_-12px_rgba(22, 101, 52, 0.35)] sm:p-7"
               >
-                <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-brand-400/15 text-3xl shadow-[0_0_24px_rgba(225, 29, 72, 0.25)] ring-1 ring-brand-400/40">{f.e}</span><h3 className="mt-4 text-[15px] font-bold tracking-tight text-[#2b1116]">{f.t}</h3><p className="mt-1.5 text-sm leading-relaxed text-[#8a6a68]">{f.d}</p>
+                <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-brand-400/15 text-3xl shadow-[0_0_24px_rgba(22, 163, 74, 0.25)] ring-1 ring-brand-400/40">{f.e}</span><h3 className="mt-4 text-[15px] font-bold tracking-tight text-[#21301f]">{f.t}</h3><p className="mt-1.5 text-sm leading-relaxed text-[#7a7f6e]">{f.d}</p>
               </motion.div>
             </Reveal>
           ))}
