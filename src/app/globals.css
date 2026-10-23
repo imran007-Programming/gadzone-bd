@@ -1,63 +1,63 @@
 @import "tailwindcss";
 
 @theme {
-  /* Midnight Neon Market: a late-night gadget bazaar under neon signs.
-     Cards are smoked-glass tiles with an electric violet rim and a cyan
-     light-bar across the top; they lift into a neon halo on hover.
-     Violet carries the brand, cyan the charge, magenta the spark. */
+  /* Morning Craft Bazaar: a sunlit craft-paper market.
+     Cards are hand-stitched paper tiles with a terracotta rim and a warm
+     drop shadow; they lift into a sun-glow on hover.
+     Terracotta carries the brand, deep teal the hem, marigold the spark. */
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = electric violet scale */
-  --color-brand-50: #f5f0ff;
-  --color-brand-100: #ece4ff;
-  --color-brand-200: #d9c8ff;
-  --color-brand-300: #bfa3ff;
-  --color-brand-400: #a37aff;
-  --color-brand-500: #8b5cf6;
-  --color-brand-600: #7c3aed;
-  --color-brand-700: #6d28d9;
-  --color-brand-800: #5b21b6;
-  --color-brand-900: #4c1d95;
-  --color-brand-950: #2e1065;
-  --color-brand: #7c3aed;
-  --color-brand-dark: #5b21b6;
-  --color-brand-deep: #4c1d95;
+  /* brand = terracotta ember scale */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-brand-950: #431407;
+  --color-brand: #ea580c;
+  --color-brand-dark: #9a3412;
+  --color-brand-deep: #7c2d12;
 
-  /* gold = neon cyan scale (name kept for legacy class refs) */
-  --color-gold-50: #ecfeff;
-  --color-gold-100: #cffafe;
-  --color-gold-200: #a5f3fc;
-  --color-gold-300: #67e8f9;
-  --color-gold-400: #22d3ee;
-  --color-gold-500: #06b6d4;
-  --color-gold-600: #0891b2;
-  --color-gold-700: #0e7490;
-  --color-gold-800: #155e75;
-  --color-gold-900: #164e63;
-  --color-gold-950: #083344;
-  --color-gold: #06b6d4;
-  --color-gold-deep: #0e7490;
-  --color-gold-soft: #cffafe;
+  /* gold = deep teal scale (name kept for legacy class refs) */
+  --color-gold-50: #f0fdfa;
+  --color-gold-100: #ccfbf1;
+  --color-gold-200: #99f6e4;
+  --color-gold-300: #5eead4;
+  --color-gold-400: #2dd4bf;
+  --color-gold-500: #14b8a6;
+  --color-gold-600: #0d9488;
+  --color-gold-700: #0f766e;
+  --color-gold-800: #115e59;
+  --color-gold-900: #134e4a;
+  --color-gold-950: #042f2e;
+  --color-gold: #0d9488;
+  --color-gold-deep: #0f766e;
+  --color-gold-soft: #ccfbf1;
 
-  /* popblue = neon magenta scale (name kept for legacy class refs) */
-  --color-popblue-50: #fdf2f8;
-  --color-popblue-100: #fce7f3;
-  --color-popblue-200: #fbcfe8;
-  --color-popblue-300: #f9a8d4;
-  --color-popblue-400: #f472b6;
-  --color-popblue-500: #ec4899;
-  --color-popblue-600: #db2777;
-  --color-popblue-700: #be185d;
-  --color-popblue-800: #9d174d;
-  --color-popblue-900: #831843;
-  --color-popblue-950: #500724;
-  --color-popblue: #db2777;
-  --color-popblue-deep: #be185d;
-  --color-popblue-soft: #fce7f3;
+  /* popblue = marigold amber scale (name kept for legacy class refs) */
+  --color-popblue-50: #fffbeb;
+  --color-popblue-100: #fef3c7;
+  --color-popblue-200: #fde68a;
+  --color-popblue-300: #fcd34d;
+  --color-popblue-400: #fbbf24;
+  --color-popblue-500: #f59e0b;
+  --color-popblue-600: #d97706;
+  --color-popblue-700: #b45309;
+  --color-popblue-800: #92400e;
+  --color-popblue-900: #78350f;
+  --color-popblue-950: #451a03;
+  --color-popblue: #d97706;
+  --color-popblue-deep: #b45309;
+  --color-popblue-soft: #fef3c7;
 
-  --color-ink: #f4f1ff;
-  --color-paper: #0a0720;
-  --color-mute: #a79fd6;
+  --color-ink: #33241a;
+  --color-paper: #fdf6ea;
+  --color-mute: #8a7a66;
 }
 
 html { scroll-behavior: smooth; }
@@ -72,23 +72,23 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #0a0720;
+  background-color: #fdf6ea;
   background-image:
-    radial-gradient(circle, rgba(139, 92, 246, 0.16) 1px, transparent 1.7px),
-    radial-gradient(ellipse 60% 32% at 90% -10%, rgba(6, 182, 212, 0.22), transparent 70%),
-    radial-gradient(ellipse 46% 26% at 2% 104%, rgba(124, 58, 237, 0.24), transparent 70%),
-    radial-gradient(ellipse 38% 24% at 60% 46%, rgba(219, 39, 119, 0.14), transparent 70%);
+    radial-gradient(circle, rgba(234, 88, 12, 0.08) 1px, transparent 1.7px),
+    radial-gradient(ellipse 60% 32% at 90% -10%, rgba(13, 148, 136, 0.12), transparent 70%),
+    radial-gradient(ellipse 46% 26% at 2% 104%, rgba(234, 88, 12, 0.12), transparent 70%),
+    radial-gradient(ellipse 38% 24% at 60% 46%, rgba(245, 158, 11, 0.10), transparent 70%);
   background-size: 30px 30px, auto, auto, auto;
-  color: #f4f1ff;
+  color: #33241a;
 }
-::selection { background: #7c3aed; color: #f5f0ff; }
+::selection { background: #ea580c; color: #fff7ed; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #8b5cf6, #06b6d4); border-radius: 8px; border: 2px solid #0a0720; }
-::-webkit-scrollbar-track { background: #1d1848; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #f97316, #0d9488); border-radius: 8px; border: 2px solid #fdf6ea; }
+::-webkit-scrollbar-track { background: #f7e8d2; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Neon rain: glowing sparks drifting down through the night market air. */
+/* Paper scraps: warm flecks drifting down through the morning market air. */
 @keyframes signal-fall {
   0% { transform: translate3d(-6px, -60px, 0) rotate(0deg) scale(0.75); opacity: 0; }
   18% { opacity: 0.9; }
@@ -98,53 +98,53 @@ body {
 }
 .pop-fall { animation: signal-fall 12s linear infinite; }
 
-/* Neon drift: slow lateral float of the charged night air. */
+/* Bazaar drift: slow lateral float of the warm morning air. */
 @keyframes signal-sway {
   0%, 100% { transform: translate3d(3vw, 0, 0) scale(1); opacity: 0.55; }
   50% { transform: translate3d(-3vw, -0.8rem, 0) scale(1.1); opacity: 0.85; }
 }
 .pop-drift { animation: signal-sway 30s ease-in-out infinite; }
 
-/* Signal bob: gentle floating pulse. */
+/* Sun bob: gentle floating pulse. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-8px) scale(1.04); }
 }
 .pop-bob { animation: signal-bob 4s ease-in-out infinite; }
 
-/* Slow rotation for the neon halo. */
+/* Slow rotation for the sun halo. */
 @keyframes signal-wheel {
   to { transform: rotate(-360deg); }
 }
 .pop-spin { animation: signal-wheel 56s linear infinite; }
 
-/* Neon glint: sparkling catchlight. */
+/* Sun glint: sparkling catchlight. */
 @keyframes signal-glint {
   0%, 100% { opacity: 0.3; transform: scale(0.85); }
   50% { opacity: 1; transform: scale(1.2); }
 }
 .pop-twinkle { animation: signal-glint 3.6s ease-in-out infinite; }
 
-/* Night ticker: infinite marquee (leftward drift). */
+/* Day ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Neon bars: violet -> deep indigo -> cyan diagonal charge. */
+/* Sun bars: terracotta -> deep teal -> marigold diagonal charge. */
 .pop-stripes {
-  background-image: repeating-linear-gradient(-55deg, #7c3aed 0 10px, #5b21b6 10px 20px, #06b6d4 20px 30px);
+  background-image: repeating-linear-gradient(-55deg, #ea580c 0 10px, #c2410c 10px 20px, #0d9488 20px 30px);
 }
 
-/* Night glass tile: a smoked-glass card with a violet rim and a cyan
-   light-bar across the top; it lifts into a neon halo on hover. */
+/* Stitched paper tile: a hand-stitched craft card with a terracotta rim
+   and a warm drop shadow; it lifts into a sun-glow on hover. */
 .pop-lift {
   position: relative;
-  border: 2px solid rgba(139, 92, 246, 0.45);
-  background: linear-gradient(180deg, #1a1545 0%, #100c2c 100%);
+  border: 2px solid rgba(234, 88, 12, 0.45);
+  background: linear-gradient(180deg, #fffdf8 0%, #fff6e6 100%);
   border-radius: 1.25rem;
-  box-shadow: 0 2px 0 rgba(6, 182, 212, 0.25), 0 0 28px -10px rgba(139, 92, 246, 0.55);
+  box-shadow: 0 3px 0 rgba(194, 65, 12, 0.22), 0 14px 28px -14px rgba(234, 88, 12, 0.35);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   overflow: hidden;
 }
@@ -155,85 +155,85 @@ body {
   left: 0;
   right: 0;
   height: 6px;
-  background: linear-gradient(90deg, #7c3aed 0%, #06b6d4 55%, #db2777 100%);
-  box-shadow: 0 0 14px 2px rgba(6, 182, 212, 0.55);
+  background: linear-gradient(90deg, #ea580c 0%, #0d9488 55%, #d97706 100%);
+  box-shadow: 0 2px 8px rgba(234, 88, 12, 0.4);
   pointer-events: none;
 }
 .pop-lift::after {
   content: "";
   position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: radial-gradient(ellipse 62% 42% at 50% 108%, rgba(6, 182, 212, 0.14) 0%, transparent 65%);
+  inset: 6px;
+  border-radius: 0.9rem;
+  border: 1.5px dashed rgba(194, 65, 12, 0.3);
   pointer-events: none;
 }
 .pop-lift:hover {
   transform: translateY(-4px);
-  border-color: #a37aff;
-  box-shadow: 0 2px 0 rgba(6, 182, 212, 0.3), 0 0 40px -8px rgba(139, 92, 246, 0.8);
+  border-color: #fb923c;
+  box-shadow: 0 4px 0 rgba(194, 65, 12, 0.25), 0 22px 40px -14px rgba(234, 88, 12, 0.5);
 }
 
-/* Night glass: shared by modals and drawers — a dark frosted panel. */
+/* Craft glass: shared by modals and drawers — a frosted cream panel. */
 .pop-glass {
-  background: rgba(16, 12, 44, 0.88);
+  background: rgba(255, 253, 248, 0.92);
   backdrop-filter: blur(20px) saturate(1.15);
   -webkit-backdrop-filter: blur(20px) saturate(1.15);
-  border: 2px solid rgba(139, 92, 246, 0.45);
+  border: 2px solid rgba(234, 88, 12, 0.4);
   border-radius: 1.25rem;
-  box-shadow: 0 24px 60px -18px rgba(0, 0, 0, 0.7), 0 0 32px -10px rgba(139, 92, 246, 0.5), inset 0 1px 0 rgba(244, 241, 255, 0.12);
+  box-shadow: 0 24px 60px -18px rgba(124, 45, 18, 0.35), 0 0 32px -12px rgba(234, 88, 12, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
-/* Neon seal: a violet medallion with a dashed cyan ring. */
+/* Sun seal: a marigold medallion with a dashed teal ring. */
 .starburst {
-  background: radial-gradient(circle at 35% 30%, #a37aff 0%, #7c3aed 55%, #1e1448 100%);
-  color: #f5f0ff;
-  text-shadow: 0 1px 0 rgba(10, 7, 32, 0.6);
+  background: radial-gradient(circle at 35% 30%, #fbbf24 0%, #f59e0b 55%, #b45309 100%);
+  color: #fffbeb;
+  text-shadow: 0 1px 0 rgba(124, 45, 18, 0.5);
   border-radius: 9999px;
   transform: rotate(6deg);
-  box-shadow: 0 0 22px -4px rgba(139, 92, 246, 0.8), inset 0 2px 6px rgba(255, 255, 255, 0.25);
-  outline: 2px dashed #67e8f9;
+  box-shadow: 0 0 22px -4px rgba(245, 158, 11, 0.7), inset 0 2px 6px rgba(255, 255, 255, 0.45);
+  outline: 2px dashed #0d9488;
   outline-offset: -6px;
 }
 
-/* Neon dots: faint starfield texture for hero bands. */
+/* Sun dots: faint craft-dot texture for hero bands. */
 .halftone {
-  background-image: radial-gradient(circle, rgba(139, 92, 246, 0.22) 1px, transparent 1.7px);
+  background-image: radial-gradient(circle, rgba(234, 88, 12, 0.12) 1px, transparent 1.7px);
   background-size: 14px 14px;
 }
 
-/* Night band: a violet -> cyan -> magenta ribbon. */
+/* Day band: a terracotta -> teal -> marigold ribbon. */
 .zigzag {
   height: 6px;
-  background: repeating-linear-gradient(135deg, #7c3aed 0 12px, #06b6d4 12px 24px, #db2777 24px 36px);
+  background: repeating-linear-gradient(135deg, #ea580c 0 12px, #0d9488 12px 24px, #d97706 24px 36px);
   border-radius: 9999px;
-  box-shadow: 0 2px 14px rgba(139, 92, 246, 0.55);
+  box-shadow: 0 2px 10px rgba(234, 88, 12, 0.35);
 }
 
-/* Neon canopy: violet and midnight stripes with a cyan hem. */
+/* Market canopy: cream and terracotta stripes with a teal hem. */
 .bazaar-awning {
   background-image:
-    repeating-linear-gradient(90deg, #7c3aed 0 28px, #0a0720 28px 56px);
-  border-bottom: 3px solid #06b6d4;
-  box-shadow: 0 6px 18px -4px rgba(139, 92, 246, 0.7), 0 0 24px -6px rgba(6, 182, 212, 0.5);
+    repeating-linear-gradient(90deg, #ea580c 0 28px, #fff7ed 28px 56px);
+  border-bottom: 3px solid #0d9488;
+  box-shadow: 0 6px 18px -6px rgba(234, 88, 12, 0.4);
 }
 
-/* Neon wash: layered violet/cyan glow for the night orb. */
+/* Sun wash: layered terracotta/marigold glow for the morning orb. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(163, 122, 255, 0.5) 0%, rgba(139, 92, 246, 0.38) 42%, rgba(219, 39, 119, 0.16) 62%, rgba(219, 39, 119, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(251, 191, 36, 0.55) 0%, rgba(249, 115, 22, 0.38) 42%, rgba(13, 148, 136, 0.14) 62%, rgba(13, 148, 136, 0) 76%);
 }
 .sun-disc {
   background:
-    conic-gradient(from 40deg, #22d3ee, #f472b6, #8b5cf6, #22d3ee);
-  box-shadow: 0 0 70px -8px rgba(139, 92, 246, 0.8), 0 0 30px -6px rgba(6, 182, 212, 0.6);
+    conic-gradient(from 40deg, #fbbf24, #f97316, #ea580c, #fbbf24);
+  box-shadow: 0 0 70px -8px rgba(234, 88, 12, 0.6), 0 0 30px -6px rgba(245, 158, 11, 0.5);
 }
 
-/* Neon halo rings. */
+/* Sun halo rings. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(139, 92, 246, 0.6) 0px,
-    rgba(139, 92, 246, 0.6) 4px,
+    rgba(234, 88, 12, 0.5) 0px,
+    rgba(234, 88, 12, 0.5) 4px,
     transparent 4px,
     transparent 30px
   );
@@ -244,8 +244,8 @@ body {
 .sun-rays {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(34, 211, 238, 0.55) 0px,
-    rgba(34, 211, 238, 0.55) 4px,
+    rgba(245, 158, 11, 0.45) 0px,
+    rgba(245, 158, 11, 0.45) 4px,
     transparent 4px,
     transparent 30px
   );
@@ -254,63 +254,63 @@ body {
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all neon-styled. */
+/* Legacy aliases kept so untouched components still render — all craft-styled. */
 .lagoon-lift {
   position: relative;
-  border: 2px solid rgba(109, 40, 217, 0.5);
-  background: linear-gradient(180deg, #1a1545 0%, #100c2c 100%);
+  border: 2px solid rgba(13, 148, 136, 0.5);
+  background: linear-gradient(180deg, #f0fdfa 0%, #fff6e6 100%);
   border-radius: 1.25rem;
-  box-shadow: 0 2px 0 rgba(109, 40, 217, 0.25), 0 0 28px -10px rgba(109, 40, 217, 0.6);
+  box-shadow: 0 3px 0 rgba(15, 118, 110, 0.2), 0 14px 28px -14px rgba(13, 148, 136, 0.35);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   overflow: hidden;
 }
 .lagoon-lift:hover {
   transform: translateY(-4px);
-  border-color: #a37aff;
-  box-shadow: 0 2px 0 rgba(109, 40, 217, 0.3), 0 0 40px -8px rgba(139, 92, 246, 0.7);
+  border-color: #14b8a6;
+  box-shadow: 0 4px 0 rgba(15, 118, 110, 0.25), 0 22px 40px -14px rgba(13, 148, 136, 0.45);
 }
 .stamp-perf {
-  border: 2px dashed #6d28d9;
-  background: rgba(139, 92, 246, 0.08);
+  border: 2px dashed #c2410c;
+  background: rgba(234, 88, 12, 0.06);
   border-radius: 1.25rem;
-  box-shadow: 0 0 18px -6px rgba(139, 92, 246, 0.5);
+  box-shadow: 0 3px 0 rgba(194, 65, 12, 0.18), 0 12px 24px -14px rgba(234, 88, 12, 0.4);
 }
 .ember-glow {
   position: relative;
-  border: 2px solid rgba(109, 40, 217, 0.45);
-  background: linear-gradient(180deg, #1d1848 0%, #100c2c 100%);
+  border: 2px solid rgba(234, 88, 12, 0.45);
+  background: linear-gradient(180deg, #fffdf8 0%, #fff6e6 100%);
   border-radius: 1.25rem;
-  box-shadow: 0 2px 0 rgba(109, 40, 217, 0.2), 0 0 28px -10px rgba(109, 40, 217, 0.6);
+  box-shadow: 0 3px 0 rgba(194, 65, 12, 0.2), 0 14px 28px -14px rgba(234, 88, 12, 0.4);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
   transform: translateY(-4px);
-  box-shadow: 0 2px 0 rgba(109, 40, 217, 0.3), 0 0 40px -8px rgba(109, 40, 217, 0.7);
+  box-shadow: 0 4px 0 rgba(194, 65, 12, 0.25), 0 22px 40px -14px rgba(234, 88, 12, 0.5);
 }
 .ripple-glow {
   position: relative;
-  border: 2px solid rgba(109, 40, 217, 0.45);
-  background: linear-gradient(180deg, #141c48 0%, #100c2c 100%);
+  border: 2px solid rgba(217, 119, 6, 0.5);
+  background: linear-gradient(180deg, #fffbeb 0%, #fff6e6 100%);
   border-radius: 1.25rem;
-  box-shadow: 0 2px 0 rgba(109, 40, 217, 0.2), 0 0 28px -10px rgba(109, 40, 217, 0.6);
+  box-shadow: 0 3px 0 rgba(180, 83, 9, 0.2), 0 14px 28px -14px rgba(217, 119, 6, 0.4);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
   transform: translateY(-4px);
-  box-shadow: 0 2px 0 rgba(109, 40, 217, 0.3), 0 0 40px -8px rgba(109, 40, 217, 0.7);
+  box-shadow: 0 4px 0 rgba(180, 83, 9, 0.25), 0 22px 40px -14px rgba(217, 119, 6, 0.5);
 }
 .lagoon-glow {
   position: relative;
-  border: 2px solid rgba(139, 92, 246, 0.45);
-  background: linear-gradient(180deg, #1a1545 0%, #100c2c 100%);
+  border: 2px solid rgba(234, 88, 12, 0.45);
+  background: linear-gradient(180deg, #fffdf8 0%, #fef3c7 100%);
   border-radius: 1.25rem;
-  box-shadow: 0 2px 0 rgba(139, 92, 246, 0.2), 0 0 28px -10px rgba(139, 92, 246, 0.6);
+  box-shadow: 0 3px 0 rgba(194, 65, 12, 0.2), 0 14px 28px -14px rgba(234, 88, 12, 0.4);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
   transform: translateY(-4px);
-  box-shadow: 0 2px 0 rgba(139, 92, 246, 0.3), 0 0 40px -8px rgba(139, 92, 246, 0.7);
+  box-shadow: 0 4px 0 rgba(194, 65, 12, 0.25), 0 22px 40px -14px rgba(234, 88, 12, 0.5);
 }
