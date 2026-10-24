@@ -22,21 +22,21 @@ const item: Variants = {
 
 // Signal glow drifting over the harbor.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(15,118,110, 0.20)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(220,38,38, 0.20)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(217,119,6, 0.16)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(15,118,110, 0.16)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(67,56,202, 0.20)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(124,58,237, 0.20)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(6,182,212, 0.16)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(67,56,202, 0.16)" },
 ];
 
 // Bubble spray rising off the harbor floor.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#0f766e" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#2dd4bf" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#12312e" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#115e59" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#dc2626" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fbbf24" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#d97706" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#4338ca" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#22d3ee" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#1e1b4b" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#7c3aed" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#06b6d4" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#818cf8" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#0891b2" },
 ];
 
 // Beacon blinks scattered through the light.
@@ -100,7 +100,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(15,118,110, 0.45), inset 0 0 18px rgba(15,118,110, 0.25)",
+                  boxShadow: "0 0 28px 2px rgba(67,56,202, 0.45), inset 0 0 18px rgba(6,182,212, 0.25)",
                   opacity: 1 - r * 0.22,
                 }}
               />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#0f766e", "#2dd4bf", "#dc2626", "#d97706"];
+              const colors = ["#4338ca", "#22d3ee", "#7c3aed", "#0891b2"];
               return (
                 <span
                   key={i}
@@ -159,7 +159,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           {STARS.map((s, i) => (
             <span
               key={i}
-              className="pop-twinkle absolute rounded-full bg-[#0f766e]"
+              className="pop-twinkle absolute rounded-full bg-[#4338ca]"
               style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
             />
           ))}
@@ -176,8 +176,8 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
-              <div className="rounded-[2.5rem] bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-400 p-[4px] shadow-[0_24px_56px_-18px_rgba(15,118,110, 0.45)]">
-                <div className="overflow-hidden rounded-[2.1rem] bg-paper ring-1 ring-ink/20">
+              <div className="rounded-2xl bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-400 p-[4px] shadow-[0_24px_56px_-18px_rgba(124,58,237, 0.45)]">
+                <div className="overflow-hidden rounded-xl bg-paper ring-1 ring-ink/20">
                   <BannerCarousel />
                 </div>
               </div>
