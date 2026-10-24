@@ -30,13 +30,13 @@ const ORBS = [
 
 // Signal spray rising off the water.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#0891b2" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#0ea5d2" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#0a3543" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#0c7490" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#d97706" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#f59e0b" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#e11d48" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#1d4ed8" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#3b82f6" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#17203a" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#1e40af" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#ea580c" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#f97316" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#db2777" },
 ];
 
 // Beacon blinks scattered through the light.
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* mist wash under the beacon */}
-      <div className="relative bg-gradient-to-b from-[#f2f8f9] via-[#f2f8f9] to-[#f2f8f9]">
+      <div className="relative bg-gradient-to-b from-[#f7f4ec] via-[#f7f4ec] to-[#f7f4ec]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#0891b2", "#0ea5d2", "#f59e0b", "#e11d48"];
+              const colors = ["#1d4ed8", "#3b82f6", "#f97316", "#db2777"];
               return (
                 <span
                   key={i}
@@ -159,7 +159,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           {STARS.map((s, i) => (
             <span
               key={i}
-              className="pop-twinkle absolute rounded-full bg-[#0891b2]"
+              className="pop-twinkle absolute rounded-full bg-[#1d4ed8]"
               style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
             />
           ))}
