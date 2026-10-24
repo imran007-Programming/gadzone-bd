@@ -85,7 +85,7 @@ export default function AccountModal({ open, onClose }: AccountModalProps) {
                     <span className="mt-1 inline-block rounded-full bg-brand-400/15 px-2.5 py-0.5 text-xs font-bold text-brand-700 ring-1 ring-brand-400/30 capitalize">{session.user.role ?? "customer"}</span>
                   </div>
                 </div>
-                <Link href="/dashboard" onClick={close} className="mt-4 block rounded-full bg-gradient-to-r from-brand-500 to-brand-700 py-3 text-center font-bold text-white shadow-[0_8px_24px_-8px_rgba(107,55,207, 0.4)] transition hover:brightness-110 active:scale-[0.99]">
+                <Link href="/dashboard" onClick={close} className="mt-4 block rounded-full bg-gradient-to-r from-brand-500 to-brand-700 py-3 text-center font-bold text-white shadow-[0_8px_24px_-8px_rgba(8,145,178, 0.4)] transition hover:brightness-110 active:scale-[0.99]">
                   Go to My Dashboard
                 </Link>
                 {session.user.role === "admin" && (

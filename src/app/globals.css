@@ -1,66 +1,66 @@
 @import "tailwindcss";
 
 @theme {
-  /* Marigold Lantern Festival: an evening fair strung with paper lanterns.
-     Warm ivory is the canvas, deep plum is the ink, violet is the ribbon,
-     marigold amber is the lantern light, and fuchsia is the confetti.
-     Cards are lantern-lit tiles with a ribbon band on their left edge;
+  /* Harbor Signal: a working harbor at first light.
+     Pale mist is the canvas, deep teal is the ink, signal cyan is the
+     beacon, buoy amber is the marker, and signal coral is the flare.
+     Cards are white signal tiles with a beacon bar across their top edge;
      they lift on hover. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = violet ribbon scale */
-  --color-brand-50: #f4efff;
-  --color-brand-100: #e9defc;
-  --color-brand-200: #d4c1fa;
-  --color-brand-300: #b995f5;
-  --color-brand-400: #9d6eee;
-  --color-brand-500: #7f4de3;
-  --color-brand-600: #6b37cf;
-  --color-brand-700: #582dab;
-  --color-brand-800: #472788;
-  --color-brand-900: #382068;
-  --color-brand-950: #20123d;
-  --color-brand: #6b37cf;
-  --color-brand-dark: #582dab;
-  --color-brand-deep: #382068;
+  /* brand = signal cyan scale */
+  --color-brand-50: #eefbfe;
+  --color-brand-100: #d7f3fa;
+  --color-brand-200: #b0e7f5;
+  --color-brand-300: #78d6ee;
+  --color-brand-400: #3abde3;
+  --color-brand-500: #0ea5d2;
+  --color-brand-600: #0891b2;
+  --color-brand-700: #0c7490;
+  --color-brand-800: #105e75;
+  --color-brand-900: #114f63;
+  --color-brand-950: #0a3543;
+  --color-brand: #0891b2;
+  --color-brand-dark: #0c7490;
+  --color-brand-deep: #114f63;
 
-  /* gold = marigold amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffaeb;
-  --color-gold-100: #fff1c6;
-  --color-gold-200: #ffe288;
-  --color-gold-300: #ffc94d;
-  --color-gold-400: #ffae1a;
+  /* gold = buoy amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
   --color-gold-500: #f59e0b;
-  --color-gold-600: #d97e06;
+  --color-gold-600: #d97706;
   --color-gold-700: #b45309;
   --color-gold-800: #92400e;
   --color-gold-900: #78350f;
   --color-gold-950: #451a03;
-  --color-gold: #d97e06;
+  --color-gold: #d97706;
   --color-gold-deep: #b45309;
-  --color-gold-soft: #fff1c6;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = fuchsia confetti scale (name kept for legacy class refs) */
-  --color-popblue-50: #fdf2f8;
-  --color-popblue-100: #fce7f3;
-  --color-popblue-200: #fbcfe8;
-  --color-popblue-300: #f9a8d4;
-  --color-popblue-400: #f472b6;
-  --color-popblue-500: #ec4899;
-  --color-popblue-600: #db2777;
-  --color-popblue-700: #be185d;
-  --color-popblue-800: #9d174d;
-  --color-popblue-900: #831843;
-  --color-popblue-950: #500724;
-  --color-popblue: #db2777;
-  --color-popblue-deep: #be185d;
-  --color-popblue-soft: #fce7f3;
+  /* popblue = signal coral scale (name kept for legacy class refs) */
+  --color-popblue-50: #fff1f2;
+  --color-popblue-100: #ffe4e6;
+  --color-popblue-200: #fecdd3;
+  --color-popblue-300: #fda4af;
+  --color-popblue-400: #fb7185;
+  --color-popblue-500: #f43f5e;
+  --color-popblue-600: #e11d48;
+  --color-popblue-700: #be123c;
+  --color-popblue-800: #9f1239;
+  --color-popblue-900: #881337;
+  --color-popblue-950: #4c0519;
+  --color-popblue: #e11d48;
+  --color-popblue-deep: #be123c;
+  --color-popblue-soft: #ffe4e6;
 
-  --color-ink: #241d3f;
-  --color-paper: #faf5ea;
-  --color-mute: #6f6589;
-  --color-card: #fffdf7;
-  --color-deep: #171130;
+  --color-ink: #0b2730;
+  --color-paper: #f2f8f9;
+  --color-mute: #5d7a80;
+  --color-card: #ffffff;
+  --color-deep: #06222b;
 }
 
 html { scroll-behavior: smooth; }
@@ -75,180 +75,178 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #faf5ea;
+  background-color: #f2f8f9;
   background-image:
-    radial-gradient(circle at 50% 40%, rgba(107, 55, 207, 0.10) 1.5px, transparent 1.6px),
-    radial-gradient(ellipse 60% 32% at 92% -8%, rgba(245, 158, 11, 0.16), transparent 70%),
-    radial-gradient(ellipse 52% 34% at 2% 104%, rgba(219, 39, 119, 0.10), transparent 70%),
-    radial-gradient(ellipse 34% 24% at 50% 46%, rgba(127, 77, 227, 0.10), transparent 70%);
-  background-size: 30px 30px, auto, auto, auto;
+    repeating-linear-gradient(0deg, rgba(8, 145, 178, 0.055) 0 1px, transparent 1px 34px),
+    radial-gradient(ellipse 56% 30% at 8% -6%, rgba(8, 145, 178, 0.16), transparent 70%),
+    radial-gradient(ellipse 48% 30% at 96% 104%, rgba(245, 158, 11, 0.13), transparent 70%),
+    radial-gradient(ellipse 30% 22% at 88% 8%, rgba(225, 29, 72, 0.08), transparent 70%);
   background-position: 0 0, 0 0, 0 0, 0 0;
-  color: #241d3f;
+  color: #0b2730;
 }
-::selection { background: #6b37cf; color: #ffffff; }
+::selection { background: #0891b2; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #7f4de3, #f59e0b); border-radius: 999px; border: 2px solid #faf5ea; }
-::-webkit-scrollbar-track { background: #e9dfc9; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0ea5d2, #f59e0b); border-radius: 999px; border: 2px solid #f2f8f9; }
+::-webkit-scrollbar-track { background: #d7e6e9; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Warm, festive display type for the lantern fair voice. */
-h1, h2, h3 { letter-spacing: -0.02em; }
+/* Crisp harbor type: tight, upright headlines. */
+h1, h2, h3 { letter-spacing: -0.015em; }
 
-/* Lantern motes: glowing sparks drifting up through the fair air. */
-@keyframes snow-drift {
-  0% { transform: translate3d(0, 6vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
+/* Signal spray: bright flecks rising off the water. */
+@keyframes harbor-spray {
+  0% { transform: translate3d(0, 6vh, 0) scale(0.7); opacity: 0; }
   14% { opacity: 0.9; }
-  35% { transform: translate3d(-12px, -26vh, 0) scale(1) rotate(-100deg); }
-  62% { transform: translate3d(14px, -54vh, 0) scale(0.9) rotate(-200deg); }
-  84% { opacity: 0.55; }
-  100% { transform: translate3d(-8px, -88vh, 0) scale(0.75) rotate(-320deg); opacity: 0; }
+  38% { transform: translate3d(10px, -26vh, 0) scale(1); }
+  64% { transform: translate3d(-12px, -54vh, 0) scale(0.9); }
+  84% { opacity: 0.5; }
+  100% { transform: translate3d(8px, -88vh, 0) scale(0.75); opacity: 0; }
 }
-.pop-fall { animation: snow-drift 12s linear infinite; }
+.pop-fall { animation: harbor-spray 11s linear infinite; }
 
-/* Lantern sway: slow lateral drift of the violet glow. */
-@keyframes aurora-sway {
+/* Beacon sweep: slow lateral drift of the signal glow. */
+@keyframes beacon-sweep {
   0%, 100% { transform: translate3d(-2vw, 0, 0) scale(1); opacity: 0.55; }
   50% { transform: translate3d(2.5vw, -0.6rem, 0) scale(1.06); opacity: 0.85; }
 }
-.pop-drift { animation: aurora-sway 24s ease-in-out infinite; }
+.pop-drift { animation: beacon-sweep 20s ease-in-out infinite; }
 
-/* Lantern bob: gentle rise and settle of the hanging lantern. */
-@keyframes glacier-bob {
+/* Buoy bob: gentle rise and settle of the floating marker. */
+@keyframes buoy-bob {
   0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-9px) scale(1.03); }
+  50% { transform: translateY(-8px) scale(1.04); }
 }
-.pop-bob { animation: glacier-bob 5.2s ease-in-out infinite; }
+.pop-bob { animation: buoy-bob 4.6s ease-in-out infinite; }
 
-/* Slow turn for the lantern wheel. */
-@keyframes polar-wheel {
+/* Slow turn for the signal dial. */
+@keyframes signal-dial {
   to { transform: rotate(360deg); }
 }
-.pop-spin { animation: polar-wheel 64s linear infinite; }
+.pop-spin { animation: signal-dial 56s linear infinite; }
 
-/* Lantern glint: wavering catchlight on the glass. */
-@keyframes frost-glint {
+/* Beacon blink: rhythmic pulse of the harbor light. */
+@keyframes beacon-blink {
   0%, 100% { opacity: 0.35; transform: scale(0.85); }
   50% { opacity: 1; transform: scale(1.25); }
 }
-.pop-twinkle { animation: frost-glint 3.8s ease-in-out infinite; }
+.pop-twinkle { animation: beacon-blink 3.2s ease-in-out infinite; }
 
-/* Festival ticker: infinite marquee (leftward drift). */
-@keyframes aurora-ticker {
+/* Signal ticker: infinite marquee (leftward drift). */
+@keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
-.pop-ticker { animation: aurora-ticker 26s linear infinite; }
+.pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Ribbon bands: violet -> marigold -> fuchsia diagonal bands. */
+/* Signal bands: cyan -> amber -> coral diagonal bands. */
 .pop-stripes {
-  background-image: repeating-linear-gradient(-45deg, #fce7f3 0 10px, #7f4de3 10px 20px, #f59e0b 20px 30px, #ec4899 30px 40px);
+  background-image: repeating-linear-gradient(-45deg, #ffe4e6 0 10px, #0ea5d2 10px 20px, #f59e0b 20px 30px, #f43f5e 30px 40px);
 }
 
-/* Lantern tile: a warm ivory tile with softly rounded corners and a
-   ribbon band along its left edge; it lifts on hover. */
+/* Signal tile: a white tile with softly rounded corners and a beacon bar
+   across its top edge; it lifts on hover. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(36, 29, 63, 0.10);
-  background: #fffdf7;
-  border-radius: 1.35rem;
-  box-shadow: 0 1px 2px rgba(36, 29, 63, 0.06), 0 20px 38px -24px rgba(107, 55, 207, 0.45), 0 4px 14px -8px rgba(36, 29, 63, 0.10);
+  border: 1px solid rgba(11, 39, 48, 0.10);
+  background: #ffffff;
+  border-radius: 1.1rem;
+  box-shadow: 0 1px 2px rgba(11, 39, 48, 0.06), 0 18px 34px -22px rgba(8, 145, 178, 0.45), 0 4px 12px -8px rgba(11, 39, 48, 0.10);
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
   overflow: hidden;
 }
-.pop-lift::after {
-  /* ribbon band along the tile's left edge */
+.pop-lift::before {
+  /* beacon bar across the tile's top edge */
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
-  width: 6px;
-  background: linear-gradient(180deg, #6b37cf, #ec4899, #f59e0b);
-  box-shadow: 2px 0 12px rgba(245, 158, 11, 0.45);
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #0891b2, #f59e0b, #e11d48);
+  box-shadow: 0 2px 10px rgba(8, 145, 178, 0.45);
   pointer-events: none;
+  z-index: 2;
 }
 .pop-lift:hover {
-  transform: translateY(-7px) rotate(-0.4deg);
-  border-color: rgba(107, 55, 207, 0.45);
-  box-shadow: 0 1px 2px rgba(36, 29, 63, 0.06), 0 32px 56px -24px rgba(107, 55, 207, 0.50), 0 10px 22px -8px rgba(245, 158, 11, 0.28);
+  transform: translateY(-6px);
+  border-color: rgba(8, 145, 178, 0.5);
+  box-shadow: 0 1px 2px rgba(11, 39, 48, 0.06), 0 28px 50px -22px rgba(8, 145, 178, 0.55), 0 10px 20px -8px rgba(245, 158, 11, 0.25);
 }
 
-/* Lantern glass: shared by modals and drawers — a deep-plum pane with an amber rim. */
+/* Harbor glass: shared by modals and drawers — a mist pane with a cyan rim. */
 .pop-glass {
-  background: rgba(23, 17, 48, 0.92);
+  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(22px) saturate(1.25);
   -webkit-backdrop-filter: blur(22px) saturate(1.25);
-  border: 1px solid rgba(245, 158, 11, 0.35);
-  border-radius: 1.4rem;
-  box-shadow: 0 30px 60px -24px rgba(107, 55, 207, 0.55);
+  border: 1px solid rgba(8, 145, 178, 0.35);
+  border-radius: 1.1rem;
+  box-shadow: 0 30px 60px -24px rgba(8, 145, 178, 0.45);
 }
 
-/* Lantern medallion: a marigold seal with a dashed white festival ring. */
+/* Signal buoy: a coral seal with a dashed white ring. */
 .starburst {
-  background: radial-gradient(circle at 35% 30%, #ffc94d 0%, #d97e06 58%, #451a03 100%);
-  color: #fffaeb;
-  text-shadow: 0 1px 2px rgba(69, 26, 3, 0.7);
+  background: radial-gradient(circle at 35% 30%, #fb7185 0%, #e11d48 58%, #4c0519 100%);
+  color: #fff1f2;
+  text-shadow: 0 1px 2px rgba(76, 5, 25, 0.7);
   border-radius: 9999px;
-  transform: rotate(8deg);
-  box-shadow: 0 10px 24px -8px rgba(217, 126, 6, 0.7), inset 0 2px 6px rgba(255, 255, 255, 0.45);
-  outline: 2px dashed rgba(255, 250, 235, 0.9);
+  box-shadow: 0 10px 24px -8px rgba(225, 29, 72, 0.7), inset 0 2px 6px rgba(255, 255, 255, 0.45);
+  outline: 2px dashed rgba(255, 241, 242, 0.9);
   outline-offset: -6px;
-  border: 1px solid rgba(180, 83, 9, 0.6);
+  border: 1px solid rgba(190, 18, 60, 0.6);
 }
 
-/* Marigold speckle: faint violet dots for festival bands. */
+/* Tide grid: faint cyan dots for harbor bands. */
 .halftone {
-  background-image:
-    linear-gradient(rgba(107, 55, 207, 0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(107, 55, 207, 0.12) 1px, transparent 1px);
-  background-size: 26px 26px;
-  background-position: 0 0, 0 0;
+  background-image: radial-gradient(circle, rgba(8, 145, 178, 0.20) 1.4px, transparent 1.5px);
+  background-size: 24px 24px;
+  background-position: 0 0;
 }
 
-/* Confetti divider: a row of amber, violet and fuchsia dots dividing sections. */
+/* Signal dashes: a row of cyan, amber and coral dashes dividing sections. */
 .zigzag {
-  height: 20px;
+  height: 14px;
   background-image:
-    radial-gradient(circle at 18px 12px, rgba(245, 158, 11, 0.65) 4px, transparent 5px),
-    radial-gradient(circle at 36px 8px, rgba(107, 55, 207, 0.60) 2.5px, transparent 3.5px),
-    radial-gradient(circle at 45px 13px, rgba(219, 39, 119, 0.55) 2px, transparent 3px);
-  background-size: 54px 20px;
+    linear-gradient(90deg, rgba(8, 145, 178, 0.85) 0 14px, transparent 14px 22px),
+    linear-gradient(90deg, rgba(245, 158, 11, 0.85) 0 10px, transparent 10px 22px),
+    linear-gradient(90deg, rgba(225, 29, 72, 0.75) 0 6px, transparent 6px 22px);
+  background-size: 66px 5px, 66px 5px, 66px 5px;
+  background-position: 0 0, 22px 5px, 44px 9px;
   background-repeat: repeat-x;
   opacity: 0.9;
-  -webkit-mask: linear-gradient(180deg, black 65%, transparent 100%);
-  mask: linear-gradient(180deg, black 65%, transparent 100%);
+  -webkit-mask: linear-gradient(90deg, black 85%, transparent 100%);
+  mask: linear-gradient(90deg, black 85%, transparent 100%);
 }
 
-/* Festival awning: violet/marigold/fuchsia glow band with a shaded canopy. */
+/* Harbor beacon: cyan/amber/coral glow band with a shaded canopy. */
 .bazaar-awning {
   background-image: linear-gradient(90deg,
-    rgba(107, 55, 207, 0.92) 0%,
+    rgba(8, 145, 178, 0.92) 0%,
     rgba(245, 158, 11, 0.78) 30%,
-    rgba(236, 72, 153, 0.62) 62%,
-    rgba(23, 17, 48, 0.88) 100%);
-  box-shadow: 0 6px 22px -6px rgba(107, 55, 207, 0.62);
+    rgba(244, 63, 94, 0.62) 62%,
+    rgba(6, 34, 43, 0.88) 100%);
+  box-shadow: 0 6px 22px -6px rgba(8, 145, 178, 0.62);
 }
 
-/* Lantern aura: layered violet/fuchsia/amber glow for the core halo. */
+/* Dawn glow: layered cyan/amber/coral glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(245, 158, 11, 0.40) 0%, rgba(127, 77, 227, 0.28) 42%, rgba(236, 72, 153, 0.18) 62%, rgba(236, 72, 153, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(245, 158, 11, 0.40) 0%, rgba(14, 165, 210, 0.28) 42%, rgba(244, 63, 94, 0.18) 62%, rgba(244, 63, 94, 0) 76%);
 }
-/* Festival lantern: a glowing marigold sphere with a violet halo. */
+/* First-light sun: a glowing amber disc with a cyan halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #fff1c6 0%, #f59e0b 52%, #7f4de3 100%);
-  box-shadow: 0 0 70px -8px rgba(245, 158, 11, 0.55), 0 0 28px -6px rgba(127, 77, 227, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.50);
+    radial-gradient(circle at 38% 34%, #fff7e6 0%, #f59e0b 52%, #0ea5d2 100%);
+  box-shadow: 0 0 70px -8px rgba(245, 158, 11, 0.55), 0 0 28px -6px rgba(14, 165, 210, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.50);
   border: 1px solid rgba(180, 83, 9, 0.42);
 }
 
-/* Lantern rings around the festival orb. */
+/* Signal rings around the dawn beacon. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(127, 77, 227, 0.40) 0px,
-    rgba(127, 77, 227, 0.40) 3px,
+    rgba(14, 165, 210, 0.40) 0px,
+    rgba(14, 165, 210, 0.40) 3px,
     transparent 3px,
     transparent 28px
   );
