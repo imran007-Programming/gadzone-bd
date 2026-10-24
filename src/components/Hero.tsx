@@ -30,7 +30,7 @@ const ORBS = [
 
 // Ember flecks rising off the warm dusk.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#65a30d" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#0d9488" },
   { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f97316" },
   { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#a21caf" },
   { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#f97316" },
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#65a30d", "#f97316", "#ea580c", "#a21caf"];
+              const colors = ["#0d9488", "#06b6d4", "#0284c7", "#2dd4bf"];
               return (
                 <span
                   key={i}
@@ -159,7 +159,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           {STARS.map((s, i) => (
             <span
               key={i}
-              className="pop-twinkle absolute rounded-full bg-[#65a30d]"
+              className="pop-twinkle absolute rounded-full bg-[#0d9488]"
               style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
             />
           ))}
