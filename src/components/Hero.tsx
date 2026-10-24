@@ -22,21 +22,21 @@ const item: Variants = {
 
 // Signal glow drifting over the night.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(139,92,246, 0.20)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(244,63,94, 0.22)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(6,182,212, 0.16)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(124,58,237, 0.16)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(15,118,110, 0.20)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(234,88,12, 0.22)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(202,138,4, 0.16)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(13,148,136, 0.16)" },
 ];
 
 // Signal spray rising off the night floor.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#7c3aed" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#8b5cf6" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#1e1b4b" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#6d28d9" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#f43f5e" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fb7185" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#06b6d4" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#0d9488" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#14b8a6" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#14201f" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#0f766e" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#ea580c" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fb923c" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#eab308" },
 ];
 
 // Beacon blinks scattered through the light.
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#7c3aed", "#8b5cf6", "#f43f5e", "#06b6d4"];
+              const colors = ["#0d9488", "#14b8a6", "#ea580c", "#eab308"];
               return (
                 <span
                   key={i}
@@ -159,7 +159,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           {STARS.map((s, i) => (
             <span
               key={i}
-              className="pop-twinkle absolute rounded-full bg-[#7c3aed]"
+              className="pop-twinkle absolute rounded-full bg-[#0d9488]"
               style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
             />
           ))}

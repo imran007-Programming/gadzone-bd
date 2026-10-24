@@ -1,65 +1,64 @@
 @import "tailwindcss";
 
 @theme {
-  /* Twilight Bazaar: a night market under violet lantern light.
-     Deep violet is the lantern, coral is the spice, cyan is the signal.
-     Cards are crisp lavender-white panels with a vertical accent bar; they
-     lift crisply on hover. */
+  /* Delta Workshop: river teal, terracotta clay and mustard sun on warm
+     sand paper. Cards are chunky cream panels with a thick rim and a
+     terracotta top stripe; they lift softly on hover. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = emerald leaf scale */
-  --color-brand-50: #f5f3ff;
-  --color-brand-100: #ede9fe;
-  --color-brand-200: #ddd6fe;
-  --color-brand-300: #c4b5fd;
-  --color-brand-400: #a78bfa;
-  --color-brand-500: #8b5cf6;
-  --color-brand-600: #7c3aed;
-  --color-brand-700: #6d28d9;
-  --color-brand-800: #5b21b6;
-  --color-brand-900: #4c1d95;
-  --color-brand-950: #2e1065;
-  --color-brand: #7c3aed;
-  --color-brand-dark: #6d28d9;
-  --color-brand-deep: #4c1d95;
+  /* brand = river teal scale */
+  --color-brand-50: #f0fdfa;
+  --color-brand-100: #ccfbf1;
+  --color-brand-200: #99f6e4;
+  --color-brand-300: #5eead4;
+  --color-brand-400: #2dd4bf;
+  --color-brand-500: #14b8a6;
+  --color-brand-600: #0d9488;
+  --color-brand-700: #0f766e;
+  --color-brand-800: #115e59;
+  --color-brand-900: #134e4a;
+  --color-brand-950: #042f2b;
+  --color-brand: #0d9488;
+  --color-brand-dark: #0f766e;
+  --color-brand-deep: #134e4a;
 
-  /* gold = amber sun scale (name kept for legacy class refs) */
-  --color-gold-50: #fff1f2;
-  --color-gold-100: #ffe4e6;
-  --color-gold-200: #fecdd3;
-  --color-gold-300: #fda4af;
-  --color-gold-400: #fb7185;
-  --color-gold-500: #f43f5e;
-  --color-gold-600: #e11d48;
-  --color-gold-700: #be123c;
-  --color-gold-800: #9f1239;
-  --color-gold-900: #881337;
-  --color-gold-950: #4c0519;
-  --color-gold: #f43f5e;
-  --color-gold-deep: #be123c;
-  --color-gold-soft: #ffe4e6;
+  /* gold = terracotta clay scale (name kept for legacy class refs) */
+  --color-gold-50: #fff7ed;
+  --color-gold-100: #ffedd5;
+  --color-gold-200: #fed7aa;
+  --color-gold-300: #fdba74;
+  --color-gold-400: #fb923c;
+  --color-gold-500: #f97316;
+  --color-gold-600: #ea580c;
+  --color-gold-700: #c2410c;
+  --color-gold-800: #9a3412;
+  --color-gold-900: #7c2d12;
+  --color-gold-950: #431407;
+  --color-gold: #f97316;
+  --color-gold-deep: #c2410c;
+  --color-gold-soft: #ffedd5;
 
-  /* popblue = lime sprout scale (name kept for legacy class refs) */
-  --color-popblue-50: #ecfeff;
-  --color-popblue-100: #cffafe;
-  --color-popblue-200: #a5f3fc;
-  --color-popblue-300: #67e8f9;
-  --color-popblue-400: #22d3ee;
-  --color-popblue-500: #06b6d4;
-  --color-popblue-600: #0891b2;
-  --color-popblue-700: #0e7490;
-  --color-popblue-800: #155e75;
-  --color-popblue-900: #164e63;
-  --color-popblue-950: #083344;
-  --color-popblue: #0891b2;
-  --color-popblue-deep: #0e7490;
-  --color-popblue-soft: #cffafe;
+  /* popblue = mustard sun scale (name kept for legacy class refs) */
+  --color-popblue-50: #fefce8;
+  --color-popblue-100: #fef9c3;
+  --color-popblue-200: #fef08a;
+  --color-popblue-300: #fde047;
+  --color-popblue-400: #facc15;
+  --color-popblue-500: #eab308;
+  --color-popblue-600: #ca8a04;
+  --color-popblue-700: #a16207;
+  --color-popblue-800: #854d0e;
+  --color-popblue-900: #713f12;
+  --color-popblue-950: #422006;
+  --color-popblue: #ca8a04;
+  --color-popblue-deep: #a16207;
+  --color-popblue-soft: #fef9c3;
 
-  --color-ink: #1e1b4b;
-  --color-paper: #f5f4fb;
-  --color-mute: #5b5a76;
+  --color-ink: #14201f;
+  --color-paper: #faf6ec;
+  --color-mute: #5d6b68;
   --color-card: #ffffff;
-  --color-deep: #171233;
+  --color-deep: #0f1f1e;
 }
 
 html { scroll-behavior: smooth; }
@@ -74,16 +73,16 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f5f4fb;
+  background-color: #faf6ec;
   background-image:
-    radial-gradient(ellipse 55% 30% at 8% -6%, rgba(244, 63, 94, 0.20), transparent 70%),
-    radial-gradient(ellipse 48% 32% at 96% 104%, rgba(139, 92, 246, 0.16), transparent 70%),
-    radial-gradient(ellipse 30% 22% at 88% 4%, rgba(6, 182, 212, 0.14), transparent 70%);
-  color: #1e1b4b;
+    radial-gradient(ellipse 55% 30% at 8% -6%, rgba(234, 88, 12, 0.20), transparent 70%),
+    radial-gradient(ellipse 48% 32% at 96% 104%, rgba(15, 118, 110, 0.16), transparent 70%),
+    radial-gradient(ellipse 30% 22% at 88% 4%, rgba(202, 138, 4, 0.14), transparent 70%);
+  color: #14201f;
 }
-::selection { background: #7c3aed; color: #ffffff; }
+::selection { background: #0d9488; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #8b5cf6, #f43f5e); border-radius: 999px; border: 2px solid #f5f4fb; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #14b8a6, #f97316); border-radius: 999px; border: 2px solid #faf6ec; }
 ::-webkit-scrollbar-track { background: #e9e7f5; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
@@ -139,65 +138,65 @@ h1, h2, h3 { letter-spacing: -0.015em; text-wrap: balance; }
 /* Sun check: indigo -> coral -> cyan checkered tiles. */
 .pop-stripes {
   background-image:
-    conic-gradient(from 45deg, #ede9fe 0 25%, #fecdd3 0 50%, #cffafe 0 75%, #ddd6fe 0 100%);
+    conic-gradient(from 45deg, #ccfbf1 0 25%, #fed7aa 0 50%, #fef9c3 0 75%, #99f6e4 0 100%);
   background-size: 28px 28px;
 }
 
-/* Twilight panel: a white panel with a crisp violet rim and a diffused
-   violet shadow; it lifts crisply on hover. */
+/* Delta panel: a cream panel with a thick teal rim and a soft offset
+   shadow; it lifts softly on hover. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(30, 27, 75, 0.10);
-  background: #ffffff;
-  border-radius: 1rem;
-  box-shadow: 0 20px 36px -20px rgba(124, 58, 237, 0.30);
+  border: 2px solid rgba(20, 32, 31, 0.12);
+  background: #fffdf7;
+  border-radius: 1.75rem;
+  box-shadow: 0 22px 34px -22px rgba(13, 148, 136, 0.35);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   overflow: hidden;
 }
 .pop-lift::before {
-  /* violet accent bar along the panel's left edge */
+  /* terracotta top stripe across the panel's top edge */
   content: "";
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
-  width: 5px;
-  background-image: linear-gradient(180deg, #7c3aed 0 34%, #f43f5e 34% 66%, #06b6d4 66% 100%);
-  opacity: 0.9;
+  right: 0;
+  height: 6px;
+  background-image: linear-gradient(90deg, #0d9488 0 34%, #ea580c 34% 66%, #eab308 66% 100%);
+  opacity: 0.95;
   pointer-events: none;
   z-index: 2;
 }
 .pop-lift:hover {
-  transform: translateY(-6px);
-  border-color: rgba(124, 58, 237, 0.40);
-  box-shadow: 0 30px 48px -20px rgba(124, 58, 237, 0.40);
+  transform: translateY(-4px);
+  border-color: rgba(13, 148, 136, 0.40);
+  box-shadow: 0 30px 48px -20px rgba(13, 148, 136, 0.40);
 }
 
 /* Morning glass: shared by modals and drawers — a misty pane with an indigo rim. */
 .pop-glass {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 253, 247, 0.92);
   backdrop-filter: blur(22px) saturate(1.25);
   -webkit-backdrop-filter: blur(22px) saturate(1.25);
-  border: 2px solid rgba(124, 58, 237, 0.35);
+  border: 2px solid rgba(13, 148, 136, 0.35);
   border-radius: 1rem;
-  box-shadow: 0 30px 60px -24px rgba(124, 58, 237, 0.35);
+  box-shadow: 0 30px 60px -24px rgba(13, 148, 136, 0.35);
 }
 
 /* Coral seal: a sunny disc with a double indigo ring. */
 .starburst {
-  background: radial-gradient(circle at 35% 30%, #fecdd3 0%, #fb7185 55%, #e11d48 100%);
-  color: #4c0519;
+  background: radial-gradient(circle at 35% 30%, #fed7aa 0%, #fb923c 55%, #ea580c 100%);
+  color: #431407;
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
   border-radius: 9999px;
-  box-shadow: 0 10px 24px -8px rgba(244, 63, 94, 0.65), inset 0 2px 6px rgba(255, 255, 255, 0.55);
-  outline: 2px solid rgba(124, 58, 237, 0.85);
+  box-shadow: 0 10px 24px -8px rgba(234, 88, 12, 0.65), inset 0 2px 6px rgba(255, 255, 255, 0.55);
+  outline: 2px solid rgba(13, 148, 136, 0.85);
   outline-offset: 3px;
-  border: 3px solid #fff1f2;
+  border: 3px solid #fff7ed;
 }
 
 /* Sun grid: faint indigo dots on morning cream. */
 .halftone {
-  background-image: radial-gradient(circle, rgba(124, 58, 237, 0.16) 1.4px, transparent 1.5px);
+  background-image: radial-gradient(circle, rgba(13, 148, 136, 0.16) 1.4px, transparent 1.5px);
   background-size: 26px 26px;
   background-position: 0 0;
 }
@@ -205,7 +204,7 @@ h1, h2, h3 { letter-spacing: -0.015em; text-wrap: balance; }
 /* Sun seam: a row of coral sun dots dividing sections. */
 .zigzag {
   height: 12px;
-  background-image: radial-gradient(circle, rgba(244, 63, 94, 0.9) 2.2px, transparent 2.6px);
+  background-image: radial-gradient(circle, rgba(234, 88, 12, 0.9) 2.2px, transparent 2.6px);
   background-size: 18px 12px;
   background-repeat: repeat-x;
   background-position: 0 center;
@@ -217,25 +216,25 @@ h1, h2, h3 { letter-spacing: -0.015em; text-wrap: balance; }
 /* Morning awning: scalloped sun bands hanging over the section. */
 .bazaar-awning {
   background-image:
-    radial-gradient(circle at 16px -6px, #7c3aed 16px, transparent 17px),
-    radial-gradient(circle at 48px -6px, #f43f5e 16px, transparent 17px),
-    linear-gradient(180deg, rgba(124, 58, 237, 0.10), rgba(244, 63, 94, 0.10));
+    radial-gradient(circle at 16px -6px, #0d9488 16px, transparent 17px),
+    radial-gradient(circle at 48px -6px, #f97316 16px, transparent 17px),
+    linear-gradient(180deg, rgba(13, 148, 136, 0.10), rgba(234, 88, 12, 0.10));
   background-size: 64px 22px, 64px 22px, 100% 100%;
   background-position: 0 100%, 32px 100%, 0 0;
   background-repeat: repeat-x, repeat-x, no-repeat;
-  box-shadow: 0 8px 24px -8px rgba(124, 58, 237, 0.45);
+  box-shadow: 0 8px 24px -8px rgba(13, 148, 136, 0.45);
 }
 
 /* Morning glow: layered coral/indigo/cyan glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(244, 63, 94, 0.40) 0%, rgba(139, 92, 246, 0.26) 42%, rgba(6, 182, 212, 0.16) 62%, rgba(6, 182, 212, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(234, 88, 12, 0.40) 0%, rgba(15, 118, 110, 0.26) 42%, rgba(202, 138, 4, 0.16) 62%, rgba(202, 138, 4, 0) 76%);
 }
 /* Sun moon: a glowing disc with an indigo halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #fdf2f8 0%, #fb7185 52%, #7c3aed 100%);
-  box-shadow: 0 0 70px -8px rgba(244, 63, 94, 0.55), 0 0 28px -6px rgba(124, 58, 237, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.50);
+    radial-gradient(circle at 38% 34%, #fdf2f8 0%, #fb923c 52%, #0d9488 100%);
+  box-shadow: 0 0 70px -8px rgba(234, 88, 12, 0.55), 0 0 28px -6px rgba(13, 148, 136, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.50);
   border: 2px solid rgba(190, 18, 60, 0.45);
 }
 
@@ -243,12 +242,12 @@ h1, h2, h3 { letter-spacing: -0.015em; text-wrap: balance; }
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(244, 63, 94, 0.42) 0px,
-    rgba(244, 63, 94, 0.42) 2px,
+    rgba(234, 88, 12, 0.42) 0px,
+    rgba(234, 88, 12, 0.42) 2px,
     transparent 2px,
     transparent 12px,
-    rgba(124, 58, 237, 0.30) 12px,
-    rgba(124, 58, 237, 0.30) 14px,
+    rgba(13, 148, 136, 0.30) 12px,
+    rgba(13, 148, 136, 0.30) 14px,
     transparent 14px,
     transparent 30px
   );
@@ -259,7 +258,7 @@ h1, h2, h3 { letter-spacing: -0.015em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(124, 58, 237, 0.34) 0deg 4deg,
+    rgba(13, 148, 136, 0.34) 0deg 4deg,
     transparent 4deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
