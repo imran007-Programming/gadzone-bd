@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Signal glow drifting over the orchard.
+// Signal glow drifting over the harbor.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(157,36,80, 0.20)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(224,79,34, 0.22)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(111,148,72, 0.16)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(157,36,80, 0.16)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(15,118,110, 0.20)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(220,38,38, 0.20)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(217,119,6, 0.16)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(15,118,110, 0.16)" },
 ];
 
-// Petal spray rising off the orchard floor.
+// Bubble spray rising off the harbor floor.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#9d2450" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#c43a6e" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#2b1420" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#86204a" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#e04f22" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fb9263" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#6f9448" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#0f766e" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#2dd4bf" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#12312e" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#115e59" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#dc2626" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fbbf24" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#d97706" },
 ];
 
 // Beacon blinks scattered through the light.
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* mist wash under the beacon */}
-      <div className="relative bg-gradient-to-b from-[#fdf7f1] via-[#fdf7f1] to-[#fdf7f1]">
+      <div className="relative bg-gradient-to-b from-[#faf6ef] via-[#faf6ef] to-[#faf6ef]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -100,7 +100,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(124,58,237, 0.45), inset 0 0 18px rgba(124,58,237, 0.25)",
+                  boxShadow: "0 0 28px 2px rgba(15,118,110, 0.45), inset 0 0 18px rgba(15,118,110, 0.25)",
                   opacity: 1 - r * 0.22,
                 }}
               />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#9d2450", "#c43a6e", "#e04f22", "#6f9448"];
+              const colors = ["#0f766e", "#2dd4bf", "#dc2626", "#d97706"];
               return (
                 <span
                   key={i}
@@ -159,7 +159,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           {STARS.map((s, i) => (
             <span
               key={i}
-              className="pop-twinkle absolute rounded-full bg-[#9d2450]"
+              className="pop-twinkle absolute rounded-full bg-[#0f766e]"
               style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
             />
           ))}
@@ -176,7 +176,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
-              <div className="rounded-[2.5rem] bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-400 p-[4px] shadow-[0_24px_56px_-18px_rgba(124,58,237, 0.45)]">
+              <div className="rounded-[2.5rem] bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-400 p-[4px] shadow-[0_24px_56px_-18px_rgba(15,118,110, 0.45)]">
                 <div className="overflow-hidden rounded-[2.1rem] bg-paper ring-1 ring-ink/20">
                   <BannerCarousel />
                 </div>
@@ -186,7 +186,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
 
         {/* signal ticker: deep teal band with white type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/60 bg-gradient-to-r from-brand-600/95 via-popblue-600/95 to-brand-700/95 py-3 shadow-[0_14px_30px_-14px_rgba(217,119,6, 0.5)] backdrop-blur">
+        <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/60 bg-gradient-to-r from-brand-600/95 via-popblue-600/95 to-brand-700/95 py-3 shadow-[0_14px_30px_-14px_rgba(15,118,110, 0.5)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
