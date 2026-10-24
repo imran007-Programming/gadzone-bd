@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  /* Copper Dunes: a sun-baked desert bazaar at golden hour. Warm sand is
-     the canvas, deep espresso is the ink, burnt copper is the brand current,
-     harvest amber is the warm glow, and deep teal is the oasis pop. Cards
-     are perforated dune tickets with a folded corner and a copper sun
-     shadow; they lift on hover. */
+  /* Ember Harvest: warm terracotta dusk over a sandy market floor. Warm
+     cream is the canvas, espresso is the ink, ember orange is the brand
+     current, honey amber is the rich pop, and palm green is the fresh
+     signal. Cards are terracotta tiles with a warm porcelain face, an
+     ember bar on the left edge and an arched top-left corner; they lift
+     and tilt on hover. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = burnt copper scale */
+  /* brand = ember orange scale */
   --color-brand-50: #fff7ed;
   --color-brand-100: #ffedd5;
   --color-brand-200: #fed7aa;
@@ -20,11 +21,11 @@
   --color-brand-800: #9a3412;
   --color-brand-900: #7c2d12;
   --color-brand-950: #431407;
-  --color-brand: #c2410c;
-  --color-brand-dark: #9a3412;
-  --color-brand-deep: #7c2d12;
+  --color-brand: #ea580c;
+  --color-brand-dark: #c2410c;
+  --color-brand-deep: #9a3412;
 
-  /* gold = harvest amber scale (name kept for legacy class refs) */
+  /* gold = honey amber scale (name kept for legacy class refs) */
   --color-gold-50: #fffbeb;
   --color-gold-100: #fef3c7;
   --color-gold-200: #fde68a;
@@ -37,30 +38,30 @@
   --color-gold-900: #78350f;
   --color-gold-950: #451a03;
   --color-gold: #d97706;
-  --color-gold-deep: #92400e;
+  --color-gold-deep: #b45309;
   --color-gold-soft: #fef3c7;
 
-  /* popblue = oasis teal scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0fdfa;
-  --color-popblue-100: #ccfbf1;
-  --color-popblue-200: #99f6e4;
-  --color-popblue-300: #5eead4;
-  --color-popblue-400: #2dd4bf;
-  --color-popblue-500: #14b8a6;
-  --color-popblue-600: #0d9488;
-  --color-popblue-700: #0f766e;
-  --color-popblue-800: #115e59;
-  --color-popblue-900: #134e4a;
-  --color-popblue-950: #042f2e;
-  --color-popblue: #0d9488;
-  --color-popblue-deep: #0f766e;
-  --color-popblue-soft: #ccfbf1;
+  /* popblue = palm green scale (name kept for legacy class refs) */
+  --color-popblue-50: #f0fdf4;
+  --color-popblue-100: #dcfce7;
+  --color-popblue-200: #bbf7d0;
+  --color-popblue-300: #86efac;
+  --color-popblue-400: #4ade80;
+  --color-popblue-500: #22c55e;
+  --color-popblue-600: #16a34a;
+  --color-popblue-700: #15803d;
+  --color-popblue-800: #166534;
+  --color-popblue-900: #14532d;
+  --color-popblue-950: #052e16;
+  --color-popblue: #16a34a;
+  --color-popblue-deep: #15803d;
+  --color-popblue-soft: #dcfce7;
 
-  --color-ink: #2b1f16;
-  --color-paper: #faf6ef;
-  --color-mute: #a08870;
+  --color-ink: #241a12;
+  --color-paper: #faf5ec;
+  --color-mute: #8d7660;
   --color-card: #fffdf8;
-  --color-deep: #1c130c;
+  --color-deep: #1c1109;
 }
 
 html { scroll-behavior: smooth; }
@@ -75,178 +76,181 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #faf6ef;
+  background-color: #faf5ec;
   background-image:
-    radial-gradient(circle at 50% 46%, rgba(194, 65, 12, 0.09) 1.5px, transparent 1.6px),
-    radial-gradient(ellipse 56% 30% at 88% -6%, rgba(234, 88, 12, 0.20), transparent 70%),
-    radial-gradient(ellipse 50% 32% at 6% 104%, rgba(13, 148, 136, 0.16), transparent 70%),
-    radial-gradient(ellipse 30% 22% at 50% 52%, rgba(217, 119, 6, 0.06), transparent 70%);
+    radial-gradient(circle at 50% 40%, rgba(234, 88, 12, 0.10) 1.5px, transparent 1.6px),
+    radial-gradient(ellipse 60% 32% at 90% -8%, rgba(217, 119, 6, 0.20), transparent 70%),
+    radial-gradient(ellipse 52% 34% at 4% 106%, rgba(22, 163, 74, 0.14), transparent 70%),
+    radial-gradient(ellipse 34% 24% at 52% 48%, rgba(234, 88, 12, 0.07), transparent 70%);
   background-size: 26px 26px, auto, auto, auto;
   background-position: 0 0, 0 0, 0 0, 0 0;
-  color: #2b1f16;
+  color: #241a12;
 }
-::selection { background: #c2410c; color: #fff7ed; }
+::selection { background: #ea580c; color: #fff7ed; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #fb923c, #0f766e); border-radius: 999px; border: 2px solid #faf6ef; }
-::-webkit-scrollbar-track { background: #ffedd5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #fb923c, #16a34a); border-radius: 999px; border: 2px solid #faf5ec; }
+::-webkit-scrollbar-track { background: #fef3c7; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Bold, sun-warmed display type for the dune voice. */
-h1, h2, h3 { letter-spacing: -0.01em; }
+/* Warm, hand-set display type for the harvest voice. */
+h1, h2, h3 { letter-spacing: -0.02em; }
 
-/* Dune motes: warm sand drifting down through the golden air. */
-@keyframes dune-fall {
-  0% { transform: translate3d(0, -24px, 0) scale(0.7) rotate(0deg); opacity: 0; }
+/* Ember sparks: embers lifting off the hearth into the dusk. */
+@keyframes ember-rise {
+  0% { transform: translate3d(0, 24px, 0) scale(0.7) rotate(0deg); opacity: 0; }
   14% { opacity: 0.9; }
-  35% { transform: translate3d(18px, 30vh, 0) scale(1) rotate(140deg); }
-  62% { transform: translate3d(-16px, 62vh, 0) scale(0.9) rotate(240deg); }
+  35% { transform: translate3d(-18px, 34vh, 0) scale(1) rotate(140deg); }
+  62% { transform: translate3d(16px, 62vh, 0) scale(0.9) rotate(240deg); }
   84% { opacity: 0.6; }
-  100% { transform: translate3d(10px, 96vh, 0) scale(0.8) rotate(360deg); opacity: 0; }
+  100% { transform: translate3d(-10px, 6vh, 0) scale(0.8) rotate(360deg); opacity: 0; }
 }
-.pop-fall { animation: dune-fall 12s linear infinite; }
+.pop-fall { animation: ember-rise 12s linear infinite; }
 
-/* Heat shimmer: slow lateral drift of the dune glow. */
-@keyframes dune-sway {
+/* Heat sway: slow lateral drift of the harvest glow. */
+@keyframes heat-sway {
   0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.5; }
-  50% { transform: translate3d(3vw, -0.8rem, 0) scale(1.08); opacity: 0.8; }
+  50% { transform: translate3d(3vw, 0.8rem, 0) scale(1.08); opacity: 0.8; }
 }
-.pop-drift { animation: dune-sway 32s ease-in-out infinite; }
+.pop-drift { animation: heat-sway 28s ease-in-out infinite; }
 
-/* Dune swell: gentle rise and fall of the warm surface. */
-@keyframes dune-bob {
+/* Ember bob: gentle rise and settle of the warm surface. */
+@keyframes ember-bob {
   0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-10px) scale(1.04); }
+  50% { transform: translateY(-12px) scale(1.03); }
 }
-.pop-bob { animation: dune-bob 4.2s ease-in-out infinite; }
+.pop-bob { animation: ember-bob 4.6s ease-in-out infinite; }
 
-/* Slow turn for the dune wheel. */
-@keyframes dune-wheel {
+/* Slow turn for the harvest dial. */
+@keyframes harvest-wheel {
   to { transform: rotate(360deg); }
 }
-.pop-spin { animation: dune-wheel 70s linear infinite; }
+.pop-spin { animation: harvest-wheel 52s linear infinite; }
 
-/* Sun glint: wavering catchlight on the copper sun. */
-@keyframes dune-glint {
+/* Ember glint: wavering catchlight on the clay. */
+@keyframes ember-glint {
   0%, 100% { opacity: 0.35; transform: scale(0.85); }
   50% { opacity: 1; transform: scale(1.25); }
 }
-.pop-twinkle { animation: dune-glint 3.8s ease-in-out infinite; }
+.pop-twinkle { animation: ember-glint 4.1s ease-in-out infinite; }
 
-/* Dune ticker: infinite marquee (leftward drift). */
-@keyframes dune-ticker {
+/* Harvest ticker: infinite marquee (leftward drift). */
+@keyframes harvest-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
-.pop-ticker { animation: dune-ticker 30s linear infinite; }
+.pop-ticker { animation: harvest-ticker 26s linear infinite; }
 
-/* Dune stripes: sand -> copper -> amber -> teal diagonal stripes. */
+/* Warm stripes: ember -> honey -> palm diagonal stripes. */
 .pop-stripes {
-  background-image: repeating-linear-gradient(-55deg, #faf6ef 0 10px, #ea580c 10px 20px, #fbbf24 20px 30px, #0d9488 30px 40px);
+  background-image: repeating-linear-gradient(-45deg, #fffbeb 0 10px, #ea580c 10px 20px, #f59e0b 20px 30px, #16a34a 30px 40px);
 }
 
-/* Dune ticket: a perforated bazaar ticket card with a folded corner and a
-   copper sun shadow; it lifts on hover. */
+/* Terracotta tile: a warm porcelain card with an ember bar on its left
+   edge and an arched top-left corner; it lifts and tilts on hover. */
 .pop-lift {
   position: relative;
-  border: 1.5px solid rgba(194, 65, 12, 0.25);
-  border-left-style: dashed;
+  border: 1px solid rgba(194, 65, 12, 0.28);
   background: #fffdf8;
-  border-radius: 1.25rem;
-  box-shadow: 0 22px 44px -24px rgba(194, 65, 12, 0.38), 0 4px 14px -8px rgba(43, 31, 22, 0.14);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  border-radius: 1.6rem;
+  border-top-left-radius: 2.8rem;
+  box-shadow: 0 20px 40px -24px rgba(194, 65, 12, 0.45), 0 4px 14px -8px rgba(28, 17, 9, 0.14);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
   overflow: hidden;
 }
 .pop-lift::before {
-  /* folded corner tab along the ticket's top-right */
+  /* ember bar along the tile's left edge */
   content: "";
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 44px;
-  height: 44px;
-  background: linear-gradient(225deg, #ea580c 0%, #fbbf24 55%, #0d9488 100%);
-  clip-path: polygon(100% 0, 0 0, 100% 100%);
-  box-shadow: 0 1px 10px rgba(234, 88, 12, 0.45);
+  top: 14%;
+  bottom: 14%;
+  left: 0;
+  width: 5px;
+  border-radius: 0 999px 999px 0;
+  background: linear-gradient(180deg, #ea580c, #f59e0b, #16a34a);
+  box-shadow: 2px 0 10px rgba(234, 88, 12, 0.5);
   pointer-events: none;
 }
 .pop-lift:hover {
-  transform: translateY(-8px) rotate(-0.4deg);
-  box-shadow: 0 32px 58px -24px rgba(194, 65, 12, 0.52), 0 8px 20px -8px rgba(43, 31, 22, 0.18);
+  transform: translateY(-7px) rotate(-0.4deg);
+  border-color: rgba(194, 65, 12, 0.55);
+  box-shadow: 0 32px 56px -24px rgba(194, 65, 12, 0.60), 0 10px 22px -8px rgba(217, 119, 6, 0.34);
 }
 
-/* Dune glass: shared by modals and drawers — a warm haze with a copper rim. */
+/* Hearth glass: shared by modals and drawers — a warm pane with an ember rim. */
 .pop-glass {
-  background: rgba(250, 246, 239, 0.92);
+  background: rgba(250, 245, 236, 0.92);
   backdrop-filter: blur(22px) saturate(1.25);
   -webkit-backdrop-filter: blur(22px) saturate(1.25);
-  border: 1.5px solid rgba(194, 65, 12, 0.38);
-  border-radius: 1.5rem;
-  box-shadow: 0 30px 60px -24px rgba(194, 65, 12, 0.48);
+  border: 1px solid rgba(234, 88, 12, 0.38);
+  border-radius: 1.4rem;
+  box-shadow: 0 30px 60px -24px rgba(194, 65, 12, 0.52);
 }
 
-/* Sun seal: a copper-stamped badge with sand type. */
+/* Ember seal: an ember-stamped badge with sun-baked type. */
 .starburst {
-  background: radial-gradient(circle at 35% 30%, #fb923c 0%, #c2410c 55%, #431407 100%);
+  background: radial-gradient(circle at 35% 30%, #fdba74 0%, #ea580c 55%, #431407 100%);
   color: #fff7ed;
-  text-shadow: 0 1px 2px rgba(67, 20, 7, 0.55);
+  text-shadow: 0 1px 2px rgba(67, 20, 7, 0.6);
   border-radius: 9999px;
-  transform: rotate(-6deg);
-  box-shadow: 0 10px 24px -8px rgba(194, 65, 12, 0.7), inset 0 2px 6px rgba(255, 255, 255, 0.45);
+  transform: rotate(6deg);
+  box-shadow: 0 10px 24px -8px rgba(234, 88, 12, 0.7), inset 0 2px 6px rgba(255, 255, 255, 0.45);
   outline: 2px dashed rgba(255, 247, 237, 0.9);
   outline-offset: -6px;
-  border: 1px solid rgba(154, 52, 18, 0.6);
+  border: 1px solid rgba(194, 65, 12, 0.6);
 }
 
-/* Dune grid: faint survey lines for merchant bands. */
+/* Clay weave: faint warm lines for merchant bands. */
 .halftone {
   background-image:
-    linear-gradient(rgba(194, 65, 12, 0.09) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(194, 65, 12, 0.09) 1px, transparent 1px);
+    linear-gradient(rgba(234, 88, 12, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(234, 88, 12, 0.10) 1px, transparent 1px);
   background-size: 22px 22px;
   background-position: 0 0, 0 0;
 }
 
-/* Dune ripples: a row of soft sand marks dividing sections. */
+/* Ember scallops: a row of dusk sparkles dividing sections. */
 .zigzag {
-  height: 18px;
-  background-image: radial-gradient(circle at 18px 2px, rgba(234, 88, 12, 0.42) 9px, transparent 10px);
-  background-size: 36px 18px;
+  height: 20px;
+  background-image:
+    radial-gradient(circle at 18px 12px, rgba(234, 88, 12, 0.55) 4px, transparent 5px),
+    radial-gradient(circle at 36px 8px, rgba(217, 119, 6, 0.45) 2.5px, transparent 3.5px);
+  background-size: 54px 20px;
   background-repeat: repeat-x;
   opacity: 0.9;
   -webkit-mask: linear-gradient(180deg, black 65%, transparent 100%);
   mask: linear-gradient(180deg, black 65%, transparent 100%);
 }
 
-/* Sunset band: copper/amber/teal glow band with a soft shade. */
+/* Harvest awning: ember/honey/palm glow band with a soft shade. */
 .bazaar-awning {
   background-image: linear-gradient(90deg,
-    rgba(194, 65, 12, 0.92) 0%,
+    rgba(234, 88, 12, 0.92) 0%,
     rgba(251, 146, 60, 0.78) 30%,
-    rgba(20, 184, 166, 0.72) 62%,
-    rgba(154, 52, 18, 0.85) 100%);
-  box-shadow: 0 6px 22px -6px rgba(194, 65, 12, 0.62);
+    rgba(74, 222, 128, 0.70) 62%,
+    rgba(154, 52, 18, 0.88) 100%);
+  box-shadow: 0 6px 22px -6px rgba(234, 88, 12, 0.62);
 }
 
-/* Dune aura: layered copper/teal/amber glow for the sun halo. */
+/* Ember aura: layered ember/honey/palm glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(251, 146, 60, 0.45) 0%, rgba(194, 65, 12, 0.28) 42%, rgba(13, 148, 136, 0.22) 62%, rgba(13, 148, 136, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(251, 146, 60, 0.45) 0%, rgba(234, 88, 12, 0.30) 42%, rgba(22, 163, 74, 0.20) 62%, rgba(22, 163, 74, 0) 76%);
 }
-/* Copper sun: a warm orb with a teal halo. */
+/* Harvest sun: a warm orb with a honey halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #fff7ed 0%, #fdba74 52%, #0d9488 100%);
-  box-shadow: 0 0 70px -8px rgba(194, 65, 12, 0.5), 0 0 28px -6px rgba(13, 148, 136, 0.4), inset 0 3px 12px rgba(255, 255, 255, 0.55);
+    radial-gradient(circle at 38% 34%, #fffbeb 0%, #fcd34d 52%, #ea580c 100%);
+  box-shadow: 0 0 70px -8px rgba(234, 88, 12, 0.55), 0 0 28px -6px rgba(245, 158, 11, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.55);
   border: 1px solid rgba(194, 65, 12, 0.42);
 }
 
-/* Sand rings around the copper sun. */
+/* Heat rings around the harvest sun. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(194, 65, 12, 0.42) 0px,
-    rgba(194, 65, 12, 0.42) 3px,
+    rgba(234, 88, 12, 0.42) 0px,
+    rgba(234, 88, 12, 0.42) 3px,
     transparent 3px,
     transparent 28px
   );
@@ -257,8 +261,8 @@ h1, h2, h3 { letter-spacing: -0.01em; }
 .sun-rays {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(20, 184, 166, 0.42) 0px,
-    rgba(20, 184, 166, 0.42) 3px,
+    rgba(245, 158, 11, 0.42) 0px,
+    rgba(245, 158, 11, 0.42) 3px,
     transparent 3px,
     transparent 28px
   );
@@ -267,63 +271,76 @@ h1, h2, h3 { letter-spacing: -0.01em; }
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all dune styled. */
+/* Legacy aliases kept so untouched components still render — all harvest styled. */
 .lagoon-lift {
   position: relative;
-  border: 1.5px solid rgba(194, 65, 12, 0.25);
-  border-left-style: dashed;
+  border: 1px solid rgba(194, 65, 12, 0.28);
   background: #fffdf8;
-  border-radius: 1.25rem;
-  box-shadow: 0 22px 44px -24px rgba(194, 65, 12, 0.38), 0 4px 14px -8px rgba(43, 31, 22, 0.14);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  border-radius: 1.6rem;
+  border-top-left-radius: 2.8rem;
+  box-shadow: 0 20px 40px -24px rgba(194, 65, 12, 0.45), 0 4px 14px -8px rgba(28, 17, 9, 0.14);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
   overflow: hidden;
 }
+.lagoon-lift::before {
+  content: "";
+  position: absolute;
+  top: 14%;
+  bottom: 14%;
+  left: 0;
+  width: 5px;
+  border-radius: 0 999px 999px 0;
+  background: linear-gradient(180deg, #ea580c, #f59e0b, #16a34a);
+  box-shadow: 2px 0 10px rgba(234, 88, 12, 0.5);
+  pointer-events: none;
+}
 .lagoon-lift:hover {
-  transform: translateY(-8px) rotate(-0.4deg);
-  box-shadow: 0 32px 58px -24px rgba(194, 65, 12, 0.52), 0 8px 20px -8px rgba(43, 31, 22, 0.18);
+  transform: translateY(-7px) rotate(-0.4deg);
+  border-color: rgba(194, 65, 12, 0.55);
+  box-shadow: 0 32px 56px -24px rgba(194, 65, 12, 0.60), 0 10px 22px -8px rgba(217, 119, 6, 0.34);
 }
 .stamp-perf {
-  border: 2px dashed rgba(194, 65, 12, 0.52);
-  background: rgba(194, 65, 12, 0.07);
-  border-radius: 1.25rem;
-  box-shadow: 0 18px 40px -20px rgba(194, 65, 12, 0.42);
+  border: 2px dashed rgba(194, 65, 12, 0.55);
+  background: rgba(234, 88, 12, 0.08);
+  border-radius: 1.6rem;
+  box-shadow: 0 20px 42px -22px rgba(194, 65, 12, 0.45);
 }
 .ember-glow {
   position: relative;
-  border: 1.5px solid rgba(194, 65, 12, 0.25);
-  background: linear-gradient(165deg, #fff7ed 0%, #fffdf8 60%, #ffedd5 100%);
-  border-radius: 1.25rem;
-  box-shadow: 0 22px 44px -24px rgba(194, 65, 12, 0.38), 0 4px 14px -8px rgba(43, 31, 22, 0.14);
+  border: 1px solid rgba(194, 65, 12, 0.28);
+  background: linear-gradient(165deg, #fff7ed 0%, #fffdf8 60%, #fef3c7 100%);
+  border-radius: 1.6rem;
+  box-shadow: 0 20px 40px -24px rgba(194, 65, 12, 0.45), 0 4px 14px -8px rgba(28, 17, 9, 0.14);
   transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
-  transform: translateY(-8px) rotate(-0.4deg);
-  box-shadow: 0 32px 58px -24px rgba(194, 65, 12, 0.52), 0 8px 20px -8px rgba(43, 31, 22, 0.18);
+  transform: translateY(-7px) rotate(-0.4deg);
+  box-shadow: 0 32px 56px -24px rgba(194, 65, 12, 0.60), 0 10px 22px -8px rgba(217, 119, 6, 0.34);
 }
 .ripple-glow {
   position: relative;
-  border: 1.5px solid rgba(20, 184, 166, 0.30);
-  background: linear-gradient(165deg, #f0fdfa 0%, #fffdf8 60%, #ccfbf1 100%);
-  border-radius: 1.25rem;
-  box-shadow: 0 22px 44px -24px rgba(13, 148, 136, 0.38), 0 4px 14px -8px rgba(43, 31, 22, 0.14);
+  border: 1px solid rgba(22, 163, 74, 0.32);
+  background: linear-gradient(165deg, #dcfce7 0%, #fffdf8 60%, #fef3c7 100%);
+  border-radius: 1.6rem;
+  box-shadow: 0 20px 40px -24px rgba(22, 163, 74, 0.40), 0 4px 14px -8px rgba(28, 17, 9, 0.14);
   transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
-  transform: translateY(-8px) rotate(-0.4deg);
-  box-shadow: 0 32px 58px -24px rgba(13, 148, 136, 0.52), 0 8px 20px -8px rgba(43, 31, 22, 0.18);
+  transform: translateY(-7px) rotate(-0.4deg);
+  box-shadow: 0 32px 56px -24px rgba(22, 163, 74, 0.52), 0 10px 22px -8px rgba(28, 17, 9, 0.14);
 }
 .lagoon-glow {
   position: relative;
-  border: 1.5px solid rgba(194, 65, 12, 0.25);
-  background: linear-gradient(165deg, #fff7ed 0%, #fffdf8 60%, #ffedd5 100%);
-  border-radius: 1.25rem;
-  box-shadow: 0 22px 44px -24px rgba(194, 65, 12, 0.38), 0 4px 14px -8px rgba(43, 31, 22, 0.14);
+  border: 1px solid rgba(194, 65, 12, 0.28);
+  background: linear-gradient(165deg, #fff7ed 0%, #fffdf8 60%, #fef3c7 100%);
+  border-radius: 1.6rem;
+  box-shadow: 0 20px 40px -24px rgba(194, 65, 12, 0.45), 0 4px 14px -8px rgba(28, 17, 9, 0.14);
   transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
-  transform: translateY(-8px) rotate(-0.4deg);
-  box-shadow: 0 32px 58px -24px rgba(194, 65, 12, 0.52), 0 8px 20px -8px rgba(43, 31, 22, 0.18);
+  transform: translateY(-7px) rotate(-0.4deg);
+  box-shadow: 0 32px 56px -24px rgba(194, 65, 12, 0.60), 0 10px 22px -8px rgba(217, 119, 6, 0.34);
 }
