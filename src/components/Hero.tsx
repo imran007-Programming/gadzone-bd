@@ -22,21 +22,21 @@ const item: Variants = {
 
 // Signal glow drifting over the harbor.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(194,65,12, 0.20)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245,158,11, 0.20)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(22,163,74, 0.16)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(194,65,12, 0.16)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(67,56,202, 0.20)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(6,182,212, 0.20)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(225,29,72, 0.16)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(67,56,202, 0.16)" },
 ];
 
 // Bubble spray rising off the harbor floor.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#c2410c" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f59e0b" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#7c2d12" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#16a34a" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#ea580c" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fb923c" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#15803d" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#4338ca" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#06b6d4" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#312e81" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#e11d48" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#6366f1" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#22d3ee" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#be123c" },
 ];
 
 // Beacon blinks scattered through the light.
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* mist wash under the beacon */}
-      <div className="relative bg-gradient-to-b from-[#fdf6ea] via-[#fdf6ea] to-[#fdf6ea]">
+      <div className="relative bg-gradient-to-b from-[#eef2f7] via-[#eef2f7] to-[#eef2f7]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -100,7 +100,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(194,65,12, 0.45), inset 0 0 18px rgba(245,158,11, 0.25)",
+                  boxShadow: "0 0 28px 2px rgba(67,56,202, 0.45), inset 0 0 18px rgba(6,182,212, 0.25)",
                   opacity: 1 - r * 0.22,
                 }}
               />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#c2410c", "#f59e0b", "#16a34a", "#15803d"];
+              const colors = ["#4338ca", "#06b6d4", "#e11d48", "#be123c"];
               return (
                 <span
                   key={i}
@@ -159,7 +159,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           {STARS.map((s, i) => (
             <span
               key={i}
-              className="pop-twinkle absolute rounded-full bg-[#c2410c]"
+              className="pop-twinkle absolute rounded-full bg-[#4338ca]"
               style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
             />
           ))}
@@ -176,8 +176,8 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
-              <div className="rounded-[2rem] bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-400 p-[4px] shadow-[0_24px_56px_-18px_rgba(194,65,12, 0.45)]">
-                <div className="overflow-hidden rounded-[1.6rem] bg-paper ring-1 ring-ink/20">
+              <div className="rounded-[1.25rem] bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-400 p-[4px] shadow-[0_24px_56px_-18px_rgba(67,56,202, 0.45)]">
+                <div className="overflow-hidden rounded-[1rem] bg-paper ring-1 ring-ink/20">
                   <BannerCarousel />
                 </div>
               </div>
@@ -186,11 +186,11 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
 
         {/* signal ticker: deep teal band with white type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/60 bg-gradient-to-r from-brand-600/95 via-popblue-600/95 to-brand-700/95 py-3 shadow-[0_14px_30px_-14px_rgba(124,45,18, 0.5)] backdrop-blur">
+        <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/60 bg-gradient-to-r from-brand-600/95 via-popblue-600/95 to-brand-700/95 py-3 shadow-[0_14px_30px_-14px_rgba(15,23,42, 0.5)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
-                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-white drop-shadow-[0_1px_0_rgba(26,15,8, 0.6)]">
+                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-white drop-shadow-[0_1px_0_rgba(15,23,42, 0.6)]">
                   {t} <span className="text-white/70">✦</span>
                 </span>
               ))}
@@ -215,7 +215,7 @@ export default function Hero({ onQuickView }: HeroProps) {
               <div key={s.l} className="pop-lift relative overflow-hidden p-4 pb-3 pt-5 text-center">
                 <span className="relative block bg-gradient-to-br from-brand-600 via-gold-600 to-popblue-600 bg-clip-text text-2xl font-black tracking-tight text-transparent">{s.v}</span>
                 <span className="relative mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-mute">{s.l}</span>
-                <span aria-hidden className="relative mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-gold-500 via-gold-400 to-gold-200 shadow-[0_2px_6px_rgba(217,119,6, 0.5)]" />
+                <span aria-hidden className="relative mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-gold-500 via-gold-400 to-gold-200 shadow-[0_2px_6px_rgba(8,145,178, 0.5)]" />
               </div>
             ))}
           </motion.div>
@@ -223,7 +223,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full border border-brand-400/60 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_8px_24px_-8px_rgba(56,20,8, 0.6)] backdrop-blur">Handpicked for you</p>
+            <p className="inline-block rounded-full border border-brand-400/60 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_8px_24px_-8px_rgba(15,23,42, 0.6)] backdrop-blur">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="relative bg-gradient-to-r from-brand-500 via-brand-600 to-ink bg-clip-text text-transparent">Picks<span aria-hidden className="absolute inset-x-0 -bottom-1 h-2 rounded-full bg-gradient-to-r from-brand-500 to-brand-700 opacity-60 blur-[3px]" /></span></h2>
             <span className="zigzag mt-4 block w-44" aria-hidden />
           </div>
