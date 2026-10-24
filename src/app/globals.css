@@ -1,66 +1,66 @@
 @import "tailwindcss";
 
 @theme {
-  /* Ember Spice Bazaar: a dusk-lit spice market. Warm cream is the canvas,
-     roasted cocoa is the ink, burnt orange is the brand current,
-     marigold is the lantern pop, and deep plum is the dusk shadow.
-     Cards are stamped paper panels with an ember ember-stripe on the top
-     edge and softly rounded corners; they rise straight up on hover. */
+  /* Tidal Signal: a night-harbor beacon board. Cool mist is the canvas,
+     deep navy is the ink, electric teal is the signal current,
+     lime is the ping, and coral is the flare.
+     Cards are signal panels with a gradient current bar on the top
+     edge and softly rounded corners; they lift on hover. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = burnt orange scale */
-  --color-brand-50: #fff7ed;
-  --color-brand-100: #ffedd5;
-  --color-brand-200: #fed7aa;
-  --color-brand-300: #fdba74;
-  --color-brand-400: #fb923c;
-  --color-brand-500: #f97316;
-  --color-brand-600: #ea580c;
-  --color-brand-700: #c2410c;
-  --color-brand-800: #9a3412;
-  --color-brand-900: #7c2d12;
-  --color-brand-950: #431407;
-  --color-brand: #ea580c;
-  --color-brand-dark: #c2410c;
-  --color-brand-deep: #7c2d12;
+  /* brand = electric teal scale */
+  --color-brand-50: #ecfeff;
+  --color-brand-100: #cffafe;
+  --color-brand-200: #a5f3fc;
+  --color-brand-300: #67e8f9;
+  --color-brand-400: #22d3ee;
+  --color-brand-500: #06b6d4;
+  --color-brand-600: #0891b2;
+  --color-brand-700: #0e7490;
+  --color-brand-800: #155e75;
+  --color-brand-900: #164e63;
+  --color-brand-950: #083344;
+  --color-brand: #0891b2;
+  --color-brand-dark: #0e7490;
+  --color-brand-deep: #164e63;
 
-  /* gold = marigold scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #d97706;
-  --color-gold-deep: #b45309;
-  --color-gold-soft: #fef3c7;
+  /* gold = lime ping scale (name kept for legacy class refs) */
+  --color-gold-50: #f7fee7;
+  --color-gold-100: #ecfccb;
+  --color-gold-200: #d9f99d;
+  --color-gold-300: #bef264;
+  --color-gold-400: #a3e635;
+  --color-gold-500: #84cc16;
+  --color-gold-600: #65a30d;
+  --color-gold-700: #4d7c0f;
+  --color-gold-800: #3f6212;
+  --color-gold-900: #365314;
+  --color-gold-950: #1a2e05;
+  --color-gold: #65a30d;
+  --color-gold-deep: #4d7c0f;
+  --color-gold-soft: #ecfccb;
 
-  /* popblue = deep plum scale (name kept for legacy class refs) */
-  --color-popblue-50: #fdf4f7;
-  --color-popblue-100: #fce7f1;
-  --color-popblue-200: #fbcfe3;
-  --color-popblue-300: #f9a8cc;
-  --color-popblue-400: #f472a8;
-  --color-popblue-500: #ec4899;
-  --color-popblue-600: #db2777;
-  --color-popblue-700: #be185d;
-  --color-popblue-800: #9d174d;
-  --color-popblue-900: #831843;
-  --color-popblue-950: #500724;
-  --color-popblue: #be185d;
-  --color-popblue-deep: #9d174d;
-  --color-popblue-soft: #fce7f1;
+  /* popblue = coral flare scale (name kept for legacy class refs) */
+  --color-popblue-50: #fff6f4;
+  --color-popblue-100: #ffe9e3;
+  --color-popblue-200: #ffd3c7;
+  --color-popblue-300: #ffab93;
+  --color-popblue-400: #ff7f5c;
+  --color-popblue-500: #ff5f3a;
+  --color-popblue-600: #f04e27;
+  --color-popblue-700: #c73e1d;
+  --color-popblue-800: #a0351c;
+  --color-popblue-900: #842c1a;
+  --color-popblue-950: #470f07;
+  --color-popblue: #f04e27;
+  --color-popblue-deep: #a0351c;
+  --color-popblue-soft: #ffe9e3;
 
-  --color-ink: #2a1a12;
-  --color-paper: #faf5ec;
-  --color-mute: #8a6d5a;
-  --color-card: #fffdf8;
-  --color-deep: #1f0f08;
+  --color-ink: #0f1e28;
+  --color-paper: #f2f7f9;
+  --color-mute: #5d7a88;
+  --color-card: #ffffff;
+  --color-deep: #071318;
 }
 
 html { scroll-behavior: smooth; }
@@ -75,27 +75,27 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #faf5ec;
+  background-color: #f2f7f9;
   background-image:
-    radial-gradient(circle at 50% 40%, rgba(234, 88, 12, 0.10) 1.5px, transparent 1.6px),
-    radial-gradient(ellipse 60% 32% at 90% -8%, rgba(245, 158, 11, 0.20), transparent 70%),
-    radial-gradient(ellipse 52% 34% at 4% 106%, rgba(190, 24, 93, 0.10), transparent 70%),
-    radial-gradient(ellipse 34% 24% at 52% 48%, rgba(251, 146, 60, 0.10), transparent 70%);
+    radial-gradient(circle at 50% 40%, rgba(8, 145, 178, 0.14) 1.5px, transparent 1.6px),
+    radial-gradient(ellipse 60% 32% at 92% -8%, rgba(34, 211, 238, 0.22), transparent 70%),
+    radial-gradient(ellipse 52% 34% at 2% 104%, rgba(240, 78, 39, 0.10), transparent 70%),
+    radial-gradient(ellipse 34% 24% at 50% 46%, rgba(132, 204, 22, 0.10), transparent 70%);
   background-size: 26px 26px, auto, auto, auto;
   background-position: 0 0, 0 0, 0 0, 0 0;
-  color: #2a1a12;
+  color: #0f1e28;
 }
-::selection { background: #ea580c; color: #fff7ed; }
+::selection { background: #0891b2; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #fb923c, #be185d); border-radius: 999px; border: 2px solid #faf5ec; }
-::-webkit-scrollbar-track { background: #f0dfc9; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #22d3ee, #f04e27); border-radius: 999px; border: 2px solid #f2f7f9; }
+::-webkit-scrollbar-track { background: #d9e8ec; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Warm, confident display type for the bazaar voice. */
-h1, h2, h3 { letter-spacing: -0.02em; }
+/* Crisp, confident display type for the signal-board voice. */
+h1, h2, h3 { letter-spacing: -0.025em; }
 
-/* Spice motes: toasted flecks drifting up through the lantern air. */
+/* Current motes: signal flecks drifting up through the harbor glow. */
 @keyframes snow-drift {
   0% { transform: translate3d(0, 6vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
   14% { opacity: 0.9; }
@@ -106,115 +106,113 @@ h1, h2, h3 { letter-spacing: -0.02em; }
 }
 .pop-fall { animation: snow-drift 12s linear infinite; }
 
-/* Lantern sway: slow lateral drift of the warm glow. */
+/* Beacon sway: slow lateral drift of the teal glow. */
 @keyframes aurora-sway {
   0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(3vw, 0.8rem, 0) scale(1.08); opacity: 0.8; }
 }
 .pop-drift { animation: aurora-sway 28s ease-in-out infinite; }
 
-/* Lantern bob: gentle rise and settle of the hanging light. */
+/* Buoy bob: gentle rise and settle of the floating signal. */
 @keyframes glacier-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-12px) scale(1.03); }
 }
 .pop-bob { animation: glacier-bob 4.6s ease-in-out infinite; }
 
-/* Slow turn for the spice wheel. */
+/* Slow turn for the signal dial. */
 @keyframes polar-wheel {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: polar-wheel 52s linear infinite; }
 
-/* Ember glint: wavering catchlight on the coals. */
+/* Flare glint: wavering catchlight on the water. */
 @keyframes frost-glint {
   0%, 100% { opacity: 0.35; transform: scale(0.85); }
   50% { opacity: 1; transform: scale(1.25); }
 }
 .pop-twinkle { animation: frost-glint 4.1s ease-in-out infinite; }
 
-/* Ember ticker: infinite marquee (leftward drift). */
+/* Signal ticker: infinite marquee (leftward drift). */
 @keyframes aurora-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: aurora-ticker 26s linear infinite; }
 
-/* Ember stripes: marigold -> orange -> plum diagonal stripes. */
+/* Signal stripes: teal -> lime -> coral diagonal stripes. */
 .pop-stripes {
-  background-image: repeating-linear-gradient(-45deg, #fef3c7 0 10px, #ea580c 10px 20px, #f59e0b 20px 30px, #be185d 30px 40px);
+  background-image: repeating-linear-gradient(-45deg, #ecfccb 0 10px, #0891b2 10px 20px, #84cc16 20px 30px, #f04e27 30px 40px);
 }
 
-/* Stamped paper panel: warm cream panel with an ember stripe on its top
-   edge and softly rounded corners; it rises straight up on hover. */
+/* Signal panel: mist-white panel with a current bar on its top
+   edge and softly rounded corners; it lifts on hover. */
 .pop-lift {
   position: relative;
-  border: 2px solid rgba(124, 45, 18, 0.28);
-  background: #fffdf8;
-  border-radius: 1.25rem;
-  border-top-left-radius: 2rem;
-  border-bottom-right-radius: 2rem;
-  box-shadow: 6px 6px 0 -1px rgba(124, 45, 18, 0.18), 0 18px 36px -24px rgba(234, 88, 12, 0.40), 0 4px 14px -8px rgba(42, 26, 18, 0.14);
+  border: 2px solid rgba(7, 19, 24, 0.16);
+  background: #ffffff;
+  border-radius: 1.5rem;
+  box-shadow: 6px 6px 0 -1px rgba(7, 19, 24, 0.10), 0 18px 36px -24px rgba(8, 145, 178, 0.45), 0 4px 14px -8px rgba(15, 30, 40, 0.12);
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
   overflow: hidden;
 }
 .pop-lift::before {
-  /* ember stripe along the panel's top edge */
+  /* current bar along the panel's top edge */
   content: "";
   position: absolute;
   top: 0;
-  left: 10%;
-  right: 10%;
+  left: 8%;
+  right: 8%;
   height: 5px;
   border-radius: 0 0 999px 999px;
-  background: linear-gradient(90deg, #ea580c, #f59e0b, #be185d);
-  box-shadow: 0 2px 10px rgba(234, 88, 12, 0.55);
+  background: linear-gradient(90deg, #0891b2, #84cc16, #f04e27);
+  box-shadow: 0 2px 10px rgba(8, 145, 178, 0.55);
   pointer-events: none;
 }
 .pop-lift:hover {
   transform: translateY(-7px);
-  border-color: rgba(234, 88, 12, 0.55);
-  box-shadow: 8px 8px 0 -1px rgba(234, 88, 12, 0.28), 0 30px 54px -24px rgba(234, 88, 12, 0.52), 0 10px 22px -8px rgba(245, 158, 11, 0.32);
+  border-color: rgba(8, 145, 178, 0.55);
+  box-shadow: 8px 8px 0 -1px rgba(8, 145, 178, 0.30), 0 30px 54px -24px rgba(8, 145, 178, 0.55), 0 10px 22px -8px rgba(132, 204, 22, 0.32);
 }
 
-/* Warm glass: shared by modals and drawers — a lantern pane with an ember rim. */
+/* Harbor glass: shared by modals and drawers — a dark navy pane with a teal rim. */
 .pop-glass {
-  background: rgba(250, 245, 236, 0.92);
+  background: rgba(7, 19, 24, 0.88);
   backdrop-filter: blur(22px) saturate(1.25);
   -webkit-backdrop-filter: blur(22px) saturate(1.25);
-  border: 1px solid rgba(234, 88, 12, 0.35);
+  border: 1px solid rgba(34, 211, 238, 0.35);
   border-radius: 1.4rem;
-  box-shadow: 0 30px 60px -24px rgba(234, 88, 12, 0.5);
+  box-shadow: 0 30px 60px -24px rgba(8, 145, 178, 0.55);
 }
 
-/* Ember seal: a coal-stamped badge with bazaar type. */
+/* Signal seal: a beacon-stamped badge with harbor type. */
 .starburst {
-  background: radial-gradient(circle at 35% 30%, #fbbf24 0%, #ea580c 55%, #7c2d12 100%);
-  color: #fff7ed;
-  text-shadow: 0 1px 2px rgba(67, 20, 7, 0.6);
+  background: radial-gradient(circle at 35% 30%, #67e8f9 0%, #0891b2 55%, #083344 100%);
+  color: #ecfeff;
+  text-shadow: 0 1px 2px rgba(8, 51, 68, 0.7);
   border-radius: 9999px;
   transform: rotate(-6deg);
-  box-shadow: 0 10px 24px -8px rgba(234, 88, 12, 0.7), inset 0 2px 6px rgba(255, 255, 255, 0.45);
-  outline: 2px dashed rgba(255, 247, 237, 0.9);
+  box-shadow: 0 10px 24px -8px rgba(8, 145, 178, 0.7), inset 0 2px 6px rgba(255, 255, 255, 0.45);
+  outline: 2px dashed rgba(236, 254, 255, 0.9);
   outline-offset: -6px;
-  border: 1px solid rgba(194, 65, 12, 0.6);
+  border: 1px solid rgba(14, 116, 144, 0.6);
 }
 
-/* Spice grid: faint warm lines for merchant bands. */
+/* Signal grid: faint teal lines for merchant bands. */
 .halftone {
   background-image:
-    linear-gradient(rgba(234, 88, 12, 0.10) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(234, 88, 12, 0.10) 1px, transparent 1px);
+    linear-gradient(rgba(8, 145, 178, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(8, 145, 178, 0.10) 1px, transparent 1px);
   background-size: 22px 22px;
   background-position: 0 0, 0 0;
 }
 
-/* Ember sparkle: a row of warm spice flecks dividing sections. */
+/* Signal sparkle: a row of teal and lime flecks dividing sections. */
 .zigzag {
   height: 20px;
   background-image:
-    radial-gradient(circle at 18px 12px, rgba(234, 88, 12, 0.55) 4px, transparent 5px),
-    radial-gradient(circle at 36px 8px, rgba(245, 158, 11, 0.45) 2.5px, transparent 3.5px);
+    radial-gradient(circle at 18px 12px, rgba(8, 145, 178, 0.55) 4px, transparent 5px),
+    radial-gradient(circle at 36px 8px, rgba(132, 204, 22, 0.50) 2.5px, transparent 3.5px);
   background-size: 54px 20px;
   background-repeat: repeat-x;
   opacity: 0.9;
@@ -222,35 +220,35 @@ h1, h2, h3 { letter-spacing: -0.02em; }
   mask: linear-gradient(180deg, black 65%, transparent 100%);
 }
 
-/* Ember awning: orange/marigold/plum glow band with a warm shade. */
+/* Harbor awning: teal/lime/coral glow band with a cool shade. */
 .bazaar-awning {
   background-image: linear-gradient(90deg,
-    rgba(234, 88, 12, 0.92) 0%,
-    rgba(251, 146, 60, 0.78) 30%,
-    rgba(251, 191, 36, 0.70) 62%,
-    rgba(80, 7, 36, 0.88) 100%);
-  box-shadow: 0 6px 22px -6px rgba(234, 88, 12, 0.62);
+    rgba(8, 145, 178, 0.92) 0%,
+    rgba(34, 211, 238, 0.78) 30%,
+    rgba(163, 230, 53, 0.70) 62%,
+    rgba(71, 15, 7, 0.88) 100%);
+  box-shadow: 0 6px 22px -6px rgba(8, 145, 178, 0.62);
 }
 
-/* Ember aura: layered orange/marigold/plum glow for the core halo. */
+/* Beacon aura: layered teal/cyan/lime glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(251, 146, 60, 0.45) 0%, rgba(234, 88, 12, 0.30) 42%, rgba(190, 24, 93, 0.20) 62%, rgba(190, 24, 93, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(34, 211, 238, 0.45) 0%, rgba(8, 145, 178, 0.30) 42%, rgba(132, 204, 22, 0.20) 62%, rgba(132, 204, 22, 0) 76%);
 }
-/* Lantern sun: a warm ember orb with a marigold halo. */
+/* Beacon orb: a glowing teal sphere with a lime halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #fef3c7 0%, #fbbf24 52%, #ea580c 100%);
-  box-shadow: 0 0 70px -8px rgba(234, 88, 12, 0.55), 0 0 28px -6px rgba(245, 158, 11, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.55);
-  border: 1px solid rgba(194, 65, 12, 0.42);
+    radial-gradient(circle at 38% 34%, #ecfccb 0%, #a3e635 52%, #0891b2 100%);
+  box-shadow: 0 0 70px -8px rgba(8, 145, 178, 0.55), 0 0 28px -6px rgba(132, 204, 22, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(14, 116, 144, 0.42);
 }
 
-/* Ember rings around the lantern sun. */
+/* Beacon rings around the signal orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(234, 88, 12, 0.42) 0px,
-    rgba(234, 88, 12, 0.42) 3px,
+    rgba(8, 145, 178, 0.42) 0px,
+    rgba(8, 145, 178, 0.42) 3px,
     transparent 3px,
     transparent 28px
   );
@@ -261,8 +259,8 @@ h1, h2, h3 { letter-spacing: -0.02em; }
 .sun-rays {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(245, 158, 11, 0.42) 0px,
-    rgba(245, 158, 11, 0.42) 3px,
+    rgba(132, 204, 22, 0.42) 0px,
+    rgba(132, 204, 22, 0.42) 3px,
     transparent 3px,
     transparent 28px
   );
@@ -271,15 +269,13 @@ h1, h2, h3 { letter-spacing: -0.02em; }
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all ember styled. */
+/* Legacy aliases kept so untouched components still render — all signal styled. */
 .lagoon-lift {
   position: relative;
-  border: 2px solid rgba(124, 45, 18, 0.28);
-  background: #fffdf8;
-  border-radius: 1.25rem;
-  border-top-left-radius: 2rem;
-  border-bottom-right-radius: 2rem;
-  box-shadow: 6px 6px 0 -1px rgba(124, 45, 18, 0.18), 0 18px 36px -24px rgba(234, 88, 12, 0.40), 0 4px 14px -8px rgba(42, 26, 18, 0.14);
+  border: 2px solid rgba(7, 19, 24, 0.16);
+  background: #ffffff;
+  border-radius: 1.5rem;
+  box-shadow: 6px 6px 0 -1px rgba(7, 19, 24, 0.10), 0 18px 36px -24px rgba(8, 145, 178, 0.45), 0 4px 14px -8px rgba(15, 30, 40, 0.12);
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
   overflow: hidden;
 }
@@ -287,61 +283,61 @@ h1, h2, h3 { letter-spacing: -0.02em; }
   content: "";
   position: absolute;
   top: 0;
-  left: 10%;
-  right: 10%;
+  left: 8%;
+  right: 8%;
   height: 5px;
   border-radius: 0 0 999px 999px;
-  background: linear-gradient(90deg, #ea580c, #f59e0b, #be185d);
-  box-shadow: 0 2px 10px rgba(234, 88, 12, 0.55);
+  background: linear-gradient(90deg, #0891b2, #84cc16, #f04e27);
+  box-shadow: 0 2px 10px rgba(8, 145, 178, 0.55);
   pointer-events: none;
 }
 .lagoon-lift:hover {
   transform: translateY(-7px);
-  border-color: rgba(234, 88, 12, 0.55);
-  box-shadow: 8px 8px 0 -1px rgba(234, 88, 12, 0.28), 0 30px 54px -24px rgba(234, 88, 12, 0.52), 0 10px 22px -8px rgba(245, 158, 11, 0.32);
+  border-color: rgba(8, 145, 178, 0.55);
+  box-shadow: 8px 8px 0 -1px rgba(8, 145, 178, 0.30), 0 30px 54px -24px rgba(8, 145, 178, 0.55), 0 10px 22px -8px rgba(132, 204, 22, 0.32);
 }
 .stamp-perf {
-  border: 2px dashed rgba(194, 65, 12, 0.55);
-  background: rgba(234, 88, 12, 0.08);
+  border: 2px dashed rgba(14, 116, 144, 0.55);
+  background: rgba(8, 145, 178, 0.08);
   border-radius: 1.25rem;
-  box-shadow: 0 20px 42px -22px rgba(234, 88, 12, 0.45);
+  box-shadow: 0 20px 42px -22px rgba(8, 145, 178, 0.45);
 }
 .ember-glow {
   position: relative;
-  border: 2px solid rgba(234, 88, 12, 0.28);
-  background: linear-gradient(165deg, #fff7ed 0%, #fffdf8 60%, #fef3c7 100%);
+  border: 2px solid rgba(8, 145, 178, 0.28);
+  background: linear-gradient(165deg, #ecfeff 0%, #ffffff 60%, #ecfccb 100%);
   border-radius: 1.25rem;
-  box-shadow: 6px 6px 0 -1px rgba(124, 45, 18, 0.18), 0 18px 36px -24px rgba(234, 88, 12, 0.40), 0 4px 14px -8px rgba(42, 26, 18, 0.14);
+  box-shadow: 6px 6px 0 -1px rgba(7, 19, 24, 0.10), 0 18px 36px -24px rgba(8, 145, 178, 0.45), 0 4px 14px -8px rgba(15, 30, 40, 0.12);
   transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
   transform: translateY(-7px);
-  box-shadow: 8px 8px 0 -1px rgba(234, 88, 12, 0.28), 0 30px 54px -24px rgba(234, 88, 12, 0.52), 0 10px 22px -8px rgba(245, 158, 11, 0.32);
+  box-shadow: 8px 8px 0 -1px rgba(8, 145, 178, 0.30), 0 30px 54px -24px rgba(8, 145, 178, 0.55), 0 10px 22px -8px rgba(132, 204, 22, 0.32);
 }
 .ripple-glow {
   position: relative;
-  border: 2px solid rgba(190, 24, 93, 0.30);
-  background: linear-gradient(165deg, #fce7f1 0%, #fffdf8 60%, #fef3c7 100%);
+  border: 2px solid rgba(240, 78, 39, 0.30);
+  background: linear-gradient(165deg, #ffe9e3 0%, #ffffff 60%, #ecfccb 100%);
   border-radius: 1.25rem;
-  box-shadow: 6px 6px 0 -1px rgba(124, 45, 18, 0.18), 0 18px 36px -24px rgba(190, 24, 93, 0.40), 0 4px 14px -8px rgba(42, 26, 18, 0.14);
+  box-shadow: 6px 6px 0 -1px rgba(7, 19, 24, 0.10), 0 18px 36px -24px rgba(240, 78, 39, 0.40), 0 4px 14px -8px rgba(15, 30, 40, 0.12);
   transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
   transform: translateY(-7px);
-  box-shadow: 8px 8px 0 -1px rgba(190, 24, 93, 0.28), 0 30px 54px -24px rgba(190, 24, 93, 0.52), 0 10px 22px -8px rgba(42, 26, 18, 0.14);
+  box-shadow: 8px 8px 0 -1px rgba(240, 78, 39, 0.28), 0 30px 54px -24px rgba(240, 78, 39, 0.52), 0 10px 22px -8px rgba(15, 30, 40, 0.12);
 }
 .lagoon-glow {
   position: relative;
-  border: 2px solid rgba(234, 88, 12, 0.28);
-  background: linear-gradient(165deg, #fff7ed 0%, #fffdf8 60%, #fef3c7 100%);
+  border: 2px solid rgba(8, 145, 178, 0.28);
+  background: linear-gradient(165deg, #ecfeff 0%, #ffffff 60%, #ecfccb 100%);
   border-radius: 1.25rem;
-  box-shadow: 6px 6px 0 -1px rgba(124, 45, 18, 0.18), 0 18px 36px -24px rgba(234, 88, 12, 0.40), 0 4px 14px -8px rgba(42, 26, 18, 0.14);
+  box-shadow: 6px 6px 0 -1px rgba(7, 19, 24, 0.10), 0 18px 36px -24px rgba(8, 145, 178, 0.45), 0 4px 14px -8px rgba(15, 30, 40, 0.12);
   transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
   transform: translateY(-7px);
-  box-shadow: 8px 8px 0 -1px rgba(234, 88, 12, 0.28), 0 30px 54px -24px rgba(234, 88, 12, 0.52), 0 10px 22px -8px rgba(245, 158, 11, 0.32);
+  box-shadow: 8px 8px 0 -1px rgba(8, 145, 178, 0.30), 0 30px 54px -24px rgba(8, 145, 178, 0.55), 0 10px 22px -8px rgba(132, 204, 22, 0.32);
 }
