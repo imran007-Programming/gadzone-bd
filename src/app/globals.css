@@ -1,65 +1,64 @@
 @import "tailwindcss";
 
 @theme {
-  /* Glacier Circuit: icy pale-blue paper, deep indigo, electric cyan
-     and violet sparks. Cards are sharp, angular panels with a bold
-     vertical circuit bar down the left edge and a crisp flat shadow;
-     they shift sideways on hover instead of lifting straight up. */
+  /* Amber Orchard: warm cream paper, terracotta, marigold and leaf
+     green. Cards are soft, fully rounded panels with a warm stripe
+     across the top edge and a gentle straight lift on hover. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = indigo scale */
-  --color-brand-50: #eef2ff;
-  --color-brand-100: #e0e7ff;
-  --color-brand-200: #c7d2fe;
-  --color-brand-300: #a5b4fc;
-  --color-brand-400: #818cf8;
-  --color-brand-500: #6366f1;
-  --color-brand-600: #4f46e5;
-  --color-brand-700: #4338ca;
-  --color-brand-800: #3730a3;
-  --color-brand-900: #312e81;
-  --color-brand-950: #1e1b4b;
-  --color-brand: #4338ca;
-  --color-brand-dark: #3730a3;
-  --color-brand-deep: #312e81;
+  /* brand = terracotta orange scale */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-brand-950: #431407;
+  --color-brand: #c2410c;
+  --color-brand-dark: #9a3412;
+  --color-brand-deep: #7c2d12;
 
-  /* gold = electric cyan scale (name kept for legacy class refs) */
-  --color-gold-50: #ecfeff;
-  --color-gold-100: #cffafe;
-  --color-gold-200: #a5f3fc;
-  --color-gold-300: #67e8f9;
-  --color-gold-400: #22d3ee;
-  --color-gold-500: #06b6d4;
-  --color-gold-600: #0891b2;
-  --color-gold-700: #0e7490;
-  --color-gold-800: #155e75;
-  --color-gold-900: #164e63;
-  --color-gold-950: #083344;
-  --color-gold: #0891b2;
-  --color-gold-deep: #0e7490;
-  --color-gold-soft: #cffafe;
+  /* gold = marigold amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #d97706;
+  --color-gold-deep: #b45309;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = violet spark scale (name kept for legacy class refs) */
-  --color-popblue-50: #f5f3ff;
-  --color-popblue-100: #ede9fe;
-  --color-popblue-200: #ddd6fe;
-  --color-popblue-300: #c4b5fd;
-  --color-popblue-400: #a78bfa;
-  --color-popblue-500: #8b5cf6;
-  --color-popblue-600: #7c3aed;
-  --color-popblue-700: #6d28d9;
-  --color-popblue-800: #5b21b6;
-  --color-popblue-900: #4c1d95;
-  --color-popblue-950: #2e1065;
-  --color-popblue: #7c3aed;
-  --color-popblue-deep: #5b21b6;
-  --color-popblue-soft: #ede9fe;
+  /* popblue = leaf green scale (name kept for legacy class refs) */
+  --color-popblue-50: #f0fdf4;
+  --color-popblue-100: #dcfce7;
+  --color-popblue-200: #bbf7d0;
+  --color-popblue-300: #86efac;
+  --color-popblue-400: #4ade80;
+  --color-popblue-500: #22c55e;
+  --color-popblue-600: #16a34a;
+  --color-popblue-700: #15803d;
+  --color-popblue-800: #166534;
+  --color-popblue-900: #14532d;
+  --color-popblue-950: #052e16;
+  --color-popblue: #16a34a;
+  --color-popblue-deep: #15803d;
+  --color-popblue-soft: #dcfce7;
 
-  --color-ink: #101a2e;
-  --color-paper: #f2f7fb;
-  --color-mute: #5b6b82;
+  --color-ink: #2a1a12;
+  --color-paper: #fdf6ea;
+  --color-mute: #7a5c4a;
   --color-card: #ffffff;
-  --color-deep: #0b1220;
+  --color-deep: #1f120b;
 }
 
 html { scroll-behavior: smooth; }
@@ -74,21 +73,21 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f2f7fb;
+  background-color: #fdf6ea;
   background-image:
-    radial-gradient(ellipse 55% 30% at 8% -4%, rgba(67, 56, 202, 0.14), transparent 70%),
-    radial-gradient(ellipse 48% 32% at 96% 104%, rgba(6, 182, 212, 0.13), transparent 70%),
-    radial-gradient(ellipse 30% 22% at 88% 2%, rgba(124, 58, 237, 0.12), transparent 70%);
-  color: #101a2e;
+    radial-gradient(ellipse 55% 30% at 8% -4%, rgba(194, 65, 12, 0.14), transparent 70%),
+    radial-gradient(ellipse 48% 32% at 96% 104%, rgba(245, 158, 11, 0.13), transparent 70%),
+    radial-gradient(ellipse 30% 22% at 88% 2%, rgba(22, 163, 74, 0.12), transparent 70%);
+  color: #2a1a12;
 }
-::selection { background: #4338ca; color: #ffffff; }
+::selection { background: #c2410c; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #4338ca, #06b6d4); border-radius: 4px; border: 2px solid #f2f7fb; }
-::-webkit-scrollbar-track { background: #dce8f2; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #c2410c, #f59e0b); border-radius: 9999px; border: 2px solid #fdf6ea; }
+::-webkit-scrollbar-track { background: #f5e6cf; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Glacier type: crisp, tight headlines with a cool electric edge. */
+/* Orchard type: crisp, tight headlines with a cool electric edge. */
 h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
 /* Rising frost: cool cyan flecks drifting up through cold air. */
@@ -102,7 +101,7 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 }
 .pop-fall { animation: kiln-embers 9s linear infinite; }
 
-/* Glacier drift: slow lateral drift of the cold light. */
+/* Orchard drift: slow lateral drift of the cold light. */
 @keyframes glaze-drift {
   0%, 100% { transform: translate3d(-2.5vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(2vw, 0.8rem, 0) scale(1.08); opacity: 0.8; }
@@ -129,84 +128,84 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 }
 .pop-twinkle { animation: ember-blink 2.8s ease-in-out infinite; }
 
-/* Glacier ticker: infinite marquee (leftward drift). */
+/* Orchard ticker: infinite marquee (leftward drift). */
 @keyframes firing-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: firing-ticker 32s linear infinite; }
 
-/* Glacier check: indigo -> cyan -> violet checkered tiles. */
+/* Orchard check: terracotta -> marigold -> leaf checkered tiles. */
 .pop-stripes {
   background-image:
-    conic-gradient(from 45deg, #c7d2fe 0 25%, #a5f3fc 0 50%, #ddd6fe 0 75%, #a5b4fc 0 100%);
+    conic-gradient(from 45deg, #fed7aa 0 25%, #fde68a 0 50%, #bbf7d0 0 75%, #fdba74 0 100%);
   background-size: 32px 32px;
 }
 
-/* Glacier panel: a sharp, angular panel with a cool rim, a bold
-   vertical circuit bar down the left edge and a crisp flat shadow;
-   it nudges sideways on hover. */
+/* Orchard panel: a soft, fully rounded panel with a warm rim, a
+   warm stripe across the top edge and a soft layered shadow;
+   it lifts straight up on hover. */
 .pop-lift {
   position: relative;
-  border: 1.5px solid rgba(16, 26, 46, 0.12);
+  border: 1.5px solid rgba(42, 26, 18, 0.12);
   background: #ffffff;
-  border-radius: 0.75rem;
-  box-shadow: 0 1px 2px rgba(30, 27, 75, 0.08), 6px 6px 0 rgba(67, 56, 202, 0.12);
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 6px rgba(124, 45, 18, 0.08), 0 18px 36px -18px rgba(194, 65, 12, 0.28);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   overflow: hidden;
 }
 .pop-lift::before {
-  /* indigo-to-cyan-to-violet accent bar down the panel's left edge */
+  /* terracotta-to-marigold-to-leaf accent stripe across the panel's top edge */
   content: "";
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
-  width: 5px;
-  background-image: linear-gradient(180deg, #4338ca 0 45%, #06b6d4 45% 75%, #7c3aed 75% 100%);
+  right: 0;
+  height: 5px;
+  background-image: linear-gradient(90deg, #c2410c 0 45%, #f59e0b 45% 75%, #16a34a 75% 100%);
   opacity: 0.95;
   pointer-events: none;
   z-index: 2;
 }
 .pop-lift:hover {
-  transform: translate(3px, -3px);
-  border-color: rgba(67, 56, 202, 0.45);
-  box-shadow: 0 1px 2px rgba(30, 27, 75, 0.08), 9px 9px 0 rgba(67, 56, 202, 0.18);
+  transform: translateY(-6px);
+  border-color: rgba(194, 65, 12, 0.45);
+  box-shadow: 0 4px 10px rgba(124, 45, 18, 0.10), 0 26px 44px -18px rgba(194, 65, 12, 0.38);
 }
 
-/* Glacier glass: shared by modals and drawers — a frosty pane with an indigo rim. */
+/* Orchard glass: shared by modals and drawers — a warm cream pane with a terracotta rim. */
 .pop-glass {
-  background: rgba(242, 247, 251, 0.92);
+  background: rgba(253, 246, 234, 0.92);
   backdrop-filter: blur(22px) saturate(1.25);
   -webkit-backdrop-filter: blur(22px) saturate(1.25);
-  border: 1.5px solid rgba(67, 56, 202, 0.28);
-  border-radius: 0.75rem;
-  box-shadow: 0 30px 60px -24px rgba(30, 27, 75, 0.30);
+  border: 1.5px solid rgba(194, 65, 12, 0.28);
+  border-radius: 1.5rem;
+  box-shadow: 0 30px 60px -24px rgba(124, 45, 18, 0.30);
 }
 
-/* Circuit seal: a cool cyan disc with a dashed indigo ring. */
+/* Orchard seal: a warm marigold disc with a dashed terracotta ring. */
 .starburst {
-  background: radial-gradient(circle at 35% 30%, #a5f3fc 0%, #06b6d4 55%, #0891b2 100%);
+  background: radial-gradient(circle at 35% 30%, #fde68a 0%, #f59e0b 55%, #d97706 100%);
   color: #ffffff;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
   border-radius: 9999px;
-  box-shadow: 0 10px 24px -8px rgba(6, 182, 212, 0.65), inset 0 2px 6px rgba(255, 255, 255, 0.55);
-  outline: 2px dashed rgba(67, 56, 202, 0.85);
+  box-shadow: 0 10px 24px -8px rgba(245, 158, 11, 0.65), inset 0 2px 6px rgba(255, 255, 255, 0.55);
+  outline: 2px dashed rgba(194, 65, 12, 0.85);
   outline-offset: 3px;
-  border: 3px solid #ecfeff;
+  border: 3px solid #fffbeb;
 }
 
-/* Glacier dots: faint indigo dot grid on icy paper. */
+/* Orchard dots: faint terracotta dot grid on warm paper. */
 .halftone {
-  background-image: radial-gradient(rgba(67, 56, 202, 0.13) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(rgba(194, 65, 12, 0.13) 1.5px, transparent 1.5px);
   background-size: 30px 30px;
   background-position: 0 0;
 }
 
-/* Glacier seam: a dashed indigo line dividing sections. */
+/* Orchard seam: a dashed terracotta line dividing sections. */
 .zigzag {
   height: 12px;
-  background-image: repeating-linear-gradient(90deg, rgba(67, 56, 202, 0.85) 0 12px, transparent 12px 24px);
+  background-image: repeating-linear-gradient(90deg, rgba(194, 65, 12, 0.85) 0 12px, transparent 12px 24px);
   background-size: 24px 3px;
   background-repeat: repeat-x;
   background-position: 0 center;
@@ -215,41 +214,41 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
   mask: linear-gradient(90deg, black 82%, transparent 100%);
 }
 
-/* Glacier band: broad indigo / cyan / violet stripes across the section top. */
+/* Orchard band: broad terracotta / marigold / leaf stripes across the section top. */
 .bazaar-awning {
   background-image: repeating-linear-gradient(
     100deg,
-    #4338ca 0 22px,
-    #06b6d4 22px 44px,
-    #7c3aed 44px 66px
+    #c2410c 0 22px,
+    #f59e0b 22px 44px,
+    #16a34a 44px 66px
   );
   opacity: 0.95;
-  box-shadow: 0 8px 24px -8px rgba(30, 27, 75, 0.45);
+  box-shadow: 0 8px 24px -8px rgba(124, 45, 18, 0.45);
 }
 
-/* Glacier glow: layered indigo/cyan/violet glow for the core halo. */
+/* Orchard glow: layered terracotta/marigold/leaf glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(124, 58, 237, 0.24) 0%, rgba(67, 56, 202, 0.24) 42%, rgba(6, 182, 212, 0.16) 62%, rgba(6, 182, 212, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(22, 163, 74, 0.24) 0%, rgba(194, 65, 12, 0.24) 42%, rgba(245, 158, 11, 0.16) 62%, rgba(245, 158, 11, 0) 76%);
 }
-/* Glacier core: a glowing cyan disc with an indigo halo. */
+/* Orchard core: a glowing marigold disc with a terracotta halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #cffafe 0%, #06b6d4 52%, #4338ca 100%);
-  box-shadow: 0 0 70px -8px rgba(6, 182, 212, 0.55), 0 0 28px -6px rgba(67, 56, 202, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.50);
-  border: 2px solid rgba(67, 56, 202, 0.45);
+    radial-gradient(circle at 38% 34%, #fef3c7 0%, #f59e0b 52%, #c2410c 100%);
+  box-shadow: 0 0 70px -8px rgba(245, 158, 11, 0.55), 0 0 28px -6px rgba(194, 65, 12, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.50);
+  border: 2px solid rgba(194, 65, 12, 0.45);
 }
 
-/* Glacier rings around the core disc. */
+/* Orchard rings around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(124, 58, 237, 0.42) 0px,
-    rgba(124, 58, 237, 0.42) 2px,
+    rgba(22, 163, 74, 0.42) 0px,
+    rgba(22, 163, 74, 0.42) 2px,
     transparent 2px,
     transparent 12px,
-    rgba(67, 56, 202, 0.30) 12px,
-    rgba(67, 56, 202, 0.30) 14px,
+    rgba(194, 65, 12, 0.30) 12px,
+    rgba(194, 65, 12, 0.30) 14px,
     transparent 14px,
     transparent 30px
   );
@@ -260,7 +259,7 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(67, 56, 202, 0.34) 0deg 4deg,
+    rgba(194, 65, 12, 0.34) 0deg 4deg,
     transparent 4deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
