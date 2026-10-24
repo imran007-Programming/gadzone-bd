@@ -1,66 +1,66 @@
 @import "tailwindcss";
 
 @theme {
-  /* Ember Kiln: a clay studio at dusk. Warm cream is the canvas,
-     deep cocoa is the ink, fired terracotta is the ember current,
-     ochre is the glaze, and fig leaf is the grove.
-     Cards are kiln tiles with arched tops and a firing band
-     along the bottom edge; they lift on hover. */
+  /* Lagoon Night Market: a floating market after the tide comes in.
+     Glacier mist is the canvas, deep ocean is the ink, lagoon teal is
+     the current, sunset coral is the lantern, and seafoam is the spray.
+     Cards are wave tiles with a tide band along the bottom edge;
+     they lift on hover. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = fired terracotta scale */
-  --color-brand-50: #fdf2ea;
-  --color-brand-100: #fae2d0;
-  --color-brand-200: #f4c19c;
-  --color-brand-300: #ec9c66;
-  --color-brand-400: #e2743c;
-  --color-brand-500: #d2541f;
-  --color-brand-600: #b9431a;
-  --color-brand-700: #933616;
-  --color-brand-800: #772d16;
-  --color-brand-900: #642a18;
-  --color-brand-950: #381408;
-  --color-brand: #b9431a;
-  --color-brand-dark: #933616;
-  --color-brand-deep: #642a18;
+  /* brand = lagoon teal scale */
+  --color-brand-50: #effcf9;
+  --color-brand-100: #c8f6ec;
+  --color-brand-200: #91ebd9;
+  --color-brand-300: #53d8c2;
+  --color-brand-400: #26bca7;
+  --color-brand-500: #0f9a88;
+  --color-brand-600: #0c7d70;
+  --color-brand-700: #0e655b;
+  --color-brand-800: #10524c;
+  --color-brand-900: #104942;
+  --color-brand-950: #032f2b;
+  --color-brand: #0c7d70;
+  --color-brand-dark: #0e655b;
+  --color-brand-deep: #104942;
 
-  /* gold = marigold ochre scale (name kept for legacy class refs) */
-  --color-gold-50: #fbf7e8;
-  --color-gold-100: #f7ecc9;
-  --color-gold-200: #f0d894;
-  --color-gold-300: #e7be5d;
-  --color-gold-400: #dfa338;
-  --color-gold-500: #d18a1f;
-  --color-gold-600: #b26f16;
-  --color-gold-700: #8f5614;
-  --color-gold-800: #764616;
-  --color-gold-900: #653c16;
-  --color-gold-950: #3d2309;
-  --color-gold: #b26f16;
-  --color-gold-deep: #8f5614;
-  --color-gold-soft: #f7ecc9;
+  /* gold = sunset coral scale (name kept for legacy class refs) */
+  --color-gold-50: #fef4ec;
+  --color-gold-100: #fde6d3;
+  --color-gold-200: #facaa5;
+  --color-gold-300: #f6a66d;
+  --color-gold-400: #f17f3a;
+  --color-gold-500: #ed5f1f;
+  --color-gold-600: #d9480f;
+  --color-gold-700: #b43710;
+  --color-gold-800: #8f2e13;
+  --color-gold-900: #742911;
+  --color-gold-950: #401305;
+  --color-gold: #d9480f;
+  --color-gold-deep: #b43710;
+  --color-gold-soft: #fde6d3;
 
-  /* popblue = fig leaf scale (name kept for legacy class refs) */
-  --color-popblue-50: #f2f6e9;
-  --color-popblue-100: #e4edcb;
-  --color-popblue-200: #c9dba1;
-  --color-popblue-300: #a6c374;
-  --color-popblue-400: #86a84e;
-  --color-popblue-500: #688d34;
-  --color-popblue-600: #506e29;
-  --color-popblue-700: #405826;
-  --color-popblue-800: #384a24;
-  --color-popblue-900: #313f22;
-  --color-popblue-950: #181f0e;
-  --color-popblue: #506e29;
-  --color-popblue-deep: #384a24;
-  --color-popblue-soft: #e4edcb;
+  /* popblue = seafoam scale (name kept for legacy class refs) */
+  --color-popblue-50: #f0f9fb;
+  --color-popblue-100: #dcf0f5;
+  --color-popblue-200: #c0e3ee;
+  --color-popblue-300: #94d2e4;
+  --color-popblue-400: #61b9d5;
+  --color-popblue-500: #3f9fbe;
+  --color-popblue-600: #3384a1;
+  --color-popblue-700: #2c6b83;
+  --color-popblue-800: #2c5b6d;
+  --color-popblue-900: #294f5e;
+  --color-popblue-950: #143442;
+  --color-popblue: #3384a1;
+  --color-popblue-deep: #2c6b83;
+  --color-popblue-soft: #dcf0f5;
 
-  --color-ink: #2a1a12;
-  --color-paper: #faf3e8;
-  --color-mute: #8a7560;
-  --color-card: #fffdf8;
-  --color-deep: #1a0f08;
+  --color-ink: #0b2730;
+  --color-paper: #edf7f4;
+  --color-mute: #5f7a7d;
+  --color-card: #ffffff;
+  --color-deep: #06222b;
 }
 
 html { scroll-behavior: smooth; }
@@ -75,27 +75,27 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #faf3e8;
+  background-color: #edf7f4;
   background-image:
-    radial-gradient(circle at 50% 40%, rgba(185, 67, 26, 0.10) 1.5px, transparent 1.6px),
-    radial-gradient(ellipse 60% 32% at 92% -8%, rgba(210, 84, 31, 0.16), transparent 70%),
-    radial-gradient(ellipse 52% 34% at 2% 104%, rgba(209, 138, 31, 0.12), transparent 70%),
-    radial-gradient(ellipse 34% 24% at 50% 46%, rgba(134, 168, 78, 0.10), transparent 70%);
+    radial-gradient(circle at 50% 40%, rgba(12, 125, 112, 0.10) 1.5px, transparent 1.6px),
+    radial-gradient(ellipse 60% 32% at 92% -8%, rgba(38, 188, 167, 0.16), transparent 70%),
+    radial-gradient(ellipse 52% 34% at 2% 104%, rgba(217, 72, 15, 0.10), transparent 70%),
+    radial-gradient(ellipse 34% 24% at 50% 46%, rgba(63, 159, 190, 0.12), transparent 70%);
   background-size: 30px 30px, auto, auto, auto;
   background-position: 0 0, 0 0, 0 0, 0 0;
-  color: #2a1a12;
+  color: #0b2730;
 }
-::selection { background: #b9431a; color: #fffdf8; }
+::selection { background: #0c7d70; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #d2541f, #d18a1f); border-radius: 999px; border: 2px solid #faf3e8; }
-::-webkit-scrollbar-track { background: #ecdfc8; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0f9a88, #ed5f1f); border-radius: 999px; border: 2px solid #edf7f4; }
+::-webkit-scrollbar-track { background: #d7e9e4; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Warm, grounded display type for the kiln-studio voice. */
+/* Bright, buoyant display type for the night-market voice. */
 h1, h2, h3 { letter-spacing: -0.02em; }
 
-/* Ember motes: fired flecks rising through the kiln heat. */
+/* Rising bubbles: air flecks drifting up through the lagoon. */
 @keyframes snow-drift {
   0% { transform: translate3d(0, 8vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
   14% { opacity: 0.85; }
@@ -106,113 +106,112 @@ h1, h2, h3 { letter-spacing: -0.02em; }
 }
 .pop-fall { animation: snow-drift 11s linear infinite; }
 
-/* Heat shimmer: slow lateral drift of the terracotta glow. */
+/* Tide sway: slow lateral drift of the teal glow. */
 @keyframes aurora-sway {
   0%, 100% { transform: translate3d(-2vw, 0, 0) scale(1); opacity: 0.55; }
   50% { transform: translate3d(2.5vw, 0.6rem, 0) scale(1.06); opacity: 0.85; }
 }
 .pop-drift { animation: aurora-sway 26s ease-in-out infinite; }
 
-/* Kiln hover: gentle rise and settle of the floating ember. */
+/* Buoy bob: gentle rise and settle of the floating lantern. */
 @keyframes glacier-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-10px) scale(1.02); }
 }
 .pop-bob { animation: glacier-bob 4.8s ease-in-out infinite; }
 
-/* Slow turn for the ember wheel. */
+/* Slow turn for the lantern wheel. */
 @keyframes polar-wheel {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: polar-wheel 58s linear infinite; }
 
-/* Ember glint: wavering catchlight on the glaze. */
+/* Lantern glint: wavering catchlight on the water. */
 @keyframes frost-glint {
   0%, 100% { opacity: 0.3; transform: scale(0.85); }
   50% { opacity: 1; transform: scale(1.2); }
 }
 .pop-twinkle { animation: frost-glint 4.4s ease-in-out infinite; }
 
-/* Kiln ticker: infinite marquee (leftward drift). */
+/* Harbor ticker: infinite marquee (leftward drift). */
 @keyframes aurora-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: aurora-ticker 28s linear infinite; }
 
-/* Clay bands: terracotta -> ochre -> fig diagonal bands. */
+/* Tide bands: teal -> seafoam -> coral diagonal bands. */
 .pop-stripes {
-  background-image: repeating-linear-gradient(-45deg, #f7ecc9 0 10px, #d2541f 10px 20px, #b26f16 20px 30px, #506e29 30px 40px);
+  background-image: repeating-linear-gradient(-45deg, #dcf0f5 0 10px, #0f9a88 10px 20px, #ed5f1f 20px 30px, #3f9fbe 30px 40px);
 }
 
-/* Kiln tile: warm white tile with an arched top and a firing band
-   along its bottom edge; it lifts on hover. */
+/* Wave tile: a clean white tile with softly rounded corners and a tide
+   band along its bottom edge; it lifts on hover. */
 .pop-lift {
   position: relative;
-  border: 2px solid rgba(42, 26, 18, 0.14);
-  background: #fffdf8;
-  border-radius: 2.25rem 2.25rem 1.25rem 1.25rem;
-  box-shadow: 5px 5px 0 -1px rgba(42, 26, 18, 0.10), 0 18px 36px -24px rgba(185, 67, 26, 0.45), 0 4px 14px -8px rgba(42, 26, 18, 0.12);
+  border: 1px solid rgba(11, 39, 48, 0.10);
+  background: #ffffff;
+  border-radius: 1.5rem;
+  box-shadow: 0 1px 2px rgba(11, 39, 48, 0.06), 0 18px 36px -24px rgba(12, 125, 112, 0.45), 0 4px 14px -8px rgba(11, 39, 48, 0.10);
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
   overflow: hidden;
 }
 .pop-lift::after {
-  /* firing band along the tile's bottom edge */
+  /* tide band along the tile's bottom edge */
   content: "";
   position: absolute;
   bottom: 0;
-  left: 12%;
-  right: 12%;
-  height: 6px;
-  border-radius: 999px 999px 0 0;
-  background: linear-gradient(90deg, #b9431a, #d18a1f, #688d34);
-  box-shadow: 0 -2px 12px rgba(210, 84, 31, 0.55);
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #0c7d70, #3f9fbe, #ed5f1f);
+  box-shadow: 0 -2px 12px rgba(38, 188, 167, 0.45);
   pointer-events: none;
 }
 .pop-lift:hover {
   transform: translateY(-7px);
-  border-color: rgba(185, 67, 26, 0.55);
-  box-shadow: 7px 7px 0 -1px rgba(185, 67, 26, 0.28), 0 30px 54px -24px rgba(185, 67, 26, 0.55), 0 10px 22px -8px rgba(209, 138, 31, 0.30);
+  border-color: rgba(12, 125, 112, 0.45);
+  box-shadow: 0 1px 2px rgba(11, 39, 48, 0.06), 0 30px 54px -24px rgba(12, 125, 112, 0.50), 0 10px 22px -8px rgba(217, 72, 15, 0.22);
 }
 
-/* Kiln glass: shared by modals and drawers — a dark cocoa pane with a terracotta rim. */
+/* Lagoon glass: shared by modals and drawers — a deep-ocean pane with a teal rim. */
 .pop-glass {
-  background: rgba(26, 15, 8, 0.90);
+  background: rgba(6, 34, 43, 0.90);
   backdrop-filter: blur(22px) saturate(1.25);
   -webkit-backdrop-filter: blur(22px) saturate(1.25);
-  border: 1px solid rgba(226, 116, 60, 0.35);
+  border: 1px solid rgba(38, 188, 167, 0.35);
   border-radius: 1.4rem;
-  box-shadow: 0 30px 60px -24px rgba(185, 67, 26, 0.55);
+  box-shadow: 0 30px 60px -24px rgba(12, 125, 112, 0.55);
 }
 
-/* Kiln seal: a terracotta wax seal with ochre kiln type. */
+/* Harbor ring: a lagoon seal with a dashed white wake ring. */
 .starburst {
-  background: radial-gradient(circle at 35% 30%, #ec9c66 0%, #b9431a 58%, #381408 100%);
-  color: #fdf2ea;
-  text-shadow: 0 1px 2px rgba(56, 20, 8, 0.7);
+  background: radial-gradient(circle at 35% 30%, #53d8c2 0%, #0c7d70 58%, #032f2b 100%);
+  color: #effcf9;
+  text-shadow: 0 1px 2px rgba(3, 47, 43, 0.7);
   border-radius: 9999px;
-  transform: rotate(8deg);
-  box-shadow: 0 10px 24px -8px rgba(185, 67, 26, 0.7), inset 0 2px 6px rgba(255, 255, 255, 0.40);
-  outline: 2px dashed rgba(253, 242, 234, 0.9);
+  transform: rotate(-8deg);
+  box-shadow: 0 10px 24px -8px rgba(12, 125, 112, 0.7), inset 0 2px 6px rgba(255, 255, 255, 0.40);
+  outline: 2px dashed rgba(239, 252, 249, 0.9);
   outline-offset: -6px;
-  border: 1px solid rgba(147, 54, 22, 0.6);
+  border: 1px solid rgba(14, 101, 91, 0.6);
 }
 
-/* Kiln speckle: faint terracotta dots for studio bands. */
+/* Seafoam speckle: faint teal dots for market bands. */
 .halftone {
   background-image:
-    linear-gradient(rgba(185, 67, 26, 0.10) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(185, 67, 26, 0.10) 1px, transparent 1px);
+    linear-gradient(rgba(12, 125, 112, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(12, 125, 112, 0.10) 1px, transparent 1px);
   background-size: 26px 26px;
   background-position: 0 0, 0 0;
 }
 
-/* Ember dashes: a row of terracotta and ochre flecks dividing sections. */
+/* Wave divider: a row of teal and coral ripples dividing sections. */
 .zigzag {
   height: 20px;
   background-image:
-    radial-gradient(circle at 18px 12px, rgba(185, 67, 26, 0.55) 4px, transparent 5px),
-    radial-gradient(circle at 36px 8px, rgba(209, 138, 31, 0.50) 2.5px, transparent 3.5px);
+    radial-gradient(circle at 18px 12px, rgba(12, 125, 112, 0.55) 4px, transparent 5px),
+    radial-gradient(circle at 36px 8px, rgba(217, 72, 15, 0.50) 2.5px, transparent 3.5px);
   background-size: 54px 20px;
   background-repeat: repeat-x;
   opacity: 0.9;
@@ -220,35 +219,35 @@ h1, h2, h3 { letter-spacing: -0.02em; }
   mask: linear-gradient(180deg, black 65%, transparent 100%);
 }
 
-/* Kiln awning: terracotta/ochre/fig glow band with a warm shade. */
+/* Harbor awning: teal/seafoam/coral glow band with a shaded canopy. */
 .bazaar-awning {
   background-image: linear-gradient(90deg,
-    rgba(185, 67, 26, 0.92) 0%,
-    rgba(226, 116, 60, 0.78) 30%,
-    rgba(223, 163, 56, 0.70) 62%,
-    rgba(56, 20, 8, 0.88) 100%);
-  box-shadow: 0 6px 22px -6px rgba(185, 67, 26, 0.62);
+    rgba(12, 125, 112, 0.92) 0%,
+    rgba(38, 188, 167, 0.78) 30%,
+    rgba(237, 95, 31, 0.62) 62%,
+    rgba(6, 34, 43, 0.88) 100%);
+  box-shadow: 0 6px 22px -6px rgba(12, 125, 112, 0.62);
 }
 
-/* Ember aura: layered terracotta/ochre/fig glow for the core halo. */
+/* Lagoon aura: layered teal/seafoam/coral glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(226, 116, 60, 0.42) 0%, rgba(185, 67, 26, 0.28) 42%, rgba(209, 138, 31, 0.18) 62%, rgba(209, 138, 31, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(38, 188, 167, 0.42) 0%, rgba(12, 125, 112, 0.28) 42%, rgba(63, 159, 190, 0.18) 62%, rgba(63, 159, 190, 0) 76%);
 }
-/* Ember orb: a glowing terracotta sphere with an ochre halo. */
+/* Harbor lantern: a glowing seafoam sphere with a teal halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #f7ecc9 0%, #dfa338 52%, #b9431a 100%);
-  box-shadow: 0 0 70px -8px rgba(185, 67, 26, 0.55), 0 0 28px -6px rgba(209, 138, 31, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.50);
-  border: 1px solid rgba(147, 54, 22, 0.42);
+    radial-gradient(circle at 38% 34%, #f0f9fb 0%, #94d2e4 52%, #0c7d70 100%);
+  box-shadow: 0 0 70px -8px rgba(12, 125, 112, 0.55), 0 0 28px -6px rgba(63, 159, 190, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.50);
+  border: 1px solid rgba(14, 101, 91, 0.42);
 }
 
-/* Ember rings around the kiln orb. */
+/* Lantern rings around the lagoon orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(185, 67, 26, 0.40) 0px,
-    rgba(185, 67, 26, 0.40) 3px,
+    rgba(12, 125, 112, 0.40) 0px,
+    rgba(12, 125, 112, 0.40) 3px,
     transparent 3px,
     transparent 28px
   );
@@ -259,8 +258,8 @@ h1, h2, h3 { letter-spacing: -0.02em; }
 .sun-rays {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(209, 138, 31, 0.40) 0px,
-    rgba(209, 138, 31, 0.40) 3px,
+    rgba(217, 72, 15, 0.40) 0px,
+    rgba(217, 72, 15, 0.40) 3px,
     transparent 3px,
     transparent 28px
   );

@@ -25,7 +25,7 @@ export default function BottomNav({ cartCount, onCartOpen, onMenuOpen, onAccount
             key={item.label}
             whileTap={{ scale: 0.94 }}
             onClick={item.onClick}
-            className="relative flex flex-col items-center gap-0.5 py-2.5 text-[11px] font-semibold tracking-tight text-[#2a1a12] transition-colors active:text-gold-700"
+            className="relative flex flex-col items-center gap-0.5 py-2.5 text-[11px] font-semibold tracking-tight text-[#0b2730] transition-colors active:text-gold-700"
           >
             <span className="relative text-xl leading-none">
               {item.icon}

@@ -66,14 +66,14 @@ export default function ProductDetails({
     >
       {/* Breadcrumb + back */}
       <div className="flex flex-wrap items-center gap-2 text-sm">
-        <button onClick={onBack} className="rounded-full border border-[#ecdfc8] bg-white px-3 py-1.5 font-semibold text-[#2a1a12] shadow-sm transition hover:border-brand-400/50 hover:text-brand-700">
+        <button onClick={onBack} className="rounded-full border border-[#ecdfc8] bg-white px-3 py-1.5 font-semibold text-[#0b2730] shadow-sm transition hover:border-brand-400/50 hover:text-brand-700">
           ← Back
         </button>
         <button onClick={onHome} className="text-[#8a7560] hover:text-brand-700">Home</button>
         <span className="text-[#8a7560]">/</span>
         <button onClick={() => onCategory(p.category)} className="text-[#8a7560] hover:text-brand-700">{p.category}</button>
         <span className="text-[#8a7560]">/</span>
-        <span className="max-w-56 truncate font-semibold text-[#2a1a12] sm:max-w-none">{p.name}</span>
+        <span className="max-w-56 truncate font-semibold text-[#0b2730] sm:max-w-none">{p.name}</span>
       </div>
 
       <div className="mt-5 grid gap-8 lg:grid-cols-2">
@@ -95,7 +95,7 @@ export default function ProductDetails({
               />
             )}
             {p.badge && (
-              <span className="absolute left-0 top-4 -skew-x-6 rounded-r-md bg-[#2a1a12] px-3 py-1 text-xs font-black uppercase tracking-wide text-white shadow">
+              <span className="absolute left-0 top-4 -skew-x-6 rounded-r-md bg-[#0b2730] px-3 py-1 text-xs font-black uppercase tracking-wide text-white shadow">
                 {p.badge}
               </span>
             )}
@@ -133,7 +133,7 @@ export default function ProductDetails({
         {/* Info column */}
         <div>
           <p className="text-xs font-bold uppercase tracking-widest text-brand-700">{p.category}</p>
-          <h1 className="mt-1 text-2xl font-black leading-tight tracking-tight text-[#2a1a12] sm:text-3xl">{p.name}</h1>
+          <h1 className="mt-1 text-2xl font-black leading-tight tracking-tight text-[#0b2730] sm:text-3xl">{p.name}</h1>
           <div className="mt-2 flex flex-wrap items-center gap-2">
             <Stars rating={p.rating} />
             <span className="text-sm text-[#8a7560]">{p.rating} ({p.reviews.toLocaleString()} reviews)</span>
@@ -159,7 +159,7 @@ export default function ProductDetails({
           {/* Variant selectors (demo only) */}
           <div className="mt-6 space-y-4">
             <div>
-              <p className="mb-2 text-sm font-bold text-[#2a1a12]">Colour: <span className="font-medium text-[#8a7560]">{colour}</span></p>
+              <p className="mb-2 text-sm font-bold text-[#0b2730]">Colour: <span className="font-medium text-[#8a7560]">{colour}</span></p>
               <div className="flex flex-wrap gap-2">
                 {COLOURS.map((c) => (
                   <button
@@ -174,7 +174,7 @@ export default function ProductDetails({
               </div>
             </div>
             <div>
-              <p className="mb-2 text-sm font-bold text-[#2a1a12]">Option: <span className="font-medium text-[#8a7560]">{option}</span></p>
+              <p className="mb-2 text-sm font-bold text-[#0b2730]">Option: <span className="font-medium text-[#8a7560]">{option}</span></p>
               <div className="flex flex-wrap gap-2">
                 {OPTIONS.map((o) => (
                   <button
@@ -192,22 +192,22 @@ export default function ProductDetails({
 
           {/* Quantity + actions */}
           <div className="mt-6 flex flex-wrap items-center gap-3">
-            <div className="flex items-center rounded-full border border-[#ecdfc8] bg-white text-[#2a1a12]">
+            <div className="flex items-center rounded-full border border-[#ecdfc8] bg-white text-[#0b2730]">
               <button onClick={() => setQty(Math.max(1, qty - 1))} className="px-4 py-3 text-lg" aria-label="Decrease quantity">−</button>
               <span className="w-8 text-center font-bold">{qty}</span>
               <button onClick={() => setQty(Math.min(99, qty + 1))} className="px-4 py-3 text-lg" aria-label="Increase quantity">+</button>
             </div>
-            <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty)} className="rounded-full bg-gradient-to-r from-brand-500 to-brand-700 px-7 py-3 font-bold text-white shadow-[0_8px_24px_-8px_rgba(185,67,26, 0.4)] transition hover:brightness-110">
+            <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty)} className="rounded-full bg-gradient-to-r from-brand-500 to-brand-700 px-7 py-3 font-bold text-white shadow-[0_8px_24px_-8px_rgba(12,125,112, 0.4)] transition hover:brightness-110">
               Add To Cart
             </motion.button>
-            <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty, true)} className="rounded-full bg-white px-7 py-3 font-bold text-[#2a1a12] transition ring-1 ring-brand-400/40 hover:bg-[#fdf8ef]">
+            <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty, true)} className="rounded-full bg-white px-7 py-3 font-bold text-[#0b2730] transition ring-1 ring-brand-400/40 hover:bg-[#fdf8ef]">
               Buy Now
             </motion.button>
           </div>
 
           {/* Delivery box */}
           <div className="mt-6 rounded-lg border border-[#ecdfc8] bg-white p-4 shadow-sm">
-            <h2 className="text-sm font-bold text-[#2a1a12]">🚚 Delivery & Returns</h2>
+            <h2 className="text-sm font-bold text-[#0b2730]">🚚 Delivery & Returns</h2>
             <ul className="mt-2 space-y-1.5 text-sm text-[#8a7560]">
               <li>Cash on Delivery available across Bangladesh.</li>
               <li>{district === "Dhaka" ? "Inside Dhaka: ৳60" : "Outside Dhaka: ৳120"} · Free delivery on orders over ৳2,000.</li>
@@ -259,12 +259,12 @@ export default function ProductDetails({
             )}
             {tab === "Additional Information" && (
               <dl className="grid gap-x-8 gap-y-2 sm:grid-cols-2">
-                <div className="flex justify-between border-b border-[#ecdfc8] py-2"><dt className="font-semibold text-[#2a1a12]">Category</dt><dd>{p.category}</dd></div>
-                <div className="flex justify-between border-b border-[#ecdfc8] py-2"><dt className="font-semibold text-[#2a1a12]">Availability</dt><dd>{p.stock}</dd></div>
-                <div className="flex justify-between border-b border-[#ecdfc8] py-2"><dt className="font-semibold text-[#2a1a12]">Rating</dt><dd>{p.rating} / 5 ({p.reviews.toLocaleString()} reviews)</dd></div>
-                <div className="flex justify-between border-b border-[#ecdfc8] py-2"><dt className="font-semibold text-[#2a1a12]">In the box</dt><dd>Product + quick-start guide</dd></div>
-                <div className="flex justify-between border-b border-[#ecdfc8] py-2"><dt className="font-semibold text-[#2a1a12]">Payment</dt><dd>COD, bKash, Nagad, Card</dd></div>
-                <div className="flex justify-between border-b border-[#ecdfc8] py-2"><dt className="font-semibold text-[#2a1a12]">Warranty</dt><dd>7-day easy return + warranty support</dd></div>
+                <div className="flex justify-between border-b border-[#ecdfc8] py-2"><dt className="font-semibold text-[#0b2730]">Category</dt><dd>{p.category}</dd></div>
+                <div className="flex justify-between border-b border-[#ecdfc8] py-2"><dt className="font-semibold text-[#0b2730]">Availability</dt><dd>{p.stock}</dd></div>
+                <div className="flex justify-between border-b border-[#ecdfc8] py-2"><dt className="font-semibold text-[#0b2730]">Rating</dt><dd>{p.rating} / 5 ({p.reviews.toLocaleString()} reviews)</dd></div>
+                <div className="flex justify-between border-b border-[#ecdfc8] py-2"><dt className="font-semibold text-[#0b2730]">In the box</dt><dd>Product + quick-start guide</dd></div>
+                <div className="flex justify-between border-b border-[#ecdfc8] py-2"><dt className="font-semibold text-[#0b2730]">Payment</dt><dd>COD, bKash, Nagad, Card</dd></div>
+                <div className="flex justify-between border-b border-[#ecdfc8] py-2"><dt className="font-semibold text-[#0b2730]">Warranty</dt><dd>7-day easy return + warranty support</dd></div>
               </dl>
             )}
             {tab === "Shipping & Delivery" && (
@@ -289,7 +289,7 @@ export default function ProductDetails({
           <div className="flex flex-wrap items-end justify-between gap-3">
             <div>
               <p className="text-xs font-bold uppercase tracking-widest text-brand-700">You may also like</p>
-              <h2 className="mt-1 text-2xl font-black tracking-tight text-[#2a1a12]">Related Products</h2>
+              <h2 className="mt-1 text-2xl font-black tracking-tight text-[#0b2730]">Related Products</h2>
             </div>
             <button onClick={() => onCategory(p.category)} className="rounded-full border border-[#ecdfc8] bg-white px-4 py-2 text-sm font-semibold text-[#8a7560] transition hover:border-brand-400/50 hover:text-brand-700">
               All {p.category} →
@@ -313,13 +313,13 @@ export default function ProductDetails({
             <img src={p.img} alt="" aria-hidden className="h-12 w-12 shrink-0 rounded-md object-cover ring-1 ring-[#ecdfc8]" onError={() => setImgErr(true)} />
           )}
           <div className="min-w-0 flex-1">
-            <p className="truncate text-sm font-bold text-[#2a1a12]">{p.name}</p>
+            <p className="truncate text-sm font-bold text-[#0b2730]">{p.name}</p>
             <p className="text-sm font-extrabold text-brand-700">{tk(p.price)} <span className="text-xs font-medium text-[#8a7560] line-through">{tk(p.oldPrice)}</span></p>
           </div>
           <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty)} className="shrink-0 rounded-full bg-gradient-to-r from-brand-500 to-brand-700 px-4 py-2.5 text-sm font-bold text-white transition hover:brightness-110 sm:px-6">
             Add to Cart
           </motion.button>
-          <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty, true)} className="hidden shrink-0 rounded-full bg-white px-5 py-2.5 text-sm font-bold text-[#2a1a12] transition ring-1 ring-brand-400/40 hover:bg-[#fdf8ef] sm:block">
+          <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty, true)} className="hidden shrink-0 rounded-full bg-white px-5 py-2.5 text-sm font-bold text-[#0b2730] transition ring-1 ring-brand-400/40 hover:bg-[#fdf8ef] sm:block">
             Buy Now
           </motion.button>
         </div>

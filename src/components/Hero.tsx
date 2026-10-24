@@ -30,10 +30,10 @@ const ORBS = [
 
 // Ember motes rising through the kiln heat.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#933616" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#b9431a" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#381408" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#933616" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#0e655b" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#0c7d70" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#032f2b" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#0e655b" },
   { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#688d34" },
   { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#86a84e" },
   { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#a6c374" },
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* ember wash under the ribbon */}
-      <div className="relative bg-gradient-to-b from-[#faf3e8] via-[#faf3e8] to-[#faf3e8]">
+      <div className="relative bg-gradient-to-b from-[#edf7f4] via-[#edf7f4] to-[#edf7f4]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#b9431a", "#933616", "#688d34", "#86a84e"];
+              const colors = ["#0c7d70", "#0e655b", "#688d34", "#86a84e"];
               return (
                 <span
                   key={i}
@@ -159,7 +159,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           {STARS.map((s, i) => (
             <span
               key={i}
-              className="pop-twinkle absolute rounded-full bg-[#b9431a]"
+              className="pop-twinkle absolute rounded-full bg-[#0c7d70]"
               style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
             />
           ))}

@@ -24,7 +24,7 @@ export default function ShopSection({ filtered, category, sort, onSortChange, ma
       <Reveal>
         <span className="text-xs font-bold uppercase tracking-widest text-brand-700">Full Catalogue</span>
         <div className="mt-1 flex flex-wrap items-end justify-between gap-3">
-          <div><h2 className="text-[2rem] font-black leading-tight tracking-tight text-[#2a1a12]">All Products</h2><p className="mt-1.5 text-sm text-[#8a7560]">{filtered.length} products found {category !== "All" && `in ${category}`}</p></div>
+          <div><h2 className="text-[2rem] font-black leading-tight tracking-tight text-[#0b2730]">All Products</h2><p className="mt-1.5 text-sm text-[#8a7560]">{filtered.length} products found {category !== "All" && `in ${category}`}</p></div>
           <div className="flex flex-wrap items-center gap-2">
             <label className="text-sm font-bold text-[#8a7560]">Sort:</label>
             <select value={sort} onChange={(e) => onSortChange(e.target.value as SortKey)} className="rounded-full border border-[#ecdfc8] bg-white px-4 py-2.5 text-sm font-medium text-[#8a7560] shadow-sm outline-none transition focus:border-brand-400 focus:ring-2 focus:ring-brand-400/30">
@@ -36,7 +36,7 @@ export default function ShopSection({ filtered, category, sort, onSortChange, ma
       </Reveal>
       <Reveal delay={0.08}>
         <div className="mt-6 flex flex-wrap items-center gap-3 rounded-lg border border-[#ecdfc8] bg-white p-4 backdrop-blur-sm sm:p-5">
-          <span className="text-sm font-bold text-[#2a1a12]">Max Price: <span className="text-brand-700">{tk(maxPrice)}</span></span>
+          <span className="text-sm font-bold text-[#0b2730]">Max Price: <span className="text-brand-700">{tk(maxPrice)}</span></span>
           <input type="range" min={400} max={5000} step={50} value={maxPrice} onChange={(e) => onMaxPriceChange(Number(e.target.value))} className="w-48 cursor-pointer accent-brand-400" />
           <span className="text-xs text-[#8a7560]">৳400 — ৳5,000</span>
           <button onClick={onReset} className="ml-auto rounded-full border border-[#ecdfc8] bg-white px-4 py-2 text-sm font-bold text-[#8a7560] shadow-sm transition hover:border-brand-400/50 hover:text-brand-700 active:scale-[0.98]">Reset Filters</button>

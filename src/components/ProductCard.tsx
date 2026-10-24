@@ -30,7 +30,7 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
         <div className="relative cursor-pointer overflow-hidden rounded-[1.4rem] ring-2 ring-brand-200" onClick={() => onQuickView(p)}>
           <ProductImage product={p} />
           {p.badge === "New" && (
-            <span className="absolute left-3 top-3 rounded-md bg-gold-700 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-white shadow-[0_0_18px_-4px_rgba(185,67,26, 0.9)] ring-1 ring-white/60">New</span>
+            <span className="absolute left-3 top-3 rounded-md bg-gold-700 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-white shadow-[0_0_18px_-4px_rgba(12,125,112, 0.9)] ring-1 ring-white/60">New</span>
           )}
           {discountPct(p) > 0 && (
             <span className="starburst absolute -right-2 -top-2 flex h-16 w-16 items-center justify-center p-4 text-center text-[11px] font-black leading-tight">-{discountPct(p)}%</span>
