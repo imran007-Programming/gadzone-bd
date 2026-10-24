@@ -1,27 +1,27 @@
 @import "tailwindcss";
 
 @theme {
-  /* Violet Night: deep violet primary, amber and rose accents on
-     pale lavender paper. Cards are soft, fully rounded tiles with
-     a layered violet glow shadow — the opposite of the previous
-     crisp teal tiles with a hard offset shadow. */
+  /* Meadow Fresh: emerald primary, lime and amber accents on
+     warm cream paper. Cards are chunky grove tiles with a solid
+     emerald border and a soft leafy shadow — the opposite of the
+     previous soft violet glow tiles on lavender paper. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = deep violet scale */
-  --color-brand-50: #f5f3ff;
-  --color-brand-100: #ede9fe;
-  --color-brand-200: #ddd6fe;
-  --color-brand-300: #c4b5fd;
-  --color-brand-400: #a78bfa;
-  --color-brand-500: #8b5cf6;
-  --color-brand-600: #7c3aed;
-  --color-brand-700: #6d28d9;
-  --color-brand-800: #5b21b6;
-  --color-brand-900: #4c1d95;
-  --color-brand-950: #2e1065;
-  --color-brand: #7c3aed;
-  --color-brand-dark: #6d28d9;
-  --color-brand-deep: #4c1d95;
+  /* brand = emerald scale */
+  --color-brand-50: #ecfdf5;
+  --color-brand-100: #d1fae5;
+  --color-brand-200: #a7f3d0;
+  --color-brand-300: #6ee7b7;
+  --color-brand-400: #34d399;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-brand-900: #064e3b;
+  --color-brand-950: #022c22;
+  --color-brand: #059669;
+  --color-brand-dark: #047857;
+  --color-brand-deep: #064e3b;
 
   /* gold = amber scale (name kept for legacy class refs) */
   --color-gold-50: #fffbeb;
@@ -39,27 +39,27 @@
   --color-gold-deep: #92400e;
   --color-gold-soft: #fef3c7;
 
-  /* popblue = rose scale (name kept for legacy class refs) */
-  --color-popblue-50: #fdf2f8;
-  --color-popblue-100: #fce7f3;
-  --color-popblue-200: #fbcfe8;
-  --color-popblue-300: #f9a8d4;
-  --color-popblue-400: #f472b6;
-  --color-popblue-500: #ec4899;
-  --color-popblue-600: #db2777;
-  --color-popblue-700: #be185d;
-  --color-popblue-800: #9d174d;
-  --color-popblue-900: #831843;
-  --color-popblue-950: #500724;
-  --color-popblue: #db2777;
-  --color-popblue-deep: #be185d;
-  --color-popblue-soft: #fce7f3;
+  /* popblue = lime scale (name kept for legacy class refs) */
+  --color-popblue-50: #f7fee7;
+  --color-popblue-100: #ecfccb;
+  --color-popblue-200: #d9f99d;
+  --color-popblue-300: #bef264;
+  --color-popblue-400: #a3e635;
+  --color-popblue-500: #84cc16;
+  --color-popblue-600: #65a30d;
+  --color-popblue-700: #4d7c0f;
+  --color-popblue-800: #3f6212;
+  --color-popblue-900: #365314;
+  --color-popblue-950: #1a2e05;
+  --color-popblue: #65a30d;
+  --color-popblue-deep: #4d7c0f;
+  --color-popblue-soft: #ecfccb;
 
-  --color-ink: #312e81;
-  --color-paper: #f7f5ff;
-  --color-mute: #5b5a8a;
+  --color-ink: #1e3320;
+  --color-paper: #fdfcf4;
+  --color-mute: #5f6f5a;
   --color-card: #ffffff;
-  --color-deep: #2e1065;
+  --color-deep: #022c22;
 }
 
 html { scroll-behavior: smooth; }
@@ -74,24 +74,24 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f7f5ff;
+  background-color: #fdfcf4;
   background-image:
-    linear-gradient(160deg, rgba(124, 58, 237, 0.08) 0%, transparent 42%),
-    radial-gradient(ellipse 50% 32% at 92% -4%, rgba(236, 72, 153, 0.14), transparent 70%),
+    linear-gradient(160deg, rgba(5, 150, 105, 0.07) 0%, transparent 42%),
+    radial-gradient(ellipse 50% 32% at 92% -4%, rgba(132, 204, 22, 0.14), transparent 70%),
     radial-gradient(ellipse 44% 30% at 4% 102%, rgba(245, 158, 11, 0.10), transparent 70%);
-  color: #312e81;
+  color: #1e3320;
 }
-::selection { background: #7c3aed; color: #ffffff; }
+::selection { background: #059669; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #a78bfa, #ec4899); border-radius: 999px; border: 2px solid #f7f5ff; }
-::-webkit-scrollbar-track { background: #e9e5ff; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #34d399, #a3e635); border-radius: 999px; border: 2px solid #fdfcf4; }
+::-webkit-scrollbar-track { background: #e7f5e9; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Violet Night type: tighter headlines with soft balance. */
-h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
+/* Meadow type: slightly looser headlines with soft balance. */
+h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Rising sparks: embers drifting gently upward through the night. */
+/* Rising leaves: fresh leaves drifting gently upward through the meadow. */
 @keyframes kiln-embers {
   0% { transform: translate3d(0, -6vh, 0) rotate(0deg); opacity: 0; }
   16% { opacity: 0.85; }
@@ -101,97 +101,97 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 }
 .pop-fall { animation: kiln-embers 11s linear infinite; }
 
-/* Night drift: slow lateral drift of the violet light. */
+/* Meadow drift: slow lateral drift of the morning light. */
 @keyframes glaze-drift {
   0%, 100% { transform: translate3d(-2vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(2vw, -0.6rem, 0) scale(1.06); opacity: 0.75; }
 }
 .pop-drift { animation: glaze-drift 24s ease-in-out infinite; }
 
-/* Night sway: gentle dip and rise of the hanging lantern. */
+/* Meadow sway: gentle dip and rise of the hanging leaf. */
 @keyframes kiln-bob {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-5px); }
 }
 .pop-bob { animation: kiln-bob 5.6s ease-in-out infinite; }
 
-/* Slow turn for the night wheel. */
+/* Slow turn for the meadow wheel. */
 @keyframes wheel-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: wheel-turn 70s linear infinite; }
 
-/* Night blink: rhythmic glint of stars. */
+/* Meadow blink: rhythmic glint of dew. */
 @keyframes ember-blink {
   0%, 100% { opacity: 0.35; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.15); }
 }
 .pop-twinkle { animation: ember-blink 3.2s ease-in-out infinite; }
 
-/* Night ticker: infinite marquee (leftward drift). */
+/* Meadow ticker: infinite marquee (leftward drift). */
 @keyframes firing-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: firing-ticker 34s linear infinite; }
 
-/* Night check: violet -> rose -> amber diagonal tiles. */
+/* Meadow check: emerald -> lime -> amber diagonal tiles. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(45deg, #a78bfa 0 10px, #f472b6 10px 20px, #fbbf24 20px 30px);
+    repeating-linear-gradient(45deg, #34d399 0 10px, #a3e635 10px 20px, #fbbf24 20px 30px);
   background-size: 42px 42px;
 }
 
-/* Violet Night card: a soft, fully rounded tile with a layered
-   violet glow shadow — no hard offset, no thin ring look.
-   On hover it lifts straight up and the glow deepens in rose. */
+/* Meadow card: a chunky grove tile with a solid emerald border
+   and a soft leafy shadow — no glow, no thin ring look.
+   On hover it lifts and the border turns lime. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(124, 58, 237, 0.18);
+  border: 2px solid rgba(5, 150, 105, 0.28);
   background: #ffffff;
-  border-radius: 1.5rem;
-  box-shadow: 0 18px 32px -16px rgba(76, 29, 149, 0.28), 0 4px 12px -6px rgba(124, 58, 237, 0.12);
+  border-radius: 1.25rem;
+  box-shadow: 0 12px 26px -14px rgba(6, 95, 70, 0.30), 0 3px 10px -6px rgba(5, 150, 105, 0.14);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-6px);
-  border-color: rgba(219, 39, 119, 0.45);
-  box-shadow: 0 28px 44px -18px rgba(190, 24, 93, 0.35), 0 6px 16px -6px rgba(124, 58, 237, 0.18);
+  transform: translateY(-4px);
+  border-color: rgba(101, 163, 13, 0.55);
+  box-shadow: 0 20px 32px -16px rgba(6, 95, 70, 0.35), 0 5px 14px -6px rgba(5, 150, 105, 0.20);
 }
 
-/* Night glass: shared by modals and drawers — a soft lavender
-   pane with a faint ring and a deep violet shadow. */
+/* Meadow glass: shared by modals and drawers — a soft cream
+   pane with a faint ring and a deep green shadow. */
 .pop-glass {
-  background: rgba(247, 245, 255, 0.92);
+  background: rgba(253, 252, 244, 0.92);
   backdrop-filter: blur(22px) saturate(1.2);
   -webkit-backdrop-filter: blur(22px) saturate(1.2);
   border: 1px solid rgba(255, 255, 255, 0.85);
-  border-radius: 1.5rem;
-  box-shadow: 0 18px 40px -12px rgba(46, 16, 101, 0.28), 0 6px 18px -8px rgba(124, 58, 237, 0.18);
+  border-radius: 1.25rem;
+  box-shadow: 0 18px 40px -12px rgba(2, 44, 34, 0.28), 0 6px 18px -8px rgba(5, 150, 105, 0.18);
 }
 
-/* Night seal: a violet-to-rose-to-amber pill badge. */
+/* Meadow seal: an emerald-to-lime-to-amber pill badge. */
 .starburst {
-  background: linear-gradient(135deg, #6d28d9 0%, #db2777 55%, #f59e0b 100%);
+  background: linear-gradient(135deg, #047857 0%, #65a30d 55%, #f59e0b 100%);
   color: #ffffff;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   border-radius: 9999px;
-  box-shadow: 0 10px 24px -8px rgba(124, 58, 237, 0.6), inset 0 2px 6px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 24px -8px rgba(5, 150, 105, 0.6), inset 0 2px 6px rgba(255, 255, 255, 0.4);
   border: 2px solid #ffffff;
 }
 
-/* Night dots: faint violet dot grid on lavender paper. */
+/* Meadow dots: faint emerald dot grid on cream paper. */
 .halftone {
-  background-image: radial-gradient(rgba(124, 58, 237, 0.16) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(rgba(5, 150, 105, 0.16) 1.5px, transparent 1.5px);
   background-size: 22px 22px;
   background-position: 0 0;
 }
 
-/* Night seam: a dotted rose line dividing sections. */
+/* Meadow seam: a dotted amber line dividing sections. */
 .zigzag {
   height: 12px;
-  background-image: radial-gradient(circle, rgba(219, 39, 119, 0.9) 1.6px, transparent 1.8px);
+  background-image: radial-gradient(circle, rgba(217, 119, 6, 0.9) 1.6px, transparent 1.8px);
   background-size: 14px 12px;
   background-repeat: repeat-x;
   background-position: 0 center;
@@ -200,41 +200,41 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
   mask: linear-gradient(90deg, black 82%, transparent 100%);
 }
 
-/* Night band: violet / rose / amber stripes across the section top. */
+/* Meadow band: emerald / lime / amber stripes across the section top. */
 .bazaar-awning {
   background-image: repeating-linear-gradient(
     90deg,
-    #7c3aed 0 22px,
-    #ec4899 22px 44px,
+    #059669 0 22px,
+    #84cc16 22px 44px,
     #f59e0b 44px 66px
   );
   opacity: 0.9;
-  box-shadow: 0 4px 16px -6px rgba(46, 16, 101, 0.3);
+  box-shadow: 0 4px 16px -6px rgba(2, 44, 34, 0.3);
 }
 
-/* Night glow: layered violet/rose/amber glow for the core halo. */
+/* Meadow glow: layered emerald/lime/amber glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(219, 39, 119, 0.20) 0%, rgba(124, 58, 237, 0.20) 42%, rgba(245, 158, 11, 0.14) 62%, rgba(245, 158, 11, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(101, 163, 13, 0.20) 0%, rgba(5, 150, 105, 0.20) 42%, rgba(245, 158, 11, 0.14) 62%, rgba(245, 158, 11, 0) 76%);
 }
-/* Night core: a glowing amber moon disc with a violet halo. */
+/* Meadow core: a glowing amber sun disc with an emerald halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #fffbeb 0%, #fbbf24 52%, #7c3aed 100%);
-  box-shadow: 0 0 70px -8px rgba(245, 158, 11, 0.5), 0 0 28px -6px rgba(124, 58, 237, 0.4), inset 0 3px 12px rgba(255, 255, 255, 0.55);
-  border: 2px solid rgba(124, 58, 237, 0.45);
+    radial-gradient(circle at 38% 34%, #fffbeb 0%, #fbbf24 52%, #059669 100%);
+  box-shadow: 0 0 70px -8px rgba(245, 158, 11, 0.5), 0 0 28px -6px rgba(5, 150, 105, 0.4), inset 0 3px 12px rgba(255, 255, 255, 0.55);
+  border: 2px solid rgba(5, 150, 105, 0.45);
 }
 
-/* Night rings around the core disc. */
+/* Meadow rings around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(236, 72, 153, 0.40) 0px,
-    rgba(236, 72, 153, 0.40) 2px,
+    rgba(132, 204, 22, 0.40) 0px,
+    rgba(132, 204, 22, 0.40) 2px,
     transparent 2px,
     transparent 12px,
-    rgba(124, 58, 237, 0.28) 12px,
-    rgba(124, 58, 237, 0.28) 14px,
+    rgba(5, 150, 105, 0.28) 12px,
+    rgba(5, 150, 105, 0.28) 14px,
     transparent 14px,
     transparent 30px
   );
@@ -245,7 +245,7 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(124, 58, 237, 0.32) 0deg 4deg,
+    rgba(5, 150, 105, 0.32) 0deg 4deg,
     transparent 4deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);

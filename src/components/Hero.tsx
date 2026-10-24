@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Warm ember light drifting over the plum dusk.
+// Fresh morning light drifting over the meadow.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(107,33,168, 0.20)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(249,115,22, 0.20)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(244,63,94, 0.16)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(107,33,168, 0.16)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(5,150,105, 0.20)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245,158,11, 0.20)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(132,204,22, 0.16)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(5,150,105, 0.16)" },
 ];
 
-// Ember flecks rising off the warm dusk.
+// Leaf flecks rising off the fresh meadow.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#0d9488" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f97316" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#a21caf" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#f97316" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#84cc16" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#facc15" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#ea580c" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#059669" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f59e0b" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#65a30d" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#84cc16" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#10b981" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fbbf24" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#047857" },
 ];
 
 // Firefly blinks scattered through the light.
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* warm wash under the ember light */}
-      <div className="relative bg-gradient-to-b from-[#f5f3ff] via-[#ede9fe] to-[#fdf2f8]">
+      <div className="relative bg-gradient-to-b from-[#fdfcf4] via-[#ecfdf5] to-[#fefce8]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#0d9488", "#06b6d4", "#0284c7", "#2dd4bf"];
+              const colors = ["#059669", "#65a30d", "#84cc16", "#10b981"];
               return (
                 <span
                   key={i}
@@ -159,7 +159,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           {STARS.map((s, i) => (
             <span
               key={i}
-              className="pop-twinkle absolute rounded-full bg-[#0d9488]"
+              className="pop-twinkle absolute rounded-full bg-[#059669]"
               style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
             />
           ))}
