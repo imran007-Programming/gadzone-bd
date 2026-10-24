@@ -22,7 +22,7 @@ export default function OrderCard({ order, showCustomer, statusEditable, onStatu
     <article className="rounded-lg bg-white p-5 shadow-sm ring-1 ring-[#e3e7ef] transition hover:shadow-md">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="min-w-0">
-          <p className="font-black text-[#1e1b4b]">{order.id}</p>
+          <p className="font-black text-[#1c2a1e]">{order.id}</p>
           <p className="mt-0.5 text-sm text-[#64748b]">
             {formatOrderDate(order.date)} · {itemCount} item{itemCount === 1 ? "" : "s"} · {order.payment}
           </p>
@@ -56,7 +56,7 @@ export default function OrderCard({ order, showCustomer, statusEditable, onStatu
         <button onClick={() => setExpanded((v) => !v)} aria-expanded={expanded} className="text-sm font-bold text-brand-700 hover:text-brand-700">
           {expanded ? "Hide details ↑" : "View details ↓"}
         </button>
-        <p className="text-sm font-bold text-[#1e1b4b]">
+        <p className="text-sm font-bold text-[#1c2a1e]">
           Total <span className="ml-1 text-base text-brand-700">{tk(order.total)}</span>
         </p>
       </div>
@@ -67,7 +67,7 @@ export default function OrderCard({ order, showCustomer, statusEditable, onStatu
             {order.items.map((it, i) => (
               <li key={i} className="flex justify-between gap-3">
                 <span className="text-[#64748b]">{it.name} <span className="text-[#64748b]">× {it.qty}</span></span>
-                <span className="shrink-0 font-semibold text-[#1e1b4b]">{tk(it.price * it.qty)}</span>
+                <span className="shrink-0 font-semibold text-[#1c2a1e]">{tk(it.price * it.qty)}</span>
               </li>
             ))}
           </ul>
