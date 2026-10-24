@@ -16,15 +16,15 @@ export default function SectionHeader({ accent, rest, subtitle, showViewAll = tr
         <div className="max-w-xl">
           <h2 className="flex items-center gap-3 text-[1.65rem] font-black leading-tight tracking-tight text-ink sm:text-[2rem]">
             <span className="starburst pop-bob relative inline-flex h-10 w-10 shrink-0 items-center justify-center" aria-hidden>
-              <span className="text-sm font-black text-[#2b1f16]">★</span>
+              <span className="text-sm font-black text-[#0f2438]">★</span>
             </span>
             <span><span className="bg-gradient-to-r from-brand-500 to-brand-700 bg-clip-text text-transparent">{accent}</span> {rest}</span>
           </h2>
           {subtitle && <p className="mt-2.5 text-[15px] leading-relaxed text-mute">{subtitle}</p>}
           <span aria-hidden className="mt-3 flex items-center gap-2">
-            <span className="inline-block h-2.5 w-2.5 rounded-full bg-brand-500 shadow-[0_2px_8px_-1px_rgba(194, 65, 12, 0.7)]" />
-            <span className="inline-block h-2.5 w-2.5 rounded-full bg-popblue-800 shadow-[0_2px_8px_-1px_rgba(43, 31, 22, 0.7)]" />
-            <span className="inline-block h-2.5 w-2.5 rounded-full bg-gold-500 shadow-[0_2px_8px_-1px_rgba(13, 148, 136, 0.7)]" />
+            <span className="inline-block h-2.5 w-2.5 rounded-full bg-brand-500 shadow-[0_2px_8px_-1px_rgba(2, 132, 199, 0.7)]" />
+            <span className="inline-block h-2.5 w-2.5 rounded-full bg-popblue-800 shadow-[0_2px_8px_-1px_rgba(23, 32, 46, 0.7)]" />
+            <span className="inline-block h-2.5 w-2.5 rounded-full bg-gold-500 shadow-[0_2px_8px_-1px_rgba(2, 132, 199, 0.7)]" />
             <span className="zigzag ml-1 w-32" />
           </span>
         </div>
