@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Warm glow drifting over the grove.
+// Cool glacier light drifting over the harbor.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(194,65,12, 0.20)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245,158,11, 0.20)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(22,163,74, 0.16)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(194,65,12, 0.16)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(15,118,110, 0.20)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(14,165,233, 0.20)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(16,185,129, 0.16)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(15,118,110, 0.16)" },
 ];
 
-// Petal flecks rising off the grove floor.
+// Ice flecks rising off the harbor water.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#c2410c" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f59e0b" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#7c2d12" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#16a34a" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#ea580c" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fbbf24" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#15803d" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#0f766e" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#0ea5e9" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#134e4a" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#10b981" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#0d9488" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#38bdf8" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#059669" },
 ];
 
 // Firefly blinks scattered through the light.
@@ -75,8 +75,8 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* warm wash under the grove glow */}
-      <div className="relative bg-gradient-to-b from-[#fff7ed] via-[#ffedd5] to-[#fff7ed]">
+      {/* cool wash under the harbor light */}
+      <div className="relative bg-gradient-to-b from-[#f0fdfa] via-[#ccfbf1] to-[#f0fdfa]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
