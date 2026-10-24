@@ -53,7 +53,7 @@ export default function CheckoutModal({ open, orderPlaced, orderId, form, distri
                 <p className="mt-2 text-[#0b2730]">Dhonnobad, {form.name}! Apnar order confirm hoyeche.</p>
                 <div className="mx-auto mt-4 max-w-xs rounded-lg bg-brand-400/10 p-4 ring-1 ring-brand-400/30"><p className="text-sm text-[#0b2730]">Order ID</p><p className="text-2xl font-black text-brand-700">{orderId}</p><p className="mt-1 text-sm text-[#0b2730]">Payment: {payMethod === "COD" ? "Cash on Delivery" : payMethod} · Delivery to {district}</p></div>
                 <p className="mt-3 text-sm text-[#0b2730]">Amra shighroi phone-e confirm korbo. Tracking link SMS-e pathano hobe.</p>
-                <button onClick={onContinueShopping} className="mt-5 rounded-full bg-gradient-to-r from-brand-500 to-brand-700 px-8 py-3 font-bold text-white shadow-[0_10px_28px_-8px_rgba(12,125,112, 0.4)] transition hover:brightness-110 active:scale-[0.98]">Continue Shopping</button>
+                <button onClick={onContinueShopping} className="mt-5 rounded-full bg-gradient-to-r from-brand-500 to-brand-700 px-8 py-3 font-bold text-white shadow-[0_10px_28px_-8px_rgba(107,55,207, 0.4)] transition hover:brightness-110 active:scale-[0.98]">Continue Shopping</button>
               </div>
             ) : (
               <form onSubmit={onPlaceOrder}>
@@ -81,7 +81,7 @@ export default function CheckoutModal({ open, orderPlaced, orderId, form, distri
                   <div className="flex justify-between"><span>Delivery</span><span className="font-bold">{delivery === 0 ? "FREE" : tk(delivery)}</span></div>
                   <div className="flex justify-between border-t border-[#ecdfc8] pt-2 text-base font-black text-[#0b2730]"><span>Total</span><span className="text-brand-700">{tk(total)}</span></div>
                 </div>
-                <motion.button whileTap={{ scale: 0.98 }} type="submit" className="mt-4 w-full rounded-full bg-gradient-to-r from-brand-500 to-brand-700 py-3.5 font-bold text-white shadow-[0_10px_28px_-8px_rgba(12,125,112, 0.4)] transition hover:brightness-110 active:scale-[0.99]">Place Order • {tk(total)} →</motion.button>
+                <motion.button whileTap={{ scale: 0.98 }} type="submit" className="mt-4 w-full rounded-full bg-gradient-to-r from-brand-500 to-brand-700 py-3.5 font-bold text-white shadow-[0_10px_28px_-8px_rgba(107,55,207, 0.4)] transition hover:brightness-110 active:scale-[0.99]">Place Order • {tk(total)} →</motion.button>
               </form>
             )}
           </motion.div>

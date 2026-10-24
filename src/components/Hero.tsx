@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Kiln heat drifting over the studio floor.
+// Lantern glow drifting over the festival ground.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(56,20,8, 0.18)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(147,54,22, 0.20)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(134,168,78, 0.14)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(56,20,8, 0.14)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(107,55,207, 0.18)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245,158,11, 0.20)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(219,39,119, 0.14)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(107,55,207, 0.14)" },
 ];
 
-// Ember motes rising through the kiln heat.
+// Lantern sparks rising through the festival air.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#0e655b" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#0c7d70" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#032f2b" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#0e655b" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#688d34" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#86a84e" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#a6c374" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#6b37cf" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#7f4de3" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#382068" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#582dab" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#d97e06" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#f59e0b" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#ec4899" },
 ];
 
-// Ember glints scattered through the heat.
+// Lantern glints scattered through the light.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -75,24 +75,24 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* ember wash under the ribbon */}
-      <div className="relative bg-gradient-to-b from-[#edf7f4] via-[#edf7f4] to-[#edf7f4]">
+      {/* marigold wash under the ribbon */}
+      <div className="relative bg-gradient-to-b from-[#faf5ea] via-[#faf5ea] to-[#faf5ea]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
 
-        {/* lantern wash sweeping the market */}
+        {/* lantern wash sweeping the fair */}
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-0 hidden h-[560px] opacity-90 sm:block">
           <div className="pop-drift absolute -left-24 top-6 h-72 w-[52rem] rotate-[-8deg] rounded-full bg-gradient-to-r from-brand-400/35 via-popblue-300/20 to-transparent blur-3xl" />
           <div className="pop-drift absolute -right-24 top-40 h-64 w-[44rem] rotate-[10deg] rounded-full bg-gradient-to-r from-transparent via-gold-300/25 to-brand-400/30 blur-3xl" style={{ animationDelay: "-12s" }} />
         </div>
 
-        {/* ember core: a glowing kiln orb ringed by a slow-spinning ember halo */}
+        {/* festival core: a glowing lantern orb ringed by a slow-spinning paper halo */}
         <div aria-hidden className="pointer-events-none absolute -right-40 -top-32 z-0 hidden opacity-90 sm:block">
           <div className="relative h-[600px] w-[600px]">
             <div className="nebula-core absolute inset-8 rounded-full blur-xl" />
             <div className="sun-rays pop-spin absolute inset-0" />
-            {/* ember rings around the kiln */}
+            {/* paper rings around the lantern */}
             {[0, 1, 2].map((r) => (
               <span
                 key={r}
@@ -100,14 +100,14 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(56,20,8, 0.45), inset 0 0 18px rgba(56,20,8, 0.25)",
+                  boxShadow: "0 0 28px 2px rgba(107,55,207, 0.45), inset 0 0 18px rgba(107,55,207, 0.25)",
                   opacity: 1 - r * 0.22,
                 }}
               />
             ))}
-            {/* the kiln heart: a layered ember disc */}
+            {/* the festival heart: a layered lantern disc */}
             <div className="sun-disc pop-spin absolute inset-44 rounded-full" style={{ animationDuration: "60s" }} />
-            {/* ember glints */}
+            {/* lantern glints */}
             <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
               {[{l:"30%",t:"34%",s:46},{l:"58%",t:"52%",s:34},{l:"44%",t:"66%",s:24},{l:"64%",t:"30%",s:20}].map((glint, i) => (
                 <span key={i} className="absolute rounded-full bg-white/80" style={{ left: glint.l, top: glint.t, width: glint.s, height: glint.s }} />
@@ -121,11 +121,11 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{ width: 26, height: 240, transform: `translate(-50%, -100%) rotate(${b * 120}deg)`, animationDuration: "36s" }}
               />
             ))}
-            {/* glass pearls dancing around the beacon */}
+            {/* glass lanterns dancing around the beacon */}
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#0c7d70", "#0e655b", "#688d34", "#86a84e"];
+              const colors = ["#6b37cf", "#7f4de3", "#f59e0b", "#ec4899"];
               return (
                 <span
                   key={i}
@@ -143,7 +143,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* drifting kiln heat */}
+        {/* drifting lantern glow */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {ORBS.map((g, i) => (
             <div
@@ -154,18 +154,18 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* ember glints */}
+        {/* lantern glints */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {STARS.map((s, i) => (
             <span
               key={i}
-              className="pop-twinkle absolute rounded-full bg-[#0c7d70]"
+              className="pop-twinkle absolute rounded-full bg-[#6b37cf]"
               style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
             />
           ))}
         </div>
 
-        {/* rising ember motes */}
+        {/* rising lantern sparks */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden overflow-hidden sm:block">
           {FLAKES.map((r, i) => (
             <Flake key={i} {...r} />
@@ -176,7 +176,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
-              <div className="rounded-[2rem] bg-gradient-to-r from-brand-400 via-popblue-400 to-gold-400 p-[3px] shadow-[0_24px_56px_-18px_rgba(147,54,22, 0.55)]">
+              <div className="rounded-[2rem] bg-gradient-to-r from-brand-400 via-gold-400 to-popblue-400 p-[3px] shadow-[0_24px_56px_-18px_rgba(107,55,207, 0.55)]">
                 <div className="overflow-hidden rounded-[1.7rem] bg-paper ring-1 ring-ink/30">
                   <BannerCarousel />
                 </div>
@@ -185,8 +185,8 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* ember ticker: dusk band with white type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/60 bg-gradient-to-r from-brand-600/95 via-popblue-600/95 to-brand-700/95 py-3 shadow-[0_14px_30px_-14px_rgba(147,54,22, 0.5)] backdrop-blur">
+        {/* festival ticker: violet band with white type */}
+        <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/60 bg-gradient-to-r from-brand-600/95 via-popblue-600/95 to-brand-700/95 py-3 shadow-[0_14px_30px_-14px_rgba(217,126,6, 0.5)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
@@ -202,7 +202,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div aria-hidden className="zigzag relative z-10 mx-auto mt-0 w-full max-w-7xl opacity-90" />
       </div>
 
-      {/* Stats + featured picks under the ember beacon */}
+      {/* Stats + featured picks under the lantern beacon */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 pb-24 pt-10 md:pb-28">
         <motion.div variants={container} initial="hidden" animate="show" {...anim}>
           <motion.div variants={item} className="grid grid-cols-2 gap-6 sm:grid-cols-4">
@@ -215,7 +215,7 @@ export default function Hero({ onQuickView }: HeroProps) {
               <div key={s.l} className="pop-lift relative overflow-hidden p-4 pb-3 pt-5 text-center">
                 <span className="relative block bg-gradient-to-br from-brand-600 via-gold-600 to-popblue-600 bg-clip-text text-2xl font-black tracking-tight text-transparent">{s.v}</span>
                 <span className="relative mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-mute">{s.l}</span>
-                <span aria-hidden className="relative mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-gold-500 via-gold-400 to-gold-200 shadow-[0_2px_6px_rgba(147,54,22, 0.5)]" />
+                <span aria-hidden className="relative mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-gold-500 via-gold-400 to-gold-200 shadow-[0_2px_6px_rgba(217,126,6, 0.5)]" />
               </div>
             ))}
           </motion.div>

@@ -22,7 +22,7 @@ export default function Footer({ onCategoryChange }: FooterProps) {
     else document.getElementById(target)?.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <footer id="contact" className="relative overflow-hidden bg-[#fae2d0] text-[#032f2b]">
+    <footer id="contact" className="relative overflow-hidden bg-[#fae2d0] text-[#241d3f]">
       <div aria-hidden className="pointer-events-none absolute -top-24 left-1/3 h-64 w-64 rounded-full bg-brand-500/15 blur-[100px]" />
       <div aria-hidden className="pointer-events-none absolute bottom-0 right-1/4 h-56 w-56 rounded-full bg-gold/10 blur-[90px]" />
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-brand-400 to-transparent opacity-60" />
@@ -32,14 +32,14 @@ export default function Footer({ onCategoryChange }: FooterProps) {
           Discover original gadgets, smart devices, audio products, mobile accessories and electronics at competitive prices with nationwide delivery across Bangladesh.
         </p>
         <div className="mt-5 grid gap-3 sm:grid-cols-2">
-          <div className="flex items-center gap-3 rounded-[1.25rem] border border-[#0c7d70]/40 bg-white p-4 shadow-[0_18px_36px_-18px_rgba(147,54,22,0.45)]">
+          <div className="flex items-center gap-3 rounded-[1.25rem] border border-[#6b37cf]/40 bg-white p-4 shadow-[0_18px_36px_-18px_rgba(107,55,207,0.45)]">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-500/20 text-xl ring-1 ring-brand-400/40">💬</span>
             <div>
               <p className="text-xs text-mute">WhatsApp</p>
               <p className="font-bold text-[#0b2730]">+880 1700-000000</p>
             </div>
           </div>
-          <div className="flex items-center gap-3 rounded-[1.25rem] border border-[#0c7d70]/40 bg-white p-4 shadow-[0_18px_36px_-18px_rgba(147,54,22,0.45)]">
+          <div className="flex items-center gap-3 rounded-[1.25rem] border border-[#6b37cf]/40 bg-white p-4 shadow-[0_18px_36px_-18px_rgba(107,55,207,0.45)]">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-500/20 text-xl ring-1 ring-brand-400/40">📞</span>
             <div>
               <p className="text-xs text-mute">Customer Care</p>
@@ -80,7 +80,7 @@ export default function Footer({ onCategoryChange }: FooterProps) {
           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-brand-700">Get in Touch</p>
             <h3 className="mt-1.5 text-lg font-black tracking-tight text-[#0b2730]">We&apos;re Here to Help</h3>
-            <div className="mt-3 rounded-[1.25rem] border border-[#0c7d70]/40 bg-white p-5 shadow-[0_18px_36px_-18px_rgba(147,54,22,0.45)]">
+            <div className="mt-3 rounded-[1.25rem] border border-[#6b37cf]/40 bg-white p-5 shadow-[0_18px_36px_-18px_rgba(107,55,207,0.45)]">
               <p className="text-xs text-mute">Warranty Support</p>
               <p className="mt-1 font-bold text-[#0b2730]">📞 +880 1700-000000</p>
               <p className="mt-1 text-sm">✉️ hello@gadzonebd.example</p>

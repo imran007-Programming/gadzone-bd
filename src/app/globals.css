@@ -1,66 +1,66 @@
 @import "tailwindcss";
 
 @theme {
-  /* Lagoon Night Market: a floating market after the tide comes in.
-     Glacier mist is the canvas, deep ocean is the ink, lagoon teal is
-     the current, sunset coral is the lantern, and seafoam is the spray.
-     Cards are wave tiles with a tide band along the bottom edge;
+  /* Marigold Lantern Festival: an evening fair strung with paper lanterns.
+     Warm ivory is the canvas, deep plum is the ink, violet is the ribbon,
+     marigold amber is the lantern light, and fuchsia is the confetti.
+     Cards are lantern-lit tiles with a ribbon band on their left edge;
      they lift on hover. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = lagoon teal scale */
-  --color-brand-50: #effcf9;
-  --color-brand-100: #c8f6ec;
-  --color-brand-200: #91ebd9;
-  --color-brand-300: #53d8c2;
-  --color-brand-400: #26bca7;
-  --color-brand-500: #0f9a88;
-  --color-brand-600: #0c7d70;
-  --color-brand-700: #0e655b;
-  --color-brand-800: #10524c;
-  --color-brand-900: #104942;
-  --color-brand-950: #032f2b;
-  --color-brand: #0c7d70;
-  --color-brand-dark: #0e655b;
-  --color-brand-deep: #104942;
+  /* brand = violet ribbon scale */
+  --color-brand-50: #f4efff;
+  --color-brand-100: #e9defc;
+  --color-brand-200: #d4c1fa;
+  --color-brand-300: #b995f5;
+  --color-brand-400: #9d6eee;
+  --color-brand-500: #7f4de3;
+  --color-brand-600: #6b37cf;
+  --color-brand-700: #582dab;
+  --color-brand-800: #472788;
+  --color-brand-900: #382068;
+  --color-brand-950: #20123d;
+  --color-brand: #6b37cf;
+  --color-brand-dark: #582dab;
+  --color-brand-deep: #382068;
 
-  /* gold = sunset coral scale (name kept for legacy class refs) */
-  --color-gold-50: #fef4ec;
-  --color-gold-100: #fde6d3;
-  --color-gold-200: #facaa5;
-  --color-gold-300: #f6a66d;
-  --color-gold-400: #f17f3a;
-  --color-gold-500: #ed5f1f;
-  --color-gold-600: #d9480f;
-  --color-gold-700: #b43710;
-  --color-gold-800: #8f2e13;
-  --color-gold-900: #742911;
-  --color-gold-950: #401305;
-  --color-gold: #d9480f;
-  --color-gold-deep: #b43710;
-  --color-gold-soft: #fde6d3;
+  /* gold = marigold amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffaeb;
+  --color-gold-100: #fff1c6;
+  --color-gold-200: #ffe288;
+  --color-gold-300: #ffc94d;
+  --color-gold-400: #ffae1a;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97e06;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #d97e06;
+  --color-gold-deep: #b45309;
+  --color-gold-soft: #fff1c6;
 
-  /* popblue = seafoam scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0f9fb;
-  --color-popblue-100: #dcf0f5;
-  --color-popblue-200: #c0e3ee;
-  --color-popblue-300: #94d2e4;
-  --color-popblue-400: #61b9d5;
-  --color-popblue-500: #3f9fbe;
-  --color-popblue-600: #3384a1;
-  --color-popblue-700: #2c6b83;
-  --color-popblue-800: #2c5b6d;
-  --color-popblue-900: #294f5e;
-  --color-popblue-950: #143442;
-  --color-popblue: #3384a1;
-  --color-popblue-deep: #2c6b83;
-  --color-popblue-soft: #dcf0f5;
+  /* popblue = fuchsia confetti scale (name kept for legacy class refs) */
+  --color-popblue-50: #fdf2f8;
+  --color-popblue-100: #fce7f3;
+  --color-popblue-200: #fbcfe8;
+  --color-popblue-300: #f9a8d4;
+  --color-popblue-400: #f472b6;
+  --color-popblue-500: #ec4899;
+  --color-popblue-600: #db2777;
+  --color-popblue-700: #be185d;
+  --color-popblue-800: #9d174d;
+  --color-popblue-900: #831843;
+  --color-popblue-950: #500724;
+  --color-popblue: #db2777;
+  --color-popblue-deep: #be185d;
+  --color-popblue-soft: #fce7f3;
 
-  --color-ink: #0b2730;
-  --color-paper: #edf7f4;
-  --color-mute: #5f7a7d;
-  --color-card: #ffffff;
-  --color-deep: #06222b;
+  --color-ink: #241d3f;
+  --color-paper: #faf5ea;
+  --color-mute: #6f6589;
+  --color-card: #fffdf7;
+  --color-deep: #171130;
 }
 
 html { scroll-behavior: smooth; }
@@ -75,143 +75,144 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #edf7f4;
+  background-color: #faf5ea;
   background-image:
-    radial-gradient(circle at 50% 40%, rgba(12, 125, 112, 0.10) 1.5px, transparent 1.6px),
-    radial-gradient(ellipse 60% 32% at 92% -8%, rgba(38, 188, 167, 0.16), transparent 70%),
-    radial-gradient(ellipse 52% 34% at 2% 104%, rgba(217, 72, 15, 0.10), transparent 70%),
-    radial-gradient(ellipse 34% 24% at 50% 46%, rgba(63, 159, 190, 0.12), transparent 70%);
+    radial-gradient(circle at 50% 40%, rgba(107, 55, 207, 0.10) 1.5px, transparent 1.6px),
+    radial-gradient(ellipse 60% 32% at 92% -8%, rgba(245, 158, 11, 0.16), transparent 70%),
+    radial-gradient(ellipse 52% 34% at 2% 104%, rgba(219, 39, 119, 0.10), transparent 70%),
+    radial-gradient(ellipse 34% 24% at 50% 46%, rgba(127, 77, 227, 0.10), transparent 70%);
   background-size: 30px 30px, auto, auto, auto;
   background-position: 0 0, 0 0, 0 0, 0 0;
-  color: #0b2730;
+  color: #241d3f;
 }
-::selection { background: #0c7d70; color: #ffffff; }
+::selection { background: #6b37cf; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0f9a88, #ed5f1f); border-radius: 999px; border: 2px solid #edf7f4; }
-::-webkit-scrollbar-track { background: #d7e9e4; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #7f4de3, #f59e0b); border-radius: 999px; border: 2px solid #faf5ea; }
+::-webkit-scrollbar-track { background: #e9dfc9; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Bright, buoyant display type for the night-market voice. */
+/* Warm, festive display type for the lantern fair voice. */
 h1, h2, h3 { letter-spacing: -0.02em; }
 
-/* Rising bubbles: air flecks drifting up through the lagoon. */
+/* Lantern motes: glowing sparks drifting up through the fair air. */
 @keyframes snow-drift {
-  0% { transform: translate3d(0, 8vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
-  14% { opacity: 0.85; }
-  35% { transform: translate3d(14px, -28vh, 0) scale(1) rotate(110deg); }
-  62% { transform: translate3d(-16px, -56vh, 0) scale(0.9) rotate(220deg); }
+  0% { transform: translate3d(0, 6vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
+  14% { opacity: 0.9; }
+  35% { transform: translate3d(-12px, -26vh, 0) scale(1) rotate(-100deg); }
+  62% { transform: translate3d(14px, -54vh, 0) scale(0.9) rotate(-200deg); }
   84% { opacity: 0.55; }
-  100% { transform: translate3d(10px, -90vh, 0) scale(0.75) rotate(330deg); opacity: 0; }
+  100% { transform: translate3d(-8px, -88vh, 0) scale(0.75) rotate(-320deg); opacity: 0; }
 }
-.pop-fall { animation: snow-drift 11s linear infinite; }
+.pop-fall { animation: snow-drift 12s linear infinite; }
 
-/* Tide sway: slow lateral drift of the teal glow. */
+/* Lantern sway: slow lateral drift of the violet glow. */
 @keyframes aurora-sway {
   0%, 100% { transform: translate3d(-2vw, 0, 0) scale(1); opacity: 0.55; }
-  50% { transform: translate3d(2.5vw, 0.6rem, 0) scale(1.06); opacity: 0.85; }
+  50% { transform: translate3d(2.5vw, -0.6rem, 0) scale(1.06); opacity: 0.85; }
 }
-.pop-drift { animation: aurora-sway 26s ease-in-out infinite; }
+.pop-drift { animation: aurora-sway 24s ease-in-out infinite; }
 
-/* Buoy bob: gentle rise and settle of the floating lantern. */
+/* Lantern bob: gentle rise and settle of the hanging lantern. */
 @keyframes glacier-bob {
   0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-10px) scale(1.02); }
+  50% { transform: translateY(-9px) scale(1.03); }
 }
-.pop-bob { animation: glacier-bob 4.8s ease-in-out infinite; }
+.pop-bob { animation: glacier-bob 5.2s ease-in-out infinite; }
 
 /* Slow turn for the lantern wheel. */
 @keyframes polar-wheel {
   to { transform: rotate(360deg); }
 }
-.pop-spin { animation: polar-wheel 58s linear infinite; }
+.pop-spin { animation: polar-wheel 64s linear infinite; }
 
-/* Lantern glint: wavering catchlight on the water. */
+/* Lantern glint: wavering catchlight on the glass. */
 @keyframes frost-glint {
-  0%, 100% { opacity: 0.3; transform: scale(0.85); }
-  50% { opacity: 1; transform: scale(1.2); }
+  0%, 100% { opacity: 0.35; transform: scale(0.85); }
+  50% { opacity: 1; transform: scale(1.25); }
 }
-.pop-twinkle { animation: frost-glint 4.4s ease-in-out infinite; }
+.pop-twinkle { animation: frost-glint 3.8s ease-in-out infinite; }
 
-/* Harbor ticker: infinite marquee (leftward drift). */
+/* Festival ticker: infinite marquee (leftward drift). */
 @keyframes aurora-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
-.pop-ticker { animation: aurora-ticker 28s linear infinite; }
+.pop-ticker { animation: aurora-ticker 26s linear infinite; }
 
-/* Tide bands: teal -> seafoam -> coral diagonal bands. */
+/* Ribbon bands: violet -> marigold -> fuchsia diagonal bands. */
 .pop-stripes {
-  background-image: repeating-linear-gradient(-45deg, #dcf0f5 0 10px, #0f9a88 10px 20px, #ed5f1f 20px 30px, #3f9fbe 30px 40px);
+  background-image: repeating-linear-gradient(-45deg, #fce7f3 0 10px, #7f4de3 10px 20px, #f59e0b 20px 30px, #ec4899 30px 40px);
 }
 
-/* Wave tile: a clean white tile with softly rounded corners and a tide
-   band along its bottom edge; it lifts on hover. */
+/* Lantern tile: a warm ivory tile with softly rounded corners and a
+   ribbon band along its left edge; it lifts on hover. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(11, 39, 48, 0.10);
-  background: #ffffff;
-  border-radius: 1.5rem;
-  box-shadow: 0 1px 2px rgba(11, 39, 48, 0.06), 0 18px 36px -24px rgba(12, 125, 112, 0.45), 0 4px 14px -8px rgba(11, 39, 48, 0.10);
+  border: 1px solid rgba(36, 29, 63, 0.10);
+  background: #fffdf7;
+  border-radius: 1.35rem;
+  box-shadow: 0 1px 2px rgba(36, 29, 63, 0.06), 0 20px 38px -24px rgba(107, 55, 207, 0.45), 0 4px 14px -8px rgba(36, 29, 63, 0.10);
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
   overflow: hidden;
 }
 .pop-lift::after {
-  /* tide band along the tile's bottom edge */
+  /* ribbon band along the tile's left edge */
   content: "";
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
-  right: 0;
-  height: 5px;
-  background: linear-gradient(90deg, #0c7d70, #3f9fbe, #ed5f1f);
-  box-shadow: 0 -2px 12px rgba(38, 188, 167, 0.45);
+  bottom: 0;
+  width: 6px;
+  background: linear-gradient(180deg, #6b37cf, #ec4899, #f59e0b);
+  box-shadow: 2px 0 12px rgba(245, 158, 11, 0.45);
   pointer-events: none;
 }
 .pop-lift:hover {
-  transform: translateY(-7px);
-  border-color: rgba(12, 125, 112, 0.45);
-  box-shadow: 0 1px 2px rgba(11, 39, 48, 0.06), 0 30px 54px -24px rgba(12, 125, 112, 0.50), 0 10px 22px -8px rgba(217, 72, 15, 0.22);
+  transform: translateY(-7px) rotate(-0.4deg);
+  border-color: rgba(107, 55, 207, 0.45);
+  box-shadow: 0 1px 2px rgba(36, 29, 63, 0.06), 0 32px 56px -24px rgba(107, 55, 207, 0.50), 0 10px 22px -8px rgba(245, 158, 11, 0.28);
 }
 
-/* Lagoon glass: shared by modals and drawers — a deep-ocean pane with a teal rim. */
+/* Lantern glass: shared by modals and drawers — a deep-plum pane with an amber rim. */
 .pop-glass {
-  background: rgba(6, 34, 43, 0.90);
+  background: rgba(23, 17, 48, 0.92);
   backdrop-filter: blur(22px) saturate(1.25);
   -webkit-backdrop-filter: blur(22px) saturate(1.25);
-  border: 1px solid rgba(38, 188, 167, 0.35);
+  border: 1px solid rgba(245, 158, 11, 0.35);
   border-radius: 1.4rem;
-  box-shadow: 0 30px 60px -24px rgba(12, 125, 112, 0.55);
+  box-shadow: 0 30px 60px -24px rgba(107, 55, 207, 0.55);
 }
 
-/* Harbor ring: a lagoon seal with a dashed white wake ring. */
+/* Lantern medallion: a marigold seal with a dashed white festival ring. */
 .starburst {
-  background: radial-gradient(circle at 35% 30%, #53d8c2 0%, #0c7d70 58%, #032f2b 100%);
-  color: #effcf9;
-  text-shadow: 0 1px 2px rgba(3, 47, 43, 0.7);
+  background: radial-gradient(circle at 35% 30%, #ffc94d 0%, #d97e06 58%, #451a03 100%);
+  color: #fffaeb;
+  text-shadow: 0 1px 2px rgba(69, 26, 3, 0.7);
   border-radius: 9999px;
-  transform: rotate(-8deg);
-  box-shadow: 0 10px 24px -8px rgba(12, 125, 112, 0.7), inset 0 2px 6px rgba(255, 255, 255, 0.40);
-  outline: 2px dashed rgba(239, 252, 249, 0.9);
+  transform: rotate(8deg);
+  box-shadow: 0 10px 24px -8px rgba(217, 126, 6, 0.7), inset 0 2px 6px rgba(255, 255, 255, 0.45);
+  outline: 2px dashed rgba(255, 250, 235, 0.9);
   outline-offset: -6px;
-  border: 1px solid rgba(14, 101, 91, 0.6);
+  border: 1px solid rgba(180, 83, 9, 0.6);
 }
 
-/* Seafoam speckle: faint teal dots for market bands. */
+/* Marigold speckle: faint violet dots for festival bands. */
 .halftone {
   background-image:
-    linear-gradient(rgba(12, 125, 112, 0.10) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(12, 125, 112, 0.10) 1px, transparent 1px);
+    linear-gradient(rgba(107, 55, 207, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(107, 55, 207, 0.12) 1px, transparent 1px);
   background-size: 26px 26px;
   background-position: 0 0, 0 0;
 }
 
-/* Wave divider: a row of teal and coral ripples dividing sections. */
+/* Confetti divider: a row of amber, violet and fuchsia dots dividing sections. */
 .zigzag {
   height: 20px;
   background-image:
-    radial-gradient(circle at 18px 12px, rgba(12, 125, 112, 0.55) 4px, transparent 5px),
-    radial-gradient(circle at 36px 8px, rgba(217, 72, 15, 0.50) 2.5px, transparent 3.5px);
+    radial-gradient(circle at 18px 12px, rgba(245, 158, 11, 0.65) 4px, transparent 5px),
+    radial-gradient(circle at 36px 8px, rgba(107, 55, 207, 0.60) 2.5px, transparent 3.5px),
+    radial-gradient(circle at 45px 13px, rgba(219, 39, 119, 0.55) 2px, transparent 3px);
   background-size: 54px 20px;
   background-repeat: repeat-x;
   opacity: 0.9;
@@ -219,35 +220,35 @@ h1, h2, h3 { letter-spacing: -0.02em; }
   mask: linear-gradient(180deg, black 65%, transparent 100%);
 }
 
-/* Harbor awning: teal/seafoam/coral glow band with a shaded canopy. */
+/* Festival awning: violet/marigold/fuchsia glow band with a shaded canopy. */
 .bazaar-awning {
   background-image: linear-gradient(90deg,
-    rgba(12, 125, 112, 0.92) 0%,
-    rgba(38, 188, 167, 0.78) 30%,
-    rgba(237, 95, 31, 0.62) 62%,
-    rgba(6, 34, 43, 0.88) 100%);
-  box-shadow: 0 6px 22px -6px rgba(12, 125, 112, 0.62);
+    rgba(107, 55, 207, 0.92) 0%,
+    rgba(245, 158, 11, 0.78) 30%,
+    rgba(236, 72, 153, 0.62) 62%,
+    rgba(23, 17, 48, 0.88) 100%);
+  box-shadow: 0 6px 22px -6px rgba(107, 55, 207, 0.62);
 }
 
-/* Lagoon aura: layered teal/seafoam/coral glow for the core halo. */
+/* Lantern aura: layered violet/fuchsia/amber glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(38, 188, 167, 0.42) 0%, rgba(12, 125, 112, 0.28) 42%, rgba(63, 159, 190, 0.18) 62%, rgba(63, 159, 190, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(245, 158, 11, 0.40) 0%, rgba(127, 77, 227, 0.28) 42%, rgba(236, 72, 153, 0.18) 62%, rgba(236, 72, 153, 0) 76%);
 }
-/* Harbor lantern: a glowing seafoam sphere with a teal halo. */
+/* Festival lantern: a glowing marigold sphere with a violet halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #f0f9fb 0%, #94d2e4 52%, #0c7d70 100%);
-  box-shadow: 0 0 70px -8px rgba(12, 125, 112, 0.55), 0 0 28px -6px rgba(63, 159, 190, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.50);
-  border: 1px solid rgba(14, 101, 91, 0.42);
+    radial-gradient(circle at 38% 34%, #fff1c6 0%, #f59e0b 52%, #7f4de3 100%);
+  box-shadow: 0 0 70px -8px rgba(245, 158, 11, 0.55), 0 0 28px -6px rgba(127, 77, 227, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.50);
+  border: 1px solid rgba(180, 83, 9, 0.42);
 }
 
-/* Lantern rings around the lagoon orb. */
+/* Lantern rings around the festival orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(12, 125, 112, 0.40) 0px,
-    rgba(12, 125, 112, 0.40) 3px,
+    rgba(127, 77, 227, 0.40) 0px,
+    rgba(127, 77, 227, 0.40) 3px,
     transparent 3px,
     transparent 28px
   );
@@ -258,8 +259,8 @@ h1, h2, h3 { letter-spacing: -0.02em; }
 .sun-rays {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(217, 72, 15, 0.40) 0px,
-    rgba(217, 72, 15, 0.40) 3px,
+    rgba(245, 158, 11, 0.40) 0px,
+    rgba(245, 158, 11, 0.40) 3px,
     transparent 3px,
     transparent 28px
   );
