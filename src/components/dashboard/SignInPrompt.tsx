@@ -13,7 +13,7 @@ export default function SignInPrompt({ title, text, callbackUrl }: SignInPromptP
   return (
     <div className="mx-auto max-w-md rounded-lg bg-white p-8 text-center shadow-sm ring-1 ring-[#e3e7ef]">
       <p className="text-4xl" aria-hidden="true">👋</p>
-      <h1 className="mt-3 text-2xl font-black text-[#14261b]">{title}</h1>
+      <h1 className="mt-3 text-2xl font-black text-[#1e1b4b]">{title}</h1>
       <p className="mt-2 text-sm text-[#64748b]">{text}</p>
       <button
         onClick={() => signIn("google", { callbackUrl })}
