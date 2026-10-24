@@ -1,66 +1,66 @@
 @import "tailwindcss";
 
 @theme {
-  /* Glacier Circuit: arctic light over a polar shop floor. Pale ice-blue is
-     the canvas, glacier navy is the ink, sky blue is the brand current,
-     aurora cyan is the electric pop, and frost mint is the fresh signal.
-     Cards are frosted ice panels with an aurora hairline on the top edge
-     and a chamfered top-right corner; they rise straight up on hover. */
+  /* Ember Spice Bazaar: a dusk-lit spice market. Warm cream is the canvas,
+     roasted cocoa is the ink, burnt orange is the brand current,
+     marigold is the lantern pop, and deep plum is the dusk shadow.
+     Cards are stamped paper panels with an ember ember-stripe on the top
+     edge and softly rounded corners; they rise straight up on hover. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = glacier sky scale */
-  --color-brand-50: #f0f9ff;
-  --color-brand-100: #e0f2fe;
-  --color-brand-200: #bae6fd;
-  --color-brand-300: #7dd3fc;
-  --color-brand-400: #38bdf8;
-  --color-brand-500: #0ea5e9;
-  --color-brand-600: #0284c7;
-  --color-brand-700: #0369a1;
-  --color-brand-800: #075985;
-  --color-brand-900: #0c4a6e;
-  --color-brand-950: #082f49;
-  --color-brand: #0284c7;
-  --color-brand-dark: #0369a1;
-  --color-brand-deep: #0c4a6e;
+  /* brand = burnt orange scale */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-brand-950: #431407;
+  --color-brand: #ea580c;
+  --color-brand-dark: #c2410c;
+  --color-brand-deep: #7c2d12;
 
-  /* gold = aurora cyan scale (name kept for legacy class refs) */
-  --color-gold-50: #ecfeff;
-  --color-gold-100: #cffafe;
-  --color-gold-200: #a5f3fc;
-  --color-gold-300: #67e8f9;
-  --color-gold-400: #22d3ee;
-  --color-gold-500: #06b6d4;
-  --color-gold-600: #0891b2;
-  --color-gold-700: #0e7490;
-  --color-gold-800: #155e75;
-  --color-gold-900: #164e63;
-  --color-gold-950: #083344;
-  --color-gold: #0891b2;
-  --color-gold-deep: #0e7490;
-  --color-gold-soft: #cffafe;
+  /* gold = marigold scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #d97706;
+  --color-gold-deep: #b45309;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = frost mint scale (name kept for legacy class refs) */
-  --color-popblue-50: #ecfdf5;
-  --color-popblue-100: #d1fae5;
-  --color-popblue-200: #a7f3d0;
-  --color-popblue-300: #6ee7b7;
-  --color-popblue-400: #34d399;
-  --color-popblue-500: #10b981;
-  --color-popblue-600: #059669;
-  --color-popblue-700: #047857;
-  --color-popblue-800: #065f46;
-  --color-popblue-900: #064e3b;
-  --color-popblue-950: #022c22;
-  --color-popblue: #059669;
-  --color-popblue-deep: #047857;
-  --color-popblue-soft: #d1fae5;
+  /* popblue = deep plum scale (name kept for legacy class refs) */
+  --color-popblue-50: #fdf4f7;
+  --color-popblue-100: #fce7f1;
+  --color-popblue-200: #fbcfe3;
+  --color-popblue-300: #f9a8cc;
+  --color-popblue-400: #f472a8;
+  --color-popblue-500: #ec4899;
+  --color-popblue-600: #db2777;
+  --color-popblue-700: #be185d;
+  --color-popblue-800: #9d174d;
+  --color-popblue-900: #831843;
+  --color-popblue-950: #500724;
+  --color-popblue: #be185d;
+  --color-popblue-deep: #9d174d;
+  --color-popblue-soft: #fce7f1;
 
-  --color-ink: #0f2438;
-  --color-paper: #eef4f9;
-  --color-mute: #647f95;
-  --color-card: #ffffff;
-  --color-deep: #071a2b;
+  --color-ink: #2a1a12;
+  --color-paper: #faf5ec;
+  --color-mute: #8a6d5a;
+  --color-card: #fffdf8;
+  --color-deep: #1f0f08;
 }
 
 html { scroll-behavior: smooth; }
@@ -75,145 +75,146 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #eef4f9;
+  background-color: #faf5ec;
   background-image:
-    radial-gradient(circle at 50% 40%, rgba(2, 132, 199, 0.10) 1.5px, transparent 1.6px),
-    radial-gradient(ellipse 60% 32% at 90% -8%, rgba(6, 182, 214, 0.18), transparent 70%),
-    radial-gradient(ellipse 52% 34% at 4% 106%, rgba(5, 150, 105, 0.12), transparent 70%),
-    radial-gradient(ellipse 34% 24% at 52% 48%, rgba(56, 189, 248, 0.08), transparent 70%);
+    radial-gradient(circle at 50% 40%, rgba(234, 88, 12, 0.10) 1.5px, transparent 1.6px),
+    radial-gradient(ellipse 60% 32% at 90% -8%, rgba(245, 158, 11, 0.20), transparent 70%),
+    radial-gradient(ellipse 52% 34% at 4% 106%, rgba(190, 24, 93, 0.10), transparent 70%),
+    radial-gradient(ellipse 34% 24% at 52% 48%, rgba(251, 146, 60, 0.10), transparent 70%);
   background-size: 26px 26px, auto, auto, auto;
   background-position: 0 0, 0 0, 0 0, 0 0;
-  color: #0f2438;
+  color: #2a1a12;
 }
-::selection { background: #0284c7; color: #f0f9ff; }
+::selection { background: #ea580c; color: #fff7ed; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #38bdf8, #059669); border-radius: 999px; border: 2px solid #eef4f9; }
-::-webkit-scrollbar-track { background: #d3e8f5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #fb923c, #be185d); border-radius: 999px; border: 2px solid #faf5ec; }
+::-webkit-scrollbar-track { background: #f0dfc9; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Crisp, high-contrast display type for the glacier voice. */
+/* Warm, confident display type for the bazaar voice. */
 h1, h2, h3 { letter-spacing: -0.02em; }
 
-/* Snowfall: ice crystals drifting down through the polar air. */
+/* Spice motes: toasted flecks drifting up through the lantern air. */
 @keyframes snow-drift {
-  0% { transform: translate3d(0, -6vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(0, 6vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
   14% { opacity: 0.9; }
-  35% { transform: translate3d(-18px, 30vh, 0) scale(1) rotate(140deg); }
-  62% { transform: translate3d(16px, 58vh, 0) scale(0.9) rotate(240deg); }
+  35% { transform: translate3d(-18px, -30vh, 0) scale(1) rotate(140deg); }
+  62% { transform: translate3d(16px, -58vh, 0) scale(0.9) rotate(240deg); }
   84% { opacity: 0.6; }
-  100% { transform: translate3d(-10px, 92vh, 0) scale(0.8) rotate(360deg); opacity: 0; }
+  100% { transform: translate3d(-10px, -92vh, 0) scale(0.8) rotate(360deg); opacity: 0; }
 }
 .pop-fall { animation: snow-drift 12s linear infinite; }
 
-/* Aurora sway: slow lateral drift of the polar glow. */
+/* Lantern sway: slow lateral drift of the warm glow. */
 @keyframes aurora-sway {
   0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(3vw, 0.8rem, 0) scale(1.08); opacity: 0.8; }
 }
 .pop-drift { animation: aurora-sway 28s ease-in-out infinite; }
 
-/* Glacier bob: gentle rise and settle of the ice surface. */
+/* Lantern bob: gentle rise and settle of the hanging light. */
 @keyframes glacier-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-12px) scale(1.03); }
 }
 .pop-bob { animation: glacier-bob 4.6s ease-in-out infinite; }
 
-/* Slow turn for the polar dial. */
+/* Slow turn for the spice wheel. */
 @keyframes polar-wheel {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: polar-wheel 52s linear infinite; }
 
-/* Frost glint: wavering catchlight on the ice. */
+/* Ember glint: wavering catchlight on the coals. */
 @keyframes frost-glint {
   0%, 100% { opacity: 0.35; transform: scale(0.85); }
   50% { opacity: 1; transform: scale(1.25); }
 }
 .pop-twinkle { animation: frost-glint 4.1s ease-in-out infinite; }
 
-/* Aurora ticker: infinite marquee (leftward drift). */
+/* Ember ticker: infinite marquee (leftward drift). */
 @keyframes aurora-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: aurora-ticker 26s linear infinite; }
 
-/* Frost stripes: sky -> aurora -> mint diagonal stripes. */
+/* Ember stripes: marigold -> orange -> plum diagonal stripes. */
 .pop-stripes {
-  background-image: repeating-linear-gradient(-45deg, #ecfeff 0 10px, #0284c7 10px 20px, #06b6d4 20px 30px, #059669 30px 40px);
+  background-image: repeating-linear-gradient(-45deg, #fef3c7 0 10px, #ea580c 10px 20px, #f59e0b 20px 30px, #be185d 30px 40px);
 }
 
-/* Frosted ice panel: white panel with an aurora hairline on its top edge
-   and a chamfered top-right corner; it rises straight up on hover. */
+/* Stamped paper panel: warm cream panel with an ember stripe on its top
+   edge and softly rounded corners; it rises straight up on hover. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(2, 132, 199, 0.22);
-  background: #ffffff;
+  border: 2px solid rgba(124, 45, 18, 0.28);
+  background: #fffdf8;
   border-radius: 1.25rem;
-  border-top-right-radius: 0.35rem;
-  box-shadow: 0 18px 36px -24px rgba(2, 132, 199, 0.45), 0 4px 14px -8px rgba(7, 26, 43, 0.12);
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  box-shadow: 6px 6px 0 -1px rgba(124, 45, 18, 0.18), 0 18px 36px -24px rgba(234, 88, 12, 0.40), 0 4px 14px -8px rgba(42, 26, 18, 0.14);
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
   overflow: hidden;
 }
 .pop-lift::before {
-  /* aurora hairline along the panel's top edge */
+  /* ember stripe along the panel's top edge */
   content: "";
   position: absolute;
   top: 0;
-  left: 12%;
-  right: 12%;
-  height: 4px;
+  left: 10%;
+  right: 10%;
+  height: 5px;
   border-radius: 0 0 999px 999px;
-  background: linear-gradient(90deg, #0284c7, #06b6d4, #059669);
-  box-shadow: 0 2px 10px rgba(6, 182, 214, 0.55);
+  background: linear-gradient(90deg, #ea580c, #f59e0b, #be185d);
+  box-shadow: 0 2px 10px rgba(234, 88, 12, 0.55);
   pointer-events: none;
 }
 .pop-lift:hover {
   transform: translateY(-7px);
-  border-color: rgba(2, 132, 199, 0.5);
-  box-shadow: 0 30px 54px -24px rgba(2, 132, 199, 0.58), 0 10px 22px -8px rgba(6, 182, 214, 0.32);
+  border-color: rgba(234, 88, 12, 0.55);
+  box-shadow: 8px 8px 0 -1px rgba(234, 88, 12, 0.28), 0 30px 54px -24px rgba(234, 88, 12, 0.52), 0 10px 22px -8px rgba(245, 158, 11, 0.32);
 }
 
-/* Frost glass: shared by modals and drawers — a cool pane with a sky rim. */
+/* Warm glass: shared by modals and drawers — a lantern pane with an ember rim. */
 .pop-glass {
-  background: rgba(238, 244, 249, 0.92);
+  background: rgba(250, 245, 236, 0.92);
   backdrop-filter: blur(22px) saturate(1.25);
   -webkit-backdrop-filter: blur(22px) saturate(1.25);
-  border: 1px solid rgba(2, 132, 199, 0.35);
+  border: 1px solid rgba(234, 88, 12, 0.35);
   border-radius: 1.4rem;
-  box-shadow: 0 30px 60px -24px rgba(2, 132, 199, 0.5);
+  box-shadow: 0 30px 60px -24px rgba(234, 88, 12, 0.5);
 }
 
-/* Ice shard: a frost-stamped badge with glacier type. */
+/* Ember seal: a coal-stamped badge with bazaar type. */
 .starburst {
-  background: radial-gradient(circle at 35% 30%, #7dd3fc 0%, #0284c7 55%, #082f49 100%);
-  color: #f0f9ff;
-  text-shadow: 0 1px 2px rgba(8, 47, 73, 0.6);
+  background: radial-gradient(circle at 35% 30%, #fbbf24 0%, #ea580c 55%, #7c2d12 100%);
+  color: #fff7ed;
+  text-shadow: 0 1px 2px rgba(67, 20, 7, 0.6);
   border-radius: 9999px;
   transform: rotate(-6deg);
-  box-shadow: 0 10px 24px -8px rgba(2, 132, 199, 0.7), inset 0 2px 6px rgba(255, 255, 255, 0.45);
-  outline: 2px dashed rgba(240, 249, 255, 0.9);
+  box-shadow: 0 10px 24px -8px rgba(234, 88, 12, 0.7), inset 0 2px 6px rgba(255, 255, 255, 0.45);
+  outline: 2px dashed rgba(255, 247, 237, 0.9);
   outline-offset: -6px;
-  border: 1px solid rgba(3, 105, 161, 0.6);
+  border: 1px solid rgba(194, 65, 12, 0.6);
 }
 
-/* Ice grid: faint cool lines for merchant bands. */
+/* Spice grid: faint warm lines for merchant bands. */
 .halftone {
   background-image:
-    linear-gradient(rgba(2, 132, 199, 0.10) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(2, 132, 199, 0.10) 1px, transparent 1px);
+    linear-gradient(rgba(234, 88, 12, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(234, 88, 12, 0.10) 1px, transparent 1px);
   background-size: 22px 22px;
   background-position: 0 0, 0 0;
 }
 
-/* Frost wave: a row of pale ice sparkles dividing sections. */
+/* Ember sparkle: a row of warm spice flecks dividing sections. */
 .zigzag {
   height: 20px;
   background-image:
-    radial-gradient(circle at 18px 12px, rgba(2, 132, 199, 0.55) 4px, transparent 5px),
-    radial-gradient(circle at 36px 8px, rgba(6, 182, 214, 0.45) 2.5px, transparent 3.5px);
+    radial-gradient(circle at 18px 12px, rgba(234, 88, 12, 0.55) 4px, transparent 5px),
+    radial-gradient(circle at 36px 8px, rgba(245, 158, 11, 0.45) 2.5px, transparent 3.5px);
   background-size: 54px 20px;
   background-repeat: repeat-x;
   opacity: 0.9;
@@ -221,35 +222,35 @@ h1, h2, h3 { letter-spacing: -0.02em; }
   mask: linear-gradient(180deg, black 65%, transparent 100%);
 }
 
-/* Aurora awning: sky/aurora/mint glow band with a cool shade. */
+/* Ember awning: orange/marigold/plum glow band with a warm shade. */
 .bazaar-awning {
   background-image: linear-gradient(90deg,
-    rgba(2, 132, 199, 0.92) 0%,
-    rgba(56, 189, 248, 0.78) 30%,
-    rgba(52, 211, 153, 0.70) 62%,
-    rgba(8, 47, 73, 0.88) 100%);
-  box-shadow: 0 6px 22px -6px rgba(2, 132, 199, 0.62);
+    rgba(234, 88, 12, 0.92) 0%,
+    rgba(251, 146, 60, 0.78) 30%,
+    rgba(251, 191, 36, 0.70) 62%,
+    rgba(80, 7, 36, 0.88) 100%);
+  box-shadow: 0 6px 22px -6px rgba(234, 88, 12, 0.62);
 }
 
-/* Aurora aura: layered sky/aurora/mint glow for the core halo. */
+/* Ember aura: layered orange/marigold/plum glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(56, 189, 248, 0.45) 0%, rgba(2, 132, 199, 0.30) 42%, rgba(5, 150, 105, 0.20) 62%, rgba(5, 150, 105, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(251, 146, 60, 0.45) 0%, rgba(234, 88, 12, 0.30) 42%, rgba(190, 24, 93, 0.20) 62%, rgba(190, 24, 93, 0) 76%);
 }
-/* Glacier sun: a pale ice orb with an aurora halo. */
+/* Lantern sun: a warm ember orb with a marigold halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #ecfeff 0%, #67e8f9 52%, #0284c7 100%);
-  box-shadow: 0 0 70px -8px rgba(2, 132, 199, 0.55), 0 0 28px -6px rgba(6, 182, 214, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.55);
-  border: 1px solid rgba(3, 105, 161, 0.42);
+    radial-gradient(circle at 38% 34%, #fef3c7 0%, #fbbf24 52%, #ea580c 100%);
+  box-shadow: 0 0 70px -8px rgba(234, 88, 12, 0.55), 0 0 28px -6px rgba(245, 158, 11, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(194, 65, 12, 0.42);
 }
 
-/* Frost rings around the glacier sun. */
+/* Ember rings around the lantern sun. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(2, 132, 199, 0.42) 0px,
-    rgba(2, 132, 199, 0.42) 3px,
+    rgba(234, 88, 12, 0.42) 0px,
+    rgba(234, 88, 12, 0.42) 3px,
     transparent 3px,
     transparent 28px
   );
@@ -260,8 +261,8 @@ h1, h2, h3 { letter-spacing: -0.02em; }
 .sun-rays {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(6, 182, 214, 0.42) 0px,
-    rgba(6, 182, 214, 0.42) 3px,
+    rgba(245, 158, 11, 0.42) 0px,
+    rgba(245, 158, 11, 0.42) 3px,
     transparent 3px,
     transparent 28px
   );
@@ -270,14 +271,15 @@ h1, h2, h3 { letter-spacing: -0.02em; }
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all glacier styled. */
+/* Legacy aliases kept so untouched components still render — all ember styled. */
 .lagoon-lift {
   position: relative;
-  border: 1px solid rgba(2, 132, 199, 0.22);
-  background: #ffffff;
+  border: 2px solid rgba(124, 45, 18, 0.28);
+  background: #fffdf8;
   border-radius: 1.25rem;
-  border-top-right-radius: 0.35rem;
-  box-shadow: 0 18px 36px -24px rgba(2, 132, 199, 0.45), 0 4px 14px -8px rgba(7, 26, 43, 0.12);
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  box-shadow: 6px 6px 0 -1px rgba(124, 45, 18, 0.18), 0 18px 36px -24px rgba(234, 88, 12, 0.40), 0 4px 14px -8px rgba(42, 26, 18, 0.14);
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
   overflow: hidden;
 }
@@ -285,61 +287,61 @@ h1, h2, h3 { letter-spacing: -0.02em; }
   content: "";
   position: absolute;
   top: 0;
-  left: 12%;
-  right: 12%;
-  height: 4px;
+  left: 10%;
+  right: 10%;
+  height: 5px;
   border-radius: 0 0 999px 999px;
-  background: linear-gradient(90deg, #0284c7, #06b6d4, #059669);
-  box-shadow: 0 2px 10px rgba(6, 182, 214, 0.55);
+  background: linear-gradient(90deg, #ea580c, #f59e0b, #be185d);
+  box-shadow: 0 2px 10px rgba(234, 88, 12, 0.55);
   pointer-events: none;
 }
 .lagoon-lift:hover {
   transform: translateY(-7px);
-  border-color: rgba(2, 132, 199, 0.5);
-  box-shadow: 0 30px 54px -24px rgba(2, 132, 199, 0.58), 0 10px 22px -8px rgba(6, 182, 214, 0.32);
+  border-color: rgba(234, 88, 12, 0.55);
+  box-shadow: 8px 8px 0 -1px rgba(234, 88, 12, 0.28), 0 30px 54px -24px rgba(234, 88, 12, 0.52), 0 10px 22px -8px rgba(245, 158, 11, 0.32);
 }
 .stamp-perf {
-  border: 2px dashed rgba(3, 105, 161, 0.55);
-  background: rgba(2, 132, 199, 0.08);
+  border: 2px dashed rgba(194, 65, 12, 0.55);
+  background: rgba(234, 88, 12, 0.08);
   border-radius: 1.25rem;
-  box-shadow: 0 20px 42px -22px rgba(2, 132, 199, 0.45);
+  box-shadow: 0 20px 42px -22px rgba(234, 88, 12, 0.45);
 }
 .ember-glow {
   position: relative;
-  border: 1px solid rgba(2, 132, 199, 0.22);
-  background: linear-gradient(165deg, #f0f9ff 0%, #ffffff 60%, #cffafe 100%);
+  border: 2px solid rgba(234, 88, 12, 0.28);
+  background: linear-gradient(165deg, #fff7ed 0%, #fffdf8 60%, #fef3c7 100%);
   border-radius: 1.25rem;
-  box-shadow: 0 18px 36px -24px rgba(2, 132, 199, 0.45), 0 4px 14px -8px rgba(7, 26, 43, 0.12);
+  box-shadow: 6px 6px 0 -1px rgba(124, 45, 18, 0.18), 0 18px 36px -24px rgba(234, 88, 12, 0.40), 0 4px 14px -8px rgba(42, 26, 18, 0.14);
   transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
   transform: translateY(-7px);
-  box-shadow: 0 30px 54px -24px rgba(2, 132, 199, 0.58), 0 10px 22px -8px rgba(6, 182, 214, 0.32);
+  box-shadow: 8px 8px 0 -1px rgba(234, 88, 12, 0.28), 0 30px 54px -24px rgba(234, 88, 12, 0.52), 0 10px 22px -8px rgba(245, 158, 11, 0.32);
 }
 .ripple-glow {
   position: relative;
-  border: 1px solid rgba(5, 150, 105, 0.30);
-  background: linear-gradient(165deg, #d1fae5 0%, #ffffff 60%, #cffafe 100%);
+  border: 2px solid rgba(190, 24, 93, 0.30);
+  background: linear-gradient(165deg, #fce7f1 0%, #fffdf8 60%, #fef3c7 100%);
   border-radius: 1.25rem;
-  box-shadow: 0 18px 36px -24px rgba(5, 150, 105, 0.40), 0 4px 14px -8px rgba(7, 26, 43, 0.12);
+  box-shadow: 6px 6px 0 -1px rgba(124, 45, 18, 0.18), 0 18px 36px -24px rgba(190, 24, 93, 0.40), 0 4px 14px -8px rgba(42, 26, 18, 0.14);
   transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
   transform: translateY(-7px);
-  box-shadow: 0 30px 54px -24px rgba(5, 150, 105, 0.52), 0 10px 22px -8px rgba(7, 26, 43, 0.12);
+  box-shadow: 8px 8px 0 -1px rgba(190, 24, 93, 0.28), 0 30px 54px -24px rgba(190, 24, 93, 0.52), 0 10px 22px -8px rgba(42, 26, 18, 0.14);
 }
 .lagoon-glow {
   position: relative;
-  border: 1px solid rgba(2, 132, 199, 0.22);
-  background: linear-gradient(165deg, #f0f9ff 0%, #ffffff 60%, #cffafe 100%);
+  border: 2px solid rgba(234, 88, 12, 0.28);
+  background: linear-gradient(165deg, #fff7ed 0%, #fffdf8 60%, #fef3c7 100%);
   border-radius: 1.25rem;
-  box-shadow: 0 18px 36px -24px rgba(2, 132, 199, 0.45), 0 4px 14px -8px rgba(7, 26, 43, 0.12);
+  box-shadow: 6px 6px 0 -1px rgba(124, 45, 18, 0.18), 0 18px 36px -24px rgba(234, 88, 12, 0.40), 0 4px 14px -8px rgba(42, 26, 18, 0.14);
   transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
   transform: translateY(-7px);
-  box-shadow: 0 30px 54px -24px rgba(2, 132, 199, 0.58), 0 10px 22px -8px rgba(6, 182, 214, 0.32);
+  box-shadow: 8px 8px 0 -1px rgba(234, 88, 12, 0.28), 0 30px 54px -24px rgba(234, 88, 12, 0.52), 0 10px 22px -8px rgba(245, 158, 11, 0.32);
 }
