@@ -1,66 +1,65 @@
 @import "tailwindcss";
 
 @theme {
-  /* Kiln Fired: a ceramics studio at noon.
-     Warm bone is the raw clay, cobalt is the glaze, molten copper is the
-     kiln fire, kiln berry is the maker's stamp. Cards are fired tiles with
-     a hard offset shadow and a mosaic seam along their bottom edge; they
-     press into the shelf on hover. */
+  /* Citrus Grove: a morning orchard at first light.
+     Deep pine is the grove, jade is the canopy, lemon is the fruit,
+     lime is the fresh leaf. Cards are soft fruit-crate panels with a
+     rounded leaf-green rim; they lift gently on hover. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = cobalt glaze scale */
-  --color-brand-50: #eef4ff;
-  --color-brand-100: #dbe7fe;
-  --color-brand-200: #bfd4fe;
-  --color-brand-300: #93b4fd;
-  --color-brand-400: #608dfa;
-  --color-brand-500: #3b66f6;
-  --color-brand-600: #2549eb;
-  --color-brand-700: #1d4ed8;
-  --color-brand-800: #1e40af;
-  --color-brand-900: #1e3a8a;
-  --color-brand-950: #172554;
-  --color-brand: #1d4ed8;
-  --color-brand-dark: #1e40af;
-  --color-brand-deep: #1e3a8a;
+  /* brand = jade canopy scale */
+  --color-brand-50: #effaf3;
+  --color-brand-100: #d7f2e1;
+  --color-brand-200: #b2e4c6;
+  --color-brand-300: #7ed0a4;
+  --color-brand-400: #4ab67f;
+  --color-brand-500: #229a64;
+  --color-brand-600: #137c4f;
+  --color-brand-700: #116340;
+  --color-brand-800: #115035;
+  --color-brand-900: #0f422d;
+  --color-brand-950: #062418;
+  --color-brand: #137c4f;
+  --color-brand-dark: #116340;
+  --color-brand-deep: #0f422d;
 
-  /* gold = molten copper scale (name kept for legacy class refs) */
-  --color-gold-50: #fff7ed;
-  --color-gold-100: #ffedd5;
-  --color-gold-200: #fed7aa;
-  --color-gold-300: #fdba74;
-  --color-gold-400: #fb923c;
-  --color-gold-500: #f97316;
-  --color-gold-600: #ea580c;
-  --color-gold-700: #c2410c;
-  --color-gold-800: #9a3412;
-  --color-gold-900: #7c2d12;
-  --color-gold-950: #431407;
-  --color-gold: #ea580c;
-  --color-gold-deep: #c2410c;
-  --color-gold-soft: #ffedd5;
+  /* gold = lemon scale (name kept for legacy class refs) */
+  --color-gold-50: #fefce8;
+  --color-gold-100: #fef9c3;
+  --color-gold-200: #fef08a;
+  --color-gold-300: #fde047;
+  --color-gold-400: #facc15;
+  --color-gold-500: #eab308;
+  --color-gold-600: #ca8a04;
+  --color-gold-700: #a16207;
+  --color-gold-800: #854d0e;
+  --color-gold-900: #713f12;
+  --color-gold-950: #422006;
+  --color-gold: #eab308;
+  --color-gold-deep: #a16207;
+  --color-gold-soft: #fef9c3;
 
-  /* popblue = kiln berry scale (name kept for legacy class refs) */
-  --color-popblue-50: #fdf2f8;
-  --color-popblue-100: #fce7f3;
-  --color-popblue-200: #fbcfe8;
-  --color-popblue-300: #f9a8d4;
-  --color-popblue-400: #f472b6;
-  --color-popblue-500: #ec4899;
-  --color-popblue-600: #db2777;
-  --color-popblue-700: #be185d;
-  --color-popblue-800: #9d174d;
-  --color-popblue-900: #831843;
-  --color-popblue-950: #500724;
-  --color-popblue: #db2777;
-  --color-popblue-deep: #be185d;
-  --color-popblue-soft: #fce7f3;
+  /* popblue = fresh leaf lime scale (name kept for legacy class refs) */
+  --color-popblue-50: #f7fee7;
+  --color-popblue-100: #ecfccb;
+  --color-popblue-200: #d9f99d;
+  --color-popblue-300: #bef264;
+  --color-popblue-400: #a3e635;
+  --color-popblue-500: #84cc16;
+  --color-popblue-600: #65a30d;
+  --color-popblue-700: #4d7c0f;
+  --color-popblue-800: #3f6212;
+  --color-popblue-900: #365314;
+  --color-popblue-950: #1a2e05;
+  --color-popblue: #65a30d;
+  --color-popblue-deep: #4d7c0f;
+  --color-popblue-soft: #ecfccb;
 
-  --color-ink: #17203a;
-  --color-paper: #f7f4ec;
-  --color-mute: #6f7a8c;
+  --color-ink: #14261b;
+  --color-paper: #f3f8ec;
+  --color-mute: #5c6f60;
   --color-card: #ffffff;
-  --color-deep: #111a30;
+  --color-deep: #0e1f15;
 }
 
 html { scroll-behavior: smooth; }
@@ -75,27 +74,25 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f7f4ec;
+  background-color: #f3f8ec;
   background-image:
-    repeating-linear-gradient(90deg, rgba(29, 78, 216, 0.045) 0 1px, transparent 1px 36px),
-    repeating-linear-gradient(0deg, rgba(29, 78, 216, 0.045) 0 1px, transparent 1px 36px),
-    radial-gradient(ellipse 52% 28% at 6% -4%, rgba(29, 78, 216, 0.14), transparent 70%),
-    radial-gradient(ellipse 46% 30% at 98% 102%, rgba(234, 88, 12, 0.12), transparent 70%),
-    radial-gradient(ellipse 28% 20% at 90% 6%, rgba(219, 39, 119, 0.08), transparent 70%);
-  background-position: 0 0, 0 0, 0 0, 0 0, 0 0;
-  color: #17203a;
+    repeating-linear-gradient(115deg, rgba(19, 124, 79, 0.05) 0 2px, transparent 2px 34px),
+    radial-gradient(ellipse 52% 28% at 6% -4%, rgba(34, 154, 100, 0.16), transparent 70%),
+    radial-gradient(ellipse 46% 30% at 98% 102%, rgba(234, 179, 8, 0.14), transparent 70%),
+    radial-gradient(ellipse 28% 20% at 90% 6%, rgba(132, 204, 22, 0.12), transparent 70%);
+  color: #14261b;
 }
-::selection { background: #1d4ed8; color: #ffffff; }
+::selection { background: #137c4f; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #2549eb, #ea580c); border-radius: 999px; border: 2px solid #f7f4ec; }
-::-webkit-scrollbar-track { background: #e7e1d2; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #229a64, #eab308); border-radius: 999px; border: 2px solid #f3f8ec; }
+::-webkit-scrollbar-track { background: #e2ecd7; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Fired type: tight, grounded headlines with a warm bite. */
-h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
+/* Grove type: open, airy headlines with a fresh bite. */
+h1, h2, h3 { letter-spacing: -0.015em; text-wrap: balance; }
 
-/* Kiln embers: bright flecks lifting off the kiln mouth. */
+/* Falling leaves: soft leaf flecks drifting down through the grove. */
 @keyframes kiln-embers {
   0% { transform: translate3d(0, 4vh, 0) scale(0.6) rotate(0deg); opacity: 0; }
   18% { opacity: 0.95; }
@@ -106,112 +103,110 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 }
 .pop-fall { animation: kiln-embers 9s linear infinite; }
 
-/* Glaze drift: slow lateral drift of the studio glow. */
+/* Canopy drift: slow lateral drift of the morning light. */
 @keyframes glaze-drift {
   0%, 100% { transform: translate3d(-2.5vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(2vw, 0.8rem, 0) scale(1.08); opacity: 0.8; }
 }
 .pop-drift { animation: glaze-drift 22s ease-in-out infinite; }
 
-/* Kiln settle: gentle dip and rise of the floating shard. */
+/* Leaf sway: gentle dip and rise of the floating leaf. */
 @keyframes kiln-bob {
   0%, 100% { transform: translateY(0) rotate(-1.5deg); }
   50% { transform: translateY(-9px) rotate(1.5deg); }
 }
 .pop-bob { animation: kiln-bob 5.2s ease-in-out infinite; }
 
-/* Slow turn for the potter's wheel. */
+/* Slow turn for the orchard wheel. */
 @keyframes wheel-turn {
   to { transform: rotate(-360deg); }
 }
 .pop-spin { animation: wheel-turn 64s linear infinite; }
 
-/* Ember blink: rhythmic pulse of the kiln fire. */
+/* Dew blink: rhythmic pulse of morning dew. */
 @keyframes ember-blink {
   0%, 100% { opacity: 0.3; transform: scale(0.8); }
   50% { opacity: 1; transform: scale(1.3); }
 }
 .pop-twinkle { animation: ember-blink 2.8s ease-in-out infinite; }
 
-/* Firing ticker: infinite marquee (leftward drift). */
+/* Grove ticker: infinite marquee (leftward drift). */
 @keyframes firing-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: firing-ticker 32s linear infinite; }
 
-/* Kiln mosaic: cobalt -> copper -> berry checkered tiles. */
+/* Orchard check: jade -> lemon -> lime checkered tiles. */
 .pop-stripes {
   background-image:
-    conic-gradient(from 45deg, #dbe7fe 0 25%, #fed7aa 0 50%, #fbcfe8 0 75%, #93b4fd 0 100%);
+    conic-gradient(from 45deg, #d7f2e1 0 25%, #fef08a 0 50%, #d9f99d 0 75%, #7ed0a4 0 100%);
   background-size: 28px 28px;
 }
 
-/* Glazed tile: a white tile with a solid clay border and a hard offset
-   shadow; it presses down onto the shelf on hover. */
+/* Fruit-crate panel: a white panel with a soft leaf rim and a diffused
+   grove shadow; it lifts gently on hover. */
 .pop-lift {
   position: relative;
-  border: 2px solid rgba(23, 32, 58, 0.14);
+  border: 2px solid rgba(20, 38, 27, 0.10);
   background: #ffffff;
-  border-radius: 1rem;
-  box-shadow: 7px 7px 0 rgba(23, 32, 58, 0.10);
+  border-radius: 1.5rem;
+  box-shadow: 0 18px 34px -18px rgba(17, 99, 64, 0.35);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   overflow: hidden;
 }
 .pop-lift::before {
-  /* mosaic seam along the tile's bottom edge */
+  /* leaf rim along the panel's top edge */
   content: "";
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
-  height: 7px;
-  background-image:
-    conic-gradient(from 45deg, #1d4ed8 0 25%, #ea580c 0 50%, #db2777 0 75%, #608dfa 0 100%);
-  background-size: 22px 22px;
-  box-shadow: 0 -2px 8px rgba(234, 88, 12, 0.35);
+  height: 6px;
+  background-image: linear-gradient(90deg, #229a64 0 34%, #eab308 34% 66%, #84cc16 66% 100%);
+  opacity: 0.9;
   pointer-events: none;
   z-index: 2;
 }
 .pop-lift:hover {
-  transform: translate(-2px, -2px);
-  border-color: rgba(29, 78, 216, 0.55);
-  box-shadow: 10px 10px 0 rgba(29, 78, 216, 0.16);
+  transform: translateY(-4px);
+  border-color: rgba(19, 124, 79, 0.45);
+  box-shadow: 0 26px 44px -18px rgba(17, 99, 64, 0.45);
 }
 
-/* Studio glass: shared by modals and drawers — a bone pane with a cobalt rim. */
+/* Grove glass: shared by modals and drawers — a misty pane with a jade rim. */
 .pop-glass {
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(22px) saturate(1.25);
   -webkit-backdrop-filter: blur(22px) saturate(1.25);
-  border: 2px solid rgba(29, 78, 216, 0.35);
-  border-radius: 1rem;
-  box-shadow: 10px 10px 0 rgba(23, 32, 58, 0.12), 0 30px 60px -24px rgba(29, 78, 216, 0.4);
+  border: 2px solid rgba(19, 124, 79, 0.35);
+  border-radius: 1.5rem;
+  box-shadow: 0 30px 60px -24px rgba(17, 99, 64, 0.4);
 }
 
-/* Kiln seal: a molten copper badge with a double berry ring. */
+/* Lemon seal: a sunny disc with a double pine ring. */
 .starburst {
-  background: radial-gradient(circle at 35% 30%, #fb923c 0%, #ea580c 55%, #7c2d12 100%);
-  color: #fff7ed;
-  text-shadow: 0 1px 2px rgba(67, 20, 7, 0.7);
+  background: radial-gradient(circle at 35% 30%, #fde047 0%, #eab308 55%, #a16207 100%);
+  color: #422006;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
   border-radius: 9999px;
-  box-shadow: 0 10px 24px -8px rgba(234, 88, 12, 0.7), inset 0 2px 6px rgba(255, 255, 255, 0.45);
-  outline: 2px solid rgba(219, 39, 119, 0.85);
+  box-shadow: 0 10px 24px -8px rgba(234, 179, 8, 0.7), inset 0 2px 6px rgba(255, 255, 255, 0.45);
+  outline: 2px solid rgba(19, 124, 79, 0.85);
   outline-offset: 3px;
-  border: 3px solid #fff7ed;
+  border: 3px solid #fefce8;
 }
 
-/* Clay grid: faint cobalt dots on bone. */
+/* Leaf grid: faint jade dots on mint cream. */
 .halftone {
-  background-image: radial-gradient(circle, rgba(29, 78, 216, 0.18) 1.4px, transparent 1.5px);
+  background-image: radial-gradient(circle, rgba(19, 124, 79, 0.18) 1.4px, transparent 1.5px);
   background-size: 26px 26px;
   background-position: 0 0;
 }
 
-/* Stitch seam: a row of copper stitches dividing sections. */
+/* Dew seam: a row of lemon dew drops dividing sections. */
 .zigzag {
   height: 12px;
-  background-image: radial-gradient(circle, rgba(234, 88, 12, 0.9) 2.2px, transparent 2.6px);
+  background-image: radial-gradient(circle, rgba(234, 179, 8, 0.9) 2.2px, transparent 2.6px);
   background-size: 18px 12px;
   background-repeat: repeat-x;
   background-position: 0 center;
@@ -220,41 +215,41 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
   mask: linear-gradient(90deg, black 82%, transparent 100%);
 }
 
-/* Kiln awning: scalloped glaze bands hanging over the section. */
+/* Grove awning: scalloped canopy bands hanging over the section. */
 .bazaar-awning {
   background-image:
-    radial-gradient(circle at 16px -6px, #1d4ed8 16px, transparent 17px),
-    radial-gradient(circle at 48px -6px, #ea580c 16px, transparent 17px),
-    linear-gradient(180deg, rgba(29, 78, 216, 0.10), rgba(234, 88, 12, 0.10));
+    radial-gradient(circle at 16px -6px, #137c4f 16px, transparent 17px),
+    radial-gradient(circle at 48px -6px, #eab308 16px, transparent 17px),
+    linear-gradient(180deg, rgba(19, 124, 79, 0.10), rgba(234, 179, 8, 0.10));
   background-size: 64px 22px, 64px 22px, 100% 100%;
   background-position: 0 100%, 32px 100%, 0 0;
   background-repeat: repeat-x, repeat-x, no-repeat;
-  box-shadow: 0 8px 24px -8px rgba(29, 78, 216, 0.55);
+  box-shadow: 0 8px 24px -8px rgba(19, 124, 79, 0.55);
 }
 
-/* Kiln glow: layered copper/cobalt/berry glow for the core halo. */
+/* Grove glow: layered lemon/jade/lime glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(234, 88, 12, 0.38) 0%, rgba(59, 102, 246, 0.26) 42%, rgba(219, 39, 119, 0.16) 62%, rgba(219, 39, 119, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(234, 179, 8, 0.38) 0%, rgba(34, 154, 100, 0.26) 42%, rgba(132, 204, 22, 0.16) 62%, rgba(132, 204, 22, 0) 76%);
 }
-/* Copper coin: a molten disc with a cobalt halo. */
+/* Lemon sun: a sunny disc with a jade halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #ffedd5 0%, #f97316 52%, #1d4ed8 100%);
-  box-shadow: 0 0 70px -8px rgba(249, 115, 22, 0.55), 0 0 28px -6px rgba(29, 78, 216, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.50);
-  border: 2px solid rgba(154, 52, 18, 0.45);
+    radial-gradient(circle at 38% 34%, #fef9c3 0%, #eab308 52%, #137c4f 100%);
+  box-shadow: 0 0 70px -8px rgba(234, 179, 8, 0.55), 0 0 28px -6px rgba(19, 124, 79, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.50);
+  border: 2px solid rgba(161, 98, 7, 0.45);
 }
 
-/* Firing rings around the copper coin. */
+/* Grove rings around the lemon sun. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(234, 88, 12, 0.42) 0px,
-    rgba(234, 88, 12, 0.42) 2px,
+    rgba(234, 179, 8, 0.42) 0px,
+    rgba(234, 179, 8, 0.42) 2px,
     transparent 2px,
     transparent 12px,
-    rgba(29, 78, 216, 0.30) 12px,
-    rgba(29, 78, 216, 0.30) 14px,
+    rgba(19, 124, 79, 0.30) 12px,
+    rgba(19, 124, 79, 0.30) 14px,
     transparent 14px,
     transparent 30px
   );
@@ -265,7 +260,7 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(29, 78, 216, 0.34) 0deg 4deg,
+    rgba(19, 124, 79, 0.34) 0deg 4deg,
     transparent 4deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);

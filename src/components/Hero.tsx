@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Signal glow drifting over the harbor.
+// Signal glow drifting over the grove.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(8,145,178, 0.18)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245,158,11, 0.20)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(225,29,72, 0.14)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(8,145,178, 0.14)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(34,154,100, 0.18)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(234,179,8, 0.20)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(132,204,22, 0.14)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(34,154,100, 0.14)" },
 ];
 
-// Signal spray rising off the water.
+// Leaf spray rising off the grove floor.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#1d4ed8" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#3b82f6" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#17203a" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#1e40af" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#ea580c" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#f97316" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#db2777" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#137c4f" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#229a64" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#14261b" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#116340" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#eab308" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#facc15" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#84cc16" },
 ];
 
 // Beacon blinks scattered through the light.
@@ -100,7 +100,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(8,145,178, 0.45), inset 0 0 18px rgba(8,145,178, 0.25)",
+                  boxShadow: "0 0 28px 2px rgba(19,124,79, 0.45), inset 0 0 18px rgba(19,124,79, 0.25)",
                   opacity: 1 - r * 0.22,
                 }}
               />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#1d4ed8", "#3b82f6", "#f97316", "#db2777"];
+              const colors = ["#137c4f", "#229a64", "#eab308", "#84cc16"];
               return (
                 <span
                   key={i}
@@ -159,7 +159,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           {STARS.map((s, i) => (
             <span
               key={i}
-              className="pop-twinkle absolute rounded-full bg-[#1d4ed8]"
+              className="pop-twinkle absolute rounded-full bg-[#137c4f]"
               style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
             />
           ))}
@@ -176,7 +176,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
-              <div className="rounded-[2rem] bg-gradient-to-r from-brand-400 via-gold-400 to-popblue-400 p-[3px] shadow-[0_24px_56px_-18px_rgba(8,145,178, 0.55)]">
+              <div className="rounded-[2rem] bg-gradient-to-r from-brand-400 via-gold-400 to-popblue-400 p-[3px] shadow-[0_24px_56px_-18px_rgba(19,124,79, 0.55)]">
                 <div className="overflow-hidden rounded-[1.7rem] bg-paper ring-1 ring-ink/30">
                   <BannerCarousel />
                 </div>
