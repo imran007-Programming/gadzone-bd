@@ -1,66 +1,66 @@
 @import "tailwindcss";
 
 @theme {
-  /* Lagoon Mist: cool mist paper, deep lagoon-teal primary,
-     coral and aqua accents. Cards are soft, rounded, floating
-     panels: a faint ring, a gentle layered shadow, no hard rim,
-     no dark border — the opposite of the previous hard-shadow
-     market-stall look. */
+  /* Ember Orchard: warm harvest paper, burnt-orange primary,
+     plum and olive accents. Cards are crisp harvest crates:
+     a warm rim, a neat rounded corner, a warm layered shadow
+     and a bold top accent — the opposite of the previous soft,
+     cool, floating lagoon panels. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = deep lagoon scale */
-  --color-brand-50: #effafc;
-  --color-brand-100: #d7f0f6;
-  --color-brand-200: #b3e2ee;
-  --color-brand-300: #7ccbe0;
-  --color-brand-400: #45aecf;
-  --color-brand-500: #1f93ba;
-  --color-brand-600: #0f7a9f;
-  --color-brand-700: #0d6484;
-  --color-brand-800: #0f526b;
-  --color-brand-900: #123f54;
-  --color-brand-950: #0a2536;
-  --color-brand: #0d6484;
-  --color-brand-dark: #0f526b;
-  --color-brand-deep: #123f54;
+  /* brand = burnt-orange scale */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-brand-950: #431407;
+  --color-brand: #c2410c;
+  --color-brand-dark: #9a3412;
+  --color-brand-deep: #7c2d12;
 
-  /* gold = coral scale (name kept for legacy class refs) */
-  --color-gold-50: #fff1f2;
-  --color-gold-100: #ffe4e6;
-  --color-gold-200: #fecdd3;
-  --color-gold-300: #fda4af;
-  --color-gold-400: #fb7185;
-  --color-gold-500: #f43f5e;
-  --color-gold-600: #e11d48;
-  --color-gold-700: #be123c;
-  --color-gold-800: #9f1239;
-  --color-gold-900: #881337;
-  --color-gold-950: #4c0519;
-  --color-gold: #e11d48;
-  --color-gold-deep: #be123c;
-  --color-gold-soft: #ffe4e6;
+  /* gold = plum scale (name kept for legacy class refs) */
+  --color-gold-50: #fdf4ff;
+  --color-gold-100: #fae8ff;
+  --color-gold-200: #f5d0fe;
+  --color-gold-300: #f0abfc;
+  --color-gold-400: #e879f9;
+  --color-gold-500: #d946ef;
+  --color-gold-600: #c026d3;
+  --color-gold-700: #a21caf;
+  --color-gold-800: #86198f;
+  --color-gold-900: #701a75;
+  --color-gold-950: #4a044e;
+  --color-gold: #a21caf;
+  --color-gold-deep: #86198f;
+  --color-gold-soft: #fae8ff;
 
-  /* popblue = aqua scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0fdfa;
-  --color-popblue-100: #ccfbf1;
-  --color-popblue-200: #99f6e4;
-  --color-popblue-300: #5eead4;
-  --color-popblue-400: #2dd4bf;
-  --color-popblue-500: #14b8a6;
-  --color-popblue-600: #0d9488;
-  --color-popblue-700: #0f766e;
-  --color-popblue-800: #115e59;
-  --color-popblue-900: #134e4a;
-  --color-popblue-950: #042f2e;
-  --color-popblue: #0d9488;
-  --color-popblue-deep: #0f766e;
-  --color-popblue-soft: #ccfbf1;
+  /* popblue = olive scale (name kept for legacy class refs) */
+  --color-popblue-50: #f7fee7;
+  --color-popblue-100: #ecfccb;
+  --color-popblue-200: #d9f99d;
+  --color-popblue-300: #bef264;
+  --color-popblue-400: #a3e635;
+  --color-popblue-500: #84cc16;
+  --color-popblue-600: #65a30d;
+  --color-popblue-700: #4d7c0f;
+  --color-popblue-800: #3f6212;
+  --color-popblue-900: #365314;
+  --color-popblue-950: #1a2e05;
+  --color-popblue: #65a30d;
+  --color-popblue-deep: #4d7c0f;
+  --color-popblue-soft: #ecfccb;
 
-  --color-ink: #102a3a;
-  --color-paper: #f2f7fa;
-  --color-mute: #54707f;
-  --color-card: #ffffff;
-  --color-deep: #102a3a;
+  --color-ink: #2d1a12;
+  --color-paper: #fdf8f0;
+  --color-mute: #7c6a58;
+  --color-card: #fffdf9;
+  --color-deep: #2d1a12;
 }
 
 html { scroll-behavior: smooth; }
@@ -75,24 +75,24 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f2f7fa;
+  background-color: #fdf8f0;
   background-image:
-    radial-gradient(ellipse 55% 30% at 8% -4%, rgba(13, 100, 132, 0.12), transparent 70%),
-    radial-gradient(ellipse 48% 32% at 96% 104%, rgba(225, 29, 72, 0.08), transparent 70%),
-    radial-gradient(ellipse 30% 22% at 88% 2%, rgba(13, 148, 136, 0.12), transparent 70%);
-  color: #102a3a;
+    radial-gradient(ellipse 55% 30% at 8% -4%, rgba(194, 65, 12, 0.14), transparent 70%),
+    radial-gradient(ellipse 48% 32% at 96% 104%, rgba(162, 28, 175, 0.10), transparent 70%),
+    radial-gradient(ellipse 30% 22% at 88% 2%, rgba(101, 163, 13, 0.14), transparent 70%);
+  color: #2d1a12;
 }
-::selection { background: #0d6484; color: #ffffff; }
+::selection { background: #c2410c; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0d6484, #e11d48); border-radius: 9999px; border: 2px solid #f2f7fa; }
-::-webkit-scrollbar-track { background: #e0eef4; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ea580c, #a21caf); border-radius: 9999px; border: 2px solid #fdf8f0; }
+::-webkit-scrollbar-track { background: #f7ead9; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Lagoon type: airy headlines with generous tracking. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Orchard type: tighter, bolder headlines. */
+h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Rising bubbles: lagoon bubbles drifting up through cool water. */
+/* Falling leaves: ember leaves drifting down through warm air. */
 @keyframes kiln-embers {
   0% { transform: translate3d(0, 4vh, 0) scale(0.6) rotate(0deg); opacity: 0; }
   18% { opacity: 0.95; }
@@ -103,96 +103,98 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 }
 .pop-fall { animation: kiln-embers 9s linear infinite; }
 
-/* Lagoon drift: slow lateral drift of the cool light. */
+/* Orchard drift: slow lateral drift of the warm light. */
 @keyframes glaze-drift {
   0%, 100% { transform: translate3d(-2.5vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(2vw, 0.8rem, 0) scale(1.08); opacity: 0.8; }
 }
 .pop-drift { animation: glaze-drift 22s ease-in-out infinite; }
 
-/* Lagoon sway: gentle dip and rise of the floating buoy. */
+/* Orchard sway: gentle dip and rise of the hanging fruit. */
 @keyframes kiln-bob {
   0%, 100% { transform: translateY(0) rotate(-1.5deg); }
   50% { transform: translateY(-9px) rotate(1.5deg); }
 }
 .pop-bob { animation: kiln-bob 5.2s ease-in-out infinite; }
 
-/* Slow turn for the lagoon wheel. */
+/* Slow turn for the orchard wheel. */
 @keyframes wheel-turn {
   to { transform: rotate(-360deg); }
 }
 .pop-spin { animation: wheel-turn 64s linear infinite; }
 
-/* Lagoon blink: rhythmic pulse of the harbour beacon. */
+/* Orchard blink: rhythmic pulse of the harvest lantern. */
 @keyframes ember-blink {
   0%, 100% { opacity: 0.3; transform: scale(0.8); }
   50% { opacity: 1; transform: scale(1.3); }
 }
 .pop-twinkle { animation: ember-blink 2.8s ease-in-out infinite; }
 
-/* Lagoon ticker: infinite marquee (leftward drift). */
+/* Orchard ticker: infinite marquee (leftward drift). */
 @keyframes firing-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: firing-ticker 32s linear infinite; }
 
-/* Lagoon check: lagoon -> coral -> aqua checkered tiles. */
+/* Orchard check: orange -> plum -> olive checkered tiles. */
 .pop-stripes {
   background-image:
-    conic-gradient(from 45deg, #b3e2ee 0 25%, #fecdd3 0 50%, #99f6e4 0 75%, #7ccbe0 0 100%);
+    conic-gradient(from 45deg, #fed7aa 0 25%, #f5d0fe 0 50%, #d9f99d 0 75%, #fdba74 0 100%);
   background-size: 32px 32px;
 }
 
-/* Lagoon float card: a soft, rounded panel with a faint ring and
-   a gentle layered shadow. On hover it floats up and the shadow
-   deepens softly — no hard offset, no dark rim. */
+/* Orchard crate card: a crisp panel with a warm rim, a bold
+   burnt-orange top accent, and a warm layered shadow. On hover
+   it lifts and the accent deepens — no soft mist, no cool rim. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(18, 63, 84, 0.10);
-  background: #ffffff;
-  border-radius: 1.5rem;
-  box-shadow: 0 2px 6px rgba(18, 63, 84, 0.06), 0 14px 30px -12px rgba(13, 100, 132, 0.18);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid rgba(124, 45, 18, 0.16);
+  border-top: 4px solid #ea580c;
+  background: #fffdf9;
+  border-radius: 1.25rem;
+  box-shadow: 0 1px 2px rgba(124, 45, 18, 0.08), 0 12px 26px -12px rgba(194, 65, 12, 0.28);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-top-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 10px rgba(18, 63, 84, 0.08), 0 24px 44px -14px rgba(13, 100, 132, 0.28);
+  transform: translateY(-3px);
+  border-top-color: #c2410c;
+  box-shadow: 0 2px 4px rgba(124, 45, 18, 0.10), 0 20px 36px -14px rgba(194, 65, 12, 0.38);
 }
 
-/* Lagoon glass: shared by modals and drawers — a cool frost pane
-   with a faint ring and a soft shadow. */
+/* Orchard glass: shared by modals and drawers — a warm frost pane
+   with a faint ring and a warm shadow. */
 .pop-glass {
-  background: rgba(242, 247, 250, 0.92);
+  background: rgba(253, 248, 240, 0.92);
   backdrop-filter: blur(22px) saturate(1.25);
   -webkit-backdrop-filter: blur(22px) saturate(1.25);
   border: 1px solid rgba(255, 255, 255, 0.8);
-  border-radius: 1.5rem;
-  box-shadow: 0 8px 30px rgba(18, 63, 84, 0.14), 0 24px 48px -16px rgba(13, 100, 132, 0.25);
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 30px rgba(124, 45, 18, 0.16), 0 24px 48px -16px rgba(194, 65, 12, 0.28);
 }
 
-/* Lagoon seal: a coral-to-aqua round badge. */
+/* Orchard seal: a burnt-orange-to-plum round badge. */
 .starburst {
-  background: radial-gradient(circle at 35% 30%, #fda4af 0%, #e11d48 55%, #0d6484 100%);
+  background: radial-gradient(circle at 35% 30%, #fdba74 0%, #ea580c 55%, #a21caf 100%);
   color: #ffffff;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
   border-radius: 9999px;
-  box-shadow: 0 10px 24px -8px rgba(225, 29, 72, 0.65), inset 0 2px 6px rgba(255, 255, 255, 0.55);
+  box-shadow: 0 10px 24px -8px rgba(234, 88, 12, 0.65), inset 0 2px 6px rgba(255, 255, 255, 0.55);
   border: 3px solid #ffffff;
 }
 
-/* Lagoon dots: faint aqua dot grid on cool mist paper. */
+/* Orchard dots: faint orange dot grid on warm harvest paper. */
 .halftone {
-  background-image: radial-gradient(rgba(13, 100, 132, 0.14) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(rgba(194, 65, 12, 0.16) 1.5px, transparent 1.5px);
   background-size: 30px 30px;
   background-position: 0 0;
 }
 
-/* Lagoon seam: a dotted coral line dividing sections. */
+/* Orchard seam: a dotted plum line dividing sections. */
 .zigzag {
   height: 12px;
-  background-image: repeating-linear-gradient(90deg, rgba(225, 29, 72, 0.85) 0 12px, transparent 12px 24px);
+  background-image: repeating-linear-gradient(90deg, rgba(162, 28, 175, 0.85) 0 12px, transparent 12px 24px);
   background-size: 24px 3px;
   background-repeat: repeat-x;
   background-position: 0 center;
@@ -201,41 +203,41 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
   mask: linear-gradient(90deg, black 82%, transparent 100%);
 }
 
-/* Lagoon band: broad lagoon / coral / aqua stripes across the section top. */
+/* Orchard band: broad orange / plum / olive stripes across the section top. */
 .bazaar-awning {
   background-image: repeating-linear-gradient(
     100deg,
-    #0d6484 0 22px,
-    #e11d48 22px 44px,
-    #0d9488 44px 66px
+    #c2410c 0 22px,
+    #a21caf 22px 44px,
+    #65a30d 44px 66px
   );
   opacity: 0.95;
-  box-shadow: 0 8px 24px -8px rgba(18, 63, 84, 0.35);
+  box-shadow: 0 8px 24px -8px rgba(124, 45, 18, 0.35);
 }
 
-/* Lagoon glow: layered lagoon/coral/aqua glow for the core halo. */
+/* Orchard glow: layered orange/plum/olive glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(13, 148, 136, 0.24) 0%, rgba(13, 100, 132, 0.24) 42%, rgba(225, 29, 72, 0.16) 62%, rgba(225, 29, 72, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(101, 163, 13, 0.24) 0%, rgba(234, 88, 12, 0.24) 42%, rgba(162, 28, 175, 0.16) 62%, rgba(162, 28, 175, 0) 76%);
 }
-/* Lagoon core: a glowing aqua disc with a lagoon halo. */
+/* Orchard core: a glowing amber disc with a burnt-orange halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #ccfbf1 0%, #0d9488 52%, #0d6484 100%);
-  box-shadow: 0 0 70px -8px rgba(13, 148, 136, 0.55), 0 0 28px -6px rgba(13, 100, 132, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.50);
-  border: 2px solid rgba(13, 100, 132, 0.45);
+    radial-gradient(circle at 38% 34%, #fef3c7 0%, #f97316 52%, #c2410c 100%);
+  box-shadow: 0 0 70px -8px rgba(234, 88, 12, 0.55), 0 0 28px -6px rgba(194, 65, 12, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.50);
+  border: 2px solid rgba(194, 65, 12, 0.45);
 }
 
-/* Lagoon rings around the core disc. */
+/* Orchard rings around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(225, 29, 72, 0.42) 0px,
-    rgba(225, 29, 72, 0.42) 2px,
+    rgba(162, 28, 175, 0.42) 0px,
+    rgba(162, 28, 175, 0.42) 2px,
     transparent 2px,
     transparent 12px,
-    rgba(13, 100, 132, 0.30) 12px,
-    rgba(13, 100, 132, 0.30) 14px,
+    rgba(194, 65, 12, 0.30) 12px,
+    rgba(194, 65, 12, 0.30) 14px,
     transparent 14px,
     transparent 30px
   );
@@ -246,7 +248,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(13, 100, 132, 0.34) 0deg 4deg,
+    rgba(194, 65, 12, 0.34) 0deg 4deg,
     transparent 4deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);

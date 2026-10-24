@@ -30,11 +30,11 @@ const ORBS = [
 
 // Ember flecks rising off the warm dusk.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#047857" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#65a30d" },
   { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f97316" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#3b0764" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#a21caf" },
   { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#f97316" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#059669" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#84cc16" },
   { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#facc15" },
   { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#ea580c" },
 ];
@@ -75,8 +75,8 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* cool wash under the ember light */}
-      <div className="relative bg-gradient-to-b from-[#eef7fb] via-[#cffafe] to-[#f0f9ff]">
+      {/* warm wash under the ember light */}
+      <div className="relative bg-gradient-to-b from-[#fff7ed] via-[#ffedd5] to-[#fdf8f0]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -100,7 +100,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(4,120,87, 0.45), inset 0 0 18px rgba(249,115,22, 0.25)",
+                  boxShadow: "0 0 28px 2px rgba(101,163,13, 0.45), inset 0 0 18px rgba(249,115,22, 0.25)",
                   opacity: 1 - r * 0.22,
                 }}
               />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#059669", "#f97316", "#ea580c", "#c2410c"];
+              const colors = ["#65a30d", "#f97316", "#ea580c", "#a21caf"];
               return (
                 <span
                   key={i}
@@ -159,7 +159,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           {STARS.map((s, i) => (
             <span
               key={i}
-              className="pop-twinkle absolute rounded-full bg-[#059669]"
+              className="pop-twinkle absolute rounded-full bg-[#65a30d]"
               style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
             />
           ))}
