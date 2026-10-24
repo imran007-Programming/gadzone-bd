@@ -1,30 +1,30 @@
 @import "tailwindcss";
 
 @theme {
-  /* Ember Bazaar: a warm spice-market morning. Sunbaked parchment is the
-     canvas, warm charcoal is the ink, saffron spice orange is the brand
-     current, marigold amber is the warm glow, and chili crimson is the hot
-     pop. Cards are stamped bazaar tiles with a saffron top edge and a hard
-     offset shade; they jump on hover. */
+  /* Sakura Bloom: a spring dawn over a blossom market. Blush dawn is the
+     canvas, deep plum is the ink, rose is the brand current, golden pollen
+     is the warm glow, and orchid violet is the dreamy pop. Cards are soft
+     bloom tiles with a petal-ribbon top edge and a feathered rose shadow;
+     they float on hover. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = saffron spice scale */
-  --color-brand-50: #fff7ed;
-  --color-brand-100: #ffedd5;
-  --color-brand-200: #fed7aa;
-  --color-brand-300: #fdba74;
-  --color-brand-400: #fb923c;
-  --color-brand-500: #f97316;
-  --color-brand-600: #ea580c;
-  --color-brand-700: #c2410c;
-  --color-brand-800: #9a3412;
-  --color-brand-900: #7c2d12;
-  --color-brand-950: #431407;
-  --color-brand: #ea580c;
-  --color-brand-dark: #c2410c;
-  --color-brand-deep: #9a3412;
+  /* brand = rose scale */
+  --color-brand-50: #fff1f2;
+  --color-brand-100: #ffe4e6;
+  --color-brand-200: #fecdd3;
+  --color-brand-300: #fda4af;
+  --color-brand-400: #fb7185;
+  --color-brand-500: #f43f5e;
+  --color-brand-600: #e11d48;
+  --color-brand-700: #be123c;
+  --color-brand-800: #9f1239;
+  --color-brand-900: #881337;
+  --color-brand-950: #4c0519;
+  --color-brand: #e11d48;
+  --color-brand-dark: #be123c;
+  --color-brand-deep: #9f1239;
 
-  /* gold = marigold amber scale (name kept for legacy class refs) */
+  /* gold = pollen amber scale (name kept for legacy class refs) */
   --color-gold-50: #fffbeb;
   --color-gold-100: #fef3c7;
   --color-gold-200: #fde68a;
@@ -40,27 +40,27 @@
   --color-gold-deep: #b45309;
   --color-gold-soft: #fef3c7;
 
-  /* popblue = chili crimson scale (name kept for legacy class refs) */
-  --color-popblue-50: #fef2f2;
-  --color-popblue-100: #fee2e2;
-  --color-popblue-200: #fecaca;
-  --color-popblue-300: #fca5a5;
-  --color-popblue-400: #f87171;
-  --color-popblue-500: #ef4444;
-  --color-popblue-600: #dc2626;
-  --color-popblue-700: #b91c1c;
-  --color-popblue-800: #991b1b;
-  --color-popblue-900: #7f1d1d;
-  --color-popblue-950: #450a0a;
-  --color-popblue: #dc2626;
-  --color-popblue-deep: #b91c1c;
-  --color-popblue-soft: #fee2e2;
+  /* popblue = orchid violet scale (name kept for legacy class refs) */
+  --color-popblue-50: #faf5ff;
+  --color-popblue-100: #f3e8ff;
+  --color-popblue-200: #e9d5ff;
+  --color-popblue-300: #d8b4fe;
+  --color-popblue-400: #c084fc;
+  --color-popblue-500: #a855f7;
+  --color-popblue-600: #9333ea;
+  --color-popblue-700: #7e22ce;
+  --color-popblue-800: #6b21a8;
+  --color-popblue-900: #581c87;
+  --color-popblue-950: #3b0764;
+  --color-popblue: #9333ea;
+  --color-popblue-deep: #7e22ce;
+  --color-popblue-soft: #f3e8ff;
 
-  --color-ink: #292524;
-  --color-paper: #faf5ec;
-  --color-mute: #8a7f72;
-  --color-card: #fffdf8;
-  --color-deep: #1c1917;
+  --color-ink: #3f2233;
+  --color-paper: #fdf4f7;
+  --color-mute: #a08492;
+  --color-card: #fffafc;
+  --color-deep: #2a1220;
 }
 
 html { scroll-behavior: smooth; }
@@ -75,139 +75,140 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #faf5ec;
+  background-color: #fdf4f7;
   background-image:
-    radial-gradient(circle at 50% 46%, rgba(234, 88, 12, 0.10) 1.5px, transparent 1.6px),
-    radial-gradient(ellipse 52% 30% at 92% -6%, rgba(249, 115, 22, 0.30), transparent 70%),
-    radial-gradient(ellipse 48% 30% at 4% 106%, rgba(217, 119, 6, 0.24), transparent 70%),
-    radial-gradient(ellipse 30% 22% at 50% 52%, rgba(220, 38, 38, 0.07), transparent 70%);
+    radial-gradient(circle at 50% 46%, rgba(225, 29, 72, 0.08) 1.5px, transparent 1.6px),
+    radial-gradient(ellipse 52% 30% at 90% -6%, rgba(244, 63, 94, 0.22), transparent 70%),
+    radial-gradient(ellipse 48% 30% at 6% 104%, rgba(147, 51, 234, 0.16), transparent 70%),
+    radial-gradient(ellipse 30% 22% at 50% 52%, rgba(217, 119, 6, 0.06), transparent 70%);
   background-size: 26px 26px, auto, auto, auto;
   background-position: 0 0, 0 0, 0 0, 0 0;
-  color: #292524;
+  color: #3f2233;
 }
-::selection { background: #ea580c; color: #fff7ed; }
+::selection { background: #e11d48; color: #fff1f2; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #fb923c, #b91c1c); border-radius: 999px; border: 2px solid #faf5ec; }
-::-webkit-scrollbar-track { background: #ffedd5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #fb7185, #7e22ce); border-radius: 999px; border: 2px solid #fdf4f7; }
+::-webkit-scrollbar-track { background: #ffe4e6; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Tighter, bolder display type for the bazaar voice. */
-h1, h2, h3 { letter-spacing: -0.018em; }
+/* Airy, soft display type for the blossom voice. */
+h1, h2, h3 { letter-spacing: -0.02em; }
 
-/* Ember drift: sparks rising through the bazaar air. */
-@keyframes ember-drift {
-  0% { transform: translate3d(-4px, 20px, 0) scale(0.7) rotate(0deg); opacity: 0; }
-  18% { opacity: 0.85; }
-  50% { transform: translate3d(8px, -90px, 0) scale(1) rotate(120deg); }
-  82% { opacity: 0.55; }
-  100% { transform: translate3d(-6px, -220px, 0) scale(0.85) rotate(260deg); opacity: 0; }
+/* Sakura fall: petals drifting down through the blossom air. */
+@keyframes sakura-fall {
+  0% { transform: translate3d(0, -24px, 0) scale(0.7) rotate(0deg); opacity: 0; }
+  14% { opacity: 0.9; }
+  35% { transform: translate3d(18px, 30vh, 0) scale(1) rotate(140deg); }
+  62% { transform: translate3d(-16px, 62vh, 0) scale(0.9) rotate(240deg); }
+  84% { opacity: 0.6; }
+  100% { transform: translate3d(10px, 96vh, 0) scale(0.8) rotate(360deg); opacity: 0; }
 }
-.pop-fall { animation: ember-drift 12s linear infinite; }
+.pop-fall { animation: sakura-fall 12s linear infinite; }
 
-/* Heat sway: slow lateral drift of the bazaar glow. */
-@keyframes ember-sway {
+/* Bloom sway: slow lateral drift of the petal glow. */
+@keyframes sakura-sway {
   0%, 100% { transform: translate3d(-3vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(3vw, -0.8rem, 0) scale(1.08); opacity: 0.8; }
 }
-.pop-drift { animation: ember-sway 32s ease-in-out infinite; }
+.pop-drift { animation: sakura-sway 32s ease-in-out infinite; }
 
-/* Skillet bob: gentle rise and fall of the warm surface. */
-@keyframes ember-bob {
+/* Petal bob: gentle rise and fall of the blossom surface. */
+@keyframes sakura-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-10px) scale(1.04); }
 }
-.pop-bob { animation: ember-bob 4.2s ease-in-out infinite; }
+.pop-bob { animation: sakura-bob 4.2s ease-in-out infinite; }
 
-/* Slow turn for the bazaar whirl. */
-@keyframes ember-wheel {
+/* Slow turn for the blossom wheel. */
+@keyframes sakura-wheel {
   to { transform: rotate(360deg); }
 }
-.pop-spin { animation: ember-wheel 70s linear infinite; }
+.pop-spin { animation: sakura-wheel 70s linear infinite; }
 
-/* Spice glint: wavering catchlight on the ember-sun disc. */
-@keyframes ember-glint {
+/* Dew glint: wavering catchlight on the bloom moon. */
+@keyframes sakura-glint {
   0%, 100% { opacity: 0.35; transform: scale(0.85); }
   50% { opacity: 1; transform: scale(1.25); }
 }
-.pop-twinkle { animation: ember-glint 3.8s ease-in-out infinite; }
+.pop-twinkle { animation: sakura-glint 3.8s ease-in-out infinite; }
 
-/* Bazaar ticker: infinite marquee (leftward drift). */
-@keyframes ember-ticker {
+/* Blossom ticker: infinite marquee (leftward drift). */
+@keyframes sakura-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
-.pop-ticker { animation: ember-ticker 30s linear infinite; }
+.pop-ticker { animation: sakura-ticker 30s linear infinite; }
 
-/* Bazaar stripes: parchment -> spice -> marigold -> chili diagonal stripes. */
+/* Blossom stripes: blush -> rose -> pollen -> orchid diagonal stripes. */
 .pop-stripes {
-  background-image: repeating-linear-gradient(-55deg, #faf5ec 0 10px, #ea580c 10px 20px, #d97706 20px 30px, #b91c1c 30px 40px);
+  background-image: repeating-linear-gradient(-55deg, #fdf4f7 0 10px, #f43f5e 10px 20px, #fbbf24 20px 30px, #9333ea 30px 40px);
 }
 
-/* Bazaar tile: a stamped saffron tile with a spice top edge and a hard
-   offset shade; it jumps on hover. */
+/* Bloom tile: a soft petal card with a blossom-ribbon top edge and a
+   feathered rose shadow; it floats on hover. */
 .pop-lift {
   position: relative;
-  border: 2px solid rgba(41, 37, 36, 0.9);
-  background: #fffdf8;
-  border-radius: 1.25rem;
-  box-shadow: 6px 6px 0 rgba(41, 37, 36, 0.9);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  border: 1.5px solid rgba(225, 29, 72, 0.22);
+  background: #fffafc;
+  border-radius: 1.75rem;
+  box-shadow: 0 24px 48px -24px rgba(225, 29, 72, 0.35), 0 4px 14px -8px rgba(63, 34, 51, 0.12);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .pop-lift::before {
-  /* saffron top edge of the tile */
+  /* blossom ribbon along the tile's top edge */
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #ea580c 0%, #fbbf24 35%, #dc2626 70%, #9a3412 100%);
-  box-shadow: 0 1px 8px rgba(234, 88, 12, 0.5);
+  height: 5px;
+  background: linear-gradient(90deg, #f43f5e 0%, #fbbf24 35%, #9333ea 70%, #be123c 100%);
+  box-shadow: 0 1px 10px rgba(244, 63, 94, 0.45);
   pointer-events: none;
 }
 .pop-lift:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 9px 9px 0 rgba(41, 37, 36, 0.9);
+  transform: translateY(-8px);
+  box-shadow: 0 34px 60px -24px rgba(225, 29, 72, 0.5), 0 8px 20px -8px rgba(63, 34, 51, 0.16);
 }
 
-/* Bazaar glass: shared by modals and drawers — a warm haze with a spice rim. */
+/* Blossom glass: shared by modals and drawers — a dawn haze with a rose rim. */
 .pop-glass {
-  background: rgba(250, 245, 236, 0.94);
-  backdrop-filter: blur(22px) saturate(1.2);
-  -webkit-backdrop-filter: blur(22px) saturate(1.2);
-  border: 2px solid rgba(194, 65, 12, 0.45);
-  border-radius: 1.25rem;
-  box-shadow: 8px 8px 0 rgba(41, 37, 36, 0.85);
+  background: rgba(253, 244, 247, 0.92);
+  backdrop-filter: blur(22px) saturate(1.25);
+  -webkit-backdrop-filter: blur(22px) saturate(1.25);
+  border: 1.5px solid rgba(225, 29, 72, 0.35);
+  border-radius: 1.75rem;
+  box-shadow: 0 30px 60px -24px rgba(225, 29, 72, 0.45);
 }
 
-/* Spice seal: a saffron-stamped badge with warm type. */
+/* Bloom seal: a rose-stamped badge with blush type. */
 .starburst {
-  background: radial-gradient(circle at 35% 30%, #fbbf24 0%, #ea580c 55%, #9a3412 100%);
-  color: #fff7ed;
-  text-shadow: 0 1px 2px rgba(67, 20, 7, 0.55);
+  background: radial-gradient(circle at 35% 30%, #fb7185 0%, #e11d48 55%, #881337 100%);
+  color: #fff1f2;
+  text-shadow: 0 1px 2px rgba(76, 5, 25, 0.55);
   border-radius: 9999px;
   transform: rotate(6deg);
-  box-shadow: 0 10px 24px -8px rgba(234, 88, 12, 0.7), inset 0 2px 6px rgba(255, 255, 255, 0.4);
-  outline: 2px dashed rgba(255, 247, 237, 0.9);
+  box-shadow: 0 10px 24px -8px rgba(225, 29, 72, 0.7), inset 0 2px 6px rgba(255, 255, 255, 0.45);
+  outline: 2px dashed rgba(255, 241, 242, 0.9);
   outline-offset: -6px;
-  border: 1px solid rgba(154, 52, 18, 0.6);
+  border: 1px solid rgba(159, 18, 57, 0.6);
 }
 
-/* Bazaar grid: faint spice survey lines for merchant bands. */
+/* Blossom grid: faint petal survey lines for merchant bands. */
 .halftone {
   background-image:
-    linear-gradient(rgba(234, 88, 12, 0.10) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(234, 88, 12, 0.10) 1px, transparent 1px);
+    linear-gradient(rgba(225, 29, 72, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(225, 29, 72, 0.08) 1px, transparent 1px);
   background-size: 22px 22px;
   background-position: 0 0, 0 0;
 }
 
-/* Clay scallops: a row of soft spice marks dividing sections. */
+/* Petal scallops: a row of soft rose marks dividing sections. */
 .zigzag {
   height: 18px;
-  background-image: radial-gradient(circle at 18px 2px, rgba(234, 88, 12, 0.45) 9px, transparent 10px);
+  background-image: radial-gradient(circle at 18px 2px, rgba(244, 63, 94, 0.4) 9px, transparent 10px);
   background-size: 36px 18px;
   background-repeat: repeat-x;
   opacity: 0.9;
@@ -215,35 +216,35 @@ h1, h2, h3 { letter-spacing: -0.018em; }
   mask: linear-gradient(180deg, black 65%, transparent 100%);
 }
 
-/* Bazaar ribbon: spice/marigold/chili glow band with a warm shade. */
+/* Blossom ribbon: rose/pollen/orchid glow band with a soft shade. */
 .bazaar-awning {
   background-image: linear-gradient(90deg,
-    rgba(234, 88, 12, 0.9) 0%,
-    rgba(251, 146, 60, 0.75) 30%,
-    rgba(217, 119, 6, 0.8) 62%,
-    rgba(220, 38, 38, 0.75) 100%);
-  box-shadow: 0 6px 22px -6px rgba(234, 88, 12, 0.6);
+    rgba(225, 29, 72, 0.9) 0%,
+    rgba(251, 113, 133, 0.75) 30%,
+    rgba(168, 85, 247, 0.7) 62%,
+    rgba(190, 18, 60, 0.8) 100%);
+  box-shadow: 0 6px 22px -6px rgba(225, 29, 72, 0.6);
 }
 
-/* Spice core: layered saffron/marigold/chili glow for the ember halo. */
+/* Bloom aura: layered rose/orchid/pollen glow for the moon halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(251, 146, 60, 0.5) 0%, rgba(234, 88, 12, 0.3) 42%, rgba(217, 119, 6, 0.24) 62%, rgba(217, 119, 6, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(251, 113, 133, 0.45) 0%, rgba(225, 29, 72, 0.28) 42%, rgba(147, 51, 234, 0.22) 62%, rgba(147, 51, 234, 0) 76%);
 }
-/* Ember sun: a glowing hot orb with a spice halo. */
+/* Bloom moon: a soft blush orb with an orchid halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #fff7ed 0%, #fbbf24 52%, #c2410c 100%);
-  box-shadow: 0 0 70px -8px rgba(234, 88, 12, 0.55), 0 0 28px -6px rgba(217, 119, 6, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(194, 65, 12, 0.5);
+    radial-gradient(circle at 38% 34%, #fff1f2 0%, #fda4af 52%, #9333ea 100%);
+  box-shadow: 0 0 70px -8px rgba(225, 29, 72, 0.5), 0 0 28px -6px rgba(147, 51, 234, 0.4), inset 0 3px 12px rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(225, 29, 72, 0.4);
 }
 
-/* Heat rings around the ember sun. */
+/* Petal rings around the bloom moon. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(234, 88, 12, 0.45) 0px,
-    rgba(234, 88, 12, 0.45) 3px,
+    rgba(225, 29, 72, 0.4) 0px,
+    rgba(225, 29, 72, 0.4) 3px,
     transparent 3px,
     transparent 28px
   );
@@ -254,8 +255,8 @@ h1, h2, h3 { letter-spacing: -0.018em; }
 .sun-rays {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(217, 119, 6, 0.45) 0px,
-    rgba(217, 119, 6, 0.45) 3px,
+    rgba(168, 85, 247, 0.4) 0px,
+    rgba(168, 85, 247, 0.4) 3px,
     transparent 3px,
     transparent 28px
   );
@@ -264,62 +265,62 @@ h1, h2, h3 { letter-spacing: -0.018em; }
   border-radius: 9999px;
 }
 
-/* Legacy aliases kept so untouched components still render — all bazaar styled. */
+/* Legacy aliases kept so untouched components still render — all blossom styled. */
 .lagoon-lift {
   position: relative;
-  border: 2px solid rgba(41, 37, 36, 0.9);
-  background: #fffdf8;
-  border-radius: 1.25rem;
-  box-shadow: 6px 6px 0 rgba(41, 37, 36, 0.9);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  border: 1.5px solid rgba(225, 29, 72, 0.22);
+  background: #fffafc;
+  border-radius: 1.75rem;
+  box-shadow: 0 24px 48px -24px rgba(225, 29, 72, 0.35), 0 4px 14px -8px rgba(63, 34, 51, 0.12);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .lagoon-lift:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 9px 9px 0 rgba(41, 37, 36, 0.9);
+  transform: translateY(-8px);
+  box-shadow: 0 34px 60px -24px rgba(225, 29, 72, 0.5), 0 8px 20px -8px rgba(63, 34, 51, 0.16);
 }
 .stamp-perf {
-  border: 2px dashed rgba(194, 65, 12, 0.6);
-  background: rgba(234, 88, 12, 0.08);
-  border-radius: 1.25rem;
-  box-shadow: 6px 6px 0 rgba(41, 37, 36, 0.85);
+  border: 2px dashed rgba(225, 29, 72, 0.5);
+  background: rgba(225, 29, 72, 0.06);
+  border-radius: 1.75rem;
+  box-shadow: 0 18px 40px -20px rgba(225, 29, 72, 0.4);
 }
 .ember-glow {
   position: relative;
-  border: 2px solid rgba(41, 37, 36, 0.9);
-  background: linear-gradient(165deg, #fff7ed 0%, #fffdf8 60%, #ffedd5 100%);
-  border-radius: 1.25rem;
-  box-shadow: 6px 6px 0 rgba(41, 37, 36, 0.9);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  border: 1.5px solid rgba(225, 29, 72, 0.22);
+  background: linear-gradient(165deg, #fff1f2 0%, #fffafc 60%, #ffe4e6 100%);
+  border-radius: 1.75rem;
+  box-shadow: 0 24px 48px -24px rgba(225, 29, 72, 0.35), 0 4px 14px -8px rgba(63, 34, 51, 0.12);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .ember-glow:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 9px 9px 0 rgba(41, 37, 36, 0.9);
+  transform: translateY(-8px);
+  box-shadow: 0 34px 60px -24px rgba(225, 29, 72, 0.5), 0 8px 20px -8px rgba(63, 34, 51, 0.16);
 }
 .ripple-glow {
   position: relative;
-  border: 2px solid rgba(41, 37, 36, 0.9);
-  background: linear-gradient(165deg, #fffbeb 0%, #fffdf8 60%, #fef3c7 100%);
-  border-radius: 1.25rem;
-  box-shadow: 6px 6px 0 rgba(41, 37, 36, 0.9);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  border: 1.5px solid rgba(168, 85, 247, 0.28);
+  background: linear-gradient(165deg, #faf5ff 0%, #fffafc 60%, #f3e8ff 100%);
+  border-radius: 1.75rem;
+  box-shadow: 0 24px 48px -24px rgba(147, 51, 234, 0.35), 0 4px 14px -8px rgba(63, 34, 51, 0.12);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .ripple-glow:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 9px 9px 0 rgba(41, 37, 36, 0.9);
+  transform: translateY(-8px);
+  box-shadow: 0 34px 60px -24px rgba(147, 51, 234, 0.5), 0 8px 20px -8px rgba(63, 34, 51, 0.16);
 }
 .lagoon-glow {
   position: relative;
-  border: 2px solid rgba(41, 37, 36, 0.9);
-  background: linear-gradient(165deg, #fff7ed 0%, #fffdf8 60%, #ffedd5 100%);
-  border-radius: 1.25rem;
-  box-shadow: 6px 6px 0 rgba(41, 37, 36, 0.9);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  border: 1.5px solid rgba(225, 29, 72, 0.22);
+  background: linear-gradient(165deg, #fff1f2 0%, #fffafc 60%, #ffe4e6 100%);
+  border-radius: 1.75rem;
+  box-shadow: 0 24px 48px -24px rgba(225, 29, 72, 0.35), 0 4px 14px -8px rgba(63, 34, 51, 0.12);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
 .lagoon-glow:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 9px 9px 0 rgba(41, 37, 36, 0.9);
+  transform: translateY(-8px);
+  box-shadow: 0 34px 60px -24px rgba(225, 29, 72, 0.5), 0 8px 20px -8px rgba(63, 34, 51, 0.16);
 }

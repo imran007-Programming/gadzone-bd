@@ -30,7 +30,7 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
         <div className="relative cursor-pointer overflow-hidden rounded-md ring-1 ring-brand-200" onClick={() => onQuickView(p)}>
           <ProductImage product={p} />
           {p.badge === "New" && (
-            <span className="absolute left-3 top-3 rounded-md bg-gold-700 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-white shadow-[0_0_18px_-4px_rgba(220, 38, 38, 0.9)] ring-1 ring-white/60">New</span>
+            <span className="absolute left-3 top-3 rounded-md bg-gold-700 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-white shadow-[0_0_18px_-4px_rgba(147, 51, 234, 0.9)] ring-1 ring-white/60">New</span>
           )}
           {discountPct(p) > 0 && (
             <span className="starburst absolute -right-2 -top-2 flex h-16 w-16 items-center justify-center p-4 text-center text-[11px] font-black leading-tight">-{discountPct(p)}%</span>
@@ -53,13 +53,13 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
           whileTap={{ scale: 0.98 }}
           onClick={() => onAddToCart(p.id)}
           aria-label={`Add ${p.name} to cart`}
-          className="flex w-full items-center justify-center gap-1.5 rounded-sm border border-brand-700 bg-brand-600 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-[3px_3px_0_#b91c1c] transition hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-[4px_4px_0_#292524] active:translate-y-0 active:scale-[0.98]"
+          className="flex w-full items-center justify-center gap-1.5 rounded-full border border-brand-700 bg-brand-600 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-[0_14px_28px_-10px_rgba(225,29,72,0.6)] transition hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-[0_20px_36px_-12px_rgba(225,29,72,0.65)] active:translate-y-0 active:scale-[0.98]"
         >
           🛒 Add
         </motion.button>
         <button
           onClick={() => onQuickView(p)}
-          className="flex w-full items-center justify-center rounded-full border border-dashed border-brand-300 bg-brand-100 px-4 py-2 text-xs font-black uppercase tracking-wider text-brand-700 transition hover:bg-brand-100 active:scale-[0.98]"
+          className="flex w-full items-center justify-center rounded-full border border-dashed border-brand-300 bg-brand-50 px-4 py-2 text-xs font-black uppercase tracking-wider text-brand-700 transition hover:bg-brand-100 active:scale-[0.98]"
         >
           View →
         </button>
