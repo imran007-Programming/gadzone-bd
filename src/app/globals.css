@@ -1,65 +1,66 @@
 @import "tailwindcss";
 
 @theme {
-  /* Velvet Dusk: cool lavender-mist paper, deep violet primary,
-     rose-pink and cyan accents. Cards are soft, fully rounded
-     panels with a violet-to-rose gradient hairline on top and a
-     soft layered shadow — no hard offset, no flat sticker rim. */
+  /* Mango Grove Market: warm cream paper, deep jungle-green primary,
+     mango amber and fresh lime accents. Cards are market-stall
+     panels: a solid dark-green rim, a hard offset shadow, and a
+     crisp mango price-chip feel — no soft violet glow, no gradient
+     hairline. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = violet scale */
-  --color-brand-50: #f5f3ff;
-  --color-brand-100: #ede9fe;
-  --color-brand-200: #ddd6fe;
-  --color-brand-300: #c4b5fd;
-  --color-brand-400: #a78bfa;
-  --color-brand-500: #8b5cf6;
-  --color-brand-600: #7c3aed;
-  --color-brand-700: #6d28d9;
-  --color-brand-800: #5b21b6;
-  --color-brand-900: #4c1d95;
-  --color-brand-950: #2e1065;
-  --color-brand: #7c3aed;
-  --color-brand-dark: #5b21b6;
-  --color-brand-deep: #4c1d95;
+  /* brand = deep jungle-green scale */
+  --color-brand-50: #f0fdf4;
+  --color-brand-100: #dcfce7;
+  --color-brand-200: #bbf7d0;
+  --color-brand-300: #86efac;
+  --color-brand-400: #4ade80;
+  --color-brand-500: #22c55e;
+  --color-brand-600: #16a34a;
+  --color-brand-700: #15803d;
+  --color-brand-800: #166534;
+  --color-brand-900: #14532d;
+  --color-brand-950: #052e16;
+  --color-brand: #15803d;
+  --color-brand-dark: #166534;
+  --color-brand-deep: #14532d;
 
-  /* gold = rose scale (name kept for legacy class refs) */
-  --color-gold-50: #fff1f2;
-  --color-gold-100: #ffe4e6;
-  --color-gold-200: #fecdd3;
-  --color-gold-300: #fda4af;
-  --color-gold-400: #fb7185;
-  --color-gold-500: #f43f5e;
-  --color-gold-600: #e11d48;
-  --color-gold-700: #be123c;
-  --color-gold-800: #9f1239;
-  --color-gold-900: #881337;
-  --color-gold-950: #4c0519;
-  --color-gold: #e11d48;
-  --color-gold-deep: #be123c;
-  --color-gold-soft: #ffe4e6;
+  /* gold = mango amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #ea580c;
+  --color-gold-700: #c2410c;
+  --color-gold-800: #9a3412;
+  --color-gold-900: #7c2d12;
+  --color-gold-950: #431407;
+  --color-gold: #ea580c;
+  --color-gold-deep: #c2410c;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = cyan scale (name kept for legacy class refs) */
-  --color-popblue-50: #ecfeff;
-  --color-popblue-100: #cffafe;
-  --color-popblue-200: #a5f3fc;
-  --color-popblue-300: #67e8f9;
-  --color-popblue-400: #22d3ee;
-  --color-popblue-500: #06b6d4;
-  --color-popblue-600: #0891b2;
-  --color-popblue-700: #0e7490;
-  --color-popblue-800: #155e75;
-  --color-popblue-900: #164e63;
-  --color-popblue-950: #083344;
-  --color-popblue: #0891b2;
-  --color-popblue-deep: #0e7490;
-  --color-popblue-soft: #cffafe;
+  /* popblue = fresh lime scale (name kept for legacy class refs) */
+  --color-popblue-50: #f7fee7;
+  --color-popblue-100: #ecfccb;
+  --color-popblue-200: #d9f99d;
+  --color-popblue-300: #bef264;
+  --color-popblue-400: #a3e635;
+  --color-popblue-500: #84cc16;
+  --color-popblue-600: #65a30d;
+  --color-popblue-700: #4d7c0f;
+  --color-popblue-800: #3f6212;
+  --color-popblue-900: #365314;
+  --color-popblue-950: #1a2e05;
+  --color-popblue: #65a30d;
+  --color-popblue-deep: #4d7c0f;
+  --color-popblue-soft: #ecfccb;
 
-  --color-ink: #1e1b2e;
-  --color-paper: #f4f1fb;
-  --color-mute: #5b5570;
+  --color-ink: #1c2a1e;
+  --color-paper: #fdf9ec;
+  --color-mute: #5a6b58;
   --color-card: #ffffff;
-  --color-deep: #1e1b2e;
+  --color-deep: #1c2a1e;
 }
 
 html { scroll-behavior: smooth; }
@@ -74,24 +75,24 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f4f1fb;
+  background-color: #fdf9ec;
   background-image:
-    radial-gradient(ellipse 55% 30% at 8% -4%, rgba(124, 58, 237, 0.14), transparent 70%),
-    radial-gradient(ellipse 48% 32% at 96% 104%, rgba(225, 29, 72, 0.10), transparent 70%),
-    radial-gradient(ellipse 30% 22% at 88% 2%, rgba(8, 145, 178, 0.12), transparent 70%);
-  color: #1e1b2e;
+    radial-gradient(ellipse 55% 30% at 8% -4%, rgba(21, 128, 61, 0.12), transparent 70%),
+    radial-gradient(ellipse 48% 32% at 96% 104%, rgba(234, 88, 12, 0.10), transparent 70%),
+    radial-gradient(ellipse 30% 22% at 88% 2%, rgba(101, 163, 13, 0.12), transparent 70%);
+  color: #1c2a1e;
 }
-::selection { background: #7c3aed; color: #ffffff; }
+::selection { background: #15803d; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #7c3aed, #e11d48); border-radius: 9999px; border: 2px solid #f4f1fb; }
-::-webkit-scrollbar-track { background: #ede9fe; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #15803d, #ea580c); border-radius: 9999px; border: 2px solid #fdf9ec; }
+::-webkit-scrollbar-track { background: #fef3c7; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Velvet type: wide, airy headlines with a soft glow-friendly weight. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Grove type: tight, punchy headlines with a market-stall snap. */
+h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Rising signal: cool violet sparks drifting up through dusk air. */
+/* Rising signal: mango leaves drifting up through warm market air. */
 @keyframes kiln-embers {
   0% { transform: translate3d(0, 4vh, 0) scale(0.6) rotate(0deg); opacity: 0; }
   18% { opacity: 0.95; }
@@ -102,109 +103,96 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 }
 .pop-fall { animation: kiln-embers 9s linear infinite; }
 
-/* Velvet drift: slow lateral drift of the dusk light. */
+/* Grove drift: slow lateral drift of the warm light. */
 @keyframes glaze-drift {
   0%, 100% { transform: translate3d(-2.5vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(2vw, 0.8rem, 0) scale(1.08); opacity: 0.8; }
 }
 .pop-drift { animation: glaze-drift 22s ease-in-out infinite; }
 
-/* Velvet sway: gentle dip and rise of the floating orb. */
+/* Grove sway: gentle dip and rise of the floating mango. */
 @keyframes kiln-bob {
   0%, 100% { transform: translateY(0) rotate(-1.5deg); }
   50% { transform: translateY(-9px) rotate(1.5deg); }
 }
 .pop-bob { animation: kiln-bob 5.2s ease-in-out infinite; }
 
-/* Slow turn for the dusk wheel. */
+/* Slow turn for the grove wheel. */
 @keyframes wheel-turn {
   to { transform: rotate(-360deg); }
 }
 .pop-spin { animation: wheel-turn 64s linear infinite; }
 
-/* Velvet blink: rhythmic pulse of the dusk beacon. */
+/* Grove blink: rhythmic pulse of the market beacon. */
 @keyframes ember-blink {
   0%, 100% { opacity: 0.3; transform: scale(0.8); }
   50% { opacity: 1; transform: scale(1.3); }
 }
 .pop-twinkle { animation: ember-blink 2.8s ease-in-out infinite; }
 
-/* Velvet ticker: infinite marquee (leftward drift). */
+/* Grove ticker: infinite marquee (leftward drift). */
 @keyframes firing-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: firing-ticker 32s linear infinite; }
 
-/* Velvet check: violet -> rose -> cyan checkered tiles. */
+/* Grove check: green -> amber -> lime checkered tiles. */
 .pop-stripes {
   background-image:
-    conic-gradient(from 45deg, #ddd6fe 0 25%, #fecdd3 0 50%, #a5f3fc 0 75%, #c4b5fd 0 100%);
+    conic-gradient(from 45deg, #bbf7d0 0 25%, #fde68a 0 50%, #d9f99d 0 75%, #86efac 0 100%);
   background-size: 32px 32px;
 }
 
-/* Velvet panel: a fully rounded panel with a soft violet rim, a
-   violet / rose / cyan gradient hairline across the top and a
-   soft layered shadow that deepens and lifts on hover. */
+/* Grove stall card: a crisp panel with a solid dark-green rim and a
+   hard offset shadow, like a painted market stall sign. On hover it
+   lifts straight up and the shadow grows. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(124, 58, 237, 0.18);
+  border: 2px solid #1c2a1e;
   background: #ffffff;
-  border-radius: 1.5rem;
-  box-shadow: 0 20px 40px -24px rgba(76, 29, 149, 0.35), 0 4px 12px -6px rgba(76, 29, 149, 0.12);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  border-radius: 1.25rem;
+  box-shadow: 6px 6px 0 rgba(28, 42, 30, 0.9);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   overflow: hidden;
 }
-.pop-lift::before {
-  /* violet-to-rose-to-cyan hairline across the panel's top edge */
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background-image: linear-gradient(90deg, #7c3aed 0%, #e11d48 50%, #0891b2 100%);
-  opacity: 0.95;
-  pointer-events: none;
-  z-index: 2;
-}
 .pop-lift:hover {
-  transform: translateY(-4px);
-  border-color: rgba(124, 58, 237, 0.40);
-  box-shadow: 0 30px 50px -24px rgba(76, 29, 149, 0.45), 0 8px 18px -8px rgba(76, 29, 149, 0.18);
+  transform: translate(-2px, -4px);
+  box-shadow: 10px 10px 0 rgba(28, 42, 30, 0.9);
 }
 
-/* Velvet glass: shared by modals and drawers — a frost pane with a violet rim. */
+/* Grove glass: shared by modals and drawers — a warm frost pane
+   with a dark-green rim and a hard offset shadow. */
 .pop-glass {
-  background: rgba(244, 241, 251, 0.92);
+  background: rgba(253, 249, 236, 0.94);
   backdrop-filter: blur(22px) saturate(1.25);
   -webkit-backdrop-filter: blur(22px) saturate(1.25);
-  border: 1px solid rgba(124, 58, 237, 0.30);
-  border-radius: 1.5rem;
-  box-shadow: 0 30px 60px -24px rgba(30, 27, 46, 0.35);
+  border: 2px solid #1c2a1e;
+  border-radius: 1.25rem;
+  box-shadow: 8px 8px 0 rgba(28, 42, 30, 0.9);
 }
 
-/* Velvet seal: a rose round badge with a violet rim. */
+/* Grove seal: a mango round badge with a dark-green rim. */
 .starburst {
-  background: radial-gradient(circle at 35% 30%, #fda4af 0%, #e11d48 55%, #7c3aed 100%);
+  background: radial-gradient(circle at 35% 30%, #fcd34d 0%, #ea580c 55%, #15803d 100%);
   color: #ffffff;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
   border-radius: 9999px;
-  box-shadow: 0 10px 24px -8px rgba(225, 29, 72, 0.65), inset 0 2px 6px rgba(255, 255, 255, 0.55);
-  border: 3px solid #f4f1fb;
+  box-shadow: 0 10px 24px -8px rgba(234, 88, 12, 0.65), inset 0 2px 6px rgba(255, 255, 255, 0.55);
+  border: 3px solid #fdf9ec;
 }
 
-/* Velvet dots: faint violet dot grid on lavender paper. */
+/* Grove dots: faint green dot grid on warm cream paper. */
 .halftone {
-  background-image: radial-gradient(rgba(124, 58, 237, 0.14) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(rgba(21, 128, 61, 0.16) 1.5px, transparent 1.5px);
   background-size: 30px 30px;
   background-position: 0 0;
 }
 
-/* Velvet seam: a dashed rose line dividing sections. */
+/* Grove seam: a dashed mango line dividing sections. */
 .zigzag {
   height: 12px;
-  background-image: repeating-linear-gradient(90deg, rgba(225, 29, 72, 0.85) 0 12px, transparent 12px 24px);
+  background-image: repeating-linear-gradient(90deg, rgba(234, 88, 12, 0.85) 0 12px, transparent 12px 24px);
   background-size: 24px 3px;
   background-repeat: repeat-x;
   background-position: 0 center;
@@ -213,41 +201,41 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
   mask: linear-gradient(90deg, black 82%, transparent 100%);
 }
 
-/* Velvet band: broad violet / rose / cyan stripes across the section top. */
+/* Grove band: broad green / mango / lime stripes across the section top. */
 .bazaar-awning {
   background-image: repeating-linear-gradient(
     100deg,
-    #7c3aed 0 22px,
-    #e11d48 22px 44px,
-    #0891b2 44px 66px
+    #15803d 0 22px,
+    #ea580c 22px 44px,
+    #65a30d 44px 66px
   );
   opacity: 0.95;
-  box-shadow: 0 8px 24px -8px rgba(30, 27, 46, 0.45);
+  box-shadow: 0 8px 24px -8px rgba(28, 42, 30, 0.45);
 }
 
-/* Velvet glow: layered violet/rose/cyan glow for the core halo. */
+/* Grove glow: layered green/mango/lime glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(8, 145, 178, 0.24) 0%, rgba(124, 58, 237, 0.24) 42%, rgba(225, 29, 72, 0.16) 62%, rgba(225, 29, 72, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(101, 163, 13, 0.24) 0%, rgba(21, 128, 61, 0.24) 42%, rgba(234, 88, 12, 0.16) 62%, rgba(234, 88, 12, 0) 76%);
 }
-/* Velvet core: a glowing rose disc with a violet halo. */
+/* Grove core: a glowing mango disc with a green halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #ffe4e6 0%, #e11d48 52%, #7c3aed 100%);
-  box-shadow: 0 0 70px -8px rgba(225, 29, 72, 0.55), 0 0 28px -6px rgba(124, 58, 237, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.50);
-  border: 2px solid rgba(124, 58, 237, 0.45);
+    radial-gradient(circle at 38% 34%, #fef3c7 0%, #ea580c 52%, #15803d 100%);
+  box-shadow: 0 0 70px -8px rgba(234, 88, 12, 0.55), 0 0 28px -6px rgba(21, 128, 61, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.50);
+  border: 2px solid rgba(21, 128, 61, 0.45);
 }
 
-/* Velvet rings around the core disc. */
+/* Grove rings around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(225, 29, 72, 0.42) 0px,
-    rgba(225, 29, 72, 0.42) 2px,
+    rgba(234, 88, 12, 0.42) 0px,
+    rgba(234, 88, 12, 0.42) 2px,
     transparent 2px,
     transparent 12px,
-    rgba(124, 58, 237, 0.30) 12px,
-    rgba(124, 58, 237, 0.30) 14px,
+    rgba(21, 128, 61, 0.30) 12px,
+    rgba(21, 128, 61, 0.30) 14px,
     transparent 14px,
     transparent 30px
   );
@@ -258,7 +246,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(124, 58, 237, 0.34) 0deg 4deg,
+    rgba(21, 128, 61, 0.34) 0deg 4deg,
     transparent 4deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
