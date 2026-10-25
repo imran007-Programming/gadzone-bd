@@ -1,65 +1,65 @@
 @import "tailwindcss";
 
 @theme {
-  /* Indigo Signal: deep indigo primary, electric lime accent and a
-     rose spark on cool lavender paper. Cards are crisp, squared-off
-     slabs with a hard offset shadow — the opposite of the previous
-     soft, rounded burnt-orange orchard pillows. */
+  /* Moss & Amber: deep forest green primary, warm amber accent and a
+     terracotta spark on warm cream paper. Cards are soft, fully
+     rounded pillows with layered soft shadows — the opposite of the
+     previous crisp, squared-off indigo slabs with hard offset shadows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = deep indigo scale */
-  --color-brand-50: #eef2ff;
-  --color-brand-100: #e0e7ff;
-  --color-brand-200: #c7d2fe;
-  --color-brand-300: #a5b4fc;
-  --color-brand-400: #818cf8;
-  --color-brand-500: #6366f1;
-  --color-brand-600: #4f46e5;
-  --color-brand-700: #4338ca;
-  --color-brand-800: #3730a3;
-  --color-brand-900: #312e81;
-  --color-brand-950: #1e1b4b;
-  --color-brand: #4f46e5;
-  --color-brand-dark: #4338ca;
-  --color-brand-deep: #3730a3;
+  /* brand = forest green scale */
+  --color-brand-50: #ecfdf5;
+  --color-brand-100: #d1fae5;
+  --color-brand-200: #a7f3d0;
+  --color-brand-300: #6ee7b7;
+  --color-brand-400: #34d399;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-brand-900: #064e3b;
+  --color-brand-950: #022c22;
+  --color-brand: #059669;
+  --color-brand-dark: #047857;
+  --color-brand-deep: #065f46;
 
-  /* gold = electric lime scale (name kept for legacy class refs) */
-  --color-gold-50: #f7fee7;
-  --color-gold-100: #ecfccb;
-  --color-gold-200: #d9f99d;
-  --color-gold-300: #bef264;
-  --color-gold-400: #a3e635;
-  --color-gold-500: #84cc16;
-  --color-gold-600: #65a30d;
-  --color-gold-700: #4d7c0f;
-  --color-gold-800: #3f6212;
-  --color-gold-900: #365314;
-  --color-gold-950: #1a2e05;
-  --color-gold: #84cc16;
-  --color-gold-deep: #4d7c0f;
-  --color-gold-soft: #ecfccb;
+  /* gold = warm amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #92400e;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = rose scale (name kept for legacy class refs) */
-  --color-popblue-50: #fff1f2;
-  --color-popblue-100: #ffe4e6;
-  --color-popblue-200: #fecdd3;
-  --color-popblue-300: #fda4af;
-  --color-popblue-400: #fb7185;
-  --color-popblue-500: #f43f5e;
-  --color-popblue-600: #e11d48;
-  --color-popblue-700: #be123c;
-  --color-popblue-800: #9f1239;
-  --color-popblue-900: #881337;
-  --color-popblue-950: #4c0519;
-  --color-popblue: #e11d48;
-  --color-popblue-deep: #9f1239;
-  --color-popblue-soft: #ffe4e6;
+  /* popblue = terracotta scale (name kept for legacy class refs) */
+  --color-popblue-50: #fff7ed;
+  --color-popblue-100: #ffedd5;
+  --color-popblue-200: #fed7aa;
+  --color-popblue-300: #fdba74;
+  --color-popblue-400: #fb923c;
+  --color-popblue-500: #f97316;
+  --color-popblue-600: #ea580c;
+  --color-popblue-700: #c2410c;
+  --color-popblue-800: #9a3412;
+  --color-popblue-900: #7c2d12;
+  --color-popblue-950: #431407;
+  --color-popblue: #ea580c;
+  --color-popblue-deep: #9a3412;
+  --color-popblue-soft: #ffedd5;
 
-  --color-ink: #1e1b4b;
-  --color-paper: #f5f3ff;
-  --color-mute: #55547a;
+  --color-ink: #1c2b26;
+  --color-paper: #fdfbf6;
+  --color-mute: #5b6b64;
   --color-card: #ffffff;
-  --color-deep: #1e1b4b;
+  --color-deep: #022c22;
 }
 
 html { scroll-behavior: smooth; }
@@ -74,125 +74,124 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f5f3ff;
+  background-color: #fdfbf6;
   background-image:
-    linear-gradient(160deg, rgba(79, 70, 229, 0.10) 0%, transparent 42%),
-    radial-gradient(ellipse 50% 32% at 92% -4%, rgba(163, 230, 53, 0.22), transparent 70%),
-    radial-gradient(ellipse 44% 30% at 4% 102%, rgba(225, 29, 72, 0.10), transparent 70%);
-  color: #1e1b4b;
+    linear-gradient(165deg, rgba(5, 150, 105, 0.08) 0%, transparent 45%),
+    radial-gradient(ellipse 50% 32% at 92% -4%, rgba(245, 158, 11, 0.20), transparent 70%),
+    radial-gradient(ellipse 44% 30% at 4% 102%, rgba(234, 88, 12, 0.08), transparent 70%);
+  color: #1c2b26;
 }
-::selection { background: #a3e635; color: #1e1b4b; }
+::selection { background: #fbbf24; color: #022c22; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #6366f1, #84cc16); border-radius: 8px; border: 2px solid #f5f3ff; }
-::-webkit-scrollbar-track { background: #e0e7ff; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #059669, #f59e0b); border-radius: 8px; border: 2px solid #fdfbf6; }
+::-webkit-scrollbar-track { background: #d1fae5; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Signal type: crisp headlines with tight tracking. */
-h1, h2, h3 { letter-spacing: -0.03em; text-wrap: balance; }
+/* Grove type: soft headlines with relaxed tracking. */
+h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Rising signal sparks: tiny rounds drifting up through cool air. */
+/* Drifting leaves: soft amber and green rounds swaying down through warm air. */
 @keyframes signal-rise {
-  0% { transform: translate3d(0, 6vh, 0) scale(0.7); opacity: 0; }
-  16% { opacity: 0.85; }
-  45% { transform: translate3d(-12px, -30vh, 0) scale(1); }
-  72% { transform: translate3d(10px, -62vh, 0) scale(1.15); opacity: 0.5; }
-  100% { transform: translate3d(-4px, -96vh, 0) scale(1.3); opacity: 0; }
+  0% { transform: translate3d(0, -4vh, 0) rotate(0deg) scale(0.8); opacity: 0; }
+  18% { opacity: 0.85; }
+  50% { transform: translate3d(14px, 46vh, 0) rotate(120deg) scale(1); }
+  78% { transform: translate3d(-10px, 78vh, 0) rotate(240deg) scale(1.1); opacity: 0.5; }
+  100% { transform: translate3d(6px, 104vh, 0) rotate(320deg) scale(1.2); opacity: 0; }
 }
-.pop-fall { animation: signal-rise 11s linear infinite; }
+.pop-fall { animation: signal-rise 12s linear infinite; }
 
-/* Signal drift: slow lateral drift of the cool light. */
+/* Grove drift: slow lateral sway of the warm light. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-2vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(2vw, -0.6rem, 0) scale(1.04); opacity: 0.75; }
 }
 .pop-drift { animation: signal-drift 24s ease-in-out infinite; }
 
-/* Signal bob: gentle dip and rise of the floating marker. */
+/* Grove bob: gentle dip and rise of the floating marker. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) rotate(-2deg); }
   50% { transform: translateY(-5px) rotate(2deg); }
 }
 .pop-bob { animation: signal-bob 5.6s ease-in-out infinite; }
 
-/* Slow turn for the signal dial. */
+/* Slow turn for the grove dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 70s linear infinite; }
 
-/* Signal blink: rhythmic sparkle of cool light. */
+/* Grove blink: rhythmic sparkle of warm light. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.35; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.15); }
 }
 .pop-twinkle { animation: signal-blink 3.2s ease-in-out infinite; }
 
-/* Signal ticker: infinite marquee (leftward drift). */
+/* Grove ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 34s linear infinite; }
 
-/* Signal check: indigo -> lime -> rose diagonal tiles. */
+/* Grove check: green -> amber -> terracotta diagonal tiles. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(45deg, #818cf8 0 10px, #a3e635 10px 20px, #e11d48 20px 30px);
+    repeating-linear-gradient(45deg, #34d399 0 10px, #fbbf24 10px 20px, #ea580c 20px 30px);
   background-size: 42px 42px;
 }
 
-/* Signal card: a crisp, squared-off slab on lavender paper with a
-   deep indigo edge and a hard offset shadow. On hover it shifts up
-   and left and the shadow snaps to lime, like a signal tile being
-   pressed into place. */
+/* Grove card: a soft, fully rounded pillow on cream paper with a
+   thin sage edge and layered soft shadows. On hover it floats up
+   gently and the shadow warms to amber, like a leaf catching light. */
 .pop-lift {
   position: relative;
-  border: 2px solid #312e81;
+  border: 1px solid rgba(5, 150, 105, 0.18);
   background: #ffffff;
-  border-radius: 0.75rem;
-  box-shadow: 5px 5px 0 rgba(79, 70, 229, 0.28);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  border-radius: 1.75rem;
+  box-shadow: 0 2px 6px rgba(2, 44, 34, 0.05), 0 18px 36px -18px rgba(2, 44, 34, 0.22);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translate(-2px, -2px);
-  border-color: #312e81;
-  box-shadow: 8px 8px 0 rgba(132, 204, 22, 0.85);
+  transform: translateY(-6px);
+  border-color: rgba(245, 158, 11, 0.55);
+  box-shadow: 0 4px 10px rgba(2, 44, 34, 0.06), 0 26px 44px -18px rgba(217, 119, 6, 0.45);
 }
 
-/* Signal glass: shared by modals and drawers — a cool lavender pane
-   with a crisp indigo edge and a hard offset shadow. */
+/* Grove glass: shared by modals and drawers — a warm cream pane
+   with a soft sage edge and a gentle layered shadow. */
 .pop-glass {
-  background: rgba(245, 243, 255, 0.92);
+  background: rgba(253, 251, 246, 0.92);
   backdrop-filter: blur(22px) saturate(1.2);
   -webkit-backdrop-filter: blur(22px) saturate(1.2);
-  border: 2px solid rgba(79, 70, 229, 0.35);
-  border-radius: 1rem;
-  box-shadow: 6px 6px 0 rgba(30, 27, 75, 0.18);
+  border: 1px solid rgba(5, 150, 105, 0.25);
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 8px rgba(2, 44, 34, 0.06), 0 24px 48px -20px rgba(2, 44, 34, 0.28);
 }
 
-/* Signal seal: an indigo-to-lime-to-rose round badge. */
+/* Grove seal: a green-to-amber-to-terracotta round badge. */
 .starburst {
-  background: linear-gradient(135deg, #4338ca 0%, #84cc16 55%, #e11d48 100%);
+  background: linear-gradient(135deg, #047857 0%, #f59e0b 55%, #ea580c 100%);
   color: #ffffff;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   border-radius: 9999px;
-  box-shadow: 0 8px 20px rgba(30, 27, 75, 0.25), inset 0 2px 6px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 20px rgba(2, 44, 34, 0.25), inset 0 2px 6px rgba(255, 255, 255, 0.4);
   border: 2px solid #ffffff;
 }
 
-/* Signal dots: faint indigo dot grid on lavender paper. */
+/* Grove dots: faint green dot grid on cream paper. */
 .halftone {
-  background-image: radial-gradient(rgba(79, 70, 229, 0.18) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(rgba(5, 150, 105, 0.16) 1.5px, transparent 1.5px);
   background-size: 20px 20px;
   background-position: 0 0;
 }
 
-/* Signal seam: a dashed lime line dividing sections. */
+/* Grove seam: a dashed amber line dividing sections. */
 .zigzag {
   height: 12px;
-  background-image: linear-gradient(90deg, rgba(132, 204, 22, 0.9) 55%, transparent 45%);
+  background-image: linear-gradient(90deg, rgba(245, 158, 11, 0.9) 55%, transparent 45%);
   background-size: 18px 2px;
   background-repeat: repeat-x;
   background-position: 0 center;
@@ -201,41 +200,41 @@ h1, h2, h3 { letter-spacing: -0.03em; text-wrap: balance; }
   mask: linear-gradient(90deg, black 82%, transparent 100%);
 }
 
-/* Signal band: indigo / lime / rose stripes across the section top. */
+/* Grove band: green / amber / terracotta stripes across the section top. */
 .bazaar-awning {
   background-image: repeating-linear-gradient(
     90deg,
-    #4f46e5 0 22px,
-    #84cc16 22px 44px,
-    #e11d48 44px 66px
+    #059669 0 22px,
+    #f59e0b 22px 44px,
+    #ea580c 44px 66px
   );
   opacity: 0.9;
-  box-shadow: 0 4px 12px rgba(30, 27, 75, 0.18);
+  box-shadow: 0 4px 12px rgba(2, 44, 34, 0.18);
 }
 
-/* Signal glow: layered indigo/lime/rose glow for the core halo. */
+/* Grove glow: layered green/amber/terracotta glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(225, 29, 72, 0.16) 0%, rgba(79, 70, 229, 0.20) 42%, rgba(132, 204, 22, 0.16) 62%, rgba(132, 204, 22, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(234, 88, 12, 0.14) 0%, rgba(5, 150, 105, 0.18) 42%, rgba(245, 158, 11, 0.16) 62%, rgba(245, 158, 11, 0) 76%);
 }
-/* Signal core: a glowing lime orb with an indigo halo. */
+/* Grove core: a glowing amber orb with a green halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #f7fee7 0%, #a3e635 52%, #4f46e5 100%);
-  box-shadow: 0 10px 28px rgba(30, 27, 75, 0.18), inset 0 3px 12px rgba(255, 255, 255, 0.55);
-  border: 2px solid rgba(79, 70, 229, 0.45);
+    radial-gradient(circle at 38% 34%, #fffbeb 0%, #fbbf24 52%, #059669 100%);
+  box-shadow: 0 10px 28px rgba(2, 44, 34, 0.18), inset 0 3px 12px rgba(255, 255, 255, 0.55);
+  border: 2px solid rgba(5, 150, 105, 0.45);
 }
 
-/* Signal ripples around the core disc. */
+/* Grove ripples around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(225, 29, 72, 0.40) 0px,
-    rgba(225, 29, 72, 0.40) 2px,
+    rgba(234, 88, 12, 0.36) 0px,
+    rgba(234, 88, 12, 0.36) 2px,
     transparent 2px,
     transparent 12px,
-    rgba(79, 70, 229, 0.28) 12px,
-    rgba(79, 70, 229, 0.28) 14px,
+    rgba(5, 150, 105, 0.26) 12px,
+    rgba(5, 150, 105, 0.26) 14px,
     transparent 14px,
     transparent 30px
   );
@@ -246,7 +245,7 @@ h1, h2, h3 { letter-spacing: -0.03em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(79, 70, 229, 0.32) 0deg 4deg,
+    rgba(5, 150, 105, 0.30) 0deg 4deg,
     transparent 4deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
