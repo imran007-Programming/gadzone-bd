@@ -1,66 +1,66 @@
 @import "tailwindcss";
 
 @theme {
-  /* Rosewood Velvet: warm plum-rose primary, amber apricot
-     spark and violet dusk on blush-cream paper. Cards are
-     fully-rounded velvet pillows with soft layered shadows —
-     the opposite of the previous Frost Circuit's cool teal
-     paper, angular tiles and flat offset shadows. */
+  /* Harbor Mint: deep teal primary, lime-citrus spark and
+     burnt-orange dusk on cool mint paper. Cards are crisp
+     harbor tiles with medium corners and a clean flat shadow —
+     the opposite of the previous Rosewood Velvet's warm plum
+     paper, fully-rounded pillows and soft layered shadows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = plum-rose scale */
-  --color-brand-50: #fdf2f8;
-  --color-brand-100: #fce7f3;
-  --color-brand-200: #fbcfe8;
-  --color-brand-300: #f9a8d4;
-  --color-brand-400: #f472b6;
-  --color-brand-500: #ec4899;
-  --color-brand-600: #db2777;
-  --color-brand-700: #be185d;
-  --color-brand-800: #9d174d;
-  --color-brand-900: #831843;
-  --color-brand-950: #500724;
-  --color-brand: #db2777;
-  --color-brand-dark: #9d174d;
-  --color-brand-deep: #500724;
+  /* brand = deep teal scale */
+  --color-brand-50: #f0fdfa;
+  --color-brand-100: #ccfbf1;
+  --color-brand-200: #99f6e4;
+  --color-brand-300: #5eead4;
+  --color-brand-400: #2dd4bf;
+  --color-brand-500: #14b8a6;
+  --color-brand-600: #0d9488;
+  --color-brand-700: #0f766e;
+  --color-brand-800: #115e59;
+  --color-brand-900: #134e4a;
+  --color-brand-950: #042f2e;
+  --color-brand: #0f766e;
+  --color-brand-dark: #115e59;
+  --color-brand-deep: #042f2e;
 
-  /* gold = amber apricot scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #d97706;
-  --color-gold-deep: #92400e;
-  --color-gold-soft: #fef3c7;
+  /* gold = lime citrus scale (name kept for legacy class refs) */
+  --color-gold-50: #f7fee7;
+  --color-gold-100: #ecfccb;
+  --color-gold-200: #d9f99d;
+  --color-gold-300: #bef264;
+  --color-gold-400: #a3e635;
+  --color-gold-500: #84cc16;
+  --color-gold-600: #65a30d;
+  --color-gold-700: #4d7c0f;
+  --color-gold-800: #3f6212;
+  --color-gold-900: #365314;
+  --color-gold-950: #1a2e05;
+  --color-gold: #65a30d;
+  --color-gold-deep: #3f6212;
+  --color-gold-soft: #ecfccb;
 
-  /* popblue = violet dusk scale (name kept for legacy class refs) */
-  --color-popblue-50: #f5f3ff;
-  --color-popblue-100: #ede9fe;
-  --color-popblue-200: #ddd6fe;
-  --color-popblue-300: #c4b5fd;
-  --color-popblue-400: #a78bfa;
-  --color-popblue-500: #8b5cf6;
-  --color-popblue-600: #7c3aed;
-  --color-popblue-700: #6d28d9;
-  --color-popblue-800: #5b21b6;
-  --color-popblue-900: #4c1a85;
-  --color-popblue-950: #2e1065;
-  --color-popblue: #7c3aed;
-  --color-popblue-deep: #5b21b6;
-  --color-popblue-soft: #ede9fe;
+  /* popblue = burnt-orange scale (name kept for legacy class refs) */
+  --color-popblue-50: #fff7ed;
+  --color-popblue-100: #ffedd5;
+  --color-popblue-200: #fed7aa;
+  --color-popblue-300: #fdba74;
+  --color-popblue-400: #fb923c;
+  --color-popblue-500: #f97316;
+  --color-popblue-600: #ea580c;
+  --color-popblue-700: #c2410c;
+  --color-popblue-800: #9a3412;
+  --color-popblue-900: #7c2d12;
+  --color-popblue-950: #431407;
+  --color-popblue: #ea580c;
+  --color-popblue-deep: #9a3412;
+  --color-popblue-soft: #ffedd5;
 
-  --color-ink: #3b1526;
-  --color-paper: #fdf6f3;
-  --color-mute: #7a5568;
+  --color-ink: #042f2e;
+  --color-paper: #f0fdfa;
+  --color-mute: #527a78;
   --color-card: #ffffff;
-  --color-deep: #500724;
+  --color-deep: #042f2e;
 }
 
 html { scroll-behavior: smooth; }
@@ -75,124 +75,124 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fdf6f3;
+  background-color: #f0fdfa;
   background-image:
-    linear-gradient(180deg, rgba(219, 39, 119, 0.08) 0%, transparent 38%),
-    radial-gradient(ellipse 50% 32% at 92% -4%, rgba(124, 58, 237, 0.12), transparent 70%),
-    radial-gradient(ellipse 44% 30% at 4% 102%, rgba(217, 119, 6, 0.12), transparent 70%);
-  color: #3b1526;
+    linear-gradient(180deg, rgba(15, 118, 110, 0.09) 0%, transparent 38%),
+    radial-gradient(ellipse 50% 32% at 92% -4%, rgba(234, 88, 12, 0.12), transparent 70%),
+    radial-gradient(ellipse 44% 30% at 4% 102%, rgba(132, 204, 22, 0.14), transparent 70%);
+  color: #042f2e;
 }
-::selection { background: #fcd34d; color: #3b1526; }
+::selection { background: #bef264; color: #042f2e; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #db2777, #7c3aed); border-radius: 999px; border: 2px solid #fdf6f3; }
-::-webkit-scrollbar-track { background: #fce7f3; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0f766e, #ea580c); border-radius: 999px; border: 2px solid #f0fdfa; }
+::-webkit-scrollbar-track { background: #ccfbf1; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Velvet type: soft, open headlines with a warm, plush feel. */
-h1, h2, h3 { letter-spacing: 0; text-wrap: balance; }
+/* Harbor type: tight, crisp headlines with a clean coastal feel. */
+h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Velvet petals: soft rose petals drifting down the page. */
+/* Harbor bubbles: soft teal bubbles rising up the page. */
 @keyframes signal-rise {
-  0% { transform: translate3d(0, -4vh, 0) rotate(0deg) scale(0.8); opacity: 0; }
+  0% { transform: translate3d(0, 4vh, 0) rotate(0deg) scale(0.8); opacity: 0; }
   18% { opacity: 0.85; }
-  50% { transform: translate3d(10px, 46vh, 0) rotate(60deg) scale(1); }
-  78% { transform: translate3d(-8px, 78vh, 0) rotate(140deg) scale(1.05); opacity: 0.5; }
-  100% { transform: translate3d(4px, 104vh, 0) rotate(200deg) scale(1.1); opacity: 0; }
+  50% { transform: translate3d(-10px, 46vh, 0) rotate(-60deg) scale(1); }
+  78% { transform: translate3d(8px, 78vh, 0) rotate(-140deg) scale(1.05); opacity: 0.5; }
+  100% { transform: translate3d(-4px, 104vh, 0) rotate(-200deg) scale(1.1); opacity: 0; }
 }
 .pop-fall { animation: signal-rise 12s linear infinite; }
 
-/* Velvet sway: slow lateral drift of the warm dusk light. */
+/* Harbor sway: slow lateral drift of the coastal light. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-2vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(2vw, -0.6rem, 0) scale(1.04); opacity: 0.75; }
 }
 .pop-drift { animation: signal-drift 24s ease-in-out infinite; }
 
-/* Velvet bob: gentle rise and fall of the floating petal. */
+/* Harbor bob: gentle rise and fall of the floating bubble. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) rotate(-2deg); }
   50% { transform: translateY(-6px) rotate(2deg); }
 }
 .pop-bob { animation: signal-bob 5.6s ease-in-out infinite; }
 
-/* Slow turn for the velvet dial. */
+/* Slow turn for the harbor dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 70s linear infinite; }
 
-/* Velvet shimmer: rhythmic gleam of the amber spark. */
+/* Harbor shimmer: rhythmic gleam of the lime spark. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.35; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.15); }
 }
 .pop-twinkle { animation: signal-blink 3.2s ease-in-out infinite; }
 
-/* Velvet ticker: infinite marquee (leftward drift). */
+/* Harbor ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 34s linear infinite; }
 
-/* Velvet check: plum-rose -> violet -> amber bands. */
+/* Harbor check: teal -> orange -> lime bands. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(45deg, #f472b6 0 10px, #a78bfa 10px 20px, #fbbf24 20px 30px);
+    repeating-linear-gradient(45deg, #2dd4bf 0 10px, #fb923c 10px 20px, #a3e635 20px 30px);
   background-size: 42px 42px;
 }
 
-/* Velvet card: a fully-rounded pillow on blush paper with soft
-   layered shadows. On hover it lifts straight up and the
-   shadow deepens — a plush, cushioned feel. */
+/* Harbor card: a crisp tile on mint paper with medium corners
+   and a clean flat shadow. On hover it lifts and tilts
+   slightly — a fresh, coastal feel. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(190, 24, 93, 0.18);
+  border: 1px solid rgba(15, 118, 110, 0.22);
   background: #ffffff;
-  border-radius: 1.5rem;
-  box-shadow: 0 18px 40px -18px rgba(157, 23, 77, 0.35), 0 4px 12px -4px rgba(80, 7, 36, 0.12);
+  border-radius: 0.875rem;
+  box-shadow: 0 10px 28px -14px rgba(4, 47, 46, 0.35), 0 2px 6px -2px rgba(4, 47, 46, 0.1);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  border-color: rgba(124, 58, 237, 0.35);
-  box-shadow: 0 28px 56px -20px rgba(157, 23, 77, 0.45), 0 8px 20px -6px rgba(80, 7, 36, 0.18);
+  transform: translateY(-6px) rotate(-0.4deg);
+  border-color: rgba(234, 88, 12, 0.45);
+  box-shadow: 0 20px 40px -16px rgba(4, 47, 46, 0.4), 0 4px 12px -4px rgba(4, 47, 46, 0.14);
 }
 
-/* Velvet glass: shared by modals and drawers — a warm frosted
-   blush pane with fully-rounded corners and a soft shadow. */
+/* Harbor glass: shared by modals and drawers — a cool frosted
+   mint pane with medium corners and a clean shadow. */
 .pop-glass {
-  background: rgba(253, 246, 243, 0.94);
+  background: rgba(240, 253, 250, 0.94);
   backdrop-filter: blur(22px) saturate(1.2);
   -webkit-backdrop-filter: blur(22px) saturate(1.2);
-  border: 1px solid rgba(190, 24, 93, 0.22);
-  border-radius: 1.5rem;
-  box-shadow: 0 24px 48px -20px rgba(80, 7, 36, 0.35);
+  border: 1px solid rgba(15, 118, 110, 0.25);
+  border-radius: 0.875rem;
+  box-shadow: 0 24px 48px -20px rgba(4, 47, 46, 0.35);
 }
 
-/* Velvet seal: a plum-rose-to-amber round badge. */
+/* Harbor seal: a teal-to-orange round badge. */
 .starburst {
-  background: linear-gradient(135deg, #db2777 0%, #7c3aed 55%, #d97706 100%);
+  background: linear-gradient(135deg, #0f766e 0%, #ea580c 55%, #65a30d 100%);
   color: #ffffff;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
   border-radius: 9999px;
-  box-shadow: 0 12px 24px -8px rgba(157, 23, 77, 0.55);
-  border: 2px solid #fdf6f3;
+  box-shadow: 0 12px 24px -8px rgba(4, 47, 46, 0.55);
+  border: 2px solid #f0fdfa;
 }
 
-/* Velvet dots: faint plum dot grid on blush paper. */
+/* Harbor dots: faint teal dot grid on mint paper. */
 .halftone {
-  background-image: radial-gradient(rgba(219, 39, 119, 0.16) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(rgba(15, 118, 110, 0.16) 1.5px, transparent 1.5px);
   background-size: 20px 20px;
   background-position: 0 0;
 }
 
-/* Velvet seam: a dotted violet line dividing sections. */
+/* Harbor seam: a dotted orange line dividing sections. */
 .zigzag {
   height: 12px;
-  background-image: radial-gradient(rgba(124, 58, 237, 0.9) 2px, transparent 2.5px);
+  background-image: radial-gradient(rgba(234, 88, 12, 0.9) 2px, transparent 2.5px);
   background-size: 18px 12px;
   background-repeat: repeat-x;
   background-position: 0 center;
@@ -201,42 +201,42 @@ h1, h2, h3 { letter-spacing: 0; text-wrap: balance; }
   mask: linear-gradient(90deg, black 82%, transparent 100%);
 }
 
-/* Velvet band: plum-rose / violet / amber stripes across the section top. */
+/* Harbor band: teal / orange / lime stripes across the section top. */
 .bazaar-awning {
   background-image: repeating-linear-gradient(
     90deg,
-    #db2777 0 22px,
-    #7c3aed 22px 44px,
-    #d97706 44px 66px
+    #0f766e 0 22px,
+    #ea580c 22px 44px,
+    #65a30d 44px 66px
   );
   opacity: 0.9;
-  box-shadow: 0 4px 12px rgba(80, 7, 36, 0.25);
+  box-shadow: 0 4px 12px rgba(4, 47, 46, 0.25);
 }
 
-/* Velvet glow: layered plum-rose/violet/amber glow for the core halo. */
+/* Harbor glow: layered teal/orange/lime glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(252, 211, 77, 0.22) 0%, rgba(244, 114, 182, 0.22) 42%, rgba(167, 139, 250, 0.18) 62%, rgba(167, 139, 250, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(190, 242, 100, 0.22) 0%, rgba(45, 212, 191, 0.22) 42%, rgba(251, 146, 60, 0.18) 62%, rgba(251, 146, 60, 0) 76%);
 }
 
-/* Velvet core: a glowing amber orb with a plum-rose halo. */
+/* Harbor core: a glowing lime orb with a teal halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #fdf6f3 0%, #fbbf24 52%, #db2777 100%);
-  box-shadow: 0 16px 32px -12px rgba(80, 7, 36, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.55);
+    radial-gradient(circle at 38% 34%, #f0fdfa 0%, #a3e635 52%, #0f766e 100%);
+  box-shadow: 0 16px 32px -12px rgba(4, 47, 46, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.55);
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Velvet ripples around the core disc. */
+/* Harbor ripples around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(124, 58, 237, 0.32) 0px,
-    rgba(124, 58, 237, 0.32) 2px,
+    rgba(234, 88, 12, 0.32) 0px,
+    rgba(234, 88, 12, 0.32) 2px,
     transparent 2px,
     transparent 12px,
-    rgba(219, 39, 119, 0.26) 12px,
-    rgba(219, 39, 119, 0.26) 14px,
+    rgba(15, 118, 110, 0.26) 12px,
+    rgba(15, 118, 110, 0.26) 14px,
     transparent 14px,
     transparent 30px
   );
@@ -247,7 +247,7 @@ h1, h2, h3 { letter-spacing: 0; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(219, 39, 119, 0.28) 0deg 4deg,
+    rgba(15, 118, 110, 0.28) 0deg 4deg,
     transparent 4deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
