@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Frost current drifting over the circuit board.
+// Rosewood dusk drifting over the velvet paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(13,148,136, 0.20)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(163,230,53, 0.20)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(2,132,199, 0.16)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(15,118,110, 0.16)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(219,39,119, 0.20)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(251,191,36, 0.20)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(124,58,237, 0.16)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(190,24,93, 0.16)" },
 ];
 
-// Circuit sparks drifting down through the frost light.
+// Rose petals drifting down through the velvet light.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#14b8a6" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#a3e635" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#0284c7" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#0d9488" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#38bdf8" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#bef264" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#0f766e" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#db2777" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#fbbf24" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#7c3aed" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#ec4899" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#a78bfa" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fcd34d" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#be185d" },
 ];
 
-// Lime sparks scattered through the frost.
+// Amber sparks scattered through the velvet.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -75,19 +75,19 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* cool frost wash under the circuit light */}
-      <div className="relative bg-gradient-to-b from-[#f0fdfa] via-[#ccfbf1] to-[#e0f2fe]">
+      {/* warm rose wash under the velvet light */}
+      <div className="relative bg-gradient-to-b from-[#fdf2f8] via-[#fce7f3] to-[#ede9fe]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
 
-        {/* frost wash sweeping the circuit */}
+        {/* velvet wash sweeping the rose dusk */}
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-0 hidden h-[560px] opacity-90 sm:block">
           <div className="pop-drift absolute -left-24 top-6 h-72 w-[52rem] rotate-[-8deg] rounded-full bg-gradient-to-r from-brand-400/35 via-popblue-300/20 to-transparent blur-3xl" />
           <div className="pop-drift absolute -right-24 top-40 h-64 w-[44rem] rotate-[10deg] rounded-full bg-gradient-to-r from-transparent via-gold-300/25 to-brand-400/30 blur-3xl" style={{ animationDelay: "-12s" }} />
         </div>
 
-        {/* circuit core: a first-light orb ringed by a slow-spinning signal dial */}
+        {/* velvet core: a first-light orb ringed by a slow-spinning dusk dial */}
         <div aria-hidden className="pointer-events-none absolute -right-40 -top-32 z-0 hidden opacity-90 sm:block">
           <div className="relative h-[600px] w-[600px]">
             <div className="nebula-core absolute inset-8 rounded-full blur-xl" />
@@ -100,12 +100,12 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(194,65,12, 0.45), inset 0 0 18px rgba(250,204,21, 0.25)",
+                  boxShadow: "0 0 28px 2px rgba(219,39,119, 0.45), inset 0 0 18px rgba(252,211,77, 0.25)",
                   opacity: 1 - r * 0.22,
                 }}
               />
             ))}
-            {/* the circuit heart: a layered first-light disc */}
+            {/* the velvet heart: a layered first-light disc */}
             <div className="sun-disc pop-spin absolute inset-44 rounded-full" style={{ animationDuration: "60s" }} />
             {/* beacon glints */}
             <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
@@ -113,7 +113,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 <span key={i} className="absolute rounded-full bg-white/80" style={{ left: glint.l, top: glint.t, width: glint.s, height: glint.s }} />
               ))}
             </div>
-            {/* sweeping signal beams */}
+            {/* sweeping velvet beams */}
             {[0, 1, 2].map((b) => (
               <span
                 key={b}
@@ -121,11 +121,11 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{ width: 26, height: 240, transform: `translate(-50%, -100%) rotate(${b * 120}deg)`, animationDuration: "36s" }}
               />
             ))}
-            {/* buoys dancing around the beacon */}
+            {/* petals dancing around the beacon */}
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#ea580c", "#facc15", "#e11d48", "#fb923c"];
+              const colors = ["#db2777", "#fbbf24", "#7c3aed", "#f472b6"];
               return (
                 <span
                   key={i}
@@ -143,7 +143,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* drifting signal glow */}
+        {/* drifting velvet glow */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {ORBS.map((g, i) => (
             <div
@@ -165,7 +165,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* rising signal spray */}
+        {/* rising petal spray */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden overflow-hidden sm:block">
           {FLAKES.map((r, i) => (
             <Flake key={i} {...r} />
@@ -185,7 +185,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* signal ticker: deep violet band with white type */}
+        {/* signal ticker: deep plum band with white type */}
         <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/60 bg-gradient-to-r from-brand-600/95 via-popblue-600/95 to-brand-700/95 py-3 shadow-[0_14px_30px_-14px_rgba(15,23,42, 0.5)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
@@ -198,11 +198,11 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* signal divider into the page */}
+        {/* velvet divider into the page */}
         <div aria-hidden className="zigzag relative z-10 mx-auto mt-0 w-full max-w-7xl opacity-90" />
       </div>
 
-      {/* Stats + featured picks under the circuit beacon */}
+      {/* Stats + featured picks under the velvet beacon */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 pb-24 pt-10 md:pb-28">
         <motion.div variants={container} initial="hidden" animate="show" {...anim}>
           <motion.div variants={item} className="grid grid-cols-2 gap-6 sm:grid-cols-4">
@@ -253,7 +253,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* signal divider into the page */}
+      {/* velvet divider into the page */}
       <div aria-hidden className="zigzag absolute bottom-0 left-0 w-full opacity-90" />
     </section>
   );
