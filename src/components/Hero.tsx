@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Ember harbor light drifting over the pale mist paper.
+// Amethyst light drifting over the warm cream paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(194,65,12, 0.20)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(47,90,128, 0.20)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(217,119,6, 0.16)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(251,146,60, 0.16)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(109,40,217, 0.20)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(79,70,229, 0.20)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(132,204,22, 0.16)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(167,139,250, 0.16)" },
 ];
 
-// Ember sparks drifting down through the harbor light.
+// Violet and lime sparks drifting down through the amethyst light.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#c2410c" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#d97706" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#2f5a80" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#f59e0b" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#fb923c" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#d97706" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#24405a" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#6d28d9" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#84cc16" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#4338ca" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#a3e635" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#7c3aed" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#84cc16" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#312e81" },
 ];
 
-// Coral sparks scattered through the circuit.
+// Lime sparks scattered through the amethyst.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#c2410c", "#d97706", "#2f5a80", "#f97316"];
+              const colors = ["#6d28d9", "#84cc16", "#4338ca", "#f97316"];
               return (
                 <span
                   key={i}
@@ -159,7 +159,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           {STARS.map((s, i) => (
             <span
               key={i}
-              className="pop-twinkle absolute rounded-full bg-[#d97706]"
+              className="pop-twinkle absolute rounded-full bg-[#84cc16]"
               style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
             />
           ))}
@@ -215,7 +215,7 @@ export default function Hero({ onQuickView }: HeroProps) {
               <div key={s.l} className="pop-lift relative overflow-hidden p-4 pb-3 pt-5 text-center">
                 <span className="relative block bg-gradient-to-br from-brand-600 via-gold-600 to-popblue-600 bg-clip-text text-2xl font-black tracking-tight text-transparent">{s.v}</span>
                 <span className="relative mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-mute">{s.l}</span>
-                <span aria-hidden className="relative mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-gold-500 via-gold-400 to-gold-200 shadow-[0_2px_6px_rgba(13,148,136, 0.5)]" />
+                <span aria-hidden className="relative mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-gold-500 via-gold-400 to-gold-200 shadow-[0_2px_6px_rgba(109,40,217, 0.5)]" />
               </div>
             ))}
           </motion.div>
