@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Indigo dusk drifting over the blueprint paper.
+// Emerald grove light drifting over the cream paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(79,70,229, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(5,150,105, 0.20)" },
   { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245,158,11, 0.20)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(225,29,72, 0.16)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(234,88,12, 0.16)" },
   { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(217,119,6, 0.16)" },
 ];
 
-// Amber sparks drifting down through the blueprint light.
+// Honey sparks drifting down through the grove light.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#4f46e5" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#059669" },
   { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f59e0b" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#e11d48" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#fb7185" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#818cf8" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#ea580c" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#fb923c" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#34d399" },
   { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fbbf24" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#be123c" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#9a3412" },
 ];
 
-// Coral sparks scattered through the blueprint.
+// Terracotta sparks scattered through the grove.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -75,19 +75,19 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* warm rose wash under the velvet light */}
-      <div className="relative bg-gradient-to-b from-[#fdf2f8] via-[#fce7f3] to-[#ede9fe]">
+      {/* warm cream wash under the grove light */}
+      <div className="relative bg-gradient-to-b from-[#f0fdf4] via-[#fefce8] to-[#ecfdf5]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
 
-        {/* velvet wash sweeping the rose dusk */}
+        {/* grove wash sweeping the cream dusk */}
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-0 hidden h-[560px] opacity-90 sm:block">
           <div className="pop-drift absolute -left-24 top-6 h-72 w-[52rem] rotate-[-8deg] rounded-full bg-gradient-to-r from-brand-400/35 via-popblue-300/20 to-transparent blur-3xl" />
           <div className="pop-drift absolute -right-24 top-40 h-64 w-[44rem] rotate-[10deg] rounded-full bg-gradient-to-r from-transparent via-gold-300/25 to-brand-400/30 blur-3xl" style={{ animationDelay: "-12s" }} />
         </div>
 
-        {/* velvet core: a first-light orb ringed by a slow-spinning dusk dial */}
+        {/* grove core: a first-light orb ringed by a slow-spinning dusk dial */}
         <div aria-hidden className="pointer-events-none absolute -right-40 -top-32 z-0 hidden opacity-90 sm:block">
           <div className="relative h-[600px] w-[600px]">
             <div className="nebula-core absolute inset-8 rounded-full blur-xl" />
@@ -100,12 +100,12 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(219,39,119, 0.45), inset 0 0 18px rgba(252,211,77, 0.25)",
+                  boxShadow: "0 0 28px 2px rgba(234,88,12, 0.45), inset 0 0 18px rgba(252,211,77, 0.25)",
                   opacity: 1 - r * 0.22,
                 }}
               />
             ))}
-            {/* the velvet heart: a layered first-light disc */}
+            {/* the grove heart: a layered first-light disc */}
             <div className="sun-disc pop-spin absolute inset-44 rounded-full" style={{ animationDuration: "60s" }} />
             {/* beacon glints */}
             <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
@@ -113,7 +113,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 <span key={i} className="absolute rounded-full bg-white/80" style={{ left: glint.l, top: glint.t, width: glint.s, height: glint.s }} />
               ))}
             </div>
-            {/* sweeping velvet beams */}
+            {/* sweeping grove beams */}
             {[0, 1, 2].map((b) => (
               <span
                 key={b}
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#4f46e5", "#f59e0b", "#e11d48", "#f472b6"];
+              const colors = ["#059669", "#f59e0b", "#ea580c", "#34d399"];
               return (
                 <span
                   key={i}
@@ -143,7 +143,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* drifting velvet glow */}
+        {/* drifting grove glow */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {ORBS.map((g, i) => (
             <div
@@ -159,7 +159,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           {STARS.map((s, i) => (
             <span
               key={i}
-              className="pop-twinkle absolute rounded-full bg-[#f59e0b]"
+              className="pop-twinkle absolute rounded-full bg-[#d97706]"
               style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
             />
           ))}
@@ -198,11 +198,11 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* velvet divider into the page */}
+        {/* grove divider into the page */}
         <div aria-hidden className="zigzag relative z-10 mx-auto mt-0 w-full max-w-7xl opacity-90" />
       </div>
 
-      {/* Stats + featured picks under the velvet beacon */}
+      {/* Stats + featured picks under the grove beacon */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 pb-24 pt-10 md:pb-28">
         <motion.div variants={container} initial="hidden" animate="show" {...anim}>
           <motion.div variants={item} className="grid grid-cols-2 gap-6 sm:grid-cols-4">
@@ -253,7 +253,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* velvet divider into the page */}
+      {/* grove divider into the page */}
       <div aria-hidden className="zigzag absolute bottom-0 left-0 w-full opacity-90" />
     </section>
   );
