@@ -115,7 +115,7 @@ export default function BannerCarousel() {
       aria-roledescription="carousel"
       aria-label="Featured offers"
     >
-      <div className="relative overflow-hidden rounded-[1.75rem] border-2 border-brand-400/40 shadow-[0_24px_70px_-18px_rgba(76,29,149, 0.45)] ring-1 ring-brand-400/25">
+      <div className="relative overflow-hidden rounded-[1.75rem] border-2 border-brand-400/40 shadow-[0_24px_70px_-18px_rgba(6,95,70, 0.45)] ring-1 ring-brand-400/25">
         <AnimatePresence initial={false} custom={direction} mode="wait">
           <motion.div
             key={slide.id}
@@ -172,7 +172,7 @@ export default function BannerCarousel() {
               <div className="mt-7 flex flex-wrap gap-3">
                 <a
                   href="#shop"
-                  className="rounded-full bg-gradient-to-r from-brand-700 to-brand-500 px-7 py-3.5 font-black text-white shadow-[0_12px_28px_-8px_rgba(76,29,149, 0.65)] transition hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0 active:shadow-none"
+                  className="rounded-full bg-gradient-to-r from-brand-700 to-brand-500 px-7 py-3.5 font-black text-white shadow-[0_12px_28px_-8px_rgba(6,95,70, 0.65)] transition hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0 active:shadow-none"
                 >
                   Shop Now →
                 </a>
@@ -192,7 +192,7 @@ export default function BannerCarousel() {
           type="button"
           onClick={prev}
           aria-label="Previous banner"
-          className="absolute left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 text-lg font-black text-white shadow-[0_8px_20px_-6px_rgba(76,29,149, 0.6)] transition hover:-translate-y-[calc(50%+2px)] hover:brightness-110 active:translate-y-[-50%] active:shadow-none sm:left-4"
+          className="absolute left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 text-lg font-black text-white shadow-[0_8px_20px_-6px_rgba(6,95,70, 0.6)] transition hover:-translate-y-[calc(50%+2px)] hover:brightness-110 active:translate-y-[-50%] active:shadow-none sm:left-4"
         >
           ‹
         </button>
@@ -200,7 +200,7 @@ export default function BannerCarousel() {
           type="button"
           onClick={next}
           aria-label="Next banner"
-          className="absolute right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 text-lg font-black text-white shadow-[0_8px_20px_-6px_rgba(76,29,149, 0.6)] transition hover:-translate-y-[calc(50%+2px)] hover:brightness-110 active:translate-y-[-50%] active:shadow-none sm:right-4"
+          className="absolute right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 text-lg font-black text-white shadow-[0_8px_20px_-6px_rgba(6,95,70, 0.6)] transition hover:-translate-y-[calc(50%+2px)] hover:brightness-110 active:translate-y-[-50%] active:shadow-none sm:right-4"
         >
           ›
         </button>

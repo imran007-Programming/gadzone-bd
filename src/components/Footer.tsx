@@ -32,14 +32,14 @@ export default function Footer({ onCategoryChange }: FooterProps) {
           Discover original gadgets, smart devices, audio products, mobile accessories and electronics at competitive prices with nationwide delivery across Bangladesh.
         </p>
         <div className="mt-5 grid gap-3 sm:grid-cols-2">
-          <div className="flex items-center gap-3 rounded-[1.25rem] border border-[#6d28d9]/40 bg-white p-4 shadow-[0_18px_36px_-18px_rgba(76,29,149,0.45)]">
+          <div className="flex items-center gap-3 rounded-[1.25rem] border border-[#047857]/40 bg-white p-4 shadow-[0_18px_36px_-18px_rgba(6,95,70,0.45)]">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-500/20 text-xl ring-1 ring-brand-400/40">💬</span>
             <div>
               <p className="text-xs text-mute">WhatsApp</p>
               <p className="font-bold text-[#0a2436]">+880 1700-000000</p>
             </div>
           </div>
-          <div className="flex items-center gap-3 rounded-[1.25rem] border border-[#6d28d9]/40 bg-white p-4 shadow-[0_18px_36px_-18px_rgba(76,29,149,0.45)]">
+          <div className="flex items-center gap-3 rounded-[1.25rem] border border-[#047857]/40 bg-white p-4 shadow-[0_18px_36px_-18px_rgba(6,95,70,0.45)]">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-500/20 text-xl ring-1 ring-brand-400/40">📞</span>
             <div>
               <p className="text-xs text-mute">Customer Care</p>
@@ -80,7 +80,7 @@ export default function Footer({ onCategoryChange }: FooterProps) {
           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-brand-700">Get in Touch</p>
             <h3 className="mt-1.5 text-lg font-black tracking-tight text-[#0a2436]">We&apos;re Here to Help</h3>
-            <div className="mt-3 rounded-[1.25rem] border border-[#6d28d9]/40 bg-white p-5 shadow-[0_18px_36px_-18px_rgba(76,29,149,0.45)]">
+            <div className="mt-3 rounded-[1.25rem] border border-[#047857]/40 bg-white p-5 shadow-[0_18px_36px_-18px_rgba(6,95,70,0.45)]">
               <p className="text-xs text-mute">Warranty Support</p>
               <p className="mt-1 font-bold text-[#0a2436]">📞 +880 1700-000000</p>
               <p className="mt-1 text-sm">✉️ hello@gadzonebd.example</p>

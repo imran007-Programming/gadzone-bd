@@ -72,7 +72,7 @@ export default function CartDrawer({ open, cartDetailed, cartCount, promo, promo
                 <div className="flex justify-between"><span>Delivery ({district})</span><span className="font-bold">{delivery === 0 ? "FREE 🎉" : tk(delivery)}</span></div>
                 <div className="flex justify-between border-t border-[#ddd6fe]/25 pt-2 text-base font-black text-[#0a2436]"><span>Total</span><span className="text-brand-700">{tk(total)}</span></div></div>
                 {subtotal - discountAmt < 2000 && <p className="mt-2 rounded-md bg-white/40 p-2.5 text-center text-xs font-semibold text-gold-700 ring-1 ring-gold-400/40">Add {tk(2000 - (subtotal - discountAmt))} more for FREE delivery! 🚚</p>}
-                <motion.button whileTap={{ scale: 0.98 }} onClick={onCheckout} className="mt-3 w-full rounded-full bg-gradient-to-r from-brand-500 to-brand-700 py-3 font-bold text-white shadow-[0_10px_28px_-8px_rgba(76,29,149, 0.4)] transition hover:brightness-110 active:scale-[0.99]">Proceed to Checkout →</motion.button>
+                <motion.button whileTap={{ scale: 0.98 }} onClick={onCheckout} className="mt-3 w-full rounded-full bg-gradient-to-r from-brand-500 to-brand-700 py-3 font-bold text-white shadow-[0_10px_28px_-8px_rgba(6,95,70, 0.4)] transition hover:brightness-110 active:scale-[0.99]">Proceed to Checkout →</motion.button>
               </div>
             )}
           </motion.div>
