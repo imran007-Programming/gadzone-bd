@@ -1,67 +1,67 @@
 @import "tailwindcss";
 
 @theme {
-  /* Forest Mint: deep emerald primary, bright lime spark and a
-     deep teal secondary on cool ice-mint paper. Cards are soft
-     pill-rounded tiles with a mint ring and a gentle mint shadow —
-     the opposite of the previous Terracotta Press's terracotta
-     palette, warm cream paper, sharp-edged tiles and thin
-     terracotta borders. */
+  /* Indigo Dusk: deep indigo primary, warm coral spark and a
+     rich violet secondary on warm cream paper. Cards are crisp
+     medium-rounded tiles with a solid indigo edge and a hard
+     offset coral shadow — the opposite of the previous Forest
+     Mint's emerald palette, ice-mint paper, pill-rounded tiles
+     and soft mint shadows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = emerald scale */
-  --color-brand-50: #ecfdf5;
-  --color-brand-100: #d1fae5;
-  --color-brand-200: #a7f3d0;
-  --color-brand-300: #6ee7b7;
-  --color-brand-400: #34d399;
-  --color-brand-500: #10b981;
-  --color-brand-600: #059669;
-  --color-brand-700: #047857;
-  --color-brand-800: #065f46;
-  --color-brand-900: #064e3b;
-  --color-brand-950: #022c22;
-  --color-brand: #059669;
-  --color-brand-dark: #047857;
-  --color-brand-deep: #064e3b;
+  /* brand = indigo scale */
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-200: #c7d2fe;
+  --color-brand-300: #a5b4fc;
+  --color-brand-400: #818cf8;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+  --color-brand-800: #3730a3;
+  --color-brand-900: #312e81;
+  --color-brand-950: #1e1b4b;
+  --color-brand: #4f46e5;
+  --color-brand-dark: #4338ca;
+  --color-brand-deep: #312e81;
 
-  /* gold = lime scale (name kept for legacy class refs) */
-  --color-gold-50: #f7fee7;
-  --color-gold-100: #ecfccb;
-  --color-gold-200: #d9f99d;
-  --color-gold-300: #bef264;
-  --color-gold-400: #a3e635;
-  --color-gold-500: #84cc16;
-  --color-gold-600: #65a30d;
-  --color-gold-700: #4d7c0f;
-  --color-gold-800: #3f6212;
-  --color-gold-900: #365314;
-  --color-gold-950: #1a2e05;
-  --color-gold: #65a30d;
-  --color-gold-deep: #365314;
-  --color-gold-soft: #ecfccb;
+  /* gold = coral scale (name kept for legacy class refs) */
+  --color-gold-50: #fff7ed;
+  --color-gold-100: #ffedd5;
+  --color-gold-200: #fed7aa;
+  --color-gold-300: #fdba74;
+  --color-gold-400: #fb923c;
+  --color-gold-500: #f97316;
+  --color-gold-600: #ea580c;
+  --color-gold-700: #c2410c;
+  --color-gold-800: #9a3412;
+  --color-gold-900: #7c2d12;
+  --color-gold-950: #431407;
+  --color-gold: #ea580c;
+  --color-gold-deep: #7c2d12;
+  --color-gold-soft: #ffedd5;
 
-  /* popblue = deep teal scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0fdfa;
-  --color-popblue-100: #ccfbf1;
-  --color-popblue-200: #99f6e4;
-  --color-popblue-300: #5eead4;
-  --color-popblue-400: #2dd4bf;
-  --color-popblue-500: #14b8a6;
-  --color-popblue-600: #0d9488;
-  --color-popblue-700: #0f766e;
-  --color-popblue-800: #115e59;
-  --color-popblue-900: #134e4a;
-  --color-popblue-950: #042f2e;
-  --color-popblue: #0f766e;
-  --color-popblue-deep: #134e4a;
-  --color-popblue-soft: #ccfbf1;
+  /* popblue = violet scale (name kept for legacy class refs) */
+  --color-popblue-50: #f5f3ff;
+  --color-popblue-100: #ede9fe;
+  --color-popblue-200: #ddd6fe;
+  --color-popblue-300: #c4b5fd;
+  --color-popblue-400: #a78bfa;
+  --color-popblue-500: #8b5cf6;
+  --color-popblue-600: #7c3aed;
+  --color-popblue-700: #6d28d9;
+  --color-popblue-800: #5b21b6;
+  --color-popblue-900: #4c1d95;
+  --color-popblue-950: #2e1065;
+  --color-popblue: #7c3aed;
+  --color-popblue-deep: #4c1d95;
+  --color-popblue-soft: #ede9fe;
 
-  --color-ink: #1c2420;
-  --color-paper: #f2faf6;
-  --color-mute: #5b6b64;
+  --color-ink: #23203a;
+  --color-paper: #faf6f0;
+  --color-mute: #6b6580;
   --color-card: #ffffff;
-  --color-deep: #064e3b;
+  --color-deep: #312e81;
 }
 
 html { scroll-behavior: smooth; }
@@ -76,25 +76,25 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f2faf6;
+  background-color: #faf6f0;
   background-image:
-    radial-gradient(ellipse 55% 34% at 88% -6%, rgba(5, 150, 105, 0.16), transparent 70%),
-    radial-gradient(ellipse 48% 32% at 6% 104%, rgba(15, 118, 110, 0.12), transparent 70%),
-    radial-gradient(ellipse 30% 22% at 50% 38%, rgba(163, 230, 53, 0.14), transparent 70%);
+    radial-gradient(ellipse 55% 34% at 88% -6%, rgba(79, 70, 229, 0.14), transparent 70%),
+    radial-gradient(ellipse 48% 32% at 6% 104%, rgba(124, 58, 237, 0.12), transparent 70%),
+    radial-gradient(ellipse 30% 22% at 50% 38%, rgba(249, 115, 22, 0.12), transparent 70%);
   background-size: auto, auto, auto;
-  color: #1c2420;
+  color: #23203a;
 }
-::selection { background: #bef264; color: #1c2420; }
+::selection { background: #fdba74; color: #23203a; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #059669, #0f766e); border-radius: 9999px; border: 2px solid #f2faf6; }
-::-webkit-scrollbar-track { background: #d1fae5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #4f46e5, #7c3aed); border-radius: 6px; border: 2px solid #faf6f0; }
+::-webkit-scrollbar-track { background: #e0e7ff; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Forest Mint type: tight, fresh headline tracking. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Indigo Dusk type: wide, confident headline tracking. */
+h1, h2, h3 { letter-spacing: 0.01em; text-wrap: balance; }
 
-/* Mint sparks: small emerald/teal marks drifting up the page. */
+/* Dusk sparks: small indigo/violet marks drifting up the page. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, 4vh, 0) rotate(0deg) scale(0.8); opacity: 0; }
   18% { opacity: 0.85; }
@@ -104,142 +104,142 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 12s linear infinite; }
 
-/* Mint sway: slow lateral drift of the cool light. */
+/* Dusk sway: slow lateral drift of the warm light. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-2vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(2vw, -0.6rem, 0) scale(1.04); opacity: 0.75; }
 }
 .pop-drift { animation: signal-drift 24s ease-in-out infinite; }
 
-/* Mint bob: gentle rise and fall of the floating mark. */
+/* Dusk bob: gentle rise and fall of the floating mark. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) rotate(-2deg); }
   50% { transform: translateY(-6px) rotate(2deg); }
 }
 .pop-bob { animation: signal-bob 5.6s ease-in-out infinite; }
 
-/* Slow turn for the mint dial. */
+/* Slow turn for the dusk dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 70s linear infinite; }
 
-/* Mint shimmer: rhythmic gleam of the lime spark. */
+/* Dusk shimmer: rhythmic gleam of the coral spark. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.35; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.15); }
 }
 .pop-twinkle { animation: signal-blink 3.2s ease-in-out infinite; }
 
-/* Mint ticker: infinite marquee (leftward drift). */
+/* Dusk ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 34s linear infinite; }
 
-/* Mint check: emerald -> teal -> lime bands. */
+/* Dusk check: indigo -> violet -> coral bands. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(45deg, #059669 0 10px, #0f766e 10px 20px, #a3e635 20px 30px);
+    repeating-linear-gradient(45deg, #4f46e5 0 10px, #7c3aed 10px 20px, #f97316 20px 30px);
   background-size: 42px 42px;
 }
 
-/* Forest Mint card: a soft pill-rounded tile on white with a
-   mint ring and a gentle mint shadow. On hover it lifts and
-   scales slightly and the ring turns emerald — a fresh,
-   rounded feel, no sharp corners, no hard offset shadows. */
+/* Indigo Dusk card: a crisp medium-rounded tile on white with a
+   solid indigo edge and a hard offset coral shadow. On hover it
+   shifts up-left and the shadow grows — a bold, poster-like
+   feel, no pill rounding, no soft blur shadows. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(5, 150, 105, 0.18);
+  border: 2px solid #312e81;
   background: #ffffff;
-  border-radius: 1.75rem;
-  box-shadow: 0 12px 32px rgba(6, 78, 59, 0.10);
+  border-radius: 1rem;
+  box-shadow: 5px 5px 0 rgba(234, 88, 12, 0.85);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-4px) scale(1.01);
-  border-color: rgba(5, 150, 105, 0.55);
-  box-shadow: 0 24px 44px rgba(6, 78, 59, 0.16);
+  transform: translate(-2px, -2px);
+  border-color: #4f46e5;
+  box-shadow: 8px 8px 0 rgba(234, 88, 12, 0.9);
 }
 
-/* Mint glass: shared by modals and drawers — a cool frosted
-   mint pane with a thin emerald edge and a soft shadow. */
+/* Dusk glass: shared by modals and drawers — a warm frosted
+   cream pane with a solid indigo edge and a hard offset shadow. */
 .pop-glass {
-  background: rgba(242, 250, 246, 0.92);
+  background: rgba(250, 246, 240, 0.94);
   backdrop-filter: blur(22px) saturate(1.2);
   -webkit-backdrop-filter: blur(22px) saturate(1.2);
-  border: 1px solid rgba(5, 150, 105, 0.16);
-  border-radius: 1.5rem;
-  box-shadow: 0 20px 40px rgba(6, 78, 59, 0.14);
+  border: 2px solid #312e81;
+  border-radius: 1rem;
+  box-shadow: 6px 6px 0 rgba(79, 70, 229, 0.25);
 }
 
-/* Mint seal: a solid deep-emerald circle badge with a mint
-   ring, tilted slightly like a leaf stamp. */
+/* Dusk seal: a solid coral circle badge with an indigo ring,
+   tilted slightly like a dusk stamp. */
 .starburst {
-  background: #047857;
+  background: #ea580c;
   color: #ffffff;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
   border-radius: 9999px;
   transform: rotate(-3deg);
-  box-shadow: 0 10px 24px rgba(4, 120, 87, 0.35);
-  border: 2px solid #ecfccb;
+  box-shadow: 0 10px 24px rgba(234, 88, 12, 0.35);
+  border: 2px solid #312e81;
 }
 
-/* Mint dots: faint emerald dot pattern on ice-mint. */
+/* Dusk dots: faint indigo dot pattern on warm cream. */
 .halftone {
-  background-image: radial-gradient(rgba(5, 150, 105, 0.20) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(rgba(79, 70, 229, 0.20) 1.5px, transparent 1.5px);
   background-size: 26px 26px;
   background-position: 0 0;
 }
 
-/* Mint seam: a dotted emerald rule dividing sections. */
+/* Dusk seam: a dotted indigo rule dividing sections. */
 .zigzag {
   height: 3px;
-  background-image: radial-gradient(circle, #059669 2px, transparent 2.5px);
+  background-image: radial-gradient(circle, #4f46e5 2px, transparent 2.5px);
   background-size: 20px 3px;
   background-repeat: repeat-x;
   background-position: 0 center;
   opacity: 0.9;
 }
 
-/* Mint band: emerald / teal / lime stripes across the section top. */
+/* Dusk band: indigo / violet / coral stripes across the section top. */
 .bazaar-awning {
   background-image: repeating-linear-gradient(
     90deg,
-    #059669 0 22px,
-    #0f766e 22px 44px,
-    #a3e635 44px 66px
+    #4f46e5 0 22px,
+    #7c3aed 22px 44px,
+    #f97316 44px 66px
   );
   opacity: 0.9;
-  box-shadow: 0 4px 12px rgba(4, 120, 87, 0.30);
+  box-shadow: 0 4px 12px rgba(67, 56, 202, 0.30);
 }
 
-/* Mint glow: layered emerald/teal/lime glow for the core halo. */
+/* Dusk glow: layered indigo/violet/coral glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(209, 250, 229, 0.45) 0%, rgba(16, 185, 129, 0.28) 42%, rgba(163, 230, 53, 0.22) 62%, rgba(163, 230, 53, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(224, 231, 255, 0.45) 0%, rgba(99, 102, 241, 0.28) 42%, rgba(249, 115, 22, 0.22) 62%, rgba(249, 115, 22, 0) 76%);
 }
 
-/* Mint core: a glowing lime orb with an emerald halo. */
+/* Dusk core: a glowing coral orb with an indigo halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #f2faf6 0%, #bef264 52%, #059669 100%);
-  box-shadow: 0 18px 36px rgba(6, 78, 59, 0.22), inset 0 3px 12px rgba(255, 255, 255, 0.55);
+    radial-gradient(circle at 38% 34%, #faf6f0 0%, #fdba74 52%, #4f46e5 100%);
+  box-shadow: 0 18px 36px rgba(49, 46, 129, 0.22), inset 0 3px 12px rgba(255, 255, 255, 0.55);
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Mint ripples around the core disc. */
+/* Dusk ripples around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(4, 120, 87, 0.30) 0px,
-    rgba(4, 120, 87, 0.30) 2px,
+    rgba(67, 56, 202, 0.30) 0px,
+    rgba(67, 56, 202, 0.30) 2px,
     transparent 2px,
     transparent 12px,
-    rgba(15, 118, 110, 0.26) 12px,
-    rgba(15, 118, 110, 0.26) 14px,
+    rgba(124, 58, 237, 0.26) 12px,
+    rgba(124, 58, 237, 0.26) 14px,
     transparent 14px,
     transparent 30px
   );
@@ -250,7 +250,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(5, 150, 105, 0.26) 0deg 4deg,
+    rgba(79, 70, 229, 0.26) 0deg 4deg,
     transparent 4deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
