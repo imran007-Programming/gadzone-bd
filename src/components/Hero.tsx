@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Emerald grove light drifting over the cream paper.
+// Sapphire circuit light drifting over the cool slate paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(5,150,105, 0.20)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245,158,11, 0.20)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(234,88,12, 0.16)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(217,119,6, 0.16)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(29,78,216, 0.20)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(225,29,72, 0.20)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(245,158,11, 0.16)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(96,165,250, 0.16)" },
 ];
 
-// Honey sparks drifting down through the grove light.
+// Coral sparks drifting down through the circuit light.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#059669" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#1d4ed8" },
   { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f59e0b" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#ea580c" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#fb923c" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#34d399" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fbbf24" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#9a3412" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#e11d48" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#fb7185" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#60a5fa" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#f59e0b" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#9f1239" },
 ];
 
-// Terracotta sparks scattered through the grove.
+// Coral sparks scattered through the circuit.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -75,8 +75,8 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* warm cream wash under the grove light */}
-      <div className="relative bg-gradient-to-b from-[#f0fdf4] via-[#fefce8] to-[#ecfdf5]">
+      {/* cool slate wash under the circuit light */}
+      <div className="relative bg-gradient-to-b from-[#eff6ff] via-[#fff1f2] to-[#dbeafe]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#059669", "#f59e0b", "#ea580c", "#34d399"];
+              const colors = ["#1d4ed8", "#f59e0b", "#e11d48", "#60a5fa"];
               return (
                 <span
                   key={i}
