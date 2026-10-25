@@ -75,8 +75,8 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* warm ember wash under the harbor light */}
-      <div className="relative bg-gradient-to-b from-[#ffedd5] via-[#ffe4e6] to-[#ccfbf1]">
+      {/* cool glacier wash under the grid light */}
+      <div className="relative bg-gradient-to-b from-[#e0e7ff] via-[#e0f2fe] to-[#ecfccb]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
