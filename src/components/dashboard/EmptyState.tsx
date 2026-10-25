@@ -15,7 +15,7 @@ export default function EmptyState({ icon, title, text, actionLabel, actionHref,
   return (
     <div className="rounded-lg bg-white p-8 text-center shadow-sm ring-1 ring-[#e3e7ef]">
       <p className="text-4xl" aria-hidden="true">{icon}</p>
-      <p className="mt-3 font-black text-[#1c2a1e]">{title}</p>
+      <p className="mt-3 font-black text-[#0a2436]">{title}</p>
       <p className="mx-auto mt-1 max-w-sm text-sm text-[#64748b]">{text}</p>
       {actionLabel && actionHref && (
         <Link href={actionHref} className="mt-4 inline-block rounded-full bg-brand-500 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-brand-600">
