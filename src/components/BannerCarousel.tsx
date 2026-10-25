@@ -157,7 +157,7 @@ export default function BannerCarousel() {
               aria-hidden
               className="absolute inset-0 bg-gradient-to-br from-[#0b2e2d]/92 via-[#0b2e2d]/55 to-[#0b2e2d]/20"
             />
-            <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_82%_18%,rgba(249,115,22, 0.30),transparent)]" />
+            <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_82%_18%,rgba(132,204,22, 0.30),transparent)]" />
             <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#0b2e2d]/80 via-transparent to-transparent" />
             {/* Slide copy */}
             <div className="absolute inset-0 flex flex-col justify-center px-6 text-white sm:px-10 lg:px-14">
@@ -172,7 +172,7 @@ export default function BannerCarousel() {
               <div className="mt-7 flex flex-wrap gap-3">
                 <a
                   href="#shop"
-                  className="rounded-full bg-gradient-to-r from-brand-700 to-brand-500 px-7 py-3.5 font-black text-white shadow-[0_12px_28px_-8px_rgba(15,118,110, 0.65)] transition hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0 active:shadow-none"
+                  className="rounded-full bg-gradient-to-r from-brand-700 to-brand-500 px-7 py-3.5 font-black text-white shadow-[0_12px_28px_-8px_rgba(162,28,175, 0.65)] transition hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0 active:shadow-none"
                 >
                   Shop Now →
                 </a>
