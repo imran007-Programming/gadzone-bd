@@ -1,66 +1,65 @@
 @import "tailwindcss";
 
 @theme {
-  /* Berry Pop: vivid fuchsia-plum primary, electric lime accent and
-     sunny yellow spark on cool lilac paper. Cards are framed slabs
-     with a plum-tinted border and a lime-kissed hover glow — the
-     opposite of the previous soft pill-edged teal/coral harbor
-     slabs on warm sand. */
+  /* Indigo Dusk: deep indigo primary, warm amber accent and a
+     teal spark on warm cream paper. Cards are squared slabs with
+     a thick amber top edge and a hard offset shadow — the opposite
+     of the previous rounded fuchsia-plum Berry Pop slabs on lilac. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = fuchsia-plum scale */
-  --color-brand-50: #fdf4ff;
-  --color-brand-100: #fae8ff;
-  --color-brand-200: #f5d0fe;
-  --color-brand-300: #f0abfc;
-  --color-brand-400: #e879f9;
-  --color-brand-500: #d946ef;
-  --color-brand-600: #c026d3;
-  --color-brand-700: #a21caf;
-  --color-brand-800: #86198f;
-  --color-brand-900: #701a75;
-  --color-brand-950: #4a044e;
-  --color-brand: #a21caf;
-  --color-brand-dark: #86198f;
-  --color-brand-deep: #701a75;
+  /* brand = indigo scale */
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-200: #c7d2fe;
+  --color-brand-300: #a5b4fc;
+  --color-brand-400: #818cf8;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+  --color-brand-800: #3730a3;
+  --color-brand-900: #312e81;
+  --color-brand-950: #1e1b4b;
+  --color-brand: #4338ca;
+  --color-brand-dark: #3730a3;
+  --color-brand-deep: #312e81;
 
-  /* gold = electric lime scale (name kept for legacy class refs) */
-  --color-gold-50: #f7fee7;
-  --color-gold-100: #ecfccb;
-  --color-gold-200: #d9f99d;
-  --color-gold-300: #bef264;
-  --color-gold-400: #a3e635;
-  --color-gold-500: #84cc16;
-  --color-gold-600: #65a30d;
-  --color-gold-700: #4d7c0f;
-  --color-gold-800: #3f6212;
-  --color-gold-900: #365314;
-  --color-gold-950: #1a2e05;
-  --color-gold: #84cc16;
-  --color-gold-deep: #3f6212;
-  --color-gold-soft: #ecfccb;
+  /* gold = warm amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #92400e;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = sunny yellow scale (name kept for legacy class refs) */
-  --color-popblue-50: #fefce8;
-  --color-popblue-100: #fef9c3;
-  --color-popblue-200: #fef08a;
-  --color-popblue-300: #fde047;
-  --color-popblue-400: #facc15;
-  --color-popblue-500: #eab308;
-  --color-popblue-600: #ca8a04;
-  --color-popblue-700: #a16207;
-  --color-popblue-800: #854d0e;
-  --color-popblue-900: #713f12;
-  --color-popblue-950: #422006;
-  --color-popblue: #eab308;
-  --color-popblue-deep: #854d0e;
-  --color-popblue-soft: #fef9c3;
+  /* popblue = teal scale (name kept for legacy class refs) */
+  --color-popblue-50: #f0fdfa;
+  --color-popblue-100: #ccfbf1;
+  --color-popblue-200: #99f6e4;
+  --color-popblue-300: #5eead4;
+  --color-popblue-400: #2dd4bf;
+  --color-popblue-500: #14b8a6;
+  --color-popblue-600: #0d9488;
+  --color-popblue-700: #0f766e;
+  --color-popblue-800: #115e59;
+  --color-popblue-900: #134e4a;
+  --color-popblue-950: #042f2e;
+  --color-popblue: #14b8a6;
+  --color-popblue-deep: #115e59;
+  --color-popblue-soft: #ccfbf1;
 
-  --color-ink: #3b0764;
-  --color-paper: #fdfaff;
-  --color-mute: #6b5d7a;
+  --color-ink: #1e1b4b;
+  --color-paper: #fef9ec;
+  --color-mute: #55587e;
   --color-card: #ffffff;
-  --color-deep: #4a044e;
+  --color-deep: #1e1b4b;
 }
 
 html { scroll-behavior: smooth; }
@@ -75,24 +74,24 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fdfaff;
+  background-color: #fef9ec;
   background-image:
-    linear-gradient(115deg, rgba(162, 28, 175, 0.07) 0%, transparent 42%),
-    radial-gradient(ellipse 50% 32% at 92% -4%, rgba(132, 204, 22, 0.16), transparent 70%),
-    radial-gradient(ellipse 44% 30% at 4% 102%, rgba(234, 179, 8, 0.12), transparent 70%);
-  color: #3b0764;
+    linear-gradient(115deg, rgba(67, 56, 202, 0.07) 0%, transparent 42%),
+    radial-gradient(ellipse 50% 32% at 92% -4%, rgba(245, 158, 11, 0.16), transparent 70%),
+    radial-gradient(ellipse 44% 30% at 4% 102%, rgba(20, 184, 166, 0.12), transparent 70%);
+  color: #1e1b4b;
 }
-::selection { background: #bef264; color: #4a044e; }
+::selection { background: #fcd34d; color: #1e1b4b; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #a21caf, #84cc16); border-radius: 999px; border: 2px solid #fdfaff; }
-::-webkit-scrollbar-track { background: #fae8ff; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #4338ca, #f59e0b); border-radius: 4px; border: 2px solid #fef9ec; }
+::-webkit-scrollbar-track { background: #e0e7ff; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Berry type: punchy headlines with tighter tracking. */
+/* Dusk type: crisp headlines with tighter tracking. */
 h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Berry motes: soft fuchsia and lime motes drifting upward. */
+/* Dusk motes: soft indigo and amber motes drifting upward. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, -4vh, 0) rotate(0deg) scale(0.8); opacity: 0; }
   18% { opacity: 0.85; }
@@ -102,97 +101,98 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 12s linear infinite; }
 
-/* Berry drift: slow lateral sway of the plum light. */
+/* Dusk drift: slow lateral sway of the indigo light. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-2vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(2vw, -0.6rem, 0) scale(1.04); opacity: 0.75; }
 }
 .pop-drift { animation: signal-drift 24s ease-in-out infinite; }
 
-/* Berry bob: gentle rise and fall of the floating berry. */
+/* Dusk bob: gentle rise and fall of the floating ember. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) rotate(-2deg); }
   50% { transform: translateY(-6px) rotate(2deg); }
 }
 .pop-bob { animation: signal-bob 5.6s ease-in-out infinite; }
 
-/* Slow turn for the berry dial. */
+/* Slow turn for the dusk dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 70s linear infinite; }
 
-/* Berry blink: rhythmic glow of the lime beacon. */
+/* Dusk blink: rhythmic glow of the amber beacon. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.35; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.15); }
 }
 .pop-twinkle { animation: signal-blink 3.2s ease-in-out infinite; }
 
-/* Berry ticker: infinite marquee (leftward drift). */
+/* Dusk ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 34s linear infinite; }
 
-/* Berry check: fuchsia -> lime -> yellow soft bands. */
+/* Dusk check: indigo -> amber -> teal soft bands. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(45deg, #e879f9 0 10px, #a3e635 10px 20px, #facc15 20px 30px);
+    repeating-linear-gradient(45deg, #818cf8 0 10px, #fbbf24 10px 20px, #2dd4bf 20px 30px);
   background-size: 42px 42px;
 }
 
-/* Berry card: a framed slab on lilac paper with a plum-tinted
-   border and a soft shadow. On hover it lifts and the border and
-   shadow turn lime, like a berry catching the light. */
+/* Dusk card: a squared slab on warm cream with a thick amber top
+   edge and a hard offset shadow. On hover it lifts and the top
+   edge and shadow turn indigo, like dusk settling in. */
 .pop-lift {
   position: relative;
-  border: 2px solid rgba(74, 4, 78, 0.10);
+  border: 1px solid rgba(30, 27, 75, 0.12);
+  border-top: 4px solid #f59e0b;
   background: #ffffff;
-  border-radius: 1.25rem;
-  box-shadow: 0 1px 2px rgba(74, 4, 78, 0.06), 0 16px 32px -16px rgba(112, 26, 117, 0.25);
+  border-radius: 0.75rem;
+  box-shadow: 4px 4px 0 rgba(30, 27, 75, 0.08), 0 18px 30px -18px rgba(49, 46, 129, 0.35);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
   transform: translateY(-4px);
-  border-color: rgba(132, 204, 22, 0.55);
-  box-shadow: 0 4px 10px rgba(74, 4, 78, 0.06), 0 24px 40px -18px rgba(101, 163, 13, 0.40);
+  border-top-color: #4338ca;
+  box-shadow: 6px 6px 0 rgba(67, 56, 202, 0.15), 0 24px 40px -18px rgba(67, 56, 202, 0.45);
 }
 
-/* Berry glass: shared by modals and drawers — a soft frosted pane
-   with framed edges and a plum-tinted shadow. */
+/* Dusk glass: shared by modals and drawers — a warm frosted pane
+   with squared edges and an indigo-tinted shadow. */
 .pop-glass {
-  background: rgba(253, 250, 255, 0.96);
+  background: rgba(254, 249, 236, 0.96);
   backdrop-filter: blur(22px) saturate(1.2);
   -webkit-backdrop-filter: blur(22px) saturate(1.2);
-  border: 2px solid rgba(74, 4, 78, 0.12);
-  border-radius: 1.25rem;
-  box-shadow: 0 2px 8px rgba(74, 4, 78, 0.06), 0 28px 56px -20px rgba(74, 4, 78, 0.30);
+  border: 1px solid rgba(30, 27, 75, 0.14);
+  border-radius: 0.75rem;
+  box-shadow: 4px 4px 0 rgba(30, 27, 75, 0.08), 0 28px 56px -20px rgba(30, 27, 75, 0.30);
 }
 
-/* Berry seal: a fuchsia-to-lime pill badge. */
+/* Dusk seal: an indigo-to-amber pill badge. */
 .starburst {
-  background: linear-gradient(135deg, #a21caf 0%, #d946ef 55%, #84cc16 100%);
+  background: linear-gradient(135deg, #4338ca 0%, #6366f1 55%, #f59e0b 100%);
   color: #ffffff;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
   border-radius: 999px;
-  box-shadow: 0 10px 24px -8px rgba(101, 163, 13, 0.55);
+  box-shadow: 0 10px 24px -8px rgba(217, 119, 6, 0.55);
   border: 2px solid #ffffff;
 }
 
-/* Berry dots: faint fuchsia dot grid on lilac paper. */
+/* Dusk dots: faint indigo dot grid on warm cream. */
 .halftone {
-  background-image: radial-gradient(rgba(162, 28, 175, 0.14) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(rgba(67, 56, 202, 0.14) 1.5px, transparent 1.5px);
   background-size: 20px 20px;
   background-position: 0 0;
 }
 
-/* Berry seam: a dashed lime line dividing sections. */
+/* Dusk seam: a dashed amber line dividing sections. */
 .zigzag {
   height: 12px;
-  background-image: linear-gradient(90deg, rgba(101, 163, 13, 0.9) 55%, transparent 45%);
+  background-image: linear-gradient(90deg, rgba(217, 119, 6, 0.9) 55%, transparent 45%);
   background-size: 18px 2px;
   background-repeat: repeat-x;
   background-position: 0 center;
@@ -201,41 +201,41 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
   mask: linear-gradient(90deg, black 82%, transparent 100%);
 }
 
-/* Berry band: fuchsia / lime / yellow stripes across the section top. */
+/* Dusk band: indigo / amber / teal stripes across the section top. */
 .bazaar-awning {
   background-image: repeating-linear-gradient(
     90deg,
-    #a21caf 0 22px,
-    #84cc16 22px 44px,
-    #eab308 44px 66px
+    #4338ca 0 22px,
+    #f59e0b 22px 44px,
+    #14b8a6 44px 66px
   );
   opacity: 0.9;
-  box-shadow: 0 4px 12px rgba(74, 4, 78, 0.25);
+  box-shadow: 0 4px 12px rgba(30, 27, 75, 0.25);
 }
 
-/* Berry glow: layered fuchsia/lime/yellow glow for the core halo. */
+/* Dusk glow: layered indigo/amber/teal glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(234, 179, 8, 0.16) 0%, rgba(162, 28, 175, 0.20) 42%, rgba(132, 204, 22, 0.18) 62%, rgba(132, 204, 22, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(251, 191, 36, 0.16) 0%, rgba(67, 56, 202, 0.20) 42%, rgba(20, 184, 166, 0.18) 62%, rgba(20, 184, 166, 0) 76%);
 }
-/* Berry core: a glowing yellow orb with a fuchsia halo. */
+/* Dusk core: a glowing amber orb with an indigo halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #fefce8 0%, #facc15 52%, #a21caf 100%);
-  box-shadow: 0 18px 36px -12px rgba(101, 163, 13, 0.55), inset 0 3px 12px rgba(255, 255, 255, 0.55);
+    radial-gradient(circle at 38% 34%, #fffbeb 0%, #fbbf24 52%, #4338ca 100%);
+  box-shadow: 0 18px 36px -12px rgba(217, 119, 6, 0.55), inset 0 3px 12px rgba(255, 255, 255, 0.55);
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Berry ripples around the core disc. */
+/* Dusk ripples around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(132, 204, 22, 0.36) 0px,
-    rgba(132, 204, 22, 0.36) 2px,
+    rgba(245, 158, 11, 0.36) 0px,
+    rgba(245, 158, 11, 0.36) 2px,
     transparent 2px,
     transparent 12px,
-    rgba(162, 28, 175, 0.28) 12px,
-    rgba(162, 28, 175, 0.28) 14px,
+    rgba(67, 56, 202, 0.28) 12px,
+    rgba(67, 56, 202, 0.28) 14px,
     transparent 14px,
     transparent 30px
   );
@@ -246,7 +246,7 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(162, 28, 175, 0.30) 0deg 4deg,
+    rgba(67, 56, 202, 0.30) 0deg 4deg,
     transparent 4deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
