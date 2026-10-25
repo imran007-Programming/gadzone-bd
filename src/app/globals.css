@@ -1,65 +1,66 @@
 @import "tailwindcss";
 
 @theme {
-  /* Indigo Dusk: deep indigo primary, warm amber accent and a
-     teal spark on warm cream paper. Cards are squared slabs with
-     a thick amber top edge and a hard offset shadow — the opposite
-     of the previous rounded fuchsia-plum Berry Pop slabs on lilac. */
+  /* Emerald Grove: deep forest-green primary, fresh lime accent and a
+     sky-blue spark on pale mint paper. Cards are fully rounded
+     pebbles with soft blurred shadows — the opposite of the previous
+     squared Indigo Dusk slabs with their amber top edge and hard
+     offset shadow. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = indigo scale */
-  --color-brand-50: #eef2ff;
-  --color-brand-100: #e0e7ff;
-  --color-brand-200: #c7d2fe;
-  --color-brand-300: #a5b4fc;
-  --color-brand-400: #818cf8;
-  --color-brand-500: #6366f1;
-  --color-brand-600: #4f46e5;
-  --color-brand-700: #4338ca;
-  --color-brand-800: #3730a3;
-  --color-brand-900: #312e81;
-  --color-brand-950: #1e1b4b;
-  --color-brand: #4338ca;
-  --color-brand-dark: #3730a3;
-  --color-brand-deep: #312e81;
+  /* brand = forest green scale */
+  --color-brand-50: #f0fdf4;
+  --color-brand-100: #dcfce7;
+  --color-brand-200: #bbf7d0;
+  --color-brand-300: #86efac;
+  --color-brand-400: #4ade80;
+  --color-brand-500: #22c55e;
+  --color-brand-600: #16a34a;
+  --color-brand-700: #15803d;
+  --color-brand-800: #166534;
+  --color-brand-900: #14532d;
+  --color-brand-950: #052e16;
+  --color-brand: #15803d;
+  --color-brand-dark: #166534;
+  --color-brand-deep: #14532d;
 
-  /* gold = warm amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #f59e0b;
-  --color-gold-deep: #92400e;
-  --color-gold-soft: #fef3c7;
+  /* gold = fresh lime scale (name kept for legacy class refs) */
+  --color-gold-50: #f7fee7;
+  --color-gold-100: #ecfccb;
+  --color-gold-200: #d9f99d;
+  --color-gold-300: #bef264;
+  --color-gold-400: #a3e635;
+  --color-gold-500: #84cc16;
+  --color-gold-600: #65a30d;
+  --color-gold-700: #4d7c0f;
+  --color-gold-800: #3f6212;
+  --color-gold-900: #365314;
+  --color-gold-950: #1a2e05;
+  --color-gold: #84cc16;
+  --color-gold-deep: #3f6212;
+  --color-gold-soft: #ecfccb;
 
-  /* popblue = teal scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0fdfa;
-  --color-popblue-100: #ccfbf1;
-  --color-popblue-200: #99f6e4;
-  --color-popblue-300: #5eead4;
-  --color-popblue-400: #2dd4bf;
-  --color-popblue-500: #14b8a6;
-  --color-popblue-600: #0d9488;
-  --color-popblue-700: #0f766e;
-  --color-popblue-800: #115e59;
-  --color-popblue-900: #134e4a;
-  --color-popblue-950: #042f2e;
-  --color-popblue: #14b8a6;
-  --color-popblue-deep: #115e59;
-  --color-popblue-soft: #ccfbf1;
+  /* popblue = sky scale (name kept for legacy class refs) */
+  --color-popblue-50: #f0f9ff;
+  --color-popblue-100: #e0f2fe;
+  --color-popblue-200: #bae6fd;
+  --color-popblue-300: #7dd3fc;
+  --color-popblue-400: #38bdf8;
+  --color-popblue-500: #0ea5e9;
+  --color-popblue-600: #0284c7;
+  --color-popblue-700: #0369a1;
+  --color-popblue-800: #075985;
+  --color-popblue-900: #0c4a6e;
+  --color-popblue-950: #082f49;
+  --color-popblue: #0ea5e9;
+  --color-popblue-deep: #075985;
+  --color-popblue-soft: #e0f2fe;
 
-  --color-ink: #1e1b4b;
-  --color-paper: #fef9ec;
-  --color-mute: #55587e;
+  --color-ink: #052e16;
+  --color-paper: #f2fbf3;
+  --color-mute: #4d5c48;
   --color-card: #ffffff;
-  --color-deep: #1e1b4b;
+  --color-deep: #052e16;
 }
 
 html { scroll-behavior: smooth; }
@@ -74,24 +75,24 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fef9ec;
+  background-color: #f2fbf3;
   background-image:
-    linear-gradient(115deg, rgba(67, 56, 202, 0.07) 0%, transparent 42%),
-    radial-gradient(ellipse 50% 32% at 92% -4%, rgba(245, 158, 11, 0.16), transparent 70%),
-    radial-gradient(ellipse 44% 30% at 4% 102%, rgba(20, 184, 166, 0.12), transparent 70%);
-  color: #1e1b4b;
+    linear-gradient(115deg, rgba(21, 128, 61, 0.07) 0%, transparent 42%),
+    radial-gradient(ellipse 50% 32% at 92% -4%, rgba(132, 204, 22, 0.18), transparent 70%),
+    radial-gradient(ellipse 44% 30% at 4% 102%, rgba(14, 165, 233, 0.12), transparent 70%);
+  color: #052e16;
 }
-::selection { background: #fcd34d; color: #1e1b4b; }
+::selection { background: #bef264; color: #052e16; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #4338ca, #f59e0b); border-radius: 4px; border: 2px solid #fef9ec; }
-::-webkit-scrollbar-track { background: #e0e7ff; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #15803d, #84cc16); border-radius: 999px; border: 2px solid #f2fbf3; }
+::-webkit-scrollbar-track { background: #dcfce7; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Dusk type: crisp headlines with tighter tracking. */
-h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
+/* Grove type: soft, open headlines with gentle tracking. */
+h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Dusk motes: soft indigo and amber motes drifting upward. */
+/* Grove motes: soft green and lime motes drifting upward. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, -4vh, 0) rotate(0deg) scale(0.8); opacity: 0; }
   18% { opacity: 0.85; }
@@ -101,98 +102,97 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 12s linear infinite; }
 
-/* Dusk drift: slow lateral sway of the indigo light. */
+/* Grove drift: slow lateral sway of the forest light. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-2vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(2vw, -0.6rem, 0) scale(1.04); opacity: 0.75; }
 }
 .pop-drift { animation: signal-drift 24s ease-in-out infinite; }
 
-/* Dusk bob: gentle rise and fall of the floating ember. */
+/* Grove bob: gentle rise and fall of the floating leaf. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) rotate(-2deg); }
   50% { transform: translateY(-6px) rotate(2deg); }
 }
 .pop-bob { animation: signal-bob 5.6s ease-in-out infinite; }
 
-/* Slow turn for the dusk dial. */
+/* Slow turn for the grove dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 70s linear infinite; }
 
-/* Dusk blink: rhythmic glow of the amber beacon. */
+/* Grove blink: rhythmic glow of the lime firefly. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.35; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.15); }
 }
 .pop-twinkle { animation: signal-blink 3.2s ease-in-out infinite; }
 
-/* Dusk ticker: infinite marquee (leftward drift). */
+/* Grove ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 34s linear infinite; }
 
-/* Dusk check: indigo -> amber -> teal soft bands. */
+/* Grove check: forest -> lime -> sky soft bands. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(45deg, #818cf8 0 10px, #fbbf24 10px 20px, #2dd4bf 20px 30px);
+    repeating-linear-gradient(45deg, #4ade80 0 10px, #a3e635 10px 20px, #38bdf8 20px 30px);
   background-size: 42px 42px;
 }
 
-/* Dusk card: a squared slab on warm cream with a thick amber top
-   edge and a hard offset shadow. On hover it lifts and the top
-   edge and shadow turn indigo, like dusk settling in. */
+/* Grove card: a fully rounded pebble on pale mint with a soft
+   blurred shadow and no hard edge. On hover it lifts higher and
+   the shadow turns forest green, like a leaf catching light. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(30, 27, 75, 0.12);
-  border-top: 4px solid #f59e0b;
+  border: 1px solid rgba(5, 46, 22, 0.08);
   background: #ffffff;
-  border-radius: 0.75rem;
-  box-shadow: 4px 4px 0 rgba(30, 27, 75, 0.08), 0 18px 30px -18px rgba(49, 46, 129, 0.35);
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 6px rgba(5, 46, 22, 0.05), 0 20px 36px -18px rgba(21, 128, 61, 0.35);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  border-top-color: #4338ca;
-  box-shadow: 6px 6px 0 rgba(67, 56, 202, 0.15), 0 24px 40px -18px rgba(67, 56, 202, 0.45);
+  transform: translateY(-6px);
+  border-color: rgba(21, 128, 61, 0.25);
+  box-shadow: 0 4px 10px rgba(5, 46, 22, 0.06), 0 28px 44px -18px rgba(21, 128, 61, 0.45);
 }
 
-/* Dusk glass: shared by modals and drawers — a warm frosted pane
-   with squared edges and an indigo-tinted shadow. */
+/* Grove glass: shared by modals and drawers — a mint frosted pane
+   with fully rounded edges and a soft green shadow. */
 .pop-glass {
-  background: rgba(254, 249, 236, 0.96);
+  background: rgba(242, 251, 243, 0.96);
   backdrop-filter: blur(22px) saturate(1.2);
   -webkit-backdrop-filter: blur(22px) saturate(1.2);
-  border: 1px solid rgba(30, 27, 75, 0.14);
-  border-radius: 0.75rem;
-  box-shadow: 4px 4px 0 rgba(30, 27, 75, 0.08), 0 28px 56px -20px rgba(30, 27, 75, 0.30);
+  border: 1px solid rgba(5, 46, 22, 0.12);
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 8px rgba(5, 46, 22, 0.06), 0 28px 56px -20px rgba(5, 46, 22, 0.28);
 }
 
-/* Dusk seal: an indigo-to-amber pill badge. */
+/* Grove seal: a forest-to-lime pill badge. */
 .starburst {
-  background: linear-gradient(135deg, #4338ca 0%, #6366f1 55%, #f59e0b 100%);
+  background: linear-gradient(135deg, #15803d 0%, #22c55e 55%, #84cc16 100%);
   color: #ffffff;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
   border-radius: 999px;
-  box-shadow: 0 10px 24px -8px rgba(217, 119, 6, 0.55);
+  box-shadow: 0 10px 24px -8px rgba(101, 163, 13, 0.55);
   border: 2px solid #ffffff;
 }
 
-/* Dusk dots: faint indigo dot grid on warm cream. */
+/* Grove dots: faint forest dot grid on pale mint. */
 .halftone {
-  background-image: radial-gradient(rgba(67, 56, 202, 0.14) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(rgba(21, 128, 61, 0.14) 1.5px, transparent 1.5px);
   background-size: 20px 20px;
   background-position: 0 0;
 }
 
-/* Dusk seam: a dashed amber line dividing sections. */
+/* Grove seam: a dashed lime line dividing sections. */
 .zigzag {
   height: 12px;
-  background-image: linear-gradient(90deg, rgba(217, 119, 6, 0.9) 55%, transparent 45%);
+  background-image: linear-gradient(90deg, rgba(101, 163, 13, 0.9) 55%, transparent 45%);
   background-size: 18px 2px;
   background-repeat: repeat-x;
   background-position: 0 center;
@@ -201,41 +201,41 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
   mask: linear-gradient(90deg, black 82%, transparent 100%);
 }
 
-/* Dusk band: indigo / amber / teal stripes across the section top. */
+/* Grove band: forest / lime / sky stripes across the section top. */
 .bazaar-awning {
   background-image: repeating-linear-gradient(
     90deg,
-    #4338ca 0 22px,
-    #f59e0b 22px 44px,
-    #14b8a6 44px 66px
+    #15803d 0 22px,
+    #84cc16 22px 44px,
+    #0ea5e9 44px 66px
   );
   opacity: 0.9;
-  box-shadow: 0 4px 12px rgba(30, 27, 75, 0.25);
+  box-shadow: 0 4px 12px rgba(5, 46, 22, 0.25);
 }
 
-/* Dusk glow: layered indigo/amber/teal glow for the core halo. */
+/* Grove glow: layered forest/lime/sky glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(251, 191, 36, 0.16) 0%, rgba(67, 56, 202, 0.20) 42%, rgba(20, 184, 166, 0.18) 62%, rgba(20, 184, 166, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(163, 230, 53, 0.16) 0%, rgba(21, 128, 61, 0.20) 42%, rgba(14, 165, 233, 0.18) 62%, rgba(14, 165, 233, 0) 76%);
 }
-/* Dusk core: a glowing amber orb with an indigo halo. */
+/* Grove core: a glowing lime orb with a forest halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #fffbeb 0%, #fbbf24 52%, #4338ca 100%);
-  box-shadow: 0 18px 36px -12px rgba(217, 119, 6, 0.55), inset 0 3px 12px rgba(255, 255, 255, 0.55);
+    radial-gradient(circle at 38% 34%, #f7fee7 0%, #a3e635 52%, #15803d 100%);
+  box-shadow: 0 18px 36px -12px rgba(101, 163, 13, 0.55), inset 0 3px 12px rgba(255, 255, 255, 0.55);
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Dusk ripples around the core disc. */
+/* Grove ripples around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(245, 158, 11, 0.36) 0px,
-    rgba(245, 158, 11, 0.36) 2px,
+    rgba(132, 204, 22, 0.36) 0px,
+    rgba(132, 204, 22, 0.36) 2px,
     transparent 2px,
     transparent 12px,
-    rgba(67, 56, 202, 0.28) 12px,
-    rgba(67, 56, 202, 0.28) 14px,
+    rgba(21, 128, 61, 0.28) 12px,
+    rgba(21, 128, 61, 0.28) 14px,
     transparent 14px,
     transparent 30px
   );
@@ -246,7 +246,7 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(67, 56, 202, 0.30) 0deg 4deg,
+    rgba(21, 128, 61, 0.30) 0deg 4deg,
     transparent 4deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
