@@ -22,21 +22,21 @@ const item: Variants = {
 
 // Glacier circuit light drifting over the grove.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(124,58,237, 0.20)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(6,182,212, 0.20)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(192,38,211, 0.16)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(124,58,237, 0.16)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(234,88,12, 0.20)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245,158,11, 0.20)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(225,29,72, 0.16)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(194,65,12, 0.16)" },
 ];
 
 // Circuit sparks falling through the grove.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#7c3aed" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#06b6d4" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#c026d3" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#0891b2" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#8b5cf6" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#22d3ee" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#5b21b6" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#ea580c" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f59e0b" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#e11d48" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#d97706" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#f97316" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fbbf24" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#9a3412" },
 ];
 
 // Firefly blinks scattered through the light.
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* frost wash under the circuit light */}
-      <div className="relative bg-gradient-to-b from-[#f4f7ff] via-[#cffafe] to-[#ede9fe]">
+      <div className="relative bg-gradient-to-b from-[#fff7ed] via-[#fef3c7] to-[#ffedd5]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -100,7 +100,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(124,58,237, 0.45), inset 0 0 18px rgba(6,182,212, 0.25)",
+                  boxShadow: "0 0 28px 2px rgba(234,88,12, 0.45), inset 0 0 18px rgba(245,158,11, 0.25)",
                   opacity: 1 - r * 0.22,
                 }}
               />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#7c3aed", "#06b6d4", "#c026d3", "#0891b2"];
+              const colors = ["#ea580c", "#f59e0b", "#e11d48", "#d97706"];
               return (
                 <span
                   key={i}
@@ -159,7 +159,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           {STARS.map((s, i) => (
             <span
               key={i}
-              className="pop-twinkle absolute rounded-full bg-[#7c3aed]"
+              className="pop-twinkle absolute rounded-full bg-[#ea580c]"
               style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
             />
           ))}
@@ -176,7 +176,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
-              <div className="rounded-lg bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-400 p-[4px] shadow-[0_24px_56px_-18px_rgba(124,58,237, 0.45)]">
+              <div className="rounded-lg bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-400 p-[4px] shadow-[0_24px_56px_-18px_rgba(234,88,12, 0.45)]">
                 <div className="overflow-hidden rounded-md bg-paper ring-1 ring-ink/20">
                   <BannerCarousel />
                 </div>
