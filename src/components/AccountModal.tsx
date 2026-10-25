@@ -58,7 +58,7 @@ export default function AccountModal({ open, onClose }: AccountModalProps) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.96, y: 8 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="max-h-[92vh] w-full max-w-md overflow-y-auto rounded-t-3xl border border-[#d7e9ef] bg-white p-6 shadow-2xl sm:rounded-lg"
+            className="max-h-[92vh] w-full max-w-md overflow-y-auto rounded-t-3xl border border-[#ddd6fe] bg-white p-6 shadow-2xl sm:rounded-lg"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-start justify-between">
@@ -70,7 +70,7 @@ export default function AccountModal({ open, onClose }: AccountModalProps) {
               <p className="mt-6 text-center text-sm text-[#0a2436]">Checking your session…</p>
             ) : session?.user ? (
               <div className="mt-5">
-                <div className="flex items-center gap-3 rounded-lg bg-white p-4 ring-1 ring-[#d7e9ef]">
+                <div className="flex items-center gap-3 rounded-lg bg-white p-4 ring-1 ring-[#ddd6fe]">
                   {session.user.image ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src={session.user.image} alt="" className="h-12 w-12 rounded-full object-cover" />
@@ -85,7 +85,7 @@ export default function AccountModal({ open, onClose }: AccountModalProps) {
                     <span className="mt-1 inline-block rounded-full bg-brand-400/15 px-2.5 py-0.5 text-xs font-bold text-brand-700 ring-1 ring-brand-400/30 capitalize">{session.user.role ?? "customer"}</span>
                   </div>
                 </div>
-                <Link href="/dashboard" onClick={close} className="mt-4 block rounded-full bg-gradient-to-r from-brand-500 to-brand-700 py-3 text-center font-bold text-white shadow-[0_8px_24px_-8px_rgba(29,92,118, 0.4)] transition hover:brightness-110 active:scale-[0.99]">
+                <Link href="/dashboard" onClick={close} className="mt-4 block rounded-full bg-gradient-to-r from-brand-500 to-brand-700 py-3 text-center font-bold text-white shadow-[0_8px_24px_-8px_rgba(76,29,149, 0.4)] transition hover:brightness-110 active:scale-[0.99]">
                   Go to My Dashboard
                 </Link>
                 {session.user.role === "admin" && (
@@ -93,7 +93,7 @@ export default function AccountModal({ open, onClose }: AccountModalProps) {
                     Go to Admin Dashboard
                   </Link>
                 )}
-                <button onClick={() => signOut({ callbackUrl: "/" })} className="mt-3 w-full rounded-full border border-[#d7e9ef] py-3 font-bold text-[#0a2436] shadow-sm transition hover:bg-white active:scale-[0.99]">
+                <button onClick={() => signOut({ callbackUrl: "/" })} className="mt-3 w-full rounded-full border border-[#ddd6fe] py-3 font-bold text-[#0a2436] shadow-sm transition hover:bg-white active:scale-[0.99]">
                   Sign out
                 </button>
               </div>
@@ -105,7 +105,7 @@ export default function AccountModal({ open, onClose }: AccountModalProps) {
                 <button
                   onClick={handleGoogle}
                   disabled={loading}
-                  className="mt-4 flex w-full items-center justify-center gap-3 rounded-full border border-[#d7e9ef] bg-white py-3 font-bold text-[#0a2436] shadow-sm ring-1 ring-[#d7e9ef] transition hover:bg-white active:scale-[0.99] disabled:opacity-60"
+                  className="mt-4 flex w-full items-center justify-center gap-3 rounded-full border border-[#ddd6fe] bg-white py-3 font-bold text-[#0a2436] shadow-sm ring-1 ring-[#ddd6fe] transition hover:bg-white active:scale-[0.99] disabled:opacity-60"
                 >
                   <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-base font-black text-[#0a2436] shadow">G</span>
                   {loading ? "Connecting to Google…" : "Continue with Google"}

@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Glacier light drifting over the harbor.
+// Violet dusk light drifting over the skyline.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(29,92,118, 0.20)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(6,182,212, 0.20)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(20,184,166, 0.16)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(87,163,192, 0.16)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(124,58,237, 0.20)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(236,72,153, 0.20)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(245,158,11, 0.16)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(109,40,217, 0.16)" },
 ];
 
-// Glacier motes drifting down through the harbor.
+// Dusk embers drifting down through the evening light.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#0891b2" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#22cdf1" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#2dd4bf" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#0e7490" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#57a3c0" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#67e8f9" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#155e75" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#8b5cf6" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#ec4899" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#f59e0b" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#7c3aed" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#db2777" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fbbf24" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#6d28d9" },
 ];
 
-// Ice sparks scattered through the light.
+// Amber sparks scattered through the light.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -75,8 +75,8 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* cool lagoon wash under the mint light */}
-      <div className="relative bg-gradient-to-b from-[#ecfdf5] via-[#d1fae5] to-[#cffafe]">
+      {/* warm dusk wash under the violet light */}
+      <div className="relative bg-gradient-to-b from-[#f5f3ff] via-[#ede9fe] to-[#fce7f3]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -100,7 +100,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(29,92,118, 0.45), inset 0 0 18px rgba(6,182,212, 0.25)",
+                  boxShadow: "0 0 28px 2px rgba(76,29,149, 0.45), inset 0 0 18px rgba(6,182,212, 0.25)",
                   opacity: 1 - r * 0.22,
                 }}
               />
@@ -176,7 +176,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
-              <div className="rounded-[1.4rem] bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-400 p-[4px] shadow-[0_24px_56px_-18px_rgba(29,92,118, 0.45)]">
+              <div className="rounded-[1.4rem] bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-400 p-[4px] shadow-[0_24px_56px_-18px_rgba(76,29,149, 0.45)]">
                 <div className="overflow-hidden rounded-[1.1rem] bg-paper ring-1 ring-ink/20">
                   <BannerCarousel />
                 </div>
@@ -215,7 +215,7 @@ export default function Hero({ onQuickView }: HeroProps) {
               <div key={s.l} className="pop-lift relative overflow-hidden p-4 pb-3 pt-5 text-center">
                 <span className="relative block bg-gradient-to-br from-brand-600 via-gold-600 to-popblue-600 bg-clip-text text-2xl font-black tracking-tight text-transparent">{s.v}</span>
                 <span className="relative mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-mute">{s.l}</span>
-                <span aria-hidden className="relative mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-gold-500 via-gold-400 to-gold-200 shadow-[0_2px_6px_rgba(8,145,178, 0.5)]" />
+                <span aria-hidden className="relative mx-auto mt-3 block h-1.5 w-16 rounded-full bg-gradient-to-r from-gold-500 via-gold-400 to-gold-200 shadow-[0_2px_6px_rgba(219,39,119, 0.5)]" />
               </div>
             ))}
           </motion.div>
