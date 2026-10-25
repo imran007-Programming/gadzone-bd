@@ -22,21 +22,21 @@ const item: Variants = {
 
 // Amethyst light drifting over the warm cream paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(194,65,12, 0.20)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(30,58,95, 0.20)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(234,179,8, 0.16)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(234,88,12, 0.16)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(5,150,105, 0.20)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(15,118,110, 0.20)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(163,230,53, 0.16)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(5,150,105, 0.16)" },
 ];
 
 // Violet and lime sparks drifting down through the amethyst light.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#c2410c" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#eab308" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#1e3a5f" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#ea580c" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#c2410c" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#eab308" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#1e3a5f" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#047857" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#a3e635" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#0f766e" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#059669" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#047857" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#a3e635" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#0f766e" },
 ];
 
 // Lime sparks scattered through the amethyst.
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#c2410c", "#eab308", "#1e3a5f", "#ea580c"];
+              const colors = ["#047857", "#a3e635", "#0f766e", "#059669"];
               return (
                 <span
                   key={i}
