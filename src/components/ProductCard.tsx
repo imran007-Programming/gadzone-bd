@@ -27,7 +27,7 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
       {/* warm glow peeking from the card's top edge */}
       <div aria-hidden className="pointer-events-none absolute inset-x-10 top-0 h-24 rounded-b-full bg-gradient-to-b from-brand-200/60 via-popblue-200/30 to-transparent blur-sm" />
       <div className="relative p-3">
-        <div className="relative cursor-pointer overflow-hidden rounded-md ring-1 ring-brand-200" onClick={() => onQuickView(p)}>
+        <div className="relative cursor-pointer overflow-hidden rounded-2xl ring-1 ring-brand-200" onClick={() => onQuickView(p)}>
           <ProductImage product={p} />
           {p.badge === "New" && (
             <span className="absolute left-3 top-3 rounded-md bg-gold-700 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-white shadow-[0_0_18px_-4px_rgba(101,163,13, 0.8)] ring-1 ring-white/60">New</span>
@@ -53,7 +53,7 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
           whileTap={{ scale: 0.98 }}
           onClick={() => onAddToCart(p.id)}
           aria-label={`Add ${p.name} to cart`}
-          className="flex w-full items-center justify-center gap-1.5 rounded-lg border border-brand-700 bg-brand-600 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-[5px_5px_0_rgba(30,27,75,0.25)] transition hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-[7px_7px_0_rgba(30,27,75,0.3)] active:translate-y-0 active:scale-[0.98]"
+          className="flex w-full items-center justify-center gap-1.5 rounded-full border border-brand-700 bg-brand-600 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-[0_10px_24px_-8px_rgba(194,65,12,0.55)] transition hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-[0_16px_30px_-8px_rgba(194,65,12,0.6)] active:translate-y-0 active:scale-[0.98]"
         >
           🛒 Add
         </motion.button>

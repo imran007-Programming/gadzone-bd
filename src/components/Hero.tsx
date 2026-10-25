@@ -22,21 +22,21 @@ const item: Variants = {
 
 // Evergreen grove light drifting over the canopy.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(5,150,105, 0.20)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(132,204,22, 0.20)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(245,158,11, 0.16)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(4,120,87, 0.16)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(234,88,12, 0.20)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(250,204,21, 0.20)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(225,29,72, 0.16)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(194,65,12, 0.16)" },
 ];
 
 // Grove leaves drifting down through the canopy light.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#10b981" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#84cc16" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#f59e0b" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#047857" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#65a30d" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fbbf24" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#065f46" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#f97316" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#facc15" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#e11d48" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#ea580c" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#fb7185" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fde047" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#9a3412" },
 ];
 
 // Amber sparks scattered through the canopy.
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* warm grove wash under the pine light */}
-      <div className="relative bg-gradient-to-b from-[#f0fdfa] via-[#ccfbf1] to-[#e0f2fe]">
+      <div className="relative bg-gradient-to-b from-[#fff7ed] via-[#ffedd5] to-[#fef9c3]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -100,7 +100,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(6,95,70, 0.45), inset 0 0 18px rgba(6,182,212, 0.25)",
+                  boxShadow: "0 0 28px 2px rgba(194,65,12, 0.45), inset 0 0 18px rgba(250,204,21, 0.25)",
                   opacity: 1 - r * 0.22,
                 }}
               />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#0891b2", "#22cdf1", "#2dd4bf", "#57a3c0"];
+              const colors = ["#ea580c", "#facc15", "#e11d48", "#fb923c"];
               return (
                 <span
                   key={i}
@@ -176,8 +176,8 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
-              <div className="rounded-md bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-400 p-[4px] shadow-[5px_5px_0_rgba(30,27,75,0.35)]">
-                <div className="overflow-hidden rounded-sm bg-paper ring-1 ring-ink/20">
+              <div className="rounded-3xl bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-400 p-[4px] shadow-[0_16px_40px_-12px_rgba(67,20,7,0.35)]">
+                <div className="overflow-hidden rounded-2xl bg-paper ring-1 ring-ink/20">
                   <BannerCarousel />
                 </div>
               </div>
