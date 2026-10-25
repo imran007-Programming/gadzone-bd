@@ -1,66 +1,66 @@
 @import "tailwindcss";
 
 @theme {
-  /* Midnight Grid: deep indigo primary, sky-cyan light and a sharp
-     lime spark on cool glacier paper. Cards are crisp flat tiles
-     with a hard offset shadow — the opposite of the previous Ember
-     Coral's coral-orange palette, warm sand paper and soft pill
-     shapes with blurred shadows. */
+  /* Terracotta Dusk: burnt-orange primary, honey-amber light and a
+     deep teal spark on warm cream paper. Cards are soft, fully
+     rounded pillows with blurred warm shadows — the opposite of
+     the previous Midnight Grid's indigo palette, glacier paper,
+     grid lines, crisp flat tiles and hard offset shadows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = indigo scale */
-  --color-brand-50: #eef2ff;
-  --color-brand-100: #e0e7ff;
-  --color-brand-200: #c7d2fe;
-  --color-brand-300: #a5b4fc;
-  --color-brand-400: #818cf8;
-  --color-brand-500: #6366f1;
-  --color-brand-600: #4f46e5;
-  --color-brand-700: #4338ca;
-  --color-brand-800: #3730a3;
-  --color-brand-900: #312e81;
-  --color-brand-950: #1e1b4b;
-  --color-brand: #4f46e5;
-  --color-brand-dark: #4338ca;
-  --color-brand-deep: #312e81;
+  /* brand = burnt-orange scale */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-brand-950: #431407;
+  --color-brand: #ea580c;
+  --color-brand-dark: #c2410c;
+  --color-brand-deep: #7c2d12;
 
-  /* gold = lime scale (name kept for legacy class refs) */
-  --color-gold-50: #f7fee7;
-  --color-gold-100: #ecfccb;
-  --color-gold-200: #d9f99d;
-  --color-gold-300: #bef264;
-  --color-gold-400: #a3e635;
-  --color-gold-500: #84cc16;
-  --color-gold-600: #65a30d;
-  --color-gold-700: #4d7c0f;
-  --color-gold-800: #3f6212;
-  --color-gold-900: #365314;
-  --color-gold-950: #1a2e05;
-  --color-gold: #65a30d;
-  --color-gold-deep: #3f6212;
-  --color-gold-soft: #ecfccb;
+  /* gold = honey-amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #d97706;
+  --color-gold-deep: #92400e;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = sky scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0f9ff;
-  --color-popblue-100: #e0f2fe;
-  --color-popblue-200: #bae6fd;
-  --color-popblue-300: #7dd3fc;
-  --color-popblue-400: #38bdf8;
-  --color-popblue-500: #0ea5e9;
-  --color-popblue-600: #0284c7;
-  --color-popblue-700: #0369a1;
-  --color-popblue-800: #075985;
-  --color-popblue-900: #0c4a6e;
-  --color-popblue-950: #082f49;
-  --color-popblue: #0ea5e9;
-  --color-popblue-deep: #075985;
-  --color-popblue-soft: #e0f2fe;
+  /* popblue = deep-teal scale (name kept for legacy class refs) */
+  --color-popblue-50: #f0fdfa;
+  --color-popblue-100: #ccfbf1;
+  --color-popblue-200: #99f6e4;
+  --color-popblue-300: #5eead4;
+  --color-popblue-400: #2dd4bf;
+  --color-popblue-500: #14b8a6;
+  --color-popblue-600: #0d9488;
+  --color-popblue-700: #0f766e;
+  --color-popblue-800: #115e59;
+  --color-popblue-900: #134e4a;
+  --color-popblue-950: #042f2e;
+  --color-popblue: #0d9488;
+  --color-popblue-deep: #115e59;
+  --color-popblue-soft: #ccfbf1;
 
-  --color-ink: #1e1b4b;
-  --color-paper: #f1f5ff;
-  --color-mute: #64748b;
-  --color-card: #ffffff;
-  --color-deep: #312e81;
+  --color-ink: #431407;
+  --color-paper: #fdf6ec;
+  --color-mute: #78716c;
+  --color-card: #fffdf9;
+  --color-deep: #7c2d12;
 }
 
 html { scroll-behavior: smooth; }
@@ -75,26 +75,25 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f1f5ff;
+  background-color: #fdf6ec;
   background-image:
-    linear-gradient(rgba(79, 70, 229, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(79, 70, 229, 0.05) 1px, transparent 1px),
-    radial-gradient(ellipse 50% 32% at 92% -4%, rgba(14, 165, 233, 0.14), transparent 70%),
-    radial-gradient(ellipse 44% 30% at 4% 102%, rgba(132, 204, 22, 0.14), transparent 70%);
-  background-size: 44px 44px, 44px 44px, auto, auto;
-  color: #1e1b4b;
+    radial-gradient(ellipse 55% 34% at 88% -6%, rgba(234, 88, 12, 0.16), transparent 70%),
+    radial-gradient(ellipse 48% 32% at 6% 104%, rgba(13, 148, 136, 0.14), transparent 70%),
+    radial-gradient(ellipse 30% 22% at 50% 38%, rgba(245, 158, 11, 0.10), transparent 70%);
+  background-size: auto, auto, auto;
+  color: #431407;
 }
-::selection { background: #bef264; color: #1e1b4b; }
+::selection { background: #fcd34d; color: #431407; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #4f46e5, #0284c7); border-radius: 4px; border: 2px solid #f1f5ff; }
-::-webkit-scrollbar-track { background: #e0e7ff; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ea580c, #0d9488); border-radius: 999px; border: 2px solid #fdf6ec; }
+::-webkit-scrollbar-track { background: #ffedd5; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Midnight Grid type: tight, upright headlines with a crisp rhythm. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Terracotta Dusk type: warm, slightly loose headlines. */
+h1, h2, h3 { letter-spacing: -0.015em; text-wrap: balance; }
 
-/* Grid sparks: small indigo/sky marks drifting up the page. */
+/* Dusk sparks: small terracotta/amber marks drifting up the page. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, 4vh, 0) rotate(0deg) scale(0.8); opacity: 0; }
   18% { opacity: 0.85; }
@@ -104,97 +103,97 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 12s linear infinite; }
 
-/* Grid sway: slow lateral drift of the indigo light. */
+/* Dusk sway: slow lateral drift of the warm light. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-2vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(2vw, -0.6rem, 0) scale(1.04); opacity: 0.75; }
 }
 .pop-drift { animation: signal-drift 24s ease-in-out infinite; }
 
-/* Grid bob: gentle rise and fall of the floating mark. */
+/* Dusk bob: gentle rise and fall of the floating mark. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) rotate(-2deg); }
   50% { transform: translateY(-6px) rotate(2deg); }
 }
 .pop-bob { animation: signal-bob 5.6s ease-in-out infinite; }
 
-/* Slow turn for the grid dial. */
+/* Slow turn for the dusk dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 70s linear infinite; }
 
-/* Grid shimmer: rhythmic gleam of the lime spark. */
+/* Dusk shimmer: rhythmic gleam of the amber spark. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.35; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.15); }
 }
 .pop-twinkle { animation: signal-blink 3.2s ease-in-out infinite; }
 
-/* Grid ticker: infinite marquee (leftward drift). */
+/* Dusk ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 34s linear infinite; }
 
-/* Grid check: indigo -> sky -> lime bands. */
+/* Dusk check: terracotta -> amber -> teal bands. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(45deg, #6366f1 0 10px, #38bdf8 10px 20px, #a3e635 20px 30px);
+    repeating-linear-gradient(45deg, #f97316 0 10px, #fbbf24 10px 20px, #2dd4bf 20px 30px);
   background-size: 42px 42px;
 }
 
-/* Grid card: a crisp flat tile on glacier paper with a hard offset
-   shadow and a firm indigo border. On hover it shifts up-left and
-   the offset shadow deepens — a blueprint tile feel. */
+/* Dusk card: a soft rounded pillow on warm cream with a blurred
+   warm shadow. On hover it lifts straight up and the shadow
+   deepens — a sunset-pillow feel, no hard edges. */
 .pop-lift {
   position: relative;
-  border: 2px solid rgba(30, 27, 75, 0.14);
-  background: #ffffff;
-  border-radius: 0.75rem;
-  box-shadow: 5px 5px 0 rgba(49, 46, 129, 0.16);
+  border: 1px solid rgba(124, 45, 18, 0.12);
+  background: #fffdf9;
+  border-radius: 1.5rem;
+  box-shadow: 0 18px 36px rgba(124, 45, 18, 0.10);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translate(-2px, -2px);
-  border-color: rgba(79, 70, 229, 0.55);
-  box-shadow: 8px 8px 0 rgba(49, 46, 129, 0.22);
+  transform: translateY(-4px);
+  border-color: rgba(234, 88, 12, 0.45);
+  box-shadow: 0 26px 48px rgba(124, 45, 18, 0.16);
 }
 
-/* Grid glass: shared by modals and drawers — a crisp frosted
-   glacier pane with a firm border and a hard offset shadow. */
+/* Dusk glass: shared by modals and drawers — a warm frosted
+   cream pane with a soft blurred shadow. */
 .pop-glass {
-  background: rgba(241, 245, 255, 0.92);
+  background: rgba(253, 246, 236, 0.92);
   backdrop-filter: blur(22px) saturate(1.2);
   -webkit-backdrop-filter: blur(22px) saturate(1.2);
-  border: 2px solid rgba(30, 27, 75, 0.14);
-  border-radius: 0.75rem;
-  box-shadow: 6px 6px 0 rgba(49, 46, 129, 0.18);
+  border: 1px solid rgba(124, 45, 18, 0.12);
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 48px rgba(124, 45, 18, 0.16);
 }
 
-/* Grid seal: an indigo-to-sky square badge with a lime edge. */
+/* Dusk seal: a terracotta-to-amber pill badge with a teal edge. */
 .starburst {
-  background: linear-gradient(135deg, #4f46e5 0%, #0ea5e9 55%, #65a30d 100%);
+  background: linear-gradient(135deg, #ea580c 0%, #f59e0b 55%, #0d9488 100%);
   color: #ffffff;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-  border-radius: 0.5rem;
-  box-shadow: 4px 4px 0 rgba(30, 27, 75, 0.35);
-  border: 2px solid #f1f5ff;
+  border-radius: 999px;
+  box-shadow: 0 10px 24px rgba(194, 65, 12, 0.35);
+  border: 2px solid #fdf6ec;
 }
 
-/* Grid dots: faint indigo dot grid on glacier paper. */
+/* Dusk dots: faint terracotta dot pattern on warm cream. */
 .halftone {
-  background-image: radial-gradient(rgba(79, 70, 229, 0.20) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(rgba(234, 88, 12, 0.20) 1.5px, transparent 1.5px);
   background-size: 22px 22px;
   background-position: 0 0;
 }
 
-/* Grid seam: a dashed sky line dividing sections. */
+/* Dusk seam: a dashed amber line dividing sections. */
 .zigzag {
   height: 12px;
-  background-image: linear-gradient(90deg, rgba(2, 132, 199, 0.9) 8px, transparent 8px);
+  background-image: linear-gradient(90deg, rgba(217, 119, 6, 0.9) 8px, transparent 8px);
   background-size: 18px 12px;
   background-repeat: repeat-x;
   background-position: 0 center;
@@ -203,42 +202,42 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
   mask: linear-gradient(90deg, black 82%, transparent 100%);
 }
 
-/* Grid band: indigo / sky / lime stripes across the section top. */
+/* Dusk band: terracotta / amber / teal stripes across the section top. */
 .bazaar-awning {
   background-image: repeating-linear-gradient(
     90deg,
-    #4f46e5 0 22px,
-    #0ea5e9 22px 44px,
-    #84cc16 44px 66px
+    #ea580c 0 22px,
+    #f59e0b 22px 44px,
+    #0d9488 44px 66px
   );
   opacity: 0.9;
-  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.30);
+  box-shadow: 0 4px 12px rgba(194, 65, 12, 0.30);
 }
 
-/* Grid glow: layered indigo/sky/lime glow for the core halo. */
+/* Dusk glow: layered terracotta/amber/teal glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(224, 231, 255, 0.35) 0%, rgba(99, 102, 241, 0.28) 42%, rgba(56, 189, 248, 0.20) 62%, rgba(56, 189, 248, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 237, 213, 0.35) 0%, rgba(249, 115, 22, 0.28) 42%, rgba(45, 212, 191, 0.20) 62%, rgba(45, 212, 191, 0) 76%);
 }
 
-/* Grid core: a glowing sky orb with an indigo halo. */
+/* Dusk core: a glowing amber orb with a terracotta halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #f1f5ff 0%, #7dd3fc 52%, #4f46e5 100%);
-  box-shadow: 6px 6px 0 rgba(30, 27, 75, 0.25), inset 0 3px 12px rgba(255, 255, 255, 0.55);
+    radial-gradient(circle at 38% 34%, #fdf6ec 0%, #fcd34d 52%, #ea580c 100%);
+  box-shadow: 0 18px 36px rgba(124, 45, 18, 0.25), inset 0 3px 12px rgba(255, 255, 255, 0.55);
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Grid ripples around the core disc. */
+/* Dusk ripples around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(2, 132, 199, 0.32) 0px,
-    rgba(2, 132, 199, 0.32) 2px,
+    rgba(13, 148, 136, 0.32) 0px,
+    rgba(13, 148, 136, 0.32) 2px,
     transparent 2px,
     transparent 12px,
-    rgba(79, 70, 229, 0.26) 12px,
-    rgba(79, 70, 229, 0.26) 14px,
+    rgba(234, 88, 12, 0.26) 12px,
+    rgba(234, 88, 12, 0.26) 14px,
     transparent 14px,
     transparent 30px
   );
@@ -249,7 +248,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(79, 70, 229, 0.28) 0deg 4deg,
+    rgba(234, 88, 12, 0.28) 0deg 4deg,
     transparent 4deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
