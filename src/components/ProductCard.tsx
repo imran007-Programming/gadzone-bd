@@ -27,7 +27,7 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
       {/* crisp circuit glow peeking from the card's top edge */}
       <div aria-hidden className="pointer-events-none absolute inset-x-10 top-0 h-24 rounded-b-full bg-gradient-to-b from-brand-200/60 via-popblue-200/30 to-transparent blur-sm" />
       <div className="relative p-3">
-        <div className="relative cursor-pointer overflow-hidden rounded-lg ring-1 ring-slate-200" onClick={() => onQuickView(p)}>
+        <div className="relative cursor-pointer overflow-hidden rounded-3xl ring-1 ring-slate-200" onClick={() => onQuickView(p)}>
           <ProductImage product={p} />
           {p.badge === "New" && (
             <span className="absolute left-3 top-3 rounded-md bg-gold-700 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-white shadow-[0_0_18px_-4px_rgba(13,148,136, 0.8)] ring-1 ring-white/60">New</span>
@@ -53,13 +53,13 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
           whileTap={{ scale: 0.98 }}
           onClick={() => onAddToCart(p.id)}
           aria-label={`Add ${p.name} to cart`}
-          className="flex w-full items-center justify-center gap-1.5 rounded-lg border border-brand-700 bg-brand-600 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-[0_10px_24px_-8px_rgba(109,40,217,0.55)] transition hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-[0_16px_30px_-8px_rgba(109,40,217,0.6)] active:translate-y-0 active:scale-[0.98]"
+          className="flex w-full items-center justify-center gap-1.5 rounded-full border border-brand-700 bg-brand-600 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-[0_10px_24px_-8px_rgba(15,118,110,0.55)] transition hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-[0_16px_30px_-8px_rgba(15,118,110,0.6)] active:translate-y-0 active:scale-[0.98]"
         >
           🛒 Add
         </motion.button>
         <button
           onClick={() => onQuickView(p)}
-          className="flex w-full items-center justify-center rounded-lg border border-dashed border-brand-300 bg-brand-50 px-4 py-2 text-xs font-black uppercase tracking-wider text-brand-700 transition hover:bg-brand-100 active:scale-[0.98]"
+          className="flex w-full items-center justify-center rounded-full border border-dashed border-brand-300 bg-brand-50 px-4 py-2 text-xs font-black uppercase tracking-wider text-brand-700 transition hover:bg-brand-100 active:scale-[0.98]"
         >
           View →
         </button>
