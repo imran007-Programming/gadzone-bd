@@ -1,65 +1,65 @@
 @import "tailwindcss";
 
 @theme {
-  /* Indigo Dusk: deep indigo primary, cyan and rose accents on
-     cool mist paper. Cards are borderless dusk tiles with a soft
-     indigo shadow — the opposite of the previous chunky emerald
-     bordered grove tiles on warm cream paper. */
+  /* Terracotta Sunrise: warm terracotta primary, amber gold and deep
+     teal accents on warm sand paper. Cards are chunky sunrise tiles
+     with a terracotta edge and a hard offset shadow — the opposite of
+     the previous borderless indigo dusk tiles on cool mist paper. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = indigo scale */
-  --color-brand-50: #eef2ff;
-  --color-brand-100: #e0e7ff;
-  --color-brand-200: #c7d2fe;
-  --color-brand-300: #a5b4fc;
-  --color-brand-400: #818cf8;
-  --color-brand-500: #6366f1;
-  --color-brand-600: #4f46e5;
-  --color-brand-700: #4338ca;
-  --color-brand-800: #3730a3;
-  --color-brand-900: #312e81;
-  --color-brand-950: #1e1b4b;
-  --color-brand: #4f46e5;
-  --color-brand-dark: #4338ca;
-  --color-brand-deep: #312e81;
+  /* brand = terracotta scale */
+  --color-brand-50: #fdf4ef;
+  --color-brand-100: #fbe7db;
+  --color-brand-200: #f6cdb4;
+  --color-brand-300: #f0a984;
+  --color-brand-400: #e87a4e;
+  --color-brand-500: #dd5a26;
+  --color-brand-600: #c2410c;
+  --color-brand-700: #9a3412;
+  --color-brand-800: #7c2d12;
+  --color-brand-900: #431407;
+  --color-brand-950: #2a0d05;
+  --color-brand: #c2410c;
+  --color-brand-dark: #9a3412;
+  --color-brand-deep: #7c2d12;
 
-  /* gold = rose scale (name kept for legacy class refs) */
-  --color-gold-50: #fff1f2;
-  --color-gold-100: #ffe4e6;
-  --color-gold-200: #fecdd3;
-  --color-gold-300: #fda4af;
-  --color-gold-400: #fb7185;
-  --color-gold-500: #f43f5e;
-  --color-gold-600: #e11d48;
-  --color-gold-700: #be123c;
-  --color-gold-800: #9f1239;
-  --color-gold-900: #881337;
-  --color-gold-950: #4c0519;
-  --color-gold: #e11d48;
-  --color-gold-deep: #9f1239;
-  --color-gold-soft: #ffe4e6;
+  /* gold = amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #d97706;
+  --color-gold-deep: #92400e;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = cyan scale (name kept for legacy class refs) */
-  --color-popblue-50: #ecfeff;
-  --color-popblue-100: #cffafe;
-  --color-popblue-200: #a5f3fc;
-  --color-popblue-300: #67e8f9;
-  --color-popblue-400: #22d3ee;
-  --color-popblue-500: #06b6d4;
-  --color-popblue-600: #0891b2;
-  --color-popblue-700: #0e7490;
-  --color-popblue-800: #155e75;
-  --color-popblue-900: #164e63;
-  --color-popblue-950: #083344;
-  --color-popblue: #0891b2;
-  --color-popblue-deep: #0e7490;
-  --color-popblue-soft: #cffafe;
+  /* popblue = deep teal scale (name kept for legacy class refs) */
+  --color-popblue-50: #f0fdfa;
+  --color-popblue-100: #ccfbf1;
+  --color-popblue-200: #99f6e4;
+  --color-popblue-300: #5eead4;
+  --color-popblue-400: #2dd4bf;
+  --color-popblue-500: #14b8a6;
+  --color-popblue-600: #0d9488;
+  --color-popblue-700: #0f766e;
+  --color-popblue-800: #115e59;
+  --color-popblue-900: #134e4a;
+  --color-popblue-950: #042f2e;
+  --color-popblue: #0d9488;
+  --color-popblue-deep: #0f766e;
+  --color-popblue-soft: #ccfbf1;
 
-  --color-ink: #1f2340;
-  --color-paper: #f5f6fb;
-  --color-mute: #5b5e77;
-  --color-card: #ffffff;
-  --color-deep: #1e1b4b;
+  --color-ink: #2b1d16;
+  --color-paper: #faf5ee;
+  --color-mute: #756558;
+  --color-card: #fffdf9;
+  --color-deep: #431407;
 }
 
 html { scroll-behavior: smooth; }
@@ -74,124 +74,124 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f5f6fb;
+  background-color: #faf5ee;
   background-image:
-    linear-gradient(165deg, rgba(79, 70, 229, 0.08) 0%, transparent 42%),
-    radial-gradient(ellipse 50% 32% at 92% -4%, rgba(6, 182, 212, 0.14), transparent 70%),
-    radial-gradient(ellipse 44% 30% at 4% 102%, rgba(244, 63, 94, 0.10), transparent 70%);
-  color: #1f2340;
+    linear-gradient(165deg, rgba(194, 65, 12, 0.09) 0%, transparent 42%),
+    radial-gradient(ellipse 50% 32% at 92% -4%, rgba(245, 158, 11, 0.16), transparent 70%),
+    radial-gradient(ellipse 44% 30% at 4% 102%, rgba(13, 148, 136, 0.12), transparent 70%);
+  color: #2b1d16;
 }
-::selection { background: #4f46e5; color: #ffffff; }
+::selection { background: #c2410c; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #818cf8, #22d3ee); border-radius: 999px; border: 2px solid #f5f6fb; }
-::-webkit-scrollbar-track { background: #e6e8f5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #e87a4e, #f59e0b); border-radius: 999px; border: 2px solid #faf5ee; }
+::-webkit-scrollbar-track { background: #f0e6da; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Dusk type: tighter headlines with soft balance. */
-h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
+/* Sunrise type: warm, slightly wider headlines with soft balance. */
+h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Falling dusk motes: tiny sparks drifting down through the evening. */
+/* Rising sunrise sparks: tiny embers floating up through the morning. */
 @keyframes kiln-embers {
-  0% { transform: translate3d(0, -6vh, 0) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(0, 6vh, 0) rotate(0deg); opacity: 0; }
   16% { opacity: 0.85; }
-  45% { transform: translate3d(-14px, 30vh, 0) rotate(40deg); }
-  72% { transform: translate3d(10px, 62vh, 0) rotate(-30deg); opacity: 0.5; }
-  100% { transform: translate3d(-4px, 96vh, 0) rotate(60deg); opacity: 0; }
+  45% { transform: translate3d(14px, -30vh, 0) rotate(40deg); }
+  72% { transform: translate3d(-10px, -62vh, 0) rotate(-30deg); opacity: 0.5; }
+  100% { transform: translate3d(4px, -96vh, 0) rotate(60deg); opacity: 0; }
 }
 .pop-fall { animation: kiln-embers 11s linear infinite; }
 
-/* Dusk drift: slow lateral drift of the evening light. */
+/* Sunrise drift: slow lateral drift of the morning light. */
 @keyframes glaze-drift {
   0%, 100% { transform: translate3d(-2vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(2vw, -0.6rem, 0) scale(1.06); opacity: 0.75; }
 }
 .pop-drift { animation: glaze-drift 24s ease-in-out infinite; }
 
-/* Dusk sway: gentle dip and rise of the hanging mote. */
+/* Sunrise sway: gentle dip and rise of the hanging spark. */
 @keyframes kiln-bob {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-5px); }
 }
 .pop-bob { animation: kiln-bob 5.6s ease-in-out infinite; }
 
-/* Slow turn for the dusk wheel. */
+/* Slow turn for the sunrise wheel. */
 @keyframes wheel-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: wheel-turn 70s linear infinite; }
 
-/* Dusk blink: rhythmic glint of evening light. */
+/* Sunrise blink: rhythmic glint of morning light. */
 @keyframes ember-blink {
   0%, 100% { opacity: 0.35; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.15); }
 }
 .pop-twinkle { animation: ember-blink 3.2s ease-in-out infinite; }
 
-/* Dusk ticker: infinite marquee (leftward drift). */
+/* Sunrise ticker: infinite marquee (leftward drift). */
 @keyframes firing-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: firing-ticker 34s linear infinite; }
 
-/* Dusk check: indigo -> cyan -> rose diagonal tiles. */
+/* Sunrise check: terracotta -> amber -> teal diagonal tiles. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(45deg, #818cf8 0 10px, #22d3ee 10px 20px, #fb7185 20px 30px);
+    repeating-linear-gradient(45deg, #e87a4e 0 10px, #fbbf24 10px 20px, #2dd4bf 20px 30px);
   background-size: 42px 42px;
 }
 
-/* Dusk card: a borderless tile floating on mist paper with a soft
-   indigo shadow — no chunky border, no hard edge.
-   On hover it rises higher and the shadow turns indigo. */
+/* Sunrise card: a chunky tile on warm sand with a terracotta edge and
+   a hard offset shadow — no soft borderless float, no cool mist.
+   On hover it rises and the offset shadow deepens. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(99, 102, 241, 0.10);
-  background: #ffffff;
-  border-radius: 1.75rem;
-  box-shadow: 0 16px 32px -18px rgba(49, 46, 129, 0.28), 0 4px 12px -6px rgba(79, 70, 229, 0.12);
+  border: 2px solid rgba(194, 65, 12, 0.22);
+  background: #fffdf9;
+  border-radius: 1.25rem;
+  box-shadow: 5px 5px 0 rgba(194, 65, 12, 0.12), 0 18px 30px -18px rgba(124, 45, 18, 0.35);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
   transform: translateY(-6px);
-  border-color: rgba(99, 102, 241, 0.30);
-  box-shadow: 0 26px 40px -18px rgba(49, 46, 129, 0.38), 0 8px 18px -6px rgba(79, 70, 229, 0.22);
+  border-color: rgba(194, 65, 12, 0.45);
+  box-shadow: 8px 10px 0 rgba(194, 65, 12, 0.16), 0 26px 40px -18px rgba(124, 45, 18, 0.45);
 }
 
-/* Dusk glass: shared by modals and drawers — a cool mist pane
-   with a faint ring and a deep indigo shadow. */
+/* Sunrise glass: shared by modals and drawers — a warm sand pane
+   with a faint ring and a deep terracotta shadow. */
 .pop-glass {
-  background: rgba(245, 246, 251, 0.92);
+  background: rgba(250, 245, 238, 0.92);
   backdrop-filter: blur(22px) saturate(1.2);
   -webkit-backdrop-filter: blur(22px) saturate(1.2);
   border: 1px solid rgba(255, 255, 255, 0.85);
-  border-radius: 1.75rem;
-  box-shadow: 0 18px 40px -12px rgba(30, 27, 75, 0.28), 0 6px 18px -8px rgba(79, 70, 229, 0.18);
+  border-radius: 1.25rem;
+  box-shadow: 0 18px 40px -12px rgba(67, 20, 7, 0.28), 0 6px 18px -8px rgba(194, 65, 12, 0.18);
 }
 
-/* Dusk seal: an indigo-to-cyan-to-rose pill badge. */
+/* Sunrise seal: a terracotta-to-amber-to-teal pill badge. */
 .starburst {
-  background: linear-gradient(135deg, #4338ca 0%, #0891b2 55%, #e11d48 100%);
+  background: linear-gradient(135deg, #9a3412 0%, #d97706 55%, #0f766e 100%);
   color: #ffffff;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   border-radius: 9999px;
-  box-shadow: 0 10px 24px -8px rgba(79, 70, 229, 0.6), inset 0 2px 6px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 24px -8px rgba(194, 65, 12, 0.6), inset 0 2px 6px rgba(255, 255, 255, 0.4);
   border: 2px solid #ffffff;
 }
 
-/* Dusk dots: faint indigo dot grid on mist paper. */
+/* Sunrise dots: faint terracotta dot grid on warm sand. */
 .halftone {
-  background-image: radial-gradient(rgba(79, 70, 229, 0.16) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(rgba(194, 65, 12, 0.16) 1.5px, transparent 1.5px);
   background-size: 22px 22px;
   background-position: 0 0;
 }
 
-/* Dusk seam: a dotted rose line dividing sections. */
+/* Sunrise seam: a dotted amber line dividing sections. */
 .zigzag {
   height: 12px;
-  background-image: radial-gradient(circle, rgba(225, 29, 72, 0.9) 1.6px, transparent 1.8px);
+  background-image: radial-gradient(circle, rgba(217, 119, 6, 0.9) 1.6px, transparent 1.8px);
   background-size: 14px 12px;
   background-repeat: repeat-x;
   background-position: 0 center;
@@ -200,41 +200,41 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
   mask: linear-gradient(90deg, black 82%, transparent 100%);
 }
 
-/* Dusk band: indigo / cyan / rose stripes across the section top. */
+/* Sunrise band: terracotta / amber / teal stripes across the section top. */
 .bazaar-awning {
   background-image: repeating-linear-gradient(
     90deg,
-    #4f46e5 0 22px,
-    #06b6d4 22px 44px,
-    #e11d48 44px 66px
+    #c2410c 0 22px,
+    #f59e0b 22px 44px,
+    #0d9488 44px 66px
   );
   opacity: 0.9;
-  box-shadow: 0 4px 16px -6px rgba(30, 27, 75, 0.3);
+  box-shadow: 0 4px 16px -6px rgba(67, 20, 7, 0.3);
 }
 
-/* Dusk glow: layered indigo/cyan/rose glow for the core halo. */
+/* Sunrise glow: layered terracotta/amber/teal glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(8, 145, 178, 0.20) 0%, rgba(79, 70, 229, 0.20) 42%, rgba(225, 29, 72, 0.14) 62%, rgba(225, 29, 72, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(13, 148, 136, 0.20) 0%, rgba(194, 65, 12, 0.20) 42%, rgba(245, 158, 11, 0.14) 62%, rgba(245, 158, 11, 0) 76%);
 }
-/* Dusk core: a glowing rose moon disc with an indigo halo. */
+/* Sunrise core: a glowing amber sun disc with a terracotta halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #fff1f2 0%, #fb7185 52%, #4f46e5 100%);
-  box-shadow: 0 0 70px -8px rgba(225, 29, 72, 0.5), 0 0 28px -6px rgba(79, 70, 229, 0.4), inset 0 3px 12px rgba(255, 255, 255, 0.55);
-  border: 2px solid rgba(79, 70, 229, 0.45);
+    radial-gradient(circle at 38% 34%, #fffbeb 0%, #fbbf24 52%, #c2410c 100%);
+  box-shadow: 0 0 70px -8px rgba(245, 158, 11, 0.5), 0 0 28px -6px rgba(194, 65, 12, 0.4), inset 0 3px 12px rgba(255, 255, 255, 0.55);
+  border: 2px solid rgba(194, 65, 12, 0.45);
 }
 
-/* Dusk rings around the core disc. */
+/* Sunrise rings around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(6, 182, 212, 0.40) 0px,
-    rgba(6, 182, 212, 0.40) 2px,
+    rgba(13, 148, 136, 0.40) 0px,
+    rgba(13, 148, 136, 0.40) 2px,
     transparent 2px,
     transparent 12px,
-    rgba(79, 70, 229, 0.28) 12px,
-    rgba(79, 70, 229, 0.28) 14px,
+    rgba(194, 65, 12, 0.28) 12px,
+    rgba(194, 65, 12, 0.28) 14px,
     transparent 14px,
     transparent 30px
   );
@@ -245,7 +245,7 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(79, 70, 229, 0.32) 0deg 4deg,
+    rgba(194, 65, 12, 0.32) 0deg 4deg,
     transparent 4deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);

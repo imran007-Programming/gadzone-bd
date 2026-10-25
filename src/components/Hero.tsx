@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Fresh morning light drifting over the meadow.
+// Warm sunrise light drifting over the sand.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(5,150,105, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(194,65,12, 0.20)" },
   { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245,158,11, 0.20)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(132,204,22, 0.16)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(5,150,105, 0.16)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(13,148,136, 0.16)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(194,65,12, 0.16)" },
 ];
 
-// Leaf flecks rising off the fresh meadow.
+// Sunrise sparks rising off the warm sand.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#059669" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#c2410c" },
   { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f59e0b" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#65a30d" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#84cc16" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#10b981" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#0d9488" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#ea580c" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#d97706" },
   { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fbbf24" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#047857" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#9a3412" },
 ];
 
 // Firefly blinks scattered through the light.
@@ -75,19 +75,19 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* warm wash under the ember light */}
-      <div className="relative bg-gradient-to-b from-[#f5f6fb] via-[#eef2ff] to-[#fff1f2]">
+      {/* warm wash under the sunrise light */}
+      <div className="relative bg-gradient-to-b from-[#faf5ee] via-[#fbe7db] to-[#fef3c7]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
 
-        {/* dawn wash sweeping the ember */}
+        {/* dawn wash sweeping the sunrise */}
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-0 hidden h-[560px] opacity-90 sm:block">
           <div className="pop-drift absolute -left-24 top-6 h-72 w-[52rem] rotate-[-8deg] rounded-full bg-gradient-to-r from-brand-400/35 via-popblue-300/20 to-transparent blur-3xl" />
           <div className="pop-drift absolute -right-24 top-40 h-64 w-[44rem] rotate-[10deg] rounded-full bg-gradient-to-r from-transparent via-gold-300/25 to-brand-400/30 blur-3xl" style={{ animationDelay: "-12s" }} />
         </div>
 
-        {/* ember core: a first-light sun ringed by a slow-spinning signal dial */}
+        {/* sunrise core: a first-light sun ringed by a slow-spinning signal dial */}
         <div aria-hidden className="pointer-events-none absolute -right-40 -top-32 z-0 hidden opacity-90 sm:block">
           <div className="relative h-[600px] w-[600px]">
             <div className="nebula-core absolute inset-8 rounded-full blur-xl" />
@@ -100,12 +100,12 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(101,163,13, 0.45), inset 0 0 18px rgba(249,115,22, 0.25)",
+                  boxShadow: "0 0 28px 2px rgba(194,65,12, 0.45), inset 0 0 18px rgba(245,158,11, 0.25)",
                   opacity: 1 - r * 0.22,
                 }}
               />
             ))}
-            {/* the ember heart: a layered first-light disc */}
+            {/* the sunrise heart: a layered first-light disc */}
             <div className="sun-disc pop-spin absolute inset-44 rounded-full" style={{ animationDuration: "60s" }} />
             {/* beacon glints */}
             <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#059669", "#65a30d", "#84cc16", "#10b981"];
+              const colors = ["#c2410c", "#f59e0b", "#0d9488", "#ea580c"];
               return (
                 <span
                   key={i}
@@ -159,7 +159,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           {STARS.map((s, i) => (
             <span
               key={i}
-              className="pop-twinkle absolute rounded-full bg-[#059669]"
+              className="pop-twinkle absolute rounded-full bg-[#c2410c]"
               style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
             />
           ))}
@@ -176,7 +176,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
-              <div className="rounded-lg bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-400 p-[4px] shadow-[0_24px_56px_-18px_rgba(4,120,87, 0.45)]">
+              <div className="rounded-lg bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-400 p-[4px] shadow-[0_24px_56px_-18px_rgba(154,52,18, 0.45)]">
                 <div className="overflow-hidden rounded-md bg-paper ring-1 ring-ink/20">
                   <BannerCarousel />
                 </div>
@@ -202,7 +202,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div aria-hidden className="zigzag relative z-10 mx-auto mt-0 w-full max-w-7xl opacity-90" />
       </div>
 
-      {/* Stats + featured picks under the ember beacon */}
+      {/* Stats + featured picks under the sunrise beacon */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 pb-24 pt-10 md:pb-28">
         <motion.div variants={container} initial="hidden" animate="show" {...anim}>
           <motion.div variants={item} className="grid grid-cols-2 gap-6 sm:grid-cols-4">
