@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Sapphire circuit light drifting over the cool slate paper.
+// Ember harbor light drifting over the pale mist paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(109,40,217, 0.20)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(13,148,136, 0.20)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(132,204,22, 0.16)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(167,139,250, 0.16)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(194,65,12, 0.20)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(47,90,128, 0.20)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(217,119,6, 0.16)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(251,146,60, 0.16)" },
 ];
 
-// Coral sparks drifting down through the circuit light.
+// Ember sparks drifting down through the harbor light.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#6d28d9" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#84cc16" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#0d9488" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#2dd4bf" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#a78bfa" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#84cc16" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#115e59" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#c2410c" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#d97706" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#2f5a80" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#f59e0b" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#fb923c" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#d97706" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#24405a" },
 ];
 
 // Coral sparks scattered through the circuit.
@@ -75,8 +75,8 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* cool slate wash under the circuit light */}
-      <div className="relative bg-gradient-to-b from-[#ede9fe] via-[#f0fdfa] to-[#ecfccb]">
+      {/* warm ember wash under the harbor light */}
+      <div className="relative bg-gradient-to-b from-[#ffedd5] via-[#fef3c7] to-[#dce8f1]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -100,7 +100,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(132,204,22, 0.45), inset 0 0 18px rgba(190,242,100, 0.30)",
+                  boxShadow: "0 0 28px 2px rgba(217,119,6, 0.45), inset 0 0 18px rgba(252,211,77, 0.30)",
                   opacity: 1 - r * 0.22,
                 }}
               />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#6d28d9", "#84cc16", "#0d9488", "#a78bfa"];
+              const colors = ["#c2410c", "#d97706", "#2f5a80", "#f97316"];
               return (
                 <span
                   key={i}
@@ -159,7 +159,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           {STARS.map((s, i) => (
             <span
               key={i}
-              className="pop-twinkle absolute rounded-full bg-[#65a30d]"
+              className="pop-twinkle absolute rounded-full bg-[#d97706]"
               style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
             />
           ))}
