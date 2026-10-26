@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Glacier light drifting over the frost paper.
+// Violet dusk light drifting over the lavender paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(56, 189, 248, 0.22)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(99, 102, 241, 0.18)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(34, 211, 238, 0.18)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(125, 211, 252, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(139, 92, 246, 0.22)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(217, 70, 239, 0.18)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(6, 182, 212, 0.18)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(167, 139, 250, 0.20)" },
 ];
 
-// Icy flakes drifting down through the glacier light.
+// Electric sparks drifting up through the dusk light.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#0ea5e9" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#6366f1" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#06b6d4" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#38bdf8" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#0284c7" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#7c3aed" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#c026d3" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#0891b2" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#a78bfa" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#6d28d9" },
   { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#22d3ee" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#4f46e5" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#d946ef" },
 ];
 
-// Icy flakes scattered through the glacier light.
+// Electric sparks scattered through the dusk light.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#0ea5e9", "#38bdf8", "#6366f1", "#22d3ee"];
+              const colors = ["#7c3aed", "#a78bfa", "#c026d3", "#22d3ee"];
               return (
                 <span
                   key={i}
@@ -159,7 +159,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           {STARS.map((s, i) => (
             <span
               key={i}
-              className="pop-twinkle absolute rounded-full bg-[#38bdf8]"
+              className="pop-twinkle absolute rounded-full bg-[#a78bfa]"
               style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
             />
           ))}
