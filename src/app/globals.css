@@ -1,67 +1,67 @@
 @import "tailwindcss";
 
 @theme {
-  /* Indigo Dusk: deep indigo primary, warm coral spark and a
-     rich violet secondary on warm cream paper. Cards are crisp
-     medium-rounded tiles with a solid indigo edge and a hard
-     offset coral shadow — the opposite of the previous Forest
-     Mint's emerald palette, ice-mint paper, pill-rounded tiles
-     and soft mint shadows. */
+  /* Rosewood Dawn: vivid rose primary, warm amber spark and a
+     deep teal contrast accent on soft blush paper. Cards are
+     generously pill-rounded tiles with soft diffused shadows —
+     the opposite of the previous Indigo Dusk's deep indigo
+     palette, warm cream paper, medium rounding and hard offset
+     coral shadows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = indigo scale */
-  --color-brand-50: #eef2ff;
-  --color-brand-100: #e0e7ff;
-  --color-brand-200: #c7d2fe;
-  --color-brand-300: #a5b4fc;
-  --color-brand-400: #818cf8;
-  --color-brand-500: #6366f1;
-  --color-brand-600: #4f46e5;
-  --color-brand-700: #4338ca;
-  --color-brand-800: #3730a3;
-  --color-brand-900: #312e81;
-  --color-brand-950: #1e1b4b;
-  --color-brand: #4f46e5;
-  --color-brand-dark: #4338ca;
-  --color-brand-deep: #312e81;
+  /* brand = rose scale */
+  --color-brand-50: #fff1f2;
+  --color-brand-100: #ffe4e6;
+  --color-brand-200: #fecdd3;
+  --color-brand-300: #fda4af;
+  --color-brand-400: #fb7185;
+  --color-brand-500: #f43f5e;
+  --color-brand-600: #e11d48;
+  --color-brand-700: #be123c;
+  --color-brand-800: #9f1239;
+  --color-brand-900: #881337;
+  --color-brand-950: #4c0519;
+  --color-brand: #e11d48;
+  --color-brand-dark: #be123c;
+  --color-brand-deep: #881337;
 
-  /* gold = coral scale (name kept for legacy class refs) */
-  --color-gold-50: #fff7ed;
-  --color-gold-100: #ffedd5;
-  --color-gold-200: #fed7aa;
-  --color-gold-300: #fdba74;
-  --color-gold-400: #fb923c;
-  --color-gold-500: #f97316;
-  --color-gold-600: #ea580c;
-  --color-gold-700: #c2410c;
-  --color-gold-800: #9a3412;
-  --color-gold-900: #7c2d12;
-  --color-gold-950: #431407;
-  --color-gold: #ea580c;
-  --color-gold-deep: #7c2d12;
-  --color-gold-soft: #ffedd5;
+  /* gold = amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #92400e;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = violet scale (name kept for legacy class refs) */
-  --color-popblue-50: #f5f3ff;
-  --color-popblue-100: #ede9fe;
-  --color-popblue-200: #ddd6fe;
-  --color-popblue-300: #c4b5fd;
-  --color-popblue-400: #a78bfa;
-  --color-popblue-500: #8b5cf6;
-  --color-popblue-600: #7c3aed;
-  --color-popblue-700: #6d28d9;
-  --color-popblue-800: #5b21b6;
-  --color-popblue-900: #4c1d95;
-  --color-popblue-950: #2e1065;
-  --color-popblue: #7c3aed;
-  --color-popblue-deep: #4c1d95;
-  --color-popblue-soft: #ede9fe;
+  /* popblue = deep teal scale (name kept for legacy class refs) */
+  --color-popblue-50: #f0fdfa;
+  --color-popblue-100: #ccfbf1;
+  --color-popblue-200: #99f6e4;
+  --color-popblue-300: #5eead4;
+  --color-popblue-400: #2dd4bf;
+  --color-popblue-500: #14b8a6;
+  --color-popblue-600: #0d9488;
+  --color-popblue-700: #0f766e;
+  --color-popblue-800: #115e59;
+  --color-popblue-900: #134e4a;
+  --color-popblue-950: #042f2e;
+  --color-popblue: #0d9488;
+  --color-popblue-deep: #115e59;
+  --color-popblue-soft: #ccfbf1;
 
-  --color-ink: #23203a;
-  --color-paper: #faf6f0;
-  --color-mute: #6b6580;
+  --color-ink: #3f0d22;
+  --color-paper: #fdf2f5;
+  --color-mute: #7a5a68;
   --color-card: #ffffff;
-  --color-deep: #312e81;
+  --color-deep: #881337;
 }
 
 html { scroll-behavior: smooth; }
@@ -76,170 +76,170 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #faf6f0;
+  background-color: #fdf2f5;
   background-image:
-    radial-gradient(ellipse 55% 34% at 88% -6%, rgba(79, 70, 229, 0.14), transparent 70%),
-    radial-gradient(ellipse 48% 32% at 6% 104%, rgba(124, 58, 237, 0.12), transparent 70%),
-    radial-gradient(ellipse 30% 22% at 50% 38%, rgba(249, 115, 22, 0.12), transparent 70%);
+    radial-gradient(ellipse 55% 34% at 12% -6%, rgba(225, 29, 72, 0.16), transparent 70%),
+    radial-gradient(ellipse 48% 32% at 94% 104%, rgba(13, 148, 136, 0.14), transparent 70%),
+    radial-gradient(ellipse 30% 22% at 50% 38%, rgba(245, 158, 11, 0.14), transparent 70%);
   background-size: auto, auto, auto;
-  color: #23203a;
+  color: #3f0d22;
 }
-::selection { background: #fdba74; color: #23203a; }
+::selection { background: #fcd34d; color: #3f0d22; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #4f46e5, #7c3aed); border-radius: 6px; border: 2px solid #faf6f0; }
-::-webkit-scrollbar-track { background: #e0e7ff; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #e11d48, #f59e0b); border-radius: 9999px; border: 2px solid #fdf2f5; }
+::-webkit-scrollbar-track { background: #ffe4e6; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Indigo Dusk type: wide, confident headline tracking. */
-h1, h2, h3 { letter-spacing: 0.01em; text-wrap: balance; }
+/* Rosewood Dawn type: tight, confident headline tracking. */
+h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Dusk sparks: small indigo/violet marks drifting up the page. */
+/* Dawn sparks: small rose/amber marks drifting down the page. */
 @keyframes signal-rise {
-  0% { transform: translate3d(0, 4vh, 0) rotate(0deg) scale(0.8); opacity: 0; }
+  0% { transform: translate3d(0, -4vh, 0) rotate(0deg) scale(0.8); opacity: 0; }
   18% { opacity: 0.85; }
-  50% { transform: translate3d(-10px, 46vh, 0) rotate(-60deg) scale(1); }
-  78% { transform: translate3d(8px, 78vh, 0) rotate(-140deg) scale(1.05); opacity: 0.5; }
-  100% { transform: translate3d(-4px, 104vh, 0) rotate(-200deg) scale(1.1); opacity: 0; }
+  50% { transform: translate3d(10px, 46vh, 0) rotate(60deg) scale(1); }
+  78% { transform: translate3d(-8px, 78vh, 0) rotate(140deg) scale(1.05); opacity: 0.5; }
+  100% { transform: translate3d(4px, 104vh, 0) rotate(200deg) scale(1.1); opacity: 0; }
 }
 .pop-fall { animation: signal-rise 12s linear infinite; }
 
-/* Dusk sway: slow lateral drift of the warm light. */
+/* Dawn sway: slow lateral drift of the warm light. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(-2vw, 0, 0) scale(1); opacity: 0.5; }
-  50% { transform: translate3d(2vw, -0.6rem, 0) scale(1.04); opacity: 0.75; }
+  0%, 100% { transform: translate3d(2vw, 0, 0) scale(1); opacity: 0.5; }
+  50% { transform: translate3d(-2vw, 0.6rem, 0) scale(1.04); opacity: 0.75; }
 }
 .pop-drift { animation: signal-drift 24s ease-in-out infinite; }
 
-/* Dusk bob: gentle rise and fall of the floating mark. */
+/* Dawn bob: gentle rise and fall of the floating mark. */
 @keyframes signal-bob {
-  0%, 100% { transform: translateY(0) rotate(-2deg); }
-  50% { transform: translateY(-6px) rotate(2deg); }
+  0%, 100% { transform: translateY(0) rotate(2deg); }
+  50% { transform: translateY(6px) rotate(-2deg); }
 }
 .pop-bob { animation: signal-bob 5.6s ease-in-out infinite; }
 
-/* Slow turn for the dusk dial. */
+/* Slow turn for the dawn dial. */
 @keyframes dial-turn {
-  to { transform: rotate(360deg); }
+  to { transform: rotate(-360deg); }
 }
 .pop-spin { animation: dial-turn 70s linear infinite; }
 
-/* Dusk shimmer: rhythmic gleam of the coral spark. */
+/* Dawn shimmer: rhythmic gleam of the amber spark. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.35; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.15); }
 }
 .pop-twinkle { animation: signal-blink 3.2s ease-in-out infinite; }
 
-/* Dusk ticker: infinite marquee (leftward drift). */
+/* Dawn ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 34s linear infinite; }
 
-/* Dusk check: indigo -> violet -> coral bands. */
+/* Dawn check: rose -> amber -> teal bands. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(45deg, #4f46e5 0 10px, #7c3aed 10px 20px, #f97316 20px 30px);
+    repeating-linear-gradient(45deg, #e11d48 0 10px, #f59e0b 10px 20px, #0d9488 20px 30px);
   background-size: 42px 42px;
 }
 
-/* Indigo Dusk card: a crisp medium-rounded tile on white with a
-   solid indigo edge and a hard offset coral shadow. On hover it
-   shifts up-left and the shadow grows — a bold, poster-like
-   feel, no pill rounding, no soft blur shadows. */
+/* Rosewood Dawn card: a generously pill-rounded tile on white
+   with a hairline rose edge and a soft diffused rose shadow.
+   On hover it lifts straight up and the shadow deepens — a
+   soft, airy feel, no hard offset shadows, no crisp edges. */
 .pop-lift {
   position: relative;
-  border: 2px solid #312e81;
+  border: 1px solid #ffe4e6;
   background: #ffffff;
-  border-radius: 1rem;
-  box-shadow: 5px 5px 0 rgba(234, 88, 12, 0.85);
+  border-radius: 1.75rem;
+  box-shadow: 0 18px 36px rgba(225, 29, 72, 0.12);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translate(-2px, -2px);
-  border-color: #4f46e5;
-  box-shadow: 8px 8px 0 rgba(234, 88, 12, 0.9);
+  transform: translateY(-4px);
+  border-color: #fda4af;
+  box-shadow: 0 26px 48px rgba(225, 29, 72, 0.18);
 }
 
-/* Dusk glass: shared by modals and drawers — a warm frosted
-   cream pane with a solid indigo edge and a hard offset shadow. */
+/* Dawn glass: shared by modals and drawers — a soft frosted
+   blush pane with a hairline rose edge and a soft shadow. */
 .pop-glass {
-  background: rgba(250, 246, 240, 0.94);
+  background: rgba(253, 242, 245, 0.94);
   backdrop-filter: blur(22px) saturate(1.2);
   -webkit-backdrop-filter: blur(22px) saturate(1.2);
-  border: 2px solid #312e81;
-  border-radius: 1rem;
-  box-shadow: 6px 6px 0 rgba(79, 70, 229, 0.25);
+  border: 1px solid #fecdd3;
+  border-radius: 1.75rem;
+  box-shadow: 0 24px 48px rgba(225, 29, 72, 0.16);
 }
 
-/* Dusk seal: a solid coral circle badge with an indigo ring,
-   tilted slightly like a dusk stamp. */
+/* Dawn seal: a solid amber circle badge with a rose ring,
+   tilted slightly like a dawn stamp. */
 .starburst {
-  background: #ea580c;
+  background: #f59e0b;
   color: #ffffff;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
   border-radius: 9999px;
-  transform: rotate(-3deg);
-  box-shadow: 0 10px 24px rgba(234, 88, 12, 0.35);
-  border: 2px solid #312e81;
+  transform: rotate(6deg);
+  box-shadow: 0 10px 24px rgba(245, 158, 11, 0.35);
+  border: 2px solid #e11d48;
 }
 
-/* Dusk dots: faint indigo dot pattern on warm cream. */
+/* Dawn dots: faint rose dot pattern on blush. */
 .halftone {
-  background-image: radial-gradient(rgba(79, 70, 229, 0.20) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(rgba(225, 29, 72, 0.20) 1.5px, transparent 1.5px);
   background-size: 26px 26px;
   background-position: 0 0;
 }
 
-/* Dusk seam: a dotted indigo rule dividing sections. */
+/* Dawn seam: a dotted rose rule dividing sections. */
 .zigzag {
   height: 3px;
-  background-image: radial-gradient(circle, #4f46e5 2px, transparent 2.5px);
+  background-image: radial-gradient(circle, #e11d48 2px, transparent 2.5px);
   background-size: 20px 3px;
   background-repeat: repeat-x;
   background-position: 0 center;
   opacity: 0.9;
 }
 
-/* Dusk band: indigo / violet / coral stripes across the section top. */
+/* Dawn band: rose / amber / teal stripes across the section top. */
 .bazaar-awning {
   background-image: repeating-linear-gradient(
     90deg,
-    #4f46e5 0 22px,
-    #7c3aed 22px 44px,
-    #f97316 44px 66px
+    #e11d48 0 22px,
+    #f59e0b 22px 44px,
+    #0d9488 44px 66px
   );
   opacity: 0.9;
-  box-shadow: 0 4px 12px rgba(67, 56, 202, 0.30);
+  box-shadow: 0 4px 12px rgba(190, 18, 60, 0.30);
 }
 
-/* Dusk glow: layered indigo/violet/coral glow for the core halo. */
+/* Dawn glow: layered rose/amber/teal glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(224, 231, 255, 0.45) 0%, rgba(99, 102, 241, 0.28) 42%, rgba(249, 115, 22, 0.22) 62%, rgba(249, 115, 22, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 228, 230, 0.45) 0%, rgba(244, 63, 94, 0.28) 42%, rgba(245, 158, 11, 0.22) 62%, rgba(245, 158, 11, 0) 76%);
 }
 
-/* Dusk core: a glowing coral orb with an indigo halo. */
+/* Dawn core: a glowing amber orb with a rose halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #faf6f0 0%, #fdba74 52%, #4f46e5 100%);
-  box-shadow: 0 18px 36px rgba(49, 46, 129, 0.22), inset 0 3px 12px rgba(255, 255, 255, 0.55);
+    radial-gradient(circle at 38% 34%, #fdf2f5 0%, #fcd34d 52%, #e11d48 100%);
+  box-shadow: 0 18px 36px rgba(136, 19, 55, 0.22), inset 0 3px 12px rgba(255, 255, 255, 0.55);
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Dusk ripples around the core disc. */
+/* Dawn ripples around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(67, 56, 202, 0.30) 0px,
-    rgba(67, 56, 202, 0.30) 2px,
+    rgba(190, 18, 60, 0.30) 0px,
+    rgba(190, 18, 60, 0.30) 2px,
     transparent 2px,
     transparent 12px,
-    rgba(124, 58, 237, 0.26) 12px,
-    rgba(124, 58, 237, 0.26) 14px,
+    rgba(13, 148, 136, 0.26) 12px,
+    rgba(13, 148, 136, 0.26) 14px,
     transparent 14px,
     transparent 30px
   );
@@ -250,7 +250,7 @@ h1, h2, h3 { letter-spacing: 0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(79, 70, 229, 0.26) 0deg 4deg,
+    rgba(225, 29, 72, 0.26) 0deg 4deg,
     transparent 4deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
