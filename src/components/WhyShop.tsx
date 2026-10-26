@@ -5,7 +5,7 @@ import Reveal from "./Reveal";
 
 export default function WhyShop() {
   return (
-    <section className="relative overflow-hidden border-y border-brand-200 bg-gradient-to-b from-[#e0f2fe] via-[#f0f9ff] to-[#e0f2fe] py-16 sm:py-20">
+    <section className="relative overflow-hidden border-y border-brand-200 bg-gradient-to-b from-[#ede9fe] via-[#f5f3ff] to-[#ede9fe] py-16 sm:py-20">
       <div aria-hidden className="pointer-events-none absolute -left-20 top-0 h-64 w-64 rounded-full bg-brand-500/20 blur-[100px]" />
       <div aria-hidden className="pointer-events-none absolute -right-20 bottom-0 h-64 w-64 rounded-full bg-gold-400/20 blur-[100px]" />
       <div className="relative mx-auto max-w-7xl px-4">
