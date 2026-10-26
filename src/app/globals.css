@@ -1,67 +1,66 @@
 @import "tailwindcss";
 
 @theme {
-  /* Sunset Ember: warm rose primary, amber accent and
-     plum contrast on cream paper. Cards are moderately
-     rounded panels with a rose-to-amber top bar and a
-     warm ember shadow — the opposite of the previous
-     Arctic Indigo's fully-rounded panels, indigo left
-     bar and cool icy tones. */
+  /* Deep Lagoon: cool teal primary, cyan accent and
+     lime contrast on icy mint paper. Cards are near-square
+     panels with a teal left bar and a hard offset shadow —
+     the opposite of the previous Sunset Ember's rounded
+     panels, rose top bar and soft warm shadow. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = rose scale */
-  --color-brand-50: #fff1f2;
-  --color-brand-100: #ffe4e6;
-  --color-brand-200: #fecdd3;
-  --color-brand-300: #fda4af;
-  --color-brand-400: #fb7185;
-  --color-brand-500: #f43f5e;
-  --color-brand-600: #e11d48;
-  --color-brand-700: #be123c;
-  --color-brand-800: #9f1239;
-  --color-brand-900: #881337;
-  --color-brand-950: #4c0519;
-  --color-brand: #e11d48;
-  --color-brand-dark: #be123c;
-  --color-brand-deep: #881337;
+  /* brand = teal scale */
+  --color-brand-50: #f0fdfa;
+  --color-brand-100: #ccfbf1;
+  --color-brand-200: #99f6e4;
+  --color-brand-300: #5eead4;
+  --color-brand-400: #2dd4bf;
+  --color-brand-500: #14b8a6;
+  --color-brand-600: #0d9488;
+  --color-brand-700: #0f766e;
+  --color-brand-800: #115e59;
+  --color-brand-900: #134e4a;
+  --color-brand-950: #042f2e;
+  --color-brand: #0f766e;
+  --color-brand-dark: #115e59;
+  --color-brand-deep: #134e4a;
 
-  /* gold = amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #f59e0b;
-  --color-gold-deep: #b45309;
-  --color-gold-soft: #fef3c7;
+  /* gold = cyan scale (name kept for legacy class refs) */
+  --color-gold-50: #ecfeff;
+  --color-gold-100: #cffafe;
+  --color-gold-200: #a5f3fc;
+  --color-gold-300: #67e8f9;
+  --color-gold-400: #22d3ee;
+  --color-gold-500: #06b6d4;
+  --color-gold-600: #0891b2;
+  --color-gold-700: #0e7490;
+  --color-gold-800: #155e75;
+  --color-gold-900: #164e63;
+  --color-gold-950: #083344;
+  --color-gold: #06b6d4;
+  --color-gold-deep: #0e7490;
+  --color-gold-soft: #cffafe;
 
-  /* popblue = plum/violet scale (name kept for legacy class refs) */
-  --color-popblue-50: #faf5ff;
-  --color-popblue-100: #f3e8ff;
-  --color-popblue-200: #e9d5ff;
-  --color-popblue-300: #d8b4fe;
-  --color-popblue-400: #c084fc;
-  --color-popblue-500: #a855f7;
-  --color-popblue-600: #9333ea;
-  --color-popblue-700: #7e22ce;
-  --color-popblue-800: #6b21a8;
-  --color-popblue-900: #581c87;
-  --color-popblue-950: #3b0764;
-  --color-popblue: #9333ea;
-  --color-popblue-deep: #6b21a8;
-  --color-popblue-soft: #f3e8ff;
+  /* popblue = lime scale (name kept for legacy class refs) */
+  --color-popblue-50: #f7fee7;
+  --color-popblue-100: #ecfccb;
+  --color-popblue-200: #d9f99d;
+  --color-popblue-300: #bef264;
+  --color-popblue-400: #a3e635;
+  --color-popblue-500: #84cc16;
+  --color-popblue-600: #65a30d;
+  --color-popblue-700: #4d7c0f;
+  --color-popblue-800: #3f6212;
+  --color-popblue-900: #365314;
+  --color-popblue-950: #1a2e05;
+  --color-popblue: #65a30d;
+  --color-popblue-deep: #4d7c0f;
+  --color-popblue-soft: #ecfccb;
 
-  --color-ink: #3f1d2b;
-  --color-paper: #fdf6f3;
-  --color-mute: #8a6d78;
+  --color-ink: #0f2e2c;
+  --color-paper: #f0fdfa;
+  --color-mute: #5a7a78;
   --color-card: #ffffff;
-  --color-deep: #4c0519;
+  --color-deep: #042f2e;
 }
 
 html { scroll-behavior: smooth; }
@@ -76,25 +75,25 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fdf6f3;
+  background-color: #f0fdfa;
   background-image:
-    radial-gradient(ellipse 60% 38% at 8% -6%, rgba(225, 29, 72, 0.14), transparent 70%),
-    radial-gradient(ellipse 52% 34% at 96% 104%, rgba(245, 158, 11, 0.18), transparent 70%),
-    radial-gradient(ellipse 32% 24% at 88% 10%, rgba(147, 51, 234, 0.08), transparent 70%);
+    radial-gradient(ellipse 60% 38% at 8% -6%, rgba(15, 118, 110, 0.14), transparent 70%),
+    radial-gradient(ellipse 52% 34% at 96% 104%, rgba(6, 182, 212, 0.18), transparent 70%),
+    radial-gradient(ellipse 32% 24% at 88% 10%, rgba(101, 163, 13, 0.08), transparent 70%);
   background-size: auto, auto, auto;
-  color: #3f1d2b;
+  color: #0f2e2c;
 }
-::selection { background: #e11d48; color: #ffffff; }
+::selection { background: #0f766e; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #f43f5e, #f59e0b); border-radius: 9999px; border: 2px solid #fdf6f3; }
-::-webkit-scrollbar-track { background: #ffe4e6; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #14b8a6, #06b6d4); border-radius: 4px; border: 2px solid #f0fdfa; }
+::-webkit-scrollbar-track { background: #ccfbf1; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Ember type: warm, wide headline tracking. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Lagoon type: crisp, tight headline tracking. */
+h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Ember sparks: rose/amber embers drifting gently up the page. */
+/* Lagoon bubbles: teal/cyan bubbles drifting gently up the page. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, 104vh, 0) rotate(0deg) scale(0.8); opacity: 0; }
   18% { opacity: 0.85; }
@@ -104,161 +103,161 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 14s linear infinite; }
 
-/* Ember sway: slow lateral drift of the warm light. */
+/* Lagoon sway: slow lateral drift of the cool light. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(2vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(-2vw, -0.6rem, 0) scale(1.04); opacity: 0.75; }
 }
 .pop-drift { animation: signal-drift 26s ease-in-out infinite; }
 
-/* Ember bob: gentle rise and fall of the floating mote. */
+/* Lagoon bob: gentle rise and fall of the floating mote. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) rotate(-2deg); }
   50% { transform: translateY(-6px) rotate(2deg); }
 }
 .pop-bob { animation: signal-bob 5.6s ease-in-out infinite; }
 
-/* Slow turn for the ember dial. */
+/* Slow turn for the lagoon dial. */
 @keyframes dial-turn {
   to { transform: rotate(-360deg); }
 }
 .pop-spin { animation: dial-turn 60s linear infinite; }
 
-/* Ember shimmer: rhythmic gleam of the amber mote. */
+/* Lagoon shimmer: rhythmic gleam of the cyan mote. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.35; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.15); }
 }
 .pop-twinkle { animation: signal-blink 2.8s ease-in-out infinite; }
 
-/* Ember ticker: infinite marquee (leftward drift). */
+/* Lagoon ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Ember check: bold rose -> amber -> plum bands. */
+/* Lagoon check: bold teal -> cyan -> lime bands. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #e11d48 0 34%, #f59e0b 34% 67%, #9333ea 67% 100%);
+    linear-gradient(90deg, #0f766e 0 34%, #06b6d4 34% 67%, #65a30d 67% 100%);
   background-size: 36px 36px;
 }
 
-/* Ember card: a moderately rounded white panel with a
-   rose-to-amber top bar and a warm ember shadow — no
-   left bar, no fully-rounded corners. On hover it lifts
-   and the top bar turns amber-to-plum. */
+/* Lagoon card: a near-square white panel with a
+   teal left bar and a hard offset shadow — no
+   top bar, no soft rounded corners. On hover it lifts
+   and the left bar turns cyan. */
 .pop-lift {
   position: relative;
-  border: 1px solid #f5d9d3;
-  border-top: 5px solid #e11d48;
+  border: 1px solid #cce8e3;
+  border-left: 5px solid #0f766e;
   background: #ffffff;
-  border-radius: 1rem;
-  box-shadow: 0 2px 6px -2px rgba(76, 5, 25, 0.10), 0 18px 38px -18px rgba(76, 5, 25, 0.30);
+  border-radius: 0.375rem;
+  box-shadow: 4px 4px 0 rgba(15, 118, 110, 0.16);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  border-color: #fecdd3;
-  border-top-color: #f59e0b;
-  box-shadow: 0 4px 10px -2px rgba(76, 5, 25, 0.12), 0 28px 48px -20px rgba(76, 5, 25, 0.36);
+  transform: translate(-2px, -4px);
+  border-color: #99f6e4;
+  border-left-color: #06b6d4;
+  box-shadow: 7px 7px 0 rgba(15, 118, 110, 0.20);
 }
 
-/* Ember glass: shared by modals and drawers — a frosted
-   warm pane with a hairline rose border and a
-   soft warm shadow. */
+/* Lagoon glass: shared by modals and drawers — a frosted
+   cool pane with a hairline teal border and a
+   hard offset shadow. */
 .pop-glass {
-  background: rgba(253, 246, 243, 0.94);
+  background: rgba(240, 253, 250, 0.94);
   backdrop-filter: blur(22px) saturate(1.2);
   -webkit-backdrop-filter: blur(22px) saturate(1.2);
-  border: 1px solid #ffe4e6;
-  border-radius: 1rem;
-  box-shadow: 0 18px 38px -18px rgba(76, 5, 25, 0.30);
+  border: 1px solid #ccfbf1;
+  border-radius: 0.375rem;
+  box-shadow: 6px 6px 0 rgba(4, 47, 46, 0.18);
 }
 
-/* Ember tag: a tilted amber pill badge, rotated the
-   other way, with white text and a solid white ring —
+/* Lagoon tag: a tilted cyan pill badge, rotated the
+   other way from before, with white text and a lime ring —
    a pill, not a diamond square. */
 .starburst {
-  background: #f59e0b;
+  background: #06b6d4;
   color: #ffffff;
   text-shadow: none;
   border-radius: 9999px;
-  transform: rotate(-5deg);
-  box-shadow: 0 10px 24px -8px rgba(217, 119, 6, 0.55);
-  border: 2px solid rgba(255, 255, 255, 0.9);
+  transform: rotate(6deg);
+  box-shadow: 0 10px 24px -8px rgba(8, 145, 178, 0.55);
+  border: 2px solid rgba(190, 242, 100, 0.9);
 }
 
-/* Ember lines: rose dots on cream, in a tighter grid. */
+/* Lagoon lines: teal dots on mint, in a wider grid. */
 .halftone {
   background-image:
-    radial-gradient(rgba(225, 29, 72, 0.28) 1.5px, transparent 1.5px);
-  background-size: 14px 14px;
+    radial-gradient(rgba(15, 118, 110, 0.28) 1.5px, transparent 1.5px);
+  background-size: 18px 18px;
 }
 
-/* Ember seam: a rose-to-amber-to-plum gradient rule dividing sections. */
+/* Lagoon seam: a teal-to-cyan-to-lime gradient rule dividing sections. */
 .zigzag {
   height: 0;
   border-top: none;
-  height: 3px;
-  background-image: linear-gradient(90deg, #e11d48, #f59e0b, #9333ea);
+  height: 4px;
+  background-image: linear-gradient(90deg, #0f766e, #06b6d4, #65a30d);
   opacity: 0.9;
-  border-radius: 9999px;
+  border-radius: 2px;
 }
 
-/* Ember band: a horizontal rose / amber / plum
+/* Lagoon band: a horizontal teal / cyan / lime
    gradient across the section top. */
 .bazaar-awning {
   background-image: linear-gradient(
     90deg,
-    rgba(225, 29, 72, 0.95),
-    rgba(245, 158, 11, 0.95),
-    rgba(147, 51, 234, 0.95)
+    rgba(15, 118, 110, 0.95),
+    rgba(6, 182, 212, 0.95),
+    rgba(101, 163, 13, 0.95)
   );
   opacity: 0.97;
-  box-shadow: 0 12px 28px -12px rgba(76, 5, 25, 0.35);
+  box-shadow: 0 12px 28px -12px rgba(4, 47, 46, 0.35);
 }
 
-/* Ember glow: layered rose/amber/plum glow for the core halo. */
+/* Lagoon glow: layered teal/cyan/lime glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(254, 243, 199, 0.70) 0%, rgba(225, 29, 72, 0.30) 42%, rgba(245, 158, 11, 0.24) 62%, rgba(245, 158, 11, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(236, 252, 203, 0.70) 0%, rgba(15, 118, 110, 0.30) 42%, rgba(6, 182, 212, 0.24) 62%, rgba(6, 182, 212, 0) 76%);
 }
 
-/* Ember core: a rose-to-amber orb with a warm halo. */
+/* Lagoon core: a teal-to-cyan orb with a cool halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #fef3c7 0%, #f59e0b 52%, #e11d48 100%);
-  box-shadow: 0 20px 40px -16px rgba(76, 5, 25, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.55);
+    radial-gradient(circle at 38% 34%, #ecfccb 0%, #06b6d4 52%, #0f766e 100%);
+  box-shadow: 0 20px 40px -16px rgba(4, 47, 46, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.55);
   border: none;
 }
 
-/* Ember traces around the core disc. */
+/* Lagoon traces around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(225, 29, 72, 0.32) 0px,
-    rgba(225, 29, 72, 0.32) 2px,
+    rgba(15, 118, 110, 0.32) 0px,
+    rgba(15, 118, 110, 0.32) 2px,
     transparent 2px,
     transparent 12px,
-    rgba(245, 158, 11, 0.28) 12px,
-    rgba(245, 158, 11, 0.28) 14px,
+    rgba(6, 182, 212, 0.28) 12px,
+    rgba(6, 182, 212, 0.28) 14px,
     transparent 14px,
     transparent 30px
   );
   -webkit-mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
   mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
-  border-radius: 1rem;
+  border-radius: 0.375rem;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(245, 158, 11, 0.30) 0deg 4deg,
+    rgba(6, 182, 212, 0.30) 0deg 4deg,
     transparent 4deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
   mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
-  border-radius: 1rem;
+  border-radius: 0.375rem;
 }
