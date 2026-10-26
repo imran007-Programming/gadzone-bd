@@ -22,21 +22,21 @@ const item: Variants = {
 
 // Emerald lagoon light drifting over the pale mint paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(13,148,136, 0.20)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(6,182,212, 0.20)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(42,90,131, 0.16)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(20,184,166, 0.16)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(124,58,237, 0.20)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245,158,11, 0.20)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(162,28,175, 0.16)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(139,92,246, 0.16)" },
 ];
 
 // Emerald and teal bubbles drifting down through the lagoon light.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#0d9488" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#06b6d4" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#2a5a83" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#14b8a6" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#0d9488" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#06b6d4" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#2a5a83" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#7c3aed" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f59e0b" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#a21caf" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#8b5cf6" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#7c3aed" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#f59e0b" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#a21caf" },
 ];
 
 // Mint bubbles scattered through the lagoon light.
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* mint circuit wash under the grid light */}
-      <div className="relative bg-gradient-to-b from-[#ccfbf1] via-[#f2f7f9] to-[#cffafe]">
+      <div className="relative bg-gradient-to-b from-[#ede9fe] via-[#fdf9f3] to-[#fef3c7]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -100,7 +100,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(13,148,136, 0.45), inset 0 0 18px rgba(6,182,212, 0.30)",
+                  boxShadow: "0 0 28px 2px rgba(124,58,237, 0.45), inset 0 0 18px rgba(245,158,11, 0.30)",
                   opacity: 1 - r * 0.22,
                 }}
               />
@@ -117,7 +117,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {[0, 1, 2].map((b) => (
               <span
                 key={b}
-                className="pop-spin absolute left-1/2 top-1/2 origin-bottom rounded-full bg-gradient-to-t from-brand-400/50 to-transparent blur-md"
+                className="pop-spin absolute left-1/2 top-1/2 origin-bottom rounded-full bg-gradient-to-t from-gold-400/50 to-transparent blur-md"
                 style={{ width: 26, height: 240, transform: `translate(-50%, -100%) rotate(${b * 120}deg)`, animationDuration: "36s" }}
               />
             ))}
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#0d9488", "#06b6d4", "#2a5a83", "#14b8a6"];
+              const colors = ["#7c3aed", "#f59e0b", "#a21caf", "#8b5cf6"];
               return (
                 <span
                   key={i}
@@ -159,7 +159,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           {STARS.map((s, i) => (
             <span
               key={i}
-              className="pop-twinkle absolute rounded-full bg-[#06b6d4]"
+              className="pop-twinkle absolute rounded-full bg-[#f59e0b]"
               style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
             />
           ))}
