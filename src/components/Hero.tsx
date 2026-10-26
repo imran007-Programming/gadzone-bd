@@ -30,13 +30,13 @@ const ORBS = [
 
 // Indigo and amber sparks drifting down through the night light.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#4f46e5" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#d97706" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#6366f1" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#fbbf24" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#4f46e5" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#d97706" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#6366f1" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#e11d48" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#ca8a04" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#fb7185" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#facc15" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#e11d48" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#ca8a04" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#fb7185" },
 ];
 
 // Amber sparks scattered through the night light.
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#4f46e5", "#f59e0b", "#6366f1", "#fbbf24"];
+              const colors = ["#e11d48", "#eab308", "#fb7185", "#facc15"];
               return (
                 <span
                   key={i}
@@ -159,7 +159,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           {STARS.map((s, i) => (
             <span
               key={i}
-              className="pop-twinkle absolute rounded-full bg-[#f59e0b]"
+              className="pop-twinkle absolute rounded-full bg-[#eab308]"
               style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
             />
           ))}

@@ -1,67 +1,67 @@
 @import "tailwindcss";
 
 @theme {
-  /* Midnight Bazaar: a bold night-market palette — deep
-     indigo primary, amber accent and sky highlights on warm
-     cream paper. Cards are sharp-cornered panels with a thick
-     indigo LEFT bar and a crisp night shadow — the opposite
-     of the previous Emerald Harbor's rounded cards with an
-     emerald TOP bar on mint paper. */
+  /* Coral Sunrise: a bright daytime palette — rose primary,
+     sunny yellow accent and teal highlights on cool slate
+     paper. Cards are fully rounded panels with a thick rose
+     BOTTOM bar and a soft warm shadow — the opposite of the
+     previous Midnight Bazaar's sharp cards with an indigo
+     LEFT bar on warm cream paper. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = indigo scale */
-  --color-brand-50: #eef2ff;
-  --color-brand-100: #e0e7ff;
-  --color-brand-200: #c7d2fe;
-  --color-brand-300: #a5b4fc;
-  --color-brand-400: #818cf8;
-  --color-brand-500: #6366f1;
-  --color-brand-600: #4f46e5;
-  --color-brand-700: #4338ca;
-  --color-brand-800: #3730a3;
-  --color-brand-900: #312e81;
-  --color-brand-950: #1e1b4b;
-  --color-brand: #4f46e5;
-  --color-brand-dark: #4338ca;
-  --color-brand-deep: #312e81;
+  /* brand = rose scale */
+  --color-brand-50: #fff1f2;
+  --color-brand-100: #ffe4e6;
+  --color-brand-200: #fecdd3;
+  --color-brand-300: #fda4af;
+  --color-brand-400: #fb7185;
+  --color-brand-500: #f43f5e;
+  --color-brand-600: #e11d48;
+  --color-brand-700: #be123c;
+  --color-brand-800: #9f1239;
+  --color-brand-900: #881337;
+  --color-brand-950: #4c0519;
+  --color-brand: #e11d48;
+  --color-brand-dark: #be123c;
+  --color-brand-deep: #881337;
 
-  /* gold = amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #f59e0b;
-  --color-gold-deep: #b45309;
-  --color-gold-soft: #fef3c7;
+  /* gold = sunny yellow scale (name kept for legacy class refs) */
+  --color-gold-50: #fefce8;
+  --color-gold-100: #fef9c3;
+  --color-gold-200: #fef08a;
+  --color-gold-300: #fde047;
+  --color-gold-400: #facc15;
+  --color-gold-500: #eab308;
+  --color-gold-600: #ca8a04;
+  --color-gold-700: #a16207;
+  --color-gold-800: #854d0e;
+  --color-gold-900: #713f12;
+  --color-gold-950: #422006;
+  --color-gold: #eab308;
+  --color-gold-deep: #a16207;
+  --color-gold-soft: #fef9c3;
 
-  /* popblue = sky scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0f9ff;
-  --color-popblue-100: #e0f2fe;
-  --color-popblue-200: #bae6fd;
-  --color-popblue-300: #7dd3fc;
-  --color-popblue-400: #38bdf8;
-  --color-popblue-500: #0ea5e9;
-  --color-popblue-600: #0284c7;
-  --color-popblue-700: #0369a1;
-  --color-popblue-800: #075985;
-  --color-popblue-900: #0c4a6e;
-  --color-popblue-950: #082f49;
-  --color-popblue: #0284c7;
-  --color-popblue-deep: #0c4a6e;
-  --color-popblue-soft: #e0f2fe;
+  /* popblue = teal scale (name kept for legacy class refs) */
+  --color-popblue-50: #f0fdfa;
+  --color-popblue-100: #ccfbf1;
+  --color-popblue-200: #99f6e4;
+  --color-popblue-300: #5eead4;
+  --color-popblue-400: #2dd4bf;
+  --color-popblue-500: #14b8a6;
+  --color-popblue-600: #0d9488;
+  --color-popblue-700: #0f766e;
+  --color-popblue-800: #115e59;
+  --color-popblue-900: #134e4a;
+  --color-popblue-950: #042f2e;
+  --color-popblue: #0d9488;
+  --color-popblue-deep: #134e4a;
+  --color-popblue-soft: #ccfbf1;
 
-  --color-ink: #1e1b4b;
-  --color-paper: #fffbeb;
-  --color-mute: #6b6257;
+  --color-ink: #292524;
+  --color-paper: #f8fafc;
+  --color-mute: #78716c;
   --color-card: #ffffff;
-  --color-deep: #1e1b4b;
+  --color-deep: #4c0519;
 }
 
 html { scroll-behavior: smooth; }
@@ -76,25 +76,25 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fffbeb;
+  background-color: #f8fafc;
   background-image:
-    radial-gradient(ellipse 60% 38% at 8% -6%, rgba(79, 70, 229, 0.14), transparent 70%),
-    radial-gradient(ellipse 52% 34% at 96% 104%, rgba(245, 158, 11, 0.16), transparent 70%),
-    radial-gradient(ellipse 32% 24% at 88% 10%, rgba(2, 132, 199, 0.08), transparent 70%);
+    radial-gradient(ellipse 60% 38% at 8% -6%, rgba(225, 29, 72, 0.12), transparent 70%),
+    radial-gradient(ellipse 52% 34% at 96% 104%, rgba(234, 179, 8, 0.18), transparent 70%),
+    radial-gradient(ellipse 32% 24% at 88% 10%, rgba(13, 148, 136, 0.10), transparent 70%);
   background-size: auto, auto, auto;
-  color: #1e1b4b;
+  color: #292524;
 }
-::selection { background: #4f46e5; color: #ffffff; }
+::selection { background: #e11d48; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #4f46e5, #f59e0b); border-radius: 4px; border: 2px solid #fffbeb; }
-::-webkit-scrollbar-track { background: #e0e7ff; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #e11d48, #eab308); border-radius: 999px; border: 2px solid #f8fafc; }
+::-webkit-scrollbar-track { background: #ffe4e6; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Bazaar type: tight, punchy headline tracking. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Sunrise type: open, airy headline tracking. */
+h1, h2, h3 { letter-spacing: 0.01em; text-wrap: balance; }
 
-/* Bazaar motes: indigo/amber sparks drifting gently down the page. */
+/* Sunrise motes: rose/yellow sparks drifting gently down the page. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, -4vh, 0) rotate(0deg) scale(0.8); opacity: 0; }
   18% { opacity: 0.85; }
@@ -104,160 +104,161 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 16s linear infinite; }
 
-/* Bazaar sway: slow lateral drift of the night light. */
+/* Sunrise sway: slow lateral drift of the daylight. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-2vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(2vw, 0.6rem, 0) scale(1.04); opacity: 0.75; }
 }
 .pop-drift { animation: signal-drift 22s ease-in-out infinite; }
 
-/* Bazaar bob: gentle rise and fall of the floating mote. */
+/* Sunrise bob: gentle rise and fall of the floating mote. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) rotate(2deg); }
   50% { transform: translateY(-8px) rotate(-2deg); }
 }
 .pop-bob { animation: signal-bob 4.8s ease-in-out infinite; }
 
-/* Slow turn for the bazaar dial. */
+/* Slow turn for the sunrise dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 48s linear infinite; }
 
-/* Bazaar shimmer: rhythmic gleam of the amber mote. */
+/* Sunrise shimmer: rhythmic gleam of the yellow mote. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.35; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.15); }
 }
 .pop-twinkle { animation: signal-blink 3.4s ease-in-out infinite; }
 
-/* Bazaar ticker: infinite marquee (rightward drift). */
+/* Sunrise ticker: infinite marquee (rightward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(-50%); }
   to { transform: translateX(0); }
 }
 .pop-ticker { animation: signal-ticker 36s linear infinite; }
 
-/* Bazaar check: bold indigo -> amber -> navy bands. */
+/* Sunrise check: bold rose -> yellow -> teal bands. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #4f46e5 0 34%, #f59e0b 34% 67%, #1e1b4b 67% 100%);
+    linear-gradient(90deg, #e11d48 0 34%, #eab308 34% 67%, #0d9488 67% 100%);
   background-size: 28px 28px;
 }
 
-/* Bazaar card: a sharp-cornered white panel with a thick
-   indigo LEFT bar and a crisp night shadow — no top bar,
-   no rounded corners, no mint paper. On hover it lifts
-   straight up and the bar turns amber. */
+/* Sunrise card: a fully rounded white panel with a thick
+   rose BOTTOM bar and a soft warm shadow — no left bar,
+   no sharp corners, no cream paper. On hover it lifts
+   straight up and the bar turns sunny yellow. */
 .pop-lift {
   position: relative;
-  border: 1px solid #e0e7ff;
-  border-left: 8px solid #4f46e5;
+  border: 1px solid #ffe4e6;
+  border-bottom: 8px solid #e11d48;
   background: #ffffff;
-  border-radius: 0.75rem;
-  box-shadow: 0 14px 24px -16px rgba(30, 27, 75, 0.35);
+  border-radius: 1.5rem;
+  box-shadow: 0 18px 30px -18px rgba(41, 37, 36, 0.25);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
   transform: translateY(-4px);
-  border-color: #c7d2fe;
-  border-left-color: #f59e0b;
-  box-shadow: 0 20px 30px -16px rgba(30, 27, 75, 0.45);
+  border-color: #fecdd3;
+  border-bottom-color: #eab308;
+  box-shadow: 0 26px 36px -18px rgba(41, 37, 36, 0.32);
 }
 
-/* Bazaar glass: shared by modals and drawers — a frosted
-   cream pane with a hairline indigo border and a
-   crisp night shadow. */
+/* Sunrise glass: shared by modals and drawers — a frosted
+   slate pane with a hairline rose border and a
+   soft warm shadow. */
 .pop-glass {
-  background: rgba(255, 251, 235, 0.94);
+  background: rgba(248, 250, 252, 0.94);
   backdrop-filter: blur(22px) saturate(1.2);
   -webkit-backdrop-filter: blur(22px) saturate(1.2);
-  border: 1px solid #c7d2fe;
-  border-radius: 0.75rem;
-  box-shadow: 0 20px 34px -18px rgba(30, 27, 75, 0.35);
+  border: 1px solid #fda4af;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 34px -18px rgba(41, 37, 36, 0.28);
 }
 
-/* Bazaar tag: a square-ish amber badge with deep navy text
-   and an indigo ring — a market-stall ticket, not a pill. */
+/* Sunrise tag: a full pill yellow badge with deep rose text
+   and a teal ring — a morning ticket, not a square stall tag. */
 .starburst {
-  background: #f59e0b;
-  color: #1e1b4b;
+  background: #eab308;
+  color: #881337;
   text-shadow: none;
-  border-radius: 0.5rem;
-  transform: rotate(-3deg);
-  box-shadow: 0 10px 20px -10px rgba(245, 158, 11, 0.6);
-  border: 2px solid rgba(79, 70, 229, 0.9);
+  border-radius: 999px;
+  transform: rotate(3deg);
+  box-shadow: 0 10px 20px -10px rgba(234, 179, 8, 0.6);
+  border: 2px solid rgba(13, 148, 136, 0.9);
 }
 
-/* Bazaar lines: indigo dots on cream, in a slightly wider grid. */
+/* Sunrise lines: rose dots on slate, in a slightly wider grid. */
 .halftone {
   background-image:
-    radial-gradient(rgba(79, 70, 229, 0.25) 1.5px, transparent 1.5px);
-  background-size: 20px 20px;
+    radial-gradient(rgba(225, 29, 72, 0.22) 1.5px, transparent 1.5px);
+  background-size: 22px 22px;
 }
 
-/* Bazaar seam: a squared indigo-to-amber gradient rule dividing sections. */
+/* Sunrise seam: a fully rounded rose-to-yellow-to-teal
+   gradient rule dividing sections. */
 .zigzag {
   height: 0;
   border-top: none;
-  height: 5px;
-  background-image: linear-gradient(90deg, #4f46e5, #f59e0b, #0284c7);
+  height: 6px;
+  background-image: linear-gradient(90deg, #e11d48, #eab308, #0d9488);
   opacity: 0.9;
-  border-radius: 2px;
+  border-radius: 999px;
 }
 
-/* Bazaar band: a diagonal indigo / amber / sky
+/* Sunrise band: a diagonal rose / yellow / teal
    gradient across the section top. */
 .bazaar-awning {
   background-image: linear-gradient(
     135deg,
-    rgba(79, 70, 229, 0.95),
-    rgba(245, 158, 11, 0.95),
-    rgba(2, 132, 199, 0.95)
+    rgba(225, 29, 72, 0.95),
+    rgba(234, 179, 8, 0.95),
+    rgba(13, 148, 136, 0.95)
   );
   opacity: 0.97;
-  box-shadow: 0 12px 28px -12px rgba(30, 27, 75, 0.35);
+  box-shadow: 0 12px 28px -12px rgba(41, 37, 36, 0.30);
 }
 
-/* Bazaar glow: layered indigo/amber/sky glow for the core halo. */
+/* Sunrise glow: layered rose/yellow/teal glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(224, 231, 255, 0.70) 0%, rgba(99, 102, 241, 0.30) 42%, rgba(245, 158, 11, 0.24) 62%, rgba(245, 158, 11, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 228, 230, 0.70) 0%, rgba(244, 63, 94, 0.30) 42%, rgba(234, 179, 8, 0.24) 62%, rgba(234, 179, 8, 0) 76%);
 }
 
-/* Bazaar core: an amber-to-indigo orb with a cool halo. */
+/* Sunrise core: a yellow-to-rose orb with a warm halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #fef3c7 0%, #f59e0b 52%, #4f46e5 100%);
-  box-shadow: 0 18px 30px -14px rgba(30, 27, 75, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.55);
+    radial-gradient(circle at 38% 34%, #fef9c3 0%, #eab308 52%, #e11d48 100%);
+  box-shadow: 0 18px 30px -14px rgba(41, 37, 36, 0.40), inset 0 3px 12px rgba(255, 255, 255, 0.55);
   border: none;
 }
 
-/* Bazaar traces around the core disc. */
+/* Sunrise traces around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(79, 70, 229, 0.32) 0px,
-    rgba(79, 70, 229, 0.32) 2px,
+    rgba(225, 29, 72, 0.32) 0px,
+    rgba(225, 29, 72, 0.32) 2px,
     transparent 2px,
     transparent 12px,
-    rgba(245, 158, 11, 0.28) 12px,
-    rgba(245, 158, 11, 0.28) 14px,
+    rgba(234, 179, 8, 0.28) 12px,
+    rgba(234, 179, 8, 0.28) 14px,
     transparent 14px,
     transparent 30px
   );
   -webkit-mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
   mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
-  border-radius: 0.75rem;
+  border-radius: 1.5rem;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(245, 158, 11, 0.30) 0deg 4deg,
+    rgba(234, 179, 8, 0.30) 0deg 4deg,
     transparent 4deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
   mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
-  border-radius: 0.75rem;
+  border-radius: 1.5rem;
 }
