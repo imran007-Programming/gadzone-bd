@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Terracotta kiln light drifting over the warm cream paper.
+// Emerald lagoon light drifting over the pale mint paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(194,65,12, 0.20)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245,158,11, 0.20)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(225,29,72, 0.16)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(234,88,12, 0.16)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(5,150,105, 0.20)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(20,184,166, 0.20)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(2,132,199, 0.16)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(16,185,129, 0.16)" },
 ];
 
-// Terracotta and amber sparks drifting down through the kiln light.
+// Emerald and teal bubbles drifting down through the lagoon light.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#c2410c" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f59e0b" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#e11d48" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#ea580c" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#c2410c" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#f59e0b" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#e11d48" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#059669" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#14b8a6" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#0284c7" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#10b981" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#059669" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#14b8a6" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#0284c7" },
 ];
 
-// Amber sparks scattered through the kiln light.
+// Mint bubbles scattered through the lagoon light.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#c2410c", "#f59e0b", "#e11d48", "#ea580c"];
+              const colors = ["#059669", "#14b8a6", "#0284c7", "#10b981"];
               return (
                 <span
                   key={i}
