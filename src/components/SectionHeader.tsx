@@ -16,7 +16,7 @@ export default function SectionHeader({ accent, rest, subtitle, showViewAll = tr
         <div className="max-w-xl">
           <h2 className="flex items-center gap-3 text-[1.65rem] font-black leading-tight tracking-tight text-ink sm:text-[2rem]">
             <span className="starburst pop-bob relative inline-flex h-10 w-10 shrink-0 items-center justify-center" aria-hidden>
-              <span className="text-sm font-black text-[#431407]">★</span>
+              <span className="text-sm font-black text-[#083344]">★</span>
             </span>
             <span><span className="bg-gradient-to-r from-brand-500 to-brand-700 bg-clip-text text-transparent">{accent}</span> {rest}</span>
           </h2>
