@@ -1,67 +1,68 @@
 @import "tailwindcss";
 
 @theme {
-  /* Verdant Grove: a botanical editorial palette — deep emerald
-     primary, fresh lime accent and clay-terracotta highlights on
-     warm ivory paper. Cards are crisp ledger panels with a thick
-     emerald TOP strip and a hard offset print shadow — the opposite
-     of the previous Coral Sunrise's fully rounded cards with a thick
-     rose BOTTOM bar and soft warm shadow on cool slate paper. */
+  /* Indigo Twilight: a dusk-city palette — deep indigo primary,
+     warm amber accent and vivid fuchsia highlights on soft
+     lavender-white paper. Cards are fully rounded, floating panels
+     with a soft layered shadow and a thin gradient rim — the
+     opposite of the previous Verdant Grove's crisp ledger panels
+     with a thick emerald TOP strip and a hard offset print shadow
+     on warm ivory paper. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = emerald scale */
-  --color-brand-50: #ecfdf5;
-  --color-brand-100: #d1fae5;
-  --color-brand-200: #a7f3d0;
-  --color-brand-300: #6ee7b7;
-  --color-brand-400: #34d399;
-  --color-brand-500: #10b981;
-  --color-brand-600: #059669;
-  --color-brand-700: #047857;
-  --color-brand-800: #065f46;
-  --color-brand-900: #064e3b;
-  --color-brand-950: #022c22;
-  --color-brand: #059669;
-  --color-brand-dark: #047857;
-  --color-brand-deep: #064e3b;
+  /* brand = indigo scale */
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-200: #c7d2fe;
+  --color-brand-300: #a5b4fc;
+  --color-brand-400: #818cf8;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+  --color-brand-800: #3730a3;
+  --color-brand-900: #312e81;
+  --color-brand-950: #1e1b4b;
+  --color-brand: #4f46e5;
+  --color-brand-dark: #4338ca;
+  --color-brand-deep: #312e81;
 
-  /* gold = lime scale (name kept for legacy class refs) */
-  --color-gold-50: #f7fee7;
-  --color-gold-100: #ecfccb;
-  --color-gold-200: #d9f99d;
-  --color-gold-300: #bef264;
-  --color-gold-400: #a3e635;
-  --color-gold-500: #84cc16;
-  --color-gold-600: #65a30d;
-  --color-gold-700: #4d7c0f;
-  --color-gold-800: #3f6212;
-  --color-gold-900: #365314;
-  --color-gold-950: #1a2e05;
-  --color-gold: #84cc16;
-  --color-gold-deep: #4d7c0f;
-  --color-gold-soft: #ecfccb;
+  /* gold = amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #b45309;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = clay terracotta scale (name kept for legacy class refs) */
-  --color-popblue-50: #fff7ed;
-  --color-popblue-100: #ffedd5;
-  --color-popblue-200: #fed7aa;
-  --color-popblue-300: #fdba74;
-  --color-popblue-400: #fb923c;
-  --color-popblue-500: #f97316;
-  --color-popblue-600: #ea580c;
-  --color-popblue-700: #c2410c;
-  --color-popblue-800: #9a3412;
-  --color-popblue-900: #7c2d12;
-  --color-popblue-950: #431407;
-  --color-popblue: #ea580c;
-  --color-popblue-deep: #9a3412;
-  --color-popblue-soft: #ffedd5;
+  /* popblue = fuchsia scale (name kept for legacy class refs) */
+  --color-popblue-50: #fdf4ff;
+  --color-popblue-100: #fae8ff;
+  --color-popblue-200: #f5d0fe;
+  --color-popblue-300: #f0abfc;
+  --color-popblue-400: #e879f9;
+  --color-popblue-500: #d946ef;
+  --color-popblue-600: #c026d3;
+  --color-popblue-700: #a21caf;
+  --color-popblue-800: #86198f;
+  --color-popblue-900: #701a75;
+  --color-popblue-950: #4a044e;
+  --color-popblue: #d946ef;
+  --color-popblue-deep: #86198f;
+  --color-popblue-soft: #fae8ff;
 
-  --color-ink: #1c2420;
-  --color-paper: #faf6ef;
-  --color-mute: #6b7a70;
+  --color-ink: #1e1b4b;
+  --color-paper: #f5f3ff;
+  --color-mute: #6d6a8a;
   --color-card: #ffffff;
-  --color-deep: #022c22;
+  --color-deep: #1e1b4b;
 }
 
 html { scroll-behavior: smooth; }
@@ -76,26 +77,26 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #faf6ef;
+  background-color: #f5f3ff;
   background-image:
-    radial-gradient(ellipse 60% 38% at 8% -6%, rgba(5, 150, 105, 0.14), transparent 70%),
-    radial-gradient(ellipse 52% 34% at 96% 104%, rgba(132, 204, 22, 0.20), transparent 70%),
-    radial-gradient(ellipse 32% 24% at 88% 10%, rgba(234, 88, 12, 0.10), transparent 70%);
+    radial-gradient(ellipse 60% 38% at 8% -6%, rgba(79, 70, 229, 0.16), transparent 70%),
+    radial-gradient(ellipse 52% 34% at 96% 104%, rgba(245, 158, 11, 0.18), transparent 70%),
+    radial-gradient(ellipse 32% 24% at 88% 10%, rgba(217, 70, 239, 0.12), transparent 70%);
   background-size: auto, auto, auto;
-  color: #1c2420;
+  color: #1e1b4b;
 }
-::selection { background: #059669; color: #ffffff; }
+::selection { background: #4f46e5; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #059669, #84cc16); border-radius: 999px; border: 2px solid #faf6ef; }
-::-webkit-scrollbar-track { background: #ecfccb; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #4f46e5, #d946ef); border-radius: 999px; border: 2px solid #f5f3ff; }
+::-webkit-scrollbar-track { background: #e0e7ff; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Grove type: tight, editorial headline tracking. */
+/* Twilight type: tight, editorial headline tracking. */
 h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Grove leaves: emerald/lime leaves drifting gently DOWN the page,
-   swaying side to side as they fall. */
+/* Twilight embers: indigo/amber embers drifting gently DOWN the
+   page, swaying side to side as they fall. */
 @keyframes signal-rise {
   0% { transform: translate3d(-4px, -4vh, 0) rotate(0deg) scale(0.8); opacity: 0; }
   18% { opacity: 0.85; }
@@ -105,159 +106,159 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 16s linear infinite; }
 
-/* Grove sway: slow lateral drift of the daylight. */
+/* Twilight sway: slow lateral drift of the dusk light. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-2vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(2vw, 0.6rem, 0) scale(1.04); opacity: 0.75; }
 }
 .pop-drift { animation: signal-drift 22s ease-in-out infinite; }
 
-/* Grove bob: gentle rise and fall of the floating leaf. */
+/* Twilight bob: gentle rise and fall of the floating ember. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) rotate(2deg); }
   50% { transform: translateY(-8px) rotate(-2deg); }
 }
 .pop-bob { animation: signal-bob 4.8s ease-in-out infinite; }
 
-/* Slow turn for the grove dial. */
+/* Slow turn for the twilight dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 48s linear infinite; }
 
-/* Grove shimmer: rhythmic gleam of the lime leaf. */
+/* Twilight shimmer: rhythmic gleam of the amber ember. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.35; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.15); }
 }
 .pop-twinkle { animation: signal-blink 3.4s ease-in-out infinite; }
 
-/* Grove ticker: infinite marquee (rightward drift). */
+/* Twilight ticker: infinite marquee (rightward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(-50%); }
   to { transform: translateX(0); }
 }
 .pop-ticker { animation: signal-ticker 36s linear infinite; }
 
-/* Grove check: bold emerald -> lime -> clay bands. */
+/* Twilight check: bold indigo -> amber -> fuchsia bands. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #059669 0 34%, #84cc16 34% 67%, #ea580c 67% 100%);
+    linear-gradient(90deg, #4f46e5 0 34%, #f59e0b 34% 67%, #d946ef 67% 100%);
   background-size: 28px 28px;
 }
 
-/* Grove card: a crisp ledger panel with a thick emerald TOP strip
-   and a hard offset print shadow — no bottom bar, no fully rounded
-   corners, no soft blur. On hover it shifts up-left, the strip turns
-   fresh lime and the print shadow grows. */
+/* Twilight card: a fully rounded floating panel with a thin
+   gradient rim and a soft layered shadow — no top strip, no hard
+   offset shadow, no square corners. On hover it floats higher,
+   the rim turns fuchsia and the shadow deepens. */
 .pop-lift {
   position: relative;
-  border: 1px solid #a7f3d0;
-  border-top: 6px solid #059669;
+  border: 1px solid #e0e7ff;
   background: #ffffff;
-  border-radius: 0.75rem;
-  box-shadow: 6px 6px 0 rgba(5, 150, 105, 0.16);
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 6px rgba(79, 70, 229, 0.08), 0 18px 36px -18px rgba(79, 70, 229, 0.28);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translate(-2px, -2px);
-  border-color: #6ee7b7;
-  border-top-color: #84cc16;
-  box-shadow: 10px 10px 0 rgba(5, 150, 105, 0.22);
+  transform: translateY(-6px) scale(1.01);
+  border-color: #f0abfc;
+  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.10), 0 28px 48px -20px rgba(217, 70, 239, 0.38);
 }
 
-/* Grove glass: shared by modals and drawers — a frosted ivory
-   pane with a hairline emerald border and a hard print shadow. */
+/* Twilight glass: shared by modals and drawers — a frosted
+   lavender pane with a hairline indigo border and a soft shadow. */
 .pop-glass {
-  background: rgba(250, 246, 239, 0.94);
+  background: rgba(245, 243, 255, 0.94);
   backdrop-filter: blur(22px) saturate(1.2);
   -webkit-backdrop-filter: blur(22px) saturate(1.2);
-  border: 1px solid #6ee7b7;
-  border-radius: 0.75rem;
-  box-shadow: 6px 6px 0 rgba(5, 150, 105, 0.18);
+  border: 1px solid #c7d2fe;
+  border-radius: 1.5rem;
+  box-shadow: 0 18px 40px -18px rgba(79, 70, 229, 0.35);
 }
 
-/* Grove tag: a full pill lime badge with deep emerald text
-   and a clay ring — a garden ticket, tilted the other way. */
+/* Twilight tag: an amber-to-fuchsia gradient pill with white text
+   and a soft glow — a dusk ticket, tilted the other way. */
 .starburst {
-  background: #84cc16;
-  color: #064e3b;
+  background: linear-gradient(135deg, #f59e0b, #d946ef);
+  color: #ffffff;
   text-shadow: none;
   border-radius: 999px;
-  transform: rotate(-2deg);
-  box-shadow: 6px 6px 0 rgba(5, 150, 105, 0.25);
-  border: 2px solid rgba(234, 88, 12, 0.9);
+  transform: rotate(3deg);
+  box-shadow: 0 10px 24px -8px rgba(217, 70, 239, 0.55);
+  border: 2px solid rgba(255, 255, 255, 0.85);
 }
 
-/* Grove lines: emerald dots on ivory, in a slightly wider grid. */
+/* Twilight lines: indigo diagonal pinstripes on lavender. */
 .halftone {
   background-image:
-    radial-gradient(rgba(5, 150, 105, 0.22) 1.5px, transparent 1.5px);
-  background-size: 26px 26px;
+    repeating-linear-gradient(45deg, rgba(79, 70, 229, 0.14) 0 1.5px, transparent 1.5px 26px);
 }
 
-/* Grove tape: a diagonal emerald / lime striped rule dividing sections. */
+/* Twilight tape: a dotted indigo / amber rule dividing sections. */
 .zigzag {
   height: 0;
   border-top: none;
   height: 8px;
-  background-image: repeating-linear-gradient(45deg, #059669 0 12px, #84cc16 12px 24px);
+  background-image: radial-gradient(circle, #4f46e5 2.5px, transparent 3px), radial-gradient(circle, #f59e0b 2.5px, transparent 3px);
+  background-size: 24px 8px, 24px 8px;
+  background-position: 0 0, 12px 0;
   opacity: 0.9;
   border-radius: 2px;
 }
 
-/* Grove band: a diagonal emerald / lime / clay
+/* Twilight band: an indigo / fuchsia / amber
    gradient across the section top. */
 .bazaar-awning {
   background-image: linear-gradient(
     135deg,
-    rgba(5, 150, 105, 0.95),
-    rgba(132, 204, 22, 0.95),
-    rgba(234, 88, 12, 0.95)
+    rgba(79, 70, 229, 0.95),
+    rgba(217, 70, 239, 0.95),
+    rgba(245, 158, 11, 0.95)
   );
   opacity: 0.97;
-  box-shadow: 6px 6px 0 rgba(5, 150, 105, 0.25);
+  box-shadow: 0 12px 28px -12px rgba(79, 70, 229, 0.45);
+  border-radius: 999px;
 }
 
-/* Grove glow: layered emerald/lime/clay glow for the core halo. */
+/* Twilight glow: layered indigo/fuchsia/amber glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(209, 250, 229, 0.70) 0%, rgba(16, 185, 129, 0.30) 42%, rgba(132, 204, 22, 0.24) 62%, rgba(132, 204, 22, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(224, 231, 255, 0.70) 0%, rgba(99, 102, 241, 0.30) 42%, rgba(217, 70, 239, 0.24) 62%, rgba(217, 70, 239, 0) 76%);
 }
 
-/* Grove core: a lime-to-emerald orb with a soft halo. */
+/* Twilight core: an amber-to-fuchsia-to-indigo orb with a soft halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #ecfccb 0%, #84cc16 52%, #059669 100%);
-  box-shadow: 6px 6px 0 rgba(5, 150, 105, 0.30), inset 0 3px 12px rgba(255, 255, 255, 0.55);
+    radial-gradient(circle at 38% 34%, #fef3c7 0%, #f59e0b 40%, #d946ef 72%, #4f46e5 100%);
+  box-shadow: 0 18px 40px -12px rgba(79, 70, 229, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.55);
   border: none;
 }
 
-/* Grove traces around the core disc. */
+/* Twilight traces around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(5, 150, 105, 0.32) 0px,
-    rgba(5, 150, 105, 0.32) 2px,
+    rgba(79, 70, 229, 0.32) 0px,
+    rgba(79, 70, 229, 0.32) 2px,
     transparent 2px,
     transparent 12px,
-    rgba(132, 204, 22, 0.28) 12px,
-    rgba(132, 204, 22, 0.28) 14px,
+    rgba(217, 70, 239, 0.28) 12px,
+    rgba(217, 70, 239, 0.28) 14px,
     transparent 14px,
     transparent 30px
   );
   -webkit-mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
   mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
-  border-radius: 0.75rem;
+  border-radius: 1.5rem;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(132, 204, 22, 0.30) 0deg 4deg,
+    rgba(245, 158, 11, 0.30) 0deg 4deg,
     transparent 4deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
   mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
-  border-radius: 0.75rem;
+  border-radius: 1.5rem;
 }
