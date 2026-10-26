@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Midnight bazaar light drifting over the cream paper.
+// Grove light drifting over the ivory paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(79, 70, 229, 0.20)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245, 158, 11, 0.20)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(99, 102, 241, 0.16)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(251, 191, 36, 0.16)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(5, 150, 105, 0.20)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(132, 204, 22, 0.20)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(234, 88, 12, 0.16)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(163, 230, 53, 0.16)" },
 ];
 
-// Indigo and amber sparks drifting down through the night light.
+// Emerald and lime leaves drifting down through the grove light.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#e11d48" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#ca8a04" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#fb7185" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#facc15" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#e11d48" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#ca8a04" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#fb7185" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#059669" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#65a30d" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#ea580c" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#84cc16" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#059669" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#65a30d" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#ea580c" },
 ];
 
-// Amber sparks scattered through the night light.
+// Lime leaves scattered through the grove light.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -75,8 +75,8 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* cream circuit wash under the grid light */}
-      <div className="relative bg-gradient-to-b from-[#fef3c7] via-[#fff7ed] to-[#e0e7ff]">
+      {/* ivory grove wash under the grid light */}
+      <div className="relative bg-gradient-to-b from-[#d1fae5] via-[#fefce8] to-[#ffedd5]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -100,7 +100,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(245, 158, 11, 0.45), inset 0 0 18px rgba(2, 132, 199, 0.30)",
+                  boxShadow: "0 0 28px 2px rgba(132, 204, 22, 0.45), inset 0 0 18px rgba(5, 150, 105, 0.30)",
                   opacity: 1 - r * 0.22,
                 }}
               />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#e11d48", "#eab308", "#fb7185", "#facc15"];
+              const colors = ["#059669", "#84cc16", "#ea580c", "#a3e635"];
               return (
                 <span
                   key={i}
@@ -159,7 +159,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           {STARS.map((s, i) => (
             <span
               key={i}
-              className="pop-twinkle absolute rounded-full bg-[#eab308]"
+              className="pop-twinkle absolute rounded-full bg-[#84cc16]"
               style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
             />
           ))}

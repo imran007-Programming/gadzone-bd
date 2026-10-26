@@ -1,67 +1,67 @@
 @import "tailwindcss";
 
 @theme {
-  /* Coral Sunrise: a bright daytime palette — rose primary,
-     sunny yellow accent and teal highlights on cool slate
-     paper. Cards are fully rounded panels with a thick rose
-     BOTTOM bar and a soft warm shadow — the opposite of the
-     previous Midnight Bazaar's sharp cards with an indigo
-     LEFT bar on warm cream paper. */
+  /* Verdant Grove: a botanical editorial palette — deep emerald
+     primary, fresh lime accent and clay-terracotta highlights on
+     warm ivory paper. Cards are crisp ledger panels with a thick
+     emerald TOP strip and a hard offset print shadow — the opposite
+     of the previous Coral Sunrise's fully rounded cards with a thick
+     rose BOTTOM bar and soft warm shadow on cool slate paper. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = rose scale */
-  --color-brand-50: #fff1f2;
-  --color-brand-100: #ffe4e6;
-  --color-brand-200: #fecdd3;
-  --color-brand-300: #fda4af;
-  --color-brand-400: #fb7185;
-  --color-brand-500: #f43f5e;
-  --color-brand-600: #e11d48;
-  --color-brand-700: #be123c;
-  --color-brand-800: #9f1239;
-  --color-brand-900: #881337;
-  --color-brand-950: #4c0519;
-  --color-brand: #e11d48;
-  --color-brand-dark: #be123c;
-  --color-brand-deep: #881337;
+  /* brand = emerald scale */
+  --color-brand-50: #ecfdf5;
+  --color-brand-100: #d1fae5;
+  --color-brand-200: #a7f3d0;
+  --color-brand-300: #6ee7b7;
+  --color-brand-400: #34d399;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-brand-900: #064e3b;
+  --color-brand-950: #022c22;
+  --color-brand: #059669;
+  --color-brand-dark: #047857;
+  --color-brand-deep: #064e3b;
 
-  /* gold = sunny yellow scale (name kept for legacy class refs) */
-  --color-gold-50: #fefce8;
-  --color-gold-100: #fef9c3;
-  --color-gold-200: #fef08a;
-  --color-gold-300: #fde047;
-  --color-gold-400: #facc15;
-  --color-gold-500: #eab308;
-  --color-gold-600: #ca8a04;
-  --color-gold-700: #a16207;
-  --color-gold-800: #854d0e;
-  --color-gold-900: #713f12;
-  --color-gold-950: #422006;
-  --color-gold: #eab308;
-  --color-gold-deep: #a16207;
-  --color-gold-soft: #fef9c3;
+  /* gold = lime scale (name kept for legacy class refs) */
+  --color-gold-50: #f7fee7;
+  --color-gold-100: #ecfccb;
+  --color-gold-200: #d9f99d;
+  --color-gold-300: #bef264;
+  --color-gold-400: #a3e635;
+  --color-gold-500: #84cc16;
+  --color-gold-600: #65a30d;
+  --color-gold-700: #4d7c0f;
+  --color-gold-800: #3f6212;
+  --color-gold-900: #365314;
+  --color-gold-950: #1a2e05;
+  --color-gold: #84cc16;
+  --color-gold-deep: #4d7c0f;
+  --color-gold-soft: #ecfccb;
 
-  /* popblue = teal scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0fdfa;
-  --color-popblue-100: #ccfbf1;
-  --color-popblue-200: #99f6e4;
-  --color-popblue-300: #5eead4;
-  --color-popblue-400: #2dd4bf;
-  --color-popblue-500: #14b8a6;
-  --color-popblue-600: #0d9488;
-  --color-popblue-700: #0f766e;
-  --color-popblue-800: #115e59;
-  --color-popblue-900: #134e4a;
-  --color-popblue-950: #042f2e;
-  --color-popblue: #0d9488;
-  --color-popblue-deep: #134e4a;
-  --color-popblue-soft: #ccfbf1;
+  /* popblue = clay terracotta scale (name kept for legacy class refs) */
+  --color-popblue-50: #fff7ed;
+  --color-popblue-100: #ffedd5;
+  --color-popblue-200: #fed7aa;
+  --color-popblue-300: #fdba74;
+  --color-popblue-400: #fb923c;
+  --color-popblue-500: #f97316;
+  --color-popblue-600: #ea580c;
+  --color-popblue-700: #c2410c;
+  --color-popblue-800: #9a3412;
+  --color-popblue-900: #7c2d12;
+  --color-popblue-950: #431407;
+  --color-popblue: #ea580c;
+  --color-popblue-deep: #9a3412;
+  --color-popblue-soft: #ffedd5;
 
-  --color-ink: #292524;
-  --color-paper: #f8fafc;
-  --color-mute: #78716c;
+  --color-ink: #1c2420;
+  --color-paper: #faf6ef;
+  --color-mute: #6b7a70;
   --color-card: #ffffff;
-  --color-deep: #4c0519;
+  --color-deep: #022c22;
 }
 
 html { scroll-behavior: smooth; }
@@ -76,189 +76,188 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f8fafc;
+  background-color: #faf6ef;
   background-image:
-    radial-gradient(ellipse 60% 38% at 8% -6%, rgba(225, 29, 72, 0.12), transparent 70%),
-    radial-gradient(ellipse 52% 34% at 96% 104%, rgba(234, 179, 8, 0.18), transparent 70%),
-    radial-gradient(ellipse 32% 24% at 88% 10%, rgba(13, 148, 136, 0.10), transparent 70%);
+    radial-gradient(ellipse 60% 38% at 8% -6%, rgba(5, 150, 105, 0.14), transparent 70%),
+    radial-gradient(ellipse 52% 34% at 96% 104%, rgba(132, 204, 22, 0.20), transparent 70%),
+    radial-gradient(ellipse 32% 24% at 88% 10%, rgba(234, 88, 12, 0.10), transparent 70%);
   background-size: auto, auto, auto;
-  color: #292524;
+  color: #1c2420;
 }
-::selection { background: #e11d48; color: #ffffff; }
+::selection { background: #059669; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #e11d48, #eab308); border-radius: 999px; border: 2px solid #f8fafc; }
-::-webkit-scrollbar-track { background: #ffe4e6; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #059669, #84cc16); border-radius: 999px; border: 2px solid #faf6ef; }
+::-webkit-scrollbar-track { background: #ecfccb; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Sunrise type: open, airy headline tracking. */
-h1, h2, h3 { letter-spacing: 0.01em; text-wrap: balance; }
+/* Grove type: tight, editorial headline tracking. */
+h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Sunrise motes: rose/yellow sparks drifting gently down the page. */
+/* Grove leaves: emerald/lime leaves drifting gently DOWN the page,
+   swaying side to side as they fall. */
 @keyframes signal-rise {
-  0% { transform: translate3d(0, -4vh, 0) rotate(0deg) scale(0.8); opacity: 0; }
+  0% { transform: translate3d(-4px, -4vh, 0) rotate(0deg) scale(0.8); opacity: 0; }
   18% { opacity: 0.85; }
-  50% { transform: translate3d(-10px, 46vh, 0) rotate(-40deg) scale(1); }
-  78% { transform: translate3d(8px, 78vh, 0) rotate(-100deg) scale(1.05); opacity: 0.5; }
-  100% { transform: translate3d(-4px, 104vh, 0) rotate(-160deg) scale(1.1); opacity: 0; }
+  50% { transform: translate3d(10px, 46vh, 0) rotate(40deg) scale(1); }
+  78% { transform: translate3d(-8px, 78vh, 0) rotate(100deg) scale(1.05); opacity: 0.5; }
+  100% { transform: translate3d(4px, 104vh, 0) rotate(160deg) scale(1.1); opacity: 0; }
 }
 .pop-fall { animation: signal-rise 16s linear infinite; }
 
-/* Sunrise sway: slow lateral drift of the daylight. */
+/* Grove sway: slow lateral drift of the daylight. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-2vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(2vw, 0.6rem, 0) scale(1.04); opacity: 0.75; }
 }
 .pop-drift { animation: signal-drift 22s ease-in-out infinite; }
 
-/* Sunrise bob: gentle rise and fall of the floating mote. */
+/* Grove bob: gentle rise and fall of the floating leaf. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) rotate(2deg); }
   50% { transform: translateY(-8px) rotate(-2deg); }
 }
 .pop-bob { animation: signal-bob 4.8s ease-in-out infinite; }
 
-/* Slow turn for the sunrise dial. */
+/* Slow turn for the grove dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 48s linear infinite; }
 
-/* Sunrise shimmer: rhythmic gleam of the yellow mote. */
+/* Grove shimmer: rhythmic gleam of the lime leaf. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.35; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.15); }
 }
 .pop-twinkle { animation: signal-blink 3.4s ease-in-out infinite; }
 
-/* Sunrise ticker: infinite marquee (rightward drift). */
+/* Grove ticker: infinite marquee (rightward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(-50%); }
   to { transform: translateX(0); }
 }
 .pop-ticker { animation: signal-ticker 36s linear infinite; }
 
-/* Sunrise check: bold rose -> yellow -> teal bands. */
+/* Grove check: bold emerald -> lime -> clay bands. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #e11d48 0 34%, #eab308 34% 67%, #0d9488 67% 100%);
+    linear-gradient(90deg, #059669 0 34%, #84cc16 34% 67%, #ea580c 67% 100%);
   background-size: 28px 28px;
 }
 
-/* Sunrise card: a fully rounded white panel with a thick
-   rose BOTTOM bar and a soft warm shadow — no left bar,
-   no sharp corners, no cream paper. On hover it lifts
-   straight up and the bar turns sunny yellow. */
+/* Grove card: a crisp ledger panel with a thick emerald TOP strip
+   and a hard offset print shadow — no bottom bar, no fully rounded
+   corners, no soft blur. On hover it shifts up-left, the strip turns
+   fresh lime and the print shadow grows. */
 .pop-lift {
   position: relative;
-  border: 1px solid #ffe4e6;
-  border-bottom: 8px solid #e11d48;
+  border: 1px solid #a7f3d0;
+  border-top: 6px solid #059669;
   background: #ffffff;
-  border-radius: 1.5rem;
-  box-shadow: 0 18px 30px -18px rgba(41, 37, 36, 0.25);
+  border-radius: 0.75rem;
+  box-shadow: 6px 6px 0 rgba(5, 150, 105, 0.16);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  border-color: #fecdd3;
-  border-bottom-color: #eab308;
-  box-shadow: 0 26px 36px -18px rgba(41, 37, 36, 0.32);
+  transform: translate(-2px, -2px);
+  border-color: #6ee7b7;
+  border-top-color: #84cc16;
+  box-shadow: 10px 10px 0 rgba(5, 150, 105, 0.22);
 }
 
-/* Sunrise glass: shared by modals and drawers — a frosted
-   slate pane with a hairline rose border and a
-   soft warm shadow. */
+/* Grove glass: shared by modals and drawers — a frosted ivory
+   pane with a hairline emerald border and a hard print shadow. */
 .pop-glass {
-  background: rgba(248, 250, 252, 0.94);
+  background: rgba(250, 246, 239, 0.94);
   backdrop-filter: blur(22px) saturate(1.2);
   -webkit-backdrop-filter: blur(22px) saturate(1.2);
-  border: 1px solid #fda4af;
-  border-radius: 1.5rem;
-  box-shadow: 0 20px 34px -18px rgba(41, 37, 36, 0.28);
+  border: 1px solid #6ee7b7;
+  border-radius: 0.75rem;
+  box-shadow: 6px 6px 0 rgba(5, 150, 105, 0.18);
 }
 
-/* Sunrise tag: a full pill yellow badge with deep rose text
-   and a teal ring — a morning ticket, not a square stall tag. */
+/* Grove tag: a full pill lime badge with deep emerald text
+   and a clay ring — a garden ticket, tilted the other way. */
 .starburst {
-  background: #eab308;
-  color: #881337;
+  background: #84cc16;
+  color: #064e3b;
   text-shadow: none;
   border-radius: 999px;
-  transform: rotate(3deg);
-  box-shadow: 0 10px 20px -10px rgba(234, 179, 8, 0.6);
-  border: 2px solid rgba(13, 148, 136, 0.9);
+  transform: rotate(-2deg);
+  box-shadow: 6px 6px 0 rgba(5, 150, 105, 0.25);
+  border: 2px solid rgba(234, 88, 12, 0.9);
 }
 
-/* Sunrise lines: rose dots on slate, in a slightly wider grid. */
+/* Grove lines: emerald dots on ivory, in a slightly wider grid. */
 .halftone {
   background-image:
-    radial-gradient(rgba(225, 29, 72, 0.22) 1.5px, transparent 1.5px);
-  background-size: 22px 22px;
+    radial-gradient(rgba(5, 150, 105, 0.22) 1.5px, transparent 1.5px);
+  background-size: 26px 26px;
 }
 
-/* Sunrise seam: a fully rounded rose-to-yellow-to-teal
-   gradient rule dividing sections. */
+/* Grove tape: a diagonal emerald / lime striped rule dividing sections. */
 .zigzag {
   height: 0;
   border-top: none;
-  height: 6px;
-  background-image: linear-gradient(90deg, #e11d48, #eab308, #0d9488);
+  height: 8px;
+  background-image: repeating-linear-gradient(45deg, #059669 0 12px, #84cc16 12px 24px);
   opacity: 0.9;
-  border-radius: 999px;
+  border-radius: 2px;
 }
 
-/* Sunrise band: a diagonal rose / yellow / teal
+/* Grove band: a diagonal emerald / lime / clay
    gradient across the section top. */
 .bazaar-awning {
   background-image: linear-gradient(
     135deg,
-    rgba(225, 29, 72, 0.95),
-    rgba(234, 179, 8, 0.95),
-    rgba(13, 148, 136, 0.95)
+    rgba(5, 150, 105, 0.95),
+    rgba(132, 204, 22, 0.95),
+    rgba(234, 88, 12, 0.95)
   );
   opacity: 0.97;
-  box-shadow: 0 12px 28px -12px rgba(41, 37, 36, 0.30);
+  box-shadow: 6px 6px 0 rgba(5, 150, 105, 0.25);
 }
 
-/* Sunrise glow: layered rose/yellow/teal glow for the core halo. */
+/* Grove glow: layered emerald/lime/clay glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 228, 230, 0.70) 0%, rgba(244, 63, 94, 0.30) 42%, rgba(234, 179, 8, 0.24) 62%, rgba(234, 179, 8, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(209, 250, 229, 0.70) 0%, rgba(16, 185, 129, 0.30) 42%, rgba(132, 204, 22, 0.24) 62%, rgba(132, 204, 22, 0) 76%);
 }
 
-/* Sunrise core: a yellow-to-rose orb with a warm halo. */
+/* Grove core: a lime-to-emerald orb with a soft halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #fef9c3 0%, #eab308 52%, #e11d48 100%);
-  box-shadow: 0 18px 30px -14px rgba(41, 37, 36, 0.40), inset 0 3px 12px rgba(255, 255, 255, 0.55);
+    radial-gradient(circle at 38% 34%, #ecfccb 0%, #84cc16 52%, #059669 100%);
+  box-shadow: 6px 6px 0 rgba(5, 150, 105, 0.30), inset 0 3px 12px rgba(255, 255, 255, 0.55);
   border: none;
 }
 
-/* Sunrise traces around the core disc. */
+/* Grove traces around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(225, 29, 72, 0.32) 0px,
-    rgba(225, 29, 72, 0.32) 2px,
+    rgba(5, 150, 105, 0.32) 0px,
+    rgba(5, 150, 105, 0.32) 2px,
     transparent 2px,
     transparent 12px,
-    rgba(234, 179, 8, 0.28) 12px,
-    rgba(234, 179, 8, 0.28) 14px,
+    rgba(132, 204, 22, 0.28) 12px,
+    rgba(132, 204, 22, 0.28) 14px,
     transparent 14px,
     transparent 30px
   );
   -webkit-mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
   mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
-  border-radius: 1.5rem;
+  border-radius: 0.75rem;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(234, 179, 8, 0.30) 0deg 4deg,
+    rgba(132, 204, 22, 0.30) 0deg 4deg,
     transparent 4deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
   mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
-  border-radius: 1.5rem;
+  border-radius: 0.75rem;
 }
