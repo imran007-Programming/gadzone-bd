@@ -1,67 +1,66 @@
 @import "tailwindcss";
 
 @theme {
-  /* Indigo Dusk: deep indigo primary, vivid coral spark
-     and bright sky contrast on pale lavender paper. Cards are
-     crisp ink-framed panels — small corners, a firm indigo
-     border and a hard offset shadow — the opposite of the
-     previous Emerald Grove's emerald/amber/teal palette, warm
-     cream paper, fully rounded pebbles and diffused shadows. */
+  /* Sage Meadow: soft sage-green primary, warm terracotta
+     spark and honey contrast on warm cream paper. Cards are
+     soft, fully rounded pebbles with diffused shadows — the
+     opposite of the previous Indigo Dusk's crisp ink frames,
+     small corners and hard offset shadows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
   /* brand = indigo scale */
-  --color-brand-50: #eef2ff;
-  --color-brand-100: #e0e7ff;
-  --color-brand-200: #c7d2fe;
-  --color-brand-300: #a5b4fc;
-  --color-brand-400: #818cf8;
-  --color-brand-500: #6366f1;
-  --color-brand-600: #4f46e5;
-  --color-brand-700: #4338ca;
-  --color-brand-800: #3730a3;
-  --color-brand-900: #312e81;
-  --color-brand-950: #1e1b4b;
-  --color-brand: #4f46e5;
-  --color-brand-dark: #4338ca;
-  --color-brand-deep: #312e81;
+  --color-brand-50: #f0f7f0;
+  --color-brand-100: #dceede;
+  --color-brand-200: #bcdcc0;
+  --color-brand-300: #92c49a;
+  --color-brand-400: #66a36e;
+  --color-brand-500: #478554;
+  --color-brand-600: #357044;
+  --color-brand-700: #2c5c39;
+  --color-brand-800: #26492f;
+  --color-brand-900: #203d28;
+  --color-brand-950: #101f14;
+  --color-brand: #357044;
+  --color-brand-dark: #2c5c39;
+  --color-brand-deep: #203d28;
 
   /* gold = coral scale (name kept for legacy class refs) */
-  --color-gold-50: #fff7ed;
-  --color-gold-100: #ffedd5;
-  --color-gold-200: #fed7aa;
-  --color-gold-300: #fdba74;
-  --color-gold-400: #fb923c;
-  --color-gold-500: #f97316;
-  --color-gold-600: #ea580c;
-  --color-gold-700: #c2410c;
-  --color-gold-800: #9a3412;
-  --color-gold-900: #7c2d12;
-  --color-gold-950: #431407;
-  --color-gold: #f97316;
-  --color-gold-deep: #9a3412;
-  --color-gold-soft: #ffedd5;
+  --color-gold-50: #fdf4ef;
+  --color-gold-100: #fbe5d8;
+  --color-gold-200: #f6c7ac;
+  --color-gold-300: #efa07c;
+  --color-gold-400: #e07856;
+  --color-gold-500: #d25f3c;
+  --color-gold-600: #c24e2c;
+  --color-gold-700: #a03e24;
+  --color-gold-800: #833522;
+  --color-gold-900: #6c2f20;
+  --color-gold-950: #3a1610;
+  --color-gold: #d25f3c;
+  --color-gold-deep: #833522;
+  --color-gold-soft: #fbe5d8;
 
   /* popblue = sky scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0f9ff;
-  --color-popblue-100: #e0f2fe;
-  --color-popblue-200: #bae6fd;
-  --color-popblue-300: #7dd3fc;
-  --color-popblue-400: #38bdf8;
-  --color-popblue-500: #0ea5e9;
-  --color-popblue-600: #0284c7;
-  --color-popblue-700: #0369a1;
-  --color-popblue-800: #075985;
-  --color-popblue-900: #0c4a6e;
-  --color-popblue-950: #082f49;
-  --color-popblue: #0284c7;
-  --color-popblue-deep: #075985;
-  --color-popblue-soft: #e0f2fe;
+  --color-popblue-50: #fef9ec;
+  --color-popblue-100: #fdf0c8;
+  --color-popblue-200: #fae08e;
+  --color-popblue-300: #f6c453;
+  --color-popblue-400: #f2a92f;
+  --color-popblue-500: #eda417;
+  --color-popblue-600: #ce840d;
+  --color-popblue-700: #a6680e;
+  --color-popblue-800: #854f0f;
+  --color-popblue-900: #713f12;
+  --color-popblue-950: #421f07;
+  --color-popblue: #ce840d;
+  --color-popblue-deep: #854f0f;
+  --color-popblue-soft: #fdf0c8;
 
-  --color-ink: #1e1b4b;
-  --color-paper: #f5f3ff;
-  --color-mute: #64748b;
+  --color-ink: #22382a;
+  --color-paper: #faf6ee;
+  --color-mute: #6b7a6e;
   --color-card: #ffffff;
-  --color-deep: #312e81;
+  --color-deep: #203d28;
 }
 
 html { scroll-behavior: smooth; }
@@ -76,18 +75,18 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f5f3ff;
+  background-color: #faf6ee;
   background-image:
-    radial-gradient(ellipse 60% 38% at 92% -6%, rgba(79, 70, 229, 0.18), transparent 70%),
-    radial-gradient(ellipse 52% 34% at 4% 104%, rgba(249, 115, 22, 0.16), transparent 70%),
-    radial-gradient(ellipse 32% 24% at 12% 10%, rgba(2, 132, 199, 0.12), transparent 70%);
+    radial-gradient(ellipse 60% 38% at 92% -6%, rgba(71, 133, 84, 0.18), transparent 70%),
+    radial-gradient(ellipse 52% 34% at 4% 104%, rgba(224, 120, 86, 0.16), transparent 70%),
+    radial-gradient(ellipse 32% 24% at 12% 10%, rgba(237, 164, 23, 0.12), transparent 70%);
   background-size: auto, auto, auto;
-  color: #1e1b4b;
+  color: #22382a;
 }
-::selection { background: #f97316; color: #ffffff; }
+::selection { background: #d25f3c; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #4f46e5, #0284c7); border-radius: 4px; border: 2px solid #f5f3ff; }
-::-webkit-scrollbar-track { background: #e0e7ff; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #357044, #ce840d); border-radius: 4px; border: 2px solid #faf6ee; }
+::-webkit-scrollbar-track { background: #dceede; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
@@ -141,105 +140,108 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 /* Dusk check: bold indigo -> coral -> sky bands. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #4f46e5 0 34%, #f97316 34% 67%, #0284c7 67% 100%);
+    linear-gradient(90deg, #357044 0 34%, #d25f3c 34% 67%, #ce840d 67% 100%);
   background-size: 36px 36px;
 }
 
-/* Dusk ink-frame: a crisp white card with a firm indigo
-   border, small corners and a hard offset shadow. On hover
-   it shifts up-left and the offset shadow grows — a bold
-   print feel, no soft pebbles, no diffused glow. */
+/* Sage Meadow card: a soft white pebble with a hairline
+   sage border, generous rounding and a diffused shadow.
+   On hover it floats gently upward — no hard offset, no
+   print-frame feel. */
 .pop-lift {
   position: relative;
-  border: 2px solid #c7d2fe;
+  border: 1px solid #dceede;
   background: #ffffff;
-  border-radius: 0.75rem;
-  box-shadow: 6px 6px 0 rgba(49, 46, 129, 0.18);
+  border-radius: 1.75rem;
+  box-shadow: 0 20px 40px -18px rgba(32, 61, 40, 0.28);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translate(-2px, -2px);
-  border-color: #818cf8;
-  box-shadow: 9px 9px 0 rgba(49, 46, 129, 0.22);
+  transform: translateY(-4px);
+  border-color: #92c49a;
+  box-shadow: 0 28px 48px -20px rgba(32, 61, 40, 0.35);
 }
 
-/* Dusk glass: shared by modals and drawers — a frosted
-   lavender pane with a firm indigo border and an offset shadow. */
+/* Meadow glass: shared by modals and drawers — a frosted
+   cream pane with a hairline sage border and a soft
+   diffused shadow. */
 .pop-glass {
-  background: rgba(238, 242, 255, 0.94);
+  background: rgba(253, 250, 240, 0.94);
   backdrop-filter: blur(22px) saturate(1.2);
   -webkit-backdrop-filter: blur(22px) saturate(1.2);
-  border: 2px solid #c7d2fe;
-  border-radius: 0.75rem;
-  box-shadow: 8px 8px 0 rgba(49, 46, 129, 0.18);
+  border: 1px solid #dceede;
+  border-radius: 1.75rem;
+  box-shadow: 0 24px 48px -20px rgba(32, 61, 40, 0.30);
 }
 
-/* Dusk seal: a sharp coral ticket tag with a deep indigo
-   border, tilted slightly like a stamped mark. */
+/* Meadow tag: a soft round terracotta pill, upright and
+   friendly, with a gentle diffused shadow. */
 .starburst {
-  background: #f97316;
+  background: #d25f3c;
   color: #ffffff;
   text-shadow: none;
-  border-radius: 0.375rem;
-  transform: rotate(-3deg);
-  box-shadow: 4px 4px 0 rgba(49, 46, 129, 0.30);
-  border: 2px solid #312e81;
+  border-radius: 9999px;
+  transform: rotate(0deg);
+  box-shadow: 0 10px 20px -8px rgba(32, 61, 40, 0.40);
+  border: none;
 }
 
 /* Dusk dots: crisp indigo dots on lavender, not drafting lines. */
 .halftone {
   background-image:
-    radial-gradient(rgba(79, 70, 229, 0.20) 1.5px, transparent 1.5px);
+    radial-gradient(rgba(71, 133, 84, 0.20) 1.5px, transparent 1.5px);
   background-size: 22px 22px, 22px 22px;
 }
 
-/* Dusk seam: a bold indigo-to-coral-to-sky gradient rule dividing sections. */
+/* Meadow seam: a soft sage-to-terracotta-to-honey gradient
+   rule, rounded and gentle, dividing sections. */
 .zigzag {
-  height: 6px;
-  background-image: linear-gradient(90deg, #4f46e5, #f97316, #0284c7);
+  height: 4px;
+  background-image: linear-gradient(90deg, #357044, #d25f3c, #ce840d);
   background-repeat: repeat-x;
   background-position: 0 center;
-  opacity: 0.95;
-  border-radius: 0;
+  opacity: 0.85;
+  border-radius: 9999px;
 }
 
-/* Dusk band: a bold indigo / coral / sky gradient across the section top. */
+/* Meadow band: a soft sage / terracotta / honey gradient
+   across the section top. */
 .bazaar-awning {
   background-image: linear-gradient(
     90deg,
-    rgba(79, 70, 229, 0.95),
-    rgba(249, 115, 22, 0.95),
-    rgba(2, 132, 199, 0.95)
+    rgba(71, 133, 84, 0.90),
+    rgba(224, 120, 86, 0.90),
+    rgba(237, 164, 23, 0.90)
   );
   opacity: 0.97;
-  box-shadow: 0 10px 0 -4px rgba(49, 46, 129, 0.25);
+  box-shadow: 0 12px 28px -12px rgba(32, 61, 40, 0.35);
 }
 
 /* Dusk glow: layered indigo/coral/sky glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 237, 213, 0.70) 0%, rgba(79, 70, 229, 0.30) 42%, rgba(249, 115, 22, 0.24) 62%, rgba(249, 115, 22, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 237, 213, 0.70) 0%, rgba(71, 133, 84, 0.30) 42%, rgba(224, 120, 86, 0.24) 62%, rgba(224, 120, 86, 0) 76%);
 }
 
-/* Dusk core: a glowing coral orb with a deep indigo halo. */
+/* Meadow core: a warm honey orb with a soft sage halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #fff7ed 0%, #fdba74 52%, #ea580c 100%);
-  box-shadow: 6px 6px 0 rgba(49, 46, 129, 0.30), inset 0 3px 12px rgba(255, 255, 255, 0.55);
-  border: 2px solid #fed7aa;
+    radial-gradient(circle at 38% 34%, #fdf4ef 0%, #efa07c 52%, #c24e2c 100%);
+  box-shadow: 0 18px 36px -14px rgba(32, 61, 40, 0.40), inset 0 3px 12px rgba(255, 255, 255, 0.55);
+  border: none;
 }
 
 /* Dusk traces around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(67, 56, 202, 0.32) 0px,
-    rgba(67, 56, 202, 0.32) 2px,
+    rgba(44, 92, 57, 0.32) 0px,
+    rgba(44, 92, 57, 0.32) 2px,
     transparent 2px,
     transparent 12px,
-    rgba(2, 132, 199, 0.28) 12px,
-    rgba(2, 132, 199, 0.28) 14px,
+    rgba(237, 164, 23, 0.28) 12px,
+    rgba(237, 164, 23, 0.28) 14px,
     transparent 14px,
     transparent 30px
   );
@@ -250,7 +252,7 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(249, 115, 22, 0.30) 0deg 4deg,
+    rgba(224, 120, 86, 0.30) 0deg 4deg,
     transparent 4deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
