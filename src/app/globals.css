@@ -1,67 +1,67 @@
 @import "tailwindcss";
 
 @theme {
-  /* Rose Ember: crimson-rose primary, amber accent and
-     deep burgundy contrast on warm cream paper. Cards are
-     fully rounded soft panels with a rose-to-amber top bar
-     and a diffuse warm shadow — the opposite of the previous
-     Emerald Harbor's sharp corners, teal left bar and crisp
-     offset shadow. */
+  /* Indigo Night: indigo primary, cyan accent and
+     deep navy contrast on cool slate paper. Cards are
+     compact angular panels with an indigo left bar and
+     a hard offset shadow — the opposite of the previous
+     Rose Ember's fully rounded panels, rose top bar and
+     soft diffuse shadow. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = rose scale */
-  --color-brand-50: #fff1f2;
-  --color-brand-100: #ffe4e6;
-  --color-brand-200: #fecdd3;
-  --color-brand-300: #fda4af;
-  --color-brand-400: #fb7185;
-  --color-brand-500: #f43f5e;
-  --color-brand-600: #e11d48;
-  --color-brand-700: #be123c;
-  --color-brand-800: #9f1239;
-  --color-brand-900: #881337;
-  --color-brand-950: #4c0519;
-  --color-brand: #be123c;
-  --color-brand-dark: #9f1239;
-  --color-brand-deep: #881337;
+  /* brand = indigo scale */
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-200: #c7d2fe;
+  --color-brand-300: #a5b4fc;
+  --color-brand-400: #818cf8;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+  --color-brand-800: #3730a3;
+  --color-brand-900: #312e81;
+  --color-brand-950: #1e1b4b;
+  --color-brand: #4338ca;
+  --color-brand-dark: #3730a3;
+  --color-brand-deep: #312e81;
 
-  /* gold = amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #f59e0b;
-  --color-gold-deep: #b45309;
-  --color-gold-soft: #fef3c7;
+  /* gold = cyan scale (name kept for legacy class refs) */
+  --color-gold-50: #ecfeff;
+  --color-gold-100: #cffafe;
+  --color-gold-200: #a5f3fc;
+  --color-gold-300: #67e8f9;
+  --color-gold-400: #22d3ee;
+  --color-gold-500: #06b6d4;
+  --color-gold-600: #0891b2;
+  --color-gold-700: #0e7490;
+  --color-gold-800: #155e75;
+  --color-gold-900: #164e63;
+  --color-gold-950: #083344;
+  --color-gold: #06b6d4;
+  --color-gold-deep: #0e7490;
+  --color-gold-soft: #cffafe;
 
-  /* popblue = burgundy scale (name kept for legacy class refs) */
-  --color-popblue-50: #fdf2f4;
-  --color-popblue-100: #fce7ea;
-  --color-popblue-200: #f8c9d0;
-  --color-popblue-300: #f2a0ad;
-  --color-popblue-400: #e56a82;
-  --color-popblue-500: #c93a5c;
-  --color-popblue-600: #a81e42;
-  --color-popblue-700: #881337;
-  --color-popblue-800: #6d1029;
-  --color-popblue-900: #4c0519;
-  --color-popblue-950: #2e0310;
-  --color-popblue: #a81e42;
-  --color-popblue-deep: #881337;
-  --color-popblue-soft: #fce7ea;
+  /* popblue = slate/navy scale (name kept for legacy class refs) */
+  --color-popblue-50: #f8fafc;
+  --color-popblue-100: #f1f5f9;
+  --color-popblue-200: #e2e8f0;
+  --color-popblue-300: #cbd5e1;
+  --color-popblue-400: #94a3b8;
+  --color-popblue-500: #64748b;
+  --color-popblue-600: #475569;
+  --color-popblue-700: #334155;
+  --color-popblue-800: #1e293b;
+  --color-popblue-900: #0f172a;
+  --color-popblue-950: #020617;
+  --color-popblue: #334155;
+  --color-popblue-deep: #0f172a;
+  --color-popblue-soft: #f1f5f9;
 
-  --color-ink: #3f0d1e;
-  --color-paper: #fff8f1;
-  --color-mute: #8a5a64;
+  --color-ink: #0f172a;
+  --color-paper: #f8fafc;
+  --color-mute: #64748b;
   --color-card: #ffffff;
-  --color-deep: #4c0519;
+  --color-deep: #0f172a;
 }
 
 html { scroll-behavior: smooth; }
@@ -76,25 +76,25 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fff1f2;
+  background-color: #eef2ff;
   background-image:
-    radial-gradient(ellipse 60% 38% at 8% -6%, rgba(225, 29, 72, 0.14), transparent 70%),
-    radial-gradient(ellipse 52% 34% at 96% 104%, rgba(245, 158, 11, 0.18), transparent 70%),
-    radial-gradient(ellipse 32% 24% at 88% 10%, rgba(136, 19, 55, 0.10), transparent 70%);
+    radial-gradient(ellipse 60% 38% at 8% -6%, rgba(79, 70, 229, 0.16), transparent 70%),
+    radial-gradient(ellipse 52% 34% at 96% 104%, rgba(6, 182, 212, 0.18), transparent 70%),
+    radial-gradient(ellipse 32% 24% at 88% 10%, rgba(15, 23, 42, 0.10), transparent 70%);
   background-size: auto, auto, auto;
-  color: #3f0d1e;
+  color: #0f172a;
 }
-::selection { background: #be123c; color: #ffffff; }
+::selection { background: #4338ca; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #f43f5e, #f59e0b); border-radius: 999px; border: 2px solid #fff1f2; }
-::-webkit-scrollbar-track { background: #ffe4e6; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #6366f1, #06b6d4); border-radius: 4px; border: 2px solid #eef2ff; }
+::-webkit-scrollbar-track { background: #e0e7ff; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Ember type: tight, warm headline tracking. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Night type: slightly tighter, crisp headline tracking. */
+h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Ember embers: rose/amber motes drifting gently down the page. */
+/* Night motes: indigo/cyan sparks drifting gently down the page. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, -4vh, 0) rotate(0deg) scale(0.8); opacity: 0; }
   18% { opacity: 0.85; }
@@ -104,160 +104,161 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 16s linear infinite; }
 
-/* Ember sway: slow lateral drift of the warm light. */
+/* Night sway: slow lateral drift of the cool light. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-2vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(2vw, 0.6rem, 0) scale(1.04); opacity: 0.75; }
 }
 .pop-drift { animation: signal-drift 22s ease-in-out infinite; }
 
-/* Ember bob: gentle rise and fall of the floating mote. */
+/* Night bob: gentle rise and fall of the floating mote. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) rotate(2deg); }
   50% { transform: translateY(-8px) rotate(-2deg); }
 }
 .pop-bob { animation: signal-bob 4.8s ease-in-out infinite; }
 
-/* Slow turn for the ember dial. */
+/* Slow turn for the night dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 48s linear infinite; }
 
-/* Ember shimmer: rhythmic gleam of the amber mote. */
+/* Night shimmer: rhythmic gleam of the cyan mote. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.35; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.15); }
 }
 .pop-twinkle { animation: signal-blink 3.4s ease-in-out infinite; }
 
-/* Ember ticker: infinite marquee (rightward drift). */
+/* Night ticker: infinite marquee (rightward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(-50%); }
   to { transform: translateX(0); }
 }
 .pop-ticker { animation: signal-ticker 36s linear infinite; }
 
-/* Ember check: bold rose -> amber -> burgundy bands. */
+/* Night check: bold indigo -> cyan -> navy bands. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #be123c 0 34%, #f59e0b 34% 67%, #881337 67% 100%);
+    linear-gradient(90deg, #4338ca 0 34%, #06b6d4 34% 67%, #0f172a 67% 100%);
   background-size: 28px 28px;
 }
 
-/* Ember card: a fully rounded white panel with a
-   rose-to-amber top bar and a soft diffuse shadow — no
-   left bar, no sharp corners, no offset shadow. On hover
-   it lifts gently and the top bar deepens to burgundy. */
+/* Night card: a compact white panel with an
+   indigo left bar and a hard offset shadow — no
+   top bar, no fully rounded corners, no soft shadow.
+   On hover it shifts up-left and the offset shadow
+   grows while the bar turns cyan. */
 .pop-lift {
   position: relative;
-  border: 1px solid #fecdd3;
-  border-top: 5px solid #e11d48;
+  border: 1px solid #e2e8f0;
+  border-left: 5px solid #4f46e5;
   background: #ffffff;
-  border-radius: 1.5rem;
-  box-shadow: 0 18px 36px -18px rgba(136, 19, 55, 0.35);
+  border-radius: 0.75rem;
+  box-shadow: 6px 6px 0 rgba(15, 23, 42, 0.12);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-6px);
-  border-color: #fda4af;
-  border-top-color: #f59e0b;
-  box-shadow: 0 26px 44px -18px rgba(136, 19, 55, 0.45);
+  transform: translate(-2px, -6px);
+  border-color: #c7d2fe;
+  border-left-color: #06b6d4;
+  box-shadow: 10px 10px 0 rgba(15, 23, 42, 0.16);
 }
 
-/* Ember glass: shared by modals and drawers — a frosted
-   cream pane with a hairline rose border and a
-   soft diffuse shadow. */
+/* Night glass: shared by modals and drawers — a frosted
+   slate pane with a hairline indigo border and a
+   hard offset shadow. */
 .pop-glass {
-  background: rgba(255, 248, 241, 0.94);
+  background: rgba(248, 250, 252, 0.94);
   backdrop-filter: blur(22px) saturate(1.2);
   -webkit-backdrop-filter: blur(22px) saturate(1.2);
-  border: 1px solid #ffe4e6;
-  border-radius: 1.5rem;
-  box-shadow: 0 24px 48px -20px rgba(76, 5, 25, 0.35);
+  border: 1px solid #e0e7ff;
+  border-radius: 0.75rem;
+  box-shadow: 8px 8px 0 rgba(15, 23, 42, 0.12);
 }
 
-/* Ember tag: a round pill badge, upright, with white text
-   and an amber ring — a pill, not a tilted square. */
+/* Night tag: a tilted square badge with white text
+   and a cyan ring — a tilted square, not an upright pill. */
 .starburst {
-  background: #e11d48;
+  background: #4f46e5;
   color: #ffffff;
   text-shadow: none;
-  border-radius: 999px;
-  transform: rotate(0deg);
-  box-shadow: 0 10px 24px -8px rgba(190, 18, 60, 0.55);
-  border: 2px solid rgba(254, 243, 199, 0.9);
+  border-radius: 0.5rem;
+  transform: rotate(-6deg);
+  box-shadow: 4px 4px 0 rgba(15, 23, 42, 0.20);
+  border: 2px solid rgba(165, 243, 252, 0.9);
 }
 
-/* Ember lines: rose dots on cream, in a tighter grid. */
+/* Night lines: indigo dots on slate, in a wider grid. */
 .halftone {
   background-image:
-    radial-gradient(rgba(190, 18, 60, 0.28) 1.5px, transparent 1.5px);
-  background-size: 18px 18px;
+    radial-gradient(rgba(67, 56, 202, 0.28) 1.5px, transparent 1.5px);
+  background-size: 22px 22px;
 }
 
-/* Ember seam: a rose-to-amber gradient rule dividing sections. */
+/* Night seam: a straight indigo-to-cyan gradient rule dividing sections. */
 .zigzag {
   height: 0;
   border-top: none;
-  height: 4px;
-  background-image: linear-gradient(90deg, #e11d48, #f59e0b, #881337);
+  height: 3px;
+  background-image: linear-gradient(90deg, #4f46e5, #06b6d4, #0f172a);
   opacity: 0.9;
-  border-radius: 999px;
+  border-radius: 0;
 }
 
-/* Ember band: a diagonal rose / amber / burgundy
+/* Night band: a diagonal indigo / cyan / navy
    gradient across the section top. */
 .bazaar-awning {
   background-image: linear-gradient(
     135deg,
-    rgba(190, 18, 60, 0.95),
-    rgba(245, 158, 11, 0.95),
-    rgba(136, 19, 55, 0.95)
+    rgba(67, 56, 202, 0.95),
+    rgba(6, 182, 212, 0.95),
+    rgba(15, 23, 42, 0.95)
   );
   opacity: 0.97;
-  box-shadow: 0 12px 28px -12px rgba(76, 5, 25, 0.35);
+  box-shadow: 0 12px 28px -12px rgba(15, 23, 42, 0.35);
 }
 
-/* Ember glow: layered rose/amber/burgundy glow for the core halo. */
+/* Night glow: layered indigo/cyan/navy glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(254, 243, 199, 0.70) 0%, rgba(225, 29, 72, 0.30) 42%, rgba(245, 158, 11, 0.24) 62%, rgba(245, 158, 11, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(207, 250, 254, 0.70) 0%, rgba(99, 102, 241, 0.30) 42%, rgba(6, 182, 212, 0.24) 62%, rgba(6, 182, 212, 0) 76%);
 }
 
-/* Ember core: a rose-to-amber orb with a warm halo. */
+/* Night core: an indigo-to-cyan orb with a cool halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #fef3c7 0%, #f59e0b 52%, #be123c 100%);
-  box-shadow: 0 18px 36px -14px rgba(76, 5, 25, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.55);
+    radial-gradient(circle at 38% 34%, #cffafe 0%, #06b6d4 52%, #4338ca 100%);
+  box-shadow: 6px 6px 0 rgba(15, 23, 42, 0.25), inset 0 3px 12px rgba(255, 255, 255, 0.55);
   border: none;
 }
 
-/* Ember traces around the core disc. */
+/* Night traces around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(190, 18, 60, 0.32) 0px,
-    rgba(190, 18, 60, 0.32) 2px,
+    rgba(67, 56, 202, 0.32) 0px,
+    rgba(67, 56, 202, 0.32) 2px,
     transparent 2px,
     transparent 12px,
-    rgba(245, 158, 11, 0.28) 12px,
-    rgba(245, 158, 11, 0.28) 14px,
+    rgba(6, 182, 212, 0.28) 12px,
+    rgba(6, 182, 212, 0.28) 14px,
     transparent 14px,
     transparent 30px
   );
   -webkit-mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
   mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
-  border-radius: 1.5rem;
+  border-radius: 0.75rem;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(245, 158, 11, 0.30) 0deg 4deg,
+    rgba(6, 182, 212, 0.30) 0deg 4deg,
     transparent 4deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
   mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
-  border-radius: 1.5rem;
+  border-radius: 0.75rem;
 }
