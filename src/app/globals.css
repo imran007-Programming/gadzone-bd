@@ -1,67 +1,67 @@
 @import "tailwindcss";
 
 @theme {
-  /* Terracotta Dusk: warm burnt-orange primary, honey-amber spark
-     and a deep plum contrast accent on warm cream paper. Cards are
-     soft, fully rounded pebbles with diffused sunset shadows — the
-     opposite of the previous Emerald Circuit's cool emerald/lime/
-     navy palette, mint paper, sharp angular tiles and hard offset
-     lime shadows. */
+  /* Magenta Blueprint: vivid magenta primary, electric cyan spark
+     and deep violet contrast on pale lavender paper. Cards are
+     crisp blueprint plates — sharp corners, a firm violet border
+     and a hard magenta offset shadow — the opposite of the
+     previous Terracotta Dusk's warm orange/plum palette, cream
+     paper, fully rounded pebbles and diffused sunset shadows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = terracotta scale */
-  --color-brand-50: #fff7ed;
-  --color-brand-100: #ffedd5;
-  --color-brand-200: #fed7aa;
-  --color-brand-300: #fdba74;
-  --color-brand-400: #fb923c;
-  --color-brand-500: #f97316;
-  --color-brand-600: #ea580c;
-  --color-brand-700: #c2410c;
-  --color-brand-800: #9a3412;
-  --color-brand-900: #7c2d12;
-  --color-brand-950: #431407;
-  --color-brand: #ea580c;
-  --color-brand-dark: #c2410c;
-  --color-brand-deep: #7c2d12;
+  /* brand = magenta scale */
+  --color-brand-50: #fdf4ff;
+  --color-brand-100: #fae8ff;
+  --color-brand-200: #f5d0fe;
+  --color-brand-300: #f0abfc;
+  --color-brand-400: #e879f9;
+  --color-brand-500: #d946ef;
+  --color-brand-600: #c026d3;
+  --color-brand-700: #a21caf;
+  --color-brand-800: #86198f;
+  --color-brand-900: #701a75;
+  --color-brand-950: #4a044e;
+  --color-brand: #c026d3;
+  --color-brand-dark: #a21caf;
+  --color-brand-deep: #701a75;
 
-  /* gold = honey-amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #f59e0b;
-  --color-gold-deep: #92400e;
-  --color-gold-soft: #fef3c7;
+  /* gold = cyan scale (name kept for legacy class refs) */
+  --color-gold-50: #ecfeff;
+  --color-gold-100: #cffafe;
+  --color-gold-200: #a5f3fc;
+  --color-gold-300: #67e8f9;
+  --color-gold-400: #22d3ee;
+  --color-gold-500: #06b6d4;
+  --color-gold-600: #0891b2;
+  --color-gold-700: #0e7490;
+  --color-gold-800: #155e75;
+  --color-gold-900: #164e63;
+  --color-gold-950: #083344;
+  --color-gold: #06b6d4;
+  --color-gold-deep: #155e75;
+  --color-gold-soft: #cffafe;
 
-  /* popblue = plum scale (name kept for legacy class refs) */
-  --color-popblue-50: #faf5ff;
-  --color-popblue-100: #f3e8ff;
-  --color-popblue-200: #e9d5ff;
-  --color-popblue-300: #d8b4fe;
-  --color-popblue-400: #c084fc;
-  --color-popblue-500: #a855f7;
-  --color-popblue-600: #9333ea;
-  --color-popblue-700: #7e22ce;
-  --color-popblue-800: #6b21a8;
-  --color-popblue-900: #581c87;
-  --color-popblue-950: #3b0764;
-  --color-popblue: #9333ea;
-  --color-popblue-deep: #6b21a8;
-  --color-popblue-soft: #f3e8ff;
+  /* popblue = violet scale (name kept for legacy class refs) */
+  --color-popblue-50: #f5f3ff;
+  --color-popblue-100: #ede9fe;
+  --color-popblue-200: #ddd6fe;
+  --color-popblue-300: #c4b5fd;
+  --color-popblue-400: #a78bfa;
+  --color-popblue-500: #8b5cf6;
+  --color-popblue-600: #7c3aed;
+  --color-popblue-700: #6d28d9;
+  --color-popblue-800: #5b21b6;
+  --color-popblue-900: #4c1d95;
+  --color-popblue-950: #2e1065;
+  --color-popblue: #7c3aed;
+  --color-popblue-deep: #5b21b6;
+  --color-popblue-soft: #ede9fe;
 
-  --color-ink: #2b1a12;
-  --color-paper: #fff8f0;
-  --color-mute: #7a5c4d;
+  --color-ink: #231028;
+  --color-paper: #faf7ff;
+  --color-mute: #6b5a72;
   --color-card: #ffffff;
-  --color-deep: #7c2d12;
+  --color-deep: #701a75;
 }
 
 html { scroll-behavior: smooth; }
@@ -76,26 +76,26 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fff8f0;
+  background-color: #faf7ff;
   background-image:
-    radial-gradient(rgba(234, 88, 12, 0.10) 1.2px, transparent 1.2px),
-    radial-gradient(ellipse 58% 36% at 10% -4%, rgba(249, 115, 22, 0.20), transparent 70%),
-    radial-gradient(ellipse 50% 34% at 96% 102%, rgba(147, 51, 234, 0.16), transparent 70%),
-    radial-gradient(ellipse 40% 26% at 55% 45%, rgba(245, 158, 11, 0.10), transparent 70%);
-  background-size: 30px 30px, auto, auto, auto;
-  color: #2b1a12;
+    linear-gradient(rgba(124, 58, 237, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 58, 237, 0.07) 1px, transparent 1px),
+    radial-gradient(ellipse 58% 36% at 10% -4%, rgba(217, 70, 239, 0.18), transparent 70%),
+    radial-gradient(ellipse 50% 34% at 96% 102%, rgba(6, 182, 212, 0.14), transparent 70%);
+  background-size: 32px 32px, 32px 32px, auto, auto;
+  color: #231028;
 }
-::selection { background: #fbbf24; color: #431407; }
+::selection { background: #22d3ee; color: #083344; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ea580c, #f59e0b); border-radius: 9999px; border: 2px solid #fff8f0; }
-::-webkit-scrollbar-track { background: #ffedd5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #c026d3, #7c3aed); border-radius: 4px; border: 2px solid #faf7ff; }
+::-webkit-scrollbar-track { background: #ede9fe; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Dusk type: soft, rounded headline tracking. */
-h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
+/* Blueprint type: tight, upright headline tracking. */
+h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Dusk sparks: warm embers drifting gently down the page. */
+/* Blueprint sparks: magenta/violet/cyan markers drifting gently down the page. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, -4vh, 0) rotate(0deg) scale(0.8); opacity: 0; }
   18% { opacity: 0.85; }
@@ -105,158 +105,157 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 12s linear infinite; }
 
-/* Dusk sway: slow lateral drift of the sunset light. */
+/* Blueprint sway: slow lateral drift of the plate light. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(2vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(-2vw, 0.6rem, 0) scale(1.04); opacity: 0.75; }
 }
 .pop-drift { animation: signal-drift 24s ease-in-out infinite; }
 
-/* Dusk bob: gentle rise and fall of the floating mark. */
+/* Blueprint bob: gentle rise and fall of the floating mark. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) rotate(2deg); }
   50% { transform: translateY(6px) rotate(-2deg); }
 }
 .pop-bob { animation: signal-bob 5.6s ease-in-out infinite; }
 
-/* Slow turn for the dusk dial. */
+/* Slow turn for the blueprint dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 70s linear infinite; }
 
-/* Dusk shimmer: rhythmic gleam of the honey spark. */
+/* Blueprint shimmer: rhythmic gleam of the cyan spark. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.35; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.15); }
 }
 .pop-twinkle { animation: signal-blink 3.2s ease-in-out infinite; }
 
-/* Dusk ticker: infinite marquee (leftward drift). */
+/* Blueprint ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 34s linear infinite; }
 
-/* Dusk check: terracotta -> honey -> plum bands. */
+/* Blueprint check: magenta -> cyan -> violet bands. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(135deg, #ea580c 0 10px, #f59e0b 10px 20px, #9333ea 20px 30px);
+    repeating-linear-gradient(135deg, #c026d3 0 10px, #06b6d4 10px 20px, #7c3aed 20px 30px);
   background-size: 42px 42px;
 }
 
-/* Terracotta Dusk card: a soft, fully rounded pebble on white with
-   a thin warm border and a diffused sunset shadow. On hover it
-   lifts straight up and the shadow deepens — a plush, pillowy
-   feel, no sharp corners, no hard offset shadows. */
+/* Blueprint plate: a crisp white card with a firm violet border,
+   sharp corners and a hard magenta offset shadow. On hover it
+   shifts up-left and the offset shadow grows — a printed-plate
+   feel, no rounded pebbles, no diffused glow. */
 .pop-lift {
   position: relative;
-  border: 1px solid #f5d0b8;
+  border: 2px solid #ddd6fe;
   background: #ffffff;
-  border-radius: 1.75rem;
-  box-shadow: 0 18px 40px rgba(124, 45, 18, 0.14), 0 4px 12px rgba(234, 88, 12, 0.08);
+  border-radius: 0.75rem;
+  box-shadow: 5px 5px 0 rgba(192, 38, 211, 0.28);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  border-color: #fb923c;
-  box-shadow: 0 26px 54px rgba(124, 45, 18, 0.20), 0 8px 18px rgba(245, 158, 11, 0.16);
+  transform: translate(-2px, -2px);
+  border-color: #c4b5fd;
+  box-shadow: 8px 8px 0 rgba(192, 38, 211, 0.35);
 }
 
-/* Dusk glass: shared by modals and drawers — a soft frosted
-   cream pane with a thin warm border and a diffused shadow. */
+/* Blueprint glass: shared by modals and drawers — a frosted
+   lavender pane with a firm violet border and a hard shadow. */
 .pop-glass {
-  background: rgba(255, 248, 240, 0.94);
+  background: rgba(250, 247, 255, 0.94);
   backdrop-filter: blur(22px) saturate(1.2);
   -webkit-backdrop-filter: blur(22px) saturate(1.2);
-  border: 1px solid #f5d0b8;
-  border-radius: 1.5rem;
-  box-shadow: 0 24px 48px rgba(124, 45, 18, 0.18);
+  border: 2px solid #ddd6fe;
+  border-radius: 0.75rem;
+  box-shadow: 8px 8px 0 rgba(124, 58, 237, 0.22);
 }
 
-/* Dusk seal: a soft honey pill badge with a warm ring,
-   tilted slightly like a sunset stamp. */
+/* Blueprint seal: a sharp cyan stamp badge with a violet ring,
+   tilted slightly like a printed mark. */
 .starburst {
-  background: #f59e0b;
-  color: #431407;
+  background: #06b6d4;
+  color: #083344;
   text-shadow: none;
-  border-radius: 9999px;
-  transform: rotate(3deg);
-  box-shadow: 0 10px 24px rgba(234, 88, 12, 0.35);
-  border: 1px solid #fde68a;
+  border-radius: 0.5rem;
+  transform: rotate(-4deg);
+  box-shadow: 3px 3px 0 rgba(124, 58, 237, 0.45);
+  border: 1px solid #a5f3fc;
 }
 
-/* Dusk dots: warm polka-dot texture on cream. */
+/* Blueprint grid: fine violet drafting lines on lavender. */
 .halftone {
   background-image:
-    radial-gradient(rgba(234, 88, 12, 0.18) 1.4px, transparent 1.4px),
-    radial-gradient(rgba(147, 51, 234, 0.14) 1.2px, transparent 1.2px);
-  background-size: 24px 24px, 36px 36px;
-  background-position: 0 0, 12px 12px;
+    linear-gradient(rgba(124, 58, 237, 0.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 58, 237, 0.14) 1px, transparent 1px);
+  background-size: 28px 28px, 28px 28px;
 }
 
-/* Dusk seam: a soft warm diagonal-stripe rule dividing sections. */
+/* Blueprint seam: a crisp magenta/cyan diagonal-stripe rule dividing sections. */
 .zigzag {
-  height: 8px;
-  background-image: repeating-linear-gradient(-45deg, #ea580c 0 12px, #f59e0b 12px 24px);
+  height: 6px;
+  background-image: repeating-linear-gradient(-45deg, #c026d3 0 12px, #06b6d4 12px 24px);
   background-repeat: repeat-x;
   background-position: 0 center;
-  opacity: 0.85;
-  border-radius: 9999px;
+  opacity: 0.9;
+  border-radius: 0;
 }
 
-/* Dusk band: terracotta / honey / plum stripes across the section top. */
+/* Blueprint band: magenta / cyan / violet stripes across the section top. */
 .bazaar-awning {
   background-image: repeating-linear-gradient(
     90deg,
-    #ea580c 0 22px,
-    #f59e0b 22px 44px,
-    #9333ea 44px 66px
+    #c026d3 0 22px,
+    #06b6d4 22px 44px,
+    #7c3aed 44px 66px
   );
-  opacity: 0.85;
-  box-shadow: 0 8px 24px rgba(124, 45, 18, 0.18);
+  opacity: 0.9;
+  box-shadow: 0 8px 0 rgba(124, 58, 237, 0.18);
 }
 
-/* Dusk glow: layered terracotta/honey/plum glow for the core halo. */
+/* Blueprint glow: layered magenta/cyan/violet glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 237, 213, 0.55) 0%, rgba(249, 115, 22, 0.30) 42%, rgba(245, 158, 11, 0.24) 62%, rgba(245, 158, 11, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(250, 232, 255, 0.55) 0%, rgba(217, 70, 239, 0.30) 42%, rgba(6, 182, 212, 0.24) 62%, rgba(6, 182, 212, 0) 76%);
 }
 
-/* Dusk core: a glowing honey orb with a terracotta halo. */
+/* Blueprint core: a glowing magenta orb with a violet halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #fffbeb 0%, #fcd34d 52%, #ea580c 100%);
-  box-shadow: 0 18px 40px rgba(124, 45, 18, 0.30), inset 0 3px 12px rgba(255, 255, 255, 0.55);
-  border: 1px solid #fed7aa;
+    radial-gradient(circle at 38% 34%, #fdf4ff 0%, #f0abfc 52%, #c026d3 100%);
+  box-shadow: 6px 6px 0 rgba(124, 58, 237, 0.30), inset 0 3px 12px rgba(255, 255, 255, 0.55);
+  border: 2px solid #ddd6fe;
 }
 
-/* Dusk traces around the core disc. */
+/* Blueprint traces around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(194, 65, 12, 0.30) 0px,
-    rgba(194, 65, 12, 0.30) 2px,
+    rgba(162, 28, 175, 0.30) 0px,
+    rgba(162, 28, 175, 0.30) 2px,
     transparent 2px,
     transparent 12px,
-    rgba(147, 51, 234, 0.26) 12px,
-    rgba(147, 51, 234, 0.26) 14px,
+    rgba(124, 58, 237, 0.26) 12px,
+    rgba(124, 58, 237, 0.26) 14px,
     transparent 14px,
     transparent 30px
   );
   -webkit-mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
   mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
-  border-radius: 1.75rem;
+  border-radius: 0.75rem;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(234, 88, 12, 0.26) 0deg 4deg,
+    rgba(192, 38, 211, 0.26) 0deg 4deg,
     transparent 4deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
   mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
-  border-radius: 1.75rem;
+  border-radius: 0.75rem;
 }
