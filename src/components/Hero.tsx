@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* mint circuit wash under the grid light */}
-      <div className="relative bg-gradient-to-b from-[#dbeafe] via-[#f1f5f9] to-[#ffedd5]">
+      <div className="relative bg-gradient-to-b from-[#ede9fe] via-[#faf7f2] to-[#ecfccb]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -159,7 +159,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           {STARS.map((s, i) => (
             <span
               key={i}
-              className="pop-twinkle absolute rounded-full bg-[#f59e0b]"
+              className="pop-twinkle absolute rounded-full bg-[#84cc16]"
               style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
             />
           ))}
@@ -176,7 +176,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
-              <div className="rounded-3xl bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-400 p-[4px] shadow-[0_16px_40px_-12px_rgba(154,52,18,0.35)]">
+              <div className="rounded-3xl bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-400 p-[4px] shadow-[0_16px_40px_-12px_rgba(76,29,149,0.35)]">
                 <div className="overflow-hidden rounded-2xl bg-paper ring-1 ring-ink/20">
                   <BannerCarousel />
                 </div>
