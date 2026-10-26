@@ -27,10 +27,10 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
       {/* crisp amethyst glow peeking from the card's top edge */}
       <div aria-hidden className="pointer-events-none absolute inset-x-10 top-0 h-24 rounded-b-full bg-gradient-to-b from-brand-200/60 via-popblue-200/30 to-transparent blur-sm" />
       <div className="relative p-3">
-        <div className="relative cursor-pointer overflow-hidden rounded-2xl ring-2 ring-brand-950/10" onClick={() => onQuickView(p)}>
+        <div className="relative cursor-pointer overflow-hidden rounded-[1.75rem] ring-2 ring-brand-950/10" onClick={() => onQuickView(p)}>
           <ProductImage product={p} />
           {p.badge === "New" && (
-            <span className="absolute left-3 top-3 rounded-md bg-gold-700 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-white shadow-[0_0_18px_-4px_rgba(161,98,7,0.8)] ring-1 ring-white/60">New</span>
+            <span className="absolute left-3 top-3 rounded-full bg-gold-700 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-white shadow-[0_0_18px_-4px_rgba(161,98,7,0.8)] ring-1 ring-white/60">New</span>
           )}
           {discountPct(p) > 0 && (
             <span className="starburst absolute -right-2 -top-2 flex h-16 w-16 items-center justify-center p-4 text-center text-[11px] font-black leading-tight">-{discountPct(p)}%</span>
@@ -38,7 +38,7 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
         </div>
       </div>
       <div className="flex flex-1 flex-col items-start gap-1.5 px-5 pb-4 pt-1 text-left">
-        <span className="rounded-md bg-brand-100 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.16em] text-brand-700 ring-1 ring-brand-200">{p.category}</span>
+        <span className="rounded-full bg-brand-100 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.16em] text-brand-700 ring-1 ring-brand-200">{p.category}</span>
         <h3 className="cursor-pointer text-[15px] font-bold leading-snug tracking-tight text-ink hover:text-brand-700" onClick={() => onQuickView(p)}>{p.name}</h3>
         <div className="flex items-center gap-1"><Stars rating={p.rating} /><span className="text-xs font-medium text-mute">{p.rating} ({p.reviews.toLocaleString()})</span></div>
         <span className={`w-fit px-2.5 py-1 text-[11px] font-bold ${p.stock === "In Stock" ? "rounded-full bg-gold-soft text-gold-deep ring-1 ring-gold/30" : "rounded-full bg-brand-100 text-brand-800 ring-1 ring-brand-200"}`}>{p.stock === "In Stock" ? "● In Stock" : "⚠ " + p.stock}</span>
