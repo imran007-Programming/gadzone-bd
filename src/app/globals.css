@@ -1,67 +1,67 @@
 @import "tailwindcss";
 
 @theme {
-  /* Terracotta Dune: warm terracotta primary, amber accent and
-     deep teal contrast on sun-baked sand paper. Cards are
-     compact squared panels with a terracotta top bar and a
-     warm desert shadow — the opposite of the previous Velvet
-     Vineyard's fully rounded panels, lime side bar and cool
-     violet tones. */
+  /* Arctic Indigo: deep indigo primary, sky accent and
+     mint contrast on icy slate paper. Cards are large
+     fully-rounded panels with an indigo left bar and a
+     cool mist shadow — the opposite of the previous
+     Terracotta Dune's squared panels, terracotta top bar
+     and warm desert tones. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = terracotta scale */
-  --color-brand-50: #fff7ed;
-  --color-brand-100: #ffedd5;
-  --color-brand-200: #fed7aa;
-  --color-brand-300: #fdba74;
-  --color-brand-400: #fb923c;
-  --color-brand-500: #f97316;
-  --color-brand-600: #ea580c;
-  --color-brand-700: #c2410c;
-  --color-brand-800: #9a3412;
-  --color-brand-900: #7c2d12;
-  --color-brand-950: #431407;
-  --color-brand: #ea580c;
-  --color-brand-dark: #c2410c;
-  --color-brand-deep: #7c2d12;
+  /* brand = indigo scale */
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-200: #c7d2fe;
+  --color-brand-300: #a5b4fc;
+  --color-brand-400: #818cf8;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+  --color-brand-800: #3730a3;
+  --color-brand-900: #312e81;
+  --color-brand-950: #1e1b4b;
+  --color-brand: #4f46e5;
+  --color-brand-dark: #4338ca;
+  --color-brand-deep: #312e81;
 
-  /* gold = amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #f59e0b;
-  --color-gold-deep: #92400e;
-  --color-gold-soft: #fef3c7;
+  /* gold = sky scale (name kept for legacy class refs) */
+  --color-gold-50: #f0f9ff;
+  --color-gold-100: #e0f2fe;
+  --color-gold-200: #bae6fd;
+  --color-gold-300: #7dd3fc;
+  --color-gold-400: #38bdf8;
+  --color-gold-500: #0ea5e9;
+  --color-gold-600: #0284c7;
+  --color-gold-700: #0369a1;
+  --color-gold-800: #075985;
+  --color-gold-900: #0c4a6e;
+  --color-gold-950: #082f49;
+  --color-gold: #0ea5e9;
+  --color-gold-deep: #0369a1;
+  --color-gold-soft: #e0f2fe;
 
-  /* popblue = deep teal scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0fdfa;
-  --color-popblue-100: #ccfbf1;
-  --color-popblue-200: #99f6e4;
-  --color-popblue-300: #5eead4;
-  --color-popblue-400: #2dd4bf;
-  --color-popblue-500: #14b8a6;
-  --color-popblue-600: #0d9488;
-  --color-popblue-700: #0f766e;
-  --color-popblue-800: #115e59;
-  --color-popblue-900: #134e4a;
-  --color-popblue-950: #042f2e;
-  --color-popblue: #0d9488;
-  --color-popblue-deep: #115e59;
-  --color-popblue-soft: #ccfbf1;
+  /* popblue = mint/emerald scale (name kept for legacy class refs) */
+  --color-popblue-50: #ecfdf5;
+  --color-popblue-100: #d1fae5;
+  --color-popblue-200: #a7f3d0;
+  --color-popblue-300: #6ee7b7;
+  --color-popblue-400: #34d399;
+  --color-popblue-500: #10b981;
+  --color-popblue-600: #059669;
+  --color-popblue-700: #047857;
+  --color-popblue-800: #065f46;
+  --color-popblue-900: #064e3b;
+  --color-popblue-950: #022c22;
+  --color-popblue: #10b981;
+  --color-popblue-deep: #065f46;
+  --color-popblue-soft: #d1fae5;
 
-  --color-ink: #292524;
-  --color-paper: #fdf6ec;
-  --color-mute: #78716c;
+  --color-ink: #1e293b;
+  --color-paper: #f1f5f9;
+  --color-mute: #64748b;
   --color-card: #ffffff;
-  --color-deep: #431407;
+  --color-deep: #1e1b4b;
 }
 
 html { scroll-behavior: smooth; }
@@ -76,25 +76,25 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fdf6ec;
+  background-color: #f1f5f9;
   background-image:
-    radial-gradient(ellipse 60% 38% at 8% -6%, rgba(234, 88, 12, 0.12), transparent 70%),
-    radial-gradient(ellipse 52% 34% at 96% 104%, rgba(245, 158, 11, 0.14), transparent 70%),
-    radial-gradient(ellipse 32% 24% at 88% 10%, rgba(13, 148, 136, 0.07), transparent 70%);
+    radial-gradient(ellipse 60% 38% at 8% -6%, rgba(79, 70, 229, 0.14), transparent 70%),
+    radial-gradient(ellipse 52% 34% at 96% 104%, rgba(14, 165, 233, 0.16), transparent 70%),
+    radial-gradient(ellipse 32% 24% at 88% 10%, rgba(16, 185, 129, 0.08), transparent 70%);
   background-size: auto, auto, auto;
-  color: #292524;
+  color: #1e293b;
 }
-::selection { background: #ea580c; color: #ffffff; }
+::selection { background: #4f46e5; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #f97316, #f59e0b); border-radius: 9999px; border: 2px solid #fdf6ec; }
-::-webkit-scrollbar-track { background: #ffedd5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #6366f1, #0ea5e9); border-radius: 9999px; border: 2px solid #f1f5f9; }
+::-webkit-scrollbar-track { background: #e0e7ff; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Dune type: relaxed, sun-warmed headline tracking. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Fjord type: tight, cool headline tracking. */
+h1, h2, h3 { letter-spacing: -0.03em; text-wrap: balance; }
 
-/* Dune sparks: terracotta/amber motes drifting gently up the page. */
+/* Fjord sparks: indigo/sky motes drifting gently up the page. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, 104vh, 0) rotate(0deg) scale(0.8); opacity: 0; }
   18% { opacity: 0.85; }
@@ -104,161 +104,161 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 14s linear infinite; }
 
-/* Dune sway: slow lateral drift of the warm light. */
+/* Fjord sway: slow lateral drift of the cool light. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(2vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(-2vw, -0.6rem, 0) scale(1.04); opacity: 0.75; }
 }
 .pop-drift { animation: signal-drift 26s ease-in-out infinite; }
 
-/* Dune bob: gentle rise and fall of the floating mote. */
+/* Fjord bob: gentle rise and fall of the floating mote. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) rotate(-2deg); }
   50% { transform: translateY(-6px) rotate(2deg); }
 }
 .pop-bob { animation: signal-bob 5.6s ease-in-out infinite; }
 
-/* Slow turn for the dune dial. */
+/* Slow turn for the fjord dial. */
 @keyframes dial-turn {
   to { transform: rotate(-360deg); }
 }
 .pop-spin { animation: dial-turn 60s linear infinite; }
 
-/* Dune shimmer: rhythmic gleam of the amber mote. */
+/* Fjord shimmer: rhythmic gleam of the sky mote. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.35; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.15); }
 }
 .pop-twinkle { animation: signal-blink 2.8s ease-in-out infinite; }
 
-/* Dune ticker: infinite marquee (leftward drift). */
+/* Fjord ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Dune check: bold terracotta -> amber -> teal bands. */
+/* Fjord check: bold indigo -> sky -> mint bands. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #ea580c 0 34%, #f59e0b 34% 67%, #0d9488 67% 100%);
+    linear-gradient(90deg, #4f46e5 0 34%, #0ea5e9 34% 67%, #10b981 67% 100%);
   background-size: 36px 36px;
 }
 
-/* Dune card: a compact squared white panel with a
-   terracotta top bar and a warm desert shadow — no side
-   bar, no rounded pill shape. On hover it lifts and the
-   top bar turns teal. */
+/* Fjord card: a large fully-rounded white panel with an
+   indigo left bar and a cool mist shadow — no top
+   bar, no squared corners. On hover it lifts and the
+   left bar turns sky. */
 .pop-lift {
   position: relative;
-  border: 1px solid #ffedd5;
-  border-top: 5px solid #ea580c;
+  border: 1px solid #e2e8f0;
+  border-left: 6px solid #4f46e5;
   background: #ffffff;
-  border-radius: 0.75rem;
-  box-shadow: 0 2px 6px -2px rgba(41, 37, 36, 0.10), 0 18px 38px -18px rgba(67, 20, 7, 0.30);
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 6px -2px rgba(30, 27, 75, 0.10), 0 18px 38px -18px rgba(30, 27, 75, 0.30);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
   transform: translateY(-4px);
-  border-color: #fed7aa;
-  border-top-color: #0d9488;
-  box-shadow: 0 4px 10px -2px rgba(41, 37, 36, 0.12), 0 28px 48px -20px rgba(67, 20, 7, 0.36);
+  border-color: #c7d2fe;
+  border-left-color: #0ea5e9;
+  box-shadow: 0 4px 10px -2px rgba(30, 27, 75, 0.12), 0 28px 48px -20px rgba(30, 27, 75, 0.36);
 }
 
-/* Dune glass: shared by modals and drawers — a frosted
-   warm-sand pane with a hairline terracotta border and a
-   soft desert shadow. */
+/* Fjord glass: shared by modals and drawers — a frosted
+   icy pane with a hairline indigo border and a
+   soft cool shadow. */
 .pop-glass {
-  background: rgba(253, 246, 236, 0.94);
+  background: rgba(248, 250, 252, 0.94);
   backdrop-filter: blur(22px) saturate(1.2);
   -webkit-backdrop-filter: blur(22px) saturate(1.2);
-  border: 1px solid #ffedd5;
-  border-radius: 0.75rem;
-  box-shadow: 0 18px 38px -18px rgba(41, 37, 36, 0.30);
+  border: 1px solid #e0e7ff;
+  border-radius: 1.5rem;
+  box-shadow: 0 18px 38px -18px rgba(30, 27, 75, 0.30);
 }
 
-/* Dune tag: a tilted amber diamond badge, rotated the
-   other way, with white text and a dashed white ring —
-   a rotated square, not a circle disc. */
+/* Fjord tag: a tilted sky pill badge, rotated the
+   other way, with white text and a solid white ring —
+   a pill, not a diamond square. */
 .starburst {
-  background: #f59e0b;
+  background: #0ea5e9;
   color: #ffffff;
   text-shadow: none;
-  border-radius: 0.5rem;
-  transform: rotate(-6deg);
-  box-shadow: 0 10px 24px -8px rgba(217, 119, 6, 0.55);
-  border: 2px dashed rgba(255, 255, 255, 0.9);
+  border-radius: 9999px;
+  transform: rotate(5deg);
+  box-shadow: 0 10px 24px -8px rgba(2, 132, 199, 0.55);
+  border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
-/* Dune lines: teal dots on sand, in a tighter grid. */
+/* Fjord lines: indigo dots on ice, in a wider grid. */
 .halftone {
   background-image:
-    radial-gradient(rgba(13, 148, 136, 0.28) 1.5px, transparent 1.5px);
-  background-size: 16px 16px;
+    radial-gradient(rgba(79, 70, 229, 0.28) 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
 }
 
-/* Dune seam: a terracotta-to-amber-to-teal gradient rule dividing sections. */
+/* Fjord seam: an indigo-to-sky-to-mint gradient rule dividing sections. */
 .zigzag {
   height: 0;
   border-top: none;
   height: 3px;
-  background-image: linear-gradient(90deg, #ea580c, #f59e0b, #0d9488);
+  background-image: linear-gradient(90deg, #4f46e5, #0ea5e9, #10b981);
   opacity: 0.9;
   border-radius: 9999px;
 }
 
-/* Dune band: a horizontal terracotta / amber / teal
+/* Fjord band: a horizontal indigo / sky / mint
    gradient across the section top. */
 .bazaar-awning {
   background-image: linear-gradient(
     90deg,
-    rgba(234, 88, 12, 0.95),
-    rgba(245, 158, 11, 0.95),
-    rgba(13, 148, 136, 0.95)
+    rgba(79, 70, 229, 0.95),
+    rgba(14, 165, 233, 0.95),
+    rgba(16, 185, 129, 0.95)
   );
   opacity: 0.97;
-  box-shadow: 0 12px 28px -12px rgba(41, 37, 36, 0.35);
+  box-shadow: 0 12px 28px -12px rgba(30, 27, 75, 0.35);
 }
 
-/* Dune glow: layered terracotta/amber/teal glow for the core halo. */
+/* Fjord glow: layered indigo/sky/mint glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(254, 243, 199, 0.70) 0%, rgba(234, 88, 12, 0.30) 42%, rgba(245, 158, 11, 0.24) 62%, rgba(245, 158, 11, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(224, 242, 254, 0.70) 0%, rgba(79, 70, 229, 0.30) 42%, rgba(14, 165, 233, 0.24) 62%, rgba(14, 165, 233, 0) 76%);
 }
 
-/* Dune core: an amber-to-terracotta orb with a warm halo. */
+/* Fjord core: an indigo-to-sky orb with a cool halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #fef3c7 0%, #f59e0b 52%, #ea580c 100%);
-  box-shadow: 0 20px 40px -16px rgba(41, 37, 36, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.55);
+    radial-gradient(circle at 38% 34%, #e0f2fe 0%, #0ea5e9 52%, #4f46e5 100%);
+  box-shadow: 0 20px 40px -16px rgba(30, 27, 75, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.55);
   border: none;
 }
 
-/* Dune traces around the core disc. */
+/* Fjord traces around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(234, 88, 12, 0.32) 0px,
-    rgba(234, 88, 12, 0.32) 2px,
+    rgba(79, 70, 229, 0.32) 0px,
+    rgba(79, 70, 229, 0.32) 2px,
     transparent 2px,
     transparent 12px,
-    rgba(245, 158, 11, 0.28) 12px,
-    rgba(245, 158, 11, 0.28) 14px,
+    rgba(14, 165, 233, 0.28) 12px,
+    rgba(14, 165, 233, 0.28) 14px,
     transparent 14px,
     transparent 30px
   );
   -webkit-mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
   mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
-  border-radius: 0.75rem;
+  border-radius: 1.5rem;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(245, 158, 11, 0.30) 0deg 4deg,
+    rgba(14, 165, 233, 0.30) 0deg 4deg,
     transparent 4deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
   mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
-  border-radius: 0.75rem;
+  border-radius: 1.5rem;
 }
