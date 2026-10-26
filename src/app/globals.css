@@ -1,67 +1,66 @@
 @import "tailwindcss";
 
 @theme {
-  /* Rosewood Dawn: vivid rose primary, warm amber spark and a
-     deep teal contrast accent on soft blush paper. Cards are
-     generously pill-rounded tiles with soft diffused shadows —
-     the opposite of the previous Indigo Dusk's deep indigo
-     palette, warm cream paper, medium rounding and hard offset
-     coral shadows. */
+  /* Emerald Circuit: deep emerald primary, vivid lime spark and a
+     navy contrast accent on pale mint paper. Cards are sharp,
+     angular tiles with hard offset lime shadows — the opposite
+     of the previous Rosewood Dawn's rose palette, blush paper,
+     pill rounding and soft diffused shadows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = rose scale */
-  --color-brand-50: #fff1f2;
-  --color-brand-100: #ffe4e6;
-  --color-brand-200: #fecdd3;
-  --color-brand-300: #fda4af;
-  --color-brand-400: #fb7185;
-  --color-brand-500: #f43f5e;
-  --color-brand-600: #e11d48;
-  --color-brand-700: #be123c;
-  --color-brand-800: #9f1239;
-  --color-brand-900: #881337;
-  --color-brand-950: #4c0519;
-  --color-brand: #e11d48;
-  --color-brand-dark: #be123c;
-  --color-brand-deep: #881337;
+  /* brand = emerald scale */
+  --color-brand-50: #ecfdf5;
+  --color-brand-100: #d1fae5;
+  --color-brand-200: #a7f3d0;
+  --color-brand-300: #6ee7b7;
+  --color-brand-400: #34d399;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-brand-900: #064e3b;
+  --color-brand-950: #022c22;
+  --color-brand: #059669;
+  --color-brand-dark: #047857;
+  --color-brand-deep: #064e3b;
 
-  /* gold = amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #f59e0b;
-  --color-gold-deep: #92400e;
-  --color-gold-soft: #fef3c7;
+  /* gold = lime scale (name kept for legacy class refs) */
+  --color-gold-50: #f7fee7;
+  --color-gold-100: #ecfccb;
+  --color-gold-200: #d9f99d;
+  --color-gold-300: #bef264;
+  --color-gold-400: #a3e635;
+  --color-gold-500: #84cc16;
+  --color-gold-600: #65a30d;
+  --color-gold-700: #4d7c0f;
+  --color-gold-800: #3f6212;
+  --color-gold-900: #365314;
+  --color-gold-950: #1a2e05;
+  --color-gold: #84cc16;
+  --color-gold-deep: #3f6212;
+  --color-gold-soft: #ecfccb;
 
-  /* popblue = deep teal scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0fdfa;
-  --color-popblue-100: #ccfbf1;
-  --color-popblue-200: #99f6e4;
-  --color-popblue-300: #5eead4;
-  --color-popblue-400: #2dd4bf;
-  --color-popblue-500: #14b8a6;
-  --color-popblue-600: #0d9488;
-  --color-popblue-700: #0f766e;
-  --color-popblue-800: #115e59;
-  --color-popblue-900: #134e4a;
-  --color-popblue-950: #042f2e;
-  --color-popblue: #0d9488;
-  --color-popblue-deep: #115e59;
-  --color-popblue-soft: #ccfbf1;
+  /* popblue = navy scale (name kept for legacy class refs) */
+  --color-popblue-50: #eff6ff;
+  --color-popblue-100: #dbeafe;
+  --color-popblue-200: #bfdbfe;
+  --color-popblue-300: #93c5fd;
+  --color-popblue-400: #60a5fa;
+  --color-popblue-500: #3b82f6;
+  --color-popblue-600: #2563eb;
+  --color-popblue-700: #1d4ed8;
+  --color-popblue-800: #1e40af;
+  --color-popblue-900: #1e3a8a;
+  --color-popblue-950: #172554;
+  --color-popblue: #2563eb;
+  --color-popblue-deep: #1e40af;
+  --color-popblue-soft: #dbeafe;
 
-  --color-ink: #3f0d22;
-  --color-paper: #fdf2f5;
-  --color-mute: #7a5a68;
+  --color-ink: #0c2b1e;
+  --color-paper: #f2fbf4;
+  --color-mute: #4d6b5c;
   --color-card: #ffffff;
-  --color-deep: #881337;
+  --color-deep: #064e3b;
 }
 
 html { scroll-behavior: smooth; }
@@ -76,25 +75,26 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fdf2f5;
+  background-color: #f2fbf4;
   background-image:
-    radial-gradient(ellipse 55% 34% at 12% -6%, rgba(225, 29, 72, 0.16), transparent 70%),
-    radial-gradient(ellipse 48% 32% at 94% 104%, rgba(13, 148, 136, 0.14), transparent 70%),
-    radial-gradient(ellipse 30% 22% at 50% 38%, rgba(245, 158, 11, 0.14), transparent 70%);
-  background-size: auto, auto, auto;
-  color: #3f0d22;
+    linear-gradient(rgba(5, 150, 105, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(5, 150, 105, 0.07) 1px, transparent 1px),
+    radial-gradient(ellipse 55% 34% at 12% -6%, rgba(5, 150, 105, 0.14), transparent 70%),
+    radial-gradient(ellipse 48% 32% at 94% 104%, rgba(37, 99, 235, 0.12), transparent 70%);
+  background-size: 44px 44px, 44px 44px, auto, auto;
+  color: #0c2b1e;
 }
-::selection { background: #fcd34d; color: #3f0d22; }
+::selection { background: #a3e635; color: #0c2b1e; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #e11d48, #f59e0b); border-radius: 9999px; border: 2px solid #fdf2f5; }
-::-webkit-scrollbar-track { background: #ffe4e6; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #059669, #84cc16); border-radius: 4px; border: 2px solid #f2fbf4; }
+::-webkit-scrollbar-track { background: #d1fae5; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Rosewood Dawn type: tight, confident headline tracking. */
-h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
+/* Circuit type: upright, confident headline tracking. */
+h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Dawn sparks: small rose/amber marks drifting down the page. */
+/* Circuit sparks: small emerald/lime marks drifting down the page. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, -4vh, 0) rotate(0deg) scale(0.8); opacity: 0; }
   18% { opacity: 0.85; }
@@ -104,156 +104,157 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 12s linear infinite; }
 
-/* Dawn sway: slow lateral drift of the warm light. */
+/* Circuit sway: slow lateral drift of the mint light. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(2vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(-2vw, 0.6rem, 0) scale(1.04); opacity: 0.75; }
 }
 .pop-drift { animation: signal-drift 24s ease-in-out infinite; }
 
-/* Dawn bob: gentle rise and fall of the floating mark. */
+/* Circuit bob: gentle rise and fall of the floating mark. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) rotate(2deg); }
   50% { transform: translateY(6px) rotate(-2deg); }
 }
 .pop-bob { animation: signal-bob 5.6s ease-in-out infinite; }
 
-/* Slow turn for the dawn dial. */
+/* Slow turn for the circuit dial. */
 @keyframes dial-turn {
   to { transform: rotate(-360deg); }
 }
 .pop-spin { animation: dial-turn 70s linear infinite; }
 
-/* Dawn shimmer: rhythmic gleam of the amber spark. */
+/* Circuit shimmer: rhythmic gleam of the lime spark. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.35; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.15); }
 }
 .pop-twinkle { animation: signal-blink 3.2s ease-in-out infinite; }
 
-/* Dawn ticker: infinite marquee (leftward drift). */
+/* Circuit ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 34s linear infinite; }
 
-/* Dawn check: rose -> amber -> teal bands. */
+/* Circuit check: emerald -> lime -> navy bands. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(45deg, #e11d48 0 10px, #f59e0b 10px 20px, #0d9488 20px 30px);
+    repeating-linear-gradient(45deg, #059669 0 10px, #84cc16 10px 20px, #2563eb 20px 30px);
   background-size: 42px 42px;
 }
 
-/* Rosewood Dawn card: a generously pill-rounded tile on white
-   with a hairline rose edge and a soft diffused rose shadow.
-   On hover it lifts straight up and the shadow deepens — a
-   soft, airy feel, no hard offset shadows, no crisp edges. */
+/* Emerald Circuit card: a sharp, angular tile on white with a
+   solid pine edge and a hard offset lime shadow. On hover it
+   shifts up-left and the shadow grows — a crisp, board-like
+   feel, no pill rounding, no soft diffused shadows. */
 .pop-lift {
   position: relative;
-  border: 1px solid #ffe4e6;
+  border: 2px solid #0c2b1e;
   background: #ffffff;
-  border-radius: 1.75rem;
-  box-shadow: 0 18px 36px rgba(225, 29, 72, 0.12);
+  border-radius: 0.75rem;
+  box-shadow: 6px 6px 0 rgba(132, 204, 22, 0.9);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  border-color: #fda4af;
-  box-shadow: 0 26px 48px rgba(225, 29, 72, 0.18);
+  transform: translate(-2px, -2px);
+  border-color: #059669;
+  box-shadow: 9px 9px 0 rgba(5, 150, 105, 0.85);
 }
 
-/* Dawn glass: shared by modals and drawers — a soft frosted
-   blush pane with a hairline rose edge and a soft shadow. */
+/* Circuit glass: shared by modals and drawers — a crisp frosted
+   mint pane with a solid pine edge and a hard offset shadow. */
 .pop-glass {
-  background: rgba(253, 242, 245, 0.94);
+  background: rgba(242, 251, 244, 0.94);
   backdrop-filter: blur(22px) saturate(1.2);
   -webkit-backdrop-filter: blur(22px) saturate(1.2);
-  border: 1px solid #fecdd3;
-  border-radius: 1.75rem;
-  box-shadow: 0 24px 48px rgba(225, 29, 72, 0.16);
+  border: 2px solid #0c2b1e;
+  border-radius: 0.75rem;
+  box-shadow: 8px 8px 0 rgba(132, 204, 22, 0.8);
 }
 
-/* Dawn seal: a solid amber circle badge with a rose ring,
-   tilted slightly like a dawn stamp. */
+/* Circuit seal: a solid lime square badge with a pine ring,
+   tilted slightly like a circuit stamp. */
 .starburst {
-  background: #f59e0b;
-  color: #ffffff;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-  border-radius: 9999px;
-  transform: rotate(6deg);
-  box-shadow: 0 10px 24px rgba(245, 158, 11, 0.35);
-  border: 2px solid #e11d48;
+  background: #84cc16;
+  color: #0c2b1e;
+  text-shadow: none;
+  border-radius: 0.5rem;
+  transform: rotate(-6deg);
+  box-shadow: 4px 4px 0 rgba(5, 150, 105, 0.9);
+  border: 2px solid #0c2b1e;
 }
 
-/* Dawn dots: faint rose dot pattern on blush. */
+/* Circuit grid: faint emerald blueprint grid on mint. */
 .halftone {
-  background-image: radial-gradient(rgba(225, 29, 72, 0.20) 1.5px, transparent 1.5px);
-  background-size: 26px 26px;
+  background-image:
+    linear-gradient(rgba(5, 150, 105, 0.16) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(5, 150, 105, 0.16) 1px, transparent 1px);
+  background-size: 22px 22px;
   background-position: 0 0;
 }
 
-/* Dawn seam: a dotted rose rule dividing sections. */
+/* Circuit seam: a thick diagonal-stripe rule dividing sections. */
 .zigzag {
-  height: 3px;
-  background-image: radial-gradient(circle, #e11d48 2px, transparent 2.5px);
-  background-size: 20px 3px;
+  height: 6px;
+  background-image: repeating-linear-gradient(-45deg, #059669 0 12px, #84cc16 12px 24px);
   background-repeat: repeat-x;
   background-position: 0 center;
   opacity: 0.9;
 }
 
-/* Dawn band: rose / amber / teal stripes across the section top. */
+/* Circuit band: emerald / lime / navy stripes across the section top. */
 .bazaar-awning {
   background-image: repeating-linear-gradient(
     90deg,
-    #e11d48 0 22px,
-    #f59e0b 22px 44px,
-    #0d9488 44px 66px
+    #059669 0 22px,
+    #84cc16 22px 44px,
+    #2563eb 44px 66px
   );
   opacity: 0.9;
-  box-shadow: 0 4px 12px rgba(190, 18, 60, 0.30);
+  box-shadow: 0 4px 12px rgba(6, 78, 59, 0.30);
 }
 
-/* Dawn glow: layered rose/amber/teal glow for the core halo. */
+/* Circuit glow: layered emerald/lime/navy glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 228, 230, 0.45) 0%, rgba(244, 63, 94, 0.28) 42%, rgba(245, 158, 11, 0.22) 62%, rgba(245, 158, 11, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(209, 250, 229, 0.45) 0%, rgba(16, 185, 129, 0.28) 42%, rgba(132, 204, 22, 0.22) 62%, rgba(132, 204, 22, 0) 76%);
 }
 
-/* Dawn core: a glowing amber orb with a rose halo. */
+/* Circuit core: a glowing lime orb with an emerald halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #fdf2f5 0%, #fcd34d 52%, #e11d48 100%);
-  box-shadow: 0 18px 36px rgba(136, 19, 55, 0.22), inset 0 3px 12px rgba(255, 255, 255, 0.55);
-  border: 2px solid rgba(255, 255, 255, 0.7);
+    radial-gradient(circle at 38% 34%, #f2fbf4 0%, #bef264 52%, #059669 100%);
+  box-shadow: 6px 6px 0 rgba(6, 78, 59, 0.35), inset 0 3px 12px rgba(255, 255, 255, 0.55);
+  border: 2px solid #0c2b1e;
 }
 
-/* Dawn ripples around the core disc. */
+/* Circuit traces around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(190, 18, 60, 0.30) 0px,
-    rgba(190, 18, 60, 0.30) 2px,
+    rgba(4, 120, 87, 0.30) 0px,
+    rgba(4, 120, 87, 0.30) 2px,
     transparent 2px,
     transparent 12px,
-    rgba(13, 148, 136, 0.26) 12px,
-    rgba(13, 148, 136, 0.26) 14px,
+    rgba(37, 99, 235, 0.26) 12px,
+    rgba(37, 99, 235, 0.26) 14px,
     transparent 14px,
     transparent 30px
   );
   -webkit-mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
   mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
-  border-radius: 9999px;
+  border-radius: 0.75rem;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(225, 29, 72, 0.26) 0deg 4deg,
+    rgba(5, 150, 105, 0.26) 0deg 4deg,
     transparent 4deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
   mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
-  border-radius: 9999px;
+  border-radius: 0.75rem;
 }

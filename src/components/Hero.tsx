@@ -75,8 +75,8 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* cool glacier wash under the grid light */}
-      <div className="relative bg-gradient-to-b from-[#ffedd5] via-[#fff7ed] to-[#fef9c3]">
+      {/* mint circuit wash under the grid light */}
+      <div className="relative bg-gradient-to-b from-[#d1fae5] via-[#f2fbf4] to-[#ecfccb]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -159,7 +159,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           {STARS.map((s, i) => (
             <span
               key={i}
-              className="pop-twinkle absolute rounded-full bg-[#eab308]"
+              className="pop-twinkle absolute rounded-full bg-[#84cc16]"
               style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
             />
           ))}
