@@ -1,67 +1,66 @@
 @import "tailwindcss";
 
 @theme {
-  /* Emerald Grove: deep-emerald primary, fresh lime accent and
-     forest contrast on mint-white paper. Cards are crisp
-     rounded panels with an emerald left bar and a soft
-     grove shadow — the opposite of the previous Amethyst
-     Dusk's violet bottom bar, warm cream paper and dusk
-     shadows. */
+  /* Coral Ember: vivid coral primary, honey amber accent and
+     deep navy contrast on warm blush paper. Cards are soft
+     rounded panels with a coral top bar and a warm ember
+     shadow — the opposite of the previous Emerald Grove's
+     deep-emerald left bar, lime sparks and mint-white paper. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = deep-emerald scale */
-  --color-brand-50: #ecfdf5;
-  --color-brand-100: #d1fae5;
-  --color-brand-200: #a7f3d0;
-  --color-brand-300: #6ee7b7;
-  --color-brand-400: #34d399;
-  --color-brand-500: #10b981;
-  --color-brand-600: #059669;
-  --color-brand-700: #047857;
-  --color-brand-800: #065f46;
-  --color-brand-900: #064e3b;
-  --color-brand-950: #022c22;
-  --color-brand: #059669;
-  --color-brand-dark: #047857;
-  --color-brand-deep: #064e3b;
+  /* brand = coral-rose scale */
+  --color-brand-50: #fff1f2;
+  --color-brand-100: #ffe4e6;
+  --color-brand-200: #fecdd3;
+  --color-brand-300: #fda4af;
+  --color-brand-400: #fb7185;
+  --color-brand-500: #f43f5e;
+  --color-brand-600: #e11d48;
+  --color-brand-700: #be123c;
+  --color-brand-800: #9f1239;
+  --color-brand-900: #881337;
+  --color-brand-950: #4c0519;
+  --color-brand: #e11d48;
+  --color-brand-dark: #be123c;
+  --color-brand-deep: #881337;
 
-  /* gold = fresh-lime scale (name kept for legacy class refs) */
-  --color-gold-50: #f7fee7;
-  --color-gold-100: #ecfccb;
-  --color-gold-200: #d9f99d;
-  --color-gold-300: #bef264;
-  --color-gold-400: #a3e635;
-  --color-gold-500: #84cc16;
-  --color-gold-600: #65a30d;
-  --color-gold-700: #4d7c0f;
-  --color-gold-800: #3f6212;
-  --color-gold-900: #365314;
-  --color-gold-950: #1a2e05;
-  --color-gold: #84cc16;
-  --color-gold-deep: #3f6212;
-  --color-gold-soft: #ecfccb;
+  /* gold = honey-amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #92400e;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = deep-forest scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0fdf4;
-  --color-popblue-100: #dcfce7;
-  --color-popblue-200: #bbf7d0;
-  --color-popblue-300: #86efac;
-  --color-popblue-400: #4ade80;
-  --color-popblue-500: #22c55e;
-  --color-popblue-600: #16a34a;
-  --color-popblue-700: #15803d;
-  --color-popblue-800: #166534;
-  --color-popblue-900: #14532d;
-  --color-popblue-950: #052e16;
-  --color-popblue: #15803d;
-  --color-popblue-deep: #14532d;
-  --color-popblue-soft: #dcfce7;
+  /* popblue = deep-navy scale (name kept for legacy class refs) */
+  --color-popblue-50: #eff6ff;
+  --color-popblue-100: #dbeafe;
+  --color-popblue-200: #bfdbfe;
+  --color-popblue-300: #93c5fd;
+  --color-popblue-400: #60a5fa;
+  --color-popblue-500: #3b82f6;
+  --color-popblue-600: #2563eb;
+  --color-popblue-700: #1d4ed8;
+  --color-popblue-800: #1e40af;
+  --color-popblue-900: #1e3a8a;
+  --color-popblue-950: #172554;
+  --color-popblue: #1d4ed8;
+  --color-popblue-deep: #1e3a8a;
+  --color-popblue-soft: #dbeafe;
 
-  --color-ink: #14291f;
-  --color-paper: #f6fbf4;
-  --color-mute: #5f7568;
+  --color-ink: #2a1216;
+  --color-paper: #fff7f4;
+  --color-mute: #7a5a5e;
   --color-card: #ffffff;
-  --color-deep: #022c22;
+  --color-deep: #4c0519;
 }
 
 html { scroll-behavior: smooth; }
@@ -76,25 +75,25 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f6fbf4;
+  background-color: #fff7f4;
   background-image:
-    radial-gradient(ellipse 60% 38% at 92% -6%, rgba(5, 150, 105, 0.14), transparent 70%),
-    radial-gradient(ellipse 52% 34% at 4% 104%, rgba(132, 204, 22, 0.16), transparent 70%),
-    radial-gradient(ellipse 32% 24% at 12% 10%, rgba(21, 128, 61, 0.10), transparent 70%);
+    radial-gradient(ellipse 60% 38% at 92% -6%, rgba(225, 29, 72, 0.13), transparent 70%),
+    radial-gradient(ellipse 52% 34% at 4% 104%, rgba(245, 158, 11, 0.16), transparent 70%),
+    radial-gradient(ellipse 32% 24% at 12% 10%, rgba(29, 78, 216, 0.09), transparent 70%);
   background-size: auto, auto, auto;
-  color: #14291f;
+  color: #2a1216;
 }
-::selection { background: #059669; color: #ffffff; }
+::selection { background: #e11d48; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #10b981, #84cc16); border-radius: 999px; border: 2px solid #f6fbf4; }
-::-webkit-scrollbar-track { background: #d1fae5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #f43f5e, #f59e0b); border-radius: 999px; border: 2px solid #fff7f4; }
+::-webkit-scrollbar-track { background: #ffe4e6; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Grove type: looser, airier headline tracking. */
-h1, h2, h3 { letter-spacing: -0.015em; text-wrap: balance; }
+/* Ember type: tighter, punchier headline tracking. */
+h1, h2, h3 { letter-spacing: -0.03em; text-wrap: balance; }
 
-/* Grove leaves: lime/emerald sparks drifting gently down the page. */
+/* Ember sparks: coral/amber embers drifting gently down the page. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, -4vh, 0) rotate(0deg) scale(0.8); opacity: 0; }
   18% { opacity: 0.85; }
@@ -104,161 +103,160 @@ h1, h2, h3 { letter-spacing: -0.015em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 12s linear infinite; }
 
-/* Grove sway: slow lateral drift of the canopy light. */
+/* Ember sway: slow lateral drift of the warm light. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-2vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(2vw, 0.6rem, 0) scale(1.04); opacity: 0.75; }
 }
 .pop-drift { animation: signal-drift 24s ease-in-out infinite; }
 
-/* Grove bob: gentle rise and fall of the floating leaf. */
+/* Ember bob: gentle rise and fall of the floating ember. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) rotate(2deg); }
   50% { transform: translateY(-6px) rotate(-2deg); }
 }
 .pop-bob { animation: signal-bob 5.6s ease-in-out infinite; }
 
-/* Slow turn for the grove dial. */
+/* Slow turn for the ember dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 60s linear infinite; }
 
-/* Grove shimmer: rhythmic gleam of the lime leaf. */
+/* Ember shimmer: rhythmic gleam of the amber ember. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.35; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.15); }
 }
 .pop-twinkle { animation: signal-blink 2.8s ease-in-out infinite; }
 
-/* Grove ticker: infinite marquee (rightward drift). */
+/* Ember ticker: infinite marquee (rightward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(-50%); }
   to { transform: translateX(0); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Grove check: bold emerald -> lime -> forest bands. */
+/* Ember check: bold coral -> amber -> navy bands. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #059669 0 34%, #84cc16 34% 67%, #15803d 67% 100%);
+    linear-gradient(90deg, #e11d48 0 34%, #f59e0b 34% 67%, #1d4ed8 67% 100%);
   background-size: 36px 36px;
 }
 
-/* Grove card: a crisp rounded white panel with an emerald
-   left bar and a soft grove shadow — no bottom bar, no
-   warm dusk tones. On hover it lifts and the left bar
-   turns lime. */
+/* Ember card: a soft rounded white panel with a coral
+   top bar and a warm ember shadow — no left bar, no
+   cool grove tones. On hover it lifts and the top bar
+   turns honey amber. */
 .pop-lift {
   position: relative;
-  border: 1px solid #dbe7dd;
-  border-left: 5px solid #059669;
+  border: 1px solid #f3ddd9;
+  border-top: 5px solid #e11d48;
   background: #ffffff;
-  border-radius: 1.25rem;
-  box-shadow: 0 2px 6px -2px rgba(20, 41, 31, 0.10), 0 18px 38px -18px rgba(2, 44, 34, 0.30);
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 6px -2px rgba(42, 18, 22, 0.10), 0 18px 38px -18px rgba(76, 5, 25, 0.30);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
   transform: translateY(-4px);
-  border-color: #d9f99d;
-  border-left-color: #84cc16;
-  box-shadow: 0 4px 10px -2px rgba(20, 41, 31, 0.12), 0 28px 48px -20px rgba(2, 44, 34, 0.36);
+  border-color: #fde68a;
+  border-top-color: #f59e0b;
+  box-shadow: 0 4px 10px -2px rgba(42, 18, 22, 0.12), 0 28px 48px -20px rgba(76, 5, 25, 0.36);
 }
 
-/* Grove glass: shared by modals and drawers — a frosted
-   mint-white pane with a hairline emerald border and a
-   soft grove shadow. */
+/* Ember glass: shared by modals and drawers — a frosted
+   warm-blush pane with a hairline coral border and a
+   soft ember shadow. */
 .pop-glass {
-  background: rgba(246, 251, 244, 0.94);
+  background: rgba(255, 247, 244, 0.94);
   backdrop-filter: blur(22px) saturate(1.2);
   -webkit-backdrop-filter: blur(22px) saturate(1.2);
-  border: 1px solid #a7f3d0;
-  border-radius: 1.25rem;
-  box-shadow: 0 18px 38px -18px rgba(20, 41, 31, 0.30);
+  border: 1px solid #fecdd3;
+  border-radius: 1.5rem;
+  box-shadow: 0 18px 38px -18px rgba(42, 18, 22, 0.30);
 }
 
-/* Grove tag: a fresh lime square badge, tilted slightly
-   the other way, with deep forest text — a tilted tile,
-   not a round disc. */
+/* Ember tag: a round coral disc badge, tilted slightly,
+   with white text — a round disc, not a square tile. */
 .starburst {
-  background: #84cc16;
-  color: #052e16;
+  background: #e11d48;
+  color: #ffffff;
   text-shadow: none;
-  border-radius: 0.75rem;
-  transform: rotate(-8deg);
-  box-shadow: 0 10px 24px -8px rgba(101, 163, 13, 0.55);
+  border-radius: 9999px;
+  transform: rotate(6deg);
+  box-shadow: 0 10px 24px -8px rgba(190, 18, 60, 0.55);
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Grove lines: crisp emerald dots on mint, in a wider grid. */
+/* Ember lines: crisp coral dots on blush, in a tighter grid. */
 .halftone {
   background-image:
-    radial-gradient(rgba(5, 150, 105, 0.20) 1.5px, transparent 1.5px);
-  background-size: 22px 22px;
+    radial-gradient(rgba(225, 29, 72, 0.20) 1.5px, transparent 1.5px);
+  background-size: 18px 18px;
 }
 
-/* Grove seam: an emerald-to-lime-to-forest gradient rule dividing sections. */
+/* Ember seam: a coral-to-amber-to-navy gradient rule dividing sections. */
 .zigzag {
   height: 0;
   border-top: none;
-  height: 4px;
-  background-image: linear-gradient(90deg, #059669, #84cc16, #15803d);
+  height: 5px;
+  background-image: linear-gradient(90deg, #e11d48, #f59e0b, #1d4ed8);
   opacity: 0.9;
   border-radius: 999px;
 }
 
-/* Grove band: a horizontal emerald / lime / forest
+/* Ember band: a horizontal coral / amber / navy
    gradient across the section top. */
 .bazaar-awning {
   background-image: linear-gradient(
     90deg,
-    rgba(5, 150, 105, 0.95),
-    rgba(132, 204, 22, 0.95),
-    rgba(21, 128, 61, 0.95)
+    rgba(225, 29, 72, 0.95),
+    rgba(245, 158, 11, 0.95),
+    rgba(29, 78, 216, 0.95)
   );
   opacity: 0.97;
-  box-shadow: 0 12px 28px -12px rgba(20, 41, 31, 0.35);
+  box-shadow: 0 12px 28px -12px rgba(42, 18, 22, 0.35);
 }
 
-/* Grove glow: layered emerald/lime/forest glow for the core halo. */
+/* Ember glow: layered coral/amber/navy glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(236, 252, 203, 0.70) 0%, rgba(5, 150, 105, 0.30) 42%, rgba(132, 204, 22, 0.24) 62%, rgba(132, 204, 22, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(254, 243, 199, 0.70) 0%, rgba(225, 29, 72, 0.30) 42%, rgba(245, 158, 11, 0.24) 62%, rgba(245, 158, 11, 0) 76%);
 }
 
-/* Grove core: a fresh lime-to-emerald orb with a forest halo. */
+/* Ember core: a honey-amber-to-coral orb with a navy halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #ecfccb 0%, #84cc16 52%, #059669 100%);
-  box-shadow: 0 20px 40px -16px rgba(20, 41, 31, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.55);
+    radial-gradient(circle at 38% 34%, #fef3c7 0%, #f59e0b 52%, #e11d48 100%);
+  box-shadow: 0 20px 40px -16px rgba(42, 18, 22, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.55);
   border: none;
 }
 
-/* Grove traces around the core disc. */
+/* Ember traces around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(5, 150, 105, 0.32) 0px,
-    rgba(5, 150, 105, 0.32) 2px,
+    rgba(225, 29, 72, 0.32) 0px,
+    rgba(225, 29, 72, 0.32) 2px,
     transparent 2px,
     transparent 12px,
-    rgba(132, 204, 22, 0.28) 12px,
-    rgba(132, 204, 22, 0.28) 14px,
+    rgba(245, 158, 11, 0.28) 12px,
+    rgba(245, 158, 11, 0.28) 14px,
     transparent 14px,
     transparent 30px
   );
   -webkit-mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
   mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
-  border-radius: 1.25rem;
+  border-radius: 1.5rem;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(132, 204, 22, 0.30) 0deg 4deg,
+    rgba(245, 158, 11, 0.30) 0deg 4deg,
     transparent 4deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
   mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
-  border-radius: 1.25rem;
+  border-radius: 1.5rem;
 }
