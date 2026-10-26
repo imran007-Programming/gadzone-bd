@@ -1,66 +1,66 @@
 @import "tailwindcss";
 
 @theme {
-  /* Aurora Violet: vivid violet primary, icy cyan accent and
-     fuchsia contrast on cool lavender paper. Cards are sharp
-     squared panels with a violet left bar and a cool aurora
-     shadow — the opposite of the previous Coral Ember's soft
-     rounded cards, coral top bar and warm blush paper. */
+  /* Emerald Grove: deep emerald primary, honey amber accent and
+     rose contrast on warm cream paper. Cards are soft rounded
+     panels with an emerald top bar and a warm grove shadow —
+     the opposite of the previous Aurora Violet's sharp squared
+     cards, violet left bar and cool lavender paper. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = violet scale */
-  --color-brand-50: #f5f3ff;
-  --color-brand-100: #ede9fe;
-  --color-brand-200: #ddd6fe;
-  --color-brand-300: #c4b5fd;
-  --color-brand-400: #a78bfa;
-  --color-brand-500: #8b5cf6;
-  --color-brand-600: #7c3aed;
-  --color-brand-700: #6d28d9;
-  --color-brand-800: #5b21b6;
-  --color-brand-900: #4c1d95;
-  --color-brand-950: #2e1065;
-  --color-brand: #7c3aed;
-  --color-brand-dark: #6d28d9;
-  --color-brand-deep: #4c1d95;
+  /* brand = emerald scale */
+  --color-brand-50: #ecfdf5;
+  --color-brand-100: #d1fae5;
+  --color-brand-200: #a7f3d0;
+  --color-brand-300: #6ee7b7;
+  --color-brand-400: #34d399;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-brand-900: #064e3b;
+  --color-brand-950: #022c22;
+  --color-brand: #059669;
+  --color-brand-dark: #047857;
+  --color-brand-deep: #064e3b;
 
-  /* gold = icy-cyan scale (name kept for legacy class refs) */
-  --color-gold-50: #ecfeff;
-  --color-gold-100: #cffafe;
-  --color-gold-200: #a5f3fc;
-  --color-gold-300: #67e8f9;
-  --color-gold-400: #22d3ee;
-  --color-gold-500: #06b6d4;
-  --color-gold-600: #0891b2;
-  --color-gold-700: #0e7490;
-  --color-gold-800: #155e75;
-  --color-gold-900: #164e63;
-  --color-gold-950: #083344;
-  --color-gold: #06b6d4;
-  --color-gold-deep: #155e75;
-  --color-gold-soft: #cffafe;
+  /* gold = honey-amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #92400e;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = fuchsia scale (name kept for legacy class refs) */
-  --color-popblue-50: #fdf4ff;
-  --color-popblue-100: #fae8ff;
-  --color-popblue-200: #f5d0fe;
-  --color-popblue-300: #f0abfc;
-  --color-popblue-400: #e879f9;
-  --color-popblue-500: #d946ef;
-  --color-popblue-600: #c026d3;
-  --color-popblue-700: #a21caf;
-  --color-popblue-800: #86198f;
-  --color-popblue-900: #701a75;
-  --color-popblue-950: #4a044e;
-  --color-popblue: #c026d3;
-  --color-popblue-deep: #86198f;
-  --color-popblue-soft: #fae8ff;
+  /* popblue = rose scale (name kept for legacy class refs) */
+  --color-popblue-50: #fff1f2;
+  --color-popblue-100: #ffe4e6;
+  --color-popblue-200: #fecdd3;
+  --color-popblue-300: #fda4af;
+  --color-popblue-400: #fb7185;
+  --color-popblue-500: #f43f5e;
+  --color-popblue-600: #e11d48;
+  --color-popblue-700: #be123c;
+  --color-popblue-800: #9f1239;
+  --color-popblue-900: #881337;
+  --color-popblue-950: #4c0519;
+  --color-popblue: #e11d48;
+  --color-popblue-deep: #9f1239;
+  --color-popblue-soft: #ffe4e6;
 
-  --color-ink: #1e1b4b;
-  --color-paper: #f5f3ff;
-  --color-mute: #6d6a8a;
+  --color-ink: #292524;
+  --color-paper: #fdfbf7;
+  --color-mute: #78716c;
   --color-card: #ffffff;
-  --color-deep: #2e1065;
+  --color-deep: #022c22;
 }
 
 html { scroll-behavior: smooth; }
@@ -75,25 +75,25 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f5f3ff;
+  background-color: #fdfbf7;
   background-image:
-    radial-gradient(ellipse 60% 38% at 8% -6%, rgba(124, 58, 237, 0.14), transparent 70%),
-    radial-gradient(ellipse 52% 34% at 96% 104%, rgba(6, 182, 212, 0.16), transparent 70%),
-    radial-gradient(ellipse 32% 24% at 88% 10%, rgba(217, 70, 239, 0.10), transparent 70%);
+    radial-gradient(ellipse 60% 38% at 8% -6%, rgba(5, 150, 105, 0.14), transparent 70%),
+    radial-gradient(ellipse 52% 34% at 96% 104%, rgba(245, 158, 11, 0.16), transparent 70%),
+    radial-gradient(ellipse 32% 24% at 88% 10%, rgba(225, 29, 72, 0.08), transparent 70%);
   background-size: auto, auto, auto;
-  color: #1e1b4b;
+  color: #292524;
 }
-::selection { background: #7c3aed; color: #ffffff; }
+::selection { background: #059669; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #8b5cf6, #06b6d4); border-radius: 4px; border: 2px solid #f5f3ff; }
-::-webkit-scrollbar-track { background: #ede9fe; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #10b981, #f59e0b); border-radius: 6px; border: 2px solid #fdfbf7; }
+::-webkit-scrollbar-track { background: #d1fae5; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Aurora type: crisp, wide-open headline tracking. */
-h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
+/* Grove type: warm, slightly open headline tracking. */
+h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Aurora sparks: violet/cyan motes drifting gently up the page. */
+/* Grove sparks: emerald/amber motes drifting gently up the page. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, 104vh, 0) rotate(0deg) scale(0.8); opacity: 0; }
   18% { opacity: 0.85; }
@@ -101,162 +101,163 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
   78% { transform: translate3d(-8px, 22vh, 0) rotate(100deg) scale(1.05); opacity: 0.5; }
   100% { transform: translate3d(4px, -4vh, 0) rotate(160deg) scale(1.1); opacity: 0; }
 }
-.pop-fall { animation: signal-rise 12s linear infinite; }
+.pop-fall { animation: signal-rise 14s linear infinite; }
 
-/* Aurora sway: slow lateral drift of the cool light. */
+/* Grove sway: slow lateral drift of the warm light. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(2vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(-2vw, -0.6rem, 0) scale(1.04); opacity: 0.75; }
 }
-.pop-drift { animation: signal-drift 24s ease-in-out infinite; }
+.pop-drift { animation: signal-drift 26s ease-in-out infinite; }
 
-/* Aurora bob: gentle rise and fall of the floating mote. */
+/* Grove bob: gentle rise and fall of the floating mote. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) rotate(-2deg); }
   50% { transform: translateY(-6px) rotate(2deg); }
 }
 .pop-bob { animation: signal-bob 5.6s ease-in-out infinite; }
 
-/* Slow turn for the aurora dial. */
+/* Slow turn for the grove dial. */
 @keyframes dial-turn {
   to { transform: rotate(-360deg); }
 }
 .pop-spin { animation: dial-turn 60s linear infinite; }
 
-/* Aurora shimmer: rhythmic gleam of the cyan mote. */
+/* Grove shimmer: rhythmic gleam of the amber mote. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.35; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.15); }
 }
 .pop-twinkle { animation: signal-blink 2.8s ease-in-out infinite; }
 
-/* Aurora ticker: infinite marquee (leftward drift). */
+/* Grove ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Aurora check: bold violet -> cyan -> fuchsia bands. */
+/* Grove check: bold emerald -> amber -> rose bands. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #7c3aed 0 34%, #06b6d4 34% 67%, #c026d3 67% 100%);
+    linear-gradient(90deg, #059669 0 34%, #f59e0b 34% 67%, #e11d48 67% 100%);
   background-size: 36px 36px;
 }
 
-/* Aurora card: a sharp squared white panel with a violet
-   left bar and a cool aurora shadow — no top bar, no
-   warm ember tones. On hover it lifts and the left bar
-   turns icy cyan. */
+/* Grove card: a soft fully-rounded white panel with an
+   emerald top bar and a warm grove shadow — no left bar,
+   no cool tones. On hover it lifts and the top bar
+   turns honey amber. */
 .pop-lift {
   position: relative;
-  border: 1px solid #ddd6fe;
-  border-left: 5px solid #7c3aed;
+  border: 1px solid #d1fae5;
+  border-top: 6px solid #059669;
   background: #ffffff;
-  border-radius: 0.75rem;
-  box-shadow: 0 2px 6px -2px rgba(30, 27, 75, 0.10), 0 18px 38px -18px rgba(46, 16, 101, 0.30);
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 6px -2px rgba(41, 37, 36, 0.10), 0 18px 38px -18px rgba(2, 44, 34, 0.30);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
   transform: translateY(-4px);
-  border-color: #a5f3fc;
-  border-left-color: #06b6d4;
-  box-shadow: 0 4px 10px -2px rgba(30, 27, 75, 0.12), 0 28px 48px -20px rgba(46, 16, 101, 0.36);
+  border-color: #fde68a;
+  border-top-color: #f59e0b;
+  box-shadow: 0 4px 10px -2px rgba(41, 37, 36, 0.12), 0 28px 48px -20px rgba(2, 44, 34, 0.36);
 }
 
-/* Aurora glass: shared by modals and drawers — a frosted
-   cool-lavender pane with a hairline violet border and a
-   soft aurora shadow. */
+/* Grove glass: shared by modals and drawers — a frosted
+   warm-cream pane with a hairline emerald border and a
+   soft grove shadow. */
 .pop-glass {
-  background: rgba(245, 243, 255, 0.94);
+  background: rgba(253, 251, 247, 0.94);
   backdrop-filter: blur(22px) saturate(1.2);
   -webkit-backdrop-filter: blur(22px) saturate(1.2);
-  border: 1px solid #ddd6fe;
-  border-radius: 0.75rem;
-  box-shadow: 0 18px 38px -18px rgba(30, 27, 75, 0.30);
+  border: 1px solid #d1fae5;
+  border-radius: 1.5rem;
+  box-shadow: 0 18px 38px -18px rgba(41, 37, 36, 0.30);
 }
 
-/* Aurora tag: a square violet tile badge, tilted slightly,
-   with white text — a square tile, not a round disc. */
+/* Grove tag: a round rose disc badge, tilted slightly,
+   with white text and a dashed white ring — a round disc,
+   not a square tile. */
 .starburst {
-  background: #7c3aed;
+  background: #e11d48;
   color: #ffffff;
   text-shadow: none;
-  border-radius: 0.5rem;
-  transform: rotate(-6deg);
-  box-shadow: 0 10px 24px -8px rgba(109, 40, 217, 0.55);
-  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 9999px;
+  transform: rotate(8deg);
+  box-shadow: 0 10px 24px -8px rgba(190, 18, 60, 0.55);
+  border: 2px dashed rgba(255, 255, 255, 0.85);
 }
 
-/* Aurora lines: crisp violet dots on lavender, in a wider grid. */
+/* Grove lines: warm amber dots on cream, in a tighter grid. */
 .halftone {
   background-image:
-    radial-gradient(rgba(124, 58, 237, 0.20) 1.5px, transparent 1.5px);
-  background-size: 22px 22px;
+    radial-gradient(rgba(245, 158, 11, 0.28) 1.5px, transparent 1.5px);
+  background-size: 18px 18px;
 }
 
-/* Aurora seam: a violet-to-cyan-to-fuchsia gradient rule dividing sections. */
+/* Grove seam: an emerald-to-amber-to-rose gradient rule dividing sections. */
 .zigzag {
   height: 0;
   border-top: none;
-  height: 4px;
-  background-image: linear-gradient(90deg, #7c3aed, #06b6d4, #c026d3);
+  height: 3px;
+  background-image: linear-gradient(90deg, #059669, #f59e0b, #e11d48);
   opacity: 0.9;
-  border-radius: 2px;
+  border-radius: 9999px;
 }
 
-/* Aurora band: a horizontal violet / cyan / fuchsia
+/* Grove band: a horizontal emerald / amber / rose
    gradient across the section top. */
 .bazaar-awning {
   background-image: linear-gradient(
     90deg,
-    rgba(124, 58, 237, 0.95),
-    rgba(6, 182, 212, 0.95),
-    rgba(192, 38, 211, 0.95)
+    rgba(5, 150, 105, 0.95),
+    rgba(245, 158, 11, 0.95),
+    rgba(225, 29, 72, 0.95)
   );
   opacity: 0.97;
-  box-shadow: 0 12px 28px -12px rgba(30, 27, 75, 0.35);
+  box-shadow: 0 12px 28px -12px rgba(41, 37, 36, 0.35);
 }
 
-/* Aurora glow: layered violet/cyan/fuchsia glow for the core halo. */
+/* Grove glow: layered emerald/amber/rose glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(207, 250, 254, 0.70) 0%, rgba(124, 58, 237, 0.30) 42%, rgba(6, 182, 212, 0.24) 62%, rgba(6, 182, 212, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(254, 243, 199, 0.70) 0%, rgba(5, 150, 105, 0.30) 42%, rgba(245, 158, 11, 0.24) 62%, rgba(245, 158, 11, 0) 76%);
 }
 
-/* Aurora core: a cyan-to-violet-to-fuchsia orb with a cool halo. */
+/* Grove core: an amber-to-emerald-to-rose orb with a warm halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #cffafe 0%, #06b6d4 52%, #7c3aed 100%);
-  box-shadow: 0 20px 40px -16px rgba(30, 27, 75, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.55);
+    radial-gradient(circle at 38% 34%, #fef3c7 0%, #f59e0b 52%, #059669 100%);
+  box-shadow: 0 20px 40px -16px rgba(41, 37, 36, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.55);
   border: none;
 }
 
-/* Aurora traces around the core disc. */
+/* Grove traces around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(124, 58, 237, 0.32) 0px,
-    rgba(124, 58, 237, 0.32) 2px,
+    rgba(5, 150, 105, 0.32) 0px,
+    rgba(5, 150, 105, 0.32) 2px,
     transparent 2px,
     transparent 12px,
-    rgba(6, 182, 212, 0.28) 12px,
-    rgba(6, 182, 212, 0.28) 14px,
+    rgba(245, 158, 11, 0.28) 12px,
+    rgba(245, 158, 11, 0.28) 14px,
     transparent 14px,
     transparent 30px
   );
   -webkit-mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
   mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
-  border-radius: 0.75rem;
+  border-radius: 1.5rem;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(6, 182, 212, 0.30) 0deg 4deg,
+    rgba(245, 158, 11, 0.30) 0deg 4deg,
     transparent 4deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
   mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
-  border-radius: 0.75rem;
+  border-radius: 1.5rem;
 }
