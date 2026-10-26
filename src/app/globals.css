@@ -1,67 +1,67 @@
 @import "tailwindcss";
 
 @theme {
-  /* Emerald Harvest: a warm, organic palette — deep emerald ink,
-     golden amber warmth and soft teal on warm cream paper.
-     Cards are big soft rounded pillows with a gentle layered
-     shadow — the opposite of the previous Violet Dusk's cool
-     lavender paper, sharp 0.5rem geometric panels and hard
-     offset shadows. */
+  /* Cobalt Current: a cool, crisp, techy palette — deep navy ink,
+     vivid cobalt blue primary, bright cyan signal and a coral
+     spark accent on icy slate paper. Cards are sharp, flat
+     panels with thin slate borders and one crisp shadow — the
+     opposite of the previous Emerald Harvest's warm cream paper,
+     big soft 1.5rem pillows and layered warm shadows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = emerald scale */
-  --color-brand-50: #ecfdf5;
-  --color-brand-100: #d1fae5;
-  --color-brand-200: #a7f3d0;
-  --color-brand-300: #6ee7b7;
-  --color-brand-400: #34d399;
-  --color-brand-500: #10b981;
-  --color-brand-600: #059669;
-  --color-brand-700: #047857;
-  --color-brand-800: #065f46;
-  --color-brand-900: #064e3b;
-  --color-brand-950: #022c22;
-  --color-brand: #047857;
-  --color-brand-dark: #065f46;
-  --color-brand-deep: #064e3b;
+  /* brand = cobalt blue scale */
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-200: #bfdbfe;
+  --color-brand-300: #93c5fd;
+  --color-brand-400: #60a5fa;
+  --color-brand-500: #3b82f6;
+  --color-brand-600: #2563eb;
+  --color-brand-700: #1d4ed8;
+  --color-brand-800: #1e40af;
+  --color-brand-900: #1e3a8a;
+  --color-brand-950: #172554;
+  --color-brand: #1d4ed8;
+  --color-brand-dark: #1e40af;
+  --color-brand-deep: #1e3a8a;
 
-  /* gold = amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #d97706;
-  --color-gold-deep: #b45309;
-  --color-gold-soft: #fef3c7;
+  /* gold = coral orange scale (name kept for legacy class refs) */
+  --color-gold-50: #fff7ed;
+  --color-gold-100: #ffedd5;
+  --color-gold-200: #fed7aa;
+  --color-gold-300: #fdba74;
+  --color-gold-400: #fb923c;
+  --color-gold-500: #f97316;
+  --color-gold-600: #ea580c;
+  --color-gold-700: #c2410c;
+  --color-gold-800: #9a3412;
+  --color-gold-900: #7c2d12;
+  --color-gold-950: #431407;
+  --color-gold: #ea580c;
+  --color-gold-deep: #c2410c;
+  --color-gold-soft: #ffedd5;
 
-  /* popblue = deep teal scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0fdfa;
-  --color-popblue-100: #ccfbf1;
-  --color-popblue-200: #99f6e4;
-  --color-popblue-300: #5eead4;
-  --color-popblue-400: #2dd4bf;
-  --color-popblue-500: #14b8a6;
-  --color-popblue-600: #0d9488;
-  --color-popblue-700: #0f766e;
-  --color-popblue-800: #115e59;
-  --color-popblue-900: #134e4a;
-  --color-popblue-950: #042f2e;
-  --color-popblue: #0d9488;
-  --color-popblue-deep: #0f766e;
-  --color-popblue-soft: #ccfbf1;
+  /* popblue = bright cyan scale (name kept for legacy class refs) */
+  --color-popblue-50: #ecfeff;
+  --color-popblue-100: #cffafe;
+  --color-popblue-200: #a5f3fc;
+  --color-popblue-300: #67e8f9;
+  --color-popblue-400: #22d3ee;
+  --color-popblue-500: #06b6d4;
+  --color-popblue-600: #0891b2;
+  --color-popblue-700: #0e7490;
+  --color-popblue-800: #155e75;
+  --color-popblue-900: #164e63;
+  --color-popblue-950: #083344;
+  --color-popblue: #0891b2;
+  --color-popblue-deep: #0e7490;
+  --color-popblue-soft: #cffafe;
 
-  --color-ink: #1c1917;
-  --color-paper: #fffbeb;
-  --color-mute: #78716c;
+  --color-ink: #0f172a;
+  --color-paper: #f1f5f9;
+  --color-mute: #475569;
   --color-card: #ffffff;
-  --color-deep: #1c1917;
+  --color-deep: #0f172a;
 }
 
 html { scroll-behavior: smooth; }
@@ -76,187 +76,181 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fffbeb;
+  background-color: #f1f5f9;
   background-image:
-    radial-gradient(ellipse 60% 38% at 8% -6%, rgba(5, 150, 105, 0.14), transparent 70%),
-    radial-gradient(ellipse 52% 34% at 96% 104%, rgba(217, 119, 6, 0.13), transparent 70%),
-    radial-gradient(ellipse 32% 24% at 88% 10%, rgba(13, 148, 136, 0.12), transparent 70%);
-  background-size: auto, auto, auto;
-  color: #1c1917;
+    linear-gradient(rgba(37, 99, 235, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.05) 1px, transparent 1px);
+  background-size: 44px 44px, 44px 44px;
+  color: #0f172a;
 }
-::selection { background: #d97706; color: #ffffff; }
+::selection { background: #2563eb; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #059669, #d97706); border-radius: 999px; border: 2px solid #fffbeb; }
-::-webkit-scrollbar-track { background: #fef3c7; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #2563eb, #06b6d4); border-radius: 4px; border: 2px solid #f1f5f9; }
+::-webkit-scrollbar-track { background: #e2e8f0; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Harvest type: warm, generous headlines with soft spacing. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Current type: tight, uppercase-friendly headlines with crisp spacing. */
+h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Harvest drift: soft golden motes floating gently upward,
-   swaying side to side like seeds on a breeze. */
+/* Current rise: straight vertical signal travelling upward,
+   no sway, no rotation — a clean data pulse. */
 @keyframes signal-rise {
-  0% { transform: translate3d(0, 6vh, 0) rotate(0deg) scale(0.8); opacity: 0; }
-  15% { opacity: 0.85; }
-  50% { transform: translate3d(16px, -48vh, 0) rotate(24deg) scale(1); }
-  80% { transform: translate3d(-14px, -82vh, 0) rotate(48deg) scale(1.05); opacity: 0.5; }
-  100% { transform: translate3d(8px, -108vh, 0) rotate(72deg) scale(1.1); opacity: 0; }
+  0% { transform: translate3d(0, 6vh, 0) scale(0.8); opacity: 0; }
+  15% { opacity: 0.9; }
+  50% { transform: translate3d(0, -48vh, 0) scale(1); }
+  80% { transform: translate3d(0, -82vh, 0) scale(1); opacity: 0.5; }
+  100% { transform: translate3d(0, -108vh, 0) scale(1); opacity: 0; }
 }
-.pop-fall { animation: signal-rise 16s linear infinite; }
+.pop-fall { animation: signal-rise 14s linear infinite; }
 
-/* Harvest sway: slow breathing drift of the warm light. */
+/* Current drift: short, level side-to-side sweep of cool light. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(-1.5vw, 0, 0) scale(1); opacity: 0.55; }
-  50% { transform: translate3d(1.5vw, -0.4rem, 0) scale(1.03); opacity: 0.8; }
+  0%, 100% { transform: translate3d(-0.75vw, 0, 0) scale(1); opacity: 0.5; }
+  50% { transform: translate3d(0.75vw, 0, 0) scale(1.02); opacity: 0.75; }
 }
-.pop-drift { animation: signal-drift 20s ease-in-out infinite; }
+.pop-drift { animation: signal-drift 16s ease-in-out infinite; }
 
-/* Harvest bob: gentle rise and fall, like a leaf on water. */
+/* Current bob: small, quick, level lift — no tilt. */
 @keyframes signal-bob {
-  0%, 100% { transform: translateY(0) rotate(-2deg); }
-  50% { transform: translateY(-8px) rotate(2deg); }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
 }
-.pop-bob { animation: signal-bob 6.4s ease-in-out infinite; }
+.pop-bob { animation: signal-bob 4.8s ease-in-out infinite; }
 
-/* Slow turn for the harvest dial. */
+/* Slow turn for the current dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
-.pop-spin { animation: dial-turn 44s linear infinite; }
+.pop-spin { animation: dial-turn 36s linear infinite; }
 
-/* Harvest shimmer: slow warm gleam. */
+/* Current blink: crisp cyan pulse. */
 @keyframes signal-blink {
-  0%, 100% { opacity: 0.4; transform: scale(0.92); }
-  50% { opacity: 1; transform: scale(1.12); }
+  0%, 100% { opacity: 0.35; transform: scale(0.95); }
+  50% { opacity: 1; transform: scale(1.08); }
 }
-.pop-twinkle { animation: signal-blink 3.4s ease-in-out infinite; }
+.pop-twinkle { animation: signal-blink 2.8s ease-in-out infinite; }
 
-/* Harvest ticker: infinite marquee (leftward drift). */
+/* Current ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
-.pop-ticker { animation: signal-ticker 34s linear infinite; }
+.pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Harvest check: bold emerald -> amber -> teal bands. */
+/* Current check: crisp cobalt -> cyan -> coral bands. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #059669 0 34%, #d97706 34% 67%, #0d9488 67% 100%);
-  background-size: 36px 36px;
+    linear-gradient(90deg, #2563eb 0 34%, #06b6d4 34% 67%, #ea580c 67% 100%);
+  background-size: 28px 28px;
 }
 
-/* Harvest card: a big soft rounded pillow with a warm amber
-   hairline and a gentle layered shadow — no hard offset,
-   no sharp corners. On hover it lifts softly and the
-   shadow deepens. */
+/* Current card: a sharp flat panel with a thin slate border
+   and one crisp shadow — no pillow rounding, no warm glow.
+   On hover it steps up 2px and the border turns cobalt. */
 .pop-lift {
   position: relative;
-  border: 1px solid #fde68a;
+  border: 1px solid #cbd5e1;
   background: #ffffff;
-  border-radius: 1.5rem;
-  box-shadow: 0 18px 36px -18px rgba(120, 53, 15, 0.28), 0 4px 12px -6px rgba(6, 78, 59, 0.12);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 14px -6px rgba(15, 23, 42, 0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-6px);
-  border-color: #fcd34d;
-  box-shadow: 0 28px 48px -20px rgba(120, 53, 15, 0.34), 0 8px 18px -8px rgba(6, 78, 59, 0.16);
+  transform: translateY(-2px);
+  border-color: #93c5fd;
+  box-shadow: 0 10px 22px -8px rgba(37, 99, 235, 0.32);
 }
 
-/* Harvest glass: shared by modals and drawers — a warm frosted
-   pane with an amber hairline and a soft layered shadow. */
+/* Current glass: shared by modals and drawers — a cool frosted
+   pane with a thin slate border and a crisp shadow. */
 .pop-glass {
-  background: rgba(255, 251, 235, 0.92);
-  backdrop-filter: blur(22px) saturate(1.15);
-  -webkit-backdrop-filter: blur(22px) saturate(1.15);
-  border: 1px solid #fde68a;
-  border-radius: 1.5rem;
-  box-shadow: 0 24px 44px -20px rgba(120, 53, 15, 0.32);
+  background: rgba(241, 245, 249, 0.92);
+  backdrop-filter: blur(18px) saturate(1.1);
+  -webkit-backdrop-filter: blur(18px) saturate(1.1);
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  box-shadow: 0 16px 32px -16px rgba(15, 23, 42, 0.3);
 }
 
-/* Harvest tag: an emerald-to-amber gradient pill with white text,
-   tilted playfully — the opposite of Dusk's upright crisp badge. */
+/* Current tag: an upright cobalt-to-coral gradient square badge
+   with a thin white ring — no tilt, no pill. */
 .starburst {
-  background: linear-gradient(135deg, #059669, #d97706);
+  background: linear-gradient(135deg, #2563eb, #ea580c);
   color: #ffffff;
   text-shadow: none;
-  border-radius: 999px;
-  transform: rotate(-4deg);
-  box-shadow: 0 12px 24px -8px rgba(217, 119, 6, 0.55);
-  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 0.375rem;
+  transform: rotate(0deg);
+  box-shadow: 0 8px 18px -6px rgba(37, 99, 235, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.9);
 }
 
-/* Harvest dots: soft amber polka dots on cream. */
+/* Current grid: fine cool blueprint grid lines on slate. */
 .halftone {
   background-image:
-    radial-gradient(rgba(217, 119, 6, 0.16) 1.5px, transparent 1.5px);
-  background-size: 26px 26px;
+    linear-gradient(rgba(37, 99, 235, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.10) 1px, transparent 1px);
+  background-size: 28px 28px;
 }
 
-/* Harvest rule: a thick soft emerald/amber/teal gradient line
-   with fully rounded ends. */
+/* Current rule: a thin, straight cobalt/cyan/coral line
+   with square ends. */
 .zigzag {
-  height: 6px;
+  height: 2px;
   border-top: none;
-  background-image: linear-gradient(90deg, #059669, #d97706, #0d9488);
+  background-image: linear-gradient(90deg, #2563eb, #06b6d4, #ea580c);
   opacity: 0.9;
-  border-radius: 999px;
+  border-radius: 0;
 }
 
-/* Harvest band: an emerald / amber / teal gradient across the
-   section top, with softly rounded bottom corners. */
+/* Current band: a flat cobalt bar across the section top,
+   square corners, no gradient wash. */
 .bazaar-awning {
-  background-image: linear-gradient(
-    135deg,
-    rgba(4, 120, 87, 0.95),
-    rgba(217, 119, 6, 0.95),
-    rgba(13, 148, 136, 0.95)
-  );
-  opacity: 0.97;
-  box-shadow: 0 12px 28px -12px rgba(4, 120, 87, 0.45);
-  border-radius: 0 0 1rem 1rem;
+  background-image: linear-gradient(90deg, #1d4ed8, #2563eb);
+  opacity: 1;
+  box-shadow: 0 4px 12px -6px rgba(37, 99, 235, 0.5);
+  border-radius: 0;
 }
 
-/* Harvest glow: layered emerald/amber glow for the core halo. */
+/* Current glow: layered cobalt/cyan glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 251, 235, 0.9) 0%, rgba(110, 231, 183, 0.30) 42%, rgba(217, 119, 6, 0.22) 62%, rgba(217, 119, 6, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(241, 245, 249, 0.9) 0%, rgba(147, 197, 253, 0.35) 42%, rgba(6, 182, 212, 0.22) 62%, rgba(6, 182, 212, 0) 76%);
 }
 
-/* Harvest core: an amber-to-emerald orb with a warm halo. */
+/* Current core: a flat cobalt disc with a crisp cyan ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #fffbeb 0%, #fcd34d 40%, #d97706 72%, #064e3b 100%);
-  box-shadow: 0 18px 40px -12px rgba(217, 119, 6, 0.5), inset 0 3px 12px rgba(255, 255, 255, 0.55);
+    radial-gradient(circle at 50% 50%, #3b82f6 0%, #1d4ed8 68%, #1e3a8a 100%);
+  box-shadow: 0 12px 28px -10px rgba(37, 99, 235, 0.55), 0 0 0 3px rgba(103, 232, 249, 0.5);
   border: none;
 }
 
-/* Harvest traces around the core disc. */
+/* Current traces around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(5, 150, 105, 0.30) 0px,
-    rgba(5, 150, 105, 0.30) 2px,
-    transparent 2px,
-    transparent 12px,
-    rgba(217, 119, 6, 0.26) 12px,
-    rgba(217, 119, 6, 0.26) 14px,
+    rgba(37, 99, 235, 0.30) 0px,
+    rgba(37, 99, 235, 0.30) 1px,
+    transparent 1px,
     transparent 14px,
+    rgba(6, 182, 212, 0.26) 14px,
+    rgba(6, 182, 212, 0.26) 15px,
+    transparent 15px,
     transparent 30px
   );
   -webkit-mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
   mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
-  border-radius: 1.5rem;
+  border-radius: 0.5rem;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(251, 191, 36, 0.30) 0deg 4deg,
-    transparent 4deg 14deg
+    rgba(34, 211, 238, 0.30) 0deg 2deg,
+    transparent 2deg 12deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
   mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
-  border-radius: 1.5rem;
+  border-radius: 0.5rem;
 }
