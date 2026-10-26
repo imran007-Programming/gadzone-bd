@@ -1,68 +1,67 @@
 @import "tailwindcss";
 
 @theme {
-  /* Indigo Twilight: a dusk-city palette — deep indigo primary,
-     warm amber accent and vivid fuchsia highlights on soft
-     lavender-white paper. Cards are fully rounded, floating panels
-     with a soft layered shadow and a thin gradient rim — the
-     opposite of the previous Verdant Grove's crisp ledger panels
-     with a thick emerald TOP strip and a hard offset print shadow
-     on warm ivory paper. */
+  /* Terracotta Market: a warm open-air market palette — burnt
+     terracotta primary, deep teal accent and sunny marigold
+     highlights on warm cream paper. Cards are bold stamped panels
+     with a thick rim and a hard offset print shadow — the
+     opposite of the previous Indigo Twilight's fully rounded,
+     softly floating lavender panels with a thin gradient rim. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = indigo scale */
-  --color-brand-50: #eef2ff;
-  --color-brand-100: #e0e7ff;
-  --color-brand-200: #c7d2fe;
-  --color-brand-300: #a5b4fc;
-  --color-brand-400: #818cf8;
-  --color-brand-500: #6366f1;
-  --color-brand-600: #4f46e5;
-  --color-brand-700: #4338ca;
-  --color-brand-800: #3730a3;
-  --color-brand-900: #312e81;
-  --color-brand-950: #1e1b4b;
-  --color-brand: #4f46e5;
-  --color-brand-dark: #4338ca;
-  --color-brand-deep: #312e81;
+  /* brand = terracotta scale */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-brand-950: #431407;
+  --color-brand: #ea580c;
+  --color-brand-dark: #c2410c;
+  --color-brand-deep: #7c2d12;
 
-  /* gold = amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #f59e0b;
-  --color-gold-deep: #b45309;
-  --color-gold-soft: #fef3c7;
+  /* gold = teal scale (name kept for legacy class refs) */
+  --color-gold-50: #f0fdfa;
+  --color-gold-100: #ccfbf1;
+  --color-gold-200: #99f6e4;
+  --color-gold-300: #5eead4;
+  --color-gold-400: #2dd4bf;
+  --color-gold-500: #14b8a6;
+  --color-gold-600: #0d9488;
+  --color-gold-700: #0f766e;
+  --color-gold-800: #115e59;
+  --color-gold-900: #134e4a;
+  --color-gold-950: #042f2e;
+  --color-gold: #0d9488;
+  --color-gold-deep: #0f766e;
+  --color-gold-soft: #ccfbf1;
 
-  /* popblue = fuchsia scale (name kept for legacy class refs) */
-  --color-popblue-50: #fdf4ff;
-  --color-popblue-100: #fae8ff;
-  --color-popblue-200: #f5d0fe;
-  --color-popblue-300: #f0abfc;
-  --color-popblue-400: #e879f9;
-  --color-popblue-500: #d946ef;
-  --color-popblue-600: #c026d3;
-  --color-popblue-700: #a21caf;
-  --color-popblue-800: #86198f;
-  --color-popblue-900: #701a75;
-  --color-popblue-950: #4a044e;
-  --color-popblue: #d946ef;
-  --color-popblue-deep: #86198f;
-  --color-popblue-soft: #fae8ff;
+  /* popblue = marigold scale (name kept for legacy class refs) */
+  --color-popblue-50: #fffbeb;
+  --color-popblue-100: #fef3c7;
+  --color-popblue-200: #fde68a;
+  --color-popblue-300: #fcd34d;
+  --color-popblue-400: #fbbf24;
+  --color-popblue-500: #f59e0b;
+  --color-popblue-600: #d97706;
+  --color-popblue-700: #b45309;
+  --color-popblue-800: #92400e;
+  --color-popblue-900: #78350f;
+  --color-popblue-950: #451a03;
+  --color-popblue: #f59e0b;
+  --color-popblue-deep: #b45309;
+  --color-popblue-soft: #fef3c7;
 
-  --color-ink: #1e1b4b;
-  --color-paper: #f5f3ff;
-  --color-mute: #6d6a8a;
+  --color-ink: #1c1917;
+  --color-paper: #fdf6ec;
+  --color-mute: #78716c;
   --color-card: #ffffff;
-  --color-deep: #1e1b4b;
+  --color-deep: #1c1917;
 }
 
 html { scroll-behavior: smooth; }
@@ -77,180 +76,180 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f5f3ff;
+  background-color: #fdf6ec;
   background-image:
-    radial-gradient(ellipse 60% 38% at 8% -6%, rgba(79, 70, 229, 0.16), transparent 70%),
-    radial-gradient(ellipse 52% 34% at 96% 104%, rgba(245, 158, 11, 0.18), transparent 70%),
-    radial-gradient(ellipse 32% 24% at 88% 10%, rgba(217, 70, 239, 0.12), transparent 70%);
+    radial-gradient(ellipse 60% 38% at 8% -6%, rgba(234, 88, 12, 0.14), transparent 70%),
+    radial-gradient(ellipse 52% 34% at 96% 104%, rgba(13, 148, 136, 0.14), transparent 70%),
+    radial-gradient(ellipse 32% 24% at 88% 10%, rgba(245, 158, 11, 0.12), transparent 70%);
   background-size: auto, auto, auto;
-  color: #1e1b4b;
+  color: #1c1917;
 }
-::selection { background: #4f46e5; color: #ffffff; }
+::selection { background: #ea580c; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #4f46e5, #d946ef); border-radius: 999px; border: 2px solid #f5f3ff; }
-::-webkit-scrollbar-track { background: #e0e7ff; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ea580c, #0d9488); border-radius: 999px; border: 2px solid #fdf6ec; }
+::-webkit-scrollbar-track { background: #ffedd5; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Twilight type: tight, editorial headline tracking. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Market type: sturdy, upright headline tracking. */
+h1, h2, h3 { letter-spacing: 0; text-wrap: balance; }
 
-/* Twilight embers: indigo/amber embers drifting gently DOWN the
-   page, swaying side to side as they fall. */
+/* Market embers: terracotta/teal sparks drifting gently UP the
+   page, swaying side to side as they rise. */
 @keyframes signal-rise {
-  0% { transform: translate3d(-4px, -4vh, 0) rotate(0deg) scale(0.8); opacity: 0; }
+  0% { transform: translate3d(-4px, 4vh, 0) rotate(0deg) scale(0.8); opacity: 0; }
   18% { opacity: 0.85; }
-  50% { transform: translate3d(10px, 46vh, 0) rotate(40deg) scale(1); }
-  78% { transform: translate3d(-8px, 78vh, 0) rotate(100deg) scale(1.05); opacity: 0.5; }
-  100% { transform: translate3d(4px, 104vh, 0) rotate(160deg) scale(1.1); opacity: 0; }
+  50% { transform: translate3d(10px, -46vh, 0) rotate(40deg) scale(1); }
+  78% { transform: translate3d(-8px, -78vh, 0) rotate(100deg) scale(1.05); opacity: 0.5; }
+  100% { transform: translate3d(4px, -104vh, 0) rotate(160deg) scale(1.1); opacity: 0; }
 }
-.pop-fall { animation: signal-rise 16s linear infinite; }
+.pop-fall { animation: signal-rise 14s linear infinite; }
 
-/* Twilight sway: slow lateral drift of the dusk light. */
+/* Market sway: slow lateral drift of the warm market light. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-2vw, 0, 0) scale(1); opacity: 0.5; }
-  50% { transform: translate3d(2vw, 0.6rem, 0) scale(1.04); opacity: 0.75; }
+  50% { transform: translate3d(2vw, -0.6rem, 0) scale(1.04); opacity: 0.75; }
 }
-.pop-drift { animation: signal-drift 22s ease-in-out infinite; }
+.pop-drift { animation: signal-drift 18s ease-in-out infinite; }
 
-/* Twilight bob: gentle rise and fall of the floating ember. */
+/* Market bob: gentle rise and fall of the floating spark. */
 @keyframes signal-bob {
-  0%, 100% { transform: translateY(0) rotate(2deg); }
-  50% { transform: translateY(-8px) rotate(-2deg); }
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-6px) rotate(2deg); }
 }
-.pop-bob { animation: signal-bob 4.8s ease-in-out infinite; }
+.pop-bob { animation: signal-bob 5.6s ease-in-out infinite; }
 
-/* Slow turn for the twilight dial. */
+/* Slow turn for the market dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
-.pop-spin { animation: dial-turn 48s linear infinite; }
+.pop-spin { animation: dial-turn 36s linear infinite; }
 
-/* Twilight shimmer: rhythmic gleam of the amber ember. */
+/* Market shimmer: rhythmic gleam of the marigold spark. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.35; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.15); }
 }
-.pop-twinkle { animation: signal-blink 3.4s ease-in-out infinite; }
+.pop-twinkle { animation: signal-blink 2.8s ease-in-out infinite; }
 
-/* Twilight ticker: infinite marquee (rightward drift). */
+/* Market ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
-.pop-ticker { animation: signal-ticker 36s linear infinite; }
+.pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Twilight check: bold indigo -> amber -> fuchsia bands. */
+/* Market check: bold terracotta -> teal -> marigold bands. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #4f46e5 0 34%, #f59e0b 34% 67%, #d946ef 67% 100%);
-  background-size: 28px 28px;
+    linear-gradient(90deg, #ea580c 0 34%, #0d9488 34% 67%, #f59e0b 67% 100%);
+  background-size: 36px 36px;
 }
 
-/* Twilight card: a fully rounded floating panel with a thin
-   gradient rim and a soft layered shadow — no top strip, no hard
-   offset shadow, no square corners. On hover it floats higher,
-   the rim turns fuchsia and the shadow deepens. */
+/* Market card: a bold stamped panel with a thick terracotta rim
+   and a hard offset print shadow — no soft blur, no pill corners.
+   On hover it stamps upward, the rim turns teal and the offset
+   shadow deepens. */
 .pop-lift {
   position: relative;
-  border: 1px solid #e0e7ff;
+  border: 2px solid #fed7aa;
   background: #ffffff;
-  border-radius: 1.5rem;
-  box-shadow: 0 2px 6px rgba(79, 70, 229, 0.08), 0 18px 36px -18px rgba(79, 70, 229, 0.28);
+  border-radius: 1rem;
+  box-shadow: 6px 6px 0 rgba(194, 65, 12, 0.16);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-6px) scale(1.01);
-  border-color: #f0abfc;
-  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.10), 0 28px 48px -20px rgba(217, 70, 239, 0.38);
+  transform: translate(-3px, -3px);
+  border-color: #5eead4;
+  box-shadow: 9px 9px 0 rgba(13, 148, 136, 0.22);
 }
 
-/* Twilight glass: shared by modals and drawers — a frosted
-   lavender pane with a hairline indigo border and a soft shadow. */
+/* Market glass: shared by modals and drawers — a frosted
+   cream pane with a hairline terracotta border and a hard shadow. */
 .pop-glass {
-  background: rgba(245, 243, 255, 0.94);
+  background: rgba(253, 246, 236, 0.94);
   backdrop-filter: blur(22px) saturate(1.2);
   -webkit-backdrop-filter: blur(22px) saturate(1.2);
-  border: 1px solid #c7d2fe;
-  border-radius: 1.5rem;
-  box-shadow: 0 18px 40px -18px rgba(79, 70, 229, 0.35);
+  border: 2px solid #fdba74;
+  border-radius: 1rem;
+  box-shadow: 8px 8px 0 rgba(194, 65, 12, 0.18);
 }
 
-/* Twilight tag: an amber-to-fuchsia gradient pill with white text
-   and a soft glow — a dusk ticket, tilted the other way. */
+/* Market tag: a teal-to-terracotta gradient pill with white text
+   and a warm glow — a market stamp, tilted the other way. */
 .starburst {
-  background: linear-gradient(135deg, #f59e0b, #d946ef);
+  background: linear-gradient(135deg, #0d9488, #ea580c);
   color: #ffffff;
   text-shadow: none;
   border-radius: 999px;
-  transform: rotate(3deg);
-  box-shadow: 0 10px 24px -8px rgba(217, 70, 239, 0.55);
+  transform: rotate(-3deg);
+  box-shadow: 0 10px 24px -8px rgba(234, 88, 12, 0.55);
   border: 2px solid rgba(255, 255, 255, 0.85);
 }
 
-/* Twilight lines: indigo diagonal pinstripes on lavender. */
+/* Market lines: teal vertical pinstripes on cream. */
 .halftone {
   background-image:
-    repeating-linear-gradient(45deg, rgba(79, 70, 229, 0.14) 0 1.5px, transparent 1.5px 26px);
+    repeating-linear-gradient(90deg, rgba(13, 148, 136, 0.14) 0 1.5px, transparent 1.5px 26px);
 }
 
-/* Twilight tape: a dotted indigo / amber rule dividing sections. */
+/* Market tape: a dotted terracotta / teal rule dividing sections. */
 .zigzag {
   height: 0;
   border-top: none;
   height: 8px;
-  background-image: radial-gradient(circle, #4f46e5 2.5px, transparent 3px), radial-gradient(circle, #f59e0b 2.5px, transparent 3px);
+  background-image: radial-gradient(circle, #ea580c 2.5px, transparent 3px), radial-gradient(circle, #0d9488 2.5px, transparent 3px);
   background-size: 24px 8px, 24px 8px;
   background-position: 0 0, 12px 0;
   opacity: 0.9;
   border-radius: 2px;
 }
 
-/* Twilight band: an indigo / fuchsia / amber
+/* Market band: a terracotta / marigold / teal
    gradient across the section top. */
 .bazaar-awning {
   background-image: linear-gradient(
     135deg,
-    rgba(79, 70, 229, 0.95),
-    rgba(217, 70, 239, 0.95),
-    rgba(245, 158, 11, 0.95)
+    rgba(234, 88, 12, 0.95),
+    rgba(245, 158, 11, 0.95),
+    rgba(13, 148, 136, 0.95)
   );
   opacity: 0.97;
-  box-shadow: 0 12px 28px -12px rgba(79, 70, 229, 0.45);
-  border-radius: 999px;
+  box-shadow: 0 12px 28px -12px rgba(194, 65, 12, 0.45);
+  border-radius: 1rem;
 }
 
-/* Twilight glow: layered indigo/fuchsia/amber glow for the core halo. */
+/* Market glow: layered terracotta/marigold/teal glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(224, 231, 255, 0.70) 0%, rgba(99, 102, 241, 0.30) 42%, rgba(217, 70, 239, 0.24) 62%, rgba(217, 70, 239, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 237, 213, 0.70) 0%, rgba(249, 115, 22, 0.30) 42%, rgba(13, 148, 136, 0.24) 62%, rgba(13, 148, 136, 0) 76%);
 }
 
-/* Twilight core: an amber-to-fuchsia-to-indigo orb with a soft halo. */
+/* Market core: a teal-to-marigold-to-terracotta orb with a warm halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #fef3c7 0%, #f59e0b 40%, #d946ef 72%, #4f46e5 100%);
-  box-shadow: 0 18px 40px -12px rgba(79, 70, 229, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.55);
+    radial-gradient(circle at 38% 34%, #ccfbf1 0%, #0d9488 40%, #f59e0b 72%, #ea580c 100%);
+  box-shadow: 0 18px 40px -12px rgba(194, 65, 12, 0.45), inset 0 3px 12px rgba(255, 255, 255, 0.55);
   border: none;
 }
 
-/* Twilight traces around the core disc. */
+/* Market traces around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(79, 70, 229, 0.32) 0px,
-    rgba(79, 70, 229, 0.32) 2px,
+    rgba(234, 88, 12, 0.32) 0px,
+    rgba(234, 88, 12, 0.32) 2px,
     transparent 2px,
     transparent 12px,
-    rgba(217, 70, 239, 0.28) 12px,
-    rgba(217, 70, 239, 0.28) 14px,
+    rgba(13, 148, 136, 0.28) 12px,
+    rgba(13, 148, 136, 0.28) 14px,
     transparent 14px,
     transparent 30px
   );
   -webkit-mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
   mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
-  border-radius: 1.5rem;
+  border-radius: 1rem;
 }
 .sun-rays {
   background: repeating-conic-gradient(
@@ -260,5 +259,5 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
   mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
-  border-radius: 1.5rem;
+  border-radius: 1rem;
 }
