@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* mint circuit wash under the grid light */}
-      <div className="relative bg-gradient-to-b from-[#ede9fe] via-[#fdf9f3] to-[#fef3c7]">
+      <div className="relative bg-gradient-to-b from-[#dbeafe] via-[#f1f5f9] to-[#ffedd5]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
