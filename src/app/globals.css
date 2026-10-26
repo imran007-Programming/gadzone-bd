@@ -1,66 +1,67 @@
 @import "tailwindcss";
 
 @theme {
-  /* Cobalt Harbor: electric cobalt primary, lime spark
-     and cyan contrast on icy blue paper. Cards are big
-     pill-rounded harbor buoys with a lime keel accent —
-     the opposite of the previous Plum Editorial's
-     near-square slabs and plum top-accent bars. */
+  /* Terracotta Kiln: burnt terracotta primary, amber ember
+     and rose contrast on warm cream paper. Cards are
+     sharp-cornered kiln tiles with a hard offset shadow
+     and an amber top edge — the opposite of the previous
+     Cobalt Harbor's pill-rounded buoys, lime keel line
+     and soft diffused shadows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = cobalt blue scale */
-  --color-brand-50: #eff6ff;
-  --color-brand-100: #dbeafe;
-  --color-brand-200: #bfdbfe;
-  --color-brand-300: #93c5fd;
-  --color-brand-400: #60a5fa;
-  --color-brand-500: #2563eb;
-  --color-brand-600: #1d4ed8;
-  --color-brand-700: #1e40af;
-  --color-brand-800: #1e3a8a;
-  --color-brand-900: #172554;
-  --color-brand-950: #0a1a3f;
-  --color-brand: #1d4ed8;
-  --color-brand-dark: #1e40af;
-  --color-brand-deep: #172554;
+  /* brand = terracotta scale */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #ea580c;
+  --color-brand-600: #c2410c;
+  --color-brand-700: #9a3412;
+  --color-brand-800: #7c2d12;
+  --color-brand-900: #431407;
+  --color-brand-950: #2a0f05;
+  --color-brand: #c2410c;
+  --color-brand-dark: #9a3412;
+  --color-brand-deep: #431407;
 
-  /* gold = lime scale (name kept for legacy class refs) */
-  --color-gold-50: #f7fee7;
-  --color-gold-100: #ecfccb;
-  --color-gold-200: #d9f99d;
-  --color-gold-300: #bef264;
-  --color-gold-400: #a3e635;
-  --color-gold-500: #84cc16;
-  --color-gold-600: #65a30d;
-  --color-gold-700: #4d7c0f;
-  --color-gold-800: #365314;
-  --color-gold-900: #1a2e05;
-  --color-gold-950: #0f1d02;
-  --color-gold: #84cc16;
-  --color-gold-deep: #365314;
-  --color-gold-soft: #ecfccb;
+  /* gold = amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #92400e;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = cyan scale (name kept for legacy class refs) */
-  --color-popblue-50: #ecfeff;
-  --color-popblue-100: #cffafe;
-  --color-popblue-200: #a5f3fc;
-  --color-popblue-300: #67e8f9;
-  --color-popblue-400: #22d3ee;
-  --color-popblue-500: #06b6d4;
-  --color-popblue-600: #0891b2;
-  --color-popblue-700: #0e7490;
-  --color-popblue-800: #155e75;
-  --color-popblue-900: #164e63;
-  --color-popblue-950: #083344;
-  --color-popblue: #0891b2;
-  --color-popblue-deep: #155e75;
-  --color-popblue-soft: #cffafe;
+  /* popblue = ember rose scale (name kept for legacy class refs) */
+  --color-popblue-50: #fff1f2;
+  --color-popblue-100: #ffe4e6;
+  --color-popblue-200: #fecdd3;
+  --color-popblue-300: #fda4af;
+  --color-popblue-400: #fb7185;
+  --color-popblue-500: #f43f5e;
+  --color-popblue-600: #e11d48;
+  --color-popblue-700: #be123c;
+  --color-popblue-800: #9f1239;
+  --color-popblue-900: #881337;
+  --color-popblue-950: #4c0519;
+  --color-popblue: #e11d48;
+  --color-popblue-deep: #9f1239;
+  --color-popblue-soft: #ffe4e6;
 
-  --color-ink: #0a1f3d;
-  --color-paper: #eef6ff;
-  --color-mute: #4a6a8a;
-  --color-card: #ffffff;
-  --color-deep: #0a1a3f;
+  --color-ink: #2b1d12;
+  --color-paper: #fdf6ec;
+  --color-mute: #7a5c43;
+  --color-card: #fffdf8;
+  --color-deep: #2a0f05;
 }
 
 html { scroll-behavior: smooth; }
@@ -75,25 +76,25 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #eef6ff;
+  background-color: #fdf6ec;
   background-image:
-    radial-gradient(ellipse 60% 38% at 92% -6%, rgba(37, 99, 235, 0.16), transparent 70%),
-    radial-gradient(ellipse 52% 34% at 4% 104%, rgba(163, 230, 53, 0.20), transparent 70%),
-    radial-gradient(ellipse 32% 24% at 12% 10%, rgba(6, 182, 212, 0.14), transparent 70%);
+    radial-gradient(ellipse 60% 38% at 92% -6%, rgba(234, 88, 12, 0.14), transparent 70%),
+    radial-gradient(ellipse 52% 34% at 4% 104%, rgba(245, 158, 11, 0.18), transparent 70%),
+    radial-gradient(ellipse 32% 24% at 12% 10%, rgba(225, 29, 72, 0.10), transparent 70%);
   background-size: auto, auto, auto;
-  color: #0a1f3d;
+  color: #2b1d12;
 }
-::selection { background: #1d4ed8; color: #ffffff; }
+::selection { background: #c2410c; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #2563eb, #06b6d4); border-radius: 9999px; border: 2px solid #eef6ff; }
-::-webkit-scrollbar-track { background: #dbeafe; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ea580c, #f59e0b); border-radius: 4px; border: 2px solid #fdf6ec; }
+::-webkit-scrollbar-track { background: #ffedd5; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Harbor type: wide, bold headline tracking. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Kiln type: tight, sturdy headline tracking. */
+h1, h2, h3 { letter-spacing: 0.005em; text-wrap: balance; }
 
-/* Harbor sparks: cobalt/cyan/lime embers drifting gently down the page. */
+/* Kiln sparks: terracotta/amber embers drifting gently down the page. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, -4vh, 0) rotate(0deg) scale(0.8); opacity: 0; }
   18% { opacity: 0.85; }
@@ -103,161 +104,160 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 12s linear infinite; }
 
-/* Harbor sway: slow lateral drift of the harbor light. */
+/* Kiln sway: slow lateral drift of the kiln light. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(2vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(-2vw, 0.6rem, 0) scale(1.04); opacity: 0.75; }
 }
 .pop-drift { animation: signal-drift 24s ease-in-out infinite; }
 
-/* Harbor bob: gentle rise and fall of the floating buoy. */
+/* Kiln bob: gentle rise and fall of the floating ember. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) rotate(2deg); }
   50% { transform: translateY(6px) rotate(-2deg); }
 }
 .pop-bob { animation: signal-bob 5.6s ease-in-out infinite; }
 
-/* Slow turn for the harbor dial. */
+/* Slow turn for the kiln dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 60s linear infinite; }
 
-/* Harbor shimmer: rhythmic gleam of the lime spark. */
+/* Kiln shimmer: rhythmic gleam of the amber ember. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.35; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.15); }
 }
 .pop-twinkle { animation: signal-blink 2.8s ease-in-out infinite; }
 
-/* Harbor ticker: infinite marquee (leftward drift). */
+/* Kiln ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Harbor check: bold cobalt -> cyan -> lime bands. */
+/* Kiln check: bold terracotta -> amber -> rose bands. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #2563eb 0 34%, #06b6d4 34% 67%, #a3e635 67% 100%);
+    linear-gradient(90deg, #ea580c 0 34%, #f59e0b 34% 67%, #e11d48 67% 100%);
   background-size: 36px 36px;
 }
 
-/* Harbor buoy card: a big pill-rounded white buoy with a
-   soft cobalt shadow and a lime keel line underneath.
-   On hover it floats higher — no top accent bar, no
-   near-square editorial slab feel. */
+/* Kiln tile card: a sharp-cornered cream tile with a hard
+   offset terracotta shadow and an amber top edge.
+   On hover it lifts straight up — no pill rounding, no
+   soft diffused shadow, no bottom keel line. */
 .pop-lift {
   position: relative;
-  border: 1px solid #bfdbfe;
-  border-bottom: 4px solid #a3e635;
-  background: #ffffff;
-  border-radius: 1.5rem;
-  box-shadow: 0 16px 32px -18px rgba(10, 26, 63, 0.35);
+  border: 1px solid #fed7aa;
+  border-top: 4px solid #f59e0b;
+  background: #fffdf8;
+  border-radius: 0.75rem;
+  box-shadow: 5px 5px 0 0 rgba(154, 52, 18, 0.22);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-6px);
-  border-color: #60a5fa;
-  border-bottom-color: #84cc16;
-  box-shadow: 0 26px 40px -20px rgba(10, 26, 63, 0.42);
+  transform: translate(-2px, -2px);
+  border-color: #fb923c;
+  border-top-color: #ea580c;
+  box-shadow: 8px 8px 0 0 rgba(154, 52, 18, 0.30);
 }
 
-/* Harbor glass: shared by modals and drawers — a frosted
-   icy pane with a hairline cobalt border and a soft
-   diffused shadow. */
+/* Kiln glass: shared by modals and drawers — a frosted
+   warm cream pane with a hairline terracotta border and
+   a hard offset shadow. */
 .pop-glass {
-  background: rgba(238, 246, 255, 0.94);
+  background: rgba(253, 246, 236, 0.94);
   backdrop-filter: blur(22px) saturate(1.2);
   -webkit-backdrop-filter: blur(22px) saturate(1.2);
-  border: 1px solid #bfdbfe;
-  border-radius: 1.5rem;
-  box-shadow: 0 20px 40px -18px rgba(10, 26, 63, 0.32);
+  border: 1px solid #fed7aa;
+  border-radius: 0.75rem;
+  box-shadow: 5px 5px 0 0 rgba(154, 52, 18, 0.22);
 }
 
-/* Harbor tag: a tilted lime pill, playful and bright,
-   with a gentle diffused shadow. */
+/* Kiln tag: a flat amber chip with a hard shadow —
+   square-edged and upright, not tilted or pill-shaped. */
 .starburst {
-  background: #a3e635;
-  color: #0a1f3d;
+  background: #f59e0b;
+  color: #2b1d12;
   text-shadow: none;
-  border-radius: 9999px;
-  transform: rotate(-3deg);
-  box-shadow: 0 10px 20px -8px rgba(10, 26, 63, 0.40);
+  border-radius: 0.5rem;
+  transform: none;
+  box-shadow: 3px 3px 0 0 rgba(154, 52, 18, 0.35);
   border: none;
 }
 
-/* Harbor dots: crisp cobalt dots on icy blue, not drafting lines. */
+/* Kiln lines: diagonal terracotta pinstripes on cream,
+   not crisp dots. */
 .halftone {
   background-image:
-    radial-gradient(rgba(37, 99, 235, 0.20) 1.5px, transparent 1.5px);
-  background-size: 22px 22px, 22px 22px;
+    repeating-linear-gradient(45deg, rgba(234, 88, 12, 0.12) 0 2px, transparent 2px 14px);
+  background-size: auto;
 }
 
-/* Harbor seam: a bold cobalt-to-cyan-to-lime gradient
-   rule, rounded and thick, dividing sections. */
+/* Kiln seam: a dashed terracotta rule dividing sections. */
 .zigzag {
-  height: 6px;
-  background-image: linear-gradient(90deg, #2563eb, #06b6d4, #a3e635);
-  background-repeat: repeat-x;
-  background-position: 0 center;
+  height: 0;
+  border-top: 3px dashed rgba(194, 65, 12, 0.55);
+  background-image: none;
   opacity: 0.9;
-  border-radius: 9999px;
+  border-radius: 0;
 }
 
-/* Harbor band: a diagonal cobalt / cyan / lime gradient
-   across the section top. */
+/* Kiln band: a horizontal terracotta / amber / rose
+   gradient across the section top. */
 .bazaar-awning {
   background-image: linear-gradient(
-    135deg,
-    rgba(37, 99, 235, 0.95),
-    rgba(6, 182, 212, 0.95),
-    rgba(163, 230, 53, 0.95)
+    90deg,
+    rgba(234, 88, 12, 0.95),
+    rgba(245, 158, 11, 0.95),
+    rgba(225, 29, 72, 0.95)
   );
   opacity: 0.97;
-  box-shadow: 0 12px 28px -12px rgba(10, 26, 63, 0.35);
+  box-shadow: 0 12px 28px -12px rgba(43, 29, 18, 0.35);
 }
 
-/* Harbor glow: layered cobalt/cyan/lime glow for the core halo. */
+/* Kiln glow: layered terracotta/amber/rose glow for the core halo. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(247, 254, 231, 0.70) 0%, rgba(37, 99, 235, 0.30) 42%, rgba(6, 182, 212, 0.24) 62%, rgba(6, 182, 212, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(254, 243, 199, 0.70) 0%, rgba(234, 88, 12, 0.30) 42%, rgba(245, 158, 11, 0.24) 62%, rgba(245, 158, 11, 0) 76%);
 }
 
-/* Harbor core: a bright lime-to-cyan orb with a cobalt halo. */
+/* Kiln core: a bright amber-to-terracotta orb with a rose halo. */
 .sun-disc {
   background:
-    radial-gradient(circle at 38% 34%, #ecfccb 0%, #22d3ee 52%, #1d4ed8 100%);
-  box-shadow: 0 18px 36px -14px rgba(10, 26, 63, 0.40), inset 0 3px 12px rgba(255, 255, 255, 0.55);
+    radial-gradient(circle at 38% 34%, #fef3c7 0%, #f59e0b 52%, #c2410c 100%);
+  box-shadow: 5px 5px 0 0 rgba(154, 52, 18, 0.30), inset 0 3px 12px rgba(255, 255, 255, 0.55);
   border: none;
 }
 
-/* Harbor traces around the core disc. */
+/* Kiln traces around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(30, 64, 175, 0.32) 0px,
-    rgba(30, 64, 175, 0.32) 2px,
+    rgba(154, 52, 18, 0.32) 0px,
+    rgba(154, 52, 18, 0.32) 2px,
     transparent 2px,
     transparent 12px,
-    rgba(6, 182, 212, 0.28) 12px,
-    rgba(6, 182, 212, 0.28) 14px,
+    rgba(245, 158, 11, 0.28) 12px,
+    rgba(245, 158, 11, 0.28) 14px,
     transparent 14px,
     transparent 30px
   );
   -webkit-mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
   mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
-  border-radius: 1.5rem;
+  border-radius: 0.75rem;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(163, 230, 53, 0.30) 0deg 4deg,
+    rgba(245, 158, 11, 0.30) 0deg 4deg,
     transparent 4deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
   mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
-  border-radius: 1.5rem;
+  border-radius: 0.75rem;
 }
