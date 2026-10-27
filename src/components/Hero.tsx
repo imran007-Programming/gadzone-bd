@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Bubblegum glow drifting over the blush paper.
+// Circuit glow drifting over the sage paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(236, 72, 153, 0.22)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(34, 211, 238, 0.20)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(245, 158, 11, 0.20)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(219, 39, 119, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(132, 204, 22, 0.22)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(16, 185, 129, 0.20)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(101, 163, 13, 0.20)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(87, 83, 78, 0.20)" },
 ];
 
-// Bubblegum bubbles drifting up through the lagoon light.
+// Circuit sparks drifting up through the grid light.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#ec4899" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#06b6d4" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#f59e0b" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#f472b6" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#db2777" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#22d3ee" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#fbbf24" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#84cc16" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#10b981" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#65a30d" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#a3e635" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#059669" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#34d399" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#78716c" },
 ];
 
-// Bubblegum bubbles scattered through the lagoon light.
+// Circuit sparks scattered through the grid light.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* bubblegum lagoon wash under the grid light */}
-      <div className="relative bg-gradient-to-b from-[#fce7f3] via-[#fff1f2] to-[#cffafe]">
+      <div className="relative bg-gradient-to-b from-[#ecfccb] via-[#f4f6f1] to-[#d1fae5]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -100,7 +100,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(56, 189, 248, 0.45), inset 0 0 18px rgba(79, 70, 229, 0.30)",
+                  boxShadow: "0 0 28px 2px rgba(132, 204, 22, 0.45), inset 0 0 18px rgba(16, 185, 129, 0.30)",
                   opacity: 1 - r * 0.22,
                 }}
               />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#7c3aed", "#a78bfa", "#c026d3", "#f59e0b"];
+              const colors = ["#84cc16", "#10b981", "#65a30d", "#57534e"];
               return (
                 <span
                   key={i}
