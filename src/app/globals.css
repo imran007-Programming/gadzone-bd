@@ -1,68 +1,68 @@
 @import "tailwindcss";
 
 @theme {
-  /* Royal Dusk: a twilight direction — deep indigo brand,
-     warm amber and soft rose accents on lavender paper.
-     Cards are extra-rounded plush slabs with layered soft
-     shadows and a dusk glow that blooms on hover — the
-     opposite of the previous Emerald Grove's cool mint paper,
-     medium-rounded crisp slabs, thin green rims and sliding
-     lime top bar. */
+  /* Glacier Pop: a crisp, icy direction — sky-blue brand,
+     tangerine and violet accents on icy white-blue paper.
+     Cards are sharp, small-cornered slabs with thin sky rims
+     and a hard offset shadow that pops on hover — the
+     opposite of the previous Royal Dusk's lavender paper,
+     extra-rounded plush slabs, soft layered shadows and
+     dusk glow blooming across the top. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = indigo scale */
-  --color-brand-50: #eef2ff;
-  --color-brand-100: #e0e7ff;
-  --color-brand-200: #c7d2fe;
-  --color-brand-300: #a5b4fc;
-  --color-brand-400: #818cf8;
-  --color-brand-500: #6366f1;
-  --color-brand-600: #4f46e5;
-  --color-brand-700: #4338ca;
-  --color-brand-800: #3730a3;
-  --color-brand-900: #312e81;
-  --color-brand-950: #1e1b4b;
-  --color-brand: #4f46e5;
-  --color-brand-dark: #4338ca;
-  --color-brand-deep: #3730a3;
+  /* brand = sky scale */
+  --color-brand-50: #f0f9ff;
+  --color-brand-100: #e0f2fe;
+  --color-brand-200: #bae6fd;
+  --color-brand-300: #7dd3fc;
+  --color-brand-400: #38bdf8;
+  --color-brand-500: #0ea5e9;
+  --color-brand-600: #0284c7;
+  --color-brand-700: #0369a1;
+  --color-brand-800: #075985;
+  --color-brand-900: #0c4a6e;
+  --color-brand-950: #082f49;
+  --color-brand: #0284c7;
+  --color-brand-dark: #0369a1;
+  --color-brand-deep: #075985;
 
-  /* gold = warm amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #f59e0b;
-  --color-gold-deep: #b45309;
-  --color-gold-soft: #fef3c7;
+  /* gold = tangerine scale (name kept for legacy class refs) */
+  --color-gold-50: #fff7ed;
+  --color-gold-100: #ffedd5;
+  --color-gold-200: #fed7aa;
+  --color-gold-300: #fdba74;
+  --color-gold-400: #fb923c;
+  --color-gold-500: #f97316;
+  --color-gold-600: #ea580c;
+  --color-gold-700: #c2410c;
+  --color-gold-800: #9a3412;
+  --color-gold-900: #7c2d12;
+  --color-gold-950: #431407;
+  --color-gold: #f97316;
+  --color-gold-deep: #c2410c;
+  --color-gold-soft: #ffedd5;
 
-  /* popblue = soft rose scale (name kept for legacy class refs) */
-  --color-popblue-50: #fff1f2;
-  --color-popblue-100: #ffe4e6;
-  --color-popblue-200: #fecdd3;
-  --color-popblue-300: #fda4af;
-  --color-popblue-400: #fb7185;
-  --color-popblue-500: #f43f5e;
-  --color-popblue-600: #e11d48;
-  --color-popblue-700: #be123c;
-  --color-popblue-800: #9f1239;
-  --color-popblue-900: #881337;
-  --color-popblue-950: #4c0519;
-  --color-popblue: #f43f5e;
-  --color-popblue-deep: #e11d48;
-  --color-popblue-soft: #ffe4e6;
+  /* popblue = violet scale (name kept for legacy class refs) */
+  --color-popblue-50: #f5f3ff;
+  --color-popblue-100: #ede9fe;
+  --color-popblue-200: #ddd6fe;
+  --color-popblue-300: #c4b5fd;
+  --color-popblue-400: #a78bfa;
+  --color-popblue-500: #8b5cf6;
+  --color-popblue-600: #7c3aed;
+  --color-popblue-700: #6d28d9;
+  --color-popblue-800: #5b21b6;
+  --color-popblue-900: #4c1d95;
+  --color-popblue-950: #2e1065;
+  --color-popblue: #8b5cf6;
+  --color-popblue-deep: #7c3aed;
+  --color-popblue-soft: #ede9fe;
 
-  --color-ink: #1e1b4b;
-  --color-paper: #f5f3ff;
-  --color-mute: #6b6690;
+  --color-ink: #082f49;
+  --color-paper: #f0f9ff;
+  --color-mute: #475569;
   --color-card: #ffffff;
-  --color-deep: #171233;
+  --color-deep: #0b1f33;
 }
 
 html { scroll-behavior: smooth; }
@@ -77,24 +77,24 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f5f3ff;
+  background-color: #f0f9ff;
   background-image:
-    linear-gradient(180deg, rgba(79, 70, 229, 0.08) 0%, transparent 340px),
-    radial-gradient(circle at 88% 0%, rgba(244, 63, 94, 0.12) 0%, transparent 42%),
-    radial-gradient(circle at 6% 100%, rgba(245, 158, 11, 0.12) 0%, transparent 44%);
-  color: #1e1b4b;
+    linear-gradient(180deg, rgba(2, 132, 199, 0.10) 0%, transparent 340px),
+    radial-gradient(circle at 88% 0%, rgba(249, 115, 22, 0.14) 0%, transparent 42%),
+    radial-gradient(circle at 6% 100%, rgba(139, 92, 246, 0.12) 0%, transparent 44%);
+  color: #082f49;
 }
-::selection { background: #fcd34d; color: #1e1b4b; }
+::selection { background: #fdba74; color: #082f49; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #4f46e5, #f43f5e); border-radius: 8px; border: 2px solid #f5f3ff; }
-::-webkit-scrollbar-track { background: #e0e7ff; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0284c7, #8b5cf6); border-radius: 4px; border: 2px solid #f0f9ff; }
+::-webkit-scrollbar-track { background: #e0f2fe; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Royal Dusk type: soft, generous headlines. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Glacier Pop type: tight, punchy headlines. */
+h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Royal Dusk drift: embers rising through twilight. */
+/* Glacier Pop drift: ice crystals rising through cold light. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, -4vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.9; }
@@ -103,14 +103,14 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 15s linear infinite; }
 
-/* Royal Dusk sway: a slow, dreamy dusk sway. */
+/* Glacier Pop sway: a crisp, brisk glacier sway. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(-1vw, 0, 0) rotate(-2deg) scale(1); opacity: 0.5; }
-  50% { transform: translate3d(1vw, 8px, 0) rotate(2deg) scale(1.05); opacity: 0.9; }
+  0%, 100% { transform: translate3d(-1vw, 0, 0) rotate(-1deg) scale(1); opacity: 0.5; }
+  50% { transform: translate3d(1vw, 6px, 0) rotate(1deg) scale(1.03); opacity: 0.9; }
 }
 .pop-drift { animation: signal-drift 11s ease-in-out infinite; }
 
-/* Royal Dusk bounce: a soft, plush hop. */
+/* Glacier Pop bounce: a snappy, crisp hop. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   30% { transform: translateY(-3px) scale(1.01); }
@@ -118,137 +118,127 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 }
 .pop-bob { animation: signal-bob 4.4s ease-in-out infinite; }
 
-/* Slow turn for the dusk dial. */
+/* Slow turn for the glacier dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 36s linear infinite; }
 
-/* Royal Dusk glow pulse: a warm amber pulse. */
+/* Glacier Pop glow pulse: a tangerine pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.45; transform: scale(0.92); }
   50% { opacity: 1; transform: scale(1.12); }
 }
 .pop-twinkle { animation: signal-blink 3s ease-in-out infinite; }
 
-/* Royal Dusk ticker: infinite marquee (leftward drift). */
+/* Glacier Pop ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Royal Dusk bands: indigo -> amber -> rose stripes. */
+/* Glacier Pop bands: sky -> tangerine -> violet stripes. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #4f46e5 0 34%, #f59e0b 34% 67%, #f43f5e 67% 100%);
+    linear-gradient(90deg, #0284c7 0 34%, #f97316 34% 67%, #8b5cf6 67% 100%);
   background-size: 34px 34px;
 }
 
-/* Royal Dusk card: a plush white slab — extra-large corners,
-   a soft indigo rim and layered pillowy shadows, with a warm
-   dusk glow that blooms across the top on hover. */
+/* Glacier Pop card: a crisp white slab — small corners,
+   a thin sky rim and a hard offset shadow that pops
+   further on hover instead of a soft plush glow. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(79, 70, 229, 0.16);
+  border: 1px solid rgba(2, 132, 199, 0.28);
   background: #ffffff;
-  border-radius: 1.5rem;
-  box-shadow: 0 2px 4px rgba(30, 27, 75, 0.06), 0 16px 32px -16px rgba(49, 46, 129, 0.22);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border-radius: 0.75rem;
+  box-shadow: 4px 4px 0 rgba(2, 132, 199, 0.18);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   overflow: hidden;
 }
-.pop-lift::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: radial-gradient(ellipse 90% 55% at 50% 0%, rgba(245, 158, 11, 0.16) 0%, rgba(79, 70, 229, 0.10) 45%, transparent 70%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 0;
-  pointer-events: none;
-}
 .pop-lift:hover {
-  transform: translateY(-6px);
-  border-color: rgba(79, 70, 229, 0.4);
-  box-shadow: 0 4px 8px rgba(30, 27, 75, 0.06), 0 28px 48px -20px rgba(49, 46, 129, 0.35);
+  transform: translate(-2px, -2px);
+  border-color: rgba(2, 132, 199, 0.55);
+  box-shadow: 7px 7px 0 rgba(2, 132, 199, 0.28);
 }
-.pop-lift:hover::before { opacity: 1; }
 
-/* Royal Dusk glass: shared by modals and drawers — a frosted
-   lavender pane with a soft indigo ring and pillowy shadow. */
+/* Glacier Pop glass: shared by modals and drawers — a frosted
+   icy pane with a crisp sky ring and hard offset shadow. */
 .pop-glass {
-  background: rgba(245, 243, 255, 0.94);
+  background: rgba(240, 249, 255, 0.94);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(79, 70, 229, 0.22);
-  border-radius: 1.25rem;
-  box-shadow: 0 20px 44px -20px rgba(49, 46, 129, 0.4);
+  border: 1px solid rgba(2, 132, 199, 0.35);
+  border-radius: 0.75rem;
+  box-shadow: 6px 6px 0 rgba(2, 132, 199, 0.20);
 }
 
-/* Royal Dusk tag: a plush pill badge — warm amber with deep
-   indigo text, tilted slightly, soft shadow. */
+/* Glacier Pop tag: a crisp tangerine disc — upright, bold,
+   with a white ring and hard shadow. */
 .starburst {
-  background: #fbbf24;
-  color: #1e1b4b;
+  background: #f97316;
+  color: #ffffff;
   text-shadow: none;
   border-radius: 999px;
-  transform: rotate(-3deg);
-  box-shadow: 0 6px 16px -6px rgba(180, 83, 9, 0.55);
+  transform: rotate(0deg);
+  box-shadow: 3px 3px 0 rgba(194, 65, 12, 0.55);
   border: 2px solid #ffffff;
 }
 
-/* Royal Dusk dots: a soft dotted indigo field. */
+/* Glacier Pop grid: a crisp faint blueprint grid. */
 .halftone {
-  background-image: radial-gradient(rgba(79, 70, 229, 0.20) 1.5px, transparent 1.5px);
-  background-size: 18px 18px;
+  background-image:
+    linear-gradient(rgba(2, 132, 199, 0.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(2, 132, 199, 0.14) 1px, transparent 1px);
+  background-size: 22px 22px;
 }
 
-/* Royal Dusk rule: a dashed dusk divider. */
+/* Glacier Pop rule: a solid three-tone bar. */
 .zigzag {
   height: 4px;
   border-top: none;
-  background-image: repeating-linear-gradient(90deg, #4f46e5 0 14px, #f59e0b 14px 24px, #f43f5e 24px 34px, transparent 34px 44px);
+  background-image: linear-gradient(90deg, #0284c7 0 34%, #f97316 34% 67%, #8b5cf6 67% 100%);
   background-size: 100% 4px;
   background-repeat: no-repeat;
-  opacity: 0.85;
-  border-radius: 999px;
+  opacity: 0.9;
+  border-radius: 2px;
 }
 
-/* Royal Dusk band: a deep indigo gradient bar with a warm
-   amber underline and softly rounded bottom corners. */
+/* Glacier Pop band: a crisp sky gradient bar with a tangerine
+   underline and sharp square corners. */
 .bazaar-awning {
-  background: linear-gradient(180deg, #312e81, #4338ca);
+  background: linear-gradient(180deg, #0369a1, #0284c7);
   opacity: 1;
-  box-shadow: 0 12px 28px -14px rgba(49, 46, 129, 0.55);
-  border-bottom: 4px solid #f59e0b;
-  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 8px 0 rgba(2, 132, 199, 0.18);
+  border-bottom: 4px solid #f97316;
+  border-radius: 0;
 }
 
-/* Royal Dusk glow: a warm lavender halo for the core. */
+/* Glacier Pop glow: an icy halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(245, 243, 255, 0.95) 0%, rgba(253, 224, 171, 0.55) 42%, rgba(79, 70, 229, 0.28) 62%, rgba(79, 70, 229, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(240, 249, 255, 0.95) 0%, rgba(254, 215, 170, 0.55) 42%, rgba(2, 132, 199, 0.28) 62%, rgba(2, 132, 199, 0) 76%);
 }
 
-/* Royal Dusk core: a deep indigo disc with an amber ring. */
+/* Glacier Pop core: a sky disc with a tangerine ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #a5b4fc 0%, #4f46e5 55%, #1e1b4b 100%);
-  box-shadow: 0 0 0 4px #fcd34d, 0 16px 32px rgba(49, 46, 129, 0.4);
+    radial-gradient(circle at 35% 30%, #7dd3fc 0%, #0284c7 55%, #082f49 100%);
+  box-shadow: 0 0 0 4px #fb923c, 0 16px 32px rgba(2, 132, 199, 0.4);
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Soft traces around the core disc. */
+/* Crisp traces around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(79, 70, 229, 0.35) 0px,
-    rgba(79, 70, 229, 0.35) 1px,
+    rgba(2, 132, 199, 0.35) 0px,
+    rgba(2, 132, 199, 0.35) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(244, 63, 94, 0.35) 14px,
-    rgba(244, 63, 94, 0.35) 15px,
+    rgba(139, 92, 246, 0.35) 14px,
+    rgba(139, 92, 246, 0.35) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -259,7 +249,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(245, 158, 11, 0.45) 0deg 3deg,
+    rgba(249, 115, 22, 0.45) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
