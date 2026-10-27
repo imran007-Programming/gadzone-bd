@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* warm sand wash under the coral light */}
-      <div className="relative bg-gradient-to-b from-[#e0f2fe] via-[#f0f9ff] to-[#ffedd5]">
+      <div className="relative bg-gradient-to-b from-[#dbeafe] via-[#eef2ff] to-[#eef2f7]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -176,8 +176,8 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
-              <div className="rounded-[1.75rem] bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-400 p-[4px] shadow-[0_24px_48px_-20px_rgba(30,27,75,0.45)]">
-                <div className="overflow-hidden rounded-[1.25rem] bg-paper ring-1 ring-ink/20">
+              <div className="rounded-[0.625rem] bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-400 p-[3px] shadow-[0_16px_32px_-20px_rgba(15,23,42,0.45)]">
+                <div className="overflow-hidden rounded-[0.375rem] bg-paper ring-1 ring-ink/20">
                   <BannerCarousel />
                 </div>
               </div>

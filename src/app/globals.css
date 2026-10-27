@@ -1,67 +1,67 @@
 @import "tailwindcss";
 
 @theme {
-  /* Ember Grove: a warm, woodland direction — deep forest-green
-     brand, mustard and terracotta accents on warm cream paper.
-     Cards are plush, extra-rounded slabs with soft layered
-     shadows that lift gently on hover — the opposite of the
-     previous Glacier Pop's icy sky-blue paper, sharp small
-     corners, hard offset shadows and cold glow. */
+  /* Harbor Blueprint: a cool, sharp, editorial direction — deep
+     navy/indigo brand, cyan and orange accents on pale slate
+     paper. Cards are flat, crisp slabs with small corners and
+     thin slate borders — the opposite of the previous Ember
+     Grove's warm forest-green, mustard and berry palette, cream
+     paper, plush extra-rounded slabs and soft layered shadows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = forest-green scale */
-  --color-brand-50: #f0fdf4;
-  --color-brand-100: #dcfce7;
-  --color-brand-200: #bbf7d0;
-  --color-brand-300: #86efac;
-  --color-brand-400: #4ade80;
-  --color-brand-500: #22c55e;
-  --color-brand-600: #16a34a;
-  --color-brand-700: #15803d;
-  --color-brand-800: #166534;
-  --color-brand-900: #14532d;
-  --color-brand-950: #052e16;
-  --color-brand: #15803d;
-  --color-brand-dark: #14532d;
-  --color-brand-deep: #052e16;
+  /* brand = navy/indigo scale */
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-200: #c7d2fe;
+  --color-brand-300: #a5b4fc;
+  --color-brand-400: #818cf8;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+  --color-brand-800: #3730a3;
+  --color-brand-900: #312e81;
+  --color-brand-950: #1e1b4b;
+  --color-brand: #4338ca;
+  --color-brand-dark: #312e81;
+  --color-brand-deep: #1e1b4b;
 
-  /* gold = mustard scale (name kept for legacy class refs) */
-  --color-gold-50: #fefce8;
-  --color-gold-100: #fef9c3;
-  --color-gold-200: #fef08a;
-  --color-gold-300: #fde047;
-  --color-gold-400: #facc15;
-  --color-gold-500: #eab308;
-  --color-gold-600: #ca8a04;
-  --color-gold-700: #a16207;
-  --color-gold-800: #854d0e;
-  --color-gold-900: #713f12;
-  --color-gold-950: #422006;
-  --color-gold: #eab308;
-  --color-gold-deep: #a16207;
-  --color-gold-soft: #fef9c3;
+  /* gold = cyan scale (name kept for legacy class refs) */
+  --color-gold-50: #ecfeff;
+  --color-gold-100: #cffafe;
+  --color-gold-200: #a5f3fc;
+  --color-gold-300: #67e8f9;
+  --color-gold-400: #22d3ee;
+  --color-gold-500: #06b6d4;
+  --color-gold-600: #0891b2;
+  --color-gold-700: #0e7490;
+  --color-gold-800: #155e75;
+  --color-gold-900: #164e63;
+  --color-gold-950: #083344;
+  --color-gold: #06b6d4;
+  --color-gold-deep: #0e7490;
+  --color-gold-soft: #cffafe;
 
-  /* popblue = berry-plum scale (name kept for legacy class refs) */
-  --color-popblue-50: #fdf2f8;
-  --color-popblue-100: #fce7f3;
-  --color-popblue-200: #fbcfe8;
-  --color-popblue-300: #f9a8d4;
-  --color-popblue-400: #f472b6;
-  --color-popblue-500: #ec4899;
-  --color-popblue-600: #db2777;
-  --color-popblue-700: #be185d;
-  --color-popblue-800: #9d174d;
-  --color-popblue-900: #831843;
-  --color-popblue-950: #500724;
-  --color-popblue: #db2777;
-  --color-popblue-deep: #be185d;
-  --color-popblue-soft: #fce7f3;
+  /* popblue = orange scale (name kept for legacy class refs) */
+  --color-popblue-50: #fff7ed;
+  --color-popblue-100: #ffedd5;
+  --color-popblue-200: #fed7aa;
+  --color-popblue-300: #fdba74;
+  --color-popblue-400: #fb923c;
+  --color-popblue-500: #f97316;
+  --color-popblue-600: #ea580c;
+  --color-popblue-700: #c2410c;
+  --color-popblue-800: #9a3412;
+  --color-popblue-900: #7c2d12;
+  --color-popblue-950: #431407;
+  --color-popblue: #ea580c;
+  --color-popblue-deep: #c2410c;
+  --color-popblue-soft: #ffedd5;
 
-  --color-ink: #292524;
-  --color-paper: #fdf9f0;
-  --color-mute: #57534e;
-  --color-card: #fffdf7;
-  --color-deep: #1c1917;
+  --color-ink: #0f172a;
+  --color-paper: #eef2f7;
+  --color-mute: #475569;
+  --color-card: #ffffff;
+  --color-deep: #020617;
 }
 
 html { scroll-behavior: smooth; }
@@ -76,24 +76,24 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fdf9f0;
+  background-color: #eef2f7;
   background-image:
-    linear-gradient(180deg, rgba(21, 128, 61, 0.10) 0%, transparent 360px),
-    radial-gradient(circle at 88% 0%, rgba(234, 179, 8, 0.20) 0%, transparent 44%),
-    radial-gradient(circle at 6% 100%, rgba(219, 39, 119, 0.12) 0%, transparent 46%);
-  color: #292524;
+    linear-gradient(180deg, rgba(67, 56, 202, 0.08) 0%, transparent 360px),
+    radial-gradient(circle at 88% 0%, rgba(6, 182, 212, 0.16) 0%, transparent 44%),
+    radial-gradient(circle at 6% 100%, rgba(234, 88, 12, 0.10) 0%, transparent 46%);
+  color: #0f172a;
 }
-::selection { background: #fde047; color: #292524; }
+::selection { background: #67e8f9; color: #0f172a; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #15803d, #ca8a04); border-radius: 999px; border: 2px solid #fdf9f0; }
-::-webkit-scrollbar-track { background: #fef9c3; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #4338ca, #0891b2); border-radius: 4px; border: 2px solid #eef2f7; }
+::-webkit-scrollbar-track { background: #cffafe; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Ember Grove type: warm, relaxed headlines. */
+/* Harbor Blueprint type: crisp, upright headlines. */
 h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Ember Grove drift: embers rising through warm evening air. */
+/* Harbor Blueprint drift: signals rising through cool harbor air. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, -4vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.9; }
@@ -102,14 +102,14 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 17s linear infinite; }
 
-/* Ember Grove sway: a slow, warm grove sway. */
+/* Harbor Blueprint sway: a slow, steady harbor sway. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-1vw, 0, 0) rotate(-1deg) scale(1); opacity: 0.5; }
   50% { transform: translate3d(1vw, 8px, 0) rotate(1deg) scale(1.03); opacity: 0.9; }
 }
 .pop-drift { animation: signal-drift 13s ease-in-out infinite; }
 
-/* Ember Grove bounce: a soft, pillowy hop. */
+/* Harbor Blueprint bounce: a crisp, small hop. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   30% { transform: translateY(-4px) scale(1.01); }
@@ -117,125 +117,127 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 }
 .pop-bob { animation: signal-bob 5s ease-in-out infinite; }
 
-/* Slow turn for the grove dial. */
+/* Slow turn for the harbor dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 40s linear infinite; }
 
-/* Ember Grove glow pulse: a mustard ember pulse. */
+/* Harbor Blueprint glow pulse: a cyan beacon pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.45; transform: scale(0.92); }
   50% { opacity: 1; transform: scale(1.12); }
 }
 .pop-twinkle { animation: signal-blink 3.4s ease-in-out infinite; }
 
-/* Ember Grove ticker: infinite marquee (leftward drift). */
+/* Harbor Blueprint ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 34s linear infinite; }
 
-/* Ember Grove bands: forest -> mustard -> berry stripes. */
+/* Harbor Blueprint bands: navy -> cyan -> orange stripes. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #15803d 0 34%, #eab308 34% 67%, #db2777 67% 100%);
+    linear-gradient(90deg, #4338ca 0 34%, #06b6d4 34% 67%, #ea580c 67% 100%);
   background-size: 34px 34px;
 }
 
-/* Ember Grove card: a plush cream slab — extra-rounded
-   corners, a soft green rim and layered soft shadows that
-   lift gently on hover instead of a hard offset pop. */
+/* Harbor Blueprint card: a flat white slab — small corners,
+   a thin slate border and a single crisp shadow that deepens
+   slightly on hover instead of a plush lift. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(21, 128, 61, 0.16);
-  background: #fffdf7;
-  border-radius: 1.75rem;
-  box-shadow: 0 2px 6px rgba(28, 25, 23, 0.06), 0 14px 30px rgba(21, 128, 61, 0.10);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: #ffffff;
+  border-radius: 0.625rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  border-color: rgba(21, 128, 61, 0.35);
-  box-shadow: 0 4px 10px rgba(28, 25, 23, 0.08), 0 22px 44px rgba(21, 128, 61, 0.18);
+  transform: translateY(-2px);
+  border-color: rgba(67, 56, 202, 0.35);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.10);
 }
 
-/* Ember Grove glass: shared by modals and drawers — a warm
-   frosted cream pane with a soft green ring and plush shadow. */
+/* Harbor Blueprint glass: shared by modals and drawers — a
+   crisp frosted white pane with a thin navy ring. */
 .pop-glass {
-  background: rgba(253, 249, 240, 0.94);
+  background: rgba(238, 242, 247, 0.94);
   backdrop-filter: blur(18px) saturate(1.05);
   -webkit-backdrop-filter: blur(18px) saturate(1.05);
-  border: 1px solid rgba(21, 128, 61, 0.22);
-  border-radius: 1.75rem;
-  box-shadow: 0 10px 34px rgba(21, 128, 61, 0.16);
+  border: 1px solid rgba(67, 56, 202, 0.22);
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 34px rgba(15, 23, 42, 0.14);
 }
 
-/* Ember Grove tag: a warm mustard disc — tilted playfully,
-   with a cream ring and soft shadow. */
+/* Harbor Blueprint tag: a sharp orange square badge — upright,
+   with a white ring and crisp shadow. */
 .starburst {
-  background: #eab308;
-  color: #422006;
+  background: #ea580c;
+  color: #ffffff;
   text-shadow: none;
-  border-radius: 999px;
-  transform: rotate(-6deg);
-  box-shadow: 0 6px 16px rgba(161, 98, 7, 0.45);
-  border: 2px solid #fffdf7;
+  border-radius: 0.375rem;
+  transform: rotate(0deg);
+  box-shadow: 0 4px 12px rgba(194, 65, 12, 0.45);
+  border: 2px solid #ffffff;
 }
 
-/* Ember Grove grid: a warm dotted meadow grid. */
+/* Harbor Blueprint grid: a cool blueprint grid. */
 .halftone {
-  background-image: radial-gradient(rgba(21, 128, 61, 0.20) 1.5px, transparent 1.5px);
-  background-size: 22px 22px;
+  background-image:
+    linear-gradient(rgba(67, 56, 202, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(67, 56, 202, 0.10) 1px, transparent 1px);
+  background-size: 28px 28px;
 }
 
-/* Ember Grove rule: a warm dotted divider. */
+/* Harbor Blueprint rule: a straight cyan divider. */
 .zigzag {
-  height: 6px;
+  height: 3px;
   border-top: none;
-  background-image: radial-gradient(circle, #eab308 2px, transparent 2.5px);
-  background-size: 16px 6px;
+  background: #06b6d4;
+  background-size: 16px 3px;
   background-repeat: repeat-x;
   opacity: 0.9;
-  border-radius: 2px;
+  border-radius: 0;
 }
 
-/* Ember Grove band: a deep forest gradient bar with a
-   mustard underline and softly rounded bottom corners. */
+/* Harbor Blueprint band: a solid navy bar with a cyan
+   underline and square corners. */
 .bazaar-awning {
-  background: linear-gradient(180deg, #14532d, #15803d);
+  background: linear-gradient(180deg, #312e81, #4338ca);
   opacity: 1;
-  box-shadow: 0 12px 28px rgba(21, 128, 61, 0.22);
-  border-bottom: 4px solid #eab308;
-  border-radius: 0 0 1.5rem 1.5rem;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.18);
+  border-bottom: 3px solid #06b6d4;
+  border-radius: 0;
 }
 
-/* Ember Grove glow: a warm amber halo for the core. */
+/* Harbor Blueprint glow: a cool cyan halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(253, 249, 240, 0.95) 0%, rgba(254, 240, 138, 0.55) 42%, rgba(21, 128, 61, 0.28) 62%, rgba(21, 128, 61, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(238, 242, 247, 0.95) 0%, rgba(103, 232, 249, 0.55) 42%, rgba(67, 56, 202, 0.28) 62%, rgba(67, 56, 202, 0) 76%);
 }
 
-/* Ember Grove core: a mustard disc with a berry ring. */
+/* Harbor Blueprint core: a cyan disc with a navy ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fde047 0%, #eab308 55%, #14532d 100%);
-  box-shadow: 0 0 0 4px #f472b6, 0 16px 32px rgba(21, 128, 61, 0.4);
-  border: 2px solid rgba(255, 253, 247, 0.7);
+    radial-gradient(circle at 35% 30%, #67e8f9 0%, #06b6d4 55%, #312e81 100%);
+  box-shadow: 0 0 0 4px #fb923c, 0 16px 32px rgba(15, 23, 42, 0.35);
+  border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Warm traces around the core disc. */
+/* Cool traces around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(21, 128, 61, 0.35) 0px,
-    rgba(21, 128, 61, 0.35) 1px,
+    rgba(67, 56, 202, 0.35) 0px,
+    rgba(67, 56, 202, 0.35) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(219, 39, 119, 0.35) 14px,
-    rgba(219, 39, 119, 0.35) 15px,
+    rgba(234, 88, 12, 0.35) 14px,
+    rgba(234, 88, 12, 0.35) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -246,7 +248,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(234, 179, 8, 0.5) 0deg 3deg,
+    rgba(6, 182, 212, 0.5) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
