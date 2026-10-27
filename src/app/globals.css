@@ -1,68 +1,70 @@
 @import "tailwindcss";
 
 @theme {
-  /* Ember Hearth: a warm fireside direction — burnt orange
-     brand, golden amber and olive accents on warm cream paper.
-     Cards are soft hearth stones: big rounded corners, a warm
-     border and a diffused amber shadow that lifts and grows on
-     hover — the opposite of the previous Glacier Signal look,
-     its cold teal/coral/sky palette, sharp small corners, thin
-     slate border and flat top-stripe lift. */
+  /* Inkwell Midnight: a cool after-dark direction — deep
+     indigo brand, fresh mint and bright cyan accents on
+     pale lavender paper. Cards are ink-stamped tiles:
+     medium square corners, a solid indigo border and a
+     hard offset shadow that grows on hover — the opposite
+     of the previous Ember Hearth look, its warm burnt
+     orange/amber/olive palette, cream paper, big soft
+     rounded corners, diffused amber shadow and top
+     gradient stripe. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = burnt orange scale */
-  --color-brand-50: #fff7ed;
-  --color-brand-100: #ffedd5;
-  --color-brand-200: #fed7aa;
-  --color-brand-300: #fdba74;
-  --color-brand-400: #fb923c;
-  --color-brand-500: #f97316;
-  --color-brand-600: #ea580c;
-  --color-brand-700: #c2410c;
-  --color-brand-800: #9a3412;
-  --color-brand-900: #7c2d12;
-  --color-brand-950: #431407;
-  --color-brand: #ea580c;
-  --color-brand-dark: #9a3412;
-  --color-brand-deep: #431407;
+  /* brand = indigo scale */
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-200: #c7d2fe;
+  --color-brand-300: #a5b4fc;
+  --color-brand-400: #818cf8;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+  --color-brand-800: #3730a3;
+  --color-brand-900: #312e81;
+  --color-brand-950: #1e1b4b;
+  --color-brand: #4f46e5;
+  --color-brand-dark: #3730a3;
+  --color-brand-deep: #1e1b4b;
 
-  /* gold = golden amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #f59e0b;
-  --color-gold-deep: #b45309;
-  --color-gold-soft: #fef3c7;
+  /* gold = mint scale (name kept for legacy class refs) */
+  --color-gold-50: #ecfdf5;
+  --color-gold-100: #d1fae5;
+  --color-gold-200: #a7f3d0;
+  --color-gold-300: #6ee7b7;
+  --color-gold-400: #34d399;
+  --color-gold-500: #10b981;
+  --color-gold-600: #059669;
+  --color-gold-700: #047857;
+  --color-gold-800: #065f46;
+  --color-gold-900: #064e3b;
+  --color-gold-950: #022c22;
+  --color-gold: #10b981;
+  --color-gold-deep: #047857;
+  --color-gold-soft: #d1fae5;
 
-  /* popblue = olive scale (name kept for legacy class refs) */
-  --color-popblue-50: #f7fee7;
-  --color-popblue-100: #ecfccb;
-  --color-popblue-200: #d9f99d;
-  --color-popblue-300: #bef264;
-  --color-popblue-400: #a3e635;
-  --color-popblue-500: #84cc16;
-  --color-popblue-600: #65a30d;
-  --color-popblue-700: #4d7c0f;
-  --color-popblue-800: #3f6212;
-  --color-popblue-900: #365314;
-  --color-popblue-950: #1a2e05;
-  --color-popblue: #65a30d;
-  --color-popblue-deep: #4d7c0f;
-  --color-popblue-soft: #ecfccb;
+  /* popblue = cyan scale (name kept for legacy class refs) */
+  --color-popblue-50: #ecfeff;
+  --color-popblue-100: #cffafe;
+  --color-popblue-200: #a5f3fc;
+  --color-popblue-300: #67e8f9;
+  --color-popblue-400: #22d3ee;
+  --color-popblue-500: #06b6d4;
+  --color-popblue-600: #0891b2;
+  --color-popblue-700: #0e7490;
+  --color-popblue-800: #155e75;
+  --color-popblue-900: #164e63;
+  --color-popblue-950: #083344;
+  --color-popblue: #0891b2;
+  --color-popblue-deep: #0e7490;
+  --color-popblue-soft: #cffafe;
 
-  --color-ink: #2b1d16;
-  --color-paper: #fdf6ec;
-  --color-mute: #7a5c48;
-  --color-card: #fffdf8;
-  --color-deep: #431407;
+  --color-ink: #1e1b4b;
+  --color-paper: #f3f3fa;
+  --color-mute: #5b5a7e;
+  --color-card: #ffffff;
+  --color-deep: #1e1b4b;
 }
 
 html { scroll-behavior: smooth; }
@@ -77,40 +79,40 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fdf6ec;
+  background-color: #f3f3fa;
   background-image:
-    linear-gradient(180deg, rgba(234, 88, 12, 0.10) 0%, transparent 340px),
-    radial-gradient(circle at 92% 0%, rgba(245, 158, 11, 0.16) 0%, transparent 44%),
-    radial-gradient(circle at 4% 100%, rgba(101, 163, 13, 0.12) 0%, transparent 44%);
-  color: #2b1d16;
+    linear-gradient(180deg, rgba(79, 70, 229, 0.10) 0%, transparent 340px),
+    radial-gradient(circle at 92% 0%, rgba(6, 182, 212, 0.16) 0%, transparent 44%),
+    radial-gradient(circle at 4% 100%, rgba(16, 185, 129, 0.12) 0%, transparent 44%);
+  color: #1e1b4b;
 }
-::selection { background: #fcd34d; color: #431407; }
+::selection { background: #6ee7b7; color: #1e1b4b; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ea580c, #f59e0b); border-radius: 8px; border: 2px solid #fdf6ec; }
-::-webkit-scrollbar-track { background: #ffedd5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #4f46e5, #06b6d4); border-radius: 8px; border: 2px solid #f3f3fa; }
+::-webkit-scrollbar-track { background: #e0e7ff; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Ember Hearth type: tight, warm, bold headlines. */
-h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
+/* Inkwell Midnight type: tight, crisp, confident headlines. */
+h1, h2, h3 { letter-spacing: -0.03em; text-wrap: balance; }
 
-/* Ember Hearth rise: embers floating upward from the hearth. */
+/* Inkwell Midnight fall: ink drops drifting downward. */
 @keyframes signal-rise {
-  0% { transform: translate3d(0, 96vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
+  0% { transform: translate3d(0, -4vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.9; }
   50% { transform: translate3d(2vw, 45vh, 0) rotate(40deg) scale(1.05); }
-  100% { transform: translate3d(-1vw, -4vh, 0) rotate(80deg) scale(1); opacity: 0; }
+  100% { transform: translate3d(-1vw, 96vh, 0) rotate(80deg) scale(1); opacity: 0; }
 }
 .pop-fall { animation: signal-rise 15s linear infinite; }
 
-/* Ember Hearth sway: warm air swaying the flame. */
+/* Inkwell Midnight sway: a cool night breeze. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(-1vw, 0, 0) rotate(1deg) scale(1); opacity: 0.5; }
-  50% { transform: translate3d(1vw, -8px, 0) rotate(-1deg) scale(1.03); opacity: 0.9; }
+  0%, 100% { transform: translate3d(-1vw, 0, 0) rotate(-1deg) scale(1); opacity: 0.5; }
+  50% { transform: translate3d(1vw, -8px, 0) rotate(1deg) scale(1.03); opacity: 0.9; }
 }
 .pop-drift { animation: signal-drift 11s ease-in-out infinite; }
 
-/* Ember Hearth bounce: a soft ember bob. */
+/* Inkwell Midnight bounce: a soft ink bob. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   30% { transform: translateY(-3px) scale(1.01); }
@@ -118,136 +120,125 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 }
 .pop-bob { animation: signal-bob 4.5s ease-in-out infinite; }
 
-/* Slow turn for the hearth dial. */
+/* Slow turn for the midnight dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 36s linear infinite; }
 
-/* Ember Hearth glow pulse: an amber shimmer pulse. */
+/* Inkwell Midnight glow pulse: a mint shimmer pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.45; transform: scale(0.92); }
   50% { opacity: 1; transform: scale(1.12); }
 }
 .pop-twinkle { animation: signal-blink 3s ease-in-out infinite; }
 
-/* Ember Hearth ticker: infinite marquee (leftward drift). */
+/* Inkwell Midnight ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 32s linear infinite; }
 
-/* Ember Hearth bands: orange -> amber -> olive stripes. */
+/* Inkwell Midnight bands: indigo -> mint -> cyan stripes. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #ea580c 0 34%, #f59e0b 34% 67%, #65a30d 67% 100%);
+    linear-gradient(90deg, #4f46e5 0 34%, #10b981 34% 67%, #06b6d4 67% 100%);
   background-size: 34px 34px;
 }
 
-/* Ember Hearth card: a soft hearth stone — big rounded
-   corners, a warm border and a diffused amber shadow that
-   lifts and grows on hover. */
+/* Inkwell Midnight card: an ink-stamped tile — medium
+   square corners, a solid indigo border and a hard offset
+   shadow that steps out further on hover. */
 .pop-lift {
   position: relative;
-  border: 2px solid rgba(43, 29, 22, 0.10);
-  background: #fffdf8;
-  border-radius: 1.5rem;
-  box-shadow: 0 18px 30px -18px rgba(124, 45, 18, 0.35);
+  border: 2px solid #312e81;
+  background: #ffffff;
+  border-radius: 0.9rem;
+  box-shadow: 6px 6px 0 #312e81;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   overflow: hidden;
 }
-.pop-lift::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 auto 0;
-  height: 4px;
-  background: linear-gradient(90deg, #ea580c, #f59e0b, #65a30d);
-  opacity: 0;
-  transition: opacity 0.25s ease;
-  z-index: 1;
-}
 .pop-lift:hover {
-  transform: translateY(-6px) scale(1.01);
-  box-shadow: 0 28px 40px -18px rgba(124, 45, 18, 0.45);
+  transform: translate(-2px, -2px);
+  box-shadow: 9px 9px 0 #312e81;
 }
-.pop-lift:hover::before { opacity: 1; }
 
-/* Ember Hearth glass: shared by modals and drawers — a
-   warm frosted pane with an amber ring. */
+/* Inkwell Midnight glass: shared by modals and drawers — a
+   cool frosted pane with an indigo ring. */
 .pop-glass {
-  background: rgba(253, 246, 236, 0.94);
+  background: rgba(243, 243, 250, 0.94);
   backdrop-filter: blur(18px) saturate(1.05);
   -webkit-backdrop-filter: blur(18px) saturate(1.05);
-  border: 1px solid rgba(234, 88, 12, 0.20);
-  border-radius: 1.25rem;
-  box-shadow: 0 18px 36px -16px rgba(124, 45, 18, 0.30);
+  border: 1px solid rgba(79, 70, 229, 0.20);
+  border-radius: 0.9rem;
+  box-shadow: 0 18px 36px -16px rgba(30, 27, 75, 0.30);
 }
 
-/* Ember Hearth tag: an amber chip badge — big rounded
-   corners, burnt-orange ring, soft shadow. */
+/* Inkwell Midnight tag: a mint chip badge — squarer
+   corners, indigo ring, hard offset shadow. */
 .starburst {
-  background: #f59e0b;
-  color: #431407;
+  background: #10b981;
+  color: #022c22;
   text-shadow: none;
-  border-radius: 1rem;
-  transform: rotate(-2deg);
-  box-shadow: 0 8px 20px -8px rgba(217, 119, 6, 0.55);
-  border: 1.5px solid #9a3412;
+  border-radius: 0.6rem;
+  transform: rotate(2deg);
+  box-shadow: 4px 4px 0 #312e81;
+  border: 1.5px solid #312e81;
 }
 
-/* Ember Hearth dots: fine amber dots. */
+/* Inkwell Midnight dots: fine indigo dots. */
 .halftone {
   background-image:
-    radial-gradient(rgba(234, 88, 12, 0.18) 1.5px, transparent 1.5px);
+    radial-gradient(rgba(79, 70, 229, 0.18) 1.5px, transparent 1.5px);
   background-size: 20px 20px;
 }
 
-/* Ember Hearth rule: an orange-to-amber-to-olive bar. */
+/* Inkwell Midnight rule: an indigo-to-mint-to-cyan bar. */
 .zigzag {
-  height: 4px;
+  height: 5px;
   border-top: none;
-  background: linear-gradient(90deg, #ea580c, #f59e0b, #65a30d);
-  background-size: 100% 4px;
+  background: linear-gradient(90deg, #4f46e5, #10b981, #06b6d4);
+  background-size: 100% 5px;
   background-repeat: no-repeat;
   opacity: 0.9;
   border-radius: 999px;
 }
 
-/* Ember Hearth band: a deep espresso bar with an amber
-   underline and rounded bottom corners. */
+/* Inkwell Midnight band: a deep indigo bar with a mint
+   underline and straight square edges. */
 .bazaar-awning {
-  background: linear-gradient(180deg, #431407, #c2410c);
+  background: linear-gradient(180deg, #1e1b4b, #4338ca);
   opacity: 1;
-  box-shadow: 0 10px 24px -12px rgba(124, 45, 18, 0.35);
-  border-bottom: 4px solid #f59e0b;
-  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 10px 24px -12px rgba(30, 27, 75, 0.35);
+  border-bottom: 4px solid #10b981;
+  border-radius: 0;
 }
 
-/* Ember Hearth glow: an amber halo for the core. */
+/* Inkwell Midnight glow: a mint halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(254, 243, 199, 0.55) 42%, rgba(234, 88, 12, 0.28) 62%, rgba(234, 88, 12, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(209, 250, 229, 0.55) 42%, rgba(79, 70, 229, 0.28) 62%, rgba(79, 70, 229, 0) 76%);
 }
 
-/* Ember Hearth core: an amber disc with an olive ring. */
+/* Inkwell Midnight core: a cyan disc with a mint ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fcd34d 0%, #ea580c 55%, #431407 100%);
-  box-shadow: 0 0 0 4px #65a30d, 0 12px 28px -12px rgba(124, 45, 18, 0.45);
+    radial-gradient(circle at 35% 30%, #67e8f9 0%, #6366f1 55%, #1e1b4b 100%);
+  box-shadow: 0 0 0 4px #10b981, 0 12px 28px -12px rgba(30, 27, 75, 0.45);
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Warm traces around the core disc. */
+/* Cool traces around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(234, 88, 12, 0.35) 0px,
-    rgba(234, 88, 12, 0.35) 1px,
+    rgba(79, 70, 229, 0.35) 0px,
+    rgba(79, 70, 229, 0.35) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(101, 163, 13, 0.35) 14px,
-    rgba(101, 163, 13, 0.35) 15px,
+    rgba(6, 182, 212, 0.35) 14px,
+    rgba(6, 182, 212, 0.35) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -258,7 +249,7 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(245, 158, 11, 0.5) 0deg 3deg,
+    rgba(16, 185, 129, 0.5) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
