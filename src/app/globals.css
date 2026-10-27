@@ -1,68 +1,68 @@
 @import "tailwindcss";
 
 @theme {
-  /* Verdant Canopy: a fresh forest direction — deep
-     forest-green brand, fresh lime and teal accents on
-     soft leaf-cream paper. Cards are crisp, clean panels
-     with a thin green rim and a lime top accent — the
-     opposite of the previous Ember Dusk's warm terracotta
-     palette, honey-amber glow and plush fully rounded
-     pillow cards. */
+  /* Indigo Atelier: a sharp studio direction — deep
+     indigo brand, violet and warm amber accents on
+     soft lavender paper. Cards are crisp white blocks
+     with a bold ink rim and a hard offset shadow — the
+     opposite of the previous Verdant Canopy's leaf-cream
+     paper, thin green rims, lime top accents and soft
+     pillowy rounded panels. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = forest-green scale */
-  --color-brand-50: #f0fdf4;
-  --color-brand-100: #dcfce7;
-  --color-brand-200: #bbf7d0;
-  --color-brand-300: #86efac;
-  --color-brand-400: #4ade80;
-  --color-brand-500: #22c55e;
-  --color-brand-600: #16a34a;
-  --color-brand-700: #15803d;
-  --color-brand-800: #166534;
-  --color-brand-900: #14532d;
-  --color-brand-950: #052e16;
-  --color-brand: #15803d;
-  --color-brand-dark: #166534;
-  --color-brand-deep: #14532d;
+  /* brand = indigo scale */
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-200: #c7d2fe;
+  --color-brand-300: #a5b4fc;
+  --color-brand-400: #818cf8;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+  --color-brand-800: #3730a3;
+  --color-brand-900: #312e81;
+  --color-brand-950: #1e1b4b;
+  --color-brand: #4338ca;
+  --color-brand-dark: #3730a3;
+  --color-brand-deep: #312e81;
 
-  /* gold = fresh-lime scale */
-  --color-gold-50: #f7fee7;
-  --color-gold-100: #ecfccb;
-  --color-gold-200: #d9f99d;
-  --color-gold-300: #bef264;
-  --color-gold-400: #a3e635;
-  --color-gold-500: #84cc16;
-  --color-gold-600: #65a30d;
-  --color-gold-700: #4d7c0f;
-  --color-gold-800: #3f6212;
-  --color-gold-900: #365314;
-  --color-gold-950: #1a2e05;
-  --color-gold: #84cc16;
-  --color-gold-deep: #4d7c0f;
-  --color-gold-soft: #ecfccb;
+  /* gold = warm amber scale */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #b45309;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = teal scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0fdfa;
-  --color-popblue-100: #ccfbf1;
-  --color-popblue-200: #99f6e4;
-  --color-popblue-300: #5eead4;
-  --color-popblue-400: #2dd4bf;
-  --color-popblue-500: #14b8a6;
-  --color-popblue-600: #0d9488;
-  --color-popblue-700: #0f766e;
-  --color-popblue-800: #115e59;
-  --color-popblue-900: #134e4a;
-  --color-popblue-950: #042f2e;
-  --color-popblue: #14b8a6;
-  --color-popblue-deep: #0f766e;
-  --color-popblue-soft: #ccfbf1;
+  /* popblue = violet scale (name kept for legacy class refs) */
+  --color-popblue-50: #f5f3ff;
+  --color-popblue-100: #ede9fe;
+  --color-popblue-200: #ddd6fe;
+  --color-popblue-300: #c4b5fd;
+  --color-popblue-400: #a78bfa;
+  --color-popblue-500: #8b5cf6;
+  --color-popblue-600: #7c3aed;
+  --color-popblue-700: #6d28d9;
+  --color-popblue-800: #5b21b6;
+  --color-popblue-900: #4c1d95;
+  --color-popblue-950: #2e1065;
+  --color-popblue: #8b5cf6;
+  --color-popblue-deep: #6d28d9;
+  --color-popblue-soft: #ede9fe;
 
-  --color-ink: #16281a;
-  --color-paper: #f6fbf0;
-  --color-mute: #5b6b57;
-  --color-card: #fdfff8;
-  --color-deep: #16281a;
+  --color-ink: #1e1b4b;
+  --color-paper: #f7f5ff;
+  --color-mute: #5b5b7a;
+  --color-card: #ffffff;
+  --color-deep: #1e1b4b;
 }
 
 html { scroll-behavior: smooth; }
@@ -77,24 +77,24 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f6fbf0;
+  background-color: #f7f5ff;
   background-image:
-    radial-gradient(circle at 8% 0%, rgba(21, 128, 61, 0.14) 0%, transparent 46%),
-    radial-gradient(circle at 92% 8%, rgba(132, 204, 22, 0.16) 0%, transparent 42%),
-    radial-gradient(circle at 50% 100%, rgba(20, 184, 166, 0.10) 0%, transparent 48%);
-  color: #16281a;
+    radial-gradient(circle at 8% 0%, rgba(67, 56, 202, 0.14) 0%, transparent 46%),
+    radial-gradient(circle at 92% 8%, rgba(245, 158, 11, 0.16) 0%, transparent 42%),
+    radial-gradient(circle at 50% 100%, rgba(139, 92, 246, 0.10) 0%, transparent 48%);
+  color: #1e1b4b;
 }
-::selection { background: #bef264; color: #052e16; }
+::selection { background: #fcd34d; color: #1e1b4b; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #15803d, #84cc16); border-radius: 999px; border: 2px solid #f6fbf0; }
-::-webkit-scrollbar-track { background: #dcfce7; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #4338ca, #f59e0b); border-radius: 999px; border: 2px solid #f7f5ff; }
+::-webkit-scrollbar-track { background: #e0e7ff; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Canopy type: crisp, leafy headlines. */
+/* Atelier type: tight, confident headlines. */
 h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Canopy drift: leaves fluttering down through dappled light. */
+/* Atelier drift: studio motes drifting down through violet light. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, -4vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.9; }
@@ -103,14 +103,14 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 15s linear infinite; }
 
-/* Canopy sway: a slow, leafy sway. */
+/* Atelier sway: a slow, deliberate sway. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-1vw, 0, 0) rotate(-2deg) scale(1); opacity: 0.5; }
   50% { transform: translate3d(1vw, 8px, 0) rotate(2deg) scale(1.05); opacity: 0.9; }
 }
 .pop-drift { animation: signal-drift 11s ease-in-out infinite; }
 
-/* Canopy bounce: a light, springy bob. */
+/* Atelier bounce: a crisp, springy bob. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   30% { transform: translateY(-3px) scale(1.01); }
@@ -118,134 +118,124 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 }
 .pop-bob { animation: signal-bob 4.4s ease-in-out infinite; }
 
-/* Slow turn for the canopy dial. */
+/* Slow turn for the atelier dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 36s linear infinite; }
 
-/* Canopy glow pulse: a fresh lime pulse. */
+/* Atelier glow pulse: a warm amber pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.45; transform: scale(0.92); }
   50% { opacity: 1; transform: scale(1.12); }
 }
 .pop-twinkle { animation: signal-blink 3s ease-in-out infinite; }
 
-/* Canopy ticker: infinite marquee (leftward drift). */
+/* Atelier ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Canopy bands: forest -> lime -> teal stripes. */
+/* Atelier bands: indigo -> violet -> amber stripes. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #15803d 0 34%, #84cc16 34% 67%, #14b8a6 67% 100%);
+    linear-gradient(90deg, #4338ca 0 34%, #8b5cf6 34% 67%, #f59e0b 67% 100%);
   background-size: 34px 34px;
 }
 
-/* Canopy card: a crisp, clean panel — a fresh cream
-   face, a thin forest-green rim, a lime top accent and
-   a light leaf shadow. On hover it lifts slightly and
-   the rim turns lime. */
+/* Atelier card: a crisp white block — a bold ink rim,
+   square-ish corners and a hard offset shadow. On hover
+   it shifts up-left and the shadow grows. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(20, 83, 45, 0.16);
-  background: #fdfff8;
-  border-radius: 1.25rem;
-  box-shadow: 0 12px 28px -16px rgba(20, 83, 45, 0.25), 0 2px 8px -4px rgba(20, 83, 45, 0.10);
+  border: 2px solid rgba(30, 27, 75, 0.9);
+  background: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 5px 5px 0 rgba(30, 27, 75, 0.9);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
-.pop-lift::before {
-  content: "";
-  position: absolute;
-  inset-inline: 0;
-  top: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #15803d, #84cc16 55%, #14b8a6);
-  z-index: 1;
-}
 .pop-lift:hover {
-  transform: translateY(-3px);
-  border-color: rgba(132, 204, 22, 0.55);
-  box-shadow: 0 20px 38px -18px rgba(20, 83, 45, 0.32), 0 6px 14px -6px rgba(20, 83, 45, 0.14);
+  transform: translate(-2px, -2px);
+  border-color: #4338ca;
+  box-shadow: 8px 8px 0 rgba(67, 56, 202, 0.9);
 }
 
-/* Canopy glass: shared by modals and drawers — a fresh
-   frosted leaf pane with a soft lime rim. */
+/* Atelier glass: shared by modals and drawers — a frosted
+   lavender pane with a bold ink rim and offset shadow. */
 .pop-glass {
-  background: rgba(246, 251, 240, 0.94);
+  background: rgba(247, 245, 255, 0.94);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(20, 83, 45, 0.20);
-  border-radius: 1.25rem;
-  box-shadow: 0 24px 48px -20px rgba(20, 83, 45, 0.32);
+  border: 2px solid rgba(30, 27, 75, 0.9);
+  border-radius: 0.75rem;
+  box-shadow: 6px 6px 0 rgba(30, 27, 75, 0.9);
 }
 
-/* Canopy tag: a crisp pill badge — forest-to-lime
-   gradient with a light leaf shadow. */
+/* Atelier tag: a crisp pill badge — indigo-to-violet
+   gradient with a warm amber rim. */
 .starburst {
-  background: linear-gradient(135deg, #15803d, #84cc16);
+  background: linear-gradient(135deg, #4338ca, #8b5cf6);
   color: #ffffff;
-  text-shadow: 0 1px 2px rgba(5, 46, 22, 0.35);
+  text-shadow: 0 1px 2px rgba(30, 27, 75, 0.35);
   border-radius: 999px;
   transform: rotate(0deg);
-  box-shadow: 0 10px 20px -8px rgba(21, 128, 61, 0.55);
-  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 20px -8px rgba(67, 56, 202, 0.55);
+  border: 2px solid #fbbf24;
 }
 
-/* Canopy dots: a fresh dotted leaf field. */
+/* Atelier dots: a sharp dotted indigo field. */
 .halftone {
-  background-image: radial-gradient(rgba(21, 128, 61, 0.20) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(rgba(67, 56, 202, 0.20) 1.5px, transparent 1.5px);
   background-size: 20px 20px;
 }
 
-/* Canopy rule: a soft dotted leaf divider. */
+/* Atelier rule: a bold dotted indigo divider. */
 .zigzag {
   height: 3px;
   border-top: none;
-  background-image: radial-gradient(circle, #15803d 2px, transparent 2.5px);
+  background-image: radial-gradient(circle, #4338ca 2px, transparent 2.5px);
   background-size: 14px 3px;
   background-repeat: repeat-x;
   opacity: 0.55;
   border-radius: 999px;
 }
 
-/* Canopy band: a fresh forest gradient bar with a soft glow. */
+/* Atelier band: a deep indigo gradient bar with an amber edge. */
 .bazaar-awning {
-  background: linear-gradient(120deg, #14532d, #15803d 42%, #84cc16 72%, #14b8a6);
+  background: linear-gradient(120deg, #312e81, #4338ca 42%, #8b5cf6 72%, #f59e0b);
   opacity: 1;
-  box-shadow: 0 12px 28px -12px rgba(20, 83, 45, 0.45);
-  border-bottom: none;
-  border-radius: 0 0 1.25rem 1.25rem;
+  box-shadow: 0 12px 28px -12px rgba(30, 27, 75, 0.45);
+  border-bottom: 3px solid #1e1b4b;
+  border-radius: 0;
 }
 
-/* Canopy glow: a fresh leaf halo for the core. */
+/* Atelier glow: a violet halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(246, 251, 240, 0.95) 0%, rgba(190, 242, 100, 0.55) 42%, rgba(21, 128, 61, 0.28) 62%, rgba(21, 128, 61, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(247, 245, 255, 0.95) 0%, rgba(252, 211, 77, 0.55) 42%, rgba(67, 56, 202, 0.28) 62%, rgba(67, 56, 202, 0) 76%);
 }
 
-/* Canopy core: a glowing lime leaf disc with a soft ring. */
+/* Atelier core: a glowing violet disc with an amber ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #d9f99d 0%, #84cc16 45%, #14532d 100%);
-  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.85), 0 14px 32px rgba(21, 128, 61, 0.40);
+    radial-gradient(circle at 35% 30%, #ddd6fe 0%, #8b5cf6 45%, #312e81 100%);
+  box-shadow: 0 0 0 4px #fbbf24, 0 14px 32px rgba(67, 56, 202, 0.40);
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Fresh traces around the core disc. */
+/* Sharp traces around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(21, 128, 61, 0.35) 0px,
-    rgba(21, 128, 61, 0.35) 1px,
+    rgba(67, 56, 202, 0.35) 0px,
+    rgba(67, 56, 202, 0.35) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(20, 184, 166, 0.35) 14px,
-    rgba(20, 184, 166, 0.35) 15px,
+    rgba(245, 158, 11, 0.35) 14px,
+    rgba(245, 158, 11, 0.35) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -256,7 +246,7 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(132, 204, 22, 0.45) 0deg 3deg,
+    rgba(245, 158, 11, 0.45) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);

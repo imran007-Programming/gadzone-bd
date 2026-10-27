@@ -4,7 +4,7 @@ export default function TopBar() {
       {/* drifting signal-dust flecks */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-40 [background-image:radial-gradient(rgba(6,95,70, 0.35)_1px,transparent_1.5px)] [background-size:20px_20px]"
+        className="pointer-events-none absolute inset-0 opacity-40 [background-image:radial-gradient(rgba(30,27,75, 0.35)_1px,transparent_1.5px)] [background-size:20px_20px]"
       />
       <div aria-hidden className="pointer-events-none absolute -left-12 top-1/2 h-28 w-28 -translate-y-1/2 rounded-full bg-brand-500/30 blur-2xl" />
       <div aria-hidden className="pointer-events-none absolute -right-12 top-1/2 h-28 w-28 -translate-y-1/2 rounded-full bg-brand-500/30 blur-2xl" />

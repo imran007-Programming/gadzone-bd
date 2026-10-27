@@ -197,7 +197,7 @@ export default function ProductDetails({
               <span className="w-8 text-center font-bold">{qty}</span>
               <button onClick={() => setQty(Math.min(99, qty + 1))} className="px-4 py-3 text-lg" aria-label="Increase quantity">+</button>
             </div>
-            <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty)} className="rounded-full bg-gradient-to-r from-brand-500 to-brand-700 px-7 py-3 font-bold text-white shadow-[0_8px_24px_-8px_rgba(6,95,70, 0.4)] transition hover:brightness-110">
+            <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty)} className="rounded-full bg-gradient-to-r from-brand-500 to-brand-700 px-7 py-3 font-bold text-white shadow-[0_8px_24px_-8px_rgba(30,27,75, 0.4)] transition hover:brightness-110">
               Add To Cart
             </motion.button>
             <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty, true)} className="rounded-full bg-white px-7 py-3 font-bold text-[#0a2436] transition ring-1 ring-brand-400/40 hover:bg-[#eef2ff]">

@@ -185,7 +185,7 @@ export default function HomeClient() {
         <>
           <Hero onQuickView={handleQuickView} />
           {/* Lantern Festival: post-hero sections ride on an ivory stage over the warm paper page. */}
-          <main className="relative z-10 mx-2.5 mt-10 rounded-[1.75rem] bg-white shadow-[0_0_70px_-18px_rgba(6,95,70, 0.45)] ring-1 ring-brand-400/25 sm:mx-5 lg:mx-auto lg:max-w-[86rem]">
+          <main className="relative z-10 mx-2.5 mt-10 rounded-[1.75rem] bg-white shadow-[0_0_70px_-18px_rgba(30,27,75, 0.45)] ring-1 ring-brand-400/25 sm:mx-5 lg:mx-auto lg:max-w-[86rem]">
           <CategoryGrid category={category} onCategoryChange={setCategory} />
           <FlashDeals products={flash} countdown={countdown} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
           <ProductSection accent="Trending" rest="Audio Products" subtitle="Explore earbuds, headphones & speakers picked for better sound." products={audioProducts} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />

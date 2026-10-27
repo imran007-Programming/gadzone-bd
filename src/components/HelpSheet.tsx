@@ -54,7 +54,7 @@ export default function HelpSheet({ open, onClose, onViewAllFaq }: HelpSheetProp
             </div>
             <button
               onClick={onViewAllFaq}
-              className="mt-4 w-full rounded-md bg-gradient-to-r from-brand-600 to-brand-800 py-3 font-bold text-white shadow-[0_8px_24px_-8px_rgba(6,95,70, 0.4)] transition hover:brightness-110 active:scale-[0.99]"
+              className="mt-4 w-full rounded-md bg-gradient-to-r from-brand-600 to-brand-800 py-3 font-bold text-white shadow-[0_8px_24px_-8px_rgba(30,27,75, 0.4)] transition hover:brightness-110 active:scale-[0.99]"
             >
               View all FAQs
             </button>
