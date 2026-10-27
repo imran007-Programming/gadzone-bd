@@ -1,71 +1,70 @@
 @import "tailwindcss";
 
 @theme {
-  /* Sunrise Paper: a warm morning direction —
-     cream paper, terracotta orange as the primary
-     accent, amber for badges and prices, and deep
-     teal for secondary highlights. Cards are chunky
-     soft paper tiles: large 1.75rem corners, a warm
-     stone edge and a soft daylight shadow — the
-     opposite of the previous Neon Night Market look,
-     its dark indigo-charcoal night, lime / magenta /
-     cyan palette, slim 0.5rem glass slabs and neon
-     glow. */
+  /* Glacier Blueprint: a cool, crisp, technical direction —
+     icy blue-white paper, deep slate-blue as the primary
+     accent, sky cyan for badges and prices, and mint
+     emerald for secondary highlights. Cards are sharp
+     blueprint tiles: small 0.5rem corners, a thin slate
+     edge and a flat, precise shadow — the opposite of
+     the previous Sunrise Paper look, its warm cream
+     paper, terracotta / amber / teal palette, chunky
+     1.75rem paper tiles and soft daylight glow. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = terracotta orange scale */
-  --color-brand-50: #fff7ed;
-  --color-brand-100: #ffedd5;
-  --color-brand-200: #fed7aa;
-  --color-brand-300: #fdba74;
-  --color-brand-400: #fb923c;
-  --color-brand-500: #f97316;
-  --color-brand-600: #ea580c;
-  --color-brand-700: #c2410c;
-  --color-brand-800: #9a3412;
-  --color-brand-900: #7c2d12;
-  --color-brand-950: #431407;
-  --color-brand: #f97316;
-  --color-brand-dark: #c2410c;
-  --color-brand-deep: #431407;
+  /* brand = slate-blue scale */
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-200: #bfdbfe;
+  --color-brand-300: #93c5fd;
+  --color-brand-400: #60a5fa;
+  --color-brand-500: #2563eb;
+  --color-brand-600: #1d4ed8;
+  --color-brand-700: #1e40af;
+  --color-brand-800: #1e3a8a;
+  --color-brand-900: #172554;
+  --color-brand-950: #0a1a3a;
+  --color-brand: #2563eb;
+  --color-brand-dark: #1e40af;
+  --color-brand-deep: #0a1a3a;
 
-  /* gold = amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #f59e0b;
-  --color-gold-deep: #92400e;
-  --color-gold-soft: #fef3c7;
+  /* gold = sky cyan scale (name kept for legacy class refs) */
+  --color-gold-50: #f0f9ff;
+  --color-gold-100: #e0f2fe;
+  --color-gold-200: #bae6fd;
+  --color-gold-300: #7dd3fc;
+  --color-gold-400: #38bdf8;
+  --color-gold-500: #0284c7;
+  --color-gold-600: #0369a1;
+  --color-gold-700: #075985;
+  --color-gold-800: #0c4a6e;
+  --color-gold-900: #082f49;
+  --color-gold-950: #041e30;
+  --color-gold: #0284c7;
+  --color-gold-deep: #0c4a6e;
+  --color-gold-soft: #e0f2fe;
 
-  /* popblue = deep teal scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0fdfa;
-  --color-popblue-100: #ccfbf1;
-  --color-popblue-200: #99f6e4;
-  --color-popblue-300: #5eead4;
-  --color-popblue-400: #2dd4bf;
-  --color-popblue-500: #14b8a6;
-  --color-popblue-600: #0d9488;
-  --color-popblue-700: #0f766e;
-  --color-popblue-800: #115e59;
-  --color-popblue-900: #134e4a;
-  --color-popblue-950: #042f2e;
-  --color-popblue: #14b8a6;
-  --color-popblue-deep: #0f766e;
-  --color-popblue-soft: #ccfbf1;
+  /* popblue = mint emerald scale (name kept for legacy class refs) */
+  --color-popblue-50: #ecfdf5;
+  --color-popblue-100: #d1fae5;
+  --color-popblue-200: #a7f3d0;
+  --color-popblue-300: #6ee7b7;
+  --color-popblue-400: #34d399;
+  --color-popblue-500: #059669;
+  --color-popblue-600: #047857;
+  --color-popblue-700: #065f46;
+  --color-popblue-800: #064e3b;
+  --color-popblue-900: #022c22;
+  --color-popblue-950: #011d16;
+  --color-popblue: #059669;
+  --color-popblue-deep: #065f46;
+  --color-popblue-soft: #d1fae5;
 
-  --color-ink: #1c1917;
-  --color-paper: #fffaf3;
-  --color-mute: #78716c;
+  --color-ink: #0f2a43;
+  --color-paper: #f2f7fc;
+  --color-mute: #5b7285;
   --color-card: #ffffff;
-  --color-deep: #292524;
+  --color-deep: #122f4a;
 }
 
 html { scroll-behavior: smooth; }
@@ -80,165 +79,168 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fffaf3;
+  background-color: #f2f7fc;
   background-image:
-    linear-gradient(180deg, rgba(249, 115, 22, 0.08) 0%, transparent 380px),
-    radial-gradient(circle at 92% 0%, rgba(245, 158, 11, 0.16) 0%, transparent 44%),
-    radial-gradient(circle at 4% 100%, rgba(20, 184, 166, 0.12) 0%, transparent 44%);
-  color: #1c1917;
+    linear-gradient(rgba(37, 99, 235, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.05) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(37, 99, 235, 0.07) 0%, transparent 380px);
+  background-size: 32px 32px, 32px 32px, 100% 380px;
+  color: #0f2a43;
 }
-::selection { background: #fdba74; color: #431407; }
+::selection { background: #7dd3fc; color: #0a1a3a; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #f97316, #f59e0b); border-radius: 999px; border: 2px solid #fffaf3; }
-::-webkit-scrollbar-track { background: #f5f5f4; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #2563eb, #0284c7); border-radius: 4px; border: 2px solid #f2f7fc; }
+::-webkit-scrollbar-track { background: #e2e8f0; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Morning type: warm, open, gently rounded headlines. */
-h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
+/* Blueprint type: crisp, upright, technical headlines. */
+h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Morning rise: soft motes drifting upward in daylight. */
+/* Glacier rise: cool motes drifting upward. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, 4vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
-  15% { opacity: 0.8; }
+  15% { opacity: 0.7; }
   50% { transform: translate3d(-2vw, -42vh, 0) rotate(-30deg) scale(1.02); }
   100% { transform: translate3d(1vw, -92vh, 0) rotate(-60deg) scale(1); opacity: 0; }
 }
 .pop-fall { animation: signal-rise 14s linear infinite; }
 
-/* Morning sway: a slow, gentle side-to-side float. */
+/* Glacier sway: a slow, precise side-to-side float. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-6px, 0, 0) rotate(-1deg) scale(1); opacity: 0.6; }
   50% { transform: translate3d(6px, -6px, 0) rotate(1deg) scale(1.02); opacity: 0.9; }
 }
 .pop-drift { animation: signal-drift 12s ease-in-out infinite; }
 
-/* Morning bob: a gentle hover lift. */
+/* Glacier bob: a gentle hover lift. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-5px) scale(1.02); }
 }
 .pop-bob { animation: signal-bob 5s ease-in-out infinite; }
 
-/* Slow turn for the morning dial. */
+/* Slow turn for the glacier dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 48s linear infinite; }
 
-/* Morning glow pulse: a soft amber shimmer. */
+/* Glacier glow pulse: a cool cyan shimmer. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.5; transform: scale(0.94); }
   50% { opacity: 1; transform: scale(1.06); }
 }
 .pop-twinkle { animation: signal-blink 3.5s ease-in-out infinite; }
 
-/* Morning ticker: infinite marquee (leftward drift). */
+/* Glacier ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Morning bands: terracotta -> amber -> teal stripes. */
+/* Glacier bands: blue -> cyan -> mint stripes. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #f97316 0 34%, #f59e0b 34% 67%, #14b8a6 67% 100%);
+    linear-gradient(90deg, #2563eb 0 34%, #0284c7 34% 67%, #059669 67% 100%);
   background-size: 34px 34px;
 }
 
-/* Morning card: a chunky soft paper tile — large
-   rounded corners, a warm stone edge and a soft
-   daylight shadow that deepens on hover. */
+/* Glacier card: a sharp blueprint tile — small
+   rounded corners, a thin slate edge and a flat,
+   precise shadow that firms up on hover. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(120, 113, 108, 0.25);
+  border: 1px solid rgba(100, 116, 139, 0.35);
   background: #ffffff;
-  border-radius: 1.75rem;
-  box-shadow: 0 2px 0 rgba(120, 113, 108, 0.12), 0 16px 32px -16px rgba(194, 65, 12, 0.25);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px rgba(15, 42, 67, 0.08), 0 8px 20px -12px rgba(30, 64, 175, 0.25);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 0 rgba(120, 113, 108, 0.12), 0 24px 40px -16px rgba(194, 65, 12, 0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 2px 4px rgba(15, 42, 67, 0.1), 0 16px 28px -12px rgba(30, 64, 175, 0.35);
 }
 
-/* Morning glass: shared by modals and drawers — a
-   warm frosted pane with a thick amber top edge. */
+/* Glacier glass: shared by modals and drawers — a
+   cool frosted pane with a thin blue left edge. */
 .pop-glass {
-  background: rgba(255, 250, 243, 0.94);
+  background: rgba(242, 247, 252, 0.94);
   backdrop-filter: blur(16px) saturate(1.05);
   -webkit-backdrop-filter: blur(16px) saturate(1.05);
-  border: 1px solid rgba(120, 113, 108, 0.25);
-  border-top: 4px solid #f59e0b;
-  border-radius: 1.75rem;
-  box-shadow: 0 20px 48px -16px rgba(41, 37, 36, 0.3);
+  border: 1px solid rgba(100, 116, 139, 0.35);
+  border-left: 4px solid #0284c7;
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 48px -16px rgba(15, 42, 67, 0.3);
 }
 
-/* Morning tag: an amber pill badge — large corners,
-   tilted the other way. */
+/* Glacier tag: a sharp square badge — no tilt,
+   crisp corners, blue-to-cyan face. */
 .starburst {
-  background: linear-gradient(135deg, #fbbf24, #d97706);
+  background: linear-gradient(135deg, #38bdf8, #0369a1);
   color: #ffffff;
   text-shadow: none;
-  border-radius: 999px;
-  transform: rotate(6deg);
-  box-shadow: 0 6px 18px rgba(217, 119, 6, 0.4);
+  border-radius: 0.25rem;
+  transform: rotate(0deg);
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
-/* Morning dots: fine terracotta dots. */
+/* Glacier grid: fine slate-blue grid lines. */
 .halftone {
-  background-image: radial-gradient(rgba(249, 115, 22, 0.22) 1.5px, transparent 1.5px);
+  background-image:
+    linear-gradient(rgba(37, 99, 235, 0.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.14) 1px, transparent 1px);
   background-size: 22px 22px;
 }
 
-/* Morning rule: a terracotta-to-amber-to-teal bar. */
+/* Glacier rule: a blue-to-cyan-to-mint bar. */
 .zigzag {
-  height: 4px;
+  height: 3px;
   border-top: none;
-  background: linear-gradient(90deg, #f97316, #f59e0b, #14b8a6);
-  background-size: 100% 4px;
+  background: linear-gradient(90deg, #2563eb, #0284c7, #059669);
+  background-size: 100% 3px;
   background-repeat: no-repeat;
   opacity: 0.9;
-  border-radius: 999px;
+  border-radius: 0;
 }
 
-/* Morning band: a warm gradient bar with a
-   terracotta underline and rounded bottom corners. */
+/* Glacier band: a cool gradient bar with a
+   blue underline and square bottom corners. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #fff7ed, #ffedd5, #fef3c7);
+  background: linear-gradient(90deg, #eff6ff, #dbeafe, #e0f2fe);
   opacity: 1;
-  box-shadow: 0 10px 24px -12px rgba(194, 65, 12, 0.3);
-  border-bottom: 3px solid #f97316;
-  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 8px 20px -12px rgba(30, 64, 175, 0.3);
+  border-bottom: 2px solid #2563eb;
+  border-radius: 0;
 }
 
-/* Morning glow: a peach-amber halo for the core. */
+/* Glacier glow: an icy cyan halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.5) 0%, rgba(249, 115, 22, 0.28) 42%, rgba(245, 158, 11, 0.3) 62%, rgba(245, 158, 11, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.5) 0%, rgba(37, 99, 235, 0.22) 42%, rgba(2, 132, 199, 0.25) 62%, rgba(2, 132, 199, 0) 76%);
 }
 
-/* Morning core: an amber disc with a soft ring. */
+/* Glacier core: a cyan disc with a crisp ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fef3c7 0%, #f59e0b 55%, #c2410c 100%);
-  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.35), 0 0 44px rgba(249, 115, 22, 0.4);
+    radial-gradient(circle at 35% 30%, #e0f2fe 0%, #0284c7 55%, #1e40af 100%);
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.35), 0 0 36px rgba(37, 99, 235, 0.35);
   border: 2px solid rgba(255, 255, 255, 0.6);
 }
 
-/* Soft rings around the core disc. */
+/* Crisp rings around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(249, 115, 22, 0.3) 0px,
-    rgba(249, 115, 22, 0.3) 1px,
+    rgba(37, 99, 235, 0.3) 0px,
+    rgba(37, 99, 235, 0.3) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(245, 158, 11, 0.3) 14px,
-    rgba(245, 158, 11, 0.3) 15px,
+    rgba(2, 132, 199, 0.3) 14px,
+    rgba(2, 132, 199, 0.3) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -249,7 +251,7 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(245, 158, 11, 0.45) 0deg 3deg,
+    rgba(2, 132, 199, 0.4) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);

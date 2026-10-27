@@ -14,7 +14,7 @@ type NewsletterProps = {
 export default function Newsletter({ email, onEmailChange, subscribed, onSubscribe }: NewsletterProps) {
   return (
     <Reveal>
-      <div className="relative flex flex-col justify-center overflow-hidden rounded-[2rem] bg-gradient-to-br from-brand-700 via-brand-600 to-brand-800 p-8 text-white shadow-xl shadow-brand-900/30 sm:p-10">
+      <div className="relative flex flex-col justify-center overflow-hidden rounded-md bg-gradient-to-br from-brand-700 via-brand-600 to-brand-800 p-8 text-white shadow-xl shadow-brand-900/30 sm:p-10">
         <div aria-hidden className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[#161a12]/40 blur-3xl" />
         <div aria-hidden className="pointer-events-none absolute -bottom-20 -left-10 h-48 w-48 rounded-full bg-brand-500/30 blur-3xl" />
         <div
