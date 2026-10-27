@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Harvest glow drifting over the warm cream paper.
+// Harbor glow drifting over the warm cream paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(245, 158, 11, 0.22)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(5, 150, 105, 0.20)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(132, 204, 22, 0.20)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(2, 44, 34, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(249, 77, 42, 0.22)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(37, 99, 235, 0.20)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(6, 182, 212, 0.20)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(15, 36, 64, 0.20)" },
 ];
 
-// Harvest leaves drifting down through the warm light.
+// Harbor signal drifting down through the warm light.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#f59e0b" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#059669" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#84cc16" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#fbbf24" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#047857" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#a3e635" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#022c22" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#f94d2a" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#2563eb" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#06b6d4" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#ff7a5c" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#1e40af" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#22d3ee" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#0f2440" },
 ];
 
-// Harvest leaves scattered through the warm light.
+// Harbor signal scattered through the warm light.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* cool dusk wash under the iris light */}
-      <div className="relative bg-gradient-to-b from-[#ede9fe] via-[#f6f4ff] to-[#e0e7ff]">
+      <div className="relative bg-gradient-to-b from-[#dbeafe] via-[#eef3f7] to-[#cffafe]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -100,7 +100,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(236, 72, 153, 0.45), inset 0 0 18px rgba(124, 58, 237, 0.30)",
+                  boxShadow: "0 0 28px 2px rgba(37, 99, 235, 0.45), inset 0 0 18px rgba(6, 182, 212, 0.30)",
                   opacity: 1 - r * 0.22,
                 }}
               />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#ec4899", "#8b5cf6", "#06b6d4", "#2e1065"];
+              const colors = ["#f94d2a", "#2563eb", "#06b6d4", "#0f2440"];
               return (
                 <span
                   key={i}
@@ -223,7 +223,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full border border-brand-400/60 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_8px_24px_-8px_rgba(15,23,42, 0.6)] backdrop-blur">Handpicked for you</p>
+            <p className="inline-block rounded-md border border-brand-400/60 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_8px_24px_-8px_rgba(15,23,42, 0.6)] backdrop-blur">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="relative bg-gradient-to-r from-brand-500 via-brand-600 to-ink bg-clip-text text-transparent">Picks<span aria-hidden className="absolute inset-x-0 -bottom-1 h-2 rounded-full bg-gradient-to-r from-brand-500 to-brand-700 opacity-60 blur-[3px]" /></span></h2>
             <span className="zigzag mt-4 block w-44" aria-hidden />
           </div>
