@@ -1,67 +1,68 @@
 @import "tailwindcss";
 
 @theme {
-  /* Harbor Mist: a coastal direction — deep navy brand,
-     coral and sky accents on pale mist. Cards are soft
-     harbor pebbles: fully rounded, borderless, soft
-     diffused shadows — the opposite of the previous
-     the previous green ledger look, thin ink
-     borders, small corners and hard offset shadows. */
+  /* Orchard Dusk: a warm plum-and-honey direction — deep plum
+     brand, honey amber and leaf green accents on warm cream.
+     Cards are crisp orchard crates: medium corners, a thin
+     plum-tinted border and a small hard offset shadow — the
+     opposite of the previous Harbor Mist look, its fully
+     rounded borderless pebbles, soft diffused shadows and
+     navy/coral/sky palette. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = deep navy scale */
-  --color-brand-50: #eef4fb;
-  --color-brand-100: #d9e8f5;
-  --color-brand-200: #b3cfe8;
-  --color-brand-300: #84aed6;
-  --color-brand-400: #5488bd;
-  --color-brand-500: #2f6da3;
-  --color-brand-600: #1d5689;
-  --color-brand-700: #16446e;
-  --color-brand-800: #123a5e;
-  --color-brand-900: #0b2545;
-  --color-brand-950: #071a33;
-  --color-brand: #1d5689;
-  --color-brand-dark: #123a5e;
-  --color-brand-deep: #071a33;
+  /* brand = deep plum scale */
+  --color-brand-50: #f5f0fb;
+  --color-brand-100: #ede3f7;
+  --color-brand-200: #dcc8ef;
+  --color-brand-300: #c2a0e2;
+  --color-brand-400: #a173cf;
+  --color-brand-500: #8549b8;
+  --color-brand-600: #6b21a8;
+  --color-brand-700: #581c87;
+  --color-brand-800: #4a156e;
+  --color-brand-900: #3b0f57;
+  --color-brand-950: #240a38;
+  --color-brand: #6b21a8;
+  --color-brand-dark: #4a156e;
+  --color-brand-deep: #240a38;
 
-  /* gold = coral scale (name kept for legacy class refs) */
-  --color-gold-50: #fff5f2;
-  --color-gold-100: #ffe8e0;
-  --color-gold-200: #ffcdbf;
-  --color-gold-300: #ffab94;
-  --color-gold-400: #ff7d5c;
-  --color-gold-500: #ff5a33;
-  --color-gold-600: #f43f14;
-  --color-gold-700: #d92f08;
-  --color-gold-800: #b3270a;
-  --color-gold-900: #8f2009;
-  --color-gold-950: #4a0f04;
-  --color-gold: #f43f14;
-  --color-gold-deep: #b3270a;
-  --color-gold-soft: #ffe8e0;
+  /* gold = honey amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fdf8ec;
+  --color-gold-100: #fbeed3;
+  --color-gold-200: #f6dca6;
+  --color-gold-300: #eec27a;
+  --color-gold-400: #e5a44a;
+  --color-gold-500: #d97706;
+  --color-gold-600: #b45309;
+  --color-gold-700: #92400e;
+  --color-gold-800: #78350f;
+  --color-gold-900: #451a03;
+  --color-gold-950: #2a1002;
+  --color-gold: #d97706;
+  --color-gold-deep: #92400e;
+  --color-gold-soft: #fbeed3;
 
-  /* popblue = sky scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0f9ff;
-  --color-popblue-100: #dff2fe;
-  --color-popblue-200: #bfe6fe;
-  --color-popblue-300: #7dd3fc;
-  --color-popblue-400: #38bdf8;
-  --color-popblue-500: #0ea5e9;
-  --color-popblue-600: #0284c7;
-  --color-popblue-700: #0369a1;
-  --color-popblue-800: #075985;
-  --color-popblue-900: #0c4a6e;
-  --color-popblue-950: #082f49;
-  --color-popblue: #0284c7;
-  --color-popblue-deep: #0369a1;
-  --color-popblue-soft: #dff2fe;
+  /* popblue = leaf green scale (name kept for legacy class refs) */
+  --color-popblue-50: #f0fdf4;
+  --color-popblue-100: #dcfce7;
+  --color-popblue-200: #bbf7d0;
+  --color-popblue-300: #86efac;
+  --color-popblue-400: #4ade80;
+  --color-popblue-500: #22c55e;
+  --color-popblue-600: #16a34a;
+  --color-popblue-700: #15803d;
+  --color-popblue-800: #166534;
+  --color-popblue-900: #14532d;
+  --color-popblue-950: #052e16;
+  --color-popblue: #16a34a;
+  --color-popblue-deep: #15803d;
+  --color-popblue-soft: #dcfce7;
 
-  --color-ink: #0f2033;
-  --color-paper: #f2f8fb;
-  --color-mute: #5b7186;
+  --color-ink: #2a1a33;
+  --color-paper: #faf6ef;
+  --color-mute: #6b5d73;
   --color-card: #ffffff;
-  --color-deep: #071a33;
+  --color-deep: #240a38;
 }
 
 html { scroll-behavior: smooth; }
@@ -76,24 +77,24 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f2f8fb;
+  background-color: #faf6ef;
   background-image:
-    linear-gradient(180deg, rgba(29, 86, 137, 0.10) 0%, transparent 380px),
-    radial-gradient(circle at 88% 0%, rgba(244, 63, 20, 0.12) 0%, transparent 46%),
-    radial-gradient(circle at 6% 100%, rgba(2, 132, 199, 0.12) 0%, transparent 46%);
-  color: #0f2033;
+    linear-gradient(180deg, rgba(107, 33, 168, 0.10) 0%, transparent 340px),
+    radial-gradient(circle at 92% 0%, rgba(217, 119, 6, 0.14) 0%, transparent 44%),
+    radial-gradient(circle at 4% 100%, rgba(22, 163, 74, 0.12) 0%, transparent 44%);
+  color: #2a1a33;
 }
-::selection { background: #ffab94; color: #071a33; }
+::selection { background: #eec27a; color: #240a38; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #1d5689, #0284c7); border-radius: 999px; border: 2px solid #f2f8fb; }
-::-webkit-scrollbar-track { background: #d9e8f5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #6b21a8, #d97706); border-radius: 8px; border: 2px solid #faf6ef; }
+::-webkit-scrollbar-track { background: #ede3f7; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Harbor Mist type: open, airy headlines. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Orchard Dusk type: tight, confident headlines. */
+h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Harbor Mist drift: sea spray drifting down. */
+/* Orchard Dusk drift: honey drops falling through the grove. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, -4vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.9; }
@@ -102,14 +103,14 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 15s linear infinite; }
 
-/* Harbor Mist sway: a slow tide sway. */
+/* Orchard Dusk sway: branches swaying in the evening air. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-1vw, 0, 0) rotate(1deg) scale(1); opacity: 0.5; }
   50% { transform: translate3d(1vw, -8px, 0) rotate(-1deg) scale(1.03); opacity: 0.9; }
 }
 .pop-drift { animation: signal-drift 11s ease-in-out infinite; }
 
-/* Harbor Mist bounce: a gentle wave bob. */
+/* Orchard Dusk bounce: a ripe-fruit bob. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   30% { transform: translateY(-3px) scale(1.01); }
@@ -117,42 +118,42 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 }
 .pop-bob { animation: signal-bob 4.5s ease-in-out infinite; }
 
-/* Slow turn for the harbor dial. */
+/* Slow turn for the orchard dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 36s linear infinite; }
 
-/* Harbor Mist glow pulse: a coral shimmer pulse. */
+/* Orchard Dusk glow pulse: a honey shimmer pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.45; transform: scale(0.92); }
   50% { opacity: 1; transform: scale(1.12); }
 }
 .pop-twinkle { animation: signal-blink 3s ease-in-out infinite; }
 
-/* Harbor Mist ticker: infinite marquee (leftward drift). */
+/* Orchard Dusk ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 32s linear infinite; }
 
-/* Harbor Mist bands: navy -> sky -> coral stripes. */
+/* Orchard Dusk bands: plum -> honey -> leaf stripes. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #1d5689 0 34%, #0284c7 34% 67%, #f43f14 67% 100%);
+    linear-gradient(90deg, #6b21a8 0 34%, #d97706 34% 67%, #16a34a 67% 100%);
   background-size: 34px 34px;
 }
 
-/* Harbor Mist card: a soft harbor pebble — no border,
-   fully rounded, and a soft diffused shadow that deepens
-   and lifts on hover. */
+/* Orchard Dusk card: a crisp orchard crate — medium corners,
+   a thin plum-tinted border and a small hard offset shadow
+   that lifts straight up on hover. */
 .pop-lift {
   position: relative;
-  border: none;
+  border: 1.5px solid rgba(88, 28, 135, 0.22);
   background: #ffffff;
-  border-radius: 1.75rem;
-  box-shadow: 0 18px 40px -18px rgba(7, 26, 51, 0.28);
+  border-radius: 1rem;
+  box-shadow: 4px 4px 0 rgba(88, 28, 135, 0.16);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   overflow: hidden;
 }
@@ -160,93 +161,93 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
   content: "";
   position: absolute;
   inset: 0 0 auto 0;
-  height: 5px;
-  background: linear-gradient(90deg, #1d5689, #0284c7, #f43f14);
+  height: 4px;
+  background: linear-gradient(90deg, #6b21a8, #d97706, #16a34a);
   opacity: 0;
   transition: opacity 0.25s ease;
   z-index: 1;
 }
 .pop-lift:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 28px 50px -20px rgba(7, 26, 51, 0.35);
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0 rgba(88, 28, 135, 0.20);
 }
 .pop-lift:hover::before { opacity: 1; }
 
-/* Harbor Mist glass: shared by modals and drawers — a
-   frosted white pane with a soft navy ring. */
+/* Orchard Dusk glass: shared by modals and drawers — a
+   warm frosted pane with a plum ring. */
 .pop-glass {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(253, 248, 236, 0.94);
   backdrop-filter: blur(18px) saturate(1.05);
   -webkit-backdrop-filter: blur(18px) saturate(1.05);
-  border: 1px solid rgba(29, 86, 137, 0.15);
-  border-radius: 1.25rem;
-  box-shadow: 0 24px 48px -20px rgba(7, 26, 51, 0.30);
+  border: 1px solid rgba(107, 33, 168, 0.20);
+  border-radius: 1rem;
+  box-shadow: 6px 6px 0 rgba(88, 28, 135, 0.14);
 }
 
-/* Harbor Mist tag: a round coral pill badge —
-   fully rounded, white ring, soft shadow. */
+/* Orchard Dusk tag: a honey pill badge — medium-rounded,
+   plum ring, crisp shadow. */
 .starburst {
-  background: #f43f14;
+  background: #d97706;
   color: #ffffff;
   text-shadow: none;
-  border-radius: 999px;
-  transform: rotate(-3deg);
-  box-shadow: 0 10px 24px -8px rgba(244, 63, 20, 0.65);
-  border: 2px solid #ffffff;
+  border-radius: 0.75rem;
+  transform: rotate(-2deg);
+  box-shadow: 3px 3px 0 rgba(88, 28, 135, 0.30);
+  border: 1.5px solid #581c87;
 }
 
-/* Harbor Mist dots: fine mist dots. */
+/* Orchard Dusk dots: fine orchard dots. */
 .halftone {
   background-image:
-    radial-gradient(rgba(29, 86, 137, 0.16) 1.5px, transparent 1.5px);
-  background-size: 22px 22px;
+    radial-gradient(rgba(107, 33, 168, 0.18) 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
 }
 
-/* Harbor Mist rule: a soft navy-to-coral bar. */
+/* Orchard Dusk rule: a plum-to-honey-to-leaf bar. */
 .zigzag {
   height: 4px;
   border-top: none;
-  background: linear-gradient(90deg, #1d5689, #0284c7, #f43f14);
+  background: linear-gradient(90deg, #6b21a8, #d97706, #16a34a);
   background-size: 100% 4px;
   background-repeat: no-repeat;
   opacity: 0.9;
   border-radius: 999px;
 }
 
-/* Harbor Mist band: a deep navy bar with a
-   coral underline and rounded bottom corners. */
+/* Orchard Dusk band: a deep plum bar with a honey
+   underline and squared bottom corners. */
 .bazaar-awning {
-  background: linear-gradient(180deg, #071a33, #1d5689);
+  background: linear-gradient(180deg, #240a38, #581c87);
   opacity: 1;
-  box-shadow: 0 10px 24px -12px rgba(7, 26, 51, 0.35);
-  border-bottom: 4px solid #f43f14;
-  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 10px 24px -12px rgba(36, 10, 56, 0.35);
+  border-bottom: 4px solid #d97706;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
-/* Harbor Mist glow: a sky halo for the core. */
+/* Orchard Dusk glow: a honey halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(191, 230, 254, 0.55) 42%, rgba(29, 86, 137, 0.28) 62%, rgba(29, 86, 137, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(251, 238, 211, 0.55) 42%, rgba(107, 33, 168, 0.28) 62%, rgba(107, 33, 168, 0) 76%);
 }
 
-/* Harbor Mist core: a coral disc with a sky ring. */
+/* Orchard Dusk core: a honey disc with a leaf ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #ffab94 0%, #f43f14 55%, #071a33 100%);
-  box-shadow: 0 0 0 4px #38bdf8, 0 18px 40px -12px rgba(7, 26, 51, 0.45);
+    radial-gradient(circle at 35% 30%, #eec27a 0%, #d97706 55%, #240a38 100%);
+  box-shadow: 0 0 0 4px #22c55e, 4px 4px 0 rgba(88, 28, 135, 0.35);
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Sky traces around the core disc. */
+/* Leaf traces around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(29, 86, 137, 0.35) 0px,
-    rgba(29, 86, 137, 0.35) 1px,
+    rgba(107, 33, 168, 0.35) 0px,
+    rgba(107, 33, 168, 0.35) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(2, 132, 199, 0.35) 14px,
-    rgba(2, 132, 199, 0.35) 15px,
+    rgba(22, 163, 74, 0.35) 14px,
+    rgba(22, 163, 74, 0.35) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -257,7 +258,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(2, 132, 199, 0.5) 0deg 3deg,
+    rgba(22, 163, 74, 0.5) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
