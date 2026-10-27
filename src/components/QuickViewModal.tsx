@@ -33,7 +33,7 @@ export default function QuickViewModal({ product, qty, onQtyChange, onClose, onA
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.96, y: 8 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="flex max-h-[92vh] w-full max-w-2xl flex-col overflow-hidden rounded-t-[2rem] border border-[#d9f99d] bg-white shadow-2xl sm:rounded-[2rem]"
+            className="flex max-h-[92vh] w-full max-w-2xl flex-col overflow-hidden rounded-t-[2rem] border border-[#ddd6fe] bg-white shadow-2xl sm:rounded-[2rem]"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex-1 overflow-y-auto">
@@ -50,8 +50,8 @@ export default function QuickViewModal({ product, qty, onQtyChange, onClose, onA
                 </div>
               </div>
             </div>
-            <div className="sticky bottom-0 flex items-center gap-3 border-t border-[#d9f99d] bg-white p-3 sm:p-4">
-              <div className="flex shrink-0 items-center rounded-full border border-[#d9f99d] bg-white text-[#161a12]">
+            <div className="sticky bottom-0 flex items-center gap-3 border-t border-[#ddd6fe] bg-white p-3 sm:p-4">
+              <div className="flex shrink-0 items-center rounded-full border border-[#ddd6fe] bg-white text-[#161a12]">
                 <button onClick={() => onQtyChange(Math.max(1, qty - 1))} className="px-3 py-2 text-lg" aria-label="Decrease quantity">−</button>
                 <span className="w-8 text-center font-bold">{qty}</span>
                 <button onClick={() => onQtyChange(qty + 1)} className="px-3 py-2 text-lg" aria-label="Increase quantity">+</button>
