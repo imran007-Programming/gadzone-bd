@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Coral Tide glow drifting over the warm sand paper.
+// Violet Dusk glow drifting over the lavender paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(217, 58, 18, 0.22)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(13, 148, 136, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(109, 40, 217, 0.22)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(192, 38, 211, 0.20)" },
   { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(245, 158, 11, 0.20)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(42, 31, 26, 0.20)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(46, 16, 101, 0.20)" },
 ];
 
-// Coral Tide sparks drifting down through the warm light.
+// Violet Dusk sparks drifting down through the evening light.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#d93a12" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#0d9488" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#6d28d9" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#c026d3" },
   { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#f59e0b" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#2dd4bf" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#b32e0e" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#0f766e" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#2a1f1a" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#a78bfa" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#b45309" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#e879f9" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#2e1065" },
 ];
 
 // Ember sparks scattered through the warm dusk light.
@@ -75,8 +75,8 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* warm sand wash under the coral light */}
-      <div className="relative bg-gradient-to-b from-[#ccfbf1] via-[#ecfeff] to-[#f0fdfa]">
+      {/* warm sand wash under the dusk light */}
+      <div className="relative bg-gradient-to-b from-[#ede9fe] via-[#fae8ff] to-[#faf7ff]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -87,7 +87,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           <div className="pop-drift absolute -right-24 top-40 h-64 w-[44rem] rotate-[10deg] rounded-full bg-gradient-to-r from-transparent via-gold-300/25 to-brand-400/30 blur-3xl" style={{ animationDelay: "-12s" }} />
         </div>
 
-        {/* coral core: a warm orb ringed by a slow-spinning dial */}
+        {/* dusk core: a warm orb ringed by a slow-spinning dial */}
         <div aria-hidden className="pointer-events-none absolute -right-40 -top-32 z-0 hidden opacity-90 sm:block">
           <div className="relative h-[600px] w-[600px]">
             <div className="nebula-core absolute inset-8 rounded-full blur-xl" />
@@ -100,12 +100,12 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(217, 58, 18, 0.45), inset 0 0 18px rgba(13, 148, 136, 0.30)",
+                  boxShadow: "0 0 28px 2px rgba(109, 40, 217, 0.45), inset 0 0 18px rgba(192, 38, 211, 0.30)",
                   opacity: 1 - r * 0.22,
                 }}
               />
             ))}
-            {/* the coral heart: a layered coral disc */}
+            {/* the dusk heart: a layered dusk disc */}
             <div className="sun-disc pop-spin absolute inset-44 rounded-full" style={{ animationDuration: "60s" }} />
             {/* beacon glints */}
             <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
@@ -113,7 +113,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 <span key={i} className="absolute rounded-full bg-white/80" style={{ left: glint.l, top: glint.t, width: glint.s, height: glint.s }} />
               ))}
             </div>
-            {/* sweeping coral beams */}
+            {/* sweeping dusk beams */}
             {[0, 1, 2].map((b) => (
               <span
                 key={b}
@@ -143,7 +143,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* drifting coral glow */}
+        {/* drifting dusk glow */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {ORBS.map((g, i) => (
             <div
@@ -185,7 +185,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* signal ticker: deep coral band with white type */}
+        {/* signal ticker: deep dusk band with white type */}
         <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/60 bg-gradient-to-r from-brand-600/95 via-popblue-600/95 to-brand-700/95 py-3 shadow-[0_14px_30px_-14px_rgba(42,31,26, 0.5)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
@@ -198,11 +198,11 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* coral divider into the page */}
+        {/* dusk divider into the page */}
         <div aria-hidden className="zigzag relative z-10 mx-auto mt-0 w-full max-w-7xl opacity-90" />
       </div>
 
-      {/* Stats + featured picks under the coral beacon */}
+      {/* Stats + featured picks under the dusk beacon */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 pb-24 pt-10 md:pb-28">
         <motion.div variants={container} initial="hidden" animate="show" {...anim}>
           <motion.div variants={item} className="grid grid-cols-2 gap-6 sm:grid-cols-4">
@@ -253,7 +253,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* coral divider into the page */}
+      {/* dusk divider into the page */}
       <div aria-hidden className="zigzag absolute bottom-0 left-0 w-full opacity-90" />
     </section>
   );

@@ -1,67 +1,68 @@
 @import "tailwindcss";
 
 @theme {
-  /* Glacier Current: a cool, crisp, current direction — deep
-     teal brand, cyan and lime accents on icy mint paper.
-     Cards are flat, crisp slabs with modest corners and a thin
-     teal border — the opposite of the previous Rosewood
-     Sunset's warm rose/plum palette, amber and emerald
-     accents, warm cream paper and extra-rounded plush slabs. */
+  /* Violet Dusk: a warm-evening direction — deep violet brand,
+     fuchsia and amber accents on soft lavender paper.
+     Cards are extra-rounded plush slabs with a soft layered
+     shadow and a violet-to-amber gradient top edge — the
+     opposite of the previous Glacier Current's cool teal/cyan/
+     lime palette, icy mint paper, flat crisp slabs and modest
+     corners. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = teal scale */
-  --color-brand-50: #f0fdfa;
-  --color-brand-100: #ccfbf1;
-  --color-brand-200: #99f6e4;
-  --color-brand-300: #5eead4;
-  --color-brand-400: #2dd4bf;
-  --color-brand-500: #14b8a6;
-  --color-brand-600: #0d9488;
-  --color-brand-700: #0f766e;
-  --color-brand-800: #115e59;
-  --color-brand-900: #134e4a;
-  --color-brand-950: #042f2e;
-  --color-brand: #0f766e;
-  --color-brand-dark: #134e4a;
-  --color-brand-deep: #042f2e;
+  /* brand = violet scale */
+  --color-brand-50: #f5f3ff;
+  --color-brand-100: #ede9fe;
+  --color-brand-200: #ddd6fe;
+  --color-brand-300: #c4b5fd;
+  --color-brand-400: #a78bfa;
+  --color-brand-500: #8b5cf6;
+  --color-brand-600: #7c3aed;
+  --color-brand-700: #6d28d9;
+  --color-brand-800: #5b21b6;
+  --color-brand-900: #4c1d95;
+  --color-brand-950: #2e1065;
+  --color-brand: #6d28d9;
+  --color-brand-dark: #4c1d95;
+  --color-brand-deep: #2e1065;
 
-  /* gold = lime scale (name kept for legacy class refs) */
-  --color-gold-50: #f7fee7;
-  --color-gold-100: #ecfccb;
-  --color-gold-200: #d9f99d;
-  --color-gold-300: #bef264;
-  --color-gold-400: #a3e635;
-  --color-gold-500: #84cc16;
-  --color-gold-600: #65a30d;
-  --color-gold-700: #4d7c0f;
-  --color-gold-800: #3f6212;
-  --color-gold-900: #365314;
-  --color-gold-950: #1a2e05;
-  --color-gold: #84cc16;
-  --color-gold-deep: #4d7c0f;
-  --color-gold-soft: #ecfccb;
+  /* gold = amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #b45309;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = cyan scale (name kept for legacy class refs) */
-  --color-popblue-50: #ecfeff;
-  --color-popblue-100: #cffafe;
-  --color-popblue-200: #a5f3fc;
-  --color-popblue-300: #67e8f9;
-  --color-popblue-400: #22d3ee;
-  --color-popblue-500: #06b6d4;
-  --color-popblue-600: #0891b2;
-  --color-popblue-700: #0e7490;
-  --color-popblue-800: #155e75;
-  --color-popblue-900: #164e63;
-  --color-popblue-950: #083344;
-  --color-popblue: #0891b2;
-  --color-popblue-deep: #0e7490;
-  --color-popblue-soft: #cffafe;
+  /* popblue = fuchsia scale (name kept for legacy class refs) */
+  --color-popblue-50: #fdf4ff;
+  --color-popblue-100: #fae8ff;
+  --color-popblue-200: #f5d0fe;
+  --color-popblue-300: #f0abfc;
+  --color-popblue-400: #e879f9;
+  --color-popblue-500: #d946ef;
+  --color-popblue-600: #c026d3;
+  --color-popblue-700: #a21caf;
+  --color-popblue-800: #86198f;
+  --color-popblue-900: #701a75;
+  --color-popblue-950: #4a044e;
+  --color-popblue: #c026d3;
+  --color-popblue-deep: #a21caf;
+  --color-popblue-soft: #fae8ff;
 
-  --color-ink: #0f2a2e;
-  --color-paper: #f0fdfa;
-  --color-mute: #4d6b70;
+  --color-ink: #2a1a3e;
+  --color-paper: #faf7ff;
+  --color-mute: #6b5a83;
   --color-card: #ffffff;
-  --color-deep: #042f2e;
+  --color-deep: #2e1065;
 }
 
 html { scroll-behavior: smooth; }
@@ -76,24 +77,24 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f0fdfa;
+  background-color: #faf7ff;
   background-image:
-    linear-gradient(180deg, rgba(13, 148, 136, 0.12) 0%, transparent 380px),
-    radial-gradient(circle at 88% 0%, rgba(6, 182, 212, 0.18) 0%, transparent 46%),
-    radial-gradient(circle at 6% 100%, rgba(132, 204, 22, 0.12) 0%, transparent 46%);
-  color: #0f2a2e;
+    linear-gradient(180deg, rgba(109, 40, 217, 0.10) 0%, transparent 380px),
+    radial-gradient(circle at 88% 0%, rgba(217, 70, 239, 0.16) 0%, transparent 46%),
+    radial-gradient(circle at 6% 100%, rgba(245, 158, 11, 0.12) 0%, transparent 46%);
+  color: #2a1a3e;
 }
-::selection { background: #bef264; color: #0f2a2e; }
+::selection { background: #fcd34d; color: #2e1065; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0f766e, #0891b2); border-radius: 999px; border: 2px solid #f0fdfa; }
-::-webkit-scrollbar-track { background: #ccfbf1; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #6d28d9, #c026d3); border-radius: 999px; border: 2px solid #faf7ff; }
+::-webkit-scrollbar-track { background: #ede9fe; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Glacier Current type: cool, tight headlines. */
-h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
+/* Violet Dusk type: soft, roomy headlines. */
+h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Glacier Current drift: cool bubbles gliding through clear water. */
+/* Violet Dusk drift: dusk motes rising through evening light. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, -4vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.9; }
@@ -102,14 +103,14 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 15s linear infinite; }
 
-/* Glacier Current sway: a slow, cool current sway. */
+/* Violet Dusk sway: a slow evening sway. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-1vw, 0, 0) rotate(1deg) scale(1); opacity: 0.5; }
   50% { transform: translate3d(1vw, -8px, 0) rotate(-1deg) scale(1.03); opacity: 0.9; }
 }
 .pop-drift { animation: signal-drift 11s ease-in-out infinite; }
 
-/* Glacier Current bounce: a light, buoyant bob. */
+/* Violet Dusk bounce: a gentle dusk bob. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   30% { transform: translateY(-3px) scale(1.01); }
@@ -117,138 +118,136 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 }
 .pop-bob { animation: signal-bob 4.5s ease-in-out infinite; }
 
-/* Slow turn for the current dial. */
+/* Slow turn for the dusk dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 36s linear infinite; }
 
-/* Glacier Current glow pulse: a cyan shimmer pulse. */
+/* Violet Dusk glow pulse: a fuchsia shimmer pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.45; transform: scale(0.92); }
   50% { opacity: 1; transform: scale(1.12); }
 }
 .pop-twinkle { animation: signal-blink 3s ease-in-out infinite; }
 
-/* Glacier Current ticker: infinite marquee (leftward drift). */
+/* Violet Dusk ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 32s linear infinite; }
 
-/* Glacier Current bands: teal -> cyan -> lime stripes. */
+/* Violet Dusk bands: violet -> fuchsia -> amber stripes. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #0f766e 0 34%, #06b6d4 34% 67%, #84cc16 67% 100%);
+    linear-gradient(90deg, #6d28d9 0 34%, #c026d3 34% 67%, #f59e0b 67% 100%);
   background-size: 34px 34px;
 }
 
-/* Glacier Current card: a crisp white slab — modest corners,
-   a thin teal border and a single flat shadow that deepens
-   slightly on hover, with a lime top edge. */
+/* Violet Dusk card: an extra-rounded plush slab — soft
+   layered shadows, no border, and a violet-to-amber gradient
+   top edge that fades in on hover while the card lifts. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(15, 118, 110, 0.16);
+  border: none;
   background: #ffffff;
-  border-radius: 1rem;
-  box-shadow: 0 1px 3px rgba(4, 47, 46, 0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  border-radius: 1.75rem;
+  box-shadow: 0 2px 6px rgba(46, 16, 101, 0.07), 0 12px 28px rgba(46, 16, 101, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   overflow: hidden;
 }
 .pop-lift::before {
   content: "";
   position: absolute;
   inset: 0 0 auto 0;
-  height: 3px;
-  background: linear-gradient(90deg, #0f766e, #06b6d4, #84cc16);
+  height: 5px;
+  background: linear-gradient(90deg, #6d28d9, #c026d3, #f59e0b);
   opacity: 0;
   transition: opacity 0.25s ease;
   z-index: 1;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  border-color: rgba(15, 118, 110, 0.4);
-  box-shadow: 0 10px 24px rgba(4, 47, 46, 0.12);
+  transform: translateY(-6px);
+  box-shadow: 0 4px 10px rgba(46, 16, 101, 0.08), 0 22px 44px rgba(46, 16, 101, 0.16);
 }
 .pop-lift:hover::before { opacity: 1; }
 
-/* Glacier Current glass: shared by modals and drawers — a
-   cool frosted mint pane with a thin teal ring. */
+/* Violet Dusk glass: shared by modals and drawers — a
+   warm frosted lavender pane with a soft violet ring. */
 .pop-glass {
-  background: rgba(240, 253, 250, 0.94);
+  background: rgba(250, 247, 255, 0.94);
   backdrop-filter: blur(18px) saturate(1.05);
   -webkit-backdrop-filter: blur(18px) saturate(1.05);
-  border: 1px solid rgba(15, 118, 110, 0.22);
-  border-radius: 1rem;
-  box-shadow: 0 10px 30px rgba(4, 47, 46, 0.14);
+  border: 1px solid rgba(109, 40, 217, 0.22);
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(46, 16, 101, 0.16);
 }
 
-/* Glacier Current tag: an upright lime square badge — crisp,
-   with a white ring and a cool shadow (no tilt). */
+/* Violet Dusk tag: a tilted amber circle badge — plush,
+   with a white ring and a warm shadow. */
 .starburst {
-  background: #65a30d;
+  background: #d97706;
   color: #ffffff;
   text-shadow: none;
-  border-radius: 0.75rem;
-  transform: rotate(0deg);
-  box-shadow: 0 4px 12px rgba(77, 124, 15, 0.45);
+  border-radius: 999px;
+  transform: rotate(-8deg);
+  box-shadow: 0 4px 12px rgba(180, 83, 9, 0.45);
   border: 2px solid #ffffff;
 }
 
-/* Glacier Current grid: fine cool grid lines. */
+/* Violet Dusk dots: soft dusk dots instead of grid lines. */
 .halftone {
   background-image:
-    linear-gradient(rgba(15, 118, 110, 0.10) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(15, 118, 110, 0.10) 1px, transparent 1px);
-  background-size: 28px 28px;
+    radial-gradient(rgba(109, 40, 217, 0.16) 1.5px, transparent 1.5px);
+  background-size: 26px 26px;
 }
 
-/* Glacier Current rule: a solid teal-to-lime gradient bar. */
+/* Violet Dusk rule: a thick violet-to-amber gradient bar. */
 .zigzag {
-  height: 4px;
+  height: 6px;
   border-top: none;
-  background: linear-gradient(90deg, #0f766e, #06b6d4, #84cc16);
-  background-size: 100% 4px;
+  background: linear-gradient(90deg, #6d28d9, #c026d3, #f59e0b);
+  background-size: 100% 6px;
   background-repeat: no-repeat;
   opacity: 0.9;
   border-radius: 999px;
 }
 
-/* Glacier Current band: a deep teal bar with a lime underline
-   and square bottom corners. */
+/* Violet Dusk band: a deep violet bar with an amber
+   underline and softly rounded bottom corners. */
 .bazaar-awning {
-  background: linear-gradient(180deg, #042f2e, #0f766e);
+  background: linear-gradient(180deg, #2e1065, #6d28d9);
   opacity: 1;
-  box-shadow: 0 10px 24px rgba(4, 47, 46, 0.20);
-  border-bottom: 4px solid #84cc16;
-  border-radius: 0;
+  box-shadow: 0 10px 24px rgba(46, 16, 101, 0.20);
+  border-bottom: 4px solid #f59e0b;
+  border-radius: 0 0 1rem 1rem;
 }
 
-/* Glacier Current glow: a cool cyan halo for the core. */
+/* Violet Dusk glow: a warm fuchsia halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(240, 253, 250, 0.95) 0%, rgba(103, 232, 249, 0.55) 42%, rgba(15, 118, 110, 0.28) 62%, rgba(15, 118, 110, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(250, 247, 255, 0.95) 0%, rgba(240, 171, 252, 0.55) 42%, rgba(109, 40, 217, 0.28) 62%, rgba(109, 40, 217, 0) 76%);
 }
 
-/* Glacier Current core: a cyan disc with a lime ring. */
+/* Violet Dusk core: an amber disc with a fuchsia ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #a5f3fc 0%, #06b6d4 55%, #042f2e 100%);
-  box-shadow: 0 0 0 4px #a3e635, 0 16px 32px rgba(4, 47, 46, 0.35);
+    radial-gradient(circle at 35% 30%, #fde68a 0%, #f59e0b 55%, #2e1065 100%);
+  box-shadow: 0 0 0 4px #e879f9, 0 16px 32px rgba(46, 16, 101, 0.35);
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Cool traces around the core disc. */
+/* Warm traces around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(15, 118, 110, 0.35) 0px,
-    rgba(15, 118, 110, 0.35) 1px,
+    rgba(109, 40, 217, 0.35) 0px,
+    rgba(109, 40, 217, 0.35) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(6, 182, 212, 0.35) 14px,
-    rgba(6, 182, 212, 0.35) 15px,
+    rgba(192, 38, 211, 0.35) 14px,
+    rgba(192, 38, 211, 0.35) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -259,7 +258,7 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(6, 182, 212, 0.5) 0deg 3deg,
+    rgba(192, 38, 211, 0.5) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
