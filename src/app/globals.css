@@ -1,67 +1,68 @@
 @import "tailwindcss";
 
 @theme {
-  /* Ember Dune: a warm, desert-dusk direction — terracotta
-     ink, amber sun and dusty rose on warm cream sand.
-     Cards are soft, pill-rounded panels with diffused
-     warm shadows — the opposite of the previous Pine
-     Ledger's cool pine/cyan palette, near-square corners
-     and flat hard offset shadows. */
+  /* Iris Dusk: a cool violet-dusk direction — deep indigo
+     ink, violet primary, magenta-pink spark and cyan
+     glints on pale lavender paper. Cards are crisp,
+     near-square panels with hairline borders and flat
+     shadows — the opposite of the previous Ember Dune's
+     warm terracotta palette, pill-rounded corners and
+     diffused amber glow. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = terracotta scale */
-  --color-brand-50: #fff7ed;
-  --color-brand-100: #ffedd5;
-  --color-brand-200: #fed7aa;
-  --color-brand-300: #fdba74;
-  --color-brand-400: #fb923c;
-  --color-brand-500: #f97316;
-  --color-brand-600: #ea580c;
-  --color-brand-700: #c2410c;
-  --color-brand-800: #9a3412;
-  --color-brand-900: #7c2d12;
-  --color-brand-950: #431407;
-  --color-brand: #ea580c;
-  --color-brand-dark: #c2410c;
-  --color-brand-deep: #7c2d12;
+  /* brand = violet scale */
+  --color-brand-50: #f5f3ff;
+  --color-brand-100: #ede9fe;
+  --color-brand-200: #ddd6fe;
+  --color-brand-300: #c4b5fd;
+  --color-brand-400: #a78bfa;
+  --color-brand-500: #8b5cf6;
+  --color-brand-600: #7c3aed;
+  --color-brand-700: #6d28d9;
+  --color-brand-800: #5b21b6;
+  --color-brand-900: #4c1d95;
+  --color-brand-950: #2e1065;
+  --color-brand: #7c3aed;
+  --color-brand-dark: #6d28d9;
+  --color-brand-deep: #4c1d95;
 
-  /* gold = amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #f59e0b;
-  --color-gold-deep: #b45309;
-  --color-gold-soft: #fef3c7;
+  /* gold = magenta-pink scale (name kept for legacy class refs) */
+  --color-gold-50: #fdf2f8;
+  --color-gold-100: #fce7f3;
+  --color-gold-200: #fbcfe8;
+  --color-gold-300: #f9a8d4;
+  --color-gold-400: #f472b6;
+  --color-gold-500: #ec4899;
+  --color-gold-600: #db2777;
+  --color-gold-700: #be185d;
+  --color-gold-800: #9d174d;
+  --color-gold-900: #831843;
+  --color-gold-950: #500724;
+  --color-gold: #ec4899;
+  --color-gold-deep: #be185d;
+  --color-gold-soft: #fce7f3;
 
-  /* popblue = dusty rose scale (name kept for legacy class refs) */
-  --color-popblue-50: #fff1f2;
-  --color-popblue-100: #ffe4e6;
-  --color-popblue-200: #fecdd3;
-  --color-popblue-300: #fda4af;
-  --color-popblue-400: #fb7185;
-  --color-popblue-500: #f43f5e;
-  --color-popblue-600: #e11d48;
-  --color-popblue-700: #be123c;
-  --color-popblue-800: #9f1239;
-  --color-popblue-900: #881337;
-  --color-popblue-950: #4c0519;
-  --color-popblue: #e11d48;
-  --color-popblue-deep: #be123c;
-  --color-popblue-soft: #ffe4e6;
+  /* popblue = cyan scale (name kept for legacy class refs) */
+  --color-popblue-50: #ecfeff;
+  --color-popblue-100: #cffafe;
+  --color-popblue-200: #a5f3fc;
+  --color-popblue-300: #67e8f9;
+  --color-popblue-400: #22d3ee;
+  --color-popblue-500: #06b6d4;
+  --color-popblue-600: #0891b2;
+  --color-popblue-700: #0e7490;
+  --color-popblue-800: #155e75;
+  --color-popblue-900: #164e63;
+  --color-popblue-950: #083344;
+  --color-popblue: #06b6d4;
+  --color-popblue-deep: #0e7490;
+  --color-popblue-soft: #cffafe;
 
-  --color-ink: #2b1a12;
-  --color-paper: #fdf6ec;
-  --color-mute: #8a6a55;
-  --color-card: #fffdf8;
-  --color-deep: #2b1a12;
+  --color-ink: #221a3d;
+  --color-paper: #f6f4ff;
+  --color-mute: #6d6489;
+  --color-card: #fffefe;
+  --color-deep: #221a3d;
 }
 
 html { scroll-behavior: smooth; }
@@ -76,42 +77,43 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fdf6ec;
+  background-color: #f6f4ff;
   background-image:
-    radial-gradient(circle at 10% 2%, rgba(249, 115, 22, 0.16) 0%, transparent 42%),
-    radial-gradient(circle at 90% 10%, rgba(225, 29, 72, 0.12) 0%, transparent 40%),
-    radial-gradient(circle at 50% 100%, rgba(245, 158, 11, 0.14) 0%, transparent 45%),
-    radial-gradient(rgba(194, 65, 12, 0.10) 1px, transparent 1px);
-  background-size: auto, auto, auto, 26px 26px;
-  color: #2b1a12;
+    radial-gradient(circle at 8% 0%, rgba(124, 58, 237, 0.14) 0%, transparent 42%),
+    radial-gradient(circle at 92% 8%, rgba(236, 72, 153, 0.10) 0%, transparent 40%),
+    radial-gradient(circle at 50% 100%, rgba(6, 182, 212, 0.12) 0%, transparent 45%),
+    linear-gradient(rgba(109, 40, 217, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(109, 40, 217, 0.06) 1px, transparent 1px);
+  background-size: auto, auto, auto, 32px 32px, 32px 32px;
+  color: #221a3d;
 }
-::selection { background: #fcd34d; color: #2b1a12; }
+::selection { background: #f9a8d4; color: #221a3d; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ea580c, #e11d48); border-radius: 999px; border: 2px solid #fdf6ec; }
-::-webkit-scrollbar-track { background: #ffedd5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #7c3aed, #ec4899); border-radius: 4px; border: 2px solid #f6f4ff; }
+::-webkit-scrollbar-track { background: #ede9fe; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Ember type: warm, generous headlines. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Iris type: crisp, tight headlines. */
+h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Ember drift: embers drifting up, softly. */
+/* Iris drift: sparks drifting up, cool and quick. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, 4vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.9; }
-  50% { transform: translate3d(-2vw, -45vh, 0) rotate(-40deg) scale(1.05); }
-  100% { transform: translate3d(1vw, -96vh, 0) rotate(-80deg) scale(1); opacity: 0; }
+  50% { transform: translate3d(2vw, -45vh, 0) rotate(40deg) scale(1.05); }
+  100% { transform: translate3d(-1vw, -96vh, 0) rotate(80deg) scale(1); opacity: 0; }
 }
 .pop-fall { animation: signal-rise 13s linear infinite; }
 
-/* Ember sway: a slow, warm sway. */
+/* Iris sway: a cool, restrained sway. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-1vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(1vw, -6px, 0) scale(1.05); opacity: 0.9; }
 }
 .pop-drift { animation: signal-drift 10s ease-in-out infinite; }
 
-/* Ember bounce: a soft, pillowy bounce. */
+/* Iris bounce: a crisp snap bounce. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   30% { transform: translateY(-6px) scale(1.03); }
@@ -119,122 +121,125 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 }
 .pop-bob { animation: signal-bob 3.8s ease-in-out infinite; }
 
-/* Slow turn for the ember dial. */
+/* Slow turn for the iris dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 32s linear infinite; }
 
-/* Ember glow pulse: a warm amber pulse. */
+/* Iris glow pulse: a cool violet pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.45; transform: scale(0.92); }
   50% { opacity: 1; transform: scale(1.12); }
 }
 .pop-twinkle { animation: signal-blink 2.6s ease-in-out infinite; }
 
-/* Ember ticker: infinite marquee (leftward drift). */
+/* Iris ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 26s linear infinite; }
 
-/* Ember bands: terracotta -> amber -> rose stripes. */
+/* Iris bands: violet -> pink -> cyan stripes. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #ea580c 0 34%, #f59e0b 34% 67%, #e11d48 67% 100%);
+    linear-gradient(90deg, #7c3aed 0 34%, #ec4899 34% 67%, #06b6d4 67% 100%);
   background-size: 28px 28px;
 }
 
-/* Ember card: a soft, pill-rounded panel — a warm edge
-   and a diffused amber shadow, no hard offset.
-   On hover it lifts gently and the shadow deepens. */
+/* Iris card: a crisp, near-square panel — a hairline
+   violet edge and a flat, tight shadow, no glow.
+   On hover it lifts crisply and the border deepens. */
 .pop-lift {
   position: relative;
-  border: 1.5px solid rgba(194, 65, 12, 0.28);
-  background: #fffdf8;
-  border-radius: 1.75rem;
-  box-shadow: 0 12px 32px rgba(194, 65, 12, 0.14), 0 2px 8px rgba(43, 26, 18, 0.06);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid rgba(109, 40, 217, 0.22);
+  background: #fffefe;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 0 rgba(76, 29, 149, 0.12), 0 6px 16px rgba(76, 29, 149, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 44px rgba(194, 65, 12, 0.22), 0 4px 12px rgba(43, 26, 18, 0.08);
+  transform: translateY(-3px);
+  border-color: rgba(109, 40, 217, 0.45);
+  box-shadow: 0 4px 0 rgba(76, 29, 149, 0.14), 0 12px 24px rgba(76, 29, 149, 0.12);
 }
 
-/* Ember glass: shared by modals and drawers — a warm
-   frosted cream pane with a soft diffused shadow. */
+/* Iris glass: shared by modals and drawers — a cool
+   frosted lavender pane with a crisp hairline edge. */
 .pop-glass {
-  background: rgba(253, 246, 236, 0.92);
+  background: rgba(246, 244, 255, 0.92);
   backdrop-filter: blur(18px) saturate(1.15);
   -webkit-backdrop-filter: blur(18px) saturate(1.15);
-  border: 1.5px solid rgba(194, 65, 12, 0.28);
-  border-radius: 1.75rem;
-  box-shadow: 0 20px 44px rgba(194, 65, 12, 0.20);
+  border: 1px solid rgba(109, 40, 217, 0.30);
+  border-radius: 0.75rem;
+  box-shadow: 0 12px 28px rgba(76, 29, 149, 0.16);
 }
 
-/* Ember tag: a soft pill badge — terracotta-to-amber
-   gradient with a warm glow. */
+/* Iris tag: a tilted sticker badge — violet-to-pink
+   gradient with a crisp edge. */
 .starburst {
-  background: linear-gradient(135deg, #ea580c, #f59e0b);
+  background: linear-gradient(135deg, #7c3aed, #ec4899);
   color: #ffffff;
-  text-shadow: 0 1px 2px rgba(67, 20, 7, 0.35);
-  border-radius: 999px;
-  transform: rotate(0deg);
-  box-shadow: 0 8px 20px rgba(234, 88, 12, 0.35);
-  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 2px rgba(46, 16, 101, 0.35);
+  border-radius: 0.5rem;
+  transform: rotate(-6deg);
+  box-shadow: 0 6px 14px rgba(124, 58, 237, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.9);
 }
 
-/* Ember dots: a warm sand-dot field. */
+/* Iris dots: a fine violet grid field. */
 .halftone {
-  background-image: radial-gradient(rgba(194, 65, 12, 0.20) 1.5px, transparent 1.5px);
-  background-size: 18px 18px;
+  background-image:
+    linear-gradient(rgba(109, 40, 217, 0.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(109, 40, 217, 0.14) 1px, transparent 1px);
+  background-size: 22px 22px;
 }
 
-/* Ember rule: a soft rounded gradient divider. */
+/* Iris rule: a crisp gradient divider. */
 .zigzag {
-  height: 4px;
+  height: 3px;
   border-top: none;
-  background: linear-gradient(90deg, #ea580c, #f59e0b, #e11d48);
+  background: linear-gradient(90deg, #7c3aed, #ec4899, #06b6d4);
   background-repeat: no-repeat;
   opacity: 1;
-  border-radius: 999px;
+  border-radius: 2px;
 }
 
-/* Ember band: a warm sunset gradient bar with soft rounded corners. */
+/* Iris band: a cool dusk gradient bar, sharp-edged. */
 .bazaar-awning {
-  background: linear-gradient(120deg, #7c2d12, #ea580c 45%, #f59e0b 75%, #e11d48);
+  background: linear-gradient(120deg, #2e1065, #7c3aed 45%, #ec4899 75%, #06b6d4);
   opacity: 1;
-  box-shadow: 0 12px 32px rgba(194, 65, 12, 0.28);
+  box-shadow: 0 6px 18px rgba(76, 29, 149, 0.25);
   border-bottom: none;
-  border-radius: 0 0 1.5rem 1.5rem;
+  border-radius: 0;
 }
 
-/* Ember glow: a warm dusk halo for the core. */
+/* Iris glow: a cool dusk halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(253, 246, 236, 0.95) 0%, rgba(253, 230, 138, 0.60) 42%, rgba(225, 29, 72, 0.28) 62%, rgba(225, 29, 72, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(246, 244, 255, 0.95) 0%, rgba(196, 181, 253, 0.60) 42%, rgba(236, 72, 153, 0.28) 62%, rgba(236, 72, 153, 0) 76%);
 }
 
-/* Ember core: a glowing ember disc with an amber ring. */
+/* Iris core: a glowing violet disc with a pink ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fcd34d 0%, #f97316 45%, #7c2d12 100%);
-  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.85), 0 16px 36px rgba(234, 88, 12, 0.45);
+    radial-gradient(circle at 35% 30%, #f9a8d4 0%, #8b5cf6 45%, #2e1065 100%);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.85), 0 12px 28px rgba(124, 58, 237, 0.40);
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Warm traces around the core disc. */
+/* Cool traces around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(234, 88, 12, 0.35) 0px,
-    rgba(234, 88, 12, 0.35) 1px,
+    rgba(124, 58, 237, 0.35) 0px,
+    rgba(124, 58, 237, 0.35) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(225, 29, 72, 0.35) 14px,
-    rgba(225, 29, 72, 0.35) 15px,
+    rgba(236, 72, 153, 0.35) 14px,
+    rgba(236, 72, 153, 0.35) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -245,7 +250,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(245, 158, 11, 0.45) 0deg 3deg,
+    rgba(6, 182, 212, 0.45) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
