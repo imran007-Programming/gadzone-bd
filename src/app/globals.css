@@ -1,67 +1,67 @@
 @import "tailwindcss";
 
 @theme {
-  /* Forest Ledger: an editorial direction — deep forest green
-     brand, terracotta and moss accents on warm cream paper.
-     Cards are crisp ledger slabs: thin ink borders, small
-     corners, hard offset shadows — the opposite of the
-     previous Violet Dusk's violet/fuchsia/amber palette,
-     plush extra-rounded cards and soft layered shadows. */
+  /* Harbor Mist: a coastal direction — deep navy brand,
+     coral and sky accents on pale mist. Cards are soft
+     harbor pebbles: fully rounded, borderless, soft
+     diffused shadows — the opposite of the previous
+     the previous green ledger look, thin ink
+     borders, small corners and hard offset shadows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = forest green scale */
-  --color-brand-50: #f0fdf4;
-  --color-brand-100: #dcfce7;
-  --color-brand-200: #bbf7d0;
-  --color-brand-300: #86efac;
-  --color-brand-400: #4ade80;
-  --color-brand-500: #22c55e;
-  --color-brand-600: #16a34a;
-  --color-brand-700: #15803d;
-  --color-brand-800: #166534;
-  --color-brand-900: #14532d;
-  --color-brand-950: #052e16;
-  --color-brand: #15803d;
-  --color-brand-dark: #14532d;
-  --color-brand-deep: #052e16;
+  /* brand = deep navy scale */
+  --color-brand-50: #eef4fb;
+  --color-brand-100: #d9e8f5;
+  --color-brand-200: #b3cfe8;
+  --color-brand-300: #84aed6;
+  --color-brand-400: #5488bd;
+  --color-brand-500: #2f6da3;
+  --color-brand-600: #1d5689;
+  --color-brand-700: #16446e;
+  --color-brand-800: #123a5e;
+  --color-brand-900: #0b2545;
+  --color-brand-950: #071a33;
+  --color-brand: #1d5689;
+  --color-brand-dark: #123a5e;
+  --color-brand-deep: #071a33;
 
-  /* gold = terracotta scale (name kept for legacy class refs) */
-  --color-gold-50: #fff7ed;
-  --color-gold-100: #ffedd5;
-  --color-gold-200: #fed7aa;
-  --color-gold-300: #fdba74;
-  --color-gold-400: #fb923c;
-  --color-gold-500: #f97316;
-  --color-gold-600: #ea580c;
-  --color-gold-700: #c2410c;
-  --color-gold-800: #9a3412;
-  --color-gold-900: #7c2d12;
-  --color-gold-950: #431407;
-  --color-gold: #ea580c;
-  --color-gold-deep: #9a3412;
-  --color-gold-soft: #ffedd5;
+  /* gold = coral scale (name kept for legacy class refs) */
+  --color-gold-50: #fff5f2;
+  --color-gold-100: #ffe8e0;
+  --color-gold-200: #ffcdbf;
+  --color-gold-300: #ffab94;
+  --color-gold-400: #ff7d5c;
+  --color-gold-500: #ff5a33;
+  --color-gold-600: #f43f14;
+  --color-gold-700: #d92f08;
+  --color-gold-800: #b3270a;
+  --color-gold-900: #8f2009;
+  --color-gold-950: #4a0f04;
+  --color-gold: #f43f14;
+  --color-gold-deep: #b3270a;
+  --color-gold-soft: #ffe8e0;
 
-  /* popblue = moss teal scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0fdfa;
-  --color-popblue-100: #ccfbf1;
-  --color-popblue-200: #99f6e4;
-  --color-popblue-300: #5eead4;
-  --color-popblue-400: #2dd4bf;
-  --color-popblue-500: #14b8a6;
-  --color-popblue-600: #0d9488;
-  --color-popblue-700: #0f766e;
-  --color-popblue-800: #115e59;
-  --color-popblue-900: #134e4a;
-  --color-popblue-950: #042f2e;
-  --color-popblue: #0d9488;
-  --color-popblue-deep: #0f766e;
-  --color-popblue-soft: #ccfbf1;
+  /* popblue = sky scale (name kept for legacy class refs) */
+  --color-popblue-50: #f0f9ff;
+  --color-popblue-100: #dff2fe;
+  --color-popblue-200: #bfe6fe;
+  --color-popblue-300: #7dd3fc;
+  --color-popblue-400: #38bdf8;
+  --color-popblue-500: #0ea5e9;
+  --color-popblue-600: #0284c7;
+  --color-popblue-700: #0369a1;
+  --color-popblue-800: #075985;
+  --color-popblue-900: #0c4a6e;
+  --color-popblue-950: #082f49;
+  --color-popblue: #0284c7;
+  --color-popblue-deep: #0369a1;
+  --color-popblue-soft: #dff2fe;
 
-  --color-ink: #1c1917;
-  --color-paper: #fdf8ee;
-  --color-mute: #78716c;
+  --color-ink: #0f2033;
+  --color-paper: #f2f8fb;
+  --color-mute: #5b7186;
   --color-card: #ffffff;
-  --color-deep: #052e16;
+  --color-deep: #071a33;
 }
 
 html { scroll-behavior: smooth; }
@@ -76,24 +76,24 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fdf8ee;
+  background-color: #f2f8fb;
   background-image:
-    linear-gradient(180deg, rgba(21, 128, 61, 0.08) 0%, transparent 380px),
-    radial-gradient(circle at 88% 0%, rgba(234, 88, 12, 0.10) 0%, transparent 46%),
-    radial-gradient(circle at 6% 100%, rgba(13, 148, 136, 0.10) 0%, transparent 46%);
-  color: #1c1917;
+    linear-gradient(180deg, rgba(29, 86, 137, 0.10) 0%, transparent 380px),
+    radial-gradient(circle at 88% 0%, rgba(244, 63, 20, 0.12) 0%, transparent 46%),
+    radial-gradient(circle at 6% 100%, rgba(2, 132, 199, 0.12) 0%, transparent 46%);
+  color: #0f2033;
 }
-::selection { background: #fdba74; color: #052e16; }
+::selection { background: #ffab94; color: #071a33; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #15803d, #0d9488); border-radius: 2px; border: 2px solid #fdf8ee; }
-::-webkit-scrollbar-track { background: #dcfce7; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #1d5689, #0284c7); border-radius: 999px; border: 2px solid #f2f8fb; }
+::-webkit-scrollbar-track { background: #d9e8f5; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Forest Ledger type: tight, editorial headlines. */
-h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
+/* Harbor Mist type: open, airy headlines. */
+h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Forest Ledger drift: leaves falling through still air. */
+/* Harbor Mist drift: sea spray drifting down. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, -4vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.9; }
@@ -102,14 +102,14 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 15s linear infinite; }
 
-/* Forest Ledger sway: a slow breeze sway. */
+/* Harbor Mist sway: a slow tide sway. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-1vw, 0, 0) rotate(1deg) scale(1); opacity: 0.5; }
   50% { transform: translate3d(1vw, -8px, 0) rotate(-1deg) scale(1.03); opacity: 0.9; }
 }
 .pop-drift { animation: signal-drift 11s ease-in-out infinite; }
 
-/* Forest Ledger bounce: a gentle leaf bob. */
+/* Harbor Mist bounce: a gentle wave bob. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   30% { transform: translateY(-3px) scale(1.01); }
@@ -117,42 +117,42 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 }
 .pop-bob { animation: signal-bob 4.5s ease-in-out infinite; }
 
-/* Slow turn for the ledger dial. */
+/* Slow turn for the harbor dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 36s linear infinite; }
 
-/* Forest Ledger glow pulse: a terracotta shimmer pulse. */
+/* Harbor Mist glow pulse: a coral shimmer pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.45; transform: scale(0.92); }
   50% { opacity: 1; transform: scale(1.12); }
 }
 .pop-twinkle { animation: signal-blink 3s ease-in-out infinite; }
 
-/* Forest Ledger ticker: infinite marquee (leftward drift). */
+/* Harbor Mist ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 32s linear infinite; }
 
-/* Forest Ledger bands: forest -> teal -> terracotta stripes. */
+/* Harbor Mist bands: navy -> sky -> coral stripes. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #15803d 0 34%, #0d9488 34% 67%, #ea580c 67% 100%);
+    linear-gradient(90deg, #1d5689 0 34%, #0284c7 34% 67%, #f43f14 67% 100%);
   background-size: 34px 34px;
 }
 
-/* Forest Ledger card: a crisp ledger slab — thin ink
-   border, small corners, and a hard offset shadow that
-   grows on hover while the card lifts. */
+/* Harbor Mist card: a soft harbor pebble — no border,
+   fully rounded, and a soft diffused shadow that deepens
+   and lifts on hover. */
 .pop-lift {
   position: relative;
-  border: 1.5px solid rgba(28, 25, 23, 0.9);
+  border: none;
   background: #ffffff;
-  border-radius: 0.5rem;
-  box-shadow: 4px 4px 0 rgba(5, 46, 22, 0.9);
+  border-radius: 1.75rem;
+  box-shadow: 0 18px 40px -18px rgba(7, 26, 51, 0.28);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   overflow: hidden;
 }
@@ -160,93 +160,93 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
   content: "";
   position: absolute;
   inset: 0 0 auto 0;
-  height: 4px;
-  background: linear-gradient(90deg, #15803d, #0d9488, #ea580c);
+  height: 5px;
+  background: linear-gradient(90deg, #1d5689, #0284c7, #f43f14);
   opacity: 0;
   transition: opacity 0.25s ease;
   z-index: 1;
 }
 .pop-lift:hover {
-  transform: translate(-2px, -4px);
-  box-shadow: 7px 7px 0 rgba(5, 46, 22, 0.9);
+  transform: translateY(-6px);
+  box-shadow: 0 28px 50px -20px rgba(7, 26, 51, 0.35);
 }
 .pop-lift:hover::before { opacity: 1; }
 
-/* Forest Ledger glass: shared by modals and drawers — a
-   warm frosted cream pane with a forest ring. */
+/* Harbor Mist glass: shared by modals and drawers — a
+   frosted white pane with a soft navy ring. */
 .pop-glass {
-  background: rgba(253, 248, 238, 0.94);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(18px) saturate(1.05);
   -webkit-backdrop-filter: blur(18px) saturate(1.05);
-  border: 1.5px solid rgba(21, 128, 61, 0.35);
-  border-radius: 0.75rem;
-  box-shadow: 5px 5px 0 rgba(5, 46, 22, 0.25);
+  border: 1px solid rgba(29, 86, 137, 0.15);
+  border-radius: 1.25rem;
+  box-shadow: 0 24px 48px -20px rgba(7, 26, 51, 0.30);
 }
 
-/* Forest Ledger tag: a square terracotta stamp badge —
-   crisp corners, white ring, hard shadow. */
+/* Harbor Mist tag: a round coral pill badge —
+   fully rounded, white ring, soft shadow. */
 .starburst {
-  background: #c2410c;
+  background: #f43f14;
   color: #ffffff;
   text-shadow: none;
-  border-radius: 0.375rem;
-  transform: rotate(-6deg);
-  box-shadow: 3px 3px 0 rgba(5, 46, 22, 0.85);
+  border-radius: 999px;
+  transform: rotate(-3deg);
+  box-shadow: 0 10px 24px -8px rgba(244, 63, 20, 0.65);
   border: 2px solid #ffffff;
 }
 
-/* Forest Ledger dots: fine ledger grid dots. */
+/* Harbor Mist dots: fine mist dots. */
 .halftone {
   background-image:
-    radial-gradient(rgba(21, 128, 61, 0.18) 1.5px, transparent 1.5px);
+    radial-gradient(rgba(29, 86, 137, 0.16) 1.5px, transparent 1.5px);
   background-size: 22px 22px;
 }
 
-/* Forest Ledger rule: a thick forest-to-terracotta bar. */
+/* Harbor Mist rule: a soft navy-to-coral bar. */
 .zigzag {
-  height: 5px;
+  height: 4px;
   border-top: none;
-  background: linear-gradient(90deg, #15803d, #0d9488, #ea580c);
-  background-size: 100% 5px;
+  background: linear-gradient(90deg, #1d5689, #0284c7, #f43f14);
+  background-size: 100% 4px;
   background-repeat: no-repeat;
   opacity: 0.9;
-  border-radius: 2px;
+  border-radius: 999px;
 }
 
-/* Forest Ledger band: a deep forest bar with a
-   terracotta underline and square corners. */
+/* Harbor Mist band: a deep navy bar with a
+   coral underline and rounded bottom corners. */
 .bazaar-awning {
-  background: linear-gradient(180deg, #052e16, #15803d);
+  background: linear-gradient(180deg, #071a33, #1d5689);
   opacity: 1;
-  box-shadow: 0 6px 0 rgba(5, 46, 22, 0.25);
-  border-bottom: 4px solid #ea580c;
-  border-radius: 0;
+  box-shadow: 0 10px 24px -12px rgba(7, 26, 51, 0.35);
+  border-bottom: 4px solid #f43f14;
+  border-radius: 0 0 1rem 1rem;
 }
 
-/* Forest Ledger glow: a moss halo for the core. */
+/* Harbor Mist glow: a sky halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(253, 248, 238, 0.95) 0%, rgba(153, 246, 228, 0.55) 42%, rgba(21, 128, 61, 0.28) 62%, rgba(21, 128, 61, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(191, 230, 254, 0.55) 42%, rgba(29, 86, 137, 0.28) 62%, rgba(29, 86, 137, 0) 76%);
 }
 
-/* Forest Ledger core: a terracotta disc with a teal ring. */
+/* Harbor Mist core: a coral disc with a sky ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fdba74 0%, #ea580c 55%, #052e16 100%);
-  box-shadow: 0 0 0 4px #2dd4bf, 4px 4px 0 rgba(5, 46, 22, 0.85);
+    radial-gradient(circle at 35% 30%, #ffab94 0%, #f43f14 55%, #071a33 100%);
+  box-shadow: 0 0 0 4px #38bdf8, 0 18px 40px -12px rgba(7, 26, 51, 0.45);
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Moss traces around the core disc. */
+/* Sky traces around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(21, 128, 61, 0.35) 0px,
-    rgba(21, 128, 61, 0.35) 1px,
+    rgba(29, 86, 137, 0.35) 0px,
+    rgba(29, 86, 137, 0.35) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(13, 148, 136, 0.35) 14px,
-    rgba(13, 148, 136, 0.35) 15px,
+    rgba(2, 132, 199, 0.35) 14px,
+    rgba(2, 132, 199, 0.35) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -257,7 +257,7 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(13, 148, 136, 0.5) 0deg 3deg,
+    rgba(2, 132, 199, 0.5) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
