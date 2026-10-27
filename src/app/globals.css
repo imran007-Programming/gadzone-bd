@@ -1,70 +1,70 @@
 @import "tailwindcss";
 
 @theme {
-  /* Glacier Blueprint: a cool, crisp, technical direction —
-     icy blue-white paper, deep slate-blue as the primary
-     accent, sky cyan for badges and prices, and mint
-     emerald for secondary highlights. Cards are sharp
-     blueprint tiles: small 0.5rem corners, a thin slate
-     edge and a flat, precise shadow — the opposite of
-     the previous Sunrise Paper look, its warm cream
-     paper, terracotta / amber / teal palette, chunky
-     1.75rem paper tiles and soft daylight glow. */
+  /* Twilight Violet: a warm dusk-market direction —
+     deep violet as the primary accent, tangerine for
+     badges and prices, and lime for secondary highlights,
+     on soft lavender paper. Cards are big, pillowy,
+     fully rounded tiles with a soft violet glow — the
+     opposite of the previous Glacier Blueprint look,
+     its icy blue-white paper, slate-blue / cyan / mint
+     palette, sharp 0.5rem blueprint tiles and fine
+     grid lines. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = slate-blue scale */
-  --color-brand-50: #eff6ff;
-  --color-brand-100: #dbeafe;
-  --color-brand-200: #bfdbfe;
-  --color-brand-300: #93c5fd;
-  --color-brand-400: #60a5fa;
-  --color-brand-500: #2563eb;
-  --color-brand-600: #1d4ed8;
-  --color-brand-700: #1e40af;
-  --color-brand-800: #1e3a8a;
-  --color-brand-900: #172554;
-  --color-brand-950: #0a1a3a;
-  --color-brand: #2563eb;
-  --color-brand-dark: #1e40af;
-  --color-brand-deep: #0a1a3a;
+  /* brand = violet scale */
+  --color-brand-50: #f5f3ff;
+  --color-brand-100: #ede9fe;
+  --color-brand-200: #ddd6fe;
+  --color-brand-300: #c4b5fd;
+  --color-brand-400: #a78bfa;
+  --color-brand-500: #8b5cf6;
+  --color-brand-600: #7c3aed;
+  --color-brand-700: #6d28d9;
+  --color-brand-800: #5b21b6;
+  --color-brand-900: #4c1d95;
+  --color-brand-950: #2e1065;
+  --color-brand: #7c3aed;
+  --color-brand-dark: #6d28d9;
+  --color-brand-deep: #2e1065;
 
-  /* gold = sky cyan scale (name kept for legacy class refs) */
-  --color-gold-50: #f0f9ff;
-  --color-gold-100: #e0f2fe;
-  --color-gold-200: #bae6fd;
-  --color-gold-300: #7dd3fc;
-  --color-gold-400: #38bdf8;
-  --color-gold-500: #0284c7;
-  --color-gold-600: #0369a1;
-  --color-gold-700: #075985;
-  --color-gold-800: #0c4a6e;
-  --color-gold-900: #082f49;
-  --color-gold-950: #041e30;
-  --color-gold: #0284c7;
-  --color-gold-deep: #0c4a6e;
-  --color-gold-soft: #e0f2fe;
+  /* gold = tangerine scale (name kept for legacy class refs) */
+  --color-gold-50: #fff7ed;
+  --color-gold-100: #ffedd5;
+  --color-gold-200: #fed7aa;
+  --color-gold-300: #fdba74;
+  --color-gold-400: #fb923c;
+  --color-gold-500: #f97316;
+  --color-gold-600: #ea580c;
+  --color-gold-700: #c2410c;
+  --color-gold-800: #9a3412;
+  --color-gold-900: #7c2d12;
+  --color-gold-950: #431407;
+  --color-gold: #f97316;
+  --color-gold-deep: #9a3412;
+  --color-gold-soft: #ffedd5;
 
-  /* popblue = mint emerald scale (name kept for legacy class refs) */
-  --color-popblue-50: #ecfdf5;
-  --color-popblue-100: #d1fae5;
-  --color-popblue-200: #a7f3d0;
-  --color-popblue-300: #6ee7b7;
-  --color-popblue-400: #34d399;
-  --color-popblue-500: #059669;
-  --color-popblue-600: #047857;
-  --color-popblue-700: #065f46;
-  --color-popblue-800: #064e3b;
-  --color-popblue-900: #022c22;
-  --color-popblue-950: #011d16;
-  --color-popblue: #059669;
-  --color-popblue-deep: #065f46;
-  --color-popblue-soft: #d1fae5;
+  /* popblue = lime scale (name kept for legacy class refs) */
+  --color-popblue-50: #f7fee7;
+  --color-popblue-100: #ecfccb;
+  --color-popblue-200: #d9f99d;
+  --color-popblue-300: #bef264;
+  --color-popblue-400: #a3e635;
+  --color-popblue-500: #84cc16;
+  --color-popblue-600: #65a30d;
+  --color-popblue-700: #4d7c0f;
+  --color-popblue-800: #3f6212;
+  --color-popblue-900: #365314;
+  --color-popblue-950: #1a2e05;
+  --color-popblue: #84cc16;
+  --color-popblue-deep: #4d7c0f;
+  --color-popblue-soft: #ecfccb;
 
-  --color-ink: #0f2a43;
-  --color-paper: #f2f7fc;
-  --color-mute: #5b7285;
+  --color-ink: #2a1a4a;
+  --color-paper: #faf7ff;
+  --color-mute: #6b5b8a;
   --color-card: #ffffff;
-  --color-deep: #122f4a;
+  --color-deep: #2e1065;
 }
 
 html { scroll-behavior: smooth; }
@@ -79,168 +79,167 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f2f7fc;
+  background-color: #faf7ff;
   background-image:
-    linear-gradient(rgba(37, 99, 235, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(37, 99, 235, 0.05) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(37, 99, 235, 0.07) 0%, transparent 380px);
-  background-size: 32px 32px, 32px 32px, 100% 380px;
-  color: #0f2a43;
+    radial-gradient(circle at 12% 0%, rgba(124, 58, 237, 0.12) 0%, transparent 42%),
+    radial-gradient(circle at 88% 12%, rgba(249, 115, 22, 0.12) 0%, transparent 40%),
+    radial-gradient(rgba(124, 58, 237, 0.10) 1.2px, transparent 1.2px);
+  background-size: 100% 480px, 100% 480px, 26px 26px;
+  color: #2a1a4a;
 }
-::selection { background: #7dd3fc; color: #0a1a3a; }
+::selection { background: #fdba74; color: #2e1065; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #2563eb, #0284c7); border-radius: 4px; border: 2px solid #f2f7fc; }
-::-webkit-scrollbar-track { background: #e2e8f0; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #7c3aed, #f97316); border-radius: 999px; border: 2px solid #faf7ff; }
+::-webkit-scrollbar-track { background: #ede9fe; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Blueprint type: crisp, upright, technical headlines. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Twilight type: warm, rounded, generous headlines. */
+h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Glacier rise: cool motes drifting upward. */
+/* Twilight rise: warm motes drifting upward. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, 4vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.7; }
-  50% { transform: translate3d(-2vw, -42vh, 0) rotate(-30deg) scale(1.02); }
-  100% { transform: translate3d(1vw, -92vh, 0) rotate(-60deg) scale(1); opacity: 0; }
+  50% { transform: translate3d(2vw, -42vh, 0) rotate(30deg) scale(1.02); }
+  100% { transform: translate3d(-1vw, -92vh, 0) rotate(60deg) scale(1); opacity: 0; }
 }
 .pop-fall { animation: signal-rise 14s linear infinite; }
 
-/* Glacier sway: a slow, precise side-to-side float. */
+/* Twilight sway: a slow, soft side-to-side float. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(-6px, 0, 0) rotate(-1deg) scale(1); opacity: 0.6; }
-  50% { transform: translate3d(6px, -6px, 0) rotate(1deg) scale(1.02); opacity: 0.9; }
+  0%, 100% { transform: translate3d(-6px, 0, 0) rotate(-2deg) scale(1); opacity: 0.6; }
+  50% { transform: translate3d(6px, -8px, 0) rotate(2deg) scale(1.03); opacity: 0.9; }
 }
 .pop-drift { animation: signal-drift 12s ease-in-out infinite; }
 
-/* Glacier bob: a gentle hover lift. */
+/* Twilight bob: a gentle hover lift. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-5px) scale(1.02); }
+  50% { transform: translateY(-6px) scale(1.02); }
 }
 .pop-bob { animation: signal-bob 5s ease-in-out infinite; }
 
-/* Slow turn for the glacier dial. */
+/* Slow turn for the twilight dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 48s linear infinite; }
 
-/* Glacier glow pulse: a cool cyan shimmer. */
+/* Twilight glow pulse: a warm tangerine shimmer. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.5; transform: scale(0.94); }
   50% { opacity: 1; transform: scale(1.06); }
 }
 .pop-twinkle { animation: signal-blink 3.5s ease-in-out infinite; }
 
-/* Glacier ticker: infinite marquee (leftward drift). */
+/* Twilight ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Glacier bands: blue -> cyan -> mint stripes. */
+/* Twilight bands: violet -> tangerine -> lime stripes. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #2563eb 0 34%, #0284c7 34% 67%, #059669 67% 100%);
+    linear-gradient(90deg, #7c3aed 0 34%, #f97316 34% 67%, #84cc16 67% 100%);
   background-size: 34px 34px;
 }
 
-/* Glacier card: a sharp blueprint tile — small
-   rounded corners, a thin slate edge and a flat,
-   precise shadow that firms up on hover. */
+/* Twilight card: a big pillowy tile — fully rounded
+   corners, a soft violet edge and a warm glow shadow
+   that deepens on hover. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(100, 116, 139, 0.35);
+  border: 1px solid rgba(124, 58, 237, 0.22);
   background: #ffffff;
-  border-radius: 0.5rem;
-  box-shadow: 0 1px 2px rgba(15, 42, 67, 0.08), 0 8px 20px -12px rgba(30, 64, 175, 0.25);
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 6px rgba(46, 16, 101, 0.08), 0 18px 36px -18px rgba(109, 40, 217, 0.35);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 2px 4px rgba(15, 42, 67, 0.1), 0 16px 28px -12px rgba(30, 64, 175, 0.35);
+  transform: translateY(-6px);
+  box-shadow: 0 4px 10px rgba(46, 16, 101, 0.10), 0 28px 44px -18px rgba(109, 40, 217, 0.45);
 }
 
-/* Glacier glass: shared by modals and drawers — a
-   cool frosted pane with a thin blue left edge. */
+/* Twilight glass: shared by modals and drawers — a
+   warm frosted pane with a thick violet top edge. */
 .pop-glass {
-  background: rgba(242, 247, 252, 0.94);
+  background: rgba(250, 247, 255, 0.94);
   backdrop-filter: blur(16px) saturate(1.05);
   -webkit-backdrop-filter: blur(16px) saturate(1.05);
-  border: 1px solid rgba(100, 116, 139, 0.35);
-  border-left: 4px solid #0284c7;
-  border-radius: 0.5rem;
-  box-shadow: 0 20px 48px -16px rgba(15, 42, 67, 0.3);
+  border: 1px solid rgba(124, 58, 237, 0.22);
+  border-top: 5px solid #7c3aed;
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 48px -16px rgba(46, 16, 101, 0.35);
 }
 
-/* Glacier tag: a sharp square badge — no tilt,
-   crisp corners, blue-to-cyan face. */
+/* Twilight tag: a soft pill badge — fully rounded,
+   tangerine-to-violet face. */
 .starburst {
-  background: linear-gradient(135deg, #38bdf8, #0369a1);
+  background: linear-gradient(135deg, #fb923c, #7c3aed);
   color: #ffffff;
   text-shadow: none;
-  border-radius: 0.25rem;
+  border-radius: 999px;
   transform: rotate(0deg);
-  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.4);
+  box-shadow: 0 6px 18px rgba(249, 115, 22, 0.45);
   border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
-/* Glacier grid: fine slate-blue grid lines. */
+/* Twilight dots: soft violet polka dots. */
 .halftone {
   background-image:
-    linear-gradient(rgba(37, 99, 235, 0.14) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(37, 99, 235, 0.14) 1px, transparent 1px);
-  background-size: 22px 22px;
+    radial-gradient(rgba(124, 58, 237, 0.18) 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
 }
 
-/* Glacier rule: a blue-to-cyan-to-mint bar. */
+/* Twilight rule: a violet-to-tangerine-to-lime bar. */
 .zigzag {
-  height: 3px;
+  height: 5px;
   border-top: none;
-  background: linear-gradient(90deg, #2563eb, #0284c7, #059669);
-  background-size: 100% 3px;
+  background: linear-gradient(90deg, #7c3aed, #f97316, #84cc16);
+  background-size: 100% 5px;
   background-repeat: no-repeat;
   opacity: 0.9;
-  border-radius: 0;
+  border-radius: 999px;
 }
 
-/* Glacier band: a cool gradient bar with a
-   blue underline and square bottom corners. */
+/* Twilight band: a warm gradient bar with a
+   tangerine underline and rounded bottom corners. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #eff6ff, #dbeafe, #e0f2fe);
+  background: linear-gradient(90deg, #ede9fe, #ffedd5, #ecfccb);
   opacity: 1;
-  box-shadow: 0 8px 20px -12px rgba(30, 64, 175, 0.3);
-  border-bottom: 2px solid #2563eb;
-  border-radius: 0;
+  box-shadow: 0 12px 24px -12px rgba(109, 40, 217, 0.35);
+  border-bottom: 3px solid #f97316;
+  border-radius: 0 0 1.5rem 1.5rem;
 }
 
-/* Glacier glow: an icy cyan halo for the core. */
+/* Twilight glow: a warm violet halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.5) 0%, rgba(37, 99, 235, 0.22) 42%, rgba(2, 132, 199, 0.25) 62%, rgba(2, 132, 199, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.55) 0%, rgba(124, 58, 237, 0.25) 42%, rgba(249, 115, 22, 0.28) 62%, rgba(249, 115, 22, 0) 76%);
 }
 
-/* Glacier core: a cyan disc with a crisp ring. */
+/* Twilight core: a tangerine disc with a soft ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #e0f2fe 0%, #0284c7 55%, #1e40af 100%);
-  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.35), 0 0 36px rgba(37, 99, 235, 0.35);
+    radial-gradient(circle at 35% 30%, #ffedd5 0%, #f97316 55%, #6d28d9 100%);
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.35), 0 0 36px rgba(124, 58, 237, 0.4);
   border: 2px solid rgba(255, 255, 255, 0.6);
 }
 
-/* Crisp rings around the core disc. */
+/* Soft rings around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(37, 99, 235, 0.3) 0px,
-    rgba(37, 99, 235, 0.3) 1px,
+    rgba(124, 58, 237, 0.3) 0px,
+    rgba(124, 58, 237, 0.3) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(2, 132, 199, 0.3) 14px,
-    rgba(2, 132, 199, 0.3) 15px,
+    rgba(249, 115, 22, 0.3) 14px,
+    rgba(249, 115, 22, 0.3) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -251,7 +250,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(2, 132, 199, 0.4) 0deg 3deg,
+    rgba(249, 115, 22, 0.4) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
