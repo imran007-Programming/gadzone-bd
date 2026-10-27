@@ -1,68 +1,67 @@
 @import "tailwindcss";
 
 @theme {
-  /* Glacier Pop: a crisp, icy direction — sky-blue brand,
-     tangerine and violet accents on icy white-blue paper.
-     Cards are sharp, small-cornered slabs with thin sky rims
-     and a hard offset shadow that pops on hover — the
-     opposite of the previous Royal Dusk's lavender paper,
-     extra-rounded plush slabs, soft layered shadows and
-     dusk glow blooming across the top. */
+  /* Ember Grove: a warm, woodland direction — deep forest-green
+     brand, mustard and terracotta accents on warm cream paper.
+     Cards are plush, extra-rounded slabs with soft layered
+     shadows that lift gently on hover — the opposite of the
+     previous Glacier Pop's icy sky-blue paper, sharp small
+     corners, hard offset shadows and cold glow. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = sky scale */
-  --color-brand-50: #f0f9ff;
-  --color-brand-100: #e0f2fe;
-  --color-brand-200: #bae6fd;
-  --color-brand-300: #7dd3fc;
-  --color-brand-400: #38bdf8;
-  --color-brand-500: #0ea5e9;
-  --color-brand-600: #0284c7;
-  --color-brand-700: #0369a1;
-  --color-brand-800: #075985;
-  --color-brand-900: #0c4a6e;
-  --color-brand-950: #082f49;
-  --color-brand: #0284c7;
-  --color-brand-dark: #0369a1;
-  --color-brand-deep: #075985;
+  /* brand = forest-green scale */
+  --color-brand-50: #f0fdf4;
+  --color-brand-100: #dcfce7;
+  --color-brand-200: #bbf7d0;
+  --color-brand-300: #86efac;
+  --color-brand-400: #4ade80;
+  --color-brand-500: #22c55e;
+  --color-brand-600: #16a34a;
+  --color-brand-700: #15803d;
+  --color-brand-800: #166534;
+  --color-brand-900: #14532d;
+  --color-brand-950: #052e16;
+  --color-brand: #15803d;
+  --color-brand-dark: #14532d;
+  --color-brand-deep: #052e16;
 
-  /* gold = tangerine scale (name kept for legacy class refs) */
-  --color-gold-50: #fff7ed;
-  --color-gold-100: #ffedd5;
-  --color-gold-200: #fed7aa;
-  --color-gold-300: #fdba74;
-  --color-gold-400: #fb923c;
-  --color-gold-500: #f97316;
-  --color-gold-600: #ea580c;
-  --color-gold-700: #c2410c;
-  --color-gold-800: #9a3412;
-  --color-gold-900: #7c2d12;
-  --color-gold-950: #431407;
-  --color-gold: #f97316;
-  --color-gold-deep: #c2410c;
-  --color-gold-soft: #ffedd5;
+  /* gold = mustard scale (name kept for legacy class refs) */
+  --color-gold-50: #fefce8;
+  --color-gold-100: #fef9c3;
+  --color-gold-200: #fef08a;
+  --color-gold-300: #fde047;
+  --color-gold-400: #facc15;
+  --color-gold-500: #eab308;
+  --color-gold-600: #ca8a04;
+  --color-gold-700: #a16207;
+  --color-gold-800: #854d0e;
+  --color-gold-900: #713f12;
+  --color-gold-950: #422006;
+  --color-gold: #eab308;
+  --color-gold-deep: #a16207;
+  --color-gold-soft: #fef9c3;
 
-  /* popblue = violet scale (name kept for legacy class refs) */
-  --color-popblue-50: #f5f3ff;
-  --color-popblue-100: #ede9fe;
-  --color-popblue-200: #ddd6fe;
-  --color-popblue-300: #c4b5fd;
-  --color-popblue-400: #a78bfa;
-  --color-popblue-500: #8b5cf6;
-  --color-popblue-600: #7c3aed;
-  --color-popblue-700: #6d28d9;
-  --color-popblue-800: #5b21b6;
-  --color-popblue-900: #4c1d95;
-  --color-popblue-950: #2e1065;
-  --color-popblue: #8b5cf6;
-  --color-popblue-deep: #7c3aed;
-  --color-popblue-soft: #ede9fe;
+  /* popblue = berry-plum scale (name kept for legacy class refs) */
+  --color-popblue-50: #fdf2f8;
+  --color-popblue-100: #fce7f3;
+  --color-popblue-200: #fbcfe8;
+  --color-popblue-300: #f9a8d4;
+  --color-popblue-400: #f472b6;
+  --color-popblue-500: #ec4899;
+  --color-popblue-600: #db2777;
+  --color-popblue-700: #be185d;
+  --color-popblue-800: #9d174d;
+  --color-popblue-900: #831843;
+  --color-popblue-950: #500724;
+  --color-popblue: #db2777;
+  --color-popblue-deep: #be185d;
+  --color-popblue-soft: #fce7f3;
 
-  --color-ink: #082f49;
-  --color-paper: #f0f9ff;
-  --color-mute: #475569;
-  --color-card: #ffffff;
-  --color-deep: #0b1f33;
+  --color-ink: #292524;
+  --color-paper: #fdf9f0;
+  --color-mute: #57534e;
+  --color-card: #fffdf7;
+  --color-deep: #1c1917;
 }
 
 html { scroll-behavior: smooth; }
@@ -77,168 +76,166 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f0f9ff;
+  background-color: #fdf9f0;
   background-image:
-    linear-gradient(180deg, rgba(2, 132, 199, 0.10) 0%, transparent 340px),
-    radial-gradient(circle at 88% 0%, rgba(249, 115, 22, 0.14) 0%, transparent 42%),
-    radial-gradient(circle at 6% 100%, rgba(139, 92, 246, 0.12) 0%, transparent 44%);
-  color: #082f49;
+    linear-gradient(180deg, rgba(21, 128, 61, 0.10) 0%, transparent 360px),
+    radial-gradient(circle at 88% 0%, rgba(234, 179, 8, 0.20) 0%, transparent 44%),
+    radial-gradient(circle at 6% 100%, rgba(219, 39, 119, 0.12) 0%, transparent 46%);
+  color: #292524;
 }
-::selection { background: #fdba74; color: #082f49; }
+::selection { background: #fde047; color: #292524; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0284c7, #8b5cf6); border-radius: 4px; border: 2px solid #f0f9ff; }
-::-webkit-scrollbar-track { background: #e0f2fe; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #15803d, #ca8a04); border-radius: 999px; border: 2px solid #fdf9f0; }
+::-webkit-scrollbar-track { background: #fef9c3; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Glacier Pop type: tight, punchy headlines. */
-h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
+/* Ember Grove type: warm, relaxed headlines. */
+h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Glacier Pop drift: ice crystals rising through cold light. */
+/* Ember Grove drift: embers rising through warm evening air. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, -4vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.9; }
-  50% { transform: translate3d(-2vw, 45vh, 0) rotate(-40deg) scale(1.05); }
-  100% { transform: translate3d(1vw, 96vh, 0) rotate(-80deg) scale(1); opacity: 0; }
+  50% { transform: translate3d(2vw, 45vh, 0) rotate(40deg) scale(1.05); }
+  100% { transform: translate3d(-1vw, 96vh, 0) rotate(80deg) scale(1); opacity: 0; }
 }
-.pop-fall { animation: signal-rise 15s linear infinite; }
+.pop-fall { animation: signal-rise 17s linear infinite; }
 
-/* Glacier Pop sway: a crisp, brisk glacier sway. */
+/* Ember Grove sway: a slow, warm grove sway. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-1vw, 0, 0) rotate(-1deg) scale(1); opacity: 0.5; }
-  50% { transform: translate3d(1vw, 6px, 0) rotate(1deg) scale(1.03); opacity: 0.9; }
+  50% { transform: translate3d(1vw, 8px, 0) rotate(1deg) scale(1.03); opacity: 0.9; }
 }
-.pop-drift { animation: signal-drift 11s ease-in-out infinite; }
+.pop-drift { animation: signal-drift 13s ease-in-out infinite; }
 
-/* Glacier Pop bounce: a snappy, crisp hop. */
+/* Ember Grove bounce: a soft, pillowy hop. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
-  30% { transform: translateY(-3px) scale(1.01); }
-  50% { transform: translateY(-4px) scale(1.01); }
+  30% { transform: translateY(-4px) scale(1.01); }
+  50% { transform: translateY(-5px) scale(1.01); }
 }
-.pop-bob { animation: signal-bob 4.4s ease-in-out infinite; }
+.pop-bob { animation: signal-bob 5s ease-in-out infinite; }
 
-/* Slow turn for the glacier dial. */
+/* Slow turn for the grove dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
-.pop-spin { animation: dial-turn 36s linear infinite; }
+.pop-spin { animation: dial-turn 40s linear infinite; }
 
-/* Glacier Pop glow pulse: a tangerine pulse. */
+/* Ember Grove glow pulse: a mustard ember pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.45; transform: scale(0.92); }
   50% { opacity: 1; transform: scale(1.12); }
 }
-.pop-twinkle { animation: signal-blink 3s ease-in-out infinite; }
+.pop-twinkle { animation: signal-blink 3.4s ease-in-out infinite; }
 
-/* Glacier Pop ticker: infinite marquee (leftward drift). */
+/* Ember Grove ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
-.pop-ticker { animation: signal-ticker 30s linear infinite; }
+.pop-ticker { animation: signal-ticker 34s linear infinite; }
 
-/* Glacier Pop bands: sky -> tangerine -> violet stripes. */
+/* Ember Grove bands: forest -> mustard -> berry stripes. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #0284c7 0 34%, #f97316 34% 67%, #8b5cf6 67% 100%);
+    linear-gradient(90deg, #15803d 0 34%, #eab308 34% 67%, #db2777 67% 100%);
   background-size: 34px 34px;
 }
 
-/* Glacier Pop card: a crisp white slab — small corners,
-   a thin sky rim and a hard offset shadow that pops
-   further on hover instead of a soft plush glow. */
+/* Ember Grove card: a plush cream slab — extra-rounded
+   corners, a soft green rim and layered soft shadows that
+   lift gently on hover instead of a hard offset pop. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(2, 132, 199, 0.28);
-  background: #ffffff;
-  border-radius: 0.75rem;
-  box-shadow: 4px 4px 0 rgba(2, 132, 199, 0.18);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  border: 1px solid rgba(21, 128, 61, 0.16);
+  background: #fffdf7;
+  border-radius: 1.75rem;
+  box-shadow: 0 2px 6px rgba(28, 25, 23, 0.06), 0 14px 30px rgba(21, 128, 61, 0.10);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translate(-2px, -2px);
-  border-color: rgba(2, 132, 199, 0.55);
-  box-shadow: 7px 7px 0 rgba(2, 132, 199, 0.28);
+  transform: translateY(-4px);
+  border-color: rgba(21, 128, 61, 0.35);
+  box-shadow: 0 4px 10px rgba(28, 25, 23, 0.08), 0 22px 44px rgba(21, 128, 61, 0.18);
 }
 
-/* Glacier Pop glass: shared by modals and drawers — a frosted
-   icy pane with a crisp sky ring and hard offset shadow. */
+/* Ember Grove glass: shared by modals and drawers — a warm
+   frosted cream pane with a soft green ring and plush shadow. */
 .pop-glass {
-  background: rgba(240, 249, 255, 0.94);
-  backdrop-filter: blur(18px) saturate(1.1);
-  -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(2, 132, 199, 0.35);
-  border-radius: 0.75rem;
-  box-shadow: 6px 6px 0 rgba(2, 132, 199, 0.20);
+  background: rgba(253, 249, 240, 0.94);
+  backdrop-filter: blur(18px) saturate(1.05);
+  -webkit-backdrop-filter: blur(18px) saturate(1.05);
+  border: 1px solid rgba(21, 128, 61, 0.22);
+  border-radius: 1.75rem;
+  box-shadow: 0 10px 34px rgba(21, 128, 61, 0.16);
 }
 
-/* Glacier Pop tag: a crisp tangerine disc — upright, bold,
-   with a white ring and hard shadow. */
+/* Ember Grove tag: a warm mustard disc — tilted playfully,
+   with a cream ring and soft shadow. */
 .starburst {
-  background: #f97316;
-  color: #ffffff;
+  background: #eab308;
+  color: #422006;
   text-shadow: none;
   border-radius: 999px;
-  transform: rotate(0deg);
-  box-shadow: 3px 3px 0 rgba(194, 65, 12, 0.55);
-  border: 2px solid #ffffff;
+  transform: rotate(-6deg);
+  box-shadow: 0 6px 16px rgba(161, 98, 7, 0.45);
+  border: 2px solid #fffdf7;
 }
 
-/* Glacier Pop grid: a crisp faint blueprint grid. */
+/* Ember Grove grid: a warm dotted meadow grid. */
 .halftone {
-  background-image:
-    linear-gradient(rgba(2, 132, 199, 0.14) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(2, 132, 199, 0.14) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(21, 128, 61, 0.20) 1.5px, transparent 1.5px);
   background-size: 22px 22px;
 }
 
-/* Glacier Pop rule: a solid three-tone bar. */
+/* Ember Grove rule: a warm dotted divider. */
 .zigzag {
-  height: 4px;
+  height: 6px;
   border-top: none;
-  background-image: linear-gradient(90deg, #0284c7 0 34%, #f97316 34% 67%, #8b5cf6 67% 100%);
-  background-size: 100% 4px;
-  background-repeat: no-repeat;
+  background-image: radial-gradient(circle, #eab308 2px, transparent 2.5px);
+  background-size: 16px 6px;
+  background-repeat: repeat-x;
   opacity: 0.9;
   border-radius: 2px;
 }
 
-/* Glacier Pop band: a crisp sky gradient bar with a tangerine
-   underline and sharp square corners. */
+/* Ember Grove band: a deep forest gradient bar with a
+   mustard underline and softly rounded bottom corners. */
 .bazaar-awning {
-  background: linear-gradient(180deg, #0369a1, #0284c7);
+  background: linear-gradient(180deg, #14532d, #15803d);
   opacity: 1;
-  box-shadow: 0 8px 0 rgba(2, 132, 199, 0.18);
-  border-bottom: 4px solid #f97316;
-  border-radius: 0;
+  box-shadow: 0 12px 28px rgba(21, 128, 61, 0.22);
+  border-bottom: 4px solid #eab308;
+  border-radius: 0 0 1.5rem 1.5rem;
 }
 
-/* Glacier Pop glow: an icy halo for the core. */
+/* Ember Grove glow: a warm amber halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(240, 249, 255, 0.95) 0%, rgba(254, 215, 170, 0.55) 42%, rgba(2, 132, 199, 0.28) 62%, rgba(2, 132, 199, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(253, 249, 240, 0.95) 0%, rgba(254, 240, 138, 0.55) 42%, rgba(21, 128, 61, 0.28) 62%, rgba(21, 128, 61, 0) 76%);
 }
 
-/* Glacier Pop core: a sky disc with a tangerine ring. */
+/* Ember Grove core: a mustard disc with a berry ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #7dd3fc 0%, #0284c7 55%, #082f49 100%);
-  box-shadow: 0 0 0 4px #fb923c, 0 16px 32px rgba(2, 132, 199, 0.4);
-  border: 2px solid rgba(255, 255, 255, 0.7);
+    radial-gradient(circle at 35% 30%, #fde047 0%, #eab308 55%, #14532d 100%);
+  box-shadow: 0 0 0 4px #f472b6, 0 16px 32px rgba(21, 128, 61, 0.4);
+  border: 2px solid rgba(255, 253, 247, 0.7);
 }
 
-/* Crisp traces around the core disc. */
+/* Warm traces around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(2, 132, 199, 0.35) 0px,
-    rgba(2, 132, 199, 0.35) 1px,
+    rgba(21, 128, 61, 0.35) 0px,
+    rgba(21, 128, 61, 0.35) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(139, 92, 246, 0.35) 14px,
-    rgba(139, 92, 246, 0.35) 15px,
+    rgba(219, 39, 119, 0.35) 14px,
+    rgba(219, 39, 119, 0.35) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -249,7 +246,7 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(249, 115, 22, 0.45) 0deg 3deg,
+    rgba(234, 179, 8, 0.5) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
