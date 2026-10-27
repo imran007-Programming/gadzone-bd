@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Volt Grid glow drifting over the cool paper.
+// Harbor glow drifting over the cool mint paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(163, 230, 53, 0.25)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(234, 88, 12, 0.20)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(22, 26, 18, 0.18)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(132, 204, 22, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(45, 212, 191, 0.25)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(2, 132, 199, 0.20)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(4, 47, 46, 0.18)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(13, 148, 136, 0.20)" },
 ];
 
-// Volt Grid sparks falling through the grid light.
+// Harbor bubbles rising through the coastal light.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#84cc16" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#14b8a6" },
   { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#ea580c" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#334155" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#a3e635" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#65a30d" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#0f766e" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#2dd4bf" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#0284c7" },
   { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#f97316" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#161a12" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#042f2e" },
 ];
 
 // Ink drops scattered through the cool night light.
@@ -75,8 +75,8 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* cream wash under the hearth light */}
-      <div className="relative bg-gradient-to-b from-[#fde68a] via-[#ffedd5] to-[#fdf6ec]">
+      {/* mint wash under the harbor light */}
+      <div className="relative bg-gradient-to-b from-[#99f6e4] via-[#ccfbf1] to-[#effaf7]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
