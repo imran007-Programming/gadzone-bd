@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Violet dusk light drifting over the lavender paper.
+// Bubblegum glow drifting over the blush paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(139, 92, 246, 0.22)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(217, 70, 239, 0.18)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(6, 182, 212, 0.18)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(167, 139, 250, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(236, 72, 153, 0.22)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(34, 211, 238, 0.20)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(245, 158, 11, 0.20)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(219, 39, 119, 0.20)" },
 ];
 
-// Electric sparks drifting up through the dusk light.
+// Bubblegum bubbles drifting up through the lagoon light.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#7c3aed" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#c026d3" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#ec4899" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#06b6d4" },
   { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#f59e0b" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#a78bfa" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#6d28d9" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#10b981" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#d946ef" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#f472b6" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#db2777" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#22d3ee" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#fbbf24" },
 ];
 
-// Electric sparks scattered through the dusk light.
+// Bubblegum bubbles scattered through the lagoon light.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -75,8 +75,8 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* frost glacier wash under the grid light */}
-      <div className="relative bg-gradient-to-b from-[#e0f2fe] via-[#f0f9ff] to-[#dbeafe]">
+      {/* bubblegum lagoon wash under the grid light */}
+      <div className="relative bg-gradient-to-b from-[#fce7f3] via-[#fff1f2] to-[#cffafe]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
