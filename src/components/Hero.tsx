@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Iris glow drifting over the dusk paper.
+// Harvest glow drifting over the warm cream paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(236, 72, 153, 0.22)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(124, 58, 237, 0.20)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(6, 182, 212, 0.20)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(46, 16, 101, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(245, 158, 11, 0.22)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(5, 150, 105, 0.20)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(132, 204, 22, 0.20)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(2, 44, 34, 0.20)" },
 ];
 
-// Iris sparks drifting up through the dusk light.
+// Harvest leaves drifting down through the warm light.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#ec4899" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#8b5cf6" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#06b6d4" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#f472b6" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#7c3aed" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#67e8f9" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#2e1065" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#f59e0b" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#059669" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#84cc16" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#fbbf24" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#047857" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#a3e635" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#022c22" },
 ];
 
-// Iris sparks scattered through the dusk light.
+// Harvest leaves scattered through the warm light.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
