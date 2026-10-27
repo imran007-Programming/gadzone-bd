@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Emerald Grove glow drifting over the warm sand paper.
+// Volt Grid glow drifting over the cool paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(5, 150, 105, 0.22)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(234, 179, 8, 0.20)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(225, 29, 72, 0.18)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(2, 44, 34, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(163, 230, 53, 0.25)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(234, 88, 12, 0.20)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(22, 26, 18, 0.18)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(132, 204, 22, 0.20)" },
 ];
 
-// Emerald Grove leaves falling through the warm garden light.
+// Volt Grid sparks falling through the grid light.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#059669" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#eab308" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#e11d48" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#10b981" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#047857" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#facc15" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#022c22" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#84cc16" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#ea580c" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#334155" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#a3e635" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#65a30d" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#f97316" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#161a12" },
 ];
 
 // Ink drops scattered through the cool night light.
@@ -100,7 +100,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(5, 150, 105, 0.45), inset 0 0 18px rgba(234, 179, 8, 0.30)",
+                  boxShadow: "0 0 28px 2px rgba(22,26,18, 0.45), inset 0 0 18px rgba(234, 179, 8, 0.30)",
                   opacity: 1 - r * 0.22,
                 }}
               />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#eab308", "#059669", "#e11d48", "#022c22"];
+              const colors = ["#a3e635", "#ea580c", "#334155", "#161a12"];
               return (
                 <span
                   key={i}

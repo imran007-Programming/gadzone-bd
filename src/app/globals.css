@@ -1,70 +1,69 @@
 @import "tailwindcss";
 
 @theme {
-  /* Emerald Grove: a warm botanical direction — deep
-     emerald brand, sunflower amber and soft coral accents
-     on warm sand paper. Cards are soft garden tiles:
-     big pill-rounded corners, a thin sage ring and a soft
-     diffused shadow that lifts on hover — the opposite of
-     the previous Inkwell Midnight look, its deep indigo /
-     mint / cyan palette, pale lavender paper, medium
-     square corners, solid indigo border and hard offset
-     shadow. */
+  /* Volt Grid: a sharp, high-voltage direction — graphite ink,
+     volt lime and signal orange on cool paper. Cards are
+     angular grid tiles: small square corners, a solid 2px ink
+     border and a hard offset shadow that jumps on hover —
+     the opposite of the previous Emerald Grove look, its
+     emerald / amber / coral palette, warm sand paper,
+     big pill-rounded corners, thin sage ring and soft
+     diffused shadow. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = emerald scale */
-  --color-brand-50: #ecfdf5;
-  --color-brand-100: #d1fae5;
-  --color-brand-200: #a7f3d0;
-  --color-brand-300: #6ee7b7;
-  --color-brand-400: #34d399;
-  --color-brand-500: #10b981;
-  --color-brand-600: #059669;
-  --color-brand-700: #047857;
-  --color-brand-800: #065f46;
-  --color-brand-900: #064e3b;
-  --color-brand-950: #022c22;
-  --color-brand: #059669;
-  --color-brand-dark: #065f46;
-  --color-brand-deep: #022c22;
+  /* brand = volt lime scale */
+  --color-brand-50: #f7fee7;
+  --color-brand-100: #ecfccb;
+  --color-brand-200: #d9f99d;
+  --color-brand-300: #bef264;
+  --color-brand-400: #a3e635;
+  --color-brand-500: #84cc16;
+  --color-brand-600: #65a30d;
+  --color-brand-700: #4d7c0f;
+  --color-brand-800: #3f6212;
+  --color-brand-900: #365314;
+  --color-brand-950: #1a2e05;
+  --color-brand: #65a30d;
+  --color-brand-dark: #3f6212;
+  --color-brand-deep: #1a2e05;
 
-  /* gold = sunflower amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fefce8;
-  --color-gold-100: #fef9c3;
-  --color-gold-200: #fef08a;
-  --color-gold-300: #fde047;
-  --color-gold-400: #facc15;
-  --color-gold-500: #eab308;
-  --color-gold-600: #ca8a04;
-  --color-gold-700: #a16207;
-  --color-gold-800: #854d0e;
-  --color-gold-900: #713f12;
-  --color-gold-950: #422006;
-  --color-gold: #eab308;
-  --color-gold-deep: #a16207;
-  --color-gold-soft: #fef9c3;
+  /* gold = graphite scale (name kept for legacy class refs) */
+  --color-gold-50: #f8fafc;
+  --color-gold-100: #f1f5f9;
+  --color-gold-200: #e2e8f0;
+  --color-gold-300: #cbd5e1;
+  --color-gold-400: #94a3b8;
+  --color-gold-500: #64748b;
+  --color-gold-600: #475569;
+  --color-gold-700: #334155;
+  --color-gold-800: #1e293b;
+  --color-gold-900: #0f172a;
+  --color-gold-950: #020617;
+  --color-gold: #334155;
+  --color-gold-deep: #0f172a;
+  --color-gold-soft: #f1f5f9;
 
-  /* popblue = soft coral scale (name kept for legacy class refs) */
-  --color-popblue-50: #fff1f2;
-  --color-popblue-100: #ffe4e6;
-  --color-popblue-200: #fecdd3;
-  --color-popblue-300: #fda4af;
-  --color-popblue-400: #fb7185;
-  --color-popblue-500: #f43f5e;
-  --color-popblue-600: #e11d48;
-  --color-popblue-700: #be123c;
-  --color-popblue-800: #9f1239;
-  --color-popblue-900: #881337;
-  --color-popblue-950: #4c0519;
-  --color-popblue: #e11d48;
-  --color-popblue-deep: #be123c;
-  --color-popblue-soft: #ffe4e6;
+  /* popblue = signal orange scale (name kept for legacy class refs) */
+  --color-popblue-50: #fff7ed;
+  --color-popblue-100: #ffedd5;
+  --color-popblue-200: #fed7aa;
+  --color-popblue-300: #fdba74;
+  --color-popblue-400: #fb923c;
+  --color-popblue-500: #f97316;
+  --color-popblue-600: #ea580c;
+  --color-popblue-700: #c2410c;
+  --color-popblue-800: #9a3412;
+  --color-popblue-900: #7c2d12;
+  --color-popblue-950: #431407;
+  --color-popblue: #ea580c;
+  --color-popblue-deep: #c2410c;
+  --color-popblue-soft: #ffedd5;
 
-  --color-ink: #1a2e22;
-  --color-paper: #faf7ef;
-  --color-mute: #5f6f60;
+  --color-ink: #161a12;
+  --color-paper: #f4f6f1;
+  --color-mute: #5c6657;
   --color-card: #ffffff;
-  --color-deep: #022c22;
+  --color-deep: #1a2e05;
 }
 
 html { scroll-behavior: smooth; }
@@ -79,40 +78,40 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #faf7ef;
+  background-color: #f4f6f1;
   background-image:
-    linear-gradient(180deg, rgba(5, 150, 105, 0.10) 0%, transparent 340px),
-    radial-gradient(circle at 92% 0%, rgba(234, 179, 8, 0.18) 0%, transparent 44%),
-    radial-gradient(circle at 4% 100%, rgba(225, 29, 72, 0.10) 0%, transparent 44%);
-  color: #1a2e22;
+    linear-gradient(180deg, rgba(163, 230, 53, 0.14) 0%, transparent 340px),
+    radial-gradient(circle at 92% 0%, rgba(234, 88, 12, 0.14) 0%, transparent 44%),
+    radial-gradient(circle at 4% 100%, rgba(22, 26, 18, 0.10) 0%, transparent 44%);
+  color: #161a12;
 }
-::selection { background: #fde047; color: #022c22; }
+::selection { background: #bef264; color: #161a12; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #059669, #eab308); border-radius: 999px; border: 2px solid #faf7ef; }
-::-webkit-scrollbar-track { background: #d1fae5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #84cc16, #161a12); border-radius: 2px; border: 2px solid #f4f6f1; }
+::-webkit-scrollbar-track { background: #ecfccb; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Emerald Grove type: open, warm, gently rounded headlines. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Volt Grid type: tight, punchy, grid-aligned headlines. */
+h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Emerald Grove fall: leaves drifting downward. */
+/* Volt Grid sparks: voltage dropping straight down. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, -4vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.9; }
   50% { transform: translate3d(2vw, 45vh, 0) rotate(40deg) scale(1.05); }
   100% { transform: translate3d(-1vw, 96vh, 0) rotate(80deg) scale(1); opacity: 0; }
 }
-.pop-fall { animation: signal-rise 15s linear infinite; }
+.pop-fall { animation: signal-rise 13s linear infinite; }
 
-/* Emerald Grove sway: a soft garden breeze. */
+/* Volt Grid hum: a sharp electric shiver. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-1vw, 0, 0) rotate(-1deg) scale(1); opacity: 0.5; }
   50% { transform: translate3d(1vw, -8px, 0) rotate(1deg) scale(1.03); opacity: 0.9; }
 }
 .pop-drift { animation: signal-drift 11s ease-in-out infinite; }
 
-/* Emerald Grove bounce: a soft leaf bob. */
+/* Volt Grid jolt: a quick upward snap. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   30% { transform: translateY(-3px) scale(1.01); }
@@ -120,125 +119,126 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 }
 .pop-bob { animation: signal-bob 4.5s ease-in-out infinite; }
 
-/* Slow turn for the garden dial. */
+/* Slow turn for the volt dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 36s linear infinite; }
 
-/* Emerald Grove glow pulse: a sunflower shimmer pulse. */
+/* Volt Grid surge pulse: a lime flash pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.45; transform: scale(0.92); }
   50% { opacity: 1; transform: scale(1.12); }
 }
 .pop-twinkle { animation: signal-blink 3s ease-in-out infinite; }
 
-/* Emerald Grove ticker: infinite marquee (leftward drift). */
+/* Volt Grid ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
-.pop-ticker { animation: signal-ticker 32s linear infinite; }
+.pop-ticker { animation: signal-ticker 26s linear infinite; }
 
-/* Emerald Grove bands: emerald -> amber -> coral stripes. */
+/* Volt Grid bands: lime -> graphite -> orange stripes. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #059669 0 34%, #eab308 34% 67%, #e11d48 67% 100%);
+    linear-gradient(90deg, #84cc16 0 34%, #161a12 34% 67%, #ea580c 67% 100%);
   background-size: 34px 34px;
 }
 
-/* Emerald Grove card: a soft garden tile — big pill-rounded
-   corners, a thin sage ring and a soft diffused shadow that
-   lifts gently on hover. */
+/* Volt Grid card: an angular grid tile — small square corners,
+   a solid 2px ink border and a hard offset shadow that jumps
+   on hover. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(5, 150, 105, 0.25);
+  border: 2px solid #161a12;
   background: #ffffff;
-  border-radius: 1.75rem;
-  box-shadow: 0 18px 36px -18px rgba(2, 44, 34, 0.28);
+  border-radius: 1rem;
+  box-shadow: 5px 5px 0 #161a12;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 28px 48px -20px rgba(2, 44, 34, 0.35);
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0 #161a12;
 }
 
-/* Emerald Grove glass: shared by modals and drawers — a
-   warm frosted pane with an emerald ring. */
+/* Volt Grid glass: shared by modals and drawers — a cool
+   frosted pane with a solid ink edge. */
 .pop-glass {
-  background: rgba(250, 247, 239, 0.94);
+  background: rgba(244, 246, 241, 0.94);
   backdrop-filter: blur(18px) saturate(1.05);
   -webkit-backdrop-filter: blur(18px) saturate(1.05);
-  border: 1px solid rgba(5, 150, 105, 0.20);
-  border-radius: 1.5rem;
-  box-shadow: 0 18px 36px -16px rgba(2, 44, 34, 0.30);
+  border: 2px solid #161a12;
+  border-radius: 1rem;
+  box-shadow: 6px 6px 0 rgba(22, 26, 18, 0.25);
 }
 
-/* Emerald Grove tag: a sunflower pill badge — fully rounded,
-   emerald ring, soft shadow. */
+/* Volt Grid tag: a lime volt badge — square-ish corners,
+   solid ink border, hard offset shadow. */
 .starburst {
-  background: #facc15;
-  color: #022c22;
+  background: #bef264;
+  color: #161a12;
   text-shadow: none;
-  border-radius: 999px;
-  transform: rotate(-3deg);
-  box-shadow: 0 10px 20px -8px rgba(2, 44, 34, 0.40);
-  border: 1.5px solid #059669;
+  border-radius: 0.75rem;
+  transform: rotate(2deg);
+  box-shadow: 4px 4px 0 #161a12;
+  border: 2px solid #161a12;
 }
 
-/* Emerald Grove dots: fine emerald dots. */
+/* Volt Grid lines: fine graphite grid lines. */
 .halftone {
   background-image:
-    radial-gradient(rgba(5, 150, 105, 0.18) 1.5px, transparent 1.5px);
-  background-size: 20px 20px;
+    linear-gradient(rgba(22, 26, 18, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(22, 26, 18, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
 }
 
-/* Emerald Grove rule: an emerald-to-amber-to-coral bar. */
+/* Volt Grid rule: a lime-to-graphite-to-orange bar. */
 .zigzag {
-  height: 6px;
+  height: 8px;
   border-top: none;
-  background: linear-gradient(90deg, #059669, #eab308, #e11d48);
-  background-size: 100% 6px;
+  background: linear-gradient(90deg, #84cc16, #161a12, #ea580c);
+  background-size: 100% 8px;
   background-repeat: no-repeat;
   opacity: 0.9;
-  border-radius: 999px;
+  border-radius: 0;
 }
 
-/* Emerald Grove band: a deep emerald bar with an amber
-   underline and softly rounded bottom edge. */
+/* Volt Grid band: a graphite bar with a lime underline and
+   square corners. */
 .bazaar-awning {
-  background: linear-gradient(180deg, #022c22, #047857);
+  background: linear-gradient(180deg, #161a12, #334155);
   opacity: 1;
-  box-shadow: 0 10px 24px -12px rgba(2, 44, 34, 0.35);
-  border-bottom: 4px solid #eab308;
-  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 10px 24px -12px rgba(22, 26, 18, 0.35);
+  border-bottom: 4px solid #a3e635;
+  border-radius: 0;
 }
 
-/* Emerald Grove glow: an amber halo for the core. */
+/* Volt Grid glow: a lime halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(254, 249, 195, 0.55) 42%, rgba(5, 150, 105, 0.28) 62%, rgba(5, 150, 105, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(217, 249, 157, 0.55) 42%, rgba(234, 88, 12, 0.28) 62%, rgba(234, 88, 12, 0) 76%);
 }
 
-/* Emerald Grove core: an amber disc with an emerald ring. */
+/* Volt Grid core: a lime disc with a graphite ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fde047 0%, #10b981 55%, #022c22 100%);
-  box-shadow: 0 0 0 4px #eab308, 0 12px 28px -12px rgba(2, 44, 34, 0.45);
+    radial-gradient(circle at 35% 30%, #d9f99d 0%, #84cc16 55%, #161a12 100%);
+  box-shadow: 0 0 0 4px #a3e635, 5px 5px 0 #161a12;
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Warm traces around the core disc. */
+/* Sharp traces around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(5, 150, 105, 0.35) 0px,
-    rgba(5, 150, 105, 0.35) 1px,
+    rgba(22, 26, 18, 0.35) 0px,
+    rgba(22, 26, 18, 0.35) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(234, 179, 8, 0.35) 14px,
-    rgba(234, 179, 8, 0.35) 15px,
+    rgba(163, 230, 53, 0.35) 14px,
+    rgba(163, 230, 53, 0.35) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -249,7 +249,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(234, 179, 8, 0.5) 0deg 3deg,
+    rgba(163, 230, 53, 0.5) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
