@@ -32,10 +32,10 @@ const ORBS = [
 const FLAKES = [
   { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#7c3aed" },
   { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#c026d3" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#0891b2" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#f59e0b" },
   { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#a78bfa" },
   { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#6d28d9" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#22d3ee" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#10b981" },
   { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#d946ef" },
 ];
 
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#7c3aed", "#a78bfa", "#c026d3", "#22d3ee"];
+              const colors = ["#7c3aed", "#a78bfa", "#c026d3", "#f59e0b"];
               return (
                 <span
                   key={i}
