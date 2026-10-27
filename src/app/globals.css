@@ -1,67 +1,68 @@
 @import "tailwindcss";
 
 @theme {
-  /* Ember Dusk: a warm sunset direction — terracotta
-     brand, honey-amber gold and rosewood accents on warm
-     sand paper. Cards are plush, fully rounded pillows with
-     soft diffused shadows — the opposite of the previous
-     Midnight Harbor's cool mist paper, steel-blue palette,
-     near-square panels and hard offset shadows. */
+  /* Verdant Canopy: a fresh forest direction — deep
+     forest-green brand, fresh lime and teal accents on
+     soft leaf-cream paper. Cards are crisp, clean panels
+     with a thin green rim and a lime top accent — the
+     opposite of the previous Ember Dusk's warm terracotta
+     palette, honey-amber glow and plush fully rounded
+     pillow cards. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = terracotta scale */
-  --color-brand-50: #fff7ed;
-  --color-brand-100: #ffedd5;
-  --color-brand-200: #fed7aa;
-  --color-brand-300: #fdba74;
-  --color-brand-400: #fb923c;
-  --color-brand-500: #f97316;
-  --color-brand-600: #ea580c;
-  --color-brand-700: #c2410c;
-  --color-brand-800: #9a3412;
-  --color-brand-900: #7c2d12;
-  --color-brand-950: #431407;
-  --color-brand: #ea580c;
-  --color-brand-dark: #c2410c;
-  --color-brand-deep: #7c2d12;
+  /* brand = forest-green scale */
+  --color-brand-50: #f0fdf4;
+  --color-brand-100: #dcfce7;
+  --color-brand-200: #bbf7d0;
+  --color-brand-300: #86efac;
+  --color-brand-400: #4ade80;
+  --color-brand-500: #22c55e;
+  --color-brand-600: #16a34a;
+  --color-brand-700: #15803d;
+  --color-brand-800: #166534;
+  --color-brand-900: #14532d;
+  --color-brand-950: #052e16;
+  --color-brand: #15803d;
+  --color-brand-dark: #166534;
+  --color-brand-deep: #14532d;
 
-  /* gold = honey-amber scale */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #f59e0b;
-  --color-gold-deep: #b45309;
-  --color-gold-soft: #fef3c7;
+  /* gold = fresh-lime scale */
+  --color-gold-50: #f7fee7;
+  --color-gold-100: #ecfccb;
+  --color-gold-200: #d9f99d;
+  --color-gold-300: #bef264;
+  --color-gold-400: #a3e635;
+  --color-gold-500: #84cc16;
+  --color-gold-600: #65a30d;
+  --color-gold-700: #4d7c0f;
+  --color-gold-800: #3f6212;
+  --color-gold-900: #365314;
+  --color-gold-950: #1a2e05;
+  --color-gold: #84cc16;
+  --color-gold-deep: #4d7c0f;
+  --color-gold-soft: #ecfccb;
 
-  /* popblue = rosewood scale (name kept for legacy class refs) */
-  --color-popblue-50: #fff1f2;
-  --color-popblue-100: #ffe4e6;
-  --color-popblue-200: #fecdd3;
-  --color-popblue-300: #fda4af;
-  --color-popblue-400: #fb7185;
-  --color-popblue-500: #f43f5e;
-  --color-popblue-600: #e11d48;
-  --color-popblue-700: #be123c;
-  --color-popblue-800: #9f1239;
-  --color-popblue-900: #881337;
-  --color-popblue-950: #4c0519;
-  --color-popblue: #f43f5e;
-  --color-popblue-deep: #be123c;
-  --color-popblue-soft: #ffe4e6;
+  /* popblue = teal scale (name kept for legacy class refs) */
+  --color-popblue-50: #f0fdfa;
+  --color-popblue-100: #ccfbf1;
+  --color-popblue-200: #99f6e4;
+  --color-popblue-300: #5eead4;
+  --color-popblue-400: #2dd4bf;
+  --color-popblue-500: #14b8a6;
+  --color-popblue-600: #0d9488;
+  --color-popblue-700: #0f766e;
+  --color-popblue-800: #115e59;
+  --color-popblue-900: #134e4a;
+  --color-popblue-950: #042f2e;
+  --color-popblue: #14b8a6;
+  --color-popblue-deep: #0f766e;
+  --color-popblue-soft: #ccfbf1;
 
-  --color-ink: #2a1a12;
-  --color-paper: #fdf3e7;
-  --color-mute: #7a5c4a;
-  --color-card: #fffdf8;
-  --color-deep: #2a1a12;
+  --color-ink: #16281a;
+  --color-paper: #f6fbf0;
+  --color-mute: #5b6b57;
+  --color-card: #fdfff8;
+  --color-deep: #16281a;
 }
 
 html { scroll-behavior: smooth; }
@@ -76,24 +77,24 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fdf3e7;
+  background-color: #f6fbf0;
   background-image:
-    radial-gradient(circle at 8% 0%, rgba(234, 88, 12, 0.16) 0%, transparent 46%),
-    radial-gradient(circle at 92% 8%, rgba(245, 158, 11, 0.18) 0%, transparent 42%),
-    radial-gradient(circle at 50% 100%, rgba(244, 63, 94, 0.12) 0%, transparent 48%);
-  color: #2a1a12;
+    radial-gradient(circle at 8% 0%, rgba(21, 128, 61, 0.14) 0%, transparent 46%),
+    radial-gradient(circle at 92% 8%, rgba(132, 204, 22, 0.16) 0%, transparent 42%),
+    radial-gradient(circle at 50% 100%, rgba(20, 184, 166, 0.10) 0%, transparent 48%);
+  color: #16281a;
 }
-::selection { background: #fcd34d; color: #431407; }
+::selection { background: #bef264; color: #052e16; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ea580c, #f59e0b); border-radius: 999px; border: 2px solid #fdf3e7; }
-::-webkit-scrollbar-track { background: #ffedd5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #15803d, #84cc16); border-radius: 999px; border: 2px solid #f6fbf0; }
+::-webkit-scrollbar-track { background: #dcfce7; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Ember type: soft, warm headlines. */
+/* Canopy type: crisp, leafy headlines. */
 h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Ember drift: embers floating down through warm dusk light. */
+/* Canopy drift: leaves fluttering down through dappled light. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, -4vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.9; }
@@ -102,14 +103,14 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 15s linear infinite; }
 
-/* Ember sway: a slow, warm sway. */
+/* Canopy sway: a slow, leafy sway. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-1vw, 0, 0) rotate(-2deg) scale(1); opacity: 0.5; }
   50% { transform: translate3d(1vw, 8px, 0) rotate(2deg) scale(1.05); opacity: 0.9; }
 }
 .pop-drift { animation: signal-drift 11s ease-in-out infinite; }
 
-/* Ember bounce: a soft, pillowy bob. */
+/* Canopy bounce: a light, springy bob. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   30% { transform: translateY(-3px) scale(1.01); }
@@ -117,124 +118,134 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 }
 .pop-bob { animation: signal-bob 4.4s ease-in-out infinite; }
 
-/* Slow turn for the ember dial. */
+/* Slow turn for the canopy dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 36s linear infinite; }
 
-/* Ember glow pulse: a warm amber pulse. */
+/* Canopy glow pulse: a fresh lime pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.45; transform: scale(0.92); }
   50% { opacity: 1; transform: scale(1.12); }
 }
 .pop-twinkle { animation: signal-blink 3s ease-in-out infinite; }
 
-/* Ember ticker: infinite marquee (leftward drift). */
+/* Canopy ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Ember bands: terracotta -> amber -> rose stripes. */
+/* Canopy bands: forest -> lime -> teal stripes. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #ea580c 0 34%, #f59e0b 34% 67%, #f43f5e 67% 100%);
+    linear-gradient(90deg, #15803d 0 34%, #84cc16 34% 67%, #14b8a6 67% 100%);
   background-size: 34px 34px;
 }
 
-/* Ember card: a plush, fully rounded pillow — a warm
-   cream face, a soft terracotta rim and a diffused warm
-   shadow. On hover it floats up and the shadow deepens. */
+/* Canopy card: a crisp, clean panel — a fresh cream
+   face, a thin forest-green rim, a lime top accent and
+   a light leaf shadow. On hover it lifts slightly and
+   the rim turns lime. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(124, 45, 18, 0.14);
-  background: #fffdf8;
-  border-radius: 1.75rem;
-  box-shadow: 0 20px 40px -18px rgba(124, 45, 18, 0.28), 0 4px 12px -6px rgba(124, 45, 18, 0.12);
+  border: 1px solid rgba(20, 83, 45, 0.16);
+  background: #fdfff8;
+  border-radius: 1.25rem;
+  box-shadow: 0 12px 28px -16px rgba(20, 83, 45, 0.25), 0 2px 8px -4px rgba(20, 83, 45, 0.10);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
+.pop-lift::before {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #15803d, #84cc16 55%, #14b8a6);
+  z-index: 1;
+}
 .pop-lift:hover {
-  transform: translateY(-5px);
-  border-color: rgba(234, 88, 12, 0.35);
-  box-shadow: 0 30px 54px -20px rgba(124, 45, 18, 0.38), 0 8px 18px -8px rgba(124, 45, 18, 0.16);
+  transform: translateY(-3px);
+  border-color: rgba(132, 204, 22, 0.55);
+  box-shadow: 0 20px 38px -18px rgba(20, 83, 45, 0.32), 0 6px 14px -6px rgba(20, 83, 45, 0.14);
 }
 
-/* Ember glass: shared by modals and drawers — a warm
-   frosted sand pane with a soft amber rim. */
+/* Canopy glass: shared by modals and drawers — a fresh
+   frosted leaf pane with a soft lime rim. */
 .pop-glass {
-  background: rgba(253, 243, 231, 0.94);
+  background: rgba(246, 251, 240, 0.94);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(124, 45, 18, 0.20);
-  border-radius: 1.5rem;
-  box-shadow: 0 24px 48px -20px rgba(124, 45, 18, 0.35);
+  border: 1px solid rgba(20, 83, 45, 0.20);
+  border-radius: 1.25rem;
+  box-shadow: 0 24px 48px -20px rgba(20, 83, 45, 0.32);
 }
 
-/* Ember tag: a soft pill badge — terracotta-to-rose
-   sunset gradient with a diffused warm shadow. */
+/* Canopy tag: a crisp pill badge — forest-to-lime
+   gradient with a light leaf shadow. */
 .starburst {
-  background: linear-gradient(135deg, #ea580c, #f43f5e);
+  background: linear-gradient(135deg, #15803d, #84cc16);
   color: #ffffff;
-  text-shadow: 0 1px 2px rgba(67, 20, 7, 0.35);
+  text-shadow: 0 1px 2px rgba(5, 46, 22, 0.35);
   border-radius: 999px;
   transform: rotate(0deg);
-  box-shadow: 0 10px 20px -8px rgba(194, 65, 12, 0.55);
+  box-shadow: 0 10px 20px -8px rgba(21, 128, 61, 0.55);
   border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
-/* Ember dots: a warm dotted field. */
+/* Canopy dots: a fresh dotted leaf field. */
 .halftone {
-  background-image: radial-gradient(rgba(194, 65, 12, 0.20) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(rgba(21, 128, 61, 0.20) 1.5px, transparent 1.5px);
   background-size: 20px 20px;
 }
 
-/* Ember rule: a soft dotted warm divider. */
+/* Canopy rule: a soft dotted leaf divider. */
 .zigzag {
   height: 3px;
   border-top: none;
-  background-image: radial-gradient(circle, #ea580c 2px, transparent 2.5px);
+  background-image: radial-gradient(circle, #15803d 2px, transparent 2.5px);
   background-size: 14px 3px;
   background-repeat: repeat-x;
   opacity: 0.55;
   border-radius: 999px;
 }
 
-/* Ember band: a soft sunset gradient bar with a warm glow. */
+/* Canopy band: a fresh forest gradient bar with a soft glow. */
 .bazaar-awning {
-  background: linear-gradient(120deg, #7c2d12, #ea580c 42%, #f59e0b 72%, #f43f5e);
+  background: linear-gradient(120deg, #14532d, #15803d 42%, #84cc16 72%, #14b8a6);
   opacity: 1;
-  box-shadow: 0 12px 28px -12px rgba(124, 45, 18, 0.45);
+  box-shadow: 0 12px 28px -12px rgba(20, 83, 45, 0.45);
   border-bottom: none;
-  border-radius: 0 0 1.5rem 1.5rem;
+  border-radius: 0 0 1.25rem 1.25rem;
 }
 
-/* Ember glow: a warm sunset halo for the core. */
+/* Canopy glow: a fresh leaf halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(253, 243, 231, 0.95) 0%, rgba(252, 211, 77, 0.55) 42%, rgba(234, 88, 12, 0.28) 62%, rgba(234, 88, 12, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(246, 251, 240, 0.95) 0%, rgba(190, 242, 100, 0.55) 42%, rgba(21, 128, 61, 0.28) 62%, rgba(21, 128, 61, 0) 76%);
 }
 
-/* Ember core: a glowing amber sun disc with a soft ring. */
+/* Canopy core: a glowing lime leaf disc with a soft ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fde68a 0%, #f59e0b 45%, #7c2d12 100%);
-  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.85), 0 14px 32px rgba(234, 88, 12, 0.40);
+    radial-gradient(circle at 35% 30%, #d9f99d 0%, #84cc16 45%, #14532d 100%);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.85), 0 14px 32px rgba(21, 128, 61, 0.40);
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Warm traces around the core disc. */
+/* Fresh traces around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(234, 88, 12, 0.35) 0px,
-    rgba(234, 88, 12, 0.35) 1px,
+    rgba(21, 128, 61, 0.35) 0px,
+    rgba(21, 128, 61, 0.35) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(244, 63, 94, 0.35) 14px,
-    rgba(244, 63, 94, 0.35) 15px,
+    rgba(20, 184, 166, 0.35) 14px,
+    rgba(20, 184, 166, 0.35) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -245,7 +256,7 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(245, 158, 11, 0.45) 0deg 3deg,
+    rgba(132, 204, 22, 0.45) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
