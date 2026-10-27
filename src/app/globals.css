@@ -1,70 +1,71 @@
 @import "tailwindcss";
 
 @theme {
-  /* Neon Night Market: a dark after-hours direction —
-     deep indigo-charcoal night, electric lime as the
-     primary accent, hot magenta for badges and prices,
-     and cyan for secondary highlights. Cards are slim
-     dark glass slabs: small 0.5rem corners, a thin neon
-     edge and a soft glow — the opposite of the previous
-     Copper Coast look, its warm cream paper, teal /
-     copper / coral palette, chunky 1.5rem tiles, thick
-     copper top edge and hard offset shadow. */
+  /* Sunrise Paper: a warm morning direction —
+     cream paper, terracotta orange as the primary
+     accent, amber for badges and prices, and deep
+     teal for secondary highlights. Cards are chunky
+     soft paper tiles: large 1.75rem corners, a warm
+     stone edge and a soft daylight shadow — the
+     opposite of the previous Neon Night Market look,
+     its dark indigo-charcoal night, lime / magenta /
+     cyan palette, slim 0.5rem glass slabs and neon
+     glow. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = lime scale */
-  --color-brand-50: #f7fee7;
-  --color-brand-100: #ecfccb;
-  --color-brand-200: #d9f99d;
-  --color-brand-300: #bef264;
-  --color-brand-400: #a3e635;
-  --color-brand-500: #84cc16;
-  --color-brand-600: #65a30d;
-  --color-brand-700: #4d7c0f;
-  --color-brand-800: #3f6212;
-  --color-brand-900: #365314;
-  --color-brand-950: #1a2e05;
-  --color-brand: #a3e635;
-  --color-brand-dark: #65a30d;
-  --color-brand-deep: #1a2e05;
+  /* brand = terracotta orange scale */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-brand-950: #431407;
+  --color-brand: #f97316;
+  --color-brand-dark: #c2410c;
+  --color-brand-deep: #431407;
 
-  /* gold = magenta scale (name kept for legacy class refs) */
-  --color-gold-50: #fdf4ff;
-  --color-gold-100: #fae8ff;
-  --color-gold-200: #f5d0fe;
-  --color-gold-300: #f0abfc;
-  --color-gold-400: #e879f9;
-  --color-gold-500: #d946ef;
-  --color-gold-600: #c026d3;
-  --color-gold-700: #a21caf;
-  --color-gold-800: #86198f;
-  --color-gold-900: #701a75;
-  --color-gold-950: #4a044e;
-  --color-gold: #d946ef;
-  --color-gold-deep: #86198f;
-  --color-gold-soft: #fae8ff;
+  /* gold = amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #92400e;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = cyan scale (name kept for legacy class refs) */
-  --color-popblue-50: #ecfeff;
-  --color-popblue-100: #cffafe;
-  --color-popblue-200: #a5f3fc;
-  --color-popblue-300: #67e8f9;
-  --color-popblue-400: #22d3ee;
-  --color-popblue-500: #06b6d4;
-  --color-popblue-600: #0891b2;
-  --color-popblue-700: #0e7490;
-  --color-popblue-800: #155e75;
-  --color-popblue-900: #164e63;
-  --color-popblue-950: #083344;
-  --color-popblue: #22d3ee;
-  --color-popblue-deep: #0e7490;
-  --color-popblue-soft: #cffafe;
+  /* popblue = deep teal scale (name kept for legacy class refs) */
+  --color-popblue-50: #f0fdfa;
+  --color-popblue-100: #ccfbf1;
+  --color-popblue-200: #99f6e4;
+  --color-popblue-300: #5eead4;
+  --color-popblue-400: #2dd4bf;
+  --color-popblue-500: #14b8a6;
+  --color-popblue-600: #0d9488;
+  --color-popblue-700: #0f766e;
+  --color-popblue-800: #115e59;
+  --color-popblue-900: #134e4a;
+  --color-popblue-950: #042f2e;
+  --color-popblue: #14b8a6;
+  --color-popblue-deep: #0f766e;
+  --color-popblue-soft: #ccfbf1;
 
-  --color-ink: #f1f5f9;
-  --color-paper: #0b1120;
-  --color-mute: #94a3b8;
-  --color-card: #111827;
-  --color-deep: #020617;
+  --color-ink: #1c1917;
+  --color-paper: #fffaf3;
+  --color-mute: #78716c;
+  --color-card: #ffffff;
+  --color-deep: #292524;
 }
 
 html { scroll-behavior: smooth; }
@@ -79,165 +80,165 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #0b1120;
+  background-color: #fffaf3;
   background-image:
-    linear-gradient(180deg, rgba(163, 230, 53, 0.10) 0%, transparent 380px),
-    radial-gradient(circle at 92% 0%, rgba(217, 70, 239, 0.18) 0%, transparent 44%),
-    radial-gradient(circle at 4% 100%, rgba(34, 211, 238, 0.14) 0%, transparent 44%);
-  color: #f1f5f9;
+    linear-gradient(180deg, rgba(249, 115, 22, 0.08) 0%, transparent 380px),
+    radial-gradient(circle at 92% 0%, rgba(245, 158, 11, 0.16) 0%, transparent 44%),
+    radial-gradient(circle at 4% 100%, rgba(20, 184, 166, 0.12) 0%, transparent 44%);
+  color: #1c1917;
 }
-::selection { background: #bef264; color: #0b1120; }
+::selection { background: #fdba74; color: #431407; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #a3e635, #d946ef); border-radius: 999px; border: 2px solid #0b1120; }
-::-webkit-scrollbar-track { background: #1e293b; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #f97316, #f59e0b); border-radius: 999px; border: 2px solid #fffaf3; }
+::-webkit-scrollbar-track { background: #f5f5f4; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Night type: tight, sharp, high-contrast headlines. */
-h1, h2, h3 { letter-spacing: -0.03em; text-wrap: balance; }
+/* Morning type: warm, open, gently rounded headlines. */
+h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Night sparks: sparks drifting upward through the dark. */
+/* Morning rise: soft motes drifting upward in daylight. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, 4vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
-  15% { opacity: 0.9; }
+  15% { opacity: 0.8; }
   50% { transform: translate3d(-2vw, -42vh, 0) rotate(-30deg) scale(1.02); }
   100% { transform: translate3d(1vw, -92vh, 0) rotate(-60deg) scale(1); opacity: 0; }
 }
 .pop-fall { animation: signal-rise 14s linear infinite; }
 
-/* Night sway: a slow, gentle side-to-side float. */
+/* Morning sway: a slow, gentle side-to-side float. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-6px, 0, 0) rotate(-1deg) scale(1); opacity: 0.6; }
   50% { transform: translate3d(6px, -6px, 0) rotate(1deg) scale(1.02); opacity: 0.9; }
 }
 .pop-drift { animation: signal-drift 12s ease-in-out infinite; }
 
-/* Night bob: a gentle hover lift. */
+/* Morning bob: a gentle hover lift. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-5px) scale(1.02); }
 }
 .pop-bob { animation: signal-bob 5s ease-in-out infinite; }
 
-/* Slow turn for the night dial. */
+/* Slow turn for the morning dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 48s linear infinite; }
 
-/* Night glow pulse: a soft magenta shimmer. */
+/* Morning glow pulse: a soft amber shimmer. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.5; transform: scale(0.94); }
   50% { opacity: 1; transform: scale(1.06); }
 }
 .pop-twinkle { animation: signal-blink 3.5s ease-in-out infinite; }
 
-/* Night ticker: infinite marquee (leftward drift). */
+/* Morning ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Night bands: lime -> magenta -> cyan stripes. */
+/* Morning bands: terracotta -> amber -> teal stripes. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #a3e635 0 34%, #d946ef 34% 67%, #22d3ee 67% 100%);
+    linear-gradient(90deg, #f97316 0 34%, #f59e0b 34% 67%, #14b8a6 67% 100%);
   background-size: 34px 34px;
 }
 
-/* Night card: a slim dark glass slab — small rounded
-   corners, a thin lime edge and a soft neon glow that
-   brightens on hover. */
+/* Morning card: a chunky soft paper tile — large
+   rounded corners, a warm stone edge and a soft
+   daylight shadow that deepens on hover. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(163, 230, 53, 0.35);
-  background: #111827;
-  border-radius: 0.5rem;
-  box-shadow: 0 0 0 1px rgba(163, 230, 53, 0.08), 0 12px 32px -12px rgba(163, 230, 53, 0.35);
+  border: 1px solid rgba(120, 113, 108, 0.25);
+  background: #ffffff;
+  border-radius: 1.75rem;
+  box-shadow: 0 2px 0 rgba(120, 113, 108, 0.12), 0 16px 32px -16px rgba(194, 65, 12, 0.25);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
   transform: translateY(-4px);
-  box-shadow: 0 0 0 1px rgba(163, 230, 53, 0.25), 0 20px 40px -12px rgba(217, 70, 239, 0.45);
+  box-shadow: 0 4px 0 rgba(120, 113, 108, 0.12), 0 24px 40px -16px rgba(194, 65, 12, 0.35);
 }
 
-/* Night glass: shared by modals and drawers — a dark
-   frosted pane with a thin magenta top edge. */
+/* Morning glass: shared by modals and drawers — a
+   warm frosted pane with a thick amber top edge. */
 .pop-glass {
-  background: rgba(11, 17, 32, 0.92);
+  background: rgba(255, 250, 243, 0.94);
   backdrop-filter: blur(16px) saturate(1.05);
   -webkit-backdrop-filter: blur(16px) saturate(1.05);
-  border: 1px solid rgba(163, 230, 53, 0.35);
-  border-top: 2px solid #d946ef;
-  border-radius: 0.5rem;
-  box-shadow: 0 20px 48px -16px rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(120, 113, 108, 0.25);
+  border-top: 4px solid #f59e0b;
+  border-radius: 1.75rem;
+  box-shadow: 0 20px 48px -16px rgba(41, 37, 36, 0.3);
 }
 
-/* Night tag: a magenta pill badge — small corners,
+/* Morning tag: an amber pill badge — large corners,
    tilted the other way. */
 .starburst {
-  background: linear-gradient(135deg, #e879f9, #c026d3);
+  background: linear-gradient(135deg, #fbbf24, #d97706);
   color: #ffffff;
   text-shadow: none;
   border-radius: 999px;
-  transform: rotate(-6deg);
-  box-shadow: 0 0 18px rgba(217, 70, 239, 0.55);
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  transform: rotate(6deg);
+  box-shadow: 0 6px 18px rgba(217, 119, 6, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
-/* Night dots: fine lime dots. */
+/* Morning dots: fine terracotta dots. */
 .halftone {
-  background-image: radial-gradient(rgba(163, 230, 53, 0.30) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(rgba(249, 115, 22, 0.22) 1.5px, transparent 1.5px);
   background-size: 22px 22px;
 }
 
-/* Night rule: a lime-to-magenta-to-cyan bar. */
+/* Morning rule: a terracotta-to-amber-to-teal bar. */
 .zigzag {
-  height: 3px;
+  height: 4px;
   border-top: none;
-  background: linear-gradient(90deg, #a3e635, #d946ef, #22d3ee);
-  background-size: 100% 3px;
+  background: linear-gradient(90deg, #f97316, #f59e0b, #14b8a6);
+  background-size: 100% 4px;
   background-repeat: no-repeat;
   opacity: 0.9;
   border-radius: 999px;
 }
 
-/* Night band: a dark gradient bar with a lime
-   underline and squared bottom corners. */
+/* Morning band: a warm gradient bar with a
+   terracotta underline and rounded bottom corners. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #020617, #1e293b, #0f172a);
+  background: linear-gradient(90deg, #fff7ed, #ffedd5, #fef3c7);
   opacity: 1;
-  box-shadow: 0 10px 24px -12px rgba(0, 0, 0, 0.7);
-  border-bottom: 2px solid #a3e635;
-  border-radius: 0;
+  box-shadow: 0 10px 24px -12px rgba(194, 65, 12, 0.3);
+  border-bottom: 3px solid #f97316;
+  border-radius: 0 0 1rem 1rem;
 }
 
-/* Night glow: a lime-magenta halo for the core. */
+/* Morning glow: a peach-amber halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.12) 0%, rgba(163, 230, 53, 0.28) 42%, rgba(217, 70, 239, 0.30) 62%, rgba(217, 70, 239, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.5) 0%, rgba(249, 115, 22, 0.28) 42%, rgba(245, 158, 11, 0.3) 62%, rgba(245, 158, 11, 0) 76%);
 }
 
-/* Night core: a lime disc with a soft ring. */
+/* Morning core: an amber disc with a soft ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #ecfccb 0%, #a3e635 55%, #1a2e05 100%);
-  box-shadow: 0 0 0 4px rgba(163, 230, 53, 0.35), 0 0 44px rgba(163, 230, 53, 0.45);
-  border: 2px solid rgba(255, 255, 255, 0.25);
+    radial-gradient(circle at 35% 30%, #fef3c7 0%, #f59e0b 55%, #c2410c 100%);
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.35), 0 0 44px rgba(249, 115, 22, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.6);
 }
 
 /* Soft rings around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(163, 230, 53, 0.30) 0px,
-    rgba(163, 230, 53, 0.30) 1px,
+    rgba(249, 115, 22, 0.3) 0px,
+    rgba(249, 115, 22, 0.3) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(217, 70, 239, 0.30) 14px,
-    rgba(217, 70, 239, 0.30) 15px,
+    rgba(245, 158, 11, 0.3) 14px,
+    rgba(245, 158, 11, 0.3) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -248,7 +249,7 @@ h1, h2, h3 { letter-spacing: -0.03em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(163, 230, 53, 0.45) 0deg 3deg,
+    rgba(245, 158, 11, 0.45) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
