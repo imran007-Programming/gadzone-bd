@@ -1,70 +1,70 @@
 @import "tailwindcss";
 
 @theme {
-  /* Copper Coast: a warm coastal direction — deep teal
-     ink, copper and coral accents on warm cream paper,
-     with a bright coral flash for badges and prices.
-     Cards are chunky coast tiles: big 1.5rem corners,
-     a thick copper top edge and a hard offset shadow —
-     the opposite of the previous Violet Dusk look, its
-     violet / indigo / rose palette, cool lavender paper,
-     slim dusk panes, small 0.75rem corners, thin violet
-     edge and soft diffused shadow. */
+  /* Neon Night Market: a dark after-hours direction —
+     deep indigo-charcoal night, electric lime as the
+     primary accent, hot magenta for badges and prices,
+     and cyan for secondary highlights. Cards are slim
+     dark glass slabs: small 0.5rem corners, a thin neon
+     edge and a soft glow — the opposite of the previous
+     Copper Coast look, its warm cream paper, teal /
+     copper / coral palette, chunky 1.5rem tiles, thick
+     copper top edge and hard offset shadow. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = teal scale */
-  --color-brand-50: #f0fdfa;
-  --color-brand-100: #ccfbf1;
-  --color-brand-200: #99f6e4;
-  --color-brand-300: #5eead4;
-  --color-brand-400: #2dd4bf;
-  --color-brand-500: #14b8a6;
-  --color-brand-600: #0d9488;
-  --color-brand-700: #0f766e;
-  --color-brand-800: #115e59;
-  --color-brand-900: #134e4a;
-  --color-brand-950: #042f2e;
-  --color-brand: #0d9488;
-  --color-brand-dark: #0f766e;
-  --color-brand-deep: #042f2e;
+  /* brand = lime scale */
+  --color-brand-50: #f7fee7;
+  --color-brand-100: #ecfccb;
+  --color-brand-200: #d9f99d;
+  --color-brand-300: #bef264;
+  --color-brand-400: #a3e635;
+  --color-brand-500: #84cc16;
+  --color-brand-600: #65a30d;
+  --color-brand-700: #4d7c0f;
+  --color-brand-800: #3f6212;
+  --color-brand-900: #365314;
+  --color-brand-950: #1a2e05;
+  --color-brand: #a3e635;
+  --color-brand-dark: #65a30d;
+  --color-brand-deep: #1a2e05;
 
-  /* gold = copper scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #d97706;
-  --color-gold-deep: #92400e;
-  --color-gold-soft: #fef3c7;
+  /* gold = magenta scale (name kept for legacy class refs) */
+  --color-gold-50: #fdf4ff;
+  --color-gold-100: #fae8ff;
+  --color-gold-200: #f5d0fe;
+  --color-gold-300: #f0abfc;
+  --color-gold-400: #e879f9;
+  --color-gold-500: #d946ef;
+  --color-gold-600: #c026d3;
+  --color-gold-700: #a21caf;
+  --color-gold-800: #86198f;
+  --color-gold-900: #701a75;
+  --color-gold-950: #4a044e;
+  --color-gold: #d946ef;
+  --color-gold-deep: #86198f;
+  --color-gold-soft: #fae8ff;
 
-  /* popblue = coral scale (name kept for legacy class refs) */
-  --color-popblue-50: #fff7ed;
-  --color-popblue-100: #ffedd5;
-  --color-popblue-200: #fed7aa;
-  --color-popblue-300: #fdba74;
-  --color-popblue-400: #fb923c;
-  --color-popblue-500: #f97316;
-  --color-popblue-600: #ea580c;
-  --color-popblue-700: #c2410c;
-  --color-popblue-800: #9a3412;
-  --color-popblue-900: #7c2d12;
-  --color-popblue-950: #431407;
-  --color-popblue: #ea580c;
-  --color-popblue-deep: #c2410c;
-  --color-popblue-soft: #ffedd5;
+  /* popblue = cyan scale (name kept for legacy class refs) */
+  --color-popblue-50: #ecfeff;
+  --color-popblue-100: #cffafe;
+  --color-popblue-200: #a5f3fc;
+  --color-popblue-300: #67e8f9;
+  --color-popblue-400: #22d3ee;
+  --color-popblue-500: #06b6d4;
+  --color-popblue-600: #0891b2;
+  --color-popblue-700: #0e7490;
+  --color-popblue-800: #155e75;
+  --color-popblue-900: #164e63;
+  --color-popblue-950: #083344;
+  --color-popblue: #22d3ee;
+  --color-popblue-deep: #0e7490;
+  --color-popblue-soft: #cffafe;
 
-  --color-ink: #1c1917;
-  --color-paper: #faf6ef;
-  --color-mute: #57534e;
-  --color-card: #fffdf8;
-  --color-deep: #042f2e;
+  --color-ink: #f1f5f9;
+  --color-paper: #0b1120;
+  --color-mute: #94a3b8;
+  --color-card: #111827;
+  --color-deep: #020617;
 }
 
 html { scroll-behavior: smooth; }
@@ -79,166 +79,165 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #faf6ef;
+  background-color: #0b1120;
   background-image:
-    linear-gradient(180deg, rgba(45, 212, 191, 0.28) 0%, transparent 380px),
-    radial-gradient(circle at 92% 0%, rgba(234, 88, 12, 0.16) 0%, transparent 44%),
-    radial-gradient(circle at 4% 100%, rgba(217, 119, 6, 0.14) 0%, transparent 44%);
-  color: #1c1917;
+    linear-gradient(180deg, rgba(163, 230, 53, 0.10) 0%, transparent 380px),
+    radial-gradient(circle at 92% 0%, rgba(217, 70, 239, 0.18) 0%, transparent 44%),
+    radial-gradient(circle at 4% 100%, rgba(34, 211, 238, 0.14) 0%, transparent 44%);
+  color: #f1f5f9;
 }
-::selection { background: #fde68a; color: #1c1917; }
+::selection { background: #bef264; color: #0b1120; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0d9488, #d97706); border-radius: 999px; border: 2px solid #faf6ef; }
-::-webkit-scrollbar-track { background: #fef3c7; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #a3e635, #d946ef); border-radius: 999px; border: 2px solid #0b1120; }
+::-webkit-scrollbar-track { background: #1e293b; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Coast type: bold, slightly wider, sun-warmed headlines. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Night type: tight, sharp, high-contrast headlines. */
+h1, h2, h3 { letter-spacing: -0.03em; text-wrap: balance; }
 
-/* Coast embers: embers rising gently upward. */
+/* Night sparks: sparks drifting upward through the dark. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, 4vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
-  15% { opacity: 0.8; }
+  15% { opacity: 0.9; }
   50% { transform: translate3d(-2vw, -42vh, 0) rotate(-30deg) scale(1.02); }
   100% { transform: translate3d(1vw, -92vh, 0) rotate(-60deg) scale(1); opacity: 0; }
 }
 .pop-fall { animation: signal-rise 14s linear infinite; }
 
-/* Coast sway: a slow, gentle side-to-side float. */
+/* Night sway: a slow, gentle side-to-side float. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-6px, 0, 0) rotate(-1deg) scale(1); opacity: 0.6; }
   50% { transform: translate3d(6px, -6px, 0) rotate(1deg) scale(1.02); opacity: 0.9; }
 }
 .pop-drift { animation: signal-drift 12s ease-in-out infinite; }
 
-/* Coast bob: a gentle hover lift. */
+/* Night bob: a gentle hover lift. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-5px) scale(1.02); }
 }
 .pop-bob { animation: signal-bob 5s ease-in-out infinite; }
 
-/* Slow turn for the coast dial. */
+/* Slow turn for the night dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 48s linear infinite; }
 
-/* Coast glow pulse: a soft coral shimmer. */
+/* Night glow pulse: a soft magenta shimmer. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.5; transform: scale(0.94); }
   50% { opacity: 1; transform: scale(1.06); }
 }
 .pop-twinkle { animation: signal-blink 3.5s ease-in-out infinite; }
 
-/* Coast ticker: infinite marquee (leftward drift). */
+/* Night ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Coast bands: teal -> copper -> coral stripes. */
+/* Night bands: lime -> magenta -> cyan stripes. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #0d9488 0 34%, #d97706 34% 67%, #ea580c 67% 100%);
+    linear-gradient(90deg, #a3e635 0 34%, #d946ef 34% 67%, #22d3ee 67% 100%);
   background-size: 34px 34px;
 }
 
-/* Coast card: a chunky coast tile — big rounded
-   corners, a thick copper top edge and a hard offset
-   shadow that lifts on hover. */
+/* Night card: a slim dark glass slab — small rounded
+   corners, a thin lime edge and a soft neon glow that
+   brightens on hover. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(13, 148, 136, 0.30);
-  border-top: 4px solid #d97706;
-  background: #fffdf8;
-  border-radius: 1.5rem;
-  box-shadow: 8px 8px 0 rgba(4, 47, 46, 0.12);
+  border: 1px solid rgba(163, 230, 53, 0.35);
+  background: #111827;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0 1px rgba(163, 230, 53, 0.08), 0 12px 32px -12px rgba(163, 230, 53, 0.35);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
   transform: translateY(-4px);
-  box-shadow: 12px 12px 0 rgba(4, 47, 46, 0.16);
+  box-shadow: 0 0 0 1px rgba(163, 230, 53, 0.25), 0 20px 40px -12px rgba(217, 70, 239, 0.45);
 }
 
-/* Coast glass: shared by modals and drawers — a warm
-   frosted pane with a thick copper top edge. */
+/* Night glass: shared by modals and drawers — a dark
+   frosted pane with a thin magenta top edge. */
 .pop-glass {
-  background: rgba(250, 246, 239, 0.92);
+  background: rgba(11, 17, 32, 0.92);
   backdrop-filter: blur(16px) saturate(1.05);
   -webkit-backdrop-filter: blur(16px) saturate(1.05);
-  border: 1px solid rgba(13, 148, 136, 0.30);
-  border-top: 4px solid #ea580c;
-  border-radius: 1.5rem;
-  box-shadow: 8px 8px 0 rgba(4, 47, 46, 0.14);
+  border: 1px solid rgba(163, 230, 53, 0.35);
+  border-top: 2px solid #d946ef;
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 48px -16px rgba(0, 0, 0, 0.7);
 }
 
-/* Coast tag: a coral square badge — chunky corners,
+/* Night tag: a magenta pill badge — small corners,
    tilted the other way. */
 .starburst {
-  background: linear-gradient(135deg, #fb923c, #ea580c);
+  background: linear-gradient(135deg, #e879f9, #c026d3);
   color: #ffffff;
   text-shadow: none;
-  border-radius: 0.75rem;
+  border-radius: 999px;
   transform: rotate(-6deg);
-  box-shadow: 6px 6px 0 rgba(4, 47, 46, 0.18);
-  border: 2px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 18px rgba(217, 70, 239, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.35);
 }
 
-/* Coast dots: chunky copper dots. */
+/* Night dots: fine lime dots. */
 .halftone {
-  background-image: radial-gradient(rgba(217, 119, 6, 0.28) 2px, transparent 2px);
-  background-size: 30px 30px;
+  background-image: radial-gradient(rgba(163, 230, 53, 0.30) 1.5px, transparent 1.5px);
+  background-size: 22px 22px;
 }
 
-/* Coast rule: a teal-to-copper-to-coral bar. */
+/* Night rule: a lime-to-magenta-to-cyan bar. */
 .zigzag {
-  height: 6px;
+  height: 3px;
   border-top: none;
-  background: linear-gradient(90deg, #0d9488, #d97706, #ea580c);
-  background-size: 100% 6px;
+  background: linear-gradient(90deg, #a3e635, #d946ef, #22d3ee);
+  background-size: 100% 3px;
   background-repeat: no-repeat;
   opacity: 0.9;
   border-radius: 999px;
 }
 
-/* Coast band: a teal gradient bar with a copper
-   underline and rounded bottom corners. */
+/* Night band: a dark gradient bar with a lime
+   underline and squared bottom corners. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #115e59, #0d9488, #14b8a6);
+  background: linear-gradient(90deg, #020617, #1e293b, #0f172a);
   opacity: 1;
-  box-shadow: 0 10px 24px -12px rgba(4, 47, 46, 0.4);
-  border-bottom: 4px solid #d97706;
-  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 10px 24px -12px rgba(0, 0, 0, 0.7);
+  border-bottom: 2px solid #a3e635;
+  border-radius: 0;
 }
 
-/* Coast glow: a teal-copper halo for the core. */
+/* Night glow: a lime-magenta halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(204, 251, 241, 0.6) 42%, rgba(234, 88, 12, 0.28) 62%, rgba(234, 88, 12, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.12) 0%, rgba(163, 230, 53, 0.28) 42%, rgba(217, 70, 239, 0.30) 62%, rgba(217, 70, 239, 0) 76%);
 }
 
-/* Coast core: a copper disc with a soft ring. */
+/* Night core: a lime disc with a soft ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fde68a 0%, #d97706 55%, #451a03 100%);
-  box-shadow: 0 0 0 4px rgba(251, 191, 36, 0.5), 0 20px 40px -16px rgba(4, 47, 46, 0.5);
-  border: 2px solid rgba(255, 255, 255, 0.8);
+    radial-gradient(circle at 35% 30%, #ecfccb 0%, #a3e635 55%, #1a2e05 100%);
+  box-shadow: 0 0 0 4px rgba(163, 230, 53, 0.35), 0 0 44px rgba(163, 230, 53, 0.45);
+  border: 2px solid rgba(255, 255, 255, 0.25);
 }
 
 /* Soft rings around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(13, 148, 136, 0.25) 0px,
-    rgba(13, 148, 136, 0.25) 1px,
+    rgba(163, 230, 53, 0.30) 0px,
+    rgba(163, 230, 53, 0.30) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(234, 88, 12, 0.25) 14px,
-    rgba(234, 88, 12, 0.25) 15px,
+    rgba(217, 70, 239, 0.30) 14px,
+    rgba(217, 70, 239, 0.30) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -249,7 +248,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(251, 191, 36, 0.45) 0deg 3deg,
+    rgba(163, 230, 53, 0.45) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
