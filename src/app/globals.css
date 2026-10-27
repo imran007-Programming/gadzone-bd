@@ -1,67 +1,67 @@
 @import "tailwindcss";
 
 @theme {
-  /* Midnight Harbor: a cool harbor direction — deep navy
-     ink, steel-blue brand, coral signal accents and cyan
-     sparks on cool mist paper. Cards are crisp, near-square
-     panels with hard offset shadows — the opposite of the
-     previous Verdant Harvest's warm cream paper, emerald
-     palette, fully rounded panels and plush diffused shadows. */
+  /* Ember Dusk: a warm sunset direction — terracotta
+     brand, honey-amber gold and rosewood accents on warm
+     sand paper. Cards are plush, fully rounded pillows with
+     soft diffused shadows — the opposite of the previous
+     Midnight Harbor's cool mist paper, steel-blue palette,
+     near-square panels and hard offset shadows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = steel-blue scale */
-  --color-brand-50: #eff6ff;
-  --color-brand-100: #dbeafe;
-  --color-brand-200: #bfdbfe;
-  --color-brand-300: #93c5fd;
-  --color-brand-400: #60a5fa;
-  --color-brand-500: #2563eb;
-  --color-brand-600: #1d4ed8;
-  --color-brand-700: #1e40af;
-  --color-brand-800: #1e3a8a;
-  --color-brand-900: #172554;
-  --color-brand-950: #0a1a3f;
-  --color-brand: #2563eb;
-  --color-brand-dark: #1e40af;
-  --color-brand-deep: #172554;
+  /* brand = terracotta scale */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-brand-950: #431407;
+  --color-brand: #ea580c;
+  --color-brand-dark: #c2410c;
+  --color-brand-deep: #7c2d12;
 
-  /* gold = coral scale (name kept for legacy class refs) */
-  --color-gold-50: #fff5f2;
-  --color-gold-100: #ffe8e0;
-  --color-gold-200: #ffcdbf;
-  --color-gold-300: #ff9d85;
-  --color-gold-400: #ff7a5c;
-  --color-gold-500: #f94d2a;
-  --color-gold-600: #e03312;
-  --color-gold-700: #b92a0f;
-  --color-gold-800: #8f220c;
-  --color-gold-900: #6e1d0b;
-  --color-gold-950: #3d0e05;
-  --color-gold: #f94d2a;
-  --color-gold-deep: #b92a0f;
-  --color-gold-soft: #ffe8e0;
+  /* gold = honey-amber scale */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #b45309;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = cyan scale (name kept for legacy class refs) */
-  --color-popblue-50: #ecfeff;
-  --color-popblue-100: #cffafe;
-  --color-popblue-200: #a5f3fc;
-  --color-popblue-300: #67e8f9;
-  --color-popblue-400: #22d3ee;
-  --color-popblue-500: #06b6d4;
-  --color-popblue-600: #0891b2;
-  --color-popblue-700: #0e7490;
-  --color-popblue-800: #155e75;
-  --color-popblue-900: #164e63;
-  --color-popblue-950: #083344;
-  --color-popblue: #06b6d4;
-  --color-popblue-deep: #0e7490;
-  --color-popblue-soft: #cffafe;
+  /* popblue = rosewood scale (name kept for legacy class refs) */
+  --color-popblue-50: #fff1f2;
+  --color-popblue-100: #ffe4e6;
+  --color-popblue-200: #fecdd3;
+  --color-popblue-300: #fda4af;
+  --color-popblue-400: #fb7185;
+  --color-popblue-500: #f43f5e;
+  --color-popblue-600: #e11d48;
+  --color-popblue-700: #be123c;
+  --color-popblue-800: #9f1239;
+  --color-popblue-900: #881337;
+  --color-popblue-950: #4c0519;
+  --color-popblue: #f43f5e;
+  --color-popblue-deep: #be123c;
+  --color-popblue-soft: #ffe4e6;
 
-  --color-ink: #0f2440;
-  --color-paper: #eef3f7;
-  --color-mute: #5b6b80;
-  --color-card: #ffffff;
-  --color-deep: #0f2440;
+  --color-ink: #2a1a12;
+  --color-paper: #fdf3e7;
+  --color-mute: #7a5c4a;
+  --color-card: #fffdf8;
+  --color-deep: #2a1a12;
 }
 
 html { scroll-behavior: smooth; }
@@ -76,25 +76,24 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #eef3f7;
+  background-color: #fdf3e7;
   background-image:
-    radial-gradient(circle at 6% 0%, rgba(37, 99, 235, 0.14) 0%, transparent 42%),
-    radial-gradient(circle at 94% 6%, rgba(249, 77, 42, 0.12) 0%, transparent 40%),
-    radial-gradient(circle at 50% 100%, rgba(6, 182, 212, 0.12) 0%, transparent 45%),
-    repeating-linear-gradient(90deg, rgba(30, 64, 175, 0.05) 0 2px, transparent 2px 26px);
-  color: #0f2440;
+    radial-gradient(circle at 8% 0%, rgba(234, 88, 12, 0.16) 0%, transparent 46%),
+    radial-gradient(circle at 92% 8%, rgba(245, 158, 11, 0.18) 0%, transparent 42%),
+    radial-gradient(circle at 50% 100%, rgba(244, 63, 94, 0.12) 0%, transparent 48%);
+  color: #2a1a12;
 }
-::selection { background: #ff7a5c; color: #ffffff; }
+::selection { background: #fcd34d; color: #431407; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #2563eb, #f94d2a); border-radius: 4px; border: 2px solid #eef3f7; }
-::-webkit-scrollbar-track { background: #dbeafe; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ea580c, #f59e0b); border-radius: 999px; border: 2px solid #fdf3e7; }
+::-webkit-scrollbar-track { background: #ffedd5; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Harbor type: tight, crisp headlines. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Ember type: soft, warm headlines. */
+h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Harbor drift: signal buoys bobbing, cool and steady. */
+/* Ember drift: embers floating down through warm dusk light. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, -4vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.9; }
@@ -103,14 +102,14 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 15s linear infinite; }
 
-/* Harbor sway: a gentle, tidal sway. */
+/* Ember sway: a slow, warm sway. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-1vw, 0, 0) rotate(-2deg) scale(1); opacity: 0.5; }
   50% { transform: translate3d(1vw, 8px, 0) rotate(2deg) scale(1.05); opacity: 0.9; }
 }
 .pop-drift { animation: signal-drift 11s ease-in-out infinite; }
 
-/* Harbor bounce: a crisp, short bob. */
+/* Ember bounce: a soft, pillowy bob. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   30% { transform: translateY(-3px) scale(1.01); }
@@ -118,124 +117,124 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 }
 .pop-bob { animation: signal-bob 4.4s ease-in-out infinite; }
 
-/* Slow turn for the harbor dial. */
+/* Slow turn for the ember dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 36s linear infinite; }
 
-/* Harbor glow pulse: a cool cyan pulse. */
+/* Ember glow pulse: a warm amber pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.45; transform: scale(0.92); }
   50% { opacity: 1; transform: scale(1.12); }
 }
 .pop-twinkle { animation: signal-blink 3s ease-in-out infinite; }
 
-/* Harbor ticker: infinite marquee (leftward drift). */
+/* Ember ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Harbor bands: steel -> coral -> cyan stripes. */
+/* Ember bands: terracotta -> amber -> rose stripes. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #2563eb 0 34%, #f94d2a 34% 67%, #06b6d4 67% 100%);
+    linear-gradient(90deg, #ea580c 0 34%, #f59e0b 34% 67%, #f43f5e 67% 100%);
   background-size: 34px 34px;
 }
 
-/* Harbor card: a crisp, near-square panel — a white
-   face, a firm navy edge and a hard offset shadow.
-   On hover it shifts up-left and the shadow steps out. */
+/* Ember card: a plush, fully rounded pillow — a warm
+   cream face, a soft terracotta rim and a diffused warm
+   shadow. On hover it floats up and the shadow deepens. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(15, 36, 64, 0.20);
-  background: #ffffff;
-  border-radius: 0.75rem;
-  box-shadow: 5px 5px 0 rgba(15, 36, 64, 0.12);
+  border: 1px solid rgba(124, 45, 18, 0.14);
+  background: #fffdf8;
+  border-radius: 1.75rem;
+  box-shadow: 0 20px 40px -18px rgba(124, 45, 18, 0.28), 0 4px 12px -6px rgba(124, 45, 18, 0.12);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translate(-2px, -2px);
-  border-color: rgba(15, 36, 64, 0.40);
-  box-shadow: 8px 8px 0 rgba(15, 36, 64, 0.16);
+  transform: translateY(-5px);
+  border-color: rgba(234, 88, 12, 0.35);
+  box-shadow: 0 30px 54px -20px rgba(124, 45, 18, 0.38), 0 8px 18px -8px rgba(124, 45, 18, 0.16);
 }
 
-/* Harbor glass: shared by modals and drawers — a cool
-   frosted mist pane with a firm navy edge. */
+/* Ember glass: shared by modals and drawers — a warm
+   frosted sand pane with a soft amber rim. */
 .pop-glass {
-  background: rgba(238, 243, 247, 0.94);
+  background: rgba(253, 243, 231, 0.94);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(15, 36, 64, 0.28);
-  border-radius: 0.75rem;
-  box-shadow: 6px 6px 0 rgba(15, 36, 64, 0.18);
+  border: 1px solid rgba(124, 45, 18, 0.20);
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 48px -20px rgba(124, 45, 18, 0.35);
 }
 
-/* Harbor tag: a square signal badge — steel-to-coral
-   gradient with a hard offset shadow. */
+/* Ember tag: a soft pill badge — terracotta-to-rose
+   sunset gradient with a diffused warm shadow. */
 .starburst {
-  background: linear-gradient(135deg, #2563eb, #f94d2a);
+  background: linear-gradient(135deg, #ea580c, #f43f5e);
   color: #ffffff;
-  text-shadow: 0 1px 2px rgba(10, 26, 63, 0.35);
-  border-radius: 0.5rem;
+  text-shadow: 0 1px 2px rgba(67, 20, 7, 0.35);
+  border-radius: 999px;
   transform: rotate(0deg);
-  box-shadow: 3px 3px 0 rgba(15, 36, 64, 0.25);
+  box-shadow: 0 10px 20px -8px rgba(194, 65, 12, 0.55);
   border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
-/* Harbor dots: a crisp grid field. */
+/* Ember dots: a warm dotted field. */
 .halftone {
-  background-image: radial-gradient(rgba(30, 64, 175, 0.18) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(rgba(194, 65, 12, 0.20) 1.5px, transparent 1.5px);
   background-size: 20px 20px;
 }
 
-/* Harbor rule: a straight gradient divider. */
+/* Ember rule: a soft dotted warm divider. */
 .zigzag {
   height: 3px;
   border-top: none;
-  background: linear-gradient(90deg, #2563eb, #f94d2a, #06b6d4);
-  background-repeat: no-repeat;
-  opacity: 1;
-  border-radius: 0;
+  background-image: radial-gradient(circle, #ea580c 2px, transparent 2.5px);
+  background-size: 14px 3px;
+  background-repeat: repeat-x;
+  opacity: 0.55;
+  border-radius: 999px;
 }
 
-/* Harbor band: a straight navy-to-cyan gradient bar
-   with square feet. */
+/* Ember band: a soft sunset gradient bar with a warm glow. */
 .bazaar-awning {
-  background: linear-gradient(120deg, #0a1a3f, #2563eb 45%, #06b6d4 78%, #f94d2a);
+  background: linear-gradient(120deg, #7c2d12, #ea580c 42%, #f59e0b 72%, #f43f5e);
   opacity: 1;
-  box-shadow: 0 6px 0 rgba(15, 36, 64, 0.18);
+  box-shadow: 0 12px 28px -12px rgba(124, 45, 18, 0.45);
   border-bottom: none;
-  border-radius: 0;
+  border-radius: 0 0 1.5rem 1.5rem;
 }
 
-/* Harbor glow: a cool steel halo for the core. */
+/* Ember glow: a warm sunset halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(238, 243, 247, 0.95) 0%, rgba(103, 232, 249, 0.55) 42%, rgba(37, 99, 235, 0.28) 62%, rgba(37, 99, 235, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(253, 243, 231, 0.95) 0%, rgba(252, 211, 77, 0.55) 42%, rgba(234, 88, 12, 0.28) 62%, rgba(234, 88, 12, 0) 76%);
 }
 
-/* Harbor core: a glowing cyan disc with a steel ring. */
+/* Ember core: a glowing amber sun disc with a soft ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #a5f3fc 0%, #06b6d4 45%, #172554 100%);
-  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.85), 0 14px 32px rgba(6, 182, 212, 0.40);
+    radial-gradient(circle at 35% 30%, #fde68a 0%, #f59e0b 45%, #7c2d12 100%);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.85), 0 14px 32px rgba(234, 88, 12, 0.40);
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Cool traces around the core disc. */
+/* Warm traces around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(37, 99, 235, 0.35) 0px,
-    rgba(37, 99, 235, 0.35) 1px,
+    rgba(234, 88, 12, 0.35) 0px,
+    rgba(234, 88, 12, 0.35) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(249, 77, 42, 0.35) 14px,
-    rgba(249, 77, 42, 0.35) 15px,
+    rgba(244, 63, 94, 0.35) 14px,
+    rgba(244, 63, 94, 0.35) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -246,7 +245,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(6, 182, 212, 0.45) 0deg 3deg,
+    rgba(245, 158, 11, 0.45) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);

@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Harbor glow drifting over the warm cream paper.
+// Ember glow drifting over the warm sand paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(249, 77, 42, 0.22)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(37, 99, 235, 0.20)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(6, 182, 212, 0.20)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(15, 36, 64, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(234, 88, 12, 0.22)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245, 158, 11, 0.20)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(244, 63, 94, 0.20)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(42, 26, 18, 0.20)" },
 ];
 
-// Harbor signal drifting down through the warm light.
+// Ember sparks drifting down through the warm dusk light.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#f94d2a" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#2563eb" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#06b6d4" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#ff7a5c" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#1e40af" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#22d3ee" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#0f2440" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#ea580c" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f59e0b" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#f43f5e" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#fb923c" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#d97706" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#be123c" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#2a1a12" },
 ];
 
-// Harbor signal scattered through the warm light.
+// Ember sparks scattered through the warm dusk light.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
