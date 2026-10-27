@@ -1,68 +1,67 @@
 @import "tailwindcss";
 
 @theme {
-  /* Indigo Atelier: a sharp studio direction — deep
-     indigo brand, violet and warm amber accents on
-     soft lavender paper. Cards are crisp white blocks
-     with a bold ink rim and a hard offset shadow — the
-     opposite of the previous Verdant Canopy's leaf-cream
-     paper, thin green rims, lime top accents and soft
-     pillowy rounded panels. */
+  /* Coral Tide: a warm seaside direction — coral brand,
+     deep teal and sunny amber accents on warm sand paper.
+     Cards are soft, fully rounded shells with layered soft
+     shadows — the opposite of the previous Indigo Atelier's
+     lavender paper, bold ink rims, hard offset shadows and
+     square-ish corners. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = indigo scale */
-  --color-brand-50: #eef2ff;
-  --color-brand-100: #e0e7ff;
-  --color-brand-200: #c7d2fe;
-  --color-brand-300: #a5b4fc;
-  --color-brand-400: #818cf8;
-  --color-brand-500: #6366f1;
-  --color-brand-600: #4f46e5;
-  --color-brand-700: #4338ca;
-  --color-brand-800: #3730a3;
-  --color-brand-900: #312e81;
-  --color-brand-950: #1e1b4b;
-  --color-brand: #4338ca;
-  --color-brand-dark: #3730a3;
-  --color-brand-deep: #312e81;
+  /* brand = coral scale */
+  --color-brand-50: #fff4f0;
+  --color-brand-100: #ffe6de;
+  --color-brand-200: #ffc9b8;
+  --color-brand-300: #ff9d84;
+  --color-brand-400: #fb6a4a;
+  --color-brand-500: #f04e23;
+  --color-brand-600: #d93a12;
+  --color-brand-700: #b32e0e;
+  --color-brand-800: #94220f;
+  --color-brand-900: #7a2210;
+  --color-brand-950: #42100a;
+  --color-brand: #d93a12;
+  --color-brand-dark: #b32e0e;
+  --color-brand-deep: #8a2409;
 
-  /* gold = warm amber scale */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #f59e0b;
-  --color-gold-deep: #b45309;
-  --color-gold-soft: #fef3c7;
+  /* gold = deep teal scale (name kept for legacy class refs) */
+  --color-gold-50: #f0fdfa;
+  --color-gold-100: #ccfbf1;
+  --color-gold-200: #99f6e4;
+  --color-gold-300: #5eead4;
+  --color-gold-400: #2dd4bf;
+  --color-gold-500: #14b8a6;
+  --color-gold-600: #0d9488;
+  --color-gold-700: #0f766e;
+  --color-gold-800: #115e59;
+  --color-gold-900: #134e4a;
+  --color-gold-950: #042f2e;
+  --color-gold: #0d9488;
+  --color-gold-deep: #0f766e;
+  --color-gold-soft: #ccfbf1;
 
-  /* popblue = violet scale (name kept for legacy class refs) */
-  --color-popblue-50: #f5f3ff;
-  --color-popblue-100: #ede9fe;
-  --color-popblue-200: #ddd6fe;
-  --color-popblue-300: #c4b5fd;
-  --color-popblue-400: #a78bfa;
-  --color-popblue-500: #8b5cf6;
-  --color-popblue-600: #7c3aed;
-  --color-popblue-700: #6d28d9;
-  --color-popblue-800: #5b21b6;
-  --color-popblue-900: #4c1d95;
-  --color-popblue-950: #2e1065;
-  --color-popblue: #8b5cf6;
-  --color-popblue-deep: #6d28d9;
-  --color-popblue-soft: #ede9fe;
+  /* popblue = sunny amber scale (name kept for legacy class refs) */
+  --color-popblue-50: #fffbeb;
+  --color-popblue-100: #fef3c7;
+  --color-popblue-200: #fde68a;
+  --color-popblue-300: #fcd34d;
+  --color-popblue-400: #fbbf24;
+  --color-popblue-500: #f59e0b;
+  --color-popblue-600: #d97706;
+  --color-popblue-700: #b45309;
+  --color-popblue-800: #92400e;
+  --color-popblue-900: #78350f;
+  --color-popblue-950: #451a03;
+  --color-popblue: #f59e0b;
+  --color-popblue-deep: #d97706;
+  --color-popblue-soft: #fef3c7;
 
-  --color-ink: #1e1b4b;
-  --color-paper: #f7f5ff;
-  --color-mute: #5b5b7a;
+  --color-ink: #2a1f1a;
+  --color-paper: #fdf6ec;
+  --color-mute: #7a6a5e;
   --color-card: #ffffff;
-  --color-deep: #1e1b4b;
+  --color-deep: #231a15;
 }
 
 html { scroll-behavior: smooth; }
@@ -77,24 +76,24 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f7f5ff;
+  background-color: #fdf6ec;
   background-image:
-    radial-gradient(circle at 8% 0%, rgba(67, 56, 202, 0.14) 0%, transparent 46%),
-    radial-gradient(circle at 92% 8%, rgba(245, 158, 11, 0.16) 0%, transparent 42%),
-    radial-gradient(circle at 50% 100%, rgba(139, 92, 246, 0.10) 0%, transparent 48%);
-  color: #1e1b4b;
+    radial-gradient(circle at 8% 0%, rgba(217, 58, 18, 0.12) 0%, transparent 46%),
+    radial-gradient(circle at 92% 8%, rgba(13, 148, 136, 0.14) 0%, transparent 42%),
+    radial-gradient(circle at 50% 100%, rgba(245, 158, 11, 0.10) 0%, transparent 48%);
+  color: #2a1f1a;
 }
-::selection { background: #fcd34d; color: #1e1b4b; }
+::selection { background: #fcd34d; color: #2a1f1a; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #4338ca, #f59e0b); border-radius: 999px; border: 2px solid #f7f5ff; }
-::-webkit-scrollbar-track { background: #e0e7ff; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #d93a12, #0d9488); border-radius: 999px; border: 2px solid #fdf6ec; }
+::-webkit-scrollbar-track { background: #ffe6de; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Atelier type: tight, confident headlines. */
-h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
+/* Coral Tide type: warm, rounded headlines. */
+h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Atelier drift: studio motes drifting down through violet light. */
+/* Coral Tide drift: sea foam rising through warm light. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, -4vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.9; }
@@ -103,14 +102,14 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 15s linear infinite; }
 
-/* Atelier sway: a slow, deliberate sway. */
+/* Coral Tide sway: a slow, gentle tide sway. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-1vw, 0, 0) rotate(-2deg) scale(1); opacity: 0.5; }
   50% { transform: translate3d(1vw, 8px, 0) rotate(2deg) scale(1.05); opacity: 0.9; }
 }
 .pop-drift { animation: signal-drift 11s ease-in-out infinite; }
 
-/* Atelier bounce: a crisp, springy bob. */
+/* Coral Tide bounce: a soft, buoyant bob. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   30% { transform: translateY(-3px) scale(1.01); }
@@ -118,124 +117,124 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 }
 .pop-bob { animation: signal-bob 4.4s ease-in-out infinite; }
 
-/* Slow turn for the atelier dial. */
+/* Slow turn for the tide dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 36s linear infinite; }
 
-/* Atelier glow pulse: a warm amber pulse. */
+/* Coral Tide glow pulse: a warm coral pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.45; transform: scale(0.92); }
   50% { opacity: 1; transform: scale(1.12); }
 }
 .pop-twinkle { animation: signal-blink 3s ease-in-out infinite; }
 
-/* Atelier ticker: infinite marquee (leftward drift). */
+/* Coral Tide ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Atelier bands: indigo -> violet -> amber stripes. */
+/* Coral Tide bands: coral -> teal -> amber stripes. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #4338ca 0 34%, #8b5cf6 34% 67%, #f59e0b 67% 100%);
+    linear-gradient(90deg, #d93a12 0 34%, #0d9488 34% 67%, #f59e0b 67% 100%);
   background-size: 34px 34px;
 }
 
-/* Atelier card: a crisp white block — a bold ink rim,
-   square-ish corners and a hard offset shadow. On hover
-   it shifts up-left and the shadow grows. */
+/* Coral Tide card: a soft white shell — fully rounded
+   corners, no hard rim, layered soft shadows. On hover
+   it lifts gently and the shadow deepens. */
 .pop-lift {
   position: relative;
-  border: 2px solid rgba(30, 27, 75, 0.9);
+  border: 1px solid rgba(42, 31, 26, 0.08);
   background: #ffffff;
-  border-radius: 0.75rem;
-  box-shadow: 5px 5px 0 rgba(30, 27, 75, 0.9);
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 6px rgba(42, 31, 26, 0.06), 0 18px 36px -18px rgba(42, 31, 26, 0.22);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translate(-2px, -2px);
-  border-color: #4338ca;
-  box-shadow: 8px 8px 0 rgba(67, 56, 202, 0.9);
+  transform: translateY(-4px);
+  border-color: rgba(217, 58, 18, 0.35);
+  box-shadow: 0 4px 10px rgba(42, 31, 26, 0.06), 0 28px 48px -20px rgba(217, 58, 18, 0.35);
 }
 
-/* Atelier glass: shared by modals and drawers — a frosted
-   lavender pane with a bold ink rim and offset shadow. */
+/* Coral Tide glass: shared by modals and drawers — a frosted
+   sand pane with a soft ring and layered soft shadow. */
 .pop-glass {
-  background: rgba(247, 245, 255, 0.94);
+  background: rgba(253, 246, 236, 0.94);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 2px solid rgba(30, 27, 75, 0.9);
-  border-radius: 0.75rem;
-  box-shadow: 6px 6px 0 rgba(30, 27, 75, 0.9);
+  border: 1px solid rgba(42, 31, 26, 0.10);
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 8px rgba(42, 31, 26, 0.06), 0 24px 48px -20px rgba(42, 31, 26, 0.28);
 }
 
-/* Atelier tag: a crisp pill badge — indigo-to-violet
-   gradient with a warm amber rim. */
+/* Coral Tide tag: a soft pill badge — coral-to-amber
+   gradient with a white rim. */
 .starburst {
-  background: linear-gradient(135deg, #4338ca, #8b5cf6);
+  background: linear-gradient(135deg, #d93a12, #f59e0b);
   color: #ffffff;
-  text-shadow: 0 1px 2px rgba(30, 27, 75, 0.35);
+  text-shadow: 0 1px 2px rgba(42, 31, 26, 0.35);
   border-radius: 999px;
   transform: rotate(0deg);
-  box-shadow: 0 10px 20px -8px rgba(67, 56, 202, 0.55);
-  border: 2px solid #fbbf24;
+  box-shadow: 0 10px 20px -8px rgba(217, 58, 18, 0.55);
+  border: 2px solid #ffffff;
 }
 
-/* Atelier dots: a sharp dotted indigo field. */
+/* Coral Tide dots: a soft dotted coral field. */
 .halftone {
-  background-image: radial-gradient(rgba(67, 56, 202, 0.20) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(rgba(217, 58, 18, 0.18) 1.5px, transparent 1.5px);
   background-size: 20px 20px;
 }
 
-/* Atelier rule: a bold dotted indigo divider. */
+/* Coral Tide rule: a soft gradient divider. */
 .zigzag {
-  height: 3px;
+  height: 4px;
   border-top: none;
-  background-image: radial-gradient(circle, #4338ca 2px, transparent 2.5px);
-  background-size: 14px 3px;
-  background-repeat: repeat-x;
-  opacity: 0.55;
+  background-image: linear-gradient(90deg, #d93a12, #f59e0b, #0d9488);
+  background-size: 100% 4px;
+  background-repeat: no-repeat;
+  opacity: 0.65;
   border-radius: 999px;
 }
 
-/* Atelier band: a deep indigo gradient bar with an amber edge. */
+/* Coral Tide band: a warm coral-to-teal gradient bar. */
 .bazaar-awning {
-  background: linear-gradient(120deg, #312e81, #4338ca 42%, #8b5cf6 72%, #f59e0b);
+  background: linear-gradient(120deg, #b32e0e, #d93a12 42%, #f59e0b 72%, #0d9488);
   opacity: 1;
-  box-shadow: 0 12px 28px -12px rgba(30, 27, 75, 0.45);
-  border-bottom: 3px solid #1e1b4b;
+  box-shadow: 0 12px 28px -12px rgba(42, 31, 26, 0.45);
+  border-bottom: none;
   border-radius: 0;
 }
 
-/* Atelier glow: a violet halo for the core. */
+/* Coral Tide glow: a warm sand halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(247, 245, 255, 0.95) 0%, rgba(252, 211, 77, 0.55) 42%, rgba(67, 56, 202, 0.28) 62%, rgba(67, 56, 202, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(253, 246, 236, 0.95) 0%, rgba(252, 211, 77, 0.55) 42%, rgba(217, 58, 18, 0.28) 62%, rgba(217, 58, 18, 0) 76%);
 }
 
-/* Atelier core: a glowing violet disc with an amber ring. */
+/* Coral Tide core: a glowing coral disc with a teal ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #ddd6fe 0%, #8b5cf6 45%, #312e81 100%);
-  box-shadow: 0 0 0 4px #fbbf24, 0 14px 32px rgba(67, 56, 202, 0.40);
+    radial-gradient(circle at 35% 30%, #fde68a 0%, #f04e23 45%, #7a2210 100%);
+  box-shadow: 0 0 0 4px #2dd4bf, 0 14px 32px rgba(217, 58, 18, 0.40);
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Sharp traces around the core disc. */
+/* Soft traces around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(67, 56, 202, 0.35) 0px,
-    rgba(67, 56, 202, 0.35) 1px,
+    rgba(217, 58, 18, 0.35) 0px,
+    rgba(217, 58, 18, 0.35) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(245, 158, 11, 0.35) 14px,
-    rgba(245, 158, 11, 0.35) 15px,
+    rgba(13, 148, 136, 0.35) 14px,
+    rgba(13, 148, 136, 0.35) 15px,
     transparent 15px,
     transparent 30px
   );
