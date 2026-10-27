@@ -1,68 +1,67 @@
 @import "tailwindcss";
 
 @theme {
-  /* Violet Dusk: a warm-evening direction — deep violet brand,
-     fuchsia and amber accents on soft lavender paper.
-     Cards are extra-rounded plush slabs with a soft layered
-     shadow and a violet-to-amber gradient top edge — the
-     opposite of the previous Glacier Current's cool teal/cyan/
-     lime palette, icy mint paper, flat crisp slabs and modest
-     corners. */
+  /* Forest Ledger: an editorial direction — deep forest green
+     brand, terracotta and moss accents on warm cream paper.
+     Cards are crisp ledger slabs: thin ink borders, small
+     corners, hard offset shadows — the opposite of the
+     previous Violet Dusk's violet/fuchsia/amber palette,
+     plush extra-rounded cards and soft layered shadows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = violet scale */
-  --color-brand-50: #f5f3ff;
-  --color-brand-100: #ede9fe;
-  --color-brand-200: #ddd6fe;
-  --color-brand-300: #c4b5fd;
-  --color-brand-400: #a78bfa;
-  --color-brand-500: #8b5cf6;
-  --color-brand-600: #7c3aed;
-  --color-brand-700: #6d28d9;
-  --color-brand-800: #5b21b6;
-  --color-brand-900: #4c1d95;
-  --color-brand-950: #2e1065;
-  --color-brand: #6d28d9;
-  --color-brand-dark: #4c1d95;
-  --color-brand-deep: #2e1065;
+  /* brand = forest green scale */
+  --color-brand-50: #f0fdf4;
+  --color-brand-100: #dcfce7;
+  --color-brand-200: #bbf7d0;
+  --color-brand-300: #86efac;
+  --color-brand-400: #4ade80;
+  --color-brand-500: #22c55e;
+  --color-brand-600: #16a34a;
+  --color-brand-700: #15803d;
+  --color-brand-800: #166534;
+  --color-brand-900: #14532d;
+  --color-brand-950: #052e16;
+  --color-brand: #15803d;
+  --color-brand-dark: #14532d;
+  --color-brand-deep: #052e16;
 
-  /* gold = amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #f59e0b;
-  --color-gold-deep: #b45309;
-  --color-gold-soft: #fef3c7;
+  /* gold = terracotta scale (name kept for legacy class refs) */
+  --color-gold-50: #fff7ed;
+  --color-gold-100: #ffedd5;
+  --color-gold-200: #fed7aa;
+  --color-gold-300: #fdba74;
+  --color-gold-400: #fb923c;
+  --color-gold-500: #f97316;
+  --color-gold-600: #ea580c;
+  --color-gold-700: #c2410c;
+  --color-gold-800: #9a3412;
+  --color-gold-900: #7c2d12;
+  --color-gold-950: #431407;
+  --color-gold: #ea580c;
+  --color-gold-deep: #9a3412;
+  --color-gold-soft: #ffedd5;
 
-  /* popblue = fuchsia scale (name kept for legacy class refs) */
-  --color-popblue-50: #fdf4ff;
-  --color-popblue-100: #fae8ff;
-  --color-popblue-200: #f5d0fe;
-  --color-popblue-300: #f0abfc;
-  --color-popblue-400: #e879f9;
-  --color-popblue-500: #d946ef;
-  --color-popblue-600: #c026d3;
-  --color-popblue-700: #a21caf;
-  --color-popblue-800: #86198f;
-  --color-popblue-900: #701a75;
-  --color-popblue-950: #4a044e;
-  --color-popblue: #c026d3;
-  --color-popblue-deep: #a21caf;
-  --color-popblue-soft: #fae8ff;
+  /* popblue = moss teal scale (name kept for legacy class refs) */
+  --color-popblue-50: #f0fdfa;
+  --color-popblue-100: #ccfbf1;
+  --color-popblue-200: #99f6e4;
+  --color-popblue-300: #5eead4;
+  --color-popblue-400: #2dd4bf;
+  --color-popblue-500: #14b8a6;
+  --color-popblue-600: #0d9488;
+  --color-popblue-700: #0f766e;
+  --color-popblue-800: #115e59;
+  --color-popblue-900: #134e4a;
+  --color-popblue-950: #042f2e;
+  --color-popblue: #0d9488;
+  --color-popblue-deep: #0f766e;
+  --color-popblue-soft: #ccfbf1;
 
-  --color-ink: #2a1a3e;
-  --color-paper: #faf7ff;
-  --color-mute: #6b5a83;
+  --color-ink: #1c1917;
+  --color-paper: #fdf8ee;
+  --color-mute: #78716c;
   --color-card: #ffffff;
-  --color-deep: #2e1065;
+  --color-deep: #052e16;
 }
 
 html { scroll-behavior: smooth; }
@@ -77,24 +76,24 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #faf7ff;
+  background-color: #fdf8ee;
   background-image:
-    linear-gradient(180deg, rgba(109, 40, 217, 0.10) 0%, transparent 380px),
-    radial-gradient(circle at 88% 0%, rgba(217, 70, 239, 0.16) 0%, transparent 46%),
-    radial-gradient(circle at 6% 100%, rgba(245, 158, 11, 0.12) 0%, transparent 46%);
-  color: #2a1a3e;
+    linear-gradient(180deg, rgba(21, 128, 61, 0.08) 0%, transparent 380px),
+    radial-gradient(circle at 88% 0%, rgba(234, 88, 12, 0.10) 0%, transparent 46%),
+    radial-gradient(circle at 6% 100%, rgba(13, 148, 136, 0.10) 0%, transparent 46%);
+  color: #1c1917;
 }
-::selection { background: #fcd34d; color: #2e1065; }
+::selection { background: #fdba74; color: #052e16; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #6d28d9, #c026d3); border-radius: 999px; border: 2px solid #faf7ff; }
-::-webkit-scrollbar-track { background: #ede9fe; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #15803d, #0d9488); border-radius: 2px; border: 2px solid #fdf8ee; }
+::-webkit-scrollbar-track { background: #dcfce7; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Violet Dusk type: soft, roomy headlines. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Forest Ledger type: tight, editorial headlines. */
+h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Violet Dusk drift: dusk motes rising through evening light. */
+/* Forest Ledger drift: leaves falling through still air. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, -4vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.9; }
@@ -103,14 +102,14 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 15s linear infinite; }
 
-/* Violet Dusk sway: a slow evening sway. */
+/* Forest Ledger sway: a slow breeze sway. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-1vw, 0, 0) rotate(1deg) scale(1); opacity: 0.5; }
   50% { transform: translate3d(1vw, -8px, 0) rotate(-1deg) scale(1.03); opacity: 0.9; }
 }
 .pop-drift { animation: signal-drift 11s ease-in-out infinite; }
 
-/* Violet Dusk bounce: a gentle dusk bob. */
+/* Forest Ledger bounce: a gentle leaf bob. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   30% { transform: translateY(-3px) scale(1.01); }
@@ -118,42 +117,42 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 }
 .pop-bob { animation: signal-bob 4.5s ease-in-out infinite; }
 
-/* Slow turn for the dusk dial. */
+/* Slow turn for the ledger dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 36s linear infinite; }
 
-/* Violet Dusk glow pulse: a fuchsia shimmer pulse. */
+/* Forest Ledger glow pulse: a terracotta shimmer pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.45; transform: scale(0.92); }
   50% { opacity: 1; transform: scale(1.12); }
 }
 .pop-twinkle { animation: signal-blink 3s ease-in-out infinite; }
 
-/* Violet Dusk ticker: infinite marquee (leftward drift). */
+/* Forest Ledger ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 32s linear infinite; }
 
-/* Violet Dusk bands: violet -> fuchsia -> amber stripes. */
+/* Forest Ledger bands: forest -> teal -> terracotta stripes. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #6d28d9 0 34%, #c026d3 34% 67%, #f59e0b 67% 100%);
+    linear-gradient(90deg, #15803d 0 34%, #0d9488 34% 67%, #ea580c 67% 100%);
   background-size: 34px 34px;
 }
 
-/* Violet Dusk card: an extra-rounded plush slab — soft
-   layered shadows, no border, and a violet-to-amber gradient
-   top edge that fades in on hover while the card lifts. */
+/* Forest Ledger card: a crisp ledger slab — thin ink
+   border, small corners, and a hard offset shadow that
+   grows on hover while the card lifts. */
 .pop-lift {
   position: relative;
-  border: none;
+  border: 1.5px solid rgba(28, 25, 23, 0.9);
   background: #ffffff;
-  border-radius: 1.75rem;
-  box-shadow: 0 2px 6px rgba(46, 16, 101, 0.07), 0 12px 28px rgba(46, 16, 101, 0.08);
+  border-radius: 0.5rem;
+  box-shadow: 4px 4px 0 rgba(5, 46, 22, 0.9);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   overflow: hidden;
 }
@@ -161,93 +160,93 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
   content: "";
   position: absolute;
   inset: 0 0 auto 0;
-  height: 5px;
-  background: linear-gradient(90deg, #6d28d9, #c026d3, #f59e0b);
+  height: 4px;
+  background: linear-gradient(90deg, #15803d, #0d9488, #ea580c);
   opacity: 0;
   transition: opacity 0.25s ease;
   z-index: 1;
 }
 .pop-lift:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 4px 10px rgba(46, 16, 101, 0.08), 0 22px 44px rgba(46, 16, 101, 0.16);
+  transform: translate(-2px, -4px);
+  box-shadow: 7px 7px 0 rgba(5, 46, 22, 0.9);
 }
 .pop-lift:hover::before { opacity: 1; }
 
-/* Violet Dusk glass: shared by modals and drawers — a
-   warm frosted lavender pane with a soft violet ring. */
+/* Forest Ledger glass: shared by modals and drawers — a
+   warm frosted cream pane with a forest ring. */
 .pop-glass {
-  background: rgba(250, 247, 255, 0.94);
+  background: rgba(253, 248, 238, 0.94);
   backdrop-filter: blur(18px) saturate(1.05);
   -webkit-backdrop-filter: blur(18px) saturate(1.05);
-  border: 1px solid rgba(109, 40, 217, 0.22);
-  border-radius: 1.5rem;
-  box-shadow: 0 10px 30px rgba(46, 16, 101, 0.16);
+  border: 1.5px solid rgba(21, 128, 61, 0.35);
+  border-radius: 0.75rem;
+  box-shadow: 5px 5px 0 rgba(5, 46, 22, 0.25);
 }
 
-/* Violet Dusk tag: a tilted amber circle badge — plush,
-   with a white ring and a warm shadow. */
+/* Forest Ledger tag: a square terracotta stamp badge —
+   crisp corners, white ring, hard shadow. */
 .starburst {
-  background: #d97706;
+  background: #c2410c;
   color: #ffffff;
   text-shadow: none;
-  border-radius: 999px;
-  transform: rotate(-8deg);
-  box-shadow: 0 4px 12px rgba(180, 83, 9, 0.45);
+  border-radius: 0.375rem;
+  transform: rotate(-6deg);
+  box-shadow: 3px 3px 0 rgba(5, 46, 22, 0.85);
   border: 2px solid #ffffff;
 }
 
-/* Violet Dusk dots: soft dusk dots instead of grid lines. */
+/* Forest Ledger dots: fine ledger grid dots. */
 .halftone {
   background-image:
-    radial-gradient(rgba(109, 40, 217, 0.16) 1.5px, transparent 1.5px);
-  background-size: 26px 26px;
+    radial-gradient(rgba(21, 128, 61, 0.18) 1.5px, transparent 1.5px);
+  background-size: 22px 22px;
 }
 
-/* Violet Dusk rule: a thick violet-to-amber gradient bar. */
+/* Forest Ledger rule: a thick forest-to-terracotta bar. */
 .zigzag {
-  height: 6px;
+  height: 5px;
   border-top: none;
-  background: linear-gradient(90deg, #6d28d9, #c026d3, #f59e0b);
-  background-size: 100% 6px;
+  background: linear-gradient(90deg, #15803d, #0d9488, #ea580c);
+  background-size: 100% 5px;
   background-repeat: no-repeat;
   opacity: 0.9;
-  border-radius: 999px;
+  border-radius: 2px;
 }
 
-/* Violet Dusk band: a deep violet bar with an amber
-   underline and softly rounded bottom corners. */
+/* Forest Ledger band: a deep forest bar with a
+   terracotta underline and square corners. */
 .bazaar-awning {
-  background: linear-gradient(180deg, #2e1065, #6d28d9);
+  background: linear-gradient(180deg, #052e16, #15803d);
   opacity: 1;
-  box-shadow: 0 10px 24px rgba(46, 16, 101, 0.20);
-  border-bottom: 4px solid #f59e0b;
-  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 6px 0 rgba(5, 46, 22, 0.25);
+  border-bottom: 4px solid #ea580c;
+  border-radius: 0;
 }
 
-/* Violet Dusk glow: a warm fuchsia halo for the core. */
+/* Forest Ledger glow: a moss halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(250, 247, 255, 0.95) 0%, rgba(240, 171, 252, 0.55) 42%, rgba(109, 40, 217, 0.28) 62%, rgba(109, 40, 217, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(253, 248, 238, 0.95) 0%, rgba(153, 246, 228, 0.55) 42%, rgba(21, 128, 61, 0.28) 62%, rgba(21, 128, 61, 0) 76%);
 }
 
-/* Violet Dusk core: an amber disc with a fuchsia ring. */
+/* Forest Ledger core: a terracotta disc with a teal ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fde68a 0%, #f59e0b 55%, #2e1065 100%);
-  box-shadow: 0 0 0 4px #e879f9, 0 16px 32px rgba(46, 16, 101, 0.35);
+    radial-gradient(circle at 35% 30%, #fdba74 0%, #ea580c 55%, #052e16 100%);
+  box-shadow: 0 0 0 4px #2dd4bf, 4px 4px 0 rgba(5, 46, 22, 0.85);
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Warm traces around the core disc. */
+/* Moss traces around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(109, 40, 217, 0.35) 0px,
-    rgba(109, 40, 217, 0.35) 1px,
+    rgba(21, 128, 61, 0.35) 0px,
+    rgba(21, 128, 61, 0.35) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(192, 38, 211, 0.35) 14px,
-    rgba(192, 38, 211, 0.35) 15px,
+    rgba(13, 148, 136, 0.35) 14px,
+    rgba(13, 148, 136, 0.35) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -258,7 +257,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(192, 38, 211, 0.5) 0deg 3deg,
+    rgba(13, 148, 136, 0.5) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);

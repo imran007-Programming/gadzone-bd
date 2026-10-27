@@ -24,7 +24,7 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
       whileHover={reduce ? undefined : { y: -5 }}
       className="pop-lift group relative flex h-full flex-col overflow-hidden bg-paper"
     >
-      {/* soft sky glow peeking from the card's top edge */}
+      {/* soft leaf glow peeking from the card's top edge */}
       <div aria-hidden className="pointer-events-none absolute inset-x-10 top-0 h-24 rounded-b-full bg-gradient-to-b from-brand-200/60 via-popblue-200/30 to-transparent blur-sm" />
       <div className="relative p-3">
         <div className="relative cursor-pointer overflow-hidden rounded-md ring-2 ring-brand-950/10" onClick={() => onQuickView(p)}>
@@ -53,13 +53,13 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
           whileTap={{ scale: 0.98 }}
           onClick={() => onAddToCart(p.id)}
           aria-label={`Add ${p.name} to cart`}
-          className="flex w-full items-center justify-center gap-1.5 rounded-xl border border-brand-700 bg-brand-600 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-[0_10px_24px_-8px_rgba(109,40,217,0.45)] transition hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-[0_16px_30px_-8px_rgba(109,40,217,0.5)] active:translate-y-0 active:scale-[0.98]"
+          className="flex w-full items-center justify-center gap-1.5 rounded-lg border border-brand-700 bg-brand-600 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-[4px_4px_0_rgba(5,46,22,0.9)] transition hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-[6px_6px_0_rgba(5,46,22,0.9)] active:translate-y-0 active:scale-[0.98]"
         >
           🛒 Add
         </motion.button>
         <button
           onClick={() => onQuickView(p)}
-          className="flex w-full items-center justify-center rounded-xl border border-brand-300 bg-brand-50 px-4 py-2 text-xs font-black uppercase tracking-wider text-brand-700 transition hover:bg-brand-100 active:scale-[0.98]"
+          className="flex w-full items-center justify-center rounded-lg border border-brand-300 bg-brand-50 px-4 py-2 text-xs font-black uppercase tracking-wider text-brand-700 transition hover:bg-brand-100 active:scale-[0.98]"
         >
           View →
         </button>
