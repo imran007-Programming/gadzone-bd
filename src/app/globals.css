@@ -1,67 +1,67 @@
 @import "tailwindcss";
 
 @theme {
-  /* Pine Ledger: a cool, editorial direction — deep pine
-     green ink, lime accents and cyan highlights on cool
-     sage paper. Cards are crisp, near-square panels with
-     flat hard offset shadows — the opposite of the
-     previous Sunset Orchard's warm amber/coral palette,
-     pill-soft rounding and soft glows. */
+  /* Ember Dune: a warm, desert-dusk direction — terracotta
+     ink, amber sun and dusty rose on warm cream sand.
+     Cards are soft, pill-rounded panels with diffused
+     warm shadows — the opposite of the previous Pine
+     Ledger's cool pine/cyan palette, near-square corners
+     and flat hard offset shadows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = pine emerald scale */
-  --color-brand-50: #ecfdf5;
-  --color-brand-100: #d1fae5;
-  --color-brand-200: #a7f3d0;
-  --color-brand-300: #6ee7b7;
-  --color-brand-400: #34d399;
-  --color-brand-500: #10b981;
-  --color-brand-600: #059669;
-  --color-brand-700: #047857;
-  --color-brand-800: #065f46;
-  --color-brand-900: #064e3b;
-  --color-brand-950: #022c22;
-  --color-brand: #059669;
-  --color-brand-dark: #047857;
-  --color-brand-deep: #064e3b;
+  /* brand = terracotta scale */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-brand-950: #431407;
+  --color-brand: #ea580c;
+  --color-brand-dark: #c2410c;
+  --color-brand-deep: #7c2d12;
 
-  /* gold = lime scale (name kept for legacy class refs) */
-  --color-gold-50: #f7fee7;
-  --color-gold-100: #ecfccb;
-  --color-gold-200: #d9f99d;
-  --color-gold-300: #bef264;
-  --color-gold-400: #a3e635;
-  --color-gold-500: #84cc16;
-  --color-gold-600: #65a30d;
-  --color-gold-700: #4d7c0f;
-  --color-gold-800: #3f6212;
-  --color-gold-900: #365314;
-  --color-gold-950: #1a2e05;
-  --color-gold: #84cc16;
-  --color-gold-deep: #4d7c0f;
-  --color-gold-soft: #ecfccb;
+  /* gold = amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #b45309;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = cyan scale (name kept for legacy class refs) */
-  --color-popblue-50: #ecfeff;
-  --color-popblue-100: #cffafe;
-  --color-popblue-200: #a5f3fc;
-  --color-popblue-300: #67e8f9;
-  --color-popblue-400: #22d3ee;
-  --color-popblue-500: #06b6d4;
-  --color-popblue-600: #0891b2;
-  --color-popblue-700: #0e7490;
-  --color-popblue-800: #155e75;
-  --color-popblue-900: #164e63;
-  --color-popblue-950: #083344;
-  --color-popblue: #0891b2;
-  --color-popblue-deep: #0e7490;
-  --color-popblue-soft: #cffafe;
+  /* popblue = dusty rose scale (name kept for legacy class refs) */
+  --color-popblue-50: #fff1f2;
+  --color-popblue-100: #ffe4e6;
+  --color-popblue-200: #fecdd3;
+  --color-popblue-300: #fda4af;
+  --color-popblue-400: #fb7185;
+  --color-popblue-500: #f43f5e;
+  --color-popblue-600: #e11d48;
+  --color-popblue-700: #be123c;
+  --color-popblue-800: #9f1239;
+  --color-popblue-900: #881337;
+  --color-popblue-950: #4c0519;
+  --color-popblue: #e11d48;
+  --color-popblue-deep: #be123c;
+  --color-popblue-soft: #ffe4e6;
 
-  --color-ink: #0f2a22;
-  --color-paper: #f2f7f1;
-  --color-mute: #56705f;
-  --color-card: #ffffff;
-  --color-deep: #0f2a22;
+  --color-ink: #2b1a12;
+  --color-paper: #fdf6ec;
+  --color-mute: #8a6a55;
+  --color-card: #fffdf8;
+  --color-deep: #2b1a12;
 }
 
 html { scroll-behavior: smooth; }
@@ -76,42 +76,42 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f2f7f1;
+  background-color: #fdf6ec;
   background-image:
-    linear-gradient(rgba(5, 150, 105, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(5, 150, 105, 0.07) 1px, transparent 1px),
-    radial-gradient(circle at 12% 4%, rgba(5, 150, 105, 0.14) 0%, transparent 45%),
-    radial-gradient(circle at 88% 14%, rgba(6, 182, 212, 0.10) 0%, transparent 42%);
-  background-size: 28px 28px, 28px 28px, auto, auto;
-  color: #0f2a22;
+    radial-gradient(circle at 10% 2%, rgba(249, 115, 22, 0.16) 0%, transparent 42%),
+    radial-gradient(circle at 90% 10%, rgba(225, 29, 72, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 50% 100%, rgba(245, 158, 11, 0.14) 0%, transparent 45%),
+    radial-gradient(rgba(194, 65, 12, 0.10) 1px, transparent 1px);
+  background-size: auto, auto, auto, 26px 26px;
+  color: #2b1a12;
 }
-::selection { background: #bef264; color: #0f2a22; }
+::selection { background: #fcd34d; color: #2b1a12; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #059669, #0891b2); border-radius: 2px; border: 2px solid #f2f7f1; }
-::-webkit-scrollbar-track { background: #d1fae5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ea580c, #e11d48); border-radius: 999px; border: 2px solid #fdf6ec; }
+::-webkit-scrollbar-track { background: #ffedd5; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Pine type: crisp, editorial headlines. */
-h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
+/* Ember type: warm, generous headlines. */
+h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Pine drift: leaves drifting down, crisply. */
+/* Ember drift: embers drifting up, softly. */
 @keyframes signal-rise {
-  0% { transform: translate3d(0, -4vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
+  0% { transform: translate3d(0, 4vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.9; }
-  50% { transform: translate3d(2vw, 45vh, 0) rotate(40deg) scale(1.05); }
-  100% { transform: translate3d(-1vw, 96vh, 0) rotate(80deg) scale(1); opacity: 0; }
+  50% { transform: translate3d(-2vw, -45vh, 0) rotate(-40deg) scale(1.05); }
+  100% { transform: translate3d(1vw, -96vh, 0) rotate(-80deg) scale(1); opacity: 0; }
 }
 .pop-fall { animation: signal-rise 13s linear infinite; }
 
-/* Pine sway: a slow, steady sway. */
+/* Ember sway: a slow, warm sway. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-1vw, 0, 0) scale(1); opacity: 0.5; }
   50% { transform: translate3d(1vw, -6px, 0) scale(1.05); opacity: 0.9; }
 }
 .pop-drift { animation: signal-drift 10s ease-in-out infinite; }
 
-/* Pine bounce: a firm, snappy bounce. */
+/* Ember bounce: a soft, pillowy bounce. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   30% { transform: translateY(-6px) scale(1.03); }
@@ -119,125 +119,122 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 }
 .pop-bob { animation: signal-bob 3.8s ease-in-out infinite; }
 
-/* Slow turn for the pine dial. */
+/* Slow turn for the ember dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 32s linear infinite; }
 
-/* Pine glow pulse: a cool mint pulse. */
+/* Ember glow pulse: a warm amber pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.45; transform: scale(0.92); }
   50% { opacity: 1; transform: scale(1.12); }
 }
 .pop-twinkle { animation: signal-blink 2.6s ease-in-out infinite; }
 
-/* Pine ticker: infinite marquee (leftward drift). */
+/* Ember ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 26s linear infinite; }
 
-/* Pine bands: pine -> lime -> cyan stripes. */
+/* Ember bands: terracotta -> amber -> rose stripes. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #059669 0 34%, #84cc16 34% 67%, #0891b2 67% 100%);
+    linear-gradient(90deg, #ea580c 0 34%, #f59e0b 34% 67%, #e11d48 67% 100%);
   background-size: 28px 28px;
 }
 
-/* Pine card: a crisp, near-square panel — a solid pine
-   edge and a flat hard offset shadow, no soft glow.
-   On hover it shifts up-left and the shadow grows. */
+/* Ember card: a soft, pill-rounded panel — a warm edge
+   and a diffused amber shadow, no hard offset.
+   On hover it lifts gently and the shadow deepens. */
 .pop-lift {
   position: relative;
-  border: 1.5px solid rgba(6, 78, 59, 0.85);
-  background: #ffffff;
-  border-radius: 0.75rem;
-  box-shadow: 4px 4px 0 rgba(6, 78, 59, 0.9);
+  border: 1.5px solid rgba(194, 65, 12, 0.28);
+  background: #fffdf8;
+  border-radius: 1.75rem;
+  box-shadow: 0 12px 32px rgba(194, 65, 12, 0.14), 0 2px 8px rgba(43, 26, 18, 0.06);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 rgba(6, 78, 59, 0.9);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 44px rgba(194, 65, 12, 0.22), 0 4px 12px rgba(43, 26, 18, 0.08);
 }
 
-/* Pine glass: shared by modals and drawers — a cool
-   frosted sage pane with a solid pine edge and a flat
-   offset shadow. */
+/* Ember glass: shared by modals and drawers — a warm
+   frosted cream pane with a soft diffused shadow. */
 .pop-glass {
-  background: rgba(242, 247, 241, 0.92);
+  background: rgba(253, 246, 236, 0.92);
   backdrop-filter: blur(18px) saturate(1.15);
   -webkit-backdrop-filter: blur(18px) saturate(1.15);
-  border: 1.5px solid rgba(6, 78, 59, 0.85);
-  border-radius: 0.75rem;
-  box-shadow: 6px 6px 0 rgba(6, 78, 59, 0.9);
+  border: 1.5px solid rgba(194, 65, 12, 0.28);
+  border-radius: 1.75rem;
+  box-shadow: 0 20px 44px rgba(194, 65, 12, 0.20);
 }
 
-/* Pine tag: a straight, rectangular badge — pine-to-lime
-   gradient, upright, with a flat shadow. */
+/* Ember tag: a soft pill badge — terracotta-to-amber
+   gradient with a warm glow. */
 .starburst {
-  background: linear-gradient(135deg, #059669, #84cc16);
+  background: linear-gradient(135deg, #ea580c, #f59e0b);
   color: #ffffff;
-  text-shadow: 0 1px 2px rgba(2, 44, 34, 0.35);
-  border-radius: 0.375rem;
+  text-shadow: 0 1px 2px rgba(67, 20, 7, 0.35);
+  border-radius: 999px;
   transform: rotate(0deg);
-  box-shadow: 3px 3px 0 rgba(6, 78, 59, 0.9);
+  box-shadow: 0 8px 20px rgba(234, 88, 12, 0.35);
   border: 1.5px solid rgba(255, 255, 255, 0.9);
 }
 
-/* Pine dots: a cool ledger-grid field. */
+/* Ember dots: a warm sand-dot field. */
 .halftone {
-  background-image:
-    linear-gradient(rgba(5, 150, 105, 0.18) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(5, 150, 105, 0.18) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(194, 65, 12, 0.20) 1.5px, transparent 1.5px);
   background-size: 18px 18px;
 }
 
-/* Pine rule: a solid flat divider line. */
+/* Ember rule: a soft rounded gradient divider. */
 .zigzag {
-  height: 3px;
+  height: 4px;
   border-top: none;
-  background: linear-gradient(90deg, #059669, #84cc16, #0891b2);
+  background: linear-gradient(90deg, #ea580c, #f59e0b, #e11d48);
   background-repeat: no-repeat;
   opacity: 1;
-  border-radius: 0;
+  border-radius: 999px;
 }
 
-/* Pine band: a cool pine gradient bar with square corners. */
+/* Ember band: a warm sunset gradient bar with soft rounded corners. */
 .bazaar-awning {
-  background: linear-gradient(120deg, #064e3b, #059669 45%, #84cc16 75%, #0891b2);
+  background: linear-gradient(120deg, #7c2d12, #ea580c 45%, #f59e0b 75%, #e11d48);
   opacity: 1;
-  box-shadow: 4px 4px 0 rgba(2, 44, 34, 0.9);
+  box-shadow: 0 12px 32px rgba(194, 65, 12, 0.28);
   border-bottom: none;
-  border-radius: 0;
+  border-radius: 0 0 1.5rem 1.5rem;
 }
 
-/* Pine glow: a cool mint halo for the core. */
+/* Ember glow: a warm dusk halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(242, 247, 241, 0.95) 0%, rgba(167, 243, 208, 0.60) 42%, rgba(8, 145, 178, 0.28) 62%, rgba(8, 145, 178, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(253, 246, 236, 0.95) 0%, rgba(253, 230, 138, 0.60) 42%, rgba(225, 29, 72, 0.28) 62%, rgba(225, 29, 72, 0) 76%);
 }
 
-/* Pine core: a deep pine disc with a lime ring. */
+/* Ember core: a glowing ember disc with an amber ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #6ee7b7 0%, #059669 45%, #064e3b 100%);
-  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.85), 6px 6px 0 rgba(6, 78, 59, 0.9);
+    radial-gradient(circle at 35% 30%, #fcd34d 0%, #f97316 45%, #7c2d12 100%);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.85), 0 16px 36px rgba(234, 88, 12, 0.45);
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Cool traces around the core disc. */
+/* Warm traces around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(5, 150, 105, 0.35) 0px,
-    rgba(5, 150, 105, 0.35) 1px,
+    rgba(234, 88, 12, 0.35) 0px,
+    rgba(234, 88, 12, 0.35) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(8, 145, 178, 0.35) 14px,
-    rgba(8, 145, 178, 0.35) 15px,
+    rgba(225, 29, 72, 0.35) 14px,
+    rgba(225, 29, 72, 0.35) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -248,7 +245,7 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(132, 204, 22, 0.45) 0deg 3deg,
+    rgba(245, 158, 11, 0.45) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
