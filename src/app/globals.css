@@ -1,70 +1,71 @@
 @import "tailwindcss";
 
 @theme {
-  /* Violet Ember: a warm, bold direction —
-     vivid violet as the primary accent, amber for
-     badges and prices, deep indigo for contrast, on
-     warm cream paper with violet and amber glows.
-     Cards are chunky white panels with a thick violet
-     border, generous rounded corners and a solid offset
-     shadow — the opposite of the previous Lagoon Night
-     look, its teal / cyan / navy palette, pale mint
-     paper, sleek thin-bordered panels and tight corners. */
+  /* Forest Grove: a fresh, calm direction —
+     deep forest green as the primary accent, lime for
+     badges and highlights, burnt orange for contrast,
+     on pale sage paper with soft green glows.
+     Cards are flat white panels with a thin green
+     border, modest rounded corners and a soft diffused
+     shadow — the opposite of the previous Violet Ember
+     look, its vivid violet / amber / rose palette, warm
+     cream paper, chunky thick-bordered panels and solid
+     offset shadows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = vivid violet scale */
-  --color-brand-50: #f5f3ff;
-  --color-brand-100: #ede9fe;
-  --color-brand-200: #ddd6fe;
-  --color-brand-300: #c4b5fd;
-  --color-brand-400: #a78bfa;
-  --color-brand-500: #8b5cf6;
-  --color-brand-600: #7c3aed;
-  --color-brand-700: #6d28d9;
-  --color-brand-800: #5b21b6;
-  --color-brand-900: #4c1d95;
-  --color-brand-950: #2e1065;
-  --color-brand: #7c3aed;
-  --color-brand-dark: #6d28d9;
-  --color-brand-deep: #2e1065;
+  /* brand = emerald / forest-green scale */
+  --color-brand-50: #ecfdf5;
+  --color-brand-100: #d1fae5;
+  --color-brand-200: #a7f3d0;
+  --color-brand-300: #6ee7b7;
+  --color-brand-400: #34d399;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-brand-900: #064e3b;
+  --color-brand-950: #022c22;
+  --color-brand: #059669;
+  --color-brand-dark: #047857;
+  --color-brand-deep: #022c22;
 
-  /* gold = amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #d97706;
-  --color-gold-deep: #92400e;
-  --color-gold-soft: #fef3c7;
+  /* gold = lime scale (name kept for legacy class refs) */
+  --color-gold-50: #f7fee7;
+  --color-gold-100: #ecfccb;
+  --color-gold-200: #d9f99d;
+  --color-gold-300: #bef264;
+  --color-gold-400: #a3e635;
+  --color-gold-500: #84cc16;
+  --color-gold-600: #65a30d;
+  --color-gold-700: #4d7c0f;
+  --color-gold-800: #3f6212;
+  --color-gold-900: #365314;
+  --color-gold-950: #1a2e05;
+  --color-gold: #65a30d;
+  --color-gold-deep: #3f6212;
+  --color-gold-soft: #ecfccb;
 
-  /* popblue = rose scale (name kept for legacy class refs) */
-  --color-popblue-50: #fff1f2;
-  --color-popblue-100: #ffe4e6;
-  --color-popblue-200: #fecdd3;
-  --color-popblue-300: #fda4af;
-  --color-popblue-400: #fb7185;
-  --color-popblue-500: #f43f5e;
-  --color-popblue-600: #e11d48;
-  --color-popblue-700: #be123c;
-  --color-popblue-800: #9f1239;
-  --color-popblue-900: #881337;
-  --color-popblue-950: #4c0519;
-  --color-popblue: #e11d48;
-  --color-popblue-deep: #4c0519;
-  --color-popblue-soft: #ffe4e6;
+  /* popblue = burnt-orange scale (name kept for legacy class refs) */
+  --color-popblue-50: #fff7ed;
+  --color-popblue-100: #ffedd5;
+  --color-popblue-200: #fed7aa;
+  --color-popblue-300: #fdba74;
+  --color-popblue-400: #fb923c;
+  --color-popblue-500: #f97316;
+  --color-popblue-600: #ea580c;
+  --color-popblue-700: #c2410c;
+  --color-popblue-800: #9a3412;
+  --color-popblue-900: #7c2d12;
+  --color-popblue-950: #431407;
+  --color-popblue: #ea580c;
+  --color-popblue-deep: #431407;
+  --color-popblue-soft: #ffedd5;
 
-  --color-ink: #1e1b4b;
-  --color-paper: #fff7ed;
-  --color-mute: #6d5a7d;
+  --color-ink: #16281d;
+  --color-paper: #f2f7f0;
+  --color-mute: #5c6e60;
   --color-card: #ffffff;
-  --color-deep: #1e1b4b;
+  --color-deep: #16281d;
 }
 
 html { scroll-behavior: smooth; }
@@ -79,26 +80,26 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fff7ed;
+  background-color: #f2f7f0;
   background-image:
-    radial-gradient(circle at 8% 0%, rgba(124, 58, 237, 0.20) 0%, transparent 46%),
-    radial-gradient(circle at 94% 6%, rgba(245, 158, 11, 0.20) 0%, transparent 42%),
-    radial-gradient(circle at 50% 100%, rgba(225, 29, 72, 0.12) 0%, transparent 50%);
+    radial-gradient(circle at 8% 0%, rgba(5, 150, 105, 0.16) 0%, transparent 46%),
+    radial-gradient(circle at 94% 6%, rgba(132, 204, 22, 0.18) 0%, transparent 42%),
+    radial-gradient(circle at 50% 100%, rgba(234, 88, 12, 0.10) 0%, transparent 50%);
   background-size: 100% 640px, 100% 640px, 100% 720px;
   background-repeat: no-repeat, no-repeat, no-repeat;
-  color: #1e1b4b;
+  color: #16281d;
 }
-::selection { background: #fcd34d; color: #1e1b4b; }
+::selection { background: #d9f99d; color: #16281d; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #8b5cf6, #f59e0b); border-radius: 999px; border: 2px solid #fff7ed; }
-::-webkit-scrollbar-track { background: #ede9fe; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #059669, #84cc16); border-radius: 999px; border: 2px solid #f2f7f0; }
+::-webkit-scrollbar-track { background: #d1fae5; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Violet Ember type: bold, roomy headlines. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Forest Grove type: crisp, slightly tighter headlines. */
+h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Violet Ember drift: embers floating upward. */
+/* Forest Grove drift: leaves floating upward. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, -8vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.8; }
@@ -107,128 +108,128 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 18s linear infinite; }
 
-/* Violet Ember sway: a gentle side-to-side float. */
+/* Forest Grove sway: a gentle side-to-side float. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-6px, 0, 0) rotate(2deg) scale(1); opacity: 0.6; }
   50% { transform: translate3d(6px, -8px, 0) rotate(-2deg) scale(1.02); opacity: 0.9; }
 }
 .pop-drift { animation: signal-drift 11s ease-in-out infinite; }
 
-/* Violet Ember bob: a soft hover lift. */
+/* Forest Grove bob: a soft hover lift. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-5px) scale(1.01); }
 }
 .pop-bob { animation: signal-bob 5s ease-in-out infinite; }
 
-/* Slow turn for the ember dial. */
+/* Slow turn for the grove dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 60s linear infinite; }
 
-/* Violet Ember glint: a warm amber pulse. */
+/* Forest Grove glint: a soft lime pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.5; transform: scale(0.94); }
   50% { opacity: 1; transform: scale(1.06); }
 }
 .pop-twinkle { animation: signal-blink 3.5s ease-in-out infinite; }
 
-/* Violet Ember ticker: infinite marquee (leftward drift). */
+/* Forest Grove ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Violet Ember bands: violet -> amber -> rose blocks, chunky. */
+/* Forest Grove bands: forest -> lime -> orange blocks, slim. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #7c3aed 0 34%, #f59e0b 34% 67%, #e11d48 67% 100%);
+    linear-gradient(90deg, #059669 0 34%, #84cc16 34% 67%, #ea580c 67% 100%);
   background-size: 72px 72px;
   border-radius: 999px;
 }
 
-/* Violet Ember card: a chunky white panel — a thick
-   violet border, generous rounded corners and a solid
-   offset shadow that shifts on hover. */
+/* Forest Grove card: a flat white panel — a thin
+   forest-green border, modest rounded corners and a
+   soft diffused shadow that deepens on hover. */
 .pop-lift {
   position: relative;
-  border: 2px solid rgba(124, 58, 237, 0.35);
+  border: 1px solid rgba(5, 150, 105, 0.28);
   background: #ffffff;
-  border-radius: 1.75rem;
-  box-shadow: 6px 6px 0 rgba(76, 29, 149, 0.18);
+  border-radius: 0.9rem;
+  box-shadow: 0 10px 30px rgba(6, 95, 70, 0.10);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translate(-2px, -4px);
-  box-shadow: 9px 9px 0 rgba(76, 29, 149, 0.22);
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(6, 95, 70, 0.16);
 }
 
-/* Violet Ember glass: shared by modals and drawers — a
-   frosted cream pane with an amber-tinted border and a
-   solid offset shadow. */
+/* Forest Grove glass: shared by modals and drawers — a
+   frosted sage pane with a lime-tinted border and a
+   soft diffused shadow. */
 .pop-glass {
-  background: rgba(255, 247, 237, 0.92);
+  background: rgba(242, 247, 240, 0.92);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 2px solid rgba(245, 158, 11, 0.45);
-  border-radius: 1.5rem;
-  box-shadow: 6px 6px 0 rgba(76, 29, 149, 0.18);
+  border: 1px solid rgba(132, 204, 22, 0.5);
+  border-radius: 1rem;
+  box-shadow: 0 16px 40px rgba(6, 95, 70, 0.14);
 }
 
-/* Violet Ember tag: an amber badge —
-   deep indigo type, round pill shape, slightly tilted. */
+/* Forest Grove tag: a lime badge —
+   deep forest type, round pill shape, upright. */
 .starburst {
-  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 55%, #fb7185 100%);
-  color: #1e1b4b;
+  background: linear-gradient(135deg, #bef264 0%, #84cc16 55%, #fb923c 100%);
+  color: #16281d;
   text-shadow: none;
   border-radius: 999px;
-  transform: rotate(-2deg);
-  box-shadow: 4px 4px 0 rgba(76, 29, 149, 0.25);
+  transform: rotate(0deg);
+  box-shadow: 0 8px 20px rgba(6, 95, 70, 0.20);
   border: 2px solid #ffffff;
 }
 
-/* Violet Ember dots: a warm dotted ember pattern. */
+/* Forest Grove dots: a soft dotted leaf pattern. */
 .halftone {
   background-image:
-    radial-gradient(rgba(124, 58, 237, 0.22) 1px, transparent 1px),
-    radial-gradient(rgba(245, 158, 11, 0.22) 1px, transparent 1px);
+    radial-gradient(rgba(5, 150, 105, 0.20) 1px, transparent 1px),
+    radial-gradient(rgba(132, 204, 22, 0.20) 1px, transparent 1px);
   background-size: 24px 24px, 32px 32px;
   background-position: 0 0, 12px 16px;
 }
 
-/* Violet Ember rule: a chunky violet-to-amber bar. */
+/* Forest Grove rule: a slim forest-to-lime bar. */
 .zigzag {
-  height: 6px;
+  height: 3px;
   border-top: none;
-  background: linear-gradient(90deg, #7c3aed 0 33%, #f59e0b 33% 67%, #e11d48 67% 100%);
+  background: linear-gradient(90deg, #059669 0 33%, #84cc16 33% 67%, #ea580c 67% 100%);
   opacity: 1;
   border-radius: 999px;
 }
 
-/* Violet Ember band: a violet-to-amber bar with
-   a solid offset shadow underneath. */
+/* Forest Grove band: a sage-to-lime bar with
+   a soft shadow underneath. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #ede9fe, #fff7ed, #fef3c7);
+  background: linear-gradient(90deg, #d1fae5, #f2f7f0, #ecfccb);
   opacity: 1;
-  box-shadow: 0 10px 0 -4px rgba(76, 29, 149, 0.15);
-  border-bottom: 2px solid rgba(124, 58, 237, 0.3);
+  box-shadow: 0 10px 24px -8px rgba(6, 95, 70, 0.18);
+  border-bottom: 1px solid rgba(5, 150, 105, 0.3);
   border-radius: 0;
 }
 
-/* Violet Ember glow: a warm halo for the core. */
+/* Forest Grove glow: a soft halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.8) 0%, rgba(253, 230, 138, 0.4) 42%, rgba(139, 92, 246, 0.3) 62%, rgba(139, 92, 246, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.8) 0%, rgba(217, 249, 157, 0.4) 42%, rgba(16, 185, 129, 0.3) 62%, rgba(16, 185, 129, 0) 76%);
 }
 
-/* Violet Ember core: a violet disc with an amber ring. */
+/* Forest Grove core: a forest disc with a lime ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fef3c7 0%, #8b5cf6 55%, #1e1b4b 100%);
-  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.65), 0 0 36px rgba(124, 58, 237, 0.45);
+    radial-gradient(circle at 35% 30%, #ecfccb 0%, #10b981 55%, #16281d 100%);
+  box-shadow: 0 0 0 3px rgba(132, 204, 22, 0.65), 0 0 36px rgba(5, 150, 105, 0.45);
   border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
@@ -236,12 +237,12 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(124, 58, 237, 0.3) 0px,
-    rgba(124, 58, 237, 0.3) 1px,
+    rgba(5, 150, 105, 0.3) 0px,
+    rgba(5, 150, 105, 0.3) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(245, 158, 11, 0.3) 14px,
-    rgba(245, 158, 11, 0.3) 15px,
+    rgba(132, 204, 22, 0.3) 14px,
+    rgba(132, 204, 22, 0.3) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -252,7 +253,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(245, 158, 11, 0.5) 0deg 3deg,
+    rgba(132, 204, 22, 0.5) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
