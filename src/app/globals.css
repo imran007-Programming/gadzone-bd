@@ -1,71 +1,71 @@
 @import "tailwindcss";
 
 @theme {
-  /* Terracotta Press: a warm print-shop direction —
-     terracotta as the primary accent, amber gold for
-     badges and prices, warm sand-brown for contrast,
-     on a warm cream paper with a fine diagonal weave.
-     Cards are warm panels with a solid chocolate
-     border and a hard offset press shadow — the
-     opposite of the previous Indigo Harbor look, its
-     indigo / coral rose / sky palette, pale slate
-     paper, dot grid, crisp lightly rounded panels
-     with a coral top bar and soft blurred shadows. */
+  /* Alpine Glacier: a cool, clean direction —
+     deep teal as the primary accent, bright cyan for
+     badges and prices, deep pine-navy for contrast,
+     on a pale mint paper with soft frosted blobs.
+     Cards are airy white panels with a thin teal-tinted
+     border, generous pill rounding and a soft blurred
+     shadow — the opposite of the previous Terracotta
+     Press look, its terracotta / amber / sand palette,
+     warm cream paper, diagonal weave, solid chocolate
+     borders and hard offset press shadows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = terracotta scale */
-  --color-brand-50: #fff7ed;
-  --color-brand-100: #ffedd5;
-  --color-brand-200: #fed7aa;
-  --color-brand-300: #fdba74;
-  --color-brand-400: #fb923c;
-  --color-brand-500: #f97316;
-  --color-brand-600: #ea580c;
-  --color-brand-700: #c2410c;
-  --color-brand-800: #9a3412;
-  --color-brand-900: #7c2d12;
-  --color-brand-950: #431407;
-  --color-brand: #ea580c;
-  --color-brand-dark: #c2410c;
-  --color-brand-deep: #431407;
+  /* brand = teal scale */
+  --color-brand-50: #f0fdfa;
+  --color-brand-100: #ccfbf1;
+  --color-brand-200: #99f6e4;
+  --color-brand-300: #5eead4;
+  --color-brand-400: #2dd4bf;
+  --color-brand-500: #14b8a6;
+  --color-brand-600: #0d9488;
+  --color-brand-700: #0f766e;
+  --color-brand-800: #115e59;
+  --color-brand-900: #134e4a;
+  --color-brand-950: #042f2e;
+  --color-brand: #0d9488;
+  --color-brand-dark: #0f766e;
+  --color-brand-deep: #042f2e;
 
-  /* gold = amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #d97706;
-  --color-gold-deep: #92400e;
-  --color-gold-soft: #fef3c7;
+  /* gold = cyan scale (name kept for legacy class refs) */
+  --color-gold-50: #ecfeff;
+  --color-gold-100: #cffafe;
+  --color-gold-200: #a5f3fc;
+  --color-gold-300: #67e8f9;
+  --color-gold-400: #22d3ee;
+  --color-gold-500: #06b6d4;
+  --color-gold-600: #0891b2;
+  --color-gold-700: #0e7490;
+  --color-gold-800: #155e75;
+  --color-gold-900: #164e63;
+  --color-gold-950: #083344;
+  --color-gold: #0891b2;
+  --color-gold-deep: #155e75;
+  --color-gold-soft: #cffafe;
 
-  /* popblue = warm sand-brown scale (name kept for legacy class refs) */
-  --color-popblue-50: #faf6f1;
-  --color-popblue-100: #f3e9dc;
-  --color-popblue-200: #e4d2b8;
-  --color-popblue-300: #d2b48c;
-  --color-popblue-400: #bd8f5e;
-  --color-popblue-500: #a4713e;
-  --color-popblue-600: #8a5a2e;
-  --color-popblue-700: #6f4524;
-  --color-popblue-800: #593a20;
-  --color-popblue-900: #4a2f1a;
-  --color-popblue-950: #2b1a0c;
-  --color-popblue: #8a5a2e;
-  --color-popblue-deep: #2b1a0c;
-  --color-popblue-soft: #f3e9dc;
+  /* popblue = deep pine-navy scale (name kept for legacy class refs) */
+  --color-popblue-50: #f0fdfa;
+  --color-popblue-100: #d9f2ec;
+  --color-popblue-200: #b3e3d8;
+  --color-popblue-300: #84cec0;
+  --color-popblue-400: #4fb3a2;
+  --color-popblue-500: #2a9785;
+  --color-popblue-600: #1d7a6c;
+  --color-popblue-700: #1a6258;
+  --color-popblue-800: #1b4f47;
+  --color-popblue-900: #1c423c;
+  --color-popblue-950: #0a2a26;
+  --color-popblue: #1d7a6c;
+  --color-popblue-deep: #0a2a26;
+  --color-popblue-soft: #d9f2ec;
 
-  --color-ink: #292524;
-  --color-paper: #fff8ec;
-  --color-mute: #78716c;
-  --color-card: #fffdf8;
-  --color-deep: #431407;
+  --color-ink: #134e4a;
+  --color-paper: #f0fdfa;
+  --color-mute: #5f7d79;
+  --color-card: #ffffff;
+  --color-deep: #042f2e;
 }
 
 html { scroll-behavior: smooth; }
@@ -80,168 +80,169 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fff8ec;
+  background-color: #f0fdfa;
   background-image:
-    repeating-linear-gradient(45deg, rgba(234, 88, 12, 0.045) 0px, rgba(234, 88, 12, 0.045) 1px, transparent 1px, transparent 14px),
-    radial-gradient(circle at 8% 0%, rgba(249, 115, 22, 0.16) 0%, transparent 48%),
-    radial-gradient(circle at 94% 6%, rgba(217, 119, 6, 0.14) 0%, transparent 44%),
-    radial-gradient(circle at 50% 100%, rgba(138, 90, 46, 0.12) 0%, transparent 52%);
-  background-size: auto, 100% 640px, 100% 640px, 100% 720px;
-  background-repeat: repeat, no-repeat, no-repeat, no-repeat;
-  color: #292524;
+    radial-gradient(circle at 6% 0%, rgba(45, 212, 191, 0.22) 0%, transparent 46%),
+    radial-gradient(circle at 96% 8%, rgba(34, 211, 238, 0.18) 0%, transparent 42%),
+    radial-gradient(circle at 50% 100%, rgba(13, 148, 136, 0.14) 0%, transparent 50%);
+  background-size: 100% 640px, 100% 640px, 100% 720px;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  color: #134e4a;
 }
-::selection { background: #fde68a; color: #451a03; }
+::selection { background: #a5f3fc; color: #083344; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ea580c, #d97706); border-radius: 999px; border: 2px solid #fff8ec; }
-::-webkit-scrollbar-track { background: #ffedd5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #14b8a6, #0891b2); border-radius: 999px; border: 2px solid #f0fdfa; }
+::-webkit-scrollbar-track { background: #ccfbf1; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Terracotta Press type: warm, sturdy headlines. */
-h1, h2, h3 { letter-spacing: 0em; text-wrap: balance; }
+/* Alpine Glacier type: crisp, cool headlines. */
+h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Terracotta Press drift: embers rising with a sway. */
+/* Alpine Glacier drift: snowflakes falling gently. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, -8vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.8; }
-  50% { transform: translate3d(-4vw, 46vh, 0) rotate(-120deg) scale(1.02); }
-  100% { transform: translate3d(3vw, 92vh, 0) rotate(-240deg) scale(1); opacity: 0; }
+  50% { transform: translate3d(3vw, 46vh, 0) rotate(120deg) scale(1.02); }
+  100% { transform: translate3d(-2vw, 92vh, 0) rotate(240deg) scale(1); opacity: 0; }
 }
-.pop-fall { animation: signal-rise 16s linear infinite; }
+.pop-fall { animation: signal-rise 18s linear infinite; }
 
-/* Terracotta Press sway: a gentle side-to-side float. */
+/* Alpine Glacier sway: a gentle side-to-side float. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(8px, 0, 0) rotate(3deg) scale(1); opacity: 0.6; }
-  50% { transform: translate3d(-8px, -10px, 0) rotate(-3deg) scale(1.03); opacity: 0.9; }
+  0%, 100% { transform: translate3d(-6px, 0, 0) rotate(-2deg) scale(1); opacity: 0.6; }
+  50% { transform: translate3d(6px, -8px, 0) rotate(2deg) scale(1.02); opacity: 0.9; }
 }
-.pop-drift { animation: signal-drift 12s ease-in-out infinite; }
+.pop-drift { animation: signal-drift 11s ease-in-out infinite; }
 
-/* Terracotta Press bob: a soft hover lift. */
+/* Alpine Glacier bob: a soft hover lift. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-6px) scale(1.01); }
+  50% { transform: translateY(-5px) scale(1.01); }
 }
 .pop-bob { animation: signal-bob 5s ease-in-out infinite; }
 
-/* Slow turn for the press dial. */
+/* Slow turn for the glacier dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 60s linear infinite; }
 
-/* Terracotta Press glint: a soft amber pulse. */
+/* Alpine Glacier glint: a soft cyan pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.5; transform: scale(0.94); }
   50% { opacity: 1; transform: scale(1.06); }
 }
 .pop-twinkle { animation: signal-blink 3.5s ease-in-out infinite; }
 
-/* Terracotta Press ticker: infinite marquee (leftward drift). */
+/* Alpine Glacier ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Terracotta Press bands: terracotta -> amber -> sand blocks, bold. */
+/* Alpine Glacier bands: teal -> cyan -> pine blocks, soft. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #ea580c 0 34%, #d97706 34% 67%, #8a5a2e 67% 100%);
+    linear-gradient(90deg, #0d9488 0 34%, #06b6d4 34% 67%, #1d7a6c 67% 100%);
   background-size: 44px 44px;
   border-radius: 999px;
 }
 
-/* Terracotta Press card: a warm panel — a solid
-   chocolate border, a hard offset press shadow and
-   generous rounding that stamps deeper on hover. */
+/* Alpine Glacier card: an airy white panel — a thin
+   teal-tinted border, generous pill rounding and a
+   soft blurred shadow that deepens on hover. */
 .pop-lift {
   position: relative;
-  border: 2px solid #431407;
-  background: #fffdf8;
-  border-radius: 1.25rem;
-  box-shadow: 5px 5px 0 rgba(67, 20, 7, 0.9), 0 2px 6px -2px rgba(217, 119, 6, 0.25);
+  border: 1px solid rgba(13, 148, 136, 0.22);
+  background: #ffffff;
+  border-radius: 2rem;
+  box-shadow: 0 12px 32px -12px rgba(13, 148, 136, 0.28), 0 2px 8px -2px rgba(8, 145, 178, 0.12);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translate(-2px, -4px);
-  box-shadow: 8px 9px 0 rgba(67, 20, 7, 0.9), 0 6px 14px -6px rgba(217, 119, 6, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 24px 44px -16px rgba(13, 148, 136, 0.35), 0 4px 12px -4px rgba(8, 145, 178, 0.16);
 }
 
-/* Terracotta Press glass: shared by modals and drawers — a
-   warm frosted pane with a solid chocolate border and
-   a hard offset press shadow. */
+/* Alpine Glacier glass: shared by modals and drawers — a
+   cool frosted pane with a thin teal-tinted border and
+   a soft blurred shadow. */
 .pop-glass {
-  background: rgba(255, 248, 236, 0.94);
-  backdrop-filter: blur(16px) saturate(1.05);
-  -webkit-backdrop-filter: blur(16px) saturate(1.05);
-  border: 2px solid #431407;
-  border-radius: 1.25rem;
-  box-shadow: 6px 6px 0 rgba(67, 20, 7, 0.9);
+  background: rgba(240, 253, 250, 0.88);
+  backdrop-filter: blur(18px) saturate(1.1);
+  -webkit-backdrop-filter: blur(18px) saturate(1.1);
+  border: 1px solid rgba(13, 148, 136, 0.25);
+  border-radius: 2rem;
+  box-shadow: 0 20px 40px -16px rgba(13, 148, 136, 0.3);
 }
 
-/* Terracotta Press tag: an amber-to-terracotta pill badge —
-   white type, fully rounded, tilted like a stamp. */
+/* Alpine Glacier tag: a teal-to-cyan pill badge —
+   white type, fully rounded, upright. */
 .starburst {
-  background: linear-gradient(135deg, #f59e0b 0%, #ea580c 55%, #c2410c 100%);
+  background: linear-gradient(135deg, #14b8a6 0%, #0891b2 55%, #0f766e 100%);
   color: #ffffff;
   text-shadow: none;
   border-radius: 999px;
-  transform: rotate(-8deg);
-  box-shadow: 0 10px 24px rgba(67, 20, 7, 0.35);
-  border: 2px solid #fffdf8;
+  transform: rotate(0deg);
+  box-shadow: 0 10px 24px rgba(13, 148, 136, 0.35);
+  border: 2px solid #ffffff;
 }
 
-/* Terracotta Press weave: a fine diagonal crosshatch. */
+/* Alpine Glacier frost: a soft dotted frost pattern. */
 .halftone {
   background-image:
-    repeating-linear-gradient(45deg, rgba(234, 88, 12, 0.14) 0px, rgba(234, 88, 12, 0.14) 1px, transparent 1px, transparent 10px),
-    repeating-linear-gradient(-45deg, rgba(217, 119, 6, 0.12) 0px, rgba(217, 119, 6, 0.12) 1px, transparent 1px, transparent 10px);
+    radial-gradient(rgba(13, 148, 136, 0.16) 1px, transparent 1px),
+    radial-gradient(rgba(8, 145, 178, 0.12) 1px, transparent 1px);
+  background-size: 18px 18px, 26px 26px;
+  background-position: 0 0, 9px 13px;
 }
 
-/* Terracotta Press rule: a thick terracotta-to-amber-to-sand bar. */
+/* Alpine Glacier rule: a slim teal-to-cyan bar. */
 .zigzag {
-  height: 6px;
+  height: 4px;
   border-top: none;
-  background: linear-gradient(90deg, #ea580c 0 33%, #d97706 33% 67%, #8a5a2e 67% 100%);
+  background: linear-gradient(90deg, #0d9488 0 33%, #06b6d4 33% 67%, #1d7a6c 67% 100%);
   opacity: 1;
   border-radius: 999px;
 }
 
-/* Terracotta Press band: a warm terracotta-to-cream bar with
-   a hard shadow underneath. */
+/* Alpine Glacier band: a cool mint-to-white bar with
+   a soft shadow underneath. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #ffedd5, #fff8ec, #fef3c7);
+  background: linear-gradient(90deg, #ccfbf1, #f0fdfa, #cffafe);
   opacity: 1;
-  box-shadow: 0 4px 0 rgba(67, 20, 7, 0.85);
-  border-bottom: 2px solid #431407;
+  box-shadow: 0 8px 24px -12px rgba(13, 148, 136, 0.35);
+  border-bottom: 1px solid rgba(13, 148, 136, 0.2);
   border-radius: 0;
 }
 
-/* Terracotta Press glow: a warm amber halo for the core. */
+/* Alpine Glacier glow: a cool cyan halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.7) 0%, rgba(245, 158, 11, 0.3) 42%, rgba(234, 88, 12, 0.3) 62%, rgba(234, 88, 12, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.75) 0%, rgba(103, 232, 249, 0.3) 42%, rgba(20, 184, 166, 0.3) 62%, rgba(20, 184, 166, 0) 76%);
 }
 
-/* Terracotta Press core: a deep terracotta disc with an amber ring. */
+/* Alpine Glacier core: a deep teal disc with a cyan ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #ffedd5 0%, #f97316 55%, #7c2d12 100%);
-  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.55), 0 0 36px rgba(234, 88, 12, 0.35);
-  border: 2px solid rgba(255, 253, 248, 0.9);
+    radial-gradient(circle at 35% 30%, #ccfbf1 0%, #14b8a6 55%, #134e4a 100%);
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.5), 0 0 36px rgba(13, 148, 136, 0.35);
+  border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
 /* Soft rings around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(234, 88, 12, 0.35) 0px,
-    rgba(234, 88, 12, 0.35) 1px,
+    rgba(13, 148, 136, 0.3) 0px,
+    rgba(13, 148, 136, 0.3) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(217, 119, 6, 0.35) 14px,
-    rgba(217, 119, 6, 0.35) 15px,
+    rgba(8, 145, 178, 0.3) 14px,
+    rgba(8, 145, 178, 0.3) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -252,7 +253,7 @@ h1, h2, h3 { letter-spacing: 0em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(217, 119, 6, 0.45) 0deg 3deg,
+    rgba(8, 145, 178, 0.4) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
