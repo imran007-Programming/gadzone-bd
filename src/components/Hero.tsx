@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Grove glow drifting over the warm sand.
+// Frostline glow drifting over the icy sheet.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(5, 150, 105, 0.28)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(54, 83, 20, 0.18)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(245, 158, 11, 0.22)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(4, 120, 87, 0.25)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(8, 145, 178, 0.28)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(124, 58, 237, 0.18)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(13, 148, 136, 0.22)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(34, 211, 238, 0.25)" },
 ];
 
-// Grove orbs falling through the lavender light.
+// Frostline flakes falling through the icy light.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#059669" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#10b981" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#365314" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#fcd34d" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#047857" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#f59e0b" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#fbbf24" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#0891b2" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#22d3ee" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#7c3aed" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#99f6e4" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#0d9488" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#a78bfa" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#67e8f9" },
 ];
 
-// Peach sparks scattered through the lavender light.
+// Ice crystals scattered through the icy light.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -75,8 +75,8 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* grove wash under the lavender light */}
-      <div className="relative bg-gradient-to-b from-[#d1fae5] via-[#faf8f1] to-[#fef3c7]">
+      {/* frostline wash under the icy light */}
+      <div className="relative bg-gradient-to-b from-[#cffafe] via-[#f2fbfe] to-[#ede9fe]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -87,7 +87,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           <div className="pop-drift absolute -right-24 top-40 h-64 w-[44rem] rotate-[10deg] rounded-full bg-gradient-to-r from-transparent via-brand-300/25 to-gold-400/30 blur-3xl" style={{ animationDelay: "-12s" }} />
         </div>
 
-        {/* grove core: a emerald orb ringed by a slow-spinning dial */}
+        {/* frostline core: an icy orb ringed by a slow-spinning dial */}
         <div aria-hidden className="pointer-events-none absolute -right-40 -top-32 z-0 hidden opacity-90 sm:block">
           <div className="relative h-[600px] w-[600px]">
             <div className="nebula-core absolute inset-8 rounded-full blur-xl" />
@@ -100,12 +100,12 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(5,150,105, 0.45), inset 0 0 18px rgba(245,158,11, 0.30)",
+                  boxShadow: "0 0 28px 2px rgba(8,145,178, 0.45), inset 0 0 18px rgba(124,58,237, 0.30)",
                   opacity: 1 - r * 0.22,
                 }}
               />
             ))}
-            {/* the grove heart: a layered emerald disc */}
+            {/* the frostline heart: a layered icy disc */}
             <div className="sun-disc pop-spin absolute inset-44 rounded-full" style={{ animationDuration: "60s" }} />
             {/* grid glints */}
             <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
@@ -113,7 +113,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 <span key={i} className="absolute rounded-full bg-white/80" style={{ left: glint.l, top: glint.t, width: glint.s, height: glint.s }} />
               ))}
             </div>
-            {/* sweeping grove beams */}
+            {/* sweeping frostline beams */}
             {[0, 1, 2].map((b) => (
               <span
                 key={b}
@@ -121,11 +121,11 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{ width: 26, height: 240, transform: `translate(-50%, -100%) rotate(${b * 120}deg)`, animationDuration: "36s" }}
               />
             ))}
-            {/* peach sparks dancing around the beacon */}
+            {/* ice crystals dancing around the beacon */}
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#a7f3d0", "#fbbf24", "#fde68a", "#059669"];
+              const colors = ["#a5f3fc", "#c4b5fd", "#99f6e4", "#0891b2"];
               return (
                 <span
                   key={i}
@@ -143,7 +143,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* drifting grove glow */}
+        {/* drifting frostline glow */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {ORBS.map((g, i) => (
             <div
@@ -176,7 +176,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
-              <div className="rounded-xl bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 p-[3px] shadow-[0_16px_32px_-20px_rgba(5,150,105,0.45)]">
+              <div className="rounded-xl bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 p-[3px] shadow-[0_16px_32px_-20px_rgba(8,145,178,0.45)]">
                 <div className="overflow-hidden rounded-xl bg-paper ring-1 ring-ink/20">
                   <BannerCarousel />
                 </div>
@@ -185,7 +185,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* grove ticker: plum-to-violet band with white type */}
+        {/* frostline ticker: deep-cyan band with white type */}
         <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/60 bg-gradient-to-r from-popblue-900/95 via-brand-700/95 to-brand-600/95 py-3 shadow-[0_14px_30px_-14px_rgba(15,23,42, 0.5)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
@@ -198,11 +198,11 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* grove divider into the page */}
+        {/* frostline divider into the page */}
         <div aria-hidden className="zigzag relative z-10 mx-auto mt-0 w-full max-w-7xl opacity-90" />
       </div>
 
-      {/* Stats + featured picks under the grove beacon */}
+      {/* Stats + featured picks under the frostline beacon */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 pb-24 pt-10 md:pb-28">
         <motion.div variants={container} initial="hidden" animate="show" {...anim}>
           <motion.div variants={item} className="grid grid-cols-2 gap-6 sm:grid-cols-4">
@@ -215,7 +215,7 @@ export default function Hero({ onQuickView }: HeroProps) {
               <div key={s.l} className="pop-lift relative overflow-hidden p-4 pb-3 pt-5 text-center">
                 <span className="relative block bg-gradient-to-br from-brand-600 via-gold-500 to-popblue-700 bg-clip-text text-2xl font-black tracking-tight text-transparent">{s.v}</span>
                 <span className="relative mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-mute">{s.l}</span>
-                <span aria-hidden className="relative mx-auto mt-3 block h-1 w-16 rounded-full bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 shadow-[0_2px_6px_rgba(6,95,70,0.4)]" />
+                <span aria-hidden className="relative mx-auto mt-3 block h-1 w-16 rounded-full bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 shadow-[0_2px_6px_rgba(8,51,68,0.4)]" />
               </div>
             ))}
           </motion.div>
@@ -223,7 +223,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-md border border-brand-300/60 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_8px_24px_-8px_rgba(5,150,105,0.6)] backdrop-blur">Handpicked for you</p>
+            <p className="inline-block rounded-md border border-brand-300/60 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_8px_24px_-8px_rgba(8,145,178,0.6)] backdrop-blur">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="relative bg-gradient-to-r from-brand-500 via-gold-500 to-popblue-800 bg-clip-text text-transparent">Picks<span aria-hidden className="absolute inset-x-0 -bottom-1 h-1 bg-gradient-to-r from-brand-500 to-gold-500 opacity-70" /></span></h2>
             <span className="zigzag mt-4 block w-44" aria-hidden />
           </div>
@@ -253,7 +253,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* grove divider into the page */}
+      {/* frostline divider into the page */}
       <div aria-hidden className="zigzag absolute bottom-0 left-0 w-full opacity-90" />
     </section>
   );
