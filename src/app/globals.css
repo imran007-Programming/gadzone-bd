@@ -1,71 +1,70 @@
 @import "tailwindcss";
 
 @theme {
-  /* Glacier Circuit: a cool, crisp direction —
-     deep teal as the primary accent, bright mint
-     for highlights, dark slate-teal for grounded
-     contrast, on icy mint paper with a frost wash.
-     Cards are sharp, flat panels with a thin cool
-     border and a crisp flat shadow — the opposite
-     of the previous Ember Spice look, its warm
-     terracotta/amber palette, warm cream paper,
-     sunset wash, soft fully rounded panels and
-     soft warm shadows. */
+  /* Night Bloom: a warm-night violet direction —
+     deep violet as the primary accent, vivid lime
+     for highlights, dark plum for grounded contrast,
+     on soft lilac paper with a violet-lime wash.
+     Cards are plump, fully rounded panels with a
+     soft diffused shadow — the opposite of the
+     previous Glacier Circuit look, its cool teal/
+     cyan palette, icy mint paper, frost wash,
+     sharp flat panels and crisp flat shadows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = deep teal scale */
-  --color-brand-50: #f0fdfa;
-  --color-brand-100: #ccfbf1;
-  --color-brand-200: #99f6e4;
-  --color-brand-300: #5eead4;
-  --color-brand-400: #2dd4bf;
-  --color-brand-500: #14b8a6;
-  --color-brand-600: #0d9488;
-  --color-brand-700: #0f766e;
-  --color-brand-800: #115e59;
-  --color-brand-900: #134e4a;
-  --color-brand-950: #042f2e;
-  --color-brand: #0f766e;
-  --color-brand-dark: #115e59;
-  --color-brand-deep: #134e4a;
+  /* brand = deep violet scale */
+  --color-brand-50: #f5f3ff;
+  --color-brand-100: #ede9fe;
+  --color-brand-200: #ddd6fe;
+  --color-brand-300: #c4b5fd;
+  --color-brand-400: #a78bfa;
+  --color-brand-500: #8b5cf6;
+  --color-brand-600: #7c3aed;
+  --color-brand-700: #6d28d9;
+  --color-brand-800: #5b21b6;
+  --color-brand-900: #4c1d95;
+  --color-brand-950: #2e1065;
+  --color-brand: #6d28d9;
+  --color-brand-dark: #5b21b6;
+  --color-brand-deep: #4c1d95;
 
-  /* gold = bright mint/cyan scale */
-  --color-gold-50: #ecfeff;
-  --color-gold-100: #cffafe;
-  --color-gold-200: #a5f3fc;
-  --color-gold-300: #67e8f9;
-  --color-gold-400: #22d3ee;
-  --color-gold-500: #06b6d4;
-  --color-gold-600: #0891b2;
-  --color-gold-700: #0e7490;
-  --color-gold-800: #155e75;
-  --color-gold-900: #164e63;
-  --color-gold-950: #083344;
-  --color-gold: #06b6d4;
-  --color-gold-deep: #0e7490;
-  --color-gold-soft: #cffafe;
+  /* gold = vivid lime scale */
+  --color-gold-50: #f7fee7;
+  --color-gold-100: #ecfccb;
+  --color-gold-200: #d9f99d;
+  --color-gold-300: #bef264;
+  --color-gold-400: #a3e635;
+  --color-gold-500: #84cc16;
+  --color-gold-600: #65a30d;
+  --color-gold-700: #4d7c0f;
+  --color-gold-800: #3f6212;
+  --color-gold-900: #365314;
+  --color-gold-950: #1a2e05;
+  --color-gold: #84cc16;
+  --color-gold-deep: #4d7c0f;
+  --color-gold-soft: #ecfccb;
 
-  /* popblue = dark slate-teal scale (name kept for legacy class refs) */
-  --color-popblue-50: #f8fafc;
-  --color-popblue-100: #f1f5f9;
-  --color-popblue-200: #e2e8f0;
-  --color-popblue-300: #cbd5e1;
-  --color-popblue-400: #94a3b8;
-  --color-popblue-500: #64748b;
-  --color-popblue-600: #475569;
-  --color-popblue-700: #334155;
-  --color-popblue-800: #1e293b;
-  --color-popblue-900: #0f172a;
-  --color-popblue-950: #020617;
-  --color-popblue: #334155;
-  --color-popblue-deep: #0f172a;
-  --color-popblue-soft: #f1f5f9;
+  /* popblue = dark plum scale (name kept for legacy class refs) */
+  --color-popblue-50: #fdf4ff;
+  --color-popblue-100: #fae8ff;
+  --color-popblue-200: #f5d0fe;
+  --color-popblue-300: #f0abfc;
+  --color-popblue-400: #e879f9;
+  --color-popblue-500: #d946ef;
+  --color-popblue-600: #c026d3;
+  --color-popblue-700: #a21caf;
+  --color-popblue-800: #86198f;
+  --color-popblue-900: #701a75;
+  --color-popblue-950: #4a044e;
+  --color-popblue: #a21caf;
+  --color-popblue-deep: #701a75;
+  --color-popblue-soft: #fae8ff;
 
-  --color-ink: #134e4a;
-  --color-paper: #f0fdfa;
-  --color-mute: #475569;
+  --color-ink: #3b0764;
+  --color-paper: #f5f3ff;
+  --color-mute: #65558a;
   --color-card: #ffffff;
-  --color-deep: #134e4a;
+  --color-deep: #4c1d95;
 }
 
 html { scroll-behavior: smooth; }
@@ -80,168 +79,166 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f0fdfa;
+  background-color: #f5f3ff;
   background-image:
-    radial-gradient(ellipse 60% 28% at 12% 0%, rgba(20, 184, 166, 0.18) 0%, rgba(20, 184, 166, 0) 70%),
-    radial-gradient(ellipse 50% 24% at 92% 12%, rgba(6, 182, 212, 0.20) 0%, rgba(6, 182, 212, 0) 70%),
-    linear-gradient(180deg, rgba(204, 251, 241, 0.9) 0%, rgba(207, 250, 254, 0.5) 42%, rgba(240, 253, 250, 0) 78%);
-  color: #134e4a;
+    radial-gradient(ellipse 60% 28% at 12% 0%, rgba(139, 92, 246, 0.20) 0%, rgba(139, 92, 246, 0) 70%),
+    radial-gradient(ellipse 50% 24% at 92% 12%, rgba(163, 230, 53, 0.22) 0%, rgba(163, 230, 53, 0) 70%),
+    linear-gradient(180deg, rgba(237, 233, 254, 0.9) 0%, rgba(236, 252, 203, 0.5) 42%, rgba(245, 243, 255, 0) 78%);
+  color: #3b0764;
 }
-::selection { background: #a5f3fc; color: #042f2e; }
+::selection { background: #bef264; color: #2e1065; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0f766e, #06b6d4); border-radius: 2px; border: 2px solid #f0fdfa; }
-::-webkit-scrollbar-track { background: #ccfbf1; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #7c3aed, #84cc16); border-radius: 999px; border: 2px solid #f5f3ff; }
+::-webkit-scrollbar-track { background: #ede9fe; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Glacier Circuit type: tight, crisp headlines. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Night Bloom type: wide, soft headlines. */
+h1, h2, h3 { letter-spacing: 0.01em; text-wrap: balance; }
 
-/* Glacier Circuit frost: drifting up through cool air. */
+/* Night Bloom bloom: drifting up through warm night air. */
 @keyframes signal-rise {
-  0% { transform: translate3d(0, 10vh, 0) rotate(-4deg) scale(0.9); opacity: 0; }
+  0% { transform: translate3d(0, 10vh, 0) rotate(4deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.85; }
-  50% { transform: translate3d(3vw, -30vh, 0) rotate(5deg) scale(1.05); }
-  100% { transform: translate3d(-2vw, -68vh, 0) rotate(-5deg) scale(1); opacity: 0; }
+  50% { transform: translate3d(-3vw, -30vh, 0) rotate(-5deg) scale(1.05); }
+  100% { transform: translate3d(2vw, -68vh, 0) rotate(5deg) scale(1); opacity: 0; }
 }
 .pop-fall { animation: signal-rise 16s linear infinite; }
 
-/* Glacier Circuit sway: a slow side-to-side drift. */
+/* Night Bloom sway: a slow side-to-side drift. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(-10px, 0, 0) rotate(-3deg) scale(1); opacity: 0.6; }
-  50% { transform: translate3d(10px, -14px, 0) rotate(3deg) scale(1.04); opacity: 0.95; }
+  0%, 100% { transform: translate3d(10px, 0, 0) rotate(3deg) scale(1); opacity: 0.6; }
+  50% { transform: translate3d(-10px, -14px, 0) rotate(-3deg) scale(1.04); opacity: 0.95; }
 }
 .pop-drift { animation: signal-drift 8s ease-in-out infinite; }
 
-/* Glacier Circuit bob: a gentle floating lift. */
+/* Night Bloom bob: a gentle floating lift. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-6px) scale(1.02); }
 }
 .pop-bob { animation: signal-bob 4s ease-in-out infinite; }
 
-/* Slow turn for the circuit dial. */
+/* Slow turn for the bloom dial. */
 @keyframes dial-turn {
-  to { transform: rotate(360deg); }
+  to { transform: rotate(-360deg); }
 }
 .pop-spin { animation: dial-turn 50s linear infinite; }
 
-/* Glacier Circuit glint: a cyan pulse. */
+/* Night Bloom glint: a lime pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.4; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.12); }
 }
 .pop-twinkle { animation: signal-blink 2.6s ease-in-out infinite; }
 
-/* Glacier Circuit ticker: infinite marquee (rightward drift). */
+/* Night Bloom ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 28s linear infinite; }
 
-/* Glacier Circuit bands: teal -> cyan -> slate bars. */
+/* Night Bloom bands: violet -> lime -> plum bars. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #0f766e 0 34%, #06b6d4 34% 67%, #0f172a 67% 100%);
-  background-size: 48px 48px;
-  border-radius: 2px;
+    linear-gradient(90deg, #7c3aed 0 34%, #a3e635 34% 67%, #701a75 67% 100%);
+  background-size: 64px 64px;
+  border-radius: 999px;
 }
 
-/* Glacier Circuit card: a sharp, flat panel —
-   a thin cool border and a crisp flat shadow that
-   lifts on hover instead of a soft warm rounded panel. */
+/* Night Bloom card: a plump, fully rounded panel —
+   a soft violet border and a diffused shadow that
+   lifts on hover instead of a sharp flat panel. */
 .pop-lift {
   position: relative;
-  border: 1px solid #99f6e4;
+  border: 1px solid #ddd6fe;
   background: #ffffff;
-  border-radius: 0.375rem;
-  box-shadow: 4px 4px 0 rgba(15, 118, 110, 0.18);
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 40px -18px rgba(109, 40, 217, 0.35);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  border-color: #5eead4;
-  box-shadow: 6px 6px 0 rgba(15, 118, 110, 0.28);
+  transform: translateY(-6px);
+  border-color: #c4b5fd;
+  box-shadow: 0 28px 48px -20px rgba(109, 40, 217, 0.45);
 }
 
-/* Glacier Circuit glass: shared by modals and drawers — a
-   frosted mint pane with a thin cool border and a
-   crisp flat shadow. */
+/* Night Bloom glass: shared by modals and drawers — a
+   frosted lilac pane with a soft violet border and a
+   diffused shadow. */
 .pop-glass {
-  background: rgba(240, 253, 250, 0.94);
+  background: rgba(245, 243, 255, 0.94);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid #99f6e4;
-  border-radius: 0.375rem;
-  box-shadow: 6px 6px 0 rgba(19, 78, 74, 0.22);
+  border: 1px solid #ddd6fe;
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 48px -20px rgba(76, 29, 149, 0.4);
 }
 
-/* Glacier Circuit tag: a square mint chip — dark teal type,
-   upright, with a crisp flat shadow. */
+/* Night Bloom tag: a tilted lime pill — dark plum type,
+   with a soft diffused shadow. */
 .starburst {
-  background: #22d3ee;
-  color: #083344;
+  background: #a3e635;
+  color: #1a2e05;
   text-shadow: none;
-  border-radius: 2px;
-  transform: rotate(0deg);
-  box-shadow: 3px 3px 0 rgba(15, 118, 110, 0.55);
-  border: 1px solid #06b6d4;
+  border-radius: 999px;
+  transform: rotate(-3deg);
+  box-shadow: 0 10px 20px -8px rgba(109, 40, 217, 0.5);
+  border: 1px solid #84cc16;
 }
 
-/* Glacier Circuit texture: a cool teal grid. */
+/* Night Bloom texture: a soft violet dot field. */
 .halftone {
-  background-image:
-    linear-gradient(rgba(15, 118, 110, 0.10) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(15, 118, 110, 0.10) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(124, 58, 237, 0.22) 1.5px, transparent 1.5px);
   background-size: 22px 22px;
   background-position: 0 0;
 }
 
-/* Glacier Circuit rule: a solid teal-to-cyan bar. */
+/* Night Bloom rule: a soft violet-to-lime bar. */
 .zigzag {
-  height: 5px;
+  height: 6px;
   border-top: none;
-  background: linear-gradient(90deg, #0f766e 0%, #06b6d4 100%);
+  background: linear-gradient(90deg, #7c3aed 0%, #a3e635 100%);
   opacity: 1;
-  border-radius: 2px;
+  border-radius: 999px;
 }
 
-/* Glacier Circuit band: a teal-to-cyan wash
-   with a crisp shadow and square bottom edge. */
+/* Night Bloom band: a violet-to-plum wash
+   with a soft shadow and rounded bottom edge. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #134e4a, #0f766e 55%, #06b6d4);
+  background: linear-gradient(90deg, #4c1d95, #7c3aed 55%, #a3e635);
   opacity: 1;
-  box-shadow: 0 6px 0 rgba(19, 78, 74, 0.25);
+  box-shadow: 0 18px 36px -18px rgba(76, 29, 149, 0.55);
   border-bottom: none;
-  border-radius: 0;
+  border-radius: 0 0 1.5rem 1.5rem;
 }
 
-/* Glacier Circuit glow: a cool teal-cyan halo for the core. */
+/* Night Bloom glow: a soft violet-lime halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.9) 0%, rgba(165, 243, 252, 0.65) 42%, rgba(15, 118, 110, 0.32) 62%, rgba(15, 118, 110, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.9) 0%, rgba(217, 249, 157, 0.65) 42%, rgba(124, 58, 237, 0.32) 62%, rgba(124, 58, 237, 0) 76%);
 }
 
-/* Glacier Circuit core: a teal disc with a cyan ring. */
+/* Night Bloom core: a violet disc with a lime ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #2dd4bf 0%, #0f766e 55%, #134e4a 100%);
-  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.9), 0 24px 48px -16px rgba(15, 118, 110, 0.55);
+    radial-gradient(circle at 35% 30%, #a78bfa 0%, #7c3aed 55%, #4c1d95 100%);
+  box-shadow: 0 0 0 3px rgba(163, 230, 53, 0.9), 0 24px 48px -16px rgba(109, 40, 217, 0.55);
   border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
-/* Cool rings around the core disc. */
+/* Soft rings around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(15, 118, 110, 0.45) 0px,
-    rgba(15, 118, 110, 0.45) 1px,
+    rgba(124, 58, 237, 0.45) 0px,
+    rgba(124, 58, 237, 0.45) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(6, 182, 212, 0.45) 14px,
-    rgba(6, 182, 212, 0.45) 15px,
+    rgba(163, 230, 53, 0.45) 14px,
+    rgba(163, 230, 53, 0.45) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -252,7 +249,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(34, 211, 238, 0.55) 0deg 3deg,
+    rgba(163, 230, 53, 0.55) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
