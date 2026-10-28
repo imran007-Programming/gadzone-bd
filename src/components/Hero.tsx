@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Terracotta Sun glow drifting over the warm sand.
+// Lagoon Night glow drifting over the cool water.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(234, 88, 12, 0.28)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(234, 179, 8, 0.2)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(156, 90, 34, 0.22)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(249, 115, 22, 0.25)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(13, 148, 136, 0.28)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(6, 182, 212, 0.2)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(2, 132, 199, 0.22)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(20, 184, 166, 0.25)" },
 ];
 
-// Terracotta Sun embers falling through the warm light.
+// Lagoon Night bubbles rising through the cool water.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#ea580c" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#eab308" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#c2410c" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#9c5a22" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#f97316" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#facc15" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#fdba74" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#0d9488" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#06b6d4" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#0f766e" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#0284c7" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#14b8a6" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#22d3ee" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#5eead4" },
 ];
 
 // Leaf glints scattered through the warm light.
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* grove wash under the warm light */}
-      <div className="relative bg-gradient-to-b from-[#ffedd5] via-[#fef9c3] to-[#fed7aa]">
+      <div className="relative bg-gradient-to-b from-[#ccfbf1] via-[#cffafe] to-[#bae6fd]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -100,7 +100,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(234,88,12, 0.45), inset 0 0 18px rgba(234,88,12, 0.30)",
+                  boxShadow: "0 0 28px 2px rgba(13,148,136, 0.45), inset 0 0 18px rgba(13,148,136, 0.30)",
                   opacity: 1 - r * 0.22,
                 }}
               />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#fed7aa", "#fef08a", "#fdba74", "#ea580c"];
+              const colors = ["#99f6e4", "#a5f3fc", "#5eead4", "#0d9488"];
               return (
                 <span
                   key={i}
@@ -176,7 +176,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
-              <div className="rounded-xl bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 p-[3px] shadow-[0_16px_32px_-20px_rgba(234,88,12,0.45)]">
+              <div className="rounded-xl bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 p-[3px] shadow-[0_16px_32px_-20px_rgba(13,148,136,0.45)]">
                 <div className="overflow-hidden rounded-xl bg-paper ring-1 ring-ink/20">
                   <BannerCarousel />
                 </div>
@@ -223,7 +223,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-md border border-brand-300/60 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_8px_24px_-8px_rgba(234,88,12,0.6)] backdrop-blur">Handpicked for you</p>
+            <p className="inline-block rounded-md border border-brand-300/60 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_8px_24px_-8px_rgba(13,148,136,0.6)] backdrop-blur">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="relative bg-gradient-to-r from-brand-500 via-gold-500 to-popblue-800 bg-clip-text text-transparent">Picks<span aria-hidden className="absolute inset-x-0 -bottom-1 h-1 bg-gradient-to-r from-brand-500 to-gold-500 opacity-70" /></span></h2>
             <span className="zigzag mt-4 block w-44" aria-hidden />
           </div>
