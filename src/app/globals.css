@@ -1,72 +1,72 @@
 @import "tailwindcss";
 
 @theme {
-  /* Solar Citrus: a warm, zesty direction —
-     burnt orange as the primary accent, leaf green
-     for fresh highlights, cocoa brown for contrast,
-     on warm cream paper with a diagonal pinstripe
-     texture. Cards are tighter medium-rounded panels
-     with a crisp amber border, a solid top accent
-     bar and a small offset shadow — the opposite of
-     the previous Twilight Plum look, its violet /
-     coral / indigo palette, pale lilac paper, dot
-     texture, big soft-rounded panels and diffused
-     shadows. */
+  /* Lagoon Drift: a cool, calm direction —
+     deep teal as the primary accent, marigold amber
+     for warm highlights, deep-sea petrol for contrast,
+     on pale aqua paper with a soft dot-grid texture.
+     Cards are large soft-rounded panels with a thin
+     teal border and a diffused shadow that deepens on
+     hover — the opposite of the previous Solar Citrus
+     look, its burnt-orange / leaf-green / cocoa palette,
+     warm cream paper, diagonal pinstripe texture,
+     tighter medium-rounded panels, solid top accent
+     bar and hard offset shadows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = burnt-orange scale */
-  --color-brand-50: #fff7ed;
-  --color-brand-100: #ffedd5;
-  --color-brand-200: #fed7aa;
-  --color-brand-300: #fdba74;
-  --color-brand-400: #fb923c;
-  --color-brand-500: #f97316;
-  --color-brand-600: #ea580c;
-  --color-brand-700: #c2410c;
-  --color-brand-800: #9a3412;
-  --color-brand-900: #7c2d12;
-  --color-brand-950: #431407;
-  --color-brand: #ea580c;
-  --color-brand-dark: #c2410c;
-  --color-brand-deep: #7c2d12;
+  /* brand = deep-teal scale */
+  --color-brand-50: #f0fdfa;
+  --color-brand-100: #ccfbf1;
+  --color-brand-200: #99f6e4;
+  --color-brand-300: #5eead4;
+  --color-brand-400: #2dd4bf;
+  --color-brand-500: #14b8a6;
+  --color-brand-600: #0d9488;
+  --color-brand-700: #0f766e;
+  --color-brand-800: #115e59;
+  --color-brand-900: #134e4a;
+  --color-brand-950: #042f2e;
+  --color-brand: #0d9488;
+  --color-brand-dark: #0f766e;
+  --color-brand-deep: #134e4a;
 
-  /* gold = leaf-green scale (name kept for legacy class refs) */
-  --color-gold-50: #f0fdf4;
-  --color-gold-100: #dcfce7;
-  --color-gold-200: #bbf7d0;
-  --color-gold-300: #86efac;
-  --color-gold-400: #4ade80;
-  --color-gold-500: #22c55e;
-  --color-gold-600: #16a34a;
-  --color-gold-700: #15803d;
-  --color-gold-800: #166534;
-  --color-gold-900: #14532d;
-  --color-gold-950: #052e16;
-  --color-gold: #16a34a;
-  --color-gold-deep: #14532d;
-  --color-gold-soft: #dcfce7;
+  /* gold = marigold-amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #d97706;
+  --color-gold-deep: #92400e;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = cocoa-brown scale (name kept for legacy class refs) */
-  --color-popblue-50: #fdf8f2;
-  --color-popblue-100: #f5e8d8;
-  --color-popblue-200: #e8cfae;
-  --color-popblue-300: #d9ac7a;
-  --color-popblue-400: #c9854a;
-  --color-popblue-500: #a96a2e;
-  --color-popblue-600: #8a5220;
-  --color-popblue-700: #6f3f1a;
-  --color-popblue-800: #5a3317;
-  --color-popblue-900: #451a03;
-  --color-popblue-950: #2a1202;
-  --color-popblue: #8a5220;
-  --color-popblue-deep: #2a1202;
-  --color-popblue-soft: #f5e8d8;
+  /* popblue = deep-sea petrol scale (name kept for legacy class refs) */
+  --color-popblue-50: #f0f9fa;
+  --color-popblue-100: #dcf0f2;
+  --color-popblue-200: #bfe0e5;
+  --color-popblue-300: #93c8d1;
+  --color-popblue-400: #5aa6b4;
+  --color-popblue-500: #3a8a99;
+  --color-popblue-600: #2f7080;
+  --color-popblue-700: #2b5c68;
+  --color-popblue-800: #274c56;
+  --color-popblue-900: #23424a;
+  --color-popblue-950: #122a30;
+  --color-popblue: #2f7080;
+  --color-popblue-deep: #122a30;
+  --color-popblue-soft: #dcf0f2;
 
-  --color-ink: #2b1d10;
-  --color-paper: #fffaf0;
-  --color-mute: #7a6a58;
+  --color-ink: #123232;
+  --color-paper: #f2fafa;
+  --color-mute: #5b7a7a;
   --color-card: #ffffff;
-  --color-deep: #7c2d12;
+  --color-deep: #134e4a;
 }
 
 html { scroll-behavior: smooth; }
@@ -81,176 +81,167 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fffaf0;
+  background-color: #f2fafa;
   background-image:
-    repeating-linear-gradient(115deg, rgba(234, 88, 12, 0.05) 0px, rgba(234, 88, 12, 0.05) 1px, transparent 1px, transparent 14px),
-    linear-gradient(160deg, rgba(255, 237, 213, 0.85) 0%, rgba(220, 252, 231, 0.35) 45%, rgba(255, 250, 240, 0) 75%);
-  background-size: 100% 100%, 100% 100%;
-  color: #2b1d10;
+    radial-gradient(rgba(13, 148, 136, 0.10) 1px, transparent 1px),
+    linear-gradient(165deg, rgba(204, 251, 241, 0.9) 0%, rgba(254, 243, 199, 0.35) 45%, rgba(242, 250, 250, 0) 78%);
+  background-size: 22px 22px, 100% 100%;
+  color: #123232;
 }
-::selection { background: #bbf7d0; color: #14532d; }
+::selection { background: #99f6e4; color: #134e4a; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #f97316, #16a34a); border-radius: 4px; border: 2px solid #fffaf0; }
-::-webkit-scrollbar-track { background: #ffedd5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0d9488, #d97706); border-radius: 999px; border: 2px solid #f2fafa; }
+::-webkit-scrollbar-track { background: #ccfbf1; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Solar Citrus type: tight headlines, punchy and open. */
-h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
+/* Lagoon Drift type: relaxed headlines, open and calm. */
+h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Solar Citrus fall: citrus leaves drifting down the warm light. */
+/* Lagoon Drift drift: bubbles rising through still water. */
 @keyframes signal-rise {
-  0% { transform: translate3d(0, -8vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
+  0% { transform: translate3d(0, 8vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.8; }
-  50% { transform: translate3d(3vw, 46vh, 0) rotate(90deg) scale(1.02); }
-  100% { transform: translate3d(-2vw, 92vh, 0) rotate(180deg) scale(1); opacity: 0; }
+  50% { transform: translate3d(-3vw, 46vh, 0) rotate(90deg) scale(1.02); }
+  100% { transform: translate3d(2vw, 92vh, 0) rotate(180deg) scale(1); opacity: 0; }
 }
 .pop-fall { animation: signal-rise 20s linear infinite; }
 
-/* Solar Citrus sway: a gentle side-to-side float. */
+/* Lagoon Drift sway: a gentle side-to-side float. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-6px, 0, 0) rotate(-2deg) scale(1); opacity: 0.6; }
   50% { transform: translate3d(6px, -10px, 0) rotate(2deg) scale(1.02); opacity: 0.9; }
 }
 .pop-drift { animation: signal-drift 12s ease-in-out infinite; }
 
-/* Solar Citrus bob: a snappy hover lift. */
+/* Lagoon Drift bob: a soft hover lift. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-5px) scale(1.01); }
 }
 .pop-bob { animation: signal-bob 5s ease-in-out infinite; }
 
-/* Slow turn for the citrus dial. */
+/* Slow turn for the lagoon dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 70s linear infinite; }
 
-/* Solar Citrus glint: a warm amber pulse. */
+/* Lagoon Drift glint: a soft amber pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.5; transform: scale(0.94); }
   50% { opacity: 1; transform: scale(1.06); }
 }
 .pop-twinkle { animation: signal-blink 3.5s ease-in-out infinite; }
 
-/* Solar Citrus ticker: infinite marquee (leftward drift). */
+/* Lagoon Drift ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 34s linear infinite; }
 
-/* Solar Citrus bands: orange -> green -> cocoa bars. */
+/* Lagoon Drift bands: teal -> amber -> deep-sea bars. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #ea580c 0 34%, #16a34a 34% 67%, #8a5220 67% 100%);
+    linear-gradient(90deg, #0d9488 0 34%, #d97706 34% 67%, #2f7080 67% 100%);
   background-size: 72px 72px;
-  border-radius: 4px;
+  border-radius: 999px;
 }
 
-/* Solar Citrus card: a tighter medium-rounded panel —
-   a crisp amber border, a solid orange top accent bar
-   and a small flat offset shadow that steps out on
-   hover instead of a soft diffused glow. */
+/* Lagoon Drift card: a large soft-rounded panel —
+   a thin teal border and a soft diffused shadow that
+   deepens and lifts on hover instead of a hard offset
+   block or a solid top accent bar. */
 .pop-lift {
   position: relative;
-  border: 2px solid #fed7aa;
+  border: 1px solid #ccfbf1;
   background: #ffffff;
-  border-radius: 0.9rem;
-  box-shadow: 4px 4px 0 rgba(194, 65, 12, 0.14);
+  border-radius: 1.75rem;
+  box-shadow: 0 18px 36px -18px rgba(19, 78, 74, 0.28);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   overflow: hidden;
 }
-.pop-lift::before {
-  content: "";
-  position: absolute;
-  inset-inline: 0;
-  top: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #ea580c, #f97316 45%, #16a34a);
-  z-index: 1;
-}
 .pop-lift:hover {
-  transform: translate(-2px, -4px);
-  box-shadow: 7px 7px 0 rgba(194, 65, 12, 0.18);
+  transform: translateY(-4px);
+  box-shadow: 0 28px 48px -20px rgba(19, 78, 74, 0.38);
 }
 
-/* Solar Citrus glass: shared by modals and drawers — a
-   frosted cream pane with an amber border and a flat
-   offset shadow. */
+/* Lagoon Drift glass: shared by modals and drawers — a
+   frosted aqua pane with a teal border and a soft
+   diffused shadow. */
 .pop-glass {
-  background: rgba(255, 250, 240, 0.94);
+  background: rgba(242, 250, 250, 0.94);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 2px solid #fed7aa;
-  border-radius: 0.9rem;
-  box-shadow: 5px 5px 0 rgba(194, 65, 12, 0.16);
+  border: 1px solid #ccfbf1;
+  border-radius: 1.75rem;
+  box-shadow: 0 24px 44px -20px rgba(19, 78, 74, 0.32);
 }
 
-/* Solar Citrus tag: a leaf-green square badge — white
-   type, tilted slightly, with a crisp white frame. */
+/* Lagoon Drift tag: a marigold pill badge — white
+   type, upright, with a soft halo shadow. */
 .starburst {
-  background: #16a34a;
+  background: #d97706;
   color: #ffffff;
   text-shadow: none;
-  border-radius: 0.5rem;
-  transform: rotate(-3deg);
-  box-shadow: 3px 3px 0 rgba(124, 45, 18, 0.35);
+  border-radius: 999px;
+  transform: none;
+  box-shadow: 0 10px 24px -8px rgba(180, 83, 9, 0.55);
   border: 2px solid #ffffff;
 }
 
-/* Solar Citrus pinstripes: a warm diagonal stripe texture. */
+/* Lagoon Drift dots: a soft teal dot-grid texture. */
 .halftone {
   background-image:
-    repeating-linear-gradient(115deg, rgba(234, 88, 12, 0.12) 0px, rgba(234, 88, 12, 0.12) 1px, transparent 1px, transparent 12px);
-  background-size: auto;
+    radial-gradient(rgba(13, 148, 136, 0.16) 1.2px, transparent 1.2px);
+  background-size: 20px 20px;
   background-position: 0 0;
 }
 
-/* Solar Citrus rule: a squared orange-to-green-to-cocoa bar. */
+/* Lagoon Drift rule: a rounded teal-to-amber-to-sea bar. */
 .zigzag {
   height: 6px;
   border-top: none;
-  background: linear-gradient(90deg, #ea580c 0 33%, #16a34a 33% 67%, #8a5220 67% 100%);
+  background: linear-gradient(90deg, #0d9488 0 33%, #d97706 33% 67%, #2f7080 67% 100%);
   opacity: 1;
-  border-radius: 2px;
+  border-radius: 999px;
 }
 
-/* Solar Citrus band: a bold horizontal orange-to-green
-   wash with a flat offset shadow. */
+/* Lagoon Drift band: a calm horizontal teal-to-sea
+   wash with a soft shadow. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #c2410c, #f97316 45%, #16a34a);
+  background: linear-gradient(90deg, #0f766e, #14b8a6 45%, #2f7080);
   opacity: 1;
-  box-shadow: 0 4px 0 rgba(124, 45, 18, 0.25);
+  box-shadow: 0 10px 24px -12px rgba(19, 78, 74, 0.45);
   border-bottom: none;
-  border-radius: 0 0 0.9rem 0.9rem;
+  border-radius: 0 0 1.75rem 1.75rem;
 }
 
-/* Solar Citrus glow: a warm amber-green halo for the core. */
+/* Lagoon Drift glow: a soft teal-amber halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.9) 0%, rgba(254, 215, 170, 0.6) 42%, rgba(249, 115, 22, 0.3) 62%, rgba(249, 115, 22, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.9) 0%, rgba(153, 246, 228, 0.6) 42%, rgba(20, 184, 166, 0.3) 62%, rgba(20, 184, 166, 0) 76%);
 }
 
-/* Solar Citrus core: an amber disc with a green ring. */
+/* Lagoon Drift core: a teal disc with an amber ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fdba74 0%, #ea580c 55%, #7c2d12 100%);
-  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.85), 4px 4px 0 rgba(124, 45, 18, 0.3);
+    radial-gradient(circle at 35% 30%, #5eead4 0%, #0d9488 55%, #134e4a 100%);
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.85), 0 18px 36px -14px rgba(19, 78, 74, 0.45);
   border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
-/* Crisp rings around the core disc. */
+/* Soft rings around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(234, 88, 12, 0.45) 0px,
-    rgba(234, 88, 12, 0.45) 1px,
+    rgba(13, 148, 136, 0.45) 0px,
+    rgba(13, 148, 136, 0.45) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(22, 163, 74, 0.45) 14px,
-    rgba(22, 163, 74, 0.45) 15px,
+    rgba(217, 119, 6, 0.45) 14px,
+    rgba(217, 119, 6, 0.45) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -261,7 +252,7 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(22, 163, 74, 0.55) 0deg 3deg,
+    rgba(217, 119, 6, 0.55) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
