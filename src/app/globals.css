@@ -1,71 +1,71 @@
 @import "tailwindcss";
 
 @theme {
-  /* Frostline: a cool, icy direction — cyan as the
-     primary accent, violet for badges and prices,
-     teal for cool contrast, on an icy blue-white
-     paper with a fine dot grid. Cards are crisp,
-     lightly rounded panels with a thin cyan top
-     bar and a clean flat shadow — the opposite of
-     the previous Terracotta Kiln look, its burnt
-     orange / rose / sky palette, warm cream paper,
-     diagonal hatch texture and chunky panels with
-     a thick terracotta base bar and tilted badges. */
+  /* Mango Grove: a warm harvest direction — deep
+     emerald as the primary accent, mango amber for
+     badges and prices, lime for leafy contrast, on
+     a warm cream paper with a fine diagonal leaf
+     stripe. Cards are big soft rounded panels with
+     a thick amber base bar and a pill badge — the
+     opposite of the previous Frostline look, its
+     cyan / violet / teal palette, icy blue-white
+     paper, dot grid and crisp lightly rounded
+     panels with a thin cyan top bar. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = cyan scale */
-  --color-brand-50: #ecfeff;
-  --color-brand-100: #cffafe;
-  --color-brand-200: #a5f3fc;
-  --color-brand-300: #67e8f9;
-  --color-brand-400: #22d3ee;
-  --color-brand-500: #06b6d4;
-  --color-brand-600: #0891b2;
-  --color-brand-700: #0e7490;
-  --color-brand-800: #155e75;
-  --color-brand-900: #164e63;
-  --color-brand-950: #083344;
-  --color-brand: #0891b2;
-  --color-brand-dark: #0e7490;
-  --color-brand-deep: #083344;
+  /* brand = emerald scale */
+  --color-brand-50: #ecfdf5;
+  --color-brand-100: #d1fae5;
+  --color-brand-200: #a7f3d0;
+  --color-brand-300: #6ee7b7;
+  --color-brand-400: #34d399;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-brand-900: #064e3b;
+  --color-brand-950: #022c22;
+  --color-brand: #059669;
+  --color-brand-dark: #047857;
+  --color-brand-deep: #022c22;
 
-  /* gold = violet scale (name kept for legacy class refs) */
-  --color-gold-50: #f5f3ff;
-  --color-gold-100: #ede9fe;
-  --color-gold-200: #ddd6fe;
-  --color-gold-300: #c4b5fd;
-  --color-gold-400: #a78bfa;
-  --color-gold-500: #8b5cf6;
-  --color-gold-600: #7c3aed;
-  --color-gold-700: #6d28d9;
-  --color-gold-800: #5b21b6;
-  --color-gold-900: #4c1d95;
-  --color-gold-950: #2e1065;
-  --color-gold: #7c3aed;
-  --color-gold-deep: #5b21b6;
-  --color-gold-soft: #ede9fe;
+  /* gold = mango amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #d97706;
+  --color-gold-deep: #92400e;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = teal scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0fdfa;
-  --color-popblue-100: #ccfbf1;
-  --color-popblue-200: #99f6e4;
-  --color-popblue-300: #5eead4;
-  --color-popblue-400: #2dd4bf;
-  --color-popblue-500: #14b8a6;
-  --color-popblue-600: #0d9488;
-  --color-popblue-700: #0f766e;
-  --color-popblue-800: #115e59;
-  --color-popblue-900: #134e4a;
-  --color-popblue-950: #042f2e;
-  --color-popblue: #0d9488;
-  --color-popblue-deep: #042f2e;
-  --color-popblue-soft: #ccfbf1;
+  /* popblue = lime leaf scale (name kept for legacy class refs) */
+  --color-popblue-50: #f7fee7;
+  --color-popblue-100: #ecfccb;
+  --color-popblue-200: #d9f99d;
+  --color-popblue-300: #bef264;
+  --color-popblue-400: #a3e635;
+  --color-popblue-500: #84cc16;
+  --color-popblue-600: #65a30d;
+  --color-popblue-700: #4d7c0f;
+  --color-popblue-800: #3f6212;
+  --color-popblue-900: #365314;
+  --color-popblue-950: #1a2e05;
+  --color-popblue: #65a30d;
+  --color-popblue-deep: #1a2e05;
+  --color-popblue-soft: #ecfccb;
 
-  --color-ink: #0f2a33;
-  --color-paper: #f2fbfe;
-  --color-mute: #5b7a86;
+  --color-ink: #16241a;
+  --color-paper: #faf7ed;
+  --color-mute: #66755f;
   --color-card: #ffffff;
-  --color-deep: #083344;
+  --color-deep: #022c22;
 }
 
 html { scroll-behavior: smooth; }
@@ -80,157 +80,156 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f2fbfe;
+  background-color: #faf7ed;
   background-image:
-    radial-gradient(rgba(8, 145, 178, 0.10) 1px, transparent 1px),
-    radial-gradient(circle at 8% 0%, rgba(6, 182, 212, 0.16) 0%, transparent 48%),
-    radial-gradient(circle at 94% 6%, rgba(124, 58, 237, 0.12) 0%, transparent 44%),
-    radial-gradient(circle at 50% 100%, rgba(13, 148, 136, 0.10) 0%, transparent 52%);
-  background-size: 24px 24px, 100% 640px, 100% 640px, 100% 720px;
+    repeating-linear-gradient(45deg, rgba(5, 150, 105, 0.05) 0px, rgba(5, 150, 105, 0.05) 1px, transparent 1px, transparent 18px),
+    radial-gradient(circle at 8% 0%, rgba(16, 185, 129, 0.16) 0%, transparent 48%),
+    radial-gradient(circle at 94% 6%, rgba(245, 158, 11, 0.14) 0%, transparent 44%),
+    radial-gradient(circle at 50% 100%, rgba(101, 163, 13, 0.12) 0%, transparent 52%);
+  background-size: auto, 100% 640px, 100% 640px, 100% 720px;
   background-repeat: repeat, no-repeat, no-repeat, no-repeat;
-  color: #0f2a33;
+  color: #16241a;
 }
-::selection { background: #a5f3fc; color: #083344; }
+::selection { background: #fde68a; color: #451a03; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #06b6d4, #7c3aed); border-radius: 999px; border: 2px solid #f2fbfe; }
-::-webkit-scrollbar-track { background: #cffafe; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #10b981, #d97706); border-radius: 999px; border: 2px solid #faf7ed; }
+::-webkit-scrollbar-track { background: #d1fae5; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Frostline type: crisp, tight headlines. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Mango Grove type: warm, slightly loose headlines. */
+h1, h2, h3 { letter-spacing: 0em; text-wrap: balance; }
 
-/* Frostline snowfall: flakes drifting down instead of embers rising. */
+/* Mango Grove leaves: leaves drifting down with a sway. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, -8vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.8; }
-  50% { transform: translate3d(2vw, 46vh, 0) rotate(40deg) scale(1.02); }
-  100% { transform: translate3d(-1vw, 92vh, 0) rotate(80deg) scale(1); opacity: 0; }
+  50% { transform: translate3d(4vw, 46vh, 0) rotate(120deg) scale(1.02); }
+  100% { transform: translate3d(-3vw, 92vh, 0) rotate(240deg) scale(1); opacity: 0; }
 }
 .pop-fall { animation: signal-rise 16s linear infinite; }
 
-/* Frostline sway: a gentle side-to-side float. */
+/* Mango Grove sway: a gentle side-to-side float. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(-8px, 0, 0) rotate(-2deg) scale(1); opacity: 0.6; }
-  50% { transform: translate3d(8px, -10px, 0) rotate(2deg) scale(1.03); opacity: 0.9; }
+  0%, 100% { transform: translate3d(-8px, 0, 0) rotate(-3deg) scale(1); opacity: 0.6; }
+  50% { transform: translate3d(8px, -10px, 0) rotate(3deg) scale(1.03); opacity: 0.9; }
 }
 .pop-drift { animation: signal-drift 12s ease-in-out infinite; }
 
-/* Frostline bob: a soft hover lift. */
+/* Mango Grove bob: a soft hover lift. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-6px) scale(1.01); }
 }
 .pop-bob { animation: signal-bob 5s ease-in-out infinite; }
 
-/* Slow turn for the frost dial. */
+/* Slow turn for the grove dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 60s linear infinite; }
 
-/* Frostline glint: a soft violet pulse. */
+/* Mango Grove glint: a soft amber pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.5; transform: scale(0.94); }
   50% { opacity: 1; transform: scale(1.06); }
 }
 .pop-twinkle { animation: signal-blink 3.5s ease-in-out infinite; }
 
-/* Frostline ticker: infinite marquee (leftward drift). */
+/* Mango Grove ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Frostline bands: cyan -> violet -> teal blocks, crisp. */
+/* Mango Grove bands: emerald -> amber -> lime blocks, soft. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #0891b2 0 34%, #7c3aed 34% 67%, #0d9488 67% 100%);
+    linear-gradient(90deg, #059669 0 34%, #d97706 34% 67%, #65a30d 67% 100%);
   background-size: 44px 44px;
   border-radius: 999px;
 }
 
-/* Frostline card: a crisp panel — a thin cyan ring,
-   a cyan top bar and a clean flat shadow that
-   lifts further on hover. */
+/* Mango Grove card: a big soft rounded panel — an
+   emerald ring, a thick amber base bar and a soft
+   warm shadow that lifts further on hover. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(8, 145, 178, 0.22);
-  border-top: 4px solid #0891b2;
+  border: 1px solid rgba(5, 150, 105, 0.22);
+  border-bottom: 5px solid #d97706;
   background: #ffffff;
-  border-radius: 0.75rem;
-  box-shadow: 0 10px 24px -12px rgba(8, 51, 68, 0.25), 0 2px 6px -2px rgba(124, 58, 237, 0.12);
+  border-radius: 1.5rem;
+  box-shadow: 0 18px 30px -18px rgba(2, 44, 34, 0.28), 0 2px 8px -2px rgba(217, 119, 6, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  border-color: rgba(8, 145, 178, 0.45);
-  box-shadow: 0 18px 30px -14px rgba(8, 51, 68, 0.35), 0 6px 14px -6px rgba(124, 58, 237, 0.2);
+  transform: translateY(-6px) scale(1.01);
+  border-color: rgba(5, 150, 105, 0.45);
+  box-shadow: 0 26px 40px -20px rgba(2, 44, 34, 0.35), 0 8px 18px -6px rgba(217, 119, 6, 0.22);
 }
 
-/* Frostline glass: shared by modals and drawers — a
-   frosted icy pane with a violet left edge. */
+/* Mango Grove glass: shared by modals and drawers — a
+   warm frosted pane with an amber left edge. */
 .pop-glass {
-  background: rgba(242, 251, 254, 0.92);
+  background: rgba(250, 247, 237, 0.92);
   backdrop-filter: blur(16px) saturate(1.05);
   -webkit-backdrop-filter: blur(16px) saturate(1.05);
-  border: 1px solid rgba(8, 145, 178, 0.28);
-  border-left: 5px solid #7c3aed;
-  border-radius: 0.75rem;
-  box-shadow: 0 20px 40px -20px rgba(8, 51, 68, 0.35);
+  border: 1px solid rgba(5, 150, 105, 0.28);
+  border-left: 5px solid #d97706;
+  border-radius: 1.25rem;
+  box-shadow: 0 20px 40px -20px rgba(2, 44, 34, 0.35);
 }
 
-/* Frostline tag: a straight icy badge — cyan to
-   violet, white type, square corners, no tilt. */
+/* Mango Grove tag: a plump mango pill badge — amber
+   to emerald, white type, fully rounded, slight tilt. */
 .starburst {
-  background: linear-gradient(135deg, #22d3ee 0%, #0891b2 55%, #7c3aed 100%);
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 55%, #059669 100%);
   color: #ffffff;
   text-shadow: none;
-  border-radius: 0.75rem;
-  transform: rotate(0deg);
-  box-shadow: 0 10px 24px rgba(8, 51, 68, 0.35);
+  border-radius: 999px;
+  transform: rotate(-2deg);
+  box-shadow: 0 10px 24px rgba(2, 44, 34, 0.35);
   border: 2px solid #ffffff;
 }
 
-/* Frostline grid: fine dot grid. */
+/* Mango Grove stripe: fine diagonal leaf lines. */
 .halftone {
   background-image:
-    radial-gradient(rgba(8, 145, 178, 0.16) 1px, transparent 1px);
-  background-size: 22px 22px;
+    repeating-linear-gradient(45deg, rgba(5, 150, 105, 0.14) 0px, rgba(5, 150, 105, 0.14) 1px, transparent 1px, transparent 14px);
 }
 
-/* Frostline rule: a slim cyan-to-violet-to-teal bar. */
+/* Mango Grove rule: a chunky emerald-to-amber-to-lime bar. */
 .zigzag {
-  height: 4px;
+  height: 6px;
   border-top: none;
-  background: linear-gradient(90deg, #0891b2 0 33%, #7c3aed 33% 67%, #0d9488 67% 100%);
+  background: linear-gradient(90deg, #059669 0 33%, #d97706 33% 67%, #65a30d 67% 100%);
   opacity: 1;
   border-radius: 999px;
 }
 
-/* Frostline band: a cool cyan-to-icy-to-violet bar with
+/* Mango Grove band: a warm cream-to-amber bar with
    a gentle glow underneath. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #cffafe, #f2fbfe, #ede9fe);
+  background: linear-gradient(90deg, #d1fae5, #faf7ed, #fef3c7);
   opacity: 1;
-  box-shadow: 0 10px 24px -12px rgba(8, 51, 68, 0.35);
-  border-bottom: 1px solid rgba(8, 145, 178, 0.22);
+  box-shadow: 0 10px 24px -12px rgba(2, 44, 34, 0.35);
+  border-bottom: 1px solid rgba(5, 150, 105, 0.22);
   border-radius: 0;
 }
 
-/* Frostline glow: a cool cyan halo for the core. */
+/* Mango Grove glow: a warm amber halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.7) 0%, rgba(6, 182, 212, 0.30) 42%, rgba(124, 58, 237, 0.28) 62%, rgba(124, 58, 237, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.7) 0%, rgba(245, 158, 11, 0.30) 42%, rgba(5, 150, 105, 0.28) 62%, rgba(5, 150, 105, 0) 76%);
 }
 
-/* Frostline core: an icy disc with a violet ring. */
+/* Mango Grove core: a ripe mango disc with a lime ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #cffafe 0%, #06b6d4 55%, #0e7490 100%);
-  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.55), 0 0 36px rgba(8, 145, 178, 0.35);
+    radial-gradient(circle at 35% 30%, #fef3c7 0%, #f59e0b 55%, #d97706 100%);
+  box-shadow: 0 0 0 3px rgba(101, 163, 13, 0.55), 0 0 36px rgba(217, 119, 6, 0.35);
   border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
@@ -238,12 +237,12 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(8, 145, 178, 0.35) 0px,
-    rgba(8, 145, 178, 0.35) 1px,
+    rgba(5, 150, 105, 0.35) 0px,
+    rgba(5, 150, 105, 0.35) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(124, 58, 237, 0.35) 14px,
-    rgba(124, 58, 237, 0.35) 15px,
+    rgba(217, 119, 6, 0.35) 14px,
+    rgba(217, 119, 6, 0.35) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -254,7 +253,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(124, 58, 237, 0.45) 0deg 3deg,
+    rgba(217, 119, 6, 0.45) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
