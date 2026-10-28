@@ -66,7 +66,7 @@ export default function ProductDetails({
     >
       {/* Breadcrumb + back */}
       <div className="flex flex-wrap items-center gap-2 text-sm">
-        <button onClick={onBack} className="rounded-full border border-[#ddd6fe] bg-white px-3 py-1.5 font-semibold text-[#161a12] shadow-sm transition hover:border-brand-400/50 hover:text-brand-700">
+        <button onClick={onBack} className="rounded-full border border-[#fed7aa] bg-white px-3 py-1.5 font-semibold text-[#161a12] shadow-sm transition hover:border-brand-400/50 hover:text-brand-700">
           ← Back
         </button>
         <button onClick={onHome} className="text-[#71717a] hover:text-brand-700">Home</button>
@@ -79,7 +79,7 @@ export default function ProductDetails({
       <div className="mt-5 grid gap-8 lg:grid-cols-2">
         {/* Gallery */}
         <div>
-          <div className="relative overflow-hidden rounded-[2rem] border border-[#ddd6fe] bg-white shadow-[0_20px_50px_-16px_rgba(22,26,18, 0.25)]">
+          <div className="relative overflow-hidden rounded-[2rem] border border-[#fed7aa] bg-white shadow-[0_20px_50px_-16px_rgba(22,26,18, 0.25)]">
             {imgErr ? (
               <div className="flex h-80 items-center justify-center bg-gradient-to-br from-brand-100 via-brand-50 to-brand-100 sm:h-96">
                 <span className="text-6xl">🔌</span>
@@ -111,7 +111,7 @@ export default function ProductDetails({
                 key={v.label}
                 onClick={() => setView(i)}
                 aria-label={`View ${v.label}`}
-                className={`overflow-hidden rounded-lg bg-white shadow-sm ring-2 transition ${view === i ? "ring-brand-400" : "ring-[#ddd6fe] hover:ring-brand-400/40"}`}
+                className={`overflow-hidden rounded-lg bg-white shadow-sm ring-2 transition ${view === i ? "ring-brand-400" : "ring-[#fed7aa] hover:ring-brand-400/40"}`}
               >
                 {imgErr ? (
                   <div className="flex h-20 items-center justify-center bg-gradient-to-br from-brand-100 via-brand-50 to-brand-100"><span className="text-2xl">🔌</span></div>
@@ -166,7 +166,7 @@ export default function ProductDetails({
                     key={c}
                     onClick={() => setColour(c)}
                     aria-pressed={colour === c}
-                    className={`rounded-full border px-4 py-2 text-sm font-semibold transition ${colour === c ? "border-brand-400/60 bg-brand-400/10 text-brand-700 ring-1 ring-brand-400/40" : "border-[#ddd6fe] bg-white text-[#71717a] hover:border-brand-400/50"}`}
+                    className={`rounded-full border px-4 py-2 text-sm font-semibold transition ${colour === c ? "border-brand-400/60 bg-brand-400/10 text-brand-700 ring-1 ring-brand-400/40" : "border-[#fed7aa] bg-white text-[#71717a] hover:border-brand-400/50"}`}
                   >
                     {c}
                   </button>
@@ -181,7 +181,7 @@ export default function ProductDetails({
                     key={o}
                     onClick={() => setOption(o)}
                     aria-pressed={option === o}
-                    className={`rounded-full border px-4 py-2 text-sm font-semibold transition ${option === o ? "border-brand-400/60 bg-brand-400/10 text-brand-700 ring-1 ring-brand-400/40" : "border-[#ddd6fe] bg-white text-[#71717a] hover:border-brand-400/50"}`}
+                    className={`rounded-full border px-4 py-2 text-sm font-semibold transition ${option === o ? "border-brand-400/60 bg-brand-400/10 text-brand-700 ring-1 ring-brand-400/40" : "border-[#fed7aa] bg-white text-[#71717a] hover:border-brand-400/50"}`}
                   >
                     {o}
                   </button>
@@ -192,7 +192,7 @@ export default function ProductDetails({
 
           {/* Quantity + actions */}
           <div className="mt-6 flex flex-wrap items-center gap-3">
-            <div className="flex items-center rounded-full border border-[#ddd6fe] bg-white text-[#161a12]">
+            <div className="flex items-center rounded-full border border-[#fed7aa] bg-white text-[#161a12]">
               <button onClick={() => setQty(Math.max(1, qty - 1))} className="px-4 py-3 text-lg" aria-label="Decrease quantity">−</button>
               <span className="w-8 text-center font-bold">{qty}</span>
               <button onClick={() => setQty(Math.min(99, qty + 1))} className="px-4 py-3 text-lg" aria-label="Increase quantity">+</button>
@@ -206,7 +206,7 @@ export default function ProductDetails({
           </div>
 
           {/* Delivery box */}
-          <div className="mt-6 rounded-lg border border-[#ddd6fe] bg-white p-4 shadow-sm">
+          <div className="mt-6 rounded-lg border border-[#fed7aa] bg-white p-4 shadow-sm">
             <h2 className="text-sm font-bold text-[#161a12]">🚚 Delivery & Returns</h2>
             <ul className="mt-2 space-y-1.5 text-sm text-[#71717a]">
               <li>Cash on Delivery available across Bangladesh.</li>
@@ -220,8 +220,8 @@ export default function ProductDetails({
       </div>
 
       {/* Tabs */}
-      <div className="mt-10 rounded-lg border border-[#ddd6fe] bg-white p-5 shadow-sm sm:p-6">
-        <div className="flex flex-wrap gap-2 border-b border-[#ddd6fe] pb-3" role="tablist" aria-label="Product information">
+      <div className="mt-10 rounded-lg border border-[#fed7aa] bg-white p-5 shadow-sm sm:p-6">
+        <div className="flex flex-wrap gap-2 border-b border-[#fed7aa] pb-3" role="tablist" aria-label="Product information">
           {TABS.map((t) => (
             <button
               key={t}
@@ -259,12 +259,12 @@ export default function ProductDetails({
             )}
             {tab === "Additional Information" && (
               <dl className="grid gap-x-8 gap-y-2 sm:grid-cols-2">
-                <div className="flex justify-between border-b border-[#ddd6fe] py-2"><dt className="font-semibold text-[#161a12]">Category</dt><dd>{p.category}</dd></div>
-                <div className="flex justify-between border-b border-[#ddd6fe] py-2"><dt className="font-semibold text-[#161a12]">Availability</dt><dd>{p.stock}</dd></div>
-                <div className="flex justify-between border-b border-[#ddd6fe] py-2"><dt className="font-semibold text-[#161a12]">Rating</dt><dd>{p.rating} / 5 ({p.reviews.toLocaleString()} reviews)</dd></div>
-                <div className="flex justify-between border-b border-[#ddd6fe] py-2"><dt className="font-semibold text-[#161a12]">In the box</dt><dd>Product + quick-start guide</dd></div>
-                <div className="flex justify-between border-b border-[#ddd6fe] py-2"><dt className="font-semibold text-[#161a12]">Payment</dt><dd>COD, bKash, Nagad, Card</dd></div>
-                <div className="flex justify-between border-b border-[#ddd6fe] py-2"><dt className="font-semibold text-[#161a12]">Warranty</dt><dd>7-day easy return + warranty support</dd></div>
+                <div className="flex justify-between border-b border-[#fed7aa] py-2"><dt className="font-semibold text-[#161a12]">Category</dt><dd>{p.category}</dd></div>
+                <div className="flex justify-between border-b border-[#fed7aa] py-2"><dt className="font-semibold text-[#161a12]">Availability</dt><dd>{p.stock}</dd></div>
+                <div className="flex justify-between border-b border-[#fed7aa] py-2"><dt className="font-semibold text-[#161a12]">Rating</dt><dd>{p.rating} / 5 ({p.reviews.toLocaleString()} reviews)</dd></div>
+                <div className="flex justify-between border-b border-[#fed7aa] py-2"><dt className="font-semibold text-[#161a12]">In the box</dt><dd>Product + quick-start guide</dd></div>
+                <div className="flex justify-between border-b border-[#fed7aa] py-2"><dt className="font-semibold text-[#161a12]">Payment</dt><dd>COD, bKash, Nagad, Card</dd></div>
+                <div className="flex justify-between border-b border-[#fed7aa] py-2"><dt className="font-semibold text-[#161a12]">Warranty</dt><dd>7-day easy return + warranty support</dd></div>
               </dl>
             )}
             {tab === "Shipping & Delivery" && (
@@ -291,7 +291,7 @@ export default function ProductDetails({
               <p className="text-xs font-bold uppercase tracking-widest text-brand-700">You may also like</p>
               <h2 className="mt-1 text-2xl font-black tracking-tight text-[#161a12]">Related Products</h2>
             </div>
-            <button onClick={() => onCategory(p.category)} className="rounded-full border border-[#ddd6fe] bg-white px-4 py-2 text-sm font-semibold text-[#71717a] transition hover:border-brand-400/50 hover:text-brand-700">
+            <button onClick={() => onCategory(p.category)} className="rounded-full border border-[#fed7aa] bg-white px-4 py-2 text-sm font-semibold text-[#71717a] transition hover:border-brand-400/50 hover:text-brand-700">
               All {p.category} →
             </button>
           </div>
@@ -310,7 +310,7 @@ export default function ProductDetails({
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-gradient-to-br from-brand-100 via-brand-50 to-brand-100"><span className="text-xl">🔌</span></div>
           ) : (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={p.img} alt="" aria-hidden className="h-12 w-12 shrink-0 rounded-md object-cover ring-1 ring-[#ddd6fe]" onError={() => setImgErr(true)} />
+            <img src={p.img} alt="" aria-hidden className="h-12 w-12 shrink-0 rounded-md object-cover ring-1 ring-[#fed7aa]" onError={() => setImgErr(true)} />
           )}
           <div className="min-w-0 flex-1">
             <p className="truncate text-sm font-bold text-[#161a12]">{p.name}</p>
