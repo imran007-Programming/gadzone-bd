@@ -1,70 +1,71 @@
 @import "tailwindcss";
 
 @theme {
-  /* Night Bloom: a warm-night violet direction —
-     deep violet as the primary accent, vivid lime
-     for highlights, dark plum for grounded contrast,
-     on soft lilac paper with a violet-lime wash.
-     Cards are plump, fully rounded panels with a
-     soft diffused shadow — the opposite of the
-     previous Glacier Circuit look, its cool teal/
-     cyan palette, icy mint paper, frost wash,
-     sharp flat panels and crisp flat shadows. */
+  /* Ember Market: a warm street-market direction —
+     burnt terracotta as the primary accent, golden
+     amber for highlights, deep pine for grounded
+     contrast, on warm cream paper with a sun-baked
+     wash. Cards are crisp, near-square panels with
+     a hard offset shadow — the opposite of the
+     previous Night Bloom look, its deep violet/
+     lime palette, lilac paper, violet-lime wash,
+     plump fully rounded panels and soft diffused
+     shadows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = deep violet scale */
-  --color-brand-50: #f5f3ff;
-  --color-brand-100: #ede9fe;
-  --color-brand-200: #ddd6fe;
-  --color-brand-300: #c4b5fd;
-  --color-brand-400: #a78bfa;
-  --color-brand-500: #8b5cf6;
-  --color-brand-600: #7c3aed;
-  --color-brand-700: #6d28d9;
-  --color-brand-800: #5b21b6;
-  --color-brand-900: #4c1d95;
-  --color-brand-950: #2e1065;
-  --color-brand: #6d28d9;
-  --color-brand-dark: #5b21b6;
-  --color-brand-deep: #4c1d95;
+  /* brand = burnt terracotta scale */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-brand-950: #431407;
+  --color-brand: #c2410c;
+  --color-brand-dark: #9a3412;
+  --color-brand-deep: #7c2d12;
 
-  /* gold = vivid lime scale */
-  --color-gold-50: #f7fee7;
-  --color-gold-100: #ecfccb;
-  --color-gold-200: #d9f99d;
-  --color-gold-300: #bef264;
-  --color-gold-400: #a3e635;
-  --color-gold-500: #84cc16;
-  --color-gold-600: #65a30d;
-  --color-gold-700: #4d7c0f;
-  --color-gold-800: #3f6212;
-  --color-gold-900: #365314;
-  --color-gold-950: #1a2e05;
-  --color-gold: #84cc16;
-  --color-gold-deep: #4d7c0f;
-  --color-gold-soft: #ecfccb;
+  /* gold = golden amber scale */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #b45309;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = dark plum scale (name kept for legacy class refs) */
-  --color-popblue-50: #fdf4ff;
-  --color-popblue-100: #fae8ff;
-  --color-popblue-200: #f5d0fe;
-  --color-popblue-300: #f0abfc;
-  --color-popblue-400: #e879f9;
-  --color-popblue-500: #d946ef;
-  --color-popblue-600: #c026d3;
-  --color-popblue-700: #a21caf;
-  --color-popblue-800: #86198f;
-  --color-popblue-900: #701a75;
-  --color-popblue-950: #4a044e;
-  --color-popblue: #a21caf;
-  --color-popblue-deep: #701a75;
-  --color-popblue-soft: #fae8ff;
+  /* popblue = deep pine scale (name kept for legacy class refs) */
+  --color-popblue-50: #ecfdf5;
+  --color-popblue-100: #d1fae5;
+  --color-popblue-200: #a7f3d0;
+  --color-popblue-300: #6ee7b7;
+  --color-popblue-400: #34d399;
+  --color-popblue-500: #10b981;
+  --color-popblue-600: #059669;
+  --color-popblue-700: #047857;
+  --color-popblue-800: #065f46;
+  --color-popblue-900: #064e3b;
+  --color-popblue-950: #022c22;
+  --color-popblue: #047857;
+  --color-popblue-deep: #064e3b;
+  --color-popblue-soft: #d1fae5;
 
-  --color-ink: #3b0764;
-  --color-paper: #f5f3ff;
-  --color-mute: #65558a;
+  --color-ink: #292524;
+  --color-paper: #fff7ed;
+  --color-mute: #78716c;
   --color-card: #ffffff;
-  --color-deep: #4c1d95;
+  --color-deep: #7c2d12;
 }
 
 html { scroll-behavior: smooth; }
@@ -79,166 +80,165 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f5f3ff;
+  background-color: #fff7ed;
   background-image:
-    radial-gradient(ellipse 60% 28% at 12% 0%, rgba(139, 92, 246, 0.20) 0%, rgba(139, 92, 246, 0) 70%),
-    radial-gradient(ellipse 50% 24% at 92% 12%, rgba(163, 230, 53, 0.22) 0%, rgba(163, 230, 53, 0) 70%),
-    linear-gradient(180deg, rgba(237, 233, 254, 0.9) 0%, rgba(236, 252, 203, 0.5) 42%, rgba(245, 243, 255, 0) 78%);
-  color: #3b0764;
+    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(249, 115, 22, 0.18) 0%, rgba(249, 115, 22, 0) 70%),
+    radial-gradient(ellipse 45% 22% at 8% 10%, rgba(245, 158, 11, 0.20) 0%, rgba(245, 158, 11, 0) 70%),
+    linear-gradient(180deg, rgba(255, 237, 213, 0.9) 0%, rgba(254, 243, 199, 0.5) 42%, rgba(255, 247, 237, 0) 78%);
+  color: #292524;
 }
-::selection { background: #bef264; color: #2e1065; }
+::selection { background: #fcd34d; color: #431407; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #7c3aed, #84cc16); border-radius: 999px; border: 2px solid #f5f3ff; }
-::-webkit-scrollbar-track { background: #ede9fe; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ea580c, #f59e0b); border-radius: 2px; border: 2px solid #fff7ed; }
+::-webkit-scrollbar-track { background: #ffedd5; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Night Bloom type: wide, soft headlines. */
-h1, h2, h3 { letter-spacing: 0.01em; text-wrap: balance; }
+/* Ember Market type: tight, bold, uppercase-leaning headlines. */
+h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Night Bloom bloom: drifting up through warm night air. */
+/* Ember Market ember: rising sparks over a market stall. */
 @keyframes signal-rise {
-  0% { transform: translate3d(0, 10vh, 0) rotate(4deg) scale(0.9); opacity: 0; }
+  0% { transform: translate3d(0, 10vh, 0) rotate(-3deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.85; }
-  50% { transform: translate3d(-3vw, -30vh, 0) rotate(-5deg) scale(1.05); }
-  100% { transform: translate3d(2vw, -68vh, 0) rotate(5deg) scale(1); opacity: 0; }
+  50% { transform: translate3d(3vw, -30vh, 0) rotate(4deg) scale(1.05); }
+  100% { transform: translate3d(-2vw, -68vh, 0) rotate(-4deg) scale(1); opacity: 0; }
 }
 .pop-fall { animation: signal-rise 16s linear infinite; }
 
-/* Night Bloom sway: a slow side-to-side drift. */
+/* Ember Market sway: a slow side-to-side drift. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(10px, 0, 0) rotate(3deg) scale(1); opacity: 0.6; }
-  50% { transform: translate3d(-10px, -14px, 0) rotate(-3deg) scale(1.04); opacity: 0.95; }
+  0%, 100% { transform: translate3d(8px, 0, 0) rotate(2deg) scale(1); opacity: 0.6; }
+  50% { transform: translate3d(-8px, -10px, 0) rotate(-2deg) scale(1.03); opacity: 0.95; }
 }
 .pop-drift { animation: signal-drift 8s ease-in-out infinite; }
 
-/* Night Bloom bob: a gentle floating lift. */
+/* Ember Market bob: a gentle floating lift. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-6px) scale(1.02); }
+  50% { transform: translateY(-5px) scale(1.01); }
 }
 .pop-bob { animation: signal-bob 4s ease-in-out infinite; }
 
-/* Slow turn for the bloom dial. */
+/* Slow turn for the ember dial. */
 @keyframes dial-turn {
-  to { transform: rotate(-360deg); }
+  to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 50s linear infinite; }
 
-/* Night Bloom glint: a lime pulse. */
+/* Ember Market glint: an amber pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.4; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.12); }
 }
 .pop-twinkle { animation: signal-blink 2.6s ease-in-out infinite; }
 
-/* Night Bloom ticker: infinite marquee (leftward drift). */
+/* Ember Market ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 28s linear infinite; }
 
-/* Night Bloom bands: violet -> lime -> plum bars. */
+/* Ember Market bands: terracotta -> amber -> pine bars. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #7c3aed 0 34%, #a3e635 34% 67%, #701a75 67% 100%);
+    linear-gradient(90deg, #ea580c 0 34%, #f59e0b 34% 67%, #064e3b 67% 100%);
   background-size: 64px 64px;
-  border-radius: 999px;
+  border-radius: 2px;
 }
 
-/* Night Bloom card: a plump, fully rounded panel —
-   a soft violet border and a diffused shadow that
-   lifts on hover instead of a sharp flat panel. */
+/* Ember Market card: a crisp, near-square panel —
+   a solid ink border and a hard offset shadow that
+   presses flat on hover instead of a soft lift. */
 .pop-lift {
   position: relative;
-  border: 1px solid #ddd6fe;
+  border: 2px solid #292524;
   background: #ffffff;
-  border-radius: 1.5rem;
-  box-shadow: 0 20px 40px -18px rgba(109, 40, 217, 0.35);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  border-radius: 0.375rem;
+  box-shadow: 6px 6px 0 0 #292524;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-6px);
-  border-color: #c4b5fd;
-  box-shadow: 0 28px 48px -20px rgba(109, 40, 217, 0.45);
+  transform: translate(2px, 2px);
+  box-shadow: 3px 3px 0 0 #292524;
 }
 
-/* Night Bloom glass: shared by modals and drawers — a
-   frosted lilac pane with a soft violet border and a
-   diffused shadow. */
+/* Ember Market glass: shared by modals and drawers — a
+   frosted cream pane with a solid ink border and a
+   hard offset shadow. */
 .pop-glass {
-  background: rgba(245, 243, 255, 0.94);
+  background: rgba(255, 247, 237, 0.94);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid #ddd6fe;
-  border-radius: 1.5rem;
-  box-shadow: 0 24px 48px -20px rgba(76, 29, 149, 0.4);
+  border: 2px solid #292524;
+  border-radius: 0.5rem;
+  box-shadow: 8px 8px 0 0 rgba(41, 37, 36, 0.9);
 }
 
-/* Night Bloom tag: a tilted lime pill — dark plum type,
-   with a soft diffused shadow. */
+/* Ember Market tag: a flat amber ticket — dark ink type,
+   square corners, slight tilt, hard shadow. */
 .starburst {
-  background: #a3e635;
-  color: #1a2e05;
+  background: #fbbf24;
+  color: #292524;
   text-shadow: none;
-  border-radius: 999px;
-  transform: rotate(-3deg);
-  box-shadow: 0 10px 20px -8px rgba(109, 40, 217, 0.5);
-  border: 1px solid #84cc16;
+  border-radius: 2px;
+  transform: rotate(-2deg);
+  box-shadow: 3px 3px 0 0 #292524;
+  border: 2px solid #292524;
 }
 
-/* Night Bloom texture: a soft violet dot field. */
+/* Ember Market texture: a warm terracotta dot field. */
 .halftone {
-  background-image: radial-gradient(rgba(124, 58, 237, 0.22) 1.5px, transparent 1.5px);
-  background-size: 22px 22px;
+  background-image: radial-gradient(rgba(234, 88, 12, 0.22) 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
   background-position: 0 0;
 }
 
-/* Night Bloom rule: a soft violet-to-lime bar. */
+/* Ember Market rule: a solid terracotta-to-amber bar. */
 .zigzag {
   height: 6px;
   border-top: none;
-  background: linear-gradient(90deg, #7c3aed 0%, #a3e635 100%);
+  background: linear-gradient(90deg, #c2410c 0%, #f59e0b 100%);
   opacity: 1;
-  border-radius: 999px;
+  border-radius: 2px;
 }
 
-/* Night Bloom band: a violet-to-plum wash
-   with a soft shadow and rounded bottom edge. */
+/* Ember Market band: a terracotta-to-pine wash
+   with a hard bottom border and square edge. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #4c1d95, #7c3aed 55%, #a3e635);
+  background: linear-gradient(90deg, #7c2d12, #c2410c 55%, #047857);
   opacity: 1;
-  box-shadow: 0 18px 36px -18px rgba(76, 29, 149, 0.55);
-  border-bottom: none;
-  border-radius: 0 0 1.5rem 1.5rem;
+  box-shadow: none;
+  border-bottom: 3px solid #292524;
+  border-radius: 0;
 }
 
-/* Night Bloom glow: a soft violet-lime halo for the core. */
+/* Ember Market glow: a warm terracotta-amber halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.9) 0%, rgba(217, 249, 157, 0.65) 42%, rgba(124, 58, 237, 0.32) 62%, rgba(124, 58, 237, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.9) 0%, rgba(253, 230, 138, 0.65) 42%, rgba(234, 88, 12, 0.32) 62%, rgba(234, 88, 12, 0) 76%);
 }
 
-/* Night Bloom core: a violet disc with a lime ring. */
+/* Ember Market core: a terracotta disc with an amber ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #a78bfa 0%, #7c3aed 55%, #4c1d95 100%);
-  box-shadow: 0 0 0 3px rgba(163, 230, 53, 0.9), 0 24px 48px -16px rgba(109, 40, 217, 0.55);
-  border: 2px solid rgba(255, 255, 255, 0.9);
+    radial-gradient(circle at 35% 30%, #fb923c 0%, #ea580c 55%, #7c2d12 100%);
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.9), 6px 6px 0 0 #292524;
+  border: 2px solid #292524;
 }
 
-/* Soft rings around the core disc. */
+/* Solid rings around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(124, 58, 237, 0.45) 0px,
-    rgba(124, 58, 237, 0.45) 1px,
+    rgba(234, 88, 12, 0.45) 0px,
+    rgba(234, 88, 12, 0.45) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(163, 230, 53, 0.45) 14px,
-    rgba(163, 230, 53, 0.45) 15px,
+    rgba(245, 158, 11, 0.45) 14px,
+    rgba(245, 158, 11, 0.45) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -249,7 +249,7 @@ h1, h2, h3 { letter-spacing: 0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(163, 230, 53, 0.55) 0deg 3deg,
+    rgba(245, 158, 11, 0.55) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
