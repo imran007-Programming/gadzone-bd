@@ -1,71 +1,71 @@
 @import "tailwindcss";
 
 @theme {
-  /* Indigo Blueprint: a sharp, flat direction —
-     deep indigo as the primary accent, violet for
-     secondary depth, amber for highlights, on cool
-     slate-lavender paper with a blueprint grid.
-     Cards are flat panels with a hard offset shadow:
-     a 1.5px indigo border, small rounded corners and
-     a solid indigo offset block — the opposite of the
-     previous Emerald Grove look, its emerald / lime /
-     forest palette, mint paper, plump double-ring
-     panels and extra-large rounded corners. */
+  /* Ember Sunset: a warm, soft direction —
+     deep rose as the primary accent, orange for
+     sunset warmth, teal for a cool contrast, on
+     warm cream paper with soft radial glows.
+     Cards are plump pill-rounded panels with a
+     soft diffused shadow — the opposite of the
+     previous Indigo Blueprint look, its indigo /
+     violet / amber palette, blueprint grid paper,
+     flat panels, hard offset shadows and small
+     square corners. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = indigo scale */
-  --color-brand-50: #eef2ff;
-  --color-brand-100: #e0e7ff;
-  --color-brand-200: #c7d2fe;
-  --color-brand-300: #a5b4fc;
-  --color-brand-400: #818cf8;
-  --color-brand-500: #6366f1;
-  --color-brand-600: #4f46e5;
-  --color-brand-700: #4338ca;
-  --color-brand-800: #3730a3;
-  --color-brand-900: #312e81;
-  --color-brand-950: #1e1b4b;
-  --color-brand: #4f46e5;
-  --color-brand-dark: #4338ca;
-  --color-brand-deep: #1e1b4b;
+  /* brand = rose scale */
+  --color-brand-50: #fff1f2;
+  --color-brand-100: #ffe4e6;
+  --color-brand-200: #fecdd3;
+  --color-brand-300: #fda4af;
+  --color-brand-400: #fb7185;
+  --color-brand-500: #f43f5e;
+  --color-brand-600: #e11d48;
+  --color-brand-700: #be123c;
+  --color-brand-800: #9f1239;
+  --color-brand-900: #881337;
+  --color-brand-950: #4c0519;
+  --color-brand: #e11d48;
+  --color-brand-dark: #be123c;
+  --color-brand-deep: #4c0519;
 
-  /* gold = amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #d97706;
-  --color-gold-deep: #92400e;
-  --color-gold-soft: #fef3c7;
+  /* gold = orange scale (name kept for legacy class refs) */
+  --color-gold-50: #fff7ed;
+  --color-gold-100: #ffedd5;
+  --color-gold-200: #fed7aa;
+  --color-gold-300: #fdba74;
+  --color-gold-400: #fb923c;
+  --color-gold-500: #f97316;
+  --color-gold-600: #ea580c;
+  --color-gold-700: #c2410c;
+  --color-gold-800: #9a3412;
+  --color-gold-900: #7c2d12;
+  --color-gold-950: #431407;
+  --color-gold: #ea580c;
+  --color-gold-deep: #9a3412;
+  --color-gold-soft: #ffedd5;
 
-  /* popblue = violet scale (name kept for legacy class refs) */
-  --color-popblue-50: #f5f3ff;
-  --color-popblue-100: #ede9fe;
-  --color-popblue-200: #ddd6fe;
-  --color-popblue-300: #c4b5fd;
-  --color-popblue-400: #a78bfa;
-  --color-popblue-500: #8b5cf6;
-  --color-popblue-600: #7c3aed;
-  --color-popblue-700: #6d28d9;
-  --color-popblue-800: #5b21b6;
-  --color-popblue-900: #4c1d95;
-  --color-popblue-950: #2e1065;
-  --color-popblue: #6d28d9;
-  --color-popblue-deep: #2e1065;
-  --color-popblue-soft: #ede9fe;
+  /* popblue = teal scale (name kept for legacy class refs) */
+  --color-popblue-50: #f0fdfa;
+  --color-popblue-100: #ccfbf1;
+  --color-popblue-200: #99f6e4;
+  --color-popblue-300: #5eead4;
+  --color-popblue-400: #2dd4bf;
+  --color-popblue-500: #14b8a6;
+  --color-popblue-600: #0d9488;
+  --color-popblue-700: #0f766e;
+  --color-popblue-800: #115e59;
+  --color-popblue-900: #134e4a;
+  --color-popblue-950: #042f2e;
+  --color-popblue: #0f766e;
+  --color-popblue-deep: #042f2e;
+  --color-popblue-soft: #ccfbf1;
 
-  --color-ink: #1e1b4b;
-  --color-paper: #eef2ff;
-  --color-mute: #64748b;
+  --color-ink: #292524;
+  --color-paper: #fff7ed;
+  --color-mute: #78716c;
   --color-card: #ffffff;
-  --color-deep: #1e1b4b;
+  --color-deep: #4c0519;
 }
 
 html { scroll-behavior: smooth; }
@@ -80,24 +80,24 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #eef2ff;
+  background-color: #fff7ed;
   background-image:
-    linear-gradient(rgba(79, 70, 229, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(79, 70, 229, 0.07) 1px, transparent 1px);
-  background-size: 32px 32px;
-  color: #1e1b4b;
+    radial-gradient(ellipse 60% 40% at 12% -4%, rgba(225, 29, 72, 0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 55% 38% at 92% 6%, rgba(249, 115, 22, 0.14) 0%, transparent 70%),
+    radial-gradient(ellipse 45% 30% at 50% 110%, rgba(20, 184, 166, 0.10) 0%, transparent 70%);
+  color: #292524;
 }
-::selection { background: #fde68a; color: #1e1b4b; }
+::selection { background: #fed7aa; color: #4c0519; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #4f46e5, #8b5cf6); border-radius: 4px; border: 2px solid #eef2ff; }
-::-webkit-scrollbar-track { background: #e0e7ff; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #e11d48, #f97316); border-radius: 999px; border: 2px solid #fff7ed; }
+::-webkit-scrollbar-track { background: #ffedd5; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Indigo Blueprint type: crisp headlines with wider tracking on small caps. */
+/* Ember Sunset type: warm headlines with a soft, rounded feel. */
 h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Indigo Blueprint fall: square chips drifting down the grid. */
+/* Ember Sunset fall: round embers drifting down the warm sky. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, -8vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.8; }
@@ -106,151 +106,151 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 22s linear infinite; }
 
-/* Indigo Blueprint sway: a gentle side-to-side float. */
+/* Ember Sunset sway: a gentle side-to-side float. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-6px, 0, 0) rotate(-2deg) scale(1); opacity: 0.6; }
   50% { transform: translate3d(6px, -10px, 0) rotate(2deg) scale(1.02); opacity: 0.9; }
 }
 .pop-drift { animation: signal-drift 13s ease-in-out infinite; }
 
-/* Indigo Blueprint bob: a soft hover lift. */
+/* Ember Sunset bob: a soft hover lift. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-6px) scale(1.02); }
 }
 .pop-bob { animation: signal-bob 6s ease-in-out infinite; }
 
-/* Slow turn for the blueprint dial. */
+/* Slow turn for the sunset dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 75s linear infinite; }
 
-/* Indigo Blueprint glint: a soft amber pulse. */
+/* Ember Sunset glint: a soft orange pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.5; transform: scale(0.94); }
   50% { opacity: 1; transform: scale(1.06); }
 }
 .pop-twinkle { animation: signal-blink 4s ease-in-out infinite; }
 
-/* Indigo Blueprint ticker: infinite marquee (leftward drift). */
+/* Ember Sunset ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 36s linear infinite; }
 
-/* Indigo Blueprint bands: indigo -> violet -> amber blocks, slim. */
+/* Ember Sunset bands: rose -> orange -> teal blocks, pill-soft. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #4f46e5 0 34%, #8b5cf6 34% 67%, #f59e0b 67% 100%);
+    linear-gradient(90deg, #e11d48 0 34%, #f97316 34% 67%, #14b8a6 67% 100%);
   background-size: 72px 72px;
-  border-radius: 4px;
+  border-radius: 999px;
 }
 
-/* Indigo Blueprint card: a flat panel — a 1.5px indigo
-   border, small rounded corners and a hard solid
-   indigo offset shadow that grows on hover. */
+/* Ember Sunset card: a plump pill-rounded panel — a soft
+   rose-tinted border, large rounded corners and a soft
+   diffused shadow that deepens on hover. */
 .pop-lift {
   position: relative;
-  border: 1.5px solid #c7d2fe;
+  border: 1px solid #fecdd3;
   background: #ffffff;
-  border-radius: 0.75rem;
-  box-shadow: 5px 5px 0 #312e81;
+  border-radius: 1.5rem;
+  box-shadow: 0 18px 36px -18px rgba(190, 18, 60, 0.35);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translate(-2px, -4px);
-  box-shadow: 8px 8px 0 #4f46e5;
+  transform: translateY(-4px);
+  box-shadow: 0 28px 48px -20px rgba(225, 29, 72, 0.45);
 }
 
-/* Indigo Blueprint glass: shared by modals and drawers — a
-   frosted white pane with a violet-tinted border and a
-   hard indigo offset shadow. */
+/* Ember Sunset glass: shared by modals and drawers — a
+   frosted warm-white pane with an orange-tinted border
+   and a soft diffused shadow. */
 .pop-glass {
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1.5px solid #ddd6fe;
-  border-radius: 0.75rem;
-  box-shadow: 6px 6px 0 rgba(30, 27, 75, 0.9);
+  border: 1px solid #fed7aa;
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 48px -20px rgba(76, 5, 25, 0.35);
 }
 
-/* Indigo Blueprint tag: a solid amber square badge —
-   dark indigo type, tilted square shape, hard shadow. */
+/* Ember Sunset tag: a round orange sunset badge —
+   white type, tilted slightly, soft ring and glow. */
 .starburst {
-  background: #f59e0b;
-  color: #1e1b4b;
+  background: #f97316;
+  color: #ffffff;
   text-shadow: none;
-  border-radius: 0.375rem;
-  transform: rotate(8deg);
-  box-shadow: 3px 3px 0 #1e1b4b;
+  border-radius: 999px;
+  transform: rotate(-6deg);
+  box-shadow: 0 10px 24px -8px rgba(234, 88, 12, 0.65);
   border: 2px solid #ffffff;
 }
 
-/* Indigo Blueprint dots: a crisp indigo dot grid. */
+/* Ember Sunset dots: a soft rose dot wash. */
 .halftone {
   background-image:
-    radial-gradient(rgba(79, 70, 229, 0.22) 1.5px, transparent 1.5px);
+    radial-gradient(rgba(225, 29, 72, 0.16) 1.5px, transparent 1.5px);
   background-size: 20px 20px;
   background-position: 0 0;
 }
 
-/* Indigo Blueprint rule: a straight indigo-to-violet-to-amber bar. */
+/* Ember Sunset rule: a soft rose-to-orange-to-teal bar. */
 .zigzag {
-  height: 4px;
+  height: 6px;
   border-top: none;
-  background: linear-gradient(90deg, #4f46e5 0 33%, #8b5cf6 33% 67%, #f59e0b 67% 100%);
+  background: linear-gradient(90deg, #e11d48 0 33%, #f97316 33% 67%, #14b8a6 67% 100%);
   opacity: 1;
-  border-radius: 4px;
+  border-radius: 999px;
 }
 
-/* Indigo Blueprint band: an indigo bar with a violet
-   underline and a hard shadow underneath. */
+/* Ember Sunset band: a rose-to-orange bar with a teal
+   underline and a soft glow underneath. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #4f46e5, #6d28d9, #8b5cf6);
+  background: linear-gradient(90deg, #e11d48, #f97316, #fb923c);
   opacity: 1;
-  box-shadow: 0 4px 0 rgba(30, 27, 75, 0.9);
-  border-bottom: 2px solid #f59e0b;
+  box-shadow: 0 6px 20px rgba(225, 29, 72, 0.35);
+  border-bottom: 2px solid #14b8a6;
   border-radius: 0;
 }
 
-/* Indigo Blueprint glow: a soft violet halo for the core. */
+/* Ember Sunset glow: a soft warm halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.85) 0%, rgba(221, 214, 254, 0.5) 42%, rgba(99, 102, 241, 0.3) 62%, rgba(99, 102, 241, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.9) 0%, rgba(254, 215, 170, 0.55) 42%, rgba(244, 63, 94, 0.3) 62%, rgba(244, 63, 94, 0) 76%);
 }
 
-/* Indigo Blueprint core: an indigo disc with an amber ring. */
+/* Ember Sunset core: a rose disc with an orange ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #a5b4fc 0%, #4f46e5 55%, #1e1b4b 100%);
-  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.8), 0 0 36px rgba(79, 70, 229, 0.45);
+    radial-gradient(circle at 35% 30%, #fda4af 0%, #e11d48 55%, #881337 100%);
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.8), 0 0 36px rgba(225, 29, 72, 0.45);
   border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
-/* Crisp rings around the core disc. */
+/* Soft rings around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(79, 70, 229, 0.35) 0px,
-    rgba(79, 70, 229, 0.35) 1px,
+    rgba(225, 29, 72, 0.35) 0px,
+    rgba(225, 29, 72, 0.35) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(139, 92, 246, 0.35) 14px,
-    rgba(139, 92, 246, 0.35) 15px,
+    rgba(20, 184, 166, 0.35) 14px,
+    rgba(20, 184, 166, 0.35) 15px,
     transparent 15px,
     transparent 30px
   );
   -webkit-mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
   mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
-  border-radius: 4px;
+  border-radius: 999px;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(245, 158, 11, 0.55) 0deg 3deg,
+    rgba(249, 115, 22, 0.55) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
