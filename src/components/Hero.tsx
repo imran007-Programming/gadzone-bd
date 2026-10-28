@@ -22,21 +22,21 @@ const item: Variants = {
 
 // Mango Grove glow drifting over the warm cream.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(5, 150, 105, 0.28)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(217, 119, 6, 0.18)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(101, 163, 13, 0.22)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(245, 158, 11, 0.25)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(79, 70, 229, 0.28)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(225, 29, 72, 0.18)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(2, 132, 199, 0.22)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(251, 113, 133, 0.25)" },
 ];
 
 // Mango Grove leaves falling through the warm light.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#059669" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f59e0b" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#d97706" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#65a30d" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#10b981" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fbbf24" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#84cc16" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#4f46e5" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#e11d48" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#be123c" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#0284c7" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#6366f1" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fb7185" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#38bdf8" },
 ];
 
 // Leaf glints scattered through the warm light.
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* grove wash under the warm light */}
-      <div className="relative bg-gradient-to-b from-[#d1fae5] via-[#faf7ed] to-[#fef3c7]">
+      <div className="relative bg-gradient-to-b from-[#e0e7ff] via-[#f1f5f9] to-[#ffe4e6]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#a7f3d0", "#fcd34d", "#d9f99d", "#059669"];
+              const colors = ["#c7d2fe", "#fecdd3", "#bae6fd", "#4f46e5"];
               return (
                 <span
                   key={i}

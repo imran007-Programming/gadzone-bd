@@ -1,71 +1,71 @@
 @import "tailwindcss";
 
 @theme {
-  /* Mango Grove: a warm harvest direction — deep
-     emerald as the primary accent, mango amber for
-     badges and prices, lime for leafy contrast, on
-     a warm cream paper with a fine diagonal leaf
-     stripe. Cards are big soft rounded panels with
-     a thick amber base bar and a pill badge — the
-     opposite of the previous Frostline look, its
-     cyan / violet / teal palette, icy blue-white
-     paper, dot grid and crisp lightly rounded
-     panels with a thin cyan top bar. */
+  /* Indigo Harbor: a cool harbor direction — deep
+     indigo as the primary accent, coral rose for
+     badges and prices, sky blue for cool contrast, on
+     a pale slate paper with a fine dot grid. Cards are
+     crisp lightly rounded panels with a coral top bar
+     and a clean flat shadow — the opposite of the
+     previous Mango Grove look, its emerald / mango
+     amber / lime palette, warm cream paper, diagonal
+     leaf stripe and big soft panels with a thick
+     amber base bar. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = emerald scale */
-  --color-brand-50: #ecfdf5;
-  --color-brand-100: #d1fae5;
-  --color-brand-200: #a7f3d0;
-  --color-brand-300: #6ee7b7;
-  --color-brand-400: #34d399;
-  --color-brand-500: #10b981;
-  --color-brand-600: #059669;
-  --color-brand-700: #047857;
-  --color-brand-800: #065f46;
-  --color-brand-900: #064e3b;
-  --color-brand-950: #022c22;
-  --color-brand: #059669;
-  --color-brand-dark: #047857;
-  --color-brand-deep: #022c22;
+  /* brand = indigo scale */
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-200: #c7d2fe;
+  --color-brand-300: #a5b4fc;
+  --color-brand-400: #818cf8;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+  --color-brand-800: #3730a3;
+  --color-brand-900: #312e81;
+  --color-brand-950: #1e1b4b;
+  --color-brand: #4f46e5;
+  --color-brand-dark: #4338ca;
+  --color-brand-deep: #1e1b4b;
 
-  /* gold = mango amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #d97706;
-  --color-gold-deep: #92400e;
-  --color-gold-soft: #fef3c7;
+  /* gold = coral rose scale (name kept for legacy class refs) */
+  --color-gold-50: #fff1f2;
+  --color-gold-100: #ffe4e6;
+  --color-gold-200: #fecdd3;
+  --color-gold-300: #fda4af;
+  --color-gold-400: #fb7185;
+  --color-gold-500: #f43f5e;
+  --color-gold-600: #e11d48;
+  --color-gold-700: #be123c;
+  --color-gold-800: #9f1239;
+  --color-gold-900: #881337;
+  --color-gold-950: #4c0519;
+  --color-gold: #e11d48;
+  --color-gold-deep: #9f1239;
+  --color-gold-soft: #ffe4e6;
 
-  /* popblue = lime leaf scale (name kept for legacy class refs) */
-  --color-popblue-50: #f7fee7;
-  --color-popblue-100: #ecfccb;
-  --color-popblue-200: #d9f99d;
-  --color-popblue-300: #bef264;
-  --color-popblue-400: #a3e635;
-  --color-popblue-500: #84cc16;
-  --color-popblue-600: #65a30d;
-  --color-popblue-700: #4d7c0f;
-  --color-popblue-800: #3f6212;
-  --color-popblue-900: #365314;
-  --color-popblue-950: #1a2e05;
-  --color-popblue: #65a30d;
-  --color-popblue-deep: #1a2e05;
-  --color-popblue-soft: #ecfccb;
+  /* popblue = sky scale (name kept for legacy class refs) */
+  --color-popblue-50: #f0f9ff;
+  --color-popblue-100: #e0f2fe;
+  --color-popblue-200: #bae6fd;
+  --color-popblue-300: #7dd3fc;
+  --color-popblue-400: #38bdf8;
+  --color-popblue-500: #0ea5e9;
+  --color-popblue-600: #0284c7;
+  --color-popblue-700: #0369a1;
+  --color-popblue-800: #075985;
+  --color-popblue-900: #0c4a6e;
+  --color-popblue-950: #082f49;
+  --color-popblue: #0284c7;
+  --color-popblue-deep: #082f49;
+  --color-popblue-soft: #e0f2fe;
 
-  --color-ink: #16241a;
-  --color-paper: #faf7ed;
-  --color-mute: #66755f;
+  --color-ink: #0f172a;
+  --color-paper: #f1f5f9;
+  --color-mute: #64748b;
   --color-card: #ffffff;
-  --color-deep: #022c22;
+  --color-deep: #1e1b4b;
 }
 
 html { scroll-behavior: smooth; }
@@ -80,27 +80,27 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #faf7ed;
+  background-color: #f1f5f9;
   background-image:
-    repeating-linear-gradient(45deg, rgba(5, 150, 105, 0.05) 0px, rgba(5, 150, 105, 0.05) 1px, transparent 1px, transparent 18px),
-    radial-gradient(circle at 8% 0%, rgba(16, 185, 129, 0.16) 0%, transparent 48%),
-    radial-gradient(circle at 94% 6%, rgba(245, 158, 11, 0.14) 0%, transparent 44%),
-    radial-gradient(circle at 50% 100%, rgba(101, 163, 13, 0.12) 0%, transparent 52%);
-  background-size: auto, 100% 640px, 100% 640px, 100% 720px;
+    radial-gradient(rgba(79, 70, 229, 0.10) 1px, transparent 1px),
+    radial-gradient(circle at 8% 0%, rgba(99, 102, 241, 0.18) 0%, transparent 48%),
+    radial-gradient(circle at 94% 6%, rgba(225, 29, 72, 0.12) 0%, transparent 44%),
+    radial-gradient(circle at 50% 100%, rgba(2, 132, 199, 0.12) 0%, transparent 52%);
+  background-size: 22px 22px, 100% 640px, 100% 640px, 100% 720px;
   background-repeat: repeat, no-repeat, no-repeat, no-repeat;
-  color: #16241a;
+  color: #0f172a;
 }
-::selection { background: #fde68a; color: #451a03; }
+::selection { background: #fecdd3; color: #4c0519; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #10b981, #d97706); border-radius: 999px; border: 2px solid #faf7ed; }
-::-webkit-scrollbar-track { background: #d1fae5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #6366f1, #e11d48); border-radius: 999px; border: 2px solid #f1f5f9; }
+::-webkit-scrollbar-track { background: #e0e7ff; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Mango Grove type: warm, slightly loose headlines. */
-h1, h2, h3 { letter-spacing: 0em; text-wrap: balance; }
+/* Indigo Harbor type: tight, crisp headlines. */
+h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Mango Grove leaves: leaves drifting down with a sway. */
+/* Indigo Harbor drift: harbor lights rising with a sway. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, -8vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.8; }
@@ -109,127 +109,128 @@ h1, h2, h3 { letter-spacing: 0em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 16s linear infinite; }
 
-/* Mango Grove sway: a gentle side-to-side float. */
+/* Indigo Harbor sway: a gentle side-to-side float. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-8px, 0, 0) rotate(-3deg) scale(1); opacity: 0.6; }
   50% { transform: translate3d(8px, -10px, 0) rotate(3deg) scale(1.03); opacity: 0.9; }
 }
 .pop-drift { animation: signal-drift 12s ease-in-out infinite; }
 
-/* Mango Grove bob: a soft hover lift. */
+/* Indigo Harbor bob: a soft hover lift. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-6px) scale(1.01); }
 }
 .pop-bob { animation: signal-bob 5s ease-in-out infinite; }
 
-/* Slow turn for the grove dial. */
+/* Slow turn for the harbor dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 60s linear infinite; }
 
-/* Mango Grove glint: a soft amber pulse. */
+/* Indigo Harbor glint: a soft coral pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.5; transform: scale(0.94); }
   50% { opacity: 1; transform: scale(1.06); }
 }
 .pop-twinkle { animation: signal-blink 3.5s ease-in-out infinite; }
 
-/* Mango Grove ticker: infinite marquee (leftward drift). */
+/* Indigo Harbor ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Mango Grove bands: emerald -> amber -> lime blocks, soft. */
+/* Indigo Harbor bands: indigo -> coral -> sky blocks, crisp. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #059669 0 34%, #d97706 34% 67%, #65a30d 67% 100%);
+    linear-gradient(90deg, #4f46e5 0 34%, #e11d48 34% 67%, #0284c7 67% 100%);
   background-size: 44px 44px;
   border-radius: 999px;
 }
 
-/* Mango Grove card: a big soft rounded panel — an
-   emerald ring, a thick amber base bar and a soft
-   warm shadow that lifts further on hover. */
+/* Indigo Harbor card: a crisp lightly rounded panel —
+   an indigo ring, a coral top bar and a clean flat
+   shadow that lifts slightly on hover. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(5, 150, 105, 0.22);
-  border-bottom: 5px solid #d97706;
+  border: 1px solid rgba(79, 70, 229, 0.20);
+  border-top: 4px solid #e11d48;
   background: #ffffff;
-  border-radius: 1.5rem;
-  box-shadow: 0 18px 30px -18px rgba(2, 44, 34, 0.28), 0 2px 8px -2px rgba(217, 119, 6, 0.15);
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 24px -16px rgba(30, 27, 75, 0.30), 0 2px 6px -2px rgba(225, 29, 72, 0.12);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-6px) scale(1.01);
-  border-color: rgba(5, 150, 105, 0.45);
-  box-shadow: 0 26px 40px -20px rgba(2, 44, 34, 0.35), 0 8px 18px -6px rgba(217, 119, 6, 0.22);
+  transform: translateY(-4px);
+  border-color: rgba(79, 70, 229, 0.45);
+  box-shadow: 0 18px 30px -18px rgba(30, 27, 75, 0.35), 0 6px 14px -6px rgba(225, 29, 72, 0.18);
 }
 
-/* Mango Grove glass: shared by modals and drawers — a
-   warm frosted pane with an amber left edge. */
+/* Indigo Harbor glass: shared by modals and drawers — a
+   cool frosted pane with a coral top edge. */
 .pop-glass {
-  background: rgba(250, 247, 237, 0.92);
+  background: rgba(241, 245, 249, 0.92);
   backdrop-filter: blur(16px) saturate(1.05);
   -webkit-backdrop-filter: blur(16px) saturate(1.05);
-  border: 1px solid rgba(5, 150, 105, 0.28);
-  border-left: 5px solid #d97706;
-  border-radius: 1.25rem;
-  box-shadow: 0 20px 40px -20px rgba(2, 44, 34, 0.35);
+  border: 1px solid rgba(79, 70, 229, 0.28);
+  border-top: 4px solid #e11d48;
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 40px -20px rgba(30, 27, 75, 0.35);
 }
 
-/* Mango Grove tag: a plump mango pill badge — amber
-   to emerald, white type, fully rounded, slight tilt. */
+/* Indigo Harbor tag: a coral-to-indigo pill badge —
+   white type, fully rounded, upright, no tilt. */
 .starburst {
-  background: linear-gradient(135deg, #f59e0b 0%, #d97706 55%, #059669 100%);
+  background: linear-gradient(135deg, #e11d48 0%, #be123c 45%, #4f46e5 100%);
   color: #ffffff;
   text-shadow: none;
   border-radius: 999px;
-  transform: rotate(-2deg);
-  box-shadow: 0 10px 24px rgba(2, 44, 34, 0.35);
+  transform: rotate(0deg);
+  box-shadow: 0 10px 24px rgba(30, 27, 75, 0.35);
   border: 2px solid #ffffff;
 }
 
-/* Mango Grove stripe: fine diagonal leaf lines. */
+/* Indigo Harbor dots: a fine slate dot grid. */
 .halftone {
   background-image:
-    repeating-linear-gradient(45deg, rgba(5, 150, 105, 0.14) 0px, rgba(5, 150, 105, 0.14) 1px, transparent 1px, transparent 14px);
+    radial-gradient(rgba(79, 70, 229, 0.16) 1px, transparent 1px);
+  background-size: 16px 16px;
 }
 
-/* Mango Grove rule: a chunky emerald-to-amber-to-lime bar. */
+/* Indigo Harbor rule: a slim indigo-to-coral-to-sky bar. */
 .zigzag {
-  height: 6px;
+  height: 4px;
   border-top: none;
-  background: linear-gradient(90deg, #059669 0 33%, #d97706 33% 67%, #65a30d 67% 100%);
+  background: linear-gradient(90deg, #4f46e5 0 33%, #e11d48 33% 67%, #0284c7 67% 100%);
   opacity: 1;
   border-radius: 999px;
 }
 
-/* Mango Grove band: a warm cream-to-amber bar with
+/* Indigo Harbor band: a cool indigo-to-slate bar with
    a gentle glow underneath. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #d1fae5, #faf7ed, #fef3c7);
+  background: linear-gradient(90deg, #e0e7ff, #f1f5f9, #ffe4e6);
   opacity: 1;
-  box-shadow: 0 10px 24px -12px rgba(2, 44, 34, 0.35);
-  border-bottom: 1px solid rgba(5, 150, 105, 0.22);
+  box-shadow: 0 10px 24px -12px rgba(30, 27, 75, 0.35);
+  border-bottom: 1px solid rgba(79, 70, 229, 0.22);
   border-radius: 0;
 }
 
-/* Mango Grove glow: a warm amber halo for the core. */
+/* Indigo Harbor glow: a cool indigo halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.7) 0%, rgba(245, 158, 11, 0.30) 42%, rgba(5, 150, 105, 0.28) 62%, rgba(5, 150, 105, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.7) 0%, rgba(225, 29, 72, 0.28) 42%, rgba(79, 70, 229, 0.28) 62%, rgba(79, 70, 229, 0) 76%);
 }
 
-/* Mango Grove core: a ripe mango disc with a lime ring. */
+/* Indigo Harbor core: a deep indigo disc with a sky ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fef3c7 0%, #f59e0b 55%, #d97706 100%);
-  box-shadow: 0 0 0 3px rgba(101, 163, 13, 0.55), 0 0 36px rgba(217, 119, 6, 0.35);
+    radial-gradient(circle at 35% 30%, #e0e7ff 0%, #6366f1 55%, #312e81 100%);
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.55), 0 0 36px rgba(79, 70, 229, 0.35);
   border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
@@ -237,12 +238,12 @@ h1, h2, h3 { letter-spacing: 0em; text-wrap: balance; }
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(5, 150, 105, 0.35) 0px,
-    rgba(5, 150, 105, 0.35) 1px,
+    rgba(79, 70, 229, 0.35) 0px,
+    rgba(79, 70, 229, 0.35) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(217, 119, 6, 0.35) 14px,
-    rgba(217, 119, 6, 0.35) 15px,
+    rgba(225, 29, 72, 0.35) 14px,
+    rgba(225, 29, 72, 0.35) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -253,7 +254,7 @@ h1, h2, h3 { letter-spacing: 0em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(217, 119, 6, 0.45) 0deg 3deg,
+    rgba(225, 29, 72, 0.45) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
