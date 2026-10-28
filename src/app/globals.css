@@ -1,70 +1,70 @@
 @import "tailwindcss";
 
 @theme {
-  /* Blueprint Grid: a crisp, technical, workshop direction —
-     cobalt blue as the primary accent, signal yellow for
-     badges and prices, and cyan for secondary highlights,
-     on cool slate paper with a faint blueprint grid. Cards
-     are sharp, flat, thin-bordered panels with square-ish
-     corners and hard flat shadows — the opposite of the
-     previous Coral Dusk look, its rose / amber / indigo
-     palette, warm cream paper, plush fully-rounded cards
-     and soft layered glows. */
+  /* Emerald Grove: a warm, organic, garden direction —
+     deep emerald as the primary accent, warm amber for
+     badges and prices, and soft rose for secondary
+     highlights, on warm cream paper with soft dotted
+     texture. Cards are plush, fully rounded, softly
+     shadowed pills — the opposite of the previous
+     Blueprint Grid look, its cobalt / yellow / cyan
+     palette, cool slate paper, sharp flat panels,
+     square corners, hard shadows and drafting grid. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = blue scale */
-  --color-brand-50: #eff6ff;
-  --color-brand-100: #dbeafe;
-  --color-brand-200: #bfdbfe;
-  --color-brand-300: #93c5fd;
-  --color-brand-400: #60a5fa;
-  --color-brand-500: #3b82f6;
-  --color-brand-600: #2563eb;
-  --color-brand-700: #1d4ed8;
-  --color-brand-800: #1e40af;
-  --color-brand-900: #1e3a8a;
-  --color-brand-950: #172554;
-  --color-brand: #2563eb;
-  --color-brand-dark: #1d4ed8;
-  --color-brand-deep: #172554;
+  /* brand = emerald scale */
+  --color-brand-50: #ecfdf5;
+  --color-brand-100: #d1fae5;
+  --color-brand-200: #a7f3d0;
+  --color-brand-300: #6ee7b7;
+  --color-brand-400: #34d399;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-brand-900: #064e3b;
+  --color-brand-950: #022c22;
+  --color-brand: #059669;
+  --color-brand-dark: #047857;
+  --color-brand-deep: #022c22;
 
-  /* gold = yellow scale (name kept for legacy class refs) */
-  --color-gold-50: #fefce8;
-  --color-gold-100: #fef9c3;
-  --color-gold-200: #fef08a;
-  --color-gold-300: #fde047;
-  --color-gold-400: #facc15;
-  --color-gold-500: #eab308;
-  --color-gold-600: #ca8a04;
-  --color-gold-700: #a16207;
-  --color-gold-800: #854d0e;
-  --color-gold-900: #713f12;
-  --color-gold-950: #422006;
-  --color-gold: #eab308;
-  --color-gold-deep: #854d0e;
-  --color-gold-soft: #fef9c3;
+  /* gold = amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #92400e;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = cyan scale (name kept for legacy class refs) */
-  --color-popblue-50: #ecfeff;
-  --color-popblue-100: #cffafe;
-  --color-popblue-200: #a5f3fc;
-  --color-popblue-300: #67e8f9;
-  --color-popblue-400: #22d3ee;
-  --color-popblue-500: #06b6d4;
-  --color-popblue-600: #0891b2;
-  --color-popblue-700: #0e7490;
-  --color-popblue-800: #155e75;
-  --color-popblue-900: #164e63;
-  --color-popblue-950: #083344;
-  --color-popblue: #0e7490;
-  --color-popblue-deep: #083344;
-  --color-popblue-soft: #cffafe;
+  /* popblue = rose scale (name kept for legacy class refs) */
+  --color-popblue-50: #fff1f2;
+  --color-popblue-100: #ffe4e6;
+  --color-popblue-200: #fecdd3;
+  --color-popblue-300: #fda4af;
+  --color-popblue-400: #fb7185;
+  --color-popblue-500: #f43f5e;
+  --color-popblue-600: #e11d48;
+  --color-popblue-700: #be123c;
+  --color-popblue-800: #9f1239;
+  --color-popblue-900: #881337;
+  --color-popblue-950: #4c0519;
+  --color-popblue: #be123c;
+  --color-popblue-deep: #4c0519;
+  --color-popblue-soft: #ffe4e6;
 
-  --color-ink: #0f172a;
-  --color-paper: #f8fafc;
-  --color-mute: #64748b;
+  --color-ink: #16281d;
+  --color-paper: #fdfaf3;
+  --color-mute: #6b7a6e;
   --color-card: #ffffff;
-  --color-deep: #0f172a;
+  --color-deep: #16281d;
 }
 
 html { scroll-behavior: smooth; }
@@ -79,158 +79,157 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f8fafc;
+  background-color: #fdfaf3;
   background-image:
-    linear-gradient(rgba(37, 99, 235, 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(37, 99, 235, 0.055) 1px, transparent 1px),
-    radial-gradient(circle at 8% 0%, rgba(59, 130, 246, 0.10) 0%, transparent 42%),
-    radial-gradient(circle at 94% 12%, rgba(234, 179, 8, 0.10) 0%, transparent 40%);
-  background-size: 28px 28px, 28px 28px, 100% 640px, 100% 640px;
-  background-repeat: repeat, repeat, no-repeat, no-repeat;
-  color: #0f172a;
+    radial-gradient(circle, rgba(5, 150, 105, 0.10) 1.5px, transparent 1.5px),
+    radial-gradient(circle at 8% 0%, rgba(16, 185, 129, 0.16) 0%, transparent 46%),
+    radial-gradient(circle at 94% 12%, rgba(245, 158, 11, 0.16) 0%, transparent 42%),
+    radial-gradient(circle at 50% 100%, rgba(244, 63, 94, 0.08) 0%, transparent 50%);
+  background-size: 26px 26px, 100% 640px, 100% 640px, 100% 720px;
+  background-repeat: repeat, no-repeat, no-repeat, no-repeat;
+  color: #16281d;
 }
-::selection { background: #fde047; color: #172554; }
+::selection { background: #fcd34d; color: #022c22; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #2563eb, #06b6d4); border-radius: 4px; border: 2px solid #f8fafc; }
-::-webkit-scrollbar-track { background: #dbeafe; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #059669, #f59e0b); border-radius: 999px; border: 2px solid #fdfaf3; }
+::-webkit-scrollbar-track { background: #fef3c7; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Blueprint type: crisp, technical, tight headlines. */
-h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
+/* Grove type: soft, warm, gently rounded headlines. */
+h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Blueprint rise: square chips drifting upward. */
+/* Grove fall: soft petals drifting downward. */
 @keyframes signal-rise {
-  0% { transform: translate3d(0, 4vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
+  0% { transform: translate3d(0, -4vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.7; }
-  50% { transform: translate3d(-2vw, -42vh, 0) rotate(-30deg) scale(1.02); }
-  100% { transform: translate3d(1vw, -92vh, 0) rotate(-60deg) scale(1); opacity: 0; }
+  50% { transform: translate3d(2vw, 42vh, 0) rotate(40deg) scale(1.02); }
+  100% { transform: translate3d(-1vw, 92vh, 0) rotate(80deg) scale(1); opacity: 0; }
 }
-.pop-fall { animation: signal-rise 14s linear infinite; }
+.pop-fall { animation: signal-rise 16s linear infinite; }
 
-/* Blueprint sway: a slow, straight side-to-side float. */
+/* Grove sway: a slow, leafy side-to-side float. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(-6px, 0, 0) rotate(0deg) scale(1); opacity: 0.6; }
-  50% { transform: translate3d(6px, -8px, 0) rotate(0deg) scale(1.03); opacity: 0.9; }
+  0%, 100% { transform: translate3d(-8px, 0, 0) rotate(-2deg) scale(1); opacity: 0.6; }
+  50% { transform: translate3d(8px, -10px, 0) rotate(2deg) scale(1.03); opacity: 0.9; }
 }
 .pop-drift { animation: signal-drift 12s ease-in-out infinite; }
 
-/* Blueprint bob: a gentle hover lift. */
+/* Grove bob: a gentle hover lift. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-4px) scale(1.01); }
+  50% { transform: translateY(-6px) scale(1.01); }
 }
 .pop-bob { animation: signal-bob 5s ease-in-out infinite; }
 
-/* Slow turn for the blueprint dial. */
+/* Slow turn for the grove dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 48s linear infinite; }
 
-/* Blueprint shimmer: a cyan pulse. */
+/* Grove shimmer: a warm amber pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.5; transform: scale(0.94); }
   50% { opacity: 1; transform: scale(1.06); }
 }
 .pop-twinkle { animation: signal-blink 3.5s ease-in-out infinite; }
 
-/* Blueprint ticker: infinite marquee (leftward drift). */
+/* Grove ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Blueprint bands: blue -> yellow -> cyan blocks. */
+/* Grove bands: emerald -> amber -> rose blocks, softened. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #2563eb 0 34%, #eab308 34% 67%, #0e7490 67% 100%);
+    linear-gradient(90deg, #059669 0 34%, #f59e0b 34% 67%, #f43f5e 67% 100%);
   background-size: 34px 34px;
+  border-radius: 999px;
 }
 
-/* Blueprint card: a sharp, flat panel — a thin slate
-   edge, square-ish corners and a hard flat shadow that
-   deepens on hover. */
+/* Grove card: a plush, fully rounded panel — a soft
+   sage edge, pill corners and layered soft shadows
+   that deepen into a warm lift on hover. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(15, 23, 42, 0.12);
+  border: 1px solid rgba(5, 150, 105, 0.16);
   background: #ffffff;
-  border-radius: 0.75rem;
-  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 12px 24px -16px rgba(37, 99, 235, 0.28);
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 6px rgba(22, 40, 29, 0.06), 0 18px 36px -18px rgba(5, 150, 105, 0.35);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-3px);
-  border-color: rgba(37, 99, 235, 0.5);
-  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.06), 0 20px 32px -16px rgba(37, 99, 235, 0.38);
+  transform: translateY(-6px);
+  border-color: rgba(5, 150, 105, 0.45);
+  box-shadow: 0 4px 10px rgba(22, 40, 29, 0.06), 0 28px 44px -18px rgba(5, 150, 105, 0.45);
 }
 
-/* Blueprint glass: shared by modals and drawers — a
-   cool frosted pane with a cobalt top edge. */
+/* Grove glass: shared by modals and drawers — a
+   warm frosted pane with a soft emerald top edge. */
 .pop-glass {
-  background: rgba(248, 250, 252, 0.96);
+  background: rgba(253, 250, 243, 0.96);
   backdrop-filter: blur(16px) saturate(1.05);
   -webkit-backdrop-filter: blur(16px) saturate(1.05);
-  border: 1px solid rgba(37, 99, 235, 0.18);
-  border-top: 4px solid #2563eb;
-  border-radius: 0.75rem;
-  box-shadow: 0 20px 40px -18px rgba(15, 23, 42, 0.3);
+  border: 1px solid rgba(5, 150, 105, 0.2);
+  border-top: 4px solid #059669;
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 48px -18px rgba(22, 40, 29, 0.3);
 }
 
-/* Blueprint tag: a square signal badge — yellow plate,
-   navy type, ringed in white. */
+/* Grove tag: a soft pill badge — amber plate,
+   deep green type, ringed in white. */
 .starburst {
-  background: linear-gradient(135deg, #fde047 0%, #eab308 60%, #ca8a04 100%);
-  color: #172554;
+  background: linear-gradient(135deg, #fde68a 0%, #f59e0b 60%, #d97706 100%);
+  color: #022c22;
   text-shadow: none;
-  border-radius: 0.375rem;
-  transform: rotate(-6deg);
-  box-shadow: 0 6px 16px rgba(202, 138, 4, 0.45);
+  border-radius: 999px;
+  transform: rotate(-2deg);
+  box-shadow: 0 8px 20px rgba(217, 119, 6, 0.4);
   border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
-/* Blueprint grid: a fine drafting grid. */
+/* Grove dots: a fine dotted garden texture. */
 .halftone {
   background-image:
-    linear-gradient(rgba(37, 99, 235, 0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(37, 99, 235, 0.12) 1px, transparent 1px);
-  background-size: 28px 28px;
+    radial-gradient(circle, rgba(5, 150, 105, 0.16) 1.5px, transparent 1.5px);
+  background-size: 22px 22px;
 }
 
-/* Blueprint rule: a dashed blue-to-cyan measuring rule. */
+/* Grove rule: a dotted amber-to-emerald trail. */
 .zigzag {
-  height: 3px;
+  height: 4px;
   border-top: none;
-  background: repeating-linear-gradient(90deg, #2563eb 0 12px, transparent 12px 20px, #06b6d4 20px 32px, transparent 32px 40px);
-  background-size: 100% 3px;
-  background-repeat: no-repeat;
+  background: radial-gradient(circle, #059669 2px, transparent 2.5px) 0 0 / 24px 4px repeat-x,
+    radial-gradient(circle, #f59e0b 2px, transparent 2.5px) 12px 0 / 24px 4px repeat-x;
   opacity: 0.9;
-  border-radius: 0;
+  border-radius: 999px;
 }
 
-/* Blueprint band: a flat blue-tinted bar with a
-   cobalt underline and square bottom corners. */
+/* Grove band: a soft cream-to-mint bar with a
+   rounded bottom and a gentle warm shadow. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #dbeafe, #fef9c3, #cffafe);
+  background: linear-gradient(90deg, #d1fae5, #fef3c7, #ffe4e6);
   opacity: 1;
-  box-shadow: 0 10px 20px -14px rgba(37, 99, 235, 0.4);
-  border-bottom: 3px solid #2563eb;
-  border-radius: 0;
+  box-shadow: 0 14px 28px -16px rgba(5, 150, 105, 0.4);
+  border-bottom: none;
+  border-radius: 0 0 1.5rem 1.5rem;
 }
 
-/* Blueprint glow: a cool drafting halo for the core. */
+/* Grove glow: a warm garden halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.65) 0%, rgba(37, 99, 235, 0.22) 42%, rgba(6, 182, 212, 0.28) 62%, rgba(6, 182, 212, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.7) 0%, rgba(16, 185, 129, 0.25) 42%, rgba(245, 158, 11, 0.28) 62%, rgba(245, 158, 11, 0) 76%);
 }
 
-/* Blueprint core: a yellow disc with a cobalt ring. */
+/* Grove core: a leaf disc with an amber ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fef9c3 0%, #eab308 55%, #2563eb 100%);
-  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.35), 0 0 36px rgba(37, 99, 235, 0.35);
+    radial-gradient(circle at 35% 30%, #d1fae5 0%, #10b981 55%, #047857 100%);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.45), 0 0 36px rgba(5, 150, 105, 0.35);
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
@@ -238,12 +237,12 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(37, 99, 235, 0.3) 0px,
-    rgba(37, 99, 235, 0.3) 1px,
+    rgba(5, 150, 105, 0.3) 0px,
+    rgba(5, 150, 105, 0.3) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(234, 179, 8, 0.3) 14px,
-    rgba(234, 179, 8, 0.3) 15px,
+    rgba(245, 158, 11, 0.3) 14px,
+    rgba(245, 158, 11, 0.3) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -254,7 +253,7 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(234, 179, 8, 0.4) 0deg 3deg,
+    rgba(245, 158, 11, 0.4) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
