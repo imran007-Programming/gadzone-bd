@@ -1,70 +1,70 @@
 @import "tailwindcss";
 
 @theme {
-  /* Verdant Grid: a crisp, angular direction —
-     deep emerald as the primary accent, lime for
-     fresh highlights, slate-navy for contrast, on
-     pale sage paper with a fine grid. Cards are
-     sharp-cornered panels with a flat hard offset
-     shadow — the opposite of the previous Ember
-     Sunset look, its rose / orange / teal palette,
-     warm cream paper, radial glows, plump
-     pill-rounded cards and soft diffused shadows. */
+  /* Twilight Plum: a soft, rounded direction —
+     deep violet as the primary accent, coral for
+     warm highlights, indigo-night for contrast, on
+     pale lilac paper with a gentle dot texture.
+     Cards are big soft-rounded panels with diffused
+     shadows — the opposite of the previous Verdant
+     Grid look, its emerald / lime palette, pale sage
+     paper, fine grid lines, sharp corners and flat
+     hard offset shadows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = emerald scale */
-  --color-brand-50: #ecfdf5;
-  --color-brand-100: #d1fae5;
-  --color-brand-200: #a7f3d0;
-  --color-brand-300: #6ee7b7;
-  --color-brand-400: #34d399;
-  --color-brand-500: #10b981;
-  --color-brand-600: #059669;
-  --color-brand-700: #047857;
-  --color-brand-800: #065f46;
-  --color-brand-900: #064e3b;
-  --color-brand-950: #022c22;
-  --color-brand: #059669;
-  --color-brand-dark: #047857;
-  --color-brand-deep: #022c22;
+  /* brand = violet scale */
+  --color-brand-50: #f5f3ff;
+  --color-brand-100: #ede9fe;
+  --color-brand-200: #ddd6fe;
+  --color-brand-300: #c4b5fd;
+  --color-brand-400: #a78bfa;
+  --color-brand-500: #8b5cf6;
+  --color-brand-600: #7c3aed;
+  --color-brand-700: #6d28d9;
+  --color-brand-800: #5b21b6;
+  --color-brand-900: #4c1d95;
+  --color-brand-950: #2e1065;
+  --color-brand: #7c3aed;
+  --color-brand-dark: #6d28d9;
+  --color-brand-deep: #2e1065;
 
-  /* gold = lime scale (name kept for legacy class refs) */
-  --color-gold-50: #f7fee7;
-  --color-gold-100: #ecfccb;
-  --color-gold-200: #d9f99d;
-  --color-gold-300: #bef264;
-  --color-gold-400: #a3e635;
-  --color-gold-500: #84cc16;
-  --color-gold-600: #65a30d;
-  --color-gold-700: #4d7c0f;
-  --color-gold-800: #3f6212;
-  --color-gold-900: #365314;
-  --color-gold-950: #1a2e05;
-  --color-gold: #65a30d;
-  --color-gold-deep: #365314;
-  --color-gold-soft: #ecfccb;
+  /* gold = coral scale (name kept for legacy class refs) */
+  --color-gold-50: #fff1f2;
+  --color-gold-100: #ffe4e6;
+  --color-gold-200: #fecdd3;
+  --color-gold-300: #fda4af;
+  --color-gold-400: #fb7185;
+  --color-gold-500: #f43f5e;
+  --color-gold-600: #e11d48;
+  --color-gold-700: #be123c;
+  --color-gold-800: #9f1239;
+  --color-gold-900: #881337;
+  --color-gold-950: #4c0519;
+  --color-gold: #f43f5e;
+  --color-gold-deep: #881337;
+  --color-gold-soft: #ffe4e6;
 
-  /* popblue = slate-navy scale (name kept for legacy class refs) */
-  --color-popblue-50: #f8fafc;
-  --color-popblue-100: #f1f5f9;
-  --color-popblue-200: #e2e8f0;
-  --color-popblue-300: #cbd5e1;
-  --color-popblue-400: #94a3b8;
-  --color-popblue-500: #64748b;
-  --color-popblue-600: #475569;
-  --color-popblue-700: #334155;
-  --color-popblue-800: #1e293b;
-  --color-popblue-900: #0f172a;
-  --color-popblue-950: #020617;
-  --color-popblue: #334155;
-  --color-popblue-deep: #020617;
-  --color-popblue-soft: #f1f5f9;
+  /* popblue = indigo-night scale (name kept for legacy class refs) */
+  --color-popblue-50: #eef2ff;
+  --color-popblue-100: #e0e7ff;
+  --color-popblue-200: #c7d2fe;
+  --color-popblue-300: #a5b4fc;
+  --color-popblue-400: #818cf8;
+  --color-popblue-500: #6366f1;
+  --color-popblue-600: #4f46e5;
+  --color-popblue-700: #4338ca;
+  --color-popblue-800: #3730a3;
+  --color-popblue-900: #312e81;
+  --color-popblue-950: #1e1b4b;
+  --color-popblue: #4338ca;
+  --color-popblue-deep: #1e1b4b;
+  --color-popblue-soft: #e0e7ff;
 
-  --color-ink: #132a1d;
-  --color-paper: #f1f7f1;
-  --color-mute: #5b6b60;
+  --color-ink: #2a1f33;
+  --color-paper: #faf7fc;
+  --color-mute: #6b5d7a;
   --color-card: #ffffff;
-  --color-deep: #022c22;
+  --color-deep: #2e1065;
 }
 
 html { scroll-behavior: smooth; }
@@ -79,24 +79,24 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f1f7f1;
+  background-color: #faf7fc;
   background-image:
-    linear-gradient(rgba(5, 150, 105, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(5, 150, 105, 0.07) 1px, transparent 1px);
-  background-size: 40px 40px;
-  color: #132a1d;
+    radial-gradient(rgba(124, 58, 237, 0.10) 1.2px, transparent 1.2px),
+    linear-gradient(160deg, rgba(237, 233, 254, 0.7) 0%, rgba(255, 228, 230, 0.35) 45%, rgba(250, 247, 252, 0) 75%);
+  background-size: 26px 26px, 100% 100%;
+  color: #2a1f33;
 }
-::selection { background: #d9f99d; color: #022c22; }
+::selection { background: #fecdd3; color: #4c0519; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #059669, #65a30d); border-radius: 4px; border: 2px solid #f1f7f1; }
-::-webkit-scrollbar-track { background: #ecfccb; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #8b5cf6, #f43f5e); border-radius: 999px; border: 2px solid #faf7fc; }
+::-webkit-scrollbar-track { background: #ede9fe; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Verdant Grid type: crisp headlines, tight and upright. */
-h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
+/* Twilight Plum type: soft headlines, relaxed and open. */
+h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Verdant Grid fall: leaves drifting down the grid. */
+/* Twilight Plum fall: petals drifting down the dusk. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, -8vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.8; }
@@ -105,154 +105,154 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 22s linear infinite; }
 
-/* Verdant Grid sway: a gentle side-to-side float. */
+/* Twilight Plum sway: a gentle side-to-side float. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-6px, 0, 0) rotate(-2deg) scale(1); opacity: 0.6; }
   50% { transform: translate3d(6px, -10px, 0) rotate(2deg) scale(1.02); opacity: 0.9; }
 }
 .pop-drift { animation: signal-drift 13s ease-in-out infinite; }
 
-/* Verdant Grid bob: a crisp hover lift. */
+/* Twilight Plum bob: a soft hover lift. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-4px) scale(1.01); }
 }
 .pop-bob { animation: signal-bob 6s ease-in-out infinite; }
 
-/* Slow turn for the garden dial. */
+/* Slow turn for the dusk dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 75s linear infinite; }
 
-/* Verdant Grid glint: a crisp lime pulse. */
+/* Twilight Plum glint: a soft coral pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.5; transform: scale(0.94); }
   50% { opacity: 1; transform: scale(1.06); }
 }
 .pop-twinkle { animation: signal-blink 4s ease-in-out infinite; }
 
-/* Verdant Grid ticker: infinite marquee (leftward drift). */
+/* Twilight Plum ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 36s linear infinite; }
 
-/* Verdant Grid bands: emerald -> lime -> navy blocks, square-cut. */
+/* Twilight Plum bands: violet -> coral -> indigo pills. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #059669 0 34%, #84cc16 34% 67%, #334155 67% 100%);
+    linear-gradient(90deg, #7c3aed 0 34%, #f43f5e 34% 67%, #4338ca 67% 100%);
   background-size: 72px 72px;
-  border-radius: 4px;
+  border-radius: 999px;
 }
 
-/* Verdant Grid card: a sharp-cornered panel — a solid
-   emerald-tinted border, small corners and a flat hard
-   offset shadow that steps out further on hover. */
+/* Twilight Plum card: a big soft-rounded panel — a thin
+   violet-tinted border and a soft diffused shadow that
+   lifts gently on hover. */
 .pop-lift {
   position: relative;
-  border: 2px solid #a7f3d0;
+  border: 1px solid #ddd6fe;
   background: #ffffff;
-  border-radius: 0.75rem;
-  box-shadow: 4px 4px 0 rgba(6, 95, 70, 0.18);
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(76, 29, 149, 0.10), 0 2px 8px rgba(76, 29, 149, 0.06);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 7px 7px 0 rgba(5, 150, 105, 0.28);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 44px rgba(76, 29, 149, 0.16), 0 4px 12px rgba(244, 63, 94, 0.10);
 }
 
-/* Verdant Grid glass: shared by modals and drawers — a
-   frosted white pane with an emerald border and a flat
-   offset shadow. */
+/* Twilight Plum glass: shared by modals and drawers — a
+   frosted white pane with a violet border and a soft
+   diffused shadow. */
 .pop-glass {
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid #a7f3d0;
-  border-radius: 0.75rem;
-  box-shadow: 6px 6px 0 rgba(6, 95, 70, 0.18);
+  border: 1px solid #ddd6fe;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 44px rgba(76, 29, 149, 0.16);
 }
 
-/* Verdant Grid tag: a square lime badge — dark type,
-   upright, with a crisp white frame. */
+/* Twilight Plum tag: a soft coral pill badge — white
+   type, tilted slightly, with a crisp white frame. */
 .starburst {
-  background: #84cc16;
-  color: #1a2e05;
+  background: #f43f5e;
+  color: #ffffff;
   text-shadow: none;
-  border-radius: 4px;
-  transform: rotate(0deg);
-  box-shadow: 3px 3px 0 rgba(6, 95, 70, 0.35);
+  border-radius: 999px;
+  transform: rotate(-2deg);
+  box-shadow: 0 6px 16px rgba(244, 63, 94, 0.35);
   border: 2px solid #ffffff;
 }
 
-/* Verdant Grid dots: a sparse emerald dot grid. */
+/* Twilight Plum dots: a soft violet dot texture. */
 .halftone {
   background-image:
-    radial-gradient(rgba(5, 150, 105, 0.2) 1.5px, transparent 1.5px);
+    radial-gradient(rgba(124, 58, 237, 0.16) 1.5px, transparent 1.5px);
   background-size: 24px 24px;
   background-position: 0 0;
 }
 
-/* Verdant Grid rule: a straight emerald-to-lime-to-navy bar. */
+/* Twilight Plum rule: a rounded violet-to-coral-to-indigo bar. */
 .zigzag {
-  height: 4px;
+  height: 6px;
   border-top: none;
-  background: linear-gradient(90deg, #059669 0 33%, #84cc16 33% 67%, #334155 67% 100%);
+  background: linear-gradient(90deg, #7c3aed 0 33%, #f43f5e 33% 67%, #4338ca 67% 100%);
   opacity: 1;
-  border-radius: 0;
+  border-radius: 999px;
 }
 
-/* Verdant Grid band: a flat emerald bar with a lime
-   underline and no glow. */
+/* Twilight Plum band: a soft diagonal violet-to-coral
+   wash with a gentle shadow. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #047857, #059669, #10b981);
+  background: linear-gradient(120deg, #6d28d9, #8b5cf6 45%, #f43f5e);
   opacity: 1;
-  box-shadow: none;
-  border-bottom: 3px solid #84cc16;
-  border-radius: 0;
+  box-shadow: 0 12px 32px rgba(109, 40, 217, 0.25);
+  border-bottom: none;
+  border-radius: 0 0 1.5rem 1.5rem;
 }
 
-/* Verdant Grid glow: a flat mint halo for the core. */
+/* Twilight Plum glow: a soft violet-coral halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.9) 0%, rgba(217, 249, 157, 0.55) 42%, rgba(16, 185, 129, 0.3) 62%, rgba(16, 185, 129, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.9) 0%, rgba(254, 205, 211, 0.55) 42%, rgba(139, 92, 246, 0.3) 62%, rgba(139, 92, 246, 0) 76%);
 }
 
-/* Verdant Grid core: an emerald disc with a lime ring. */
+/* Twilight Plum core: a violet disc with a coral ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #6ee7b7 0%, #059669 55%, #064e3b 100%);
-  box-shadow: 0 0 0 3px rgba(132, 204, 22, 0.85), 4px 4px 0 rgba(6, 95, 70, 0.35);
+    radial-gradient(circle at 35% 30%, #c4b5fd 0%, #7c3aed 55%, #4c1d95 100%);
+  box-shadow: 0 0 0 3px rgba(244, 63, 94, 0.85), 0 12px 28px rgba(76, 29, 149, 0.35);
   border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
-/* Crisp rings around the core disc. */
+/* Soft rings around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(5, 150, 105, 0.4) 0px,
-    rgba(5, 150, 105, 0.4) 1px,
+    rgba(124, 58, 237, 0.4) 0px,
+    rgba(124, 58, 237, 0.4) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(132, 204, 22, 0.4) 14px,
-    rgba(132, 204, 22, 0.4) 15px,
+    rgba(244, 63, 94, 0.4) 14px,
+    rgba(244, 63, 94, 0.4) 15px,
     transparent 15px,
     transparent 30px
   );
   -webkit-mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
   mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
-  border-radius: 4px;
+  border-radius: 999px;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(132, 204, 22, 0.55) 0deg 3deg,
+    rgba(244, 63, 94, 0.55) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
   mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
-  border-radius: 4px;
+  border-radius: 999px;
 }

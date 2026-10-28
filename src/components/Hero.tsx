@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Ember Sunset glow drifting over the warm evening sky.
+// Twilight Plum glow drifting over the soft dusk sky.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(225, 29, 72, 0.28)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(249, 115, 22, 0.20)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(20, 184, 166, 0.22)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(124, 58, 237, 0.28)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(244, 63, 94, 0.20)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(67, 56, 202, 0.22)" },
   { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(190, 18, 60, 0.25)" },
 ];
 
-// Ember Sunset sparks rising through the warm light.
+// Twilight Plum petals rising through the soft light.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#e11d48" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f97316" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#14b8a6" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#7c3aed" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f43f5e" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#4338ca" },
   { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#be123c" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#fb7185" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#14b8a6" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#2dd4bf" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#a78bfa" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#4338ca" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#fb7185" },
 ];
 
 // Ember glints scattered through the warm light.
