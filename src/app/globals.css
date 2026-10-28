@@ -1,70 +1,69 @@
 @import "tailwindcss";
 
 @theme {
-  /* Orchard Dusk: a warm evening direction —
-     deep plum as the primary accent, vivid tangerine
-     for badges and prices, and warm espresso for
-     secondary highlights, on cream paper. Cards are
-     chunky, generously rounded blocks with a thick
-     plum edge and a hard offset shadow — the opposite
-     of the previous Glacier Frost look, its icy cyan /
-     sky / navy palette, sharp-cornered frost tiles
-     and cool glacier glow. */
+  /* Mint Field: a flat, sharp-cornered editorial direction —
+     deep emerald as the primary accent, vivid lime for
+     badges and prices, and dark pine for secondary
+     highlights, on mint paper. Cards are flat, crisp
+     rectangles with a thin pine edge and a soft lift —
+     the opposite of the previous Orchard Dusk look, its
+     warm plum / tangerine palette, chunky rounded
+     blocks and hard offset shadows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = plum scale */
-  --color-brand-50: #faf5ff;
-  --color-brand-100: #f3e8ff;
-  --color-brand-200: #e9d5ff;
-  --color-brand-300: #d8b4fe;
-  --color-brand-400: #c084fc;
-  --color-brand-500: #a855f7;
-  --color-brand-600: #9333ea;
-  --color-brand-700: #7e22ce;
-  --color-brand-800: #6b21a8;
-  --color-brand-900: #581c87;
-  --color-brand-950: #3b0764;
-  --color-brand: #7e22ce;
-  --color-brand-dark: #6b21a8;
-  --color-brand-deep: #3b0764;
+  /* brand = emerald scale */
+  --color-brand-50: #ecfdf5;
+  --color-brand-100: #d1fae5;
+  --color-brand-200: #a7f3d0;
+  --color-brand-300: #6ee7b7;
+  --color-brand-400: #34d399;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-brand-900: #064e3b;
+  --color-brand-950: #022c22;
+  --color-brand: #047857;
+  --color-brand-dark: #065f46;
+  --color-brand-deep: #022c22;
 
-  /* gold = tangerine scale (name kept for legacy class refs) */
-  --color-gold-50: #fff7ed;
-  --color-gold-100: #ffedd5;
-  --color-gold-200: #fed7aa;
-  --color-gold-300: #fdba74;
-  --color-gold-400: #fb923c;
-  --color-gold-500: #f97316;
-  --color-gold-600: #ea580c;
-  --color-gold-700: #c2410c;
-  --color-gold-800: #9a3412;
-  --color-gold-900: #7c2d12;
-  --color-gold-950: #431407;
-  --color-gold: #f97316;
-  --color-gold-deep: #9a3412;
-  --color-gold-soft: #ffedd5;
+  /* gold = lime scale (name kept for legacy class refs) */
+  --color-gold-50: #f7fee7;
+  --color-gold-100: #ecfccb;
+  --color-gold-200: #d9f99d;
+  --color-gold-300: #bef264;
+  --color-gold-400: #a3e635;
+  --color-gold-500: #84cc16;
+  --color-gold-600: #65a30d;
+  --color-gold-700: #4d7c0f;
+  --color-gold-800: #3f6212;
+  --color-gold-900: #365314;
+  --color-gold-950: #1a2e05;
+  --color-gold: #84cc16;
+  --color-gold-deep: #3f6212;
+  --color-gold-soft: #ecfccb;
 
-  /* popblue = warm espresso scale (name kept for legacy class refs) */
-  --color-popblue-50: #fafaf9;
-  --color-popblue-100: #f5f5f4;
-  --color-popblue-200: #e7e5e4;
-  --color-popblue-300: #d6d3d1;
-  --color-popblue-400: #a8a29e;
-  --color-popblue-500: #78716c;
-  --color-popblue-600: #57534e;
-  --color-popblue-700: #44403c;
-  --color-popblue-800: #292524;
-  --color-popblue-900: #1c1917;
-  --color-popblue-950: #0c0a09;
-  --color-popblue: #292524;
-  --color-popblue-deep: #1c1917;
-  --color-popblue-soft: #f5f5f4;
+  /* popblue = dark pine scale (name kept for legacy class refs) */
+  --color-popblue-50: #f2f7f4;
+  --color-popblue-100: #e0ebe3;
+  --color-popblue-200: #c2d6c9;
+  --color-popblue-300: #97b5a3;
+  --color-popblue-400: #6a927c;
+  --color-popblue-500: #4a7a60;
+  --color-popblue-600: #386048;
+  --color-popblue-700: #2d4d3a;
+  --color-popblue-800: #26402f;
+  --color-popblue-900: #1a2e21;
+  --color-popblue-950: #0d1a12;
+  --color-popblue: #26402f;
+  --color-popblue-deep: #1a2e21;
+  --color-popblue-soft: #e0ebe3;
 
-  --color-ink: #1c1917;
-  --color-paper: #fff7ed;
-  --color-mute: #57534e;
+  --color-ink: #12211a;
+  --color-paper: #f7faf6;
+  --color-mute: #4a5d52;
   --color-card: #ffffff;
-  --color-deep: #3b0764;
+  --color-deep: #022c22;
 }
 
 html { scroll-behavior: smooth; }
@@ -79,25 +78,25 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fff7ed;
+  background-color: #f7faf6;
   background-image:
-    radial-gradient(circle at 10% 0%, rgba(126, 34, 206, 0.12) 0%, transparent 44%),
-    radial-gradient(circle at 90% 10%, rgba(249, 115, 22, 0.16) 0%, transparent 42%),
-    radial-gradient(rgba(126, 34, 206, 0.07) 1.5px, transparent 1.5px);
-  background-size: 100% 520px, 100% 520px, 28px 28px;
-  color: #1c1917;
+    linear-gradient(rgba(4, 120, 87, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(4, 120, 87, 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 90% 0%, rgba(163, 230, 53, 0.14) 0%, transparent 40%);
+  background-size: 32px 32px, 32px 32px, 100% 520px;
+  color: #12211a;
 }
-::selection { background: #fed7aa; color: #3b0764; }
+::selection { background: #d9f99d; color: #022c22; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #7e22ce, #f97316); border-radius: 999px; border: 2px solid #fff7ed; }
-::-webkit-scrollbar-track { background: #ffedd5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #047857, #84cc16); border-radius: 2px; border: 2px solid #f7faf6; }
+::-webkit-scrollbar-track { background: #e0ebe3; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Orchard type: warm, upright, generous headlines. */
-h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
+/* Mint type: crisp, upright, editorial headlines. */
+h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Orchard rise: fireflies drifting upward at dusk. */
+/* Mint rise: leaves drifting upward in a breeze. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, 4vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.7; }
@@ -106,140 +105,141 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 14s linear infinite; }
 
-/* Orchard sway: a slow, soft side-to-side float. */
+/* Mint sway: a slow, soft side-to-side float. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-6px, 0, 0) rotate(-2deg) scale(1); opacity: 0.6; }
   50% { transform: translate3d(6px, -8px, 0) rotate(2deg) scale(1.03); opacity: 0.9; }
 }
 .pop-drift { animation: signal-drift 12s ease-in-out infinite; }
 
-/* Orchard bob: a gentle hover lift. */
+/* Mint bob: a gentle hover lift. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-4px) scale(1.01); }
 }
 .pop-bob { animation: signal-bob 5s ease-in-out infinite; }
 
-/* Slow turn for the orchard dial. */
+/* Slow turn for the mint dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 48s linear infinite; }
 
-/* Orchard shimmer: a warm tangerine pulse. */
+/* Mint shimmer: a lime pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.5; transform: scale(0.94); }
   50% { opacity: 1; transform: scale(1.06); }
 }
 .pop-twinkle { animation: signal-blink 3.5s ease-in-out infinite; }
 
-/* Orchard ticker: infinite marquee (leftward drift). */
+/* Mint ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Orchard bands: plum -> tangerine -> espresso stripes. */
+/* Mint bands: emerald -> lime -> pine stripes. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #7e22ce 0 34%, #f97316 34% 67%, #292524 67% 100%);
+    linear-gradient(90deg, #047857 0 34%, #84cc16 34% 67%, #26402f 67% 100%);
   background-size: 34px 34px;
 }
 
-/* Orchard card: a chunky dusk block — generously
-   rounded corners, a thick plum edge and a hard
-   offset shadow that deepens on hover. */
+/* Mint card: a flat, crisp rectangle — sharp corners,
+   a thin pine edge and a soft shadow that lifts on hover. */
 .pop-lift {
   position: relative;
-  border: 2px solid rgba(59, 7, 100, 0.85);
+  border: 1px solid rgba(2, 44, 34, 0.16);
   background: #ffffff;
-  border-radius: 1.5rem;
-  box-shadow: 5px 5px 0 rgba(59, 7, 100, 0.9);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 2px rgba(2, 44, 34, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 8px 8px 0 rgba(59, 7, 100, 0.9);
+  transform: translateY(-3px);
+  border-color: rgba(4, 120, 87, 0.45);
+  box-shadow: 0 16px 28px -14px rgba(4, 120, 87, 0.35);
 }
 
-/* Orchard glass: shared by modals and drawers — a
-   warm frosted pane with a thick tangerine top edge. */
+/* Mint glass: shared by modals and drawers — a
+   clean frosted pane with a lime top edge. */
 .pop-glass {
-  background: rgba(255, 247, 237, 0.94);
+  background: rgba(247, 250, 246, 0.96);
   backdrop-filter: blur(16px) saturate(1.05);
   -webkit-backdrop-filter: blur(16px) saturate(1.05);
-  border: 2px solid rgba(59, 7, 100, 0.35);
-  border-top: 4px solid #f97316;
-  border-radius: 1.25rem;
-  box-shadow: 6px 6px 0 rgba(59, 7, 100, 0.25);
+  border: 1px solid rgba(2, 44, 34, 0.16);
+  border-top: 3px solid #84cc16;
+  border-radius: 0.5rem;
+  box-shadow: 0 16px 32px -16px rgba(2, 44, 34, 0.28);
 }
 
-/* Orchard tag: a tilted dusk badge — chunky pill,
-   tangerine-to-plum face. */
+/* Mint tag: a tilted field badge — sharp lime tile,
+   dark pine type. */
 .starburst {
-  background: linear-gradient(135deg, #f97316, #7e22ce);
-  color: #ffffff;
+  background: linear-gradient(135deg, #bef264, #84cc16);
+  color: #1a2e05;
   text-shadow: none;
-  border-radius: 999px;
-  transform: rotate(4deg);
-  box-shadow: 0 6px 18px rgba(126, 34, 206, 0.45);
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 0.375rem;
+  transform: rotate(-3deg);
+  box-shadow: 0 4px 14px rgba(101, 163, 13, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Orchard dots: soft plum dusk dots. */
+/* Mint dots: a faint field grid. */
 .halftone {
   background-image:
-    radial-gradient(rgba(126, 34, 206, 0.14) 1.5px, transparent 1.5px);
-  background-size: 20px 20px;
+    linear-gradient(rgba(4, 120, 87, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(4, 120, 87, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
-/* Orchard rule: a plum-to-tangerine-to-espresso bar. */
+/* Mint rule: an emerald-to-lime-to-pine bar. */
 .zigzag {
-  height: 8px;
+  height: 3px;
   border-top: none;
-  background: linear-gradient(90deg, #7e22ce, #f97316, #292524);
-  background-size: 100% 8px;
+  background: linear-gradient(90deg, #047857, #84cc16, #26402f);
+  background-size: 100% 3px;
   background-repeat: no-repeat;
   opacity: 0.9;
-  border-radius: 999px;
+  border-radius: 0;
 }
 
-/* Orchard band: a warm gradient bar with a
-   tangerine underline and rounded bottom corners. */
+/* Mint band: a pale mint bar with a
+   lime underline and square bottom corners. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #ffedd5, #fed7aa, #f3e8ff);
+  background: linear-gradient(90deg, #ecfdf5, #d9f99d, #d1fae5);
   opacity: 1;
-  box-shadow: 0 12px 24px -12px rgba(126, 34, 206, 0.35);
-  border-bottom: 4px solid #f97316;
-  border-radius: 0 0 1.5rem 1.5rem;
+  box-shadow: 0 10px 20px -12px rgba(4, 120, 87, 0.35);
+  border-bottom: 3px solid #84cc16;
+  border-radius: 0;
 }
 
-/* Orchard glow: a warm dusk halo for the core. */
+/* Mint glow: a soft field halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.55) 0%, rgba(126, 34, 206, 0.25) 42%, rgba(249, 115, 22, 0.3) 62%, rgba(249, 115, 22, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.6) 0%, rgba(4, 120, 87, 0.22) 42%, rgba(132, 204, 22, 0.28) 62%, rgba(132, 204, 22, 0) 76%);
 }
 
-/* Orchard core: a tangerine disc with a soft ring. */
+/* Mint core: a lime disc with a soft ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #ffedd5 0%, #f97316 55%, #7e22ce 100%);
-  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.35), 0 0 36px rgba(126, 34, 206, 0.4);
-  border: 2px solid rgba(255, 255, 255, 0.6);
+    radial-gradient(circle at 35% 30%, #ecfccb 0%, #84cc16 55%, #047857 100%);
+  box-shadow: 0 0 0 3px rgba(132, 204, 22, 0.35), 0 0 36px rgba(4, 120, 87, 0.35);
+  border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
 /* Soft rings around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(126, 34, 206, 0.3) 0px,
-    rgba(126, 34, 206, 0.3) 1px,
+    rgba(4, 120, 87, 0.3) 0px,
+    rgba(4, 120, 87, 0.3) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(249, 115, 22, 0.3) 14px,
-    rgba(249, 115, 22, 0.3) 15px,
+    rgba(132, 204, 22, 0.3) 14px,
+    rgba(132, 204, 22, 0.3) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -250,7 +250,7 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(249, 115, 22, 0.4) 0deg 3deg,
+    rgba(132, 204, 22, 0.4) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
