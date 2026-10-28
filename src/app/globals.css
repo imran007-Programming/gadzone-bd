@@ -1,70 +1,70 @@
 @import "tailwindcss";
 
 @theme {
-  /* Glacier Frost: a cool polar direction —
-     icy cyan as the primary accent, bright sky blue
-     for badges and prices, and deep navy for secondary
-     highlights, on frost-white paper. Cards are crisp,
-     sharp-cornered frost tiles with a thin cyan edge
-     and a cool glacier shadow — the opposite of the
-     previous Ember Bazaar look, its crimson rose /
-     amber / cocoa palette, pillowy rounded tiles and
-     warm ember glow. */
+  /* Orchard Dusk: a warm evening direction —
+     deep plum as the primary accent, vivid tangerine
+     for badges and prices, and warm espresso for
+     secondary highlights, on cream paper. Cards are
+     chunky, generously rounded blocks with a thick
+     plum edge and a hard offset shadow — the opposite
+     of the previous Glacier Frost look, its icy cyan /
+     sky / navy palette, sharp-cornered frost tiles
+     and cool glacier glow. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = cyan scale */
-  --color-brand-50: #ecfeff;
-  --color-brand-100: #cffafe;
-  --color-brand-200: #a5f3fc;
-  --color-brand-300: #67e8f9;
-  --color-brand-400: #22d3ee;
-  --color-brand-500: #06b6d4;
-  --color-brand-600: #0891b2;
-  --color-brand-700: #0e7490;
-  --color-brand-800: #155e75;
-  --color-brand-900: #164e63;
-  --color-brand-950: #083344;
-  --color-brand: #0891b2;
-  --color-brand-dark: #0e7490;
-  --color-brand-deep: #083344;
+  /* brand = plum scale */
+  --color-brand-50: #faf5ff;
+  --color-brand-100: #f3e8ff;
+  --color-brand-200: #e9d5ff;
+  --color-brand-300: #d8b4fe;
+  --color-brand-400: #c084fc;
+  --color-brand-500: #a855f7;
+  --color-brand-600: #9333ea;
+  --color-brand-700: #7e22ce;
+  --color-brand-800: #6b21a8;
+  --color-brand-900: #581c87;
+  --color-brand-950: #3b0764;
+  --color-brand: #7e22ce;
+  --color-brand-dark: #6b21a8;
+  --color-brand-deep: #3b0764;
 
-  /* gold = sky scale (name kept for legacy class refs) */
-  --color-gold-50: #f0f9ff;
-  --color-gold-100: #e0f2fe;
-  --color-gold-200: #bae6fd;
-  --color-gold-300: #7dd3fc;
-  --color-gold-400: #38bdf8;
-  --color-gold-500: #0ea5e9;
-  --color-gold-600: #0284c7;
-  --color-gold-700: #0369a1;
-  --color-gold-800: #075985;
-  --color-gold-900: #0c4a6e;
-  --color-gold-950: #082f49;
-  --color-gold: #0ea5e9;
-  --color-gold-deep: #075985;
-  --color-gold-soft: #e0f2fe;
+  /* gold = tangerine scale (name kept for legacy class refs) */
+  --color-gold-50: #fff7ed;
+  --color-gold-100: #ffedd5;
+  --color-gold-200: #fed7aa;
+  --color-gold-300: #fdba74;
+  --color-gold-400: #fb923c;
+  --color-gold-500: #f97316;
+  --color-gold-600: #ea580c;
+  --color-gold-700: #c2410c;
+  --color-gold-800: #9a3412;
+  --color-gold-900: #7c2d12;
+  --color-gold-950: #431407;
+  --color-gold: #f97316;
+  --color-gold-deep: #9a3412;
+  --color-gold-soft: #ffedd5;
 
-  /* popblue = deep navy scale (name kept for legacy class refs) */
-  --color-popblue-50: #f8fafc;
-  --color-popblue-100: #f1f5f9;
-  --color-popblue-200: #e2e8f0;
-  --color-popblue-300: #cbd5e1;
-  --color-popblue-400: #94a3b8;
-  --color-popblue-500: #64748b;
-  --color-popblue-600: #475569;
-  --color-popblue-700: #334155;
-  --color-popblue-800: #1e293b;
-  --color-popblue-900: #0f172a;
-  --color-popblue-950: #020617;
-  --color-popblue: #1e293b;
-  --color-popblue-deep: #0f172a;
-  --color-popblue-soft: #f1f5f9;
+  /* popblue = warm espresso scale (name kept for legacy class refs) */
+  --color-popblue-50: #fafaf9;
+  --color-popblue-100: #f5f5f4;
+  --color-popblue-200: #e7e5e4;
+  --color-popblue-300: #d6d3d1;
+  --color-popblue-400: #a8a29e;
+  --color-popblue-500: #78716c;
+  --color-popblue-600: #57534e;
+  --color-popblue-700: #44403c;
+  --color-popblue-800: #292524;
+  --color-popblue-900: #1c1917;
+  --color-popblue-950: #0c0a09;
+  --color-popblue: #292524;
+  --color-popblue-deep: #1c1917;
+  --color-popblue-soft: #f5f5f4;
 
-  --color-ink: #0f172a;
-  --color-paper: #f8fafc;
-  --color-mute: #475569;
+  --color-ink: #1c1917;
+  --color-paper: #fff7ed;
+  --color-mute: #57534e;
   --color-card: #ffffff;
-  --color-deep: #083344;
+  --color-deep: #3b0764;
 }
 
 html { scroll-behavior: smooth; }
@@ -79,25 +79,25 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f8fafc;
+  background-color: #fff7ed;
   background-image:
-    radial-gradient(circle at 12% 0%, rgba(8, 145, 178, 0.10) 0%, transparent 42%),
-    radial-gradient(circle at 88% 12%, rgba(56, 189, 248, 0.12) 0%, transparent 40%),
-    repeating-linear-gradient(90deg, rgba(8, 145, 178, 0.05) 0 1px, transparent 1px 26px);
-  background-size: 100% 480px, 100% 480px, 26px 26px;
-  color: #0f172a;
+    radial-gradient(circle at 10% 0%, rgba(126, 34, 206, 0.12) 0%, transparent 44%),
+    radial-gradient(circle at 90% 10%, rgba(249, 115, 22, 0.16) 0%, transparent 42%),
+    radial-gradient(rgba(126, 34, 206, 0.07) 1.5px, transparent 1.5px);
+  background-size: 100% 520px, 100% 520px, 28px 28px;
+  color: #1c1917;
 }
-::selection { background: #bae6fd; color: #083344; }
+::selection { background: #fed7aa; color: #3b0764; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0891b2, #38bdf8); border-radius: 999px; border: 2px solid #f8fafc; }
-::-webkit-scrollbar-track { background: #e0f2fe; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #7e22ce, #f97316); border-radius: 999px; border: 2px solid #fff7ed; }
+::-webkit-scrollbar-track { background: #ffedd5; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Glacier type: crisp, upright, generous headlines. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Orchard type: warm, upright, generous headlines. */
+h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Glacier rise: ice crystals drifting upward. */
+/* Orchard rise: fireflies drifting upward at dusk. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, 4vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.7; }
@@ -106,127 +106,127 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 14s linear infinite; }
 
-/* Glacier sway: a slow, soft side-to-side float. */
+/* Orchard sway: a slow, soft side-to-side float. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-6px, 0, 0) rotate(-2deg) scale(1); opacity: 0.6; }
   50% { transform: translate3d(6px, -8px, 0) rotate(2deg) scale(1.03); opacity: 0.9; }
 }
 .pop-drift { animation: signal-drift 12s ease-in-out infinite; }
 
-/* Glacier bob: a gentle hover lift. */
+/* Orchard bob: a gentle hover lift. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-4px) scale(1.01); }
 }
 .pop-bob { animation: signal-bob 5s ease-in-out infinite; }
 
-/* Slow turn for the glacier dial. */
+/* Slow turn for the orchard dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 48s linear infinite; }
 
-/* Glacier shimmer: a cool cyan pulse. */
+/* Orchard shimmer: a warm tangerine pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.5; transform: scale(0.94); }
   50% { opacity: 1; transform: scale(1.06); }
 }
 .pop-twinkle { animation: signal-blink 3.5s ease-in-out infinite; }
 
-/* Glacier ticker: infinite marquee (leftward drift). */
+/* Orchard ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Glacier bands: cyan -> sky -> navy stripes. */
+/* Orchard bands: plum -> tangerine -> espresso stripes. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #0891b2 0 34%, #38bdf8 34% 67%, #1e293b 67% 100%);
+    linear-gradient(90deg, #7e22ce 0 34%, #f97316 34% 67%, #292524 67% 100%);
   background-size: 34px 34px;
 }
 
-/* Glacier card: a crisp frost tile — sharp corners,
-   a thin cyan edge and a cool glacier shadow that
-   lifts on hover. */
+/* Orchard card: a chunky dusk block — generously
+   rounded corners, a thick plum edge and a hard
+   offset shadow that deepens on hover. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(8, 145, 178, 0.28);
+  border: 2px solid rgba(59, 7, 100, 0.85);
   background: #ffffff;
-  border-radius: 0.5rem;
-  box-shadow: 0 1px 2px rgba(8, 47, 73, 0.08), 0 14px 28px -16px rgba(8, 145, 178, 0.35);
+  border-radius: 1.5rem;
+  box-shadow: 5px 5px 0 rgba(59, 7, 100, 0.9);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 2px 4px rgba(8, 47, 73, 0.10), 0 22px 34px -16px rgba(8, 145, 178, 0.45);
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0 rgba(59, 7, 100, 0.9);
 }
 
-/* Glacier glass: shared by modals and drawers — a
-   cool frosted pane with a thick cyan top edge. */
+/* Orchard glass: shared by modals and drawers — a
+   warm frosted pane with a thick tangerine top edge. */
 .pop-glass {
-  background: rgba(248, 250, 252, 0.94);
+  background: rgba(255, 247, 237, 0.94);
   backdrop-filter: blur(16px) saturate(1.05);
   -webkit-backdrop-filter: blur(16px) saturate(1.05);
-  border: 1px solid rgba(8, 145, 178, 0.28);
-  border-top: 4px solid #0891b2;
-  border-radius: 0.75rem;
-  box-shadow: 0 24px 48px -16px rgba(8, 47, 73, 0.35);
+  border: 2px solid rgba(59, 7, 100, 0.35);
+  border-top: 4px solid #f97316;
+  border-radius: 1.25rem;
+  box-shadow: 6px 6px 0 rgba(59, 7, 100, 0.25);
 }
 
-/* Glacier tag: a tilted ice badge — sharp corners,
-   cyan-to-sky face. */
+/* Orchard tag: a tilted dusk badge — chunky pill,
+   tangerine-to-plum face. */
 .starburst {
-  background: linear-gradient(135deg, #06b6d4, #0ea5e9);
+  background: linear-gradient(135deg, #f97316, #7e22ce);
   color: #ffffff;
   text-shadow: none;
-  border-radius: 0.5rem;
-  transform: rotate(-6deg);
-  box-shadow: 0 6px 18px rgba(8, 145, 178, 0.45);
+  border-radius: 999px;
+  transform: rotate(4deg);
+  box-shadow: 0 6px 18px rgba(126, 34, 206, 0.45);
   border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
-/* Glacier dots: soft cyan ice dots. */
+/* Orchard dots: soft plum dusk dots. */
 .halftone {
   background-image:
-    radial-gradient(rgba(8, 145, 178, 0.14) 1.5px, transparent 1.5px);
+    radial-gradient(rgba(126, 34, 206, 0.14) 1.5px, transparent 1.5px);
   background-size: 20px 20px;
 }
 
-/* Glacier rule: a cyan-to-sky-to-navy bar. */
+/* Orchard rule: a plum-to-tangerine-to-espresso bar. */
 .zigzag {
-  height: 6px;
+  height: 8px;
   border-top: none;
-  background: linear-gradient(90deg, #0891b2, #38bdf8, #1e293b);
-  background-size: 100% 6px;
+  background: linear-gradient(90deg, #7e22ce, #f97316, #292524);
+  background-size: 100% 8px;
   background-repeat: no-repeat;
   opacity: 0.9;
   border-radius: 999px;
 }
 
-/* Glacier band: a cool gradient bar with a
-   cyan underline and sharp bottom corners. */
+/* Orchard band: a warm gradient bar with a
+   tangerine underline and rounded bottom corners. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #cffafe, #e0f2fe, #f1f5f9);
+  background: linear-gradient(90deg, #ffedd5, #fed7aa, #f3e8ff);
   opacity: 1;
-  box-shadow: 0 12px 24px -12px rgba(8, 145, 178, 0.35);
-  border-bottom: 3px solid #0891b2;
-  border-radius: 0 0 0.5rem 0.5rem;
+  box-shadow: 0 12px 24px -12px rgba(126, 34, 206, 0.35);
+  border-bottom: 4px solid #f97316;
+  border-radius: 0 0 1.5rem 1.5rem;
 }
 
-/* Glacier glow: a cool cyan halo for the core. */
+/* Orchard glow: a warm dusk halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.55) 0%, rgba(8, 145, 178, 0.25) 42%, rgba(56, 189, 248, 0.28) 62%, rgba(56, 189, 248, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.55) 0%, rgba(126, 34, 206, 0.25) 42%, rgba(249, 115, 22, 0.3) 62%, rgba(249, 115, 22, 0) 76%);
 }
 
-/* Glacier core: an ice disc with a soft ring. */
+/* Orchard core: a tangerine disc with a soft ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #e0f2fe 0%, #38bdf8 55%, #0e7490 100%);
-  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.35), 0 0 36px rgba(8, 145, 178, 0.4);
+    radial-gradient(circle at 35% 30%, #ffedd5 0%, #f97316 55%, #7e22ce 100%);
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.35), 0 0 36px rgba(126, 34, 206, 0.4);
   border: 2px solid rgba(255, 255, 255, 0.6);
 }
 
@@ -234,12 +234,12 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(8, 145, 178, 0.3) 0px,
-    rgba(8, 145, 178, 0.3) 1px,
+    rgba(126, 34, 206, 0.3) 0px,
+    rgba(126, 34, 206, 0.3) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(56, 189, 248, 0.3) 14px,
-    rgba(56, 189, 248, 0.3) 15px,
+    rgba(249, 115, 22, 0.3) 14px,
+    rgba(249, 115, 22, 0.3) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -250,7 +250,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(56, 189, 248, 0.4) 0deg 3deg,
+    rgba(249, 115, 22, 0.4) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
