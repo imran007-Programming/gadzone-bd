@@ -1,70 +1,72 @@
 @import "tailwindcss";
 
 @theme {
-  /* Twilight Plum: a soft, rounded direction —
-     deep violet as the primary accent, coral for
-     warm highlights, indigo-night for contrast, on
-     pale lilac paper with a gentle dot texture.
-     Cards are big soft-rounded panels with diffused
-     shadows — the opposite of the previous Verdant
-     Grid look, its emerald / lime palette, pale sage
-     paper, fine grid lines, sharp corners and flat
-     hard offset shadows. */
+  /* Solar Citrus: a warm, zesty direction —
+     burnt orange as the primary accent, leaf green
+     for fresh highlights, cocoa brown for contrast,
+     on warm cream paper with a diagonal pinstripe
+     texture. Cards are tighter medium-rounded panels
+     with a crisp amber border, a solid top accent
+     bar and a small offset shadow — the opposite of
+     the previous Twilight Plum look, its violet /
+     coral / indigo palette, pale lilac paper, dot
+     texture, big soft-rounded panels and diffused
+     shadows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = violet scale */
-  --color-brand-50: #f5f3ff;
-  --color-brand-100: #ede9fe;
-  --color-brand-200: #ddd6fe;
-  --color-brand-300: #c4b5fd;
-  --color-brand-400: #a78bfa;
-  --color-brand-500: #8b5cf6;
-  --color-brand-600: #7c3aed;
-  --color-brand-700: #6d28d9;
-  --color-brand-800: #5b21b6;
-  --color-brand-900: #4c1d95;
-  --color-brand-950: #2e1065;
-  --color-brand: #7c3aed;
-  --color-brand-dark: #6d28d9;
-  --color-brand-deep: #2e1065;
+  /* brand = burnt-orange scale */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-brand-950: #431407;
+  --color-brand: #ea580c;
+  --color-brand-dark: #c2410c;
+  --color-brand-deep: #7c2d12;
 
-  /* gold = coral scale (name kept for legacy class refs) */
-  --color-gold-50: #fff1f2;
-  --color-gold-100: #ffe4e6;
-  --color-gold-200: #fecdd3;
-  --color-gold-300: #fda4af;
-  --color-gold-400: #fb7185;
-  --color-gold-500: #f43f5e;
-  --color-gold-600: #e11d48;
-  --color-gold-700: #be123c;
-  --color-gold-800: #9f1239;
-  --color-gold-900: #881337;
-  --color-gold-950: #4c0519;
-  --color-gold: #f43f5e;
-  --color-gold-deep: #881337;
-  --color-gold-soft: #ffe4e6;
+  /* gold = leaf-green scale (name kept for legacy class refs) */
+  --color-gold-50: #f0fdf4;
+  --color-gold-100: #dcfce7;
+  --color-gold-200: #bbf7d0;
+  --color-gold-300: #86efac;
+  --color-gold-400: #4ade80;
+  --color-gold-500: #22c55e;
+  --color-gold-600: #16a34a;
+  --color-gold-700: #15803d;
+  --color-gold-800: #166534;
+  --color-gold-900: #14532d;
+  --color-gold-950: #052e16;
+  --color-gold: #16a34a;
+  --color-gold-deep: #14532d;
+  --color-gold-soft: #dcfce7;
 
-  /* popblue = indigo-night scale (name kept for legacy class refs) */
-  --color-popblue-50: #eef2ff;
-  --color-popblue-100: #e0e7ff;
-  --color-popblue-200: #c7d2fe;
-  --color-popblue-300: #a5b4fc;
-  --color-popblue-400: #818cf8;
-  --color-popblue-500: #6366f1;
-  --color-popblue-600: #4f46e5;
-  --color-popblue-700: #4338ca;
-  --color-popblue-800: #3730a3;
-  --color-popblue-900: #312e81;
-  --color-popblue-950: #1e1b4b;
-  --color-popblue: #4338ca;
-  --color-popblue-deep: #1e1b4b;
-  --color-popblue-soft: #e0e7ff;
+  /* popblue = cocoa-brown scale (name kept for legacy class refs) */
+  --color-popblue-50: #fdf8f2;
+  --color-popblue-100: #f5e8d8;
+  --color-popblue-200: #e8cfae;
+  --color-popblue-300: #d9ac7a;
+  --color-popblue-400: #c9854a;
+  --color-popblue-500: #a96a2e;
+  --color-popblue-600: #8a5220;
+  --color-popblue-700: #6f3f1a;
+  --color-popblue-800: #5a3317;
+  --color-popblue-900: #451a03;
+  --color-popblue-950: #2a1202;
+  --color-popblue: #8a5220;
+  --color-popblue-deep: #2a1202;
+  --color-popblue-soft: #f5e8d8;
 
-  --color-ink: #2a1f33;
-  --color-paper: #faf7fc;
-  --color-mute: #6b5d7a;
+  --color-ink: #2b1d10;
+  --color-paper: #fffaf0;
+  --color-mute: #7a6a58;
   --color-card: #ffffff;
-  --color-deep: #2e1065;
+  --color-deep: #7c2d12;
 }
 
 html { scroll-behavior: smooth; }
@@ -79,166 +81,176 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #faf7fc;
+  background-color: #fffaf0;
   background-image:
-    radial-gradient(rgba(124, 58, 237, 0.10) 1.2px, transparent 1.2px),
-    linear-gradient(160deg, rgba(237, 233, 254, 0.7) 0%, rgba(255, 228, 230, 0.35) 45%, rgba(250, 247, 252, 0) 75%);
-  background-size: 26px 26px, 100% 100%;
-  color: #2a1f33;
+    repeating-linear-gradient(115deg, rgba(234, 88, 12, 0.05) 0px, rgba(234, 88, 12, 0.05) 1px, transparent 1px, transparent 14px),
+    linear-gradient(160deg, rgba(255, 237, 213, 0.85) 0%, rgba(220, 252, 231, 0.35) 45%, rgba(255, 250, 240, 0) 75%);
+  background-size: 100% 100%, 100% 100%;
+  color: #2b1d10;
 }
-::selection { background: #fecdd3; color: #4c0519; }
+::selection { background: #bbf7d0; color: #14532d; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #8b5cf6, #f43f5e); border-radius: 999px; border: 2px solid #faf7fc; }
-::-webkit-scrollbar-track { background: #ede9fe; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #f97316, #16a34a); border-radius: 4px; border: 2px solid #fffaf0; }
+::-webkit-scrollbar-track { background: #ffedd5; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Twilight Plum type: soft headlines, relaxed and open. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Solar Citrus type: tight headlines, punchy and open. */
+h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Twilight Plum fall: petals drifting down the dusk. */
+/* Solar Citrus fall: citrus leaves drifting down the warm light. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, -8vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.8; }
   50% { transform: translate3d(3vw, 46vh, 0) rotate(90deg) scale(1.02); }
   100% { transform: translate3d(-2vw, 92vh, 0) rotate(180deg) scale(1); opacity: 0; }
 }
-.pop-fall { animation: signal-rise 22s linear infinite; }
+.pop-fall { animation: signal-rise 20s linear infinite; }
 
-/* Twilight Plum sway: a gentle side-to-side float. */
+/* Solar Citrus sway: a gentle side-to-side float. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-6px, 0, 0) rotate(-2deg) scale(1); opacity: 0.6; }
   50% { transform: translate3d(6px, -10px, 0) rotate(2deg) scale(1.02); opacity: 0.9; }
 }
-.pop-drift { animation: signal-drift 13s ease-in-out infinite; }
+.pop-drift { animation: signal-drift 12s ease-in-out infinite; }
 
-/* Twilight Plum bob: a soft hover lift. */
+/* Solar Citrus bob: a snappy hover lift. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-4px) scale(1.01); }
+  50% { transform: translateY(-5px) scale(1.01); }
 }
-.pop-bob { animation: signal-bob 6s ease-in-out infinite; }
+.pop-bob { animation: signal-bob 5s ease-in-out infinite; }
 
-/* Slow turn for the dusk dial. */
+/* Slow turn for the citrus dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
-.pop-spin { animation: dial-turn 75s linear infinite; }
+.pop-spin { animation: dial-turn 70s linear infinite; }
 
-/* Twilight Plum glint: a soft coral pulse. */
+/* Solar Citrus glint: a warm amber pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.5; transform: scale(0.94); }
   50% { opacity: 1; transform: scale(1.06); }
 }
-.pop-twinkle { animation: signal-blink 4s ease-in-out infinite; }
+.pop-twinkle { animation: signal-blink 3.5s ease-in-out infinite; }
 
-/* Twilight Plum ticker: infinite marquee (leftward drift). */
+/* Solar Citrus ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
-.pop-ticker { animation: signal-ticker 36s linear infinite; }
+.pop-ticker { animation: signal-ticker 34s linear infinite; }
 
-/* Twilight Plum bands: violet -> coral -> indigo pills. */
+/* Solar Citrus bands: orange -> green -> cocoa bars. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #7c3aed 0 34%, #f43f5e 34% 67%, #4338ca 67% 100%);
+    linear-gradient(90deg, #ea580c 0 34%, #16a34a 34% 67%, #8a5220 67% 100%);
   background-size: 72px 72px;
-  border-radius: 999px;
+  border-radius: 4px;
 }
 
-/* Twilight Plum card: a big soft-rounded panel — a thin
-   violet-tinted border and a soft diffused shadow that
-   lifts gently on hover. */
+/* Solar Citrus card: a tighter medium-rounded panel —
+   a crisp amber border, a solid orange top accent bar
+   and a small flat offset shadow that steps out on
+   hover instead of a soft diffused glow. */
 .pop-lift {
   position: relative;
-  border: 1px solid #ddd6fe;
+  border: 2px solid #fed7aa;
   background: #ffffff;
-  border-radius: 1.5rem;
-  box-shadow: 0 10px 30px rgba(76, 29, 149, 0.10), 0 2px 8px rgba(76, 29, 149, 0.06);
+  border-radius: 0.9rem;
+  box-shadow: 4px 4px 0 rgba(194, 65, 12, 0.14);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   overflow: hidden;
 }
+.pop-lift::before {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ea580c, #f97316 45%, #16a34a);
+  z-index: 1;
+}
 .pop-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 44px rgba(76, 29, 149, 0.16), 0 4px 12px rgba(244, 63, 94, 0.10);
+  transform: translate(-2px, -4px);
+  box-shadow: 7px 7px 0 rgba(194, 65, 12, 0.18);
 }
 
-/* Twilight Plum glass: shared by modals and drawers — a
-   frosted white pane with a violet border and a soft
-   diffused shadow. */
+/* Solar Citrus glass: shared by modals and drawers — a
+   frosted cream pane with an amber border and a flat
+   offset shadow. */
 .pop-glass {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 250, 240, 0.94);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid #ddd6fe;
-  border-radius: 1.5rem;
-  box-shadow: 0 20px 44px rgba(76, 29, 149, 0.16);
+  border: 2px solid #fed7aa;
+  border-radius: 0.9rem;
+  box-shadow: 5px 5px 0 rgba(194, 65, 12, 0.16);
 }
 
-/* Twilight Plum tag: a soft coral pill badge — white
+/* Solar Citrus tag: a leaf-green square badge — white
    type, tilted slightly, with a crisp white frame. */
 .starburst {
-  background: #f43f5e;
+  background: #16a34a;
   color: #ffffff;
   text-shadow: none;
-  border-radius: 999px;
-  transform: rotate(-2deg);
-  box-shadow: 0 6px 16px rgba(244, 63, 94, 0.35);
+  border-radius: 0.5rem;
+  transform: rotate(-3deg);
+  box-shadow: 3px 3px 0 rgba(124, 45, 18, 0.35);
   border: 2px solid #ffffff;
 }
 
-/* Twilight Plum dots: a soft violet dot texture. */
+/* Solar Citrus pinstripes: a warm diagonal stripe texture. */
 .halftone {
   background-image:
-    radial-gradient(rgba(124, 58, 237, 0.16) 1.5px, transparent 1.5px);
-  background-size: 24px 24px;
+    repeating-linear-gradient(115deg, rgba(234, 88, 12, 0.12) 0px, rgba(234, 88, 12, 0.12) 1px, transparent 1px, transparent 12px);
+  background-size: auto;
   background-position: 0 0;
 }
 
-/* Twilight Plum rule: a rounded violet-to-coral-to-indigo bar. */
+/* Solar Citrus rule: a squared orange-to-green-to-cocoa bar. */
 .zigzag {
   height: 6px;
   border-top: none;
-  background: linear-gradient(90deg, #7c3aed 0 33%, #f43f5e 33% 67%, #4338ca 67% 100%);
+  background: linear-gradient(90deg, #ea580c 0 33%, #16a34a 33% 67%, #8a5220 67% 100%);
   opacity: 1;
-  border-radius: 999px;
+  border-radius: 2px;
 }
 
-/* Twilight Plum band: a soft diagonal violet-to-coral
-   wash with a gentle shadow. */
+/* Solar Citrus band: a bold horizontal orange-to-green
+   wash with a flat offset shadow. */
 .bazaar-awning {
-  background: linear-gradient(120deg, #6d28d9, #8b5cf6 45%, #f43f5e);
+  background: linear-gradient(90deg, #c2410c, #f97316 45%, #16a34a);
   opacity: 1;
-  box-shadow: 0 12px 32px rgba(109, 40, 217, 0.25);
+  box-shadow: 0 4px 0 rgba(124, 45, 18, 0.25);
   border-bottom: none;
-  border-radius: 0 0 1.5rem 1.5rem;
+  border-radius: 0 0 0.9rem 0.9rem;
 }
 
-/* Twilight Plum glow: a soft violet-coral halo for the core. */
+/* Solar Citrus glow: a warm amber-green halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.9) 0%, rgba(254, 205, 211, 0.55) 42%, rgba(139, 92, 246, 0.3) 62%, rgba(139, 92, 246, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.9) 0%, rgba(254, 215, 170, 0.6) 42%, rgba(249, 115, 22, 0.3) 62%, rgba(249, 115, 22, 0) 76%);
 }
 
-/* Twilight Plum core: a violet disc with a coral ring. */
+/* Solar Citrus core: an amber disc with a green ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #c4b5fd 0%, #7c3aed 55%, #4c1d95 100%);
-  box-shadow: 0 0 0 3px rgba(244, 63, 94, 0.85), 0 12px 28px rgba(76, 29, 149, 0.35);
+    radial-gradient(circle at 35% 30%, #fdba74 0%, #ea580c 55%, #7c2d12 100%);
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.85), 4px 4px 0 rgba(124, 45, 18, 0.3);
   border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
-/* Soft rings around the core disc. */
+/* Crisp rings around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(124, 58, 237, 0.4) 0px,
-    rgba(124, 58, 237, 0.4) 1px,
+    rgba(234, 88, 12, 0.45) 0px,
+    rgba(234, 88, 12, 0.45) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(244, 63, 94, 0.4) 14px,
-    rgba(244, 63, 94, 0.4) 15px,
+    rgba(22, 163, 74, 0.45) 14px,
+    rgba(22, 163, 74, 0.45) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -249,7 +261,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(244, 63, 94, 0.55) 0deg 3deg,
+    rgba(22, 163, 74, 0.55) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);

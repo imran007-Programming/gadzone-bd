@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Twilight Plum glow drifting over the soft dusk sky.
+// Solar Citrus glow drifting over the warm morning light.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(124, 58, 237, 0.28)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(244, 63, 94, 0.20)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(67, 56, 202, 0.22)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(190, 18, 60, 0.25)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(234, 88, 12, 0.28)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(22, 163, 74, 0.20)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(249, 115, 22, 0.22)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(138, 82, 32, 0.25)" },
 ];
 
-// Twilight Plum petals rising through the soft light.
+// Solar Citrus leaves rising through the warm light.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#7c3aed" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f43f5e" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#4338ca" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#be123c" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#a78bfa" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#4338ca" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#fb7185" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#ea580c" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#16a34a" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#f97316" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#15803d" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#fdba74" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#8a5220" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#4ade80" },
 ];
 
 // Ember glints scattered through the warm light.
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* sunset wash over the warm evening sky */}
-      <div className="relative bg-gradient-to-b from-[#ffe4e6] via-[#ffedd5] to-[#fef3c7]">
+      <div className="relative bg-gradient-to-b from-[#ffedd5] via-[#fef3c7] to-[#fff7ed]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
