@@ -1,69 +1,69 @@
 @import "tailwindcss";
 
 @theme {
-  /* Mint Field: a flat, sharp-cornered editorial direction —
-     deep emerald as the primary accent, vivid lime for
-     badges and prices, and dark pine for secondary
-     highlights, on mint paper. Cards are flat, crisp
-     rectangles with a thin pine edge and a soft lift —
-     the opposite of the previous Orchard Dusk look, its
-     warm plum / tangerine palette, chunky rounded
-     blocks and hard offset shadows. */
+  /* Coral Dusk: a soft, rounded, warm-evening direction —
+     vivid coral-rose as the primary accent, amber for
+     badges and prices, and deep indigo for secondary
+     highlights, on warm cream paper. Cards are plush,
+     fully rounded pill-edged panels with soft layered
+     shadows — the opposite of the previous Mint Field
+     look, its emerald / lime / pine palette, sharp flat
+     rectangles and thin pine edges. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = emerald scale */
-  --color-brand-50: #ecfdf5;
-  --color-brand-100: #d1fae5;
-  --color-brand-200: #a7f3d0;
-  --color-brand-300: #6ee7b7;
-  --color-brand-400: #34d399;
-  --color-brand-500: #10b981;
-  --color-brand-600: #059669;
-  --color-brand-700: #047857;
-  --color-brand-800: #065f46;
-  --color-brand-900: #064e3b;
-  --color-brand-950: #022c22;
-  --color-brand: #047857;
-  --color-brand-dark: #065f46;
-  --color-brand-deep: #022c22;
+  /* brand = rose scale */
+  --color-brand-50: #fff1f2;
+  --color-brand-100: #ffe4e6;
+  --color-brand-200: #fecdd3;
+  --color-brand-300: #fda4af;
+  --color-brand-400: #fb7185;
+  --color-brand-500: #f43f5e;
+  --color-brand-600: #e11d48;
+  --color-brand-700: #be123c;
+  --color-brand-800: #9f1239;
+  --color-brand-900: #881337;
+  --color-brand-950: #4c0519;
+  --color-brand: #e11d48;
+  --color-brand-dark: #be123c;
+  --color-brand-deep: #4c0519;
 
-  /* gold = lime scale (name kept for legacy class refs) */
-  --color-gold-50: #f7fee7;
-  --color-gold-100: #ecfccb;
-  --color-gold-200: #d9f99d;
-  --color-gold-300: #bef264;
-  --color-gold-400: #a3e635;
-  --color-gold-500: #84cc16;
-  --color-gold-600: #65a30d;
-  --color-gold-700: #4d7c0f;
-  --color-gold-800: #3f6212;
-  --color-gold-900: #365314;
-  --color-gold-950: #1a2e05;
-  --color-gold: #84cc16;
-  --color-gold-deep: #3f6212;
-  --color-gold-soft: #ecfccb;
+  /* gold = amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #92400e;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = dark pine scale (name kept for legacy class refs) */
-  --color-popblue-50: #f2f7f4;
-  --color-popblue-100: #e0ebe3;
-  --color-popblue-200: #c2d6c9;
-  --color-popblue-300: #97b5a3;
-  --color-popblue-400: #6a927c;
-  --color-popblue-500: #4a7a60;
-  --color-popblue-600: #386048;
-  --color-popblue-700: #2d4d3a;
-  --color-popblue-800: #26402f;
-  --color-popblue-900: #1a2e21;
-  --color-popblue-950: #0d1a12;
-  --color-popblue: #26402f;
-  --color-popblue-deep: #1a2e21;
-  --color-popblue-soft: #e0ebe3;
+  /* popblue = deep indigo scale (name kept for legacy class refs) */
+  --color-popblue-50: #eef2ff;
+  --color-popblue-100: #e0e7ff;
+  --color-popblue-200: #c7d2fe;
+  --color-popblue-300: #a5b4fc;
+  --color-popblue-400: #818cf8;
+  --color-popblue-500: #6366f1;
+  --color-popblue-600: #4f46e5;
+  --color-popblue-700: #4338ca;
+  --color-popblue-800: #3730a3;
+  --color-popblue-900: #312e81;
+  --color-popblue-950: #1e1b4b;
+  --color-popblue: #312e81;
+  --color-popblue-deep: #1e1b4b;
+  --color-popblue-soft: #e0e7ff;
 
-  --color-ink: #12211a;
-  --color-paper: #f7faf6;
-  --color-mute: #4a5d52;
+  --color-ink: #292524;
+  --color-paper: #fff8f1;
+  --color-mute: #78716c;
   --color-card: #ffffff;
-  --color-deep: #022c22;
+  --color-deep: #1e1b4b;
 }
 
 html { scroll-behavior: smooth; }
@@ -78,155 +78,154 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f7faf6;
+  background-color: #fff8f1;
   background-image:
-    linear-gradient(rgba(4, 120, 87, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(4, 120, 87, 0.05) 1px, transparent 1px),
-    radial-gradient(circle at 90% 0%, rgba(163, 230, 53, 0.14) 0%, transparent 40%);
-  background-size: 32px 32px, 32px 32px, 100% 520px;
-  color: #12211a;
+    radial-gradient(circle at 8% 0%, rgba(244, 63, 94, 0.12) 0%, transparent 42%),
+    radial-gradient(circle at 94% 12%, rgba(245, 158, 11, 0.14) 0%, transparent 40%),
+    radial-gradient(circle at 50% 100%, rgba(79, 70, 229, 0.08) 0%, transparent 46%);
+  background-size: 100% 640px, 100% 640px, 100% 640px;
+  background-repeat: no-repeat;
+  color: #292524;
 }
-::selection { background: #d9f99d; color: #022c22; }
+::selection { background: #fde68a; color: #4c0519; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #047857, #84cc16); border-radius: 2px; border: 2px solid #f7faf6; }
-::-webkit-scrollbar-track { background: #e0ebe3; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #e11d48, #f59e0b); border-radius: 999px; border: 2px solid #fff8f1; }
+::-webkit-scrollbar-track { background: #ffe4e6; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Mint type: crisp, upright, editorial headlines. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Coral type: warm, rounded, generous headlines. */
+h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Mint rise: leaves drifting upward in a breeze. */
+/* Coral rise: warm embers drifting upward at dusk. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, 4vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.7; }
-  50% { transform: translate3d(2vw, -42vh, 0) rotate(30deg) scale(1.02); }
-  100% { transform: translate3d(-1vw, -92vh, 0) rotate(60deg) scale(1); opacity: 0; }
+  50% { transform: translate3d(-2vw, -42vh, 0) rotate(-30deg) scale(1.02); }
+  100% { transform: translate3d(1vw, -92vh, 0) rotate(-60deg) scale(1); opacity: 0; }
 }
 .pop-fall { animation: signal-rise 14s linear infinite; }
 
-/* Mint sway: a slow, soft side-to-side float. */
+/* Coral sway: a slow, soft side-to-side float. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-6px, 0, 0) rotate(-2deg) scale(1); opacity: 0.6; }
   50% { transform: translate3d(6px, -8px, 0) rotate(2deg) scale(1.03); opacity: 0.9; }
 }
 .pop-drift { animation: signal-drift 12s ease-in-out infinite; }
 
-/* Mint bob: a gentle hover lift. */
+/* Coral bob: a gentle hover lift. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-4px) scale(1.01); }
 }
 .pop-bob { animation: signal-bob 5s ease-in-out infinite; }
 
-/* Slow turn for the mint dial. */
+/* Slow turn for the coral dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 48s linear infinite; }
 
-/* Mint shimmer: a lime pulse. */
+/* Coral shimmer: an amber pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.5; transform: scale(0.94); }
   50% { opacity: 1; transform: scale(1.06); }
 }
 .pop-twinkle { animation: signal-blink 3.5s ease-in-out infinite; }
 
-/* Mint ticker: infinite marquee (leftward drift). */
+/* Coral ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Mint bands: emerald -> lime -> pine stripes. */
+/* Coral bands: rose -> amber -> indigo stripes. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #047857 0 34%, #84cc16 34% 67%, #26402f 67% 100%);
+    linear-gradient(90deg, #e11d48 0 34%, #f59e0b 34% 67%, #312e81 67% 100%);
   background-size: 34px 34px;
 }
 
-/* Mint card: a flat, crisp rectangle — sharp corners,
-   a thin pine edge and a soft shadow that lifts on hover. */
+/* Coral card: a plush, fully rounded panel — a soft
+   rose-tinted edge and layered shadows that deepen on hover. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(2, 44, 34, 0.16);
+  border: 1px solid rgba(225, 29, 72, 0.14);
   background: #ffffff;
-  border-radius: 0.375rem;
-  box-shadow: 0 1px 2px rgba(2, 44, 34, 0.06);
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 6px rgba(76, 5, 25, 0.05), 0 18px 36px -18px rgba(225, 29, 72, 0.22);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-3px);
-  border-color: rgba(4, 120, 87, 0.45);
-  box-shadow: 0 16px 28px -14px rgba(4, 120, 87, 0.35);
+  transform: translateY(-4px);
+  border-color: rgba(225, 29, 72, 0.35);
+  box-shadow: 0 4px 10px rgba(76, 5, 25, 0.06), 0 26px 44px -18px rgba(225, 29, 72, 0.32);
 }
 
-/* Mint glass: shared by modals and drawers — a
-   clean frosted pane with a lime top edge. */
+/* Coral glass: shared by modals and drawers — a
+   warm frosted pane with a coral top edge. */
 .pop-glass {
-  background: rgba(247, 250, 246, 0.96);
+  background: rgba(255, 248, 241, 0.96);
   backdrop-filter: blur(16px) saturate(1.05);
   -webkit-backdrop-filter: blur(16px) saturate(1.05);
-  border: 1px solid rgba(2, 44, 34, 0.16);
-  border-top: 3px solid #84cc16;
-  border-radius: 0.5rem;
-  box-shadow: 0 16px 32px -16px rgba(2, 44, 34, 0.28);
+  border: 1px solid rgba(225, 29, 72, 0.16);
+  border-top: 4px solid #f43f5e;
+  border-radius: 1.25rem;
+  box-shadow: 0 20px 40px -18px rgba(76, 5, 25, 0.3);
 }
 
-/* Mint tag: a tilted field badge — sharp lime tile,
-   dark pine type. */
+/* Coral tag: a round dusk badge — amber disc,
+   deep indigo type, ringed in white. */
 .starburst {
-  background: linear-gradient(135deg, #bef264, #84cc16);
-  color: #1a2e05;
+  background: radial-gradient(circle at 35% 30%, #fde68a 0%, #f59e0b 60%, #d97706 100%);
+  color: #1e1b4b;
   text-shadow: none;
-  border-radius: 0.375rem;
-  transform: rotate(-3deg);
-  box-shadow: 0 4px 14px rgba(101, 163, 13, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 999px;
+  transform: rotate(-6deg);
+  box-shadow: 0 6px 18px rgba(217, 119, 6, 0.45);
+  border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
-/* Mint dots: a faint field grid. */
+/* Coral dots: a soft dusk dot field. */
 .halftone {
-  background-image:
-    linear-gradient(rgba(4, 120, 87, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(4, 120, 87, 0.08) 1px, transparent 1px);
-  background-size: 24px 24px;
+  background-image: radial-gradient(rgba(225, 29, 72, 0.12) 1.5px, transparent 1.5px);
+  background-size: 26px 26px;
 }
 
-/* Mint rule: an emerald-to-lime-to-pine bar. */
+/* Coral rule: a rose-to-amber-to-indigo pill bar. */
 .zigzag {
-  height: 3px;
+  height: 5px;
   border-top: none;
-  background: linear-gradient(90deg, #047857, #84cc16, #26402f);
-  background-size: 100% 3px;
+  background: linear-gradient(90deg, #e11d48, #f59e0b, #312e81);
+  background-size: 100% 5px;
   background-repeat: no-repeat;
   opacity: 0.9;
-  border-radius: 0;
+  border-radius: 999px;
 }
 
-/* Mint band: a pale mint bar with a
-   lime underline and square bottom corners. */
+/* Coral band: a warm cream bar with a
+   coral underline and fully rounded bottom corners. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #ecfdf5, #d9f99d, #d1fae5);
+  background: linear-gradient(90deg, #fff1f2, #fef3c7, #e0e7ff);
   opacity: 1;
-  box-shadow: 0 10px 20px -12px rgba(4, 120, 87, 0.35);
-  border-bottom: 3px solid #84cc16;
-  border-radius: 0;
+  box-shadow: 0 14px 28px -16px rgba(225, 29, 72, 0.35);
+  border-bottom: 4px solid #f43f5e;
+  border-radius: 0 0 1rem 1rem;
 }
 
-/* Mint glow: a soft field halo for the core. */
+/* Coral glow: a soft dusk halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.6) 0%, rgba(4, 120, 87, 0.22) 42%, rgba(132, 204, 22, 0.28) 62%, rgba(132, 204, 22, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.65) 0%, rgba(225, 29, 72, 0.22) 42%, rgba(245, 158, 11, 0.28) 62%, rgba(245, 158, 11, 0) 76%);
 }
 
-/* Mint core: a lime disc with a soft ring. */
+/* Coral core: an amber disc with a soft ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #ecfccb 0%, #84cc16 55%, #047857 100%);
-  box-shadow: 0 0 0 3px rgba(132, 204, 22, 0.35), 0 0 36px rgba(4, 120, 87, 0.35);
+    radial-gradient(circle at 35% 30%, #fef3c7 0%, #f59e0b 55%, #e11d48 100%);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.35), 0 0 36px rgba(225, 29, 72, 0.35);
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
@@ -234,12 +233,12 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(4, 120, 87, 0.3) 0px,
-    rgba(4, 120, 87, 0.3) 1px,
+    rgba(225, 29, 72, 0.3) 0px,
+    rgba(225, 29, 72, 0.3) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(132, 204, 22, 0.3) 14px,
-    rgba(132, 204, 22, 0.3) 15px,
+    rgba(245, 158, 11, 0.3) 14px,
+    rgba(245, 158, 11, 0.3) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -250,7 +249,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(132, 204, 22, 0.4) 0deg 3deg,
+    rgba(245, 158, 11, 0.4) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
