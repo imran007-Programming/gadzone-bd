@@ -1,69 +1,70 @@
 @import "tailwindcss";
 
 @theme {
-  /* Coral Dusk: a soft, rounded, warm-evening direction —
-     vivid coral-rose as the primary accent, amber for
-     badges and prices, and deep indigo for secondary
-     highlights, on warm cream paper. Cards are plush,
-     fully rounded pill-edged panels with soft layered
-     shadows — the opposite of the previous Mint Field
-     look, its emerald / lime / pine palette, sharp flat
-     rectangles and thin pine edges. */
+  /* Blueprint Grid: a crisp, technical, workshop direction —
+     cobalt blue as the primary accent, signal yellow for
+     badges and prices, and cyan for secondary highlights,
+     on cool slate paper with a faint blueprint grid. Cards
+     are sharp, flat, thin-bordered panels with square-ish
+     corners and hard flat shadows — the opposite of the
+     previous Coral Dusk look, its rose / amber / indigo
+     palette, warm cream paper, plush fully-rounded cards
+     and soft layered glows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = rose scale */
-  --color-brand-50: #fff1f2;
-  --color-brand-100: #ffe4e6;
-  --color-brand-200: #fecdd3;
-  --color-brand-300: #fda4af;
-  --color-brand-400: #fb7185;
-  --color-brand-500: #f43f5e;
-  --color-brand-600: #e11d48;
-  --color-brand-700: #be123c;
-  --color-brand-800: #9f1239;
-  --color-brand-900: #881337;
-  --color-brand-950: #4c0519;
-  --color-brand: #e11d48;
-  --color-brand-dark: #be123c;
-  --color-brand-deep: #4c0519;
+  /* brand = blue scale */
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-200: #bfdbfe;
+  --color-brand-300: #93c5fd;
+  --color-brand-400: #60a5fa;
+  --color-brand-500: #3b82f6;
+  --color-brand-600: #2563eb;
+  --color-brand-700: #1d4ed8;
+  --color-brand-800: #1e40af;
+  --color-brand-900: #1e3a8a;
+  --color-brand-950: #172554;
+  --color-brand: #2563eb;
+  --color-brand-dark: #1d4ed8;
+  --color-brand-deep: #172554;
 
-  /* gold = amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #f59e0b;
-  --color-gold-deep: #92400e;
-  --color-gold-soft: #fef3c7;
+  /* gold = yellow scale (name kept for legacy class refs) */
+  --color-gold-50: #fefce8;
+  --color-gold-100: #fef9c3;
+  --color-gold-200: #fef08a;
+  --color-gold-300: #fde047;
+  --color-gold-400: #facc15;
+  --color-gold-500: #eab308;
+  --color-gold-600: #ca8a04;
+  --color-gold-700: #a16207;
+  --color-gold-800: #854d0e;
+  --color-gold-900: #713f12;
+  --color-gold-950: #422006;
+  --color-gold: #eab308;
+  --color-gold-deep: #854d0e;
+  --color-gold-soft: #fef9c3;
 
-  /* popblue = deep indigo scale (name kept for legacy class refs) */
-  --color-popblue-50: #eef2ff;
-  --color-popblue-100: #e0e7ff;
-  --color-popblue-200: #c7d2fe;
-  --color-popblue-300: #a5b4fc;
-  --color-popblue-400: #818cf8;
-  --color-popblue-500: #6366f1;
-  --color-popblue-600: #4f46e5;
-  --color-popblue-700: #4338ca;
-  --color-popblue-800: #3730a3;
-  --color-popblue-900: #312e81;
-  --color-popblue-950: #1e1b4b;
-  --color-popblue: #312e81;
-  --color-popblue-deep: #1e1b4b;
-  --color-popblue-soft: #e0e7ff;
+  /* popblue = cyan scale (name kept for legacy class refs) */
+  --color-popblue-50: #ecfeff;
+  --color-popblue-100: #cffafe;
+  --color-popblue-200: #a5f3fc;
+  --color-popblue-300: #67e8f9;
+  --color-popblue-400: #22d3ee;
+  --color-popblue-500: #06b6d4;
+  --color-popblue-600: #0891b2;
+  --color-popblue-700: #0e7490;
+  --color-popblue-800: #155e75;
+  --color-popblue-900: #164e63;
+  --color-popblue-950: #083344;
+  --color-popblue: #0e7490;
+  --color-popblue-deep: #083344;
+  --color-popblue-soft: #cffafe;
 
-  --color-ink: #292524;
-  --color-paper: #fff8f1;
-  --color-mute: #78716c;
+  --color-ink: #0f172a;
+  --color-paper: #f8fafc;
+  --color-mute: #64748b;
   --color-card: #ffffff;
-  --color-deep: #1e1b4b;
+  --color-deep: #0f172a;
 }
 
 html { scroll-behavior: smooth; }
@@ -78,26 +79,27 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fff8f1;
+  background-color: #f8fafc;
   background-image:
-    radial-gradient(circle at 8% 0%, rgba(244, 63, 94, 0.12) 0%, transparent 42%),
-    radial-gradient(circle at 94% 12%, rgba(245, 158, 11, 0.14) 0%, transparent 40%),
-    radial-gradient(circle at 50% 100%, rgba(79, 70, 229, 0.08) 0%, transparent 46%);
-  background-size: 100% 640px, 100% 640px, 100% 640px;
-  background-repeat: no-repeat;
-  color: #292524;
+    linear-gradient(rgba(37, 99, 235, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.055) 1px, transparent 1px),
+    radial-gradient(circle at 8% 0%, rgba(59, 130, 246, 0.10) 0%, transparent 42%),
+    radial-gradient(circle at 94% 12%, rgba(234, 179, 8, 0.10) 0%, transparent 40%);
+  background-size: 28px 28px, 28px 28px, 100% 640px, 100% 640px;
+  background-repeat: repeat, repeat, no-repeat, no-repeat;
+  color: #0f172a;
 }
-::selection { background: #fde68a; color: #4c0519; }
+::selection { background: #fde047; color: #172554; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #e11d48, #f59e0b); border-radius: 999px; border: 2px solid #fff8f1; }
-::-webkit-scrollbar-track { background: #ffe4e6; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #2563eb, #06b6d4); border-radius: 4px; border: 2px solid #f8fafc; }
+::-webkit-scrollbar-track { background: #dbeafe; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Coral type: warm, rounded, generous headlines. */
+/* Blueprint type: crisp, technical, tight headlines. */
 h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Coral rise: warm embers drifting upward at dusk. */
+/* Blueprint rise: square chips drifting upward. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, 4vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.7; }
@@ -106,126 +108,129 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 14s linear infinite; }
 
-/* Coral sway: a slow, soft side-to-side float. */
+/* Blueprint sway: a slow, straight side-to-side float. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(-6px, 0, 0) rotate(-2deg) scale(1); opacity: 0.6; }
-  50% { transform: translate3d(6px, -8px, 0) rotate(2deg) scale(1.03); opacity: 0.9; }
+  0%, 100% { transform: translate3d(-6px, 0, 0) rotate(0deg) scale(1); opacity: 0.6; }
+  50% { transform: translate3d(6px, -8px, 0) rotate(0deg) scale(1.03); opacity: 0.9; }
 }
 .pop-drift { animation: signal-drift 12s ease-in-out infinite; }
 
-/* Coral bob: a gentle hover lift. */
+/* Blueprint bob: a gentle hover lift. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-4px) scale(1.01); }
 }
 .pop-bob { animation: signal-bob 5s ease-in-out infinite; }
 
-/* Slow turn for the coral dial. */
+/* Slow turn for the blueprint dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 48s linear infinite; }
 
-/* Coral shimmer: an amber pulse. */
+/* Blueprint shimmer: a cyan pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.5; transform: scale(0.94); }
   50% { opacity: 1; transform: scale(1.06); }
 }
 .pop-twinkle { animation: signal-blink 3.5s ease-in-out infinite; }
 
-/* Coral ticker: infinite marquee (leftward drift). */
+/* Blueprint ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Coral bands: rose -> amber -> indigo stripes. */
+/* Blueprint bands: blue -> yellow -> cyan blocks. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #e11d48 0 34%, #f59e0b 34% 67%, #312e81 67% 100%);
+    linear-gradient(90deg, #2563eb 0 34%, #eab308 34% 67%, #0e7490 67% 100%);
   background-size: 34px 34px;
 }
 
-/* Coral card: a plush, fully rounded panel — a soft
-   rose-tinted edge and layered shadows that deepen on hover. */
+/* Blueprint card: a sharp, flat panel — a thin slate
+   edge, square-ish corners and a hard flat shadow that
+   deepens on hover. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(225, 29, 72, 0.14);
+  border: 1px solid rgba(15, 23, 42, 0.12);
   background: #ffffff;
-  border-radius: 1.5rem;
-  box-shadow: 0 2px 6px rgba(76, 5, 25, 0.05), 0 18px 36px -18px rgba(225, 29, 72, 0.22);
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 12px 24px -16px rgba(37, 99, 235, 0.28);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  border-color: rgba(225, 29, 72, 0.35);
-  box-shadow: 0 4px 10px rgba(76, 5, 25, 0.06), 0 26px 44px -18px rgba(225, 29, 72, 0.32);
+  transform: translateY(-3px);
+  border-color: rgba(37, 99, 235, 0.5);
+  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.06), 0 20px 32px -16px rgba(37, 99, 235, 0.38);
 }
 
-/* Coral glass: shared by modals and drawers — a
-   warm frosted pane with a coral top edge. */
+/* Blueprint glass: shared by modals and drawers — a
+   cool frosted pane with a cobalt top edge. */
 .pop-glass {
-  background: rgba(255, 248, 241, 0.96);
+  background: rgba(248, 250, 252, 0.96);
   backdrop-filter: blur(16px) saturate(1.05);
   -webkit-backdrop-filter: blur(16px) saturate(1.05);
-  border: 1px solid rgba(225, 29, 72, 0.16);
-  border-top: 4px solid #f43f5e;
-  border-radius: 1.25rem;
-  box-shadow: 0 20px 40px -18px rgba(76, 5, 25, 0.3);
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  border-top: 4px solid #2563eb;
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 40px -18px rgba(15, 23, 42, 0.3);
 }
 
-/* Coral tag: a round dusk badge — amber disc,
-   deep indigo type, ringed in white. */
+/* Blueprint tag: a square signal badge — yellow plate,
+   navy type, ringed in white. */
 .starburst {
-  background: radial-gradient(circle at 35% 30%, #fde68a 0%, #f59e0b 60%, #d97706 100%);
-  color: #1e1b4b;
+  background: linear-gradient(135deg, #fde047 0%, #eab308 60%, #ca8a04 100%);
+  color: #172554;
   text-shadow: none;
-  border-radius: 999px;
+  border-radius: 0.375rem;
   transform: rotate(-6deg);
-  box-shadow: 0 6px 18px rgba(217, 119, 6, 0.45);
+  box-shadow: 0 6px 16px rgba(202, 138, 4, 0.45);
   border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
-/* Coral dots: a soft dusk dot field. */
+/* Blueprint grid: a fine drafting grid. */
 .halftone {
-  background-image: radial-gradient(rgba(225, 29, 72, 0.12) 1.5px, transparent 1.5px);
-  background-size: 26px 26px;
+  background-image:
+    linear-gradient(rgba(37, 99, 235, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
 }
 
-/* Coral rule: a rose-to-amber-to-indigo pill bar. */
+/* Blueprint rule: a dashed blue-to-cyan measuring rule. */
 .zigzag {
-  height: 5px;
+  height: 3px;
   border-top: none;
-  background: linear-gradient(90deg, #e11d48, #f59e0b, #312e81);
-  background-size: 100% 5px;
+  background: repeating-linear-gradient(90deg, #2563eb 0 12px, transparent 12px 20px, #06b6d4 20px 32px, transparent 32px 40px);
+  background-size: 100% 3px;
   background-repeat: no-repeat;
   opacity: 0.9;
-  border-radius: 999px;
+  border-radius: 0;
 }
 
-/* Coral band: a warm cream bar with a
-   coral underline and fully rounded bottom corners. */
+/* Blueprint band: a flat blue-tinted bar with a
+   cobalt underline and square bottom corners. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #fff1f2, #fef3c7, #e0e7ff);
+  background: linear-gradient(90deg, #dbeafe, #fef9c3, #cffafe);
   opacity: 1;
-  box-shadow: 0 14px 28px -16px rgba(225, 29, 72, 0.35);
-  border-bottom: 4px solid #f43f5e;
-  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 10px 20px -14px rgba(37, 99, 235, 0.4);
+  border-bottom: 3px solid #2563eb;
+  border-radius: 0;
 }
 
-/* Coral glow: a soft dusk halo for the core. */
+/* Blueprint glow: a cool drafting halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.65) 0%, rgba(225, 29, 72, 0.22) 42%, rgba(245, 158, 11, 0.28) 62%, rgba(245, 158, 11, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.65) 0%, rgba(37, 99, 235, 0.22) 42%, rgba(6, 182, 212, 0.28) 62%, rgba(6, 182, 212, 0) 76%);
 }
 
-/* Coral core: an amber disc with a soft ring. */
+/* Blueprint core: a yellow disc with a cobalt ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fef3c7 0%, #f59e0b 55%, #e11d48 100%);
-  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.35), 0 0 36px rgba(225, 29, 72, 0.35);
+    radial-gradient(circle at 35% 30%, #fef9c3 0%, #eab308 55%, #2563eb 100%);
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.35), 0 0 36px rgba(37, 99, 235, 0.35);
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
@@ -233,12 +238,12 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(225, 29, 72, 0.3) 0px,
-    rgba(225, 29, 72, 0.3) 1px,
+    rgba(37, 99, 235, 0.3) 0px,
+    rgba(37, 99, 235, 0.3) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(245, 158, 11, 0.3) 14px,
-    rgba(245, 158, 11, 0.3) 15px,
+    rgba(234, 179, 8, 0.3) 14px,
+    rgba(234, 179, 8, 0.3) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -249,7 +254,7 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(245, 158, 11, 0.4) 0deg 3deg,
+    rgba(234, 179, 8, 0.4) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
