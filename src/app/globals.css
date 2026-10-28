@@ -1,71 +1,70 @@
 @import "tailwindcss";
 
 @theme {
-  /* Harbor Current: a cool coastal direction —
-     ocean blue as the primary accent, bright cyan
-     for highlights, deep navy for grounded contrast,
-     on breezy sky-tinted paper. Cards are soft,
-     fully rounded pillows with diffused shadows that
-     lift on hover — the opposite of the previous
-     Ember Market look, its burnt terracotta/amber/
-     pine palette, warm cream paper, near-square
-     panels, solid ink borders and hard offset
-     shadows that pressed flat on hover. */
+  /* Plum Signal: a bold violet-and-lime direction —
+     deep violet as the primary accent, vivid lime
+     for highlights, dark plum for grounded contrast,
+     on lilac-tinted paper. Cards are crisp rounded
+     panels with a lime top bar and a violet ring
+     that lifts on hover — the opposite of the previous
+     Harbor Current look, its ocean blue/cyan palette,
+     sky-tinted paper, fully rounded pillow cards and
+     diffused misty shadows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = ocean blue scale */
-  --color-brand-50: #eff6ff;
-  --color-brand-100: #dbeafe;
-  --color-brand-200: #bfdbfe;
-  --color-brand-300: #93c5fd;
-  --color-brand-400: #60a5fa;
-  --color-brand-500: #3b82f6;
-  --color-brand-600: #2563eb;
-  --color-brand-700: #1d4ed8;
-  --color-brand-800: #1e40af;
-  --color-brand-900: #1e3a8a;
-  --color-brand-950: #172554;
-  --color-brand: #1d4ed8;
-  --color-brand-dark: #1e40af;
-  --color-brand-deep: #1e3a8a;
+  /* brand = violet scale */
+  --color-brand-50: #f5f3ff;
+  --color-brand-100: #ede9fe;
+  --color-brand-200: #ddd6fe;
+  --color-brand-300: #c4b5fd;
+  --color-brand-400: #a78bfa;
+  --color-brand-500: #8b5cf6;
+  --color-brand-600: #7c3aed;
+  --color-brand-700: #6d28d9;
+  --color-brand-800: #5b21b6;
+  --color-brand-900: #4c1d95;
+  --color-brand-950: #2e1065;
+  --color-brand: #6d28d9;
+  --color-brand-dark: #5b21b6;
+  --color-brand-deep: #4c1d95;
 
-  /* gold = bright cyan scale (name kept for legacy class refs) */
-  --color-gold-50: #ecfeff;
-  --color-gold-100: #cffafe;
-  --color-gold-200: #a5f3fc;
-  --color-gold-300: #67e8f9;
-  --color-gold-400: #22d3ee;
-  --color-gold-500: #06b6d4;
-  --color-gold-600: #0891b2;
-  --color-gold-700: #0e7490;
-  --color-gold-800: #155e75;
-  --color-gold-900: #164e63;
-  --color-gold-950: #083344;
-  --color-gold: #06b6d4;
-  --color-gold-deep: #0e7490;
-  --color-gold-soft: #cffafe;
+  /* gold = vivid lime scale (name kept for legacy class refs) */
+  --color-gold-50: #f7fee7;
+  --color-gold-100: #ecfccb;
+  --color-gold-200: #d9f99d;
+  --color-gold-300: #bef264;
+  --color-gold-400: #a3e635;
+  --color-gold-500: #84cc16;
+  --color-gold-600: #65a30d;
+  --color-gold-700: #4d7c0f;
+  --color-gold-800: #3f6212;
+  --color-gold-900: #365314;
+  --color-gold-950: #1a2e05;
+  --color-gold: #84cc16;
+  --color-gold-deep: #4d7c0f;
+  --color-gold-soft: #ecfccb;
 
-  /* popblue = deep navy slate scale (name kept for legacy class refs) */
-  --color-popblue-50: #f8fafc;
-  --color-popblue-100: #f1f5f9;
-  --color-popblue-200: #e2e8f0;
-  --color-popblue-300: #cbd5e1;
-  --color-popblue-400: #94a3b8;
-  --color-popblue-500: #64748b;
-  --color-popblue-600: #475569;
-  --color-popblue-700: #334155;
-  --color-popblue-800: #1e293b;
-  --color-popblue-900: #0f172a;
-  --color-popblue-950: #020617;
-  --color-popblue: #334155;
-  --color-popblue-deep: #0f172a;
-  --color-popblue-soft: #e2e8f0;
+  /* popblue = deep plum scale (name kept for legacy class refs) */
+  --color-popblue-50: #faf5ff;
+  --color-popblue-100: #f3e8ff;
+  --color-popblue-200: #e9d5ff;
+  --color-popblue-300: #d8b4fe;
+  --color-popblue-400: #c084fc;
+  --color-popblue-500: #a855f7;
+  --color-popblue-600: #9333ea;
+  --color-popblue-700: #7e22ce;
+  --color-popblue-800: #6b21a8;
+  --color-popblue-900: #581c87;
+  --color-popblue-950: #3b0764;
+  --color-popblue: #7e22ce;
+  --color-popblue-deep: #3b0764;
+  --color-popblue-soft: #e9d5ff;
 
-  --color-ink: #0f172a;
-  --color-paper: #eef4ff;
-  --color-mute: #64748b;
+  --color-ink: #230f38;
+  --color-paper: #faf7ff;
+  --color-mute: #6d5d80;
   --color-card: #ffffff;
-  --color-deep: #1e3a8a;
+  --color-deep: #4c1d95;
 }
 
 html { scroll-behavior: smooth; }
@@ -80,24 +79,24 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #eef4ff;
+  background-color: #faf7ff;
   background-image:
-    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(59, 130, 246, 0.20) 0%, rgba(59, 130, 246, 0) 70%),
-    radial-gradient(ellipse 45% 22% at 8% 10%, rgba(6, 182, 212, 0.22) 0%, rgba(6, 182, 212, 0) 70%),
-    linear-gradient(180deg, rgba(219, 234, 254, 0.9) 0%, rgba(207, 250, 254, 0.5) 42%, rgba(238, 244, 255, 0) 78%);
-  color: #0f172a;
+    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(124, 58, 237, 0.20) 0%, rgba(124, 58, 237, 0) 70%),
+    radial-gradient(ellipse 45% 22% at 8% 10%, rgba(132, 204, 22, 0.22) 0%, rgba(132, 204, 22, 0) 70%),
+    linear-gradient(180deg, rgba(237, 233, 254, 0.9) 0%, rgba(236, 252, 203, 0.5) 42%, rgba(250, 247, 255, 0) 78%);
+  color: #230f38;
 }
-::selection { background: #67e8f9; color: #082f49; }
+::selection { background: #a3e635; color: #1a2e05; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #2563eb, #06b6d4); border-radius: 999px; border: 2px solid #eef4ff; }
-::-webkit-scrollbar-track { background: #dbeafe; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #7c3aed, #84cc16); border-radius: 999px; border: 2px solid #faf7ff; }
+::-webkit-scrollbar-track { background: #ede9fe; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Harbor Current type: airy, open headlines with soft tracking. */
-h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
+/* Plum Signal type: tight, punchy headlines. */
+h1, h2, h3 { letter-spacing: -0.03em; text-wrap: balance; }
 
-/* Harbor Current current: slow waves drifting upward. */
+/* Plum Signal current: slow sparks drifting upward. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, 10vh, 0) rotate(-3deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.85; }
@@ -106,139 +105,148 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 16s linear infinite; }
 
-/* Harbor Current sway: a slow side-to-side drift. */
+/* Plum Signal sway: a slow side-to-side drift. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(8px, 0, 0) rotate(2deg) scale(1); opacity: 0.6; }
   50% { transform: translate3d(-8px, -10px, 0) rotate(-2deg) scale(1.03); opacity: 0.95; }
 }
 .pop-drift { animation: signal-drift 8s ease-in-out infinite; }
 
-/* Harbor Current bob: a gentle floating lift. */
+/* Plum Signal bob: a gentle floating lift. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-5px) scale(1.01); }
 }
 .pop-bob { animation: signal-bob 4s ease-in-out infinite; }
 
-/* Slow turn for the current dial. */
+/* Slow turn for the signal dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 50s linear infinite; }
 
-/* Harbor Current glint: a cyan pulse. */
+/* Plum Signal glint: a lime pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.4; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.12); }
 }
 .pop-twinkle { animation: signal-blink 2.6s ease-in-out infinite; }
 
-/* Harbor Current ticker: infinite marquee (leftward drift). */
+/* Plum Signal ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 28s linear infinite; }
 
-/* Harbor Current bands: blue -> cyan -> navy bars. */
+/* Plum Signal bands: violet -> lime -> plum bars. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #2563eb 0 34%, #06b6d4 34% 67%, #0f172a 67% 100%);
+    linear-gradient(90deg, #7c3aed 0 34%, #84cc16 34% 67%, #3b0764 67% 100%);
   background-size: 64px 64px;
   border-radius: 999px;
 }
 
-/* Harbor Current card: a soft, fully rounded pillow —
-   a thin misty ring and a diffused shadow that lifts
-   higher on hover instead of pressing flat. */
+/* Plum Signal card: a crisp rounded panel with a lime
+   top bar and a violet ring — it lifts and the ring
+   deepens on hover. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(148, 163, 184, 0.45);
+  border: 2px solid rgba(124, 58, 237, 0.28);
   background: #ffffff;
-  border-radius: 1.5rem;
-  box-shadow: 0 18px 38px -18px rgba(37, 99, 235, 0.35), 0 4px 12px -6px rgba(15, 23, 42, 0.12);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-radius: 1.25rem;
+  box-shadow: 0 14px 30px -16px rgba(124, 58, 237, 0.35), 0 3px 10px -4px rgba(35, 15, 56, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
+.pop-lift::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: linear-gradient(90deg, #7c3aed, #84cc16);
+  z-index: 1;
+}
 .pop-lift:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 28px 50px -20px rgba(37, 99, 235, 0.45), 0 8px 18px -8px rgba(15, 23, 42, 0.14);
+  transform: translateY(-4px);
+  border-color: rgba(124, 58, 237, 0.55);
+  box-shadow: 0 24px 44px -18px rgba(124, 58, 237, 0.5), 0 8px 16px -8px rgba(35, 15, 56, 0.14);
 }
 
-/* Harbor Current glass: shared by modals and drawers — a
-   frosted sky pane with a thin misty ring and a soft
-   diffused shadow. */
+/* Plum Signal glass: shared by modals and drawers — a
+   frosted lilac pane with a violet ring and a crisp
+   violet shadow. */
 .pop-glass {
-  background: rgba(238, 244, 255, 0.92);
+  background: rgba(250, 247, 255, 0.92);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(147, 197, 253, 0.7);
-  border-radius: 1.5rem;
-  box-shadow: 0 30px 60px -24px rgba(37, 99, 235, 0.4);
+  border: 2px solid rgba(167, 139, 250, 0.7);
+  border-radius: 1.25rem;
+  box-shadow: 0 26px 52px -22px rgba(124, 58, 237, 0.45);
 }
 
-/* Harbor Current tag: a round cyan buoy badge — white
-   type, fully round, upright, soft shadow. */
+/* Plum Signal tag: a lime signal badge — plum type,
+   fully round, tilted slightly, crisp shadow. */
 .starburst {
-  background: #0891b2;
-  color: #ffffff;
+  background: #a3e635;
+  color: #1a2e05;
   text-shadow: none;
   border-radius: 999px;
-  transform: none;
-  box-shadow: 0 10px 22px -8px rgba(8, 145, 178, 0.7);
-  border: 2px solid rgba(255, 255, 255, 0.85);
+  transform: rotate(-6deg);
+  box-shadow: 0 10px 22px -8px rgba(101, 163, 13, 0.7);
+  border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
-/* Harbor Current texture: a cool blue dot field. */
+/* Plum Signal texture: a violet dot field. */
 .halftone {
-  background-image: radial-gradient(rgba(37, 99, 235, 0.20) 1.5px, transparent 1.5px);
-  background-size: 20px 20px;
+  background-image: radial-gradient(rgba(124, 58, 237, 0.22) 1.5px, transparent 1.5px);
+  background-size: 22px 22px;
   background-position: 0 0;
 }
 
-/* Harbor Current rule: a soft blue-to-cyan pill bar. */
+/* Plum Signal rule: a bold violet-to-lime bar. */
 .zigzag {
-  height: 6px;
+  height: 8px;
   border-top: none;
-  background: linear-gradient(90deg, #2563eb 0%, #06b6d4 100%);
+  background: linear-gradient(90deg, #7c3aed 0%, #84cc16 55%, #3b0764 100%);
   opacity: 1;
   border-radius: 999px;
 }
 
-/* Harbor Current band: a blue-to-navy wash with a soft
-   glow and fully rounded lower edge. */
+/* Plum Signal band: a plum-to-violet-to-lime wash with
+   a crisp shadow and softly rounded lower corners. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #1e3a8a, #2563eb 55%, #06b6d4);
+  background: linear-gradient(90deg, #3b0764, #7c3aed 55%, #84cc16);
   opacity: 1;
-  box-shadow: 0 8px 24px -12px rgba(37, 99, 235, 0.5);
+  box-shadow: 0 8px 24px -12px rgba(124, 58, 237, 0.5);
   border-bottom: none;
-  border-radius: 0 0 999px 999px;
+  border-radius: 0 0 24px 24px;
 }
 
-/* Harbor Current glow: a cool blue-cyan halo for the core. */
+/* Plum Signal glow: a violet-lime halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(165, 243, 252, 0.7) 42%, rgba(37, 99, 235, 0.32) 62%, rgba(37, 99, 235, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(217, 249, 157, 0.7) 42%, rgba(124, 58, 237, 0.32) 62%, rgba(124, 58, 237, 0) 76%);
 }
 
-/* Harbor Current core: an ocean-blue disc with a cyan ring. */
+/* Plum Signal core: a violet disc with a lime ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #60a5fa 0%, #2563eb 55%, #1e3a8a 100%);
-  box-shadow: 0 0 0 3px rgba(103, 232, 249, 0.9), 0 20px 40px -16px rgba(37, 99, 235, 0.55);
+    radial-gradient(circle at 35% 30%, #a78bfa 0%, #7c3aed 55%, #4c1d95 100%);
+  box-shadow: 0 0 0 3px rgba(163, 230, 53, 0.9), 0 20px 40px -16px rgba(124, 58, 237, 0.55);
   border: 2px solid rgba(255, 255, 255, 0.8);
 }
 
-/* Soft rings around the core disc. */
+/* Crisp rings around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(37, 99, 235, 0.45) 0px,
-    rgba(37, 99, 235, 0.45) 1px,
+    rgba(124, 58, 237, 0.45) 0px,
+    rgba(124, 58, 237, 0.45) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(6, 182, 212, 0.45) 14px,
-    rgba(6, 182, 212, 0.45) 15px,
+    rgba(132, 204, 22, 0.45) 14px,
+    rgba(132, 204, 22, 0.45) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -249,7 +257,7 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(6, 182, 212, 0.55) 0deg 3deg,
+    rgba(132, 204, 22, 0.55) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
