@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Dusk glow drifting over the cool lavender paper.
+// Monsoon glow drifting over the fresh cream paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(249, 115, 22, 0.25)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(20, 184, 166, 0.20)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(245, 158, 11, 0.18)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(194, 65, 12, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(245, 158, 11, 0.25)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(14, 165, 233, 0.20)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(5, 150, 105, 0.18)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(217, 119, 6, 0.20)" },
 ];
 
-// Dusk embers rising through the evening light.
+// Monsoon rain drops falling through the fresh light.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#ea580c" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f59e0b" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#0f766e" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#fdba74" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#14b8a6" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#f97316" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#92400e" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#d97706" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#059669" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#0284c7" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#fcd34d" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#0ea5e9" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#f59e0b" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#047857" },
 ];
 
 // Ink drops scattered through the cool night light.
@@ -75,8 +75,8 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* lavender wash under the dusk light */}
-      <div className="relative bg-gradient-to-b from-[#ffedd5] via-[#fff7ed] to-[#fffaf3]">
+      {/* mint wash under the monsoon light */}
+      <div className="relative bg-gradient-to-b from-[#d1fae5] via-[#f6f8f3] to-[#fffbeb]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
