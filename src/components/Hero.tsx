@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Copper Forge glow drifting over the workbench.
+// Fjord Tide glow drifting over calm water.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(194, 65, 12, 0.28)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(217, 119, 6, 0.20)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(234, 88, 12, 0.22)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(28, 25, 23, 0.25)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(15, 118, 110, 0.28)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(6, 182, 212, 0.20)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(45, 212, 191, 0.22)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(15, 23, 42, 0.25)" },
 ];
 
-// Copper Forge sparks rising from the forge.
+// Fjord Tide bubbles rising through the water.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#c2410c" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#d97706" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#ea580c" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#b45309" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#fbbf24" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#44403c" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#f59e0b" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#0f766e" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#06b6d4" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#2dd4bf" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#0e7490" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#5eead4" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#334155" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#22d3ee" },
 ];
 
 // Tide glints scattered through the calm water.
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* lagoon wash over calm water */}
-      <div className="relative bg-gradient-to-b from-[#ffedd5] via-[#fef3c7] to-[#fdf8f1]">
+      <div className="relative bg-gradient-to-b from-[#ccfbf1] via-[#cffafe] to-[#eefaf8]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -100,7 +100,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(194,65,12, 0.45), inset 0 0 18px rgba(194,65,12, 0.30)",
+                  boxShadow: "0 0 28px 2px rgba(15,118,110, 0.45), inset 0 0 18px rgba(15,118,110, 0.30)",
                   opacity: 1 - r * 0.22,
                 }}
               />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#fdba74", "#fcd34d", "#fb923c", "#44403c"];
+              const colors = ["#5eead4", "#67e8f9", "#2dd4bf", "#334155"];
               return (
                 <span
                   key={i}
