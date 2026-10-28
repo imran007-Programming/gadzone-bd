@@ -22,21 +22,21 @@ const item: Variants = {
 
 // Sunrise Bazaar glow drifting over the morning market.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(234, 88, 12, 0.28)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245, 158, 11, 0.2)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(194, 65, 12, 0.22)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(13, 148, 136, 0.25)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(79, 70, 229, 0.28)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(139, 92, 246, 0.20)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(245, 158, 11, 0.22)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(109, 40, 217, 0.25)" },
 ];
 
 // Sunrise Bazaar sparks rising through the warm light.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#ea580c" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f59e0b" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#c2410c" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#0d9488" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#f97316" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#d97706" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#fbbf24" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#4f46e5" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#8b5cf6" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#f59e0b" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#6d28d9" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#6366f1" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#f59e0b" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#a78bfa" },
 ];
 
 // Leaf glints scattered through the warm light.
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* sunrise wash over the morning market */}
-      <div className="relative bg-gradient-to-b from-[#ffedd5] via-[#fef3c7] to-[#ccfbf1]">
+      <div className="relative bg-gradient-to-b from-[#e0e7ff] via-[#ede9fe] to-[#fef3c7]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#99f6e4", "#a5f3fc", "#5eead4", "#0d9488"];
+              const colors = ["#c7d2fe", "#ddd6fe", "#fde68a", "#6d28d9"];
               return (
                 <span
                   key={i}
