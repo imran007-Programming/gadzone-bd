@@ -1,71 +1,70 @@
 @import "tailwindcss";
 
 @theme {
-  /* Ember Sunset: a warm, soft direction —
-     deep rose as the primary accent, orange for
-     sunset warmth, teal for a cool contrast, on
-     warm cream paper with soft radial glows.
-     Cards are plump pill-rounded panels with a
-     soft diffused shadow — the opposite of the
-     previous Indigo Blueprint look, its indigo /
-     violet / amber palette, blueprint grid paper,
-     flat panels, hard offset shadows and small
-     square corners. */
+  /* Verdant Grid: a crisp, angular direction —
+     deep emerald as the primary accent, lime for
+     fresh highlights, slate-navy for contrast, on
+     pale sage paper with a fine grid. Cards are
+     sharp-cornered panels with a flat hard offset
+     shadow — the opposite of the previous Ember
+     Sunset look, its rose / orange / teal palette,
+     warm cream paper, radial glows, plump
+     pill-rounded cards and soft diffused shadows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = rose scale */
-  --color-brand-50: #fff1f2;
-  --color-brand-100: #ffe4e6;
-  --color-brand-200: #fecdd3;
-  --color-brand-300: #fda4af;
-  --color-brand-400: #fb7185;
-  --color-brand-500: #f43f5e;
-  --color-brand-600: #e11d48;
-  --color-brand-700: #be123c;
-  --color-brand-800: #9f1239;
-  --color-brand-900: #881337;
-  --color-brand-950: #4c0519;
-  --color-brand: #e11d48;
-  --color-brand-dark: #be123c;
-  --color-brand-deep: #4c0519;
+  /* brand = emerald scale */
+  --color-brand-50: #ecfdf5;
+  --color-brand-100: #d1fae5;
+  --color-brand-200: #a7f3d0;
+  --color-brand-300: #6ee7b7;
+  --color-brand-400: #34d399;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-brand-900: #064e3b;
+  --color-brand-950: #022c22;
+  --color-brand: #059669;
+  --color-brand-dark: #047857;
+  --color-brand-deep: #022c22;
 
-  /* gold = orange scale (name kept for legacy class refs) */
-  --color-gold-50: #fff7ed;
-  --color-gold-100: #ffedd5;
-  --color-gold-200: #fed7aa;
-  --color-gold-300: #fdba74;
-  --color-gold-400: #fb923c;
-  --color-gold-500: #f97316;
-  --color-gold-600: #ea580c;
-  --color-gold-700: #c2410c;
-  --color-gold-800: #9a3412;
-  --color-gold-900: #7c2d12;
-  --color-gold-950: #431407;
-  --color-gold: #ea580c;
-  --color-gold-deep: #9a3412;
-  --color-gold-soft: #ffedd5;
+  /* gold = lime scale (name kept for legacy class refs) */
+  --color-gold-50: #f7fee7;
+  --color-gold-100: #ecfccb;
+  --color-gold-200: #d9f99d;
+  --color-gold-300: #bef264;
+  --color-gold-400: #a3e635;
+  --color-gold-500: #84cc16;
+  --color-gold-600: #65a30d;
+  --color-gold-700: #4d7c0f;
+  --color-gold-800: #3f6212;
+  --color-gold-900: #365314;
+  --color-gold-950: #1a2e05;
+  --color-gold: #65a30d;
+  --color-gold-deep: #365314;
+  --color-gold-soft: #ecfccb;
 
-  /* popblue = teal scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0fdfa;
-  --color-popblue-100: #ccfbf1;
-  --color-popblue-200: #99f6e4;
-  --color-popblue-300: #5eead4;
-  --color-popblue-400: #2dd4bf;
-  --color-popblue-500: #14b8a6;
-  --color-popblue-600: #0d9488;
-  --color-popblue-700: #0f766e;
-  --color-popblue-800: #115e59;
-  --color-popblue-900: #134e4a;
-  --color-popblue-950: #042f2e;
-  --color-popblue: #0f766e;
-  --color-popblue-deep: #042f2e;
-  --color-popblue-soft: #ccfbf1;
+  /* popblue = slate-navy scale (name kept for legacy class refs) */
+  --color-popblue-50: #f8fafc;
+  --color-popblue-100: #f1f5f9;
+  --color-popblue-200: #e2e8f0;
+  --color-popblue-300: #cbd5e1;
+  --color-popblue-400: #94a3b8;
+  --color-popblue-500: #64748b;
+  --color-popblue-600: #475569;
+  --color-popblue-700: #334155;
+  --color-popblue-800: #1e293b;
+  --color-popblue-900: #0f172a;
+  --color-popblue-950: #020617;
+  --color-popblue: #334155;
+  --color-popblue-deep: #020617;
+  --color-popblue-soft: #f1f5f9;
 
-  --color-ink: #292524;
-  --color-paper: #fff7ed;
-  --color-mute: #78716c;
+  --color-ink: #132a1d;
+  --color-paper: #f1f7f1;
+  --color-mute: #5b6b60;
   --color-card: #ffffff;
-  --color-deep: #4c0519;
+  --color-deep: #022c22;
 }
 
 html { scroll-behavior: smooth; }
@@ -80,24 +79,24 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fff7ed;
+  background-color: #f1f7f1;
   background-image:
-    radial-gradient(ellipse 60% 40% at 12% -4%, rgba(225, 29, 72, 0.12) 0%, transparent 70%),
-    radial-gradient(ellipse 55% 38% at 92% 6%, rgba(249, 115, 22, 0.14) 0%, transparent 70%),
-    radial-gradient(ellipse 45% 30% at 50% 110%, rgba(20, 184, 166, 0.10) 0%, transparent 70%);
-  color: #292524;
+    linear-gradient(rgba(5, 150, 105, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(5, 150, 105, 0.07) 1px, transparent 1px);
+  background-size: 40px 40px;
+  color: #132a1d;
 }
-::selection { background: #fed7aa; color: #4c0519; }
+::selection { background: #d9f99d; color: #022c22; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #e11d48, #f97316); border-radius: 999px; border: 2px solid #fff7ed; }
-::-webkit-scrollbar-track { background: #ffedd5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #059669, #65a30d); border-radius: 4px; border: 2px solid #f1f7f1; }
+::-webkit-scrollbar-track { background: #ecfccb; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Ember Sunset type: warm headlines with a soft, rounded feel. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Verdant Grid type: crisp headlines, tight and upright. */
+h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Ember Sunset fall: round embers drifting down the warm sky. */
+/* Verdant Grid fall: leaves drifting down the grid. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, -8vh, 0) rotate(0deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.8; }
@@ -106,154 +105,154 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 22s linear infinite; }
 
-/* Ember Sunset sway: a gentle side-to-side float. */
+/* Verdant Grid sway: a gentle side-to-side float. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-6px, 0, 0) rotate(-2deg) scale(1); opacity: 0.6; }
   50% { transform: translate3d(6px, -10px, 0) rotate(2deg) scale(1.02); opacity: 0.9; }
 }
 .pop-drift { animation: signal-drift 13s ease-in-out infinite; }
 
-/* Ember Sunset bob: a soft hover lift. */
+/* Verdant Grid bob: a crisp hover lift. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-6px) scale(1.02); }
+  50% { transform: translateY(-4px) scale(1.01); }
 }
 .pop-bob { animation: signal-bob 6s ease-in-out infinite; }
 
-/* Slow turn for the sunset dial. */
+/* Slow turn for the garden dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 75s linear infinite; }
 
-/* Ember Sunset glint: a soft orange pulse. */
+/* Verdant Grid glint: a crisp lime pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.5; transform: scale(0.94); }
   50% { opacity: 1; transform: scale(1.06); }
 }
 .pop-twinkle { animation: signal-blink 4s ease-in-out infinite; }
 
-/* Ember Sunset ticker: infinite marquee (leftward drift). */
+/* Verdant Grid ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 36s linear infinite; }
 
-/* Ember Sunset bands: rose -> orange -> teal blocks, pill-soft. */
+/* Verdant Grid bands: emerald -> lime -> navy blocks, square-cut. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #e11d48 0 34%, #f97316 34% 67%, #14b8a6 67% 100%);
+    linear-gradient(90deg, #059669 0 34%, #84cc16 34% 67%, #334155 67% 100%);
   background-size: 72px 72px;
-  border-radius: 999px;
+  border-radius: 4px;
 }
 
-/* Ember Sunset card: a plump pill-rounded panel — a soft
-   rose-tinted border, large rounded corners and a soft
-   diffused shadow that deepens on hover. */
+/* Verdant Grid card: a sharp-cornered panel — a solid
+   emerald-tinted border, small corners and a flat hard
+   offset shadow that steps out further on hover. */
 .pop-lift {
   position: relative;
-  border: 1px solid #fecdd3;
+  border: 2px solid #a7f3d0;
   background: #ffffff;
-  border-radius: 1.5rem;
-  box-shadow: 0 18px 36px -18px rgba(190, 18, 60, 0.35);
+  border-radius: 0.75rem;
+  box-shadow: 4px 4px 0 rgba(6, 95, 70, 0.18);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 28px 48px -20px rgba(225, 29, 72, 0.45);
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0 rgba(5, 150, 105, 0.28);
 }
 
-/* Ember Sunset glass: shared by modals and drawers — a
-   frosted warm-white pane with an orange-tinted border
-   and a soft diffused shadow. */
+/* Verdant Grid glass: shared by modals and drawers — a
+   frosted white pane with an emerald border and a flat
+   offset shadow. */
 .pop-glass {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid #fed7aa;
-  border-radius: 1.5rem;
-  box-shadow: 0 24px 48px -20px rgba(76, 5, 25, 0.35);
+  border: 1px solid #a7f3d0;
+  border-radius: 0.75rem;
+  box-shadow: 6px 6px 0 rgba(6, 95, 70, 0.18);
 }
 
-/* Ember Sunset tag: a round orange sunset badge —
-   white type, tilted slightly, soft ring and glow. */
+/* Verdant Grid tag: a square lime badge — dark type,
+   upright, with a crisp white frame. */
 .starburst {
-  background: #f97316;
-  color: #ffffff;
+  background: #84cc16;
+  color: #1a2e05;
   text-shadow: none;
-  border-radius: 999px;
-  transform: rotate(-6deg);
-  box-shadow: 0 10px 24px -8px rgba(234, 88, 12, 0.65);
+  border-radius: 4px;
+  transform: rotate(0deg);
+  box-shadow: 3px 3px 0 rgba(6, 95, 70, 0.35);
   border: 2px solid #ffffff;
 }
 
-/* Ember Sunset dots: a soft rose dot wash. */
+/* Verdant Grid dots: a sparse emerald dot grid. */
 .halftone {
   background-image:
-    radial-gradient(rgba(225, 29, 72, 0.16) 1.5px, transparent 1.5px);
-  background-size: 20px 20px;
+    radial-gradient(rgba(5, 150, 105, 0.2) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
   background-position: 0 0;
 }
 
-/* Ember Sunset rule: a soft rose-to-orange-to-teal bar. */
+/* Verdant Grid rule: a straight emerald-to-lime-to-navy bar. */
 .zigzag {
-  height: 6px;
+  height: 4px;
   border-top: none;
-  background: linear-gradient(90deg, #e11d48 0 33%, #f97316 33% 67%, #14b8a6 67% 100%);
+  background: linear-gradient(90deg, #059669 0 33%, #84cc16 33% 67%, #334155 67% 100%);
   opacity: 1;
-  border-radius: 999px;
-}
-
-/* Ember Sunset band: a rose-to-orange bar with a teal
-   underline and a soft glow underneath. */
-.bazaar-awning {
-  background: linear-gradient(90deg, #e11d48, #f97316, #fb923c);
-  opacity: 1;
-  box-shadow: 0 6px 20px rgba(225, 29, 72, 0.35);
-  border-bottom: 2px solid #14b8a6;
   border-radius: 0;
 }
 
-/* Ember Sunset glow: a soft warm halo for the core. */
-.nebula-core {
-  background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.9) 0%, rgba(254, 215, 170, 0.55) 42%, rgba(244, 63, 94, 0.3) 62%, rgba(244, 63, 94, 0) 76%);
+/* Verdant Grid band: a flat emerald bar with a lime
+   underline and no glow. */
+.bazaar-awning {
+  background: linear-gradient(90deg, #047857, #059669, #10b981);
+  opacity: 1;
+  box-shadow: none;
+  border-bottom: 3px solid #84cc16;
+  border-radius: 0;
 }
 
-/* Ember Sunset core: a rose disc with an orange ring. */
+/* Verdant Grid glow: a flat mint halo for the core. */
+.nebula-core {
+  background:
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.9) 0%, rgba(217, 249, 157, 0.55) 42%, rgba(16, 185, 129, 0.3) 62%, rgba(16, 185, 129, 0) 76%);
+}
+
+/* Verdant Grid core: an emerald disc with a lime ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fda4af 0%, #e11d48 55%, #881337 100%);
-  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.8), 0 0 36px rgba(225, 29, 72, 0.45);
+    radial-gradient(circle at 35% 30%, #6ee7b7 0%, #059669 55%, #064e3b 100%);
+  box-shadow: 0 0 0 3px rgba(132, 204, 22, 0.85), 4px 4px 0 rgba(6, 95, 70, 0.35);
   border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
-/* Soft rings around the core disc. */
+/* Crisp rings around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(225, 29, 72, 0.35) 0px,
-    rgba(225, 29, 72, 0.35) 1px,
+    rgba(5, 150, 105, 0.4) 0px,
+    rgba(5, 150, 105, 0.4) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(20, 184, 166, 0.35) 14px,
-    rgba(20, 184, 166, 0.35) 15px,
+    rgba(132, 204, 22, 0.4) 14px,
+    rgba(132, 204, 22, 0.4) 15px,
     transparent 15px,
     transparent 30px
   );
   -webkit-mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
   mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
-  border-radius: 999px;
+  border-radius: 4px;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(249, 115, 22, 0.55) 0deg 3deg,
+    rgba(132, 204, 22, 0.55) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
   mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
-  border-radius: 999px;
+  border-radius: 4px;
 }
