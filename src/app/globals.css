@@ -1,72 +1,71 @@
 @import "tailwindcss";
 
 @theme {
-  /* Ember Spice Market: a warm, sun-baked direction —
-     terracotta orange as the primary accent, golden
-     amber for bright highlights, warm espresso for
-     grounded contrast, on warm cream paper with a
-     sunset wash. Cards are soft, airy panels with a
-     thin warm border and a soft warm shadow that
-     lifts on hover — the opposite of the previous
-     Indigo Night Market look, its cool indigo/lime
-     palette, cool lavender paper, night wash, chunky
-     fully rounded panels and thick indigo borders
-     with hard offset shadows. */
+  /* Glacier Circuit: a cool, crisp direction —
+     deep teal as the primary accent, bright mint
+     for highlights, dark slate-teal for grounded
+     contrast, on icy mint paper with a frost wash.
+     Cards are sharp, flat panels with a thin cool
+     border and a crisp flat shadow — the opposite
+     of the previous Ember Spice look, its warm
+     terracotta/amber palette, warm cream paper,
+     sunset wash, soft fully rounded panels and
+     soft warm shadows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = terracotta orange scale */
-  --color-brand-50: #fff7ed;
-  --color-brand-100: #ffedd5;
-  --color-brand-200: #fed7aa;
-  --color-brand-300: #fdba74;
-  --color-brand-400: #fb923c;
-  --color-brand-500: #f97316;
-  --color-brand-600: #ea580c;
-  --color-brand-700: #c2410c;
-  --color-brand-800: #9a3412;
-  --color-brand-900: #7c2d12;
-  --color-brand-950: #431407;
-  --color-brand: #c2410c;
-  --color-brand-dark: #9a3412;
-  --color-brand-deep: #7c2d12;
+  /* brand = deep teal scale */
+  --color-brand-50: #f0fdfa;
+  --color-brand-100: #ccfbf1;
+  --color-brand-200: #99f6e4;
+  --color-brand-300: #5eead4;
+  --color-brand-400: #2dd4bf;
+  --color-brand-500: #14b8a6;
+  --color-brand-600: #0d9488;
+  --color-brand-700: #0f766e;
+  --color-brand-800: #115e59;
+  --color-brand-900: #134e4a;
+  --color-brand-950: #042f2e;
+  --color-brand: #0f766e;
+  --color-brand-dark: #115e59;
+  --color-brand-deep: #134e4a;
 
-  /* gold = amber scale */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #f59e0b;
-  --color-gold-deep: #b45309;
-  --color-gold-soft: #fef3c7;
+  /* gold = bright mint/cyan scale */
+  --color-gold-50: #ecfeff;
+  --color-gold-100: #cffafe;
+  --color-gold-200: #a5f3fc;
+  --color-gold-300: #67e8f9;
+  --color-gold-400: #22d3ee;
+  --color-gold-500: #06b6d4;
+  --color-gold-600: #0891b2;
+  --color-gold-700: #0e7490;
+  --color-gold-800: #155e75;
+  --color-gold-900: #164e63;
+  --color-gold-950: #083344;
+  --color-gold: #06b6d4;
+  --color-gold-deep: #0e7490;
+  --color-gold-soft: #cffafe;
 
-  /* popblue = warm espresso scale (name kept for legacy class refs) */
-  --color-popblue-50: #fafaf9;
-  --color-popblue-100: #f5f5f4;
-  --color-popblue-200: #e7e5e4;
-  --color-popblue-300: #d6d3d1;
-  --color-popblue-400: #a8a29e;
-  --color-popblue-500: #78716c;
-  --color-popblue-600: #57534e;
-  --color-popblue-700: #44403c;
-  --color-popblue-800: #292524;
-  --color-popblue-900: #1c1917;
-  --color-popblue-950: #0c0a09;
-  --color-popblue: #44403c;
-  --color-popblue-deep: #1c1917;
-  --color-popblue-soft: #f5f5f4;
+  /* popblue = dark slate-teal scale (name kept for legacy class refs) */
+  --color-popblue-50: #f8fafc;
+  --color-popblue-100: #f1f5f9;
+  --color-popblue-200: #e2e8f0;
+  --color-popblue-300: #cbd5e1;
+  --color-popblue-400: #94a3b8;
+  --color-popblue-500: #64748b;
+  --color-popblue-600: #475569;
+  --color-popblue-700: #334155;
+  --color-popblue-800: #1e293b;
+  --color-popblue-900: #0f172a;
+  --color-popblue-950: #020617;
+  --color-popblue: #334155;
+  --color-popblue-deep: #0f172a;
+  --color-popblue-soft: #f1f5f9;
 
-  --color-ink: #292524;
-  --color-paper: #fff7ed;
-  --color-mute: #78716c;
+  --color-ink: #134e4a;
+  --color-paper: #f0fdfa;
+  --color-mute: #475569;
   --color-card: #ffffff;
-  --color-deep: #7c2d12;
+  --color-deep: #134e4a;
 }
 
 html { scroll-behavior: smooth; }
@@ -81,24 +80,24 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fff7ed;
+  background-color: #f0fdfa;
   background-image:
-    radial-gradient(ellipse 60% 28% at 12% 0%, rgba(249, 115, 22, 0.20) 0%, rgba(249, 115, 22, 0) 70%),
-    radial-gradient(ellipse 50% 24% at 92% 12%, rgba(245, 158, 11, 0.22) 0%, rgba(245, 158, 11, 0) 70%),
-    linear-gradient(180deg, rgba(255, 237, 213, 0.9) 0%, rgba(254, 243, 199, 0.5) 42%, rgba(255, 247, 237, 0) 78%);
-  color: #292524;
+    radial-gradient(ellipse 60% 28% at 12% 0%, rgba(20, 184, 166, 0.18) 0%, rgba(20, 184, 166, 0) 70%),
+    radial-gradient(ellipse 50% 24% at 92% 12%, rgba(6, 182, 212, 0.20) 0%, rgba(6, 182, 212, 0) 70%),
+    linear-gradient(180deg, rgba(204, 251, 241, 0.9) 0%, rgba(207, 250, 254, 0.5) 42%, rgba(240, 253, 250, 0) 78%);
+  color: #134e4a;
 }
-::selection { background: #fde68a; color: #431407; }
+::selection { background: #a5f3fc; color: #042f2e; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #c2410c, #f59e0b); border-radius: 999px; border: 2px solid #fff7ed; }
-::-webkit-scrollbar-track { background: #ffedd5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0f766e, #06b6d4); border-radius: 2px; border: 2px solid #f0fdfa; }
+::-webkit-scrollbar-track { background: #ccfbf1; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Ember Spice Market type: relaxed, warm headlines. */
-h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
+/* Glacier Circuit type: tight, crisp headlines. */
+h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Ember Spice Market sparks: drifting up through warm air. */
+/* Glacier Circuit frost: drifting up through cool air. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, 10vh, 0) rotate(-4deg) scale(0.9); opacity: 0; }
   15% { opacity: 0.85; }
@@ -107,142 +106,142 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 16s linear infinite; }
 
-/* Ember Spice Market sway: a slow side-to-side drift. */
+/* Glacier Circuit sway: a slow side-to-side drift. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-10px, 0, 0) rotate(-3deg) scale(1); opacity: 0.6; }
   50% { transform: translate3d(10px, -14px, 0) rotate(3deg) scale(1.04); opacity: 0.95; }
 }
 .pop-drift { animation: signal-drift 8s ease-in-out infinite; }
 
-/* Ember Spice Market bob: a gentle floating lift. */
+/* Glacier Circuit bob: a gentle floating lift. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-6px) scale(1.02); }
 }
 .pop-bob { animation: signal-bob 4s ease-in-out infinite; }
 
-/* Slow turn for the spice-market dial. */
+/* Slow turn for the circuit dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 50s linear infinite; }
 
-/* Ember Spice Market glint: an amber pulse. */
+/* Glacier Circuit glint: a cyan pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.4; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.12); }
 }
 .pop-twinkle { animation: signal-blink 2.6s ease-in-out infinite; }
 
-/* Ember Spice Market ticker: infinite marquee (rightward drift). */
+/* Glacier Circuit ticker: infinite marquee (rightward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(-50%); }
   to { transform: translateX(0); }
 }
 .pop-ticker { animation: signal-ticker 28s linear infinite; }
 
-/* Ember Spice Market bands: terracotta -> amber -> espresso bars. */
+/* Glacier Circuit bands: teal -> cyan -> slate bars. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #c2410c 0 34%, #f59e0b 34% 67%, #1c1917 67% 100%);
+    linear-gradient(90deg, #0f766e 0 34%, #06b6d4 34% 67%, #0f172a 67% 100%);
   background-size: 48px 48px;
-  border-radius: 999px;
+  border-radius: 2px;
 }
 
-/* Ember Spice Market card: a soft, airy panel —
-   a thin warm border and a soft warm shadow that
-   lifts on hover instead of a thick indigo border
-   with a hard offset shadow. */
+/* Glacier Circuit card: a sharp, flat panel —
+   a thin cool border and a crisp flat shadow that
+   lifts on hover instead of a soft warm rounded panel. */
 .pop-lift {
   position: relative;
-  border: 1px solid #fed7aa;
+  border: 1px solid #99f6e4;
   background: #ffffff;
-  border-radius: 1.25rem;
-  box-shadow: 0 10px 30px -12px rgba(194, 65, 12, 0.25);
+  border-radius: 0.375rem;
+  box-shadow: 4px 4px 0 rgba(15, 118, 110, 0.18);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
   transform: translateY(-4px);
-  border-color: #fdba74;
-  box-shadow: 0 22px 40px -16px rgba(194, 65, 12, 0.35);
+  border-color: #5eead4;
+  box-shadow: 6px 6px 0 rgba(15, 118, 110, 0.28);
 }
 
-/* Ember Spice Market glass: shared by modals and drawers — a
-   frosted cream pane with a thin warm border and a
-   soft warm shadow. */
+/* Glacier Circuit glass: shared by modals and drawers — a
+   frosted mint pane with a thin cool border and a
+   crisp flat shadow. */
 .pop-glass {
-  background: rgba(255, 247, 237, 0.94);
+  background: rgba(240, 253, 250, 0.94);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid #fed7aa;
-  border-radius: 1.25rem;
-  box-shadow: 0 24px 48px -20px rgba(124, 45, 18, 0.35);
+  border: 1px solid #99f6e4;
+  border-radius: 0.375rem;
+  box-shadow: 6px 6px 0 rgba(19, 78, 74, 0.22);
 }
 
-/* Ember Spice Market tag: an amber pill — espresso type,
-   tilted slightly the other way, with a soft shadow. */
+/* Glacier Circuit tag: a square mint chip — dark teal type,
+   upright, with a crisp flat shadow. */
 .starburst {
-  background: #fbbf24;
-  color: #451a03;
+  background: #22d3ee;
+  color: #083344;
   text-shadow: none;
-  border-radius: 999px;
-  transform: rotate(-2deg);
-  box-shadow: 0 8px 20px -8px rgba(194, 65, 12, 0.55);
-  border: 1px solid #f59e0b;
+  border-radius: 2px;
+  transform: rotate(0deg);
+  box-shadow: 3px 3px 0 rgba(15, 118, 110, 0.55);
+  border: 1px solid #06b6d4;
 }
 
-/* Ember Spice Market texture: a warm terracotta dot grid. */
+/* Glacier Circuit texture: a cool teal grid. */
 .halftone {
   background-image:
-    radial-gradient(rgba(194, 65, 12, 0.12) 1px, transparent 1px);
+    linear-gradient(rgba(15, 118, 110, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 118, 110, 0.10) 1px, transparent 1px);
   background-size: 22px 22px;
   background-position: 0 0;
 }
 
-/* Ember Spice Market rule: a solid terracotta-to-amber bar. */
+/* Glacier Circuit rule: a solid teal-to-cyan bar. */
 .zigzag {
   height: 5px;
   border-top: none;
-  background: linear-gradient(90deg, #c2410c 0%, #f59e0b 100%);
+  background: linear-gradient(90deg, #0f766e 0%, #06b6d4 100%);
   opacity: 1;
-  border-radius: 999px;
+  border-radius: 2px;
 }
 
-/* Ember Spice Market band: a terracotta-to-amber wash
-   with a soft shadow and a rounded bottom edge. */
+/* Glacier Circuit band: a teal-to-cyan wash
+   with a crisp shadow and square bottom edge. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #7c2d12, #c2410c 55%, #f59e0b);
+  background: linear-gradient(90deg, #134e4a, #0f766e 55%, #06b6d4);
   opacity: 1;
-  box-shadow: 0 10px 24px -12px rgba(124, 45, 18, 0.45);
+  box-shadow: 0 6px 0 rgba(19, 78, 74, 0.25);
   border-bottom: none;
-  border-radius: 0 0 0.75rem 0.75rem;
+  border-radius: 0;
 }
 
-/* Ember Spice Market glow: a warm terracotta-amber halo for the core. */
+/* Glacier Circuit glow: a cool teal-cyan halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.9) 0%, rgba(253, 230, 138, 0.65) 42%, rgba(194, 65, 12, 0.32) 62%, rgba(194, 65, 12, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.9) 0%, rgba(165, 243, 252, 0.65) 42%, rgba(15, 118, 110, 0.32) 62%, rgba(15, 118, 110, 0) 76%);
 }
 
-/* Ember Spice Market core: a terracotta disc with an amber ring. */
+/* Glacier Circuit core: a teal disc with a cyan ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fb923c 0%, #c2410c 55%, #7c2d12 100%);
-  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.9), 0 24px 48px -16px rgba(194, 65, 12, 0.55);
+    radial-gradient(circle at 35% 30%, #2dd4bf 0%, #0f766e 55%, #134e4a 100%);
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.9), 0 24px 48px -16px rgba(15, 118, 110, 0.55);
   border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
-/* Warm rings around the core disc. */
+/* Cool rings around the core disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(194, 65, 12, 0.45) 0px,
-    rgba(194, 65, 12, 0.45) 1px,
+    rgba(15, 118, 110, 0.45) 0px,
+    rgba(15, 118, 110, 0.45) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(245, 158, 11, 0.45) 14px,
-    rgba(245, 158, 11, 0.45) 15px,
+    rgba(6, 182, 212, 0.45) 14px,
+    rgba(6, 182, 212, 0.45) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -253,7 +252,7 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(251, 191, 36, 0.55) 0deg 3deg,
+    rgba(34, 211, 238, 0.55) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
