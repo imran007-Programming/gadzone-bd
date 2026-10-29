@@ -161,7 +161,7 @@ export default function BannerCarousel() {
             <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/80 via-transparent to-transparent" />
             {/* Slide copy */}
             <div className="absolute inset-0 flex flex-col justify-center px-6 text-white sm:px-10 lg:px-14">
-              <span className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-gold-700 to-gold-600 px-5 py-1.5 text-xs font-black uppercase tracking-[0.18em] text-white shadow-[0_0_22px_rgba(245,158,11, 0.55)] ring-2 ring-white/30">
+              <span className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-gold-700 to-gold-600 px-5 py-1.5 text-xs font-black uppercase tracking-[0.18em] text-white shadow-[0_0_22px_rgba(132,204,22, 0.55)] ring-2 ring-white/30">
                 {slide.eyebrow}
               </span>
               <h2 className="mt-5 max-w-xl text-4xl font-black leading-[1.05] tracking-tight drop-shadow-sm sm:text-5xl">
