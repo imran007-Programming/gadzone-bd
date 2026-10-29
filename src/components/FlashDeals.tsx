@@ -17,7 +17,7 @@ export default function FlashDeals({ products, countdown, onQuickView, onAddToCa
   const { hh, mm, ss } = countdown;
   const reduce = useReducedMotion();
   return (
-    <section id="flash" className="relative overflow-hidden bg-[#fef3c7] py-14 text-[#0f172a] ring-1 ring-inset ring-brand-400/20 sm:py-16">
+    <section id="flash" className="relative overflow-hidden bg-[#ecfeff] py-14 text-[#0f172a] ring-1 ring-inset ring-brand-400/20 sm:py-16">
       <div aria-hidden className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-brand-400/20 blur-[100px]" />
       <div aria-hidden className="pointer-events-none absolute -bottom-24 -left-16 h-72 w-72 rounded-full bg-brand-600/20 blur-[100px]" />
       {/* delta rain-fleck dots */}
@@ -38,7 +38,7 @@ export default function FlashDeals({ products, countdown, onQuickView, onAddToCa
               <motion.span
                 animate={reduce ? undefined : { scale: [1, 1.08, 1] }}
                 transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
-                className="rounded-lg bg-gradient-to-b from-brand-700 to-brand-900 px-3.5 py-2 text-lg font-black tabular-nums text-white shadow-[0_0_22px_rgba(245,158,11, 0.6)] ring-2 ring-brand-200/60"
+                className="rounded-lg bg-gradient-to-b from-brand-700 to-brand-900 px-3.5 py-2 text-lg font-black tabular-nums text-white shadow-[0_0_22px_rgba(8,145,178, 0.6)] ring-2 ring-brand-200/60"
               >
                 {ss}
               </motion.span>

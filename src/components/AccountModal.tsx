@@ -58,7 +58,7 @@ export default function AccountModal({ open, onClose }: AccountModalProps) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.96, y: 8 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="max-h-[92vh] w-full max-w-md overflow-y-auto rounded-t-3xl border border-[#fed7aa] bg-white p-6 shadow-2xl sm:rounded-lg"
+            className="max-h-[92vh] w-full max-w-md overflow-y-auto rounded-t-3xl border border-[#bae6fd] bg-white p-6 shadow-2xl sm:rounded-lg"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-start justify-between">
@@ -70,7 +70,7 @@ export default function AccountModal({ open, onClose }: AccountModalProps) {
               <p className="mt-6 text-center text-sm text-[#0f172a]">Checking your session…</p>
             ) : session?.user ? (
               <div className="mt-5">
-                <div className="flex items-center gap-3 rounded-lg bg-white p-4 ring-1 ring-[#fed7aa]">
+                <div className="flex items-center gap-3 rounded-lg bg-white p-4 ring-1 ring-[#bae6fd]">
                   {session.user.image ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src={session.user.image} alt="" className="h-12 w-12 rounded-full object-cover" />
@@ -93,7 +93,7 @@ export default function AccountModal({ open, onClose }: AccountModalProps) {
                     Go to Admin Dashboard
                   </Link>
                 )}
-                <button onClick={() => signOut({ callbackUrl: "/" })} className="mt-3 w-full rounded-full border border-[#fed7aa] py-3 font-bold text-[#0f172a] shadow-sm transition hover:bg-white active:scale-[0.99]">
+                <button onClick={() => signOut({ callbackUrl: "/" })} className="mt-3 w-full rounded-full border border-[#bae6fd] py-3 font-bold text-[#0f172a] shadow-sm transition hover:bg-white active:scale-[0.99]">
                   Sign out
                 </button>
               </div>
@@ -105,7 +105,7 @@ export default function AccountModal({ open, onClose }: AccountModalProps) {
                 <button
                   onClick={handleGoogle}
                   disabled={loading}
-                  className="mt-4 flex w-full items-center justify-center gap-3 rounded-full border border-[#fed7aa] bg-white py-3 font-bold text-[#0f172a] shadow-sm ring-1 ring-[#fed7aa] transition hover:bg-white active:scale-[0.99] disabled:opacity-60"
+                  className="mt-4 flex w-full items-center justify-center gap-3 rounded-full border border-[#bae6fd] bg-white py-3 font-bold text-[#0f172a] shadow-sm ring-1 ring-[#bae6fd] transition hover:bg-white active:scale-[0.99] disabled:opacity-60"
                 >
                   <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-base font-black text-[#0f172a] shadow">G</span>
                   {loading ? "Connecting to Google…" : "Continue with Google"}

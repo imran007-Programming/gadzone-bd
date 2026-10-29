@@ -46,15 +46,15 @@ export default function MobileMenu({ open, onClose, category, onCategoryChange }
             animate={{ x: 0, opacity: 1 }}
             exit={reduce ? { opacity: 0 } : { x: "-100%" }}
             transition={{ type: "tween", duration: 0.28, ease: "easeOut" }}
-            className="absolute left-0 top-0 flex h-full w-4/5 max-w-xs flex-col rounded-r-3xl border-r border-[#fed7aa] bg-white shadow-2xl"
+            className="absolute left-0 top-0 flex h-full w-4/5 max-w-xs flex-col rounded-r-3xl border-r border-[#bae6fd] bg-white shadow-2xl"
           >
-            <div className="flex items-center justify-between border-b border-[#fed7aa] px-5 py-4">
+            <div className="flex items-center justify-between border-b border-[#bae6fd] px-5 py-4">
               <span className="text-lg font-black text-[#0f172a]">
                 Gad<span className="text-brand-700">Zone</span> BD
               </span>
               <button onClick={onClose} className="rounded-full px-2 text-2xl text-[#0f172a] transition hover:bg-white hover:text-brand-600" aria-label="Close menu">×</button>
             </div>
-            <div className="flex border-b border-[#fed7aa]">
+            <div className="flex border-b border-[#bae6fd]">
               {(["categories", "menu"] as const).map((t) => (
                 <button
                   key={t}
@@ -67,7 +67,7 @@ export default function MobileMenu({ open, onClose, category, onCategoryChange }
             </div>
             <div className="flex-1 overflow-y-auto">
               {tab === "categories" ? (
-                <ul className="divide-y divide-[#fed7aa]">
+                <ul className="divide-y divide-[#bae6fd]">
                   {CATEGORIES.map((c) => (
                     <li key={c}>
                       <button
@@ -85,7 +85,7 @@ export default function MobileMenu({ open, onClose, category, onCategoryChange }
                   ))}
                 </ul>
               ) : (
-                <ul className="divide-y divide-[#fed7aa]">
+                <ul className="divide-y divide-[#bae6fd]">
                   {MENU_LINKS.map((link) => (
                     <li key={link.label}>
                       <button
