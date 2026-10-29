@@ -1,71 +1,71 @@
 @import "tailwindcss";
 
 @theme {
-  /* Indigo Dusk Current: a warm-evening direction — deep
-     indigo as the primary accent, bright coral for
-     highlights, midnight navy for grounded contrast, on
-     pale lavender-blush paper. Cards are generous, soft
-     panels with wide 1.6rem corners, a thin indigo border
-     plus a coral-to-indigo gradient top edge, and a soft
-     diffused shadow — the opposite of the previous Pine
-     Frost look, its pine green / lime-mint palette, pale
-     frost-mint paper, tight 0.9rem corners, slim lime top
-     accent and flat layered shadows. */
+  /* Berry Bazaar Current: a loud market-stall direction —
+     vivid magenta as the primary accent, sunny amber for
+     highlights, deep plum for grounded contrast, on warm
+     cream paper. Cards are compact, punchy panels with
+     tight 0.75rem corners, a thick amber side bar, a thin
+     plum border and a hard offset shadow — the opposite
+     of the previous Indigo Dusk look, its indigo / coral
+     palette, lavender-blush paper, wide 1.6rem corners,
+     coral-to-indigo gradient top edge and soft diffused
+     shadows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = indigo scale */
-  --color-brand-50: #eef2ff;
-  --color-brand-100: #e0e7ff;
-  --color-brand-200: #c7d2fe;
-  --color-brand-300: #a5b4fc;
-  --color-brand-400: #818cf8;
-  --color-brand-500: #6366f1;
-  --color-brand-600: #4f46e5;
-  --color-brand-700: #4338ca;
-  --color-brand-800: #3730a3;
-  --color-brand-900: #312e81;
-  --color-brand-950: #1e1b4b;
-  --color-brand: #4f46e5;
-  --color-brand-dark: #4338ca;
-  --color-brand-deep: #3730a3;
+  /* brand = magenta scale */
+  --color-brand-50: #fdf4ff;
+  --color-brand-100: #fae8ff;
+  --color-brand-200: #f5d0fe;
+  --color-brand-300: #f0abfc;
+  --color-brand-400: #e879f9;
+  --color-brand-500: #d946ef;
+  --color-brand-600: #c026d3;
+  --color-brand-700: #a21caf;
+  --color-brand-800: #86198f;
+  --color-brand-900: #701a75;
+  --color-brand-950: #4a044e;
+  --color-brand: #c026d3;
+  --color-brand-dark: #a21caf;
+  --color-brand-deep: #86198f;
 
-  /* gold = coral scale (name kept for legacy class refs) */
-  --color-gold-50: #fff7ed;
-  --color-gold-100: #ffedd5;
-  --color-gold-200: #fed7aa;
-  --color-gold-300: #fdba74;
-  --color-gold-400: #fb923c;
-  --color-gold-500: #f97316;
-  --color-gold-600: #ea580c;
-  --color-gold-700: #c2410c;
-  --color-gold-800: #9a3412;
-  --color-gold-900: #7c2d12;
-  --color-gold-950: #431407;
-  --color-gold: #f97316;
-  --color-gold-deep: #c2410c;
-  --color-gold-soft: #ffedd5;
+  /* gold = amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #b45309;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = midnight navy scale (name kept for legacy class refs) */
-  --color-popblue-50: #f8fafc;
-  --color-popblue-100: #f1f5f9;
-  --color-popblue-200: #e2e8f0;
-  --color-popblue-300: #cbd5e1;
-  --color-popblue-400: #94a3b8;
-  --color-popblue-500: #64748b;
-  --color-popblue-600: #475569;
-  --color-popblue-700: #334155;
-  --color-popblue-800: #1e293b;
-  --color-popblue-900: #0f172a;
-  --color-popblue-950: #020617;
-  --color-popblue: #0f172a;
-  --color-popblue-deep: #020617;
-  --color-popblue-soft: #e2e8f0;
+  /* popblue = deep plum scale (name kept for legacy class refs) */
+  --color-popblue-50: #faf5ff;
+  --color-popblue-100: #f3e8ff;
+  --color-popblue-200: #e9d5ff;
+  --color-popblue-300: #d8b4fe;
+  --color-popblue-400: #c084fc;
+  --color-popblue-500: #a855f7;
+  --color-popblue-600: #9333ea;
+  --color-popblue-700: #7e22ce;
+  --color-popblue-800: #6b21a8;
+  --color-popblue-900: #581c87;
+  --color-popblue-950: #3b0764;
+  --color-popblue: #581c87;
+  --color-popblue-deep: #3b0764;
+  --color-popblue-soft: #e9d5ff;
 
-  --color-ink: #1e1b4b;
-  --color-paper: #faf7ff;
-  --color-mute: #5b5b7a;
+  --color-ink: #4a044e;
+  --color-paper: #fffaf5;
+  --color-mute: #6b5a6e;
   --color-card: #ffffff;
-  --color-deep: #312e81;
+  --color-deep: #701a75;
 }
 
 html { scroll-behavior: smooth; }
@@ -80,24 +80,24 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #faf7ff;
+  background-color: #fffaf5;
   background-image:
-    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(79, 70, 229, 0.14) 0%, rgba(79, 70, 229, 0) 70%),
-    radial-gradient(ellipse 45% 22% at 8% 10%, rgba(249, 115, 22, 0.18) 0%, rgba(249, 115, 22, 0) 70%),
-    linear-gradient(180deg, rgba(224, 231, 255, 0.9) 0%, rgba(255, 237, 213, 0.5) 42%, rgba(250, 247, 255, 0) 78%);
-  color: #1e1b4b;
+    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(192, 38, 211, 0.14) 0%, rgba(192, 38, 211, 0) 70%),
+    radial-gradient(ellipse 45% 22% at 8% 10%, rgba(245, 158, 11, 0.20) 0%, rgba(245, 158, 11, 0) 70%),
+    linear-gradient(180deg, rgba(250, 232, 255, 0.9) 0%, rgba(254, 243, 199, 0.5) 42%, rgba(255, 250, 245, 0) 78%);
+  color: #4a044e;
 }
-::selection { background: #fdba74; color: #1e1b4b; }
+::selection { background: #fcd34d; color: #4a044e; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #4f46e5, #f97316); border-radius: 999px; border: 2px solid #faf7ff; }
-::-webkit-scrollbar-track { background: #e0e7ff; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #c026d3, #f59e0b); border-radius: 999px; border: 2px solid #fffaf5; }
+::-webkit-scrollbar-track { background: #fae8ff; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Indigo Dusk type: soft, wide headlines. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Berry Bazaar type: tight, punchy headlines. */
+h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Indigo Dusk fall: dusk motes drifting down. */
+/* Berry Bazaar fall: market confetti drifting down. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, -8vh, 0) scale(0.9) rotate(0deg); opacity: 0; }
   15% { opacity: 0.85; }
@@ -106,142 +106,142 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 16s linear infinite; }
 
-/* Indigo Dusk sway: a gentle side-to-side drift. */
+/* Berry Bazaar sway: a gentle side-to-side drift. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-6px, 0, 0) scale(1); opacity: 0.6; }
   50% { transform: translate3d(6px, -6px, 0) scale(1.02); opacity: 0.95; }
 }
 .pop-drift { animation: signal-drift 10s ease-in-out infinite; }
 
-/* Indigo Dusk bob: a soft little rise. */
+/* Berry Bazaar bob: a soft little rise. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-5px) scale(1.01); }
 }
 .pop-bob { animation: signal-bob 5s ease-in-out infinite; }
 
-/* Slow turn for the dusk dial. */
+/* Slow turn for the bazaar dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 60s linear infinite; }
 
-/* Indigo Dusk glint: a coral pulse. */
+/* Berry Bazaar glint: an amber pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.4; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.12); }
 }
 .pop-twinkle { animation: signal-blink 3s ease-in-out infinite; }
 
-/* Indigo Dusk ticker: infinite marquee (leftward drift). */
+/* Berry Bazaar ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Indigo Dusk bands: indigo -> coral -> navy vertical stripes. */
+/* Berry Bazaar bands: magenta -> amber -> plum vertical stripes. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(90deg, #4f46e5 0 16px, #f97316 16px 32px, #0f172a 32px 48px);
+    repeating-linear-gradient(90deg, #c026d3 0 16px, #f59e0b 16px 32px, #581c87 32px 48px);
   border-radius: 999px;
 }
 
-/* Indigo Dusk card: a generous soft panel with wide
-   corners, a thin indigo border, a coral-to-indigo
-   gradient top edge and a soft diffused shadow — it
-   lifts and grows slightly on hover. */
+/* Berry Bazaar card: a compact punchy panel with tight
+   corners, a thick amber side bar, a thin plum border
+   and a hard offset shadow — it nudges up-left on hover
+   so the shadow grows. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(49, 46, 129, 0.14);
-  border-top: 4px solid transparent;
-  border-image: linear-gradient(90deg, #f97316, #6366f1, #0f172a) 1;
+  border: 1.5px solid rgba(112, 26, 117, 0.28);
+  border-left: 5px solid #f59e0b;
   background: #ffffff;
-  border-radius: 1.6rem;
-  box-shadow: 0 2px 6px rgba(30, 27, 75, 0.08), 0 24px 40px -24px rgba(49, 46, 129, 0.35);
+  border-radius: 0.75rem;
+  box-shadow: 6px 6px 0 rgba(74, 4, 78, 0.14);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-6px) scale(1.01);
-  box-shadow: 0 4px 10px rgba(30, 27, 75, 0.10), 0 32px 48px -24px rgba(49, 46, 129, 0.45);
+  transform: translate(-2px, -4px);
+  box-shadow: 9px 9px 0 rgba(74, 4, 78, 0.20);
 }
 
-/* Indigo Dusk glass: shared by modals and drawers — a
-   frosted lavender pane with a thin indigo border and a
-   soft diffused shadow. */
+/* Berry Bazaar glass: shared by modals and drawers — a
+   frosted cream pane with a thick magenta edge and a
+   hard offset shadow. */
 .pop-glass {
-  background: rgba(250, 247, 255, 0.94);
+  background: rgba(255, 250, 245, 0.94);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(49, 46, 129, 0.20);
-  border-radius: 1.6rem;
-  box-shadow: 0 24px 48px -24px rgba(49, 46, 129, 0.45);
+  border: 1.5px solid rgba(112, 26, 117, 0.28);
+  border-top: 4px solid #c026d3;
+  border-radius: 0.75rem;
+  box-shadow: 8px 8px 0 rgba(74, 4, 78, 0.18);
 }
 
-/* Indigo Dusk tag: a coral circular badge — white type,
-   wide corners, tilted the other way, soft shadow. */
+/* Berry Bazaar tag: an amber tilted square badge — plum
+   type, tight corners, tilted the other way, hard shadow. */
 .starburst {
-  background: #f97316;
-  color: #ffffff;
+  background: #f59e0b;
+  color: #4a044e;
   text-shadow: none;
-  border-radius: 999px;
-  transform: rotate(3deg);
-  box-shadow: 0 8px 20px -8px rgba(194, 65, 12, 0.65);
+  border-radius: 0.5rem;
+  transform: rotate(-4deg);
+  box-shadow: 3px 3px 0 rgba(74, 4, 78, 0.35);
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Indigo Dusk texture: an indigo dot grid. */
+/* Berry Bazaar texture: a magenta dot grid. */
 .halftone {
-  background-image: radial-gradient(rgba(79, 70, 229, 0.16) 1.5px, transparent 1.5px);
-  background-size: 22px 22px;
+  background-image: radial-gradient(rgba(192, 38, 211, 0.18) 1.5px, transparent 1.5px);
+  background-size: 18px 18px;
   background-position: 0 0;
 }
 
-/* Indigo Dusk rule: an indigo-to-coral-to-navy bar. */
+/* Berry Bazaar rule: a magenta-to-amber-to-plum bar. */
 .zigzag {
-  height: 8px;
+  height: 6px;
   border-top: none;
-  background: linear-gradient(90deg, #4f46e5 0%, #f97316 55%, #0f172a 100%);
+  background: linear-gradient(90deg, #c026d3 0%, #f59e0b 55%, #581c87 100%);
   opacity: 1;
-  border-radius: 999px;
+  border-radius: 2px;
 }
 
-/* Indigo Dusk band: diagonal indigo / navy / coral
-   stripes with a soft shadow and rounded bottom edge. */
+/* Berry Bazaar band: diagonal magenta / plum / amber
+   stripes with a hard offset shadow and a squared edge. */
 .bazaar-awning {
-  background: repeating-linear-gradient(115deg, #1e1b4b 0 24px, #4f46e5 24px 48px, #f97316 48px 60px);
+  background: repeating-linear-gradient(115deg, #4a044e 0 24px, #c026d3 24px 48px, #f59e0b 48px 60px);
   opacity: 1;
-  box-shadow: 0 10px 24px -12px rgba(49, 46, 129, 0.5);
-  border-bottom: 1px solid rgba(49, 46, 129, 0.2);
-  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 8px 0 rgba(74, 4, 78, 0.18);
+  border-bottom: 1.5px solid rgba(74, 4, 78, 0.3);
+  border-radius: 0 0 0.5rem 0.5rem;
 }
 
-/* Indigo Dusk glow: an indigo-coral halo for the core. */
+/* Berry Bazaar glow: a magenta-amber halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 237, 213, 0.7) 42%, rgba(79, 70, 229, 0.30) 62%, rgba(79, 70, 229, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(254, 243, 199, 0.7) 42%, rgba(192, 38, 211, 0.30) 62%, rgba(192, 38, 211, 0) 76%);
 }
 
-/* Indigo Dusk core: a glowing indigo-coral orb with a
-   soft coral ring. */
+/* Berry Bazaar core: a glowing magenta-amber orb with a
+   thick plum ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fdba74 0%, #6366f1 55%, #1e1b4b 100%);
-  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.9), 0 16px 32px -12px rgba(49, 46, 129, 0.5);
-  border: 1px solid rgba(49, 46, 129, 0.25);
+    radial-gradient(circle at 35% 30%, #fcd34d 0%, #d946ef 55%, #4a044e 100%);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.9), 6px 6px 0 rgba(74, 4, 78, 0.25);
+  border: 1.5px solid rgba(74, 4, 78, 0.3);
 }
 
-/* Soft rings around the dusk orb. */
+/* Bold rings around the bazaar orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(79, 70, 229, 0.5) 0px,
-    rgba(79, 70, 229, 0.5) 2px,
+    rgba(192, 38, 211, 0.5) 0px,
+    rgba(192, 38, 211, 0.5) 2px,
     transparent 2px,
     transparent 14px,
-    rgba(249, 115, 22, 0.55) 14px,
-    rgba(249, 115, 22, 0.55) 16px,
+    rgba(245, 158, 11, 0.55) 14px,
+    rgba(245, 158, 11, 0.55) 16px,
     transparent 16px,
     transparent 30px
   );
@@ -252,7 +252,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(249, 115, 22, 0.6) 0deg 3deg,
+    rgba(245, 158, 11, 0.6) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
