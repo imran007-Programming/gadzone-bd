@@ -1,70 +1,71 @@
 @import "tailwindcss";
 
 @theme {
-  /* Glacier Circuit: a cool workshop-at-dawn direction —
-     deep teal as the primary accent, bright cyan for
-     highlights, slate-navy for contrast, icy blue-white
-     paper, white cards. Cards are crisp, near-square
-     0.5rem panels with a thick teal LEFT bar and a
-     thin hard shadow — the opposite of the previous
-     Sunset Ember look, its burnt orange / amber
-     palette, warm sand paper, generous 1.5rem panels,
-     thick orange BOTTOM bar and warm offset shadow. */
+  /* Orchid Dusk: a warm evening direction —
+     deep violet as the primary accent, bright fuchsia
+     for highlights, plum-dark for contrast, warm
+     lavender paper, white cards. Cards are plush,
+     generously rounded 1.75rem panels with a thick
+     violet TOP bar and a soft layered shadow — the
+     opposite of the previous Glacier Circuit look, its
+     teal / cyan palette, icy blue-white paper, crisp
+     near-square 0.5rem panels, thick teal LEFT bar
+     and thin hard shadow. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = teal scale */
-  --color-brand-50: #f0fdfa;
-  --color-brand-100: #ccfbf1;
-  --color-brand-200: #99f6e4;
-  --color-brand-300: #5eead4;
-  --color-brand-400: #2dd4bf;
-  --color-brand-500: #14b8a6;
-  --color-brand-600: #0d9488;
-  --color-brand-700: #0f766e;
-  --color-brand-800: #115e59;
-  --color-brand-900: #134e4a;
-  --color-brand-950: #042f2e;
-  --color-brand: #0f766e;
-  --color-brand-dark: #115e59;
-  --color-brand-deep: #134e4a;
+  /* brand = violet scale */
+  --color-brand-50: #f5f3ff;
+  --color-brand-100: #ede9fe;
+  --color-brand-200: #ddd6fe;
+  --color-brand-300: #c4b5fd;
+  --color-brand-400: #a78bfa;
+  --color-brand-500: #8b5cf6;
+  --color-brand-600: #7c3aed;
+  --color-brand-700: #6d28d9;
+  --color-brand-800: #5b21b6;
+  --color-brand-900: #4c1d95;
+  --color-brand-950: #2e1065;
+  --color-brand: #6d28d9;
+  --color-brand-dark: #5b21b6;
+  --color-brand-deep: #4c1d95;
 
-  /* gold = cyan scale (name kept for legacy class refs) */
-  --color-gold-50: #ecfeff;
-  --color-gold-100: #cffafe;
-  --color-gold-200: #a5f3fc;
-  --color-gold-300: #67e8f9;
-  --color-gold-400: #22d3ee;
-  --color-gold-500: #06b6d4;
-  --color-gold-600: #0891b2;
-  --color-gold-700: #0e7490;
-  --color-gold-800: #155e75;
-  --color-gold-900: #164e63;
-  --color-gold-950: #083344;
-  --color-gold: #06b6d4;
-  --color-gold-deep: #0e7490;
-  --color-gold-soft: #cffafe;
+  /* gold = fuchsia scale (name kept for legacy class refs) */
+  --color-gold-50: #fdf4ff;
+  --color-gold-100: #fae8ff;
+  --color-gold-200: #f5d0fe;
+  --color-gold-300: #f0abfc;
+  --color-gold-400: #e879f9;
+  --color-gold-500: #d946ef;
+  --color-gold-600: #c026d3;
+  --color-gold-700: #a21caf;
+  --color-gold-800: #86198f;
+  --color-gold-900: #701a75;
+  --color-gold-950: #4a044e;
+  --color-gold: #d946ef;
+  --color-gold-deep: #a21caf;
+  --color-gold-soft: #fae8ff;
 
-  /* popblue = slate-navy scale (name kept for legacy class refs) */
-  --color-popblue-50: #f1f5f9;
-  --color-popblue-100: #e2e8f0;
-  --color-popblue-200: #cbd5e1;
-  --color-popblue-300: #94a3b8;
-  --color-popblue-400: #64748b;
-  --color-popblue-500: #475569;
-  --color-popblue-600: #334155;
-  --color-popblue-700: #1e293b;
-  --color-popblue-800: #0f172a;
-  --color-popblue-900: #020617;
-  --color-popblue-950: #020617;
-  --color-popblue: #1e293b;
-  --color-popblue-deep: #020617;
-  --color-popblue-soft: #94a3b8;
+  /* popblue = plum-dark scale (name kept for legacy class refs) */
+  --color-popblue-50: #f8f7fb;
+  --color-popblue-100: #efeaf6;
+  --color-popblue-200: #ddd5ea;
+  --color-popblue-300: #b8a8d1;
+  --color-popblue-400: #9381b5;
+  --color-popblue-500: #776294;
+  --color-popblue-600: #5f4a7a;
+  --color-popblue-700: #4e3c63;
+  --color-popblue-800: #3d2f4e;
+  --color-popblue-900: #2a1f38;
+  --color-popblue-950: #1a1226;
+  --color-popblue: #4e3c63;
+  --color-popblue-deep: #1a1226;
+  --color-popblue-soft: #b8a8d1;
 
-  --color-ink: #0f172a;
-  --color-paper: #f2f8f9;
-  --color-mute: #5b7183;
+  --color-ink: #2a1f38;
+  --color-paper: #faf6ff;
+  --color-mute: #6b5d80;
   --color-card: #ffffff;
-  --color-deep: #134e4a;
+  --color-deep: #4c1d95;
 }
 
 html { scroll-behavior: smooth; }
@@ -78,175 +79,175 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f2f8f9;
+  background-color: #faf6ff;
   background-image:
-    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(6, 182, 212, 0.18) 0%, rgba(6, 182, 212, 0) 70%),
-    radial-gradient(ellipse 45% 22% at 8% 10%, rgba(13, 148, 136, 0.14) 0%, rgba(13, 148, 136, 0) 70%),
-    linear-gradient(180deg, rgba(207, 250, 254, 0.9) 0%, rgba(204, 251, 241, 0.5) 42%, rgba(242, 248, 249, 0) 78%);
-  color: #0f172a;
+    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(217, 70, 239, 0.16) 0%, rgba(217, 70, 239, 0) 70%),
+    radial-gradient(ellipse 45% 22% at 8% 10%, rgba(124, 58, 237, 0.14) 0%, rgba(124, 58, 237, 0) 70%),
+    linear-gradient(180deg, rgba(250, 232, 255, 0.9) 0%, rgba(237, 233, 254, 0.5) 42%, rgba(250, 246, 255, 0) 78%);
+  color: #2a1f38;
 }
-::selection { background: #67e8f9; color: #042f2e; }
+::selection { background: #f0abfc; color: #2e1065; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0f766e, #06b6d4); border-radius: 8px; border: 2px solid #f2f8f9; }
-::-webkit-scrollbar-track { background: #ccfbf1; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #7c3aed, #d946ef); border-radius: 8px; border: 2px solid #faf6ff; }
+::-webkit-scrollbar-track { background: #ede9fe; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Glacier Circuit type: crisp, tight headlines. */
+/* Orchid Dusk type: soft, rounded headlines. */
 h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Glacier Circuit fall: frost motes drifting gently
-   DOWNWARD through cold air — the reverse of the old
-   upward ember rise. */
+/* Orchid Dusk rise: petals drifting gently UPWARD
+   through warm evening air — the reverse of the old
+   downward frost fall. */
 @keyframes signal-fall {
-  0% { transform: translate3d(0, -4vh, 0) scale(0.9) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(0, 52vh, 0) scale(0.95) rotate(0deg); opacity: 0; }
   15% { opacity: 0.8; }
-  50% { transform: translate3d(-3vw, 26vh, 0) scale(1.1) rotate(-40deg); }
-  100% { transform: translate3d(3vw, 52vh, 0) scale(0.95) rotate(-80deg); opacity: 0; }
+  50% { transform: translate3d(3vw, 26vh, 0) scale(1.1) rotate(40deg); }
+  100% { transform: translate3d(-3vw, -4vh, 0) scale(0.9) rotate(80deg); opacity: 0; }
 }
 .pop-fall { animation: signal-fall 22s linear infinite; }
 
-/* Glacier Circuit sway: a slow, narrow side-to-side drift. */
+/* Orchid Dusk sway: a slow, wide side-to-side drift. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(-8px, 0, 0) scale(1); opacity: 0.6; }
-  50% { transform: translate3d(8px, 0, 0) scale(1.02); opacity: 0.95; }
+  0%, 100% { transform: translate3d(-14px, 0, 0) scale(1); opacity: 0.6; }
+  50% { transform: translate3d(14px, 0, 0) scale(1.02); opacity: 0.95; }
 }
 .pop-drift { animation: signal-drift 10s ease-in-out infinite; }
 
-/* Glacier Circuit bob: a gentle little float. */
+/* Orchid Dusk bob: a gentle little float. */
 @keyframes signal-bob {
-  0%, 100% { transform: translateY(0) scale(1) rotate(-1deg); }
-  50% { transform: translateY(-6px) scale(1.02) rotate(1deg); }
+  0%, 100% { transform: translateY(0) scale(1) rotate(1deg); }
+  50% { transform: translateY(-8px) scale(1.02) rotate(-1deg); }
 }
 .pop-bob { animation: signal-bob 5s ease-in-out infinite; }
 
-/* Slow turn for the frost dial. */
+/* Slow turn for the dusk dial. */
 @keyframes dial-turn {
-  to { transform: rotate(-360deg); }
+  to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 90s linear infinite; }
 
-/* Glacier Circuit glint: a cyan pulse. */
+/* Orchid Dusk glint: a fuchsia pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.4; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.15); }
 }
 .pop-twinkle { animation: signal-blink 3.2s ease-in-out infinite; }
 
-/* Glacier Circuit ticker: infinite marquee (rightward drift). */
+/* Orchid Dusk ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 28s linear infinite; }
 
-/* Glacier Circuit bands: teal / cyan diagonal stripes. */
+/* Orchid Dusk bands: violet / fuchsia diagonal stripes. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(45deg, #0f766e 0px, #0f766e 12px, #06b6d4 12px, #06b6d4 24px);
-  background-size: 100% 4px;
+    repeating-linear-gradient(45deg, #7c3aed 0px, #7c3aed 12px, #d946ef 12px, #d946ef 24px);
+  background-size: 100% 6px;
   background-repeat: repeat-x;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
-/* Glacier Circuit card: a crisp, near-square panel with
-   a thick teal LEFT bar and a thin hard shadow —
-   it slides right on hover, the bar turning cyan. */
+/* Orchid Dusk card: a plush, generously rounded panel
+   with a thick violet TOP bar and a soft layered
+   shadow — it lifts UP on hover, the bar turning
+   fuchsia. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(15, 23, 42, 0.1);
-  border-left: 5px solid #0f766e;
+  border: 1px solid rgba(42, 31, 56, 0.08);
+  border-top: 5px solid #7c3aed;
   background: #ffffff;
-  border-radius: 0.5rem;
-  box-shadow: 3px 3px 0 rgba(15, 118, 110, 0.12);
+  border-radius: 1.75rem;
+  box-shadow: 0 18px 30px -18px rgba(76, 29, 149, 0.28), 0 4px 10px -6px rgba(76, 29, 149, 0.12);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateX(4px);
-  border-left-color: #06b6d4;
-  box-shadow: 5px 5px 0 rgba(15, 118, 110, 0.16);
+  transform: translateY(-4px);
+  border-top-color: #d946ef;
+  box-shadow: 0 26px 40px -18px rgba(76, 29, 149, 0.35), 0 8px 14px -6px rgba(76, 29, 149, 0.14);
 }
 
-/* Glacier Circuit glass: shared by modals and drawers — a
-   frosted ice pane with a sharp edge and a teal
-   LEFT rule. */
+/* Orchid Dusk glass: shared by modals and drawers — a
+   frosted lavender pane with a soft edge and a violet
+   TOP rule. */
 .pop-glass {
-  background: rgba(242, 248, 249, 0.94);
+  background: rgba(250, 246, 255, 0.94);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(15, 23, 42, 0.1);
-  border-left: 5px solid #0f766e;
-  border-radius: 0.5rem;
-  box-shadow: 3px 3px 0 rgba(15, 118, 110, 0.12);
+  border: 1px solid rgba(42, 31, 56, 0.08);
+  border-top: 5px solid #7c3aed;
+  border-radius: 1.25rem;
+  box-shadow: 0 18px 30px -18px rgba(76, 29, 149, 0.28);
 }
 
-/* Glacier Circuit tag: a teal-to-cyan pill badge —
-   deep navy type, solid ring, sticker tilt the other way. */
+/* Orchid Dusk tag: a violet-to-fuchsia pill badge —
+   white type, soft ring, sticker tilt the other way. */
 .starburst {
-  background: linear-gradient(135deg, #14b8a6, #22d3ee);
-  color: #042f2e;
+  background: linear-gradient(135deg, #8b5cf6, #d946ef);
+  color: #ffffff;
   text-shadow: none;
   border-radius: 999px;
-  transform: rotate(-3deg);
-  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.3);
+  transform: rotate(3deg);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.35);
   border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
-/* Glacier Circuit texture: a fine circuit-line grid field. */
+/* Orchid Dusk texture: a fine polka-dot field. */
 .halftone {
   background-image:
-    linear-gradient(rgba(15, 118, 110, 0.16) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(6, 182, 212, 0.16) 1px, transparent 1px);
+    radial-gradient(rgba(124, 58, 237, 0.18) 1.5px, transparent 1.5px),
+    radial-gradient(rgba(217, 70, 239, 0.14) 1.5px, transparent 1.5px);
   background-size: 22px 22px;
   background-position: 0 0, 11px 11px;
 }
 
-/* Glacier Circuit rule: a double solid cyan rule. */
+/* Orchid Dusk rule: a gradient pill rule. */
 .zigzag {
-  height: 0;
-  border-top: 3px solid #06b6d4;
-  border-bottom: none;
-  background: none;
+  height: 4px;
+  border: none;
+  background: linear-gradient(90deg, #7c3aed, #d946ef);
   opacity: 1;
-  border-radius: 0;
+  border-radius: 999px;
 }
 
-/* Glacier Circuit band: a slate-navy / teal / cyan
-   horizontal wash with a cool shadow. */
+/* Orchid Dusk band: a plum-dark / violet / fuchsia
+   horizontal wash with a soft shadow. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #020617 0%, #0f766e 55%, #06b6d4 100%);
+  background: linear-gradient(90deg, #1a1226 0%, #6d28d9 55%, #d946ef 100%);
   opacity: 1;
-  box-shadow: 0 10px 30px rgba(15, 118, 110, 0.25);
-  border-bottom: 1px solid rgba(15, 23, 42, 0.1);
+  box-shadow: 0 10px 30px rgba(76, 29, 149, 0.25);
+  border-bottom: 1px solid rgba(42, 31, 56, 0.08);
   border-radius: 0;
 }
 
-/* Glacier Circuit glow: a cool halo for the core. */
+/* Orchid Dusk glow: a warm halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(204, 251, 241, 0.7) 42%, rgba(6, 182, 212, 0.25) 62%, rgba(6, 182, 212, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(237, 233, 254, 0.7) 42%, rgba(217, 70, 239, 0.25) 62%, rgba(217, 70, 239, 0) 76%);
 }
 
-/* Glacier Circuit core: a deep teal orb with a
-   bright cyan ring. */
+/* Orchid Dusk core: a deep violet orb with a
+   bright fuchsia ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #f2f8f9 0%, #2dd4bf 55%, #042f2e 100%);
-  box-shadow: 0 0 0 3px rgba(103, 232, 249, 0.9), 0 10px 30px rgba(15, 118, 110, 0.25);
-  border: 1px solid rgba(15, 23, 42, 0.1);
+    radial-gradient(circle at 35% 30%, #faf6ff 0%, #a78bfa 55%, #2e1065 100%);
+  box-shadow: 0 0 0 3px rgba(240, 171, 252, 0.9), 0 10px 30px rgba(76, 29, 149, 0.25);
+  border: 1px solid rgba(42, 31, 56, 0.08);
 }
 
-/* Wide rings around the frost orb. */
+/* Wide rings around the dusk orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(15, 118, 110, 0.5) 0px,
-    rgba(15, 118, 110, 0.5) 2px,
+    rgba(124, 58, 237, 0.5) 0px,
+    rgba(124, 58, 237, 0.5) 2px,
     transparent 2px,
     transparent 14px,
-    rgba(6, 182, 212, 0.55) 14px,
-    rgba(6, 182, 212, 0.55) 16px,
+    rgba(217, 70, 239, 0.55) 14px,
+    rgba(217, 70, 239, 0.55) 16px,
     transparent 16px,
     transparent 30px
   );
@@ -257,7 +258,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(6, 182, 212, 0.6) 0deg 3deg,
+    rgba(217, 70, 239, 0.6) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
