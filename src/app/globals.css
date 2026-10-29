@@ -1,49 +1,50 @@
 @import "tailwindcss";
 
 @theme {
-  /* Ember Dusk: a warm, sunset direction — burnt coral-orange
-     as the primary accent, golden amber for highlights, deep
-     slate-navy for grounded contrast, on warm sand paper.
-     Cards are large, softly rounded panels with diffused
-     warm shadows that lift gently on hover — the opposite
-     of the previous Violet Orchard look, its deep violet /
-     electric lime palette, warm cream paper, squared-off
-     panels, lime top edge and crisp hard offset shadows. */
+  /* Indigo Frost: a cool, crisp direction — deep indigo
+     as the primary accent, bright sky blue for highlights,
+     ink-navy for grounded contrast, on icy lavender paper.
+     Cards are crisp medium-rounded panels with a thin
+     indigo outline and a small hard offset shadow that
+     steps on hover — the opposite of the previous Ember
+     Dusk look, its burnt coral-orange / golden amber palette,
+     warm sand paper, large softly rounded panels and
+     diffused warm shadows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = burnt coral-orange scale */
-  --color-brand-50: #fff7ed;
-  --color-brand-100: #ffedd5;
-  --color-brand-200: #fed7aa;
-  --color-brand-300: #fdba74;
-  --color-brand-400: #fb923c;
-  --color-brand-500: #f97316;
-  --color-brand-600: #ea580c;
-  --color-brand-700: #c2410c;
-  --color-brand-800: #9a3412;
-  --color-brand-900: #7c2d12;
-  --color-brand-950: #431407;
-  --color-brand: #ea580c;
-  --color-brand-dark: #c2410c;
-  --color-brand-deep: #9a3412;
+  /* brand = indigo scale */
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-200: #c7d2fe;
+  --color-brand-300: #a5b4fc;
+  --color-brand-400: #818cf8;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+  --color-brand-800: #3730a3;
+  --color-brand-900: #312e81;
+  --color-brand-950: #1e1b4b;
+  --color-brand: #4f46e5;
+  --color-brand-dark: #4338ca;
+  --color-brand-deep: #3730a3;
 
-  /* gold = golden amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #f59e0b;
-  --color-gold-deep: #b45309;
-  --color-gold-soft: #fef3c7;
+  /* gold = sky scale (name kept for legacy class refs) */
+  --color-gold-50: #f0f9ff;
+  --color-gold-100: #e0f2fe;
+  --color-gold-200: #bae6fd;
+  --color-gold-300: #7dd3fc;
+  --color-gold-400: #38bdf8;
+  --color-gold-500: #0ea5e9;
+  --color-gold-600: #0284c7;
+  --color-gold-700: #0369a1;
+  --color-gold-800: #075985;
+  --color-gold-900: #0c4a6e;
+  --color-gold-950: #082f49;
+  --color-gold: #0ea5e9;
+  --color-gold-deep: #0369a1;
+  --color-gold-soft: #e0f2fe;
 
-  /* popblue = deep slate-navy scale (name kept for legacy class refs) */
+  /* popblue = ink-navy scale (name kept for legacy class refs) */
   --color-popblue-50: #f8fafc;
   --color-popblue-100: #f1f5f9;
   --color-popblue-200: #e2e8f0;
@@ -59,11 +60,11 @@
   --color-popblue-deep: #0f172a;
   --color-popblue-soft: #e2e8f0;
 
-  --color-ink: #1e293b;
-  --color-paper: #fdf6ec;
+  --color-ink: #1e1b4b;
+  --color-paper: #f5f3ff;
   --color-mute: #64748b;
   --color-card: #ffffff;
-  --color-deep: #7c2d12;
+  --color-deep: #312e81;
 }
 
 html { scroll-behavior: smooth; }
@@ -78,24 +79,24 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fdf6ec;
+  background-color: #f5f3ff;
   background-image:
-    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(234, 88, 12, 0.14) 0%, rgba(234, 88, 12, 0) 70%),
-    radial-gradient(ellipse 45% 22% at 8% 10%, rgba(245, 158, 11, 0.22) 0%, rgba(245, 158, 11, 0) 70%),
-    linear-gradient(180deg, rgba(255, 237, 213, 0.9) 0%, rgba(254, 243, 199, 0.5) 42%, rgba(253, 246, 236, 0) 78%);
-  color: #1e293b;
+    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(79, 70, 229, 0.16) 0%, rgba(79, 70, 229, 0) 70%),
+    radial-gradient(ellipse 45% 22% at 8% 10%, rgba(14, 165, 233, 0.20) 0%, rgba(14, 165, 233, 0) 70%),
+    linear-gradient(180deg, rgba(224, 231, 255, 0.9) 0%, rgba(224, 242, 254, 0.5) 42%, rgba(245, 243, 255, 0) 78%);
+  color: #1e1b4b;
 }
-::selection { background: #fcd34d; color: #451a03; }
+::selection { background: #7dd3fc; color: #082f49; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ea580c, #f59e0b); border-radius: 999px; border: 2px solid #fdf6ec; }
-::-webkit-scrollbar-track { background: #ffedd5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #4f46e5, #0ea5e9); border-radius: 4px; border: 2px solid #f5f3ff; }
+::-webkit-scrollbar-track { background: #e0e7ff; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Ember Dusk type: warm, rounded headlines with relaxed tracking. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Indigo Frost type: tight, crisp headlines. */
+h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Ember Dusk current: embers rising softly. */
+/* Indigo Frost current: frost motes drifting up. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, 12vh, 0) scale(0.9); opacity: 0; }
   15% { opacity: 0.85; }
@@ -104,139 +105,139 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 16s linear infinite; }
 
-/* Ember Dusk sway: a slow, lazy drift. */
+/* Indigo Frost sway: a slow, crisp drift. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-6px, 0, 0) scale(1); opacity: 0.6; }
   50% { transform: translate3d(6px, -6px, 0) scale(1.02); opacity: 0.95; }
 }
 .pop-drift { animation: signal-drift 10s ease-in-out infinite; }
 
-/* Ember Dusk bob: a gentle floating rise. */
+/* Indigo Frost bob: a gentle floating rise. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-5px) scale(1.01); }
 }
 .pop-bob { animation: signal-bob 5s ease-in-out infinite; }
 
-/* Slow turn for the dusk dial. */
+/* Slow turn for the frost dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 60s linear infinite; }
 
-/* Ember Dusk glint: an amber pulse. */
+/* Indigo Frost glint: a sky pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.4; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.12); }
 }
 .pop-twinkle { animation: signal-blink 3s ease-in-out infinite; }
 
-/* Ember Dusk ticker: infinite marquee (leftward drift). */
+/* Indigo Frost ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Ember Dusk bands: coral -> amber -> navy bars. */
+/* Indigo Frost bands: indigo -> sky -> navy bars. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #ea580c 0 34%, #f59e0b 34% 67%, #1e293b 67% 100%);
+    linear-gradient(90deg, #4f46e5 0 34%, #0ea5e9 34% 67%, #0f172a 67% 100%);
   background-size: 64px 64px;
-  border-radius: 999px;
+  border-radius: 4px;
 }
 
-/* Ember Dusk card: a large, softly rounded panel with a
-   diffused warm shadow — it lifts gently and the shadow
-   deepens and warms on hover. */
+/* Indigo Frost card: a crisp medium-rounded panel with a
+   thin indigo outline and a small hard offset shadow — it
+   steps up and the shadow sharpens on hover. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(234, 88, 12, 0.18);
+  border: 1px solid rgba(79, 70, 229, 0.28);
   background: #ffffff;
-  border-radius: 1.75rem;
-  box-shadow: 0 18px 38px -18px rgba(154, 52, 18, 0.35);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border-radius: 1rem;
+  box-shadow: 4px 4px 0 rgba(49, 46, 129, 0.16);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  border-color: rgba(234, 88, 12, 0.4);
-  box-shadow: 0 26px 48px -18px rgba(154, 52, 18, 0.5);
+  transform: translate(-2px, -2px);
+  border-color: rgba(79, 70, 229, 0.55);
+  box-shadow: 7px 7px 0 rgba(49, 46, 129, 0.22);
 }
 
-/* Ember Dusk glass: shared by modals and drawers — a
-   frosted sand pane with a coral ring and soft shadow. */
+/* Indigo Frost glass: shared by modals and drawers — a
+   frosted lavender pane with an indigo ring and crisp shadow. */
 .pop-glass {
-  background: rgba(253, 246, 236, 0.92);
+  background: rgba(245, 243, 255, 0.92);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(234, 88, 12, 0.28);
-  border-radius: 1.5rem;
-  box-shadow: 0 24px 48px -20px rgba(154, 52, 18, 0.45);
+  border: 1px solid rgba(79, 70, 229, 0.35);
+  border-radius: 1rem;
+  box-shadow: 6px 6px 0 rgba(49, 46, 129, 0.18);
 }
 
-/* Ember Dusk tag: a golden sunset label — navy type,
-   fully rounded pill, soft warm shadow. */
+/* Indigo Frost tag: a sky label — navy type,
+   small rounded corners, crisp shadow. */
 .starburst {
-  background: #fbbf24;
-  color: #1e293b;
+  background: #7dd3fc;
+  color: #0f172a;
   text-shadow: none;
-  border-radius: 999px;
-  transform: rotate(-2deg);
-  box-shadow: 0 14px 28px -10px rgba(234, 88, 12, 0.55);
+  border-radius: 0.5rem;
+  transform: rotate(1deg);
+  box-shadow: 3px 3px 0 rgba(49, 46, 129, 0.25);
   border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Ember Dusk texture: a coral dot grid. */
+/* Indigo Frost texture: an indigo dot grid. */
 .halftone {
-  background-image: radial-gradient(rgba(234, 88, 12, 0.22) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(rgba(79, 70, 229, 0.22) 1.5px, transparent 1.5px);
   background-size: 20px 20px;
   background-position: 0 0;
 }
 
-/* Ember Dusk rule: a soft coral-to-amber bar. */
+/* Indigo Frost rule: a crisp indigo-to-sky bar. */
 .zigzag {
-  height: 8px;
+  height: 6px;
   border-top: none;
-  background: linear-gradient(90deg, #ea580c 0%, #f59e0b 55%, #1e293b 100%);
+  background: linear-gradient(90deg, #4f46e5 0%, #0ea5e9 55%, #0f172a 100%);
   opacity: 1;
-  border-radius: 999px;
+  border-radius: 4px;
 }
 
-/* Ember Dusk band: a navy-to-coral-to-amber wash with
-   a soft shadow and fully rounded lower corners. */
+/* Indigo Frost band: an ink-navy-to-indigo-to-sky wash with
+   a crisp shadow and small rounded lower corners. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #0f172a, #ea580c 55%, #f59e0b);
+  background: linear-gradient(90deg, #0f172a, #4f46e5 55%, #0ea5e9);
   opacity: 1;
-  box-shadow: 0 18px 34px -18px rgba(154, 52, 18, 0.5);
+  box-shadow: 0 10px 0 -2px rgba(49, 46, 129, 0.20);
   border-bottom: none;
-  border-radius: 0 0 1.5rem 1.5rem;
+  border-radius: 0 0 1rem 1rem;
 }
 
-/* Ember Dusk glow: a coral-amber halo for the core. */
+/* Indigo Frost glow: an indigo-sky halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(253, 230, 138, 0.7) 42%, rgba(234, 88, 12, 0.32) 62%, rgba(234, 88, 12, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(186, 230, 253, 0.7) 42%, rgba(79, 70, 229, 0.32) 62%, rgba(79, 70, 229, 0) 76%);
 }
 
-/* Ember Dusk core: a glowing ember with an amber ring. */
+/* Indigo Frost core: a glowing indigo disc with a sky ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fdba74 0%, #ea580c 55%, #7c2d12 100%);
-  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.9), 0 20px 40px -16px rgba(234, 88, 12, 0.6);
+    radial-gradient(circle at 35% 30%, #a5b4fc 0%, #4f46e5 55%, #1e1b4b 100%);
+  box-shadow: 0 0 0 3px rgba(125, 211, 252, 0.9), 0 20px 40px -16px rgba(79, 70, 229, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Soft rings around the ember. */
+/* Crisp rings around the frost disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(234, 88, 12, 0.45) 0px,
-    rgba(234, 88, 12, 0.45) 1px,
+    rgba(79, 70, 229, 0.45) 0px,
+    rgba(79, 70, 229, 0.45) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(245, 158, 11, 0.45) 14px,
-    rgba(245, 158, 11, 0.45) 15px,
+    rgba(14, 165, 233, 0.45) 14px,
+    rgba(14, 165, 233, 0.45) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -247,7 +248,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(245, 158, 11, 0.55) 0deg 3deg,
+    rgba(14, 165, 233, 0.55) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
