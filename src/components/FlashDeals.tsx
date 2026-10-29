@@ -17,11 +17,11 @@ export default function FlashDeals({ products, countdown, onQuickView, onAddToCa
   const { hh, mm, ss } = countdown;
   const reduce = useReducedMotion();
   return (
-    <section id="flash" className="relative overflow-hidden bg-[#ecfccb] py-14 text-[#161a12] ring-1 ring-inset ring-brand-400/20 sm:py-16">
+    <section id="flash" className="relative overflow-hidden bg-[#ecfccb] py-14 text-[#0f172a] ring-1 ring-inset ring-brand-400/20 sm:py-16">
       <div aria-hidden className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-brand-400/20 blur-[100px]" />
       <div aria-hidden className="pointer-events-none absolute -bottom-24 -left-16 h-72 w-72 rounded-full bg-brand-600/20 blur-[100px]" />
       {/* delta rain-fleck dots */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 opacity-40 [background-image:radial-gradient(rgba(22,26,18, 0.14)_1px,transparent_1.5px)] [background-size:30px_30px]" />
+      <div aria-hidden className="pointer-events-none absolute inset-0 opacity-40 [background-image:radial-gradient(rgba(15,23,42, 0.14)_1px,transparent_1.5px)] [background-size:30px_30px]" />
       <div className="relative mx-auto max-w-7xl px-4">
         <Reveal>
           <div className="flex flex-wrap items-end justify-between gap-3">
@@ -34,7 +34,7 @@ export default function FlashDeals({ products, countdown, onQuickView, onAddToCa
             </div>
             <div className="flex items-center gap-2 text-sm font-bold tracking-wide">
               <span className="text-brand-600/80">Ends in</span>
-              {[hh, mm].map((v, i) => <span key={i} className="rounded-lg bg-gradient-to-b from-brand-700 to-brand-900 px-3.5 py-2 text-lg font-black tabular-nums text-white shadow-[0_0_18px_rgba(22,26,18, 0.5)] ring-1 ring-brand-200/50">{v}</span>)}
+              {[hh, mm].map((v, i) => <span key={i} className="rounded-lg bg-gradient-to-b from-brand-700 to-brand-900 px-3.5 py-2 text-lg font-black tabular-nums text-white shadow-[0_0_18px_rgba(15,23,42, 0.5)] ring-1 ring-brand-200/50">{v}</span>)}
               <motion.span
                 animate={reduce ? undefined : { scale: [1, 1.08, 1] }}
                 transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
