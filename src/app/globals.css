@@ -1,70 +1,69 @@
 @import "tailwindcss";
 
 @theme {
-  /* Violet Orchard: a warm, high-contrast direction — deep
-     violet as the primary accent, electric lime for
-     highlights, dark plum for grounded contrast, on warm
-     cream paper. Cards are compact, squared-off panels
-     with a bold violet top edge and a crisp lime shadow
-     that steps sideways on hover — the opposite of the
-     previous Tidal Lagoon look, its teal/cyan palette,
-     misty seafoam paper, fully rounded pill-soft cards
-     and soft diffused shadows. */
+  /* Ember Dusk: a warm, sunset direction — burnt coral-orange
+     as the primary accent, golden amber for highlights, deep
+     slate-navy for grounded contrast, on warm sand paper.
+     Cards are large, softly rounded panels with diffused
+     warm shadows that lift gently on hover — the opposite
+     of the previous Violet Orchard look, its deep violet /
+     electric lime palette, warm cream paper, squared-off
+     panels, lime top edge and crisp hard offset shadows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = deep violet scale */
-  --color-brand-50: #f5f3ff;
-  --color-brand-100: #ede9fe;
-  --color-brand-200: #ddd6fe;
-  --color-brand-300: #c4b5fd;
-  --color-brand-400: #a78bfa;
-  --color-brand-500: #8b5cf6;
-  --color-brand-600: #7c3aed;
-  --color-brand-700: #6d28d9;
-  --color-brand-800: #5b21b6;
-  --color-brand-900: #4c1d95;
-  --color-brand-950: #2e1065;
-  --color-brand: #6d28d9;
-  --color-brand-dark: #5b21b6;
-  --color-brand-deep: #4c1d95;
+  /* brand = burnt coral-orange scale */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-brand-950: #431407;
+  --color-brand: #ea580c;
+  --color-brand-dark: #c2410c;
+  --color-brand-deep: #9a3412;
 
-  /* gold = electric lime scale (name kept for legacy class refs) */
-  --color-gold-50: #f7fee7;
-  --color-gold-100: #ecfccb;
-  --color-gold-200: #d9f99d;
-  --color-gold-300: #bef264;
-  --color-gold-400: #a3e635;
-  --color-gold-500: #84cc16;
-  --color-gold-600: #65a30d;
-  --color-gold-700: #4d7c0f;
-  --color-gold-800: #365314;
-  --color-gold-900: #1a2e05;
-  --color-gold-950: #111802;
-  --color-gold: #a3e635;
-  --color-gold-deep: #65a30d;
-  --color-gold-soft: #ecfccb;
+  /* gold = golden amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #b45309;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = dark plum scale (name kept for legacy class refs) */
-  --color-popblue-50: #faf5ff;
-  --color-popblue-100: #f3e8ff;
-  --color-popblue-200: #e9d5ff;
-  --color-popblue-300: #d8b4fe;
-  --color-popblue-400: #c084fc;
-  --color-popblue-500: #a855f7;
-  --color-popblue-600: #9333ea;
-  --color-popblue-700: #7e22ce;
-  --color-popblue-800: #6b21a8;
-  --color-popblue-900: #581c87;
-  --color-popblue-950: #3b0764;
-  --color-popblue: #581c87;
-  --color-popblue-deep: #2e1065;
-  --color-popblue-soft: #e9d5ff;
+  /* popblue = deep slate-navy scale (name kept for legacy class refs) */
+  --color-popblue-50: #f8fafc;
+  --color-popblue-100: #f1f5f9;
+  --color-popblue-200: #e2e8f0;
+  --color-popblue-300: #cbd5e1;
+  --color-popblue-400: #94a3b8;
+  --color-popblue-500: #64748b;
+  --color-popblue-600: #475569;
+  --color-popblue-700: #334155;
+  --color-popblue-800: #1e293b;
+  --color-popblue-900: #0f172a;
+  --color-popblue-950: #020617;
+  --color-popblue: #1e293b;
+  --color-popblue-deep: #0f172a;
+  --color-popblue-soft: #e2e8f0;
 
-  --color-ink: #2e1065;
-  --color-paper: #faf7f0;
-  --color-mute: #6b7280;
+  --color-ink: #1e293b;
+  --color-paper: #fdf6ec;
+  --color-mute: #64748b;
   --color-card: #ffffff;
-  --color-deep: #4c1d95;
+  --color-deep: #7c2d12;
 }
 
 html { scroll-behavior: smooth; }
@@ -79,180 +78,179 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #faf7f0;
+  background-color: #fdf6ec;
   background-image:
-    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(124, 58, 237, 0.14) 0%, rgba(124, 58, 237, 0) 70%),
-    radial-gradient(ellipse 45% 22% at 8% 10%, rgba(163, 230, 53, 0.22) 0%, rgba(163, 230, 53, 0) 70%),
-    linear-gradient(180deg, rgba(237, 233, 254, 0.9) 0%, rgba(236, 252, 203, 0.5) 42%, rgba(250, 247, 240, 0) 78%);
-  color: #2e1065;
+    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(234, 88, 12, 0.14) 0%, rgba(234, 88, 12, 0) 70%),
+    radial-gradient(ellipse 45% 22% at 8% 10%, rgba(245, 158, 11, 0.22) 0%, rgba(245, 158, 11, 0) 70%),
+    linear-gradient(180deg, rgba(255, 237, 213, 0.9) 0%, rgba(254, 243, 199, 0.5) 42%, rgba(253, 246, 236, 0) 78%);
+  color: #1e293b;
 }
-::selection { background: #bef264; color: #1a2e05; }
+::selection { background: #fcd34d; color: #451a03; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #7c3aed, #a3e635); border-radius: 4px; border: 2px solid #faf7f0; }
-::-webkit-scrollbar-track { background: #ede9fe; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ea580c, #f59e0b); border-radius: 999px; border: 2px solid #fdf6ec; }
+::-webkit-scrollbar-track { background: #ffedd5; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Violet Orchard type: bold, tight headlines with strong tracking. */
-h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
+/* Ember Dusk type: warm, rounded headlines with relaxed tracking. */
+h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Violet Orchard current: petals drifting down. */
+/* Ember Dusk current: embers rising softly. */
 @keyframes signal-rise {
-  0% { transform: translate3d(0, -10vh, 0) rotate(3deg) scale(0.9); opacity: 0; }
+  0% { transform: translate3d(0, 12vh, 0) scale(0.9); opacity: 0; }
   15% { opacity: 0.85; }
-  50% { transform: translate3d(-3vw, 30vh, 0) rotate(-4deg) scale(1.05); }
-  100% { transform: translate3d(2vw, 68vh, 0) rotate(4deg) scale(1); opacity: 0; }
+  50% { transform: translate3d(2vw, -24vh, 0) scale(1.05); }
+  100% { transform: translate3d(-2vw, -62vh, 0) scale(1); opacity: 0; }
 }
 .pop-fall { animation: signal-rise 16s linear infinite; }
 
-/* Violet Orchard sway: a brisk side-to-side snap. */
+/* Ember Dusk sway: a slow, lazy drift. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(-8px, 0, 0) rotate(-2deg) scale(1); opacity: 0.6; }
-  50% { transform: translate3d(8px, 8px, 0) rotate(2deg) scale(1.03); opacity: 0.95; }
+  0%, 100% { transform: translate3d(-6px, 0, 0) scale(1); opacity: 0.6; }
+  50% { transform: translate3d(6px, -6px, 0) scale(1.02); opacity: 0.95; }
 }
-.pop-drift { animation: signal-drift 8s ease-in-out infinite; }
+.pop-drift { animation: signal-drift 10s ease-in-out infinite; }
 
-/* Violet Orchard bob: a sharp little hop. */
+/* Ember Dusk bob: a gentle floating rise. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-7px) scale(1.01); }
+  50% { transform: translateY(-5px) scale(1.01); }
 }
-.pop-bob { animation: signal-bob 4s ease-in-out infinite; }
+.pop-bob { animation: signal-bob 5s ease-in-out infinite; }
 
-/* Slow turn for the orchard dial. */
+/* Slow turn for the dusk dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
-.pop-spin { animation: dial-turn 50s linear infinite; }
+.pop-spin { animation: dial-turn 60s linear infinite; }
 
-/* Violet Orchard glint: a lime pulse. */
+/* Ember Dusk glint: an amber pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.4; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.12); }
 }
-.pop-twinkle { animation: signal-blink 2.6s ease-in-out infinite; }
+.pop-twinkle { animation: signal-blink 3s ease-in-out infinite; }
 
-/* Violet Orchard ticker: infinite marquee (leftward drift). */
+/* Ember Dusk ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
-.pop-ticker { animation: signal-ticker 28s linear infinite; }
+.pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Violet Orchard bands: violet -> lime -> plum bars. */
+/* Ember Dusk bands: coral -> amber -> navy bars. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #7c3aed 0 34%, #a3e635 34% 67%, #2e1065 67% 100%);
+    linear-gradient(90deg, #ea580c 0 34%, #f59e0b 34% 67%, #1e293b 67% 100%);
   background-size: 64px 64px;
-  border-radius: 4px;
+  border-radius: 999px;
 }
 
-/* Violet Orchard card: a compact squared panel with a
-   bold lime top edge and a crisp offset shadow — it
-   steps sideways and the shadow hardens on hover. */
+/* Ember Dusk card: a large, softly rounded panel with a
+   diffused warm shadow — it lifts gently and the shadow
+   deepens and warms on hover. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(109, 40, 217, 0.25);
-  border-top: 4px solid #a3e635;
+  border: 1px solid rgba(234, 88, 12, 0.18);
   background: #ffffff;
-  border-radius: 0.75rem;
-  box-shadow: 6px 6px 0 rgba(124, 58, 237, 0.18);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  border-radius: 1.75rem;
+  box-shadow: 0 18px 38px -18px rgba(154, 52, 18, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translate(2px, -2px);
-  border-color: rgba(109, 40, 217, 0.55);
-  box-shadow: 9px 9px 0 rgba(124, 58, 237, 0.32);
+  transform: translateY(-4px);
+  border-color: rgba(234, 88, 12, 0.4);
+  box-shadow: 0 26px 48px -18px rgba(154, 52, 18, 0.5);
 }
 
-/* Violet Orchard glass: shared by modals and drawers — a
-   frosted cream pane with a violet ring and crisp shadow. */
+/* Ember Dusk glass: shared by modals and drawers — a
+   frosted sand pane with a coral ring and soft shadow. */
 .pop-glass {
-  background: rgba(250, 247, 240, 0.92);
+  background: rgba(253, 246, 236, 0.92);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(109, 40, 217, 0.3);
-  border-radius: 0.75rem;
-  box-shadow: 8px 8px 0 rgba(124, 58, 237, 0.2);
+  border: 1px solid rgba(234, 88, 12, 0.28);
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 48px -20px rgba(154, 52, 18, 0.45);
 }
 
-/* Violet Orchard tag: a lime orchard label — plum type,
-   squared corners, tilted slightly, crisp shadow. */
+/* Ember Dusk tag: a golden sunset label — navy type,
+   fully rounded pill, soft warm shadow. */
 .starburst {
-  background: #a3e635;
-  color: #2e1065;
+  background: #fbbf24;
+  color: #1e293b;
   text-shadow: none;
-  border-radius: 0.375rem;
-  transform: rotate(3deg);
-  box-shadow: 4px 4px 0 rgba(124, 58, 237, 0.4);
+  border-radius: 999px;
+  transform: rotate(-2deg);
+  box-shadow: 0 14px 28px -10px rgba(234, 88, 12, 0.55);
   border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Violet Orchard texture: a violet dot grid. */
+/* Ember Dusk texture: a coral dot grid. */
 .halftone {
-  background-image: radial-gradient(rgba(124, 58, 237, 0.25) 1.5px, transparent 1.5px);
-  background-size: 18px 18px;
+  background-image: radial-gradient(rgba(234, 88, 12, 0.22) 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
   background-position: 0 0;
 }
 
-/* Violet Orchard rule: a bold violet-to-lime bar. */
+/* Ember Dusk rule: a soft coral-to-amber bar. */
 .zigzag {
   height: 8px;
   border-top: none;
-  background: linear-gradient(90deg, #7c3aed 0%, #a3e635 55%, #2e1065 100%);
+  background: linear-gradient(90deg, #ea580c 0%, #f59e0b 55%, #1e293b 100%);
   opacity: 1;
-  border-radius: 2px;
+  border-radius: 999px;
 }
 
-/* Violet Orchard band: a plum-to-violet-to-lime wash with
-   a crisp shadow and squared lower corners. */
+/* Ember Dusk band: a navy-to-coral-to-amber wash with
+   a soft shadow and fully rounded lower corners. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #2e1065, #7c3aed 55%, #a3e635);
+  background: linear-gradient(90deg, #0f172a, #ea580c 55%, #f59e0b);
   opacity: 1;
-  box-shadow: 0 10px 0 -4px rgba(124, 58, 237, 0.3);
+  box-shadow: 0 18px 34px -18px rgba(154, 52, 18, 0.5);
   border-bottom: none;
-  border-radius: 0 0 0.5rem 0.5rem;
+  border-radius: 0 0 1.5rem 1.5rem;
 }
 
-/* Violet Orchard glow: a violet-lime halo for the core. */
+/* Ember Dusk glow: a coral-amber halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(217, 249, 157, 0.7) 42%, rgba(124, 58, 237, 0.32) 62%, rgba(124, 58, 237, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(253, 230, 138, 0.7) 42%, rgba(234, 88, 12, 0.32) 62%, rgba(234, 88, 12, 0) 76%);
 }
 
-/* Violet Orchard core: a violet pearl with a lime ring. */
+/* Ember Dusk core: a glowing ember with an amber ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #a78bfa 0%, #7c3aed 55%, #4c1d95 100%);
-  box-shadow: 0 0 0 3px rgba(163, 230, 53, 0.9), 8px 8px 0 rgba(124, 58, 237, 0.35);
+    radial-gradient(circle at 35% 30%, #fdba74 0%, #ea580c 55%, #7c2d12 100%);
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.9), 0 20px 40px -16px rgba(234, 88, 12, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Crisp rings around the core pearl. */
+/* Soft rings around the ember. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(124, 58, 237, 0.45) 0px,
-    rgba(124, 58, 237, 0.45) 1px,
+    rgba(234, 88, 12, 0.45) 0px,
+    rgba(234, 88, 12, 0.45) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(163, 230, 53, 0.45) 14px,
-    rgba(163, 230, 53, 0.45) 15px,
+    rgba(245, 158, 11, 0.45) 14px,
+    rgba(245, 158, 11, 0.45) 15px,
     transparent 15px,
     transparent 30px
   );
   -webkit-mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
   mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
-  border-radius: 4px;
+  border-radius: 999px;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(163, 230, 53, 0.55) 0deg 3deg,
+    rgba(245, 158, 11, 0.55) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
   mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
-  border-radius: 4px;
+  border-radius: 999px;
 }

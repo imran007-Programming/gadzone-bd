@@ -38,7 +38,7 @@ export default function FlashDeals({ products, countdown, onQuickView, onAddToCa
               <motion.span
                 animate={reduce ? undefined : { scale: [1, 1.08, 1] }}
                 transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
-                className="rounded-lg bg-gradient-to-b from-brand-700 to-brand-900 px-3.5 py-2 text-lg font-black tabular-nums text-white shadow-[0_0_22px_rgba(6,182,212, 0.6)] ring-2 ring-brand-200/60"
+                className="rounded-lg bg-gradient-to-b from-brand-700 to-brand-900 px-3.5 py-2 text-lg font-black tabular-nums text-white shadow-[0_0_22px_rgba(245,158,11, 0.6)] ring-2 ring-brand-200/60"
               >
                 {ss}
               </motion.span>
