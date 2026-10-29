@@ -1,71 +1,70 @@
 @import "tailwindcss";
 
 @theme {
-  /* Harbor Night: a sharp harbor direction —
-     deep indigo as the primary accent, amber for
-     bright highlights, slate-navy for contrast,
-     cool mist paper, midnight ink. Cards are
-     angular panels with an amber TOP rule and a
-     hard indigo offset shadow — the opposite of
-     the previous Rosewood Grove look, its rose /
-     lime palette, blush paper, fully rounded
-     corners, lime BOTTOM pill and diffused
-     rose shadow. */
+  /* Verdant Market: a fresh, leafy market direction —
+     deep emerald as the primary accent, warm
+     terracotta for bright highlights, soft stone for
+     contrast, warm cream paper, espresso ink. Cards
+     are fully rounded, softly shadowed panels with a
+     terracotta BOTTOM bar — the opposite of the
+     previous Harbor Night look, its indigo / amber
+     palette, cool mist paper, angular corners, amber
+     TOP rule and hard indigo offset shadow. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = indigo scale */
-  --color-brand-50: #eef2ff;
-  --color-brand-100: #e0e7ff;
-  --color-brand-200: #c7d2fe;
-  --color-brand-300: #a5b4fc;
-  --color-brand-400: #818cf8;
-  --color-brand-500: #6366f1;
-  --color-brand-600: #4f46e5;
-  --color-brand-700: #4338ca;
-  --color-brand-800: #3730a3;
-  --color-brand-900: #312e81;
-  --color-brand-950: #1e1b4b;
-  --color-brand: #4338ca;
-  --color-brand-dark: #3730a3;
-  --color-brand-deep: #312e81;
+  /* brand = emerald scale */
+  --color-brand-50: #ecfdf5;
+  --color-brand-100: #d1fae5;
+  --color-brand-200: #a7f3d0;
+  --color-brand-300: #6ee7b7;
+  --color-brand-400: #34d399;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-brand-900: #064e3b;
+  --color-brand-950: #022c22;
+  --color-brand: #047857;
+  --color-brand-dark: #065f46;
+  --color-brand-deep: #064e3b;
 
-  /* gold = amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #f59e0b;
-  --color-gold-deep: #b45309;
-  --color-gold-soft: #fef3c7;
+  /* gold = terracotta scale (name kept for legacy class refs) */
+  --color-gold-50: #fff7ed;
+  --color-gold-100: #ffedd5;
+  --color-gold-200: #fed7aa;
+  --color-gold-300: #fdba74;
+  --color-gold-400: #fb923c;
+  --color-gold-500: #f97316;
+  --color-gold-600: #ea580c;
+  --color-gold-700: #c2410c;
+  --color-gold-800: #9a3412;
+  --color-gold-900: #7c2d12;
+  --color-gold-950: #431407;
+  --color-gold: #f97316;
+  --color-gold-deep: #c2410c;
+  --color-gold-soft: #ffedd5;
 
-  /* popblue = slate-navy scale (name kept for legacy class refs) */
-  --color-popblue-50: #f8fafc;
-  --color-popblue-100: #f1f5f9;
-  --color-popblue-200: #e2e8f0;
-  --color-popblue-300: #cbd5e1;
-  --color-popblue-400: #94a3b8;
-  --color-popblue-500: #64748b;
-  --color-popblue-600: #475569;
-  --color-popblue-700: #334155;
-  --color-popblue-800: #1e293b;
-  --color-popblue-900: #0f172a;
-  --color-popblue-950: #020617;
-  --color-popblue: #334155;
-  --color-popblue-deep: #020617;
-  --color-popblue-soft: #cbd5e1;
+  /* popblue = warm stone scale (name kept for legacy class refs) */
+  --color-popblue-50: #fafaf9;
+  --color-popblue-100: #f5f5f4;
+  --color-popblue-200: #e7e5e4;
+  --color-popblue-300: #d6d3d1;
+  --color-popblue-400: #a8a29e;
+  --color-popblue-500: #78716c;
+  --color-popblue-600: #57534e;
+  --color-popblue-700: #44403c;
+  --color-popblue-800: #292524;
+  --color-popblue-900: #1c1917;
+  --color-popblue-950: #0c0a09;
+  --color-popblue: #44403c;
+  --color-popblue-deep: #0c0a09;
+  --color-popblue-soft: #d6d3d1;
 
-  --color-ink: #0f172a;
-  --color-paper: #f1f5f9;
-  --color-mute: #64748b;
+  --color-ink: #1c1917;
+  --color-paper: #faf6ef;
+  --color-mute: #78716c;
   --color-card: #ffffff;
-  --color-deep: #312e81;
+  --color-deep: #064e3b;
 }
 
 html { scroll-behavior: smooth; }
@@ -79,24 +78,24 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f1f5f9;
+  background-color: #faf6ef;
   background-image:
-    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(67, 56, 202, 0.14) 0%, rgba(67, 56, 202, 0) 70%),
-    radial-gradient(ellipse 45% 22% at 8% 10%, rgba(245, 158, 11, 0.18) 0%, rgba(245, 158, 11, 0) 70%),
-    linear-gradient(180deg, rgba(224, 231, 255, 0.9) 0%, rgba(254, 243, 199, 0.5) 42%, rgba(241, 245, 249, 0) 78%);
-  color: #0f172a;
+    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(4, 120, 87, 0.12) 0%, rgba(4, 120, 87, 0) 70%),
+    radial-gradient(ellipse 45% 22% at 8% 10%, rgba(249, 115, 22, 0.16) 0%, rgba(249, 115, 22, 0) 70%),
+    linear-gradient(180deg, rgba(209, 250, 229, 0.9) 0%, rgba(255, 237, 213, 0.5) 42%, rgba(250, 246, 239, 0) 78%);
+  color: #1c1917;
 }
-::selection { background: #fcd34d; color: #1e1b4b; }
+::selection { background: #fdba74; color: #431407; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #4338ca, #f59e0b); border-radius: 4px; border: 2px solid #f1f5f9; }
-::-webkit-scrollbar-track { background: #e0e7ff; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #047857, #f97316); border-radius: 999px; border: 2px solid #faf6ef; }
+::-webkit-scrollbar-track { background: #d1fae5; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Harbor Night type: wide, sturdy headlines. */
+/* Verdant Market type: soft, rounded headlines. */
 h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Harbor Night rise: signals drifting upward. */
+/* Verdant Market rise: leaves drifting upward. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, 6vh, 0) scale(0.95) rotate(0deg); opacity: 0; }
   15% { opacity: 0.85; }
@@ -105,148 +104,149 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 20s linear infinite; }
 
-/* Harbor Night sway: a slow side-to-side drift. */
+/* Verdant Market sway: a slow side-to-side drift. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-8px, 4px, 0) scale(1); opacity: 0.6; }
   50% { transform: translate3d(8px, -4px, 0) scale(1.03); opacity: 0.95; }
 }
 .pop-drift { animation: signal-drift 13s ease-in-out infinite; }
 
-/* Harbor Night bob: a soft little rise. */
+/* Verdant Market bob: a soft little rise. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-6px) scale(1.02); }
 }
 .pop-bob { animation: signal-bob 6s ease-in-out infinite; }
 
-/* Slow turn for the harbor dial. */
+/* Slow turn for the market dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 80s linear infinite; }
 
-/* Harbor Night glint: an amber pulse. */
+/* Verdant Market glint: a terracotta pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.4; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.15); }
 }
 .pop-twinkle { animation: signal-blink 3.5s ease-in-out infinite; }
 
-/* Harbor Night ticker: infinite marquee (leftward drift). */
+/* Verdant Market ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 34s linear infinite; }
 
-/* Harbor Night bands: indigo -> amber diagonal stripes. */
+/* Verdant Market bands: emerald -> terracotta diagonal stripes. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(-45deg, #4338ca 0px, #4338ca 8px, #f59e0b 8px, #f59e0b 16px);
+    repeating-linear-gradient(-45deg, #047857 0px, #047857 8px, #f97316 8px, #f97316 16px);
   background-size: 100% 6px;
   background-repeat: repeat-x;
-  border-radius: 2px;
+  border-radius: 999px;
 }
 
-/* Harbor Night card: an angular panel with an amber
-   TOP rule and a hard indigo offset shadow — it
-   shifts diagonally on hover, the shadow tightening
-   and the border turning indigo. */
+/* Verdant Market card: a fully rounded panel with a
+   terracotta BOTTOM bar and a soft diffused emerald
+   shadow — it lifts gently on hover, the shadow
+   deepening and the border turning emerald. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(15, 23, 42, 0.14);
-  border-top: 4px solid #f59e0b;
+  border: 1px solid rgba(28, 25, 23, 0.1);
+  border-bottom: 4px solid #f97316;
   background: #ffffff;
-  border-radius: 0.75rem;
-  box-shadow: 6px 6px 0 0 rgba(49, 46, 129, 0.9);
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 40px -20px rgba(6, 78, 59, 0.35);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translate(-2px, -4px);
-  border-top-color: #4338ca;
-  box-shadow: 8px 8px 0 0 rgba(49, 46, 129, 1);
+  transform: translateY(-4px);
+  border-bottom-color: #047857;
+  box-shadow: 0 28px 48px -20px rgba(6, 78, 59, 0.45);
 }
 
-/* Harbor Night glass: shared by modals and drawers — a
-   frosted mist pane with a navy edge and a thick
-   indigo LEFT rule. */
+/* Verdant Market glass: shared by modals and drawers — a
+   frosted cream pane with a stone edge and a thick
+   emerald LEFT rule. */
 .pop-glass {
-  background: rgba(241, 245, 249, 0.94);
+  background: rgba(250, 246, 239, 0.94);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(15, 23, 42, 0.16);
-  border-left: 5px solid #4338ca;
-  border-radius: 0.75rem;
-  box-shadow: 8px 8px 0 0 rgba(49, 46, 129, 0.35);
+  border: 1px solid rgba(28, 25, 23, 0.12);
+  border-left: 5px solid #047857;
+  border-radius: 1.25rem;
+  box-shadow: 0 24px 48px -24px rgba(6, 78, 59, 0.4);
 }
 
-/* Harbor Night tag: a rotated amber diamond badge —
-   midnight type, hard shadow. */
+/* Verdant Market tag: a soft terracotta pill badge —
+   cream type, diffused shadow. */
 .starburst {
-  background: #fbbf24;
-  color: #1e1b4b;
+  background: #ea580c;
+  color: #fff7ed;
   text-shadow: none;
-  border-radius: 0.25rem;
-  transform: rotate(6deg);
-  box-shadow: 4px 4px 0 0 rgba(49, 46, 129, 0.9);
+  border-radius: 999px;
+  transform: rotate(-6deg);
+  box-shadow: 0 14px 28px -12px rgba(194, 65, 12, 0.7);
   border: 2px solid rgba(255, 255, 255, 0.8);
 }
 
-/* Harbor Night texture: an indigo dot field. */
+/* Verdant Market texture: an emerald dot field. */
 .halftone {
   background-image: radial-gradient(
-    rgba(67, 56, 202, 0.14) 1.5px,
+    rgba(4, 120, 87, 0.14) 1.5px,
     transparent 1.5px
   );
   background-size: 28px 28px;
   background-position: 0 0;
 }
 
-/* Harbor Night rule: an indigo-to-amber-to-navy bar. */
+/* Verdant Market rule: an emerald-to-terracotta-to-stone bar. */
 .zigzag {
   height: 8px;
   border-top: none;
-  background: linear-gradient(90deg, #4338ca 0%, #f59e0b 55%, #0f172a 100%);
+  background: linear-gradient(90deg, #047857 0%, #f97316 55%, #1c1917 100%);
   opacity: 1;
-  border-radius: 2px;
+  border-radius: 999px;
 }
 
-/* Harbor Night band: a navy / indigo / amber diagonal
-   wash with a hard shadow and straight bottom corners. */
+/* Verdant Market band: a stone / emerald / terracotta
+   diagonal wash with a soft shadow and rounded
+   bottom corners. */
 .bazaar-awning {
-  background: linear-gradient(115deg, #020617 0%, #4338ca 55%, #f59e0b 100%);
+  background: linear-gradient(115deg, #0c0a09 0%, #047857 55%, #f97316 100%);
   opacity: 1;
-  box-shadow: 0 8px 0 0 rgba(49, 46, 129, 0.35);
-  border-bottom: 1px solid rgba(15, 23, 42, 0.12);
-  border-radius: 0;
+  box-shadow: 0 16px 32px -20px rgba(6, 78, 59, 0.45);
+  border-bottom: 1px solid rgba(28, 25, 23, 0.12);
+  border-radius: 0 0 1rem 1rem;
 }
 
-/* Harbor Night glow: an indigo halo for the core. */
+/* Verdant Market glow: an emerald halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(254, 243, 199, 0.7) 42%, rgba(67, 56, 202, 0.28) 62%, rgba(67, 56, 202, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 237, 213, 0.7) 42%, rgba(4, 120, 87, 0.28) 62%, rgba(4, 120, 87, 0) 76%);
 }
 
-/* Harbor Night core: a glowing harbor orb with a
-   bright amber ring. */
+/* Verdant Market core: a glowing market orb with a
+   soft terracotta ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fcd34d 0%, #4338ca 55%, #020617 100%);
-  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.9), 8px 8px 0 0 rgba(49, 46, 129, 0.4);
-  border: 1px solid rgba(15, 23, 42, 0.12);
+    radial-gradient(circle at 35% 30%, #fdba74 0%, #047857 55%, #0c0a09 100%);
+  box-shadow: 0 0 0 3px rgba(251, 146, 60, 0.9), 0 20px 40px -16px rgba(6, 78, 59, 0.5);
+  border: 1px solid rgba(28, 25, 23, 0.12);
 }
 
-/* Tight rings around the harbor orb. */
+/* Tight rings around the market orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(67, 56, 202, 0.5) 0px,
-    rgba(67, 56, 202, 0.5) 2px,
+    rgba(4, 120, 87, 0.5) 0px,
+    rgba(4, 120, 87, 0.5) 2px,
     transparent 2px,
     transparent 14px,
-    rgba(245, 158, 11, 0.55) 14px,
-    rgba(245, 158, 11, 0.55) 16px,
+    rgba(249, 115, 22, 0.55) 14px,
+    rgba(249, 115, 22, 0.55) 16px,
     transparent 16px,
     transparent 30px
   );
@@ -257,7 +257,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(245, 158, 11, 0.6) 0deg 3deg,
+    rgba(249, 115, 22, 0.6) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
