@@ -1,70 +1,71 @@
 @import "tailwindcss";
 
 @theme {
-  /* Amethyst Dusk: a rich evening direction —
-     deep violet as the primary accent, vivid fuchsia
-     for highlights, dark plum for contrast, warm cream
-     paper, white cards. Cards are sharper panels with
-     a 2px plum border, a thick violet BOTTOM bar and a
-     hard offset sticker shadow — the opposite of the
-     previous Lagoon Frost look, its teal / cyan palette,
-     icy mint paper, fully rounded cards, teal TOP bar
-     and soft diffused shadow. */
+  /* Citrus Grove: a fresh daylight direction —
+     leaf green as the primary accent, sunny amber
+     for highlights, deep forest for contrast, pale
+     lime paper, white cards. Cards are soft, fully
+     rounded panels with a thin green TOP bar and a
+     soft diffused shadow that lifts on hover — the
+     opposite of the previous Amethyst Dusk look, its
+     violet / fuchsia palette, warm cream paper,
+     sharper 1rem panels, 2px plum border, thick
+     violet BOTTOM bar and hard offset sticker shadow. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = violet scale */
-  --color-brand-50: #f5f3ff;
-  --color-brand-100: #ede9fe;
-  --color-brand-200: #ddd6fe;
-  --color-brand-300: #c4b5fd;
-  --color-brand-400: #a78bfa;
-  --color-brand-500: #8b5cf6;
-  --color-brand-600: #7c3aed;
-  --color-brand-700: #6d28d9;
-  --color-brand-800: #5b21b6;
-  --color-brand-900: #4c1d95;
-  --color-brand-950: #2e1065;
-  --color-brand: #6d28d9;
-  --color-brand-dark: #5b21b6;
-  --color-brand-deep: #4c1d95;
+  /* brand = leaf green scale */
+  --color-brand-50: #f0fdf4;
+  --color-brand-100: #dcfce7;
+  --color-brand-200: #bbf7d0;
+  --color-brand-300: #86efac;
+  --color-brand-400: #4ade80;
+  --color-brand-500: #22c55e;
+  --color-brand-600: #16a34a;
+  --color-brand-700: #15803d;
+  --color-brand-800: #166534;
+  --color-brand-900: #14532d;
+  --color-brand-950: #052e16;
+  --color-brand: #15803d;
+  --color-brand-dark: #166534;
+  --color-brand-deep: #14532d;
 
-  /* gold = fuchsia scale (name kept for legacy class refs) */
-  --color-gold-50: #fdf4ff;
-  --color-gold-100: #fae8ff;
-  --color-gold-200: #f5d0fe;
-  --color-gold-300: #f0abfc;
-  --color-gold-400: #e879f9;
-  --color-gold-500: #d946ef;
-  --color-gold-600: #c026d3;
-  --color-gold-700: #a21caf;
-  --color-gold-800: #86198f;
-  --color-gold-900: #701a75;
-  --color-gold-950: #4a044e;
-  --color-gold: #d946ef;
-  --color-gold-deep: #a21caf;
-  --color-gold-soft: #fae8ff;
+  /* gold = sunny amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #b45309;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = dark plum scale (name kept for legacy class refs) */
-  --color-popblue-50: #faf7f5;
-  --color-popblue-100: #f3ece9;
-  --color-popblue-200: #e6d9d4;
-  --color-popblue-300: #d4bcae;
-  --color-popblue-400: #b8938a;
-  --color-popblue-500: #8f6a68;
-  --color-popblue-600: #6e4a52;
-  --color-popblue-700: #553344;
-  --color-popblue-800: #3d2233;
-  --color-popblue-900: #2a1524;
-  --color-popblue-950: #1a0a17;
-  --color-popblue: #553344;
-  --color-popblue-deep: #1a0a17;
-  --color-popblue-soft: #d4bcae;
+  /* popblue = deep forest scale (name kept for legacy class refs) */
+  --color-popblue-50: #f2f7f0;
+  --color-popblue-100: #e0efe0;
+  --color-popblue-200: #c2dfc2;
+  --color-popblue-300: #97c697;
+  --color-popblue-400: #65a565;
+  --color-popblue-500: #438543;
+  --color-popblue-600: #2f6a33;
+  --color-popblue-700: #275528;
+  --color-popblue-800: #224522;
+  --color-popblue-900: #1d3a1e;
+  --color-popblue-950: #0d200e;
+  --color-popblue: #275528;
+  --color-popblue-deep: #0d200e;
+  --color-popblue-soft: #97c697;
 
-  --color-ink: #2a1524;
-  --color-paper: #fdf8f2;
-  --color-mute: #6e4a52;
+  --color-ink: #1d3a1e;
+  --color-paper: #f7fee7;
+  --color-mute: #2f6a33;
   --color-card: #ffffff;
-  --color-deep: #4c1d95;
+  --color-deep: #14532d;
 }
 
 html { scroll-behavior: smooth; }
@@ -78,172 +79,171 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fdf8f2;
+  background-color: #f7fee7;
   background-image:
-    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(217, 70, 239, 0.20) 0%, rgba(217, 70, 239, 0) 70%),
-    radial-gradient(ellipse 45% 22% at 8% 12%, rgba(124, 58, 237, 0.16) 0%, rgba(124, 58, 237, 0) 70%),
-    linear-gradient(180deg, rgba(250, 232, 255, 0.9) 0%, rgba(237, 233, 254, 0.5) 42%, rgba(253, 248, 242, 0) 78%);
-  color: #2a1524;
+    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(245, 158, 11, 0.18) 0%, rgba(245, 158, 11, 0) 70%),
+    radial-gradient(ellipse 45% 22% at 8% 12%, rgba(34, 197, 94, 0.16) 0%, rgba(34, 197, 94, 0) 70%),
+    linear-gradient(180deg, rgba(254, 243, 199, 0.9) 0%, rgba(220, 252, 231, 0.5) 42%, rgba(247, 254, 231, 0) 78%);
+  color: #1d3a1e;
 }
-::selection { background: #f0abfc; color: #2e1065; }
+::selection { background: #fcd34d; color: #052e16; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #7c3aed, #d946ef); border-radius: 4px; border: 2px solid #fdf8f2; }
-::-webkit-scrollbar-track { background: #ede9fe; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #16a34a, #f59e0b); border-radius: 999px; border: 2px solid #f7fee7; }
+::-webkit-scrollbar-track { background: #dcfce7; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Amethyst Dusk type: tighter, punchier headlines. */
-h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
+/* Citrus Grove type: roomier, friendlier headlines. */
+h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Amethyst Dusk rise: embers floating gently upward
-   into the evening sky — the reverse of the old drift. */
+/* Citrus Grove rise: leaves drifting gently downward
+   in a breeze — the reverse of the old upward embers. */
 @keyframes signal-fall {
-  0% { transform: translate3d(0, 4vh, 0) scale(0.9); opacity: 0; }
+  0% { transform: translate3d(0, -4vh, 0) scale(0.9) rotate(0deg); opacity: 0; }
   15% { opacity: 0.8; }
-  50% { transform: translate3d(-3vw, -26vh, 0) scale(1.1); }
-  100% { transform: translate3d(3vw, -52vh, 0) scale(0.95); opacity: 0; }
+  50% { transform: translate3d(3vw, 26vh, 0) scale(1.1) rotate(40deg); }
+  100% { transform: translate3d(-3vw, 52vh, 0) scale(0.95) rotate(80deg); opacity: 0; }
 }
 .pop-fall { animation: signal-fall 20s linear infinite; }
 
-/* Amethyst Dusk sway: a quicker side-to-side drift. */
+/* Citrus Grove sway: a slow, wide side-to-side drift. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(-18px, -6px, 0) scale(1); opacity: 0.6; }
-  50% { transform: translate3d(18px, 6px, 0) scale(1.05); opacity: 0.95; }
+  0%, 100% { transform: translate3d(-24px, 4px, 0) scale(1); opacity: 0.6; }
+  50% { transform: translate3d(24px, -4px, 0) scale(1.03); opacity: 0.95; }
 }
-.pop-drift { animation: signal-drift 9s ease-in-out infinite; }
+.pop-drift { animation: signal-drift 12s ease-in-out infinite; }
 
-/* Amethyst Dusk bob: a bolder little lift. */
+/* Citrus Grove bob: a gentle little bounce. */
 @keyframes signal-bob {
-  0%, 100% { transform: translateY(0) scale(1) rotate(-2deg); }
-  50% { transform: translateY(-12px) scale(1.05) rotate(2deg); }
+  0%, 100% { transform: translateY(0) scale(1) rotate(1deg); }
+  50% { transform: translateY(-8px) scale(1.03) rotate(-1deg); }
 }
-.pop-bob { animation: signal-bob 5s ease-in-out infinite; }
+.pop-bob { animation: signal-bob 6s ease-in-out infinite; }
 
-/* Slow turn for the dusk dial. */
+/* Slow turn for the grove dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
-.pop-spin { animation: dial-turn 80s linear infinite; }
+.pop-spin { animation: dial-turn 90s linear infinite; }
 
-/* Amethyst Dusk glint: a fuchsia pulse. */
+/* Citrus Grove glint: an amber pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.4; transform: scale(0.9); }
-  50% { opacity: 1; transform: scale(1.25); }
+  50% { opacity: 1; transform: scale(1.15); }
 }
-.pop-twinkle { animation: signal-blink 2.8s ease-in-out infinite; }
+.pop-twinkle { animation: signal-blink 3.2s ease-in-out infinite; }
 
-/* Amethyst Dusk ticker: infinite marquee (leftward drift). */
+/* Citrus Grove ticker: infinite marquee (rightward drift). */
 @keyframes signal-ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
 }
-.pop-ticker { animation: signal-ticker 24s linear infinite; }
+.pop-ticker { animation: signal-ticker 28s linear infinite; }
 
-/* Amethyst Dusk bands: violet -> fuchsia diagonal stripes. */
+/* Citrus Grove bands: green -> amber diagonal stripes. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(45deg, #7c3aed 0px, #7c3aed 10px, #d946ef 10px, #d946ef 20px);
+    repeating-linear-gradient(45deg, #16a34a 0px, #16a34a 10px, #f59e0b 10px, #f59e0b 20px);
   background-size: 100% 4px;
   background-repeat: repeat-x;
-  border-radius: 2px;
+  border-radius: 999px;
 }
 
-/* Amethyst Dusk card: a sharper panel with a 2px plum
-   border, a thick violet BOTTOM bar and a hard offset
-   sticker shadow — it presses down on hover, the bar
-   turning fuchsia. */
+/* Citrus Grove card: a soft, fully rounded panel with a
+   thin green TOP bar and a soft diffused shadow — it
+   lifts on hover, the bar turning amber. */
 .pop-lift {
   position: relative;
-  border: 2px solid rgba(42, 21, 36, 0.85);
-  border-bottom: 6px solid #7c3aed;
+  border: 1px solid rgba(29, 58, 30, 0.12);
+  border-top: 4px solid #16a34a;
   background: #ffffff;
-  border-radius: 1rem;
-  box-shadow: 6px 6px 0 rgba(42, 21, 36, 0.9);
+  border-radius: 1.75rem;
+  box-shadow: 0 12px 32px rgba(20, 83, 45, 0.12);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translate(2px, 2px);
-  border-bottom-color: #d946ef;
-  box-shadow: 3px 3px 0 rgba(42, 21, 36, 0.9);
+  transform: translateY(-4px);
+  border-top-color: #f59e0b;
+  box-shadow: 0 20px 44px rgba(20, 83, 45, 0.18);
 }
 
-/* Amethyst Dusk glass: shared by modals and drawers — a
-   frosted cream pane with a plum edge and a violet
-   BOTTOM rule. */
+/* Citrus Grove glass: shared by modals and drawers — a
+   frosted lime pane with a soft edge and a green
+   TOP rule. */
 .pop-glass {
-  background: rgba(253, 248, 242, 0.94);
+  background: rgba(247, 254, 231, 0.94);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 2px solid rgba(42, 21, 36, 0.85);
-  border-bottom: 6px solid #7c3aed;
-  border-radius: 1rem;
-  box-shadow: 6px 6px 0 rgba(42, 21, 36, 0.9);
+  border: 1px solid rgba(29, 58, 30, 0.12);
+  border-top: 4px solid #16a34a;
+  border-radius: 1.75rem;
+  box-shadow: 0 12px 32px rgba(20, 83, 45, 0.12);
 }
 
-/* Amethyst Dusk tag: a violet-to-fuchsia tilted square
-   badge — white type, hard shadow. */
+/* Citrus Grove tag: a green-to-amber pill badge —
+   white type, soft shadow. */
 .starburst {
-  background: linear-gradient(135deg, #7c3aed, #d946ef);
+  background: linear-gradient(135deg, #16a34a, #f59e0b);
   color: #ffffff;
   text-shadow: none;
-  border-radius: 0.75rem;
-  transform: rotate(-8deg);
-  box-shadow: 4px 4px 0 rgba(42, 21, 36, 0.9);
+  border-radius: 999px;
+  transform: rotate(2deg);
+  box-shadow: 0 8px 20px rgba(20, 83, 45, 0.25);
   border: 2px solid rgba(255, 255, 255, 0.8);
 }
 
-/* Amethyst Dusk texture: a dusk ember field. */
+/* Citrus Grove texture: a leaf-dot field. */
 .halftone {
-  background-image: radial-gradient(rgba(124, 58, 237, 0.20) 2px, transparent 2px);
-  background-size: 32px 32px;
+  background-image: radial-gradient(rgba(22, 163, 74, 0.20) 2px, transparent 2px);
+  background-size: 28px 28px;
   background-position: 0 0;
 }
 
-/* Amethyst Dusk rule: a violet dotted rule. */
+/* Citrus Grove rule: a green dashed rule. */
 .zigzag {
   height: 0;
-  border-top: 4px dotted #7c3aed;
+  border-top: 3px dashed #16a34a;
   background: none;
   opacity: 1;
   border-radius: 0;
 }
 
-/* Amethyst Dusk band: a plum / violet / fuchsia
-   diagonal wash with a hard shadow. */
+/* Citrus Grove band: a forest / green / amber
+   diagonal wash with a soft shadow. */
 .bazaar-awning {
-  background: linear-gradient(135deg, #1a0a17 0%, #6d28d9 55%, #d946ef 100%);
+  background: linear-gradient(135deg, #0d200e 0%, #15803d 55%, #f59e0b 100%);
   opacity: 1;
-  box-shadow: 0 8px 0 rgba(42, 21, 36, 0.9);
-  border-bottom: 2px solid rgba(42, 21, 36, 0.85);
+  box-shadow: 0 12px 32px rgba(20, 83, 45, 0.25);
+  border-bottom: 1px solid rgba(29, 58, 30, 0.12);
   border-radius: 0;
 }
 
-/* Amethyst Dusk glow: a warm halo for the core. */
+/* Citrus Grove glow: a warm halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(250, 232, 255, 0.7) 42%, rgba(217, 70, 239, 0.28) 62%, rgba(217, 70, 239, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(254, 243, 199, 0.7) 42%, rgba(245, 158, 11, 0.28) 62%, rgba(245, 158, 11, 0) 76%);
 }
 
-/* Amethyst Dusk core: a glowing dusk orb with a
-   bright fuchsia ring. */
+/* Citrus Grove core: a glowing sun orb with a
+   bright amber ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fdf4ff 0%, #e879f9 55%, #1a0a17 100%);
-  box-shadow: 0 0 0 3px rgba(240, 171, 252, 0.9), 6px 6px 0 rgba(42, 21, 36, 0.9);
-  border: 2px solid rgba(42, 21, 36, 0.85);
+    radial-gradient(circle at 35% 30%, #fffbeb 0%, #fbbf24 55%, #0d200e 100%);
+  box-shadow: 0 0 0 3px rgba(252, 211, 77, 0.9), 0 12px 32px rgba(20, 83, 45, 0.25);
+  border: 1px solid rgba(29, 58, 30, 0.12);
 }
 
-/* Wide rings around the dusk orb. */
+/* Wide rings around the grove orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(124, 58, 237, 0.5) 0px,
-    rgba(124, 58, 237, 0.5) 2px,
+    rgba(22, 163, 74, 0.5) 0px,
+    rgba(22, 163, 74, 0.5) 2px,
     transparent 2px,
     transparent 14px,
-    rgba(217, 70, 239, 0.55) 14px,
-    rgba(217, 70, 239, 0.55) 16px,
+    rgba(245, 158, 11, 0.55) 14px,
+    rgba(245, 158, 11, 0.55) 16px,
     transparent 16px,
     transparent 30px
   );
@@ -254,7 +254,7 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(217, 70, 239, 0.6) 0deg 3deg,
+    rgba(245, 158, 11, 0.6) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
