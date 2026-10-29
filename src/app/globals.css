@@ -1,70 +1,71 @@
 @import "tailwindcss";
 
 @theme {
-  /* Tidal Current: a cool coastal direction —
-     ocean blue as the primary accent, coral orange
-     for highlights, deep navy for contrast, ice-blue
-     paper, white cards. Cards are crisp, sharper
-     1rem panels with a thick blue LEFT bar and a
-     tight, flat shadow — the opposite of the previous
-     Citrus Grove look, its leaf green / amber palette,
-     pale lime paper, fully rounded 1.75rem panels,
-     thin green TOP bar and soft diffused shadow. */
+  /* Velvet Dusk: a warm evening direction —
+     deep plum-violet as the primary accent, warm
+     amber for highlights, dark plum for contrast,
+     warm cream paper, white cards. Cards are soft,
+     fully rounded 1.75rem panels with a thick violet
+     BOTTOM bar and a hard offset shadow — the
+     opposite of the previous Tidal Current look, its
+     ocean blue / coral palette, ice-blue paper, sharp
+     1rem panels, thick blue LEFT bar and tight flat
+     shadow. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = ocean blue scale */
-  --color-brand-50: #f0f9ff;
-  --color-brand-100: #e0f2fe;
-  --color-brand-200: #bae6fd;
-  --color-brand-300: #7dd3fc;
-  --color-brand-400: #38bdf8;
-  --color-brand-500: #0ea5e9;
-  --color-brand-600: #0284c7;
-  --color-brand-700: #0369a1;
-  --color-brand-800: #075985;
-  --color-brand-900: #0c4a6e;
-  --color-brand-950: #082f49;
-  --color-brand: #0369a1;
-  --color-brand-dark: #075985;
-  --color-brand-deep: #0c4a6e;
+  /* brand = plum-violet scale */
+  --color-brand-50: #f5f3ff;
+  --color-brand-100: #ede9fe;
+  --color-brand-200: #ddd6fe;
+  --color-brand-300: #c4b5fd;
+  --color-brand-400: #a78bfa;
+  --color-brand-500: #8b5cf6;
+  --color-brand-600: #7c3aed;
+  --color-brand-700: #6d28d9;
+  --color-brand-800: #5b21b6;
+  --color-brand-900: #4c1d95;
+  --color-brand-950: #2e1065;
+  --color-brand: #6d28d9;
+  --color-brand-dark: #5b21b6;
+  --color-brand-deep: #4c1d95;
 
-  /* gold = coral orange scale (name kept for legacy class refs) */
-  --color-gold-50: #fff7ed;
-  --color-gold-100: #ffedd5;
-  --color-gold-200: #fed7aa;
-  --color-gold-300: #fdba74;
-  --color-gold-400: #fb923c;
-  --color-gold-500: #f97316;
-  --color-gold-600: #ea580c;
-  --color-gold-700: #c2410c;
-  --color-gold-800: #9a3412;
-  --color-gold-900: #7c2d12;
-  --color-gold-950: #431407;
-  --color-gold: #f97316;
-  --color-gold-deep: #c2410c;
-  --color-gold-soft: #ffedd5;
+  /* gold = warm amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #b45309;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = deep navy scale (name kept for legacy class refs) */
-  --color-popblue-50: #f8fafc;
-  --color-popblue-100: #f1f5f9;
-  --color-popblue-200: #e2e8f0;
-  --color-popblue-300: #cbd5e1;
-  --color-popblue-400: #94a3b8;
-  --color-popblue-500: #64748b;
-  --color-popblue-600: #475569;
-  --color-popblue-700: #334155;
-  --color-popblue-800: #1e293b;
-  --color-popblue-900: #0f172a;
-  --color-popblue-950: #020617;
-  --color-popblue: #334155;
-  --color-popblue-deep: #020617;
-  --color-popblue-soft: #94a3b8;
+  /* popblue = deep plum scale (name kept for legacy class refs) */
+  --color-popblue-50: #faf5ff;
+  --color-popblue-100: #f3e8ff;
+  --color-popblue-200: #e9d5ff;
+  --color-popblue-300: #d8b4fe;
+  --color-popblue-400: #c084fc;
+  --color-popblue-500: #a855f7;
+  --color-popblue-600: #9333ea;
+  --color-popblue-700: #7e22ce;
+  --color-popblue-800: #6b21a8;
+  --color-popblue-900: #581c87;
+  --color-popblue-950: #3b0764;
+  --color-popblue: #7e22ce;
+  --color-popblue-deep: #3b0764;
+  --color-popblue-soft: #c084fc;
 
-  --color-ink: #0f172a;
-  --color-paper: #f0f9ff;
-  --color-mute: #475569;
+  --color-ink: #221133;
+  --color-paper: #fdf8f0;
+  --color-mute: #6b5d7e;
   --color-card: #ffffff;
-  --color-deep: #0c4a6e;
+  --color-deep: #4c1d95;
 }
 
 html { scroll-behavior: smooth; }
@@ -78,172 +79,175 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f0f9ff;
+  background-color: #fdf8f0;
   background-image:
-    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(249, 115, 22, 0.16) 0%, rgba(249, 115, 22, 0) 70%),
-    radial-gradient(ellipse 45% 22% at 8% 12%, rgba(2, 132, 199, 0.14) 0%, rgba(2, 132, 199, 0) 70%),
-    linear-gradient(180deg, rgba(255, 237, 213, 0.9) 0%, rgba(224, 242, 254, 0.5) 42%, rgba(240, 249, 255, 0) 78%);
-  color: #0f172a;
+    radial-gradient(ellipse 55% 26% at 12% 0%, rgba(245, 158, 11, 0.20) 0%, rgba(245, 158, 11, 0) 70%),
+    radial-gradient(ellipse 45% 22% at 92% 12%, rgba(124, 58, 237, 0.16) 0%, rgba(124, 58, 237, 0) 70%),
+    linear-gradient(180deg, rgba(254, 243, 199, 0.9) 0%, rgba(237, 233, 254, 0.5) 42%, rgba(253, 248, 240, 0) 78%);
+  color: #221133;
 }
-::selection { background: #fdba74; color: #082f49; }
+::selection { background: #fcd34d; color: #3b0764; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0284c7, #f97316); border-radius: 999px; border: 2px solid #f0f9ff; }
-::-webkit-scrollbar-track { background: #e0f2fe; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #7c3aed, #f59e0b); border-radius: 999px; border: 2px solid #fdf8f0; }
+::-webkit-scrollbar-track { background: #ede9fe; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Tidal Current type: tighter, crisper headlines. */
-h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
+/* Velvet Dusk type: slightly looser, warmer headlines. */
+h1, h2, h3 { letter-spacing: -0.03em; text-wrap: balance; }
 
-/* Tidal Current rise: bubbles drifting gently upward
-   through the water — the reverse of the old falling
-   leaves. */
+/* Velvet Dusk fall: embers drifting gently DOWNWARD
+   through the dusk — the reverse of the old rising
+   bubbles. */
 @keyframes signal-fall {
-  0% { transform: translate3d(0, 52vh, 0) scale(0.9) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(0, -4vh, 0) scale(0.9) rotate(0deg); opacity: 0; }
   15% { opacity: 0.8; }
-  50% { transform: translate3d(-3vw, 26vh, 0) scale(1.1) rotate(-40deg); }
-  100% { transform: translate3d(3vw, -4vh, 0) scale(0.95) rotate(-80deg); opacity: 0; }
+  50% { transform: translate3d(3vw, 26vh, 0) scale(1.1) rotate(40deg); }
+  100% { transform: translate3d(-3vw, 52vh, 0) scale(0.95) rotate(80deg); opacity: 0; }
 }
 .pop-fall { animation: signal-fall 20s linear infinite; }
 
-/* Tidal Current sway: a slow, narrow side-to-side drift. */
+/* Velvet Dusk sway: a slow, wide side-to-side drift. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(-12px, 2px, 0) scale(1); opacity: 0.6; }
-  50% { transform: translate3d(12px, -2px, 0) scale(1.02); opacity: 0.95; }
+  0%, 100% { transform: translate3d(-20px, -3px, 0) scale(1); opacity: 0.6; }
+  50% { transform: translate3d(20px, 3px, 0) scale(1.02); opacity: 0.95; }
 }
 .pop-drift { animation: signal-drift 12s ease-in-out infinite; }
 
-/* Tidal Current bob: a gentle little float. */
+/* Velvet Dusk bob: a gentle little float. */
 @keyframes signal-bob {
-  0%, 100% { transform: translateY(0) scale(1) rotate(-1deg); }
-  50% { transform: translateY(-5px) scale(1.02) rotate(1deg); }
+  0%, 100% { transform: translateY(0) scale(1) rotate(1deg); }
+  50% { transform: translateY(-5px) scale(1.02) rotate(-1deg); }
 }
 .pop-bob { animation: signal-bob 6s ease-in-out infinite; }
 
-/* Slow turn for the current dial. */
+/* Slow turn for the dusk dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 90s linear infinite; }
 
-/* Tidal Current glint: a coral pulse. */
+/* Velvet Dusk glint: an amber pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.4; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.15); }
 }
 .pop-twinkle { animation: signal-blink 3.2s ease-in-out infinite; }
 
-/* Tidal Current ticker: infinite marquee (leftward drift). */
+/* Velvet Dusk ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 28s linear infinite; }
 
-/* Tidal Current bands: blue -> coral diagonal stripes. */
+/* Velvet Dusk bands: violet / amber vertical stripes. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(45deg, #0284c7 0px, #0284c7 10px, #f97316 10px, #f97316 20px);
+    repeating-linear-gradient(90deg, #7c3aed 0px, #7c3aed 12px, #f59e0b 12px, #f59e0b 24px);
   background-size: 100% 4px;
   background-repeat: repeat-x;
   border-radius: 999px;
 }
 
-/* Tidal Current card: a crisp, sharper panel with a
-   thick blue LEFT bar and a tight flat shadow — it
-   lifts slightly on hover, the bar turning coral. */
+/* Velvet Dusk card: a soft, fully rounded panel with a
+   thick violet BOTTOM bar and a hard offset shadow —
+   it lifts diagonally on hover, the bar turning amber. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(15, 23, 42, 0.12);
-  border-left: 4px solid #0284c7;
+  border: 1px solid rgba(34, 17, 51, 0.12);
+  border-bottom: 4px solid #7c3aed;
   background: #ffffff;
-  border-radius: 1rem;
-  box-shadow: 0 2px 8px rgba(12, 74, 110, 0.08);
+  border-radius: 1.75rem;
+  box-shadow: 6px 6px 0 rgba(76, 29, 149, 0.12);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-2px);
-  border-left-color: #f97316;
-  box-shadow: 0 10px 24px rgba(12, 74, 110, 0.16);
+  transform: translate(-2px, -2px);
+  border-bottom-color: #f59e0b;
+  box-shadow: 9px 9px 0 rgba(76, 29, 149, 0.18);
 }
 
-/* Tidal Current glass: shared by modals and drawers — a
-   frosted ice-blue pane with a soft edge and a blue
-   LEFT rule. */
+/* Velvet Dusk glass: shared by modals and drawers — a
+   frosted cream pane with a soft edge and a violet
+   BOTTOM rule. */
 .pop-glass {
-  background: rgba(240, 249, 255, 0.94);
+  background: rgba(253, 248, 240, 0.94);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(15, 23, 42, 0.12);
-  border-left: 4px solid #0284c7;
-  border-radius: 1rem;
-  box-shadow: 0 2px 8px rgba(12, 74, 110, 0.08);
+  border: 1px solid rgba(34, 17, 51, 0.12);
+  border-bottom: 4px solid #7c3aed;
+  border-radius: 1.75rem;
+  box-shadow: 6px 6px 0 rgba(76, 29, 149, 0.12);
 }
 
-/* Tidal Current tag: a blue-to-coral pill badge —
-   white type, tight shadow. */
+/* Velvet Dusk tag: a violet-to-amber pill badge —
+   white type, dashed ring, sticker tilt. */
 .starburst {
-  background: linear-gradient(135deg, #0284c7, #f97316);
+  background: linear-gradient(135deg, #7c3aed, #f59e0b);
   color: #ffffff;
   text-shadow: none;
   border-radius: 999px;
-  transform: rotate(-2deg);
-  box-shadow: 0 4px 12px rgba(12, 74, 110, 0.25);
-  border: 2px solid rgba(255, 255, 255, 0.8);
+  transform: rotate(3deg);
+  box-shadow: 0 4px 12px rgba(76, 29, 149, 0.25);
+  border: 2px dashed rgba(255, 255, 255, 0.9);
 }
 
-/* Tidal Current texture: a bubble-dot field. */
+/* Velvet Dusk texture: a diamond lattice field. */
 .halftone {
-  background-image: radial-gradient(rgba(2, 132, 199, 0.18) 2px, transparent 2px);
-  background-size: 24px 24px;
+  background-image:
+    repeating-linear-gradient(45deg, rgba(124, 58, 237, 0.14) 0px, rgba(124, 58, 237, 0.14) 1px, transparent 1px, transparent 18px),
+    repeating-linear-gradient(-45deg, rgba(245, 158, 11, 0.14) 0px, rgba(245, 158, 11, 0.14) 1px, transparent 1px, transparent 18px);
+  background-size: 26px 26px;
   background-position: 0 0;
 }
 
-/* Tidal Current rule: a coral dotted rule. */
+/* Velvet Dusk rule: a double violet / amber rule. */
 .zigzag {
-  height: 0;
-  border-top: 3px dotted #f97316;
+  height: 6px;
+  border-top: 2px solid #7c3aed;
+  border-bottom: 2px solid #f59e0b;
   background: none;
   opacity: 1;
   border-radius: 0;
 }
 
-/* Tidal Current band: a navy / blue / coral
-   horizontal wash with a tight shadow. */
+/* Velvet Dusk band: a plum / violet / amber
+   horizontal wash with a hard offset shadow. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #020617 0%, #0369a1 55%, #f97316 100%);
+  background: linear-gradient(90deg, #3b0764 0%, #7c3aed 55%, #f59e0b 100%);
   opacity: 1;
-  box-shadow: 0 2px 8px rgba(12, 74, 110, 0.25);
-  border-bottom: 1px solid rgba(15, 23, 42, 0.12);
+  box-shadow: 4px 4px 0 rgba(76, 29, 149, 0.25);
+  border-bottom: 1px solid rgba(34, 17, 51, 0.12);
   border-radius: 0;
 }
 
-/* Tidal Current glow: a cool halo for the core. */
+/* Velvet Dusk glow: a warm halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(224, 242, 254, 0.7) 42%, rgba(249, 115, 22, 0.22) 62%, rgba(249, 115, 22, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(237, 233, 254, 0.7) 42%, rgba(245, 158, 11, 0.22) 62%, rgba(245, 158, 11, 0) 76%);
 }
 
-/* Tidal Current core: a deep ocean orb with a
-   bright coral ring. */
+/* Velvet Dusk core: a deep plum orb with a
+   bright amber ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #f0f9ff 0%, #38bdf8 55%, #020617 100%);
-  box-shadow: 0 0 0 3px rgba(251, 146, 60, 0.9), 0 2px 8px rgba(12, 74, 110, 0.25);
-  border: 1px solid rgba(15, 23, 42, 0.12);
+    radial-gradient(circle at 35% 30%, #fdf8f0 0%, #a78bfa 55%, #3b0764 100%);
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.9), 6px 6px 0 rgba(76, 29, 149, 0.18);
+  border: 1px solid rgba(34, 17, 51, 0.12);
 }
 
-/* Wide rings around the current orb. */
+/* Wide rings around the dusk orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(2, 132, 199, 0.5) 0px,
-    rgba(2, 132, 199, 0.5) 2px,
+    rgba(124, 58, 237, 0.5) 0px,
+    rgba(124, 58, 237, 0.5) 2px,
     transparent 2px,
     transparent 14px,
-    rgba(249, 115, 22, 0.55) 14px,
-    rgba(249, 115, 22, 0.55) 16px,
+    rgba(245, 158, 11, 0.55) 14px,
+    rgba(245, 158, 11, 0.55) 16px,
     transparent 16px,
     transparent 30px
   );
@@ -254,7 +258,7 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(249, 115, 22, 0.6) 0deg 3deg,
+    rgba(245, 158, 11, 0.6) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
