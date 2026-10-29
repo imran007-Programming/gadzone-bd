@@ -1,71 +1,70 @@
 @import "tailwindcss";
 
 @theme {
-  /* Sunset Ember: a warm market-at-dusk direction —
-     burnt orange as the primary accent, amber for
-     highlights, espresso for contrast, warm sand
-     paper, white cards. Cards are generous, fully
-     rounded 1.5rem panels with a thick orange BOTTOM
-     bar and a warm offset shadow — the opposite of
-     the previous Emerald Ledger look, its emerald /
-     lime palette, pale sage paper, compact squarish
-     0.75rem panels, thick emerald TOP bar and soft
-     diffuse shadow. */
+  /* Glacier Circuit: a cool workshop-at-dawn direction —
+     deep teal as the primary accent, bright cyan for
+     highlights, slate-navy for contrast, icy blue-white
+     paper, white cards. Cards are crisp, near-square
+     0.5rem panels with a thick teal LEFT bar and a
+     thin hard shadow — the opposite of the previous
+     Sunset Ember look, its burnt orange / amber
+     palette, warm sand paper, generous 1.5rem panels,
+     thick orange BOTTOM bar and warm offset shadow. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = burnt orange scale */
-  --color-brand-50: #fff7ed;
-  --color-brand-100: #ffedd5;
-  --color-brand-200: #fed7aa;
-  --color-brand-300: #fdba74;
-  --color-brand-400: #fb923c;
-  --color-brand-500: #f97316;
-  --color-brand-600: #ea580c;
-  --color-brand-700: #c2410c;
-  --color-brand-800: #9a3412;
-  --color-brand-900: #7c2d12;
-  --color-brand-950: #431407;
-  --color-brand: #c2410c;
-  --color-brand-dark: #9a3412;
-  --color-brand-deep: #7c2d12;
+  /* brand = teal scale */
+  --color-brand-50: #f0fdfa;
+  --color-brand-100: #ccfbf1;
+  --color-brand-200: #99f6e4;
+  --color-brand-300: #5eead4;
+  --color-brand-400: #2dd4bf;
+  --color-brand-500: #14b8a6;
+  --color-brand-600: #0d9488;
+  --color-brand-700: #0f766e;
+  --color-brand-800: #115e59;
+  --color-brand-900: #134e4a;
+  --color-brand-950: #042f2e;
+  --color-brand: #0f766e;
+  --color-brand-dark: #115e59;
+  --color-brand-deep: #134e4a;
 
-  /* gold = amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #f59e0b;
-  --color-gold-deep: #b45309;
-  --color-gold-soft: #fef3c7;
+  /* gold = cyan scale (name kept for legacy class refs) */
+  --color-gold-50: #ecfeff;
+  --color-gold-100: #cffafe;
+  --color-gold-200: #a5f3fc;
+  --color-gold-300: #67e8f9;
+  --color-gold-400: #22d3ee;
+  --color-gold-500: #06b6d4;
+  --color-gold-600: #0891b2;
+  --color-gold-700: #0e7490;
+  --color-gold-800: #155e75;
+  --color-gold-900: #164e63;
+  --color-gold-950: #083344;
+  --color-gold: #06b6d4;
+  --color-gold-deep: #0e7490;
+  --color-gold-soft: #cffafe;
 
-  /* popblue = deep indigo scale (name kept for legacy class refs) */
-  --color-popblue-50: #eef2ff;
-  --color-popblue-100: #e0e7ff;
-  --color-popblue-200: #c7d2fe;
-  --color-popblue-300: #a5b4fc;
-  --color-popblue-400: #818cf8;
-  --color-popblue-500: #6366f1;
-  --color-popblue-600: #4f46e5;
-  --color-popblue-700: #4338ca;
-  --color-popblue-800: #3730a3;
-  --color-popblue-900: #312e81;
-  --color-popblue-950: #1e1b4b;
-  --color-popblue: #4338ca;
-  --color-popblue-deep: #1e1b4b;
-  --color-popblue-soft: #a5b4fc;
+  /* popblue = slate-navy scale (name kept for legacy class refs) */
+  --color-popblue-50: #f1f5f9;
+  --color-popblue-100: #e2e8f0;
+  --color-popblue-200: #cbd5e1;
+  --color-popblue-300: #94a3b8;
+  --color-popblue-400: #64748b;
+  --color-popblue-500: #475569;
+  --color-popblue-600: #334155;
+  --color-popblue-700: #1e293b;
+  --color-popblue-800: #0f172a;
+  --color-popblue-900: #020617;
+  --color-popblue-950: #020617;
+  --color-popblue: #1e293b;
+  --color-popblue-deep: #020617;
+  --color-popblue-soft: #94a3b8;
 
-  --color-ink: #2a1f1a;
-  --color-paper: #fdf6ec;
-  --color-mute: #7a655a;
+  --color-ink: #0f172a;
+  --color-paper: #f2f8f9;
+  --color-mute: #5b7183;
   --color-card: #ffffff;
-  --color-deep: #7c2d12;
+  --color-deep: #134e4a;
 }
 
 html { scroll-behavior: smooth; }
@@ -79,174 +78,175 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fdf6ec;
+  background-color: #f2f8f9;
   background-image:
-    radial-gradient(ellipse 55% 26% at 12% 0%, rgba(245, 158, 11, 0.25) 0%, rgba(245, 158, 11, 0) 70%),
-    radial-gradient(ellipse 45% 22% at 92% 10%, rgba(234, 88, 12, 0.16) 0%, rgba(234, 88, 12, 0) 70%),
-    linear-gradient(180deg, rgba(254, 243, 199, 0.9) 0%, rgba(255, 237, 213, 0.5) 42%, rgba(253, 246, 236, 0) 78%);
-  color: #2a1f1a;
+    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(6, 182, 212, 0.18) 0%, rgba(6, 182, 212, 0) 70%),
+    radial-gradient(ellipse 45% 22% at 8% 10%, rgba(13, 148, 136, 0.14) 0%, rgba(13, 148, 136, 0) 70%),
+    linear-gradient(180deg, rgba(207, 250, 254, 0.9) 0%, rgba(204, 251, 241, 0.5) 42%, rgba(242, 248, 249, 0) 78%);
+  color: #0f172a;
 }
-::selection { background: #fcd34d; color: #431407; }
+::selection { background: #67e8f9; color: #042f2e; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #c2410c, #f59e0b); border-radius: 8px; border: 2px solid #fdf6ec; }
-::-webkit-scrollbar-track { background: #ffedd5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0f766e, #06b6d4); border-radius: 8px; border: 2px solid #f2f8f9; }
+::-webkit-scrollbar-track { background: #ccfbf1; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Sunset Ember type: warm, open headlines. */
-h1, h2, h3 { letter-spacing: 0.005em; text-wrap: balance; }
+/* Glacier Circuit type: crisp, tight headlines. */
+h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Sunset Ember rise: embers drifting gently UPWARD
-   through the dusk air — the reverse of the old fall. */
+/* Glacier Circuit fall: frost motes drifting gently
+   DOWNWARD through cold air — the reverse of the old
+   upward ember rise. */
 @keyframes signal-fall {
-  0% { transform: translate3d(0, 4vh, 0) scale(0.9) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(0, -4vh, 0) scale(0.9) rotate(0deg); opacity: 0; }
   15% { opacity: 0.8; }
-  50% { transform: translate3d(3vw, -26vh, 0) scale(1.1) rotate(40deg); }
-  100% { transform: translate3d(-3vw, -52vh, 0) scale(0.95) rotate(80deg); opacity: 0; }
+  50% { transform: translate3d(-3vw, 26vh, 0) scale(1.1) rotate(-40deg); }
+  100% { transform: translate3d(3vw, 52vh, 0) scale(0.95) rotate(-80deg); opacity: 0; }
 }
 .pop-fall { animation: signal-fall 22s linear infinite; }
 
-/* Sunset Ember sway: a slow, wide side-to-side drift. */
+/* Glacier Circuit sway: a slow, narrow side-to-side drift. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(-16px, 0, 0) scale(1); opacity: 0.6; }
-  50% { transform: translate3d(16px, 0, 0) scale(1.02); opacity: 0.95; }
+  0%, 100% { transform: translate3d(-8px, 0, 0) scale(1); opacity: 0.6; }
+  50% { transform: translate3d(8px, 0, 0) scale(1.02); opacity: 0.95; }
 }
 .pop-drift { animation: signal-drift 10s ease-in-out infinite; }
 
-/* Sunset Ember bob: a gentle little float. */
+/* Glacier Circuit bob: a gentle little float. */
 @keyframes signal-bob {
-  0%, 100% { transform: translateY(0) scale(1) rotate(1deg); }
-  50% { transform: translateY(-6px) scale(1.02) rotate(-1deg); }
+  0%, 100% { transform: translateY(0) scale(1) rotate(-1deg); }
+  50% { transform: translateY(-6px) scale(1.02) rotate(1deg); }
 }
 .pop-bob { animation: signal-bob 5s ease-in-out infinite; }
 
-/* Slow turn for the ember dial. */
+/* Slow turn for the frost dial. */
 @keyframes dial-turn {
-  to { transform: rotate(360deg); }
+  to { transform: rotate(-360deg); }
 }
 .pop-spin { animation: dial-turn 90s linear infinite; }
 
-/* Sunset Ember glint: an amber pulse. */
+/* Glacier Circuit glint: a cyan pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.4; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.15); }
 }
 .pop-twinkle { animation: signal-blink 3.2s ease-in-out infinite; }
 
-/* Sunset Ember ticker: infinite marquee (leftward drift). */
+/* Glacier Circuit ticker: infinite marquee (rightward drift). */
 @keyframes signal-ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
 }
 .pop-ticker { animation: signal-ticker 28s linear infinite; }
 
-/* Sunset Ember bands: orange / amber horizontal stripes. */
+/* Glacier Circuit bands: teal / cyan diagonal stripes. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(90deg, #c2410c 0px, #c2410c 12px, #f59e0b 12px, #f59e0b 24px);
+    repeating-linear-gradient(45deg, #0f766e 0px, #0f766e 12px, #06b6d4 12px, #06b6d4 24px);
   background-size: 100% 4px;
   background-repeat: repeat-x;
   border-radius: 2px;
 }
 
-/* Sunset Ember card: a generous, fully rounded panel with
-   a thick orange BOTTOM bar and a warm offset shadow —
-   it rises straight up on hover, the bar turning amber. */
+/* Glacier Circuit card: a crisp, near-square panel with
+   a thick teal LEFT bar and a thin hard shadow —
+   it slides right on hover, the bar turning cyan. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(42, 31, 26, 0.1);
-  border-bottom: 5px solid #c2410c;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-left: 5px solid #0f766e;
   background: #ffffff;
-  border-radius: 1.5rem;
-  box-shadow: 6px 6px 0 rgba(194, 65, 12, 0.12);
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 0 rgba(15, 118, 110, 0.12);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  border-bottom-color: #f59e0b;
-  box-shadow: 8px 10px 0 rgba(194, 65, 12, 0.16);
+  transform: translateX(4px);
+  border-left-color: #06b6d4;
+  box-shadow: 5px 5px 0 rgba(15, 118, 110, 0.16);
 }
 
-/* Sunset Ember glass: shared by modals and drawers — a
-   frosted sand pane with a soft edge and an orange
-   BOTTOM rule. */
+/* Glacier Circuit glass: shared by modals and drawers — a
+   frosted ice pane with a sharp edge and a teal
+   LEFT rule. */
 .pop-glass {
-  background: rgba(253, 246, 236, 0.94);
+  background: rgba(242, 248, 249, 0.94);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(42, 31, 26, 0.1);
-  border-bottom: 5px solid #c2410c;
-  border-radius: 1.5rem;
-  box-shadow: 6px 6px 0 rgba(194, 65, 12, 0.12);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-left: 5px solid #0f766e;
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 0 rgba(15, 118, 110, 0.12);
 }
 
-/* Sunset Ember tag: an orange-to-amber pill badge —
-   espresso type, solid ring, sticker tilt the other way. */
+/* Glacier Circuit tag: a teal-to-cyan pill badge —
+   deep navy type, solid ring, sticker tilt the other way. */
 .starburst {
-  background: linear-gradient(135deg, #f97316, #fbbf24);
-  color: #431407;
+  background: linear-gradient(135deg, #14b8a6, #22d3ee);
+  color: #042f2e;
   text-shadow: none;
   border-radius: 999px;
-  transform: rotate(3deg);
-  box-shadow: 0 4px 12px rgba(194, 65, 12, 0.3);
+  transform: rotate(-3deg);
+  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.3);
   border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
-/* Sunset Ember texture: a fine dot grid field. */
+/* Glacier Circuit texture: a fine circuit-line grid field. */
 .halftone {
   background-image:
-    radial-gradient(rgba(194, 65, 12, 0.22) 1px, transparent 1px),
-    radial-gradient(rgba(245, 158, 11, 0.22) 1px, transparent 1px);
+    linear-gradient(rgba(15, 118, 110, 0.16) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 182, 212, 0.16) 1px, transparent 1px);
   background-size: 22px 22px;
   background-position: 0 0, 11px 11px;
 }
 
-/* Sunset Ember rule: a double dashed orange rule. */
+/* Glacier Circuit rule: a double solid cyan rule. */
 .zigzag {
   height: 0;
-  border-top: 3px dashed #c2410c;
+  border-top: 3px solid #06b6d4;
   border-bottom: none;
   background: none;
   opacity: 1;
   border-radius: 0;
 }
 
-/* Sunset Ember band: an espresso / orange / amber
-   horizontal wash with a warm shadow. */
+/* Glacier Circuit band: a slate-navy / teal / cyan
+   horizontal wash with a cool shadow. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #431407 0%, #c2410c 55%, #f59e0b 100%);
+  background: linear-gradient(90deg, #020617 0%, #0f766e 55%, #06b6d4 100%);
   opacity: 1;
-  box-shadow: 0 10px 30px rgba(194, 65, 12, 0.25);
-  border-bottom: 1px solid rgba(42, 31, 26, 0.1);
+  box-shadow: 0 10px 30px rgba(15, 118, 110, 0.25);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.1);
   border-radius: 0;
 }
 
-/* Sunset Ember glow: a warm halo for the core. */
+/* Glacier Circuit glow: a cool halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 237, 213, 0.7) 42%, rgba(245, 158, 11, 0.25) 62%, rgba(245, 158, 11, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(204, 251, 241, 0.7) 42%, rgba(6, 182, 212, 0.25) 62%, rgba(6, 182, 212, 0) 76%);
 }
 
-/* Sunset Ember core: a deep ember orb with a
-   bright amber ring. */
+/* Glacier Circuit core: a deep teal orb with a
+   bright cyan ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fdf6ec 0%, #fb923c 55%, #431407 100%);
-  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.9), 0 10px 30px rgba(194, 65, 12, 0.25);
-  border: 1px solid rgba(42, 31, 26, 0.1);
+    radial-gradient(circle at 35% 30%, #f2f8f9 0%, #2dd4bf 55%, #042f2e 100%);
+  box-shadow: 0 0 0 3px rgba(103, 232, 249, 0.9), 0 10px 30px rgba(15, 118, 110, 0.25);
+  border: 1px solid rgba(15, 23, 42, 0.1);
 }
 
-/* Wide rings around the ember orb. */
+/* Wide rings around the frost orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(194, 65, 12, 0.5) 0px,
-    rgba(194, 65, 12, 0.5) 2px,
+    rgba(15, 118, 110, 0.5) 0px,
+    rgba(15, 118, 110, 0.5) 2px,
     transparent 2px,
     transparent 14px,
-    rgba(245, 158, 11, 0.55) 14px,
-    rgba(245, 158, 11, 0.55) 16px,
+    rgba(6, 182, 212, 0.55) 14px,
+    rgba(6, 182, 212, 0.55) 16px,
     transparent 16px,
     transparent 30px
   );
@@ -257,7 +257,7 @@ h1, h2, h3 { letter-spacing: 0.005em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(245, 158, 11, 0.6) 0deg 3deg,
+    rgba(6, 182, 212, 0.6) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
