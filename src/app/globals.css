@@ -1,70 +1,70 @@
 @import "tailwindcss";
 
 @theme {
-  /* Ember Dune: a warm desert direction —
-     burnt orange as the primary accent, amber for bright
-     highlights, deep espresso for contrast, warm sand
-     paper, cream cards. Cards are sharp-cornered panels
-     with a thick burnt-orange LEFT bar and a hard offset
-     shadow — the opposite of the previous Twilight Harbor
-     look, its indigo / coral palette, lavender paper,
-     medium-rounded panels, thin coral TOP bar, soft violet
-     glow shadow and crosshatch texture. */
+  /* Lagoon Frost: a cool coastal direction —
+     deep teal as the primary accent, bright cyan for
+     highlights, deep navy for contrast, icy mint
+     paper, white cards. Cards are fully rounded panels
+     with a gradient TOP bar and a soft diffused shadow
+     — the opposite of the previous Ember Dune look,
+     its burnt-orange / amber palette, warm sand paper,
+     sharp corners, thick burnt-orange LEFT bar and
+     hard offset shadow. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = burnt orange scale */
-  --color-brand-50: #fff7ed;
-  --color-brand-100: #ffedd5;
-  --color-brand-200: #fed7aa;
-  --color-brand-300: #fdba74;
-  --color-brand-400: #fb923c;
-  --color-brand-500: #f97316;
-  --color-brand-600: #ea580c;
-  --color-brand-700: #c2410c;
-  --color-brand-800: #9a3412;
-  --color-brand-900: #7c2d12;
-  --color-brand-950: #431407;
-  --color-brand: #c2410c;
-  --color-brand-dark: #9a3412;
-  --color-brand-deep: #7c2d12;
+  /* brand = teal scale */
+  --color-brand-50: #f0fdfa;
+  --color-brand-100: #ccfbf1;
+  --color-brand-200: #99f6e4;
+  --color-brand-300: #5eead4;
+  --color-brand-400: #2dd4bf;
+  --color-brand-500: #14b8a6;
+  --color-brand-600: #0d9488;
+  --color-brand-700: #0f766e;
+  --color-brand-800: #115e59;
+  --color-brand-900: #134e4a;
+  --color-brand-950: #042f2e;
+  --color-brand: #0f766e;
+  --color-brand-dark: #115e59;
+  --color-brand-deep: #134e4a;
 
-  /* gold = amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #f59e0b;
-  --color-gold-deep: #b45309;
-  --color-gold-soft: #fef3c7;
+  /* gold = cyan scale (name kept for legacy class refs) */
+  --color-gold-50: #ecfeff;
+  --color-gold-100: #cffafe;
+  --color-gold-200: #a5f3fc;
+  --color-gold-300: #67e8f9;
+  --color-gold-400: #22d3ee;
+  --color-gold-500: #06b6d4;
+  --color-gold-600: #0891b2;
+  --color-gold-700: #0e7490;
+  --color-gold-800: #155e75;
+  --color-gold-900: #164e63;
+  --color-gold-950: #083344;
+  --color-gold: #06b6d4;
+  --color-gold-deep: #0e7490;
+  --color-gold-soft: #cffafe;
 
-  /* popblue = deep espresso scale (name kept for legacy class refs) */
-  --color-popblue-50: #faf7f2;
-  --color-popblue-100: #f1e9db;
-  --color-popblue-200: #e2d3b8;
-  --color-popblue-300: #cdb28a;
-  --color-popblue-400: #b3935f;
-  --color-popblue-500: #9c7a44;
-  --color-popblue-600: #856336;
-  --color-popblue-700: #6b4f2b;
-  --color-popblue-800: #4a3520;
-  --color-popblue-900: #332416;
-  --color-popblue-950: #1f150c;
-  --color-popblue: #6b4f2b;
-  --color-popblue-deep: #1f150c;
-  --color-popblue-soft: #cdb28a;
+  /* popblue = deep navy scale (name kept for legacy class refs) */
+  --color-popblue-50: #f8fafc;
+  --color-popblue-100: #f1f5f9;
+  --color-popblue-200: #e2e8f0;
+  --color-popblue-300: #cbd5e1;
+  --color-popblue-400: #94a3b8;
+  --color-popblue-500: #64748b;
+  --color-popblue-600: #475569;
+  --color-popblue-700: #334155;
+  --color-popblue-800: #1e293b;
+  --color-popblue-900: #0f172a;
+  --color-popblue-950: #020617;
+  --color-popblue: #334155;
+  --color-popblue-deep: #020617;
+  --color-popblue-soft: #cbd5e1;
 
-  --color-ink: #332416;
-  --color-paper: #faf6ef;
-  --color-mute: #6f6152;
-  --color-card: #fffdf8;
-  --color-deep: #7c2d12;
+  --color-ink: #0f172a;
+  --color-paper: #f0fdfa;
+  --color-mute: #475569;
+  --color-card: #ffffff;
+  --color-deep: #134e4a;
 }
 
 html { scroll-behavior: smooth; }
@@ -78,171 +78,170 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #faf6ef;
+  background-color: #f0fdfa;
   background-image:
-    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(249, 115, 22, 0.20) 0%, rgba(249, 115, 22, 0) 70%),
-    radial-gradient(ellipse 45% 22% at 8% 12%, rgba(245, 158, 11, 0.18) 0%, rgba(245, 158, 11, 0) 70%),
-    linear-gradient(180deg, rgba(255, 237, 213, 0.9) 0%, rgba(254, 243, 199, 0.5) 42%, rgba(250, 246, 239, 0) 78%);
-  color: #332416;
+    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(34, 211, 238, 0.22) 0%, rgba(34, 211, 238, 0) 70%),
+    radial-gradient(ellipse 45% 22% at 8% 12%, rgba(20, 184, 166, 0.18) 0%, rgba(20, 184, 166, 0) 70%),
+    linear-gradient(180deg, rgba(207, 250, 254, 0.9) 0%, rgba(204, 251, 241, 0.5) 42%, rgba(240, 253, 250, 0) 78%);
+  color: #0f172a;
 }
-::selection { background: #fcd34d; color: #1f150c; }
+::selection { background: #a5f3fc; color: #042f2e; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ea580c, #f59e0b); border-radius: 4px; border: 2px solid #faf6ef; }
-::-webkit-scrollbar-track { background: #ffedd5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0d9488, #06b6d4); border-radius: 999px; border: 2px solid #f0fdfa; }
+::-webkit-scrollbar-track { background: #ccfbf1; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Ember Dune type: slightly wider, grounded headlines. */
+/* Lagoon Frost type: airy, open headlines. */
 h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Ember Dune fall: embers drifting DOWNWARD
-   through warm air — the reverse of the harbor's rise. */
+/* Lagoon Frost drift: bubbles swaying gently downward
+   through clear water — soft, slow, and round. */
 @keyframes signal-fall {
-  0% { transform: translate3d(0, -4vh, 0) scale(0.95) rotate(0deg); opacity: 0; }
-  15% { opacity: 0.85; }
-  50% { transform: translate3d(2vw, 30vh, 0) scale(1.05) rotate(80deg); }
-  100% { transform: translate3d(-2vw, 62vh, 0) scale(1) rotate(160deg); opacity: 0; }
+  0% { transform: translate3d(0, -4vh, 0) scale(0.9); opacity: 0; }
+  15% { opacity: 0.8; }
+  50% { transform: translate3d(3vw, 26vh, 0) scale(1.1); }
+  100% { transform: translate3d(-3vw, 52vh, 0) scale(0.95); opacity: 0; }
 }
 .pop-fall { animation: signal-fall 20s linear infinite; }
 
-/* Ember Dune sway: a slow side-to-side drift. */
+/* Lagoon Frost sway: a slow side-to-side drift. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-12px, 6px, 0) scale(1); opacity: 0.6; }
   50% { transform: translate3d(12px, -6px, 0) scale(1.03); opacity: 0.95; }
 }
 .pop-drift { animation: signal-drift 13s ease-in-out infinite; }
 
-/* Ember Dune bob: a soft little lift. */
+/* Lagoon Frost bob: a soft little lift. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-8px) scale(1.03); }
 }
 .pop-bob { animation: signal-bob 6s ease-in-out infinite; }
 
-/* Slow turn for the dune dial. */
+/* Slow turn for the lagoon dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 80s linear infinite; }
 
-/* Ember Dune glint: an amber pulse. */
+/* Lagoon Frost glint: a cyan pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.4; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.2); }
 }
 .pop-twinkle { animation: signal-blink 3.5s ease-in-out infinite; }
 
-/* Ember Dune ticker: infinite marquee (leftward drift). */
+/* Lagoon Frost ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 28s linear infinite; }
 
-/* Ember Dune bands: burnt orange -> amber vertical stripes. */
+/* Lagoon Frost bands: teal -> cyan horizontal stripes. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(90deg, #ea580c 0px, #ea580c 8px, #f59e0b 8px, #f59e0b 16px);
-  background-size: 100% 4px;
+    repeating-linear-gradient(90deg, #0d9488 0px, #0d9488 8px, #06b6d4 8px, #06b6d4 16px);
+  background-size: 100% 3px;
   background-repeat: repeat-x;
-  border-radius: 2px;
+  border-radius: 999px;
 }
 
-/* Ember Dune card: a sharp-cornered panel with a
-   thick burnt-orange LEFT bar and a hard offset shadow —
-   it lifts on hover, the bar turning amber. */
+/* Lagoon Frost card: a fully rounded panel with a
+   teal TOP bar and a soft diffused shadow — it floats
+   upward on hover, the bar turning cyan. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(51, 36, 22, 0.12);
-  border-left: 5px solid #ea580c;
-  background: #fffdf8;
-  border-radius: 0.5rem;
-  box-shadow: 5px 5px 0 rgba(124, 45, 18, 0.18);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-top: 5px solid #14b8a6;
+  background: #ffffff;
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 48px -24px rgba(13, 148, 136, 0.35);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translate(-2px, -2px);
-  border-left-color: #f59e0b;
-  box-shadow: 8px 8px 0 rgba(124, 45, 18, 0.22);
+  transform: translateY(-4px);
+  border-top-color: #06b6d4;
+  box-shadow: 0 32px 56px -24px rgba(13, 148, 136, 0.45);
 }
 
-/* Ember Dune glass: shared by modals and drawers — a
-   frosted sand pane with an espresso edge and a thick
-   burnt-orange LEFT rule. */
+/* Lagoon Frost glass: shared by modals and drawers — a
+   frosted mint pane with a navy edge and a teal TOP rule. */
 .pop-glass {
-  background: rgba(250, 246, 239, 0.94);
+  background: rgba(240, 253, 250, 0.94);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(51, 36, 22, 0.12);
-  border-left: 5px solid #ea580c;
-  border-radius: 0.5rem;
-  box-shadow: 5px 5px 0 rgba(124, 45, 18, 0.20);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-top: 5px solid #14b8a6;
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 48px -24px rgba(13, 148, 136, 0.35);
 }
 
-/* Ember Dune tag: an amber-to-orange pill badge —
-   dark type, tilted the other way, hard shadow. */
+/* Lagoon Frost tag: a teal-to-cyan pill badge —
+   white type, perfectly straight, soft shadow. */
 .starburst {
-  background: linear-gradient(135deg, #fbbf24, #ea580c);
-  color: #1f150c;
+  background: linear-gradient(135deg, #14b8a6, #06b6d4);
+  color: #ffffff;
   text-shadow: none;
   border-radius: 999px;
-  transform: rotate(6deg);
-  box-shadow: 3px 3px 0 rgba(124, 45, 18, 0.35);
+  transform: rotate(0deg);
+  box-shadow: 0 12px 24px -8px rgba(13, 148, 136, 0.55);
   border: 2px solid rgba(255, 255, 255, 0.8);
 }
 
-/* Ember Dune texture: a warm dot field. */
+/* Lagoon Frost texture: a cool bubble field. */
 .halftone {
-  background-image: radial-gradient(rgba(234, 88, 12, 0.16) 1.5px, transparent 1.5px);
-  background-size: 22px 22px;
+  background-image: radial-gradient(rgba(13, 148, 136, 0.16) 1.5px, transparent 1.5px);
+  background-size: 26px 26px;
   background-position: 0 0;
 }
 
-/* Ember Dune rule: a burnt-orange-to-amber bar. */
+/* Lagoon Frost rule: a teal-to-cyan rounded bar. */
 .zigzag {
-  height: 8px;
+  height: 6px;
   border-top: none;
-  background: linear-gradient(90deg, #c2410c 0%, #ea580c 55%, #f59e0b 100%);
+  background: linear-gradient(90deg, #0f766e 0%, #14b8a6 55%, #06b6d4 100%);
   opacity: 1;
-  border-radius: 2px;
+  border-radius: 999px;
 }
 
-/* Ember Dune band: an espresso / orange / amber
-   diagonal wash, angled the other way, with a hard shadow. */
+/* Lagoon Frost band: a navy / teal / cyan
+   diagonal wash with a soft shadow. */
 .bazaar-awning {
-  background: linear-gradient(135deg, #1f150c 0%, #c2410c 55%, #f59e0b 100%);
+  background: linear-gradient(135deg, #020617 0%, #0f766e 55%, #06b6d4 100%);
   opacity: 1;
-  box-shadow: 0 16px 32px -20px rgba(124, 45, 18, 0.5);
-  border-bottom: 1px solid rgba(51, 36, 22, 0.12);
+  box-shadow: 0 16px 32px -20px rgba(13, 148, 136, 0.5);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
   border-radius: 0;
 }
 
-/* Ember Dune glow: a warm halo for the core. */
+/* Lagoon Frost glow: an icy halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(254, 243, 199, 0.7) 42%, rgba(249, 115, 22, 0.28) 62%, rgba(249, 115, 22, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(207, 250, 254, 0.7) 42%, rgba(34, 211, 238, 0.28) 62%, rgba(34, 211, 238, 0) 76%);
 }
 
-/* Ember Dune core: a glowing dune sun with a
-   warm amber ring. */
+/* Lagoon Frost core: a glowing lagoon pearl with a
+   bright cyan ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fde68a 0%, #ea580c 55%, #1f150c 100%);
-  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.9), 5px 5px 0 rgba(124, 45, 18, 0.35);
-  border: 1px solid rgba(51, 36, 22, 0.12);
+    radial-gradient(circle at 35% 30%, #ecfeff 0%, #22d3ee 55%, #020617 100%);
+  box-shadow: 0 0 0 3px rgba(103, 232, 249, 0.9), 0 24px 48px -20px rgba(13, 148, 136, 0.5);
+  border: 1px solid rgba(15, 23, 42, 0.08);
 }
 
-/* Tight rings around the dune sun. */
+/* Wide rings around the lagoon pearl. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(234, 88, 12, 0.5) 0px,
-    rgba(234, 88, 12, 0.5) 2px,
+    rgba(13, 148, 136, 0.5) 0px,
+    rgba(13, 148, 136, 0.5) 2px,
     transparent 2px,
     transparent 14px,
-    rgba(245, 158, 11, 0.55) 14px,
-    rgba(245, 158, 11, 0.55) 16px,
+    rgba(6, 182, 212, 0.55) 14px,
+    rgba(6, 182, 212, 0.55) 16px,
     transparent 16px,
     transparent 30px
   );
@@ -253,7 +252,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(245, 158, 11, 0.6) 0deg 3deg,
+    rgba(6, 182, 212, 0.6) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
