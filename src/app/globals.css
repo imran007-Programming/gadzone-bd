@@ -1,69 +1,69 @@
 @import "tailwindcss";
 
 @theme {
-  /* Verdant Grove: a fresh, leafy direction — deep emerald
-     as the primary accent, bright lime for sunny highlights,
-     forest green for grounded contrast, on soft cream-green
-     paper. Cards are large softly-rounded panels with a thin
-     emerald outline and a soft diffused shadow that lifts on
-     hover — the opposite of the previous Indigo Frost look,
-     its indigo / sky palette, icy lavender paper, medium
-     rounded panels and hard offset shadows. */
+  /* Terracotta Dusk: a warm, sunset direction — burnt
+     terracotta as the primary accent, amber for sunny
+     highlights, deep plum for grounded contrast, on warm
+     sand paper. Cards are tighter, editorial panels with a
+     thin terracotta outline and a hard offset shadow that
+     shifts on hover — the opposite of the previous Verdant
+     Grove look, its emerald / lime palette, cream-green
+     paper, large soft rounding and diffused shadows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = emerald scale */
-  --color-brand-50: #ecfdf5;
-  --color-brand-100: #d1fae5;
-  --color-brand-200: #a7f3d0;
-  --color-brand-300: #6ee7b7;
-  --color-brand-400: #34d399;
-  --color-brand-500: #10b981;
-  --color-brand-600: #059669;
-  --color-brand-700: #047857;
-  --color-brand-800: #065f46;
-  --color-brand-900: #064e3b;
-  --color-brand-950: #022c22;
-  --color-brand: #059669;
-  --color-brand-dark: #047857;
-  --color-brand-deep: #065f46;
+  /* brand = terracotta scale */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-brand-950: #431407;
+  --color-brand: #ea580c;
+  --color-brand-dark: #c2410c;
+  --color-brand-deep: #9a3412;
 
-  /* gold = lime scale (name kept for legacy class refs) */
-  --color-gold-50: #f7fee7;
-  --color-gold-100: #ecfccb;
-  --color-gold-200: #d9f99d;
-  --color-gold-300: #bef264;
-  --color-gold-400: #a3e635;
-  --color-gold-500: #84cc16;
-  --color-gold-600: #65a30d;
-  --color-gold-700: #4d7c0f;
-  --color-gold-800: #3f6212;
-  --color-gold-900: #365314;
-  --color-gold-950: #1a2e05;
-  --color-gold: #84cc16;
-  --color-gold-deep: #4d7c0f;
-  --color-gold-soft: #ecfccb;
+  /* gold = amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #b45309;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = forest scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0fdf4;
-  --color-popblue-100: #dcfce7;
-  --color-popblue-200: #bbf7d0;
-  --color-popblue-300: #86efac;
-  --color-popblue-400: #4ade80;
-  --color-popblue-500: #22c55e;
-  --color-popblue-600: #16a34a;
-  --color-popblue-700: #15803d;
-  --color-popblue-800: #166534;
-  --color-popblue-900: #14532d;
-  --color-popblue-950: #052e16;
-  --color-popblue: #14532d;
-  --color-popblue-deep: #052e16;
-  --color-popblue-soft: #bbf7d0;
+  /* popblue = plum scale (name kept for legacy class refs) */
+  --color-popblue-50: #fdf2f8;
+  --color-popblue-100: #fce7f3;
+  --color-popblue-200: #fbcfe8;
+  --color-popblue-300: #f9a8d4;
+  --color-popblue-400: #f472b6;
+  --color-popblue-500: #ec4899;
+  --color-popblue-600: #db2777;
+  --color-popblue-700: #be185d;
+  --color-popblue-800: #9d174d;
+  --color-popblue-900: #831843;
+  --color-popblue-950: #500724;
+  --color-popblue: #831843;
+  --color-popblue-deep: #500724;
+  --color-popblue-soft: #fbcfe8;
 
-  --color-ink: #052e16;
-  --color-paper: #f8fdf0;
-  --color-mute: #556b57;
+  --color-ink: #1c1917;
+  --color-paper: #fdf6ee;
+  --color-mute: #78716c;
   --color-card: #ffffff;
-  --color-deep: #064e3b;
+  --color-deep: #7c2d12;
 }
 
 html { scroll-behavior: smooth; }
@@ -78,24 +78,24 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f8fdf0;
+  background-color: #fdf6ee;
   background-image:
-    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(5, 150, 105, 0.14) 0%, rgba(5, 150, 105, 0) 70%),
-    radial-gradient(ellipse 45% 22% at 8% 10%, rgba(132, 204, 22, 0.20) 0%, rgba(132, 204, 22, 0) 70%),
-    linear-gradient(180deg, rgba(209, 250, 229, 0.9) 0%, rgba(236, 252, 203, 0.5) 42%, rgba(248, 253, 240, 0) 78%);
-  color: #052e16;
+    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(234, 88, 12, 0.16) 0%, rgba(234, 88, 12, 0) 70%),
+    radial-gradient(ellipse 45% 22% at 8% 10%, rgba(245, 158, 11, 0.22) 0%, rgba(245, 158, 11, 0) 70%),
+    linear-gradient(180deg, rgba(255, 237, 213, 0.9) 0%, rgba(254, 243, 199, 0.5) 42%, rgba(253, 246, 238, 0) 78%);
+  color: #1c1917;
 }
-::selection { background: #bef264; color: #1a2e05; }
+::selection { background: #fcd34d; color: #431407; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #059669, #84cc16); border-radius: 8px; border: 2px solid #f8fdf0; }
-::-webkit-scrollbar-track { background: #d1fae5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ea580c, #f59e0b); border-radius: 8px; border: 2px solid #fdf6ee; }
+::-webkit-scrollbar-track { background: #ffedd5; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Verdant Grove type: relaxed, leafy headlines. */
+/* Terracotta Dusk type: tight, editorial headlines. */
 h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Verdant Grove current: leaves drifting up. */
+/* Terracotta Dusk current: embers drifting up. */
 @keyframes signal-rise {
   0% { transform: translate3d(0, 12vh, 0) scale(0.9) rotate(0deg); opacity: 0; }
   15% { opacity: 0.85; }
@@ -104,139 +104,139 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 }
 .pop-fall { animation: signal-rise 16s linear infinite; }
 
-/* Verdant Grove sway: a slow, leafy drift. */
+/* Terracotta Dusk sway: a slow, warm drift. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-6px, 0, 0) scale(1); opacity: 0.6; }
   50% { transform: translate3d(6px, -6px, 0) scale(1.02); opacity: 0.95; }
 }
 .pop-drift { animation: signal-drift 10s ease-in-out infinite; }
 
-/* Verdant Grove bob: a gentle floating rise. */
+/* Terracotta Dusk bob: a gentle floating rise. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-5px) scale(1.01); }
 }
 .pop-bob { animation: signal-bob 5s ease-in-out infinite; }
 
-/* Slow turn for the grove dial. */
+/* Slow turn for the dusk dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 60s linear infinite; }
 
-/* Verdant Grove glint: a lime pulse. */
+/* Terracotta Dusk glint: an amber pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.4; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.12); }
 }
 .pop-twinkle { animation: signal-blink 3s ease-in-out infinite; }
 
-/* Verdant Grove ticker: infinite marquee (leftward drift). */
+/* Terracotta Dusk ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Verdant Grove bands: emerald -> lime -> forest bars. */
+/* Terracotta Dusk bands: terracotta -> amber -> plum bars. */
 .pop-stripes {
   background-image:
-    linear-gradient(90deg, #059669 0 34%, #84cc16 34% 67%, #052e16 67% 100%);
+    linear-gradient(90deg, #ea580c 0 34%, #f59e0b 34% 67%, #500724 67% 100%);
   background-size: 64px 64px;
   border-radius: 8px;
 }
 
-/* Verdant Grove card: a large softly-rounded panel with a
-   thin emerald outline and a soft diffused shadow — it
-   lifts gently and the shadow deepens on hover. */
+/* Terracotta Dusk card: a tighter editorial panel with a
+   thin terracotta outline and a hard offset shadow — it
+   shifts up-left and the shadow grows on hover. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(5, 150, 105, 0.22);
+  border: 1px solid rgba(234, 88, 12, 0.28);
   background: #ffffff;
-  border-radius: 1.75rem;
-  box-shadow: 0 20px 40px -20px rgba(5, 46, 22, 0.28);
+  border-radius: 0.9rem;
+  box-shadow: 5px 5px 0 rgba(28, 25, 23, 0.12);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  border-color: rgba(5, 150, 105, 0.5);
-  box-shadow: 0 28px 48px -20px rgba(5, 46, 22, 0.38);
+  transform: translate(-2px, -2px);
+  border-color: rgba(234, 88, 12, 0.55);
+  box-shadow: 7px 7px 0 rgba(28, 25, 23, 0.16);
 }
 
-/* Verdant Grove glass: shared by modals and drawers — a
-   frosted cream-green pane with an emerald ring and soft shadow. */
+/* Terracotta Dusk glass: shared by modals and drawers — a
+   frosted warm-sand pane with a terracotta ring and offset shadow. */
 .pop-glass {
-  background: rgba(248, 253, 240, 0.92);
+  background: rgba(253, 246, 238, 0.92);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(5, 150, 105, 0.35);
-  border-radius: 1.75rem;
-  box-shadow: 0 24px 48px -24px rgba(5, 46, 22, 0.35);
+  border: 1px solid rgba(234, 88, 12, 0.35);
+  border-radius: 0.9rem;
+  box-shadow: 6px 6px 0 rgba(28, 25, 23, 0.14);
 }
 
-/* Verdant Grove tag: a lime label — forest type,
-   fully rounded pill, soft shadow. */
+/* Terracotta Dusk tag: an amber label — espresso type,
+   fully rounded pill, hard shadow. */
 .starburst {
-  background: #bef264;
-  color: #052e16;
+  background: #fbbf24;
+  color: #431407;
   text-shadow: none;
   border-radius: 999px;
-  transform: rotate(-2deg);
-  box-shadow: 0 12px 24px -12px rgba(5, 46, 22, 0.4);
+  transform: rotate(3deg);
+  box-shadow: 4px 4px 0 rgba(28, 25, 23, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Verdant Grove texture: an emerald dot grid. */
+/* Terracotta Dusk texture: a terracotta dot grid. */
 .halftone {
-  background-image: radial-gradient(rgba(5, 150, 105, 0.20) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(rgba(234, 88, 12, 0.20) 1.5px, transparent 1.5px);
   background-size: 24px 24px;
   background-position: 0 0;
 }
 
-/* Verdant Grove rule: a soft emerald-to-lime bar. */
+/* Terracotta Dusk rule: a terracotta-to-amber-to-plum bar. */
 .zigzag {
   height: 8px;
   border-top: none;
-  background: linear-gradient(90deg, #059669 0%, #84cc16 55%, #052e16 100%);
+  background: linear-gradient(90deg, #ea580c 0%, #f59e0b 55%, #500724 100%);
   opacity: 1;
   border-radius: 999px;
 }
 
-/* Verdant Grove band: a forest-to-emerald-to-lime wash with
-   a soft shadow and large rounded lower corners. */
+/* Terracotta Dusk band: a plum-to-terracotta-to-amber wash
+   with a hard offset shadow and square lower corners. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #052e16, #059669 55%, #84cc16);
+  background: linear-gradient(90deg, #500724, #ea580c 55%, #f59e0b);
   opacity: 1;
-  box-shadow: 0 16px 32px -16px rgba(5, 46, 22, 0.35);
+  box-shadow: 0 6px 0 rgba(28, 25, 23, 0.12);
   border-bottom: none;
-  border-radius: 0 0 1.75rem 1.75rem;
+  border-radius: 0;
 }
 
-/* Verdant Grove glow: an emerald-lime halo for the core. */
+/* Terracotta Dusk glow: a terracotta-amber halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(217, 249, 157, 0.7) 42%, rgba(5, 150, 105, 0.32) 62%, rgba(5, 150, 105, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(253, 230, 138, 0.7) 42%, rgba(234, 88, 12, 0.32) 62%, rgba(234, 88, 12, 0) 76%);
 }
 
-/* Verdant Grove core: a glowing emerald disc with a lime ring. */
+/* Terracotta Dusk core: a glowing terracotta disc with an amber ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #6ee7b7 0%, #059669 55%, #052e16 100%);
-  box-shadow: 0 0 0 3px rgba(190, 242, 100, 0.9), 0 20px 40px -16px rgba(5, 150, 105, 0.6);
+    radial-gradient(circle at 35% 30%, #fdba74 0%, #ea580c 55%, #431407 100%);
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.9), 6px 6px 0 rgba(28, 25, 23, 0.18);
   border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Soft rings around the grove disc. */
+/* Warm rings around the dusk disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(5, 150, 105, 0.45) 0px,
-    rgba(5, 150, 105, 0.45) 1px,
+    rgba(234, 88, 12, 0.45) 0px,
+    rgba(234, 88, 12, 0.45) 1px,
     transparent 1px,
     transparent 14px,
-    rgba(132, 204, 22, 0.45) 14px,
-    rgba(132, 204, 22, 0.45) 15px,
+    rgba(245, 158, 11, 0.45) 14px,
+    rgba(245, 158, 11, 0.45) 15px,
     transparent 15px,
     transparent 30px
   );
@@ -247,7 +247,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(132, 204, 22, 0.55) 0deg 3deg,
+    rgba(245, 158, 11, 0.55) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
