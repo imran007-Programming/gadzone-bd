@@ -1,71 +1,70 @@
 @import "tailwindcss";
 
 @theme {
-  /* Citrus Grove: a fresh daylight direction —
-     leaf green as the primary accent, sunny amber
-     for highlights, deep forest for contrast, pale
-     lime paper, white cards. Cards are soft, fully
-     rounded panels with a thin green TOP bar and a
-     soft diffused shadow that lifts on hover — the
-     opposite of the previous Amethyst Dusk look, its
-     violet / fuchsia palette, warm cream paper,
-     sharper 1rem panels, 2px plum border, thick
-     violet BOTTOM bar and hard offset sticker shadow. */
+  /* Tidal Current: a cool coastal direction —
+     ocean blue as the primary accent, coral orange
+     for highlights, deep navy for contrast, ice-blue
+     paper, white cards. Cards are crisp, sharper
+     1rem panels with a thick blue LEFT bar and a
+     tight, flat shadow — the opposite of the previous
+     Citrus Grove look, its leaf green / amber palette,
+     pale lime paper, fully rounded 1.75rem panels,
+     thin green TOP bar and soft diffused shadow. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = leaf green scale */
-  --color-brand-50: #f0fdf4;
-  --color-brand-100: #dcfce7;
-  --color-brand-200: #bbf7d0;
-  --color-brand-300: #86efac;
-  --color-brand-400: #4ade80;
-  --color-brand-500: #22c55e;
-  --color-brand-600: #16a34a;
-  --color-brand-700: #15803d;
-  --color-brand-800: #166534;
-  --color-brand-900: #14532d;
-  --color-brand-950: #052e16;
-  --color-brand: #15803d;
-  --color-brand-dark: #166534;
-  --color-brand-deep: #14532d;
+  /* brand = ocean blue scale */
+  --color-brand-50: #f0f9ff;
+  --color-brand-100: #e0f2fe;
+  --color-brand-200: #bae6fd;
+  --color-brand-300: #7dd3fc;
+  --color-brand-400: #38bdf8;
+  --color-brand-500: #0ea5e9;
+  --color-brand-600: #0284c7;
+  --color-brand-700: #0369a1;
+  --color-brand-800: #075985;
+  --color-brand-900: #0c4a6e;
+  --color-brand-950: #082f49;
+  --color-brand: #0369a1;
+  --color-brand-dark: #075985;
+  --color-brand-deep: #0c4a6e;
 
-  /* gold = sunny amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #f59e0b;
-  --color-gold-deep: #b45309;
-  --color-gold-soft: #fef3c7;
+  /* gold = coral orange scale (name kept for legacy class refs) */
+  --color-gold-50: #fff7ed;
+  --color-gold-100: #ffedd5;
+  --color-gold-200: #fed7aa;
+  --color-gold-300: #fdba74;
+  --color-gold-400: #fb923c;
+  --color-gold-500: #f97316;
+  --color-gold-600: #ea580c;
+  --color-gold-700: #c2410c;
+  --color-gold-800: #9a3412;
+  --color-gold-900: #7c2d12;
+  --color-gold-950: #431407;
+  --color-gold: #f97316;
+  --color-gold-deep: #c2410c;
+  --color-gold-soft: #ffedd5;
 
-  /* popblue = deep forest scale (name kept for legacy class refs) */
-  --color-popblue-50: #f2f7f0;
-  --color-popblue-100: #e0efe0;
-  --color-popblue-200: #c2dfc2;
-  --color-popblue-300: #97c697;
-  --color-popblue-400: #65a565;
-  --color-popblue-500: #438543;
-  --color-popblue-600: #2f6a33;
-  --color-popblue-700: #275528;
-  --color-popblue-800: #224522;
-  --color-popblue-900: #1d3a1e;
-  --color-popblue-950: #0d200e;
-  --color-popblue: #275528;
-  --color-popblue-deep: #0d200e;
-  --color-popblue-soft: #97c697;
+  /* popblue = deep navy scale (name kept for legacy class refs) */
+  --color-popblue-50: #f8fafc;
+  --color-popblue-100: #f1f5f9;
+  --color-popblue-200: #e2e8f0;
+  --color-popblue-300: #cbd5e1;
+  --color-popblue-400: #94a3b8;
+  --color-popblue-500: #64748b;
+  --color-popblue-600: #475569;
+  --color-popblue-700: #334155;
+  --color-popblue-800: #1e293b;
+  --color-popblue-900: #0f172a;
+  --color-popblue-950: #020617;
+  --color-popblue: #334155;
+  --color-popblue-deep: #020617;
+  --color-popblue-soft: #94a3b8;
 
-  --color-ink: #1d3a1e;
-  --color-paper: #f7fee7;
-  --color-mute: #2f6a33;
+  --color-ink: #0f172a;
+  --color-paper: #f0f9ff;
+  --color-mute: #475569;
   --color-card: #ffffff;
-  --color-deep: #14532d;
+  --color-deep: #0c4a6e;
 }
 
 html { scroll-behavior: smooth; }
@@ -79,171 +78,172 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f7fee7;
+  background-color: #f0f9ff;
   background-image:
-    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(245, 158, 11, 0.18) 0%, rgba(245, 158, 11, 0) 70%),
-    radial-gradient(ellipse 45% 22% at 8% 12%, rgba(34, 197, 94, 0.16) 0%, rgba(34, 197, 94, 0) 70%),
-    linear-gradient(180deg, rgba(254, 243, 199, 0.9) 0%, rgba(220, 252, 231, 0.5) 42%, rgba(247, 254, 231, 0) 78%);
-  color: #1d3a1e;
+    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(249, 115, 22, 0.16) 0%, rgba(249, 115, 22, 0) 70%),
+    radial-gradient(ellipse 45% 22% at 8% 12%, rgba(2, 132, 199, 0.14) 0%, rgba(2, 132, 199, 0) 70%),
+    linear-gradient(180deg, rgba(255, 237, 213, 0.9) 0%, rgba(224, 242, 254, 0.5) 42%, rgba(240, 249, 255, 0) 78%);
+  color: #0f172a;
 }
-::selection { background: #fcd34d; color: #052e16; }
+::selection { background: #fdba74; color: #082f49; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #16a34a, #f59e0b); border-radius: 999px; border: 2px solid #f7fee7; }
-::-webkit-scrollbar-track { background: #dcfce7; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0284c7, #f97316); border-radius: 999px; border: 2px solid #f0f9ff; }
+::-webkit-scrollbar-track { background: #e0f2fe; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Citrus Grove type: roomier, friendlier headlines. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Tidal Current type: tighter, crisper headlines. */
+h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Citrus Grove rise: leaves drifting gently downward
-   in a breeze — the reverse of the old upward embers. */
+/* Tidal Current rise: bubbles drifting gently upward
+   through the water — the reverse of the old falling
+   leaves. */
 @keyframes signal-fall {
-  0% { transform: translate3d(0, -4vh, 0) scale(0.9) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(0, 52vh, 0) scale(0.9) rotate(0deg); opacity: 0; }
   15% { opacity: 0.8; }
-  50% { transform: translate3d(3vw, 26vh, 0) scale(1.1) rotate(40deg); }
-  100% { transform: translate3d(-3vw, 52vh, 0) scale(0.95) rotate(80deg); opacity: 0; }
+  50% { transform: translate3d(-3vw, 26vh, 0) scale(1.1) rotate(-40deg); }
+  100% { transform: translate3d(3vw, -4vh, 0) scale(0.95) rotate(-80deg); opacity: 0; }
 }
 .pop-fall { animation: signal-fall 20s linear infinite; }
 
-/* Citrus Grove sway: a slow, wide side-to-side drift. */
+/* Tidal Current sway: a slow, narrow side-to-side drift. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(-24px, 4px, 0) scale(1); opacity: 0.6; }
-  50% { transform: translate3d(24px, -4px, 0) scale(1.03); opacity: 0.95; }
+  0%, 100% { transform: translate3d(-12px, 2px, 0) scale(1); opacity: 0.6; }
+  50% { transform: translate3d(12px, -2px, 0) scale(1.02); opacity: 0.95; }
 }
 .pop-drift { animation: signal-drift 12s ease-in-out infinite; }
 
-/* Citrus Grove bob: a gentle little bounce. */
+/* Tidal Current bob: a gentle little float. */
 @keyframes signal-bob {
-  0%, 100% { transform: translateY(0) scale(1) rotate(1deg); }
-  50% { transform: translateY(-8px) scale(1.03) rotate(-1deg); }
+  0%, 100% { transform: translateY(0) scale(1) rotate(-1deg); }
+  50% { transform: translateY(-5px) scale(1.02) rotate(1deg); }
 }
 .pop-bob { animation: signal-bob 6s ease-in-out infinite; }
 
-/* Slow turn for the grove dial. */
+/* Slow turn for the current dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 90s linear infinite; }
 
-/* Citrus Grove glint: an amber pulse. */
+/* Tidal Current glint: a coral pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.4; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.15); }
 }
 .pop-twinkle { animation: signal-blink 3.2s ease-in-out infinite; }
 
-/* Citrus Grove ticker: infinite marquee (rightward drift). */
+/* Tidal Current ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 28s linear infinite; }
 
-/* Citrus Grove bands: green -> amber diagonal stripes. */
+/* Tidal Current bands: blue -> coral diagonal stripes. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(45deg, #16a34a 0px, #16a34a 10px, #f59e0b 10px, #f59e0b 20px);
+    repeating-linear-gradient(45deg, #0284c7 0px, #0284c7 10px, #f97316 10px, #f97316 20px);
   background-size: 100% 4px;
   background-repeat: repeat-x;
   border-radius: 999px;
 }
 
-/* Citrus Grove card: a soft, fully rounded panel with a
-   thin green TOP bar and a soft diffused shadow — it
-   lifts on hover, the bar turning amber. */
+/* Tidal Current card: a crisp, sharper panel with a
+   thick blue LEFT bar and a tight flat shadow — it
+   lifts slightly on hover, the bar turning coral. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(29, 58, 30, 0.12);
-  border-top: 4px solid #16a34a;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-left: 4px solid #0284c7;
   background: #ffffff;
-  border-radius: 1.75rem;
-  box-shadow: 0 12px 32px rgba(20, 83, 45, 0.12);
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(12, 74, 110, 0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  border-top-color: #f59e0b;
-  box-shadow: 0 20px 44px rgba(20, 83, 45, 0.18);
+  transform: translateY(-2px);
+  border-left-color: #f97316;
+  box-shadow: 0 10px 24px rgba(12, 74, 110, 0.16);
 }
 
-/* Citrus Grove glass: shared by modals and drawers — a
-   frosted lime pane with a soft edge and a green
-   TOP rule. */
+/* Tidal Current glass: shared by modals and drawers — a
+   frosted ice-blue pane with a soft edge and a blue
+   LEFT rule. */
 .pop-glass {
-  background: rgba(247, 254, 231, 0.94);
+  background: rgba(240, 249, 255, 0.94);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(29, 58, 30, 0.12);
-  border-top: 4px solid #16a34a;
-  border-radius: 1.75rem;
-  box-shadow: 0 12px 32px rgba(20, 83, 45, 0.12);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-left: 4px solid #0284c7;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(12, 74, 110, 0.08);
 }
 
-/* Citrus Grove tag: a green-to-amber pill badge —
-   white type, soft shadow. */
+/* Tidal Current tag: a blue-to-coral pill badge —
+   white type, tight shadow. */
 .starburst {
-  background: linear-gradient(135deg, #16a34a, #f59e0b);
+  background: linear-gradient(135deg, #0284c7, #f97316);
   color: #ffffff;
   text-shadow: none;
   border-radius: 999px;
-  transform: rotate(2deg);
-  box-shadow: 0 8px 20px rgba(20, 83, 45, 0.25);
+  transform: rotate(-2deg);
+  box-shadow: 0 4px 12px rgba(12, 74, 110, 0.25);
   border: 2px solid rgba(255, 255, 255, 0.8);
 }
 
-/* Citrus Grove texture: a leaf-dot field. */
+/* Tidal Current texture: a bubble-dot field. */
 .halftone {
-  background-image: radial-gradient(rgba(22, 163, 74, 0.20) 2px, transparent 2px);
-  background-size: 28px 28px;
+  background-image: radial-gradient(rgba(2, 132, 199, 0.18) 2px, transparent 2px);
+  background-size: 24px 24px;
   background-position: 0 0;
 }
 
-/* Citrus Grove rule: a green dashed rule. */
+/* Tidal Current rule: a coral dotted rule. */
 .zigzag {
   height: 0;
-  border-top: 3px dashed #16a34a;
+  border-top: 3px dotted #f97316;
   background: none;
   opacity: 1;
   border-radius: 0;
 }
 
-/* Citrus Grove band: a forest / green / amber
-   diagonal wash with a soft shadow. */
+/* Tidal Current band: a navy / blue / coral
+   horizontal wash with a tight shadow. */
 .bazaar-awning {
-  background: linear-gradient(135deg, #0d200e 0%, #15803d 55%, #f59e0b 100%);
+  background: linear-gradient(90deg, #020617 0%, #0369a1 55%, #f97316 100%);
   opacity: 1;
-  box-shadow: 0 12px 32px rgba(20, 83, 45, 0.25);
-  border-bottom: 1px solid rgba(29, 58, 30, 0.12);
+  box-shadow: 0 2px 8px rgba(12, 74, 110, 0.25);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.12);
   border-radius: 0;
 }
 
-/* Citrus Grove glow: a warm halo for the core. */
+/* Tidal Current glow: a cool halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(254, 243, 199, 0.7) 42%, rgba(245, 158, 11, 0.28) 62%, rgba(245, 158, 11, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(224, 242, 254, 0.7) 42%, rgba(249, 115, 22, 0.22) 62%, rgba(249, 115, 22, 0) 76%);
 }
 
-/* Citrus Grove core: a glowing sun orb with a
-   bright amber ring. */
+/* Tidal Current core: a deep ocean orb with a
+   bright coral ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fffbeb 0%, #fbbf24 55%, #0d200e 100%);
-  box-shadow: 0 0 0 3px rgba(252, 211, 77, 0.9), 0 12px 32px rgba(20, 83, 45, 0.25);
-  border: 1px solid rgba(29, 58, 30, 0.12);
+    radial-gradient(circle at 35% 30%, #f0f9ff 0%, #38bdf8 55%, #020617 100%);
+  box-shadow: 0 0 0 3px rgba(251, 146, 60, 0.9), 0 2px 8px rgba(12, 74, 110, 0.25);
+  border: 1px solid rgba(15, 23, 42, 0.12);
 }
 
-/* Wide rings around the grove orb. */
+/* Wide rings around the current orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(22, 163, 74, 0.5) 0px,
-    rgba(22, 163, 74, 0.5) 2px,
+    rgba(2, 132, 199, 0.5) 0px,
+    rgba(2, 132, 199, 0.5) 2px,
     transparent 2px,
     transparent 14px,
-    rgba(245, 158, 11, 0.55) 14px,
-    rgba(245, 158, 11, 0.55) 16px,
+    rgba(249, 115, 22, 0.55) 14px,
+    rgba(249, 115, 22, 0.55) 16px,
     transparent 16px,
     transparent 30px
   );
@@ -254,7 +254,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(245, 158, 11, 0.6) 0deg 3deg,
+    rgba(249, 115, 22, 0.6) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
