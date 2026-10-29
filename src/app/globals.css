@@ -1,70 +1,70 @@
 @import "tailwindcss";
 
 @theme {
-  /* Harbor Ledger: a crisp coastal-ledger direction —
-     deep ocean blue as the primary accent, bright sky
-     cyan for highlights, dark navy for grounded contrast,
-     on warm sand paper. Cards are crisp, tight panels
-     with 0.75rem corners, a thin navy-tinted border and
-     a bold blue top rule — the opposite of the previous
-     Verdant Grove look, its emerald / lime palette, pale
-     sage paper, wide 1.75rem pillowy corners, lime top
-     edge and soft diffused shadows. */
+  /* Ember Market: a warm market-stall direction —
+     burnt terracotta as the primary accent, marigold
+     amber for highlights, deep espresso for grounded
+     contrast, on warm cream paper. Cards are generous,
+     chunky panels with 1.5rem corners, a thick terracotta
+     bottom edge and a hard offset shadow — the opposite
+     of the previous Harbor Ledger look, its ocean blue /
+     cyan palette, sand paper, tight 0.75rem corners, thin
+     navy border, blue top rule and soft diffused shadows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = ocean-blue scale */
-  --color-brand-50: #f0f9ff;
-  --color-brand-100: #e0f2fe;
-  --color-brand-200: #bae6fd;
-  --color-brand-300: #7dd3fc;
-  --color-brand-400: #38bdf8;
-  --color-brand-500: #0ea5e9;
-  --color-brand-600: #0284c7;
-  --color-brand-700: #0369a1;
-  --color-brand-800: #075985;
-  --color-brand-900: #0c4a6e;
-  --color-brand-950: #082f49;
-  --color-brand: #0284c7;
-  --color-brand-dark: #0369a1;
-  --color-brand-deep: #075985;
+  /* brand = terracotta scale */
+  --color-brand-50: #fdf4f1;
+  --color-brand-100: #fbe7e0;
+  --color-brand-200: #f6c9ba;
+  --color-brand-300: #efa28c;
+  --color-brand-400: #e5724f;
+  --color-brand-500: #cf4a24;
+  --color-brand-600: #b93a1a;
+  --color-brand-700: #9c3016;
+  --color-brand-800: #7d2815;
+  --color-brand-900: #5e2013;
+  --color-brand-950: #3a130b;
+  --color-brand: #cf4a24;
+  --color-brand-dark: #b93a1a;
+  --color-brand-deep: #7d2815;
 
-  /* gold = bright cyan scale (name kept for legacy class refs) */
-  --color-gold-50: #ecfeff;
-  --color-gold-100: #cffafe;
-  --color-gold-200: #a5f3fc;
-  --color-gold-300: #67e8f9;
-  --color-gold-400: #22d3ee;
-  --color-gold-500: #06b6d4;
-  --color-gold-600: #0891b2;
-  --color-gold-700: #0e7490;
-  --color-gold-800: #155e75;
-  --color-gold-900: #164e63;
-  --color-gold-950: #083344;
-  --color-gold: #06b6d4;
-  --color-gold-deep: #0e7490;
-  --color-gold-soft: #cffafe;
+  /* gold = marigold amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fff9eb;
+  --color-gold-100: #fff0c6;
+  --color-gold-200: #ffe388;
+  --color-gold-300: #ffd14a;
+  --color-gold-400: #fbbe24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #b45309;
+  --color-gold-soft: #fff0c6;
 
-  /* popblue = deep navy scale (name kept for legacy class refs) */
-  --color-popblue-50: #f8fafc;
-  --color-popblue-100: #f1f5f9;
-  --color-popblue-200: #e2e8f0;
-  --color-popblue-300: #cbd5e1;
-  --color-popblue-400: #94a3b8;
-  --color-popblue-500: #64748b;
-  --color-popblue-600: #475569;
-  --color-popblue-700: #334155;
-  --color-popblue-800: #1e293b;
-  --color-popblue-900: #0f172a;
-  --color-popblue-950: #020617;
-  --color-popblue: #1e293b;
-  --color-popblue-deep: #020617;
-  --color-popblue-soft: #e2e8f0;
+  /* popblue = deep espresso scale (name kept for legacy class refs) */
+  --color-popblue-50: #faf7f2;
+  --color-popblue-100: #f3ede3;
+  --color-popblue-200: #e3d5c2;
+  --color-popblue-300: #cdb49a;
+  --color-popblue-400: #b08d68;
+  --color-popblue-500: #8d6a48;
+  --color-popblue-600: #6f5136;
+  --color-popblue-700: #57402b;
+  --color-popblue-800: #3d2c1e;
+  --color-popblue-900: #2a1d13;
+  --color-popblue-950: #170e08;
+  --color-popblue: #3d2c1e;
+  --color-popblue-deep: #170e08;
+  --color-popblue-soft: #e3d5c2;
 
-  --color-ink: #0f172a;
-  --color-paper: #f7f5f0;
-  --color-mute: #475569;
+  --color-ink: #2a1d13;
+  --color-paper: #fff8ef;
+  --color-mute: #6f5136;
   --color-card: #ffffff;
-  --color-deep: #0c4a6e;
+  --color-deep: #7d2815;
 }
 
 html { scroll-behavior: smooth; }
@@ -79,172 +79,173 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f7f5f0;
+  background-color: #fff8ef;
   background-image:
-    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(2, 132, 199, 0.12) 0%, rgba(2, 132, 199, 0) 70%),
-    radial-gradient(ellipse 45% 22% at 8% 10%, rgba(56, 189, 248, 0.18) 0%, rgba(56, 189, 248, 0) 70%),
-    linear-gradient(180deg, rgba(224, 242, 254, 0.9) 0%, rgba(207, 250, 254, 0.5) 42%, rgba(247, 245, 240, 0) 78%);
-  color: #0f172a;
+    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(207, 74, 36, 0.14) 0%, rgba(207, 74, 36, 0) 70%),
+    radial-gradient(ellipse 45% 22% at 8% 10%, rgba(245, 158, 11, 0.20) 0%, rgba(245, 158, 11, 0) 70%),
+    linear-gradient(180deg, rgba(251, 231, 224, 0.9) 0%, rgba(255, 240, 198, 0.5) 42%, rgba(255, 248, 239, 0) 78%);
+  color: #2a1d13;
 }
-::selection { background: #bae6fd; color: #082f49; }
+::selection { background: #ffe388; color: #3a130b; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0284c7, #06b6d4); border-radius: 999px; border: 2px solid #f7f5f0; }
-::-webkit-scrollbar-track { background: #e0f2fe; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #cf4a24, #f59e0b); border-radius: 999px; border: 2px solid #fff8ef; }
+::-webkit-scrollbar-track { background: #fbe7e0; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Harbor Ledger type: tight, ledger-crisp headlines. */
-h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
+/* Ember Market type: warm, slightly relaxed headlines. */
+h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Harbor Ledger fall: signal buoys drifting down. */
+/* Ember Market fall: embers drifting up. */
 @keyframes signal-rise {
-  0% { transform: translate3d(0, -8vh, 0) scale(0.9) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(0, 8vh, 0) scale(0.9) rotate(0deg); opacity: 0; }
   15% { opacity: 0.85; }
-  50% { transform: translate3d(-2vw, 26vh, 0) scale(1.05) rotate(-24deg); }
-  100% { transform: translate3d(2vw, 62vh, 0) scale(1) rotate(18deg); opacity: 0; }
+  50% { transform: translate3d(2vw, -26vh, 0) scale(1.05) rotate(24deg); }
+  100% { transform: translate3d(-2vw, -62vh, 0) scale(1) rotate(-18deg); opacity: 0; }
 }
 .pop-fall { animation: signal-rise 16s linear infinite; }
 
-/* Harbor Ledger sway: a gentle side-to-side drift. */
+/* Ember Market sway: a gentle side-to-side drift. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-6px, 0, 0) scale(1); opacity: 0.6; }
-  50% { transform: translate3d(6px, -6px, 0) scale(1.02); opacity: 0.95; }
+  50% { transform: translate3d(6px, 6px, 0) scale(1.02); opacity: 0.95; }
 }
 .pop-drift { animation: signal-drift 10s ease-in-out infinite; }
 
-/* Harbor Ledger bob: a soft little rise. */
+/* Ember Market bob: a soft little rise. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-5px) scale(1.01); }
 }
 .pop-bob { animation: signal-bob 5s ease-in-out infinite; }
 
-/* Slow turn for the harbor dial. */
+/* Slow turn for the ember dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 60s linear infinite; }
 
-/* Harbor Ledger glint: a cyan pulse. */
+/* Ember Market glint: an amber pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.4; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.12); }
 }
 .pop-twinkle { animation: signal-blink 3s ease-in-out infinite; }
 
-/* Harbor Ledger ticker: infinite marquee (leftward drift). */
+/* Ember Market ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Harbor Ledger bands: ocean blue -> cyan -> navy dots. */
+/* Ember Market bands: terracotta -> amber -> espresso dots. */
 .pop-stripes {
   background-image:
-    radial-gradient(circle, #0284c7 3px, transparent 3.5px),
-    radial-gradient(circle, #06b6d4 3px, transparent 3.5px);
+    radial-gradient(circle, #cf4a24 3px, transparent 3.5px),
+    radial-gradient(circle, #f59e0b 3px, transparent 3.5px);
   background-size: 28px 12px;
   background-position: 0 0, 14px 6px;
   border-radius: 999px;
 }
 
-/* Harbor Ledger card: a crisp tight panel with small
-   corners, a thin navy-tinted border and a bold blue
-   top rule — it lifts straight up on hover and its
-   border turns ocean blue. */
+/* Ember Market card: a chunky panel with generous
+   corners, a thick terracotta bottom edge and a hard
+   offset shadow — it lifts and its shadow deepens
+   on hover, with the edge turning marigold. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(15, 23, 42, 0.14);
-  border-top: 3px solid #0284c7;
+  border: 1px solid rgba(42, 29, 19, 0.16);
+  border-bottom: 4px solid #cf4a24;
   background: #ffffff;
-  border-radius: 0.75rem;
-  box-shadow: 0 10px 24px -12px rgba(15, 23, 42, 0.25);
+  border-radius: 1.5rem;
+  box-shadow: 6px 6px 0 rgba(42, 29, 19, 0.12);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
   transform: translateY(-3px);
-  border-color: rgba(2, 132, 199, 0.55);
-  box-shadow: 0 18px 32px -14px rgba(15, 23, 42, 0.32);
+  border-bottom-color: #f59e0b;
+  box-shadow: 8px 10px 0 rgba(42, 29, 19, 0.16);
 }
 
-/* Harbor Ledger glass: shared by modals and drawers — a
-   frosted sand pane with a crisp navy edge and a tight
-   shadow. */
+/* Ember Market glass: shared by modals and drawers — a
+   frosted cream pane with a warm espresso edge and a
+   thick terracotta bottom edge. */
 .pop-glass {
-  background: rgba(247, 245, 240, 0.94);
+  background: rgba(255, 248, 239, 0.94);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(15, 23, 42, 0.16);
-  border-top: 3px solid #0284c7;
-  border-radius: 0.75rem;
-  box-shadow: 0 16px 32px -16px rgba(15, 23, 42, 0.30);
+  border: 1px solid rgba(42, 29, 19, 0.18);
+  border-bottom: 4px solid #cf4a24;
+  border-radius: 1.5rem;
+  box-shadow: 6px 6px 0 rgba(42, 29, 19, 0.12);
 }
 
-/* Harbor Ledger tag: an upright cyan pill badge — deep
-   navy type, fully rounded, tight shadow, no tilt. */
+/* Ember Market tag: a tilted marigold badge — deep
+   espresso type, chunky corners, hard offset shadow. */
 .starburst {
-  background: #38bdf8;
-  color: #082f49;
+  background: #ffd14a;
+  color: #2a1d13;
   text-shadow: none;
-  border-radius: 999px;
-  transform: none;
-  box-shadow: 0 8px 20px -8px rgba(15, 23, 42, 0.35);
+  border-radius: 1rem;
+  transform: rotate(-8deg);
+  box-shadow: 3px 3px 0 rgba(42, 29, 19, 0.25);
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Harbor Ledger texture: an ocean-blue dot grid. */
+/* Ember Market texture: a terracotta dot grid. */
 .halftone {
-  background-image: radial-gradient(rgba(2, 132, 199, 0.16) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(rgba(207, 74, 36, 0.18) 1.5px, transparent 1.5px);
   background-size: 18px 18px;
   background-position: 0 0;
 }
 
-/* Harbor Ledger rule: an ocean-blue-to-cyan-to-navy bar. */
+/* Ember Market rule: a terracotta-to-amber-to-espresso bar. */
 .zigzag {
-  height: 6px;
+  height: 8px;
   border-top: none;
-  background: linear-gradient(90deg, #0284c7 0%, #06b6d4 55%, #0f172a 100%);
+  background: linear-gradient(90deg, #cf4a24 0%, #f59e0b 55%, #2a1d13 100%);
   opacity: 1;
   border-radius: 999px;
 }
 
-/* Harbor Ledger band: a deep navy / ocean-blue / cyan
-   gradient wash with a tight shadow and a square edge. */
+/* Ember Market band: an espresso / terracotta / amber
+   gradient wash with a hard offset shadow and rounded
+   bottom corners. */
 .bazaar-awning {
-  background: linear-gradient(115deg, #0f172a 0%, #0284c7 55%, #06b6d4 100%);
+  background: linear-gradient(115deg, #2a1d13 0%, #cf4a24 55%, #f59e0b 100%);
   opacity: 1;
-  box-shadow: 0 10px 24px -12px rgba(15, 23, 42, 0.35);
-  border-bottom: 1px solid rgba(15, 23, 42, 0.15);
-  border-radius: 0;
+  box-shadow: 0 6px 0 rgba(42, 29, 19, 0.12);
+  border-bottom: 1px solid rgba(42, 29, 19, 0.15);
+  border-radius: 0 0 1rem 1rem;
 }
 
-/* Harbor Ledger glow: an ocean-blue halo for the core. */
+/* Ember Market glow: a terracotta halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(207, 250, 254, 0.7) 42%, rgba(2, 132, 199, 0.30) 62%, rgba(2, 132, 199, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 240, 198, 0.7) 42%, rgba(207, 74, 36, 0.30) 62%, rgba(207, 74, 36, 0) 76%);
 }
 
-/* Harbor Ledger core: a glowing sky-blue orb with a
-   bright cyan ring. */
+/* Ember Market core: a glowing ember orb with a
+   bright marigold ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #bae6fd 0%, #0ea5e9 55%, #0f172a 100%);
-  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.9), 0 20px 40px -16px rgba(15, 23, 42, 0.4);
-  border: 1px solid rgba(15, 23, 42, 0.15);
+    radial-gradient(circle at 35% 30%, #ffe388 0%, #cf4a24 55%, #2a1d13 100%);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.9), 0 20px 40px -16px rgba(42, 29, 19, 0.4);
+  border: 1px solid rgba(42, 29, 19, 0.15);
 }
 
-/* Tight rings around the harbor orb. */
+/* Tight rings around the ember orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(2, 132, 199, 0.5) 0px,
-    rgba(2, 132, 199, 0.5) 2px,
+    rgba(207, 74, 36, 0.5) 0px,
+    rgba(207, 74, 36, 0.5) 2px,
     transparent 2px,
     transparent 14px,
-    rgba(6, 182, 212, 0.55) 14px,
-    rgba(6, 182, 212, 0.55) 16px,
+    rgba(245, 158, 11, 0.55) 14px,
+    rgba(245, 158, 11, 0.55) 16px,
     transparent 16px,
     transparent 30px
   );
@@ -255,7 +256,7 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(6, 182, 212, 0.6) 0deg 3deg,
+    rgba(245, 158, 11, 0.6) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
