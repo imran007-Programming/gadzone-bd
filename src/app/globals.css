@@ -1,71 +1,71 @@
 @import "tailwindcss";
 
 @theme {
-  /* Amber Orchard: a warm harvest direction —
-     burnt amber as the primary accent, leaf green
-     for highlights, deep forest for contrast, warm
-     cream paper, white cards. Cards are sturdy,
-     1rem panels with a thick leaf-green BOTTOM bar
-     and a flat amber offset shadow — the opposite
-     of the previous Orchid Dusk look, its violet /
-     fuchsia palette, warm lavender paper, plush
-     1.75rem panels, thick violet TOP bar and soft
-     layered shadow. */
+  /* Lagoon Tide: a cool coastal direction —
+     deep teal as the primary accent, bright coral
+     for highlights, deep slate-navy for contrast,
+     icy paper, white cards. Cards are soft,
+     1.5rem panels with a thick coral LEFT bar and
+     a soft layered teal shadow — the opposite of
+     the previous Amber Orchard look, its warm
+     amber / leaf-green palette, warm cream paper,
+     sturdy 1rem panels, thick green BOTTOM bar
+     and flat amber offset shadow. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = amber scale */
-  --color-brand-50: #fffbeb;
-  --color-brand-100: #fef3c7;
-  --color-brand-200: #fde68a;
-  --color-brand-300: #fcd34d;
-  --color-brand-400: #fbbf24;
-  --color-brand-500: #f59e0b;
-  --color-brand-600: #d97706;
-  --color-brand-700: #b45309;
-  --color-brand-800: #92400e;
-  --color-brand-900: #78350f;
-  --color-brand-950: #451a03;
-  --color-brand: #b45309;
-  --color-brand-dark: #92400e;
-  --color-brand-deep: #78350f;
+  /* brand = teal scale */
+  --color-brand-50: #f0fdfa;
+  --color-brand-100: #ccfbf1;
+  --color-brand-200: #99f6e4;
+  --color-brand-300: #5eead4;
+  --color-brand-400: #2dd4bf;
+  --color-brand-500: #14b8a6;
+  --color-brand-600: #0d9488;
+  --color-brand-700: #0f766e;
+  --color-brand-800: #115e59;
+  --color-brand-900: #134e4a;
+  --color-brand-950: #042f2e;
+  --color-brand: #0f766e;
+  --color-brand-dark: #115e59;
+  --color-brand-deep: #134e4a;
 
-  /* gold = leaf-green scale (name kept for legacy class refs) */
-  --color-gold-50: #f0fdf4;
-  --color-gold-100: #dcfce7;
-  --color-gold-200: #bbf7d0;
-  --color-gold-300: #86efac;
-  --color-gold-400: #4ade80;
-  --color-gold-500: #22c55e;
-  --color-gold-600: #16a34a;
-  --color-gold-700: #15803d;
-  --color-gold-800: #166534;
-  --color-gold-900: #14532d;
-  --color-gold-950: #052e16;
-  --color-gold: #22c55e;
-  --color-gold-deep: #15803d;
-  --color-gold-soft: #dcfce7;
+  /* gold = coral scale (name kept for legacy class refs) */
+  --color-gold-50: #fff1f2;
+  --color-gold-100: #ffe4e6;
+  --color-gold-200: #fecdd3;
+  --color-gold-300: #fda4af;
+  --color-gold-400: #fb7185;
+  --color-gold-500: #f43f5e;
+  --color-gold-600: #e11d48;
+  --color-gold-700: #be123c;
+  --color-gold-800: #9f1239;
+  --color-gold-900: #881337;
+  --color-gold-950: #4c0519;
+  --color-gold: #f43f5e;
+  --color-gold-deep: #be123c;
+  --color-gold-soft: #ffe4e6;
 
-  /* popblue = warm bark scale (name kept for legacy class refs) */
-  --color-popblue-50: #fafaf9;
-  --color-popblue-100: #f5f5f4;
-  --color-popblue-200: #e7e5e4;
-  --color-popblue-300: #d6d3d1;
-  --color-popblue-400: #a8a29e;
-  --color-popblue-500: #78716c;
-  --color-popblue-600: #57534e;
-  --color-popblue-700: #44403c;
-  --color-popblue-800: #292524;
-  --color-popblue-900: #1c1917;
-  --color-popblue-950: #0c0a09;
-  --color-popblue: #44403c;
-  --color-popblue-deep: #0c0a09;
-  --color-popblue-soft: #d6d3d1;
+  /* popblue = slate scale (name kept for legacy class refs) */
+  --color-popblue-50: #f8fafc;
+  --color-popblue-100: #f1f5f9;
+  --color-popblue-200: #e2e8f0;
+  --color-popblue-300: #cbd5e1;
+  --color-popblue-400: #94a3b8;
+  --color-popblue-500: #64748b;
+  --color-popblue-600: #475569;
+  --color-popblue-700: #334155;
+  --color-popblue-800: #1e293b;
+  --color-popblue-900: #0f172a;
+  --color-popblue-950: #020617;
+  --color-popblue: #334155;
+  --color-popblue-deep: #020617;
+  --color-popblue-soft: #cbd5e1;
 
-  --color-ink: #1c1917;
-  --color-paper: #fffdf5;
-  --color-mute: #78716c;
+  --color-ink: #0f172a;
+  --color-paper: #f8fafc;
+  --color-mute: #64748b;
   --color-card: #ffffff;
-  --color-deep: #78350f;
+  --color-deep: #134e4a;
 }
 
 html { scroll-behavior: smooth; }
@@ -79,175 +79,176 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fffdf5;
+  background-color: #f8fafc;
   background-image:
-    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(245, 158, 11, 0.18) 0%, rgba(245, 158, 11, 0) 70%),
-    radial-gradient(ellipse 45% 22% at 8% 10%, rgba(22, 163, 74, 0.14) 0%, rgba(22, 163, 74, 0) 70%),
-    linear-gradient(180deg, rgba(254, 243, 199, 0.9) 0%, rgba(220, 252, 231, 0.5) 42%, rgba(255, 253, 245, 0) 78%);
-  color: #1c1917;
+    radial-gradient(ellipse 55% 26% at 12% 0%, rgba(20, 184, 166, 0.20) 0%, rgba(20, 184, 166, 0) 70%),
+    radial-gradient(ellipse 45% 22% at 92% 10%, rgba(244, 63, 94, 0.14) 0%, rgba(244, 63, 94, 0) 70%),
+    linear-gradient(180deg, rgba(204, 251, 241, 0.9) 0%, rgba(255, 228, 230, 0.5) 42%, rgba(248, 250, 252, 0) 78%);
+  color: #0f172a;
 }
-::selection { background: #fcd34d; color: #451a03; }
+::selection { background: #fda4af; color: #4c0519; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #d97706, #16a34a); border-radius: 8px; border: 2px solid #fffdf5; }
-::-webkit-scrollbar-track { background: #fef3c7; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0d9488, #f43f5e); border-radius: 8px; border: 2px solid #f8fafc; }
+::-webkit-scrollbar-track { background: #ccfbf1; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Amber Orchard type: crisp, tight headlines. */
-h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
+/* Lagoon Tide type: crisp, slightly tighter headlines. */
+h1, h2, h3 { letter-spacing: -0.03em; text-wrap: balance; }
 
-/* Amber Orchard fall: leaves drifting gently DOWNWARD
-   through warm harvest air — the reverse of the old
-   upward petal drift. */
+/* Lagoon Tide rise: bubbles drifting gently UPWARD
+   through cool water — the reverse of the old
+   downward leaf fall. */
 @keyframes signal-fall {
-  0% { transform: translate3d(0, -4vh, 0) scale(0.95) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(0, 4vh, 0) scale(0.95) rotate(0deg); opacity: 0; }
   15% { opacity: 0.8; }
-  50% { transform: translate3d(-3vw, 26vh, 0) scale(1.1) rotate(-40deg); }
-  100% { transform: translate3d(3vw, 52vh, 0) scale(0.9) rotate(-80deg); opacity: 0; }
+  50% { transform: translate3d(3vw, -26vh, 0) scale(1.1) rotate(40deg); }
+  100% { transform: translate3d(-3vw, -52vh, 0) scale(0.9) rotate(80deg); opacity: 0; }
 }
 .pop-fall { animation: signal-fall 22s linear infinite; }
 
-/* Amber Orchard sway: a slow, wide side-to-side drift. */
+/* Lagoon Tide sway: a slow, wide side-to-side drift. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-14px, 0, 0) scale(1); opacity: 0.6; }
   50% { transform: translate3d(14px, 0, 0) scale(1.02); opacity: 0.95; }
 }
 .pop-drift { animation: signal-drift 10s ease-in-out infinite; }
 
-/* Amber Orchard bob: a gentle little float. */
+/* Lagoon Tide bob: a gentle little float. */
 @keyframes signal-bob {
-  0%, 100% { transform: translateY(0) scale(1) rotate(-1deg); }
-  50% { transform: translateY(-8px) scale(1.02) rotate(1deg); }
+  0%, 100% { transform: translateY(0) scale(1) rotate(1deg); }
+  50% { transform: translateY(-10px) scale(1.02) rotate(-1deg); }
 }
 .pop-bob { animation: signal-bob 5s ease-in-out infinite; }
 
-/* Slow turn for the harvest dial. */
+/* Slow reverse turn for the tide dial. */
 @keyframes dial-turn {
-  to { transform: rotate(360deg); }
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
 }
-.pop-spin { animation: dial-turn 90s linear infinite; }
+.pop-spin { animation: dial-turn 120s linear infinite; }
 
-/* Amber Orchard glint: a leaf-green pulse. */
+/* Lagoon Tide glint: a coral pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.4; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.15); }
 }
 .pop-twinkle { animation: signal-blink 3.2s ease-in-out infinite; }
 
-/* Amber Orchard ticker: infinite marquee (leftward drift). */
+/* Lagoon Tide ticker: infinite marquee (rightward drift). */
 @keyframes signal-ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
 }
 .pop-ticker { animation: signal-ticker 28s linear infinite; }
 
-/* Amber Orchard bands: amber / green diagonal stripes. */
+/* Lagoon Tide bands: teal / coral diagonal stripes. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(45deg, #d97706 0px, #d97706 12px, #16a34a 12px, #16a34a 24px);
+    repeating-linear-gradient(45deg, #0d9488 0px, #0d9488 12px, #f43f5e 12px, #f43f5e 24px);
   background-size: 100% 6px;
   background-repeat: repeat-x;
   border-radius: 3px;
 }
 
-/* Amber Orchard card: a sturdy 1rem panel with a
-   thick leaf-green BOTTOM bar and a flat amber
-   offset shadow — it shifts up-left on hover, the
-   bar turning amber and the shadow growing. */
+/* Lagoon Tide card: a soft 1.5rem panel with a
+   thick coral LEFT bar and a soft layered teal
+   shadow — it lifts straight up on hover, the
+   bar turning teal and the shadow deepening. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(28, 25, 23, 0.1);
-  border-bottom: 5px solid #16a34a;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-left: 5px solid #f43f5e;
   background: #ffffff;
-  border-radius: 1rem;
-  box-shadow: 5px 5px 0 rgba(217, 119, 6, 0.18);
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(15, 118, 110, 0.12);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translate(-2px, -2px);
-  border-bottom-color: #d97706;
-  box-shadow: 8px 8px 0 rgba(217, 119, 6, 0.22);
+  transform: translateY(-4px);
+  border-left-color: #0d9488;
+  box-shadow: 0 18px 40px rgba(15, 118, 110, 0.18);
 }
 
-/* Amber Orchard glass: shared by modals and drawers — a
-   frosted cream pane with a soft edge and a leaf-green
-   LEFT rule. */
+/* Lagoon Tide glass: shared by modals and drawers — a
+   frosted icy pane with a soft edge and a coral
+   TOP rule. */
 .pop-glass {
-  background: rgba(255, 253, 245, 0.94);
+  background: rgba(248, 250, 252, 0.94);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(28, 25, 23, 0.1);
-  border-left: 5px solid #16a34a;
-  border-radius: 1rem;
-  box-shadow: 5px 5px 0 rgba(217, 119, 6, 0.18);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-top: 5px solid #f43f5e;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(15, 118, 110, 0.12);
 }
 
-/* Amber Orchard tag: an amber-to-green pill badge —
+/* Lagoon Tide tag: a teal-to-coral pill badge —
    white type, soft ring, sticker tilt the other way. */
 .starburst {
-  background: linear-gradient(135deg, #f59e0b, #16a34a);
+  background: linear-gradient(135deg, #14b8a6, #f43f5e);
   color: #ffffff;
   text-shadow: none;
   border-radius: 999px;
-  transform: rotate(-3deg);
-  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.35);
+  transform: rotate(3deg);
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.35);
   border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
-/* Amber Orchard texture: a fine polka-dot field. */
+/* Lagoon Tide texture: a fine polka-dot field. */
 .halftone {
   background-image:
-    radial-gradient(rgba(217, 119, 6, 0.18) 1.5px, transparent 1.5px),
-    radial-gradient(rgba(22, 163, 74, 0.14) 1.5px, transparent 1.5px);
-  background-size: 22px 22px;
-  background-position: 0 0, 11px 11px;
+    radial-gradient(rgba(13, 148, 136, 0.18) 1.5px, transparent 1.5px),
+    radial-gradient(rgba(244, 63, 94, 0.14) 1.5px, transparent 1.5px);
+  background-size: 26px 26px;
+  background-position: 0 0, 13px 13px;
 }
 
-/* Amber Orchard rule: a gradient pill rule. */
+/* Lagoon Tide rule: a gradient pill rule. */
 .zigzag {
   height: 4px;
   border: none;
-  background: linear-gradient(90deg, #16a34a, #f59e0b);
+  background: linear-gradient(90deg, #f43f5e, #14b8a6);
   opacity: 1;
   border-radius: 999px;
 }
 
-/* Amber Orchard band: a forest / amber horizontal
-   wash with a flat shadow. */
+/* Lagoon Tide band: a navy / teal / coral horizontal
+   wash with a soft shadow. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #14532d 0%, #d97706 55%, #f59e0b 100%);
+  background: linear-gradient(90deg, #0f172a 0%, #0d9488 55%, #f43f5e 100%);
   opacity: 1;
-  box-shadow: 0 6px 0 rgba(20, 83, 45, 0.15);
-  border-bottom: 1px solid rgba(28, 25, 23, 0.1);
+  box-shadow: 0 10px 30px rgba(15, 118, 110, 0.15);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
   border-radius: 0;
 }
 
-/* Amber Orchard glow: a warm halo for the core. */
+/* Lagoon Tide glow: a cool halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(254, 243, 199, 0.7) 42%, rgba(245, 158, 11, 0.25) 62%, rgba(245, 158, 11, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(204, 251, 241, 0.7) 42%, rgba(20, 184, 166, 0.25) 62%, rgba(20, 184, 166, 0) 76%);
 }
 
-/* Amber Orchard core: a deep amber orb with a
-   bright leaf-green ring. */
+/* Lagoon Tide core: a deep teal orb with a
+   bright coral ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fffbeb 0%, #fbbf24 55%, #451a03 100%);
-  box-shadow: 0 0 0 3px rgba(134, 239, 172, 0.9), 0 10px 30px rgba(120, 53, 15, 0.25);
-  border: 1px solid rgba(28, 25, 23, 0.1);
+    radial-gradient(circle at 35% 30%, #f0fdfa 0%, #2dd4bf 55%, #042f2e 100%);
+  box-shadow: 0 0 0 3px rgba(253, 164, 175, 0.9), 0 10px 30px rgba(19, 78, 74, 0.25);
+  border: 1px solid rgba(15, 23, 42, 0.08);
 }
 
-/* Wide rings around the harvest orb. */
+/* Wide rings around the lagoon orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(217, 119, 6, 0.5) 0px,
-    rgba(217, 119, 6, 0.5) 2px,
+    rgba(13, 148, 136, 0.5) 0px,
+    rgba(13, 148, 136, 0.5) 2px,
     transparent 2px,
     transparent 14px,
-    rgba(22, 163, 74, 0.55) 14px,
-    rgba(22, 163, 74, 0.55) 16px,
+    rgba(244, 63, 94, 0.55) 14px,
+    rgba(244, 63, 94, 0.55) 16px,
     transparent 16px,
     transparent 30px
   );
@@ -258,7 +259,7 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(22, 163, 74, 0.6) 0deg 3deg,
+    rgba(244, 63, 94, 0.6) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
