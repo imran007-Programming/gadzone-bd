@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Lagoon Market glow drifting over lagoon air.
+// Amber Orchard glow drifting over harvest air.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(13, 148, 136, 0.28)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(6, 182, 212, 0.24)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(15, 118, 110, 0.22)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(217, 119, 6, 0.28)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(22, 163, 74, 0.24)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(245, 158, 11, 0.22)" },
   { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(2, 6, 23, 0.22)" },
 ];
 
-// Lagoon Market bubbles drifting through lagoon air.
+// Amber Orchard leaves drifting through harvest air.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#0d9488" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#06b6d4" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#14b8a6" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#22d3ee" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#67e8f9" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#5eead4" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#cffafe" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#d97706" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#16a34a" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#f59e0b" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#15803d" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#fbbf24" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#86efac" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#fef3c7" },
 ];
 
-// Ember Market glints scattered through the ember air.
+// Amber Orchard glints scattered through the harvest air.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -75,8 +75,8 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* lagoon wash over the icy mint field */}
-      <div className="relative bg-gradient-to-b from-[#cffafe] via-[#f0fdfa] to-[#99f6e4]">
+      {/* harvest wash over the warm cream field */}
+      <div className="relative bg-gradient-to-b from-[#fef3c7] via-[#fffbeb] to-[#fde68a]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#5eead4", "#06b6d4", "#22d3ee", "#14b8a6"];
+              const colors = ["#86efac", "#16a34a", "#15803d", "#f59e0b"];
               return (
                 <span
                   key={i}
