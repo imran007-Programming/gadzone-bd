@@ -1,75 +1,75 @@
 @import "tailwindcss";
 
 @theme {
-  /* Ember Market: a warm market-stall direction —
-     burnt terracotta as the primary accent, marigold
-     amber for highlights, deep espresso for grounded
-     contrast, on warm cream paper. Cards are generous,
-     chunky panels with 1.5rem corners, a thick terracotta
-     bottom edge and a hard offset shadow — the opposite
-     of the previous Harbor Ledger look, its ocean blue /
-     cyan palette, sand paper, tight 0.75rem corners, thin
-     navy border, blue top rule and soft diffused shadows. */
+  /* Frost Grove: a cool forest direction —
+     emerald mint as the primary accent, lime leaf for
+     highlights, deep pine for grounded contrast, on
+     cool mint paper. Cards are slim panels with
+     cut-diagonal corners, a thick mint left edge and
+     a soft diffused shadow — the opposite of the
+     previous Ember Market look, its warm terracotta /
+     marigold palette, cream paper, chunky 1.5rem
+     corners, thick terracotta bottom edge and hard
+     offset shadow. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = terracotta scale */
-  --color-brand-50: #fdf4f1;
-  --color-brand-100: #fbe7e0;
-  --color-brand-200: #f6c9ba;
-  --color-brand-300: #efa28c;
-  --color-brand-400: #e5724f;
-  --color-brand-500: #cf4a24;
-  --color-brand-600: #b93a1a;
-  --color-brand-700: #9c3016;
-  --color-brand-800: #7d2815;
-  --color-brand-900: #5e2013;
-  --color-brand-950: #3a130b;
-  --color-brand: #cf4a24;
-  --color-brand-dark: #b93a1a;
-  --color-brand-deep: #7d2815;
+  /* brand = emerald mint scale */
+  --color-brand-50: #ecfdf5;
+  --color-brand-100: #d1fae5;
+  --color-brand-200: #a7f3d0;
+  --color-brand-300: #6ee7b7;
+  --color-brand-400: #34d399;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-brand-900: #064e3b;
+  --color-brand-950: #022c22;
+  --color-brand: #059669;
+  --color-brand-dark: #047857;
+  --color-brand-deep: #065f46;
 
-  /* gold = marigold amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fff9eb;
-  --color-gold-100: #fff0c6;
-  --color-gold-200: #ffe388;
-  --color-gold-300: #ffd14a;
-  --color-gold-400: #fbbe24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #f59e0b;
-  --color-gold-deep: #b45309;
-  --color-gold-soft: #fff0c6;
+  /* gold = lime leaf scale (name kept for legacy class refs) */
+  --color-gold-50: #f7fee7;
+  --color-gold-100: #ecfccb;
+  --color-gold-200: #d9f99d;
+  --color-gold-300: #bef264;
+  --color-gold-400: #a3e635;
+  --color-gold-500: #84cc16;
+  --color-gold-600: #65a30d;
+  --color-gold-700: #4d7c0f;
+  --color-gold-800: #3f6212;
+  --color-gold-900: #365314;
+  --color-gold-950: #1a2e05;
+  --color-gold: #84cc16;
+  --color-gold-deep: #4d7c0f;
+  --color-gold-soft: #ecfccb;
 
-  /* popblue = deep espresso scale (name kept for legacy class refs) */
-  --color-popblue-50: #faf7f2;
-  --color-popblue-100: #f3ede3;
-  --color-popblue-200: #e3d5c2;
-  --color-popblue-300: #cdb49a;
-  --color-popblue-400: #b08d68;
-  --color-popblue-500: #8d6a48;
-  --color-popblue-600: #6f5136;
-  --color-popblue-700: #57402b;
-  --color-popblue-800: #3d2c1e;
-  --color-popblue-900: #2a1d13;
-  --color-popblue-950: #170e08;
-  --color-popblue: #3d2c1e;
-  --color-popblue-deep: #170e08;
-  --color-popblue-soft: #e3d5c2;
+  /* popblue = deep pine scale (name kept for legacy class refs) */
+  --color-popblue-50: #f2f7f4;
+  --color-popblue-100: #e0ede6;
+  --color-popblue-200: #c2d9cc;
+  --color-popblue-300: #97bca8;
+  --color-popblue-400: #689a80;
+  --color-popblue-500: #487d61;
+  --color-popblue-600: #35634b;
+  --color-popblue-700: #2b503d;
+  --color-popblue-800: #234031;
+  --color-popblue-900: #1d3529;
+  --color-popblue-950: #0e1f17;
+  --color-popblue: #234031;
+  --color-popblue-deep: #0e1f17;
+  --color-popblue-soft: #c2d9cc;
 
-  --color-ink: #2a1d13;
-  --color-paper: #fff8ef;
-  --color-mute: #6f5136;
+  --color-ink: #12261d;
+  --color-paper: #f4fbf7;
+  --color-mute: #35634b;
   --color-card: #ffffff;
-  --color-deep: #7d2815;
+  --color-deep: #065f46;
 }
 
 html { scroll-behavior: smooth; }
 
-/* Keep animations minimal for users who prefer reduced motion. */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -79,173 +79,172 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fff8ef;
+  background-color: #f4fbf7;
   background-image:
-    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(207, 74, 36, 0.14) 0%, rgba(207, 74, 36, 0) 70%),
-    radial-gradient(ellipse 45% 22% at 8% 10%, rgba(245, 158, 11, 0.20) 0%, rgba(245, 158, 11, 0) 70%),
-    linear-gradient(180deg, rgba(251, 231, 224, 0.9) 0%, rgba(255, 240, 198, 0.5) 42%, rgba(255, 248, 239, 0) 78%);
-  color: #2a1d13;
+    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(5, 150, 105, 0.14) 0%, rgba(5, 150, 105, 0) 70%),
+    radial-gradient(ellipse 45% 22% at 8% 10%, rgba(132, 204, 22, 0.20) 0%, rgba(132, 204, 22, 0) 70%),
+    linear-gradient(180deg, rgba(209, 250, 229, 0.9) 0%, rgba(236, 252, 203, 0.5) 42%, rgba(244, 251, 247, 0) 78%);
+  color: #12261d;
 }
-::selection { background: #ffe388; color: #3a130b; }
+::selection { background: #d9f99d; color: #022c22; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #cf4a24, #f59e0b); border-radius: 999px; border: 2px solid #fff8ef; }
-::-webkit-scrollbar-track { background: #fbe7e0; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #059669, #84cc16); border-radius: 999px; border: 2px solid #f4fbf7; }
+::-webkit-scrollbar-track { background: #d1fae5; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Ember Market type: warm, slightly relaxed headlines. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Frost Grove type: cool, crisp headlines. */
+h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Ember Market fall: embers drifting up. */
+/* Frost Grove fall: leaves drifting down. */
 @keyframes signal-rise {
-  0% { transform: translate3d(0, 8vh, 0) scale(0.9) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(0, -8vh, 0) scale(0.9) rotate(0deg); opacity: 0; }
   15% { opacity: 0.85; }
-  50% { transform: translate3d(2vw, -26vh, 0) scale(1.05) rotate(24deg); }
-  100% { transform: translate3d(-2vw, -62vh, 0) scale(1) rotate(-18deg); opacity: 0; }
+  50% { transform: translate3d(2vw, 26vh, 0) scale(1.05) rotate(24deg); }
+  100% { transform: translate3d(-2vw, 62vh, 0) scale(1) rotate(-18deg); opacity: 0; }
 }
 .pop-fall { animation: signal-rise 16s linear infinite; }
 
-/* Ember Market sway: a gentle side-to-side drift. */
+/* Frost Grove sway: a gentle side-to-side drift. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-6px, 0, 0) scale(1); opacity: 0.6; }
   50% { transform: translate3d(6px, 6px, 0) scale(1.02); opacity: 0.95; }
 }
 .pop-drift { animation: signal-drift 10s ease-in-out infinite; }
 
-/* Ember Market bob: a soft little rise. */
+/* Frost Grove bob: a soft little rise. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-5px) scale(1.01); }
 }
 .pop-bob { animation: signal-bob 5s ease-in-out infinite; }
 
-/* Slow turn for the ember dial. */
+/* Slow turn for the grove dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 60s linear infinite; }
 
-/* Ember Market glint: an amber pulse. */
+/* Frost Grove glint: a lime pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.4; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.12); }
 }
 .pop-twinkle { animation: signal-blink 3s ease-in-out infinite; }
 
-/* Ember Market ticker: infinite marquee (leftward drift). */
+/* Frost Grove ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Ember Market bands: terracotta -> amber -> espresso dots. */
+/* Frost Grove bands: mint -> lime -> pine dots. */
 .pop-stripes {
   background-image:
-    radial-gradient(circle, #cf4a24 3px, transparent 3.5px),
-    radial-gradient(circle, #f59e0b 3px, transparent 3.5px);
+    radial-gradient(circle, #059669 3px, transparent 3.5px),
+    radial-gradient(circle, #84cc16 3px, transparent 3.5px);
   background-size: 28px 12px;
   background-position: 0 0, 14px 6px;
   border-radius: 999px;
 }
 
-/* Ember Market card: a chunky panel with generous
-   corners, a thick terracotta bottom edge and a hard
-   offset shadow — it lifts and its shadow deepens
-   on hover, with the edge turning marigold. */
+/* Frost Grove card: a slim panel with cut-diagonal
+   corners, a thick mint left edge and a soft diffused
+   shadow — it lifts gently on hover, with the edge
+   turning lime. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(42, 29, 19, 0.16);
-  border-bottom: 4px solid #cf4a24;
+  border: 1px solid rgba(18, 38, 29, 0.12);
+  border-left: 4px solid #059669;
   background: #ffffff;
-  border-radius: 1.5rem;
-  box-shadow: 6px 6px 0 rgba(42, 29, 19, 0.12);
+  border-radius: 1.25rem 0.25rem 1.25rem 0.25rem;
+  box-shadow: 0 14px 30px -16px rgba(18, 38, 29, 0.25);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
   transform: translateY(-3px);
-  border-bottom-color: #f59e0b;
-  box-shadow: 8px 10px 0 rgba(42, 29, 19, 0.16);
+  border-left-color: #84cc16;
+  box-shadow: 0 20px 38px -16px rgba(18, 38, 29, 0.32);
 }
 
-/* Ember Market glass: shared by modals and drawers — a
-   frosted cream pane with a warm espresso edge and a
-   thick terracotta bottom edge. */
+/* Frost Grove glass: shared by modals and drawers — a
+   frosted mint pane with a pine edge and a thick mint
+   left edge. */
 .pop-glass {
-  background: rgba(255, 248, 239, 0.94);
+  background: rgba(244, 251, 247, 0.94);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(42, 29, 19, 0.18);
-  border-bottom: 4px solid #cf4a24;
-  border-radius: 1.5rem;
-  box-shadow: 6px 6px 0 rgba(42, 29, 19, 0.12);
+  border: 1px solid rgba(18, 38, 29, 0.14);
+  border-left: 4px solid #059669;
+  border-radius: 1.25rem 0.25rem 1.25rem 0.25rem;
+  box-shadow: 0 14px 30px -16px rgba(18, 38, 29, 0.25);
 }
 
-/* Ember Market tag: a tilted marigold badge — deep
-   espresso type, chunky corners, hard offset shadow. */
+/* Frost Grove tag: a round lime badge — deep pine
+   type, cut corners, soft shadow. */
 .starburst {
-  background: #ffd14a;
-  color: #2a1d13;
+  background: #bef264;
+  color: #12261d;
   text-shadow: none;
-  border-radius: 1rem;
-  transform: rotate(-8deg);
-  box-shadow: 3px 3px 0 rgba(42, 29, 19, 0.25);
+  border-radius: 1.25rem 0.25rem 1.25rem 0.25rem;
+  transform: rotate(0deg);
+  box-shadow: 0 10px 20px -10px rgba(18, 38, 29, 0.35);
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Ember Market texture: a terracotta dot grid. */
+/* Frost Grove texture: a mint dot grid. */
 .halftone {
-  background-image: radial-gradient(rgba(207, 74, 36, 0.18) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(rgba(5, 150, 105, 0.18) 1.5px, transparent 1.5px);
   background-size: 18px 18px;
   background-position: 0 0;
 }
 
-/* Ember Market rule: a terracotta-to-amber-to-espresso bar. */
+/* Frost Grove rule: a mint-to-lime-to-pine bar. */
 .zigzag {
   height: 8px;
   border-top: none;
-  background: linear-gradient(90deg, #cf4a24 0%, #f59e0b 55%, #2a1d13 100%);
+  background: linear-gradient(90deg, #059669 0%, #84cc16 55%, #12261d 100%);
   opacity: 1;
   border-radius: 999px;
 }
 
-/* Ember Market band: an espresso / terracotta / amber
-   gradient wash with a hard offset shadow and rounded
-   bottom corners. */
+/* Frost Grove band: a pine / mint / lime gradient
+   wash with a soft shadow and rounded bottom corners. */
 .bazaar-awning {
-  background: linear-gradient(115deg, #2a1d13 0%, #cf4a24 55%, #f59e0b 100%);
+  background: linear-gradient(115deg, #12261d 0%, #059669 55%, #84cc16 100%);
   opacity: 1;
-  box-shadow: 0 6px 0 rgba(42, 29, 19, 0.12);
-  border-bottom: 1px solid rgba(42, 29, 19, 0.15);
+  box-shadow: 0 10px 24px -12px rgba(18, 38, 29, 0.3);
+  border-bottom: 1px solid rgba(18, 38, 29, 0.12);
   border-radius: 0 0 1rem 1rem;
 }
 
-/* Ember Market glow: a terracotta halo for the core. */
+/* Frost Grove glow: a mint halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 240, 198, 0.7) 42%, rgba(207, 74, 36, 0.30) 62%, rgba(207, 74, 36, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(236, 252, 203, 0.7) 42%, rgba(5, 150, 105, 0.30) 62%, rgba(5, 150, 105, 0) 76%);
 }
 
-/* Ember Market core: a glowing ember orb with a
-   bright marigold ring. */
+/* Frost Grove core: a glowing mint orb with a
+   bright lime ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #ffe388 0%, #cf4a24 55%, #2a1d13 100%);
-  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.9), 0 20px 40px -16px rgba(42, 29, 19, 0.4);
-  border: 1px solid rgba(42, 29, 19, 0.15);
+    radial-gradient(circle at 35% 30%, #d9f99d 0%, #059669 55%, #12261d 100%);
+  box-shadow: 0 0 0 3px rgba(132, 204, 22, 0.9), 0 20px 40px -16px rgba(18, 38, 29, 0.4);
+  border: 1px solid rgba(18, 38, 29, 0.12);
 }
 
-/* Tight rings around the ember orb. */
+/* Tight rings around the grove orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(207, 74, 36, 0.5) 0px,
-    rgba(207, 74, 36, 0.5) 2px,
+    rgba(5, 150, 105, 0.5) 0px,
+    rgba(5, 150, 105, 0.5) 2px,
     transparent 2px,
     transparent 14px,
-    rgba(245, 158, 11, 0.55) 14px,
-    rgba(245, 158, 11, 0.55) 16px,
+    rgba(132, 204, 22, 0.55) 14px,
+    rgba(132, 204, 22, 0.55) 16px,
     transparent 16px,
     transparent 30px
   );
@@ -256,7 +255,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(245, 158, 11, 0.6) 0deg 3deg,
+    rgba(132, 204, 22, 0.6) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
