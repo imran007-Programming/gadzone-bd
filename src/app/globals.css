@@ -1,70 +1,69 @@
 @import "tailwindcss";
 
 @theme {
-  /* Verdant Market: a fresh, leafy market direction —
-     deep emerald as the primary accent, warm
-     terracotta for bright highlights, soft stone for
-     contrast, warm cream paper, espresso ink. Cards
-     are fully rounded, softly shadowed panels with a
-     terracotta BOTTOM bar — the opposite of the
-     previous Harbor Night look, its indigo / amber
-     palette, cool mist paper, angular corners, amber
-     TOP rule and hard indigo offset shadow. */
+  /* Violet Dusk: a twilight gadget direction —
+     deep violet as the primary accent, vivid fuchsia
+     for bright highlights, indigo for depth, lavender
+     paper, plum ink. Cards are crisp panels with a
+     violet LEFT bar — the opposite of the previous
+     Verdant Market look, its emerald / terracotta
+     palette, warm cream paper, fully rounded corners,
+     terracotta BOTTOM bar and soft diffused shadow. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = emerald scale */
-  --color-brand-50: #ecfdf5;
-  --color-brand-100: #d1fae5;
-  --color-brand-200: #a7f3d0;
-  --color-brand-300: #6ee7b7;
-  --color-brand-400: #34d399;
-  --color-brand-500: #10b981;
-  --color-brand-600: #059669;
-  --color-brand-700: #047857;
-  --color-brand-800: #065f46;
-  --color-brand-900: #064e3b;
-  --color-brand-950: #022c22;
-  --color-brand: #047857;
-  --color-brand-dark: #065f46;
-  --color-brand-deep: #064e3b;
+  /* brand = violet scale */
+  --color-brand-50: #f5f3ff;
+  --color-brand-100: #ede9fe;
+  --color-brand-200: #ddd6fe;
+  --color-brand-300: #c4b5fd;
+  --color-brand-400: #a78bfa;
+  --color-brand-500: #8b5cf6;
+  --color-brand-600: #7c3aed;
+  --color-brand-700: #6d28d9;
+  --color-brand-800: #5b21b6;
+  --color-brand-900: #4c1d95;
+  --color-brand-950: #2e1065;
+  --color-brand: #6d28d9;
+  --color-brand-dark: #5b21b6;
+  --color-brand-deep: #4c1d95;
 
-  /* gold = terracotta scale (name kept for legacy class refs) */
-  --color-gold-50: #fff7ed;
-  --color-gold-100: #ffedd5;
-  --color-gold-200: #fed7aa;
-  --color-gold-300: #fdba74;
-  --color-gold-400: #fb923c;
-  --color-gold-500: #f97316;
-  --color-gold-600: #ea580c;
-  --color-gold-700: #c2410c;
-  --color-gold-800: #9a3412;
-  --color-gold-900: #7c2d12;
-  --color-gold-950: #431407;
-  --color-gold: #f97316;
-  --color-gold-deep: #c2410c;
-  --color-gold-soft: #ffedd5;
+  /* gold = fuchsia scale (name kept for legacy class refs) */
+  --color-gold-50: #fdf4ff;
+  --color-gold-100: #fae8ff;
+  --color-gold-200: #f5d0fe;
+  --color-gold-300: #f0abfc;
+  --color-gold-400: #e879f9;
+  --color-gold-500: #d946ef;
+  --color-gold-600: #c026d3;
+  --color-gold-700: #a21caf;
+  --color-gold-800: #86198f;
+  --color-gold-900: #701a75;
+  --color-gold-950: #4a044e;
+  --color-gold: #d946ef;
+  --color-gold-deep: #a21caf;
+  --color-gold-soft: #fae8ff;
 
-  /* popblue = warm stone scale (name kept for legacy class refs) */
-  --color-popblue-50: #fafaf9;
-  --color-popblue-100: #f5f5f4;
-  --color-popblue-200: #e7e5e4;
-  --color-popblue-300: #d6d3d1;
-  --color-popblue-400: #a8a29e;
-  --color-popblue-500: #78716c;
-  --color-popblue-600: #57534e;
-  --color-popblue-700: #44403c;
-  --color-popblue-800: #292524;
-  --color-popblue-900: #1c1917;
-  --color-popblue-950: #0c0a09;
-  --color-popblue: #44403c;
-  --color-popblue-deep: #0c0a09;
-  --color-popblue-soft: #d6d3d1;
+  /* popblue = indigo scale (name kept for legacy class refs) */
+  --color-popblue-50: #eef2ff;
+  --color-popblue-100: #e0e7ff;
+  --color-popblue-200: #c7d2fe;
+  --color-popblue-300: #a5b4fc;
+  --color-popblue-400: #818cf8;
+  --color-popblue-500: #6366f1;
+  --color-popblue-600: #4f46e5;
+  --color-popblue-700: #4338ca;
+  --color-popblue-800: #3730a3;
+  --color-popblue-900: #312e81;
+  --color-popblue-950: #1e1b4b;
+  --color-popblue: #4338ca;
+  --color-popblue-deep: #1e1b4b;
+  --color-popblue-soft: #a5b4fc;
 
-  --color-ink: #1c1917;
-  --color-paper: #faf6ef;
-  --color-mute: #78716c;
+  --color-ink: #241a33;
+  --color-paper: #f8f7ff;
+  --color-mute: #6b6480;
   --color-card: #ffffff;
-  --color-deep: #064e3b;
+  --color-deep: #4c1d95;
 }
 
 html { scroll-behavior: smooth; }
@@ -78,175 +77,173 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #faf6ef;
+  background-color: #f8f7ff;
   background-image:
-    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(4, 120, 87, 0.12) 0%, rgba(4, 120, 87, 0) 70%),
-    radial-gradient(ellipse 45% 22% at 8% 10%, rgba(249, 115, 22, 0.16) 0%, rgba(249, 115, 22, 0) 70%),
-    linear-gradient(180deg, rgba(209, 250, 229, 0.9) 0%, rgba(255, 237, 213, 0.5) 42%, rgba(250, 246, 239, 0) 78%);
-  color: #1c1917;
+    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(124, 58, 237, 0.14) 0%, rgba(124, 58, 237, 0) 70%),
+    radial-gradient(ellipse 45% 22% at 8% 10%, rgba(217, 70, 239, 0.18) 0%, rgba(217, 70, 239, 0) 70%),
+    linear-gradient(180deg, rgba(237, 233, 254, 0.9) 0%, rgba(250, 232, 255, 0.5) 42%, rgba(248, 247, 255, 0) 78%);
+  color: #241a33;
 }
-::selection { background: #fdba74; color: #431407; }
+::selection { background: #f0abfc; color: #4a044e; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #047857, #f97316); border-radius: 999px; border: 2px solid #faf6ef; }
-::-webkit-scrollbar-track { background: #d1fae5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #7c3aed, #d946ef); border-radius: 999px; border: 2px solid #f8f7ff; }
+::-webkit-scrollbar-track { background: #ede9fe; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Verdant Market type: soft, rounded headlines. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Violet Dusk type: tight, crisp headlines. */
+h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Verdant Market rise: leaves drifting upward. */
-@keyframes signal-rise {
-  0% { transform: translate3d(0, 6vh, 0) scale(0.95) rotate(0deg); opacity: 0; }
+/* Violet Dusk fall: petals drifting downward at dusk. */
+@keyframes signal-fall {
+  0% { transform: translate3d(0, -4vh, 0) scale(0.95) rotate(0deg); opacity: 0; }
   15% { opacity: 0.85; }
-  50% { transform: translate3d(2vw, -30vh, 0) scale(1.05) rotate(20deg); }
-  100% { transform: translate3d(-2vw, -62vh, 0) scale(1) rotate(-16deg); opacity: 0; }
+  50% { transform: translate3d(2vw, 30vh, 0) scale(1.05) rotate(80deg); }
+  100% { transform: translate3d(-2vw, 62vh, 0) scale(1) rotate(160deg); opacity: 0; }
 }
-.pop-fall { animation: signal-rise 20s linear infinite; }
+.pop-fall { animation: signal-fall 20s linear infinite; }
 
-/* Verdant Market sway: a slow side-to-side drift. */
+/* Violet Dusk sway: a slow side-to-side drift. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(-8px, 4px, 0) scale(1); opacity: 0.6; }
-  50% { transform: translate3d(8px, -4px, 0) scale(1.03); opacity: 0.95; }
+  0%, 100% { transform: translate3d(-12px, 6px, 0) scale(1); opacity: 0.6; }
+  50% { transform: translate3d(12px, -6px, 0) scale(1.03); opacity: 0.95; }
 }
 .pop-drift { animation: signal-drift 13s ease-in-out infinite; }
 
-/* Verdant Market bob: a soft little rise. */
+/* Violet Dusk bob: a soft little rise. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-6px) scale(1.02); }
+  50% { transform: translateY(-8px) scale(1.03); }
 }
 .pop-bob { animation: signal-bob 6s ease-in-out infinite; }
 
-/* Slow turn for the market dial. */
+/* Slow turn for the dusk dial. */
 @keyframes dial-turn {
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 80s linear infinite; }
 
-/* Verdant Market glint: a terracotta pulse. */
+/* Violet Dusk glint: a fuchsia pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.4; transform: scale(0.9); }
-  50% { opacity: 1; transform: scale(1.15); }
+  50% { opacity: 1; transform: scale(1.2); }
 }
 .pop-twinkle { animation: signal-blink 3.5s ease-in-out infinite; }
 
-/* Verdant Market ticker: infinite marquee (leftward drift). */
+/* Violet Dusk ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
-.pop-ticker { animation: signal-ticker 34s linear infinite; }
+.pop-ticker { animation: signal-ticker 28s linear infinite; }
 
-/* Verdant Market bands: emerald -> terracotta diagonal stripes. */
+/* Violet Dusk bands: violet -> fuchsia diagonal stripes. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(-45deg, #047857 0px, #047857 8px, #f97316 8px, #f97316 16px);
-  background-size: 100% 6px;
+    repeating-linear-gradient(45deg, #7c3aed 0px, #7c3aed 8px, #d946ef 8px, #d946ef 16px);
+  background-size: 100% 4px;
   background-repeat: repeat-x;
   border-radius: 999px;
 }
 
-/* Verdant Market card: a fully rounded panel with a
-   terracotta BOTTOM bar and a soft diffused emerald
-   shadow — it lifts gently on hover, the shadow
-   deepening and the border turning emerald. */
+/* Violet Dusk card: a crisp panel with a violet LEFT
+   bar and a tighter violet shadow — it lifts higher
+   on hover, the bar turning fuchsia. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(28, 25, 23, 0.1);
-  border-bottom: 4px solid #f97316;
+  border: 1px solid rgba(36, 26, 51, 0.1);
+  border-left: 4px solid #7c3aed;
   background: #ffffff;
-  border-radius: 1.5rem;
-  box-shadow: 0 20px 40px -20px rgba(6, 78, 59, 0.35);
+  border-radius: 1rem;
+  box-shadow: 0 14px 28px -16px rgba(76, 29, 149, 0.4);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  border-bottom-color: #047857;
-  box-shadow: 0 28px 48px -20px rgba(6, 78, 59, 0.45);
+  transform: translateY(-6px);
+  border-left-color: #d946ef;
+  box-shadow: 0 22px 36px -16px rgba(76, 29, 149, 0.5);
 }
 
-/* Verdant Market glass: shared by modals and drawers — a
-   frosted cream pane with a stone edge and a thick
-   emerald LEFT rule. */
+/* Violet Dusk glass: shared by modals and drawers — a
+   frosted lavender pane with a plum edge and a thick
+   violet TOP rule. */
 .pop-glass {
-  background: rgba(250, 246, 239, 0.94);
+  background: rgba(248, 247, 255, 0.94);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(28, 25, 23, 0.12);
-  border-left: 5px solid #047857;
-  border-radius: 1.25rem;
-  box-shadow: 0 24px 48px -24px rgba(6, 78, 59, 0.4);
+  border: 1px solid rgba(36, 26, 51, 0.12);
+  border-top: 5px solid #7c3aed;
+  border-radius: 1rem;
+  box-shadow: 0 24px 48px -24px rgba(76, 29, 149, 0.45);
 }
 
-/* Verdant Market tag: a soft terracotta pill badge —
-   cream type, diffused shadow. */
+/* Violet Dusk tag: a fuchsia-to-violet gradient pill —
+   white type, tilted the other way, diffused shadow. */
 .starburst {
-  background: #ea580c;
-  color: #fff7ed;
+  background: linear-gradient(135deg, #d946ef, #7c3aed);
+  color: #ffffff;
   text-shadow: none;
   border-radius: 999px;
-  transform: rotate(-6deg);
-  box-shadow: 0 14px 28px -12px rgba(194, 65, 12, 0.7);
+  transform: rotate(4deg);
+  box-shadow: 0 14px 28px -12px rgba(162, 28, 175, 0.7);
   border: 2px solid rgba(255, 255, 255, 0.8);
 }
 
-/* Verdant Market texture: an emerald dot field. */
+/* Violet Dusk texture: a violet dot field. */
 .halftone {
   background-image: radial-gradient(
-    rgba(4, 120, 87, 0.14) 1.5px,
+    rgba(124, 58, 237, 0.16) 1.5px,
     transparent 1.5px
   );
-  background-size: 28px 28px;
+  background-size: 22px 22px;
   background-position: 0 0;
 }
 
-/* Verdant Market rule: an emerald-to-terracotta-to-stone bar. */
+/* Violet Dusk rule: a violet-to-fuchsia-to-indigo bar. */
 .zigzag {
-  height: 8px;
+  height: 6px;
   border-top: none;
-  background: linear-gradient(90deg, #047857 0%, #f97316 55%, #1c1917 100%);
+  background: linear-gradient(90deg, #7c3aed 0%, #d946ef 55%, #312e81 100%);
   opacity: 1;
   border-radius: 999px;
 }
 
-/* Verdant Market band: a stone / emerald / terracotta
-   diagonal wash with a soft shadow and rounded
-   bottom corners. */
+/* Violet Dusk band: an indigo / violet / fuchsia
+   diagonal wash with a soft shadow. */
 .bazaar-awning {
-  background: linear-gradient(115deg, #0c0a09 0%, #047857 55%, #f97316 100%);
+  background: linear-gradient(115deg, #1e1b4b 0%, #7c3aed 55%, #d946ef 100%);
   opacity: 1;
-  box-shadow: 0 16px 32px -20px rgba(6, 78, 59, 0.45);
-  border-bottom: 1px solid rgba(28, 25, 23, 0.12);
-  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 16px 32px -20px rgba(76, 29, 149, 0.5);
+  border-bottom: 1px solid rgba(36, 26, 51, 0.12);
+  border-radius: 0;
 }
 
-/* Verdant Market glow: an emerald halo for the core. */
+/* Violet Dusk glow: a violet halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 237, 213, 0.7) 42%, rgba(4, 120, 87, 0.28) 62%, rgba(4, 120, 87, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(250, 232, 255, 0.7) 42%, rgba(124, 58, 237, 0.28) 62%, rgba(124, 58, 237, 0) 76%);
 }
 
-/* Verdant Market core: a glowing market orb with a
-   soft terracotta ring. */
+/* Violet Dusk core: a glowing dusk orb with a
+   soft fuchsia ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fdba74 0%, #047857 55%, #0c0a09 100%);
-  box-shadow: 0 0 0 3px rgba(251, 146, 60, 0.9), 0 20px 40px -16px rgba(6, 78, 59, 0.5);
-  border: 1px solid rgba(28, 25, 23, 0.12);
+    radial-gradient(circle at 35% 30%, #f0abfc 0%, #7c3aed 55%, #1e1b4b 100%);
+  box-shadow: 0 0 0 3px rgba(232, 121, 249, 0.9), 0 20px 40px -16px rgba(76, 29, 149, 0.5);
+  border: 1px solid rgba(36, 26, 51, 0.12);
 }
 
-/* Tight rings around the market orb. */
+/* Tight rings around the dusk orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(4, 120, 87, 0.5) 0px,
-    rgba(4, 120, 87, 0.5) 2px,
+    rgba(124, 58, 237, 0.5) 0px,
+    rgba(124, 58, 237, 0.5) 2px,
     transparent 2px,
     transparent 14px,
-    rgba(249, 115, 22, 0.55) 14px,
-    rgba(249, 115, 22, 0.55) 16px,
+    rgba(217, 70, 239, 0.55) 14px,
+    rgba(217, 70, 239, 0.55) 16px,
     transparent 16px,
     transparent 30px
   );
@@ -257,7 +254,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(249, 115, 22, 0.6) 0deg 3deg,
+    rgba(217, 70, 239, 0.6) 0deg 3deg,
     transparent 3deg 14deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);

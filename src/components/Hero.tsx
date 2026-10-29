@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Verdant Market glow drifting over market air.
+// Violet Dusk glow drifting over dusk air.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(5, 150, 105, 0.28)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(249, 115, 22, 0.24)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(6, 95, 70, 0.22)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(28, 25, 23, 0.22)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(124, 58, 237, 0.28)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(217, 70, 239, 0.24)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(91, 33, 182, 0.22)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(30, 27, 75, 0.22)" },
 ];
 
-// Verdant Market leaves drifting through market air.
+// Violet Dusk leaves drifting through dusk air.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#059669" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f97316" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#047857" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#10b981" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#fb923c" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#292524" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#d1fae5" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#7c3aed" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#d946ef" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#6d28d9" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#8b5cf6" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#e879f9" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#312e81" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#ede9fe" },
 ];
 
-// Verdant Market glints scattered through the market air.
+// Violet Dusk glints scattered through the dusk air.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -75,19 +75,19 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* emerald wash over the cream field */}
-      <div className="relative bg-gradient-to-b from-[#d1fae5] via-[#faf6ef] to-[#fdba74]">
+      {/* violet wash over the lavender field */}
+      <div className="relative bg-gradient-to-b from-[#ede9fe] via-[#f8f7ff] to-[#f0abfc]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
 
-        {/* warm grid wash sweeping the sheet */}
+        {/* cool grid wash sweeping the sheet */}
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-0 hidden h-[560px] opacity-90 sm:block">
           <div className="pop-drift absolute -left-24 top-6 h-72 w-[52rem] rotate-[-8deg] rounded-full bg-gradient-to-r from-brand-400/35 via-gold-300/25 to-transparent blur-3xl" />
           <div className="pop-drift absolute -right-24 top-40 h-64 w-[44rem] rotate-[10deg] rounded-full bg-gradient-to-r from-transparent via-brand-300/25 to-gold-400/30 blur-3xl" style={{ animationDelay: "-12s" }} />
         </div>
 
-        {/* market core: a market orb ringed by a slow-spinning dial */}
+        {/* dusk core: a dusk orb ringed by a slow-spinning dial */}
         <div aria-hidden className="pointer-events-none absolute -right-40 -top-32 z-0 hidden opacity-90 sm:block">
           <div className="relative h-[600px] w-[600px]">
             <div className="nebula-core absolute inset-8 rounded-full blur-xl" />
@@ -100,12 +100,12 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(5,150,105, 0.45), inset 0 0 18px rgba(249,115,22, 0.30)",
+                  boxShadow: "0 0 28px 2px rgba(124,58,237, 0.45), inset 0 0 18px rgba(217,70,239, 0.30)",
                   opacity: 1 - r * 0.22,
                 }}
               />
             ))}
-            {/* the market heart: a layered warm disc */}
+            {/* the dusk heart: a layered warm disc */}
             <div className="sun-disc pop-spin absolute inset-44 rounded-full" style={{ animationDuration: "60s" }} />
             {/* circuit glints */}
             <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
@@ -113,7 +113,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 <span key={i} className="absolute rounded-full bg-white/80" style={{ left: glint.l, top: glint.t, width: glint.s, height: glint.s }} />
               ))}
             </div>
-            {/* sweeping market beams */}
+            {/* sweeping dusk beams */}
             {[0, 1, 2].map((b) => (
               <span
                 key={b}
@@ -121,11 +121,11 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{ width: 26, height: 240, transform: `translate(-50%, -100%) rotate(${b * 120}deg)`, animationDuration: "36s" }}
               />
             ))}
-            {/* market sparks dancing around the green orb */}
+            {/* dusk sparks dancing around the green orb */}
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#34d399", "#f97316", "#fdba74", "#10b981"];
+              const colors = ["#a78bfa", "#d946ef", "#f0abfc", "#8b5cf6"];
               return (
                 <span
                   key={i}
@@ -143,7 +143,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* drifting market glow */}
+        {/* drifting dusk glow */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {ORBS.map((g, i) => (
             <div
@@ -154,7 +154,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* terracotta glints */}
+        {/* fuchsia glints */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {STARS.map((s, i) => (
             <span
@@ -165,14 +165,14 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* rising market leaf spray */}
+        {/* rising dusk petal fall */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden overflow-hidden sm:block">
           {FLAKES.map((r, i) => (
             <Flake key={i} {...r} />
           ))}
         </div>
 
-        {/* 4-banner carousel in a rounded market frame */}
+        {/* 4-banner carousel in a rounded dusk frame */}
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2.5">
@@ -185,12 +185,12 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* market ticker: deep forest band with cream type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/60 bg-gradient-to-r from-popblue-950/95 via-brand-800/95 to-brand-600/95 py-3 shadow-[0_14px_30px_-14px_rgba(28,25,23, 0.5)] backdrop-blur">
+        {/* dusk ticker: deep indigo band with white type */}
+        <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/60 bg-gradient-to-r from-popblue-950/95 via-brand-800/95 to-brand-600/95 py-3 shadow-[0_14px_30px_-14px_rgba(36,26,51, 0.5)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
-                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-white drop-shadow-[0_1px_0_rgba(28,25,23, 0.6)]">
+                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-white drop-shadow-[0_1px_0_rgba(36,26,51, 0.6)]">
                   {t} <span className="text-white/70">✦</span>
                 </span>
               ))}
@@ -198,11 +198,11 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* market divider into the page */}
+        {/* dusk divider into the page */}
         <div aria-hidden className="zigzag relative z-10 mx-auto mt-0 w-full max-w-7xl opacity-90" />
       </div>
 
-      {/* Stats + featured picks under the market orb */}
+      {/* Stats + featured picks under the dusk orb */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 pb-24 pt-10 md:pb-28">
         <motion.div variants={container} initial="hidden" animate="show" {...anim}>
           <motion.div variants={item} className="grid grid-cols-2 gap-6 sm:grid-cols-4">
@@ -215,7 +215,7 @@ export default function Hero({ onQuickView }: HeroProps) {
               <div key={s.l} className="pop-lift relative overflow-hidden p-4 pb-3 pt-5 text-center">
                 <span className="relative block bg-gradient-to-br from-brand-600 via-gold-500 to-popblue-700 bg-clip-text text-2xl font-black tracking-tight text-transparent">{s.v}</span>
                 <span className="relative mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-mute">{s.l}</span>
-                <span aria-hidden className="relative mx-auto mt-3 block h-1 w-16 rounded-sm bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 shadow-[0_2px_6px_rgba(5,150,105,0.4)]" />
+                <span aria-hidden className="relative mx-auto mt-3 block h-1 w-16 rounded-sm bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 shadow-[0_2px_6px_rgba(124,58,237,0.4)]" />
               </div>
             ))}
           </motion.div>
@@ -223,7 +223,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-sm border border-brand-300/60 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_8px_24px_-8px_rgba(5,150,105,0.35)] backdrop-blur">Handpicked for you</p>
+            <p className="inline-block rounded-sm border border-brand-300/60 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_8px_24px_-8px_rgba(124,58,237,0.35)] backdrop-blur">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="relative bg-gradient-to-r from-brand-500 via-gold-500 to-popblue-800 bg-clip-text text-transparent">Picks<span aria-hidden className="absolute inset-x-0 -bottom-1 h-1 bg-gradient-to-r from-brand-500 to-gold-500 opacity-70" /></span></h2>
             <span className="zigzag mt-4 block w-44" aria-hidden />
           </div>
@@ -253,7 +253,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* market divider into the page */}
+      {/* dusk divider into the page */}
       <div aria-hidden className="zigzag absolute bottom-0 left-0 w-full opacity-90" />
     </section>
   );
