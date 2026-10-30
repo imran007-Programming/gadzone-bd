@@ -22,10 +22,10 @@ const item: Variants = {
 
 // Violet Velvet glow drifting over blush-lavender.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(124, 58, 237, 0.28)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(236, 72, 153, 0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(109, 40, 217, 0.22)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(34, 26, 46, 0.22)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(5, 150, 105, 0.28)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(132, 204, 22, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(4, 120, 87, 0.22)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(2, 44, 34, 0.22)" },
 ];
 
 // Mango Grove leaves drifting down through still orchard air.
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* velvet wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#bbf7d0] via-[#fffbeb] to-[#ffedd5]">
+      <div className="relative bg-gradient-to-b from-[#d1fae5] via-[#f7fee7] to-[#f2fbf5]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -100,7 +100,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(76,29,149, 0.45), inset 0 0 18px rgba(249,168,212, 0.30)",
+                  boxShadow: "0 0 28px 2px rgba(6,78,59, 0.45), inset 0 0 18px rgba(190,242,100, 0.30)",
                   opacity: 1 - r * 0.22,
                 }}
               />
@@ -176,8 +176,8 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2.5">
-              <div className="rounded-[1.5rem] bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 p-1 shadow-[0_24px_48px_-24px_rgba(76,29,149,0.45)]">
-                <div className="overflow-hidden rounded-2xl bg-paper ring-1 ring-ink/20">
+              <div className="rounded-lg bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 p-1 shadow-[0_24px_48px_-24px_rgba(6,78,59,0.45)]">
+                <div className="overflow-hidden rounded-md bg-paper ring-1 ring-ink/20">
                   <BannerCarousel />
                 </div>
               </div>
@@ -186,11 +186,11 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
 
         {/* velvet ticker: plum band with white type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/60 bg-gradient-to-r from-popblue-950/95 via-brand-800/95 to-brand-600/95 py-3 shadow-[0_14px_30px_-14px_rgba(46,16,101, 0.5)] backdrop-blur">
+        <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/60 bg-gradient-to-r from-popblue-950/95 via-brand-800/95 to-brand-600/95 py-3 shadow-[0_14px_30px_-14px_rgba(2,44,34, 0.5)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
-                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-white drop-shadow-[0_1px_0_rgba(46,16,101, 0.6)]">
+                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-white drop-shadow-[0_1px_0_rgba(2,44,34, 0.6)]">
                   {t} <span className="text-white/70">✦</span>
                 </span>
               ))}
@@ -223,7 +223,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full border border-brand-300/60 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_8px_24px_-8px_rgba(76,29,149,0.35)] backdrop-blur">Handpicked for you</p>
+            <p className="inline-block rounded-full border border-brand-300/60 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_8px_24px_-8px_rgba(6,78,59,0.35)] backdrop-blur">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="relative bg-gradient-to-r from-brand-500 via-gold-500 to-popblue-800 bg-clip-text text-transparent">Picks<span aria-hidden className="absolute inset-x-0 -bottom-1 h-1 bg-gradient-to-r from-brand-500 to-gold-500 opacity-70" /></span></h2>
             <span className="zigzag mt-4 block w-44" aria-hidden />
           </div>
@@ -239,7 +239,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 onClick={() => onQuickView(p)}
               >
                 <div className="relative">
-                  <div className="overflow-hidden border-b-4 border-gold-300 rounded-t-[1.5rem]">
+                  <div className="overflow-hidden border-b-4 border-gold-300 rounded-t-md">
                     <ProductImage product={p} />
                   </div>
                   <span className="starburst absolute -right-1 -top-1 flex h-16 w-16 items-center justify-center p-4 text-center text-[11px] font-black leading-tight">-{discountPct(p)}%</span>
