@@ -115,7 +115,7 @@ export default function BannerCarousel() {
       aria-roledescription="carousel"
       aria-label="Featured offers"
     >
-      <div className="relative overflow-hidden rounded-md border-2 border-brand-400/40 shadow-[0_24px_70px_-18px_rgba(15,23,42, 0.45)] ring-1 ring-brand-400/25">
+      <div className="relative overflow-hidden rounded-[1.25rem] border-2 border-brand-400/40 shadow-[0_24px_70px_-18px_rgba(42,29,58, 0.45)] ring-1 ring-brand-400/25">
         <AnimatePresence initial={false} custom={direction} mode="wait">
           <motion.div
             key={slide.id}
