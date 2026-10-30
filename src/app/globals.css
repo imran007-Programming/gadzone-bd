@@ -1,71 +1,71 @@
 @import "tailwindcss";
 
 @theme {
-  /* Fern Grove: a fresh, leafy original direction —
-     deep emerald as the primary accent, vivid lime
-     for highlights, forest green for contrast, warm
-     ivory paper, white cards. Cards are generous
-     1.5rem panels with a gradient TOP accent bar
-     and a soft diffused shadow — the opposite of
-     the previous Velvet Plum look, its violet /
-     fuchsia palette, lilac paper, compact 0.75rem
-     panels, gradient LEFT accent bar and crisp
-     ring shadow. */
+  /* Copperline: a warm, workshop-original direction —
+     burnt copper as the primary accent, amber for
+     highlights, deep slate for contrast, warm sand
+     paper, white cards. Cards are compact 0.75rem
+     panels with a thick 2px border, a hard offset
+     shadow and a gradient BOTTOM accent bar — the
+     opposite of the previous Fern Grove look, its
+     emerald / lime palette, ivory paper, generous
+     1.5rem panels, soft diffused shadow and
+     gradient TOP accent bar. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = deep emerald scale */
-  --color-brand-50: #ecfdf5;
-  --color-brand-100: #d1fae5;
-  --color-brand-200: #a7f3d0;
-  --color-brand-300: #6ee7b7;
-  --color-brand-400: #34d399;
-  --color-brand-500: #10b981;
-  --color-brand-600: #059669;
-  --color-brand-700: #047857;
-  --color-brand-800: #065f46;
-  --color-brand-900: #064e3b;
-  --color-brand-950: #022c22;
-  --color-brand: #047857;
-  --color-brand-dark: #065f46;
-  --color-brand-deep: #064e3b;
+  /* brand = burnt copper scale */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-brand-950: #431407;
+  --color-brand: #c2410c;
+  --color-brand-dark: #9a3412;
+  --color-brand-deep: #7c2d12;
 
-  /* gold = vivid lime scale (name kept for legacy class refs) */
-  --color-gold-50: #f7fee7;
-  --color-gold-100: #ecfccb;
-  --color-gold-200: #d9f99d;
-  --color-gold-300: #bef264;
-  --color-gold-400: #a3e635;
-  --color-gold-500: #84cc16;
-  --color-gold-600: #65a30d;
-  --color-gold-700: #4d7c0f;
-  --color-gold-800: #3f6212;
-  --color-gold-900: #365314;
-  --color-gold-950: #1a2e05;
-  --color-gold: #84cc16;
-  --color-gold-deep: #4d7c0f;
-  --color-gold-soft: #ecfccb;
+  /* gold = warm amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #b45309;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = forest green scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0fdf4;
-  --color-popblue-100: #dcfce7;
-  --color-popblue-200: #bbf7d0;
-  --color-popblue-300: #86efac;
-  --color-popblue-400: #4ade80;
-  --color-popblue-500: #22c55e;
-  --color-popblue-600: #16a34a;
-  --color-popblue-700: #15803d;
-  --color-popblue-800: #166534;
-  --color-popblue-900: #14532d;
-  --color-popblue-950: #052e16;
-  --color-popblue: #15803d;
-  --color-popblue-deep: #052e16;
-  --color-popblue-soft: #86efac;
+  /* popblue = deep slate scale (name kept for legacy class refs) */
+  --color-popblue-50: #f8fafc;
+  --color-popblue-100: #f1f5f9;
+  --color-popblue-200: #e2e8f0;
+  --color-popblue-300: #cbd5e1;
+  --color-popblue-400: #94a3b8;
+  --color-popblue-500: #64748b;
+  --color-popblue-600: #475569;
+  --color-popblue-700: #334155;
+  --color-popblue-800: #1e293b;
+  --color-popblue-900: #0f172a;
+  --color-popblue-950: #020617;
+  --color-popblue: #334155;
+  --color-popblue-deep: #0f172a;
+  --color-popblue-soft: #e2e8f0;
 
-  --color-ink: #1a2e1f;
-  --color-paper: #fefce8;
-  --color-mute: #55624c;
+  --color-ink: #292524;
+  --color-paper: #fdf6ec;
+  --color-mute: #57534e;
   --color-card: #ffffff;
-  --color-deep: #14532d;
+  --color-deep: #1e293b;
 }
 
 html { scroll-behavior: smooth; }
@@ -79,87 +79,88 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fefce8;
+  background-color: #fdf6ec;
   background-image:
-    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(5, 150, 105, 0.14) 0%, rgba(5, 150, 105, 0) 70%),
-    radial-gradient(ellipse 45% 22% at 8% 12%, rgba(132, 204, 22, 0.16) 0%, rgba(132, 204, 22, 0) 70%),
-    linear-gradient(180deg, rgba(209, 250, 229, 0.9) 0%, rgba(236, 252, 203, 0.55) 42%, rgba(254, 252, 232, 0) 78%);
-  color: #1a2e1f;
+    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(234, 88, 12, 0.14) 0%, rgba(234, 88, 12, 0) 70%),
+    radial-gradient(ellipse 45% 22% at 8% 12%, rgba(245, 158, 11, 0.18) 0%, rgba(245, 158, 11, 0) 70%),
+    linear-gradient(180deg, rgba(255, 237, 213, 0.9) 0%, rgba(254, 243, 199, 0.55) 42%, rgba(253, 246, 236, 0) 78%);
+  color: #292524;
 }
-::selection { background: #d9f99d; color: #1a2e1f; }
+::selection { background: #fde68a; color: #292524; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #059669, #84cc16); border-radius: 8px; border: 2px solid #fefce8; }
-::-webkit-scrollbar-track { background: #d1fae5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ea580c, #f59e0b); border-radius: 8px; border: 2px solid #fdf6ec; }
+::-webkit-scrollbar-track { background: #ffedd5; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Fern Grove type: tight, grounded headlines. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Copperline type: wide, confident headlines. */
+h1, h2, h3 { letter-spacing: 0.01em; text-wrap: balance; }
 
-/* Fern Grove fall: leaves fluttering gently
-   DOWNWARD with a wide side-to-side sway. */
+/* Copperline fall: embers drifting gently
+   DOWNWARD with a narrow side-to-side sway. */
 @keyframes signal-fall {
   0% { transform: translate3d(0, -4vh, 0) rotate(0deg); opacity: 0; }
   15% { opacity: 0.8; }
-  50% { transform: translate3d(-4vw, 26vh, 0) rotate(-24deg); }
-  100% { transform: translate3d(4vw, 52vh, 0) rotate(24deg); opacity: 0; }
+  50% { transform: translate3d(-2vw, 26vh, 0) rotate(-12deg); }
+  100% { transform: translate3d(2vw, 52vh, 0) rotate(12deg); opacity: 0; }
 }
 .pop-fall { animation: signal-fall 20s linear infinite; }
 
-/* Fern Grove sway: a broad, slow side-to-side drift. */
+/* Copperline sway: a tight, quick side-to-side drift. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(-16px, 0, 0) scale(1); opacity: 0.7; }
-  50% { transform: translate3d(16px, 0, 0) scale(1.04); opacity: 1; }
+  0%, 100% { transform: translate3d(-8px, 0, 0) scale(1); opacity: 0.7; }
+  50% { transform: translate3d(8px, 0, 0) scale(1.02); opacity: 1; }
 }
-.pop-drift { animation: signal-drift 8s ease-in-out infinite; }
+.pop-drift { animation: signal-drift 6s ease-in-out infinite; }
 
-/* Fern Grove bob: a shallow, quick float. */
+/* Copperline bob: a deep, slow float. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1) rotate(0deg); }
-  50% { transform: translateY(-7px) scale(1.01) rotate(1deg); }
+  50% { transform: translateY(-11px) scale(1.02) rotate(-1deg); }
 }
-.pop-bob { animation: signal-bob 4s ease-in-out infinite; }
+.pop-bob { animation: signal-bob 5s ease-in-out infinite; }
 
-/* Forward turn for the grove dial. */
+/* Forward turn for the copper dial. */
 @keyframes dial-turn {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 46s linear infinite; }
 
-/* Fern Grove glint: a slow lime pulse. */
+/* Copperline glint: a fast amber pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.55; transform: scale(0.95); }
   50% { opacity: 1; transform: scale(1.15); }
 }
-.pop-twinkle { animation: signal-blink 2.8s ease-in-out infinite; }
+.pop-twinkle { animation: signal-blink 1.9s ease-in-out infinite; }
 
-/* Fern Grove ticker: infinite marquee (leftward drift). */
+/* Copperline ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 36s linear infinite; }
 
-/* Fern Grove bands: emerald / lime diagonal stripes. */
+/* Copperline bands: copper / amber diagonal stripes. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(45deg, #059669 0px, #059669 10px, #84cc16 10px, #84cc16 20px);
+    repeating-linear-gradient(45deg, #c2410c 0px, #c2410c 10px, #f59e0b 10px, #f59e0b 20px);
   background-size: 100% 10px;
   background-repeat: repeat-x;
   border-radius: 999px;
 }
 
-/* Fern Grove card: a generous 1.5rem panel with a
-   gradient TOP accent bar and a soft diffused
-   shadow — it lifts higher and grows on hover,
-   the bar deepening beneath it. */
+/* Copperline card: a compact 0.75rem panel with a
+   thick 2px border, a hard offset shadow and a
+   gradient BOTTOM accent bar — it nudges up and
+   the shadow deepens on hover, the bar glowing
+   beneath it. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(26, 46, 31, 0.1);
+  border: 2px solid rgba(41, 37, 36, 0.12);
   background: #ffffff;
-  border-radius: 1.5rem;
-  box-shadow: 0 18px 38px rgba(6, 95, 70, 0.12);
+  border-radius: 0.75rem;
+  box-shadow: 6px 6px 0 rgba(194, 65, 12, 0.16);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   overflow: hidden;
 }
@@ -168,94 +169,95 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
   position: absolute;
   left: 0;
   right: 0;
-  top: 0;
+  bottom: 0;
   height: 5px;
-  background: linear-gradient(90deg, #059669, #84cc16);
+  background: linear-gradient(90deg, #c2410c, #f59e0b);
   z-index: 1;
 }
 .pop-lift:hover {
-  transform: translateY(-5px) scale(1.015);
-  box-shadow: 0 26px 48px rgba(6, 95, 70, 0.18);
-  border-color: rgba(5, 150, 105, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 9px 9px 0 rgba(194, 65, 12, 0.22);
+  border-color: rgba(234, 88, 12, 0.5);
 }
 
-/* Fern Grove glass: shared by modals and drawers — a
-   frosted ivory pane with a soft edge and a lime
+/* Copperline glass: shared by modals and drawers — a
+   frosted sand pane with a hard edge and an amber
    hairline. */
 .pop-glass {
-  background: rgba(254, 252, 232, 0.94);
+  background: rgba(253, 246, 236, 0.94);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(26, 46, 31, 0.1);
-  border-radius: 1.5rem;
-  box-shadow: 0 18px 38px rgba(6, 95, 70, 0.12);
+  border: 2px solid rgba(41, 37, 36, 0.12);
+  border-radius: 0.75rem;
+  box-shadow: 6px 6px 0 rgba(194, 65, 12, 0.16);
 }
 
-/* Fern Grove tag: an emerald-to-lime pill badge —
-   dark type, upright, with a double ring. */
+/* Copperline tag: a copper-to-amber badge —
+   cream type, tilted -3deg, with a hard offset
+   shadow. */
 .starburst {
-  background: linear-gradient(135deg, #059669, #84cc16);
-  color: #1a2e05;
+  background: linear-gradient(135deg, #c2410c, #f59e0b);
+  color: #fff7ed;
   text-shadow: none;
-  border-radius: 999px;
-  transform: rotate(0deg);
-  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.35), inset 0 0 0 2px rgba(255, 255, 255, 0.55);
+  border-radius: 0.5rem;
+  transform: rotate(-3deg);
+  box-shadow: 3px 3px 0 rgba(41, 37, 36, 0.25), inset 0 0 0 2px rgba(255, 255, 255, 0.35);
   border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
-/* Fern Grove texture: a dotted leaf-field. */
+/* Copperline texture: a dotted copper-field. */
 .halftone {
   background-image:
-    radial-gradient(rgba(5, 150, 105, 0.22) 1.5px, transparent 1.5px),
-    radial-gradient(rgba(132, 204, 22, 0.22) 1.5px, transparent 1.5px);
+    radial-gradient(rgba(194, 65, 12, 0.22) 1.5px, transparent 1.5px),
+    radial-gradient(rgba(245, 158, 11, 0.22) 1.5px, transparent 1.5px);
   background-size: 22px 22px, 22px 22px;
   background-position: 0 0, 11px 11px;
 }
 
-/* Fern Grove rule: a thick gradient pill rule, emerald first. */
+/* Copperline rule: a thick gradient pill rule, copper first. */
 .zigzag {
   height: 6px;
   border: none;
-  background: linear-gradient(90deg, #059669, #84cc16);
+  background: linear-gradient(90deg, #c2410c, #f59e0b);
   opacity: 1;
   border-radius: 999px;
 }
 
-/* Fern Grove band: a deep forest / emerald / lime
-   diagonal wash with a soft shadow. */
+/* Copperline band: a deep slate / copper / amber
+   diagonal wash with a hard offset shadow. */
 .bazaar-awning {
-  background: linear-gradient(135deg, #052e16 0%, #047857 55%, #84cc16 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #c2410c 55%, #f59e0b 100%);
   opacity: 1;
-  box-shadow: 0 18px 38px rgba(6, 95, 70, 0.18);
-  border-bottom: 3px solid #84cc16;
+  box-shadow: 6px 6px 0 rgba(194, 65, 12, 0.2);
+  border-bottom: 3px solid #f59e0b;
   border-radius: 0;
 }
 
-/* Fern Grove glow: a lime halo for the core. */
+/* Copperline glow: an amber halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(209, 250, 229, 0.7) 42%, rgba(5, 150, 105, 0.25) 62%, rgba(5, 150, 105, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 237, 213, 0.7) 42%, rgba(234, 88, 12, 0.25) 62%, rgba(234, 88, 12, 0) 76%);
 }
 
-/* Fern Grove core: a leaf-green orb with a
-   bright lime ring. */
+/* Copperline core: a copper orb with a
+   bright amber ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fefce8 0%, #34d399 55%, #052e16 100%);
-  box-shadow: 0 0 0 3px rgba(190, 242, 100, 0.9), 0 10px 30px rgba(6, 95, 70, 0.25);
-  border: 1px solid rgba(26, 46, 31, 0.1);
+    radial-gradient(circle at 35% 30%, #fff7ed 0%, #fb923c 55%, #0f172a 100%);
+  box-shadow: 0 0 0 3px rgba(252, 211, 77, 0.9), 6px 6px 0 rgba(194, 65, 12, 0.25);
+  border: 2px solid rgba(41, 37, 36, 0.12);
 }
 
-/* Wide rings around the leaf orb. */
+/* Wide rings around the copper orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(5, 150, 105, 0.5) 0px,
-    rgba(5, 150, 105, 0.5) 2px,
+    rgba(194, 65, 12, 0.5) 0px,
+    rgba(194, 65, 12, 0.5) 2px,
     transparent 2px,
     transparent 14px,
-    rgba(132, 204, 22, 0.55) 14px,
-    rgba(132, 204, 22, 0.55) 16px,
+    rgba(245, 158, 11, 0.55) 14px,
+    rgba(245, 158, 11, 0.55) 16px,
     transparent 16px,
     transparent 28px
   );
@@ -266,7 +268,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(132, 204, 22, 0.6) 0deg 3deg,
+    rgba(245, 158, 11, 0.6) 0deg 3deg,
     transparent 3deg 18deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
