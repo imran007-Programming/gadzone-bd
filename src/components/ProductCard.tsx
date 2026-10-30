@@ -30,7 +30,7 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
         <div className="relative cursor-pointer overflow-hidden rounded-md ring-1 ring-brand-200" onClick={() => onQuickView(p)}>
           <ProductImage product={p} />
           {p.badge === "New" && (
-            <span className="absolute left-3 top-3 rounded-full bg-gold-400 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-gold-950 shadow-[0_10px_20px_-8px_rgba(12,74,110,0.7)] ring-1 ring-white/60">New</span>
+            <span className="absolute left-3 top-3 rounded-full bg-gold-400 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-gold-950 shadow-[0_10px_20px_-8px_rgba(2, 44, 34,0.7)] ring-1 ring-white/60">New</span>
           )}
           {discountPct(p) > 0 && (
             <span className="starburst absolute -right-2 -top-2 flex h-16 w-16 items-center justify-center p-4 text-center text-[11px] font-black leading-tight">-{discountPct(p)}%</span>
@@ -53,7 +53,7 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
           whileTap={{ scale: 0.98 }}
           onClick={() => onAddToCart(p.id)}
           aria-label={`Add ${p.name} to cart`}
-          className="flex w-full items-center justify-center gap-1.5 rounded-md border-2 border-brand-800 bg-brand-600 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-[0_12px_24px_-8px_rgba(37,99,235,0.55)] transition hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-[0_18px_32px_-10px_rgba(37,99,235,0.65)] active:translate-y-0 active:scale-[0.98]"
+          className="flex w-full items-center justify-center gap-1.5 rounded-md border-2 border-brand-800 bg-brand-600 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-[0_12px_24px_-8px_rgba(5, 150, 105,0.55)] transition hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-[0_18px_32px_-10px_rgba(5, 150, 105,0.65)] active:translate-y-0 active:scale-[0.98]"
         >
           🛒 Add
         </motion.button>
