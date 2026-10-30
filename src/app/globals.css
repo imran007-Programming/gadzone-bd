@@ -1,71 +1,71 @@
 @import "tailwindcss";
 
 @theme {
-  /* Violet Vineyard: a rich, playful direction —
-     deep violet as the primary accent, bright lime
-     for highlights, dark plum for contrast,
-     lavender paper, white cards. Cards are crisp
-     1rem panels with a thick lime TOP bar and a
-     hard violet offset shadow — the opposite of
-     the previous Lagoon Tide look, its teal /
-     coral palette, icy paper, soft 1.5rem panels,
-     thick coral LEFT bar and soft layered teal
-     shadow. */
+  /* Rosewood Ember: a warm, original direction —
+     deep rosewood crimson as the primary accent,
+     sunny amber for highlights, warm stone for
+     contrast, blush paper, white cards. Cards are
+     sharp 0.5rem panels with a thick amber RIGHT
+     bar and a soft diffused shadow — the opposite
+     of the previous Violet Vineyard look, its
+     violet / lime palette, lavender paper, soft
+     1rem panels, thick lime TOP bar and hard
+     violet offset shadow. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = violet scale */
-  --color-brand-50: #f5f3ff;
-  --color-brand-100: #ede9fe;
-  --color-brand-200: #ddd6fe;
-  --color-brand-300: #c4b5fd;
-  --color-brand-400: #a78bfa;
-  --color-brand-500: #8b5cf6;
-  --color-brand-600: #7c3aed;
-  --color-brand-700: #6d28d9;
-  --color-brand-800: #5b21b6;
-  --color-brand-900: #4c1d95;
-  --color-brand-950: #2e1065;
-  --color-brand: #6d28d9;
-  --color-brand-dark: #5b21b6;
-  --color-brand-deep: #4c1d95;
+  /* brand = rosewood crimson scale */
+  --color-brand-50: #fff1f2;
+  --color-brand-100: #ffe4e6;
+  --color-brand-200: #fecdd3;
+  --color-brand-300: #fda4af;
+  --color-brand-400: #fb7185;
+  --color-brand-500: #f43f5e;
+  --color-brand-600: #e11d48;
+  --color-brand-700: #be123c;
+  --color-brand-800: #9f1239;
+  --color-brand-900: #881337;
+  --color-brand-950: #4c0519;
+  --color-brand: #be123c;
+  --color-brand-dark: #9f1239;
+  --color-brand-deep: #881337;
 
-  /* gold = lime scale (name kept for legacy class refs) */
-  --color-gold-50: #f7fee7;
-  --color-gold-100: #ecfccb;
-  --color-gold-200: #d9f99d;
-  --color-gold-300: #bef264;
-  --color-gold-400: #a3e635;
-  --color-gold-500: #84cc16;
-  --color-gold-600: #65a30d;
-  --color-gold-700: #4d7c0f;
-  --color-gold-800: #3f6212;
-  --color-gold-900: #365314;
-  --color-gold-950: #1a2e05;
-  --color-gold: #84cc16;
-  --color-gold-deep: #4d7c0f;
-  --color-gold-soft: #ecfccb;
+  /* gold = amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #b45309;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = plum scale (name kept for legacy class refs) */
-  --color-popblue-50: #f8f7fa;
-  --color-popblue-100: #f0edf3;
-  --color-popblue-200: #ddd6e3;
-  --color-popblue-300: #c3b8cf;
-  --color-popblue-400: #a294b5;
-  --color-popblue-500: #837093;
-  --color-popblue-600: #6a577a;
-  --color-popblue-700: #574763;
-  --color-popblue-800: #463a50;
-  --color-popblue-900: #2f2538;
-  --color-popblue-950: #1d1522;
-  --color-popblue: #574763;
-  --color-popblue-deep: #1d1522;
-  --color-popblue-soft: #c3b8cf;
+  /* popblue = warm stone scale (name kept for legacy class refs) */
+  --color-popblue-50: #fafaf9;
+  --color-popblue-100: #f5f5f4;
+  --color-popblue-200: #e7e5e4;
+  --color-popblue-300: #d6d3d1;
+  --color-popblue-400: #a8a29e;
+  --color-popblue-500: #78716c;
+  --color-popblue-600: #57534e;
+  --color-popblue-700: #44403c;
+  --color-popblue-800: #292524;
+  --color-popblue-900: #1c1917;
+  --color-popblue-950: #0c0a09;
+  --color-popblue: #44403c;
+  --color-popblue-deep: #0c0a09;
+  --color-popblue-soft: #d6d3d1;
 
-  --color-ink: #2f2538;
-  --color-paper: #faf7ff;
-  --color-mute: #837093;
+  --color-ink: #292524;
+  --color-paper: #fff7f5;
+  --color-mute: #78716c;
   --color-card: #ffffff;
-  --color-deep: #4c1d95;
+  --color-deep: #881337;
 }
 
 html { scroll-behavior: smooth; }
@@ -79,178 +79,176 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #faf7ff;
+  background-color: #fff7f5;
   background-image:
-    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(124, 58, 237, 0.20) 0%, rgba(124, 58, 237, 0) 70%),
-    radial-gradient(ellipse 45% 22% at 8% 10%, rgba(132, 204, 22, 0.16) 0%, rgba(132, 204, 22, 0) 70%),
-    linear-gradient(180deg, rgba(237, 233, 254, 0.9) 0%, rgba(236, 252, 203, 0.5) 42%, rgba(250, 247, 255, 0) 78%);
-  color: #2f2538;
+    radial-gradient(ellipse 55% 26% at 10% 0%, rgba(225, 29, 72, 0.16) 0%, rgba(225, 29, 72, 0) 70%),
+    radial-gradient(ellipse 45% 22% at 92% 12%, rgba(245, 158, 11, 0.18) 0%, rgba(245, 158, 11, 0) 70%),
+    linear-gradient(180deg, rgba(255, 228, 230, 0.9) 0%, rgba(254, 243, 199, 0.55) 42%, rgba(255, 247, 245, 0) 78%);
+  color: #292524;
 }
-::selection { background: #bef264; color: #1a2e05; }
+::selection { background: #fcd34d; color: #451a03; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #7c3aed, #84cc16); border-radius: 8px; border: 2px solid #faf7ff; }
-::-webkit-scrollbar-track { background: #ede9fe; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #e11d48, #f59e0b); border-radius: 8px; border: 2px solid #fff7f5; }
+::-webkit-scrollbar-track { background: #ffe4e6; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Violet Vineyard type: a touch looser, bolder headlines. */
-h1, h2, h3 { letter-spacing: -0.015em; text-wrap: balance; }
+/* Rosewood Ember type: tighter, punchier headlines. */
+h1, h2, h3 { letter-spacing: -0.03em; text-wrap: balance; }
 
-/* Violet Vineyard fall: petals drifting gently
-   DOWNWARD through the vineyard — the reverse of
-   the old upward bubbles. */
+/* Rosewood Ember rise: embers drifting gently
+   UPWARD through the warm air — the reverse of
+   the old downward fall. */
 @keyframes signal-fall {
-  0% { transform: translate3d(0, -4vh, 0) scale(0.95) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(0, 52vh, 0) scale(0.9) rotate(0deg); opacity: 0; }
   15% { opacity: 0.8; }
-  50% { transform: translate3d(-3vw, 26vh, 0) scale(1.1) rotate(-40deg); }
-  100% { transform: translate3d(3vw, 52vh, 0) scale(0.9) rotate(-80deg); opacity: 0; }
+  50% { transform: translate3d(3vw, 26vh, 0) scale(1.1) rotate(40deg); }
+  100% { transform: translate3d(-3vw, -4vh, 0) scale(0.95) rotate(80deg); opacity: 0; }
 }
 .pop-fall { animation: signal-fall 22s linear infinite; }
 
-/* Violet Vineyard sway: a slow, narrow side-to-side drift. */
+/* Rosewood Ember sway: a wide, slow side-to-side drift. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(-8px, 0, 0) scale(1); opacity: 0.6; }
-  50% { transform: translate3d(8px, 0, 0) scale(1.02); opacity: 0.95; }
+  0%, 100% { transform: translate3d(-18px, 0, 0) scale(1); opacity: 0.6; }
+  50% { transform: translate3d(18px, 0, 0) scale(1.02); opacity: 0.95; }
 }
-.pop-drift { animation: signal-drift 8s ease-in-out infinite; }
+.pop-drift { animation: signal-drift 11s ease-in-out infinite; }
 
-/* Violet Vineyard bob: a bouncier little float. */
+/* Rosewood Ember bob: a gentle, slow float. */
 @keyframes signal-bob {
-  0%, 100% { transform: translateY(0) scale(1) rotate(-1deg); }
-  50% { transform: translateY(-14px) scale(1.03) rotate(1deg); }
+  0%, 100% { transform: translateY(0) scale(1) rotate(1deg); }
+  50% { transform: translateY(-7px) scale(1.01) rotate(-1deg); }
 }
-.pop-bob { animation: signal-bob 4s ease-in-out infinite; }
+.pop-bob { animation: signal-bob 6s ease-in-out infinite; }
 
-/* Forward turn for the vineyard dial. */
+/* Reverse turn for the ember dial. */
 @keyframes dial-turn {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
 }
 .pop-spin { animation: dial-turn 90s linear infinite; }
 
-/* Violet Vineyard glint: a lime pulse. */
+/* Rosewood Ember glint: a slow amber pulse. */
 @keyframes signal-blink {
-  0%, 100% { opacity: 0.4; transform: scale(0.9); }
-  50% { opacity: 1; transform: scale(1.2); }
+  0%, 100% { opacity: 0.5; transform: scale(0.95); }
+  50% { opacity: 1; transform: scale(1.1); }
 }
-.pop-twinkle { animation: signal-blink 2.6s ease-in-out infinite; }
+.pop-twinkle { animation: signal-blink 3.4s ease-in-out infinite; }
 
-/* Violet Vineyard ticker: infinite marquee (leftward drift). */
+/* Rosewood Ember ticker: infinite marquee (rightward drift). */
 @keyframes signal-ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
 }
 .pop-ticker { animation: signal-ticker 32s linear infinite; }
 
-/* Violet Vineyard bands: violet / lime diagonal stripes. */
+/* Rosewood Ember bands: crimson / amber diagonal stripes. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(135deg, #7c3aed 0px, #7c3aed 10px, #84cc16 10px, #84cc16 20px);
+    repeating-linear-gradient(45deg, #e11d48 0px, #e11d48 10px, #f59e0b 10px, #f59e0b 20px);
   background-size: 100% 8px;
   background-repeat: repeat-x;
   border-radius: 3px;
 }
 
-/* Violet Vineyard card: a crisp 1rem panel with a
-   thick lime TOP bar and a hard violet offset
-   shadow — it lifts diagonally on hover, the bar
-   turning violet and the shadow growing. */
+/* Rosewood Ember card: a sharp 0.5rem panel with a
+   thick amber RIGHT bar and a soft diffused
+   shadow — it lifts straight up on hover, the bar
+   turning crimson and the shadow deepening. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(47, 37, 56, 0.10);
-  border-top: 5px solid #84cc16;
+  border: 1px solid rgba(41, 37, 36, 0.10);
+  border-right: 5px solid #f59e0b;
   background: #ffffff;
-  border-radius: 1rem;
-  box-shadow: 6px 6px 0 rgba(109, 40, 217, 0.16);
+  border-radius: 0.5rem;
+  box-shadow: 0 12px 28px -12px rgba(136, 19, 55, 0.28);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translate(-2px, -4px);
-  border-top-color: #7c3aed;
-  box-shadow: 10px 10px 0 rgba(109, 40, 217, 0.22);
+  transform: translateY(-4px);
+  border-right-color: #e11d48;
+  box-shadow: 0 22px 40px -16px rgba(136, 19, 55, 0.38);
 }
 
-/* Violet Vineyard glass: shared by modals and drawers — a
-   frosted lavender pane with a soft edge and a lime
-   LEFT rule. */
+/* Rosewood Ember glass: shared by modals and drawers — a
+   frosted blush pane with a soft edge and an amber
+   RIGHT rule. */
 .pop-glass {
-  background: rgba(250, 247, 255, 0.94);
+  background: rgba(255, 247, 245, 0.94);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(47, 37, 56, 0.10);
-  border-left: 5px solid #84cc16;
-  border-radius: 1rem;
-  box-shadow: 6px 6px 0 rgba(109, 40, 217, 0.16);
+  border: 1px solid rgba(41, 37, 36, 0.10);
+  border-right: 5px solid #f59e0b;
+  border-radius: 0.5rem;
+  box-shadow: 0 12px 28px -12px rgba(136, 19, 55, 0.28);
 }
 
-/* Violet Vineyard tag: a violet-to-lime pill badge —
-   dark plum type, soft ring, sticker tilt the other way. */
+/* Rosewood Ember tag: a crimson-to-amber pill badge —
+   white type, soft ring, sticker tilt the other way. */
 .starburst {
-  background: linear-gradient(135deg, #8b5cf6, #a3e635);
-  color: #1d1522;
+  background: linear-gradient(135deg, #e11d48, #f59e0b);
+  color: #ffffff;
   text-shadow: none;
   border-radius: 999px;
-  transform: rotate(-3deg);
-  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.35);
+  transform: rotate(4deg);
+  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.35);
   border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
-/* Violet Vineyard texture: a fine polka-dot field. */
+/* Rosewood Ember texture: a fine diagonal crosshatch field. */
 .halftone {
   background-image:
-    radial-gradient(rgba(124, 58, 237, 0.18) 1.5px, transparent 1.5px),
-    radial-gradient(rgba(132, 204, 22, 0.16) 1.5px, transparent 1.5px);
-  background-size: 22px 22px;
-  background-position: 0 0, 11px 11px;
+    repeating-linear-gradient(45deg, rgba(225, 29, 72, 0.10) 0px, rgba(225, 29, 72, 0.10) 1px, transparent 1px, transparent 14px),
+    repeating-linear-gradient(-45deg, rgba(245, 158, 11, 0.10) 0px, rgba(245, 158, 11, 0.10) 1px, transparent 1px, transparent 14px);
 }
 
-/* Violet Vineyard rule: a gradient pill rule. */
+/* Rosewood Ember rule: a gradient pill rule. */
 .zigzag {
-  height: 5px;
+  height: 6px;
   border: none;
-  background: linear-gradient(90deg, #84cc16, #7c3aed);
+  background: linear-gradient(90deg, #f59e0b, #e11d48);
   opacity: 1;
   border-radius: 999px;
 }
 
-/* Violet Vineyard band: a plum / violet / lime horizontal
-   wash with a hard shadow. */
+/* Rosewood Ember band: a stone / crimson / amber diagonal
+   wash with a soft shadow. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #1d1522 0%, #7c3aed 55%, #84cc16 100%);
+  background: linear-gradient(135deg, #0c0a09 0%, #e11d48 55%, #f59e0b 100%);
   opacity: 1;
-  box-shadow: 0 10px 30px rgba(109, 40, 217, 0.18);
-  border-bottom: 1px solid rgba(47, 37, 56, 0.10);
+  box-shadow: 0 10px 30px rgba(136, 19, 55, 0.18);
+  border-bottom: 1px solid rgba(41, 37, 36, 0.10);
   border-radius: 0;
 }
 
-/* Violet Vineyard glow: a violet halo for the core. */
+/* Rosewood Ember glow: a crimson halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(237, 233, 254, 0.7) 42%, rgba(124, 58, 237, 0.25) 62%, rgba(124, 58, 237, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 228, 230, 0.7) 42%, rgba(225, 29, 72, 0.25) 62%, rgba(225, 29, 72, 0) 76%);
 }
 
-/* Violet Vineyard core: a lime orb with a
-   bright violet ring. */
+/* Rosewood Ember core: an amber orb with a
+   bright crimson ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #f7fee7 0%, #a3e635 55%, #2e1065 100%);
-  box-shadow: 0 0 0 3px rgba(190, 242, 100, 0.9), 0 10px 30px rgba(76, 29, 149, 0.25);
-  border: 1px solid rgba(47, 37, 56, 0.10);
+    radial-gradient(circle at 35% 30%, #fffbeb 0%, #fbbf24 55%, #4c0519 100%);
+  box-shadow: 0 0 0 3px rgba(252, 211, 77, 0.9), 0 10px 30px rgba(136, 19, 55, 0.25);
+  border: 1px solid rgba(41, 37, 36, 0.10);
 }
 
-/* Wide rings around the vineyard orb. */
+/* Wide rings around the ember orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(124, 58, 237, 0.5) 0px,
-    rgba(124, 58, 237, 0.5) 2px,
+    rgba(225, 29, 72, 0.5) 0px,
+    rgba(225, 29, 72, 0.5) 2px,
     transparent 2px,
-    transparent 18px,
-    rgba(132, 204, 22, 0.55) 18px,
-    rgba(132, 204, 22, 0.55) 20px,
-    transparent 20px,
-    transparent 34px
+    transparent 14px,
+    rgba(245, 158, 11, 0.55) 14px,
+    rgba(245, 158, 11, 0.55) 16px,
+    transparent 16px,
+    transparent 28px
   );
   -webkit-mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
   mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
@@ -259,8 +257,8 @@ h1, h2, h3 { letter-spacing: -0.015em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(132, 204, 22, 0.6) 0deg 3deg,
-    transparent 3deg 14deg
+    rgba(245, 158, 11, 0.6) 0deg 3deg,
+    transparent 3deg 18deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
   mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
