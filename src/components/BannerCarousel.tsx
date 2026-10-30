@@ -157,7 +157,7 @@ export default function BannerCarousel() {
               aria-hidden
               className="absolute inset-0 bg-gradient-to-br from-[#1c1917]/92 via-[#1c1917]/55 to-[#1c1917]/20"
             />
-            <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_82%_18%,rgba(245,158,11, 0.30),transparent)]" />
+            <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_82%_18%,rgba(244,63,94, 0.30),transparent)]" />
             <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#1c1917]/80 via-transparent to-transparent" />
             {/* Slide copy */}
             <div className="absolute inset-0 flex flex-col justify-center px-6 text-white sm:px-10 lg:px-14">
