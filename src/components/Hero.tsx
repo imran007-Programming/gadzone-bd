@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* velvet wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#ede9fe] via-[#fae8ff] to-[#faf5ff]">
+      <div className="relative bg-gradient-to-b from-[#fffbeb] via-[#fce7f3] to-[#ede9fe]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -176,7 +176,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2.5">
-              <div className="rounded-lg bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 p-1 shadow-[0_24px_48px_-24px_rgba(6,78,59,0.45)]">
+              <div className="rounded-lg bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 p-1 shadow-[0_24px_48px_-24px_rgba(46,16,101,0.45)]">
                 <div className="overflow-hidden rounded-md bg-paper ring-1 ring-ink/20">
                   <BannerCarousel />
                 </div>
@@ -186,7 +186,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
 
         {/* velvet ticker: plum band with white type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/60 bg-gradient-to-r from-popblue-950/95 via-brand-800/95 to-brand-600/95 py-3 shadow-[0_14px_30px_-14px_rgba(2,44,34, 0.5)] backdrop-blur">
+        <div aria-hidden className="relative z-10 mt-8 border-y border-brand-300/60 bg-gradient-to-r from-popblue-950/95 via-brand-800/95 to-brand-600/95 py-3 shadow-[0_14px_30px_-14px_rgba(46,16,101,0.5)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (

@@ -1,70 +1,71 @@
 @import "tailwindcss";
 
 @theme {
-  /* Cobalt Tide: a fresh, original direction —
-     cobalt blue as the primary accent, warm coral
-     for highlights, cool mist paper, and deep navy
-     ink for contrast. Cards are sharp 0.5rem panels
-     with a flat layered shadow and a thick gradient
-     TOP accent bar — the opposite of the previous
-     Emerald Grove look, its emerald / amber palette,
-     warm ivory paper, soft 1.5rem panels, layered
-     bloom shadow, and thick gradient LEFT accent bar. */
+  /* Violet Dusk: a fresh, original direction —
+     deep violet as the primary accent, warm amber
+     for highlights, fuchsia for pops, and warm
+     cream paper. Cards are chunky 1.5rem panels
+     with a solid plum outline, an offset hard
+     shadow, and a thick gradient BOTTOM accent
+     bar — the opposite of the previous Cobalt
+     Tide look, its cobalt / coral palette, cool
+     mist paper, sharp 0.5rem panels, soft layered
+     shadow, and thick gradient TOP accent bar. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = cobalt blue scale */
-  --color-brand-50: #eff6ff;
-  --color-brand-100: #dbeafe;
-  --color-brand-200: #bfdbfe;
-  --color-brand-300: #93c5fd;
-  --color-brand-400: #60a5fa;
-  --color-brand-500: #3b82f6;
-  --color-brand-600: #2563eb;
-  --color-brand-700: #1d4ed8;
-  --color-brand-800: #1e40af;
-  --color-brand-900: #1e3a8a;
-  --color-brand-950: #172554;
-  --color-brand: #2563eb;
-  --color-brand-dark: #1e40af;
-  --color-brand-deep: #172554;
+  /* brand = violet scale */
+  --color-brand-50: #f5f3ff;
+  --color-brand-100: #ede9fe;
+  --color-brand-200: #ddd6fe;
+  --color-brand-300: #c4b5fd;
+  --color-brand-400: #a78bfa;
+  --color-brand-500: #8b5cf6;
+  --color-brand-600: #7c3aed;
+  --color-brand-700: #6d28d9;
+  --color-brand-800: #5b21b6;
+  --color-brand-900: #4c1d95;
+  --color-brand-950: #2e1065;
+  --color-brand: #7c3aed;
+  --color-brand-dark: #6d28d9;
+  --color-brand-deep: #2e1065;
 
-  /* gold = coral scale (name kept for legacy class refs) */
-  --color-gold-50: #fff7ed;
-  --color-gold-100: #ffedd5;
-  --color-gold-200: #fed7aa;
-  --color-gold-300: #fdba74;
-  --color-gold-400: #fb923c;
-  --color-gold-500: #f97316;
-  --color-gold-600: #ea580c;
-  --color-gold-700: #c2410c;
-  --color-gold-800: #9a3412;
-  --color-gold-900: #7c2d12;
-  --color-gold-950: #431407;
-  --color-gold: #f97316;
-  --color-gold-deep: #9a3412;
-  --color-gold-soft: #ffedd5;
+  /* gold = amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #92400e;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = cyan scale (name kept for legacy class refs) */
-  --color-popblue-50: #ecfeff;
-  --color-popblue-100: #cffafe;
-  --color-popblue-200: #a5f3fc;
-  --color-popblue-300: #67e8f9;
-  --color-popblue-400: #22d3ee;
-  --color-popblue-500: #06b6d4;
-  --color-popblue-600: #0891b2;
-  --color-popblue-700: #0e7490;
-  --color-popblue-800: #155e75;
-  --color-popblue-900: #164e63;
-  --color-popblue-950: #083344;
-  --color-popblue: #0891b2;
-  --color-popblue-deep: #083344;
-  --color-popblue-soft: #a5f3fc;
+  /* popblue = fuchsia scale (name kept for legacy class refs) */
+  --color-popblue-50: #fdf2f8;
+  --color-popblue-100: #fce7f3;
+  --color-popblue-200: #fbcfe8;
+  --color-popblue-300: #f9a8d4;
+  --color-popblue-400: #f472b6;
+  --color-popblue-500: #ec4899;
+  --color-popblue-600: #db2777;
+  --color-popblue-700: #be185d;
+  --color-popblue-800: #9d174d;
+  --color-popblue-900: #831843;
+  --color-popblue-950: #500724;
+  --color-popblue: #db2777;
+  --color-popblue-deep: #500724;
+  --color-popblue-soft: #fbcfe8;
 
-  --color-ink: #0f172a;
-  --color-paper: #f4f7fb;
-  --color-mute: #475569;
+  --color-ink: #2e1a47;
+  --color-paper: #fff8f0;
+  --color-mute: #6b5b7d;
   --color-card: #ffffff;
-  --color-deep: #172554;
+  --color-deep: #2e1065;
 }
 
 html { scroll-behavior: smooth; }
@@ -78,183 +79,185 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f4f7fb;
+  background-color: #fff8f0;
   background-image:
-    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(37, 99, 235, 0.14) 0%, rgba(37, 99, 235, 0) 70%),
-    radial-gradient(ellipse 45% 22% at 8% 18%, rgba(6, 182, 212, 0.16) 0%, rgba(6, 182, 212, 0) 70%),
-    linear-gradient(160deg, rgba(219, 234, 254, 0.9) 0%, rgba(255, 237, 213, 0.5) 42%, rgba(244, 247, 251, 0) 78%);
-  color: #0f172a;
+    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(124, 58, 237, 0.16) 0%, rgba(124, 58, 237, 0) 70%),
+    radial-gradient(ellipse 45% 22% at 8% 18%, rgba(245, 158, 11, 0.18) 0%, rgba(245, 158, 11, 0) 70%),
+    linear-gradient(160deg, rgba(237, 233, 254, 0.9) 0%, rgba(254, 243, 199, 0.55) 42%, rgba(255, 248, 240, 0) 78%);
+  color: #2e1a47;
 }
-::selection { background: #fdba74; color: #172554; }
+::selection { background: #fcd34d; color: #2e1065; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #2563eb, #f97316); border-radius: 4px; border: 2px solid #f4f7fb; }
-::-webkit-scrollbar-track { background: #dbeafe; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #7c3aed, #db2777); border-radius: 999px; border: 2px solid #fff8f0; }
+::-webkit-scrollbar-track { background: #ede9fe; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Tide type: tight, crisp headlines. */
-h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
+/* Dusk type: extra-tight, chunky headlines. */
+h1, h2, h3 { letter-spacing: -0.03em; text-wrap: balance; }
 
-/* Tide rise: bubbles drifting UPWARD through
-   still water, swaying side to side as they rise. */
+/* Dusk fall: confetti drifting DOWNWARD through
+   the evening air, swaying side to side as it
+   falls — the reverse of the previous rising
+   bubbles. */
 @keyframes signal-fall {
-  0% { transform: translate3d(0, 52vh, 0) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(0, -4vh, 0) rotate(0deg); opacity: 0; }
   15% { opacity: 0.85; }
   50% { transform: translate3d(2vw, 26vh, 0) rotate(160deg); }
-  100% { transform: translate3d(-2vw, -4vh, 0) rotate(320deg); opacity: 0; }
+  100% { transform: translate3d(-2vw, 52vh, 0) rotate(320deg); opacity: 0; }
 }
 .pop-fall { animation: signal-fall 24s linear infinite; }
 
-/* Tide sway: a slow, wide horizontal drift. */
+/* Dusk sway: a slow, wide horizontal drift. */
 @keyframes signal-drift {
   0%, 100% { transform: translate3d(-10px, 0, 0) scale(1); opacity: 0.7; }
   50% { transform: translate3d(10px, 0, 0) scale(1.02); opacity: 1; }
 }
 .pop-drift { animation: signal-drift 12s ease-in-out infinite; }
 
-/* Tide bob: a slow, gentle float. */
+/* Dusk bob: a slow, gentle float. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1) rotate(0deg); }
   50% { transform: translateY(-10px) scale(1.01) rotate(2deg); }
 }
 .pop-bob { animation: signal-bob 7s ease-in-out infinite; }
 
-/* Reverse turn for the tide dial. */
+/* Forward turn for the dusk dial. */
 @keyframes dial-turn {
-  from { transform: rotate(360deg); }
-  to { transform: rotate(0deg); }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 34s linear infinite; }
 
-/* Tide glint: a slow coral pulse. */
+/* Dusk glint: a slow amber pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.5; transform: scale(0.96); }
   50% { opacity: 1; transform: scale(1.08); }
 }
 .pop-twinkle { animation: signal-blink 3.2s ease-in-out infinite; }
 
-/* Tide ticker: infinite marquee (leftward drift). */
+/* Dusk ticker: infinite marquee (rightward drift). */
 @keyframes signal-ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
 }
 .pop-ticker { animation: signal-ticker 42s linear infinite; }
 
-/* Tide bands: cobalt / cyan horizontal stripes. */
+/* Dusk bands: violet / fuchsia diagonal stripes. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(0deg, #2563eb 0px, #2563eb 10px, #06b6d4 10px, #06b6d4 20px);
-  background-size: 100% 28px;
-  background-repeat: repeat-x;
+    repeating-linear-gradient(45deg, #7c3aed 0px, #7c3aed 10px, #db2777 10px, #db2777 20px);
+  background-size: 28px 28px;
+  background-repeat: repeat;
   border-radius: 2px;
 }
 
-/* Tide card: a sharp 0.5rem panel with a flat
-   layered shadow and a thick gradient TOP accent
-   bar — it lifts gently on hover while the shadow
-   deepens and the bar brightens. */
+/* Dusk card: a chunky 1.5rem panel with a solid
+   plum outline and an offset hard shadow, plus a
+   thick gradient BOTTOM accent bar — it hops up
+   on hover while the shadow stretches. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(30, 58, 138, 0.14);
+  border: 2px solid rgba(46, 16, 101, 0.85);
   background: #ffffff;
-  border-radius: 0.5rem;
-  box-shadow: 0 1px 2px rgba(23, 37, 84, 0.08), 0 10px 24px -12px rgba(23, 37, 84, 0.22);
+  border-radius: 1.5rem;
+  box-shadow: 5px 5px 0 rgba(46, 16, 101, 0.9);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   overflow: hidden;
 }
 .pop-lift::after {
   content: "";
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
-  height: 5px;
-  background: linear-gradient(90deg, #f97316, #2563eb);
+  height: 6px;
+  background: linear-gradient(90deg, #f59e0b, #db2777, #7c3aed);
   z-index: 1;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 2px 4px rgba(23, 37, 84, 0.1), 0 20px 32px -14px rgba(23, 37, 84, 0.32);
-  border-color: rgba(234, 88, 12, 0.5);
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0 rgba(46, 16, 101, 0.9);
+  border-color: rgba(46, 16, 101, 1);
 }
 
-/* Tide glass: shared by modals and drawers — a
-   cool mist frosted pane with a sharp edge and a
-   cyan hairline. */
+/* Dusk glass: shared by modals and drawers — a
+   warm cream frosted pane with a chunky edge and
+   a fuchsia hairline. */
 .pop-glass {
-  background: rgba(244, 247, 251, 0.92);
+  background: rgba(255, 248, 240, 0.92);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(30, 58, 138, 0.16);
-  border-radius: 0.5rem;
-  box-shadow: 0 24px 40px -20px rgba(23, 37, 84, 0.3);
+  border: 1px solid rgba(219, 39, 119, 0.25);
+  border-radius: 1.25rem;
+  box-shadow: 0 24px 40px -20px rgba(46, 16, 101, 0.35);
 }
 
-/* Tide tag: a crisp square coral badge — deep
-   navy type, flat edge, no tilt. */
+/* Dusk tag: a tilted amber pill badge — deep
+   plum type, chunky edge, playful tilt. */
 .starburst {
-  background: linear-gradient(135deg, #fed7aa 0%, #fb923c 55%, #2563eb 100%);
-  color: #172554;
+  background: linear-gradient(135deg, #fde68a 0%, #fbbf24 55%, #f472b6 100%);
+  color: #2e1065;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-  border-radius: 0.375rem;
-  transform: rotate(0deg);
-  box-shadow: 0 8px 16px -8px rgba(23, 37, 84, 0.45);
-  border: 2px solid rgba(244, 247, 251, 0.95);
+  border-radius: 999px;
+  transform: rotate(-6deg);
+  box-shadow: 0 8px 16px -8px rgba(46, 16, 101, 0.45);
+  border: 2px solid rgba(46, 16, 101, 0.85);
 }
 
-/* Tide texture: a cool dot grid. */
+/* Dusk texture: a warm violet dot grid. */
 .halftone {
   background-image:
-    radial-gradient(rgba(37, 99, 235, 0.16) 1.5px, transparent 1.5px),
-    radial-gradient(rgba(6, 182, 212, 0.18) 1.5px, transparent 1.5px);
+    radial-gradient(rgba(124, 58, 237, 0.18) 1.5px, transparent 1.5px),
+    radial-gradient(rgba(245, 158, 11, 0.2) 1.5px, transparent 1.5px);
   background-size: 22px 22px, 22px 22px;
   background-position: 0 0, 11px 11px;
 }
 
-/* Tide rule: a dotted cobalt / coral line. */
+/* Dusk rule: a dashed violet / amber line. */
 .zigzag {
   height: 4px;
   border: none;
   border-radius: 999px;
-  background: repeating-linear-gradient(90deg, #2563eb 0px, #2563eb 6px, transparent 6px, transparent 14px, #f97316 14px, #f97316 20px, transparent 20px, transparent 30px);
+  background: repeating-linear-gradient(90deg, #7c3aed 0px, #7c3aed 6px, transparent 6px, transparent 14px, #f59e0b 14px, #f59e0b 20px, transparent 20px, transparent 30px);
   opacity: 1;
 }
 
-/* Tide band: a cobalt / cyan diagonal wash
-   with sharp corners and a thick cyan bottom edge. */
+/* Dusk band: a violet / fuchsia diagonal wash
+   with chunky corners and a thick amber bottom edge. */
 .bazaar-awning {
-  background: linear-gradient(135deg, #1e40af 0%, #2563eb 45%, #06b6d4 100%);
+  background: linear-gradient(135deg, #5b21b6 0%, #7c3aed 45%, #db2777 100%);
   opacity: 1;
-  box-shadow: 0 4px 12px rgba(23, 37, 84, 0.25);
-  border-bottom: 3px solid #0891b2;
-  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(46, 16, 101, 0.3);
+  border-bottom: 4px solid #f59e0b;
+  border-radius: 1.5rem;
 }
 
-/* Tide glow: a cyan halo for the core. */
+/* Dusk glow: an amber halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(219, 234, 254, 0.7) 42%, rgba(37, 99, 235, 0.20) 62%, rgba(37, 99, 235, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(254, 243, 199, 0.7) 42%, rgba(124, 58, 237, 0.22) 62%, rgba(124, 58, 237, 0) 76%);
 }
 
-/* Tide beacon: a cyan orb with a
-   deep navy ring. */
+/* Dusk beacon: an amber orb with a
+   deep plum ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #cffafe 0%, #22d3ee 55%, #172554 100%);
-  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.9), 0 12px 28px -12px rgba(23, 37, 84, 0.4);
-  border: 1px solid rgba(23, 37, 84, 0.15);
+    radial-gradient(circle at 35% 30%, #fef3c7 0%, #f59e0b 55%, #7c3aed 100%);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.9), 0 12px 28px -12px rgba(46, 16, 101, 0.4);
+  border: 1px solid rgba(46, 16, 101, 0.15);
 }
 
-/* Wide rings around the cyan orb. */
+/* Wide rings around the amber orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(37, 99, 235, 0.5) 0px,
-    rgba(37, 99, 235, 0.5) 2px,
+    rgba(124, 58, 237, 0.5) 0px,
+    rgba(124, 58, 237, 0.5) 2px,
     transparent 2px,
     transparent 20px,
-    rgba(6, 182, 212, 0.55) 20px,
-    rgba(6, 182, 212, 0.55) 22px,
+    rgba(219, 39, 119, 0.55) 20px,
+    rgba(219, 39, 119, 0.55) 22px,
     transparent 22px,
     transparent 40px
   );
@@ -265,7 +268,7 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(6, 182, 212, 0.6) 0deg 4deg,
+    rgba(219, 39, 119, 0.6) 0deg 4deg,
     transparent 4deg 28deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);

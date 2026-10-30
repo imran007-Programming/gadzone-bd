@@ -21,11 +21,11 @@ export default function FaqSection({ openFaq, onToggleFaq }: FaqSectionProps) {
   return (
     <Reveal>
       <span className="text-xs font-bold uppercase tracking-widest text-brand-700">Need Help?</span>
-      <h2 className="mt-2 text-3xl font-black leading-tight tracking-tight text-[#0f172a] sm:text-[2rem]">❓ Frequently Asked Questions</h2>
+      <h2 className="mt-2 text-3xl font-black leading-tight tracking-tight text-[#2e1a47] sm:text-[2rem]">❓ Frequently Asked Questions</h2>
       <div className="mt-5 space-y-3">
         {FAQS.map((f, i) => (
-          <div key={i} className="overflow-hidden rounded-lg border border-[#bae6fd] bg-white shadow-sm backdrop-blur-sm">
-            <button onClick={() => onToggleFaq(openFaq === i ? null : i)} className="flex w-full items-center justify-between gap-3 px-5 py-4 text-left text-[15px] font-bold tracking-tight text-[#0f172a] transition hover:bg-brand-400/10 sm:px-6">{f.q}<span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-400/15 text-base text-brand-700">{openFaq === i ? "−" : "+"}</span></button>
+          <div key={i} className="overflow-hidden rounded-lg border border-[#e9d5ff] bg-white shadow-sm backdrop-blur-sm">
+            <button onClick={() => onToggleFaq(openFaq === i ? null : i)} className="flex w-full items-center justify-between gap-3 px-5 py-4 text-left text-[15px] font-bold tracking-tight text-[#2e1a47] transition hover:bg-brand-400/10 sm:px-6">{f.q}<span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-400/15 text-base text-brand-700">{openFaq === i ? "−" : "+"}</span></button>
             <AnimatePresence initial={false}>
               {openFaq === i && (
                 <motion.div
