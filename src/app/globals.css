@@ -1,70 +1,70 @@
 @import "tailwindcss";
 
 @theme {
-  /* Glacier Lagoon: a cool original direction —
-     deep teal as the primary accent, bright cyan
-     for highlights, slate navy for contrast, icy
-     mint paper, white cards. Cards are 2rem panels
-     with a soft diffused shadow and NO accent bar —
-     the opposite of the previous Ember Harvest
-     look, its burnt orange / golden amber palette,
-     warm cream paper, 1.5rem panels, thick amber
-     TOP bar and hard offset shadow. */
+  /* Velvet Plum: a warm-cool original direction —
+     deep violet as the primary accent, vivid fuchsia
+     for highlights, indigo plum for contrast, lilac
+     paper, white cards. Cards are compact 0.75rem
+     panels with a gradient LEFT accent bar and a
+     crisp ring shadow — the opposite of the previous
+     Glacier Lagoon look, its teal / cyan palette,
+     icy mint paper, 2rem panels, soft diffused
+     shadow and NO accent bar. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = deep teal scale */
-  --color-brand-50: #f0fdfa;
-  --color-brand-100: #ccfbf1;
-  --color-brand-200: #99f6e4;
-  --color-brand-300: #5eead4;
-  --color-brand-400: #2dd4bf;
-  --color-brand-500: #14b8a6;
-  --color-brand-600: #0d9488;
-  --color-brand-700: #0f766e;
-  --color-brand-800: #115e59;
-  --color-brand-900: #134e4a;
-  --color-brand-950: #042f2e;
-  --color-brand: #0f766e;
-  --color-brand-dark: #115e59;
-  --color-brand-deep: #134e4a;
+  /* brand = deep violet scale */
+  --color-brand-50: #f5f3ff;
+  --color-brand-100: #ede9fe;
+  --color-brand-200: #ddd6fe;
+  --color-brand-300: #c4b5fd;
+  --color-brand-400: #a78bfa;
+  --color-brand-500: #8b5cf6;
+  --color-brand-600: #7c3aed;
+  --color-brand-700: #6d28d9;
+  --color-brand-800: #5b21b6;
+  --color-brand-900: #4c1d95;
+  --color-brand-950: #2e1065;
+  --color-brand: #6d28d9;
+  --color-brand-dark: #5b21b6;
+  --color-brand-deep: #4c1d95;
 
-  /* gold = bright cyan scale (name kept for legacy class refs) */
-  --color-gold-50: #ecfeff;
-  --color-gold-100: #cffafe;
-  --color-gold-200: #a5f3fc;
-  --color-gold-300: #67e8f9;
-  --color-gold-400: #22d3ee;
-  --color-gold-500: #06b6d4;
-  --color-gold-600: #0891b2;
-  --color-gold-700: #0e7490;
-  --color-gold-800: #155e75;
-  --color-gold-900: #164e63;
-  --color-gold-950: #083344;
-  --color-gold: #06b6d4;
-  --color-gold-deep: #0e7490;
-  --color-gold-soft: #cffafe;
+  /* gold = vivid fuchsia scale (name kept for legacy class refs) */
+  --color-gold-50: #fdf4ff;
+  --color-gold-100: #fae8ff;
+  --color-gold-200: #f5d0fe;
+  --color-gold-300: #f0abfc;
+  --color-gold-400: #e879f9;
+  --color-gold-500: #d946ef;
+  --color-gold-600: #c026d3;
+  --color-gold-700: #a21caf;
+  --color-gold-800: #86198f;
+  --color-gold-900: #701a75;
+  --color-gold-950: #4a044e;
+  --color-gold: #d946ef;
+  --color-gold-deep: #a21caf;
+  --color-gold-soft: #fae8ff;
 
-  /* popblue = slate navy scale (name kept for legacy class refs) */
-  --color-popblue-50: #f8fafc;
-  --color-popblue-100: #f1f5f9;
-  --color-popblue-200: #e2e8f0;
-  --color-popblue-300: #cbd5e1;
-  --color-popblue-400: #94a3b8;
-  --color-popblue-500: #64748b;
-  --color-popblue-600: #475569;
-  --color-popblue-700: #334155;
-  --color-popblue-800: #1e293b;
-  --color-popblue-900: #0f172a;
-  --color-popblue-950: #020617;
-  --color-popblue: #334155;
-  --color-popblue-deep: #020617;
-  --color-popblue-soft: #cbd5e1;
+  /* popblue = indigo plum scale (name kept for legacy class refs) */
+  --color-popblue-50: #eef2ff;
+  --color-popblue-100: #e0e7ff;
+  --color-popblue-200: #c7d2fe;
+  --color-popblue-300: #a5b4fc;
+  --color-popblue-400: #818cf8;
+  --color-popblue-500: #6366f1;
+  --color-popblue-600: #4f46e5;
+  --color-popblue-700: #4338ca;
+  --color-popblue-800: #3730a3;
+  --color-popblue-900: #312e81;
+  --color-popblue-950: #1e1b4b;
+  --color-popblue: #4338ca;
+  --color-popblue-deep: #1e1b4b;
+  --color-popblue-soft: #a5b4fc;
 
-  --color-ink: #0f172a;
-  --color-paper: #f0fdfa;
-  --color-mute: #475569;
+  --color-ink: #1e1b4b;
+  --color-paper: #faf5ff;
+  --color-mute: #524a7a;
   --color-card: #ffffff;
-  --color-deep: #134e4a;
+  --color-deep: #4c1d95;
 }
 
 html { scroll-behavior: smooth; }
@@ -78,172 +78,182 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f0fdfa;
+  background-color: #faf5ff;
   background-image:
-    radial-gradient(ellipse 55% 26% at 12% 0%, rgba(13, 148, 136, 0.14) 0%, rgba(13, 148, 136, 0) 70%),
-    radial-gradient(ellipse 45% 22% at 92% 12%, rgba(6, 182, 212, 0.18) 0%, rgba(6, 182, 212, 0) 70%),
-    linear-gradient(180deg, rgba(204, 251, 241, 0.9) 0%, rgba(207, 250, 254, 0.55) 42%, rgba(240, 253, 250, 0) 78%);
-  color: #0f172a;
+    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(124, 58, 237, 0.16) 0%, rgba(124, 58, 237, 0) 70%),
+    radial-gradient(ellipse 45% 22% at 8% 12%, rgba(217, 70, 239, 0.18) 0%, rgba(217, 70, 239, 0) 70%),
+    linear-gradient(180deg, rgba(237, 233, 254, 0.9) 0%, rgba(250, 232, 255, 0.55) 42%, rgba(250, 245, 255, 0) 78%);
+  color: #1e1b4b;
 }
-::selection { background: #99f6e4; color: #0f172a; }
+::selection { background: #ddd6fe; color: #1e1b4b; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0d9488, #06b6d4); border-radius: 8px; border: 2px solid #f0fdfa; }
-::-webkit-scrollbar-track { background: #ccfbf1; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #7c3aed, #d946ef); border-radius: 8px; border: 2px solid #faf5ff; }
+::-webkit-scrollbar-track { background: #ede9fe; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Glacier Lagoon type: tighter, crisper headlines. */
-h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
+/* Velvet Plum type: relaxed, open headlines. */
+h1, h2, h3 { letter-spacing: 0.005em; text-wrap: balance; }
 
-/* Glacier Lagoon rise: bubbles drifting gently
-   UPWARD through lagoon water with a slow sway. */
+/* Velvet Plum fall: petals drifting gently
+   DOWNWARD with a slow sway — the reverse of
+   the lagoon bubbles that rose upward. */
 @keyframes signal-fall {
-  0% { transform: translate3d(0, 52vh, 0) scale(0.8) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(0, -4vh, 0) scale(0.8) rotate(0deg); opacity: 0; }
   15% { opacity: 0.7; }
-  50% { transform: translate3d(-3vw, 26vh, 0) scale(1.05) rotate(-30deg); }
-  100% { transform: translate3d(3vw, -4vh, 0) scale(0.9) rotate(-60deg); opacity: 0; }
+  50% { transform: translate3d(3vw, 26vh, 0) scale(1.05) rotate(30deg); }
+  100% { transform: translate3d(-3vw, 52vh, 0) scale(0.9) rotate(60deg); opacity: 0; }
 }
 .pop-fall { animation: signal-fall 22s linear infinite; }
 
-/* Glacier Lagoon sway: a wide, slow side-to-side drift. */
+/* Velvet Plum sway: a narrow, quick side-to-side drift. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(-18px, 0, 0) scale(1); opacity: 0.7; }
-  50% { transform: translate3d(18px, 0, 0) scale(1.03); opacity: 1; }
+  0%, 100% { transform: translate3d(-10px, 0, 0) scale(1); opacity: 0.7; }
+  50% { transform: translate3d(10px, 0, 0) scale(1.03); opacity: 1; }
 }
-.pop-drift { animation: signal-drift 8s ease-in-out infinite; }
+.pop-drift { animation: signal-drift 6s ease-in-out infinite; }
 
-/* Glacier Lagoon bob: a quick, shallow float. */
+/* Velvet Plum bob: a deeper, slower float. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1) rotate(0deg); }
-  50% { transform: translateY(-8px) scale(1.02) rotate(2deg); }
+  50% { transform: translateY(-12px) scale(1.02) rotate(-2deg); }
 }
-.pop-bob { animation: signal-bob 4.5s ease-in-out infinite; }
+.pop-bob { animation: signal-bob 5.5s ease-in-out infinite; }
 
-/* Forward turn for the lagoon dial. */
+/* Reverse turn for the plum dial. */
 @keyframes dial-turn {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
 }
 .pop-spin { animation: dial-turn 40s linear infinite; }
 
-/* Glacier Lagoon glint: a slow cyan pulse. */
+/* Velvet Plum glint: a quick fuchsia pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.5; transform: scale(0.95); }
   50% { opacity: 1; transform: scale(1.2); }
 }
-.pop-twinkle { animation: signal-blink 2.6s ease-in-out infinite; }
+.pop-twinkle { animation: signal-blink 2s ease-in-out infinite; }
 
-/* Glacier Lagoon ticker: infinite marquee (leftward drift). */
+/* Velvet Plum ticker: infinite marquee (rightward drift). */
 @keyframes signal-ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
 }
 .pop-ticker { animation: signal-ticker 32s linear infinite; }
 
-/* Glacier Lagoon bands: teal / cyan horizontal stripes. */
+/* Velvet Plum bands: violet / fuchsia diagonal stripes. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(90deg, #0d9488 0px, #0d9488 10px, #06b6d4 10px, #06b6d4 20px);
+    repeating-linear-gradient(45deg, #7c3aed 0px, #7c3aed 10px, #d946ef 10px, #d946ef 20px);
   background-size: 100% 10px;
   background-repeat: repeat-x;
   border-radius: 999px;
 }
 
-/* Glacier Lagoon card: a 2rem panel with a
-   soft diffused shadow and NO accent bar —
-   it lifts straight up on hover, the shadow
-   deepening softly beneath it. */
+/* Velvet Plum card: a compact 0.75rem panel with a
+   gradient LEFT accent bar and a crisp ring shadow —
+   it lifts slightly and scales on hover, the bar
+   brightening beneath it. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(30, 27, 75, 0.1);
   background: #ffffff;
-  border-radius: 2rem;
-  box-shadow: 0 20px 40px rgba(15, 118, 110, 0.12);
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 24px rgba(109, 40, 217, 0.14);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
+.pop-lift::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #7c3aed, #d946ef);
+  z-index: 1;
+}
 .pop-lift:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 28px 48px rgba(15, 118, 110, 0.18);
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 16px 32px rgba(109, 40, 217, 0.2);
+  border-color: rgba(124, 58, 237, 0.4);
 }
 
-/* Glacier Lagoon glass: shared by modals and drawers — a
-   frosted mint pane with a soft edge and a cyan
+/* Velvet Plum glass: shared by modals and drawers — a
+   frosted lilac pane with a soft edge and a fuchsia
    hairline. */
 .pop-glass {
-  background: rgba(240, 253, 250, 0.94);
+  background: rgba(250, 245, 255, 0.94);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  border-radius: 2rem;
-  box-shadow: 0 20px 40px rgba(15, 118, 110, 0.12);
+  border: 1px solid rgba(30, 27, 75, 0.1);
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 24px rgba(109, 40, 217, 0.14);
 }
 
-/* Glacier Lagoon tag: a teal-to-cyan pill badge —
-   white type, soft ring, no tilt. */
+/* Velvet Plum tag: a violet-to-fuchsia pill badge —
+   white type, soft ring, tilted slightly. */
 .starburst {
-  background: linear-gradient(135deg, #0d9488, #06b6d4);
+  background: linear-gradient(135deg, #7c3aed, #d946ef);
   color: #ffffff;
   text-shadow: none;
   border-radius: 999px;
-  transform: none;
-  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.35);
+  transform: rotate(-2deg);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.35);
   border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
-/* Glacier Lagoon texture: a fine dot-grid field. */
+/* Velvet Plum texture: a diagonal crosshatch field. */
 .halftone {
   background-image:
-    radial-gradient(rgba(13, 148, 136, 0.16) 1px, transparent 1px),
-    radial-gradient(rgba(6, 182, 212, 0.16) 1px, transparent 1px);
-  background-size: 18px 18px;
-  background-position: 0 0, 9px 9px;
+    repeating-linear-gradient(45deg, rgba(124, 58, 237, 0.12) 0px, rgba(124, 58, 237, 0.12) 1px, transparent 1px, transparent 14px),
+    repeating-linear-gradient(-45deg, rgba(217, 70, 239, 0.12) 0px, rgba(217, 70, 239, 0.12) 1px, transparent 1px, transparent 14px);
 }
 
-/* Glacier Lagoon rule: a gradient pill rule, teal first. */
+/* Velvet Plum rule: a slim gradient pill rule, violet first. */
 .zigzag {
-  height: 8px;
+  height: 4px;
   border: none;
-  background: linear-gradient(90deg, #0d9488, #06b6d4);
+  background: linear-gradient(90deg, #7c3aed, #d946ef);
   opacity: 1;
   border-radius: 999px;
 }
 
-/* Glacier Lagoon band: a slate navy / teal / cyan
-   diagonal wash with a soft diffused shadow. */
+/* Velvet Plum band: an indigo plum / violet / fuchsia
+   diagonal wash with a crisp shadow. */
 .bazaar-awning {
-  background: linear-gradient(135deg, #020617 0%, #0f766e 55%, #06b6d4 100%);
+  background: linear-gradient(135deg, #1e1b4b 0%, #6d28d9 55%, #d946ef 100%);
   opacity: 1;
-  box-shadow: 0 20px 40px rgba(15, 118, 110, 0.18);
-  border-bottom: 2px solid #06b6d4;
+  box-shadow: 0 10px 24px rgba(109, 40, 217, 0.2);
+  border-bottom: 2px solid #d946ef;
   border-radius: 0;
 }
 
-/* Glacier Lagoon glow: a cyan halo for the core. */
+/* Velvet Plum glow: a fuchsia halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(204, 251, 241, 0.7) 42%, rgba(13, 148, 136, 0.25) 62%, rgba(13, 148, 136, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(237, 233, 254, 0.7) 42%, rgba(124, 58, 237, 0.25) 62%, rgba(124, 58, 237, 0) 76%);
 }
 
-/* Glacier Lagoon core: a lagoon orb with a
-   bright cyan ring. */
+/* Velvet Plum core: a plum orb with a
+   bright fuchsia ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #f0fdfa 0%, #14b8a6 55%, #042f2e 100%);
-  box-shadow: 0 0 0 3px rgba(165, 243, 252, 0.9), 0 10px 30px rgba(15, 118, 110, 0.25);
-  border: 1px solid rgba(15, 23, 42, 0.08);
+    radial-gradient(circle at 35% 30%, #faf5ff 0%, #8b5cf6 55%, #2e1065 100%);
+  box-shadow: 0 0 0 3px rgba(240, 171, 252, 0.9), 0 10px 30px rgba(109, 40, 217, 0.25);
+  border: 1px solid rgba(30, 27, 75, 0.1);
 }
 
-/* Wide rings around the lagoon orb. */
+/* Wide rings around the plum orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(13, 148, 136, 0.5) 0px,
-    rgba(13, 148, 136, 0.5) 2px,
+    rgba(124, 58, 237, 0.5) 0px,
+    rgba(124, 58, 237, 0.5) 2px,
     transparent 2px,
     transparent 14px,
-    rgba(6, 182, 212, 0.55) 14px,
-    rgba(6, 182, 212, 0.55) 16px,
+    rgba(217, 70, 239, 0.55) 14px,
+    rgba(217, 70, 239, 0.55) 16px,
     transparent 16px,
     transparent 28px
   );
@@ -254,7 +264,7 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(6, 182, 212, 0.6) 0deg 3deg,
+    rgba(217, 70, 239, 0.6) 0deg 3deg,
     transparent 3deg 18deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
