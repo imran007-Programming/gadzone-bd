@@ -115,7 +115,7 @@ export default function BannerCarousel() {
       aria-roledescription="carousel"
       aria-label="Featured offers"
     >
-      <div className="relative overflow-hidden rounded-[1.25rem] border-2 border-brand-400/40 shadow-[0_24px_70px_-18px_rgba(42,29,58, 0.45)] ring-1 ring-brand-400/25">
+      <div className="relative overflow-hidden rounded-[1.75rem] border-4 border-gold-400/60 shadow-[6px_6px_0_rgba(124,45,18,0.30)] ring-1 ring-brand-400/25">
         <AnimatePresence initial={false} custom={direction} mode="wait">
           <motion.div
             key={slide.id}
@@ -152,13 +152,13 @@ export default function BannerCarousel() {
               className="absolute inset-0 h-full w-full object-cover"
               draggable={false}
             />
-            {/* Harbor-dusk overlay so the cream copy reads over any banner art */}
+            {/* Ember-dusk overlay so the cream copy reads over any banner art */}
             <div
               aria-hidden
-              className="absolute inset-0 bg-gradient-to-br from-[#0f172a]/92 via-[#0f172a]/55 to-[#0f172a]/20"
+              className="absolute inset-0 bg-gradient-to-br from-[#1c1917]/92 via-[#1c1917]/55 to-[#1c1917]/20"
             />
-            <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_82%_18%,rgba(8,145,178, 0.30),transparent)]" />
-            <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/80 via-transparent to-transparent" />
+            <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_82%_18%,rgba(245,158,11, 0.30),transparent)]" />
+            <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#1c1917]/80 via-transparent to-transparent" />
             {/* Slide copy */}
             <div className="absolute inset-0 flex flex-col justify-center px-6 text-white sm:px-10 lg:px-14">
               <span className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-gold-700 to-gold-600 px-5 py-1.5 text-xs font-black uppercase tracking-[0.18em] text-white shadow-[0_0_22px_rgba(8,145,178, 0.55)] ring-2 ring-white/30">
@@ -178,7 +178,7 @@ export default function BannerCarousel() {
                 </a>
                 <a
                   href="#flash"
-                  className="rounded-full border-2 border-white/40 bg-[#0f172a]/70 px-7 py-3.5 font-bold text-white backdrop-blur-sm transition hover:bg-[#0f172a] active:scale-[0.98]"
+                  className="rounded-full border-2 border-white/40 bg-[#1c1917]/70 px-7 py-3.5 font-bold text-white backdrop-blur-sm transition hover:bg-[#1c1917] active:scale-[0.98]"
                 >
                   ⚡ Flash Deals
                 </a>

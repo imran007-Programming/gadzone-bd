@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Violet Storm glow drifting over storm air.
+// Ember Harvest glow drifting over harvest air.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(124, 58, 237, 0.28)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(6, 182, 212, 0.24)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(139, 92, 246, 0.22)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(42, 29, 58, 0.22)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(234, 88, 12, 0.28)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245, 158, 11, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(249, 115, 22, 0.22)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(28, 25, 23, 0.22)" },
 ];
 
-// Violet Storm sparks drifting through storm air.
+// Ember Harvest embers rising through harvest air.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#7c3aed" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#06b6d4" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#8b5cf6" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#22d3ee" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#a78bfa" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#67e8f9" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#ede9fe" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#ea580c" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f59e0b" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#f97316" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#fbbf24" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#fb923c" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fcd34d" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#ffedd5" },
 ];
 
-// Violet Storm glints scattered through the storm air.
+// Ember Harvest glints scattered through the harvest air.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* harvest wash over the warm cream field */}
-      <div className="relative bg-gradient-to-b from-[#fef3c7] via-[#fffbeb] to-[#fde68a]">
+      <div className="relative bg-gradient-to-b from-[#ffedd5] via-[#fff7ed] to-[#fed7aa]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -100,7 +100,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(13,148,136, 0.45), inset 0 0 18px rgba(103,232,249, 0.30)",
+                  boxShadow: "0 0 28px 2px rgba(234,88,12, 0.45), inset 0 0 18px rgba(252,211,77, 0.30)",
                   opacity: 1 - r * 0.22,
                 }}
               />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#86efac", "#16a34a", "#15803d", "#f59e0b"];
+              const colors = ["#fbbf24", "#ea580c", "#f97316", "#f59e0b"];
               return (
                 <span
                   key={i}
@@ -176,8 +176,8 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2.5">
-              <div className="rounded-lg bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 p-[3px] shadow-[0_16px_32px_-20px_rgba(136,19,55,0.45)]">
-                <div className="overflow-hidden rounded-md bg-paper ring-1 ring-ink/20">
+              <div className="rounded-2xl bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 p-1 shadow-[6px_6px_0_rgba(124,45,18,0.25)]">
+                <div className="overflow-hidden rounded-xl bg-paper ring-1 ring-ink/20">
                   <BannerCarousel />
                 </div>
               </div>
@@ -239,7 +239,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 onClick={() => onQuickView(p)}
               >
                 <div className="relative">
-                  <div className="overflow-hidden border-b-2 border-brand-100">
+                  <div className="overflow-hidden border-b-4 border-gold-300">
                     <ProductImage product={p} />
                   </div>
                   <span className="starburst absolute -right-1 -top-1 flex h-16 w-16 items-center justify-center p-4 text-center text-[11px] font-black leading-tight">-{discountPct(p)}%</span>
