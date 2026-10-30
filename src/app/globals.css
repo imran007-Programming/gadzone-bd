@@ -1,51 +1,51 @@
 @import "tailwindcss";
 
 @theme {
-  /* Copperline: a warm, workshop-original direction —
-     burnt copper as the primary accent, amber for
-     highlights, deep slate for contrast, warm sand
-     paper, white cards. Cards are compact 0.75rem
-     panels with a thick 2px border, a hard offset
-     shadow and a gradient BOTTOM accent bar — the
-     opposite of the previous Fern Grove look, its
-     emerald / lime palette, ivory paper, generous
-     1.5rem panels, soft diffused shadow and
-     gradient TOP accent bar. */
+  /* Glacier Indigo: a cool, original direction —
+     deep indigo as the primary accent, icy sky for
+     highlights, midnight navy for contrast, frost
+     paper, white cards. Cards are generous 1.75rem
+     panels with a hairline border, a soft diffused
+     shadow and a gradient LEFT accent bar — the
+     opposite of the previous Copperline look, its
+     burnt copper / amber palette, warm sand paper,
+     compact 0.75rem panels, hard offset shadow and
+     gradient BOTTOM accent bar. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = burnt copper scale */
-  --color-brand-50: #fff7ed;
-  --color-brand-100: #ffedd5;
-  --color-brand-200: #fed7aa;
-  --color-brand-300: #fdba74;
-  --color-brand-400: #fb923c;
-  --color-brand-500: #f97316;
-  --color-brand-600: #ea580c;
-  --color-brand-700: #c2410c;
-  --color-brand-800: #9a3412;
-  --color-brand-900: #7c2d12;
-  --color-brand-950: #431407;
-  --color-brand: #c2410c;
-  --color-brand-dark: #9a3412;
-  --color-brand-deep: #7c2d12;
+  /* brand = deep indigo scale */
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-200: #c7d2fe;
+  --color-brand-300: #a5b4fc;
+  --color-brand-400: #818cf8;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+  --color-brand-800: #3730a3;
+  --color-brand-900: #312e81;
+  --color-brand-950: #1e1b4b;
+  --color-brand: #4338ca;
+  --color-brand-dark: #3730a3;
+  --color-brand-deep: #312e81;
 
-  /* gold = warm amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #f59e0b;
-  --color-gold-deep: #b45309;
-  --color-gold-soft: #fef3c7;
+  /* gold = icy sky scale (name kept for legacy class refs) */
+  --color-gold-50: #f0f9ff;
+  --color-gold-100: #e0f2fe;
+  --color-gold-200: #bae6fd;
+  --color-gold-300: #7dd3fc;
+  --color-gold-400: #38bdf8;
+  --color-gold-500: #0ea5e9;
+  --color-gold-600: #0284c7;
+  --color-gold-700: #0369a1;
+  --color-gold-800: #075985;
+  --color-gold-900: #0c4a6e;
+  --color-gold-950: #082f49;
+  --color-gold: #0ea5e9;
+  --color-gold-deep: #0369a1;
+  --color-gold-soft: #e0f2fe;
 
-  /* popblue = deep slate scale (name kept for legacy class refs) */
+  /* popblue = midnight navy scale (name kept for legacy class refs) */
   --color-popblue-50: #f8fafc;
   --color-popblue-100: #f1f5f9;
   --color-popblue-200: #e2e8f0;
@@ -61,11 +61,11 @@
   --color-popblue-deep: #0f172a;
   --color-popblue-soft: #e2e8f0;
 
-  --color-ink: #292524;
-  --color-paper: #fdf6ec;
-  --color-mute: #57534e;
+  --color-ink: #1e1b4b;
+  --color-paper: #f2f7ff;
+  --color-mute: #475569;
   --color-card: #ffffff;
-  --color-deep: #1e293b;
+  --color-deep: #0f172a;
 }
 
 html { scroll-behavior: smooth; }
@@ -79,185 +79,185 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fdf6ec;
+  background-color: #f2f7ff;
   background-image:
-    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(234, 88, 12, 0.14) 0%, rgba(234, 88, 12, 0) 70%),
-    radial-gradient(ellipse 45% 22% at 8% 12%, rgba(245, 158, 11, 0.18) 0%, rgba(245, 158, 11, 0) 70%),
-    linear-gradient(180deg, rgba(255, 237, 213, 0.9) 0%, rgba(254, 243, 199, 0.55) 42%, rgba(253, 246, 236, 0) 78%);
-  color: #292524;
+    radial-gradient(ellipse 55% 26% at 12% 0%, rgba(79, 70, 229, 0.12) 0%, rgba(79, 70, 229, 0) 70%),
+    radial-gradient(ellipse 45% 22% at 92% 12%, rgba(14, 165, 233, 0.16) 0%, rgba(14, 165, 233, 0) 70%),
+    linear-gradient(180deg, rgba(224, 231, 255, 0.9) 0%, rgba(224, 242, 254, 0.55) 42%, rgba(242, 247, 255, 0) 78%);
+  color: #1e1b4b;
 }
-::selection { background: #fde68a; color: #292524; }
+::selection { background: #bae6fd; color: #1e1b4b; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ea580c, #f59e0b); border-radius: 8px; border: 2px solid #fdf6ec; }
-::-webkit-scrollbar-track { background: #ffedd5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #4f46e5, #0ea5e9); border-radius: 8px; border: 2px solid #f2f7ff; }
+::-webkit-scrollbar-track { background: #e0e7ff; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Copperline type: wide, confident headlines. */
-h1, h2, h3 { letter-spacing: 0.01em; text-wrap: balance; }
+/* Glacier type: tight, crisp headlines. */
+h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Copperline fall: embers drifting gently
-   DOWNWARD with a narrow side-to-side sway. */
+/* Glacier rise: mist drifting gently
+   UPWARD with a wide side-to-side sway. */
 @keyframes signal-fall {
-  0% { transform: translate3d(0, -4vh, 0) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(0, 4vh, 0) rotate(0deg); opacity: 0; }
   15% { opacity: 0.8; }
-  50% { transform: translate3d(-2vw, 26vh, 0) rotate(-12deg); }
-  100% { transform: translate3d(2vw, 52vh, 0) rotate(12deg); opacity: 0; }
+  50% { transform: translate3d(2vw, -26vh, 0) rotate(12deg); }
+  100% { transform: translate3d(-2vw, -52vh, 0) rotate(-12deg); opacity: 0; }
 }
 .pop-fall { animation: signal-fall 20s linear infinite; }
 
-/* Copperline sway: a tight, quick side-to-side drift. */
+/* Glacier sway: a wide, slow side-to-side drift. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(-8px, 0, 0) scale(1); opacity: 0.7; }
-  50% { transform: translate3d(8px, 0, 0) scale(1.02); opacity: 1; }
+  0%, 100% { transform: translate3d(-22px, 0, 0) scale(1); opacity: 0.7; }
+  50% { transform: translate3d(22px, 0, 0) scale(1.02); opacity: 1; }
 }
-.pop-drift { animation: signal-drift 6s ease-in-out infinite; }
+.pop-drift { animation: signal-drift 11s ease-in-out infinite; }
 
-/* Copperline bob: a deep, slow float. */
+/* Glacier bob: a gentle, quick float. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1) rotate(0deg); }
-  50% { transform: translateY(-11px) scale(1.02) rotate(-1deg); }
+  50% { transform: translateY(-5px) scale(1.01) rotate(1deg); }
 }
-.pop-bob { animation: signal-bob 5s ease-in-out infinite; }
+.pop-bob { animation: signal-bob 3.2s ease-in-out infinite; }
 
-/* Forward turn for the copper dial. */
+/* Reverse turn for the glacier dial. */
 @keyframes dial-turn {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
 }
 .pop-spin { animation: dial-turn 46s linear infinite; }
 
-/* Copperline glint: a fast amber pulse. */
+/* Glacier glint: a slow sky shimmer. */
 @keyframes signal-blink {
-  0%, 100% { opacity: 0.55; transform: scale(0.95); }
-  50% { opacity: 1; transform: scale(1.15); }
+  0%, 100% { opacity: 0.75; transform: scale(0.98); }
+  50% { opacity: 1; transform: scale(1.06); }
 }
-.pop-twinkle { animation: signal-blink 1.9s ease-in-out infinite; }
+.pop-twinkle { animation: signal-blink 3.4s ease-in-out infinite; }
 
-/* Copperline ticker: infinite marquee (leftward drift). */
+/* Glacier ticker: infinite marquee (rightward drift). */
 @keyframes signal-ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
 }
 .pop-ticker { animation: signal-ticker 36s linear infinite; }
 
-/* Copperline bands: copper / amber diagonal stripes. */
+/* Glacier bands: indigo / sky vertical stripes. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(45deg, #c2410c 0px, #c2410c 10px, #f59e0b 10px, #f59e0b 20px);
-  background-size: 100% 10px;
-  background-repeat: repeat-x;
+    repeating-linear-gradient(90deg, #4338ca 0px, #4338ca 10px, #0ea5e9 10px, #0ea5e9 20px);
+  background-size: 10px 100%;
+  background-repeat: repeat-y;
   border-radius: 999px;
 }
 
-/* Copperline card: a compact 0.75rem panel with a
-   thick 2px border, a hard offset shadow and a
-   gradient BOTTOM accent bar — it nudges up and
+/* Glacier card: a generous 1.75rem panel with a
+   hairline border, a soft diffused shadow and a
+   gradient LEFT accent bar — it lifts gently and
    the shadow deepens on hover, the bar glowing
-   beneath it. */
+   beside it. */
 .pop-lift {
   position: relative;
-  border: 2px solid rgba(41, 37, 36, 0.12);
+  border: 1px solid rgba(30, 27, 75, 0.09);
   background: #ffffff;
-  border-radius: 0.75rem;
-  box-shadow: 6px 6px 0 rgba(194, 65, 12, 0.16);
+  border-radius: 1.75rem;
+  box-shadow: 0 18px 40px -18px rgba(67, 56, 202, 0.28);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   overflow: hidden;
 }
 .pop-lift::before {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
+  top: 0;
   bottom: 0;
-  height: 5px;
-  background: linear-gradient(90deg, #c2410c, #f59e0b);
+  left: 0;
+  width: 5px;
+  background: linear-gradient(180deg, #4338ca, #0ea5e9);
   z-index: 1;
 }
 .pop-lift:hover {
-  transform: translateY(-3px);
-  box-shadow: 9px 9px 0 rgba(194, 65, 12, 0.22);
-  border-color: rgba(234, 88, 12, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 26px 50px -18px rgba(67, 56, 202, 0.38);
+  border-color: rgba(79, 70, 229, 0.35);
 }
 
-/* Copperline glass: shared by modals and drawers — a
-   frosted sand pane with a hard edge and an amber
+/* Glacier glass: shared by modals and drawers — a
+   frosted ice pane with a soft edge and a sky
    hairline. */
 .pop-glass {
-  background: rgba(253, 246, 236, 0.94);
+  background: rgba(242, 247, 255, 0.92);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 2px solid rgba(41, 37, 36, 0.12);
-  border-radius: 0.75rem;
-  box-shadow: 6px 6px 0 rgba(194, 65, 12, 0.16);
+  border: 1px solid rgba(30, 27, 75, 0.09);
+  border-radius: 1.75rem;
+  box-shadow: 0 18px 40px -18px rgba(67, 56, 202, 0.28);
 }
 
-/* Copperline tag: a copper-to-amber badge —
-   cream type, tilted -3deg, with a hard offset
+/* Glacier tag: an indigo-to-sky badge —
+   white type, upright, with a soft diffused
    shadow. */
 .starburst {
-  background: linear-gradient(135deg, #c2410c, #f59e0b);
-  color: #fff7ed;
+  background: linear-gradient(135deg, #4338ca, #0ea5e9);
+  color: #ffffff;
   text-shadow: none;
-  border-radius: 0.5rem;
-  transform: rotate(-3deg);
-  box-shadow: 3px 3px 0 rgba(41, 37, 36, 0.25), inset 0 0 0 2px rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  transform: rotate(0deg);
+  box-shadow: 0 10px 24px -10px rgba(67, 56, 202, 0.55), inset 0 0 0 2px rgba(255, 255, 255, 0.35);
   border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
-/* Copperline texture: a dotted copper-field. */
+/* Glacier texture: a fine indigo grid. */
 .halftone {
   background-image:
-    radial-gradient(rgba(194, 65, 12, 0.22) 1.5px, transparent 1.5px),
-    radial-gradient(rgba(245, 158, 11, 0.22) 1.5px, transparent 1.5px);
+    linear-gradient(rgba(67, 56, 202, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14, 165, 233, 0.08) 1px, transparent 1px);
   background-size: 22px 22px, 22px 22px;
-  background-position: 0 0, 11px 11px;
+  background-position: 0 0, 0 0;
 }
 
-/* Copperline rule: a thick gradient pill rule, copper first. */
+/* Glacier rule: a thin gradient pill rule, indigo first. */
 .zigzag {
-  height: 6px;
+  height: 3px;
   border: none;
-  background: linear-gradient(90deg, #c2410c, #f59e0b);
+  background: linear-gradient(90deg, #4338ca, #0ea5e9);
   opacity: 1;
   border-radius: 999px;
 }
 
-/* Copperline band: a deep slate / copper / amber
-   diagonal wash with a hard offset shadow. */
+/* Glacier band: a midnight navy / indigo / sky
+   horizontal wash with a soft diffused shadow. */
 .bazaar-awning {
-  background: linear-gradient(135deg, #0f172a 0%, #c2410c 55%, #f59e0b 100%);
+  background: linear-gradient(90deg, #0f172a 0%, #4338ca 55%, #0ea5e9 100%);
   opacity: 1;
-  box-shadow: 6px 6px 0 rgba(194, 65, 12, 0.2);
-  border-bottom: 3px solid #f59e0b;
+  box-shadow: 0 18px 40px -18px rgba(67, 56, 202, 0.28);
+  border-bottom: 3px solid #0ea5e9;
   border-radius: 0;
 }
 
-/* Copperline glow: an amber halo for the core. */
+/* Glacier glow: a sky halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 237, 213, 0.7) 42%, rgba(234, 88, 12, 0.25) 62%, rgba(234, 88, 12, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(224, 231, 255, 0.7) 42%, rgba(79, 70, 229, 0.22) 62%, rgba(79, 70, 229, 0) 76%);
 }
 
-/* Copperline core: a copper orb with a
-   bright amber ring. */
+/* Glacier core: an indigo orb with a
+   bright sky ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fff7ed 0%, #fb923c 55%, #0f172a 100%);
-  box-shadow: 0 0 0 3px rgba(252, 211, 77, 0.9), 6px 6px 0 rgba(194, 65, 12, 0.25);
-  border: 2px solid rgba(41, 37, 36, 0.12);
+    radial-gradient(circle at 35% 30%, #eef2ff 0%, #818cf8 55%, #0f172a 100%);
+  box-shadow: 0 0 0 3px rgba(125, 211, 252, 0.9), 0 18px 40px -18px rgba(67, 56, 202, 0.35);
+  border: 1px solid rgba(30, 27, 75, 0.09);
 }
 
-/* Wide rings around the copper orb. */
+/* Wide rings around the indigo orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(194, 65, 12, 0.5) 0px,
-    rgba(194, 65, 12, 0.5) 2px,
+    rgba(67, 56, 202, 0.5) 0px,
+    rgba(67, 56, 202, 0.5) 2px,
     transparent 2px,
     transparent 14px,
-    rgba(245, 158, 11, 0.55) 14px,
-    rgba(245, 158, 11, 0.55) 16px,
+    rgba(14, 165, 233, 0.55) 14px,
+    rgba(14, 165, 233, 0.55) 16px,
     transparent 16px,
     transparent 28px
   );
@@ -268,7 +268,7 @@ h1, h2, h3 { letter-spacing: 0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(245, 158, 11, 0.6) 0deg 3deg,
+    rgba(14, 165, 233, 0.6) 0deg 3deg,
     transparent 3deg 18deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
