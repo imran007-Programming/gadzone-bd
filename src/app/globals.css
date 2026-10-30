@@ -1,71 +1,71 @@
 @import "tailwindcss";
 
 @theme {
-  /* Plum Velvet: a fresh, original direction —
-     deep plum as the primary accent, raspberry
-     for highlights, warm lilac-cream paper, dark
-     plum-charcoal for contrast. Cards are compact
-     0.75rem panels with a thick gradient LEFT
-     accent bar — the opposite of the previous
-     Glacier Mint look, its icy teal / cyan palette,
-     cool mint paper, large 2rem panels, soft
-     diffused shadow and thin gradient TOP accent
-     hairline. */
+  /* Ember Harvest: a fresh, original direction —
+     burnt orange as the primary accent, golden amber
+     for highlights, warm cream paper, dark espresso
+     for contrast. Cards are large 1.5rem panels with
+     a hard offset espresso shadow and a thick gradient
+     BOTTOM accent bar — the opposite of the previous
+     Plum Velvet look, its deep plum / raspberry palette,
+     warm lilac-cream paper, compact 0.75rem panels,
+     soft diffused shadow and thick gradient LEFT
+     accent bar. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = deep plum scale */
-  --color-brand-50: #fdf4ff;
-  --color-brand-100: #fae8ff;
-  --color-brand-200: #f5d0fe;
-  --color-brand-300: #f0abfc;
-  --color-brand-400: #e879f9;
-  --color-brand-500: #a21caf;
-  --color-brand-600: #86198f;
-  --color-brand-700: #701a75;
-  --color-brand-800: #4a044e;
-  --color-brand-900: #3b0764;
-  --color-brand-950: #1e0a2e;
-  --color-brand: #701a75;
-  --color-brand-dark: #4a044e;
-  --color-brand-deep: #3b0764;
+  /* brand = burnt orange scale */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #ea580c;
+  --color-brand-600: #c2410c;
+  --color-brand-700: #9a3412;
+  --color-brand-800: #7c2d12;
+  --color-brand-900: #431407;
+  --color-brand-950: #2a1508;
+  --color-brand: #9a3412;
+  --color-brand-dark: #7c2d12;
+  --color-brand-deep: #431407;
 
-  /* gold = raspberry scale (name kept for legacy class refs) */
-  --color-gold-50: #fdf2f8;
-  --color-gold-100: #fce7f3;
-  --color-gold-200: #fbcfe8;
-  --color-gold-300: #f9a8d4;
-  --color-gold-400: #f472b6;
-  --color-gold-500: #ec4899;
-  --color-gold-600: #db2777;
-  --color-gold-700: #be185d;
-  --color-gold-800: #9d174d;
-  --color-gold-900: #831843;
-  --color-gold-950: #500724;
-  --color-gold: #ec4899;
-  --color-gold-deep: #be185d;
-  --color-gold-soft: #fce7f3;
+  /* gold = golden amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #b45309;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = plum-charcoal scale (name kept for legacy class refs) */
-  --color-popblue-50: #faf5ff;
-  --color-popblue-100: #f3e8ff;
-  --color-popblue-200: #e9d5ff;
-  --color-popblue-300: #d8b4fe;
-  --color-popblue-400: #a855f7;
-  --color-popblue-500: #7e5a8c;
-  --color-popblue-600: #5b3a68;
-  --color-popblue-700: #42264e;
-  --color-popblue-800: #2d1a35;
-  --color-popblue-900: #1e0f24;
-  --color-popblue-950: #120814;
-  --color-popblue: #42264e;
-  --color-popblue-deep: #120814;
-  --color-popblue-soft: #e9d5ff;
+  /* popblue = warm espresso scale (name kept for legacy class refs) */
+  --color-popblue-50: #fafaf9;
+  --color-popblue-100: #f5f5f4;
+  --color-popblue-200: #e7e5e4;
+  --color-popblue-300: #d6d3d1;
+  --color-popblue-400: #a8a29e;
+  --color-popblue-500: #78716c;
+  --color-popblue-600: #57534e;
+  --color-popblue-700: #44403c;
+  --color-popblue-800: #292524;
+  --color-popblue-900: #1c1917;
+  --color-popblue-950: #0c0a09;
+  --color-popblue: #44403c;
+  --color-popblue-deep: #0c0a09;
+  --color-popblue-soft: #e7e5e4;
 
-  --color-ink: #1e0f24;
-  --color-paper: #fdf4ff;
-  --color-mute: #7e5a8c;
+  --color-ink: #1c1917;
+  --color-paper: #fffbeb;
+  --color-mute: #78716c;
   --color-card: #ffffff;
-  --color-deep: #120814;
+  --color-deep: #0c0a09;
 }
 
 html { scroll-behavior: smooth; }
@@ -79,182 +79,181 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fdf4ff;
+  background-color: #fffbeb;
   background-image:
-    radial-gradient(ellipse 50% 24% at 12% 0%, rgba(236, 72, 153, 0.20) 0%, rgba(236, 72, 153, 0) 70%),
-    radial-gradient(ellipse 42% 20% at 92% 18%, rgba(112, 26, 117, 0.14) 0%, rgba(112, 26, 117, 0) 70%),
-    linear-gradient(180deg, rgba(252, 231, 243, 0.9) 0%, rgba(250, 232, 255, 0.5) 42%, rgba(253, 244, 255, 0) 78%);
-  color: #1e0f24;
+    radial-gradient(ellipse 50% 24% at 12% 0%, rgba(245, 158, 11, 0.22) 0%, rgba(245, 158, 11, 0) 70%),
+    radial-gradient(ellipse 42% 20% at 92% 18%, rgba(234, 88, 12, 0.16) 0%, rgba(234, 88, 12, 0) 70%),
+    linear-gradient(180deg, rgba(254, 243, 199, 0.9) 0%, rgba(255, 237, 213, 0.5) 42%, rgba(255, 251, 235, 0) 78%);
+  color: #1c1917;
 }
-::selection { background: #f9a8d4; color: #1e0f24; }
+::selection { background: #fcd34d; color: #1c1917; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #701a75, #ec4899); border-radius: 8px; border: 2px solid #fdf4ff; }
-::-webkit-scrollbar-track { background: #fae8ff; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ea580c, #f59e0b); border-radius: 8px; border: 2px solid #fffbeb; }
+::-webkit-scrollbar-track { background: #ffedd5; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Plum type: relaxed, warm headlines. */
-h1, h2, h3 { letter-spacing: 0.005em; text-wrap: balance; }
+/* Ember type: tight, bold headlines. */
+h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Plum drift: petals swaying DOWNWARD on a diagonal
+/* Ember rise: sparks drifting UPWARD through warm air
    with a gentle side-to-side sway — the reverse of
-   the previous upward glacier rise. */
+   the previous plum petals falling downward. */
 @keyframes signal-fall {
-  0% { transform: translate3d(0, -4vh, 0) rotate(0deg); opacity: 0; }
-  15% { opacity: 0.8; }
-  50% { transform: translate3d(-2vw, 26vh, 0) rotate(-12deg); }
-  100% { transform: translate3d(2vw, 52vh, 0) rotate(12deg); opacity: 0; }
+  0% { transform: translate3d(0, 4vh, 0) rotate(0deg); opacity: 0; }
+  15% { opacity: 0.9; }
+  50% { transform: translate3d(2vw, -26vh, 0) rotate(12deg); }
+  100% { transform: translate3d(-2vw, -52vh, 0) rotate(-12deg); opacity: 0; }
 }
 .pop-fall { animation: signal-fall 20s linear infinite; }
 
-/* Plum sway: a wide, slow side-to-side drift. */
+/* Ember sway: a tall, slow vertical drift. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(-10px, 0, 0) scale(1); opacity: 0.7; }
-  50% { transform: translate3d(10px, 0, 0) scale(1.02); opacity: 1; }
+  0%, 100% { transform: translate3d(0, -8px, 0) scale(1); opacity: 0.7; }
+  50% { transform: translate3d(0, 8px, 0) scale(1.02); opacity: 1; }
 }
 .pop-drift { animation: signal-drift 9s ease-in-out infinite; }
 
-/* Plum bob: a quick, shallow float. */
+/* Ember bob: a deep, slow float. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1) rotate(0deg); }
-  50% { transform: translateY(-6px) scale(1.01) rotate(-1deg); }
+  50% { transform: translateY(-10px) scale(1.02) rotate(1deg); }
 }
-.pop-bob { animation: signal-bob 5s ease-in-out infinite; }
+.pop-bob { animation: signal-bob 6s ease-in-out infinite; }
 
-/* Reverse turn for the plum dial. */
+/* Forward turn for the ember dial. */
 @keyframes dial-turn {
-  from { transform: rotate(360deg); }
-  to { transform: rotate(0deg); }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 18s linear infinite; }
 
-/* Plum glint: a slow raspberry shimmer. */
+/* Ember glint: a quick amber flicker. */
 @keyframes signal-blink {
-  0%, 100% { opacity: 0.7; transform: scale(0.97); }
-  50% { opacity: 1; transform: scale(1.05); }
+  0%, 100% { opacity: 0.7; transform: scale(0.96); }
+  50% { opacity: 1; transform: scale(1.12); }
 }
-.pop-twinkle { animation: signal-blink 5s ease-in-out infinite; }
+.pop-twinkle { animation: signal-blink 3s ease-in-out infinite; }
 
-/* Plum ticker: infinite marquee (leftward drift). */
+/* Ember ticker: infinite marquee (rightward drift). */
 @keyframes signal-ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Plum bands: plum / raspberry diagonal stripes. */
+/* Ember bands: orange / amber diagonal stripes. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(135deg, #701a75 0px, #701a75 10px, #ec4899 10px, #ec4899 20px);
+    repeating-linear-gradient(-45deg, #ea580c 0px, #ea580c 10px, #f59e0b 10px, #f59e0b 20px);
   background-size: 28px 100%;
   background-repeat: repeat-x;
   border-radius: 999px;
 }
 
-/* Plum card: a compact 0.75rem panel with a crisp
-   shadow and a thick gradient LEFT accent bar — it
-   lifts straight up and the bar glows raspberry on
-   hover. */
+/* Ember card: a large 1.5rem panel with a hard offset
+   espresso shadow and a thick gradient BOTTOM accent
+   bar — it shifts diagonally on hover and the shadow
+   grows while the bar glows amber. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(30, 15, 36, 0.10);
+  border: 2px solid rgba(28, 25, 23, 0.9);
   background: #ffffff;
-  border-radius: 0.75rem;
-  box-shadow: 0 10px 24px -12px rgba(112, 26, 117, 0.30), 0 2px 6px -2px rgba(18, 8, 20, 0.06);
+  border-radius: 1.5rem;
+  box-shadow: 4px 4px 0 0 #292524;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift::before {
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
   left: 0;
-  width: 5px;
-  background: linear-gradient(180deg, #ec4899, #701a75);
+  right: 0;
+  bottom: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #f59e0b, #ea580c);
   z-index: 1;
 }
 .pop-lift:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 18px 32px -14px rgba(112, 26, 117, 0.38), 0 4px 10px -2px rgba(18, 8, 20, 0.08);
-  border-color: rgba(236, 72, 153, 0.55);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 0 #292524;
+  border-color: rgba(234, 88, 12, 0.9);
 }
 
-/* Plum glass: shared by modals and drawers — a
-   warm lilac frosted pane with a crisp edge and a
-   raspberry hairline. */
+/* Ember glass: shared by modals and drawers — a
+   warm cream frosted pane with a crisp dark edge
+   and an amber hairline. */
 .pop-glass {
-  background: rgba(253, 244, 255, 0.92);
+  background: rgba(255, 251, 235, 0.92);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(30, 15, 36, 0.10);
-  border-radius: 0.75rem;
-  box-shadow: 0 10px 24px -12px rgba(112, 26, 117, 0.30);
+  border: 2px solid rgba(28, 25, 23, 0.9);
+  border-radius: 1.5rem;
+  box-shadow: 4px 4px 0 0 #292524;
 }
 
-/* Plum tag: a raspberry badge —
-   white type, tilted the other way, as a squarish chip. */
+/* Ember tag: an amber badge —
+   dark type, tilted forward, as a round coin. */
 .starburst {
-  background: linear-gradient(135deg, #ec4899, #701a75);
-  color: #ffffff;
+  background: linear-gradient(135deg, #fbbf24, #ea580c);
+  color: #1c1917;
   text-shadow: none;
-  border-radius: 0.5rem;
-  transform: rotate(-5deg);
-  box-shadow: 0 10px 24px -8px rgba(190, 24, 93, 0.55), inset 0 0 0 2px rgba(255, 255, 255, 0.35);
-  border: 2px solid rgba(253, 244, 255, 0.9);
+  border-radius: 999px;
+  transform: rotate(4deg);
+  box-shadow: 0 10px 24px -8px rgba(217, 119, 6, 0.55), inset 0 0 0 2px rgba(255, 255, 255, 0.35);
+  border: 2px solid rgba(28, 25, 23, 0.9);
 }
 
-/* Plum texture: a plum dot grid. */
+/* Ember texture: an amber dot grid. */
 .halftone {
   background-image:
-    radial-gradient(rgba(112, 26, 117, 0.14) 1.5px, transparent 1.5px);
-  background-size: 18px 18px;
+    radial-gradient(rgba(234, 88, 12, 0.16) 1.5px, transparent 1.5px);
+  background-size: 22px 22px;
 }
 
-/* Plum rule: a dashed raspberry rule, plum caps. */
+/* Ember rule: a dotted orange rule, amber caps. */
 .zigzag {
   height: 0;
   border: none;
-  border-top: 3px dashed #ec4899;
+  border-top: 4px dotted #ea580c;
   opacity: 1;
 }
 
-/* Plum band: a plum / raspberry diagonal wash
-   with rounded bottom corners and a raspberry
-   bottom edge. */
+/* Ember band: an orange / amber diagonal wash
+   with square corners and a dark espresso top edge. */
 .bazaar-awning {
-  background: linear-gradient(135deg, #3b0764 0%, #701a75 55%, #ec4899 100%);
+  background: linear-gradient(135deg, #f59e0b 0%, #ea580c 55%, #7c2d12 100%);
   opacity: 1;
-  box-shadow: 0 10px 24px -12px rgba(112, 26, 117, 0.35);
-  border-bottom: 3px solid #ec4899;
-  border-radius: 0 0 0.75rem 0.75rem;
+  box-shadow: 4px 4px 0 0 #292524;
+  border-top: 3px solid #292524;
+  border-radius: 0;
 }
 
-/* Plum glow: a raspberry halo for the core. */
+/* Ember glow: an amber halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(252, 231, 243, 0.7) 42%, rgba(112, 26, 117, 0.20) 62%, rgba(112, 26, 117, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(254, 243, 199, 0.7) 42%, rgba(234, 88, 12, 0.20) 62%, rgba(234, 88, 12, 0) 76%);
 }
 
-/* Plum beacon: a raspberry orb with a
-   deep plum ring. */
+/* Ember beacon: an amber orb with a
+   dark espresso ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fdf2f8 0%, #f472b6 55%, #3b0764 100%);
-  box-shadow: 0 0 0 3px rgba(249, 168, 212, 0.9), 0 10px 24px -12px rgba(112, 26, 117, 0.35);
-  border: 1px solid rgba(30, 15, 36, 0.10);
+    radial-gradient(circle at 35% 30%, #fffbeb 0%, #fbbf24 55%, #7c2d12 100%);
+  box-shadow: 0 0 0 3px rgba(252, 211, 77, 0.9), 4px 4px 0 0 #292524;
+  border: 2px solid rgba(28, 25, 23, 0.9);
 }
 
-/* Wide rings around the raspberry orb. */
+/* Wide rings around the amber orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(112, 26, 117, 0.5) 0px,
-    rgba(112, 26, 117, 0.5) 2px,
+    rgba(234, 88, 12, 0.5) 0px,
+    rgba(234, 88, 12, 0.5) 2px,
     transparent 2px,
     transparent 22px,
-    rgba(236, 72, 153, 0.55) 22px,
-    rgba(236, 72, 153, 0.55) 24px,
+    rgba(245, 158, 11, 0.55) 22px,
+    rgba(245, 158, 11, 0.55) 24px,
     transparent 24px,
     transparent 44px
   );
@@ -264,8 +263,8 @@ h1, h2, h3 { letter-spacing: 0.005em; text-wrap: balance; }
 }
 .sun-rays {
   background: repeating-conic-gradient(
-    from 45deg at 50% 50%,
-    rgba(236, 72, 153, 0.6) 0deg 3deg,
+    from 0deg at 50% 50%,
+    rgba(245, 158, 11, 0.6) 0deg 3deg,
     transparent 3deg 18deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
