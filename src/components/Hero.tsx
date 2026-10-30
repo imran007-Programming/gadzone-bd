@@ -20,22 +20,22 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Violet Velvet glow drifting over blush-lavender.
+// Terracotta Dusk glow drifting over warm cream.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(5, 150, 105, 0.28)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(132, 204, 22, 0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(4, 120, 87, 0.22)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(2, 44, 34, 0.22)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(234, 88, 12, 0.28)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245, 158, 11, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(194, 65, 12, 0.22)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(67, 20, 7, 0.22)" },
 ];
 
-// Mango Grove leaves drifting down through still orchard air.
+// Terracotta Dusk embers rising through cooling evening air.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#16a34a" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f97316" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#22c55e" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#fdba74" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#15803d" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fb923c" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#ea580c" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f59e0b" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#f97316" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#fbbf24" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#c2410c" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fdba74" },
   { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#fff7ed" },
 ];
 
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* velvet wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#d1fae5] via-[#f7fee7] to-[#f2fbf5]">
+      <div className="relative bg-gradient-to-b from-[#ffedd5] via-[#fef3c7] to-[#fff8f0]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -100,7 +100,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(6,78,59, 0.45), inset 0 0 18px rgba(190,242,100, 0.30)",
+                  boxShadow: "0 0 28px 2px rgba(124,45,18, 0.45), inset 0 0 18px rgba(251,191,36, 0.30)",
                   opacity: 1 - r * 0.22,
                 }}
               />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#4ade80", "#16a34a", "#15803d", "#fb923c"];
+              const colors = ["#fb923c", "#f97316", "#f59e0b", "#ea580c"];
               return (
                 <span
                   key={i}
@@ -215,7 +215,7 @@ export default function Hero({ onQuickView }: HeroProps) {
               <div key={s.l} className="pop-lift relative overflow-hidden p-4 pb-3 pt-5 text-center">
                 <span className="relative block bg-gradient-to-br from-brand-600 via-gold-500 to-popblue-700 bg-clip-text text-2xl font-black tracking-tight text-transparent">{s.v}</span>
                 <span className="relative mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-mute">{s.l}</span>
-                <span aria-hidden className="relative mx-auto mt-3 block h-1 w-16 rounded-full bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 shadow-[0_2px_6px_rgba(76,29,149,0.4)]" />
+                <span aria-hidden className="relative mx-auto mt-3 block h-1 w-16 rounded-full bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 shadow-[0_2px_6px_rgba(194,65,12,0.4)]" />
               </div>
             ))}
           </motion.div>
