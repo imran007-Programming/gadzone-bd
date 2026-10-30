@@ -1,71 +1,70 @@
 @import "tailwindcss";
 
 @theme {
-  /* Emerald Grove: a fresh, original direction —
-     deep emerald as the primary accent, warm amber
-     for highlights, soft ivory paper, and deep
-     forest ink for contrast. Cards are soft
-     1.5rem panels with a layered shadow and a
-     thick gradient LEFT accent bar — the opposite
-     of the previous Royal Orchid look, its violet /
-     fuchsia palette, pale lavender paper, crisp
-     0.75rem panels, solid offset shadow, and thick
-     gradient BOTTOM accent bar. */
+  /* Cobalt Tide: a fresh, original direction —
+     cobalt blue as the primary accent, warm coral
+     for highlights, cool mist paper, and deep navy
+     ink for contrast. Cards are sharp 0.5rem panels
+     with a flat layered shadow and a thick gradient
+     TOP accent bar — the opposite of the previous
+     Emerald Grove look, its emerald / amber palette,
+     warm ivory paper, soft 1.5rem panels, layered
+     bloom shadow, and thick gradient LEFT accent bar. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = emerald scale */
-  --color-brand-50: #ecfdf5;
-  --color-brand-100: #d1fae5;
-  --color-brand-200: #a7f3d0;
-  --color-brand-300: #6ee7b7;
-  --color-brand-400: #34d399;
-  --color-brand-500: #10b981;
-  --color-brand-600: #059669;
-  --color-brand-700: #047857;
-  --color-brand-800: #065f46;
-  --color-brand-900: #064e3b;
-  --color-brand-950: #022c22;
-  --color-brand: #059669;
-  --color-brand-dark: #065f46;
-  --color-brand-deep: #022c22;
+  /* brand = cobalt blue scale */
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-200: #bfdbfe;
+  --color-brand-300: #93c5fd;
+  --color-brand-400: #60a5fa;
+  --color-brand-500: #3b82f6;
+  --color-brand-600: #2563eb;
+  --color-brand-700: #1d4ed8;
+  --color-brand-800: #1e40af;
+  --color-brand-900: #1e3a8a;
+  --color-brand-950: #172554;
+  --color-brand: #2563eb;
+  --color-brand-dark: #1e40af;
+  --color-brand-deep: #172554;
 
-  /* gold = amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #f59e0b;
-  --color-gold-deep: #92400e;
-  --color-gold-soft: #fef3c7;
+  /* gold = coral scale (name kept for legacy class refs) */
+  --color-gold-50: #fff7ed;
+  --color-gold-100: #ffedd5;
+  --color-gold-200: #fed7aa;
+  --color-gold-300: #fdba74;
+  --color-gold-400: #fb923c;
+  --color-gold-500: #f97316;
+  --color-gold-600: #ea580c;
+  --color-gold-700: #c2410c;
+  --color-gold-800: #9a3412;
+  --color-gold-900: #7c2d12;
+  --color-gold-950: #431407;
+  --color-gold: #f97316;
+  --color-gold-deep: #9a3412;
+  --color-gold-soft: #ffedd5;
 
-  /* popblue = teal slate scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0fdfa;
-  --color-popblue-100: #ccfbf1;
-  --color-popblue-200: #99f6e4;
-  --color-popblue-300: #5eead4;
-  --color-popblue-400: #2dd4bf;
-  --color-popblue-500: #14b8a6;
-  --color-popblue-600: #0d9488;
-  --color-popblue-700: #0f766e;
-  --color-popblue-800: #115e59;
-  --color-popblue-900: #134e4a;
-  --color-popblue-950: #042f2e;
-  --color-popblue: #0d9488;
-  --color-popblue-deep: #042f2e;
-  --color-popblue-soft: #99f6e4;
+  /* popblue = cyan scale (name kept for legacy class refs) */
+  --color-popblue-50: #ecfeff;
+  --color-popblue-100: #cffafe;
+  --color-popblue-200: #a5f3fc;
+  --color-popblue-300: #67e8f9;
+  --color-popblue-400: #22d3ee;
+  --color-popblue-500: #06b6d4;
+  --color-popblue-600: #0891b2;
+  --color-popblue-700: #0e7490;
+  --color-popblue-800: #155e75;
+  --color-popblue-900: #164e63;
+  --color-popblue-950: #083344;
+  --color-popblue: #0891b2;
+  --color-popblue-deep: #083344;
+  --color-popblue-soft: #a5f3fc;
 
-  --color-ink: #022c22;
-  --color-paper: #fdfcf7;
-  --color-mute: #0f766e;
+  --color-ink: #0f172a;
+  --color-paper: #f4f7fb;
+  --color-mute: #475569;
   --color-card: #ffffff;
-  --color-deep: #022c22;
+  --color-deep: #172554;
 }
 
 html { scroll-behavior: smooth; }
@@ -79,87 +78,87 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fdfcf7;
+  background-color: #f4f7fb;
   background-image:
-    radial-gradient(ellipse 55% 26% at 12% 0%, rgba(16, 185, 129, 0.14) 0%, rgba(16, 185, 129, 0) 70%),
-    radial-gradient(ellipse 45% 22% at 92% 18%, rgba(245, 158, 11, 0.16) 0%, rgba(245, 158, 11, 0) 70%),
-    linear-gradient(180deg, rgba(209, 250, 229, 0.85) 0%, rgba(254, 243, 199, 0.5) 42%, rgba(253, 252, 247, 0) 78%);
-  color: #022c22;
+    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(37, 99, 235, 0.14) 0%, rgba(37, 99, 235, 0) 70%),
+    radial-gradient(ellipse 45% 22% at 8% 18%, rgba(6, 182, 212, 0.16) 0%, rgba(6, 182, 212, 0) 70%),
+    linear-gradient(160deg, rgba(219, 234, 254, 0.9) 0%, rgba(255, 237, 213, 0.5) 42%, rgba(244, 247, 251, 0) 78%);
+  color: #0f172a;
 }
-::selection { background: #fcd34d; color: #022c22; }
+::selection { background: #fdba74; color: #172554; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #059669, #f59e0b); border-radius: 999px; border: 2px solid #fdfcf7; }
-::-webkit-scrollbar-track { background: #d1fae5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #2563eb, #f97316); border-radius: 4px; border: 2px solid #f4f7fb; }
+::-webkit-scrollbar-track { background: #dbeafe; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Grove type: relaxed, warm headlines. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Tide type: tight, crisp headlines. */
+h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Grove rise: leaves drifting DOWNWARD through
-   still grove air, swaying side to side as they fall. */
+/* Tide rise: bubbles drifting UPWARD through
+   still water, swaying side to side as they rise. */
 @keyframes signal-fall {
-  0% { transform: translate3d(0, -4vh, 0) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(0, 52vh, 0) rotate(0deg); opacity: 0; }
   15% { opacity: 0.85; }
-  50% { transform: translate3d(-2vw, 26vh, 0) rotate(160deg); }
-  100% { transform: translate3d(2vw, 52vh, 0) rotate(320deg); opacity: 0; }
+  50% { transform: translate3d(2vw, 26vh, 0) rotate(160deg); }
+  100% { transform: translate3d(-2vw, -4vh, 0) rotate(320deg); opacity: 0; }
 }
 .pop-fall { animation: signal-fall 24s linear infinite; }
 
-/* Grove sway: a slow, wide horizontal drift. */
+/* Tide sway: a slow, wide horizontal drift. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(10px, 0, 0) scale(1); opacity: 0.7; }
-  50% { transform: translate3d(-10px, 0, 0) scale(1.02); opacity: 1; }
+  0%, 100% { transform: translate3d(-10px, 0, 0) scale(1); opacity: 0.7; }
+  50% { transform: translate3d(10px, 0, 0) scale(1.02); opacity: 1; }
 }
 .pop-drift { animation: signal-drift 12s ease-in-out infinite; }
 
-/* Grove bob: a slow, gentle float. */
+/* Tide bob: a slow, gentle float. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1) rotate(0deg); }
-  50% { transform: translateY(-10px) scale(1.01) rotate(-2deg); }
+  50% { transform: translateY(-10px) scale(1.01) rotate(2deg); }
 }
 .pop-bob { animation: signal-bob 7s ease-in-out infinite; }
 
-/* Forward turn for the grove dial. */
+/* Reverse turn for the tide dial. */
 @keyframes dial-turn {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
 }
 .pop-spin { animation: dial-turn 34s linear infinite; }
 
-/* Grove glint: a slow amber pulse. */
+/* Tide glint: a slow coral pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.5; transform: scale(0.96); }
   50% { opacity: 1; transform: scale(1.08); }
 }
 .pop-twinkle { animation: signal-blink 3.2s ease-in-out infinite; }
 
-/* Grove ticker: infinite marquee (rightward drift). */
+/* Tide ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 42s linear infinite; }
 
-/* Grove bands: emerald / amber vertical stripes. */
+/* Tide bands: cobalt / cyan horizontal stripes. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(90deg, #059669 0px, #059669 10px, #f59e0b 10px, #f59e0b 20px);
-  background-size: 28px 100%;
-  background-repeat: repeat-y;
+    repeating-linear-gradient(0deg, #2563eb 0px, #2563eb 10px, #06b6d4 10px, #06b6d4 20px);
+  background-size: 100% 28px;
+  background-repeat: repeat-x;
   border-radius: 2px;
 }
 
-/* Grove card: a soft 1.5rem panel with a layered
-   shadow and a thick gradient LEFT accent bar —
-   it lifts gently on hover while the shadow blooms
-   and the bar brightens. */
+/* Tide card: a sharp 0.5rem panel with a flat
+   layered shadow and a thick gradient TOP accent
+   bar — it lifts gently on hover while the shadow
+   deepens and the bar brightens. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(6, 78, 59, 0.14);
+  border: 1px solid rgba(30, 58, 138, 0.14);
   background: #ffffff;
-  border-radius: 1.5rem;
-  box-shadow: 0 2px 6px rgba(2, 44, 34, 0.06), 0 18px 36px -18px rgba(2, 44, 34, 0.28);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px rgba(23, 37, 84, 0.08), 0 10px 24px -12px rgba(23, 37, 84, 0.22);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   overflow: hidden;
 }
@@ -167,95 +166,95 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
   content: "";
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
-  width: 6px;
-  background: linear-gradient(180deg, #f59e0b, #059669);
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #f97316, #2563eb);
   z-index: 1;
 }
 .pop-lift:hover {
   transform: translateY(-4px);
-  box-shadow: 0 4px 10px rgba(2, 44, 34, 0.08), 0 28px 48px -20px rgba(2, 44, 34, 0.38);
-  border-color: rgba(217, 119, 6, 0.5);
+  box-shadow: 0 2px 4px rgba(23, 37, 84, 0.1), 0 20px 32px -14px rgba(23, 37, 84, 0.32);
+  border-color: rgba(234, 88, 12, 0.5);
 }
 
-/* Grove glass: shared by modals and drawers — a
-   warm ivory frosted pane with a soft edge and an
-   amber hairline. */
+/* Tide glass: shared by modals and drawers — a
+   cool mist frosted pane with a sharp edge and a
+   cyan hairline. */
 .pop-glass {
-  background: rgba(253, 252, 247, 0.92);
+  background: rgba(244, 247, 251, 0.92);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(6, 78, 59, 0.16);
-  border-radius: 1.5rem;
-  box-shadow: 0 24px 40px -20px rgba(2, 44, 34, 0.3);
+  border: 1px solid rgba(30, 58, 138, 0.16);
+  border-radius: 0.5rem;
+  box-shadow: 0 24px 40px -20px rgba(23, 37, 84, 0.3);
 }
 
-/* Grove tag: a soft rounded amber badge — deep
-   forest type, gentle edge, tilted the other way. */
+/* Tide tag: a crisp square coral badge — deep
+   navy type, flat edge, no tilt. */
 .starburst {
-  background: linear-gradient(135deg, #fde68a 0%, #fbbf24 55%, #059669 100%);
-  color: #022c22;
+  background: linear-gradient(135deg, #fed7aa 0%, #fb923c 55%, #2563eb 100%);
+  color: #172554;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-  border-radius: 1rem;
-  transform: rotate(3deg);
-  box-shadow: 0 12px 24px -8px rgba(2, 44, 34, 0.45);
-  border: 2px solid rgba(253, 252, 247, 0.95);
+  border-radius: 0.375rem;
+  transform: rotate(0deg);
+  box-shadow: 0 8px 16px -8px rgba(23, 37, 84, 0.45);
+  border: 2px solid rgba(244, 247, 251, 0.95);
 }
 
-/* Grove texture: a warm dot grid. */
+/* Tide texture: a cool dot grid. */
 .halftone {
   background-image:
-    radial-gradient(rgba(5, 150, 105, 0.16) 1.5px, transparent 1.5px),
-    radial-gradient(rgba(245, 158, 11, 0.18) 1.5px, transparent 1.5px);
+    radial-gradient(rgba(37, 99, 235, 0.16) 1.5px, transparent 1.5px),
+    radial-gradient(rgba(6, 182, 212, 0.18) 1.5px, transparent 1.5px);
   background-size: 22px 22px, 22px 22px;
   background-position: 0 0, 11px 11px;
 }
 
-/* Grove rule: a dashed emerald / amber line. */
+/* Tide rule: a dotted cobalt / coral line. */
 .zigzag {
   height: 4px;
   border: none;
   border-radius: 999px;
-  background: repeating-linear-gradient(90deg, #059669 0px, #059669 12px, transparent 12px, transparent 22px, #f59e0b 22px, #f59e0b 30px, transparent 30px, transparent 42px);
+  background: repeating-linear-gradient(90deg, #2563eb 0px, #2563eb 6px, transparent 6px, transparent 14px, #f97316 14px, #f97316 20px, transparent 20px, transparent 30px);
   opacity: 1;
 }
 
-/* Grove band: an emerald / amber diagonal wash
-   with rounded corners and a thick amber top edge. */
+/* Tide band: a cobalt / cyan diagonal wash
+   with sharp corners and a thick cyan bottom edge. */
 .bazaar-awning {
-  background: linear-gradient(135deg, #047857 0%, #059669 45%, #f59e0b 100%);
+  background: linear-gradient(135deg, #1e40af 0%, #2563eb 45%, #06b6d4 100%);
   opacity: 1;
-  box-shadow: 0 4px 12px rgba(2, 44, 34, 0.25);
-  border-top: 3px solid #d97706;
-  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(23, 37, 84, 0.25);
+  border-bottom: 3px solid #0891b2;
+  border-radius: 0.5rem;
 }
 
-/* Grove glow: an amber halo for the core. */
+/* Tide glow: a cyan halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(254, 243, 199, 0.7) 42%, rgba(5, 150, 105, 0.20) 62%, rgba(5, 150, 105, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(219, 234, 254, 0.7) 42%, rgba(37, 99, 235, 0.20) 62%, rgba(37, 99, 235, 0) 76%);
 }
 
-/* Grove beacon: an amber orb with a
-   deep forest ring. */
+/* Tide beacon: a cyan orb with a
+   deep navy ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fef3c7 0%, #fbbf24 55%, #022c22 100%);
-  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.9), 0 12px 28px -12px rgba(2, 44, 34, 0.4);
-  border: 1px solid rgba(2, 44, 34, 0.15);
+    radial-gradient(circle at 35% 30%, #cffafe 0%, #22d3ee 55%, #172554 100%);
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.9), 0 12px 28px -12px rgba(23, 37, 84, 0.4);
+  border: 1px solid rgba(23, 37, 84, 0.15);
 }
 
-/* Wide rings around the amber orb. */
+/* Wide rings around the cyan orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(5, 150, 105, 0.5) 0px,
-    rgba(5, 150, 105, 0.5) 2px,
+    rgba(37, 99, 235, 0.5) 0px,
+    rgba(37, 99, 235, 0.5) 2px,
     transparent 2px,
     transparent 20px,
-    rgba(245, 158, 11, 0.55) 20px,
-    rgba(245, 158, 11, 0.55) 22px,
+    rgba(6, 182, 212, 0.55) 20px,
+    rgba(6, 182, 212, 0.55) 22px,
     transparent 22px,
     transparent 40px
   );
@@ -266,7 +265,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(245, 158, 11, 0.6) 0deg 4deg,
+    rgba(6, 182, 212, 0.6) 0deg 4deg,
     transparent 4deg 28deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
