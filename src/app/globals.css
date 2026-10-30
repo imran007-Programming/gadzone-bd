@@ -1,71 +1,71 @@
 @import "tailwindcss";
 
 @theme {
-  /* Rosewood Ember: a warm, original direction —
-     deep rosewood crimson as the primary accent,
-     sunny amber for highlights, warm stone for
-     contrast, blush paper, white cards. Cards are
-     sharp 0.5rem panels with a thick amber RIGHT
-     bar and a soft diffused shadow — the opposite
-     of the previous Violet Vineyard look, its
-     violet / lime palette, lavender paper, soft
-     1rem panels, thick lime TOP bar and hard
-     violet offset shadow. */
+  /* Lagoon Tide: a cool, original direction —
+     deep teal as the primary accent, seafoam mint
+     for highlights, deep ink navy for contrast,
+     icy mint paper, white cards. Cards are
+     extra-rounded 1.75rem panels with a thick teal
+     BOTTOM bar and a hard offset shadow — the
+     opposite of the previous Rosewood Ember look,
+     its crimson / amber palette, blush paper,
+     sharp 0.5rem panels, thick amber RIGHT bar
+     and soft diffused shadow. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = rosewood crimson scale */
-  --color-brand-50: #fff1f2;
-  --color-brand-100: #ffe4e6;
-  --color-brand-200: #fecdd3;
-  --color-brand-300: #fda4af;
-  --color-brand-400: #fb7185;
-  --color-brand-500: #f43f5e;
-  --color-brand-600: #e11d48;
-  --color-brand-700: #be123c;
-  --color-brand-800: #9f1239;
-  --color-brand-900: #881337;
-  --color-brand-950: #4c0519;
-  --color-brand: #be123c;
-  --color-brand-dark: #9f1239;
-  --color-brand-deep: #881337;
+  /* brand = deep teal scale */
+  --color-brand-50: #f0fdfa;
+  --color-brand-100: #ccfbf1;
+  --color-brand-200: #99f6e4;
+  --color-brand-300: #5eead4;
+  --color-brand-400: #2dd4bf;
+  --color-brand-500: #14b8a6;
+  --color-brand-600: #0d9488;
+  --color-brand-700: #0f766e;
+  --color-brand-800: #115e59;
+  --color-brand-900: #134e4a;
+  --color-brand-950: #042f2e;
+  --color-brand: #0f766e;
+  --color-brand-dark: #115e59;
+  --color-brand-deep: #134e4a;
 
-  /* gold = amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #f59e0b;
-  --color-gold-deep: #b45309;
-  --color-gold-soft: #fef3c7;
+  /* gold = seafoam mint scale (name kept for legacy class refs) */
+  --color-gold-50: #ecfdf5;
+  --color-gold-100: #d1fae5;
+  --color-gold-200: #a7f3d0;
+  --color-gold-300: #6ee7b7;
+  --color-gold-400: #34d399;
+  --color-gold-500: #10b981;
+  --color-gold-600: #059669;
+  --color-gold-700: #047857;
+  --color-gold-800: #065f46;
+  --color-gold-900: #064e3b;
+  --color-gold-950: #022c22;
+  --color-gold: #10b981;
+  --color-gold-deep: #047857;
+  --color-gold-soft: #d1fae5;
 
-  /* popblue = warm stone scale (name kept for legacy class refs) */
-  --color-popblue-50: #fafaf9;
-  --color-popblue-100: #f5f5f4;
-  --color-popblue-200: #e7e5e4;
-  --color-popblue-300: #d6d3d1;
-  --color-popblue-400: #a8a29e;
-  --color-popblue-500: #78716c;
-  --color-popblue-600: #57534e;
-  --color-popblue-700: #44403c;
-  --color-popblue-800: #292524;
-  --color-popblue-900: #1c1917;
-  --color-popblue-950: #0c0a09;
-  --color-popblue: #44403c;
-  --color-popblue-deep: #0c0a09;
-  --color-popblue-soft: #d6d3d1;
+  /* popblue = deep ink navy scale (name kept for legacy class refs) */
+  --color-popblue-50: #f8fafc;
+  --color-popblue-100: #f1f5f9;
+  --color-popblue-200: #e2e8f0;
+  --color-popblue-300: #cbd5e1;
+  --color-popblue-400: #94a3b8;
+  --color-popblue-500: #64748b;
+  --color-popblue-600: #475569;
+  --color-popblue-700: #334155;
+  --color-popblue-800: #1e293b;
+  --color-popblue-900: #0f172a;
+  --color-popblue-950: #020617;
+  --color-popblue: #334155;
+  --color-popblue-deep: #020617;
+  --color-popblue-soft: #cbd5e1;
 
-  --color-ink: #292524;
-  --color-paper: #fff7f5;
-  --color-mute: #78716c;
+  --color-ink: #0f172a;
+  --color-paper: #f0fdfa;
+  --color-mute: #64748b;
   --color-card: #ffffff;
-  --color-deep: #881337;
+  --color-deep: #134e4a;
 }
 
 html { scroll-behavior: smooth; }
@@ -79,174 +79,175 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fff7f5;
+  background-color: #f0fdfa;
   background-image:
-    radial-gradient(ellipse 55% 26% at 10% 0%, rgba(225, 29, 72, 0.16) 0%, rgba(225, 29, 72, 0) 70%),
-    radial-gradient(ellipse 45% 22% at 92% 12%, rgba(245, 158, 11, 0.18) 0%, rgba(245, 158, 11, 0) 70%),
-    linear-gradient(180deg, rgba(255, 228, 230, 0.9) 0%, rgba(254, 243, 199, 0.55) 42%, rgba(255, 247, 245, 0) 78%);
-  color: #292524;
+    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(13, 148, 136, 0.16) 0%, rgba(13, 148, 136, 0) 70%),
+    radial-gradient(ellipse 45% 22% at 8% 12%, rgba(16, 185, 129, 0.18) 0%, rgba(16, 185, 129, 0) 70%),
+    linear-gradient(180deg, rgba(204, 251, 241, 0.9) 0%, rgba(209, 250, 229, 0.55) 42%, rgba(240, 253, 250, 0) 78%);
+  color: #0f172a;
 }
-::selection { background: #fcd34d; color: #451a03; }
+::selection { background: #6ee7b7; color: #022c22; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #e11d48, #f59e0b); border-radius: 8px; border: 2px solid #fff7f5; }
-::-webkit-scrollbar-track { background: #ffe4e6; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0d9488, #10b981); border-radius: 8px; border: 2px solid #f0fdfa; }
+::-webkit-scrollbar-track { background: #ccfbf1; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Rosewood Ember type: tighter, punchier headlines. */
-h1, h2, h3 { letter-spacing: -0.03em; text-wrap: balance; }
+/* Lagoon Tide type: relaxed, wide headlines. */
+h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Rosewood Ember rise: embers drifting gently
-   UPWARD through the warm air — the reverse of
-   the old downward fall. */
+/* Lagoon Tide rise: bubbles drifting gently
+   UPWARD through the water with a slow wobble. */
 @keyframes signal-fall {
-  0% { transform: translate3d(0, 52vh, 0) scale(0.9) rotate(0deg); opacity: 0; }
-  15% { opacity: 0.8; }
-  50% { transform: translate3d(3vw, 26vh, 0) scale(1.1) rotate(40deg); }
-  100% { transform: translate3d(-3vw, -4vh, 0) scale(0.95) rotate(80deg); opacity: 0; }
+  0% { transform: translate3d(0, 52vh, 0) scale(0.8) rotate(0deg); opacity: 0; }
+  15% { opacity: 0.7; }
+  50% { transform: translate3d(-3vw, 26vh, 0) scale(1.05) rotate(-30deg); }
+  100% { transform: translate3d(3vw, -4vh, 0) scale(0.9) rotate(-60deg); opacity: 0; }
 }
-.pop-fall { animation: signal-fall 22s linear infinite; }
+.pop-fall { animation: signal-fall 24s linear infinite; }
 
-/* Rosewood Ember sway: a wide, slow side-to-side drift. */
+/* Lagoon Tide sway: a narrow, quick side-to-side drift. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(-18px, 0, 0) scale(1); opacity: 0.6; }
-  50% { transform: translate3d(18px, 0, 0) scale(1.02); opacity: 0.95; }
+  0%, 100% { transform: translate3d(-8px, 0, 0) scale(1); opacity: 0.7; }
+  50% { transform: translate3d(8px, 0, 0) scale(1.03); opacity: 1; }
 }
-.pop-drift { animation: signal-drift 11s ease-in-out infinite; }
+.pop-drift { animation: signal-drift 7s ease-in-out infinite; }
 
-/* Rosewood Ember bob: a gentle, slow float. */
+/* Lagoon Tide bob: a bouncy, quick float. */
 @keyframes signal-bob {
-  0%, 100% { transform: translateY(0) scale(1) rotate(1deg); }
-  50% { transform: translateY(-7px) scale(1.01) rotate(-1deg); }
+  0%, 100% { transform: translateY(0) scale(1) rotate(-1deg); }
+  50% { transform: translateY(-11px) scale(1.02) rotate(1deg); }
 }
-.pop-bob { animation: signal-bob 6s ease-in-out infinite; }
+.pop-bob { animation: signal-bob 4s ease-in-out infinite; }
 
-/* Reverse turn for the ember dial. */
+/* Forward turn for the tide dial. */
 @keyframes dial-turn {
-  from { transform: rotate(360deg); }
-  to { transform: rotate(0deg); }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
-.pop-spin { animation: dial-turn 90s linear infinite; }
+.pop-spin { animation: dial-turn 60s linear infinite; }
 
-/* Rosewood Ember glint: a slow amber pulse. */
+/* Lagoon Tide glint: a quick mint pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.5; transform: scale(0.95); }
-  50% { opacity: 1; transform: scale(1.1); }
+  50% { opacity: 1; transform: scale(1.15); }
 }
-.pop-twinkle { animation: signal-blink 3.4s ease-in-out infinite; }
+.pop-twinkle { animation: signal-blink 2.2s ease-in-out infinite; }
 
-/* Rosewood Ember ticker: infinite marquee (rightward drift). */
+/* Lagoon Tide ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
-.pop-ticker { animation: signal-ticker 32s linear infinite; }
+.pop-ticker { animation: signal-ticker 26s linear infinite; }
 
-/* Rosewood Ember bands: crimson / amber diagonal stripes. */
+/* Lagoon Tide bands: teal / mint horizontal stripes. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(45deg, #e11d48 0px, #e11d48 10px, #f59e0b 10px, #f59e0b 20px);
+    repeating-linear-gradient(90deg, #0d9488 0px, #0d9488 10px, #10b981 10px, #10b981 20px);
   background-size: 100% 8px;
   background-repeat: repeat-x;
-  border-radius: 3px;
+  border-radius: 999px;
 }
 
-/* Rosewood Ember card: a sharp 0.5rem panel with a
-   thick amber RIGHT bar and a soft diffused
-   shadow — it lifts straight up on hover, the bar
-   turning crimson and the shadow deepening. */
+/* Lagoon Tide card: an extra-rounded 1.75rem panel
+   with a thick teal BOTTOM bar and a hard offset
+   shadow — it scales up slightly on hover, the bar
+   turning mint and the shadow sliding with it. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(41, 37, 36, 0.10);
-  border-right: 5px solid #f59e0b;
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  border-bottom: 5px solid #0d9488;
   background: #ffffff;
-  border-radius: 0.5rem;
-  box-shadow: 0 12px 28px -12px rgba(136, 19, 55, 0.28);
+  border-radius: 1.75rem;
+  box-shadow: 6px 6px 0 0 rgba(19, 78, 74, 0.18);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  border-right-color: #e11d48;
-  box-shadow: 0 22px 40px -16px rgba(136, 19, 55, 0.38);
+  transform: translateY(-4px) scale(1.01);
+  border-bottom-color: #10b981;
+  box-shadow: 8px 10px 0 0 rgba(19, 78, 74, 0.24);
 }
 
-/* Rosewood Ember glass: shared by modals and drawers — a
-   frosted blush pane with a soft edge and an amber
-   RIGHT rule. */
+/* Lagoon Tide glass: shared by modals and drawers — a
+   frosted icy pane with a soft edge and a teal
+   BOTTOM rule. */
 .pop-glass {
-  background: rgba(255, 247, 245, 0.94);
+  background: rgba(240, 253, 250, 0.94);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(41, 37, 36, 0.10);
-  border-right: 5px solid #f59e0b;
-  border-radius: 0.5rem;
-  box-shadow: 0 12px 28px -12px rgba(136, 19, 55, 0.28);
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  border-bottom: 5px solid #0d9488;
+  border-radius: 1.75rem;
+  box-shadow: 6px 6px 0 0 rgba(19, 78, 74, 0.18);
 }
 
-/* Rosewood Ember tag: a crimson-to-amber pill badge —
+/* Lagoon Tide tag: a teal-to-mint rounded badge —
    white type, soft ring, sticker tilt the other way. */
 .starburst {
-  background: linear-gradient(135deg, #e11d48, #f59e0b);
+  background: linear-gradient(135deg, #0d9488, #10b981);
   color: #ffffff;
   text-shadow: none;
-  border-radius: 999px;
-  transform: rotate(4deg);
-  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.35);
+  border-radius: 0.75rem;
+  transform: rotate(-4deg);
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.35);
   border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
-/* Rosewood Ember texture: a fine diagonal crosshatch field. */
+/* Lagoon Tide texture: a fine dot-grid field. */
 .halftone {
   background-image:
-    repeating-linear-gradient(45deg, rgba(225, 29, 72, 0.10) 0px, rgba(225, 29, 72, 0.10) 1px, transparent 1px, transparent 14px),
-    repeating-linear-gradient(-45deg, rgba(245, 158, 11, 0.10) 0px, rgba(245, 158, 11, 0.10) 1px, transparent 1px, transparent 14px);
+    radial-gradient(rgba(13, 148, 136, 0.16) 1px, transparent 1px),
+    radial-gradient(rgba(16, 185, 129, 0.16) 1px, transparent 1px);
+  background-size: 18px 18px;
+  background-position: 0 0, 9px 9px;
 }
 
-/* Rosewood Ember rule: a gradient pill rule. */
+/* Lagoon Tide rule: a gradient pill rule, mint first. */
 .zigzag {
   height: 6px;
   border: none;
-  background: linear-gradient(90deg, #f59e0b, #e11d48);
+  background: linear-gradient(90deg, #10b981, #0d9488);
   opacity: 1;
   border-radius: 999px;
 }
 
-/* Rosewood Ember band: a stone / crimson / amber diagonal
-   wash with a soft shadow. */
+/* Lagoon Tide band: an ink navy / teal / mint
+   diagonal wash with a soft shadow. */
 .bazaar-awning {
-  background: linear-gradient(135deg, #0c0a09 0%, #e11d48 55%, #f59e0b 100%);
+  background: linear-gradient(135deg, #020617 0%, #0f766e 55%, #10b981 100%);
   opacity: 1;
-  box-shadow: 0 10px 30px rgba(136, 19, 55, 0.18);
-  border-bottom: 1px solid rgba(41, 37, 36, 0.10);
+  box-shadow: 0 10px 30px rgba(19, 78, 74, 0.18);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.10);
   border-radius: 0;
 }
 
-/* Rosewood Ember glow: a crimson halo for the core. */
+/* Lagoon Tide glow: a teal halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 228, 230, 0.7) 42%, rgba(225, 29, 72, 0.25) 62%, rgba(225, 29, 72, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(204, 251, 241, 0.7) 42%, rgba(13, 148, 136, 0.25) 62%, rgba(13, 148, 136, 0) 76%);
 }
 
-/* Rosewood Ember core: an amber orb with a
-   bright crimson ring. */
+/* Lagoon Tide core: a mint orb with a
+   bright teal ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fffbeb 0%, #fbbf24 55%, #4c0519 100%);
-  box-shadow: 0 0 0 3px rgba(252, 211, 77, 0.9), 0 10px 30px rgba(136, 19, 55, 0.25);
-  border: 1px solid rgba(41, 37, 36, 0.10);
+    radial-gradient(circle at 35% 30%, #ecfdf5 0%, #34d399 55%, #042f2e 100%);
+  box-shadow: 0 0 0 3px rgba(110, 231, 183, 0.9), 0 10px 30px rgba(19, 78, 74, 0.25);
+  border: 1px solid rgba(15, 23, 42, 0.10);
 }
 
-/* Wide rings around the ember orb. */
+/* Wide rings around the tide orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(225, 29, 72, 0.5) 0px,
-    rgba(225, 29, 72, 0.5) 2px,
+    rgba(13, 148, 136, 0.5) 0px,
+    rgba(13, 148, 136, 0.5) 2px,
     transparent 2px,
     transparent 14px,
-    rgba(245, 158, 11, 0.55) 14px,
-    rgba(245, 158, 11, 0.55) 16px,
+    rgba(16, 185, 129, 0.55) 14px,
+    rgba(16, 185, 129, 0.55) 16px,
     transparent 16px,
     transparent 28px
   );
@@ -257,7 +258,7 @@ h1, h2, h3 { letter-spacing: -0.03em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(245, 158, 11, 0.6) 0deg 3deg,
+    rgba(16, 185, 129, 0.6) 0deg 3deg,
     transparent 3deg 18deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
