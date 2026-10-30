@@ -1,71 +1,72 @@
 @import "tailwindcss";
 
 @theme {
-  /* Terracotta Atelier: a fresh, original direction —
-     burnt terracotta as the primary accent, warm
-     amber for highlights, deep espresso for
-     contrast, warm sand paper, white cards. Cards
-     are compact 0.875rem panels with a hard offset
-     shadow and a thick gradient BOTTOM accent
-     stripe — the opposite of the previous Citrus
-     Grove look, its emerald / lime palette, warm
-     cream paper, chunky 1.5rem panels, big soft
-     shadow and gradient TOP accent stripe. */
+  /* Glacier Mint: a fresh, original direction —
+     icy teal as the primary accent, bright cyan
+     for highlights, deep slate-navy for contrast,
+     cool mint paper, white cards. Cards are large
+     2rem panels with a soft diffused shadow and a
+     thin gradient TOP accent hairline — the
+     opposite of the previous Terracotta Atelier
+     look, its burnt terracotta / amber palette,
+     warm sand paper, compact 0.875rem panels, hard
+     offset shadow and thick gradient BOTTOM
+     accent stripe. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = burnt terracotta scale */
-  --color-brand-50: #fff7ed;
-  --color-brand-100: #ffedd5;
-  --color-brand-200: #fed7aa;
-  --color-brand-300: #fdba74;
-  --color-brand-400: #fb923c;
-  --color-brand-500: #f97316;
-  --color-brand-600: #ea580c;
-  --color-brand-700: #c2410c;
-  --color-brand-800: #9a3412;
-  --color-brand-900: #7c2d12;
-  --color-brand-950: #431407;
-  --color-brand: #c2410c;
-  --color-brand-dark: #9a3412;
-  --color-brand-deep: #7c2d12;
+  /* brand = icy teal scale */
+  --color-brand-50: #f0fdfa;
+  --color-brand-100: #ccfbf1;
+  --color-brand-200: #99f6e4;
+  --color-brand-300: #5eead4;
+  --color-brand-400: #2dd4bf;
+  --color-brand-500: #14b8a6;
+  --color-brand-600: #0d9488;
+  --color-brand-700: #0f766e;
+  --color-brand-800: #115e59;
+  --color-brand-900: #134e4a;
+  --color-brand-950: #042f2e;
+  --color-brand: #0f766e;
+  --color-brand-dark: #115e59;
+  --color-brand-deep: #134e4a;
 
-  /* gold = warm amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #f59e0b;
-  --color-gold-deep: #b45309;
-  --color-gold-soft: #fef3c7;
+  /* gold = bright cyan scale (name kept for legacy class refs) */
+  --color-gold-50: #ecfeff;
+  --color-gold-100: #cffafe;
+  --color-gold-200: #a5f3fc;
+  --color-gold-300: #67e8f9;
+  --color-gold-400: #22d3ee;
+  --color-gold-500: #06b6d4;
+  --color-gold-600: #0891b2;
+  --color-gold-700: #0e7490;
+  --color-gold-800: #155e75;
+  --color-gold-900: #164e63;
+  --color-gold-950: #083344;
+  --color-gold: #06b6d4;
+  --color-gold-deep: #0e7490;
+  --color-gold-soft: #cffafe;
 
-  /* popblue = deep espresso scale (name kept for legacy class refs) */
-  --color-popblue-50: #fafaf9;
-  --color-popblue-100: #f5f5f4;
-  --color-popblue-200: #e7e5e4;
-  --color-popblue-300: #d6d3d1;
-  --color-popblue-400: #a8a29e;
-  --color-popblue-500: #78716c;
-  --color-popblue-600: #57534e;
-  --color-popblue-700: #44403c;
-  --color-popblue-800: #292524;
-  --color-popblue-900: #1c1917;
-  --color-popblue-950: #0c0a09;
-  --color-popblue: #44403c;
-  --color-popblue-deep: #0c0a09;
-  --color-popblue-soft: #e7e5e4;
+  /* popblue = deep slate-navy scale (name kept for legacy class refs) */
+  --color-popblue-50: #f8fafc;
+  --color-popblue-100: #f1f5f9;
+  --color-popblue-200: #e2e8f0;
+  --color-popblue-300: #cbd5e1;
+  --color-popblue-400: #94a3b8;
+  --color-popblue-500: #64748b;
+  --color-popblue-600: #475569;
+  --color-popblue-700: #334155;
+  --color-popblue-800: #1e293b;
+  --color-popblue-900: #0f172a;
+  --color-popblue-950: #020617;
+  --color-popblue: #334155;
+  --color-popblue-deep: #020617;
+  --color-popblue-soft: #e2e8f0;
 
-  --color-ink: #1c1917;
-  --color-paper: #fff7ed;
-  --color-mute: #78716c;
+  --color-ink: #0f172a;
+  --color-paper: #f0fdfa;
+  --color-mute: #64748b;
   --color-card: #ffffff;
-  --color-deep: #0c0a09;
+  --color-deep: #020617;
 }
 
 html { scroll-behavior: smooth; }
@@ -79,186 +80,181 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fff7ed;
+  background-color: #f0fdfa;
   background-image:
-    radial-gradient(ellipse 50% 24% at 12% 0%, rgba(245, 158, 11, 0.22) 0%, rgba(245, 158, 11, 0) 70%),
-    radial-gradient(ellipse 42% 20% at 92% 18%, rgba(194, 65, 12, 0.16) 0%, rgba(194, 65, 12, 0) 70%),
-    linear-gradient(180deg, rgba(254, 243, 199, 0.9) 0%, rgba(255, 237, 213, 0.5) 42%, rgba(255, 247, 237, 0) 78%);
-  color: #1c1917;
+    radial-gradient(ellipse 50% 24% at 88% 0%, rgba(6, 182, 212, 0.20) 0%, rgba(6, 182, 212, 0) 70%),
+    radial-gradient(ellipse 42% 20% at 8% 18%, rgba(15, 118, 110, 0.14) 0%, rgba(15, 118, 110, 0) 70%),
+    linear-gradient(180deg, rgba(207, 250, 254, 0.9) 0%, rgba(204, 251, 241, 0.5) 42%, rgba(240, 253, 250, 0) 78%);
+  color: #0f172a;
 }
-::selection { background: #fcd34d; color: #1c1917; }
+::selection { background: #67e8f9; color: #0f172a; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #c2410c, #f59e0b); border-radius: 8px; border: 2px solid #fff7ed; }
-::-webkit-scrollbar-track { background: #ffedd5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0f766e, #06b6d4); border-radius: 8px; border: 2px solid #f0fdfa; }
+::-webkit-scrollbar-track { background: #ccfbf1; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Atelier type: bold, wide headlines. */
-h1, h2, h3 { letter-spacing: 0.01em; text-wrap: balance; }
+/* Glacier type: tight, crisp headlines. */
+h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Atelier fall: embers drifting DOWNWARD with a gentle
+/* Glacier rise: bubbles drifting UPWARD with a gentle
    side-to-side sway — the reverse of the previous
-   upward grove drift. */
+   downward ember fall. */
 @keyframes signal-fall {
-  0% { transform: translate3d(0, -4vh, 0) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(0, 52vh, 0) rotate(0deg); opacity: 0; }
   15% { opacity: 0.8; }
-  50% { transform: translate3d(-2vw, 26vh, 0) rotate(-12deg); }
-  100% { transform: translate3d(2vw, 52vh, 0) rotate(12deg); opacity: 0; }
+  50% { transform: translate3d(2vw, 26vh, 0) rotate(12deg); }
+  100% { transform: translate3d(-2vw, -4vh, 0) rotate(-12deg); opacity: 0; }
 }
 .pop-fall { animation: signal-fall 20s linear infinite; }
 
-/* Atelier sway: a wide, slow side-to-side drift. */
+/* Glacier sway: a narrow, quick side-to-side drift. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(-10px, 0, 0) scale(1); opacity: 0.7; }
-  50% { transform: translate3d(10px, 0, 0) scale(1.02); opacity: 1; }
+  0%, 100% { transform: translate3d(-6px, 0, 0) scale(1); opacity: 0.7; }
+  50% { transform: translate3d(6px, 0, 0) scale(1.01); opacity: 1; }
 }
-.pop-drift { animation: signal-drift 11s ease-in-out infinite; }
+.pop-drift { animation: signal-drift 7s ease-in-out infinite; }
 
-/* Atelier bob: a quick, shallow float. */
+/* Glacier bob: a slow, deep float. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1) rotate(0deg); }
-  50% { transform: translateY(-6px) scale(1.02) rotate(-1deg); }
+  50% { transform: translateY(-12px) scale(1.03) rotate(1deg); }
 }
-.pop-bob { animation: signal-bob 4s ease-in-out infinite; }
+.pop-bob { animation: signal-bob 7s ease-in-out infinite; }
 
-/* Reverse turn for the atelier dial. */
+/* Forward turn for the glacier dial. */
 @keyframes dial-turn {
-  from { transform: rotate(360deg); }
-  to { transform: rotate(0deg); }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
-.pop-spin { animation: dial-turn 24s linear infinite; }
+.pop-spin { animation: dial-turn 18s linear infinite; }
 
-/* Atelier glint: a fast amber shimmer. */
+/* Glacier glint: a slow cyan shimmer. */
 @keyframes signal-blink {
-  0%, 100% { opacity: 0.7; transform: scale(0.96); }
-  50% { opacity: 1; transform: scale(1.08); }
+  0%, 100% { opacity: 0.7; transform: scale(0.97); }
+  50% { opacity: 1; transform: scale(1.05); }
 }
-.pop-twinkle { animation: signal-blink 3s ease-in-out infinite; }
+.pop-twinkle { animation: signal-blink 5s ease-in-out infinite; }
 
-/* Atelier ticker: infinite marquee (leftward drift). */
+/* Glacier ticker: infinite marquee (rightward drift). */
 @keyframes signal-ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Atelier bands: terracotta / amber diagonal stripes. */
+/* Glacier bands: teal / cyan vertical stripes. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(-45deg, #c2410c 0px, #c2410c 10px, #f59e0b 10px, #f59e0b 20px);
-  background-size: 100% 20px;
-  background-repeat: repeat-y;
+    repeating-linear-gradient(90deg, #0f766e 0px, #0f766e 10px, #06b6d4 10px, #06b6d4 20px);
+  background-size: 20px 100%;
+  background-repeat: repeat-x;
   border-radius: 999px;
 }
 
-/* Atelier card: a compact 0.875rem panel with a hard
-   offset shadow and a thick gradient BOTTOM accent
-   stripe — it shifts diagonally and the stripe glows
-   amber on hover. */
+/* Glacier card: a large 2rem panel with a soft
+   diffused shadow and a thin gradient TOP accent
+   hairline — it lifts straight up and the hairline
+   glows cyan on hover. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(28, 25, 23, 0.1);
+  border: 1px solid rgba(15, 23, 42, 0.08);
   background: #ffffff;
-  border-radius: 0.875rem;
-  box-shadow: 6px 6px 0 rgba(194, 65, 12, 0.18), 0 4px 12px -4px rgba(12, 10, 9, 0.08);
+  border-radius: 2rem;
+  box-shadow: 0 18px 40px -18px rgba(15, 118, 110, 0.28), 0 2px 8px -2px rgba(2, 6, 23, 0.06);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift::before {
   content: "";
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
-  height: 5px;
-  background: linear-gradient(90deg, #f59e0b, #c2410c);
+  height: 3px;
+  background: linear-gradient(90deg, #06b6d4, #0f766e);
   z-index: 1;
 }
 .pop-lift:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 10px 10px 0 rgba(194, 65, 12, 0.22), 0 8px 16px -6px rgba(12, 10, 9, 0.12);
-  border-color: rgba(245, 158, 11, 0.6);
+  transform: translateY(-4px);
+  box-shadow: 0 28px 56px -20px rgba(15, 118, 110, 0.36), 0 4px 12px -2px rgba(2, 6, 23, 0.08);
+  border-color: rgba(6, 182, 212, 0.55);
 }
 
-/* Atelier glass: shared by modals and drawers — a
-   warm sand frosted pane with a soft edge and an
-   amber hairline. */
+/* Glacier glass: shared by modals and drawers — a
+   cool mint frosted pane with a soft edge and a
+   cyan hairline. */
 .pop-glass {
-  background: rgba(255, 247, 237, 0.92);
+  background: rgba(240, 253, 250, 0.92);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(28, 25, 23, 0.1);
-  border-radius: 0.875rem;
-  box-shadow: 6px 6px 0 rgba(194, 65, 12, 0.18);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 2rem;
+  box-shadow: 0 18px 40px -18px rgba(15, 118, 110, 0.28);
 }
 
-/* Atelier tag: a terracotta badge —
-   white type, tilted the other way, as a squarish chip. */
+/* Glacier tag: a teal badge —
+   white type, tilted the same way, as a pill chip. */
 .starburst {
-  background: linear-gradient(135deg, #ea580c, #9a3412);
+  background: linear-gradient(135deg, #14b8a6, #0f766e);
   color: #ffffff;
   text-shadow: none;
-  border-radius: 0.75rem;
-  transform: rotate(-5deg);
-  box-shadow: 6px 6px 0 rgba(194, 65, 12, 0.35), inset 0 0 0 2px rgba(255, 255, 255, 0.35);
-  border: 2px solid rgba(255, 247, 237, 0.9);
+  border-radius: 999px;
+  transform: rotate(5deg);
+  box-shadow: 0 10px 24px -8px rgba(15, 118, 110, 0.55), inset 0 0 0 2px rgba(255, 255, 255, 0.35);
+  border: 2px solid rgba(240, 253, 250, 0.9);
 }
 
-/* Atelier texture: a terracotta dot grid. */
+/* Glacier texture: a teal vertical ribbed pattern. */
 .halftone {
   background-image:
-    radial-gradient(rgba(194, 65, 12, 0.16) 1.5px, transparent 1.5px),
-    radial-gradient(rgba(245, 158, 11, 0.16) 1.5px, transparent 1.5px);
-  background-size: 18px 18px;
-  background-position: 0 0, 9px 9px;
+    repeating-linear-gradient(90deg, rgba(15, 118, 110, 0.10) 0px, rgba(15, 118, 110, 0.10) 1.5px, transparent 1.5px, transparent 18px);
 }
 
-/* Atelier rule: a dotted amber rule, terracotta caps. */
+/* Glacier rule: a solid cyan rule, teal caps. */
 .zigzag {
-  height: 6px;
+  height: 4px;
   border: none;
-  background-image: radial-gradient(circle, #c2410c 2px, transparent 2.5px);
-  background-size: 14px 6px;
-  background-repeat: repeat-x;
+  background: linear-gradient(90deg, #0f766e, #06b6d4, #0f766e);
   opacity: 1;
   border-radius: 999px;
 }
 
-/* Atelier band: a terracotta / amber diagonal wash
-   with rounded bottom corners and an amber bottom edge. */
+/* Glacier band: a teal / cyan diagonal wash
+   with rounded top corners and a cyan top edge. */
 .bazaar-awning {
-  background: linear-gradient(135deg, #f59e0b 0%, #ea580c 55%, #7c2d12 100%);
+  background: linear-gradient(135deg, #134e4a 0%, #0f766e 55%, #06b6d4 100%);
   opacity: 1;
-  box-shadow: 6px 6px 0 rgba(194, 65, 12, 0.25);
-  border-bottom: 3px solid #f59e0b;
-  border-radius: 0 0 0.875rem 0.875rem;
+  box-shadow: 0 18px 40px -18px rgba(15, 118, 110, 0.35);
+  border-top: 3px solid #06b6d4;
+  border-radius: 2rem 2rem 0 0;
 }
 
-/* Atelier glow: an amber halo for the core. */
+/* Glacier glow: a cyan halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(254, 243, 199, 0.7) 42%, rgba(194, 65, 12, 0.22) 62%, rgba(194, 65, 12, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(207, 250, 254, 0.7) 42%, rgba(15, 118, 110, 0.20) 62%, rgba(15, 118, 110, 0) 76%);
 }
 
-/* Atelier beacon: an amber orb with a
-   deep terracotta ring. */
+/* Glacier beacon: a cyan orb with a
+   deep teal ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fffbeb 0%, #fbbf24 55%, #7c2d12 100%);
-  box-shadow: 0 0 0 3px rgba(252, 211, 77, 0.9), 6px 6px 0 rgba(194, 65, 12, 0.25);
-  border: 1px solid rgba(28, 25, 23, 0.1);
+    radial-gradient(circle at 35% 30%, #ecfeff 0%, #22d3ee 55%, #134e4a 100%);
+  box-shadow: 0 0 0 3px rgba(103, 232, 249, 0.9), 0 18px 40px -18px rgba(15, 118, 110, 0.35);
+  border: 1px solid rgba(15, 23, 42, 0.08);
 }
 
-/* Wide rings around the amber orb. */
+/* Wide rings around the cyan orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(194, 65, 12, 0.5) 0px,
-    rgba(194, 65, 12, 0.5) 2px,
+    rgba(15, 118, 110, 0.5) 0px,
+    rgba(15, 118, 110, 0.5) 2px,
     transparent 2px,
     transparent 22px,
-    rgba(245, 158, 11, 0.55) 22px,
-    rgba(245, 158, 11, 0.55) 24px,
+    rgba(6, 182, 212, 0.55) 22px,
+    rgba(6, 182, 212, 0.55) 24px,
     transparent 24px,
     transparent 44px
   );
@@ -268,8 +264,8 @@ h1, h2, h3 { letter-spacing: 0.01em; text-wrap: balance; }
 }
 .sun-rays {
   background: repeating-conic-gradient(
-    from 135deg at 50% 50%,
-    rgba(245, 158, 11, 0.6) 0deg 3deg,
+    from 45deg at 50% 50%,
+    rgba(6, 182, 212, 0.6) 0deg 3deg,
     transparent 3deg 18deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
