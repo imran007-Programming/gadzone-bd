@@ -28,15 +28,15 @@ const ORBS = [
   { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(34, 26, 46, 0.22)" },
 ];
 
-// Violet Velvet flakes drifting down through cold air.
+// Mango Grove leaves drifting down through still orchard air.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#7c3aed" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#ec4899" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#8b5cf6" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#f9a8d4" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#6d28d9" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#f472b6" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#fdf2f8" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#16a34a" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f97316" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#22c55e" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#fdba74" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#15803d" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fb923c" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#fff7ed" },
 ];
 
 // Violet Velvet glints scattered through the still air.
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* velvet wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#ddd6fe] via-[#faf5ff] to-[#fce7f3]">
+      <div className="relative bg-gradient-to-b from-[#bbf7d0] via-[#fffbeb] to-[#ffedd5]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#a78bfa", "#7c3aed", "#6d28d9", "#f472b6"];
+              const colors = ["#4ade80", "#16a34a", "#15803d", "#fb923c"];
               return (
                 <span
                   key={i}
@@ -172,7 +172,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* 4-banner carousel in a deep violet frame */}
+        {/* 4-banner carousel in a deep green frame */}
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2.5">
