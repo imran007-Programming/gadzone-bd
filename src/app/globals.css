@@ -1,72 +1,71 @@
 @import "tailwindcss";
 
 @theme {
-  /* Citrus Grove: a fresh, original direction —
-     deep emerald as the primary accent, vivid lime
-     for highlights, dark forest for contrast,
-     warm cream paper, white cards. Cards are
-     chunky 1.5rem panels with no side border, a
-     big soft shadow and a thick gradient TOP
-     accent stripe — the opposite of the previous
-     Indigo Harbor look, its cool indigo / cyan
-     palette, mist paper, crisp 0.75rem panels,
-     thin border, tight shadow and gradient LEFT
-     accent bar. */
+  /* Terracotta Atelier: a fresh, original direction —
+     burnt terracotta as the primary accent, warm
+     amber for highlights, deep espresso for
+     contrast, warm sand paper, white cards. Cards
+     are compact 0.875rem panels with a hard offset
+     shadow and a thick gradient BOTTOM accent
+     stripe — the opposite of the previous Citrus
+     Grove look, its emerald / lime palette, warm
+     cream paper, chunky 1.5rem panels, big soft
+     shadow and gradient TOP accent stripe. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = deep emerald scale */
-  --color-brand-50: #ecfdf5;
-  --color-brand-100: #d1fae5;
-  --color-brand-200: #a7f3d0;
-  --color-brand-300: #6ee7b7;
-  --color-brand-400: #34d399;
-  --color-brand-500: #10b981;
-  --color-brand-600: #059669;
-  --color-brand-700: #047857;
-  --color-brand-800: #065f46;
-  --color-brand-900: #064e3b;
-  --color-brand-950: #022c22;
-  --color-brand: #047857;
-  --color-brand-dark: #065f46;
-  --color-brand-deep: #064e3b;
+  /* brand = burnt terracotta scale */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-brand-950: #431407;
+  --color-brand: #c2410c;
+  --color-brand-dark: #9a3412;
+  --color-brand-deep: #7c2d12;
 
-  /* gold = vivid lime scale (name kept for legacy class refs) */
-  --color-gold-50: #f7fee7;
-  --color-gold-100: #ecfccb;
-  --color-gold-200: #d9f99d;
-  --color-gold-300: #bef264;
-  --color-gold-400: #a3e635;
-  --color-gold-500: #84cc16;
-  --color-gold-600: #65a30d;
-  --color-gold-700: #4d7c0f;
-  --color-gold-800: #3f6212;
-  --color-gold-900: #365314;
-  --color-gold-950: #1a2e05;
-  --color-gold: #84cc16;
-  --color-gold-deep: #4d7c0f;
-  --color-gold-soft: #ecfccb;
+  /* gold = warm amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #b45309;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = dark forest scale (name kept for legacy class refs) */
-  --color-popblue-50: #f4f7f2;
-  --color-popblue-100: #e4ecdf;
-  --color-popblue-200: #c8d8c0;
-  --color-popblue-300: #a3bc96;
-  --color-popblue-400: #7a9c6b;
-  --color-popblue-500: #5a7f4a;
-  --color-popblue-600: #446335;
-  --color-popblue-700: #364f2c;
-  --color-popblue-800: #2d4026;
-  --color-popblue-900: #22311e;
-  --color-popblue-950: #10231a;
-  --color-popblue: #364f2c;
-  --color-popblue-deep: #10231a;
-  --color-popblue-soft: #c8d8c0;
+  /* popblue = deep espresso scale (name kept for legacy class refs) */
+  --color-popblue-50: #fafaf9;
+  --color-popblue-100: #f5f5f4;
+  --color-popblue-200: #e7e5e4;
+  --color-popblue-300: #d6d3d1;
+  --color-popblue-400: #a8a29e;
+  --color-popblue-500: #78716c;
+  --color-popblue-600: #57534e;
+  --color-popblue-700: #44403c;
+  --color-popblue-800: #292524;
+  --color-popblue-900: #1c1917;
+  --color-popblue-950: #0c0a09;
+  --color-popblue: #44403c;
+  --color-popblue-deep: #0c0a09;
+  --color-popblue-soft: #e7e5e4;
 
-  --color-ink: #14291a;
-  --color-paper: #fdf9ec;
-  --color-mute: #5d6b58;
+  --color-ink: #1c1917;
+  --color-paper: #fff7ed;
+  --color-mute: #78716c;
   --color-card: #ffffff;
-  --color-deep: #10231a;
+  --color-deep: #0c0a09;
 }
 
 html { scroll-behavior: smooth; }
@@ -80,183 +79,186 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fdf9ec;
+  background-color: #fff7ed;
   background-image:
-    radial-gradient(ellipse 50% 24% at 88% 0%, rgba(132, 204, 22, 0.22) 0%, rgba(132, 204, 22, 0) 70%),
-    radial-gradient(ellipse 42% 20% at 8% 18%, rgba(4, 120, 87, 0.16) 0%, rgba(4, 120, 87, 0) 70%),
-    linear-gradient(180deg, rgba(236, 252, 203, 0.9) 0%, rgba(209, 250, 229, 0.5) 42%, rgba(253, 249, 236, 0) 78%);
-  color: #14291a;
+    radial-gradient(ellipse 50% 24% at 12% 0%, rgba(245, 158, 11, 0.22) 0%, rgba(245, 158, 11, 0) 70%),
+    radial-gradient(ellipse 42% 20% at 92% 18%, rgba(194, 65, 12, 0.16) 0%, rgba(194, 65, 12, 0) 70%),
+    linear-gradient(180deg, rgba(254, 243, 199, 0.9) 0%, rgba(255, 237, 213, 0.5) 42%, rgba(255, 247, 237, 0) 78%);
+  color: #1c1917;
 }
-::selection { background: #bef264; color: #14291a; }
+::selection { background: #fcd34d; color: #1c1917; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #047857, #84cc16); border-radius: 8px; border: 2px solid #fdf9ec; }
-::-webkit-scrollbar-track { background: #d1fae5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #c2410c, #f59e0b); border-radius: 8px; border: 2px solid #fff7ed; }
+::-webkit-scrollbar-track { background: #ffedd5; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Grove type: bold, tight headlines. */
-h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
+/* Atelier type: bold, wide headlines. */
+h1, h2, h3 { letter-spacing: 0.01em; text-wrap: balance; }
 
-/* Grove rise: leaves drifting UPWARD with a gentle
+/* Atelier fall: embers drifting DOWNWARD with a gentle
    side-to-side sway — the reverse of the previous
-   downward harbor drift. */
+   upward grove drift. */
 @keyframes signal-fall {
-  0% { transform: translate3d(0, 52vh, 0) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(0, -4vh, 0) rotate(0deg); opacity: 0; }
   15% { opacity: 0.8; }
-  50% { transform: translate3d(2vw, 26vh, 0) rotate(12deg); }
-  100% { transform: translate3d(-2vw, -4vh, 0) rotate(-12deg); opacity: 0; }
+  50% { transform: translate3d(-2vw, 26vh, 0) rotate(-12deg); }
+  100% { transform: translate3d(2vw, 52vh, 0) rotate(12deg); opacity: 0; }
 }
 .pop-fall { animation: signal-fall 20s linear infinite; }
 
-/* Grove sway: a narrow, quick side-to-side drift. */
+/* Atelier sway: a wide, slow side-to-side drift. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(-6px, 0, 0) scale(1); opacity: 0.7; }
-  50% { transform: translate3d(6px, 0, 0) scale(1.02); opacity: 1; }
+  0%, 100% { transform: translate3d(-10px, 0, 0) scale(1); opacity: 0.7; }
+  50% { transform: translate3d(10px, 0, 0) scale(1.02); opacity: 1; }
 }
-.pop-drift { animation: signal-drift 8s ease-in-out infinite; }
+.pop-drift { animation: signal-drift 11s ease-in-out infinite; }
 
-/* Grove bob: a slow, deep float. */
+/* Atelier bob: a quick, shallow float. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0) scale(1) rotate(0deg); }
-  50% { transform: translateY(-14px) scale(1.05) rotate(1deg); }
+  50% { transform: translateY(-6px) scale(1.02) rotate(-1deg); }
 }
-.pop-bob { animation: signal-bob 6s ease-in-out infinite; }
+.pop-bob { animation: signal-bob 4s ease-in-out infinite; }
 
-/* Forward turn for the grove dial. */
+/* Reverse turn for the atelier dial. */
 @keyframes dial-turn {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
 }
 .pop-spin { animation: dial-turn 24s linear infinite; }
 
-/* Grove glint: a slow lime shimmer. */
+/* Atelier glint: a fast amber shimmer. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.7; transform: scale(0.96); }
   50% { opacity: 1; transform: scale(1.08); }
 }
-.pop-twinkle { animation: signal-blink 5s ease-in-out infinite; }
+.pop-twinkle { animation: signal-blink 3s ease-in-out infinite; }
 
-/* Grove ticker: infinite marquee (rightward drift). */
+/* Atelier ticker: infinite marquee (leftward drift). */
 @keyframes signal-ticker {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 30s linear infinite; }
 
-/* Grove bands: emerald / lime diagonal stripes. */
+/* Atelier bands: terracotta / amber diagonal stripes. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(45deg, #047857 0px, #047857 10px, #84cc16 10px, #84cc16 20px);
+    repeating-linear-gradient(-45deg, #c2410c 0px, #c2410c 10px, #f59e0b 10px, #f59e0b 20px);
   background-size: 100% 20px;
   background-repeat: repeat-y;
   border-radius: 999px;
 }
 
-/* Grove card: a chunky 1.5rem panel with a big
-   soft shadow and a thick gradient TOP accent
-   stripe — it lifts higher and the stripe glows
-   lime on hover. */
+/* Atelier card: a compact 0.875rem panel with a hard
+   offset shadow and a thick gradient BOTTOM accent
+   stripe — it shifts diagonally and the stripe glows
+   amber on hover. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(20, 41, 26, 0.08);
+  border: 1px solid rgba(28, 25, 23, 0.1);
   background: #ffffff;
-  border-radius: 1.5rem;
-  box-shadow: 0 24px 48px -20px rgba(4, 120, 87, 0.35), 0 4px 12px -4px rgba(16, 35, 26, 0.08);
+  border-radius: 0.875rem;
+  box-shadow: 6px 6px 0 rgba(194, 65, 12, 0.18), 0 4px 12px -4px rgba(12, 10, 9, 0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift::before {
   content: "";
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
-  height: 6px;
-  background: linear-gradient(90deg, #84cc16, #047857);
+  height: 5px;
+  background: linear-gradient(90deg, #f59e0b, #c2410c);
   z-index: 1;
 }
 .pop-lift:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 32px 56px -20px rgba(4, 120, 87, 0.45), 0 8px 16px -6px rgba(16, 35, 26, 0.12);
-  border-color: rgba(132, 204, 22, 0.5);
+  transform: translate(-2px, -2px);
+  box-shadow: 10px 10px 0 rgba(194, 65, 12, 0.22), 0 8px 16px -6px rgba(12, 10, 9, 0.12);
+  border-color: rgba(245, 158, 11, 0.6);
 }
 
-/* Grove glass: shared by modals and drawers — a
-   warm cream frosted pane with a soft edge and a
-   lime hairline. */
+/* Atelier glass: shared by modals and drawers — a
+   warm sand frosted pane with a soft edge and an
+   amber hairline. */
 .pop-glass {
-  background: rgba(253, 249, 236, 0.92);
+  background: rgba(255, 247, 237, 0.92);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(20, 41, 26, 0.08);
-  border-radius: 1.5rem;
-  box-shadow: 0 24px 48px -20px rgba(4, 120, 87, 0.35);
+  border: 1px solid rgba(28, 25, 23, 0.1);
+  border-radius: 0.875rem;
+  box-shadow: 6px 6px 0 rgba(194, 65, 12, 0.18);
 }
 
-/* Grove tag: an emerald-to-lime badge —
-   dark type, tilted the other way, as a pill. */
+/* Atelier tag: a terracotta badge —
+   white type, tilted the other way, as a squarish chip. */
 .starburst {
-  background: linear-gradient(135deg, #84cc16, #047857);
-  color: #10231a;
+  background: linear-gradient(135deg, #ea580c, #9a3412);
+  color: #ffffff;
   text-shadow: none;
-  border-radius: 999px;
-  transform: rotate(6deg);
-  box-shadow: 0 24px 48px -20px rgba(4, 120, 87, 0.55), inset 0 0 0 2px rgba(255, 255, 255, 0.35);
-  border: 2px solid rgba(253, 249, 236, 0.9);
+  border-radius: 0.75rem;
+  transform: rotate(-5deg);
+  box-shadow: 6px 6px 0 rgba(194, 65, 12, 0.35), inset 0 0 0 2px rgba(255, 255, 255, 0.35);
+  border: 2px solid rgba(255, 247, 237, 0.9);
 }
 
-/* Grove texture: a diagonal emerald hatch. */
+/* Atelier texture: a terracotta dot grid. */
 .halftone {
   background-image:
-    repeating-linear-gradient(45deg, rgba(4, 120, 87, 0.12) 0px, rgba(4, 120, 87, 0.12) 2px, transparent 2px, transparent 14px),
-    repeating-linear-gradient(-45deg, rgba(132, 204, 22, 0.12) 0px, rgba(132, 204, 22, 0.12) 2px, transparent 2px, transparent 14px);
+    radial-gradient(rgba(194, 65, 12, 0.16) 1.5px, transparent 1.5px),
+    radial-gradient(rgba(245, 158, 11, 0.16) 1.5px, transparent 1.5px);
+  background-size: 18px 18px;
+  background-position: 0 0, 9px 9px;
 }
 
-/* Grove rule: a solid lime rule, emerald caps. */
+/* Atelier rule: a dotted amber rule, terracotta caps. */
 .zigzag {
-  height: 4px;
+  height: 6px;
   border: none;
-  background: linear-gradient(90deg, #047857 0%, #84cc16 50%, #047857 100%);
+  background-image: radial-gradient(circle, #c2410c 2px, transparent 2.5px);
+  background-size: 14px 6px;
   background-repeat: repeat-x;
   opacity: 1;
   border-radius: 999px;
 }
 
-/* Grove band: an emerald / lime horizontal wash
-   with rounded top corners and a lime top edge. */
+/* Atelier band: a terracotta / amber diagonal wash
+   with rounded bottom corners and an amber bottom edge. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #10231a 0%, #047857 55%, #84cc16 100%);
+  background: linear-gradient(135deg, #f59e0b 0%, #ea580c 55%, #7c2d12 100%);
   opacity: 1;
-  box-shadow: 0 24px 48px -20px rgba(4, 120, 87, 0.35);
-  border-top: 3px solid #84cc16;
-  border-radius: 1.5rem 1.5rem 0 0;
+  box-shadow: 6px 6px 0 rgba(194, 65, 12, 0.25);
+  border-bottom: 3px solid #f59e0b;
+  border-radius: 0 0 0.875rem 0.875rem;
 }
 
-/* Grove glow: a lime halo for the core. */
+/* Atelier glow: an amber halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(236, 252, 203, 0.7) 42%, rgba(4, 120, 87, 0.22) 62%, rgba(4, 120, 87, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(254, 243, 199, 0.7) 42%, rgba(194, 65, 12, 0.22) 62%, rgba(194, 65, 12, 0) 76%);
 }
 
-/* Grove beacon: a lime orb with a
-   deep emerald ring. */
+/* Atelier beacon: an amber orb with a
+   deep terracotta ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #f7fee7 0%, #a3e635 55%, #064e3b 100%);
-  box-shadow: 0 0 0 3px rgba(190, 242, 100, 0.9), 0 24px 48px -20px rgba(4, 120, 87, 0.35);
-  border: 1px solid rgba(20, 41, 26, 0.08);
+    radial-gradient(circle at 35% 30%, #fffbeb 0%, #fbbf24 55%, #7c2d12 100%);
+  box-shadow: 0 0 0 3px rgba(252, 211, 77, 0.9), 6px 6px 0 rgba(194, 65, 12, 0.25);
+  border: 1px solid rgba(28, 25, 23, 0.1);
 }
 
-/* Wide rings around the lime orb. */
+/* Wide rings around the amber orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(4, 120, 87, 0.5) 0px,
-    rgba(4, 120, 87, 0.5) 2px,
+    rgba(194, 65, 12, 0.5) 0px,
+    rgba(194, 65, 12, 0.5) 2px,
     transparent 2px,
     transparent 22px,
-    rgba(132, 204, 22, 0.55) 22px,
-    rgba(132, 204, 22, 0.55) 24px,
+    rgba(245, 158, 11, 0.55) 22px,
+    rgba(245, 158, 11, 0.55) 24px,
     transparent 24px,
     transparent 44px
   );
@@ -266,8 +268,8 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 }
 .sun-rays {
   background: repeating-conic-gradient(
-    from 45deg at 50% 50%,
-    rgba(132, 204, 22, 0.6) 0deg 3deg,
+    from 135deg at 50% 50%,
+    rgba(245, 158, 11, 0.6) 0deg 3deg,
     transparent 3deg 18deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
