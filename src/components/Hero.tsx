@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Ember Dune glow drifting over warm sand.
+// Pine Mist glow drifting over pale sage.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(234, 88, 12, 0.28)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245, 158, 11, 0.26)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(22, 163, 74, 0.28)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(132, 204, 22, 0.26)" },
   { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(13, 148, 136, 0.22)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(67, 20, 7, 0.22)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(5, 46, 22, 0.22)" },
 ];
 
-// Ember Dune sparks drifting across the sand.
+// Pine Mist dewdrops rising through the grove.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#ea580c" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f59e0b" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#16a34a" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#84cc16" },
   { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#0d9488" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#fbbf24" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#c2410c" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fb923c" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#431407" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#a3e635" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#15803d" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#4ade80" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#052e16" },
 ];
 
-// Ember Dune glints scattered through the sand.
+// Pine Mist glints scattered through the grove.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
