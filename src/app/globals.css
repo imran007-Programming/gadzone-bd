@@ -1,71 +1,72 @@
 @import "tailwindcss";
 
 @theme {
-  /* Ember Orchard: a fresh, original direction —
-     burnt terracotta as the primary accent, golden
-     amber for highlights, deep plum as a contrasting
-     spark, and warm cream paper. Cards are crisp
-     0.75rem panels with a thick dark edge and a hard
-     offset shadow, plus a gradient LEFT accent bar
-     — the opposite of the previous Glacier Bloom look,
-     its deep cyan-teal / hot pink / lime palette, icy
-     mint paper, pillowy 2rem corners, thin cyan edge,
-     diffuse layered shadow, and gradient TOP bar. */
+  /* Harbor Mint: a fresh, original direction —
+     deep ocean blue as the primary accent, fresh
+     mint for highlights, coral as a contrasting
+     spark, and cool mist paper. Cards are soft
+     1.5rem panels with a thin light edge and a
+     diffuse layered shadow, plus a gradient BOTTOM
+     accent bar — the opposite of the previous Ember
+     Orchard look, its burnt terracotta / golden
+     amber / deep plum palette, warm cream paper,
+     crisp 0.75rem corners, thick dark edge, hard
+     offset shadow, and gradient LEFT bar. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = burnt terracotta scale */
-  --color-brand-50: #fff7ed;
-  --color-brand-100: #ffedd5;
-  --color-brand-200: #fed7aa;
-  --color-brand-300: #fdba74;
-  --color-brand-400: #fb923c;
-  --color-brand-500: #f97316;
-  --color-brand-600: #ea580c;
-  --color-brand-700: #c2410c;
-  --color-brand-800: #9a3412;
-  --color-brand-900: #7c2d12;
-  --color-brand-950: #431407;
-  --color-brand: #c2410c;
-  --color-brand-dark: #9a3412;
-  --color-brand-deep: #431407;
+  /* brand = ocean blue scale */
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-200: #bfdbfe;
+  --color-brand-300: #93c5fd;
+  --color-brand-400: #60a5fa;
+  --color-brand-500: #3b82f6;
+  --color-brand-600: #2563eb;
+  --color-brand-700: #1d4ed8;
+  --color-brand-800: #1e40af;
+  --color-brand-900: #1e3a8a;
+  --color-brand-950: #172554;
+  --color-brand: #1d4ed8;
+  --color-brand-dark: #1e40af;
+  --color-brand-deep: #172554;
 
-  /* gold = golden amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #d97706;
-  --color-gold-deep: #92400e;
-  --color-gold-soft: #fef3c7;
+  /* gold = fresh mint scale (name kept for legacy class refs) */
+  --color-gold-50: #ecfdf5;
+  --color-gold-100: #d1fae5;
+  --color-gold-200: #a7f3d0;
+  --color-gold-300: #6ee7b7;
+  --color-gold-400: #34d399;
+  --color-gold-500: #10b981;
+  --color-gold-600: #059669;
+  --color-gold-700: #047857;
+  --color-gold-800: #065f46;
+  --color-gold-900: #064e3b;
+  --color-gold-950: #022c22;
+  --color-gold: #059669;
+  --color-gold-deep: #065f46;
+  --color-gold-soft: #d1fae5;
 
-  /* popblue = deep plum scale (name kept for legacy class refs) */
-  --color-popblue-50: #faf5ff;
-  --color-popblue-100: #f3e8ff;
-  --color-popblue-200: #e9d5ff;
-  --color-popblue-300: #d8b4fe;
-  --color-popblue-400: #c084fc;
-  --color-popblue-500: #a855f7;
-  --color-popblue-600: #9333ea;
-  --color-popblue-700: #7e22ce;
-  --color-popblue-800: #6b21a8;
-  --color-popblue-900: #581c87;
-  --color-popblue-950: #3b0764;
-  --color-popblue: #7e22ce;
-  --color-popblue-deep: #3b0764;
-  --color-popblue-soft: #f3e8ff;
+  /* popblue = coral scale (name kept for legacy class refs) */
+  --color-popblue-50: #fff1f2;
+  --color-popblue-100: #ffe4e6;
+  --color-popblue-200: #fecdd3;
+  --color-popblue-300: #fda4af;
+  --color-popblue-400: #fb7185;
+  --color-popblue-500: #f43f5e;
+  --color-popblue-600: #e11d48;
+  --color-popblue-700: #be123c;
+  --color-popblue-800: #9f1239;
+  --color-popblue-900: #881337;
+  --color-popblue-950: #4c0519;
+  --color-popblue: #e11d48;
+  --color-popblue-deep: #4c0519;
+  --color-popblue-soft: #ffe4e6;
 
-  --color-ink: #431407;
-  --color-paper: #fffbeb;
-  --color-mute: #57534e;
+  --color-ink: #0f172a;
+  --color-paper: #f0f9ff;
+  --color-mute: #475569;
   --color-card: #ffffff;
-  --color-deep: #431407;
+  --color-deep: #172554;
 }
 
 html { scroll-behavior: smooth; }
@@ -79,91 +80,92 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fffbeb;
+  background-color: #f0f9ff;
   background-image:
-    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(249, 115, 22, 0.20) 0%, rgba(249, 115, 22, 0) 70%),
-    radial-gradient(ellipse 45% 22% at 8% 24%, rgba(126, 34, 206, 0.18) 0%, rgba(126, 34, 206, 0) 70%),
-    linear-gradient(200deg, rgba(255, 237, 213, 0.9) 0%, rgba(254, 243, 199, 0.5) 42%, rgba(255, 251, 235, 0) 78%);
-  color: #431407;
+    radial-gradient(ellipse 55% 26% at 12% 0%, rgba(37, 99, 235, 0.20) 0%, rgba(37, 99, 235, 0) 70%),
+    radial-gradient(ellipse 45% 22% at 92% 24%, rgba(16, 185, 129, 0.18) 0%, rgba(16, 185, 129, 0) 70%),
+    linear-gradient(200deg, rgba(219, 234, 254, 0.9) 0%, rgba(209, 250, 229, 0.5) 42%, rgba(240, 249, 255, 0) 78%);
+  color: #0f172a;
 }
-::selection { background: #f59e0b; color: #431407; }
+::selection { background: #6ee7b7; color: #172554; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #c2410c, #f59e0b); border-radius: 4px; border: 2px solid #fffbeb; }
-::-webkit-scrollbar-track { background: #ffedd5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #2563eb, #10b981); border-radius: 999px; border: 2px solid #f0f9ff; }
+::-webkit-scrollbar-track { background: #dbeafe; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Orchard type: tighter, bolder headlines. */
-h1, h2, h3 { letter-spacing: -0.03em; text-wrap: balance; }
+/* Harbor type: relaxed, open headlines. */
+h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 
-/* Orchard fall: warm signals drifting DOWN and to
-   the right — the reverse of the previous rise
-   drifting up and to the right. */
+/* Harbor rise: cool signals drifting UP and to
+   the left — the reverse of the previous fall
+   drifting down and to the right. */
 @keyframes signal-fall {
-  0% { transform: translate3d(-2vw, -6vh, 0) scale(0.9) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(2vw, 40vh, 0) scale(0.9) rotate(0deg); opacity: 0; }
   15% { opacity: 0.8; }
-  50% { transform: translate3d(0vw, 10vh, 0) scale(1.05) rotate(-18deg); }
-  100% { transform: translate3d(2vw, 40vh, 0) scale(0.9) rotate(-36deg); opacity: 0; }
+  50% { transform: translate3d(0vw, 10vh, 0) scale(1.05) rotate(18deg); }
+  100% { transform: translate3d(-2vw, -6vh, 0) scale(0.9) rotate(36deg); opacity: 0; }
 }
 .pop-fall { animation: signal-fall 22s linear infinite; }
 
-/* Orchard sway: a slow, gentle vertical float. */
+/* Harbor sway: a slow, gentle horizontal float. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(0, -10px, 0) scale(1); opacity: 0.7; }
-  50% { transform: translate3d(0, 10px, 0) scale(1.02); opacity: 1; }
+  0%, 100% { transform: translate3d(-10px, 0, 0) scale(1); opacity: 0.7; }
+  50% { transform: translate3d(10px, 0, 0) scale(1.02); opacity: 1; }
 }
 .pop-drift { animation: signal-drift 14s ease-in-out infinite; }
 
-/* Orchard bob: a subtler scale pulse. */
+/* Harbor bob: a subtler scale pulse. */
 @keyframes signal-bob {
   0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.03); }
+  50% { transform: scale(1.04); }
 }
 .pop-bob { animation: signal-bob 5.5s ease-in-out infinite; }
 
-/* Reverse turn for the orchard dial. */
+/* Forward turn for the harbor dial. */
 @keyframes dial-turn {
-  from { transform: rotate(360deg); }
-  to { transform: rotate(0deg); }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 32s linear infinite; }
 
-/* Orchard glint: a slower amber pulse. */
+/* Harbor glint: a quicker mint pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.5; transform: scale(0.95); }
   50% { opacity: 1; transform: scale(1.06); }
 }
-.pop-twinkle { animation: signal-blink 3.4s ease-in-out infinite; }
+.pop-twinkle { animation: signal-blink 2.6s ease-in-out infinite; }
 
-/* Orchard ticker: infinite marquee running
-   leftward (from 0 to -50%), the reverse of
-   the previous rightward run. */
+/* Harbor ticker: infinite marquee running
+   rightward (from -50% to 0), the reverse of
+   the previous leftward run. */
 @keyframes signal-ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
 }
 .pop-ticker { animation: signal-ticker 42s linear infinite; }
 
-/* Orchard bands: terracotta / amber diagonal stripes
+/* Harbor bands: ocean blue / mint diagonal stripes
    running the opposite way. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(-45deg, #c2410c 0px, #c2410c 10px, #f59e0b 10px, #f59e0b 20px);
+    repeating-linear-gradient(45deg, #1d4ed8 0px, #1d4ed8 10px, #10b981 10px, #10b981 20px);
   background-size: 28px 28px;
   background-repeat: repeat;
-  border-radius: 2px;
+  border-radius: 999px;
 }
 
-/* Orchard card: a crisp 0.75rem panel with a thick
-   dark edge and a hard offset shadow, plus a
-   gradient LEFT accent bar — it shifts up-left on
-   hover while the bar widens and the shadow grows. */
+/* Harbor card: a soft 1.5rem panel with a thin
+   light edge and a diffuse layered shadow, plus a
+   gradient BOTTOM accent bar — it lifts straight
+   up on hover while the bar thickens and the
+   shadow deepens. */
 .pop-lift {
   position: relative;
-  border: 2px solid rgba(67, 20, 7, 0.85);
+  border: 1px solid rgba(15, 23, 42, 0.10);
   background: #ffffff;
-  border-radius: 0.75rem;
-  box-shadow: 6px 6px 0 rgba(67, 20, 7, 0.9);
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 40px -18px rgba(30, 58, 138, 0.35), 0 4px 12px -6px rgba(30, 58, 138, 0.12);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
@@ -171,95 +173,95 @@ h1, h2, h3 { letter-spacing: -0.03em; text-wrap: balance; }
   content: "";
   position: absolute;
   left: 0;
-  top: 0;
+  right: 0;
   bottom: 0;
-  width: 6px;
-  background: linear-gradient(180deg, #c2410c, #f59e0b, #7e22ce);
+  height: 6px;
+  background: linear-gradient(90deg, #2563eb, #10b981, #f43f5e);
   z-index: 1;
-  transition: width 0.25s ease;
+  transition: height 0.25s ease;
 }
 .pop-lift:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 10px 10px 0 rgba(67, 20, 7, 0.9);
-  border-color: rgba(67, 20, 7, 1);
+  transform: translateY(-4px);
+  box-shadow: 0 28px 56px -20px rgba(30, 58, 138, 0.45), 0 8px 20px -8px rgba(30, 58, 138, 0.18);
+  border-color: rgba(37, 99, 235, 0.35);
 }
-.pop-lift:hover::after { width: 11px; }
+.pop-lift:hover::after { height: 11px; }
 
-/* Orchard glass: shared by modals and drawers — a
-   warm cream frosted pane with crisp corners
-   and a thick dark edge. */
+/* Harbor glass: shared by modals and drawers — a
+   cool mist frosted pane with soft corners
+   and a thin light edge. */
 .pop-glass {
-  background: rgba(255, 251, 235, 0.94);
+  background: rgba(240, 249, 255, 0.92);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 2px solid rgba(67, 20, 7, 0.85);
-  border-radius: 0.75rem;
-  box-shadow: 8px 8px 0 rgba(67, 20, 7, 0.9);
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 48px -20px rgba(30, 58, 138, 0.40);
 }
 
-/* Orchard tag: a solid amber pill badge —
-   dark type, tilted +3deg, hard shadow. */
+/* Harbor tag: a solid mint pill badge —
+   dark navy type, tilted -2deg, soft shadow. */
 .starburst {
-  background: linear-gradient(135deg, #fcd34d 0%, #f59e0b 60%, #d97706 100%);
-  color: #431407;
+  background: linear-gradient(135deg, #6ee7b7 0%, #34d399 60%, #10b981 100%);
+  color: #172554;
   text-shadow: none;
   border-radius: 999px;
-  transform: rotate(3deg);
-  box-shadow: 4px 4px 0 rgba(67, 20, 7, 0.9);
-  border: 2px solid rgba(67, 20, 7, 0.85);
+  transform: rotate(-2deg);
+  box-shadow: 0 12px 24px -10px rgba(30, 58, 138, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Orchard texture: a sparser, larger dot grid. */
+/* Harbor texture: a denser, finer dot grid. */
 .halftone {
-  background-image: radial-gradient(rgba(194, 65, 12, 0.22) 1px, transparent 1px);
-  background-size: 22px 22px;
+  background-image: radial-gradient(rgba(37, 99, 235, 0.22) 1px, transparent 1px);
+  background-size: 14px 14px;
   background-position: 0 0;
 }
 
-/* Orchard rule: a solid amber line over terracotta. */
+/* Harbor rule: a dashed coral line over ocean blue. */
 .zigzag {
   height: 6px;
   border: none;
-  border-radius: 2px;
-  background: repeating-linear-gradient(90deg, #f59e0b 0px, #f59e0b 10px, transparent 10px, transparent 20px), linear-gradient(90deg, #c2410c, #c2410c) 0 100% / 100% 2px no-repeat;
+  border-radius: 999px;
+  background: repeating-linear-gradient(90deg, #f43f5e 0px, #f43f5e 8px, transparent 8px, transparent 16px), linear-gradient(90deg, #2563eb, #2563eb) 0 100% / 100% 2px no-repeat;
   opacity: 1;
 }
 
-/* Orchard band: a warm band with a thick
-   amber TOP edge and a hard offset shadow. */
+/* Harbor band: a cool band with a thick
+   coral BOTTOM edge and a soft shadow. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #ffedd5 0%, #fef3c7 55%, #fffbeb 100%);
+  background: linear-gradient(90deg, #dbeafe 0%, #d1fae5 55%, #f0f9ff 100%);
   opacity: 1;
-  box-shadow: 6px 6px 0 rgba(67, 20, 7, 0.9);
-  border-top: 6px solid #d97706;
-  border-radius: 0.5rem 0.5rem 0 0;
+  box-shadow: 0 16px 32px -16px rgba(30, 58, 138, 0.35);
+  border-bottom: 6px solid #e11d48;
+  border-radius: 0 0 0.5rem 0.5rem;
 }
 
 
-/* Orchard glow: a warm amber halo for the core. */
+/* Harbor glow: a cool mint halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(254, 243, 199, 0.7) 42%, rgba(249, 115, 22, 0.2) 62%, rgba(249, 115, 22, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(209, 250, 229, 0.7) 42%, rgba(37, 99, 235, 0.2) 62%, rgba(37, 99, 235, 0) 76%);
 }
 
-/* Orchard beacon: an amber orb with a plum ring. */
+/* Harbor beacon: a mint orb with a coral ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fffbeb 0%, #fcd34d 55%, #f59e0b 100%);
-  box-shadow: 0 0 0 3px rgba(126, 34, 206, 0.6), 6px 6px 0 rgba(67, 20, 7, 0.9);
-  border: 2px solid rgba(67, 20, 7, 0.85);
+    radial-gradient(circle at 35% 30%, #f0f9ff 0%, #6ee7b7 55%, #10b981 100%);
+  box-shadow: 0 0 0 3px rgba(244, 63, 94, 0.6), 0 20px 40px -18px rgba(30, 58, 138, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Wider rings around the orchard orb. */
+/* Wider rings around the harbor orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(194, 65, 12, 0.4) 0px,
-    rgba(194, 65, 12, 0.4) 2px,
+    rgba(37, 99, 235, 0.4) 0px,
+    rgba(37, 99, 235, 0.4) 2px,
     transparent 2px,
     transparent 18px,
-    rgba(245, 158, 11, 0.45) 18px,
-    rgba(245, 158, 11, 0.45) 20px,
+    rgba(16, 185, 129, 0.45) 18px,
+    rgba(16, 185, 129, 0.45) 20px,
     transparent 20px,
     transparent 36px
   );
@@ -270,7 +272,7 @@ h1, h2, h3 { letter-spacing: -0.03em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(245, 158, 11, 0.45) 0deg 6deg,
+    rgba(244, 63, 94, 0.45) 0deg 6deg,
     transparent 6deg 24deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
