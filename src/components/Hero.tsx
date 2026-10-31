@@ -176,7 +176,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2.5">
-              <div className="rounded-md bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 p-1 shadow-[0_24px_48px_-24px_rgba(4,47,46,0.45)]">
+              <div className="rounded-md bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 p-1 shadow-[0_24px_48px_-24px_rgba(67,20,7,0.45)]">
                 <div className="overflow-hidden rounded-sm bg-paper ring-2 ring-brand-950/80">
                   <BannerCarousel />
                 </div>
@@ -186,7 +186,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
 
         {/* lagoon ticker: deep teal band with white type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-brand-950/80 bg-gradient-to-r from-brand-950/95 via-brand-800/95 to-brand-600/95 py-3 shadow-[0_12px_28px_rgba(4,47,46,0.30)] backdrop-blur">
+        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-brand-950/80 bg-gradient-to-r from-brand-950/95 via-brand-800/95 to-brand-600/95 py-3 shadow-[0_12px_28px_rgba(67,20,7,0.30)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
@@ -223,7 +223,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full border border-brand-300/60 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_8px_24px_-8px_rgba(4,47,46,0.35)] backdrop-blur">Handpicked for you</p>
+            <p className="inline-block rounded-full border border-brand-300/60 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_8px_24px_-8px_rgba(67,20,7,0.35)] backdrop-blur">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="relative bg-gradient-to-r from-brand-500 via-gold-500 to-popblue-800 bg-clip-text text-transparent">Picks<span aria-hidden className="absolute inset-x-0 -bottom-1 h-1 bg-gradient-to-r from-brand-500 to-gold-500 opacity-70" /></span></h2>
             <span className="zigzag mt-4 block w-44" aria-hidden />
           </div>
