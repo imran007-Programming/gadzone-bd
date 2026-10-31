@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Sunset Market glow drifting over warm cream.
+// Emerald Grove glow drifting over pale sage.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(147, 51, 234, 0.28)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(244, 63, 94, 0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(217, 119, 6, 0.22)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(59, 7, 100, 0.22)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(5, 150, 105, 0.28)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(132, 204, 22, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(73, 106, 53, 0.22)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(2, 44, 34, 0.22)" },
 ];
 
-// Sunset Market sparks rising through the dusk.
+// Emerald Grove leaves falling through the grove.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#7e22ce" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f43f5e" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#d97706" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#fb7185" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#9333ea" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fbbf24" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#3b0764" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#047857" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#65a30d" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#496a35" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#a3e635" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#059669" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#84cc16" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#022c22" },
 ];
 
 // Glacier Night glints scattered through the night.
