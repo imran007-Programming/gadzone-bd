@@ -11,13 +11,13 @@ type SignInPromptProps = {
 
 export default function SignInPrompt({ title, text, callbackUrl }: SignInPromptProps) {
   return (
-    <div className="mx-auto max-w-md rounded-lg bg-white p-8 text-center shadow-sm ring-1 ring-[#e7e5e4]">
+    <div className="mx-auto max-w-md rounded-lg bg-white p-8 text-center shadow-sm ring-1 ring-[#e4e1f2]">
       <p className="text-4xl" aria-hidden="true">👋</p>
-      <h1 className="mt-3 text-2xl font-black text-[#022c22]">{title}</h1>
-      <p className="mt-2 text-sm text-[#57534e]">{text}</p>
+      <h1 className="mt-3 text-2xl font-black text-[#2e1065]">{title}</h1>
+      <p className="mt-2 text-sm text-[#57516b]">{text}</p>
       <button
         onClick={() => signIn("google", { callbackUrl })}
-        className="mt-5 flex w-full items-center justify-center gap-3 rounded-full border border-slate-300 bg-white py-3 font-bold text-[#57534e] shadow-sm transition hover:bg-[#fafaf9]"
+        className="mt-5 flex w-full items-center justify-center gap-3 rounded-full border border-slate-300 bg-white py-3 font-bold text-[#57516b] shadow-sm transition hover:bg-[#f5f3ff]"
       >
         <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-base font-black shadow">G</span>
         Continue with Google
