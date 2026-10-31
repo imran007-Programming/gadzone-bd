@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Forest Ledger glow drifting over warm cream.
+// Violet Dusk glow drifting over lavender mist.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(21, 128, 61, 0.28)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245, 158, 11, 0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(220, 38, 38, 0.22)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(5, 46, 22, 0.22)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(124, 58, 237, 0.28)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(236, 72, 153, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(6, 182, 212, 0.22)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(46, 16, 101, 0.22)" },
 ];
 
-// Forest Ledger sparks falling through the ledger.
+// Violet Dusk sparks rising through the dusk.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#15803d" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f59e0b" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#dc2626" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#16a34a" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#d97706" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#b91c1c" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#052e16" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#7c3aed" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#ec4899" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#06b6d4" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#8b5cf6" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#db2777" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#0891b2" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#2e1065" },
 ];
 
 // Harbor Mint glints scattered through the harbor.
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* harbor wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#dbeafe] via-[#d1fae5] to-[#f0f9ff]">
+      <div className="relative bg-gradient-to-b from-[#ede9fe] via-[#fce7f3] to-[#f5f3ff]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#4338ca", "#f97316", "#f59e0b", "#1e1b4b"];
+              const colors = ["#7c3aed", "#ec4899", "#06b6d4", "#2e1065"];
               return (
                 <span
                   key={i}
