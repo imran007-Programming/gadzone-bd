@@ -1,72 +1,71 @@
 @import "tailwindcss";
 
 @theme {
-  /* Twilight Violet: a fresh, original direction —
-     deep indigo as the primary accent, rose for
-     highlights, cyan as a contrasting spark, and
-     pale lavender paper. Cards are extra-rounded
-     1.75rem panels with soft diffused shadows and
-     a gradient LEFT accent bar — the opposite of
-     the previous Orchard Grove look, its forest
-     green / marigold / terracotta palette, warm
-     cream paper, hard offset shadows, tight
-     0.75rem corners, and gradient BOTTOM accent
-     bar. */
+  /* Ember Coast: a fresh, original direction —
+     burnt orange as the primary accent, amber for
+     highlights, teal as a contrasting spark, and
+     warm sand paper. Cards are 1.25rem panels with
+     crisp layered shadows and a gradient TOP
+     accent bar — the opposite of the previous
+     Twilight Violet look, its indigo / rose / cyan
+     palette, pale lavender paper, extra-rounded
+     1.75rem corners, soft diffused shadows, and
+     gradient LEFT accent bar. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = indigo scale */
-  --color-brand-50: #eef2ff;
-  --color-brand-100: #e0e7ff;
-  --color-brand-200: #c7d2fe;
-  --color-brand-300: #a5b4fc;
-  --color-brand-400: #818cf8;
-  --color-brand-500: #6366f1;
-  --color-brand-600: #4f46e5;
-  --color-brand-700: #4338ca;
-  --color-brand-800: #3730a3;
-  --color-brand-900: #312e81;
-  --color-brand-950: #1e1b4b;
-  --color-brand: #4338ca;
-  --color-brand-dark: #3730a3;
-  --color-brand-deep: #1e1b4b;
+  /* brand = burnt orange scale */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-brand-950: #431407;
+  --color-brand: #c2410c;
+  --color-brand-dark: #9a3412;
+  --color-brand-deep: #431407;
 
-  /* gold = rose scale (name kept for legacy class refs) */
-  --color-gold-50: #fff1f2;
-  --color-gold-100: #ffe4e6;
-  --color-gold-200: #fecdd3;
-  --color-gold-300: #fda4af;
-  --color-gold-400: #fb7185;
-  --color-gold-500: #f43f5e;
-  --color-gold-600: #e11d48;
-  --color-gold-700: #be123c;
-  --color-gold-800: #9f1239;
-  --color-gold-900: #881337;
-  --color-gold-950: #4c0519;
-  --color-gold: #f43f5e;
-  --color-gold-deep: #9f1239;
-  --color-gold-soft: #ffe4e6;
+  /* gold = amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #92400e;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = cyan scale (name kept for legacy class refs) */
-  --color-popblue-50: #ecfeff;
-  --color-popblue-100: #cffafe;
-  --color-popblue-200: #a5f3fc;
-  --color-popblue-300: #67e8f9;
-  --color-popblue-400: #22d3ee;
-  --color-popblue-500: #06b6d4;
-  --color-popblue-600: #0891b2;
-  --color-popblue-700: #0e7490;
-  --color-popblue-800: #155e75;
-  --color-popblue-900: #164e63;
-  --color-popblue-950: #083344;
-  --color-popblue: #06b6d4;
-  --color-popblue-deep: #083344;
-  --color-popblue-soft: #cffafe;
+  /* popblue = teal scale (name kept for legacy class refs) */
+  --color-popblue-50: #f0fdfa;
+  --color-popblue-100: #ccfbf1;
+  --color-popblue-200: #99f6e4;
+  --color-popblue-300: #5eead4;
+  --color-popblue-400: #2dd4bf;
+  --color-popblue-500: #14b8a6;
+  --color-popblue-600: #0d9488;
+  --color-popblue-700: #0f766e;
+  --color-popblue-800: #115e59;
+  --color-popblue-900: #134e4a;
+  --color-popblue-950: #042f2e;
+  --color-popblue: #0d9488;
+  --color-popblue-deep: #042f2e;
+  --color-popblue-soft: #ccfbf1;
 
-  --color-ink: #1e1b4b;
-  --color-paper: #f5f3ff;
-  --color-mute: #5b5b7a;
+  --color-ink: #292524;
+  --color-paper: #faf6ef;
+  --color-mute: #57534e;
   --color-card: #ffffff;
-  --color-deep: #1e1b4b;
+  --color-deep: #292524;
 }
 
 html { scroll-behavior: smooth; }
@@ -80,92 +79,92 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f5f3ff;
+  background-color: #faf6ef;
   background-image:
-    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(99, 102, 241, 0.2) 0%, rgba(99, 102, 241, 0) 70%),
-    radial-gradient(ellipse 45% 22% at 8% 24%, rgba(244, 63, 94, 0.14) 0%, rgba(244, 63, 94, 0) 70%),
-    linear-gradient(160deg, rgba(224, 231, 255, 0.65) 0%, rgba(255, 228, 230, 0.45) 42%, rgba(245, 243, 255, 0) 78%);
-  color: #1e1b4b;
+    radial-gradient(ellipse 55% 26% at 12% 0%, rgba(249, 115, 22, 0.18) 0%, rgba(249, 115, 22, 0) 70%),
+    radial-gradient(ellipse 45% 22% at 92% 24%, rgba(13, 148, 136, 0.14) 0%, rgba(13, 148, 136, 0) 70%),
+    linear-gradient(200deg, rgba(255, 237, 213, 0.7) 0%, rgba(254, 243, 199, 0.45) 42%, rgba(250, 246, 239, 0) 78%);
+  color: #292524;
 }
-::selection { background: #fda4af; color: #1e1b4b; }
+::selection { background: #fcd34d; color: #292524; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #4338ca, #f43f5e); border-radius: 999px; border: 2px solid #f5f3ff; }
-::-webkit-scrollbar-track { background: #e0e7ff; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #c2410c, #f59e0b); border-radius: 999px; border: 2px solid #faf6ef; }
+::-webkit-scrollbar-track { background: #ffedd5; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Violet type: tighter, punchier headlines. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Ember type: wider, sun-warmed headlines. */
+h1, h2, h3 { letter-spacing: 0.01em; text-wrap: balance; }
 
-/* Violet fall: sparks drifting DOWN and to the
-   left — the reverse of the previous leaves
-   drifting up and to the right. */
+/* Ember rise: sparks drifting UP and to the
+   right — the reverse of the previous fall
+   drifting down and to the left. */
 @keyframes signal-fall {
-  0% { transform: translate3d(-2vw, -6vh, 0) scale(0.9) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(2vw, 40vh, 0) scale(0.9) rotate(0deg); opacity: 0; }
   15% { opacity: 0.8; }
-  50% { transform: translate3d(0vw, 10vh, 0) scale(1.05) rotate(-18deg); }
-  100% { transform: translate3d(2vw, 40vh, 0) scale(0.9) rotate(-36deg); opacity: 0; }
+  50% { transform: translate3d(0vw, 10vh, 0) scale(1.05) rotate(18deg); }
+  100% { transform: translate3d(-2vw, -6vh, 0) scale(0.9) rotate(36deg); opacity: 0; }
 }
 .pop-fall { animation: signal-fall 26s linear infinite; }
 
-/* Violet sway: a slow, gentle vertical float. */
+/* Ember sway: a slow, gentle horizontal float. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(0, -10px, 0) scale(1); opacity: 0.7; }
-  50% { transform: translate3d(0, 10px, 0) scale(1.02); opacity: 1; }
+  0%, 100% { transform: translate3d(-10px, 0, 0) scale(1); opacity: 0.7; }
+  50% { transform: translate3d(10px, 0, 0) scale(1.02); opacity: 1; }
 }
 .pop-drift { animation: signal-drift 12s ease-in-out infinite; }
 
-/* Violet bob: a livelier scale pulse. */
+/* Ember bob: a livelier scale pulse. */
 @keyframes signal-bob {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.06); }
 }
 .pop-bob { animation: signal-bob 4.2s ease-in-out infinite; }
 
-/* Backward turn for the violet dial. */
+/* Forward turn for the ember dial. */
 @keyframes dial-turn {
-  from { transform: rotate(360deg); }
-  to { transform: rotate(0deg); }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 40s linear infinite; }
 
-/* Violet glint: a slower rose pulse. */
+/* Ember glint: a quicker amber pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.5; transform: scale(0.95); }
   50% { opacity: 1; transform: scale(1.15); }
 }
-.pop-twinkle { animation: signal-blink 3.4s ease-in-out infinite; }
+.pop-twinkle { animation: signal-blink 2.6s ease-in-out infinite; }
 
-/* Violet ticker: infinite marquee running
-   leftward (from 0 to -50%), the reverse of
-   the previous rightward run. */
+/* Ember ticker: infinite marquee running
+   rightward (from -50% to 0), the reverse of
+   the previous leftward run. */
 @keyframes signal-ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
 }
 .pop-ticker { animation: signal-ticker 38s linear infinite; }
 
-/* Violet bands: indigo / rose diagonal stripes
-   running the other way (-45deg). */
+/* Ember bands: burnt orange / amber diagonal
+   stripes running the other way (45deg). */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(-45deg, #4338ca 0px, #4338ca 10px, #f43f5e 10px, #f43f5e 20px);
+    repeating-linear-gradient(45deg, #c2410c 0px, #c2410c 10px, #f59e0b 10px, #f59e0b 20px);
   background-size: 28px 28px;
   background-repeat: repeat;
   border-radius: 999px;
 }
 
-/* Violet card: an extra-rounded 1.75rem panel
-   with soft diffused shadows and a gradient
-   LEFT accent bar — it lifts straight up on
-   hover while the left bar widens and the soft
-   shadow deepens. */
+/* Ember card: a 1.25rem panel with crisp
+   layered shadows and a gradient TOP accent
+   bar — it lifts straight up on hover while the
+   top bar thickens and the layered shadow
+   deepens. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(67, 56, 202, 0.18);
+  border: 1px solid rgba(194, 65, 12, 0.18);
   background: #ffffff;
-  border-radius: 1.75rem;
-  box-shadow: 0 10px 30px rgba(30, 27, 75, 0.12), 0 2px 8px rgba(30, 27, 75, 0.06);
+  border-radius: 1.25rem;
+  box-shadow: 0 2px 0 rgba(194, 65, 12, 0.12), 0 12px 28px rgba(41, 37, 36, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   overflow: hidden;
 }
@@ -173,96 +172,96 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
   content: "";
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
-  width: 6px;
-  background: linear-gradient(180deg, #4338ca, #f43f5e, #06b6d4);
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #c2410c, #f59e0b, #0d9488);
   z-index: 1;
-  transition: width 0.3s ease;
+  transition: height 0.3s ease;
 }
 .pop-lift:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 44px rgba(30, 27, 75, 0.18), 0 4px 12px rgba(30, 27, 75, 0.08);
-  border-color: rgba(67, 56, 202, 0.35);
+  box-shadow: 0 3px 0 rgba(194, 65, 12, 0.18), 0 20px 40px rgba(41, 37, 36, 0.16);
+  border-color: rgba(194, 65, 12, 0.35);
 }
-.pop-lift:hover::after { width: 12px; }
+.pop-lift:hover::after { height: 9px; }
 
-/* Violet glass: shared by modals and drawers — a
-   warm frosted pane with 1.75rem corners and a
-   soft indigo edge. */
+/* Ember glass: shared by modals and drawers — a
+   warm frosted pane with 1.25rem corners and a
+   soft ember edge. */
 .pop-glass {
-  background: rgba(245, 243, 255, 0.92);
+  background: rgba(250, 246, 239, 0.92);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(67, 56, 202, 0.25);
-  border-radius: 1.75rem;
-  box-shadow: 0 16px 40px rgba(30, 27, 75, 0.18);
+  border: 1px solid rgba(194, 65, 12, 0.25);
+  border-radius: 1.25rem;
+  box-shadow: 0 16px 40px rgba(41, 37, 36, 0.18);
 }
 
-/* Violet tag: an indigo-to-rose pill badge —
-   light type, tilted +3deg, soft shadow. */
+/* Ember tag: a solid burnt-orange pill badge —
+   light type, tilted -3deg, crisp shadow. */
 .starburst {
-  background: linear-gradient(135deg, #818cf8 0%, #4338ca 45%, #f43f5e 100%);
-  color: #fff1f2;
-  text-shadow: 0 1px 0 rgba(30, 27, 75, 0.4);
+  background: linear-gradient(135deg, #f97316 0%, #c2410c 60%, #9a3412 100%);
+  color: #fff7ed;
+  text-shadow: 0 1px 0 rgba(41, 37, 36, 0.4);
   border-radius: 999px;
-  transform: rotate(3deg);
-  box-shadow: 0 6px 16px rgba(30, 27, 75, 0.3);
+  transform: rotate(-3deg);
+  box-shadow: 0 6px 16px rgba(41, 37, 36, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
-/* Violet texture: a wider, airier dot grid. */
+/* Ember texture: a tighter, denser dot grid. */
 .halftone {
-  background-image: radial-gradient(rgba(67, 56, 202, 0.18) 1px, transparent 1px);
-  background-size: 22px 22px;
+  background-image: radial-gradient(rgba(194, 65, 12, 0.2) 1px, transparent 1px);
+  background-size: 14px 14px;
   background-position: 0 0;
 }
 
-/* Violet rule: a dotted rose line over indigo. */
+/* Ember rule: a dashed amber line over ember. */
 .zigzag {
   height: 6px;
   border: none;
   border-radius: 999px;
-  background: repeating-linear-gradient(90deg, #f43f5e 0px, #f43f5e 4px, transparent 4px, transparent 14px), linear-gradient(90deg, #4338ca, #4338ca) 0 100% / 100% 2px no-repeat;
+  background: repeating-linear-gradient(90deg, #f59e0b 0px, #f59e0b 8px, transparent 8px, transparent 18px), linear-gradient(90deg, #c2410c, #c2410c) 0 100% / 100% 2px no-repeat;
   opacity: 1;
 }
 
-/* Violet band: a lavender band with a thick
-   indigo TOP edge and soft shadow. */
+/* Ember band: a sand band with a thick
+   burnt-orange BOTTOM edge and crisp shadow. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #e0e7ff 0%, #ffe4e6 55%, #f5f3ff 100%);
+  background: linear-gradient(90deg, #ffedd5 0%, #fef3c7 55%, #faf6ef 100%);
   opacity: 1;
-  box-shadow: 0 12px 28px rgba(30, 27, 75, 0.12);
-  border-top: 6px solid #4338ca;
-  border-radius: 0 0 1.75rem 1.75rem;
+  box-shadow: 0 12px 28px rgba(41, 37, 36, 0.12);
+  border-bottom: 6px solid #c2410c;
+  border-radius: 1.25rem 1.25rem 0 0;
 }
 
-/* Violet glow: a soft rose halo for the core. */
+/* Ember glow: a soft amber halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 228, 230, 0.7) 42%, rgba(67, 56, 202, 0.2) 62%, rgba(67, 56, 202, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(254, 243, 199, 0.7) 42%, rgba(194, 65, 12, 0.2) 62%, rgba(194, 65, 12, 0) 76%);
 }
 
-/* Violet beacon: an indigo orb with a rose ring. */
+/* Ember beacon: a burnt-orange orb with a teal ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #e0e7ff 0%, #818cf8 55%, #4338ca 100%);
-  box-shadow: 0 0 0 3px rgba(244, 63, 94, 0.7), 0 10px 24px rgba(244, 63, 94, 0.35);
+    radial-gradient(circle at 35% 30%, #ffedd5 0%, #fb923c 55%, #c2410c 100%);
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.7), 0 10px 24px rgba(13, 148, 136, 0.35);
   border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
-/* Looser rings around the indigo orb. */
+/* Tighter rings around the ember orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(67, 56, 202, 0.4) 0px,
-    rgba(67, 56, 202, 0.4) 2px,
+    rgba(194, 65, 12, 0.4) 0px,
+    rgba(194, 65, 12, 0.4) 2px,
     transparent 2px,
-    transparent 18px,
-    rgba(244, 63, 94, 0.45) 18px,
-    rgba(244, 63, 94, 0.45) 20px,
-    transparent 20px,
-    transparent 36px
+    transparent 12px,
+    rgba(245, 158, 11, 0.45) 12px,
+    rgba(245, 158, 11, 0.45) 14px,
+    transparent 14px,
+    transparent 26px
   );
   -webkit-mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
   mask: radial-gradient(circle, transparent 30%, black 56%, transparent 90%);
@@ -271,8 +270,8 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(244, 63, 94, 0.45) 0deg 4deg,
-    transparent 4deg 28deg
+    rgba(245, 158, 11, 0.45) 0deg 6deg,
+    transparent 6deg 24deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
   mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
