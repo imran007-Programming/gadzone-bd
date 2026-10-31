@@ -1,70 +1,70 @@
 @import "tailwindcss";
 
 @theme {
-  /* Ember Oasis: an original direction —
-     deep teal as the primary accent, warm amber
-     for highlights, burnt orange as a grounding
-     contrast, and warm sand paper. Cards are
-     0.5rem panels with a teal-tinted border and a
-     gradient BOTTOM accent bar — the opposite of
-     the previous Twilight Harbor look, its indigo /
-     coral palette, lavender-blush paper, 1rem
-     panels, and gradient LEFT accent bar. */
+  /* Crimson Meadow: an original direction —
+     deep rose as the primary accent, fresh lime
+     for highlights, deep forest as a grounding
+     contrast, and warm cream paper. Cards are
+     1.25rem panels with a rose-tinted border and a
+     gradient LEFT accent bar — the opposite of
+     the previous Ember Oasis look, its teal /
+     amber palette, warm sand paper, 0.5rem
+     panels, and gradient BOTTOM accent bar. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = teal scale */
-  --color-brand-50: #f0fdfa;
-  --color-brand-100: #ccfbf1;
-  --color-brand-200: #99f6e4;
-  --color-brand-300: #5eead4;
-  --color-brand-400: #2dd4bf;
-  --color-brand-500: #14b8a6;
-  --color-brand-600: #0d9488;
-  --color-brand-700: #0f766e;
-  --color-brand-800: #115e59;
-  --color-brand-900: #134e4a;
-  --color-brand-950: #042f2e;
-  --color-brand: #0f766e;
-  --color-brand-dark: #115e59;
-  --color-brand-deep: #042f2e;
+  /* brand = rose scale */
+  --color-brand-50: #fff1f2;
+  --color-brand-100: #ffe4e6;
+  --color-brand-200: #fecdd3;
+  --color-brand-300: #fda4af;
+  --color-brand-400: #fb7185;
+  --color-brand-500: #f43f5e;
+  --color-brand-600: #e11d48;
+  --color-brand-700: #be123c;
+  --color-brand-800: #9f1239;
+  --color-brand-900: #881337;
+  --color-brand-950: #4c0519;
+  --color-brand: #be123c;
+  --color-brand-dark: #9f1239;
+  --color-brand-deep: #4c0519;
 
-  /* gold = amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #d97706;
-  --color-gold-deep: #92400e;
-  --color-gold-soft: #fde68a;
+  /* gold = lime scale (name kept for legacy class refs) */
+  --color-gold-50: #f7fee7;
+  --color-gold-100: #ecfccb;
+  --color-gold-200: #d9f99d;
+  --color-gold-300: #bef264;
+  --color-gold-400: #a3e635;
+  --color-gold-500: #84cc16;
+  --color-gold-600: #65a30d;
+  --color-gold-700: #4d7c0f;
+  --color-gold-800: #3f6212;
+  --color-gold-900: #365314;
+  --color-gold-950: #1a2e05;
+  --color-gold: #65a30d;
+  --color-gold-deep: #3f6212;
+  --color-gold-soft: #d9f99d;
 
-  /* popblue = burnt orange scale (name kept for legacy class refs) */
-  --color-popblue-50: #fff7ed;
-  --color-popblue-100: #ffedd5;
-  --color-popblue-200: #fed7aa;
-  --color-popblue-300: #fdba74;
-  --color-popblue-400: #fb923c;
-  --color-popblue-500: #f97316;
-  --color-popblue-600: #ea580c;
-  --color-popblue-700: #c2410c;
-  --color-popblue-800: #9a3412;
-  --color-popblue-900: #7c2d12;
-  --color-popblue-950: #431407;
-  --color-popblue: #c2410c;
-  --color-popblue-deep: #042f2e;
-  --color-popblue-soft: #fdba74;
+  /* popblue = forest scale (name kept for legacy class refs) */
+  --color-popblue-50: #f0fdf4;
+  --color-popblue-100: #dcfce7;
+  --color-popblue-200: #bbf7d0;
+  --color-popblue-300: #86efac;
+  --color-popblue-400: #4ade80;
+  --color-popblue-500: #22c55e;
+  --color-popblue-600: #16a34a;
+  --color-popblue-700: #15803d;
+  --color-popblue-800: #166534;
+  --color-popblue-900: #14532d;
+  --color-popblue-950: #052e16;
+  --color-popblue: #15803d;
+  --color-popblue-deep: #052e16;
+  --color-popblue-soft: #86efac;
 
-  --color-ink: #134e4a;
-  --color-paper: #fffbeb;
+  --color-ink: #4c0519;
+  --color-paper: #fffaf0;
   --color-mute: #57534e;
   --color-card: #ffffff;
-  --color-deep: #042f2e;
+  --color-deep: #052e16;
 }
 
 html { scroll-behavior: smooth; }
@@ -78,90 +78,91 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fffbeb;
+  background-color: #fffaf0;
   background-image:
-    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(15, 118, 110, 0.16) 0%, rgba(15, 118, 110, 0) 70%),
-    radial-gradient(ellipse 45% 22% at 8% 24%, rgba(245, 158, 11, 0.22) 0%, rgba(245, 158, 11, 0) 70%),
-    linear-gradient(160deg, rgba(204, 251, 241, 0.9) 0%, rgba(254, 243, 199, 0.55) 42%, rgba(255, 251, 235, 0) 78%);
-  color: #134e4a;
+    radial-gradient(ellipse 55% 26% at 12% 0%, rgba(190, 18, 60, 0.14) 0%, rgba(190, 18, 60, 0) 70%),
+    radial-gradient(ellipse 45% 22% at 92% 24%, rgba(132, 204, 22, 0.22) 0%, rgba(132, 204, 22, 0) 70%),
+    linear-gradient(200deg, rgba(255, 228, 230, 0.9) 0%, rgba(236, 252, 203, 0.55) 42%, rgba(255, 250, 240, 0) 78%);
+  color: #4c0519;
 }
-::selection { background: #0f766e; color: #ffffff; }
+::selection { background: #be123c; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0f766e, #f59e0b); border-radius: 4px; border: 2px solid #fffbeb; }
-::-webkit-scrollbar-track { background: #fef3c7; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #be123c, #84cc16); border-radius: 999px; border: 2px solid #fffaf0; }
+::-webkit-scrollbar-track { background: #ffe4e6; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Oasis type: relaxed, open headlines. */
-h1, h2, h3 { letter-spacing: 0.005em; text-wrap: balance; }
+/* Meadow type: tight, punchy headlines. */
+h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Oasis rise: embers drifting DOWN and to the
-   right — the reverse of the previous rise
-   drifting up and to the left. */
+/* Meadow rise: petals drifting UP and to the
+   left — the reverse of the previous fall
+   drifting down and to the right. */
 @keyframes signal-fall {
-  0% { transform: translate3d(-2vw, -6vh, 0) scale(0.9) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(2vw, 40vh, 0) scale(0.9) rotate(0deg); opacity: 0; }
   15% { opacity: 0.8; }
-  50% { transform: translate3d(0vw, 10vh, 0) scale(1.05) rotate(18deg); }
-  100% { transform: translate3d(2vw, 40vh, 0) scale(0.9) rotate(36deg); opacity: 0; }
+  50% { transform: translate3d(0vw, 10vh, 0) scale(1.05) rotate(-18deg); }
+  100% { transform: translate3d(-2vw, -6vh, 0) scale(0.9) rotate(-36deg); opacity: 0; }
 }
 .pop-fall { animation: signal-fall 22s linear infinite; }
 
-/* Oasis sway: a slow vertical float. */
+/* Meadow sway: a slow horizontal float. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(0, -10px, 0) scale(1); opacity: 0.7; }
-  50% { transform: translate3d(0, 10px, 0) scale(1.02); opacity: 1; }
+  0%, 100% { transform: translate3d(-10px, 0, 0) scale(1); opacity: 0.7; }
+  50% { transform: translate3d(10px, 0, 0) scale(1.02); opacity: 1; }
 }
 .pop-drift { animation: signal-drift 14s ease-in-out infinite; }
 
-/* Oasis bob: a gentler scale pulse. */
+/* Meadow bob: a stronger scale pulse. */
 @keyframes signal-bob {
   0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.03); }
+  50% { transform: scale(1.06); }
 }
-.pop-bob { animation: signal-bob 5.5s ease-in-out infinite; }
+.pop-bob { animation: signal-bob 4.5s ease-in-out infinite; }
 
-/* Backward turn for the oasis dial. */
+/* Forward turn for the meadow dial. */
 @keyframes dial-turn {
-  from { transform: rotate(360deg); }
-  to { transform: rotate(0deg); }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 .pop-spin { animation: dial-turn 32s linear infinite; }
 
-/* Oasis glint: a slower amber pulse. */
+/* Meadow glint: a faster lime pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.5; transform: scale(0.95); }
-  50% { opacity: 1; transform: scale(1.08); }
+  50% { opacity: 1; transform: scale(1.12); }
 }
-.pop-twinkle { animation: signal-blink 3.4s ease-in-out infinite; }
+.pop-twinkle { animation: signal-blink 2.6s ease-in-out infinite; }
 
-/* Oasis ticker: infinite marquee running
-   leftward (from 0 to -50%), the reverse of
-   the previous rightward run. */
+/* Meadow ticker: infinite marquee running
+   rightward (from -50% to 0), the reverse of
+   the previous leftward run. */
 @keyframes signal-ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
 }
 .pop-ticker { animation: signal-ticker 42s linear infinite; }
 
-/* Oasis bands: teal / amber diagonal stripes. */
+/* Meadow bands: rose / lime diagonal stripes,
+   angled the other way. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(45deg, #0f766e 0px, #0f766e 10px, #f59e0b 10px, #f59e0b 20px);
+    repeating-linear-gradient(-45deg, #be123c 0px, #be123c 10px, #84cc16 10px, #84cc16 20px);
   background-size: 28px 28px;
   background-repeat: repeat;
-  border-radius: 0.5rem;
+  border-radius: 1.25rem;
 }
 
-/* Oasis card: a 0.5rem panel with a teal-tinted
-   border and a gradient BOTTOM accent bar — it
-   lifts straight up on hover while the bar
-   thickens and the shadow deepens. */
+/* Meadow card: a 1.25rem panel with a rose-tinted
+   border and a gradient LEFT accent bar — it
+   lifts diagonally on hover while the bar
+   thickens and a hard offset shadow lands. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(15, 118, 110, 0.22);
+  border: 1px solid rgba(190, 18, 60, 0.22);
   background: #ffffff;
-  border-radius: 0.5rem;
-  box-shadow: 0 6px 16px -8px rgba(4, 47, 46, 0.25), 0 1px 3px -1px rgba(4, 47, 46, 0.10);
+  border-radius: 1.25rem;
+  box-shadow: 5px 5px 0 -1px rgba(5, 46, 22, 0.18), 0 6px 16px -8px rgba(76, 5, 25, 0.25);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   overflow: hidden;
 }
@@ -169,96 +170,97 @@ h1, h2, h3 { letter-spacing: 0.005em; text-wrap: balance; }
   content: "";
   position: absolute;
   left: 0;
-  right: 0;
+  top: 0;
   bottom: 0;
-  height: 5px;
-  background: linear-gradient(90deg, #0f766e, #f59e0b, #ea580c);
+  width: 6px;
+  background: linear-gradient(180deg, #be123c, #84cc16, #15803d);
   z-index: 1;
-  transition: height 0.25s ease;
+  transition: width 0.25s ease;
 }
 .pop-lift:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 30px -14px rgba(4, 47, 46, 0.35), 0 6px 14px -6px rgba(4, 47, 46, 0.15);
+  transform: translate(-2px, -6px);
+  box-shadow: 8px 10px 0 -1px rgba(5, 46, 22, 0.20), 0 20px 30px -14px rgba(76, 5, 25, 0.35);
 }
-.pop-lift:hover::before { height: 9px; }
+.pop-lift:hover::before { width: 10px; }
 
-/* Oasis glass: shared by modals and drawers — a
-   warm sand frosted pane with crisp corners
-   and a light ring. */
+/* Meadow glass: shared by modals and drawers — a
+   cool white frosted pane with generous corners
+   and a rose ring. */
 .pop-glass {
-  background: rgba(255, 251, 235, 0.92);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(15, 118, 110, 0.25);
-  border-radius: 0.5rem;
-  box-shadow: 0 24px 48px -20px rgba(4, 47, 46, 0.30), 0 4px 12px -4px rgba(4, 47, 46, 0.12);
+  border: 1px solid rgba(190, 18, 60, 0.25);
+  border-radius: 1.25rem;
+  box-shadow: 0 24px 48px -20px rgba(76, 5, 25, 0.30), 0 4px 12px -4px rgba(76, 5, 25, 0.12);
 }
 
-/* Oasis tag: a warm amber pill badge —
-   deep teal type, tilted the other way, crisp shadow. */
+/* Meadow tag: a fresh lime pill badge —
+   deep forest type, tilted the other way, crisp shadow. */
 .starburst {
-  background: linear-gradient(135deg, #fde68a 0%, #fbbf24 60%, #d97706 100%);
-  color: #042f2e;
+  background: linear-gradient(135deg, #ecfccb 0%, #a3e635 60%, #65a30d 100%);
+  color: #052e16;
   text-shadow: none;
   border-radius: 999px;
-  transform: rotate(-4deg);
-  box-shadow: 0 8px 20px -8px rgba(4, 47, 46, 0.45);
+  transform: rotate(4deg);
+  box-shadow: 0 8px 20px -8px rgba(76, 5, 25, 0.45);
   border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Oasis texture: a warm dot pattern. */
+/* Meadow texture: a rose dot pattern. */
 .halftone {
   background-image:
-    radial-gradient(rgba(15, 118, 110, 0.16) 1.5px, transparent 1.5px),
-    radial-gradient(rgba(245, 158, 11, 0.18) 1.5px, transparent 1.5px);
-  background-size: 24px 24px;
-  background-position: 0 0, 12px 12px;
+    radial-gradient(rgba(190, 18, 60, 0.16) 1.5px, transparent 1.5px),
+    radial-gradient(rgba(132, 204, 22, 0.18) 1.5px, transparent 1.5px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
 }
 
-/* Oasis rule: a teal-to-amber dashed line. */
+/* Meadow rule: a rose-to-lime dotted line. */
 .zigzag {
   height: 4px;
   border: none;
   border-radius: 4px;
-  background: repeating-linear-gradient(90deg, #0f766e 0px, #0f766e 16px, transparent 16px, transparent 24px, #f59e0b 24px, #f59e0b 40px, transparent 40px, transparent 48px);
+  background: radial-gradient(circle, #be123c 2px, transparent 2.5px) 0 0 / 14px 4px repeat-x,
+    radial-gradient(circle, #84cc16 2px, transparent 2.5px) 7px 0 / 14px 4px repeat-x;
   opacity: 1;
 }
 
-/* Oasis band: a sand band with a thick
-   amber BOTTOM edge and a crisp shadow. */
+/* Meadow band: a cream band with a thick
+   lime TOP edge and a crisp shadow. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #ccfbf1 0%, #fef3c7 55%, #fffbeb 100%);
+  background: linear-gradient(90deg, #ffe4e6 0%, #ecfccb 55%, #fffaf0 100%);
   opacity: 1;
-  box-shadow: 0 16px 32px -16px rgba(4, 47, 46, 0.30);
-  border-bottom: 4px solid #f59e0b;
-  border-radius: 0 0 0.5rem 0.5rem;
+  box-shadow: 0 16px 32px -16px rgba(76, 5, 25, 0.30);
+  border-top: 4px solid #84cc16;
+  border-radius: 0 0 1.25rem 1.25rem;
 }
 
 
-/* Oasis glow: a teal-amber halo for the core. */
+/* Meadow glow: a rose-lime halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(254, 243, 199, 0.7) 42%, rgba(15, 118, 110, 0.2) 62%, rgba(15, 118, 110, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(236, 252, 203, 0.7) 42%, rgba(190, 18, 60, 0.2) 62%, rgba(190, 18, 60, 0) 76%);
 }
 
-/* Oasis beacon: an amber orb with a teal ring. */
+/* Meadow beacon: a lime orb with a rose ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fffbeb 0%, #fcd34d 55%, #f59e0b 100%);
-  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.5), 0 20px 40px -16px rgba(4, 47, 46, 0.40);
+    radial-gradient(circle at 35% 30%, #fffaf0 0%, #bef264 55%, #84cc16 100%);
+  box-shadow: 0 0 0 3px rgba(190, 18, 60, 0.5), 0 20px 40px -16px rgba(76, 5, 25, 0.40);
   border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Wider rings around the oasis orb. */
+/* Wider rings around the meadow orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(15, 118, 110, 0.4) 0px,
-    rgba(15, 118, 110, 0.4) 2px,
+    rgba(190, 18, 60, 0.4) 0px,
+    rgba(190, 18, 60, 0.4) 2px,
     transparent 2px,
     transparent 18px,
-    rgba(245, 158, 11, 0.45) 18px,
-    rgba(245, 158, 11, 0.45) 20px,
+    rgba(132, 204, 22, 0.45) 18px,
+    rgba(132, 204, 22, 0.45) 20px,
     transparent 20px,
     transparent 36px
   );
@@ -269,7 +271,7 @@ h1, h2, h3 { letter-spacing: 0.005em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(245, 158, 11, 0.45) 0deg 6deg,
+    rgba(132, 204, 22, 0.45) 0deg 6deg,
     transparent 6deg 24deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
