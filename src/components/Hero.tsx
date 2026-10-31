@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Rosewood Atelier glow drifting over warm ivory.
+// Emerald Lagoon glow drifting over pale mint.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(190, 18, 60, 0.28)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245, 158, 11, 0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(20, 184, 166, 0.22)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(76, 5, 25, 0.22)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(16, 185, 129, 0.28)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(163, 230, 53, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(6, 182, 212, 0.22)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(2, 44, 34, 0.22)" },
 ];
 
-// Rosewood Atelier petals falling through the atelier.
+// Emerald Lagoon leaves rising through the lagoon.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#be123c" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f59e0b" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#0d9488" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#f43f5e" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#d97706" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#14b8a6" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#4c0519" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#047857" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#84cc16" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#0891b2" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#10b981" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#65a30d" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#06b6d4" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#022c22" },
 ];
 
-// Rosewood Atelier glints scattered through the atelier.
+// Emerald Lagoon glints scattered through the lagoon.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -75,19 +75,19 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* atelier wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#fef3c7] via-[#ffe4e6] to-[#fdf8ef]">
+      {/* lagoon wash over the stage */}
+      <div className="relative bg-gradient-to-b from-[#ecfccb] via-[#d1fae5] to-[#f0fdf4]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
 
-        {/* atelier wash sweeping the sheet */}
+        {/* lagoon wash sweeping the sheet */}
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-0 hidden h-[560px] opacity-90 sm:block">
           <div className="pop-drift absolute -left-24 top-6 h-72 w-[52rem] rotate-[-8deg] rounded-full bg-gradient-to-r from-brand-400/35 via-gold-300/25 to-transparent blur-3xl" />
           <div className="pop-drift absolute -right-24 top-40 h-64 w-[44rem] rotate-[10deg] rounded-full bg-gradient-to-r from-transparent via-brand-300/25 to-gold-400/30 blur-3xl" style={{ animationDelay: "-12s" }} />
         </div>
 
-        {/* atelier core: a rose orb ringed by a slow-spinning dial */}
+        {/* lagoon core: a lime orb ringed by a slow-spinning dial */}
         <div aria-hidden className="pointer-events-none absolute -right-40 -top-32 z-0 hidden opacity-90 sm:block">
           <div className="relative h-[600px] w-[600px]">
             <div className="nebula-core absolute inset-8 rounded-full blur-xl" />
@@ -100,12 +100,12 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(245, 158, 11, 0.45), inset 0 0 18px rgba(190, 18, 60, 0.30)",
+                  boxShadow: "0 0 28px 2px rgba(132, 204, 22, 0.45), inset 0 0 18px rgba(4, 120, 87, 0.30)",
                   opacity: 1 - r * 0.22,
                 }}
               />
             ))}
-            {/* the atelier heart: a layered amber disc */}
+            {/* the lagoon heart: a layered lime disc */}
             <div className="sun-disc pop-spin absolute inset-44 rounded-full" style={{ animationDuration: "60s" }} />
             {/* circuit glints */}
             <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
@@ -121,11 +121,11 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{ width: 26, height: 240, transform: `translate(-50%, -100%) rotate(${b * 120}deg)`, animationDuration: "36s" }}
               />
             ))}
-            {/* atelier sparks dancing around the rose orb */}
+            {/* lagoon sparks dancing around the lime orb */}
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#be123c", "#f59e0b", "#0d9488", "#4c0519"];
+              const colors = ["#047857", "#84cc16", "#0891b2", "#022c22"];
               return (
                 <span
                   key={i}
