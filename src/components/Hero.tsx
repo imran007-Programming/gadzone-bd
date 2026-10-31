@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* dune wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#ffedd5] via-[#fef3c7] to-[#fdf7ee]">
+      <div className="relative bg-gradient-to-b from-[#fdf4ff] via-[#fce7f3] to-[#fdf2f8]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
