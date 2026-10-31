@@ -1,71 +1,72 @@
 @import "tailwindcss";
 
 @theme {
-  /* Emerald Lagoon: a fresh, original direction —
-     deep emerald as the primary accent, bright lime
-     for highlights, cyan as a contrasting spark,
-     and pale mint paper. Cards are soft 1.75rem
-     panels with layered diffuse shadows and a
-     gradient LEFT accent bar — the opposite of
-     the previous Rosewood Atelier look, its deep
-     rose / amber / teal palette, warm ivory paper,
-     sharp 0.375rem corners, hard offset shadows,
-     and gradient TOP accent bar. */
+  /* Indigo Dusk: a fresh, original direction —
+     deep indigo as the primary accent, warm coral
+     for highlights, amber as a contrasting spark,
+     and warm cream paper. Cards are crisp 1rem
+     panels with a bold 2px indigo border and a
+     hard offset shadow, plus a gradient BOTTOM
+     accent bar — the opposite of the previous
+     Emerald Lagoon look, its deep emerald / lime
+     / cyan palette, pale mint paper, soft 1.75rem
+     corners, diffuse layered shadows, and
+     gradient LEFT accent bar. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = deep emerald scale */
-  --color-brand-50: #ecfdf5;
-  --color-brand-100: #d1fae5;
-  --color-brand-200: #a7f3d0;
-  --color-brand-300: #6ee7b7;
-  --color-brand-400: #34d399;
-  --color-brand-500: #10b981;
-  --color-brand-600: #059669;
-  --color-brand-700: #047857;
-  --color-brand-800: #065f46;
-  --color-brand-900: #064e3b;
-  --color-brand-950: #022c22;
-  --color-brand: #047857;
-  --color-brand-dark: #065f46;
-  --color-brand-deep: #022c22;
+  /* brand = deep indigo scale */
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-200: #c7d2fe;
+  --color-brand-300: #a5b4fc;
+  --color-brand-400: #818cf8;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+  --color-brand-800: #3730a3;
+  --color-brand-900: #312e81;
+  --color-brand-950: #1e1b4b;
+  --color-brand: #4338ca;
+  --color-brand-dark: #3730a3;
+  --color-brand-deep: #1e1b4b;
 
-  /* gold = lime scale (name kept for legacy class refs) */
-  --color-gold-50: #f7fee7;
-  --color-gold-100: #ecfccb;
-  --color-gold-200: #d9f99d;
-  --color-gold-300: #bef264;
-  --color-gold-400: #a3e635;
-  --color-gold-500: #84cc16;
-  --color-gold-600: #65a30d;
-  --color-gold-700: #4d7c0f;
-  --color-gold-800: #3f6212;
-  --color-gold-900: #365314;
-  --color-gold-950: #1a2e05;
-  --color-gold: #65a30d;
-  --color-gold-deep: #3f6212;
-  --color-gold-soft: #ecfccb;
+  /* gold = coral scale (name kept for legacy class refs) */
+  --color-gold-50: #fff7ed;
+  --color-gold-100: #ffedd5;
+  --color-gold-200: #fed7aa;
+  --color-gold-300: #fdba74;
+  --color-gold-400: #fb923c;
+  --color-gold-500: #f97316;
+  --color-gold-600: #ea580c;
+  --color-gold-700: #c2410c;
+  --color-gold-800: #9a3412;
+  --color-gold-900: #7c2d12;
+  --color-gold-950: #431407;
+  --color-gold: #ea580c;
+  --color-gold-deep: #9a3412;
+  --color-gold-soft: #ffedd5;
 
-  /* popblue = cyan scale (name kept for legacy class refs) */
-  --color-popblue-50: #ecfeff;
-  --color-popblue-100: #cffafe;
-  --color-popblue-200: #a5f3fc;
-  --color-popblue-300: #67e8f9;
-  --color-popblue-400: #22d3ee;
-  --color-popblue-500: #06b6d4;
-  --color-popblue-600: #0891b2;
-  --color-popblue-700: #0e7490;
-  --color-popblue-800: #155e75;
-  --color-popblue-900: #164e63;
-  --color-popblue-950: #083344;
-  --color-popblue: #0891b2;
-  --color-popblue-deep: #083344;
-  --color-popblue-soft: #cffafe;
+  /* popblue = amber scale (name kept for legacy class refs) */
+  --color-popblue-50: #fffbeb;
+  --color-popblue-100: #fef3c7;
+  --color-popblue-200: #fde68a;
+  --color-popblue-300: #fcd34d;
+  --color-popblue-400: #fbbf24;
+  --color-popblue-500: #f59e0b;
+  --color-popblue-600: #d97706;
+  --color-popblue-700: #b45309;
+  --color-popblue-800: #92400e;
+  --color-popblue-900: #78350f;
+  --color-popblue-950: #451a03;
+  --color-popblue: #d97706;
+  --color-popblue-deep: #451a03;
+  --color-popblue-soft: #fef3c7;
 
-  --color-ink: #052e22;
-  --color-paper: #f0fdf4;
-  --color-mute: #3f6212;
+  --color-ink: #1e1b4b;
+  --color-paper: #fff7ed;
+  --color-mute: #57534e;
   --color-card: #ffffff;
-  --color-deep: #022c22;
+  --color-deep: #1e1b4b;
 }
 
 html { scroll-behavior: smooth; }
@@ -79,90 +80,92 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f0fdf4;
+  background-color: #fff7ed;
   background-image:
-    radial-gradient(ellipse 55% 26% at 12% 0%, rgba(16, 185, 129, 0.16) 0%, rgba(16, 185, 129, 0) 70%),
-    radial-gradient(ellipse 45% 22% at 92% 24%, rgba(163, 230, 53, 0.20) 0%, rgba(163, 230, 53, 0) 70%),
-    linear-gradient(160deg, rgba(209, 250, 229, 0.8) 0%, rgba(236, 252, 203, 0.5) 42%, rgba(240, 253, 244, 0) 78%);
-  color: #052e22;
+    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(99, 102, 241, 0.16) 0%, rgba(99, 102, 241, 0) 70%),
+    radial-gradient(ellipse 45% 22% at 8% 24%, rgba(249, 115, 22, 0.20) 0%, rgba(249, 115, 22, 0) 70%),
+    linear-gradient(200deg, rgba(224, 231, 255, 0.8) 0%, rgba(255, 237, 213, 0.5) 42%, rgba(255, 247, 237, 0) 78%);
+  color: #1e1b4b;
 }
-::selection { background: #bef264; color: #022c22; }
+::selection { background: #fb923c; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #047857, #84cc16); border-radius: 999px; border: 2px solid #f0fdf4; }
-::-webkit-scrollbar-track { background: #d1fae5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #4338ca, #f97316); border-radius: 999px; border: 2px solid #fff7ed; }
+::-webkit-scrollbar-track { background: #e0e7ff; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Lagoon type: relaxed, open headlines. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Dusk type: tighter, bolder headlines. */
+h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Lagoon rise: fresh signals drifting UP and to
-   the right — the reverse of the previous fall
-   drifting down and to the left. */
+/* Dusk fall: warm signals drifting DOWN and to
+   the left — the reverse of the previous rise
+   drifting up and to the right. */
 @keyframes signal-fall {
-  0% { transform: translate3d(2vw, 40vh, 0) scale(0.9) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(-2vw, -6vh, 0) scale(0.9) rotate(0deg); opacity: 0; }
   15% { opacity: 0.8; }
-  50% { transform: translate3d(0vw, 10vh, 0) scale(1.05) rotate(18deg); }
-  100% { transform: translate3d(-2vw, -6vh, 0) scale(0.9) rotate(36deg); opacity: 0; }
+  50% { transform: translate3d(0vw, 10vh, 0) scale(1.05) rotate(-18deg); }
+  100% { transform: translate3d(2vw, 40vh, 0) scale(0.9) rotate(-36deg); opacity: 0; }
 }
 .pop-fall { animation: signal-fall 22s linear infinite; }
 
-/* Lagoon sway: a slow, gentle horizontal float. */
+/* Dusk sway: a slow, gentle vertical float. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(-10px, 0, 0) scale(1); opacity: 0.7; }
-  50% { transform: translate3d(10px, 0, 0) scale(1.02); opacity: 1; }
+  0%, 100% { transform: translate3d(0, -10px, 0) scale(1); opacity: 0.7; }
+  50% { transform: translate3d(0, 10px, 0) scale(1.02); opacity: 1; }
 }
 .pop-drift { animation: signal-drift 14s ease-in-out infinite; }
 
-/* Lagoon bob: a bolder scale pulse. */
+/* Dusk bob: a subtler scale pulse. */
 @keyframes signal-bob {
   0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.06); }
+  50% { transform: scale(1.03); }
 }
-.pop-bob { animation: signal-bob 4.5s ease-in-out infinite; }
+.pop-bob { animation: signal-bob 5.5s ease-in-out infinite; }
 
-/* Forward turn for the lagoon dial. */
+/* Reverse turn for the dusk dial. */
 @keyframes dial-turn {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
 }
 .pop-spin { animation: dial-turn 32s linear infinite; }
 
-/* Lagoon glint: a quicker cyan pulse. */
+/* Dusk glint: a slower amber pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.5; transform: scale(0.95); }
-  50% { opacity: 1; transform: scale(1.12); }
+  50% { opacity: 1; transform: scale(1.08); }
 }
-.pop-twinkle { animation: signal-blink 2.6s ease-in-out infinite; }
+.pop-twinkle { animation: signal-blink 3.4s ease-in-out infinite; }
 
-/* Lagoon ticker: infinite marquee running
-   rightward (from -50% to 0), the reverse of
-   the previous leftward run. */
+/* Dusk ticker: infinite marquee running
+   leftward (from 0 to -50%), the reverse of
+   the previous rightward run. */
 @keyframes signal-ticker {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 42s linear infinite; }
 
-/* Lagoon bands: emerald / lime diagonal stripes. */
+/* Dusk bands: indigo / coral diagonal stripes
+   running the opposite way. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(45deg, #047857 0px, #047857 10px, #a3e635 10px, #a3e635 20px);
+    repeating-linear-gradient(-45deg, #4338ca 0px, #4338ca 10px, #f97316 10px, #f97316 20px);
   background-size: 28px 28px;
   background-repeat: repeat;
   border-radius: 999px;
 }
 
-/* Lagoon card: a soft 1.75rem panel with layered
-   diffuse shadows and a gradient LEFT accent bar
-   — it rises on hover while the left bar widens
-   and the shadow deepens. */
+/* Dusk card: a crisp 1rem panel with a bold
+   2px indigo border and a hard offset shadow,
+   plus a gradient BOTTOM accent bar — it shifts
+   up-left on hover while the bottom bar thickens
+   and the shadow hardens. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(4, 120, 87, 0.18);
+  border: 2px solid rgba(67, 56, 202, 0.55);
   background: #ffffff;
-  border-radius: 1.75rem;
-  box-shadow: 0 2px 6px rgba(2, 44, 34, 0.06), 0 18px 38px -18px rgba(2, 44, 34, 0.28);
+  border-radius: 1rem;
+  box-shadow: 6px 6px 0 rgba(30, 27, 75, 0.18);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   overflow: hidden;
 }
@@ -170,94 +173,94 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
   content: "";
   position: absolute;
   left: 0;
-  top: 0;
+  right: 0;
   bottom: 0;
-  width: 5px;
-  background: linear-gradient(180deg, #047857, #84cc16, #06b6d4);
+  height: 5px;
+  background: linear-gradient(90deg, #4338ca, #f97316, #f59e0b);
   z-index: 1;
-  transition: width 0.3s ease;
+  transition: height 0.3s ease;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 10px rgba(2, 44, 34, 0.08), 0 28px 48px -18px rgba(2, 44, 34, 0.35);
-  border-color: rgba(4, 120, 87, 0.35);
+  transform: translate(-2px, -4px);
+  box-shadow: 9px 9px 0 rgba(30, 27, 75, 0.22);
+  border-color: rgba(67, 56, 202, 0.85);
 }
-.pop-lift:hover::after { width: 10px; }
+.pop-lift:hover::after { height: 10px; }
 
-/* Lagoon glass: shared by modals and drawers — a
-   pale mint frosted pane with large soft corners
-   and a gentle emerald edge. */
+/* Dusk glass: shared by modals and drawers — a
+   warm cream frosted pane with crisp corners
+   and a firm indigo edge. */
 .pop-glass {
-  background: rgba(240, 253, 244, 0.92);
+  background: rgba(255, 247, 237, 0.92);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(4, 120, 87, 0.25);
-  border-radius: 1.5rem;
-  box-shadow: 0 24px 48px -20px rgba(2, 44, 34, 0.35);
+  border: 2px solid rgba(67, 56, 202, 0.35);
+  border-radius: 1rem;
+  box-shadow: 6px 6px 0 rgba(30, 27, 75, 0.18);
 }
 
-/* Lagoon tag: a solid lime pill badge —
-   dark type, tilted -2deg, soft shadow. */
+/* Dusk tag: a solid coral pill badge —
+   white type, tilted +3deg, hard shadow. */
 .starburst {
-  background: linear-gradient(135deg, #d9f99d 0%, #a3e635 60%, #65a30d 100%);
-  color: #022c22;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background: linear-gradient(135deg, #fdba74 0%, #f97316 60%, #ea580c 100%);
+  color: #ffffff;
+  text-shadow: 0 1px 0 rgba(30, 27, 75, 0.4);
   border-radius: 999px;
-  transform: rotate(-2deg);
-  box-shadow: 0 10px 22px -8px rgba(2, 44, 34, 0.5);
+  transform: rotate(3deg);
+  box-shadow: 4px 4px 0 rgba(30, 27, 75, 0.35);
   border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Lagoon texture: a tighter, denser dot grid. */
+/* Dusk texture: a sparser, wider dot grid. */
 .halftone {
-  background-image: radial-gradient(rgba(4, 120, 87, 0.20) 1px, transparent 1px);
-  background-size: 14px 14px;
+  background-image: radial-gradient(rgba(67, 56, 202, 0.20) 1px, transparent 1px);
+  background-size: 22px 22px;
   background-position: 0 0;
 }
 
-/* Lagoon rule: a solid lime line over emerald. */
+/* Dusk rule: a solid coral line over indigo. */
 .zigzag {
   height: 6px;
   border: none;
   border-radius: 999px;
-  background: repeating-linear-gradient(90deg, #84cc16 0px, #84cc16 10px, transparent 10px, transparent 20px), linear-gradient(90deg, #047857, #047857) 0 100% / 100% 2px no-repeat;
+  background: repeating-linear-gradient(90deg, #f97316 0px, #f97316 10px, transparent 10px, transparent 20px), linear-gradient(90deg, #4338ca, #4338ca) 0 100% / 100% 2px no-repeat;
   opacity: 1;
 }
 
-/* Lagoon band: a cool band with a thick
-   deep-emerald BOTTOM edge and a soft shadow. */
+/* Dusk band: a warm band with a thick
+   coral TOP edge and a hard offset shadow. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #d1fae5 0%, #ecfccb 55%, #f0fdf4 100%);
+  background: linear-gradient(90deg, #e0e7ff 0%, #ffedd5 55%, #fff7ed 100%);
   opacity: 1;
-  box-shadow: 0 18px 36px -20px rgba(2, 44, 34, 0.35);
-  border-bottom: 6px solid #047857;
-  border-radius: 0.5rem 0.5rem 0 0;
+  box-shadow: 6px 6px 0 rgba(30, 27, 75, 0.18);
+  border-top: 6px solid #ea580c;
+  border-radius: 0 0 0.5rem 0.5rem;
 }
 
-/* Lagoon glow: a cool lime halo for the core. */
+/* Dusk glow: a warm coral halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(236, 252, 203, 0.7) 42%, rgba(16, 185, 129, 0.2) 62%, rgba(16, 185, 129, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 237, 213, 0.7) 42%, rgba(99, 102, 241, 0.2) 62%, rgba(99, 102, 241, 0) 76%);
 }
 
-/* Lagoon beacon: a lime orb with an emerald ring. */
+/* Dusk beacon: a coral orb with an indigo ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #f7fee7 0%, #bef264 55%, #84cc16 100%);
-  box-shadow: 0 0 0 3px rgba(4, 120, 87, 0.6), 0 18px 36px -14px rgba(2, 44, 34, 0.4);
+    radial-gradient(circle at 35% 30%, #fff7ed 0%, #fdba74 55%, #f97316 100%);
+  box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.6), 6px 6px 0 rgba(30, 27, 75, 0.25);
   border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Wider rings around the lagoon orb. */
+/* Wider rings around the dusk orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(4, 120, 87, 0.4) 0px,
-    rgba(4, 120, 87, 0.4) 2px,
+    rgba(67, 56, 202, 0.4) 0px,
+    rgba(67, 56, 202, 0.4) 2px,
     transparent 2px,
     transparent 18px,
-    rgba(132, 204, 22, 0.45) 18px,
-    rgba(132, 204, 22, 0.45) 20px,
+    rgba(249, 115, 22, 0.45) 18px,
+    rgba(249, 115, 22, 0.45) 20px,
     transparent 20px,
     transparent 36px
   );
@@ -268,7 +271,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(132, 204, 22, 0.45) 0deg 6deg,
+    rgba(249, 115, 22, 0.45) 0deg 6deg,
     transparent 6deg 24deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
