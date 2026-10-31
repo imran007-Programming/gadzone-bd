@@ -27,7 +27,7 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
       {/* frost glow peeking from the card's top edge */}
       <div aria-hidden className="pointer-events-none absolute inset-x-10 top-0 h-24 rounded-b-2xl bg-gradient-to-b from-brand-200/60 via-gold-200/40 to-transparent blur-sm" />
       <div className="relative p-3">
-        <div className="relative cursor-pointer overflow-hidden rounded-[1.25rem] ring-2 ring-brand-200" onClick={() => onQuickView(p)}>
+        <div className="relative cursor-pointer overflow-hidden rounded-[0.75rem] ring-2 ring-brand-200" onClick={() => onQuickView(p)}>
           <ProductImage product={p} />
           {p.badge === "New" && (
             <span className="absolute left-3 top-3 rounded-md bg-gold-400 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-gold-950 shadow-[0_10px_20px_-8px_rgba(67, 20, 7,0.45)] ring-1 ring-white/60">New</span>

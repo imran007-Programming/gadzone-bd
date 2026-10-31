@@ -1,71 +1,71 @@
 @import "tailwindcss";
 
 @theme {
-  /* Violet Dusk: an original direction —
-     deep violet as the primary accent, vivid
-     fuchsia for sparkle, warm amber for contrast,
-     and soft lavender paper. Cards are 1.5rem
-     panels with a 1px solid border, soft layered
-     shadows, and a gradient LEFT accent bar — the
-     opposite of the previous Forest Canopy look,
-     its emerald / lime / sky palette, cool mint
-     paper, 0.75rem panels, hard offset shadows,
-     and gradient BOTTOM accent bar. */
+  /* Coral Harbor: an original direction —
+     warm coral as the primary accent, deep teal
+     for contrast, sunny yellow for sparkle, and
+     warm sand paper. Cards are 1rem panels with
+     a 2px border, crisp medium shadows, and a
+     gradient TOP accent bar — the opposite of
+     the previous Violet Dusk look, its violet /
+     fuchsia / amber palette, cool lavender paper,
+     1.5rem panels, soft layered shadows, and
+     gradient LEFT accent bar. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = violet scale */
-  --color-brand-50: #f5f3ff;
-  --color-brand-100: #ede9fe;
-  --color-brand-200: #ddd6fe;
-  --color-brand-300: #c4b5fd;
-  --color-brand-400: #a78bfa;
-  --color-brand-500: #8b5cf6;
-  --color-brand-600: #7c3aed;
-  --color-brand-700: #6d28d9;
-  --color-brand-800: #5b21b6;
-  --color-brand-900: #4c1d95;
-  --color-brand-950: #2e1065;
-  --color-brand: #6d28d9;
-  --color-brand-dark: #5b21b6;
-  --color-brand-deep: #2e1065;
+  /* brand = coral scale */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-brand-950: #431407;
+  --color-brand: #c2410c;
+  --color-brand-dark: #9a3412;
+  --color-brand-deep: #431407;
 
-  /* gold = amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #d97706;
-  --color-gold-deep: #92400e;
-  --color-gold-soft: #fcd34d;
+  /* gold = sunny yellow scale (name kept for legacy class refs) */
+  --color-gold-50: #fefce8;
+  --color-gold-100: #fef9c3;
+  --color-gold-200: #fef08a;
+  --color-gold-300: #fde047;
+  --color-gold-400: #facc15;
+  --color-gold-500: #eab308;
+  --color-gold-600: #ca8a04;
+  --color-gold-700: #a16207;
+  --color-gold-800: #854d0e;
+  --color-gold-900: #713f12;
+  --color-gold-950: #422006;
+  --color-gold: #ca8a04;
+  --color-gold-deep: #854d0e;
+  --color-gold-soft: #fde047;
 
-  /* popblue = fuchsia scale (name kept for legacy class refs) */
-  --color-popblue-50: #fdf4ff;
-  --color-popblue-100: #fae8ff;
-  --color-popblue-200: #f5d0fe;
-  --color-popblue-300: #f0abfc;
-  --color-popblue-400: #e879f9;
-  --color-popblue-500: #d946ef;
-  --color-popblue-600: #c026d3;
-  --color-popblue-700: #a21caf;
-  --color-popblue-800: #86198f;
-  --color-popblue-900: #701a75;
-  --color-popblue-950: #4a044e;
-  --color-popblue: #c026d3;
-  --color-popblue-deep: #701a75;
-  --color-popblue-soft: #f0abfc;
+  /* popblue = deep teal scale (name kept for legacy class refs) */
+  --color-popblue-50: #f0fdfa;
+  --color-popblue-100: #ccfbf1;
+  --color-popblue-200: #99f6e4;
+  --color-popblue-300: #5eead4;
+  --color-popblue-400: #2dd4bf;
+  --color-popblue-500: #14b8a6;
+  --color-popblue-600: #0d9488;
+  --color-popblue-700: #0f766e;
+  --color-popblue-800: #115e59;
+  --color-popblue-900: #134e4a;
+  --color-popblue-950: #042f2b;
+  --color-popblue: #0d9488;
+  --color-popblue-deep: #134e4a;
+  --color-popblue-soft: #5eead4;
 
-  --color-ink: #2e1065;
-  --color-paper: #faf8ff;
-  --color-mute: #6b5b8f;
+  --color-ink: #431407;
+  --color-paper: #fffaf3;
+  --color-mute: #78716c;
   --color-card: #ffffff;
-  --color-deep: #2e1065;
+  --color-deep: #431407;
 }
 
 html { scroll-behavior: smooth; }
@@ -79,90 +79,90 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #faf8ff;
+  background-color: #fffaf3;
   background-image:
-    radial-gradient(ellipse 55% 26% at 12% 0%, rgba(124, 58, 237, 0.16) 0%, rgba(124, 58, 237, 0) 70%),
-    radial-gradient(ellipse 45% 22% at 92% 30%, rgba(217, 70, 239, 0.18) 0%, rgba(217, 70, 239, 0) 70%),
-    linear-gradient(165deg, rgba(237, 233, 254, 0.9) 0%, rgba(250, 232, 255, 0.55) 42%, rgba(250, 248, 255, 0) 78%);
-  color: #2e1065;
+    radial-gradient(ellipse 55% 26% at 88% 0%, rgba(249, 115, 22, 0.16) 0%, rgba(249, 115, 22, 0) 70%),
+    radial-gradient(ellipse 45% 22% at 8% 30%, rgba(13, 148, 136, 0.18) 0%, rgba(13, 148, 136, 0) 70%),
+    linear-gradient(200deg, rgba(255, 237, 213, 0.9) 0%, rgba(204, 251, 241, 0.55) 42%, rgba(255, 250, 243, 0) 78%);
+  color: #431407;
 }
-::selection { background: #6d28d9; color: #f5f3ff; }
+::selection { background: #c2410c; color: #fff7ed; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #7c3aed, #d946ef); border-radius: 4px; border: 2px solid #faf8ff; }
-::-webkit-scrollbar-track { background: #ede9fe; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ea580c, #0d9488); border-radius: 4px; border: 2px solid #fffaf3; }
+::-webkit-scrollbar-track { background: #ffedd5; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Dusk type: relaxed, open headlines. */
-h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+/* Harbor type: tight, punchy headlines. */
+h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
 
-/* Dusk drift: motes falling gently downward
-   with a soft rightward drift — not the
-   previous sideways rise. */
+/* Harbor rise: motes rising gently upward
+   with a soft leftward drift — not the
+   previous downward fall. */
 @keyframes signal-fall {
-  0% { transform: translate3d(0vw, -6vh, 0) scale(0.9) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(0vw, 12vh, 0) scale(0.9) rotate(0deg); opacity: 0; }
   15% { opacity: 0.8; }
-  50% { transform: translate3d(1vw, 4vh, 0) scale(1.05) rotate(-18deg); }
-  100% { transform: translate3d(2vw, 12vh, 0) scale(0.9) rotate(-36deg); opacity: 0; }
+  50% { transform: translate3d(-1vw, 4vh, 0) scale(1.05) rotate(18deg); }
+  100% { transform: translate3d(-2vw, -6vh, 0) scale(0.9) rotate(36deg); opacity: 0; }
 }
 .pop-fall { animation: signal-fall 18s linear infinite; }
 
-/* Dusk sway: a slow vertical float. */
+/* Harbor sway: a slow horizontal float. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate3d(0, -10px, 0) scale(1); opacity: 0.7; }
-  50% { transform: translate3d(0, 10px, 0) scale(1.02); opacity: 1; }
+  0%, 100% { transform: translate3d(-10px, 0, 0) scale(1); opacity: 0.7; }
+  50% { transform: translate3d(10px, 0, 0) scale(1.02); opacity: 1; }
 }
 .pop-drift { animation: signal-drift 9s ease-in-out infinite; }
 
-/* Dusk bob: a slightly larger scale pulse. */
+/* Harbor bob: a sharper scale pulse. */
 @keyframes signal-bob {
   0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.04); }
+  50% { transform: scale(1.08); }
 }
-.pop-bob { animation: signal-bob 4s ease-in-out infinite; }
+.pop-bob { animation: signal-bob 3s ease-in-out infinite; }
 
-/* Forward turn for the dusk dial. */
+/* Reverse turn for the harbor dial. */
 @keyframes dial-turn {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
 }
 .pop-spin { animation: dial-turn 28s linear infinite; }
 
-/* Dusk glint: a slower fuchsia pulse. */
+/* Harbor glint: a quicker teal pulse. */
 @keyframes signal-blink {
   0%, 100% { opacity: 0.5; transform: scale(0.95); }
-  50% { opacity: 1; transform: scale(1.05); }
+  50% { opacity: 1; transform: scale(1.08); }
 }
-.pop-twinkle { animation: signal-blink 3.2s ease-in-out infinite; }
+.pop-twinkle { animation: signal-blink 2.4s ease-in-out infinite; }
 
-/* Dusk ticker: infinite marquee running
-   rightward (from -50% to 0), the reverse of
-   the previous leftward run. */
+/* Harbor ticker: infinite marquee running
+   leftward (from 0 to -50%), the reverse of
+   the previous rightward run. */
 @keyframes signal-ticker {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: signal-ticker 38s linear infinite; }
 
-/* Dusk bands: violet / fuchsia diagonal stripes. */
+/* Harbor bands: coral / teal diagonal stripes. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(45deg, #7c3aed 0px, #7c3aed 10px, #d946ef 10px, #d946ef 20px);
+    repeating-linear-gradient(45deg, #ea580c 0px, #ea580c 10px, #0d9488 10px, #0d9488 20px);
   background-size: 32px 32px;
   background-repeat: repeat;
   border-radius: 999px;
 }
 
-/* Dusk card: a 1.5rem panel with a 1px solid
-   border, soft layered shadows, and a gradient
-   LEFT accent bar — it rises on hover while the
-   bar widens and the shadow deepens. */
+/* Harbor card: a 1rem panel with a 2px border,
+   crisp medium shadows, and a gradient TOP
+   accent bar — it rises on hover while the
+   bar thickens and the shadow deepens. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(124, 58, 237, 0.25);
+  border: 2px solid rgba(234, 88, 12, 0.22);
   background: #ffffff;
-  border-radius: 1.5rem;
-  box-shadow: 0 24px 48px -24px rgba(46, 16, 101, 0.28), 0 4px 12px -4px rgba(46, 16, 101, 0.12);
+  border-radius: 1rem;
+  box-shadow: 0 16px 32px -16px rgba(67, 20, 7, 0.28), 0 2px 6px -2px rgba(67, 20, 7, 0.1);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   overflow: hidden;
 }
@@ -170,97 +170,97 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
   content: "";
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
-  width: 5px;
-  background: linear-gradient(180deg, #7c3aed, #d946ef, #f59e0b);
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #ea580c, #0d9488, #eab308);
   z-index: 1;
-  transition: width 0.25s ease;
+  transition: height 0.25s ease;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 32px 64px -24px rgba(46, 16, 101, 0.36), 0 8px 20px -6px rgba(46, 16, 101, 0.16);
+  transform: translateY(-6px);
+  box-shadow: 0 24px 40px -16px rgba(67, 20, 7, 0.36), 0 6px 14px -4px rgba(67, 20, 7, 0.14);
 }
-.pop-lift:hover::before { width: 9px; }
+.pop-lift:hover::before { height: 9px; }
 
-/* Dusk glass: shared by modals and drawers — a
-   soft lavender frosted pane with wide corners
-   and a violet ring. */
+/* Harbor glass: shared by modals and drawers — a
+   warm sand frosted pane with tighter corners
+   and a coral ring. */
 .pop-glass {
-  background: rgba(250, 248, 255, 0.92);
+  background: rgba(255, 250, 243, 0.92);
   backdrop-filter: blur(18px) saturate(1.1);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
-  border: 1px solid rgba(124, 58, 237, 0.3);
-  border-radius: 1.5rem;
-  box-shadow: 0 24px 48px -24px rgba(46, 16, 101, 0.3);
+  border: 1px solid rgba(234, 88, 12, 0.3);
+  border-radius: 1rem;
+  box-shadow: 0 16px 32px -16px rgba(67, 20, 7, 0.3);
 }
 
-/* Dusk tag: a fuchsia pill badge —
-   deep violet type, tilted the other way, soft shadow. */
+/* Harbor tag: a teal pill badge —
+   deep coral type, tilted the other way, crisp shadow. */
 .starburst {
-  background: linear-gradient(135deg, #fae8ff 0%, #f0abfc 60%, #7c3aed 100%);
-  color: #2e1065;
+  background: linear-gradient(135deg, #ccfbf1 0%, #5eead4 60%, #ea580c 100%);
+  color: #431407;
   text-shadow: none;
   border-radius: 999px;
-  transform: rotate(6deg);
-  box-shadow: 0 12px 24px -8px rgba(46, 16, 101, 0.4);
+  transform: rotate(-6deg);
+  box-shadow: 0 10px 20px -8px rgba(67, 20, 7, 0.4);
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Dusk texture: a violet dot pattern. */
+/* Harbor texture: a coral dot pattern. */
 .halftone {
   background-image:
-    radial-gradient(rgba(124, 58, 237, 0.16) 1.5px, transparent 1.5px),
-    radial-gradient(rgba(217, 70, 239, 0.18) 1.5px, transparent 1.5px);
-  background-size: 26px 26px;
-  background-position: 0 0, 13px 13px;
+    radial-gradient(rgba(234, 88, 12, 0.16) 1.5px, transparent 1.5px),
+    radial-gradient(rgba(13, 148, 136, 0.18) 1.5px, transparent 1.5px);
+  background-size: 22px 22px;
+  background-position: 0 0, 11px 11px;
 }
 
-/* Dusk rule: a violet-to-fuchsia dotted line. */
+/* Harbor rule: a coral-to-teal dotted line. */
 .zigzag {
   height: 5px;
   border: none;
   border-radius: 5px;
-  background: radial-gradient(circle, #7c3aed 2px, transparent 2.5px) 0 0 / 16px 5px repeat-x,
-    radial-gradient(circle, #d946ef 2px, transparent 2.5px) 8px 0 / 16px 5px repeat-x;
+  background: radial-gradient(circle, #ea580c 2px, transparent 2.5px) 0 0 / 16px 5px repeat-x,
+    radial-gradient(circle, #0d9488 2px, transparent 2.5px) 8px 0 / 16px 5px repeat-x;
   opacity: 1;
 }
 
-/* Dusk band: a soft lavender band with a thick
-   violet BOTTOM edge and a soft shadow. */
+/* Harbor band: a warm sand band with a thick
+   teal BOTTOM edge and a crisp shadow. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #ede9fe 0%, #fae8ff 55%, #faf8ff 100%);
+  background: linear-gradient(90deg, #ffedd5 0%, #ccfbf1 55%, #fffaf3 100%);
   opacity: 1;
-  box-shadow: 0 24px 48px -24px rgba(46, 16, 101, 0.28);
-  border-bottom: 4px solid #7c3aed;
-  border-radius: 1.5rem;
+  box-shadow: 0 16px 32px -16px rgba(67, 20, 7, 0.28);
+  border-bottom: 4px solid #0d9488;
+  border-radius: 1rem;
 }
 
 
-/* Dusk glow: a soft lavender halo for the core. */
+/* Harbor glow: a warm cream halo for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(250, 232, 255, 0.7) 42%, rgba(124, 58, 237, 0.2) 62%, rgba(124, 58, 237, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(204, 251, 241, 0.7) 42%, rgba(234, 88, 12, 0.2) 62%, rgba(234, 88, 12, 0) 76%);
 }
 
-/* Dusk beacon: a violet orb with an amber ring. */
+/* Harbor beacon: a coral orb with a teal ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fdf4ff 0%, #f0abfc 55%, #7c3aed 100%);
-  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.5), 0 24px 48px -24px rgba(46, 16, 101, 0.35);
+    radial-gradient(circle at 35% 30%, #fff7ed 0%, #fdba74 55%, #ea580c 100%);
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.5), 0 16px 32px -16px rgba(67, 20, 7, 0.35);
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-/* Wider rings around the dusk orb. */
+/* Wider rings around the harbor orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(124, 58, 237, 0.4) 0px,
-    rgba(124, 58, 237, 0.4) 2px,
+    rgba(234, 88, 12, 0.4) 0px,
+    rgba(234, 88, 12, 0.4) 2px,
     transparent 2px,
     transparent 18px,
-    rgba(245, 158, 11, 0.45) 18px,
-    rgba(245, 158, 11, 0.45) 20px,
+    rgba(13, 148, 136, 0.45) 18px,
+    rgba(13, 148, 136, 0.45) 20px,
     transparent 20px,
     transparent 36px
   );
@@ -271,7 +271,7 @@ h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(217, 70, 239, 0.45) 0deg 6deg,
+    rgba(13, 148, 136, 0.45) 0deg 6deg,
     transparent 6deg 24deg
   );
   -webkit-mask: radial-gradient(circle, transparent 32%, black 58%, transparent 92%);
