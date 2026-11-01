@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Harbor Night glow drifting over warm ivory paper.
+// Sunset Coast glow drifting over warm sand paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(67, 56, 202, 0.28)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(225, 29, 72, 0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(2, 132, 199, 0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(30, 27, 75, 0.22)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(15, 118, 110, 0.28)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(234, 88, 12, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(245, 158, 11, 0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(23, 46, 43, 0.22)" },
 ];
 
-// Harbor Night sparks rising through the warm air.
+// Sunset Coast sparks rising through the warm air.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#6366f1" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#e11d48" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#0284c7" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#fb7185" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#4338ca" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fda4af" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#1e1b4b" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#0f766e" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#ea580c" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#f59e0b" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#fb923c" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#14b8a6" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fdba74" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#172e2b" },
 ];
 
 // Harbor Night glints scattered through the warm air.
