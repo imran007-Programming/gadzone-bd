@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Coral Harbor glow drifting over warm sand paper.
+// Emerald Pavilion glow drifting over ivory paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(23, 74, 130, 0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245, 166, 35, 0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(240, 68, 35, 0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(28, 39, 51, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(4, 120, 87, 0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245, 158, 11, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(162, 28, 175, 0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(18, 32, 25, 0.20)" },
 ];
 
-// Coral Harbor sparks rising through the warm air.
+// Emerald Pavilion sparks falling through the cool air.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#174a82" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f5a623" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#f04423" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#ffda80" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#ff8a6b" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#ffb8a3" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#1c2733" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#047857" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f59e0b" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#a21caf" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#fde68a" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#f0abfc" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#f5d0fe" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#122019" },
 ];
 
 // Harbor Night glints scattered through the warm air.
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* ember wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#ffe4e6] via-[#ffedd5] to-[#fdf3e7]">
+      <div className="relative bg-gradient-to-b from-[#d1fae5] via-[#fae8ff] to-[#f6f4ec]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -176,7 +176,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2.5">
-              <div className="rounded-3xl bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 p-1 shadow-[0_20px_40px_-14px_rgba(30,27,75,0.35)]">
+              <div className="rounded-3xl bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 p-1 shadow-[0_20px_40px_-14px_rgba(2,44,34,0.35)]">
                 <div className="overflow-hidden rounded-2xl bg-paper ring-2 ring-brand-950/80">
                   <BannerCarousel />
                 </div>
@@ -186,7 +186,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
 
         {/* ember ticker: forest band with white type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-brand-950/80 bg-gradient-to-r from-brand-950/95 via-brand-800/95 to-brand-600/95 py-3 shadow-[0_18px_36px_-14px_rgba(30,27,75,0.35)] backdrop-blur">
+        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-brand-950/80 bg-gradient-to-r from-brand-950/95 via-brand-800/95 to-brand-600/95 py-3 shadow-[0_18px_36px_-14px_rgba(2,44,34,0.35)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
