@@ -27,10 +27,10 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
       {/* frost glow peeking from the card's top edge */}
       <div aria-hidden className="pointer-events-none absolute inset-x-10 top-0 h-24 rounded-b-md bg-gradient-to-b from-brand-200/60 via-gold-200/40 to-transparent blur-sm" />
       <div className="relative p-3">
-        <div className="relative cursor-pointer overflow-hidden rounded-md ring-2 ring-brand-900/40" onClick={() => onQuickView(p)}>
+        <div className="relative cursor-pointer overflow-hidden rounded-3xl ring-2 ring-brand-900/40" onClick={() => onQuickView(p)}>
           <ProductImage product={p} />
           {p.badge === "New" && (
-            <span className="absolute left-3 top-3 rounded-md bg-gold-400 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-gold-950 shadow-[3px_3px_0_rgba(80, 7, 36,0.9)] ring-1 ring-white/60">New</span>
+            <span className="absolute left-3 top-3 rounded-full bg-gold-400 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-gold-950 shadow-[0_12px_24px_-10px_rgba(30,27,75,0.35)] ring-1 ring-white/60">New</span>
           )}
           {discountPct(p) > 0 && (
             <span className="starburst absolute -right-2 -top-2 flex h-16 w-16 items-center justify-center p-4 text-center text-[11px] font-black leading-tight">-{discountPct(p)}%</span>
@@ -53,7 +53,7 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
           whileTap={{ scale: 0.98 }}
           onClick={() => onAddToCart(p.id)}
           aria-label={`Add ${p.name} to cart`}
-          className="flex w-full items-center justify-center gap-1.5 rounded-lg border-2 border-brand-800 bg-brand-600 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-[4px_4px_0_rgba(80, 7, 36,0.9)] transition hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-[6px_6px_0_rgba(80, 7, 36,0.9)] active:translate-y-0 active:scale-[0.98]"
+          className="flex w-full items-center justify-center gap-1.5 rounded-lg border-2 border-brand-800 bg-brand-600 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-[0_12px_24px_-10px_rgba(30,27,75,0.35)] transition hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-[0_18px_32px_-12px_rgba(30,27,75,0.40)] active:translate-y-0 active:scale-[0.98]"
         >
           🛒 Add
         </motion.button>
