@@ -22,10 +22,10 @@ const item: Variants = {
 
 // Cobalt Harbor glow drifting over warm ivory paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(37, 99, 235, 0.28)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(157, 23, 77, 0.28)" },
   { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(101, 163, 13, 0.26)" },
   { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(2, 132, 199, 0.22)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(23, 37, 84, 0.22)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(80, 7, 36, 0.22)" },
 ];
 
 // Cobalt Harbor sparks rising through the warm air.
@@ -100,7 +100,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(23, 37, 84, 0.45), inset 0 0 18px rgba(37, 99, 235, 0.30)",
+                  boxShadow: "0 0 28px 2px rgba(80, 7, 36, 0.45), inset 0 0 18px rgba(157, 23, 77, 0.30)",
                   opacity: 1 - r * 0.22,
                 }}
               />
@@ -176,7 +176,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2.5">
-              <div className="rounded-md bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 p-1 shadow-[6px_6px_0_rgba(23, 37, 84,0.9)]">
+              <div className="rounded-md bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 p-1 shadow-[6px_6px_0_rgba(80, 7, 36,0.9)]">
                 <div className="overflow-hidden rounded-sm bg-paper ring-2 ring-brand-950/80">
                   <BannerCarousel />
                 </div>
@@ -186,11 +186,11 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
 
         {/* harbor ticker: deep navy band with white type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-brand-950/80 bg-gradient-to-r from-brand-950/95 via-brand-800/95 to-brand-600/95 py-3 shadow-[6px_6px_0_rgba(23, 37, 84,0.45)] backdrop-blur">
+        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-brand-950/80 bg-gradient-to-r from-brand-950/95 via-brand-800/95 to-brand-600/95 py-3 shadow-[6px_6px_0_rgba(80, 7, 36,0.45)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
-                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-white drop-shadow-[0_1px_0_rgba(23, 37, 84,0.6)]">
+                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-white drop-shadow-[0_1px_0_rgba(80, 7, 36,0.6)]">
                   {t} <span className="text-white/70">✦</span>
                 </span>
               ))}
@@ -215,7 +215,7 @@ export default function Hero({ onQuickView }: HeroProps) {
               <div key={s.l} className="pop-lift relative overflow-hidden p-4 pb-3 pt-5 text-center">
                 <span className="relative block bg-gradient-to-br from-brand-600 via-gold-500 to-popblue-700 bg-clip-text text-2xl font-black tracking-tight text-transparent">{s.v}</span>
                 <span className="relative mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-mute">{s.l}</span>
-                <span aria-hidden className="relative mx-auto mt-3 block h-1 w-16 rounded-full bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 shadow-[2px_2px_0_rgba(23, 37, 84,0.9)]" />
+                <span aria-hidden className="relative mx-auto mt-3 block h-1 w-16 rounded-full bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 shadow-[2px_2px_0_rgba(80, 7, 36,0.9)]" />
               </div>
             ))}
           </motion.div>
@@ -223,7 +223,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full border border-brand-300/60 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[4px_4px_0_rgba(23, 37, 84,0.9)] backdrop-blur">Handpicked for you</p>
+            <p className="inline-block rounded-full border border-brand-300/60 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[4px_4px_0_rgba(80, 7, 36,0.9)] backdrop-blur">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="relative bg-gradient-to-r from-brand-500 via-gold-500 to-popblue-800 bg-clip-text text-transparent">Picks<span aria-hidden className="absolute inset-x-0 -bottom-1 h-1 bg-gradient-to-r from-brand-500 to-gold-500 opacity-70" /></span></h2>
             <span className="zigzag mt-4 block w-44" aria-hidden />
           </div>
