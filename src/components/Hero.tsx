@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Plum Dusk glow drifting over soft peach paper.
+// Cobalt Current glow drifting over warm ivory paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(2, 132, 199, 0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(249, 115, 22, 0.26)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(37, 99, 235, 0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245, 158, 11, 0.26)" },
   { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(6, 182, 212, 0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(8, 47, 73, 0.20)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(23, 37, 84, 0.20)" },
 ];
 
-// Plum Dusk sparks rising through the soft air.
+// Cobalt Current sparks falling through the soft air.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#0284c7" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f97316" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#2563eb" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f59e0b" },
   { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#06b6d4" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#bae6fd" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#fed7aa" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#bfdbfe" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#fde68a" },
   { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#a5f3fc" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#082f49" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#172554" },
 ];
 
-// Harbor Night glints scattered through the soft air.
+// Cobalt Current glints scattered through the soft air.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
