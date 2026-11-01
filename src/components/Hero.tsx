@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Emerald Pavilion glow drifting over ivory paper.
+// Saffron Canyon glow drifting over warm sand paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(4, 120, 87, 0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245, 158, 11, 0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(162, 28, 175, 0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(18, 32, 25, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(194, 65, 12, 0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(13, 148, 136, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(225, 29, 72, 0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(43, 29, 22, 0.20)" },
 ];
 
-// Emerald Pavilion sparks falling through the cool air.
+// Saffron Canyon sparks rising through the warm air.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#047857" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f59e0b" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#a21caf" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#fde68a" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#f0abfc" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#f5d0fe" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#122019" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#c2410c" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#0d9488" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#e11d48" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#fed7aa" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#fecdd3" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#99f6e4" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#2b1d16" },
 ];
 
 // Harbor Night glints scattered through the warm air.
