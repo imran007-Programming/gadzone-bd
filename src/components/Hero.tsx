@@ -22,21 +22,21 @@ const item: Variants = {
 
 // Harbor Slate glow drifting over warm lavender-white paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(37, 107, 130, 0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(244, 83, 47, 0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(6, 182, 212, 0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(11, 36, 50, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(79, 70, 229, 0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(249, 115, 22, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(244, 63, 94, 0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(30, 27, 75, 0.20)" },
 ];
 
 // Harbor Slate sparks falling through the warm air.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#256b82" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f4532f" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#06b6d4" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#b9dcea" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#ffcdbd" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#cffafe" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#0b2432" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#4f46e5" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f97316" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#f43f5e" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#c7d2fe" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#fed7aa" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#ffe4e6" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#1e1b4b" },
 ];
 
 // Harbor Slate glints scattered through the warm air.
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* navy wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#dceef5] via-[#fdf9f2] to-[#cffafe]">
+      <div className="relative bg-gradient-to-b from-[#e0e7ff] via-[#fdf7ff] to-[#ffe4e6]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -100,7 +100,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(11, 36, 50, 0.45), inset 0 0 18px rgba(37, 107, 130, 0.30)",
+                  boxShadow: "0 0 28px 2px rgba(30, 27, 75, 0.45), inset 0 0 18px rgba(79, 70, 229, 0.30)",
                   opacity: 1 - r * 0.22,
                 }}
               />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#256b82", "#f4532f", "#06b6d4", "#0b2432"];
+              const colors = ["#4f46e5", "#f97316", "#f43f5e", "#1e1b4b"];
               return (
                 <span
                   key={i}
@@ -176,7 +176,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2.5">
-              <div className="rounded-md bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 p-1 shadow-[6px_6px_0_rgba(5,46,22,0.25)]">
+              <div className="rounded-md bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 p-1 shadow-[6px_6px_0_rgba(30,27,75,0.25)]">
                 <div className="overflow-hidden rounded-sm bg-paper ring-2 ring-brand-950/80">
                   <BannerCarousel />
                 </div>
@@ -190,7 +190,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
-                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-white drop-shadow-[0_1px_0_rgba(11, 36, 50,0.6)]">
+                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-white drop-shadow-[0_1px_0_rgba(30, 27, 75,0.6)]">
                   {t} <span className="text-white/70">✦</span>
                 </span>
               ))}
