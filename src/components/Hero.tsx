@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Teal Lagoon glow drifting over pale lagoon paper.
+// Orchid Dusk glow drifting over pale blush paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(13, 148, 136, 0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(249, 115, 22, 0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(6, 182, 212, 0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(234, 88, 12, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(124, 58, 237, 0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(225, 29, 72, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(13, 148, 136, 0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(244, 114, 182, 0.20)" },
 ];
 
-// Teal Lagoon drops falling through the cool air.
+// Orchid Dusk petals falling through the cool air.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#0f766e" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f97316" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#0891b2" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#ea580c" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#5eead4" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fdba74" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#0d9488" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#7c3aed" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#e11d48" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#0d9488" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#f472b6" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#a78bfa" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fb7185" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#14b8a6" },
 ];
 
-// Teal Lagoon glints scattered through the cool air.
+// Orchid Dusk glints scattered through the cool air.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -75,8 +75,8 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* coral current wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#99f6e4] via-[#f0fdfa] to-[#fed7aa]">
+      {/* rose current wash over the stage */}
+      <div className="relative bg-gradient-to-b from-[#ddd6fe] via-[#fdf4ff] to-[#fecdd3]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
