@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Ember Dusk glow drifting over warm peach paper.
+// Mulberry Night glow drifting over pale lilac-blush paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(79, 70, 229, 0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(249, 115, 22, 0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(225, 29, 72, 0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(30, 27, 75, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(162, 28, 175, 0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(16, 185, 129, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(217, 70, 239, 0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(74, 4, 78, 0.20)" },
 ];
 
-// Ember Dusk sparks falling through the warm air.
+// Mulberry Night sparks falling through the warm air.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#4f46e5" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f97316" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#e11d48" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#fecdd3" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#fed7aa" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#e0e7ff" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#1e1b4b" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#a21caf" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#10b981" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#d946ef" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#a7f3d0" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#f5d0fe" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fae8ff" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#4a044e" },
 ];
 
-// Ember Dusk glints scattered through the warm air.
+// Mulberry Night glints scattered through the warm air.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
