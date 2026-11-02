@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Teal Harbor glow drifting over pale lavender paper.
+// Berry Noir glow drifting over blush lavender paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(13, 148, 136, 0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(249, 115, 22, 0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(20, 184, 166, 0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(234, 179, 8, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(190, 24, 93, 0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(132, 204, 22, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(219, 39, 119, 0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(14, 165, 233, 0.20)" },
 ];
 
-// Teal Harbor sparks drifting through the dusk air.
+// Berry Noir sparks drifting through the dusk air.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#0d9488" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f97316" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#14b8a6" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#fdba74" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#99f6e4" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#ccfbf1" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#eab308" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#be185d" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#84cc16" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#db2777" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#bef264" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#f9a8d4" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fce7f3" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#0ea5e9" },
 ];
 
-// Teal Harbor glints scattered through the dusk air.
+// Berry Noir glints scattered through the dusk air.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -75,8 +75,8 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* teal harbor wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#ccfbf1] via-[#fdfbf5] to-[#ffedd5]">
+      {/* berry noir wash over the stage */}
+      <div className="relative bg-gradient-to-b from-[#fce7f3] via-[#faf6fb] to-[#ecfccb]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
