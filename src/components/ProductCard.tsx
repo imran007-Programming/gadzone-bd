@@ -24,10 +24,10 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
       whileHover={reduce ? undefined : { y: -5 }}
       className="pop-lift group relative flex h-full flex-col overflow-hidden bg-paper"
     >
-      {/* mint glow peeking from the card's top edge */}
-      <div aria-hidden className="pointer-events-none absolute inset-x-10 top-0 h-24 rounded-b-2xl bg-gradient-to-b from-brand-200/60 via-gold-200/40 to-transparent blur-sm" />
+      {/* honey glow peeking from the card's top edge */}
+      <div aria-hidden className="pointer-events-none absolute inset-x-10 top-0 h-24 rounded-b-xl bg-gradient-to-b from-brand-200/60 via-gold-200/40 to-transparent blur-sm" />
       <div className="relative p-3">
-        <div className="relative cursor-pointer overflow-hidden rounded-3xl ring-2 ring-brand-900/20" onClick={() => onQuickView(p)}>
+        <div className="relative cursor-pointer overflow-hidden rounded-xl ring-2 ring-brand-900/20" onClick={() => onQuickView(p)}>
           <ProductImage product={p} />
           {p.badge === "New" && (
             <span className="absolute left-3 top-3 rounded-full bg-gold-400 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-gold-950 shadow-[0_10px_20px_-8px_rgba(162,28,175,0.55)] ring-1 ring-white/60">New</span>

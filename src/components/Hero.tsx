@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Violet Dusk glow drifting over warm cream paper.
+// Crimson Ember glow drifting over warm cream paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(124, 58, 237, 0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(132, 204, 22, 0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(139, 92, 246, 0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(30, 27, 75, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(225, 29, 72, 0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245, 158, 11, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(244, 63, 94, 0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(19, 78, 74, 0.20)" },
 ];
 
-// Violet Dusk sparks rising through the warm air.
+// Crimson Ember sparks rising through the warm air.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#7c3aed" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#84cc16" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#8b5cf6" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#d9f99d" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#a78bfa" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#ede9fe" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#1e1b4b" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#e11d48" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f59e0b" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#f43f5e" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#fde68a" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#fda4af" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#ffe4e6" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#134e4a" },
 ];
 
-// Violet Dusk glints scattered through the warm air.
+// Crimson Ember glints scattered through the warm air.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -75,24 +75,24 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* violet wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#ede9fe] via-[#f5f3ff] to-[#ecfccb]">
+      {/* crimson wash over the stage */}
+      <div className="relative bg-gradient-to-b from-[#ffe4e6] via-[#fffbeb] to-[#fef3c7]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
 
-        {/* violet wash sweeping the sheet */}
+        {/* crimson wash sweeping the sheet */}
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-0 hidden h-[560px] opacity-90 sm:block">
           <div className="pop-drift absolute -left-24 top-6 h-72 w-[52rem] rotate-[-8deg] rounded-full bg-gradient-to-r from-brand-400/35 via-gold-300/25 to-transparent blur-3xl" />
           <div className="pop-drift absolute -right-24 top-40 h-64 w-[44rem] rotate-[10deg] rounded-full bg-gradient-to-r from-transparent via-brand-300/25 to-gold-400/30 blur-3xl" style={{ animationDelay: "-12s" }} />
         </div>
 
-        {/* violet core: a violet orb ringed by a slow-spinning dial */}
+        {/* crimson core: a crimson orb ringed by a slow-spinning dial */}
         <div aria-hidden className="pointer-events-none absolute -right-40 -top-32 z-0 hidden opacity-90 sm:block">
           <div className="relative h-[600px] w-[600px]">
             <div className="nebula-core absolute inset-8 rounded-full blur-xl" />
             <div className="sun-rays pop-spin absolute inset-0" />
-            {/* soft rings around the orb */}
+            {/* bold rings around the orb */}
             {[0, 1, 2].map((r) => (
               <span
                 key={r}
@@ -100,20 +100,20 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(30, 27, 75, 0.45), inset 0 0 18px rgba(132, 204, 22, 0.30)",
+                  boxShadow: "0 0 28px 2px rgba(41, 37, 36, 0.45), inset 0 0 18px rgba(245, 158, 11, 0.30)",
                   opacity: 1 - r * 0.22,
                 }}
               />
             ))}
-            {/* the violet heart: a layered violet disc */}
+            {/* the crimson heart: a layered crimson disc */}
             <div className="sun-disc pop-spin absolute inset-44 rounded-full" style={{ animationDuration: "60s" }} />
-            {/* violet glints */}
+            {/* crimson glints */}
             <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
               {[{l:"30%",t:"34%",s:46},{l:"58%",t:"52%",s:34},{l:"44%",t:"66%",s:24},{l:"64%",t:"30%",s:20}].map((glint, i) => (
                 <span key={i} className="absolute rounded-full bg-white/80" style={{ left: glint.l, top: glint.t, width: glint.s, height: glint.s }} />
               ))}
             </div>
-            {/* sweeping violet beams */}
+            {/* sweeping crimson beams */}
             {[0, 1, 2].map((b) => (
               <span
                 key={b}
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#7c3aed", "#84cc16", "#8b5cf6", "#1e1b4b"];
+              const colors = ["#e11d48", "#f59e0b", "#f43f5e", "#134e4a"];
               return (
                 <span
                   key={i}
