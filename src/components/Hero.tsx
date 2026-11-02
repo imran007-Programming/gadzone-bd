@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Coral Current glow drifting over warm sand paper.
+// Crimson Ember glow drifting over warm cream paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(15, 118, 110, 0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(255, 90, 45, 0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(245, 158, 11, 0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(20, 184, 166, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(190, 18, 60, 0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245, 158, 11, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(190, 24, 93, 0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(217, 119, 6, 0.20)" },
 ];
 
-// Coral Current sparks rising through the warm air.
+// Crimson Ember embers rising through the warm air.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#0f766e" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#ff5a2d" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#f59e0b" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#14b8a6" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#ffb59e" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#ccfbf1" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#f03e0e" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#be123c" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f59e0b" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#be185d" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#d97706" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#fda4af" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fcd34d" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#e11d48" },
 ];
 
-// Coral Current glints scattered through the warm air.
+// Crimson Ember glints scattered through the warm air.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
