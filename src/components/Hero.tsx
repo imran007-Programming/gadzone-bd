@@ -22,21 +22,21 @@ const item: Variants = {
 
 // Lagoon Current glow drifting over pale aqua paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(15, 118, 110, 0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(249, 115, 22, 0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(14, 165, 233, 0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(45, 212, 191, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(67, 56, 202, 0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(244, 63, 94, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(245, 158, 11, 0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(129, 140, 248, 0.20)" },
 ];
 
-// Lagoon Current bubbles rising through the pale water.
+// Harbor Current bubbles rising through the pale water.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#0f766e" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f97316" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#0ea5e9" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#5eead4" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#ea580c" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fdba74" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#115e59" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#4338ca" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f43f5e" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#f59e0b" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#818cf8" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#e11d48" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fda4af" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#312e81" },
 ];
 
 // Lagoon Current glints scattered through the pale water.
@@ -75,8 +75,8 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* grove wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#ccfbf1] via-[#f0fdfa] to-[#ffe4e6]">
+      {/* harbor wash over the stage */}
+      <div className="relative bg-gradient-to-b from-[#e0e7ff] via-[#fdf9f2] to-[#ffe4e6]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -100,7 +100,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(21, 101, 52, 0.45), inset 0 0 18px rgba(234, 88, 12, 0.30)",
+                  boxShadow: "0 0 28px 2px rgba(67, 56, 202, 0.45), inset 0 0 18px rgba(244, 63, 94, 0.30)",
                   opacity: 1 - r * 0.22,
                 }}
               />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#15803d", "#ea580c", "#ca8a04", "#14532d"];
+              const colors = ["#4338ca", "#f43f5e", "#f59e0b", "#312e81"];
               return (
                 <span
                   key={i}
