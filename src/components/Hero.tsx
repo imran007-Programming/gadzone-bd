@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* cobalt current wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#dbeafe] via-[#eff6ff] to-[#ffe4e6]">
+      <div className="relative bg-gradient-to-b from-[#ccfbf1] via-[#f0fdfa] to-[#ffedd5]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -176,8 +176,8 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
-              <div className="rounded-lg bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 p-1 shadow-[0_18px_36px_-14px_rgba(30,64,175,0.45)]">
-                <div className="overflow-hidden rounded-lg bg-paper ring-2 ring-brand-950/80">
+              <div className="rounded-3xl bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 p-1 shadow-[0_18px_36px_-14px_rgba(30,64,175,0.45)]">
+                <div className="overflow-hidden rounded-3xl bg-paper ring-2 ring-brand-950/80">
                   <BannerCarousel />
                 </div>
               </div>
@@ -215,7 +215,7 @@ export default function Hero({ onQuickView }: HeroProps) {
               <div key={s.l} className="pop-lift relative overflow-hidden p-4 pb-3 pt-5 text-center">
                 <span className="relative block bg-gradient-to-br from-brand-600 via-gold-500 to-popblue-700 bg-clip-text text-2xl font-black tracking-tight text-transparent">{s.v}</span>
                 <span className="relative mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-mute">{s.l}</span>
-                <span aria-hidden className="relative mx-auto mt-3 block h-1 w-16 rounded-full bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 shadow-[0_6px_16px_-6px_rgba(15,118,110,0.4)]" />
+                <span aria-hidden className="relative mx-auto mt-3 block h-1 w-16 rounded-3xl bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 shadow-[0_6px_16px_-6px_rgba(15,118,110,0.4)]" />
               </div>
             ))}
           </motion.div>
