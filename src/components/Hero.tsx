@@ -75,8 +75,8 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* lagoon current wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#ccfbf1] via-[#f0fdfa] to-[#fde9e4]">
+      {/* cobalt current wash over the stage */}
+      <div className="relative bg-gradient-to-b from-[#dbeafe] via-[#eff6ff] to-[#ffe4e6]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -172,11 +172,11 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* 4-banner carousel in a teal frame */}
+        {/* 4-banner carousel in a cobalt frame */}
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
-            <div className="pop-lift !overflow-visible p-2.5">
-              <div className="rounded-xl bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 p-1 shadow-[0_18px_36px_-14px_rgba(15,118,110,0.45)]">
+            <div className="pop-lift !overflow-visible p-2">
+              <div className="rounded-lg bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 p-1 shadow-[0_18px_36px_-14px_rgba(30,64,175,0.45)]">
                 <div className="overflow-hidden rounded-lg bg-paper ring-2 ring-brand-950/80">
                   <BannerCarousel />
                 </div>
