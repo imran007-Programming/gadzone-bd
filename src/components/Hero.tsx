@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Harbor Teal & Tangerine Tide glow drifting over cool mint paper.
+// Plum Dusk & Lime Zing glow drifting over warm cream paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(13, 148, 136, 0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(249, 115, 22, 0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(2, 132, 199, 0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(4, 47, 46, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(124, 58, 237, 0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(132, 204, 22, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(225, 29, 72, 0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(46, 16, 101, 0.20)" },
 ];
 
-// Harbor Teal & Tangerine Tide sparks falling through the cool mint.
+// Plum Dusk & Lime Zing sparks rising through the warm cream.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#0d9488" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f97316" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#042f2e" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#0284c7" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#14b8a6" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fb923c" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#0c4a6e" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#7c3aed" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#84cc16" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#2e1065" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#e11d48" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#a78bfa" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#bef264" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#881337" },
 ];
 
 // Harbor Teal & Tangerine Tide glints scattered through the cool mint.
