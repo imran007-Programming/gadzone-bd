@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Lagoon & Coral glow drifting over icy mint paper.
+// Midnight Harbor & Coral glow drifting over cool mist paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(15, 118, 110, 0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(249, 115, 22, 0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(2, 132, 199, 0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(234, 88, 12, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(29, 92, 127, 0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(255, 107, 74, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(31, 138, 138, 0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(214, 58, 29, 0.20)" },
 ];
 
-// Lagoon & Coral bubbles rising through the icy mint.
+// Midnight Harbor & Coral bubbles falling through the cool mist.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#0f766e" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f97316" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#0284c7" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#ea580c" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#2dd4bf" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#7dd3fc" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#042f2e" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#1d5c7f" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#ff6b4a" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#1f8a8a" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#d63a1d" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#2da3a3" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#8ab6d3" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#081e2d" },
 ];
 
-// Lagoon & Coral glints scattered through the icy mint.
+// Midnight Harbor & Coral glints scattered through the cool mist.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -75,8 +75,8 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* ivory wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#dff2e3] via-[#faf7ef] to-[#ffefc6]">
+      {/* mist wash over the stage */}
+      <div className="relative bg-gradient-to-b from-[#dcebf5] via-[#f2f7fa] to-[#ffe8e0]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
