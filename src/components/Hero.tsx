@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Pine & Papaya glow drifting over pale mint paper.
+// Plum & Lemon glow drifting over warm cream paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(18, 112, 61, 0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(249, 115, 22, 0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(20, 184, 166, 0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(234, 88, 12, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(138, 54, 124, 0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(234, 179, 8, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(244, 63, 94, 0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(190, 18, 60, 0.20)" },
 ];
 
-// Pine & Papaya bubbles rising through the pale mint.
+// Plum & Lemon flakes falling through the warm cream.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#12703d" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f97316" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#14b8a6" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#0d9488" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#ea580c" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#0f766e" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#07331e" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#8a367c" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#eab308" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#f43f5e" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#be123c" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#ca8a04" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#a35297" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#2e0f2a" },
 ];
 
-// Pine & Papaya glints scattered through the pale mint.
+// Plum & Lemon glints scattered through the warm cream.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#12703d", "#f97316", "#14b8a6", "#0d4a2b"];
+              const colors = ["#8a367c", "#eab308", "#f43f5e", "#0d4a2b"];
               return (
                 <span
                   key={i}
