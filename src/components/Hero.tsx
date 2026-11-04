@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Midnight Harbor & Coral glow drifting over cool mist paper.
+// Royal Indigo & Honey Amber glow drifting over warm cream paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(29, 92, 127, 0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(255, 107, 74, 0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(31, 138, 138, 0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(214, 58, 29, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(67, 56, 202, 0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245, 158, 11, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(5, 150, 105, 0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(217, 119, 6, 0.20)" },
 ];
 
-// Midnight Harbor & Coral bubbles falling through the cool mist.
+// Royal Indigo & Honey Amber bubbles falling through the warm cream.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#1d5c7f" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#ff6b4a" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#1f8a8a" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#d63a1d" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#2da3a3" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#8ab6d3" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#081e2d" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#4338ca" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f59e0b" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#059669" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#d97706" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#6366f1" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fbbf24" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#1e1b4b" },
 ];
 
 // Midnight Harbor & Coral glints scattered through the cool mist.
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* mist wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#f3e8f6] via-[#faf6f1] to-[#fef3c7]">
+      <div className="relative bg-gradient-to-b from-[#e0e7ff] via-[#fffaf0] to-[#fef3c7]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
