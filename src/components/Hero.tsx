@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Midnight Indigo & Citrus Lime glow drifting over cool slate paper.
+// Burgundy Harvest & Forest glow drifting over warm cream paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(79, 70, 229, 0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(163, 230, 53, 0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(192, 38, 211, 0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(132, 204, 22, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(190, 18, 60, 0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245, 158, 11, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(21, 128, 61, 0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(217, 119, 6, 0.20)" },
 ];
 
-// Midnight Indigo & Citrus Lime flakes rising through the cool slate.
+// Burgundy Harvest & Forest flakes falling through the warm cream.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#4f46e5" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#a3e635" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#c026d3" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#84cc16" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#818cf8" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#e879f9" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#1e1b4b" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#be123c" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f59e0b" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#15803d" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#d97706" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#fb7185" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#86efac" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#4c0519" },
 ];
 
-// Midnight Indigo & Citrus Lime glints scattered through the cool slate.
+// Burgundy Harvest & Forest glints scattered through the warm cream.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#4f46e5", "#a3e635", "#c026d3", "#84cc16"];
+              const colors = ["#be123c", "#f59e0b", "#15803d", "#d97706"];
               return (
                 <span
                   key={i}
