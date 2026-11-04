@@ -22,21 +22,21 @@ const item: Variants = {
 
 // Teal Tide & Tangerine Sun glow drifting over warm sand paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(15, 118, 110, 0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(249, 115, 22, 0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(124, 58, 237, 0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(234, 88, 12, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(67, 56, 202, 0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(132, 204, 22, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(249, 115, 22, 0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(99, 102, 241, 0.20)" },
 ];
 
 // Teal Tide & Tangerine Sun bubbles falling through the warm sand.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#0f766e" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#4338ca" },
   { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f97316" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#7c3aed" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#312e81" },
   { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#ea580c" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#14b8a6" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#84cc16" },
   { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fdba74" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#042f2e" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#1e1b4b" },
 ];
 
 // Teal Tide & Tangerine glints scattered through the warm sand.
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* mist wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#ccfbf1] via-[#fff7ed] to-[#ffedd5]">
+      <div className="relative bg-gradient-to-b from-[#e0e7ff] via-[#fefce8] to-[#ffedd5]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#7c3aed", "#f97316", "#0f766e", "#ea580c"];
+              const colors = ["#4338ca", "#f97316", "#84cc16", "#ea580c"];
               return (
                 <span
                   key={i}
