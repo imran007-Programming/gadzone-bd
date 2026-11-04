@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Midnight Violet & Lime Spark glow drifting over warm cream paper.
+// Ruby Dusk & Lemon Zest glow drifting over soft blush paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(109, 40, 217, 0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(132, 204, 22, 0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(249, 115, 22, 0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(76, 29, 149, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(225, 29, 72, 0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(234, 179, 8, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(124, 58, 237, 0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(76, 5, 25, 0.20)" },
 ];
 
-// Midnight Violet & Lime Spark sparks rising through the warm cream.
+// Ruby Dusk & Lemon Zest sparks rising through the soft blush.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#6d28d9" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#84cc16" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#2e1065" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#f97316" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#a78bfa" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#bef264" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#1e1b4b" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#e11d48" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#eab308" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#4c0519" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#7c3aed" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#f43f5e" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#facc15" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#2e1065" },
 ];
 
-// Midnight Violet & Lime Spark glints scattered through the warm cream.
+// Ruby Dusk & Lemon Zest glints scattered through the soft blush.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -75,19 +75,19 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* cream wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#e0e7ff] via-[#f5f4ff] to-[#d9f99d]">
+      {/* blush wash over the stage */}
+      <div className="relative bg-gradient-to-b from-[#ffe4e6] via-[#fff7f5] to-[#fef9c3]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
 
-        {/* grove wash sweeping the sheet */}
+        {/* dusk wash sweeping the sheet */}
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-0 hidden h-[560px] opacity-90 sm:block">
           <div className="pop-drift absolute -left-24 top-6 h-72 w-[52rem] rotate-[-8deg] rounded-full bg-gradient-to-r from-brand-400/35 via-gold-300/25 to-transparent blur-3xl" />
           <div className="pop-drift absolute -right-24 top-40 h-64 w-[44rem] rotate-[10deg] rounded-full bg-gradient-to-r from-transparent via-brand-300/25 to-gold-400/30 blur-3xl" style={{ animationDelay: "-12s" }} />
         </div>
 
-        {/* signal core: an amber orb ringed by a slow-spinning dial */}
+        {/* signal core: a lemon orb ringed by a slow-spinning dial */}
         <div aria-hidden className="pointer-events-none absolute -right-40 -top-32 z-0 hidden opacity-90 sm:block">
           <div className="relative h-[600px] w-[600px]">
             <div className="nebula-core absolute inset-8 rounded-full blur-xl" />
@@ -100,12 +100,12 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(185, 28, 28, 0.45), inset 0 0 18px rgba(245, 158, 11, 0.30)",
+                  boxShadow: "0 0 28px 2px rgba(225, 29, 72, 0.45), inset 0 0 18px rgba(234, 179, 8, 0.30)",
                   opacity: 1 - r * 0.22,
                 }}
               />
             ))}
-            {/* the signal heart: a layered amber disc */}
+            {/* the signal heart: a layered lemon disc */}
             <div className="sun-disc pop-spin absolute inset-44 rounded-full" style={{ animationDuration: "60s" }} />
             {/* sky glints */}
             <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
@@ -121,11 +121,11 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{ width: 26, height: 240, transform: `translate(-50%, -100%) rotate(${b * 120}deg)`, animationDuration: "36s" }}
               />
             ))}
-            {/* signal sparks dancing around the lime orb */}
+            {/* signal sparks dancing around the lemon orb */}
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#6d28d9", "#84cc16", "#f97316", "#a78bfa"];
+              const colors = ["#e11d48", "#eab308", "#7c3aed", "#f43f5e"];
               return (
                 <span
                   key={i}
@@ -143,7 +143,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* drifting canopy glow */}
+        {/* drifting dusk glow */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {ORBS.map((g, i) => (
             <div
@@ -172,7 +172,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* 4-banner carousel in a crimson frame */}
+        {/* 4-banner carousel in a ruby frame */}
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
@@ -185,7 +185,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* signal ticker: crimson band with white type */}
+        {/* signal ticker: ruby band with white type */}
         <div aria-hidden className="relative z-10 mt-8 border-y-2 border-brand-950/80 bg-gradient-to-r from-brand-950/95 via-brand-800/95 to-brand-600/95 py-3 shadow-[6px_6px_0_0_rgba(30,27,75,0.25)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
@@ -202,7 +202,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div aria-hidden className="zigzag relative z-10 mx-auto mt-0 w-full max-w-7xl opacity-90" />
       </div>
 
-      {/* Stats + featured picks under the amber orb */}
+      {/* Stats + featured picks under the lemon orb */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 pb-24 pt-10 md:pb-28">
         <motion.div variants={container} initial="hidden" animate="show" {...anim}>
           <motion.div variants={item} className="grid grid-cols-2 gap-6 sm:grid-cols-4">
