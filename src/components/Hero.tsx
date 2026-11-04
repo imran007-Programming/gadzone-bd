@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Plum & Lemon glow drifting over warm cream paper.
+// Harbor Slate & Coral glow drifting over cool mist paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(138, 54, 124, 0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(234, 179, 8, 0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(244, 63, 94, 0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(190, 18, 60, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(42, 99, 144, 0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(255, 107, 66, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(42, 154, 144, 0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(210, 63, 29, 0.20)" },
 ];
 
-// Plum & Lemon flakes falling through the warm cream.
+// Harbor Slate & Coral flakes rising through the cool mist.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#8a367c" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#eab308" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#f43f5e" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#be123c" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#ca8a04" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#a35297" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#2e0f2a" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#2a6390" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#ff6b42" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#2a9a90" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#d23f1d" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#ff8a66" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#3a7aa8" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#0b1e30" },
 ];
 
-// Plum & Lemon glints scattered through the warm cream.
+// Harbor Slate & Coral glints scattered through the cool mist.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -75,8 +75,8 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* mint wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#dcfce7] via-[#f3fbf5] to-[#ffedd5]">
+      {/* mist wash over the stage */}
+      <div className="relative bg-gradient-to-b from-[#d7f2ef] via-[#f1f6f9] to-[#ffe8e0]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#8a367c", "#eab308", "#f43f5e", "#0d4a2b"];
+              const colors = ["#2a6390", "#ff6b42", "#2a9a90", "#d23f1d"];
               return (
                 <span
                   key={i}
@@ -143,7 +143,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* drifting grove glow */}
+        {/* drifting harbor glow */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {ORBS.map((g, i) => (
             <div
