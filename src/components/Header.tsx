@@ -28,7 +28,7 @@ export default function Header({ query, onQueryChange, category, onCategoryChang
   }, []);
 
   return (
-    <header className={`sticky top-0 z-40 border-b border-ink/15 bg-white/90 backdrop-blur-xl transition-shadow duration-300 ${scrolled ? "shadow-[0_10px_30px_-12px_rgba(2,44,34, 0.35)]" : "shadow-none"}`}>
+    <header className={`sticky top-0 z-40 border-b border-ink/15 bg-white/90 backdrop-blur-xl transition-shadow duration-300 ${scrolled ? "shadow-[0_10px_30px_-12px_rgba(30,27,75, 0.35)]" : "shadow-none"}`}>
       <div className="mx-auto max-w-7xl px-4 pt-3 sm:px-6">
         <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-2">
           <div className="flex items-center gap-1">
@@ -65,7 +65,7 @@ export default function Header({ query, onQueryChange, category, onCategoryChang
             )}
             <span className="hidden rounded-full bg-white px-3 py-1.5 text-xs font-bold text-brand-700 ring-1 ring-brand-400/30 md:inline-flex">bKash ✓</span>
             <span className="hidden rounded-full bg-white px-3 py-1.5 text-xs font-bold text-brand-700 ring-1 ring-brand-400/30 md:inline-flex">COD ✓</span>
-            <motion.button whileTap={{ scale: 0.94 }} onClick={onCartOpen} className="relative rounded-lg border border-brand-300/50 bg-white px-3 py-2.5 text-sm font-bold text-brand-700 shadow-[0_0_20px_-8px_rgba(2,44,34, 0.6)] transition active:translate-x-[2px] active:translate-y-[2px] active:shadow-none sm:px-4">
+            <motion.button whileTap={{ scale: 0.94 }} onClick={onCartOpen} className="relative rounded-lg border border-brand-300/50 bg-white px-3 py-2.5 text-sm font-bold text-brand-700 shadow-[0_0_20px_-8px_rgba(30,27,75, 0.6)] transition active:translate-x-[2px] active:translate-y-[2px] active:shadow-none sm:px-4">
               <span className="hidden sm:inline">🛒 Cart</span>
               <span className="sm:hidden">🛒</span>
               {cartCount > 0 && <span className="absolute -right-1.5 -top-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-popblue-500 to-popblue-700 text-xs font-black text-white ring-2 ring-white">{cartCount}</span>}
@@ -73,7 +73,7 @@ export default function Header({ query, onQueryChange, category, onCategoryChang
           </div>
         </div>
         <form
-          className="mt-3 flex items-center gap-2 rounded-xl border border-brand-400/20 bg-white p-1.5 pl-3 shadow-[0_0_18px_-6px_rgba(2,44,34, 0.4)] transition focus-within:border-brand-400/60"
+          className="mt-3 flex items-center gap-2 rounded-xl border border-brand-400/20 bg-white p-1.5 pl-3 shadow-[0_0_18px_-6px_rgba(30,27,75, 0.4)] transition focus-within:border-brand-400/60"
           onSubmit={(e) => {
             e.preventDefault();
             document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" });
