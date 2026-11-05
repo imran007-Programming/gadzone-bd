@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Teal Lagoon & Marigold Sun drifting over pale aqua paper.
+// Cobalt Harbor & Coral Flame drifting over warm cream paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(13, 148, 136, 0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245, 158, 11, 0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(244, 63, 94, 0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(4, 47, 46, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(29, 78, 216, 0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(255, 90, 60, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(16, 185, 129, 0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(11, 31, 74, 0.20)" },
 ];
 
-// Teal Lagoon & Marigold Sun embers drifting sideways through the pale aqua.
+// Cobalt Harbor & Coral Flame embers drifting sideways through the warm cream.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#0d9488" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f43f5e" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#042f2e" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#f43f5e" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#2dd4bf" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fcd34d" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#e11d48" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#1d4ed8" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#ff5a3c" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#0b1f4a" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#ff5a3c" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#10b981" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#ffa38a" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#f03e1f" },
 ];
 
-// Teal Lagoon & Marigold Sun glints scattered through the pale aqua.
+// Cobalt Harbor & Coral Flame glints scattered through the warm cream.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -75,19 +75,19 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* aqua wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#ede9fe] via-[#fdf9ef] to-[#ecfccb]">
+      {/* cream wash over the stage */}
+      <div className="relative bg-gradient-to-b from-[#dbeafe] via-[#fff5f2] to-[#d1fae5]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
 
-        {/* teal wash sweeping the sheet */}
+        {/* cobalt wash sweeping the sheet */}
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-0 hidden h-[560px] opacity-90 sm:block">
           <div className="pop-drift absolute -left-24 top-6 h-72 w-[52rem] rotate-[-8deg] rounded-full bg-gradient-to-r from-brand-400/35 via-gold-300/25 to-transparent blur-3xl" />
           <div className="pop-drift absolute -right-24 top-40 h-64 w-[44rem] rotate-[10deg] rounded-full bg-gradient-to-r from-transparent via-brand-300/25 to-gold-400/30 blur-3xl" style={{ animationDelay: "-12s" }} />
         </div>
 
-        {/* signal core: a deep teal orb ringed by a slow-spinning dial */}
+        {/* signal core: a coral orb ringed by a slow-spinning dial */}
         <div aria-hidden className="pointer-events-none absolute -right-40 -top-32 z-0 hidden opacity-90 sm:block">
           <div className="relative h-[600px] w-[600px]">
             <div className="nebula-core absolute inset-8 rounded-full blur-xl" />
@@ -100,12 +100,12 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(13, 148, 136, 0.45), inset 0 0 18px rgba(245, 158, 11, 0.30)",
+                  boxShadow: "0 0 28px 2px rgba(29, 78, 216, 0.45), inset 0 0 18px rgba(255, 90, 60, 0.30)",
                   opacity: 1 - r * 0.22,
                 }}
               />
             ))}
-            {/* the signal heart: a layered deep teal disc */}
+            {/* the signal heart: a layered coral disc */}
             <div className="sun-disc pop-spin absolute inset-44 rounded-full" style={{ animationDuration: "60s" }} />
             {/* sky glints */}
             <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#0d9488", "#f43f5e", "#f43f5e", "#6d28d9"];
+              const colors = ["#1d4ed8", "#ff5a3c", "#ff5a3c", "#1e40af"];
               return (
                 <span
                   key={i}
