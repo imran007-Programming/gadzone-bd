@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Forest Pine & Honey Gold glow drifting over pale sage paper.
+// Midnight Harbor & Coral glow drifting over pale mist paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(21, 128, 61, 0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245, 158, 11, 0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(194, 65, 12, 0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(5, 46, 22, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(67, 56, 202, 0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(244, 82, 63, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(15, 118, 110, 0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(30, 27, 75, 0.20)" },
 ];
 
-// Forest Pine & Honey Gold embers drifting sideways through the pale sage.
+// Midnight Harbor & Coral embers drifting sideways through the pale mist.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#15803d" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f59e0b" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#052e16" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#c2410c" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#4ade80" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fcd34d" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#9a3412" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#4338ca" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f4523f" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#1e1b4b" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#0f766e" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#818cf8" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#ffa99e" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#9f2415" },
 ];
 
-// Forest Pine & Honey Gold glints scattered through the pale sage.
+// Midnight Harbor & Coral glints scattered through the pale mist.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -75,19 +75,19 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* sage wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#dcfce7] via-[#f4f7ec] to-[#fef3c7]">
+      {/* mist wash over the stage */}
+      <div className="relative bg-gradient-to-b from-[#e0e7ff] via-[#eef1f8] to-[#ffe8e4]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
 
-        {/* pine wash sweeping the sheet */}
+        {/* navy wash sweeping the sheet */}
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-0 hidden h-[560px] opacity-90 sm:block">
           <div className="pop-drift absolute -left-24 top-6 h-72 w-[52rem] rotate-[-8deg] rounded-full bg-gradient-to-r from-brand-400/35 via-gold-300/25 to-transparent blur-3xl" />
           <div className="pop-drift absolute -right-24 top-40 h-64 w-[44rem] rotate-[10deg] rounded-full bg-gradient-to-r from-transparent via-brand-300/25 to-gold-400/30 blur-3xl" style={{ animationDelay: "-12s" }} />
         </div>
 
-        {/* signal core: a honey amber orb ringed by a slow-spinning dial */}
+        {/* signal core: a vivid coral orb ringed by a slow-spinning dial */}
         <div aria-hidden className="pointer-events-none absolute -right-40 -top-32 z-0 hidden opacity-90 sm:block">
           <div className="relative h-[600px] w-[600px]">
             <div className="nebula-core absolute inset-8 rounded-full blur-xl" />
@@ -100,12 +100,12 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(21, 128, 61, 0.45), inset 0 0 18px rgba(245, 158, 11, 0.30)",
+                  boxShadow: "0 0 28px 2px rgba(67, 56, 202, 0.45), inset 0 0 18px rgba(244, 82, 63, 0.30)",
                   opacity: 1 - r * 0.22,
                 }}
               />
             ))}
-            {/* the signal heart: a layered honey amber disc */}
+            {/* the signal heart: a layered vivid coral disc */}
             <div className="sun-disc pop-spin absolute inset-44 rounded-full" style={{ animationDuration: "60s" }} />
             {/* sky glints */}
             <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
@@ -121,11 +121,11 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{ width: 26, height: 240, transform: `translate(-50%, -100%) rotate(${b * 120}deg)`, animationDuration: "36s" }}
               />
             ))}
-            {/* signal sparks dancing around the honey amber orb */}
+            {/* signal sparks dancing around the vivid coral orb */}
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#15803d", "#f59e0b", "#c2410c", "#16a34a"];
+              const colors = ["#4338ca", "#f4523f", "#0f766e", "#4f46e5"];
               return (
                 <span
                   key={i}
@@ -143,7 +143,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* drifting pine glow */}
+        {/* drifting navy glow */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {ORBS.map((g, i) => (
             <div
@@ -172,12 +172,12 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* 4-banner carousel in a pine frame */}
+        {/* 4-banner carousel in a navy frame */}
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
-              <div className="rounded-[1.25rem] bg-gradient-to-r from-brand-600 via-gold-500 to-popblue-700 p-1 shadow-[5px_5px_0_0_rgba(5,46,22,0.25)]">
-                <div className="overflow-hidden rounded-[1.25rem] bg-paper ring-1 ring-brand-950/10">
+              <div className="rounded-[0.5rem] bg-gradient-to-r from-brand-600 via-gold-500 to-popblue-700 p-1 shadow-[5px_5px_0_0_rgba(5,46,22,0.25)]">
+                <div className="overflow-hidden rounded-[0.5rem] bg-paper ring-1 ring-brand-950/10">
                   <BannerCarousel />
                 </div>
               </div>
@@ -185,7 +185,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* signal ticker: pine band with amber type */}
+        {/* signal ticker: navy band with coral type */}
         <div aria-hidden className="relative z-10 mt-8 border-y-2 border-brand-950/80 bg-gradient-to-r from-brand-950/95 via-brand-800/95 to-brand-600/95 py-3 shadow-[6px_6px_0_0_rgba(5,46,22,0.25)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
@@ -202,7 +202,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div aria-hidden className="zigzag relative z-10 mx-auto mt-0 w-full max-w-7xl opacity-90" />
       </div>
 
-      {/* Stats + featured picks under the honey amber orb */}
+      {/* Stats + featured picks under the vivid coral orb */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 pb-24 pt-10 md:pb-28">
         <motion.div variants={container} initial="hidden" animate="show" {...anim}>
           <motion.div variants={item} className="grid grid-cols-2 gap-6 sm:grid-cols-4">
