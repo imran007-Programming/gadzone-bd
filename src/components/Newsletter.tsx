@@ -30,7 +30,7 @@ export default function Newsletter({ email, onEmailChange, subscribed, onSubscri
           ) : (
             <form className="mt-5 flex flex-col gap-3 sm:flex-row" onSubmit={onSubscribe}>
               <input type="email" required value={email} onChange={(e) => onEmailChange(e.target.value)} placeholder="Your email address" className="flex-1 rounded-full bg-white px-5 py-3.5 text-sm text-[#10222f] outline-none ring-1 ring-white/40 placeholder:text-[#8ba0ae] transition focus:ring-2 focus:ring-white/80" />
-              <motion.button whileTap={{ scale: 0.96 }} className="rounded-full bg-[#10222f] px-6 py-3 font-bold text-white shadow-[0_0_24px_-6px_rgba(15,23,42, 0.5)] transition hover:bg-[#8a2e17] active:scale-[0.98]">Subscribe</motion.button>
+              <motion.button whileTap={{ scale: 0.96 }} className="rounded-full bg-[#10222f] px-6 py-3 font-bold text-white shadow-[0_0_24px_-6px_rgba(15,23,42, 0.5)] transition hover:bg-[#be123c] active:scale-[0.98]">Subscribe</motion.button>
             </form>
           )}
           <p className="mt-3.5 text-xs text-white/80">No spam, only deals. Unsubscribe anytime.</p>
