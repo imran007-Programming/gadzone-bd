@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Plum Grove & Lime Spark drifting over warm cream paper.
+// Emerald Grove & Tangerine drifting over warm cream paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(109, 40, 217, 0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(132, 204, 22, 0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(245, 158, 11, 0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(46, 16, 101, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(4, 120, 87, 0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(249, 115, 22, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(234, 179, 8, 0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(2, 44, 34, 0.20)" },
 ];
 
-// Plum Grove & Lime Spark embers drifting sideways through the warm cream.
+// Emerald Grove & Tangerine embers drifting sideways through the warm cream.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#6d28d9" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#84cc16" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#2e1065" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#84cc16" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#f59e0b" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#bef264" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#65a30d" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#047857" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f97316" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#022c22" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#f97316" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#eab308" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fdba74" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#ea580c" },
 ];
 
-// Plum Grove & Lime Spark glints scattered through the warm cream.
+// Emerald Grove & Tangerine glints scattered through the warm cream.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -121,11 +121,11 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{ width: 26, height: 240, transform: `translate(-50%, -100%) rotate(${b * 120}deg)`, animationDuration: "36s" }}
               />
             ))}
-            {/* signal sparks dancing around the deep teal orb */}
+            {/* signal sparks dancing around the emerald orb */}
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#6d28d9", "#84cc16", "#84cc16", "#1e40af"];
+              const colors = ["#047857", "#f97316", "#f97316", "#eab308"];
               return (
                 <span
                   key={i}
@@ -202,7 +202,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div aria-hidden className="zigzag relative z-10 mx-auto mt-0 w-full max-w-7xl opacity-90" />
       </div>
 
-      {/* Stats + featured picks under the deep teal orb */}
+      {/* Stats + featured picks under the emerald orb */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 pb-24 pt-10 md:pb-28">
         <motion.div variants={container} initial="hidden" animate="show" {...anim}>
           <motion.div variants={item} className="grid grid-cols-2 gap-6 sm:grid-cols-4">
