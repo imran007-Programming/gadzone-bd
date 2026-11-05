@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Violet Night & Lime light drifting over icy aqua paper.
+// Coral Ember & Midnight light drifting over warm cream paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(124, 58, 237, 0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(132, 204, 22, 0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(245, 158, 11, 0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(46, 16, 101, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(225, 29, 72, 0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(250, 204, 21, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(15, 23, 42, 0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(190, 18, 60, 0.20)" },
 ];
 
-// Violet Night & Lime embers falling through the icy aqua.
+// Coral Ember & Midnight embers rising through the warm cream.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#6d28d9" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#84cc16" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#2e1065" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#84cc16" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#f59e0b" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#a78bfa" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#65a30d" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#e11d48" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#facc15" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#0f172a" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#facc15" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#be123c" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fb7185" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#ca8a04" },
 ];
 
-// Violet Night & Lime glints scattered through the icy aqua.
+// Coral Ember & Midnight glints scattered through the warm cream.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
