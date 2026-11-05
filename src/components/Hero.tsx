@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Emerald Grove & Tangerine drifting over warm cream paper.
+// Midnight Indigo & Coral Reef drifting over cool mist paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(4, 120, 87, 0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(249, 115, 22, 0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(234, 179, 8, 0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(2, 44, 34, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(67, 56, 202, 0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(249, 74, 61, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(14, 165, 233, 0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(30, 27, 75, 0.20)" },
 ];
 
-// Emerald Grove & Tangerine embers drifting sideways through the warm cream.
+// Midnight Indigo & Coral Reef embers rising through the cool mist.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#047857" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f97316" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#022c22" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#f97316" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#eab308" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#fdba74" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#ea580c" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#4338ca" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f94a3d" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#1e1b4b" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#f94a3d" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#0ea5e9" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#ffa39c" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#e62e22" },
 ];
 
-// Emerald Grove & Tangerine glints scattered through the warm cream.
+// Midnight Indigo & Coral Reef glints scattered through the cool mist.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -75,8 +75,8 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* cream wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#dbeafe] via-[#fff5f2] to-[#d1fae5]">
+      {/* mist wash over the stage */}
+      <div className="relative bg-gradient-to-b from-[#e0e7ff] via-[#fff1f0] to-[#e0f2fe]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -121,11 +121,11 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{ width: 26, height: 240, transform: `translate(-50%, -100%) rotate(${b * 120}deg)`, animationDuration: "36s" }}
               />
             ))}
-            {/* signal sparks dancing around the emerald orb */}
+            {/* signal sparks dancing around the indigo orb */}
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#047857", "#f97316", "#f97316", "#eab308"];
+              const colors = ["#4338ca", "#f94a3d", "#f94a3d", "#0ea5e9"];
               return (
                 <span
                   key={i}
