@@ -117,7 +117,7 @@ export default function AdminPage() {
       />
 
       <div className="min-w-0 flex-1">
-        <header className="sticky top-0 z-20 border-b border-[#dcfce7] bg-white/90 backdrop-blur lg:static">
+        <header className="sticky top-0 z-20 border-b border-[#fde68a] bg-white/90 backdrop-blur lg:static">
           <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3">
             <Link href="/" className="flex shrink-0 items-center gap-2 lg:hidden">
               <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-500 text-xl font-black text-white">G</span>
@@ -156,7 +156,7 @@ export default function AdminPage() {
               callbackUrl="/admin"
             />
           ) : !isAdmin ? (
-            <div className="mx-auto max-w-md rounded-lg bg-white p-8 text-center shadow-sm ring-1 ring-[#dcfce7]">
+            <div className="mx-auto max-w-md rounded-lg bg-white p-8 text-center shadow-sm ring-1 ring-[#fde68a]">
               <p className="text-4xl" aria-hidden="true">🔒</p>
               <h1 className="mt-2 text-2xl font-black text-[#18181b]">Access denied — admin only</h1>
               <p className="mt-2 text-sm text-[#18181b]">You are signed in as {session.user.email}, but this account does not have admin access.</p>
@@ -185,7 +185,7 @@ export default function AdminPage() {
                     <div className="lg:col-span-3">
                       <WeeklyChart orders={orders} />
                     </div>
-                    <section className="rounded-lg bg-white p-5 shadow-sm ring-1 ring-[#dcfce7] lg:col-span-2">
+                    <section className="rounded-lg bg-white p-5 shadow-sm ring-1 ring-[#fde68a] lg:col-span-2">
                       <div className="flex items-center justify-between">
                         <h3 className="font-black text-[#18181b]">Low-stock products</h3>
                         <button onClick={() => setTab("products")} className="text-sm font-bold text-brand-700 hover:text-brand-700">View all →</button>
@@ -217,7 +217,7 @@ export default function AdminPage() {
                     ) : (
                       <div className="space-y-3">
                         {recentOrders.map((o) => (
-                          <div key={o.id} className="flex flex-wrap items-center justify-between gap-3 rounded-lg bg-white p-4 shadow-sm ring-1 ring-[#dcfce7]">
+                          <div key={o.id} className="flex flex-wrap items-center justify-between gap-3 rounded-lg bg-white p-4 shadow-sm ring-1 ring-[#fde68a]">
                             <div className="min-w-0">
                               <p className="font-black text-[#18181b]">{o.id}</p>
                               <p className="truncate text-sm text-[#18181b]">{o.name} · {o.email}</p>
@@ -242,7 +242,7 @@ export default function AdminPage() {
                       <p className="mt-1 text-sm text-[#18181b]">{filteredOrders.length} order{filteredOrders.length === 1 ? "" : "s"} shown</p>
                     </div>
                     {(orderSearch.trim() || statusFilter !== "All") && (
-                      <button onClick={() => { setOrderSearch(""); setStatusFilter("All"); }} className="rounded-full bg-white px-4 py-2 text-sm font-bold text-[#18181b] ring-1 ring-[#dcfce7] hover:bg-[#faf7ef]">Clear filters ✕</button>
+                      <button onClick={() => { setOrderSearch(""); setStatusFilter("All"); }} className="rounded-full bg-white px-4 py-2 text-sm font-bold text-[#18181b] ring-1 ring-[#fde68a] hover:bg-[#faf7ef]">Clear filters ✕</button>
                     )}
                   </div>
 
@@ -253,7 +253,7 @@ export default function AdminPage() {
                       value={orderSearch}
                       onChange={(e) => setOrderSearch(e.target.value)}
                       placeholder="Search by order id, name or email…"
-                      className="w-full rounded-full border border-[#dcfce7] bg-white py-2.5 pr-3 pl-9 text-sm outline-none focus:border-brand-400"
+                      className="w-full rounded-full border border-[#fde68a] bg-white py-2.5 pr-3 pl-9 text-sm outline-none focus:border-brand-400"
                     />
                   </label>
 
@@ -296,7 +296,7 @@ export default function AdminPage() {
                       value={productSearch}
                       onChange={(e) => setProductSearch(e.target.value)}
                       placeholder="Search by product name or category…"
-                      className="w-full rounded-full border border-[#dcfce7] bg-white py-2.5 pr-3 pl-9 text-sm outline-none focus:border-brand-400"
+                      className="w-full rounded-full border border-[#fde68a] bg-white py-2.5 pr-3 pl-9 text-sm outline-none focus:border-brand-400"
                     />
                   </label>
 
@@ -305,7 +305,7 @@ export default function AdminPage() {
                   ) : (
                     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                       {filteredProducts.map((p) => (
-                        <article key={p.id} className="overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-[#dcfce7] transition hover:shadow-md">
+                        <article key={p.id} className="overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-[#fde68a] transition hover:shadow-md">
                           {/* eslint-disable-next-line @next/next/no-img-element */}
                           <img src={p.img} alt={p.name} loading="lazy" className="h-40 w-full object-cover" />
                           <div className="p-4">
@@ -337,7 +337,7 @@ export default function AdminPage() {
                   ) : (
                     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                       {customers.map((c) => (
-                        <article key={c.email} className="rounded-lg bg-white p-5 shadow-sm ring-1 ring-[#dcfce7]">
+                        <article key={c.email} className="rounded-lg bg-white p-5 shadow-sm ring-1 ring-[#fde68a]">
                           <div className="flex items-center gap-3">
                             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-500 text-base font-black text-white">
                               {initials(c.name, c.email)}
@@ -347,7 +347,7 @@ export default function AdminPage() {
                               <p className="truncate text-sm text-[#18181b]">{c.email}</p>
                             </div>
                           </div>
-                          <div className="mt-4 flex items-center justify-between border-t border-[#dcfce7] pt-3 text-sm">
+                          <div className="mt-4 flex items-center justify-between border-t border-[#fde68a] pt-3 text-sm">
                             <span className="font-semibold text-[#18181b]">{c.orders} order{c.orders === 1 ? "" : "s"}</span>
                             <span className="font-black text-brand-700">{tk(c.spent)}</span>
                           </div>
