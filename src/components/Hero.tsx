@@ -238,11 +238,11 @@ export default function Hero({ onQuickView }: HeroProps) {
                 onClick={() => onQuickView(p)}
               >
                 <div className="relative">
-                  <div className="overflow-hidden border-b-4 border-gold-300 rounded-t-[1.75rem]">
+                  <div className="overflow-hidden border-t-4 border-gold-400 rounded-b-[1.75rem]">
                     <ProductImage product={p} />
                   </div>
                   <span className="starburst absolute -right-1 -top-1 flex h-16 w-16 items-center justify-center p-4 text-center text-[11px] font-black leading-tight">-{discountPct(p)}%</span>
-                  <span aria-hidden className="pop-stripes absolute inset-x-0 bottom-0 h-1.5" />
+                  <span aria-hidden className="pop-stripes absolute inset-x-0 top-0 h-1.5" />
                 </div>
                 <div className="p-3.5 text-left"><p className="truncate text-sm font-bold tracking-tight text-ink">{p.name}</p><p className="mt-1 text-base font-extrabold tracking-tight text-brand-700">{tk(p.price)} <span className="text-xs font-medium text-mute line-through">{tk(p.oldPrice)}</span></p></div>
               </motion.div>
