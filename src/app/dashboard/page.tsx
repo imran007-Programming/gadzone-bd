@@ -108,7 +108,7 @@ export default function DashboardPage() {
                     className="w-full rounded-full border border-[#dcfce7] bg-white py-2 pr-3 pl-9 text-sm outline-none focus:border-brand-400 focus:bg-white"
                   />
                 </label>
-                <Link href="/" className="relative shrink-0 rounded-full bg-white px-4 py-2 text-sm font-bold text-[#18181b] transition hover:bg-[#65a30d]">
+                <Link href="/" className="relative shrink-0 rounded-full bg-white px-4 py-2 text-sm font-bold text-[#134e4a] transition hover:bg-[#0d9488]">
                   🛒 <span className="hidden sm:inline">Cart</span>
                 </Link>
                 {session.user.image ? (
