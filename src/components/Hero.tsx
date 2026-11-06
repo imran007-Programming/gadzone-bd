@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Plum and lime over warm cream paper.
+// Coral and navy over soft sand paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(219, 39, 119, 0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(132, 204, 22, 0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(236, 72, 153, 0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(46, 16, 101, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(234, 88, 12, 0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(250, 204, 21, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(29, 78, 216, 0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(22, 35, 63, 0.20)" },
 ];
 
-// Plum and lime petals rising upward through the warm cream.
+// Coral and navy petals falling downward through the soft sand.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#7c3aed" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#db2777" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#2e1065" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#db2777" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#ec4899" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#6d28d9" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#be185d" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#ea580c" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#1d4ed8" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#16233f" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#facc15" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#2563eb" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#c2410c" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#ca8a04" },
 ];
 
-// Plum and lime glints scattered through the warm cream.
+// Coral and navy glints scattered through the soft sand.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
