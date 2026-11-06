@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Deep forest and tangerine over warm cream paper.
+// Graphite and lime over warm off-white paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(249, 115, 22, 0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(74, 222, 128, 0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(77, 124, 15, 0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(5, 46, 22, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(236, 72, 153, 0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(163, 230, 53, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(101, 163, 13, 0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(9, 9, 11, 0.20)" },
 ];
 
-// Forest and tangerine leaves falling downward through the warm cream.
+// Graphite and lime embers falling downward through the warm off-white.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#16a34a" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#f97316" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#052e16" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#ea580c" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#65a30d" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#ec4899" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#18181b" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#db2777" },
   { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#4d7c0f" },
   { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#d9f99d" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#c2410c" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#be185d" },
 ];
 
-// Forest and tangerine glints scattered through the warm cream.
+// Graphite and lime glints scattered through the warm off-white.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -75,19 +75,19 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* forest wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#fdba74] via-[#faf7ef] to-[#d9f99d]">
+      {/* graphite wash over the stage */}
+      <div className="relative bg-gradient-to-b from-[#bef264] via-[#fafaf9] to-[#fbcfe8]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
 
-        {/* forest wash sweeping the sheet */}
+        {/* graphite wash sweeping the sheet */}
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-0 hidden h-[560px] opacity-90 sm:block">
           <div className="pop-drift absolute -left-24 top-6 h-72 w-[52rem] rotate-[-8deg] rounded-full bg-gradient-to-r from-brand-400/35 via-gold-300/25 to-transparent blur-3xl" />
           <div className="pop-drift absolute -right-24 top-40 h-64 w-[44rem] rotate-[10deg] rounded-full bg-gradient-to-r from-transparent via-brand-300/25 to-gold-400/30 blur-3xl" style={{ animationDelay: "-12s" }} />
         </div>
 
-        {/* signal core: a tangerine orb ringed by a slow reverse-spinning dial */}
+        {/* signal core: a lime orb ringed by a slow reverse-spinning dial */}
         <div aria-hidden className="pointer-events-none absolute -right-40 -top-32 z-0 hidden opacity-90 sm:block">
           <div className="relative h-[600px] w-[600px]">
             <div className="nebula-core absolute inset-8 rounded-full blur-xl" />
@@ -100,12 +100,12 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(22, 163, 74, 0.45), inset 0 0 18px rgba(249, 115, 22, 0.30)",
+                  boxShadow: "0 0 28px 2px rgba(132, 204, 22, 0.45), inset 0 0 18px rgba(236, 72, 153, 0.30)",
                   opacity: 1 - r * 0.22,
                 }}
               />
             ))}
-            {/* the signal heart: a layered tangerine disc */}
+            {/* the signal heart: a layered lime disc */}
             <div className="sun-disc pop-spin absolute inset-44 rounded-full" style={{ animationDuration: "60s" }} />
             {/* gold glints */}            <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
               {[{l:"30%",t:"34%",s:46},{l:"58%",t:"52%",s:34},{l:"44%",t:"66%",s:24},{l:"64%",t:"30%",s:20}].map((glint, i) => (
@@ -120,11 +120,11 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{ width: 26, height: 240, transform: `translate(-50%, -100%) rotate(${b * 120}deg)`, animationDuration: "36s" }}
               />
             ))}
-            {/* signal sparks dancing around the tangerine orb */}
+            {/* signal sparks dancing around the lime orb */}
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#16a34a", "#d9f99d", "#f97316", "#052e16"];
+              const colors = ["#65a30d", "#d9f99d", "#ec4899", "#18181b"];
               return (
                 <span
                   key={i}
@@ -171,11 +171,11 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* 4-banner carousel in a forest frame */}
+        {/* 4-banner carousel in a graphite frame */}
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
-              <div className="rounded-md bg-gradient-to-r from-brand-600 via-gold-500 to-popblue-700 p-1 shadow-[0_20px_40px_-18px_rgba(5, 46, 22,0.35)]">
+              <div className="rounded-md bg-gradient-to-r from-brand-600 via-gold-500 to-popblue-700 p-1 shadow-[0_20px_40px_-18px_rgba(9, 9, 11,0.35)]">
                 <div className="overflow-hidden rounded-sm bg-paper ring-1 ring-brand-950/10">
                   <BannerCarousel />
                 </div>
@@ -184,12 +184,12 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* signal ticker: deep forest band with tangerine type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-brand-950/80 bg-gradient-to-r from-brand-950/95 via-brand-800/95 to-brand-600/95 py-3 shadow-[0_10px_30px_-12px_rgba(5, 46, 22,0.4)] backdrop-blur">
+        {/* signal ticker: graphite band with lime type */}
+        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-brand-950/80 bg-gradient-to-r from-brand-950/95 via-brand-800/95 to-brand-600/95 py-3 shadow-[0_10px_30px_-12px_rgba(9, 9, 11,0.4)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
-                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-popblue-300 drop-shadow-[0_1px_0_rgba(5, 46, 22,0.6)]">
+                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-popblue-300 drop-shadow-[0_1px_0_rgba(9, 9, 11,0.6)]">
                   {t} <span className="text-gold-400">✦</span>
                 </span>
               ))}
@@ -201,7 +201,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div aria-hidden className="zigzag relative z-10 mx-auto mt-0 w-full max-w-7xl opacity-90" />
       </div>
 
-      {/* Stats + featured picks under the tangerine orb */}
+      {/* Stats + featured picks under the lime orb */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 pb-24 pt-10 md:pb-28">
         <motion.div variants={container} initial="hidden" animate="show" {...anim}>
           <motion.div variants={item} className="grid grid-cols-2 gap-6 sm:grid-cols-4">
@@ -214,7 +214,7 @@ export default function Hero({ onQuickView }: HeroProps) {
               <div key={s.l} className="pop-lift relative overflow-hidden p-4 pb-3 pt-5 text-center">
                 <span className="relative block bg-gradient-to-br from-brand-600 via-gold-500 to-popblue-700 bg-clip-text text-2xl font-black tracking-tight text-transparent">{s.v}</span>
                 <span className="relative mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-mute">{s.l}</span>
-                <span aria-hidden className="relative mx-auto mt-3 block h-1 w-16 rounded-3xl bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 shadow-[0_6px_16px_-6px_rgba(5, 46, 22,0.35)]" />
+                <span aria-hidden className="relative mx-auto mt-3 block h-1 w-16 rounded-3xl bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 shadow-[0_6px_16px_-6px_rgba(9, 9, 11,0.35)]" />
               </div>
             ))}
           </motion.div>
@@ -222,7 +222,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full border border-brand-200 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_6px_16px_-6px_rgba(5, 46, 22,0.35)] backdrop-blur">Handpicked for you</p>
+            <p className="inline-block rounded-full border border-brand-200 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_6px_16px_-6px_rgba(9, 9, 11,0.35)] backdrop-blur">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="relative bg-gradient-to-r from-brand-500 via-gold-500 to-popblue-800 bg-clip-text text-transparent">Picks<span aria-hidden className="absolute inset-x-0 -bottom-1 h-1 bg-gradient-to-r from-brand-500 to-gold-500 opacity-70" /></span></h2>
             <span className="zigzag mt-4 block w-44" aria-hidden />
           </div>
