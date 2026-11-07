@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Indigo, fuchsia and cyan over soft lavender paper.
+// Burnt orange, deep teal and sunny yellow over warm cream paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(67, 56, 202, 0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(232, 121, 249, 0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(8, 145, 178, 0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(30, 27, 75, 0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(194, 65, 12, 0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(45, 212, 191, 0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(202, 138, 4, 0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(41, 37, 36, 0.20)" },
 ];
 
 // Indigo, fuchsia and cyan flakes falling down through the soft lavender.
 const FLAKES = [
-  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#4338ca" },
-  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#e879f9" },
-  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#0891b2" },
-  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#06b6d4" },
-  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#4f46e5" },
-  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#4338ca" },
-  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#a5f3fc" },
+  { left: "8%", delay: "0s", dur: "9.2s", s: 12, c: "#c2410c" },
+  { left: "21%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#2dd4bf" },
+  { left: "36%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#ca8a04" },
+  { left: "53%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#eab308" },
+  { left: "68%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#ea580c" },
+  { left: "82%", delay: "-2s", dur: "10.2s", s: 14, c: "#c2410c" },
+  { left: "93%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#fef08a" },
 ];
 
 // Indigo and cyan glints scattered through the soft lavender.
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* warm indigo wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#c7d2fe] via-[#f5f3ff] to-[#cffafe]">
+      <div className="relative bg-gradient-to-b from-[#fed7aa] via-[#fffbeb] to-[#fef9c3]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -100,7 +100,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(67, 56, 202, 0.45), inset 0 0 18px rgba(232, 121, 249, 0.30)",
+                  boxShadow: "0 0 28px 2px rgba(194, 65, 12, 0.45), inset 0 0 18px rgba(45, 212, 191, 0.30)",
                   opacity: 1 - r * 0.22,
                 }}
               />
@@ -124,7 +124,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#4338ca", "#e879f9", "#06b6d4", "#1e1b4b"];
+              const colors = ["#c2410c", "#2dd4bf", "#eab308", "#292524"];
               return (
                 <span
                   key={i}
@@ -175,7 +175,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
-              <div className="rounded-3xl bg-gradient-to-r from-brand-600 via-gold-500 to-popblue-700 p-1 shadow-[0_20px_40px_-18px_rgba(30, 27, 75,0.35)]">
+              <div className="rounded-3xl bg-gradient-to-r from-brand-600 via-gold-500 to-popblue-700 p-1 shadow-[0_20px_40px_-18px_rgba(41, 37, 36,0.35)]">
                 <div className="overflow-hidden rounded-md bg-paper ring-1 ring-brand-950/10">
                   <BannerCarousel />
                 </div>
@@ -185,11 +185,11 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
 
         {/* signal ticker: indigo band with cyan type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-brand-950/80 bg-gradient-to-r from-brand-950/95 via-brand-800/95 to-brand-600/95 py-3 shadow-[0_10px_30px_-12px_rgba(30, 27, 75,0.4)] backdrop-blur">
+        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-brand-950/80 bg-gradient-to-r from-brand-950/95 via-brand-800/95 to-brand-600/95 py-3 shadow-[0_10px_30px_-12px_rgba(41, 37, 36,0.4)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
-                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-popblue-300 drop-shadow-[0_1px_0_rgba(30, 27, 75,0.6)]">
+                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-popblue-300 drop-shadow-[0_1px_0_rgba(41, 37, 36,0.6)]">
                   {t} <span className="text-gold-400">✦</span>
                 </span>
               ))}
@@ -214,7 +214,7 @@ export default function Hero({ onQuickView }: HeroProps) {
               <div key={s.l} className="pop-lift relative overflow-hidden p-4 pb-3 pt-5 text-center">
                 <span className="relative block bg-gradient-to-br from-brand-600 via-gold-500 to-popblue-700 bg-clip-text text-2xl font-black tracking-tight text-transparent">{s.v}</span>
                 <span className="relative mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-mute">{s.l}</span>
-                <span aria-hidden className="relative mx-auto mt-3 block h-1 w-16 rounded-3xl bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 shadow-[0_6px_16px_-6px_rgba(30, 27, 75,0.35)]" />
+                <span aria-hidden className="relative mx-auto mt-3 block h-1 w-16 rounded-3xl bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 shadow-[0_6px_16px_-6px_rgba(41, 37, 36,0.35)]" />
               </div>
             ))}
           </motion.div>
@@ -222,7 +222,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full border border-brand-200 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_6px_16px_-6px_rgba(30, 27, 75,0.35)] backdrop-blur">Handpicked for you</p>
+            <p className="inline-block rounded-full border border-brand-200 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_6px_16px_-6px_rgba(41, 37, 36,0.35)] backdrop-blur">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="relative bg-gradient-to-r from-brand-500 via-gold-500 to-popblue-800 bg-clip-text text-transparent">Picks<span aria-hidden className="absolute inset-x-0 -bottom-1 h-1 bg-gradient-to-r from-brand-500 to-gold-500 opacity-70" /></span></h2>
             <span className="zigzag mt-4 block w-44" aria-hidden />
           </div>
