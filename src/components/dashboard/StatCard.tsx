@@ -20,7 +20,7 @@ export default function StatCard({ label, value, icon, sub, accent = "bg-brand-1
           <p className="text-sm font-semibold text-[#4b6353]">{label}</p>
           <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-lg ${accent}`}>{icon}</span>
         </div>
-        <p className="mt-2 truncate text-3xl font-black tracking-tight text-[#022c22]">{value}</p>
+        <p className="mt-2 truncate text-3xl font-black tracking-tight text-[#4c0519]">{value}</p>
         {sub && <p className="mt-1 text-xs font-semibold text-[#4b6353]">{sub}</p>}
       </div>
     </Reveal>

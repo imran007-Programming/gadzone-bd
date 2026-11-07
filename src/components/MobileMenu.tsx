@@ -49,17 +49,17 @@ export default function MobileMenu({ open, onClose, category, onCategoryChange }
             className="absolute left-0 top-0 flex h-full w-4/5 max-w-xs flex-col rounded-r-3xl border-r border-[#fecdd3] bg-white shadow-2xl"
           >
             <div className="flex items-center justify-between border-b border-[#fecdd3] px-5 py-4">
-              <span className="text-lg font-black text-[#022c22]">
+              <span className="text-lg font-black text-[#4c0519]">
                 Gad<span className="text-brand-700">Zone</span> BD
               </span>
-              <button onClick={onClose} className="rounded-full px-2 text-2xl text-[#022c22] transition hover:bg-white hover:text-brand-600" aria-label="Close menu">×</button>
+              <button onClick={onClose} className="rounded-full px-2 text-2xl text-[#4c0519] transition hover:bg-white hover:text-brand-600" aria-label="Close menu">×</button>
             </div>
             <div className="flex border-b border-[#fecdd3]">
               {(["categories", "menu"] as const).map((t) => (
                 <button
                   key={t}
                   onClick={() => setTab(t)}
-                  className={`flex-1 py-3.5 text-sm font-bold uppercase tracking-wide transition-colors ${tab === t ? "border-b-2 border-brand-400 bg-brand-400/10 text-brand-700" : "text-[#022c22] hover:text-[#022c22]"}`}
+                  className={`flex-1 py-3.5 text-sm font-bold uppercase tracking-wide transition-colors ${tab === t ? "border-b-2 border-brand-400 bg-brand-400/10 text-brand-700" : "text-[#4c0519] hover:text-[#4c0519]"}`}
                 >
                   {t === "categories" ? "Categories" : "Menu"}
                 </button>
@@ -76,10 +76,10 @@ export default function MobileMenu({ open, onClose, category, onCategoryChange }
                           document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" });
                           onClose();
                         }}
-                        className={`flex w-full items-center justify-between px-5 py-4 text-left text-[15px] font-semibold transition hover:bg-white ${category === c ? "text-brand-700 hover:text-brand-700" : "text-[#022c22] hover:text-[#022c22]"}`}
+                        className={`flex w-full items-center justify-between px-5 py-4 text-left text-[15px] font-semibold transition hover:bg-white ${category === c ? "text-brand-700 hover:text-brand-700" : "text-[#4c0519] hover:text-[#4c0519]"}`}
                       >
                         {c === "All" ? "All Products" : c}
-                        <span className="text-[#022c22]">›</span>
+                        <span className="text-[#4c0519]">›</span>
                       </button>
                     </li>
                   ))}
@@ -90,10 +90,10 @@ export default function MobileMenu({ open, onClose, category, onCategoryChange }
                     <li key={link.label}>
                       <button
                         onClick={() => scrollTo(link.target)}
-                        className="flex w-full items-center justify-between px-5 py-4 text-left text-[15px] font-semibold text-[#022c22] transition hover:bg-white hover:text-[#022c22]"
+                        className="flex w-full items-center justify-between px-5 py-4 text-left text-[15px] font-semibold text-[#4c0519] transition hover:bg-white hover:text-[#4c0519]"
                       >
                         {link.label}
-                        <span className="text-[#022c22]">›</span>
+                        <span className="text-[#4c0519]">›</span>
                       </button>
                     </li>
                   ))}
