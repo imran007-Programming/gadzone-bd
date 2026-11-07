@@ -171,12 +171,12 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* 4-banner carousel in an emerald frame */}
+        {/* 4-banner carousel in a midnight frame */}
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
-              <div className="rounded-[2rem] bg-gradient-to-l from-brand-600 via-gold-500 to-popblue-700 p-1 shadow-[0_20px_40px_-18px_rgba(2, 44, 34,0.35)]">
-                <div className="overflow-hidden rounded-[1.5rem] bg-paper ring-1 ring-brand-950/10">
+              <div className="rounded-md bg-gradient-to-l from-brand-600 via-gold-500 to-popblue-700 p-1 shadow-[0_20px_40px_-18px_rgba(30, 27, 75,0.35)]">
+                <div className="overflow-hidden rounded bg-paper ring-1 ring-brand-950/10">
                   <BannerCarousel />
                 </div>
               </div>
@@ -184,12 +184,12 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* lagoon ticker: deep emerald band with sky type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y-4 border-brand-950/80 bg-gradient-to-l from-brand-950/95 via-brand-800/95 to-brand-600/95 py-3 shadow-[0_10px_30px_-12px_rgba(2, 44, 34,0.4)] backdrop-blur">
+        {/* midnight ticker: deep indigo band with rose type */}
+        <div aria-hidden className="relative z-10 mt-8 border-y-4 border-brand-950/80 bg-gradient-to-l from-brand-950/95 via-brand-800/95 to-brand-600/95 py-3 shadow-[0_10px_30px_-12px_rgba(30, 27, 75,0.4)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
-                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-popblue-300 drop-shadow-[0_1px_0_rgba(2, 44, 34,0.6)]">
+                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-popblue-300 drop-shadow-[0_1px_0_rgba(30, 27, 75,0.6)]">
                   {t} <span className="text-gold-400">✦</span>
                 </span>
               ))}
@@ -222,7 +222,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full border border-brand-200 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_6px_16px_-6px_rgba(2, 44, 34,0.35)] backdrop-blur">Handpicked for you</p>
+            <p className="inline-block rounded-full border border-brand-200 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_6px_16px_-6px_rgba(30, 27, 75,0.35)] backdrop-blur">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="relative bg-gradient-to-r from-brand-500 via-gold-500 to-popblue-800 bg-clip-text text-transparent">Picks<span aria-hidden className="absolute inset-x-0 -bottom-1 h-1 bg-gradient-to-r from-brand-500 to-gold-500 opacity-70" /></span></h2>
             <span className="zigzag mt-4 block w-44" aria-hidden />
           </div>
