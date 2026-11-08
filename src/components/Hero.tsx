@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Royal Grape: deep violet, hot magenta and zesty lime over lavender-white.
+// Ember Dune: warm terracotta, deep teal and golden amber over warm sand.
 const ORBS = [
   { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(109, 40, 217,0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(219, 39, 119,0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(132, 204, 22,0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(76, 29, 149,0.20)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(15, 118, 110,0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(245, 158, 11,0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(154, 52, 18,0.20)" },
 ];
 
-// Violet, magenta and lime motes rising vertically through the royal grape dusk.
+// Terracotta, teal and amber embers drifting down-left through the ember dune dusk.
 const FLAKES = [
-  { left: "8%", top: "6%", delay: "0s", dur: "9.2s", s: 12, c: "#6d28d9" },
-  { left: "21%", top: "18%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#db2777" },
-  { left: "36%", top: "30%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#4c1d95" },
-  { left: "53%", top: "12%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#7c3aed" },
-  { left: "68%", top: "24%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#ec4899" },
-  { left: "82%", top: "8%", delay: "-2s", dur: "10.2s", s: 14, c: "#4c1d95" },
-  { left: "93%", top: "20%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#a3e635" },
+  { left: "8%", top: "6%", delay: "0s", dur: "9.2s", s: 12, c: "#c2410c" },
+  { left: "21%", top: "18%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#0f766e" },
+  { left: "36%", top: "30%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#9a3412" },
+  { left: "53%", top: "12%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#ea580c" },
+  { left: "68%", top: "24%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#14b8a6" },
+  { left: "82%", top: "8%", delay: "-2s", dur: "10.2s", s: 14, c: "#9a3412" },
+  { left: "93%", top: "20%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#f59e0b" },
 ];
 
-// Violet and magenta glints scattered through the royal grape dusk.
+// Terracotta and teal glints scattered through the ember dune dusk.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* ember wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#bae6fd] via-[#f0f9ff] to-[#a5f3fc]">
+      <div className="relative bg-gradient-to-b from-[#fed7aa] via-[#fffbeb] to-[#fdba74]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -87,7 +87,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           <div className="pop-drift absolute -right-24 top-40 h-64 w-[44rem] rotate-[10deg] rounded-full bg-gradient-to-r from-transparent via-brand-300/25 to-gold-400/30 blur-3xl" style={{ animationDelay: "-12s" }} />
         </div>
 
-        {/* ember core: a terracotta orb ringed by a slow backward spin */}
+        {/* ember core: a terracotta orb ringed by a slow forward spin */}
         <div aria-hidden className="pointer-events-none absolute -right-40 -top-32 z-0 hidden opacity-90 sm:block">
           <div className="relative h-[600px] w-[600px]">
             <div className="nebula-core absolute inset-8 rounded-full blur-xl" />
@@ -100,7 +100,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(5, 150, 105,0.45), inset 0 0 18px rgba(12, 47, 66,0.30)",
+                  boxShadow: "0 0 28px 2px rgba(15, 118, 110,0.45), inset 0 0 18px rgba(41, 37, 36,0.30)",
                   opacity: 1 - r * 0.22,
                 }}
               />
@@ -124,7 +124,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#0369a1", "#059669", "#0c4a6e", "#0c2f42"];
+              const colors = ["#9a3412", "#0f766e", "#7c2d12", "#292524"];
               return (
                 <span
                   key={i}
@@ -175,7 +175,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
-              <div className="rounded-3xl bg-gradient-to-l from-brand-600 via-gold-500 to-popblue-700 p-1 shadow-[0_20px_40px_-18px_rgba(12, 47, 66,0.35)]">
+              <div className="rounded-3xl bg-gradient-to-l from-brand-600 via-gold-500 to-popblue-700 p-1 shadow-[0_20px_40px_-18px_rgba(41, 37, 36,0.35)]">
                 <div className="overflow-hidden rounded-3xl bg-paper ring-1 ring-brand-950/10">
                   <BannerCarousel />
                 </div>
@@ -185,11 +185,11 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
 
         {/* ember ticker: deep terracotta band with teal type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y-4 border-brand-950/80 bg-gradient-to-l from-brand-950/95 via-brand-800/95 to-brand-600/95 py-3 shadow-[0_10px_30px_-12px_rgba(12, 47, 66,0.4)] backdrop-blur">
+        <div aria-hidden className="relative z-10 mt-8 border-y-4 border-brand-950/80 bg-gradient-to-l from-brand-950/95 via-brand-800/95 to-brand-600/95 py-3 shadow-[0_10px_30px_-12px_rgba(41, 37, 36,0.4)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
-                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-popblue-300 drop-shadow-[0_1px_0_rgba(12, 47, 66,0.6)]">
+                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-popblue-300 drop-shadow-[0_1px_0_rgba(41, 37, 36,0.6)]">
                   {t} <span className="text-gold-400">✦</span>
                 </span>
               ))}
@@ -214,7 +214,7 @@ export default function Hero({ onQuickView }: HeroProps) {
               <div key={s.l} className="pop-lift relative overflow-hidden p-4 pb-3 pt-5 text-center">
                 <span className="relative block bg-gradient-to-br from-brand-600 via-gold-500 to-popblue-700 bg-clip-text text-2xl font-black tracking-tight text-transparent">{s.v}</span>
                 <span className="relative mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-mute">{s.l}</span>
-                <span aria-hidden className="relative mx-auto mt-3 block h-1 w-16 rounded-full bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 shadow-[0_6px_16px_-6px_rgba(12, 47, 66,0.35)]" />
+                <span aria-hidden className="relative mx-auto mt-3 block h-1 w-16 rounded-full bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 shadow-[0_6px_16px_-6px_rgba(41, 37, 36,0.35)]" />
               </div>
             ))}
           </motion.div>
@@ -222,7 +222,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full border border-brand-200 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_6px_16px_-6px_rgba(12, 47, 66,0.35)] backdrop-blur">Handpicked for you</p>
+            <p className="inline-block rounded-full border border-brand-200 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_6px_16px_-6px_rgba(41, 37, 36,0.35)] backdrop-blur">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="relative bg-gradient-to-r from-brand-500 via-gold-500 to-popblue-800 bg-clip-text text-transparent">Picks<span aria-hidden className="absolute inset-x-0 -bottom-1 h-1 bg-gradient-to-r from-brand-500 to-gold-500 opacity-70" /></span></h2>
             <span className="zigzag mt-4 block w-44" aria-hidden />
           </div>
