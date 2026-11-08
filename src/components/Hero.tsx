@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Amber Coast: warm amber, deep teal and burnt coral over warm cream.
+// Pine Grove: deep pine, vivid lime and clear sky over pale mint.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(13, 148, 136,0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(217, 119, 6,0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(234, 88, 12,0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(69, 26, 3,0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(101, 163, 13,0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(22, 163, 74,0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(2, 132, 199,0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(5, 46, 22,0.20)" },
 ];
 
-// Amber, teal and coral embers drifting down through the coastal glow.
+// Pine, lime and sky spores rising up through the grove glow.
 const FLAKES = [
-  { left: "8%", top: "6%", delay: "0s", dur: "9.2s", s: 12, c: "#d97706" },
-  { left: "21%", top: "18%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#ea580c" },
-  { left: "36%", top: "30%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#0d9488" },
-  { left: "53%", top: "12%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#f59e0b" },
-  { left: "68%", top: "24%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#fdba74" },
-  { left: "82%", top: "8%", delay: "-2s", dur: "10.2s", s: 14, c: "#451a03" },
-  { left: "93%", top: "20%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#2dd4bf" },
+  { left: "8%", top: "84%", delay: "0s", dur: "9.2s", s: 12, c: "#16a34a" },
+  { left: "21%", top: "76%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#0284c7" },
+  { left: "36%", top: "90%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#65a30d" },
+  { left: "53%", top: "80%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#22c55e" },
+  { left: "68%", top: "72%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#7dd3fc" },
+  { left: "82%", top: "86%", delay: "-2s", dur: "10.2s", s: 14, c: "#052e16" },
+  { left: "93%", top: "78%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#a3e635" },
 ];
 
-// Amber and teal glints scattered through the coastal glow.
+// Pine and lime glints scattered through the grove glow.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -75,19 +75,19 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* ember wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#fef3c7] via-[#fffbeb] to-[#ccfbf1]">
+      {/* grove wash over the stage */}
+      <div className="relative bg-gradient-to-b from-[#dcfce7] via-[#f0fdf4] to-[#d9f99d]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
 
-        {/* amber haze sweeping the sheet */}
+        {/* pine haze sweeping the sheet */}
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-0 hidden h-[560px] opacity-90 sm:block">
           <div className="pop-drift absolute -left-24 top-6 h-72 w-[52rem] rotate-[-8deg] rounded-full bg-gradient-to-r from-brand-400/35 via-gold-300/25 to-transparent blur-3xl" />
           <div className="pop-drift absolute -right-24 top-40 h-64 w-[44rem] rotate-[10deg] rounded-full bg-gradient-to-r from-transparent via-brand-300/25 to-gold-400/30 blur-3xl" style={{ animationDelay: "-12s" }} />
         </div>
 
-        {/* ember core: an amber orb ringed by a fast forward spin */}
+        {/* grove core: a lime orb ringed by a fast forward spin */}
         <div aria-hidden className="pointer-events-none absolute -right-40 -top-32 z-0 hidden opacity-90 sm:block">
           <div className="relative h-[600px] w-[600px]">
             <div className="nebula-core absolute inset-8 rounded-full blur-xl" />
@@ -100,20 +100,20 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(13, 148, 136,0.45), inset 0 0 18px rgba(69, 26, 3,0.30)",
+                  boxShadow: "0 0 28px 2px rgba(101, 163, 13,0.45), inset 0 0 18px rgba(5, 46, 22,0.30)",
                   opacity: 1 - r * 0.22,
                 }}
               />
             ))}
-            {/* the ember heart: a layered amber disc */}
+            {/* the grove heart: a layered lime disc */}
             <div className="sun-disc pop-spin absolute inset-44 rounded-full" style={{ animationDuration: "60s" }} />
-            {/* ember glints */}
+            {/* grove glints */}
             <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
               {[{l:"30%",t:"34%",s:46},{l:"58%",t:"52%",s:34},{l:"44%",t:"66%",s:24},{l:"64%",t:"30%",s:20}].map((glint, i) => (
                 <span key={i} className="absolute rounded-full bg-white/80" style={{ left: glint.l, top: glint.t, width: glint.s, height: glint.s }} />
               ))}
             </div>
-            {/* sweeping amber beams */}
+            {/* sweeping pine beams */}
             {[0, 1, 2].map((b) => (
               <span
                 key={b}
@@ -121,11 +121,11 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{ width: 26, height: 240, transform: `translate(-50%, -100%) rotate(${b * 120}deg)`, animationDuration: "36s" }}
               />
             ))}
-            {/* ember orbs dancing around the amber orb */}
+            {/* lime orbs dancing around the pine orb */}
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#b45309", "#0f766e", "#451a03", "#fdba74"];
+              const colors = ["#15803d", "#4d7c0f", "#052e16", "#7dd3fc"];
               return (
                 <span
                   key={i}
@@ -154,7 +154,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* ember glints */}
+        {/* grove glints */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {STARS.map((s, i) => (
             <span
@@ -165,18 +165,18 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* rising ember sparks */}
+        {/* rising grove spores */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden overflow-hidden sm:block">
           {FLAKES.map((r, i) => (
             <Flake key={i} {...r} />
           ))}
         </div>
 
-        {/* 4-banner carousel in an ember frame */}
+        {/* 4-banner carousel in a grove frame */}
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
-              <div className="rounded-md bg-gradient-to-l from-brand-600 via-gold-500 to-popblue-700 p-1 shadow-[0_20px_40px_-18px_rgba(69, 26, 3,0.35)]">
+              <div className="rounded-md bg-gradient-to-l from-brand-600 via-gold-500 to-popblue-700 p-1 shadow-[0_20px_40px_-18px_rgba(5, 46, 22,0.35)]">
                 <div className="overflow-hidden rounded-md bg-paper ring-1 ring-brand-950/10">
                   <BannerCarousel />
                 </div>
@@ -185,12 +185,12 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* coastal ticker: deep espresso band with coral type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y-4 border-brand-950/80 bg-gradient-to-l from-brand-950/95 via-brand-800/95 to-brand-600/95 py-3 shadow-[0_10px_30px_-12px_rgba(69, 26, 3,0.4)] backdrop-blur">
+        {/* grove ticker: deep pine band with sky type */}
+        <div aria-hidden className="relative z-10 mt-8 border-y-4 border-brand-950/80 bg-gradient-to-l from-brand-950/95 via-brand-800/95 to-brand-600/95 py-3 shadow-[0_10px_30px_-12px_rgba(5, 46, 22,0.4)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
-                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-popblue-300 drop-shadow-[0_1px_0_rgba(69, 26, 3,0.6)]">
+                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-popblue-300 drop-shadow-[0_1px_0_rgba(5, 46, 22,0.6)]">
                   {t} <span className="text-gold-400">✦</span>
                 </span>
               ))}
@@ -198,11 +198,11 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* ember divider into the page */}
+        {/* grove divider into the page */}
         <div aria-hidden className="zigzag relative z-10 mx-auto mt-0 w-full max-w-7xl opacity-90" />
       </div>
 
-      {/* Stats + featured picks under the ember orb */}
+      {/* Stats + featured picks under the grove orb */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 pb-24 pt-10 md:pb-28">
         <motion.div variants={container} initial="hidden" animate="show" {...anim}>
           <motion.div variants={item} className="grid grid-cols-2 gap-6 sm:grid-cols-4">
@@ -215,7 +215,7 @@ export default function Hero({ onQuickView }: HeroProps) {
               <div key={s.l} className="pop-lift relative overflow-hidden p-4 pb-3 pt-5 text-center">
                 <span className="relative block bg-gradient-to-br from-brand-600 via-gold-500 to-popblue-700 bg-clip-text text-2xl font-black tracking-tight text-transparent">{s.v}</span>
                 <span className="relative mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-mute">{s.l}</span>
-                <span aria-hidden className="relative mx-auto mt-3 block h-1 w-16 rounded-full bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 shadow-[0_6px_16px_-6px_rgba(69, 26, 3,0.35)]" />
+                <span aria-hidden className="relative mx-auto mt-3 block h-1 w-16 rounded-full bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 shadow-[0_6px_16px_-6px_rgba(5, 46, 22,0.35)]" />
               </div>
             ))}
           </motion.div>
@@ -223,7 +223,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full border border-brand-200 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_6px_16px_-6px_rgba(69, 26, 3,0.35)] backdrop-blur">Handpicked for you</p>
+            <p className="inline-block rounded-full border border-brand-200 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_6px_16px_-6px_rgba(5, 46, 22,0.35)] backdrop-blur">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="relative bg-gradient-to-r from-brand-500 via-gold-500 to-popblue-800 bg-clip-text text-transparent">Picks<span aria-hidden className="absolute inset-x-0 -bottom-1 h-1 bg-gradient-to-r from-brand-500 to-gold-500 opacity-70" /></span></h2>
             <span className="zigzag mt-4 block w-44" aria-hidden />
           </div>
@@ -253,7 +253,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* ember divider into the page */}
+      {/* grove divider into the page */}
       <div aria-hidden className="zigzag absolute bottom-0 left-0 w-full opacity-90" />
     </section>
   );
