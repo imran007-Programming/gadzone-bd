@@ -25,9 +25,9 @@ export default function WeeklyChart({ orders }: { orders: StoredOrder[] }) {
   const total = days.reduce((s, d) => s + d.count, 0);
 
   return (
-    <div className="rounded-lg bg-white p-5 shadow-sm ring-1 ring-[#a7f3d0]">
+    <div className="rounded-lg bg-white p-5 shadow-sm ring-1 ring-[#fed7aa]">
       <div className="flex items-baseline justify-between gap-3">
-        <h3 className="font-black text-[#022c22]">Orders — last 7 days</h3>
+        <h3 className="font-black text-[#431407]">Orders — last 7 days</h3>
         <p className="text-sm font-bold text-brand-700">{total} order{total === 1 ? "" : "s"}</p>
       </div>
       {total === 0 ? (
