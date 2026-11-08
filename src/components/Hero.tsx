@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Royal Plum Dusk: deep violet, vivid fuchsia and warm amber over warm lavender.
+// Crimson Ember: deep crimson, vivid tangerine and warm gold over warm cream.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(124, 58, 237,0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(192, 38, 211,0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(217, 119, 6,0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(46, 16, 101,0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(225, 29, 72,0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(234, 88, 12,0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(202, 138, 4,0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(76, 5, 25,0.20)" },
 ];
 
-// Violet, fuchsia and amber droplets rising up through the dusk.
+// Crimson, tangerine and gold embers falling down through the dusk.
 const FLAKES = [
-  { left: "8%", top: "6%", delay: "0s", dur: "9.2s", s: 12, c: "#7c3aed" },
-  { left: "21%", top: "18%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#c026d3" },
-  { left: "36%", top: "30%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#6d28d9" },
-  { left: "53%", top: "12%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#d946ef" },
-  { left: "68%", top: "24%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#d97706" },
-  { left: "82%", top: "8%", delay: "-2s", dur: "10.2s", s: 14, c: "#2e1065" },
-  { left: "93%", top: "20%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#e879f9" },
+  { left: "8%", top: "6%", delay: "0s", dur: "9.2s", s: 12, c: "#e11d48" },
+  { left: "21%", top: "18%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#ea580c" },
+  { left: "36%", top: "30%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#be123c" },
+  { left: "53%", top: "12%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#f97316" },
+  { left: "68%", top: "24%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#ca8a04" },
+  { left: "82%", top: "8%", delay: "-2s", dur: "10.2s", s: 14, c: "#4c0519" },
+  { left: "93%", top: "20%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#fb923c" },
 ];
 
 // Violet and fuchsia glints scattered through the dusk.
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* plum wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#ede9fe] via-[#faf5ff] to-[#f5d0fe]">
+      <div className="relative bg-gradient-to-b from-[#ffe4e6] via-[#fffbeb] to-[#fed7aa]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -100,7 +100,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(124, 58, 237,0.45), inset 0 0 18px rgba(46, 16, 101,0.30)",
+                  boxShadow: "0 0 28px 2px rgba(225, 29, 72,0.45), inset 0 0 18px rgba(76, 5, 25,0.30)",
                   opacity: 1 - r * 0.22,
                 }}
               />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#6d28d9", "#c026d3", "#2e1065", "#d97706"];
+              const colors = ["#be123c", "#c2410c", "#4c0519", "#ca8a04"];
               return (
                 <span
                   key={i}
@@ -176,7 +176,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
-              <div className="rounded-md bg-gradient-to-l from-brand-600 via-gold-500 to-popblue-700 p-1 shadow-[0_20px_40px_-18px_rgba(46, 16, 101,0.35)]">
+              <div className="rounded-md bg-gradient-to-l from-brand-600 via-gold-500 to-popblue-700 p-1 shadow-[0_20px_40px_-18px_rgba(76, 5, 25,0.35)]">
                 <div className="overflow-hidden rounded-md bg-paper ring-1 ring-brand-950/10">
                   <BannerCarousel />
                 </div>
