@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Ember Canyon: deep violet, hot magenta and sky blue over lavender-white.
+// Royal Grape: deep violet, hot magenta and zesty lime over lavender-white.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(234, 88, 12,0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(5, 150, 105,0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(124, 45, 18,0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(12, 47, 66,0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(109, 40, 217,0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(219, 39, 119,0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(132, 204, 22,0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(76, 29, 149,0.20)" },
 ];
 
-// Terracotta, amber and teal orbs rising vertically through the ember canyon dusk.
+// Violet, magenta and lime motes rising vertically through the royal grape dusk.
 const FLAKES = [
-  { left: "8%", top: "6%", delay: "0s", dur: "9.2s", s: 12, c: "#0369a1" },
-  { left: "21%", top: "18%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#059669" },
-  { left: "36%", top: "30%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#0c4a6e" },
-  { left: "53%", top: "12%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#0284c7" },
-  { left: "68%", top: "24%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#22d3ee" },
-  { left: "82%", top: "8%", delay: "-2s", dur: "10.2s", s: 14, c: "#0c4a6e" },
-  { left: "93%", top: "20%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#6ee7b7" },
+  { left: "8%", top: "6%", delay: "0s", dur: "9.2s", s: 12, c: "#6d28d9" },
+  { left: "21%", top: "18%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#db2777" },
+  { left: "36%", top: "30%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#4c1d95" },
+  { left: "53%", top: "12%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#7c3aed" },
+  { left: "68%", top: "24%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#ec4899" },
+  { left: "82%", top: "8%", delay: "-2s", dur: "10.2s", s: 14, c: "#4c1d95" },
+  { left: "93%", top: "20%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#a3e635" },
 ];
 
-// Terracotta and amber glints scattered through the ember canyon dusk.
+// Violet and magenta glints scattered through the royal grape dusk.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
