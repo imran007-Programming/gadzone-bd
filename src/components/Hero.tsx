@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* warm wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#fffbeb] via-[#fffbeb] to-[#d9f99d]">
+      <div className="relative bg-gradient-to-b from-[#f0fdfa] via-[#f0fdfa] to-[#99f6e4]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -129,7 +129,7 @@ export default function Hero({ onQuickView }: HeroProps) {
               return (
                 <span
                   key={i}
-                  className="pop-bob absolute h-3.5 w-3.5 rounded-[8%] ring-1 ring-white/60"
+                  className="pop-bob absolute h-3.5 w-3.5 rounded-full ring-1 ring-white/60"
                   style={{
                     left: `${x}%`,
                     top: `${y}%`,
