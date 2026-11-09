@@ -1,80 +1,80 @@
 @import "tailwindcss";
 
 @theme {
-  /* Crimson Harbor: an original direction —
-     deep crimson as the primary, warm peach as the accent, charcoal
-     slate as the third tone, on soft blush paper with near-black
-     ink. Cards are HARBOR PANELS: UNIFORM large rounded corners, a
-     thick CRIMSON BOTTOM bar, a THIN rose OUTLINE, and a COOL soft
-     shadow — on hover the card lifts UP, grows to scale 1.03 with
-     a -2deg tilt while its shadow deepens into a cool crimson
-     glow. This is the opposite of the previous Emerald Grove
-     look, its deep emerald / sunny amber / bright lime palette,
-     warm cream paper, GROVE PANELS with ASYMMETRIC rounded
-     corners, a thick AMBER LEFT bar, NO outline, and a WARM soft
-     shadow — hover sliding DOWN-RIGHT, growing to scale 1.02
-     with a +2deg tilt, embers RISING straight UP with a slow
-     backward spin, a HORIZONTAL sway, a slow SINGLE-HOP bob, a
-     fast FORWARD rotation, a fade blink, a fast RIGHTWARD
-     ticker, HORIZONTAL bars, a DIAGONAL HATCH texture, a
-     CHEVRON rule, a gradient band with an amber TOP edge and
-     asymmetric rounded corners, a warm amber glow and an amber
-     orb with an emerald ring. */
+  /* Indigo Tide: an original direction —
+     deep indigo as the primary, warm coral as the accent, deep navy
+     as the third tone, on pale lavender paper with near-navy ink.
+     Cards are TIDE PANELS: UNIFORM small rounded corners, a thick
+     CORAL TOP bar, a THIN indigo OUTLINE plus a hard indigo offset
+     shadow, on a pale lavender sheet — on hover the card lifts UP,
+     grows to scale 1.02 with a +1deg tilt while its shadow deepens
+     into a warm indigo glow. This is the opposite of the previous
+     Crimson Harbor look, its deep crimson / warm peach / charcoal
+     slate palette, soft blush paper, HARBOR PANELS with UNIFORM
+     large rounded corners, a thick CRIMSON BOTTOM bar, a THIN rose
+     OUTLINE, and a COOL soft shadow — hover lifting UP, growing to
+     scale 1.03 with a -2deg tilt, embers FALLING straight DOWN
+     with a slow forward spin, a VERTICAL sway, a fast DOUBLE-HOP
+     bob, a slow BACKWARD rotation, a scale-pulse blink, a slow
+     LEFTWARD ticker, VERTICAL bars, a POLKA DOT texture, a WAVY
+     rule, a gradient band with a crimson BOTTOM edge and full
+     rounded corners, a cool crimson glow and a crimson orb with a
+     rose ring. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = deep crimson scale */
-  --color-brand-50: #fff1f2;
-  --color-brand-100: #ffe4e6;
-  --color-brand-200: #fecdd3;
-  --color-brand-300: #fda4af;
-  --color-brand-400: #fb7185;
-  --color-brand-500: #f43f5e;
-  --color-brand-600: #e11d48;
-  --color-brand-700: #be123c;
-  --color-brand-800: #9f1239;
-  --color-brand-900: #881337;
-  --color-brand-950: #4c0519;
-  --color-brand: #be123c;
-  --color-brand-dark: #9f1239;
-  --color-brand-deep: #4c0519;
+  /* brand = deep indigo scale */
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-200: #c7d2fe;
+  --color-brand-300: #a5b4fc;
+  --color-brand-400: #818cf8;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+  --color-brand-800: #3730a3;
+  --color-brand-900: #312e81;
+  --color-brand-950: #1e1b4b;
+  --color-brand: #4338ca;
+  --color-brand-dark: #3730a3;
+  --color-brand-deep: #1e1b4b;
 
-  /* gold = warm peach scale (name kept for legacy class refs) */
-  --color-gold-50: #fff7ed;
-  --color-gold-100: #ffedd5;
-  --color-gold-200: #fed7aa;
-  --color-gold-300: #fdba74;
-  --color-gold-400: #fb923c;
-  --color-gold-500: #f97316;
-  --color-gold-600: #ea580c;
-  --color-gold-700: #c2410c;
-  --color-gold-800: #9a3412;
-  --color-gold-900: #7c2d12;
-  --color-gold-950: #431407;
-  --color-gold: #c2410c;
-  --color-gold-deep: #9a3412;
-  --color-gold-soft: #fdba74;
+  /* gold = warm coral scale (name kept for legacy class refs) */
+  --color-gold-50: #fff5f3;
+  --color-gold-100: #ffe8e4;
+  --color-gold-200: #ffd5cf;
+  --color-gold-300: #ffb8ad;
+  --color-gold-400: #ff8f7d;
+  --color-gold-500: #ff6f61;
+  --color-gold-600: #f4503f;
+  --color-gold-700: #d63a2c;
+  --color-gold-800: #b32e23;
+  --color-gold-900: #8f271e;
+  --color-gold-950: #4d130e;
+  --color-gold: #d63a2c;
+  --color-gold-deep: #b32e23;
+  --color-gold-soft: #ffb8ad;
 
-  /* popblue = charcoal slate scale (name kept for legacy class refs) */
-  --color-popblue-50: #fafaf9;
-  --color-popblue-100: #f5f5f4;
-  --color-popblue-200: #e7e5e4;
-  --color-popblue-300: #d6d3d1;
-  --color-popblue-400: #a8a29e;
-  --color-popblue-500: #78716c;
-  --color-popblue-600: #57534e;
-  --color-popblue-700: #44403c;
-  --color-popblue-800: #292524;
-  --color-popblue-900: #1c1917;
-  --color-popblue-950: #0c0a09;
-  --color-popblue: #44403c;
-  --color-popblue-deep: #292524;
-  --color-popblue-soft: #d6d3d1;
+  /* popblue = deep navy scale (name kept for legacy class refs) */
+  --color-popblue-50: #f1f5f9;
+  --color-popblue-100: #e2e8f0;
+  --color-popblue-200: #cbd5e1;
+  --color-popblue-300: #94a3b8;
+  --color-popblue-400: #64748b;
+  --color-popblue-500: #475569;
+  --color-popblue-600: #334155;
+  --color-popblue-700: #1e293b;
+  --color-popblue-800: #0f172a;
+  --color-popblue-900: #0b1220;
+  --color-popblue-950: #060a14;
+  --color-popblue: #1e293b;
+  --color-popblue-deep: #0f172a;
+  --color-popblue-soft: #cbd5e1;
 
-  --color-ink: #1c1917;
-  --color-paper: #fff1f2;
-  --color-mute: #57534e;
+  --color-ink: #0b1220;
+  --color-paper: #eef2ff;
+  --color-mute: #475569;
   --color-card: #ffffff;
-  --color-deep: #4c0519;
+  --color-deep: #1e1b4b;
 }
 
 html { scroll-behavior: smooth; }
@@ -88,208 +88,208 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fff1f2;
+  background-color: #eef2ff;
   background-image:
-    radial-gradient(ellipse 44% 24% at 8% 6%, rgba(225, 29, 72, 0.16) 0%, rgba(225, 29, 72, 0) 70%),
-    radial-gradient(ellipse 40% 26% at 94% 94%, rgba(249, 115, 22, 0.18) 0%, rgba(249, 115, 22, 0) 70%),
-    linear-gradient(160deg, rgba(28, 25, 23, 0.10) 0%, rgba(255, 241, 242, 0.6) 45%, rgba(190, 18, 60, 0) 80%);
-  color: #1c1917;
+    radial-gradient(ellipse 44% 24% at 8% 6%, rgba(79, 70, 229, 0.16) 0%, rgba(79, 70, 229, 0) 70%),
+    radial-gradient(ellipse 40% 26% at 94% 94%, rgba(255, 111, 97, 0.18) 0%, rgba(255, 111, 97, 0) 70%),
+    linear-gradient(160deg, rgba(15, 23, 42, 0.10) 0%, rgba(238, 242, 255, 0.6) 45%, rgba(67, 56, 202, 0) 80%);
+  color: #0b1220;
 }
-::selection { background: #fdba74; color: #1c1917; }
+::selection { background: #ffb8ad; color: #0b1220; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #e11d48, #f97316); border-radius: 8px; border: 2px solid #fff1f2; }
-::-webkit-scrollbar-track { background: #ffe4e6; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #4f46e5, #ff6f61); border-radius: 8px; border: 2px solid #eef2ff; }
+::-webkit-scrollbar-track { background: #e0e7ff; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
 /* Current type: headlines with a
-   tight, bold tracking and a
-   crimson harbor ease. */
-h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
+   tight, bold tracking and an
+   indigo tide ease. */
+h1, h2, h3 { letter-spacing: -0.015em; text-wrap: balance; }
 
-/* Current fall: embers FALLING
-   straight DOWN with a slow forward spin. */
+/* Current fall: embers DRIFTING
+   DIAGONALLY up-right with a slow backward spin. */
 @keyframes signal-fall {
-  0% { transform: translate3d(0, -5vh, 0) scale(0.9) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(0, 105vh, 0) scale(0.9) rotate(0deg); opacity: 0; }
   15% { opacity: 0.85; }
-  50% { transform: translate3d(0, 52vh, 0) scale(1.05) rotate(180deg); }
-  100% { transform: translate3d(0, 105vh, 0) scale(0.9) rotate(360deg); opacity: 0; }
+  50% { transform: translate3d(6vw, 52vh, 0) scale(1.05) rotate(-180deg); }
+  100% { transform: translate3d(12vw, -5vh, 0) scale(0.9) rotate(-360deg); opacity: 0; }
 }
-.pop-fall { animation: signal-fall 16s linear infinite; }
+.pop-fall { animation: signal-fall 18s linear infinite; }
 
-/* Current sway: a VERTICAL sway. */
+/* Current sway: a DIAGONAL sway. */
 @keyframes signal-drift {
-  0%, 100% { transform: translate(0, 12px); opacity: 0.7; }
-  50% { transform: translate(0, -12px); opacity: 1; }
+  0%, 100% { transform: translate(10px, 10px); opacity: 0.7; }
+  50% { transform: translate(-10px, -10px); opacity: 1; }
 }
-.pop-drift { animation: signal-drift 6s ease-in-out infinite; }
+.pop-drift { animation: signal-drift 7s ease-in-out infinite; }
 
-/* Current bob: a fast DOUBLE-HOP bob. */
+/* Current bob: a slow SINGLE-HOP bob. */
 @keyframes signal-bob {
   0%, 100% { transform: translateY(0); }
-  25% { transform: translateY(-14px); }
-  45% { transform: translateY(0); }
-  60% { transform: translateY(-8px); }
-  80% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  65% { transform: translateY(0); }
 }
-.pop-bob { animation: signal-bob 2.2s ease-in-out infinite; }
+.pop-bob { animation: signal-bob 3.6s ease-in-out infinite; }
 
-/* Current dial: a slow BACKWARD rotation
-   (it spins all the way around, counter-clockwise). */
+/* Current dial: a slow FORWARD rotation
+   (it spins all the way around, clockwise). */
 @keyframes dial-turn {
-  from { transform: rotate(360deg); }
-  to { transform: rotate(0deg); }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
-.pop-spin { animation: dial-turn 8s linear infinite; }
+.pop-spin { animation: dial-turn 12s linear infinite; }
 
-/* Current glint: a scale-pulse blink. */
+/* Current glint: a fade blink (opacity only). */
 @keyframes signal-blink {
-  0%, 100% { opacity: 0.5; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.35); }
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 1; }
 }
-.pop-twinkle { animation: signal-blink 1.8s ease-in-out infinite; }
+.pop-twinkle { animation: signal-blink 2.4s ease-in-out infinite; }
 
-/* Current ticker: a slow LEFTWARD marquee. */
+/* Current ticker: a fast LEFTWARD marquee. */
 @keyframes signal-ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
-.pop-ticker { animation: signal-ticker 26s linear infinite; }
+.pop-ticker { animation: signal-ticker 14s linear infinite; }
 
-/* Current bands: crimson / peach /
-   slate VERTICAL bars. */
+/* Current bands: indigo / coral /
+   navy DIAGONAL bars. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(90deg, #e11d48 0px, #e11d48 10px, #f97316 10px, #f97316 20px, #44403c 20px, #44403c 25px);
+    repeating-linear-gradient(45deg, #4f46e5 0px, #4f46e5 10px, #ff6f61 10px, #ff6f61 20px, #1e293b 20px, #1e293b 25px);
   background-size: 34px 34px;
   background-repeat: repeat;
   border-radius: 4px;
 }
 
-/* Current card: a HARBOR PANEL
-   (uniform large rounded corners) with a
-   thick CRIMSON BOTTOM bar, a THIN rose
-   OUTLINE, and a COOL soft shadow — on
-   hover the card lifts UP, grows to
-   scale 1.03 with a -2deg tilt while
-   its shadow deepens into a cool crimson
-   glow. */
+/* Current card: a TIDE PANEL
+   (uniform small rounded corners) with a
+   thick CORAL TOP bar, a THIN indigo
+   OUTLINE plus a hard indigo offset shadow,
+   on a pale lavender sheet — on hover the
+   card lifts UP, grows to scale 1.02 with
+   a +1deg tilt while its shadow deepens
+   into a warm indigo glow. */
 .pop-lift {
   position: relative;
-  border: 1px solid #fecdd3;
-  border-bottom: 8px solid #be123c;
-  box-shadow: 0 18px 36px -18px rgba(76, 5, 25, 0.35);
+  border: 1px solid #c7d2fe;
+  border-top: 8px solid #d63a2c;
+  box-shadow: 6px 6px 0 rgba(30, 27, 75, 0.16), 0 18px 36px -18px rgba(30, 27, 75, 0.30);
   background: #ffffff;
-  border-radius: 2rem;
+  border-radius: 0.75rem;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translate(0, -6px) scale(1.03) rotate(-2deg);
-  box-shadow: 0 28px 56px -18px rgba(225, 29, 72, 0.5), 0 12px 28px -12px rgba(28, 25, 23, 0.35);
+  transform: translate(-2px, -4px) scale(1.02) rotate(1deg);
+  box-shadow: 8px 8px 0 rgba(30, 27, 75, 0.20), 0 28px 56px -18px rgba(79, 70, 229, 0.5), 0 12px 28px -12px rgba(15, 23, 42, 0.35);
 }
 
 /* Current glass: shared by modals and drawers — a
-   soft blush pane with uniform
-   rounded corners, a rose hairline and
-   a cool crimson glow shadow. */
+   pale lavender pane with small
+   rounded corners, an indigo hairline and
+   a warm indigo glow shadow. */
 .pop-glass {
-  background: rgba(255, 241, 242, 0.94);
+  background: rgba(238, 242, 255, 0.94);
   backdrop-filter: blur(20px) saturate(1.1);
   -webkit-backdrop-filter: blur(20px) saturate(1.1);
-  border: 1px solid rgba(190, 18, 60, 0.45);
-  border-radius: 2rem;
-  box-shadow: 0 20px 45px -14px rgba(225, 29, 72, 0.45);
+  border: 1px solid rgba(67, 56, 202, 0.45);
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 45px -14px rgba(79, 70, 229, 0.45);
 }
 
-/* Current tag: a crimson-to-peach-to-slate
-   tag — white type, cool crimson glow
-   shadow, tilted -3deg. */
+/* Current tag: an indigo-to-coral-to-navy
+   tag — white type, warm indigo glow
+   shadow, tilted +3deg. */
 .starburst {
-  background: linear-gradient(135deg, #e11d48 0%, #f97316 55%, #44403c 100%);
+  background: linear-gradient(135deg, #4f46e5 0%, #ff6f61 55%, #1e293b 100%);
   color: #ffffff;
-  text-shadow: 0 1px 2px rgba(76, 5, 25, 0.5);
-  border-radius: 2rem;
-  box-shadow: 0 12px 28px -8px rgba(225, 29, 72, 0.5);
-  border: 2px solid rgba(76, 5, 25, 0.45);
-  transform: rotate(-3deg);
+  text-shadow: 0 1px 2px rgba(30, 27, 75, 0.5);
+  border-radius: 0.75rem;
+  box-shadow: 0 12px 28px -8px rgba(79, 70, 229, 0.5);
+  border: 2px solid rgba(30, 27, 75, 0.45);
+  transform: rotate(3deg);
 }
 
-/* Current texture: POLKA DOTS —
-   crimson and peach dots over soft blush. */
+/* Current texture: GRID LINES —
+   indigo and coral lines over pale lavender. */
 .halftone {
   background-image:
-    radial-gradient(circle at 10px 10px, rgba(225, 29, 72, 0.14) 3px, transparent 4px),
-    radial-gradient(circle at 20px 20px, rgba(249, 115, 22, 0.14) 3px, transparent 4px);
-  background-size: 20px 20px, 20px 20px;
-  background-position: 0 0, 10px 10px;
+    linear-gradient(rgba(79, 70, 229, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(79, 70, 229, 0.10) 1px, transparent 1px),
+    linear-gradient(rgba(255, 111, 97, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 111, 97, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px, 28px 28px, 14px 14px, 14px 14px;
+  background-position: 0 0, 0 0, 7px 7px, 7px 7px;
 }
 
-/* Current rule: a WAVY rule —
-   crimson scallops over a peach line. */
+/* Current rule: a DOTTED rule —
+   indigo dots over a coral line. */
 .zigzag {
   height: 10px;
   border: none;
-  border-bottom: 3px solid #f97316;
+  border-bottom: 3px solid #ff6f61;
   background-image:
-    radial-gradient(circle at 8px -4px, transparent 10px, #be123c 10px, #be123c 12px, transparent 13px);
+    radial-gradient(circle at 8px 2px, #4338ca 3px, transparent 4px);
   background-size: 16px 10px;
   background-position: 0 0;
   background-repeat: repeat-x;
   opacity: 1;
 }
 
-/* Current band: a crimson-to-peach-to-
-   slate gradient band with a crimson
-   BOTTOM edge and full rounded corners. */
+/* Current band: an indigo-to-coral-to-
+   navy gradient band with a coral
+   TOP edge and small rounded corners. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #4c0519 0%, #be123c 45%, #f97316 75%, #44403c 100%);
+  background: linear-gradient(90deg, #1e1b4b 0%, #4338ca 45%, #ff6f61 75%, #1e293b 100%);
   opacity: 1;
-  box-shadow: 0 16px 36px -12px rgba(225, 29, 72, 0.55);
-  border-bottom: 4px solid #be123c;
-  border-radius: 2rem;
+  box-shadow: 0 16px 36px -12px rgba(79, 70, 229, 0.55);
+  border-top: 4px solid #ff6f61;
+  border-radius: 0.75rem;
 }
 
-/* Current glow: a cool crimson glow for the core. */
+/* Current glow: a warm indigo glow for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 228, 230, 0.7) 42%, rgba(225, 29, 72, 0.4) 62%, rgba(225, 29, 72, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(224, 231, 255, 0.7) 42%, rgba(79, 70, 229, 0.4) 62%, rgba(79, 70, 229, 0) 76%);
 }
 
-/* Current beacon: a crimson orb with a rose ring. */
+/* Current beacon: an indigo orb with a coral ring. */
 .sun-disc {
   background:
-    radial-gradient(circle at 35% 30%, #fecdd3 0%, #e11d48 55%, #4c0519 100%);
-  box-shadow: 0 0 0 3px rgba(255, 241, 242, 0.9), 0 0 0 6px rgba(225, 29, 72, 0.55), 0 20px 45px -12px rgba(225, 29, 72, 0.6);
+    radial-gradient(circle at 35% 30%, #a5b4fc 0%, #4f46e5 55%, #1e1b4b 100%);
+  box-shadow: 0 0 0 3px rgba(238, 242, 255, 0.9), 0 0 0 6px rgba(255, 111, 97, 0.55), 0 20px 45px -12px rgba(79, 70, 229, 0.6);
   border: none;
 }
 
-/* Tight-spaced rings around the current orb. */
+/* Wide-spaced rings around the current orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(225, 29, 72, 0.3) 0px,
-    rgba(225, 29, 72, 0.3) 1px,
+    rgba(79, 70, 229, 0.3) 0px,
+    rgba(79, 70, 229, 0.3) 1px,
     transparent 1px,
-    transparent 12px,
-    rgba(249, 115, 22, 0.30) 12px,
-    rgba(249, 115, 22, 0.30) 13px,
-    transparent 13px,
-    transparent 24px
+    transparent 24px,
+    rgba(255, 111, 97, 0.30) 24px,
+    rgba(255, 111, 97, 0.30) 25px,
+    transparent 25px,
+    transparent 48px
   );
   -webkit-mask: radial-gradient(circle, transparent 10%, black 36%, transparent 90%);
   mask: radial-gradient(circle, transparent 10%, black 36%, transparent 90%);
-  border-radius: 2rem;
+  border-radius: 0.75rem;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(225, 29, 72, 0.35) 0deg 3deg,
-    transparent 3deg 36deg,
-    rgba(249, 115, 22, 0.30) 36deg 39deg,
-    transparent 39deg 72deg
+    rgba(79, 70, 229, 0.35) 0deg 3deg,
+    transparent 3deg 48deg,
+    rgba(255, 111, 97, 0.30) 48deg 51deg,
+    transparent 51deg 96deg
   );
   -webkit-mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
   mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
-  border-radius: 2rem;
+  border-radius: 0.75rem;
 }

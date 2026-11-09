@@ -83,7 +83,7 @@ export default function Header({ query, onQueryChange, category, onCategoryChang
             value={query}
             onChange={(e) => onQueryChange(e.target.value)}
             placeholder="Search for products"
-            className="min-w-0 flex-1 bg-transparent px-3 py-1.5 text-sm text-[#1c1917] outline-none placeholder:text-[#9f1239]"
+            className="min-w-0 flex-1 bg-transparent px-3 py-1.5 text-sm text-[#0b1220] outline-none placeholder:text-[#3730a3]"
             aria-label="Search for products"
           />
           <button type="submit" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-brand-300/50 bg-gradient-to-br from-brand-500 to-brand-700 text-base text-white shadow-[0_0_16px_-4px_rgba(15, 23, 42,0.7)] transition hover:brightness-110 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none" aria-label="Search">🔍</button>
