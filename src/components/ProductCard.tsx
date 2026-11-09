@@ -24,7 +24,7 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
       whileHover={undefined}
       className="pop-lift group relative flex h-full flex-col overflow-hidden bg-paper"
     >
-      {/* soft lavender glow peeking from the card's top edge */}
+      {/* soft cream glow peeking from the card's top edge */}
       <div aria-hidden className="pointer-events-none absolute inset-x-10 top-0 h-24 rounded-b-md bg-gradient-to-b from-brand-200/60 via-gold-200/40 to-transparent blur-sm" />
       <div className="relative p-3">
         <div className="relative cursor-pointer overflow-hidden rounded-md ring-1 ring-brand-900/10" onClick={() => onQuickView(p)}>
@@ -53,7 +53,7 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
           whileTap={{ scale: 0.98 }}
           onClick={() => onAddToCart(p.id)}
           aria-label={`Add ${p.name} to cart`}
-          className="flex w-full items-center justify-center gap-1.5 rounded-md border-2 border-brand-800 bg-brand-600 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-[0_10px_24px_-10px_rgba(46, 16, 101,0.55)] transition hover:-translate-y-0.5 hover:bg-brand-700 active:translate-y-0 active:scale-[0.98]"
+          className="flex w-full items-center justify-center gap-1.5 rounded-md border-2 border-brand-800 bg-brand-600 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-[0_10px_24px_-10px_rgba(5, 46, 22,0.55)] transition hover:-translate-y-0.5 hover:bg-brand-700 active:translate-y-0 active:scale-[0.98]"
         >
           🛒 Add
         </motion.button>
