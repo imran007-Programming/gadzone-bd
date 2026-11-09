@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Verdant Grove: vivid royal blue, sunny yellow and bright rose over pale sky.
+// Indigo Horizon: vivid violet, bright cyan and warm coral over pale lavender.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(225, 29, 72,0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(217, 119, 6,0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(13, 148, 136,0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(43, 18, 22,0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(124, 58, 237,0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(8, 145, 178,0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(225, 29, 72,0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(30, 27, 75,0.20)" },
 ];
 
-// blue, yellow and rose leaves falling down through the cool glow.
+// violet, cyan and coral orbs falling down through the warm glow.
 const FLAKES = [
-  { left: "8%", top: "4%", delay: "0s", dur: "9.2s", s: 12, c: "#e11d48" },
-  { left: "21%", top: "10%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#fbbf24" },
-  { left: "36%", top: "2%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#d97706" },
-  { left: "53%", top: "12%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#115e59" },
-  { left: "68%", top: "6%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#fde68a" },
-  { left: "82%", top: "14%", delay: "-2s", dur: "10.2s", s: 14, c: "#0d9488" },
-  { left: "93%", top: "8%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#2b1216" },
+  { left: "8%", top: "4%", delay: "0s", dur: "9.2s", s: 12, c: "#7c3aed" },
+  { left: "21%", top: "10%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#22d3ee" },
+  { left: "36%", top: "2%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#0891b2" },
+  { left: "53%", top: "12%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#e11d48" },
+  { left: "68%", top: "6%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#a5f3fc" },
+  { left: "82%", top: "14%", delay: "-2s", dur: "10.2s", s: 14, c: "#8b5cf6" },
+  { left: "93%", top: "8%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#1e1b4b" },
 ];
 
-// Blue and rose glints scattered through the cool glow.
+// Violet and cyan glints scattered through the warm glow.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* warm wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#fdf2f0] via-[#fdf2f0] to-[#fef3c7]">
+      <div className="relative bg-gradient-to-b from-[#f5f3ff] via-[#f5f3ff] to-[#cffafe]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -100,7 +100,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(225, 29, 72,0.45), inset 0 0 18px rgba(244, 63, 94,0.30)",
+                  boxShadow: "0 0 28px 2px rgba(124, 58, 237,0.45), inset 0 0 18px rgba(139, 92, 246,0.30)",
                   opacity: 1 - r * 0.22,
                 }}
               />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#e11d48", "#fbbf24", "#d97706", "#fde68a"];
+              const colors = ["#7c3aed", "#22d3ee", "#0891b2", "#a5f3fc"];
               return (
                 <span
                   key={i}
