@@ -29,7 +29,7 @@ export default function Newsletter({ email, onEmailChange, subscribed, onSubscri
             <p className="mt-5 rounded-lg bg-white/15 p-4 font-bold text-white ring-1 ring-white/25">✅ Subscribed! Welcome to GadZone BD family.</p>
           ) : (
             <form className="mt-5 flex flex-col gap-3 sm:flex-row" onSubmit={onSubscribe}>
-              <input type="email" required value={email} onChange={(e) => onEmailChange(e.target.value)} placeholder="Your email address" className="flex-1 rounded-full bg-white px-5 py-3.5 text-sm text-[#1c1917] outline-none ring-1 ring-white/40 placeholder:text-[#065f46] transition focus:ring-2 focus:ring-white/80" />
+              <input type="email" required value={email} onChange={(e) => onEmailChange(e.target.value)} placeholder="Your email address" className="flex-1 rounded-full bg-white px-5 py-3.5 text-sm text-[#1c1917] outline-none ring-1 ring-white/40 placeholder:text-[#4c1d95] transition focus:ring-2 focus:ring-white/80" />
               <motion.button whileTap={{ scale: 0.96 }} className="rounded-full bg-[#1c1917] px-6 py-3 font-bold text-white shadow-[0_0_24px_-6px_rgba(28, 25, 23,0.5)] transition hover:bg-[#1c1917] active:scale-[0.98]">Subscribe</motion.button>
             </form>
           )}

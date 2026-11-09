@@ -13,7 +13,7 @@ type EmptyStateProps = {
 
 export default function EmptyState({ icon, title, text, actionLabel, actionHref, onAction }: EmptyStateProps) {
   return (
-    <div className="rounded-lg bg-white p-8 text-center shadow-sm ring-1 ring-[#6ee7b7]">
+    <div className="rounded-lg bg-white p-8 text-center shadow-sm ring-1 ring-[#c4b5fd]">
       <p className="text-4xl" aria-hidden="true">{icon}</p>
       <p className="mt-3 font-black text-[#1c1917]">{title}</p>
       <p className="mx-auto mt-1 max-w-sm text-sm text-[#57534e]">{text}</p>
