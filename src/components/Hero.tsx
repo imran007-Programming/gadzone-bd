@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Plum Orbit: deep plum, vivid lime and sunny mint over cool lavender.
+// Coral Tide: warm coral, deep teal and warm amber over warm sand.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(124, 58, 237,0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(101, 163, 13,0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(5, 150, 105,0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(36, 26, 46,0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(232, 56, 26,0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(15, 118, 110,0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(217, 119, 6,0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(28, 47, 49,0.20)" },
 ];
 
-// Plum, lime and mint drops falling down through the cool glow.
+// Coral, teal and amber bubbles rising up through the warm glow.
 const FLAKES = [
-  { left: "8%", top: "4%", delay: "0s", dur: "9.2s", s: 12, c: "#6d28d9" },
-  { left: "21%", top: "10%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#8b5cf6" },
-  { left: "36%", top: "2%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#65a30d" },
-  { left: "53%", top: "12%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#4d7c0f" },
-  { left: "68%", top: "6%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#059669" },
-  { left: "82%", top: "14%", delay: "-2s", dur: "10.2s", s: 14, c: "#047857" },
-  { left: "93%", top: "8%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#241a2e" },
+  { left: "8%", top: "4%", delay: "0s", dur: "9.2s", s: 12, c: "#e8381a" },
+  { left: "21%", top: "10%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#ff7a5c" },
+  { left: "36%", top: "2%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#0f766e" },
+  { left: "53%", top: "12%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#115e59" },
+  { left: "68%", top: "6%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#d97706" },
+  { left: "82%", top: "14%", delay: "-2s", dur: "10.2s", s: 14, c: "#b45309" },
+  { left: "93%", top: "8%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#1c2f31" },
 ];
 
-// Plum and lime glints scattered through the cool glow.
+// Coral and teal glints scattered through the warm glow.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -75,19 +75,19 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* plum wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#ddd6fe] via-[#f6f3fb] to-[#a7f3d0]">
+      {/* coral wash over the stage */}
+      <div className="relative bg-gradient-to-b from-[#ffe3d9] via-[#fdf6ec] to-[#fde68a]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
 
-        {/* plum haze sweeping the sheet */}
+        {/* coral haze sweeping the sheet */}
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-0 hidden h-[560px] opacity-90 sm:block">
           <div className="pop-drift absolute -left-24 top-6 h-72 w-[52rem] rotate-[-8deg] rounded-full bg-gradient-to-r from-brand-400/35 via-gold-300/25 to-transparent blur-3xl" />
           <div className="pop-drift absolute -right-24 top-40 h-64 w-[44rem] rotate-[10deg] rounded-full bg-gradient-to-r from-transparent via-brand-300/25 to-gold-400/30 blur-3xl" style={{ animationDelay: "-12s" }} />
         </div>
 
-        {/* plum core: a plum orb ringed by a slow backward rotation */}
+        {/* teal core: a teal orb ringed by a fast forward rotation */}
         <div aria-hidden className="pointer-events-none absolute -right-40 -top-32 z-0 hidden opacity-90 sm:block">
           <div className="relative h-[600px] w-[600px]">
             <div className="nebula-core absolute inset-8 rounded-full blur-xl" />
@@ -105,9 +105,9 @@ export default function Hero({ onQuickView }: HeroProps) {
                 }}
               />
             ))}
-            {/* the plum heart: a layered plum disc */}
+            {/* the teal heart: a layered teal disc */}
             <div className="sun-disc pop-spin absolute inset-44 rounded-full" style={{ animationDuration: "60s" }} />
-            {/* plum glints */}
+            {/* coral glints */}
             <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
               {[{l:"30%",t:"34%",s:46},{l:"58%",t:"52%",s:34},{l:"44%",t:"66%",s:24},{l:"64%",t:"30%",s:20}].map((glint, i) => (
                 <span key={i} className="absolute rounded-full bg-white/80" style={{ left: glint.l, top: glint.t, width: glint.s, height: glint.s }} />
@@ -121,11 +121,11 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{ width: 26, height: 240, transform: `translate(-50%, -100%) rotate(${b * 120}deg)`, animationDuration: "36s" }}
               />
             ))}
-            {/* plum orbs dancing around the plum orb */}
+            {/* coral orbs dancing around the teal orb */}
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#6d28d9", "#8b5cf6", "#65a30d", "#059669"];
+              const colors = ["#e8381a", "#ff7a5c", "#0f766e", "#d97706"];
               return (
                 <span
                   key={i}
@@ -143,7 +143,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* drifting cool glow */}
+        {/* drifting warm glow */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {ORBS.map((g, i) => (
             <div
@@ -154,7 +154,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* plum glints */}
+        {/* coral glints */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {STARS.map((s, i) => (
             <span
@@ -165,14 +165,14 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* falling plums */}
+        {/* rising bubbles */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden overflow-hidden sm:block">
           {FLAKES.map((r, i) => (
             <Flake key={i} {...r} />
           ))}
         </div>
 
-        {/* 4-banner carousel in an plum frame */}
+        {/* 4-banner carousel in a coral frame */}
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
@@ -185,7 +185,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* plum ticker: deep plum band with mint type */}
+        {/* coral ticker: deep teal band with amber type */}
         <div aria-hidden className="relative z-10 mt-8 border-y-4 border-brand-950/80 bg-gradient-to-l from-brand-950/95 via-brand-800/95 to-brand-600/95 py-3 shadow-[0_10px_30px_-12px_rgba(36, 26, 46,0.4)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
@@ -198,11 +198,11 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* plum divider into the page */}
+        {/* coral divider into the page */}
         <div aria-hidden className="zigzag relative z-10 mx-auto mt-0 w-full max-w-7xl opacity-90" />
       </div>
 
-      {/* Stats + featured picks under the plum orb */}
+      {/* Stats + featured picks under the teal orb */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 pb-24 pt-10 md:pb-28">
         <motion.div variants={container} initial="hidden" animate="show" {...anim}>
           <motion.div variants={item} className="grid grid-cols-2 gap-6 sm:grid-cols-4">
@@ -253,7 +253,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* plum divider into the page */}
+      {/* coral divider into the page */}
       <div aria-hidden className="zigzag absolute bottom-0 left-0 w-full opacity-90" />
     </section>
   );
