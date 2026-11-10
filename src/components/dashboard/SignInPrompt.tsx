@@ -11,7 +11,7 @@ type SignInPromptProps = {
 
 export default function SignInPrompt({ title, text, callbackUrl }: SignInPromptProps) {
   return (
-    <div className="mx-auto max-w-md rounded-lg bg-white p-8 text-center shadow-sm ring-1 ring-[#a5f3fc]">
+    <div className="mx-auto max-w-md rounded-lg bg-white p-8 text-center shadow-sm ring-1 ring-[#ddd6fe]">
       <p className="text-4xl" aria-hidden="true">👋</p>
       <h1 className="mt-3 text-2xl font-black text-[#0f172a]">{title}</h1>
       <p className="mt-2 text-sm text-[#64748b]">{text}</p>
