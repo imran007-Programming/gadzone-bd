@@ -167,7 +167,7 @@ export default function HomeClient() {
   const handleCheckout = () => { setCartOpen(false); setCheckoutOpen(true); };
 
   return (
-    <div className="min-h-screen pb-20 font-sans text-[#4c0519] md:pb-0">
+    <div className="min-h-screen pb-20 font-sans text-[#042f2e] md:pb-0">
       <TopBar />
       <Header query={query} onQueryChange={setQuery} category={category} onCategoryChange={setCategory} cartCount={cartCount} onCartOpen={() => setCartOpen(true)} onMenuOpen={() => setMenuOpen(true)} onAccountOpen={() => setAccountOpen(true)} />
       {selectedProduct ? (
@@ -184,7 +184,7 @@ export default function HomeClient() {
       ) : (
         <>
           <Hero onQuickView={handleQuickView} />
-          {/* Ember Market: post-hero sections ride on an ivory ticket stage over the warm cream page. */}
+          {/* Glacier Market: post-hero sections ride on an ice slab stage over the pale ice page. */}
           <main className="relative z-10 mx-2.5 mt-10 rounded-md bg-white shadow-[6px_6px_0_0_rgba(8,145,178,0.20),0_0_70px_-18px_rgba(8,51,68,0.45)] ring-2 ring-dashed ring-gold-500/40 sm:mx-5 lg:mx-auto lg:max-w-[86rem]">
           <CategoryGrid category={category} onCategoryChange={setCategory} />
           <FlashDeals products={flash} countdown={countdown} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
