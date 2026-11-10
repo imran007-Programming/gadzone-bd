@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Violet Grove: deep plum, violet and lime with a blush pink spark, over warm cream paper.
+// Ember Forge: warm charcoal, burnt orange and amber with a teal spark, over warm sand paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(139, 92, 246,0.26)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(132, 204, 22,0.26)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(139, 92, 246,0.24)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(46, 20, 55,0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(234, 88, 12,0.26)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245, 158, 11,0.26)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(234, 88, 12,0.24)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(28, 25, 23,0.20)" },
 ];
 
-// violet, lime and pink petals falling down through the warm glow.
+// orange, amber and teal embers rising up through the warm glow.
 const FLAKES = [
-  { left: "8%", top: "4%", delay: "0s", dur: "9.2s", s: 12, c: "#8b5cf6" },
-  { left: "21%", top: "10%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#ede9fe" },
-  { left: "36%", top: "2%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#8b5cf6" },
-  { left: "53%", top: "12%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#7c3aed" },
-  { left: "68%", top: "6%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#d9f99d" },
-  { left: "82%", top: "14%", delay: "-2s", dur: "10.2s", s: 14, c: "#6d28d9" },
-  { left: "93%", top: "8%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#2e1437" },
+  { left: "8%", top: "4%", delay: "0s", dur: "9.2s", s: 12, c: "#ea580c" },
+  { left: "21%", top: "10%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#ffedd5" },
+  { left: "36%", top: "2%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#ea580c" },
+  { left: "53%", top: "12%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#c2410c" },
+  { left: "68%", top: "6%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#fde68a" },
+  { left: "82%", top: "14%", delay: "-2s", dur: "10.2s", s: 14, c: "#0d9488" },
+  { left: "93%", top: "8%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#1c1917" },
 ];
 
-// Lime glints scattered through the warm glow.
+// Amber glints scattered through the warm glow.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
