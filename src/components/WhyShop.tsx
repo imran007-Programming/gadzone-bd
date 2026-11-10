@@ -23,7 +23,7 @@ export default function WhyShop() {
             <Reveal key={f.t} delay={i * 0.07}>
               <motion.div
                 whileHover={{ y: -4 }}
-                className="rounded-lg border border-[#a5f3fc] bg-white p-6 text-center shadow-[0_12px_36px_-12px_rgba(8, 47, 73,0.2)] backdrop-blur-sm transition-all hover:border-brand-400/40 hover:shadow-[0_16px_44px_-12px_rgba(139, 92, 246,0.35)] sm:p-7"
+                className="rounded-lg border border-[#a5f3fc] bg-white p-6 text-center shadow-[0_12px_36px_-12px_rgba(8, 47, 73,0.2)] backdrop-blur-sm transition-all hover:border-brand-400/40 hover:shadow-[0_16px_44px_-12px_rgba(244, 63, 94,0.35)] sm:p-7"
               >
                 <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-brand-400/15 text-3xl shadow-[0_0_24px_rgba(8, 47, 73,0.25)] ring-1 ring-brand-400/40">{f.e}</span><h3 className="mt-4 text-[15px] font-bold tracking-tight text-[#0f172a]">{f.t}</h3><p className="mt-1.5 text-sm leading-relaxed text-[#0e7490]">{f.d}</p>
               </motion.div>
