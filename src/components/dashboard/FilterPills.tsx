@@ -19,12 +19,12 @@ export default function FilterPills({ options, value, onChange, counts }: Filter
             aria-selected={active}
             onClick={() => onChange(opt)}
             className={`rounded-full px-4 py-2 text-sm font-bold transition ${
-              active ? "bg-gradient-to-r from-brand-500 to-brand-700 text-white font-black shadow-[0_0_18px_-4px_rgba(157, 47, 114,0.7)]" : "bg-white text-[#7a5a68] ring-1 ring-[#f6e0ee] hover:bg-[#fbf1f7]"
+              active ? "bg-gradient-to-r from-brand-500 to-brand-700 text-white font-black shadow-[0_0_18px_-4px_rgba(30, 27, 75,0.7)]" : "bg-white text-[#5b6b85] ring-1 ring-[#dbe4f0] hover:bg-[#f3f6fb]"
             }`}
           >
             {opt}
             {counts && counts[opt] !== undefined && (
-              <span className={`ml-1.5 rounded-full px-1.5 py-0.5 text-xs ${active ? "bg-white/20 text-white" : "bg-white text-[#7a5a68]"}`}>
+              <span className={`ml-1.5 rounded-full px-1.5 py-0.5 text-xs ${active ? "bg-white/20 text-white" : "bg-white text-[#5b6b85]"}`}>
                 {counts[opt]}
               </span>
             )}
