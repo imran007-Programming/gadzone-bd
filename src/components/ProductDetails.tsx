@@ -79,7 +79,7 @@ export default function ProductDetails({
       <div className="mt-5 grid gap-8 lg:grid-cols-2">
         {/* Gallery */}
         <div>
-          <div className="relative overflow-hidden rounded-[2rem] border border-[#fecdd3] bg-white shadow-[0_20px_50px_-16px_rgba(30, 27, 75,0.25)]">
+          <div className="relative overflow-hidden rounded-[2rem] border border-[#fecdd3] bg-white shadow-[0_20px_50px_-16px_rgba(18, 41, 31,0.25)]">
             {imgErr ? (
               <div className="flex h-80 items-center justify-center bg-gradient-to-br from-brand-100 via-brand-50 to-brand-100 sm:h-96">
                 <span className="text-6xl">🔌</span>
@@ -197,7 +197,7 @@ export default function ProductDetails({
               <span className="w-8 text-center font-bold">{qty}</span>
               <button onClick={() => setQty(Math.min(99, qty + 1))} className="px-4 py-3 text-lg" aria-label="Increase quantity">+</button>
             </div>
-            <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty)} className="rounded-full bg-gradient-to-r from-brand-500 to-brand-700 px-7 py-3 font-bold text-white shadow-[0_8px_24px_-8px_rgba(30, 27, 75,0.4)] transition hover:brightness-110">
+            <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty)} className="rounded-full bg-gradient-to-r from-brand-500 to-brand-700 px-7 py-3 font-bold text-white shadow-[0_8px_24px_-8px_rgba(18, 41, 31,0.4)] transition hover:brightness-110">
               Add To Cart
             </motion.button>
             <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty, true)} className="rounded-full bg-white px-7 py-3 font-bold text-[#1e1b4b] transition ring-1 ring-brand-400/40 hover:bg-[#fff1f2]">
