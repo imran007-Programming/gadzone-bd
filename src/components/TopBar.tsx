@@ -4,13 +4,13 @@ export default function TopBar() {
       {/* drifting signal-dust flecks */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-40 [background-image:radial-gradient(rgba(10, 31, 51,0.35)_1px,transparent_1.5px)] [background-size:20px_20px]"
+        className="pointer-events-none absolute inset-0 opacity-40 [background-image:radial-gradient(rgba(42, 22, 8,0.35)_1px,transparent_1.5px)] [background-size:20px_20px]"
       />
       <div aria-hidden className="pointer-events-none absolute -left-12 top-1/2 h-28 w-28 -translate-y-1/2 rounded-full bg-brand-500/30 blur-2xl" />
       <div aria-hidden className="pointer-events-none absolute -right-12 top-1/2 h-28 w-28 -translate-y-1/2 rounded-full bg-brand-500/30 blur-2xl" />
       <p className="relative">
         🎉 Eid Mega Sale — Extra 10% off with code{" "}
-        <b className="rounded-sm border border-white/60 bg-white px-3 py-0.5 font-black tracking-wide text-[#0284c7] shadow-[2px_2px_0_#0a1f33]">
+        <b className="rounded-sm border border-white/60 bg-white px-3 py-0.5 font-black tracking-wide text-[#ea580c] shadow-[2px_2px_0_#2a1608]">
           GADZONE10
         </b>{" "}
         &nbsp;|&nbsp; Free delivery on orders over ৳2,000
