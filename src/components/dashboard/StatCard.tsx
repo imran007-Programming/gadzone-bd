@@ -15,13 +15,13 @@ type StatCardProps = {
 export default function StatCard({ label, value, icon, sub, accent = "bg-brand-100 text-brand-700", delay = 0 }: StatCardProps) {
   return (
     <Reveal delay={delay}>
-      <div className="rounded-lg bg-white p-5 shadow-sm ring-1 ring-[#ffd5cb] transition hover:shadow-md">
+      <div className="rounded-lg bg-white p-5 shadow-sm ring-1 ring-[#bae6fd] transition hover:shadow-md">
         <div className="flex items-start justify-between gap-3">
-          <p className="text-sm font-semibold text-[#6b5d54]">{label}</p>
+          <p className="text-sm font-semibold text-[#475569]">{label}</p>
           <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-lg ${accent}`}>{icon}</span>
         </div>
-        <p className="mt-2 truncate text-3xl font-black tracking-tight text-[#14282e]">{value}</p>
-        {sub && <p className="mt-1 text-xs font-semibold text-[#6b5d54]">{sub}</p>}
+        <p className="mt-2 truncate text-3xl font-black tracking-tight text-[#0a1f33]">{value}</p>
+        {sub && <p className="mt-1 text-xs font-semibold text-[#475569]">{sub}</p>}
       </div>
     </Reveal>
   );
