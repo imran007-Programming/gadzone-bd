@@ -24,13 +24,13 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
       whileHover={undefined}
       className="pop-lift group relative flex h-full flex-col overflow-hidden bg-paper"
     >
-      {/* warm glow peeking from the card's right edge */}
-      <div aria-hidden className="pointer-events-none absolute inset-x-10 top-0 h-24 rounded-b-sm bg-gradient-to-b from-brand-200/60 via-gold-200/40 to-transparent blur-sm" />
+      {/* lagoon glow peeking from the card's right edge */}
+      <div aria-hidden className="pointer-events-none absolute inset-x-10 top-0 h-24 rounded-b-3xl bg-gradient-to-b from-brand-200/60 via-gold-200/40 to-transparent blur-sm" />
       <div className="relative p-3">
-        <div className="relative cursor-pointer overflow-hidden rounded-2xl ring-1 ring-brand-900/10" onClick={() => onQuickView(p)}>
+        <div className="relative cursor-pointer overflow-hidden rounded-3xl ring-1 ring-brand-900/10" onClick={() => onQuickView(p)}>
           <ProductImage product={p} />
           {p.badge === "New" && (
-            <span className="absolute left-3 top-3 rounded-2xl bg-gold-400 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-gold-950 shadow-[0_10px_20px_-8px_rgba(23, 35, 59,0.45)] ring-1 ring-white/60">New</span>
+            <span className="absolute left-3 top-3 rounded-full bg-gold-400 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-gold-950 shadow-[0_10px_20px_-8px_rgba(23, 35, 59,0.45)] ring-1 ring-white/60">New</span>
           )}
           {discountPct(p) > 0 && (
             <span className="starburst absolute -right-2 -top-2 flex h-16 w-16 items-center justify-center p-4 text-center text-[11px] font-black leading-tight">-{discountPct(p)}%</span>
@@ -38,10 +38,10 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
         </div>
       </div>
       <div className="flex flex-1 flex-col items-start gap-1.5 px-5 pb-4 pt-1 text-left">
-        <span className="rounded-2xl bg-brand-100 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.16em] text-brand-700 ring-1 ring-brand-200">{p.category}</span>
+        <span className="rounded-full bg-brand-100 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.16em] text-brand-700 ring-1 ring-brand-200">{p.category}</span>
         <h3 className="cursor-pointer text-[15px] font-bold leading-snug tracking-tight text-ink hover:text-brand-700" onClick={() => onQuickView(p)}>{p.name}</h3>
         <div className="flex items-center gap-1"><Stars rating={p.rating} /><span className="text-xs font-medium text-mute">{p.rating} ({p.reviews.toLocaleString()})</span></div>
-        <span className={`w-fit px-2.5 py-1 text-[11px] font-bold ${p.stock === "In Stock" ? "rounded-2xl bg-gold-soft text-gold-deep ring-1 ring-gold/30" : "rounded-2xl bg-brand-100 text-brand-800 ring-1 ring-brand-200"}`}>{p.stock === "In Stock" ? "● In Stock" : "⚠ " + p.stock}</span>
+        <span className={`w-fit px-2.5 py-1 text-[11px] font-bold ${p.stock === "In Stock" ? "rounded-full bg-gold-soft text-gold-deep ring-1 ring-gold/30" : "rounded-full bg-brand-100 text-brand-800 ring-1 ring-brand-200"}`}>{p.stock === "In Stock" ? "● In Stock" : "⚠ " + p.stock}</span>
         <p className="line-clamp-2 text-[13px] leading-relaxed text-mute">{p.desc}</p>
         <div className="mt-auto flex w-full items-end justify-between gap-2 pt-2.5">
           <span className="text-[22px] font-black tracking-tight text-brand-700">{tk(p.price)}</span>
@@ -53,13 +53,13 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
           whileTap={{ scale: 0.98 }}
           onClick={() => onAddToCart(p.id)}
           aria-label={`Add ${p.name} to cart`}
-          className="flex w-full items-center justify-center gap-1.5 rounded-2xl border-2 border-brand-800 bg-brand-600 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-[0_10px_24px_-10px_rgba(23, 35, 59,0.55)] transition hover:-translate-y-0.5 hover:bg-brand-700 active:translate-y-0 active:scale-[0.98]"
+          className="flex w-full items-center justify-center gap-1.5 rounded-full border-2 border-brand-800 bg-brand-600 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-[0_10px_24px_-10px_rgba(23, 35, 59,0.55)] transition hover:-translate-y-0.5 hover:bg-brand-700 active:translate-y-0 active:scale-[0.98]"
         >
           🛒 Add
         </motion.button>
         <button
           onClick={() => onQuickView(p)}
-          className="flex w-full items-center justify-center rounded-2xl border-2 border-brand-300 bg-brand-50 px-4 py-2 text-xs font-black uppercase tracking-wider text-brand-700 transition hover:bg-brand-100 active:scale-[0.98]"
+          className="flex w-full items-center justify-center rounded-full border-2 border-brand-300 bg-brand-50 px-4 py-2 text-xs font-black uppercase tracking-wider text-brand-700 transition hover:bg-brand-100 active:scale-[0.98]"
         >
           View →
         </button>
