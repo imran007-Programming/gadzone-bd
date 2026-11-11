@@ -32,25 +32,25 @@ export default function HelpSheet({ open, onClose, onViewAllFaq }: HelpSheetProp
             animate={{ y: 0, opacity: 1 }}
             exit={reduce ? { opacity: 0 } : { y: "100%" }}
             transition={{ type: "tween", duration: 0.28, ease: "easeOut" }}
-            className="max-h-[85vh] w-full max-w-lg overflow-y-auto rounded-t-3xl border border-[#fbcfe8] bg-white p-5 shadow-2xl sm:p-6"
+            className="max-h-[85vh] w-full max-w-lg overflow-y-auto rounded-t-3xl border border-[#ffd5cb] bg-white p-5 shadow-2xl sm:p-6"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="mx-auto mb-4 h-1.5 w-12 rounded-full bg-white" />
             <div className="flex items-start justify-between">
-              <h3 className="text-xl font-black text-[#25102f]">How can we help?</h3>
-              <button onClick={onClose} className="text-2xl leading-none text-[#25102f] hover:text-[#25102f]" aria-label="Close help sheet">×</button>
+              <h3 className="text-xl font-black text-[#14282e]">How can we help?</h3>
+              <button onClick={onClose} className="text-2xl leading-none text-[#14282e] hover:text-[#14282e]" aria-label="Close help sheet">×</button>
             </div>
             <div className="mt-4 space-y-3">
               {QUICK_FAQS.map((f) => (
-                <div key={f.q} className="rounded-lg border border-[#fbcfe8] bg-white p-4 shadow-sm">
-                  <p className="font-bold text-[#25102f]">{f.q}</p>
-                  <p className="mt-1 text-sm text-[#25102f]">{f.a}</p>
+                <div key={f.q} className="rounded-lg border border-[#ffd5cb] bg-white p-4 shadow-sm">
+                  <p className="font-bold text-[#14282e]">{f.q}</p>
+                  <p className="mt-1 text-sm text-[#14282e]">{f.a}</p>
                 </div>
               ))}
             </div>
             <div className="mt-4 rounded-lg bg-brand-400/10 p-4 ring-1 ring-brand-400/30">
-              <p className="font-bold text-[#25102f]">Still need help?</p>
-              <p className="mt-1 text-sm text-[#25102f]">📞 +880 1700-000000<br />✉️ hello@gadzonebd.example</p>
+              <p className="font-bold text-[#14282e]">Still need help?</p>
+              <p className="mt-1 text-sm text-[#14282e]">📞 +880 1700-000000<br />✉️ hello@gadzonebd.example</p>
             </div>
             <button
               onClick={onViewAllFaq}

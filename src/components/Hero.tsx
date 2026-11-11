@@ -30,13 +30,13 @@ const ORBS = [
 
 // orange, rose and amber velvet petals rising up through the warm glow.
 const FLAKES = [
-  { left: "8%", top: "4%", delay: "0s", dur: "9.2s", s: 12, c: "#7c3aed" },
-  { left: "21%", top: "10%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#ede9fe" },
-  { left: "36%", top: "2%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#db2777" },
-  { left: "53%", top: "12%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#6d28d9" },
-  { left: "68%", top: "6%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#c4b5fd" },
-  { left: "82%", top: "14%", delay: "-2s", dur: "10.2s", s: 14, c: "#a78bfa" },
-  { left: "93%", top: "8%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#25102f" },
+  { left: "8%", top: "4%", delay: "0s", dur: "9.2s", s: 12, c: "#f04e2e" },
+  { left: "21%", top: "10%", delay: "-1.4s", dur: "10.8s", s: 16, c: "#ffe8e2" },
+  { left: "36%", top: "2%", delay: "-2.6s", dur: "9.8s", s: 13, c: "#f04e2e" },
+  { left: "53%", top: "12%", delay: "-0.8s", dur: "10.4s", s: 17, c: "#d63d20" },
+  { left: "68%", top: "6%", delay: "-3.2s", dur: "9.6s", s: 12, c: "#ffb8a6" },
+  { left: "82%", top: "14%", delay: "-2s", dur: "10.2s", s: 14, c: "#ff8f73" },
+  { left: "93%", top: "8%", delay: "-0.4s", dur: "9.4s", s: 10, c: "#14282e" },
 ];
 
 // Royal glints scattered through the warm glow.
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* velvet wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#ede9fe] via-[#f6f1fb] to-[#f9a8d4]">
+      <div className="relative bg-gradient-to-b from-[#ffe8e2] via-[#fff7ec] to-[#ffb8a6]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#7c3aed", "#db2777", "#7c3aed", "#ede9fe"];
+              const colors = ["#f04e2e", "#f04e2e", "#f04e2e", "#ffe8e2"];
               return (
                 <span
                   key={i}
