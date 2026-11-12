@@ -184,8 +184,8 @@ export default function HomeClient() {
       ) : (
         <>
           <Hero onQuickView={handleQuickView} />
-          {/* Plum Orchard: post-hero sections ride on a tide tile stage over the orchard page. */}
-          <main className="relative z-10 mx-2.5 mt-10 rounded-md bg-white shadow-[6px_6px_0_0_rgba(109, 40, 217,0.20),0_0_70px_-18px_rgba(109, 40, 217,0.45)] ring-2 ring-dashed ring-gold-500/40 sm:mx-5 lg:mx-auto lg:max-w-[86rem]">
+          {/* Ember Dusk Market: post-hero sections ride on a warm ember stage over the sand page. */}
+          <main className="relative z-10 mx-2.5 mt-10 rounded-md bg-white shadow-[6px_6px_0_0_rgba(15, 118, 110,0.20),0_0_70px_-18px_rgba(15, 118, 110,0.45)] ring-2 ring-dashed ring-gold-500/40 sm:mx-5 lg:mx-auto lg:max-w-[86rem]">
           <CategoryGrid category={category} onCategoryChange={setCategory} />
           <FlashDeals products={flash} countdown={countdown} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
           <ProductSection accent="Trending" rest="Audio Products" subtitle="Explore earbuds, headphones & speakers picked for better sound." products={audioProducts} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
