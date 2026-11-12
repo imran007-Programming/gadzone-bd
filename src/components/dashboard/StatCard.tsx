@@ -17,11 +17,11 @@ export default function StatCard({ label, value, icon, sub, accent = "bg-brand-1
     <Reveal delay={delay}>
       <div className="rounded-lg bg-white p-5 shadow-sm ring-1 ring-[#ccfbf1] transition hover:shadow-md">
         <div className="flex items-start justify-between gap-3">
-          <p className="text-sm font-semibold text-[#4b6b60]">{label}</p>
+          <p className="text-sm font-semibold text-[#8a6a5c]">{label}</p>
           <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-lg ${accent}`}>{icon}</span>
         </div>
-        <p className="mt-2 truncate text-3xl font-black tracking-tight text-[#022c22]">{value}</p>
-        {sub && <p className="mt-1 text-xs font-semibold text-[#4b6b60]">{sub}</p>}
+        <p className="mt-2 truncate text-3xl font-black tracking-tight text-[#3a1f14]">{value}</p>
+        {sub && <p className="mt-1 text-xs font-semibold text-[#8a6a5c]">{sub}</p>}
       </div>
     </Reveal>
   );
