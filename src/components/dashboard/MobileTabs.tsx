@@ -21,7 +21,7 @@ export default function MobileTabs({ nav, active, onSelect }: MobileTabsProps) {
               aria-selected={isActive}
               onClick={() => onSelect(item.id)}
               className={`flex shrink-0 items-center gap-2 rounded-full px-4 py-2.5 text-sm font-bold whitespace-nowrap transition ${
-                isActive ? "bg-gradient-to-r from-brand-500 to-brand-700 text-white font-black shadow-[0_0_18px_-4px_rgba(14, 116, 144,0.7)]" : "bg-white text-[#5b7a8c] ring-1 ring-[#cffafe]"
+                isActive ? "bg-gradient-to-r from-brand-500 to-brand-700 text-white font-black shadow-[0_0_18px_-4px_rgba(109, 40, 217,0.7)]" : "bg-white text-[#7c6a8a] ring-1 ring-[#ede9fe]"
               }`}
             >
               <span aria-hidden="true">{item.icon}</span>
