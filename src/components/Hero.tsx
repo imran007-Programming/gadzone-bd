@@ -30,13 +30,13 @@ const ORBS = [
 
 // teal, sky and seafoam sparks falling down through the orchid night glow.
 const FLAKES = [
-  { left: "8%", top: "4%", delay: "0s", dur: "11.2s", s: 12, c: "#6d28d9" },
-  { left: "21%", top: "10%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#fae8ff" },
-  { left: "36%", top: "2%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#c026d3" },
-  { left: "53%", top: "12%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#c026d3" },
-  { left: "68%", top: "6%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#5b21b6" },
-  { left: "82%", top: "14%", delay: "-2s", dur: "12.2s", s: 14, c: "#f5d0fe" },
-  { left: "93%", top: "8%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#2b1038" },
+  { left: "8%", top: "4%", delay: "0s", dur: "11.2s", s: 12, c: "#c2410c" },
+  { left: "21%", top: "10%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#fef3c7" },
+  { left: "36%", top: "2%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#b45309" },
+  { left: "53%", top: "12%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#b45309" },
+  { left: "68%", top: "6%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#9a3412" },
+  { left: "82%", top: "14%", delay: "-2s", dur: "12.2s", s: 14, c: "#fde68a" },
+  { left: "93%", top: "8%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#2e1a12" },
 ];
 
 // Orchid Night glints scattered through the warm glow.
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* orchid night wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#ddd6fe] via-[#f7f2fb] to-[#f5d0fe]">
+      <div className="relative bg-gradient-to-b from-[#fdba74] via-[#fff8f0] to-[#fde68a]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#6d28d9", "#c026d3", "#c026d3", "#fae8ff"];
+              const colors = ["#c2410c", "#b45309", "#b45309", "#fef3c7"];
               return (
                 <span
                   key={i}
