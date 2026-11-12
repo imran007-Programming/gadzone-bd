@@ -132,7 +132,7 @@ export default function AdminPage() {
             </div>
             {session?.user && (
               <>
-                <Link href="/dashboard" className="hidden shrink-0 rounded-full px-3 py-2 text-sm font-bold text-[#6d28d9] hover:bg-[#fdf7ee] sm:block">My Dashboard</Link>
+                <Link href="/dashboard" className="hidden shrink-0 rounded-full px-3 py-2 text-sm font-bold text-[#6d28d9] hover:bg-[#f5f3ff] sm:block">My Dashboard</Link>
                 {session.user.image ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img src={session.user.image} alt="" className="h-10 w-10 shrink-0 rounded-full object-cover ring-2 ring-brand-200" />
@@ -242,7 +242,7 @@ export default function AdminPage() {
                       <p className="mt-1 text-sm text-[#6d28d9]">{filteredOrders.length} order{filteredOrders.length === 1 ? "" : "s"} shown</p>
                     </div>
                     {(orderSearch.trim() || statusFilter !== "All") && (
-                      <button onClick={() => { setOrderSearch(""); setStatusFilter("All"); }} className="rounded-full bg-white px-4 py-2 text-sm font-bold text-[#6d28d9] ring-1 ring-[#ede9fe] hover:bg-[#fdf7ee]">Clear filters ✕</button>
+                      <button onClick={() => { setOrderSearch(""); setStatusFilter("All"); }} className="rounded-full bg-white px-4 py-2 text-sm font-bold text-[#6d28d9] ring-1 ring-[#ede9fe] hover:bg-[#f5f3ff]">Clear filters ✕</button>
                     )}
                   </div>
 
