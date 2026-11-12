@@ -37,20 +37,20 @@ export default function HelpSheet({ open, onClose, onViewAllFaq }: HelpSheetProp
           >
             <div className="mx-auto mb-4 h-1.5 w-12 rounded-full bg-white" />
             <div className="flex items-start justify-between">
-              <h3 className="text-xl font-black text-[#2f1b33]">How can we help?</h3>
-              <button onClick={onClose} className="text-2xl leading-none text-[#2f1b33] hover:text-[#2f1b33]" aria-label="Close help sheet">×</button>
+              <h3 className="text-xl font-black text-ink">How can we help?</h3>
+              <button onClick={onClose} className="text-2xl leading-none text-ink hover:text-ink" aria-label="Close help sheet">×</button>
             </div>
             <div className="mt-4 space-y-3">
               {QUICK_FAQS.map((f) => (
                 <div key={f.q} className="rounded-lg border border-[#ccfbf1] bg-white p-4 shadow-sm">
-                  <p className="font-bold text-[#2f1b33]">{f.q}</p>
-                  <p className="mt-1 text-sm text-[#2f1b33]">{f.a}</p>
+                  <p className="font-bold text-ink">{f.q}</p>
+                  <p className="mt-1 text-sm text-ink">{f.a}</p>
                 </div>
               ))}
             </div>
             <div className="mt-4 rounded-lg bg-brand-400/10 p-4 ring-1 ring-brand-400/30">
-              <p className="font-bold text-[#2f1b33]">Still need help?</p>
-              <p className="mt-1 text-sm text-[#2f1b33]">📞 +880 1700-000000<br />✉️ hello@gadzonebd.example</p>
+              <p className="font-bold text-ink">Still need help?</p>
+              <p className="mt-1 text-sm text-ink">📞 +880 1700-000000<br />✉️ hello@gadzonebd.example</p>
             </div>
             <button
               onClick={onViewAllFaq}
