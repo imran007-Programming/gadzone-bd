@@ -184,7 +184,7 @@ export default function HomeClient() {
       ) : (
         <>
           <Hero onQuickView={handleQuickView} />
-          {/* Ember Dusk Market: post-hero sections ride on a warm ember stage over the sand page. */}
+          {/* Polar Jade Market: post-hero sections ride on a cool jade stage over the icy mint page. */}
           <main className="relative z-10 mx-2.5 mt-10 rounded-md bg-white shadow-[6px_6px_0_0_rgba(15, 118, 110,0.20),0_0_70px_-18px_rgba(15, 118, 110,0.45)] ring-2 ring-dashed ring-gold-500/40 sm:mx-5 lg:mx-auto lg:max-w-[86rem]">
           <CategoryGrid category={category} onCategoryChange={setCategory} />
           <FlashDeals products={flash} countdown={countdown} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
