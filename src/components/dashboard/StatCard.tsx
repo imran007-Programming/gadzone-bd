@@ -15,7 +15,7 @@ type StatCardProps = {
 export default function StatCard({ label, value, icon, sub, accent = "bg-brand-100 text-brand-700", delay = 0 }: StatCardProps) {
   return (
     <Reveal delay={delay}>
-      <div className="rounded-lg bg-white p-5 shadow-sm ring-1 ring-[#fed7aa] transition hover:shadow-md">
+      <div className="rounded-lg bg-white p-5 shadow-sm ring-1 ring-[#fde68a] transition hover:shadow-md">
         <div className="flex items-start justify-between gap-3">
           <p className="text-sm font-semibold text-mute">{label}</p>
           <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-lg ${accent}`}>{icon}</span>
