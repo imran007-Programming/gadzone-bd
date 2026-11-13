@@ -33,12 +33,12 @@ export default function QuickViewModal({ product, qty, onQtyChange, onClose, onA
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.96, y: 8 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="flex max-h-[92vh] w-full max-w-2xl flex-col overflow-hidden rounded-t-lg border border-[#ffedd5] bg-white shadow-2xl sm:rounded-lg"
+            className="flex max-h-[92vh] w-full max-w-2xl flex-col overflow-hidden rounded-t-lg border border-[#d1fae5] bg-white shadow-2xl sm:rounded-lg"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex-1 overflow-y-auto">
               <div className="grid sm:grid-cols-2">
-                <div className="relative"><ProductImage product={product} big /><span className="absolute left-0 top-3 -skew-x-6 rounded-r-full bg-gradient-to-r from-brand-500 to-brand-700 px-3 py-1 text-xs font-black text-white shadow-[0_6px_18px_-6px_rgba(234, 88, 12,0.45)]">-{discountPct(product)}% OFF</span></div>
+                <div className="relative"><ProductImage product={product} big /><span className="absolute left-0 top-3 -skew-x-6 rounded-r-full bg-gradient-to-r from-brand-500 to-brand-700 px-3 py-1 text-xs font-black text-white shadow-[0_6px_18px_-6px_rgba(5, 150, 105,0.45)]">-{discountPct(product)}% OFF</span></div>
                 <div className="p-5 sm:p-6">
                   <div className="flex items-start justify-between gap-2"><h3 className="text-xl font-black tracking-tight text-ink">{product.name}</h3><button onClick={onClose} className="text-2xl leading-none text-ink hover:text-ink">×</button></div>
                   <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-brand-700">{product.category}</p>
@@ -50,13 +50,13 @@ export default function QuickViewModal({ product, qty, onQtyChange, onClose, onA
                 </div>
               </div>
             </div>
-            <div className="sticky bottom-0 flex items-center gap-3 border-t border-[#ffedd5] bg-white p-3 sm:p-4">
-              <div className="flex shrink-0 items-center rounded-full border border-[#ffedd5] bg-white text-ink">
+            <div className="sticky bottom-0 flex items-center gap-3 border-t border-[#d1fae5] bg-white p-3 sm:p-4">
+              <div className="flex shrink-0 items-center rounded-full border border-[#d1fae5] bg-white text-ink">
                 <button onClick={() => onQtyChange(Math.max(1, qty - 1))} className="px-3 py-2 text-lg" aria-label="Decrease quantity">−</button>
                 <span className="w-8 text-center font-bold">{qty}</span>
                 <button onClick={() => onQtyChange(qty + 1)} className="px-3 py-2 text-lg" aria-label="Increase quantity">+</button>
               </div>
-              <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(product.id, qty)} className="flex-1 rounded-full bg-gradient-to-r from-brand-500 to-brand-700 py-3 font-bold text-white shadow-[0_8px_24px_-8px_rgba(234, 88, 12,0.4)] transition hover:brightness-110 active:scale-[0.99]">Add To Cart</motion.button>
+              <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(product.id, qty)} className="flex-1 rounded-full bg-gradient-to-r from-brand-500 to-brand-700 py-3 font-bold text-white shadow-[0_8px_24px_-8px_rgba(5, 150, 105,0.4)] transition hover:brightness-110 active:scale-[0.99]">Add To Cart</motion.button>
               <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(product.id, qty, true)} className="shrink-0 rounded-full bg-white px-4 py-3 text-sm font-bold text-ink shadow-sm ring-1 ring-brand-400/40 transition hover:bg-white active:scale-[0.98]">Buy Now</motion.button>
             </div>
           </motion.div>
