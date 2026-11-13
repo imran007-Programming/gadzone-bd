@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Lagoon Breeze glow: teal, coral and sunny yellow, over pale seafoam.
+// Citrus Grove glow: teal, coral and sunny yellow, over pale seafoam.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(13, 148, 136,0.30)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(224, 62, 43,0.30)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(202, 138, 4,0.28)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(13, 148, 136,0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(101, 163, 13,0.30)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(234, 88, 12,0.30)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(2, 132, 199,0.28)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(101, 163, 13,0.20)" },
 ];
 
-// teal, coral and yellow petals falling down through the lagoon glow.
+// lime, tangerine and sky leaves rising up through the grove glow.
 const FLAKES = [
-  { left: "8%", top: "4%", delay: "0s", dur: "11.2s", s: 12, c: "#0d9488" },
-  { left: "21%", top: "10%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#fef08a" },
-  { left: "36%", top: "2%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#0f766e" },
-  { left: "53%", top: "12%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#f4533f" },
-  { left: "68%", top: "6%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#134e4a" },
-  { left: "82%", top: "14%", delay: "-2s", dur: "12.2s", s: 14, c: "#e03e2b" },
-  { left: "93%", top: "8%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#eefaf6" },
+  { left: "8%", top: "4%", delay: "0s", dur: "11.2s", s: 12, c: "#65a30d" },
+  { left: "21%", top: "10%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#bae6fd" },
+  { left: "36%", top: "2%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#4d7c0f" },
+  { left: "53%", top: "12%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#f97316" },
+  { left: "68%", top: "6%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#365314" },
+  { left: "82%", top: "14%", delay: "-2s", dur: "12.2s", s: 14, c: "#ea580c" },
+  { left: "93%", top: "8%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#fffbeb" },
 ];
 
-// Lagoon Breeze glints scattered through the lagoon glow.
+// Citrus Grove glints scattered through the lagoon glow.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -75,19 +75,19 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* lagoon breeze wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#99f6e4] via-[#eefaf6] to-[#fef08a]">
+      {/* citrus grove wash over the stage */}
+      <div className="relative bg-gradient-to-b from-[#99f6e4] via-[#fffbeb] to-[#bae6fd]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
 
-        {/* lagoon breeze haze sweeping the sheet */}
+        {/* citrus grove haze sweeping the sheet */}
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-0 hidden h-[560px] opacity-90 sm:block">
           <div className="pop-drift absolute -left-24 top-6 h-72 w-[52rem] rotate-[-8deg] rounded-full bg-gradient-to-r from-brand-400/35 via-gold-300/25 to-transparent blur-3xl" />
           <div className="pop-drift absolute -right-24 top-40 h-64 w-[44rem] rotate-[10deg] rounded-full bg-gradient-to-r from-transparent via-brand-300/25 to-gold-400/30 blur-3xl" style={{ animationDelay: "-12s" }} />
         </div>
 
-        {/* lagoon breeze core: a coral orb ringed by a slow backward spin */}
+        {/* citrus grove core: a coral orb ringed by a slow backward spin */}
         <div aria-hidden className="pointer-events-none absolute -right-40 -top-32 z-0 hidden opacity-90 sm:block">
           <div className="relative h-[600px] w-[600px]">
             <div className="nebula-core absolute inset-8 rounded-full blur-xl" />
@@ -100,14 +100,14 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(13, 148, 136,0.45), inset 0 0 18px rgba(224, 62, 43,0.30)",
+                  boxShadow: "0 0 28px 2px rgba(13, 148, 136,0.45), inset 0 0 18px rgba(234, 88, 12,0.30)",
                   opacity: 1 - r * 0.22,
                 }}
               />
             ))}
-            {/* the lagoon breeze heart: a layered coral orb */}
+            {/* the citrus grove heart: a layered coral orb */}
             <div className="sun-disc pop-spin absolute inset-44 rounded-full" style={{ animationDuration: "24s" }} />
-            {/* lagoon breeze glints */}
+            {/* citrus grove glints */}
             <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
               {[{l:"30%",t:"34%",s:46},{l:"58%",t:"52%",s:34},{l:"44%",t:"66%",s:24},{l:"64%",t:"30%",s:20}].map((glint, i) => (
                 <span key={i} className="absolute rounded-full bg-white/80" style={{ left: glint.l, top: glint.t, width: glint.s, height: glint.s }} />
@@ -121,11 +121,11 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{ width: 26, height: 240, transform: `translate(-50%, -100%) rotate(${b * 120}deg)`, animationDuration: "36s" }}
               />
             ))}
-            {/* lagoon breeze petals dancing around the coral orb */}
+            {/* citrus grove petals dancing around the coral orb */}
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#0d9488", "#f4533f", "#e03e2b", "#ccfbf1"];
+              const colors = ["#65a30d", "#f97316", "#ea580c", "#ccfbf1"];
               return (
                 <span
                   key={i}
@@ -143,7 +143,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* drifting lagoon breeze glow */}
+        {/* drifting citrus grove glow */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {ORBS.map((g, i) => (
             <div
@@ -154,7 +154,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* lagoon breeze glints */}
+        {/* citrus grove glints */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {STARS.map((s, i) => (
             <span
@@ -165,14 +165,14 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* falling lagoon breeze petals */}
+        {/* falling citrus grove petals */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden overflow-hidden sm:block">
           {FLAKES.map((r, i) => (
             <Flake key={i} {...r} />
           ))}
         </div>
 
-        {/* 4-banner carousel in a lagoon breeze frame */}
+        {/* 4-banner carousel in a citrus grove frame */}
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
@@ -185,8 +185,8 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* lagoon breeze ticker: deep navy band with sunny type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-brand-950/80 bg-gradient-to-r from-brand-950/95 via-brand-800/95 to-brand-600/95 py-3 shadow-[0_10px_30px_-12px_rgba(185,47,30,0.4)] backdrop-blur">
+        {/* citrus grove ticker: deep navy band with sunny type */}
+        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-brand-950/80 bg-gradient-to-r from-brand-950/95 via-brand-800/95 to-brand-600/95 py-3 shadow-[0_10px_30px_-12px_rgba(154,52,18,0.4)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
@@ -198,11 +198,11 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* single lagoon breeze divider into the page */}
+        {/* single citrus grove divider into the page */}
         <div aria-hidden className="zigzag relative z-10 mx-auto mt-0 w-full max-w-7xl opacity-90" />
       </div>
 
-      {/* Stats + featured picks under the lagoon breeze sun */}
+      {/* Stats + featured picks under the citrus grove sun */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 pb-24 pt-10 md:pb-28">
         <motion.div variants={container} initial="hidden" animate="show" {...anim}>
           <motion.div variants={item} className="grid grid-cols-2 gap-6 sm:grid-cols-4">
@@ -234,7 +234,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 initial={reduce ? false : { opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45, delay: 0.2 + i * 0.08, ease: "easeOut" }}
-                whileHover={{ scale: 1.02, rotate: -1 }}
+                whileHover={{ scale: 1.02, rotate: 1 }}
                 className="pop-lift group cursor-pointer overflow-hidden pt-2"
                 onClick={() => onQuickView(p)}
               >
@@ -253,7 +253,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* single lagoon breeze divider into the page */}
+      {/* single citrus grove divider into the page */}
       <div aria-hidden className="zigzag absolute bottom-0 left-0 w-full opacity-90" />
     </section>
   );
