@@ -17,7 +17,7 @@ export default function SignInPrompt({ title, text, callbackUrl }: SignInPromptP
       <p className="mt-2 text-sm text-mute">{text}</p>
       <button
         onClick={() => signIn("google", { callbackUrl })}
-        className="mt-5 flex w-full items-center justify-center gap-3 rounded-full border border-slate-300 bg-white py-3 font-bold text-mute shadow-sm transition hover:bg-[#f7fee7]"
+        className="mt-5 flex w-full items-center justify-center gap-3 rounded-full border border-slate-300 bg-white py-3 font-bold text-mute shadow-sm transition hover:bg-[#f3efff]"
       >
         <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-base font-black shadow">G</span>
         Continue with Google
