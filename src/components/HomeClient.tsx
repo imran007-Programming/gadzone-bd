@@ -185,7 +185,7 @@ export default function HomeClient() {
         <>
           <Hero onQuickView={handleQuickView} />
           {/* Cobalt Current: post-hero sections ride on a cool mist stage over the cool mist page. */}
-          <main className="relative z-10 mx-2.5 mt-10 rounded-2xl bg-white shadow-[0_24px_48px_-20px_rgba(23, 37, 84,0.35),0_0_70px_-18px_rgba(5, 150, 105,0.45)] ring-2 ring-dashed ring-gold-500/40 sm:mx-5 lg:mx-auto lg:max-w-[86rem]">
+          <main className="relative z-10 mx-2.5 mt-10 rounded-2xl bg-white shadow-[0_24px_48px_-20px_rgba(23, 37, 84,0.35),0_0_70px_-18px_rgba(217, 119, 6,0.45)] ring-2 ring-dashed ring-gold-500/40 sm:mx-5 lg:mx-auto lg:max-w-[86rem]">
           <CategoryGrid category={category} onCategoryChange={setCategory} />
           <FlashDeals products={flash} countdown={countdown} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
           <ProductSection accent="Trending" rest="Audio Products" subtitle="Explore earbuds, headphones & speakers picked for better sound." products={audioProducts} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
