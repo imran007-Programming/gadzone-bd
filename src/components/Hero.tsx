@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Glacier glow: deep navy, bright teal and soft violet, over pale ice paper.
+// Ember glow: deep ember-charcoal, bright orange and soft plum, over warm cream paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(13, 181, 167,0.30)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(13, 181, 167,0.30)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(139, 92, 246,0.28)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(11, 30, 51,0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(249, 115, 22,0.30)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245, 158, 11,0.30)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(162, 28, 175,0.28)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(42, 18, 16,0.20)" },
 ];
 
-// indigo, coral and mint [Gg]laciers falling top to bottom through the [Gg]lacier glow.
+// orange, amber and coral [Ee]mbers rising bottom to top through the [Ee]mber glow.
 const FLAKES = [
-  { left: "8%", top: "4%", delay: "0s", dur: "11.2s", s: 12, c: "#0a746b" },
-  { left: "21%", top: "10%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#0db5a7" },
-  { left: "36%", top: "2%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#0db5a7" },
-  { left: "53%", top: "12%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#8b5cf6" },
-  { left: "68%", top: "6%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#0b1e33" },
-  { left: "82%", top: "14%", delay: "-2s", dur: "12.2s", s: 14, c: "#38bdf8" },
-  { left: "93%", top: "8%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#f2f7fb" },
+  { left: "8%", top: "4%", delay: "0s", dur: "11.2s", s: 12, c: "#c2410c" },
+  { left: "21%", top: "10%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#f97316" },
+  { left: "36%", top: "2%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#ea580c" },
+  { left: "53%", top: "12%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#f59e0b" },
+  { left: "68%", top: "6%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#a21caf" },
+  { left: "82%", top: "14%", delay: "-2s", dur: "12.2s", s: 14, c: "#e11d48" },
+  { left: "93%", top: "8%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#fff7ed" },
 ];
 
-// Violet [Gg]lacier glints scattered through the [Gg]lacier glow.
+// Plum [Ee]mber glints scattered through the [Ee]mber glow.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -75,19 +75,19 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* [Gg]lacier wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#c9fbf5] via-[#f2f7fb] to-[#ddd6fe]">
+      {/* [Ee]mber wash over the stage */}
+      <div className="relative bg-gradient-to-b from-[#fed7aa] via-[#fff7ed] to-[#f5d0fe]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
 
-        {/* [Gg]lacier haze sweeping the sheet */}
+        {/* [Ee]mber haze sweeping the sheet */}
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-0 hidden h-[560px] opacity-90 sm:block">
           <div className="pop-drift absolute -left-24 top-6 h-72 w-[52rem] rotate-[-8deg] rounded-full bg-gradient-to-r from-brand-400/35 via-gold-300/25 to-transparent blur-3xl" />
           <div className="pop-drift absolute -right-24 top-40 h-64 w-[44rem] rotate-[10deg] rounded-full bg-gradient-to-r from-transparent via-brand-300/25 to-gold-400/30 blur-3xl" style={{ animationDelay: "-12s" }} />
         </div>
 
-        {/* [Gg]lacier core: an [Gg]lacier orb ringed by a slow reverse spin */}
+        {/* [Ee]mber core: an [Ee]mber orb ringed by a slow reverse spin */}
         <div aria-hidden className="pointer-events-none absolute -right-40 -top-32 z-0 hidden opacity-90 sm:block">
           <div className="relative h-[600px] w-[600px]">
             <div className="nebula-core absolute inset-8 rounded-full blur-xl" />
@@ -100,20 +100,20 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(2, 6, 23,0.45), inset 0 0 18px rgba(56, 189, 248,0.30)",
+                  boxShadow: "0 0 28px 2px rgba(2, 6, 23,0.45), inset 0 0 18px rgba(245, 158, 11,0.30)",
                   opacity: 1 - r * 0.22,
                 }}
               />
             ))}
-            {/* the [Gg]lacier heart: a layered [Gg]lacier orb */}
+            {/* the [Ee]mber heart: a layered [Ee]mber orb */}
             <div className="sun-disc pop-spin absolute inset-44 rounded-full" style={{ animationDuration: "24s" }} />
-            {/* [Gg]lacier glints */}
+            {/* [Ee]mber glints */}
             <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
               {[{l:"30%",t:"34%",s:46},{l:"58%",t:"52%",s:34},{l:"44%",t:"66%",s:24},{l:"64%",t:"30%",s:20}].map((glint, i) => (
                 <span key={i} className="absolute rounded-full bg-white/80" style={{ left: glint.l, top: glint.t, width: glint.s, height: glint.s }} />
               ))}
             </div>
-            {/* sweeping [Gg]lacier beams */}
+            {/* sweeping [Ee]mber beams */}
             {[0, 1, 2].map((b) => (
               <span
                 key={b}
@@ -121,11 +121,11 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{ width: 26, height: 240, transform: `translate(-50%, -100%) rotate(${b * 120}deg)`, animationDuration: "36s" }}
               />
             ))}
-            {/* bubbles dancing around the [Gg]lacier orb */}
+            {/* bubbles dancing around the [Ee]mber orb */}
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#0db5a7", "#0a746b", "#8b5cf6", "#38bdf8"];
+              const colors = ["#f97316", "#c2410c", "#a21caf", "#f59e0b"];
               return (
                 <span
                   key={i}
@@ -143,7 +143,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* drifting [Gg]lacier glow */}
+        {/* drifting [Ee]mber glow */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {ORBS.map((g, i) => (
             <div
@@ -154,7 +154,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* [Gg]lacier glints */}
+        {/* [Ee]mber glints */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {STARS.map((s, i) => (
             <span
@@ -172,7 +172,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* 4-banner carousel in an [Gg]lacier frame */}
+        {/* 4-banner carousel in an [Ee]mber frame */}
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
@@ -185,7 +185,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* [Gg]lacier ticker: deep charcoal band with amber type */}
+        {/* [Ee]mber ticker: deep charcoal band with amber type */}
         <div aria-hidden className="relative z-10 mt-8 border-y-2 border-brand-950/80 bg-gradient-to-r from-brand-950/95 via-brand-800/95 to-brand-600/95 py-3 shadow-[0_10px_30px_-12px_rgba(2, 6, 23,0.4)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
@@ -198,11 +198,11 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* single [Gg]lacier divider into the page */}
+        {/* single [Ee]mber divider into the page */}
         <div aria-hidden className="zigzag relative z-10 mx-auto mt-0 w-full max-w-7xl opacity-90" />
       </div>
 
-      {/* Stats + featured picks under the [Gg]lacier glow */}
+      {/* Stats + featured picks under the [Ee]mber glow */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 pb-24 pt-10 md:pb-28">
         <motion.div variants={container} initial="hidden" animate="show" {...anim}>
           <motion.div variants={item} className="grid grid-cols-2 gap-6 sm:grid-cols-4">
@@ -253,7 +253,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* single [Gg]lacier divider into the page */}
+      {/* single [Ee]mber divider into the page */}
       <div aria-hidden className="zigzag absolute bottom-0 left-0 w-full opacity-90" />
     </section>
   );
