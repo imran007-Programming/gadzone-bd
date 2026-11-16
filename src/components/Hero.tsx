@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Ember glow: deep ember-charcoal, bright orange and soft plum, over warm cream paper.
+// Lagoon glow: deep lagoon ink, bright teal and soft navy, over cool mint paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(249, 115, 22,0.30)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245, 158, 11,0.30)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(162, 28, 175,0.28)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(42, 18, 16,0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(20, 184, 166,0.30)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(163, 230, 53,0.30)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(29, 78, 216,0.28)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(11, 37, 48,0.20)" },
 ];
 
-// orange, amber and coral [Ee]mbers rising bottom to top through the [Ee]mber glow.
+// teal, lime and cyan bubbles falling top to bottom through the lagoon glow.
 const FLAKES = [
-  { left: "8%", top: "4%", delay: "0s", dur: "11.2s", s: 12, c: "#c2410c" },
-  { left: "21%", top: "10%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#f97316" },
-  { left: "36%", top: "2%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#ea580c" },
-  { left: "53%", top: "12%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#f59e0b" },
-  { left: "68%", top: "6%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#a21caf" },
-  { left: "82%", top: "14%", delay: "-2s", dur: "12.2s", s: 14, c: "#e11d48" },
-  { left: "93%", top: "8%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#fff7ed" },
+  { left: "8%", top: "4%", delay: "0s", dur: "11.2s", s: 12, c: "#0f766e" },
+  { left: "21%", top: "10%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#14b8a6" },
+  { left: "36%", top: "2%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#0d9488" },
+  { left: "53%", top: "12%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#a3e635" },
+  { left: "68%", top: "6%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#1d4ed8" },
+  { left: "82%", top: "14%", delay: "-2s", dur: "12.2s", s: 14, c: "#0891b2" },
+  { left: "93%", top: "8%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#f0fdfa" },
 ];
 
-// Plum [Ee]mber glints scattered through the [Ee]mber glow.
+// Navy lagoon glints scattered through the lagoon glow.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -75,8 +75,8 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* [Ee]mber wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#fed7aa] via-[#fff7ed] to-[#f5d0fe]">
+      {/* [Ll]agoon wash over the stage */}
+      <div className="relative bg-gradient-to-b from-[#99f6e4] via-[#f0fdfa] to-[#bfdbfe]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -100,14 +100,14 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(2, 6, 23,0.45), inset 0 0 18px rgba(245, 158, 11,0.30)",
+                  boxShadow: "0 0 28px 2px rgba(2, 6, 23,0.45), inset 0 0 18px rgba(163, 230, 53,0.30)",
                   opacity: 1 - r * 0.22,
                 }}
               />
             ))}
             {/* the [Ee]mber heart: a layered [Ee]mber orb */}
             <div className="sun-disc pop-spin absolute inset-44 rounded-full" style={{ animationDuration: "24s" }} />
-            {/* [Ee]mber glints */}
+            {/* [Ll]agoon glints */}
             <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
               {[{l:"30%",t:"34%",s:46},{l:"58%",t:"52%",s:34},{l:"44%",t:"66%",s:24},{l:"64%",t:"30%",s:20}].map((glint, i) => (
                 <span key={i} className="absolute rounded-full bg-white/80" style={{ left: glint.l, top: glint.t, width: glint.s, height: glint.s }} />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#f97316", "#c2410c", "#a21caf", "#f59e0b"];
+              const colors = ["#14b8a6", "#0f766e", "#1d4ed8", "#a3e635"];
               return (
                 <span
                   key={i}
@@ -143,7 +143,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* drifting [Ee]mber glow */}
+        {/* drifting [Ll]agoon glow */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {ORBS.map((g, i) => (
             <div
@@ -154,7 +154,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* [Ee]mber glints */}
+        {/* [Ll]agoon glints */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {STARS.map((s, i) => (
             <span
@@ -202,7 +202,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div aria-hidden className="zigzag relative z-10 mx-auto mt-0 w-full max-w-7xl opacity-90" />
       </div>
 
-      {/* Stats + featured picks under the [Ee]mber glow */}
+      {/* Stats + featured picks under the [Ll]agoon glow */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 pb-24 pt-10 md:pb-28">
         <motion.div variants={container} initial="hidden" animate="show" {...anim}>
           <motion.div variants={item} className="grid grid-cols-2 gap-6 sm:grid-cols-4">
