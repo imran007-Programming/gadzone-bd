@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Geist_Mono, Bricolage_Grotesque } from "next/font/google";
+import { Space_Grotesk, Geist_Mono, Fraunces } from "next/font/google";
 import "./globals.css";
 import SessionProviderLazy from "@/components/SessionProviderLazy";
 
@@ -8,8 +8,8 @@ const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
 });
 
-const bricolage = Bricolage_Grotesque({
-  variable: "--font-bricolage",
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
   weight: ["600", "700", "800"],
 });
@@ -28,7 +28,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${spaceGrotesk.variable} ${bricolage.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${spaceGrotesk.variable} ${fraunces.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
         <SessionProviderLazy>{children}</SessionProviderLazy>
