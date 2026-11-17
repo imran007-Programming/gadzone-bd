@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Lagoon glow: deep forest ink, bright amber and teal, over warm mint.
+// Ember glow: deep plum ink, bright terracotta and rose, over warm cream.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(5, 150, 105,0.30)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(194, 65, 12,0.30)" },
   { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245, 158, 11,0.30)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(20, 184, 166,0.28)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(225, 29, 72,0.28)" },
   { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(217, 119, 6,0.20)" },
 ];
 
-// emerald, amber and teal bubbles rising upward through the lagoon glow.
+// terracotta, rose and honey embers falling downward through the ember glow.
 const FLAKES = [
-  { left: "8%", top: "4%", delay: "0s", dur: "11.2s", s: 12, c: "#059669" },
+  { left: "8%", top: "4%", delay: "0s", dur: "11.2s", s: 12, c: "#c2410c" },
   { left: "21%", top: "10%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#f59e0b" },
-  { left: "36%", top: "2%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#14b8a6" },
+  { left: "36%", top: "2%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#e11d48" },
   { left: "53%", top: "12%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#f59e0b" },
   { left: "68%", top: "6%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#d97706" },
-  { left: "82%", top: "14%", delay: "-2s", dur: "12.2s", s: 14, c: "#064e3b" },
-  { left: "93%", top: "8%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#f2fbf6" },
+  { left: "82%", top: "14%", delay: "-2s", dur: "12.2s", s: 14, c: "#7c2d12" },
+  { left: "93%", top: "8%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#fdf6ec" },
 ];
 
 // Circuit glints scattered through the circuit glow.
