@@ -20,23 +20,23 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Circuit glow: deep indigo ink, bright rose and sky, over warm cream.
+// Lagoon glow: deep forest ink, bright amber and teal, over warm mint.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(79, 70, 229,0.30)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(244, 63, 94,0.30)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(14, 165, 233,0.28)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(225, 29, 72,0.20)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(5, 150, 105,0.30)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245, 158, 11,0.30)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(20, 184, 166,0.28)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(217, 119, 6,0.20)" },
 ];
 
-// indigo, rose and sky confetti rising upward through the circuit glow.
+// emerald, amber and teal bubbles rising upward through the lagoon glow.
 const FLAKES = [
-  { left: "8%", top: "4%", delay: "0s", dur: "11.2s", s: 12, c: "#4f46e5" },
-  { left: "21%", top: "10%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#f43f5e" },
-  { left: "36%", top: "2%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#0ea5e9" },
-  { left: "53%", top: "12%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#f43f5e" },
-  { left: "68%", top: "6%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#e11d48" },
-  { left: "82%", top: "14%", delay: "-2s", dur: "12.2s", s: 14, c: "#312e81" },
-  { left: "93%", top: "8%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#f4f6ff" },
+  { left: "8%", top: "4%", delay: "0s", dur: "11.2s", s: 12, c: "#059669" },
+  { left: "21%", top: "10%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#f59e0b" },
+  { left: "36%", top: "2%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#14b8a6" },
+  { left: "53%", top: "12%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#f59e0b" },
+  { left: "68%", top: "6%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#d97706" },
+  { left: "82%", top: "14%", delay: "-2s", dur: "12.2s", s: 14, c: "#064e3b" },
+  { left: "93%", top: "8%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#f2fbf6" },
 ];
 
 // Circuit glints scattered through the circuit glow.
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* Circuit wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#c7d2fe] via-[#f4f6ff] to-[#fecdd3]">
+      <div className="relative bg-gradient-to-b from-[#a7f3d0] via-[#f2fbf6] to-[#fde68a]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -100,7 +100,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(67, 56, 202,0.45), inset 0 0 18px rgba(14, 165, 233,0.35)",
+                  boxShadow: "0 0 28px 2px rgba(4, 120, 87,0.45), inset 0 0 18px rgba(20, 184, 166,0.35)",
                   opacity: 1 - r * 0.22,
                 }}
               />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#0ea5e9", "#4f46e5", "#f43f5e", "#e11d48"];
+              const colors = ["#14b8a6", "#059669", "#f59e0b", "#d97706"];
               return (
                 <span
                   key={i}
@@ -176,7 +176,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
-              <div className="bg-gradient-to-r from-brand-600 via-gold-500 to-poprose-700 p-1.5 shadow-[0_20px_40px_-18px_rgba(15, 23, 42,0.35)]">
+              <div className="bg-gradient-to-r from-brand-600 via-gold-500 to-poprose-700 p-1.5 shadow-[0_20px_40px_-18px_rgba(5, 46, 34,0.35)]">
                 <div className="overflow-hidden bg-paper ring-1 ring-brand-950/10">
                   <BannerCarousel />
                 </div>
@@ -186,11 +186,11 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
 
         {/* Circuit ticker: deep indigo band with cream type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#0f172a]/80 bg-gradient-to-r from-[#0f172a] via-[#4338ca] to-[#be123c] py-3 shadow-[0_10px_30px_-12px_rgba(15, 23, 42,0.4)] backdrop-blur">
+        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#052e22]/80 bg-gradient-to-r from-[#052e22] via-[#047857] to-[#b45309] py-3 shadow-[0_10px_30px_-12px_rgba(5, 46, 34,0.4)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
-                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#ffe4e6] drop-shadow-[0_1px_0_rgba(15, 23, 42,0.6)]">
+                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#fef3c7] drop-shadow-[0_1px_0_rgba(5, 46, 34,0.6)]">
                   {t} <span className="text-poprose-300">✦</span>
                 </span>
               ))}
@@ -215,7 +215,7 @@ export default function Hero({ onQuickView }: HeroProps) {
               <div key={s.l} className="pop-lift relative overflow-hidden p-4 pb-3 pt-5 text-center">
                 <span className="relative block bg-gradient-to-br from-brand-600 via-gold-500 to-poprose-700 bg-clip-text text-2xl font-black tracking-wide text-transparent">{s.v}</span>
                 <span className="relative mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-mute">{s.l}</span>
-                <span aria-hidden className="relative mx-auto mt-3 block h-1 w-16 rounded-sm bg-gradient-to-r from-brand-500 via-gold-400 to-poprose-600 shadow-[0_6px_16px_-6px_rgba(15, 23, 42,0.35)]" />
+                <span aria-hidden className="relative mx-auto mt-3 block h-1 w-16 rounded-sm bg-gradient-to-r from-brand-500 via-gold-400 to-poprose-600 shadow-[0_6px_16px_-6px_rgba(5, 46, 34,0.35)]" />
               </div>
             ))}
           </motion.div>
@@ -223,7 +223,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full border border-brand-200 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_6px_16px_-6px_rgba(15, 23, 42,0.35)] backdrop-blur">Handpicked for you</p>
+            <p className="inline-block rounded-full border border-brand-200 bg-white/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_6px_16px_-6px_rgba(5, 46, 34,0.35)] backdrop-blur">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="relative bg-gradient-to-r from-brand-500 via-gold-500 to-poprose-800 bg-clip-text text-transparent">Picks<span aria-hidden className="absolute inset-x-0 -bottom-1 h-1 bg-gradient-to-r from-brand-500 to-gold-500 opacity-70" /></span></h2>
             <span className="zigzag mt-4 block w-44" aria-hidden />
           </div>
