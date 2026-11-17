@@ -155,10 +155,10 @@ export default function BannerCarousel() {
             {/* Midnight overlay so the light copy reads over any banner art */}
             <div
               aria-hidden
-              className="absolute inset-0 bg-gradient-to-br from-[#292524]/92 via-[#292524]/55 to-[#292524]/20"
+              className="absolute inset-0 bg-gradient-to-br from-[#0f172a]/92 via-[#0f172a]/55 to-[#0f172a]/20"
             />
             <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_82%_18%,rgba(41, 37, 36,0.30),transparent)]" />
-            <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#292524]/80 via-transparent to-transparent" />
+            <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/80 via-transparent to-transparent" />
             {/* Slide copy */}
             <div className="absolute inset-0 flex flex-col justify-center px-6 text-white sm:px-10 lg:px-14">
               <span className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-gold-700 to-gold-600 px-5 py-1.5 text-xs font-black uppercase tracking-[0.18em] text-white shadow-[0_0_22px_rgba(41, 37, 36,0.55)] ring-2 ring-white/30">
@@ -178,7 +178,7 @@ export default function BannerCarousel() {
                 </a>
                 <a
                   href="#flash"
-                  className="rounded-full border-2 border-white/40 bg-[#292524]/70 px-7 py-3.5 font-bold text-white backdrop-blur-sm transition hover:bg-[#292524] active:scale-[0.98]"
+                  className="rounded-full border-2 border-white/40 bg-[#0f172a]/70 px-7 py-3.5 font-bold text-white backdrop-blur-sm transition hover:bg-[#0f172a] active:scale-[0.98]"
                 >
                   ⚡ Flash Deals
                 </a>
