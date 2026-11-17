@@ -1,88 +1,89 @@
 @import "tailwindcss";
 
 @theme {
-  /* Ember Bazaar: an original direction —
-     warm cream paper, deep espresso ink,
-     burnt terracotta as the heart of the brand,
-     golden amber as the second tone, deep teal
-     as the third, hot pink
+  /* Lagoon Fresh: an original direction —
+     pale mint paper, deep pine ink,
+     vivid emerald as the heart of the brand,
+     sunny lime as the second tone, clear sky
+     as the third, coral
      as the spark. Cards are
-     EMBER CARDS: crisp 14px corners, a warm
-     terracotta edge, a HARD offset shadow — on hover
-     the card LIFTS straight up while its shadow
-     blooms into an EMBER GLOW,
-     embers RISING UPWARD with a twinkle,
-     swaying gently as they rise,
-     a CLOCKWISE spin, a warm pulsing
-     glow, a LEFTWARD ticker, terracotta / teal /
-     amber VERTICAL bars, a fine CROSSHATCH
-     and a warm gradient band
-     with a TEAL bottom edge. */
+     LAGOON CARDS: soft 26px corners, a cool
+     mint edge, a SOFT diffused shadow — on hover
+     the card LIFTS straight up with a slight
+     tilt while its shadow
+     blooms into a LAGOON GLOW,
+     droplets FALLING DOWNWARD with a twinkle,
+     swaying gently as they fall,
+     a COUNTER-CLOCKWISE spin, a cool pulsing
+     glow, a RIGHTWARD ticker, emerald / sky /
+     lime HORIZONTAL bars, fine DOTS
+     and a cool gradient band
+     with a LIME bottom edge. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = burnt terracotta scale */
-  --color-brand-50: #fff7ed;
-  --color-brand-100: #ffedd5;
-  --color-brand-200: #fed7aa;
-  --color-brand-300: #fdba74;
-  --color-brand-400: #fb923c;
-  --color-brand-500: #f97316;
-  --color-brand-600: #ea580c;
-  --color-brand-700: #c2410c;
-  --color-brand-800: #9a3412;
-  --color-brand-900: #7c2d12;
-  --color-brand-950: #431407;
-  --color-brand: #c2410c;
-  --color-brand-dark: #9a3412;
-  --color-brand-deep: #431407;
+  /* brand = vivid emerald scale */
+  --color-brand-50: #ecfdf5;
+  --color-brand-100: #d1fae5;
+  --color-brand-200: #a7f3d0;
+  --color-brand-300: #6ee7b7;
+  --color-brand-400: #34d399;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-brand-900: #064e3b;
+  --color-brand-950: #022c22;
+  --color-brand: #047857;
+  --color-brand-dark: #065f46;
+  --color-brand-deep: #022c22;
 
-  /* gold = golden amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #d97706;
-  --color-gold-deep: #92400e;
-  --color-gold-soft: #fde68a;
+  /* gold = sunny lime scale (name kept for legacy class refs) */
+  --color-gold-50: #f7fee7;
+  --color-gold-100: #ecfccb;
+  --color-gold-200: #d9f99d;
+  --color-gold-300: #bef264;
+  --color-gold-400: #a3e635;
+  --color-gold-500: #84cc16;
+  --color-gold-600: #65a30d;
+  --color-gold-700: #4d7c0f;
+  --color-gold-800: #3f6212;
+  --color-gold-900: #365314;
+  --color-gold-950: #1a2e05;
+  --color-gold: #65a30d;
+  --color-gold-deep: #3f6212;
+  --color-gold-soft: #d9f99d;
 
-  /* popblue = deep teal scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0fdfa;
-  --color-popblue-100: #ccfbf1;
-  --color-popblue-200: #99f6e4;
-  --color-popblue-300: #5eead4;
-  --color-popblue-400: #2dd4bf;
-  --color-popblue-500: #14b8a6;
-  --color-popblue-600: #0d9488;
-  --color-popblue-700: #0f766e;
-  --color-popblue-800: #115e59;
-  --color-popblue-900: #134e4a;
-  --color-popblue-950: #042f2e;
-  --color-popblue: #0f766e;
-  --color-popblue-deep: #115e59;
-  --color-popblue-soft: #99f6e4;
+  /* popblue = clear sky scale (name kept for legacy class refs) */
+  --color-popblue-50: #f0f9ff;
+  --color-popblue-100: #e0f2fe;
+  --color-popblue-200: #bae6fd;
+  --color-popblue-300: #7dd3fc;
+  --color-popblue-400: #38bdf8;
+  --color-popblue-500: #0ea5e9;
+  --color-popblue-600: #0284c7;
+  --color-popblue-700: #0369a1;
+  --color-popblue-800: #075985;
+  --color-popblue-900: #0c4a6e;
+  --color-popblue-950: #082f49;
+  --color-popblue: #0369a1;
+  --color-popblue-deep: #075985;
+  --color-popblue-soft: #bae6fd;
 
-  /* poprose = hot pink scale (used by hero + header accents) */
-  --color-poprose-200: #fbcfe8;
-  --color-poprose-300: #f9a8d4;
-  --color-poprose-400: #f472b6;
-  --color-poprose-500: #ec4899;
-  --color-poprose-600: #db2777;
-  --color-poprose-700: #be185d;
-  --color-poprose-800: #9d174d;
+  /* poprose = coral scale (used by hero + header accents) */
+  --color-poprose-200: #fecdd3;
+  --color-poprose-300: #fda4af;
+  --color-poprose-400: #fb7185;
+  --color-poprose-500: #f43f5e;
+  --color-poprose-600: #e11d48;
+  --color-poprose-700: #be123c;
+  --color-poprose-800: #9f1239;
 
-  --color-ink: #292524;
-  --color-paper: #fff7ed;
-  --color-mute: #78716c;
+  --color-ink: #052e16;
+  --color-paper: #f0fdf4;
+  --color-mute: #5b7566;
   --color-card: #ffffff;
-  --color-deep: #ffedd5;
+  --color-deep: #d1fae5;
 }
 
 html { scroll-behavior: smooth; }
@@ -96,180 +97,181 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fff7ed;
+  background-color: #f0fdf4;
   background-image:
-    radial-gradient(ellipse 44% 24% at 92% 4%, rgba(234, 88, 12, 0.14) 0%, rgba(234, 88, 12, 0) 70%),
-    radial-gradient(ellipse 40% 26% at 6% 96%, rgba(20, 184, 166, 0.12) 0%, rgba(20, 184, 166, 0) 70%),
-    linear-gradient(200deg, rgba(254, 215, 170, 0.55) 0%, rgba(255, 247, 237, 0.65) 45%, rgba(153, 246, 228, 0.35) 80%);
-  color: #292524;
+    radial-gradient(ellipse 44% 24% at 92% 4%, rgba(16, 185, 129, 0.16) 0%, rgba(16, 185, 129, 0) 70%),
+    radial-gradient(ellipse 40% 26% at 6% 96%, rgba(2, 132, 199, 0.14) 0%, rgba(2, 132, 199, 0) 70%),
+    linear-gradient(200deg, rgba(167, 243, 208, 0.55) 0%, rgba(240, 253, 244, 0.65) 45%, rgba(186, 230, 253, 0.40) 80%);
+  color: #052e16;
 }
-::selection { background: #fde68a; color: #292524; }
+::selection { background: #d9f99d; color: #052e16; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ea580c, #f59e0b); border-radius: 8px; border: 2px solid #fff7ed; }
-::-webkit-scrollbar-track { background: #fff7ed; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #059669, #0284c7); border-radius: 8px; border: 2px solid #f0fdf4; }
+::-webkit-scrollbar-track { background: #f0fdf4; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
 /* Current type: headlines in a
-   clean geometric sans with a warm ember feel — tight
-   tracking, burnt-terracotta accent. */
-h1, h2, h3 { font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: -0.03em; line-height: 1.12; text-wrap: balance; }
+   clean geometric sans with a fresh lagoon feel — relaxed
+   tracking, vivid-emerald accent. */
+h1, h2, h3 { font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: -0.02em; line-height: 1.15; text-wrap: balance; }
 
-/* Current drift: embers RISING
-   UPWARD with a twinkle,
-   swaying gently as they rise. */
+/* Current drift: droplets FALLING
+   DOWNWARD with a twinkle,
+   swaying gently as they fall. */
 @keyframes drift-fall {
-  0% { transform: translate3d(0, 105vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(0, -105vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
   15% { opacity: 0.95; }
-  50% { transform: translate3d(-2vw, 0, 0) scale(1.1) rotate(180deg); }
-  100% { transform: translate3d(2vw, -105vh, 0) scale(0.7) rotate(360deg); opacity: 0; }
+  50% { transform: translate3d(2vw, 0, 0) scale(1.1) rotate(180deg); }
+  100% { transform: translate3d(-2vw, 105vh, 0) scale(0.7) rotate(360deg); opacity: 0; }
 }
 .pop-fall { animation: drift-fall 12s linear infinite; }
 
 /* Current sway: a sideways sway with a slight tilt. */
 @keyframes drift-sway {
-  0%, 100% { transform: translate(26px, 0) rotate(2deg); opacity: 0.7; }
-  50% { transform: translate(-26px, 0) rotate(-2deg); opacity: 1; }
+  0%, 100% { transform: translate(18px, 0) rotate(-2deg); opacity: 0.7; }
+  50% { transform: translate(-18px, 0) rotate(2deg); opacity: 1; }
 }
-.pop-drift { animation: drift-sway 6s ease-in-out infinite; }
+.pop-drift { animation: drift-sway 8s ease-in-out infinite; }
 
-/* Current bob: a gentle bob with a soft pulse. */
+/* Current bob: a gentle bob with a soft pulse and a slight tilt. */
 @keyframes drift-float {
-  0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-14px) scale(1.05); }
+  0%, 100% { transform: translateY(0) scale(1) rotate(0deg); }
+  50% { transform: translateY(-14px) scale(1.05) rotate(-1.5deg); }
 }
 .pop-bob { animation: drift-float 7s ease-in-out infinite; }
 
-/* Current spin: a CLOCKWISE spin. */
+/* Current spin: a COUNTER-CLOCKWISE spin. */
 @keyframes drift-turn {
   from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  to { transform: rotate(-360deg); }
 }
 .pop-spin { animation: drift-turn 14s linear infinite; }
 
-/* Current glint: a warm pulsing glow —
+/* Current glint: a cool pulsing glow —
    dim, then flaring back. */
 @keyframes drift-blink {
   0%, 100% { opacity: 0.45; transform: scale(0.85); }
   50% { opacity: 1; transform: scale(1.15); }
 }
-.pop-twinkle { animation: drift-blink 3s ease-in-out infinite; }
+.pop-twinkle { animation: drift-blink 2.6s ease-in-out infinite; }
 
-/* Current ticker: a LEFTWARD marquee. */
+/* Current ticker: a RIGHTWARD marquee. */
 @keyframes drift-ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
 }
 .pop-ticker { animation: drift-ticker 30s linear infinite; }
 
-/* Current bands: terracotta / teal /
-   amber VERTICAL bars. */
+/* Current bands: emerald / sky /
+   lime HORIZONTAL bars. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(90deg, #431407 0px, #431407 10px, #0f766e 10px, #0f766e 20px, #ea580c 20px, #ea580c 25px);
+    repeating-linear-gradient(0deg, #022c22 0px, #022c22 10px, #0369a1 10px, #0369a1 20px, #059669 20px, #059669 25px);
   background-size: 36px 36px;
   background-repeat: repeat;
   border-radius: 4px;
 }
 
-/* Current card: an EMBER CARD
-   (crisp 14px corners) with a warm
-   terracotta edge and a HARD offset
-   shadow over warm cream paper — on hover the card
-   LIFTS straight up
-   while its shadow
-   blooms into an EMBER GLOW
-   in a warm ember glow. */
+/* Current card: a LAGOON CARD
+   (soft 26px corners) with a cool
+   mint edge and a SOFT diffused
+   shadow over pale mint paper — on hover the card
+   LIFTS straight up with a slight
+   tilt while its shadow
+   blooms into a LAGOON GLOW
+   in a cool lagoon glow. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(41, 37, 36, 0.12);
-  box-shadow: 5px 5px 0 rgba(67, 20, 7, 0.9), 0 18px 40px -18px rgba(41, 37, 36, 0.18);
+  border: 1px solid rgba(5, 46, 22, 0.10);
+  box-shadow: 0 10px 30px -12px rgba(5, 46, 22, 0.25), 0 2px 8px -2px rgba(5, 46, 22, 0.08);
   background: #ffffff;
-  border-radius: 14px;
+  border-radius: 26px;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-6px);
-  border-color: rgba(249, 115, 22, 0.55);
-  box-shadow: 8px 8px 0 rgba(234, 88, 12, 0.85), 0 28px 56px -20px rgba(234, 88, 12, 0.35), 0 8px 24px -8px rgba(20, 184, 166, 0.30);
+  transform: translateY(-6px) rotate(-0.4deg);
+  border-color: rgba(16, 185, 129, 0.55);
+  box-shadow: 0 24px 48px -16px rgba(5, 150, 105, 0.40), 0 8px 24px -8px rgba(2, 132, 199, 0.30);
 }
 
 /* Current glass: shared by modals and drawers — a
-   warm cream pane with crisp
-   corners, a terracotta border
-   and a warm ember glow. */
+   cool mint pane with soft
+   corners, an emerald border
+   and a cool lagoon glow. */
 .pop-glass {
-  background: rgba(255, 247, 237, 0.92);
+  background: rgba(240, 253, 244, 0.92);
   backdrop-filter: blur(20px) saturate(1.1);
   -webkit-backdrop-filter: blur(20px) saturate(1.1);
-  border: 1px solid rgba(249, 115, 22, 0.30);
-  border-radius: 14px;
-  box-shadow: 0 24px 48px -20px rgba(41, 37, 36, 0.35);
+  border: 1px solid rgba(16, 185, 129, 0.30);
+  border-radius: 26px;
+  box-shadow: 0 24px 48px -20px rgba(5, 46, 22, 0.35);
 }
 
-/* Current tag: a terracotta-to-amber
-   ember badge — white type, warm
+/* Current tag: an emerald-to-sky
+   lagoon badge — white type, cool
    glow, pill shape,
-   tilted -4deg. */
+   tilted +3deg. */
 .starburst {
-  background: linear-gradient(135deg, #0f766e 0%, #ea580c 45%, #f59e0b 100%);
+  background: linear-gradient(135deg, #059669 0%, #0284c7 45%, #84cc16 100%);
   color: #ffffff;
-  text-shadow: 0 1px 0 rgba(41, 37, 36, 0.3);
+  text-shadow: 0 1px 0 rgba(5, 46, 22, 0.3);
   border-radius: 999px;
-  box-shadow: 0 12px 24px -10px rgba(194, 65, 12, 0.55);
+  box-shadow: 0 12px 24px -10px rgba(4, 120, 87, 0.55);
   border: 2px solid rgba(255, 255, 255, 0.8);
-  transform: rotate(-4deg);
+  transform: rotate(3deg);
 }
 
-/* Current texture: CROSSHATCH
-   — fine terracotta diagonal lines over warm cream paper. */
+/* Current texture: DOTS
+   — fine emerald dots over pale mint paper. */
 .halftone {
   background-image:
-    repeating-linear-gradient(45deg, rgba(234, 88, 12, 0.10) 0px, rgba(234, 88, 12, 0.10) 1px, transparent 1px, transparent 12px),
-    repeating-linear-gradient(-45deg, rgba(20, 184, 166, 0.08) 0px, rgba(20, 184, 166, 0.08) 1px, transparent 1px, transparent 12px);
+    radial-gradient(circle, rgba(5, 150, 105, 0.14) 1.5px, transparent 2px),
+    radial-gradient(circle, rgba(2, 132, 199, 0.10) 1.5px, transparent 2px);
   background-size: 18px 18px;
   background-position: 0 0, 9px 9px;
 }
 
-/* Current rule: a DIAGONAL DASH —
-   alternating terracotta and teal bars. */
+/* Current rule: a DOTTED WAVE —
+   alternating emerald and sky dots. */
 .zigzag {
-  height: 10px;
+  height: 12px;
   border: none;
   background-image:
-    repeating-linear-gradient(45deg, #ea580c 0px, #ea580c 12px, transparent 12px, transparent 24px, #14b8a6 24px, #14b8a6 36px, transparent 36px, transparent 48px);
-  background-size: 48px 10px;
-  background-position: 0 0;
+    radial-gradient(circle, #059669 2.5px, transparent 3px),
+    radial-gradient(circle, #0284c7 2.5px, transparent 3px);
+  background-size: 22px 12px;
+  background-position: 0 0, 11px 6px;
   background-repeat: repeat-x;
   opacity: 1;
 }
 
-/* Current band: a warm gradient band
-   with a TEAL BOTTOM edge
-   and crisp corners. */
+/* Current band: a cool gradient band
+   with a LIME BOTTOM edge
+   and soft corners. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #431407 0%, #ea580c 55%, #f59e0b 100%);
+  background: linear-gradient(90deg, #022c22 0%, #059669 55%, #0284c7 100%);
   opacity: 1;
-  box-shadow: 0 10px 24px -12px rgba(41, 37, 36, 0.35);
+  box-shadow: 0 10px 24px -12px rgba(5, 46, 22, 0.35);
   border: none;
-  border-bottom: 4px solid #0f766e;
-  border-radius: 12px;
+  border-bottom: 4px solid #84cc16;
+  border-radius: 20px;
 }
 
-/* Current glow: a warm ember glow for the core. */
+/* Current glow: a cool lagoon glow for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(253, 230, 138, 0.75) 42%, rgba(249, 115, 22, 0.35) 62%, rgba(249, 115, 22, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(217, 249, 157, 0.75) 42%, rgba(16, 185, 129, 0.35) 62%, rgba(16, 185, 129, 0) 76%);
 }
 
-/* Current beacon: a sunset disc with an
-   amber centre, white ring and a
-   deep terracotta rim. */
+/* Current beacon: a lagoon disc with a
+   sky centre, white ring and a
+   deep pine rim. */
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 50%, #fffbeb 0%, #fcd34d 52%, #fff7ed 58%, #fb923c 72%, #431407 100%);
-  box-shadow: 0 0 0 3px rgba(255, 247, 237, 0.9), 0 0 0 6px rgba(249, 115, 22, 0.55), 0 18px 40px -18px rgba(41, 37, 36, 0.35);
+    radial-gradient(circle at 50% 50%, #f0f9ff 0%, #7dd3fc 52%, #f0fdf4 58%, #34d399 72%, #022c22 100%);
+  box-shadow: 0 0 0 3px rgba(240, 253, 244, 0.9), 0 0 0 6px rgba(16, 185, 129, 0.55), 0 18px 40px -18px rgba(5, 46, 22, 0.35);
   border: none;
 }
 
@@ -277,12 +279,12 @@ h1, h2, h3 { font-family: var(--font-display), ui-sans-serif, system-ui, sans-se
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(249, 115, 22, 0.3) 0px,
-    rgba(249, 115, 22, 0.3) 1px,
+    rgba(16, 185, 129, 0.3) 0px,
+    rgba(16, 185, 129, 0.3) 1px,
     transparent 1px,
     transparent 40px,
-    rgba(20, 184, 166, 0.30) 40px,
-    rgba(20, 184, 166, 0.30) 41px,
+    rgba(2, 132, 199, 0.30) 40px,
+    rgba(2, 132, 199, 0.30) 41px,
     transparent 41px,
     transparent 80px
   );
@@ -293,9 +295,9 @@ h1, h2, h3 { font-family: var(--font-display), ui-sans-serif, system-ui, sans-se
 .sun-rays {
   background: repeating-conic-gradient(
     from -10deg at 50% 50%,
-    rgba(249, 115, 22, 0.35) 0deg 10deg,
+    rgba(16, 185, 129, 0.35) 0deg 10deg,
     transparent 10deg 34deg,
-    rgba(245, 158, 11, 0.30) 34deg 48deg,
+    rgba(132, 204, 22, 0.30) 34deg 48deg,
     transparent 48deg 96deg
   );
   -webkit-mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
