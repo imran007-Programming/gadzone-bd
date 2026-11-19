@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Crimson Ember: deep crimson, bright flame orange and warm amber over warm blush paper.
+// Lagoon Tide: deep teal, bright flame orange and warm mint over pale lagoon paper.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(244, 63, 94,0.32)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(249, 115, 22,0.30)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(251, 113, 133,0.28)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(76, 5, 25,0.22)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(20, 184, 166,0.32)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(6, 182, 212,0.30)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(45, 212, 191,0.28)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(19, 78, 74,0.22)" },
 ];
 
-// crimson, amber embers falling downward through the crimson glow.
+// teal, mint bubbles rising upward through the teal glow.
 const BUBBLES = [
-  { left: "8%", top: "4%", delay: "0s", dur: "11.2s", s: 12, c: "#be123c" },
-  { left: "21%", top: "10%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#f43f5e" },
-  { left: "36%", top: "2%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#be123c" },
-  { left: "53%", top: "12%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#f97316" },
-  { left: "68%", top: "6%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#4c0519" },
-  { left: "82%", top: "14%", delay: "-2s", dur: "12.2s", s: 14, c: "#fda4af" },
-  { left: "93%", top: "8%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#fbbf24" },
+  { left: "8%", top: "4%", delay: "0s", dur: "11.2s", s: 12, c: "#0f766e" },
+  { left: "21%", top: "10%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#14b8a6" },
+  { left: "36%", top: "2%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#0f766e" },
+  { left: "53%", top: "12%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#06b6d4" },
+  { left: "68%", top: "6%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#134e4a" },
+  { left: "82%", top: "14%", delay: "-2s", dur: "12.2s", s: 14, c: "#5eead4" },
+  { left: "93%", top: "8%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#a7f3d0" },
 ];
 
-// Amber glints scattered through the crimson glow.
+// Mint glints scattered through the teal glow.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -75,19 +75,19 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* Crimson Ember wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#ffe4e6] via-[#fff1f2] to-[#ffe4e6]">
+      {/* Lagoon Tide wash over the stage */}
+      <div className="relative bg-gradient-to-b from-[#ccfbf1] via-[#f0fdfa] to-[#ccfbf1]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
 
-        {/* Crimson Ember haze sweeping the sheet */}
+        {/* Lagoon Tide haze sweeping the sheet */}
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-0 hidden h-[560px] opacity-90 sm:block">
           <div className="pop-drift absolute -left-24 top-6 h-72 w-[52rem] rotate-[-8deg] rounded-full bg-gradient-to-r from-brand-400/35 via-gold-300/25 to-transparent blur-3xl" />
           <div className="pop-drift absolute -right-24 top-40 h-64 w-[44rem] rotate-[10deg] rounded-full bg-gradient-to-r from-transparent via-brand-300/25 to-gold-400/30 blur-3xl" style={{ animationDelay: "-12s" }} />
         </div>
 
-        {/* Crimson Ember core: a glowing crimson disc ringed by a clockwise spin */}
+        {/* Lagoon Tide core: a glowing teal disc ringed by a clockwise spin */}
         <div aria-hidden className="pointer-events-none absolute -right-40 -top-32 z-0 hidden opacity-90 sm:block">
           <div className="relative h-[600px] w-[600px]">
             <div className="nebula-core absolute inset-8 rounded-full blur-xl" />
@@ -100,20 +100,20 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(190, 18, 60, 0.45), inset 0 0 18px rgba(190, 18, 60, 0.35)",
+                  boxShadow: "0 0 28px 2px rgba(15, 118, 110, 0.45), inset 0 0 18px rgba(15, 118, 110, 0.35)",
                   opacity: 1 - r * 0.22,
                 }}
               />
             ))}
-            {/* the crimson heart: a layered glowing crimson disc */}
+            {/* the teal heart: a layered glowing teal disc */}
             <div className="sun-disc pop-spin absolute inset-44 rounded-full" style={{ animationDuration: "24s" }} />
-            {/* Amber glints */}
+            {/* Mint glints */}
             <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
               {[{l:"30%",t:"34%",s:46},{l:"58%",t:"52%",s:34},{l:"44%",t:"66%",s:24},{l:"64%",t:"30%",s:20}].map((glint, i) => (
                 <span key={i} className="absolute rounded-full bg-white/80" style={{ left: glint.l, top: glint.t, width: glint.s, height: glint.s }} />
               ))}
             </div>
-            {/* sweeping crimson beams */}
+            {/* sweeping teal beams */}
             {[0, 1, 2].map((b) => (
               <span
                 key={b}
@@ -121,11 +121,11 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{ width: 26, height: 240, transform: `translate(-50%, -100%) rotate(${b * 120}deg)`, animationDuration: "36s" }}
               />
             ))}
-            {/* orbs dancing around the glowing crimson disc */}
+            {/* orbs dancing around the glowing teal disc */}
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#be123c", "#f43f5e", "#be123c", "#f97316"];
+              const colors = ["#0f766e", "#14b8a6", "#0f766e", "#06b6d4"];
               return (
                 <span
                   key={i}
@@ -143,7 +143,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* drifting crimson glow */}
+        {/* drifting teal glow */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {ORBS.map((g, i) => (
             <div
@@ -154,7 +154,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* Amber glints */}
+        {/* Mint glints */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {STARS.map((s, i) => (
             <span
@@ -172,11 +172,11 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* 4-banner carousel in an crimson ember frame */}
+        {/* 4-banner carousel in a lagoon tide frame */}
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
-              <div className="bg-gradient-to-r from-brand-600 via-gold-500 to-poprose-700 p-1.5 shadow-[0_20px_40px_-18px_rgba(15, 23, 42, 0.35)] rounded-lg">
+              <div className="bg-gradient-to-r from-brand-600 via-gold-500 to-poprose-700 p-1.5 shadow-[0_20px_40px_-18px_rgba(15, 23, 42, 0.35)] rounded-3xl">
                 <div className="overflow-hidden bg-paper ring-1 ring-brand-950/10">
                   <BannerCarousel />
                 </div>
@@ -185,12 +185,12 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* Crimson Ember ticker: deep crimson band with blush type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#4c0519]/80 bg-gradient-to-r from-[#4c0519] via-[#be123c] to-[#4c0519] py-3 shadow-[0_10px_30px_-12px_rgba(15, 23, 42, 0.4)] backdrop-blur">
+        {/* Lagoon Tide ticker: deep teal band with lagoon type */}
+        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#134e4a]/80 bg-gradient-to-r from-[#134e4a] via-[#0f766e] to-[#134e4a] py-3 shadow-[0_10px_30px_-12px_rgba(15, 23, 42, 0.4)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
-                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#fff1f2] drop-shadow-[0_1px_0_rgba(15, 23, 42, 0.6)]">
+                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#f0fdfa] drop-shadow-[0_1px_0_rgba(15, 23, 42, 0.6)]">
                   {t} <span className="text-gold-300">✦</span>
                 </span>
               ))}
@@ -198,11 +198,11 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* single crimson divider into the page */} 
+        {/* single teal divider into the page */} 
         <div aria-hidden className="zigzag relative z-10 mx-auto mt-0 w-full max-w-7xl opacity-90" />
       </div>
 
-      {/* Stats + featured picks under the crimson glow */}
+      {/* Stats + featured picks under the teal glow */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 pb-24 pt-10 md:pb-28">
         <motion.div variants={container} initial="hidden" animate="show" {...anim}>
           <motion.div variants={item} className="grid grid-cols-2 gap-6 sm:grid-cols-4">
@@ -253,7 +253,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* single crimson divider into the page */} 
+      {/* single teal divider into the page */} 
       <div aria-hidden className="zigzag absolute bottom-0 left-0 w-full opacity-90" />
     </section>
   );
