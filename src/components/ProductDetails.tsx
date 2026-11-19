@@ -200,7 +200,7 @@ export default function ProductDetails({
             <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty)} className="rounded-full bg-gradient-to-r from-brand-500 to-brand-700 px-7 py-3 font-bold text-white shadow-[0_8px_24px_-8px_rgba(4, 47, 46, 0.4)] transition hover:brightness-110">
               Add To Cart
             </motion.button>
-            <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty, true)} className="rounded-full bg-white px-7 py-3 font-bold text-ink transition ring-1 ring-brand-400/40 hover:bg-[#fff7ed]">
+            <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty, true)} className="rounded-full bg-white px-7 py-3 font-bold text-ink transition ring-1 ring-brand-400/40 hover:bg-[#ecfeff]">
               Buy Now
             </motion.button>
           </div>
@@ -319,7 +319,7 @@ export default function ProductDetails({
           <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty)} className="shrink-0 rounded-full bg-gradient-to-r from-brand-500 to-brand-700 px-4 py-2.5 text-sm font-bold text-white transition hover:brightness-110 sm:px-6">
             Add to Cart
           </motion.button>
-          <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty, true)} className="hidden shrink-0 rounded-full bg-white px-5 py-2.5 text-sm font-bold text-ink transition ring-1 ring-brand-400/40 hover:bg-[#fff7ed] sm:block">
+          <motion.button whileTap={{ scale: 0.97 }} onClick={() => onAddToCart(p.id, qty, true)} className="hidden shrink-0 rounded-full bg-white px-5 py-2.5 text-sm font-bold text-ink transition ring-1 ring-brand-400/40 hover:bg-[#ecfeff] sm:block">
             Buy Now
           </motion.button>
         </div>
