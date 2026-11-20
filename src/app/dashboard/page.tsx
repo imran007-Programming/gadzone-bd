@@ -86,7 +86,7 @@ export default function DashboardPage() {
 
       <div className="min-w-0 flex-1">
         {/* Top header */}
-        <header className="sticky top-0 z-20 border-b border-[#dcf5e3] bg-white/90 backdrop-blur lg:static">
+        <header className="sticky top-0 z-20 border-b border-[#e9e4fb] bg-white/90 backdrop-blur lg:static">
           <div className="mx-auto flex max-w-5xl items-center gap-3 px-4 py-3">
             <Link href="/" className="flex shrink-0 items-center gap-2 lg:hidden">
               <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-500 text-xl font-black text-white">G</span>
@@ -105,7 +105,7 @@ export default function DashboardPage() {
                     value={search}
                     onChange={(e) => handleSearch(e.target.value)}
                     placeholder="Search orders by id or item…"
-                    className="w-full rounded-full border border-[#dcf5e3] bg-white py-2 pr-3 pl-9 text-sm outline-none focus:border-brand-400 focus:bg-white"
+                    className="w-full rounded-full border border-[#e9e4fb] bg-white py-2 pr-3 pl-9 text-sm outline-none focus:border-brand-400 focus:bg-white"
                   />
                 </label>
                 <Link href="/" className="relative shrink-0 rounded-full bg-white px-4 py-2 text-sm font-bold text-[#0d2b1a] transition hover:bg-[#0d2b1a]">
@@ -132,7 +132,7 @@ export default function DashboardPage() {
                   value={search}
                   onChange={(e) => handleSearch(e.target.value)}
                   placeholder="Search orders by id or item…"
-                  className="w-full rounded-full border border-[#dcf5e3] bg-white py-2 pr-3 pl-9 text-sm outline-none focus:border-brand-400 focus:bg-white"
+                  className="w-full rounded-full border border-[#e9e4fb] bg-white py-2 pr-3 pl-9 text-sm outline-none focus:border-brand-400 focus:bg-white"
                 />
               </label>
             </div>
@@ -189,7 +189,7 @@ export default function DashboardPage() {
                     ) : (
                       <div className="space-y-3">
                         {recent.map((o) => (
-                          <div key={o.id} className="flex flex-wrap items-center justify-between gap-3 rounded-lg bg-white p-4 shadow-sm ring-1 ring-[#dcf5e3]">
+                          <div key={o.id} className="flex flex-wrap items-center justify-between gap-3 rounded-lg bg-white p-4 shadow-sm ring-1 ring-[#e9e4fb]">
                             <div className="min-w-0">
                               <p className="font-black text-[#0d2b1a]">{o.id}</p>
                               <p className="truncate text-sm text-[#0d2b1a]">{o.items.map((it) => `${it.name} × ${it.qty}`).join(" · ")}</p>
@@ -207,17 +207,17 @@ export default function DashboardPage() {
                   <section>
                     <h2 className="mb-3 text-lg font-black text-[#0d2b1a]">Quick actions</h2>
                     <div className="grid gap-3 sm:grid-cols-3">
-                      <Link href="/" className="rounded-lg bg-white p-5 shadow-sm ring-1 ring-[#dcf5e3] transition hover:shadow-md">
+                      <Link href="/" className="rounded-lg bg-white p-5 shadow-sm ring-1 ring-[#e9e4fb] transition hover:shadow-md">
                         <p className="text-2xl" aria-hidden="true">🛍️</p>
                         <p className="mt-2 font-black text-[#0d2b1a]">Shop Now</p>
                         <p className="text-sm text-[#0d2b1a]">Browse deals and new arrivals.</p>
                       </Link>
-                      <button onClick={() => setTab("orders")} className="rounded-lg bg-white p-5 text-left shadow-sm ring-1 ring-[#dcf5e3] transition hover:shadow-md">
+                      <button onClick={() => setTab("orders")} className="rounded-lg bg-white p-5 text-left shadow-sm ring-1 ring-[#e9e4fb] transition hover:shadow-md">
                         <p className="text-2xl" aria-hidden="true">🚚</p>
                         <p className="mt-2 font-black text-[#0d2b1a]">Track Order</p>
                         <p className="text-sm text-[#0d2b1a]">See the status of every order.</p>
                       </button>
-                      <Link href="/#faq" className="rounded-lg bg-white p-5 shadow-sm ring-1 ring-[#dcf5e3] transition hover:shadow-md">
+                      <Link href="/#faq" className="rounded-lg bg-white p-5 shadow-sm ring-1 ring-[#e9e4fb] transition hover:shadow-md">
                         <p className="text-2xl" aria-hidden="true">💬</p>
                         <p className="mt-2 font-black text-[#0d2b1a]">Support</p>
                         <p className="text-sm text-[#0d2b1a]">Answers to common questions.</p>
@@ -237,7 +237,7 @@ export default function DashboardPage() {
                     {(search.trim() || statusFilter !== "All") && (
                       <button
                         onClick={() => { setSearch(""); setStatusFilter("All"); }}
-                        className="rounded-full bg-white px-4 py-2 text-sm font-bold text-[#0d2b1a] ring-1 ring-[#dcf5e3] hover:bg-[#eefaf3]"
+                        className="rounded-full bg-white px-4 py-2 text-sm font-bold text-[#0d2b1a] ring-1 ring-[#e9e4fb] hover:bg-[#eefaf3]"
                       >
                         Clear filters ✕
                       </button>
@@ -270,7 +270,7 @@ export default function DashboardPage() {
                 <div className="space-y-5 pt-4">
                   <h1 className="text-2xl font-black text-[#0d2b1a]">Profile</h1>
                   <Reveal>
-                    <section className="flex flex-col items-start gap-4 rounded-lg bg-white p-6 shadow-sm ring-1 ring-[#dcf5e3] sm:flex-row sm:items-center">
+                    <section className="flex flex-col items-start gap-4 rounded-lg bg-white p-6 shadow-sm ring-1 ring-[#e9e4fb] sm:flex-row sm:items-center">
                       {session.user.image ? (
                         // eslint-disable-next-line @next/next/no-img-element
                         <img src={session.user.image} alt="" className="h-20 w-20 rounded-full object-cover ring-4 ring-brand-100" />
@@ -288,7 +288,7 @@ export default function DashboardPage() {
                     </section>
                   </Reveal>
 
-                  <section className="rounded-lg bg-white p-6 shadow-sm ring-1 ring-[#dcf5e3]">
+                  <section className="rounded-lg bg-white p-6 shadow-sm ring-1 ring-[#e9e4fb]">
                     <h2 className="font-black text-[#0d2b1a]">Account info</h2>
                     <dl className="mt-4 grid gap-4 text-sm sm:grid-cols-2">
                       <div><dt className="font-semibold text-[#0d2b1a]">Full name</dt><dd className="mt-0.5 font-bold text-[#0d2b1a]">{session.user.name ?? "—"}</dd></div>
