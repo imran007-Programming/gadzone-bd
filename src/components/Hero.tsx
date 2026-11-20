@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Monsoon Lagoon: deep teal, bright aqua and warm coral over pale mint-sand. Lagoon pills, top bars, bubbles rising up.
+// Ember Bazaar: burnt orange, warm amber and deep plum over warm cream. Ember tiles, left bars, embers falling down.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(13, 148, 136,0.32)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(255, 107, 87,0.30)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(13, 148, 136,0.28)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(11, 46, 43,0.22)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(234, 88, 12,0.32)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245, 158, 11,0.30)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(234, 88, 12,0.28)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(43, 22, 16,0.22)" },
 ];
 
-// teal, aqua and coral bubbles rising upward through the lagoon glow.
+// orange, amber and plum embers falling downward through the ember glow.
 const BUBBLES = [
-  { left: "8%", top: "62%", delay: "0s", dur: "11.2s", s: 12, c: "#0d9488" },
-  { left: "21%", top: "74%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#14b8a6" },
-  { left: "36%", top: "58%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#5eead4" },
-  { left: "53%", top: "82%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#2dd4bf" },
-  { left: "68%", top: "68%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#0b2e2b" },
-  { left: "82%", top: "90%", delay: "-2s", dur: "12.2s", s: 14, c: "#ff6b57" },
-  { left: "93%", top: "78%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#99f6e4" },
+  { left: "8%", top: "62%", delay: "0s", dur: "11.2s", s: 12, c: "#ea580c" },
+  { left: "21%", top: "74%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#f59e0b" },
+  { left: "36%", top: "58%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#fcd34d" },
+  { left: "53%", top: "82%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#fb923c" },
+  { left: "68%", top: "68%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#2b1610" },
+  { left: "82%", top: "90%", delay: "-2s", dur: "12.2s", s: 14, c: "#a21caf" },
+  { left: "93%", top: "78%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#fde68a" },
 ];
 
-// Lagoon glints scattered through the lagoon glow.
+// Ember glints scattered through the ember glow.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -59,7 +59,7 @@ function Bubble({ left, top, delay, dur, s, c }: (typeof BUBBLES)[number]) {
           width: s,
           height: s,
           borderRadius: "999px",
-          background: `radial-gradient(circle at 35% 30%, #99f6e4cc 0%, ${c}88 55%, ${c} 100%)`,
+          background: `radial-gradient(circle at 35% 30%, #fde68acc 0%, ${c}88 55%, ${c} 100%)`,
           boxShadow: `0 0 12px 2px ${c}66`,
         }}
       />
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* Monsoon Lagoon wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#e9f7f2] via-[#e9f7f2] to-[#99f6e4]">
+      <div className="relative bg-gradient-to-b from-[#fdf6ec] via-[#fdf6ec] to-[#fde68a]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#0d9488", "#ff6b57", "#5eead4", "#ff6b57"];
+              const colors = ["#ea580c", "#a21caf", "#fcd34d", "#a21caf"];
               return (
                 <span
                   key={i}
@@ -185,12 +185,12 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* Monsoon Lagoon ticker: deep-cyan band with fresh type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#0b2e2b]/80 bg-gradient-to-r from-[#0b2e2b] via-[#0d9488] to-[#0b2e2b] py-3 shadow-[0_10px_30px_-12px_rgba(11, 46, 43, 0.4)] backdrop-blur">
+        {/* Ember Bazaar ticker: deep-plum-to-orange band with fresh type */}
+        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#2b1610]/80 bg-gradient-to-r from-[#2b1610] via-[#c2410c] to-[#2b1610] py-3 shadow-[0_10px_30px_-12px_rgba(43, 22, 16, 0.4)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
-                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#e9f7f2] drop-shadow-[0_1px_0_rgba(11, 46, 43, 0.6)]">
+                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#fdf6ec] drop-shadow-[0_1px_0_rgba(43, 22, 16, 0.6)]">
                   {t} <span className="text-gold-300">✦</span>
                 </span>
               ))}
