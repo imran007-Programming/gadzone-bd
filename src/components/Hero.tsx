@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Arctic Current: deep navy, icy cyan and frost mint over frost white.
+// Ember Market: burnt orange, warm amber and deep plum over warm cream.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(14, 116, 144,0.32)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(34, 211, 238,0.30)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(8, 145, 178,0.28)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(8, 47, 73,0.22)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(194, 65, 12,0.32)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(251, 146, 60,0.30)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(234, 88, 12,0.28)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(67, 20, 7,0.22)" },
 ];
 
-// cyan, mint and navy snowflakes falling downward through the frost glow.
+// ember, amber and plum embers rising upward through the warm glow.
 const BUBBLES = [
-  { left: "8%", top: "4%", delay: "0s", dur: "11.2s", s: 12, c: "#0e7490" },
-  { left: "21%", top: "10%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#06b6d4" },
-  { left: "36%", top: "2%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#67e8f9" },
-  { left: "53%", top: "12%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#0891b2" },
-  { left: "68%", top: "6%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#082f49" },
-  { left: "82%", top: "14%", delay: "-2s", dur: "12.2s", s: 14, c: "#06b6d4" },
-  { left: "93%", top: "8%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#cffafe" },
+  { left: "8%", top: "4%", delay: "0s", dur: "11.2s", s: 12, c: "#c2410c" },
+  { left: "21%", top: "10%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#f97316" },
+  { left: "36%", top: "2%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#fdba74" },
+  { left: "53%", top: "12%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#ea580c" },
+  { left: "68%", top: "6%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#431407" },
+  { left: "82%", top: "14%", delay: "-2s", dur: "12.2s", s: 14, c: "#f97316" },
+  { left: "93%", top: "8%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#ffedd5" },
 ];
 
-// Frost sparks scattered through the frost glow.
+// Ember sparks scattered through the warm glow.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -59,7 +59,7 @@ function Bubble({ left, top, delay, dur, s, c }: (typeof BUBBLES)[number]) {
           width: s,
           height: s,
           borderRadius: "999px",
-          background: `radial-gradient(circle at 35% 30%, #cffafecc 0%, ${c}88 55%, ${c} 100%)`,
+          background: `radial-gradient(circle at 35% 30%, #ffedd5cc 0%, ${c}88 55%, ${c} 100%)`,
           boxShadow: `0 0 12px 2px ${c}66`,
         }}
       />
@@ -75,13 +75,13 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* Arctic Current wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#f0f9ff] via-[#f0f9ff] to-[#cffafe]">
+      {/* Ember Market wash over the stage */}
+      <div className="relative bg-gradient-to-b from-[#fff7ed] via-[#fff7ed] to-[#ffedd5]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
 
-        {/* Arctic Current haze sweeping the sheet */}
+        {/* Ember Market haze sweeping the sheet */}
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-0 hidden h-[560px] opacity-90 sm:block">
           <div className="pop-drift absolute -left-24 top-6 h-72 w-[52rem] rotate-[-8deg] rounded-full bg-gradient-to-r from-brand-400/35 via-gold-300/25 to-transparent blur-3xl" />
           <div className="pop-drift absolute -right-24 top-40 h-64 w-[44rem] rotate-[10deg] rounded-full bg-gradient-to-r from-transparent via-brand-300/25 to-gold-400/30 blur-3xl" style={{ animationDelay: "-12s" }} />
