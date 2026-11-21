@@ -1,87 +1,88 @@
 @import "tailwindcss";
 
 @theme {
-  /* Sunlit Bazaar: an original direction —
-     warm ivory as the paper,
-     terracotta coral as the stall paint,
-     sunny marigold as the awning,
-     forest green as the fresh-leaf fourth, over
-     bright daylight. Cards are MARKET STALLS:
-     24px corners, a 1px warm coral border,
-     a 4px coral-to-marigold-to-green TOP bar and a
-     SOFT warm shadow — on hover the
-     card LIFTS straight up with a coral glow, confetti
-     DRIFTING DOWNWARD with a glow, a
-     COUNTER-CLOCKWISE spin, a RIGHTWARD
-     ticker, coral / marigold / green
-     HORIZONTAL bands, a CONFETTI-DOT
-     texture and a warm-ivory-to-marigold band with a
-     CORAL TOP edge. */
+  /* Frostline: an original direction —
+     pale glacier as the paper,
+     deep arctic navy as the night,
+     electric cyan as the ice-light,
+     sky blue as the frost,
+     violet as the aurora fourth, over
+     cool daylight. Cards are ICE PANES:
+     10px corners, a 1px cool slate border,
+     a 3px cyan-to-sky-to-violet LEFT bar and a
+     CRISP cool shadow — on hover the
+     card LIFTS straight up with a cyan glow, snow
+     DRIFTING UPWARD with a glow, a
+     CLOCKWISE spin, a LEFTWARD
+     ticker, cyan / sky / violet
+     DIAGONAL bands, a PINSTRIPE
+     texture and a pale-ice-to-sky band with a
+     CYAN BOTTOM edge. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = terracotta coral scale */
-  --color-brand-50: #fff7ed;
-  --color-brand-100: #ffedd5;
-  --color-brand-200: #fed7aa;
-  --color-brand-300: #fdba74;
-  --color-brand-400: #fb923c;
-  --color-brand-500: #f97316;
-  --color-brand-600: #ea580c;
-  --color-brand-700: #c2410c;
-  --color-brand-800: #9a3412;
-  --color-brand-900: #7c2d12;
-  --color-brand-950: #431407;
-  --color-brand: #ea580c;
-  --color-brand-dark: #c2410c;
-  --color-brand-deep: #7c2d12;
+  /* brand = electric cyan scale */
+  --color-brand-50: #ecfeff;
+  --color-brand-100: #cffafe;
+  --color-brand-200: #a5f3fc;
+  --color-brand-300: #67e8f9;
+  --color-brand-400: #22d3ee;
+  --color-brand-500: #06b6d4;
+  --color-brand-600: #0891b2;
+  --color-brand-700: #0e7490;
+  --color-brand-800: #155e75;
+  --color-brand-900: #164e63;
+  --color-brand-950: #083344;
+  --color-brand: #0891b2;
+  --color-brand-dark: #0e7490;
+  --color-brand-deep: #164e63;
 
-  /* gold = sunny marigold scale (name kept for legacy class refs) */
-  --color-gold-50: #fefce8;
-  --color-gold-100: #fef9c3;
-  --color-gold-200: #fef08a;
-  --color-gold-300: #fde047;
-  --color-gold-400: #facc15;
-  --color-gold-500: #eab308;
-  --color-gold-600: #ca8a04;
-  --color-gold-700: #a16207;
-  --color-gold-800: #854d0e;
-  --color-gold-900: #713f12;
-  --color-gold-950: #422006;
-  --color-gold: #eab308;
-  --color-gold-deep: #854d0e;
-  --color-gold-soft: #fef9c3;
+  /* gold = ice sky scale (name kept for legacy class refs) */
+  --color-gold-50: #f0f9ff;
+  --color-gold-100: #e0f2fe;
+  --color-gold-200: #bae6fd;
+  --color-gold-300: #7dd3fc;
+  --color-gold-400: #38bdf8;
+  --color-gold-500: #0ea5e9;
+  --color-gold-600: #0284c7;
+  --color-gold-700: #0369a1;
+  --color-gold-800: #075985;
+  --color-gold-900: #0c4a6e;
+  --color-gold-950: #082f49;
+  --color-gold: #0ea5e9;
+  --color-gold-deep: #075985;
+  --color-gold-soft: #e0f2fe;
 
-  /* popblue = forest green scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0fdf4;
-  --color-popblue-100: #dcfce7;
-  --color-popblue-200: #bbf7d0;
-  --color-popblue-300: #86efac;
-  --color-popblue-400: #4ade80;
-  --color-popblue-500: #22c55e;
-  --color-popblue-600: #16a34a;
-  --color-popblue-700: #15803d;
-  --color-popblue-800: #166534;
-  --color-popblue-900: #14532d;
-  --color-popblue-950: #052e16;
-  --color-popblue: #16a34a;
-  --color-popblue-deep: #166534;
-  --color-popblue-soft: #dcfce7;
+  /* popblue = aurora violet scale (name kept for legacy class refs) */
+  --color-popblue-50: #f5f3ff;
+  --color-popblue-100: #ede9fe;
+  --color-popblue-200: #ddd6fe;
+  --color-popblue-300: #c4b5fd;
+  --color-popblue-400: #a78bfa;
+  --color-popblue-500: #8b5cf6;
+  --color-popblue-600: #7c3aed;
+  --color-popblue-700: #6d28d9;
+  --color-popblue-800: #5b21b6;
+  --color-popblue-900: #4c1d95;
+  --color-popblue-950: #2e1065;
+  --color-popblue: #7c3aed;
+  --color-popblue-deep: #5b21b6;
+  --color-popblue-soft: #ede9fe;
 
-  /* poprose = warm rose scale (used by hero + header accents) */
-  --color-poprose-200: #fecdd3;
-  --color-poprose-300: #fda4af;
-  --color-poprose-400: #fb7185;
-  --color-poprose-500: #f43f5e;
-  --color-poprose-600: #e11d48;
-  --color-poprose-700: #be123c;
-  --color-poprose-800: #9f1239;
+  /* poprose = magenta scale (used by hero + header accents) */
+  --color-poprose-200: #f5d0fe;
+  --color-poprose-300: #f0abfc;
+  --color-poprose-400: #e879f9;
+  --color-poprose-500: #d946ef;
+  --color-poprose-600: #c026d3;
+  --color-poprose-700: #a21caf;
+  --color-poprose-800: #86198f;
 
-  --color-ink: #2b1d16;
-  --color-paper: #fffaf3;
-  --color-mute: #8a6f5c;
+  --color-ink: #0f172a;
+  --color-paper: #f2f7fb;
+  --color-mute: #64748b;
   --color-card: #ffffff;
-  --color-deep: #7c2d12;
+  --color-deep: #164e63;
 }
 
 html { scroll-behavior: smooth; }
@@ -95,61 +96,61 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fffaf3;
+  background-color: #f2f7fb;
   background-image:
-    radial-gradient(ellipse 46% 26% at 6% 2%, rgba(234, 88, 12, 0.14) 0%, rgba(234, 88, 12, 0) 70%),
-    radial-gradient(ellipse 42% 28% at 96% 98%, rgba(234, 179, 8, 0.16) 0%, rgba(234, 179, 8, 0) 70%),
-    linear-gradient(135deg, rgba(255, 250, 243, 0.95) 0%, rgba(255, 247, 237, 0.98) 45%, rgba(254, 215, 170, 0.5) 85%);
-  color: #2b1d16;
+    radial-gradient(ellipse 46% 26% at 6% 2%, rgba(8, 145, 178, 0.13) 0%, rgba(8, 145, 178, 0) 70%),
+    radial-gradient(ellipse 42% 28% at 96% 98%, rgba(14, 165, 233, 0.15) 0%, rgba(14, 165, 233, 0) 70%),
+    linear-gradient(135deg, rgba(242, 247, 251, 0.95) 0%, rgba(224, 242, 254, 0.98) 45%, rgba(165, 243, 252, 0.5) 85%);
+  color: #0f172a;
 }
-::selection { background: #ea580c; color: #ffffff; }
+::selection { background: #0891b2; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ea580c, #eab308); border-radius: 4px; border: 2px solid #fffaf3; }
-::-webkit-scrollbar-track { background: #fffaf3; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0891b2, #0ea5e9); border-radius: 4px; border: 2px solid #f2f7fb; }
+::-webkit-scrollbar-track { background: #f2f7fb; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Sunlit Bazaar type: section headlines in
+/* Frostline type: section headlines in
    sentence case with a tight stance,
-   tight leading, with coral-to-marigold-to-green
+   tight leading, with cyan-to-sky-to-violet
    gradient accents; product names stay sentence case. */
 h1, h2 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: -0.01em; line-height: 1.12; text-transform: none; text-wrap: balance; }
 h3 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: -0.01em; line-height: 1.16; text-transform: none; text-wrap: balance; }
-h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #ea580c, #eab308, #16a34a); -webkit-background-clip: text; background-clip: text; color: transparent; }
+h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #0891b2, #0ea5e9, #7c3aed); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
-/* Sunlit Bazaar fall: confetti DRIFTING
-   DOWNWARD with a glow,
-   spinning counter-clockwise. */
+/* Frostline fall: snow DRIFTING
+   UPWARD with a glow,
+   spinning clockwise. */
 @keyframes drift-rise {
-  0% { transform: translate3d(0, -105vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(0, 105vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
   15% { opacity: 0.95; }
-  50% { transform: translate3d(2vw, 0, 0) scale(1.15) rotate(-180deg); }
-  100% { transform: translate3d(-2vw, 105vh, 0) scale(0.7) rotate(-360deg); opacity: 0; }
+  50% { transform: translate3d(-2vw, 0, 0) scale(1.15) rotate(180deg); }
+  100% { transform: translate3d(2vw, -105vh, 0) scale(0.7) rotate(360deg); opacity: 0; }
 }
 .pop-rise { animation: drift-rise 13s linear infinite; }
 
-/* Sunlit Bazaar sway: a gentle breeze with a soft tilt. */
+/* Frostline sway: a gentle breeze with a soft tilt. */
 @keyframes drift-sway {
-  0%, 100% { transform: translate(-6px, 0) rotate(1.5deg) scale(1); opacity: 0.7; }
-  50% { transform: translate(6px, 6px) rotate(-1.5deg) scale(1.05); opacity: 1; }
+  0%, 100% { transform: translate(6px, 0) rotate(-1.5deg) scale(1); opacity: 0.7; }
+  50% { transform: translate(-6px, -6px) rotate(1.5deg) scale(1.05); opacity: 1; }
 }
 .pop-drift { animation: drift-sway 6s ease-in-out infinite; }
 
-/* Sunlit Bazaar bob: a soft float with a gentle pulse. */
+/* Frostline bob: a soft float with a gentle pulse. */
 @keyframes drift-float {
-  0%, 100% { transform: translateY(-6px) scale(1); }
-  50% { transform: translateY(6px) scale(1.03) rotate(1deg); }
+  0%, 100% { transform: translateY(6px) scale(1); }
+  50% { transform: translateY(-6px) scale(1.03) rotate(-1deg); }
 }
 .pop-bob { animation: drift-float 4s ease-in-out infinite; }
 
-/* Sunlit Bazaar spin: a COUNTER-CLOCKWISE spin. */
+/* Frostline spin: a CLOCKWISE spin. */
 @keyframes drift-turn {
-  from { transform: rotate(360deg); }
-  to { transform: rotate(0deg); }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 .pop-spin { animation: drift-turn 20s linear infinite; }
 
-/* Sunlit Bazaar glint: a sunny marigold shimmer —
+/* Frostline glint: an icy sky shimmer —
    flaring bright, then settling again. */
 @keyframes drift-blink {
   0%, 100% { opacity: 1; transform: scale(1); }
@@ -157,45 +158,45 @@ h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #ea
 }
 .pop-twinkle { animation: drift-blink 2.4s ease-in-out infinite; }
 
-/* Sunlit Bazaar ticker: a RIGHTWARD marquee. */
+/* Frostline ticker: a LEFTWARD marquee. */
 @keyframes drift-ticker {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: drift-ticker 32s linear infinite; }
 
-/* Sunlit Bazaar bands: coral / marigold /
-   green HORIZONTAL bands. */
+/* Frostline bands: cyan / sky /
+   violet DIAGONAL bands. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(0deg, #fffaf3 0px, #fffaf3 3px, #ea580c 3px, #ea580c 6px, #eab308 6px, #eab308 9px, #16a34a 9px, #16a34a 12px);
+    repeating-linear-gradient(45deg, #f2f7fb 0px, #f2f7fb 3px, #0891b2 3px, #0891b2 6px, #0ea5e9 6px, #0ea5e9 9px, #7c3aed 9px, #7c3aed 12px);
   background-size: 17px 17px;
   background-repeat: repeat;
   border-radius: 2px;
 }
 
-/* Sunlit Bazaar card: a MARKET STALL
-   (24px corners) with a 1px warm coral
-   border, a 4px coral-to-marigold-to-green TOP bar
-   and a SOFT warm shadow over
-   bright daylight — on hover the card
+/* Frostline card: an ICE PANE
+   (10px corners) with a 1px cool slate
+   border, a 3px cyan-to-sky-to-violet LEFT bar
+   and a CRISP cool shadow over
+   cool daylight — on hover the card
    LIFTS straight up with a bigger glow
-   and a warm coral glow. */
+   and a cool cyan glow. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(234, 88, 12, 0.22);
-  box-shadow: 0 4px 0 rgba(124, 45, 18, 0.08), 0 12px 32px -12px rgba(124, 45, 18, 0.25);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  box-shadow: 0 4px 0 rgba(22, 78, 99, 0.06), 0 12px 32px -12px rgba(22, 78, 99, 0.22);
   background: rgba(255, 255, 255, 0.96);
-  border-radius: 24px;
+  border-radius: 10px;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift::before {
   content: "";
   position: absolute;
-  inset: 0 0 auto 0;
-  height: 4px;
-  background: linear-gradient(90deg, #ea580c, #eab308, #16a34a);
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: linear-gradient(180deg, #0891b2, #0ea5e9, #7c3aed);
   opacity: 0.55;
   transition: opacity 0.25s ease;
   pointer-events: none;
@@ -203,115 +204,115 @@ h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #ea
 }
 .pop-lift:hover {
   transform: translateY(-4px);
-  border-color: rgba(234, 88, 12, 0.55);
-  box-shadow: 0 8px 0 rgba(124, 45, 18, 0.08), 0 24px 48px -16px rgba(124, 45, 18, 0.3), 0 0 0 4px rgba(234, 179, 8, 0.15);
+  border-color: rgba(8, 145, 178, 0.55);
+  box-shadow: 0 8px 0 rgba(22, 78, 99, 0.06), 0 24px 48px -16px rgba(22, 78, 99, 0.28), 0 0 0 4px rgba(14, 165, 233, 0.15);
 }
 .pop-lift:hover::before { opacity: 1; }
 
-/* Sunlit Bazaar glass: shared by modals and drawers — a
-   warm ivory pane with soft
-   corners, a coral border
-   and a sunny marigold glow. */
+/* Frostline glass: shared by modals and drawers — a
+   pale ice pane with crisp
+   corners, a cyan border
+   and an icy sky glow. */
 .pop-glass {
-  background: rgba(255, 250, 243, 0.92);
+  background: rgba(242, 247, 251, 0.92);
   backdrop-filter: blur(20px) saturate(1.1);
   -webkit-backdrop-filter: blur(20px) saturate(1.1);
-  border: 1px solid rgba(234, 88, 12, 0.4);
-  border-radius: 24px;
-  box-shadow: 0 2px 0 rgba(124, 45, 18, 0.08), 0 20px 44px -18px rgba(124, 45, 18, 0.3);
+  border: 1px solid rgba(8, 145, 178, 0.4);
+  border-radius: 10px;
+  box-shadow: 0 2px 0 rgba(22, 78, 99, 0.06), 0 20px 44px -18px rgba(22, 78, 99, 0.28);
 }
 
-/* Sunlit Bazaar tag: a coral-to-marigold-to-green
-   badge — white type, warm
-   glow, tilted +2deg, fully pill-shaped. */
+/* Frostline tag: a cyan-to-sky-to-violet
+   badge — white type, cool
+   glow, tilted -2deg, sharp 8px corners. */
 .starburst {
-  background: linear-gradient(135deg, #ea580c 0%, #eab308 55%, #16a34a 100%);
+  background: linear-gradient(135deg, #0891b2 0%, #0ea5e9 55%, #7c3aed 100%);
   color: #ffffff;
   text-shadow: none;
   clip-path: none;
-  border-radius: 9999px;
-  box-shadow: 0 4px 0 rgba(124, 45, 18, 0.15);
+  border-radius: 8px;
+  box-shadow: 0 4px 0 rgba(22, 78, 99, 0.12);
   padding-left: 20px;
   padding-right: 20px;
-  transform: rotate(2deg);
+  transform: rotate(-2deg);
 }
 
-/* Sunlit Bazaar texture: CONFETTI DOTS
-   — coral dots and marigold dots over warm ivory. */
+/* Frostline texture: PINSTRIPES
+   — cyan lines and sky lines over pale ice. */
 .halftone {
   background-image:
-    radial-gradient(circle at 8px 8px, rgba(234, 88, 12, 0.16) 2px, transparent 3px),
-    radial-gradient(circle at 22px 22px, rgba(234, 179, 8, 0.16) 2px, transparent 3px);
+    repeating-linear-gradient(45deg, rgba(8, 145, 178, 0.10) 0px, rgba(8, 145, 178, 0.10) 1px, transparent 1px, transparent 12px),
+    repeating-linear-gradient(-45deg, rgba(14, 165, 233, 0.08) 0px, rgba(14, 165, 233, 0.08) 1px, transparent 1px, transparent 16px);
   background-size: 30px 30px, 26px 26px;
   background-position: 0 0, 15px 13px;
 }
 
-/* Sunlit Bazaar rule: a coral-to-marigold-to-green
-   bar with a marigold dashed underline. */
+/* Frostline rule: a cyan-to-sky-to-violet
+   bar with a sky dashed underline. */
 .zigzag {
   height: 6px;
   border: none;
-  border-bottom: 3px dashed #eab308;
+  border-bottom: 3px dashed #0ea5e9;
   border-radius: 3px;
-  background: linear-gradient(90deg, #ea580c, #eab308, #16a34a);
+  background: linear-gradient(90deg, #0891b2, #0ea5e9, #7c3aed);
   box-shadow: none;
   opacity: 1;
 }
 
-/* Sunlit Bazaar band: a warm-ivory-to-marigold band
-   with a CORAL TOP edge
-   and soft corners. */
+/* Frostline band: a deep-navy-to-cyan band
+   with a CYAN BOTTOM edge
+   and crisp corners. */
 .bazaar-awning {
-  background: linear-gradient(135deg, #fffaf3 0%, #ffedd5 45%, #fde047 75%, #f97316 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #164e63 45%, #0ea5e9 75%, #0891b2 100%);
   opacity: 1;
-  box-shadow: 0 2px 0 rgba(124, 45, 18, 0.08), 0 16px 34px -16px rgba(124, 45, 18, 0.25);
+  box-shadow: 0 2px 0 rgba(22, 78, 99, 0.06), 0 16px 34px -16px rgba(22, 78, 99, 0.25);
   border: none;
-  border-top: 4px solid #ea580c;
-  border-radius: 24px;
+  border-bottom: 4px solid #22d3ee;
+  border-radius: 10px;
 }
 
-/* Sunlit Bazaar glow: a warm coral glow for the core. */
+/* Frostline glow: a cool cyan aurora glow for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 250, 243, 0.95) 0%, rgba(254, 215, 170, 0.55) 42%, rgba(234, 88, 12, 0.22) 62%, rgba(234, 88, 12, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(242, 247, 251, 0.95) 0%, rgba(165, 243, 252, 0.55) 42%, rgba(8, 145, 178, 0.22) 62%, rgba(8, 145, 178, 0) 76%);
 }
 
-/* Sunlit Bazaar disc: a coral disc with
-   a marigold centre, pale ring and a
-   bright green rim. */
+/* Frostline disc: a frost moon disc with
+   a sky centre, pale ring and a
+   bright violet rim. */
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 50%, #fef9c3 0%, #eab308 40%, #fffaf3 52%, #ea580c 68%, #ffedd5 100%);
-  box-shadow: 0 0 0 3px rgba(255, 250, 243, 0.9), 0 0 0 6px rgba(234, 179, 8, 0.55), 0 24px 48px -20px rgba(124, 45, 18, 0.3);
+    radial-gradient(circle at 50% 50%, #e0f2fe 0%, #0ea5e9 40%, #f2f7fb 52%, #0891b2 68%, #cffafe 100%);
+  box-shadow: 0 0 0 3px rgba(242, 247, 251, 0.9), 0 0 0 6px rgba(14, 165, 233, 0.55), 0 24px 48px -20px rgba(22, 78, 99, 0.3);
   border: none;
 }
 
-/* Wider-spaced rings around the bazaar disc. */
+/* Wider-spaced rings around the frost disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(234, 88, 12, 0.3) 0px,
-    rgba(234, 88, 12, 0.3) 1px,
+    rgba(8, 145, 178, 0.3) 0px,
+    rgba(8, 145, 178, 0.3) 1px,
     transparent 1px,
     transparent 40px,
-    rgba(234, 179, 8, 0.30) 40px,
-    rgba(234, 179, 8, 0.30) 41px,
+    rgba(14, 165, 233, 0.30) 40px,
+    rgba(14, 165, 233, 0.30) 41px,
     transparent 41px,
     transparent 80px
   );
   -webkit-mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
   mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
-  border-radius: 24px;
+  border-radius: 10px;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(234, 88, 12, 0.35) 0deg 6deg,
+    rgba(8, 145, 178, 0.35) 0deg 6deg,
     transparent 6deg 42deg,
-    rgba(234, 179, 8, 0.30) 42deg 48deg,
+    rgba(14, 165, 233, 0.30) 42deg 48deg,
     transparent 48deg 96deg
   );
   -webkit-mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
   mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
-  border-radius: 24px;
+  border-radius: 10px;
 }
