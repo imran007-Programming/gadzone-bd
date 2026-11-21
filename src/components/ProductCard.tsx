@@ -24,10 +24,10 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
       whileHover={undefined}
       className="pop-lift group relative flex h-full flex-col overflow-hidden bg-paper"
     >
-      {/* Plum glow peeking from the card's top edge */}
+      {/* Reef glow peeking from the card's top edge */}
       <div aria-hidden className="pointer-events-none absolute inset-x-10 top-0 h-24 bg-gradient-to-b from-brand-200/60 via-gold-200/40 to-transparent blur-sm" />
       <div className="relative p-3">
-        <div className="relative cursor-pointer overflow-hidden rounded-lg ring-1 ring-brand-900/10" onClick={() => onQuickView(p)}>
+        <div className="relative cursor-pointer overflow-hidden rounded-xl ring-1 ring-brand-900/10" onClick={() => onQuickView(p)}>
           <ProductImage product={p} />
           {p.badge === "New" && (
             <span className="absolute left-3 top-3 rounded-md bg-gold-400 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-gold-950 shadow-[0_10px_20px_-8px_rgba(30, 27, 75,  )] ring-1 ring-white/60">New</span>
@@ -38,7 +38,7 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
         </div>
       </div>
       <div className="flex flex-1 flex-col items-start gap-1.5 px-5 pb-4 pt-1 text-left">
-        <span className="rounded-md bg-brand-100 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.16em] text-brand-700 ring-1 ring-brand-200">{p.category}</span>
+        <span className="rounded-full bg-brand-100 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.16em] text-brand-700 ring-1 ring-brand-200">{p.category}</span>
         <h3 className="cursor-pointer text-[15px] font-bold leading-snug tracking-tight text-ink hover:text-brand-700" onClick={() => onQuickView(p)}>{p.name}</h3>
         <div className="flex items-center gap-1"><Stars rating={p.rating} /><span className="text-xs font-medium text-mute">{p.rating} ({p.reviews.toLocaleString()})</span></div>
         <span className={`w-fit px-2.5 py-1 text-[11px] font-bold ${p.stock === "In Stock" ? "rounded-md bg-gold-soft text-gold-deep ring-1 ring-gold/30" : "rounded-md bg-brand-100 text-brand-800 ring-1 ring-brand-200"}`}>{p.stock === "In Stock" ? "● In Stock" : "⚠ " + p.stock}</span>
