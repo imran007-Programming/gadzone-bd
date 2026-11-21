@@ -1,88 +1,88 @@
 @import "tailwindcss";
 
 @theme {
-  /* Aurora Tide: an original direction —
-     icy pale blue as the paper,
-     deep midnight navy as the night,
-     bright cyan as the tide,
-     fresh mint as the foam,
-     sky blue as the fourth, over
-     cool daylight. Cards are TIDE PANELS:
-     12px corners, a 1px cool border,
-     a 4px cyan-to-mint-to-sky LEFT bar and a
-     COOL shadow — on hover the
-     card LIFTS straight up with a cyan glow, bubbles
+  /* Ember Bazaar: an original direction —
+     warm cream as the paper,
+     deep warm charcoal as the night,
+     burnt orange as the ember,
+     golden amber as the flame,
+     terracotta rose as the fourth, over
+     warm dusk. Cards are EMBER TILES:
+     20px corners, a 2px warm border,
+     a 4px orange-to-amber-to-rose TOP bar and a
+     WARM offset shadow — on hover the
+     card LIFTS straight up with a warm glow, embers
      RISING UPWARD with a glow, a
-     CLOCKWISE spin, a LEFTWARD
-     ticker, cyan / mint / sky
-     VERTICAL bands, a DIAGONAL-GRID
-     texture and an icy-blue-to-mint band with a
-     CYAN BOTTOM edge. */
+     COUNTER-CLOCKWISE spin, a RIGHTWARD
+     ticker, orange / amber / rose
+     HORIZONTAL bands, a WARM DOT-GRID
+     texture and a cream-to-amber band with an
+     AMBER BOTTOM edge. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = bright cyan scale */
-  --color-brand-50: #ecfeff;
-  --color-brand-100: #cffafe;
-  --color-brand-200: #a5f3fc;
-  --color-brand-300: #67e8f9;
-  --color-brand-400: #22d3ee;
-  --color-brand-500: #06b6d4;
-  --color-brand-600: #0891b2;
-  --color-brand-700: #0e7490;
-  --color-brand-800: #155e75;
-  --color-brand-900: #164e63;
-  --color-brand-950: #083344;
-  --color-brand: #0891b2;
-  --color-brand-dark: #0e7490;
-  --color-brand-deep: #164e63;
+  /* brand = burnt orange scale */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-brand-950: #431407;
+  --color-brand: #ea580c;
+  --color-brand-dark: #c2410c;
+  --color-brand-deep: #7c2d12;
 
-  /* gold = fresh mint scale (name kept for legacy class refs) */
-  --color-gold-50: #ecfdf5;
-  --color-gold-100: #d1fae5;
-  --color-gold-200: #a7f3d0;
-  --color-gold-300: #6ee7b7;
-  --color-gold-400: #34d399;
-  --color-gold-500: #10b981;
-  --color-gold-600: #059669;
-  --color-gold-700: #047857;
-  --color-gold-800: #065f46;
-  --color-gold-900: #064e3b;
-  --color-gold-950: #022c22;
-  --color-gold: #10b981;
-  --color-gold-deep: #065f46;
-  --color-gold-soft: #d1fae5;
+  /* gold = golden amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #f59e0b;
+  --color-gold-deep: #92400e;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = sky blue scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0f9ff;
-  --color-popblue-100: #e0f2fe;
-  --color-popblue-200: #bae6fd;
-  --color-popblue-300: #7dd3fc;
-  --color-popblue-400: #38bdf8;
-  --color-popblue-500: #0ea5e9;
-  --color-popblue-600: #0284c7;
-  --color-popblue-700: #0369a1;
-  --color-popblue-800: #075985;
-  --color-popblue-900: #0c4a6e;
-  --color-popblue-950: #082f49;
-  --color-popblue: #0284c7;
-  --color-popblue-deep: #075985;
-  --color-popblue-soft: #e0f2fe;
+  /* popblue = terracotta rose scale (name kept for legacy class refs) */
+  --color-popblue-50: #fff1f2;
+  --color-popblue-100: #ffe4e6;
+  --color-popblue-200: #fecdd3;
+  --color-popblue-300: #fda4af;
+  --color-popblue-400: #fb7185;
+  --color-popblue-500: #f43f5e;
+  --color-popblue-600: #e11d48;
+  --color-popblue-700: #be123c;
+  --color-popblue-800: #9f1239;
+  --color-popblue-900: #881337;
+  --color-popblue-950: #4c0519;
+  --color-popblue: #e11d48;
+  --color-popblue-deep: #9f1239;
+  --color-popblue-soft: #ffe4e6;
 
-  /* poprose = teal scale (used by hero + header accents) */
-  --color-poprose-200: #99f6e4;
-  --color-poprose-300: #5eead4;
-  --color-poprose-400: #2dd4bf;
-  --color-poprose-500: #14b8a6;
-  --color-poprose-600: #0d9488;
-  --color-poprose-700: #0f766e;
-  --color-poprose-800: #115e59;
+  /* poprose = warm terracotta scale (used by hero + header accents) */
+  --color-poprose-200: #fed7aa;
+  --color-poprose-300: #fdba74;
+  --color-poprose-400: #fb923c;
+  --color-poprose-500: #f97316;
+  --color-poprose-600: #ea580c;
+  --color-poprose-700: #c2410c;
+  --color-poprose-800: #9a3412;
 
-  --color-ink: #0b1e33;
-  --color-paper: #f0f9ff;
-  --color-mute: #64748b;
+  --color-ink: #1c1917;
+  --color-paper: #fff7ed;
+  --color-mute: #78716c;
   --color-card: #ffffff;
-  --color-deep: #082f49;
+  --color-deep: #292524;
 }
 
 html { scroll-behavior: smooth; }
@@ -96,61 +96,61 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f0f9ff;
+  background-color: #fff7ed;
   background-image:
-    radial-gradient(ellipse 46% 26% at 6% 2%, rgba(8, 145, 178, 0.12) 0%, rgba(8, 145, 178, 0) 70%),
-    radial-gradient(ellipse 42% 28% at 96% 98%, rgba(16, 185, 129, 0.14) 0%, rgba(16, 185, 129, 0) 70%),
-    linear-gradient(135deg, rgba(240, 249, 255, 0.95) 0%, rgba(224, 242, 254, 0.98) 45%, rgba(165, 243, 252, 0.5) 85%);
-  color: #0b1e33;
+    radial-gradient(ellipse 46% 26% at 6% 2%, rgba(234, 88, 12, 0.12) 0%, rgba(234, 88, 12, 0) 70%),
+    radial-gradient(ellipse 42% 28% at 96% 98%, rgba(245, 158, 11, 0.14) 0%, rgba(245, 158, 11, 0) 70%),
+    linear-gradient(135deg, rgba(255, 247, 237, 0.95) 0%, rgba(255, 237, 213, 0.98) 45%, rgba(253, 186, 116, 0.5) 85%);
+  color: #1c1917;
 }
-::selection { background: #0891b2; color: #ffffff; }
+::selection { background: #ea580c; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0891b2, #10b981); border-radius: 6px; border: 2px solid #f0f9ff; }
-::-webkit-scrollbar-track { background: #f0f9ff; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ea580c, #f59e0b); border-radius: 6px; border: 2px solid #fff7ed; }
+::-webkit-scrollbar-track { background: #fff7ed; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Aurora Tide type: section headlines in
+/* Ember Bazaar type: section headlines in
    sentence case with a tight stance,
-   tight leading, with cyan-to-mint-to-sky
+   tight leading, with orange-to-amber-to-rose
    gradient accents; product names stay sentence case. */
 h1, h2 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: -0.01em; line-height: 1.12; text-transform: none; text-wrap: balance; }
 h3 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: -0.01em; line-height: 1.16; text-transform: none; text-wrap: balance; }
-h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #0891b2, #10b981, #0369a1); -webkit-background-clip: text; background-clip: text; color: transparent; }
+h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #ea580c, #f59e0b, #be123c); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
-/* Aurora Tide rise: bubbles RISING
+/* Ember Bazaar rise: embers RISING
    UPWARD with a glow,
-   spinning clockwise. */
+   spinning counter-clockwise. */
 @keyframes drift-fall {
   0% { transform: translate3d(0, 105vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
   15% { opacity: 0.95; }
-  50% { transform: translate3d(2vw, 0, 0) scale(1.15) rotate(180deg); }
-  100% { transform: translate3d(-2vw, -105vh, 0) scale(0.7) rotate(360deg); opacity: 0; }
+  50% { transform: translate3d(2vw, 0, 0) scale(1.15) rotate(-180deg); }
+  100% { transform: translate3d(-2vw, -105vh, 0) scale(0.7) rotate(-360deg); opacity: 0; }
 }
 .pop-rise { animation: drift-fall 13s linear infinite; }
 
-/* Aurora Tide sway: a gentle current with a soft tilt. */
+/* Ember Bazaar sway: a gentle ember drift with a soft tilt. */
 @keyframes drift-sway {
   0%, 100% { transform: translate(-6px, 0) rotate(1.5deg) scale(1); opacity: 0.7; }
   50% { transform: translate(6px, -6px) rotate(-1.5deg) scale(1.05); opacity: 1; }
 }
 .pop-drift { animation: drift-sway 6s ease-in-out infinite; }
 
-/* Aurora Tide bob: a soft float with a gentle pulse. */
+/* Ember Bazaar bob: a soft float with a gentle pulse. */
 @keyframes drift-float {
   0%, 100% { transform: translateY(-6px) scale(1); }
   50% { transform: translateY(6px) scale(1.03) rotate(1deg); }
 }
 .pop-bob { animation: drift-float 4s ease-in-out infinite; }
 
-/* Aurora Tide spin: a CLOCKWISE spin. */
+/* Ember Bazaar spin: a COUNTER-CLOCKWISE spin. */
 @keyframes drift-turn {
   from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  to { transform: rotate(-360deg); }
 }
 .pop-spin { animation: drift-turn 20s linear infinite; }
 
-/* Aurora Tide glint: a cool mint shimmer —
+/* Ember Bazaar glint: a warm amber shimmer —
    flaring bright, then settling again. */
 @keyframes drift-blink {
   0%, 100% { opacity: 1; transform: scale(1); }
@@ -158,45 +158,45 @@ h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #08
 }
 .pop-twinkle { animation: drift-blink 2.4s ease-in-out infinite; }
 
-/* Aurora Tide ticker: a LEFTWARD marquee. */
+/* Ember Bazaar ticker: a RIGHTWARD marquee. */
 @keyframes drift-ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
 }
 .pop-ticker { animation: drift-ticker 32s linear infinite; }
 
-/* Aurora Tide bands: cyan / mint /
-   sky VERTICAL bands. */
+/* Ember Bazaar bands: orange / amber /
+   rose HORIZONTAL bands. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(90deg, #f0f9ff 0px, #f0f9ff 3px, #0891b2 3px, #0891b2 6px, #10b981 6px, #10b981 9px, #0284c7 9px, #0284c7 12px);
+    repeating-linear-gradient(0deg, #fff7ed 0px, #fff7ed 3px, #ea580c 3px, #ea580c 6px, #f59e0b 6px, #f59e0b 9px, #e11d48 9px, #e11d48 12px);
   background-size: 17px 17px;
   background-repeat: repeat;
   border-radius: 4px;
 }
 
-/* Aurora Tide card: a TIDE PANEL
-   (12px corners) with a 1px cool
-   border, a 4px cyan-to-mint-to-sky LEFT bar
-   and a COOL shadow over
-   cool daylight — on hover the card
+/* Ember Bazaar card: an EMBER TILE
+   (20px corners) with a 2px warm
+   border, a 4px orange-to-amber-to-rose TOP bar
+   and a WARM offset shadow over
+   warm dusk — on hover the card
    LIFTS straight up with a bigger glow
-   and a cool cyan glow. */
+   and a warm amber glow. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(11, 30, 51, 0.1);
-  box-shadow: 0 2px 0 rgba(8, 47, 73, 0.05), 0 16px 36px -16px rgba(8, 47, 73, 0.22);
+  border: 2px solid rgba(28, 25, 23, 0.12);
+  box-shadow: 0 4px 0 rgba(28, 25, 23, 0.08), 0 16px 36px -16px rgba(69, 26, 3, 0.22);
   background: rgba(255, 255, 255, 0.97);
-  border-radius: 12px;
+  border-radius: 20px;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift::before {
   content: "";
   position: absolute;
-  inset: 0 auto 0 0;
-  width: 4px;
-  background: linear-gradient(180deg, #0891b2, #10b981, #0284c7);
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ea580c, #f59e0b, #e11d48);
   opacity: 0.55;
   transition: opacity 0.25s ease;
   pointer-events: none;
@@ -204,115 +204,115 @@ h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #08
 }
 .pop-lift:hover {
   transform: translateY(-4px);
-  border-color: rgba(8, 145, 178, 0.55);
-  box-shadow: 0 4px 0 rgba(8, 47, 73, 0.05), 0 28px 52px -18px rgba(8, 47, 73, 0.3), 0 0 0 4px rgba(6, 182, 212, 0.16);
+  border-color: rgba(234, 88, 12, 0.55);
+  box-shadow: 0 4px 0 rgba(28, 25, 23, 0.08), 0 28px 52px -18px rgba(69, 26, 3, 0.3), 0 0 0 4px rgba(249, 115, 22, 0.16);
 }
 .pop-lift:hover::before { opacity: 1; }
 
-/* Aurora Tide glass: shared by modals and drawers — an
-   icy blue pane with soft
-   corners, a cyan border
-   and a cool cyan glow. */
+/* Ember Bazaar glass: shared by modals and drawers — a
+   warm cream pane with soft
+   corners, an amber border
+   and a warm amber glow. */
 .pop-glass {
-  background: rgba(240, 249, 255, 0.92);
+  background: rgba(255, 247, 237, 0.92);
   backdrop-filter: blur(20px) saturate(1.1);
   -webkit-backdrop-filter: blur(20px) saturate(1.1);
-  border: 1px solid rgba(8, 145, 178, 0.4);
-  border-radius: 12px;
-  box-shadow: 0 2px 0 rgba(8, 47, 73, 0.05), 0 20px 44px -18px rgba(8, 47, 73, 0.28);
+  border: 1px solid rgba(234, 88, 12, 0.4);
+  border-radius: 20px;
+  box-shadow: 0 4px 0 rgba(28, 25, 23, 0.08), 0 20px 44px -18px rgba(69, 26, 3, 0.28);
 }
 
-/* Aurora Tide tag: a cyan-to-mint-to-sky
-   badge — white type, cool
-   glow, tilted -2deg, crisp 10px corners. */
+/* Ember Bazaar tag: an orange-to-amber-to-rose
+   badge — white type, warm
+   glow, tilted 2deg, soft 16px corners. */
 .starburst {
-  background: linear-gradient(135deg, #0891b2 0%, #10b981 55%, #0284c7 100%);
+  background: linear-gradient(135deg, #ea580c 0%, #f59e0b 55%, #e11d48 100%);
   color: #ffffff;
   text-shadow: none;
   clip-path: none;
-  border-radius: 10px;
-  box-shadow: 0 4px 0 rgba(8, 47, 73, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 4px 0 rgba(28, 25, 23, 0.12);
   padding-left: 20px;
   padding-right: 20px;
-  transform: rotate(-2deg);
+  transform: rotate(2deg);
 }
 
-/* Aurora Tide texture: DIAGONAL GRID
-   — cyan lines and mint lines over icy blue. */
+/* Ember Bazaar texture: WARM DOT-GRID
+   — orange dots and amber dots over warm cream. */
 .halftone {
   background-image:
-    repeating-linear-gradient(45deg, rgba(8, 145, 178, 0.10) 0px, rgba(8, 145, 178, 0.10) 1px, transparent 1px, transparent 14px),
-    repeating-linear-gradient(-45deg, rgba(16, 185, 129, 0.08) 0px, rgba(16, 185, 129, 0.08) 1px, transparent 1px, transparent 14px);
-  background-size: 30px 30px, 26px 26px;
-  background-position: 0 0, 15px 13px;
+    radial-gradient(rgba(234, 88, 12, 0.14) 1.2px, transparent 1.2px),
+    radial-gradient(rgba(245, 158, 11, 0.12) 1.2px, transparent 1.2px);
+  background-size: 26px 26px, 26px 26px;
+  background-position: 0 0, 13px 13px;
 }
 
-/* Aurora Tide rule: a cyan-to-mint-to-sky
-   bar with a sky dashed underline. */
+/* Ember Bazaar rule: an orange-to-amber-to-rose
+   bar with a rose dotted underline. */
 .zigzag {
-  height: 6px;
+  height: 8px;
   border: none;
-  border-bottom: 3px dashed #0284c7;
-  border-radius: 6px;
-  background: linear-gradient(90deg, #0891b2, #10b981, #0284c7);
+  border-bottom: 3px dotted #e11d48;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #ea580c, #f59e0b, #e11d48);
   box-shadow: none;
   opacity: 1;
 }
 
-/* Aurora Tide band: a deep-navy-to-cyan band
-   with a CYAN BOTTOM edge
-   and crisp corners. */
+/* Ember Bazaar band: a warm-charcoal-to-ember band
+   with an AMBER BOTTOM edge
+   and soft corners. */
 .bazaar-awning {
-  background: linear-gradient(135deg, #0b1e33 0%, #082f49 45%, #10b981 75%, #0891b2 100%);
+  background: linear-gradient(135deg, #1c1917 0%, #292524 45%, #f59e0b 75%, #ea580c 100%);
   opacity: 1;
-  box-shadow: 0 2px 0 rgba(8, 47, 73, 0.05), 0 16px 34px -16px rgba(8, 47, 73, 0.25);
+  box-shadow: 0 4px 0 rgba(28, 25, 23, 0.08), 0 16px 34px -16px rgba(69, 26, 3, 0.25);
   border: none;
-  border-bottom: 4px solid #22d3ee;
-  border-radius: 12px;
+  border-bottom: 4px solid #fbbf24;
+  border-radius: 20px;
 }
 
-/* Aurora Tide glow: a cool cyan glow for the core. */
+/* Ember Bazaar glow: a warm amber glow for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(240, 249, 255, 0.95) 0%, rgba(103, 232, 249, 0.55) 42%, rgba(8, 145, 178, 0.22) 62%, rgba(8, 145, 178, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 247, 237, 0.95) 0%, rgba(253, 186, 116, 0.55) 42%, rgba(234, 88, 12, 0.22) 62%, rgba(234, 88, 12, 0) 76%);
 }
 
-/* Aurora Tide disc: a tide moon disc with
-   a mint centre, pale ring and a
-   bright sky rim. */
+/* Ember Bazaar disc: an ember sun disc with
+   an amber centre, pale ring and a
+   bright rose rim. */
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 50%, #d1fae5 0%, #10b981 40%, #f0f9ff 52%, #0891b2 68%, #e0f2fe 100%);
-  box-shadow: 0 0 0 3px rgba(240, 249, 255, 0.9), 0 0 0 6px rgba(6, 182, 212, 0.55), 0 24px 48px -20px rgba(8, 47, 73, 0.3);
+    radial-gradient(circle at 50% 50%, #fef3c7 0%, #f59e0b 40%, #fff7ed 52%, #ea580c 68%, #ffe4e6 100%);
+  box-shadow: 0 0 0 3px rgba(255, 247, 237, 0.9), 0 0 0 6px rgba(249, 115, 22, 0.55), 0 24px 48px -20px rgba(69, 26, 3, 0.3);
   border: none;
 }
 
-/* Wider-spaced rings around the tide disc. */
+/* Wider-spaced rings around the ember disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(8, 145, 178, 0.3) 0px,
-    rgba(8, 145, 178, 0.3) 1px,
+    rgba(234, 88, 12, 0.3) 0px,
+    rgba(234, 88, 12, 0.3) 1px,
     transparent 1px,
     transparent 40px,
-    rgba(16, 185, 129, 0.30) 40px,
-    rgba(16, 185, 129, 0.30) 41px,
+    rgba(245, 158, 11, 0.30) 40px,
+    rgba(245, 158, 11, 0.30) 41px,
     transparent 41px,
     transparent 80px
   );
   -webkit-mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
   mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
-  border-radius: 12px;
+  border-radius: 20px;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(8, 145, 178, 0.35) 0deg 6deg,
+    rgba(234, 88, 12, 0.35) 0deg 6deg,
     transparent 6deg 42deg,
-    rgba(16, 185, 129, 0.30) 42deg 48deg,
+    rgba(245, 158, 11, 0.30) 42deg 48deg,
     transparent 48deg 96deg
   );
   -webkit-mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
   mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
-  border-radius: 12px;
+  border-radius: 20px;
 }
