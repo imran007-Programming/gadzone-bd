@@ -23,9 +23,9 @@ export default function WhyShop() {
             <Reveal key={f.t} delay={i * 0.07}>
               <motion.div
                 whileHover={{ y: -4 }}
-                className="rounded-[18px] border border-[#fcd34d] bg-white p-6 text-center shadow-[0_12px_36px_-12px_rgba(42, 10, 46,  )] backdrop-blur-sm transition-all hover:border-brand-400/40 hover:shadow-[0_16px_44px_-12px_rgba(42, 10, 46,  )] sm:p-7"
+                className="rounded-[18px] border border-[#fcd34d] bg-white p-6 text-center shadow-[0_12px_36px_-12px_rgba(6, 46, 43,  )] backdrop-blur-sm transition-all hover:border-brand-400/40 hover:shadow-[0_16px_44px_-12px_rgba(6, 46, 43,  )] sm:p-7"
               >
-                <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-[18px] bg-brand-400/15 text-3xl shadow-[0_0_24px_rgba(42, 10, 46,  )] ring-1 ring-brand-400/40">{f.e}</span><h3 className="mt-4 text-[15px] font-bold tracking-tight text-ink">{f.t}</h3><p className="mt-1.5 text-sm leading-relaxed text-mute">{f.d}</p>
+                <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-[18px] bg-brand-400/15 text-3xl shadow-[0_0_24px_rgba(6, 46, 43,  )] ring-1 ring-brand-400/40">{f.e}</span><h3 className="mt-4 text-[15px] font-bold tracking-tight text-ink">{f.t}</h3><p className="mt-1.5 text-sm leading-relaxed text-mute">{f.d}</p>
               </motion.div>
             </Reveal>
           ))}
