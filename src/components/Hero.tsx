@@ -20,7 +20,7 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Ember Market: warm cream, burnt orange and golden amber over deep ember brown. Ember rounds, top bars, embers rising up.
+// Frostline: icy mint, deep teal and sky blue over deep navy-teal. Frost tiles, left bars, flakes falling down.
 const ORBS = [
   { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(234, 88, 12, )" },
   { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245, 158, 11, )" },
