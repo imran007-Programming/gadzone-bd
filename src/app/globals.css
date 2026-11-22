@@ -1,90 +1,89 @@
 @import "tailwindcss";
 
 @theme {
-  /* Berry Frost: an original direction —
-     pale berry-pink paper,
-     deep plum ink,
-     raspberry as the brand,
-     indigo as the glow,
-     amber as the sunny contrast.
-     Cards are FROST: 8px corners,
-     a cool plum shadow with a LEFT
-     vertical accent bar — on hover
+  /* Harbor Mint: an original direction —
+     pale mint paper,
+     deep teal-navy ink,
+     teal as the brand,
+     coral as the sunny contrast,
+     sky as the cool glow.
+     Cards are HARBOR: 20px corners,
+     a soft teal shadow with a TOP
+     horizontal accent bar — on hover
      the card LIFTS straight up with
-     a slight tilt, the shadow turns
-     raspberry, berry petals FALL
-     downward with a counter-clockwise
-     spin, a RIGHTWARD ticker,
-     raspberry / indigo / amber
-     VERTICAL bands, a DOT-GRID
-     texture and a pink-to-raspberry-
-     to-indigo band with an AMBER
-     BOTTOM edge. */
+     a slight tilt the other way, the
+     shadow turns teal, mint bubbles
+     RISE upward with a clockwise
+     spin, a LEFTWARD ticker,
+     teal / coral / sky HORIZONTAL
+     bands, a GRID texture and a
+     mint-to-teal-to-navy band with a
+     CORAL TOP edge. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = raspberry scale */
-  --color-brand-50: #fdf2f8;
-  --color-brand-100: #fce7f3;
-  --color-brand-200: #fbcfe8;
-  --color-brand-300: #f9a8d4;
-  --color-brand-400: #f472b6;
-  --color-brand-500: #ec4899;
-  --color-brand-600: #db2777;
-  --color-brand-700: #be185d;
-  --color-brand-800: #9d174d;
-  --color-brand-900: #831843;
-  --color-brand-950: #500724;
-  --color-brand: #db2777;
-  --color-brand-dark: #be185d;
-  --color-brand-deep: #831843;
+  /* brand = teal scale */
+  --color-brand-50: #f0fdfa;
+  --color-brand-100: #ccfbf1;
+  --color-brand-200: #99f6e4;
+  --color-brand-300: #5eead4;
+  --color-brand-400: #2dd4bf;
+  --color-brand-500: #14b8a6;
+  --color-brand-600: #0d9488;
+  --color-brand-700: #0f766e;
+  --color-brand-800: #115e59;
+  --color-brand-900: #134e4a;
+  --color-brand-950: #042f2e;
+  --color-brand: #0d9488;
+  --color-brand-dark: #0f766e;
+  --color-brand-deep: #134e4a;
 
-  /* gold = indigo scale (name kept for legacy class refs) */
-  --color-gold-50: #eef2ff;
-  --color-gold-100: #e0e7ff;
-  --color-gold-200: #c7d2fe;
-  --color-gold-300: #a5b4fc;
-  --color-gold-400: #818cf8;
-  --color-gold-500: #6366f1;
-  --color-gold-600: #4f46e5;
-  --color-gold-700: #4338ca;
-  --color-gold-800: #3730a3;
-  --color-gold-900: #312e81;
-  --color-gold-950: #1e1b4b;
-  --color-gold: #4f46e5;
-  --color-gold-deep: #312e81;
-  --color-gold-soft: #e0e7ff;
+  /* gold = coral scale (name kept for legacy class refs) */
+  --color-gold-50: #fff7ed;
+  --color-gold-100: #ffedd5;
+  --color-gold-200: #fed7aa;
+  --color-gold-300: #fdba74;
+  --color-gold-400: #fb923c;
+  --color-gold-500: #f97316;
+  --color-gold-600: #ea580c;
+  --color-gold-700: #c2410c;
+  --color-gold-800: #9a3412;
+  --color-gold-900: #7c2d12;
+  --color-gold-950: #431407;
+  --color-gold: #ea580c;
+  --color-gold-deep: #9a3412;
+  --color-gold-soft: #ffedd5;
 
-  /* popblue = amber scale (name kept for legacy class refs) */
-  --color-popblue-50: #fffbeb;
-  --color-popblue-100: #fef3c7;
-  --color-popblue-200: #fde68a;
-  --color-popblue-300: #fcd34d;
-  --color-popblue-400: #fbbf24;
-  --color-popblue-500: #f59e0b;
-  --color-popblue-600: #d97706;
-  --color-popblue-700: #b45309;
-  --color-popblue-800: #92400e;
-  --color-popblue-900: #78350f;
-  --color-popblue-950: #451a03;
-  --color-popblue: #d97706;
-  --color-popblue-deep: #b45309;
-  --color-popblue-soft: #fef3c7;
+  /* popblue = sky scale (name kept for legacy class refs) */
+  --color-popblue-50: #f0f9ff;
+  --color-popblue-100: #e0f2fe;
+  --color-popblue-200: #bae6fd;
+  --color-popblue-300: #7dd3fc;
+  --color-popblue-400: #38bdf8;
+  --color-popblue-500: #0ea5e9;
+  --color-popblue-600: #0284c7;
+  --color-popblue-700: #0369a1;
+  --color-popblue-800: #075985;
+  --color-popblue-900: #0c4a6e;
+  --color-popblue-950: #082f49;
+  --color-popblue: #0284c7;
+  --color-popblue-deep: #0369a1;
+  --color-popblue-soft: #e0f2fe;
 
-  /* poprose = fuchsia scale (used by hero + header accents) */
-  --color-poprose-200: #f5d0fe;
-  --color-poprose-300: #f0abfc;
-  --color-poprose-400: #e879f9;
-  --color-poprose-500: #d946ef;
-  --color-poprose-600: #c026d3;
-  --color-poprose-700: #a21caf;
-  --color-poprose-800: #86198f;
+  /* poprose = lime scale (used by hero + header accents) */
+  --color-poprose-200: #d9f99d;
+  --color-poprose-300: #bef264;
+  --color-poprose-400: #a3e635;
+  --color-poprose-500: #84cc16;
+  --color-poprose-600: #65a30d;
+  --color-poprose-700: #4d7c0f;
+  --color-poprose-800: #3f6212;
 
-  --color-ink: #2e0a3f;
-  --color-paper: #fdf2f8;
-  --color-mute: #715f7d;
+  --color-ink: #042f2e;
+  --color-paper: #f0fdfa;
+  --color-mute: #5b7a76;
   --color-card: #ffffff;
-  --color-deep: #500724;
+  --color-deep: #042f2e;
 }
 
 html { scroll-behavior: smooth; }
@@ -98,61 +97,61 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fdf2f8;
+  background-color: #f0fdfa;
   background-image:
-    radial-gradient(ellipse 46% 26% at 6% 4%, rgba(219, 39, 119, 0.16) 0%, rgba(219, 39, 119, 0) 70%),
-    radial-gradient(ellipse 42% 28% at 96% 96%, rgba(79, 70, 229, 0.16) 0%, rgba(79, 70, 229, 0) 70%),
-    linear-gradient(160deg, rgba(253, 242, 248, 0.95) 0%, rgba(252, 231, 243, 0.98) 45%, rgba(224, 231, 255, 0.55) 85%);
-  color: #2e0a3f;
+    radial-gradient(ellipse 46% 26% at 6% 4%, rgba(13, 148, 136, 0.16) 0%, rgba(13, 148, 136, 0) 70%),
+    radial-gradient(ellipse 42% 28% at 96% 96%, rgba(2, 132, 199, 0.16) 0%, rgba(2, 132, 199, 0) 70%),
+    linear-gradient(160deg, rgba(240, 253, 250, 0.95) 0%, rgba(204, 251, 241, 0.98) 45%, rgba(224, 242, 254, 0.55) 85%);
+  color: #042f2e;
 }
-::selection { background: #db2777; color: #ffffff; }
+::selection { background: #0d9488; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #db2777, #4f46e5); border-radius: 999px; border: 2px solid #fdf2f8; }
-::-webkit-scrollbar-track { background: #fdf2f8; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0d9488, #0284c7); border-radius: 999px; border: 2px solid #f0fdfa; }
+::-webkit-scrollbar-track { background: #f0fdfa; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Berry Frost type: section headlines in
-   UPPERCASE with a crisp stance,
-   tight tracking, with raspberry-to-
-   indigo-to-amber gradient accents;
+/* Harbor Mint type: section headlines in
+   sentence case with a relaxed stance,
+   tight tracking, with teal-to-coral-
+   to-sky gradient accents;
    product names stay sentence case. */
-h1, h2 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: 0.01em; line-height: 1.05; text-transform: uppercase; text-wrap: balance; }
-h3 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: 0; line-height: 1.15; text-wrap: balance; }
-h1 em, h2 em, h3 em { font-style: italic; background: linear-gradient(90deg, #db2777, #4f46e5, #d97706); -webkit-background-clip: text; background-clip: text; color: transparent; }
+h1, h2 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: -0.02em; line-height: 1.05; text-transform: none; text-wrap: balance; }
+h3 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: -0.01em; line-height: 1.15; text-wrap: balance; }
+h1 em, h2 em, h3 em { font-style: italic; background: linear-gradient(90deg, #0d9488, #f97316, #0284c7); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
-/* Berry Frost fall: berry petals FALL
-   downward with a counter-clockwise spin. */
+/* Harbor Mint rise: mint bubbles RISE
+   upward with a clockwise spin. */
 @keyframes drift-rise {
-  0% { transform: translate3d(0, -105vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(0, 105vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
   15% { opacity: 0.95; }
-  50% { transform: translate3d(-2vw, 0, 0) scale(1.15) rotate(-180deg); }
-  100% { transform: translate3d(2vw, 105vh, 0) scale(0.7) rotate(-360deg); opacity: 0; }
+  50% { transform: translate3d(2vw, 0, 0) scale(1.15) rotate(180deg); }
+  100% { transform: translate3d(-2vw, -105vh, 0) scale(0.7) rotate(360deg); opacity: 0; }
 }
 .pop-rise { animation: drift-rise 14s linear infinite; }
 
-/* Berry Frost sway: a gentle cool drift with a soft tilt. */
+/* Harbor Mint sway: a gentle warm drift with a soft tilt. */
 @keyframes drift-sway {
-  0%, 100% { transform: translate(-10px, 0) rotate(-2deg) scale(1); opacity: 0.7; }
-  50% { transform: translate(10px, -6px) rotate(2deg) scale(1.05); opacity: 1; }
+  0%, 100% { transform: translate(10px, 0) rotate(2deg) scale(1); opacity: 0.7; }
+  50% { transform: translate(-10px, 6px) rotate(-2deg) scale(1.05); opacity: 1; }
 }
 .pop-drift { animation: drift-sway 8s ease-in-out infinite; }
 
-/* Berry Frost bob: a soft float with a gentle pulse. */
+/* Harbor Mint bob: a soft float with a gentle pulse. */
 @keyframes drift-float {
-  0%, 100% { transform: translateY(-6px) scale(1); }
-  50% { transform: translateY(6px) scale(1.03) rotate(1deg); }
+  0%, 100% { transform: translateY(6px) scale(1); }
+  50% { transform: translateY(-6px) scale(1.03) rotate(-1deg); }
 }
 .pop-bob { animation: drift-float 5s ease-in-out infinite; }
 
-/* Berry Frost spin: a COUNTER-CLOCKWISE spin. */
+/* Harbor Mint spin: a CLOCKWISE spin. */
 @keyframes drift-turn {
   from { transform: rotate(0deg); }
-  to { transform: rotate(-360deg); }
+  to { transform: rotate(360deg); }
 }
 .pop-spin { animation: drift-turn 26s linear infinite; }
 
-/* Berry Frost flicker: a soft indigo flicker —
+/* Harbor Mint flicker: a soft sky flicker —
    flaring bright, then settling again. */
 @keyframes drift-blink {
   0%, 100% { opacity: 1; transform: scale(1); }
@@ -160,161 +159,162 @@ h1 em, h2 em, h3 em { font-style: italic; background: linear-gradient(90deg, #db
 }
 .pop-twinkle { animation: drift-blink 2.8s ease-in-out infinite; }
 
-/* Berry Frost ticker: a RIGHTWARD marquee. */
+/* Harbor Mint ticker: a LEFTWARD marquee. */
 @keyframes drift-ticker {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: drift-ticker 28s linear infinite; }
 
-/* Berry Frost bands: raspberry / indigo /
-   amber VERTICAL bands. */
+/* Harbor Mint bands: teal / coral /
+   sky HORIZONTAL bands. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(90deg, #fdf2f8 0px, #fdf2f8 3px, #db2777 3px, #db2777 6px, #4f46e5 6px, #4f46e5 9px, #d97706 9px, #d97706 12px);
+    repeating-linear-gradient(180deg, #f0fdfa 0px, #f0fdfa 3px, #0d9488 3px, #0d9488 6px, #0284c7 6px, #0284c7 9px, #f97316 9px, #f97316 12px);
   background-size: 17px 17px;
   background-repeat: repeat;
-  border-radius: 8px;
+  border-radius: 20px;
 }
 
-/* Berry Frost card: FROST
-   (8px corners) with a cool plum
-   shadow and a LEFT vertical accent
+/* Harbor Mint card: HARBOR
+   (20px corners) with a soft teal
+   shadow and a TOP horizontal accent
    bar — on hover the card LIFTS
    straight up with a slight tilt,
-   and the shadow turns raspberry. */
+   and the shadow turns teal. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(46, 10, 63, 0.12);
-  box-shadow: 0 8px 22px -10px rgba(80, 7, 36, 0.28), 0 1px 3px -1px rgba(80, 7, 36, 0.1);
+  border: 1px solid rgba(4, 47, 46, 0.12);
+  box-shadow: 0 8px 22px -10px rgba(4, 47, 46, 0.28), 0 1px 3px -1px rgba(4, 47, 46, 0.1);
   background: #ffffff;
-  border-radius: 8px;
+  border-radius: 20px;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift::before {
   content: "";
   position: absolute;
-  inset: 0 auto 0 0;
-  width: 5px;
-  background: linear-gradient(180deg, #db2777, #4f46e5, #d97706);
+  inset: 0 0 auto 0;
+  height: 5px;
+  background: linear-gradient(90deg, #0d9488, #f97316, #0284c7);
   opacity: 0.9;
   transition: opacity 0.25s ease;
   pointer-events: none;
   z-index: 1;
 }
 .pop-lift:hover {
-  transform: translateY(-6px) scale(1.005) rotate(-0.4deg);
-  border-color: rgba(219, 39, 119, 0.45);
-  box-shadow: 0 26px 44px -16px rgba(219, 39, 119, 0.5), 0 0 0 3px rgba(79, 70, 229, 0.18);
+  transform: translateY(-6px) scale(1.005) rotate(0.4deg);
+  border-color: rgba(13, 148, 136, 0.45);
+  box-shadow: 0 26px 44px -16px rgba(13, 148, 136, 0.5), 0 0 0 3px rgba(2, 132, 199, 0.18);
 }
 .pop-lift:hover::before { opacity: 1; }
 
-/* Berry Frost glass: shared by modals and drawers — a
-   pale berry pane with sharp corners,
-   a raspberry border and an indigo glow. */
+/* Harbor Mint glass: shared by modals and drawers — a
+   pale mint pane with round corners,
+   a teal border and a sky glow. */
 .pop-glass {
-  background: rgba(253, 242, 248, 0.92);
+  background: rgba(240, 253, 250, 0.92);
   backdrop-filter: blur(20px) saturate(1.1);
   -webkit-backdrop-filter: blur(20px) saturate(1.1);
-  border: 1px solid rgba(219, 39, 119, 0.3);
-  border-radius: 8px;
-  box-shadow: 0 18px 40px -16px rgba(80, 7, 36, 0.3);
+  border: 1px solid rgba(13, 148, 136, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 18px 40px -16px rgba(4, 47, 46, 0.3);
 }
 
-/* Berry Frost tag: a raspberry-to-amber
-   pill tag — white type, raspberry
+/* Harbor Mint tag: a teal-to-sky
+   pill tag — white type, teal
    glow, with a soft cool shadow. */
 .starburst {
-  background: linear-gradient(135deg, #db2777 0%, #f59e0b 55%, #4f46e5 100%);
+  background: linear-gradient(135deg, #0d9488 0%, #0284c7 55%, #f97316 100%);
   color: #ffffff;
   text-shadow: none;
   clip-path: none;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 8px 20px -6px rgba(219, 39, 119, 0.5);
+  box-shadow: 0 8px 20px -6px rgba(13, 148, 136, 0.5);
   padding-left: 14px;
   padding-right: 14px;
-  transform: rotate(-2deg);
+  transform: rotate(2deg);
 }
 
-/* Berry Frost texture: a DOT-GRID pattern —
-   raspberry dots over pale berry pink. */
+/* Harbor Mint texture: a GRID pattern —
+   teal lines over pale mint. */
 .halftone {
   background-image:
-    radial-gradient(circle, rgba(219, 39, 119, 0.22) 1.5px, transparent 1.5px),
-    radial-gradient(circle, rgba(79, 70, 229, 0.18) 1.5px, transparent 1.5px);
-  background-size: 18px 18px;
-  background-position: 0 0, 9px 9px;
+    linear-gradient(rgba(13, 148, 136, 0.14) 1.5px, transparent 1.5px),
+    linear-gradient(90deg, rgba(13, 148, 136, 0.14) 1.5px, transparent 1.5px),
+    linear-gradient(rgba(2, 132, 199, 0.10) 1.5px, transparent 1.5px);
+  background-size: 22px 22px, 22px 22px, 22px 22px;
+  background-position: 0 0, 0 0, 11px 11px;
 }
 
-/* Berry Frost rule: a dashed
-   bar in raspberry and indigo. */
+/* Harbor Mint rule: a diagonal
+   wave bar in teal and coral. */
 .zigzag {
-  height: 4px;
+  height: 6px;
   border: none;
   border-radius: 999px;
-  background-image: repeating-linear-gradient(90deg, #db2777 0px, #db2777 10px, transparent 10px, transparent 18px, #4f46e5 18px, #4f46e5 28px, transparent 28px, transparent 36px);
-  background-size: 36px 4px;
+  background-image: repeating-linear-gradient(45deg, #0d9488 0px, #0d9488 10px, transparent 10px, transparent 18px, #f97316 18px, #f97316 28px, transparent 28px, transparent 36px);
+  background-size: 36px 6px;
   background-repeat: repeat-x;
   box-shadow: none;
   opacity: 1;
 }
 
-/* Berry Frost band: a pink-to-raspberry-to-indigo band
-   with an AMBER BOTTOM edge
-   and sharp corners. */
+/* Harbor Mint band: a mint-to-teal-to-navy band
+   with a CORAL TOP edge
+   and round corners. */
 .bazaar-awning {
-  background: linear-gradient(135deg, #fdf2f8 0%, #fbcfe8 45%, #db2777 75%, #4f46e5 100%);
+  background: linear-gradient(135deg, #f0fdfa 0%, #99f6e4 45%, #0d9488 75%, #082f49 100%);
   opacity: 1;
-  box-shadow: 0 14px 30px -12px rgba(80, 7, 36, 0.45);
+  box-shadow: 0 14px 30px -12px rgba(4, 47, 46, 0.45);
   border: none;
-  border-bottom: 4px solid #f59e0b;
-  border-radius: 8px;
+  border-top: 4px solid #f97316;
+  border-radius: 20px;
 }
 
-/* Berry Frost glow: a soft indigo glow for the core. */
+/* Harbor Mint glow: a soft sky glow for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(219, 39, 119, 0.55) 42%, rgba(79, 70, 229, 0.22) 62%, rgba(79, 70, 229, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(13, 148, 136, 0.55) 42%, rgba(2, 132, 199, 0.22) 62%, rgba(2, 132, 199, 0) 76%);
 }
 
-/* Berry Frost disc: a raspberry disc with
-   an amber centre, white ring and an
-   indigo rim. */
+/* Harbor Mint disc: a teal disc with
+   a coral centre, white ring and a
+   sky rim. */
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 50%, #f59e0b 0%, #ec4899 40%, #ffffff 52%, #db2777 68%, #4f46e5 100%);
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(219, 39, 119, 0.55), 0 24px 48px -20px rgba(80, 7, 36, 0.3);
+    radial-gradient(circle at 50% 50%, #f97316 0%, #14b8a6 40%, #ffffff 52%, #0d9488 68%, #0284c7 100%);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(13, 148, 136, 0.55), 0 24px 48px -20px rgba(4, 47, 46, 0.3);
   border: none;
 }
 
-/* Tighter-spaced rings around the berry disc. */
+/* Wider-spaced rings around the teal disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(219, 39, 119, 0.3) 0px,
-    rgba(219, 39, 119, 0.3) 1px,
+    rgba(13, 148, 136, 0.3) 0px,
+    rgba(13, 148, 136, 0.3) 1px,
     transparent 1px,
     transparent 22px,
-    rgba(79, 70, 229, 0.30) 22px,
-    rgba(79, 70, 229, 0.30) 23px,
+    rgba(2, 132, 199, 0.30) 22px,
+    rgba(2, 132, 199, 0.30) 23px,
     transparent 23px,
     transparent 44px
   );
   -webkit-mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
   mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
-  border-radius: 8px;
+  border-radius: 20px;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(219, 39, 119, 0.35) 0deg 6deg,
+    rgba(13, 148, 136, 0.35) 0deg 6deg,
     transparent 6deg 42deg,
-    rgba(79, 70, 229, 0.30) 42deg 48deg,
+    rgba(2, 132, 199, 0.30) 42deg 48deg,
     transparent 48deg 96deg
   );
   -webkit-mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
   mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
-  border-radius: 8px;
+  border-radius: 20px;
 }
