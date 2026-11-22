@@ -1,89 +1,88 @@
 @import "tailwindcss";
 
 @theme {
-  /* Glacier Mint: an original direction —
-     pale mint-ice as the morning frost,
-     deep navy-slate as the ink,
-     teal as the brand,
-     sky blue as the icy glow,
-     indigo as the deep water,
-     mint green as the fresh spark.
-     Cards are GLACIER: 14px corners,
-     a crisp teal ring, a LEFT accent
+  /* Royal Grape: an original direction —
+     soft lavender paper,
+     deep plum as the ink,
+     vivid violet as the brand,
+     hot fuchsia as the spark,
+     fresh lime as the zing.
+     Cards are GRAPE: 26px corners,
+     a crisp violet ring, a TOP gradient
      bar — on hover the card LIFTS
-     and cools with a teal glow,
-     bubbles RISE with a shimmer,
-     a CLOCKWISE spin,
-     a LEFTWARD ticker, teal /
-     sky / indigo HORIZONTAL bands, a GRID
-     texture and a navy-to-teal
-     band with a MINT BOTTOM
+     and glows fuchsia,
+     petals FALL with a shimmer,
+     a COUNTER-CLOCKWISE spin,
+     a RIGHTWARD ticker, violet /
+     fuchsia / lime HORIZONTAL bands, a DOT
+     texture and a plum-to-violet
+     band with a LIME BOTTOM
      edge. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = teal scale */
-  --color-brand-50: #f0fdfa;
-  --color-brand-100: #ccfbf1;
-  --color-brand-200: #99f6e4;
-  --color-brand-300: #5eead4;
-  --color-brand-400: #2dd4bf;
-  --color-brand-500: #14b8a6;
-  --color-brand-600: #0d9488;
-  --color-brand-700: #0f766e;
-  --color-brand-800: #115e59;
-  --color-brand-900: #134e4a;
-  --color-brand-950: #042f2e;
-  --color-brand: #0d9488;
-  --color-brand-dark: #0f766e;
-  --color-brand-deep: #134e4a;
+  /* brand = violet scale */
+  --color-brand-50: #f5f3ff;
+  --color-brand-100: #ede9fe;
+  --color-brand-200: #ddd6fe;
+  --color-brand-300: #c4b5fd;
+  --color-brand-400: #a78bfa;
+  --color-brand-500: #8b5cf6;
+  --color-brand-600: #7c3aed;
+  --color-brand-700: #6d28d9;
+  --color-brand-800: #5b21b6;
+  --color-brand-900: #4c1d95;
+  --color-brand-950: #2e1065;
+  --color-brand: #7c3aed;
+  --color-brand-dark: #6d28d9;
+  --color-brand-deep: #4c1d95;
 
-  /* gold = sky scale (name kept for legacy class refs) */
-  --color-gold-50: #f0f9ff;
-  --color-gold-100: #e0f2fe;
-  --color-gold-200: #bae6fd;
-  --color-gold-300: #7dd3fc;
-  --color-gold-400: #38bdf8;
-  --color-gold-500: #0ea5e9;
-  --color-gold-600: #0284c7;
-  --color-gold-700: #0369a1;
-  --color-gold-800: #075985;
-  --color-gold-900: #0c4a6e;
-  --color-gold-950: #082f49;
-  --color-gold: #0284c7;
-  --color-gold-deep: #075985;
-  --color-gold-soft: #e0f2fe;
+  /* gold = fuchsia scale (name kept for legacy class refs) */
+  --color-gold-50: #fdf4ff;
+  --color-gold-100: #fae8ff;
+  --color-gold-200: #f5d0fe;
+  --color-gold-300: #f0abfc;
+  --color-gold-400: #e879f9;
+  --color-gold-500: #d946ef;
+  --color-gold-600: #c026d3;
+  --color-gold-700: #a21caf;
+  --color-gold-800: #86198f;
+  --color-gold-900: #701a75;
+  --color-gold-950: #4a044e;
+  --color-gold: #c026d3;
+  --color-gold-deep: #86198f;
+  --color-gold-soft: #fae8ff;
 
-  /* popblue = indigo scale (name kept for legacy class refs) */
-  --color-popblue-50: #eef2ff;
-  --color-popblue-100: #e0e7ff;
-  --color-popblue-200: #c7d2fe;
-  --color-popblue-300: #a5b4fc;
-  --color-popblue-400: #818cf8;
-  --color-popblue-500: #6366f1;
-  --color-popblue-600: #4f46e5;
-  --color-popblue-700: #4338ca;
-  --color-popblue-800: #3730a3;
-  --color-popblue-900: #312e81;
-  --color-popblue-950: #1e1b4b;
-  --color-popblue: #4f46e5;
-  --color-popblue-deep: #4338ca;
-  --color-popblue-soft: #e0e7ff;
+  /* popblue = lime scale (name kept for legacy class refs) */
+  --color-popblue-50: #f7fee7;
+  --color-popblue-100: #ecfccb;
+  --color-popblue-200: #d9f99d;
+  --color-popblue-300: #bef264;
+  --color-popblue-400: #a3e635;
+  --color-popblue-500: #84cc16;
+  --color-popblue-600: #65a30d;
+  --color-popblue-700: #4d7c0f;
+  --color-popblue-800: #3f6212;
+  --color-popblue-900: #365314;
+  --color-popblue-950: #1a2e05;
+  --color-popblue: #65a30d;
+  --color-popblue-deep: #4d7c0f;
+  --color-popblue-soft: #ecfccb;
 
-  /* poprose = mint scale (used by hero + header accents) */
-  --color-poprose-200: #bbf7d0;
-  --color-poprose-300: #86efac;
-  --color-poprose-400: #4ade80;
-  --color-poprose-500: #22c55e;
-  --color-poprose-600: #16a34a;
-  --color-poprose-700: #15803d;
-  --color-poprose-800: #166534;
+  /* poprose = pink-lavender scale (used by hero + header accents) */
+  --color-poprose-200: #f5d0fe;
+  --color-poprose-300: #f0abfc;
+  --color-poprose-400: #e879f9;
+  --color-poprose-500: #d946ef;
+  --color-poprose-600: #c026d3;
+  --color-poprose-700: #a21caf;
+  --color-poprose-800: #86198f;
 
-  --color-ink: #0b2233;
-  --color-paper: #f2faf8;
-  --color-mute: #5b7285;
+  --color-ink: #2a0f2e;
+  --color-paper: #faf7fd;
+  --color-mute: #6b5b70;
   --color-card: #ffffff;
-  --color-deep: #0b2233;
+  --color-deep: #2a0f2e;
 }
 
 html { scroll-behavior: smooth; }
@@ -97,62 +96,62 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f2faf8;
+  background-color: #faf7fd;
   background-image:
-    radial-gradient(ellipse 46% 26% at 6% 4%, rgba(13, 148, 136, 0.14) 0%, rgba(13, 148, 136, 0) 70%),
-    radial-gradient(ellipse 42% 28% at 96% 96%, rgba(2, 132, 199, 0.13) 0%, rgba(2, 132, 199, 0) 70%),
-    linear-gradient(135deg, rgba(242, 250, 248, 0.95) 0%, rgba(204, 251, 241, 0.98) 45%, rgba(224, 242, 254, 0.5) 85%);
-  color: #0b2233;
+    radial-gradient(ellipse 46% 26% at 6% 4%, rgba(124, 58, 237, 0.14) 0%, rgba(124, 58, 237, 0) 70%),
+    radial-gradient(ellipse 42% 28% at 96% 96%, rgba(217, 70, 239, 0.13) 0%, rgba(217, 70, 239, 0) 70%),
+    linear-gradient(135deg, rgba(250, 247, 253, 0.95) 0%, rgba(237, 233, 254, 0.98) 45%, rgba(250, 232, 255, 0.5) 85%);
+  color: #2a0f2e;
 }
-::selection { background: #0d9488; color: #ffffff; }
+::selection { background: #7c3aed; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0d9488, #0284c7); border-radius: 6px; border: 2px solid #f2faf8; }
-::-webkit-scrollbar-track { background: #f2faf8; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #7c3aed, #d946ef); border-radius: 6px; border: 2px solid #faf7fd; }
+::-webkit-scrollbar-track { background: #faf7fd; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Glacier Mint type: section headlines in
-   sentence case with a cool stance,
-   tighter leading, with teal-to-sky-
-   to-indigo gradient accents; product names
+/* Royal Grape type: section headlines in
+   sentence case with a regal stance,
+   tighter leading, with violet-to-fuchsia-
+   to-lime gradient accents; product names
    stay sentence case. */
 h1, h2 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: -0.02em; line-height: 1.08; text-wrap: balance; }
 h3 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: -0.02em; line-height: 1.12; text-wrap: balance; }
-h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #0d9488, #0284c7, #4f46e5); -webkit-background-clip: text; background-clip: text; color: transparent; }
+h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #7c3aed, #d946ef, #65a30d); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
-/* Glacier Mint rise: bubbles RISE
+/* Royal Grape fall: petals FALL
    with a shimmer,
-   spinning clockwise. */
+   spinning counter-clockwise. */
 @keyframes drift-fall {
-  0% { transform: translate3d(0, 105vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(0, -105vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
   15% { opacity: 0.95; }
-  50% { transform: translate3d(-2vw, 0, 0) scale(1.15) rotate(180deg); }
-  100% { transform: translate3d(2vw, -105vh, 0) scale(0.7) rotate(360deg); opacity: 0; }
+  50% { transform: translate3d(-2vw, 0, 0) scale(1.15) rotate(-180deg); }
+  100% { transform: translate3d(2vw, 105vh, 0) scale(0.7) rotate(-360deg); opacity: 0; }
 }
 .pop-rise { animation: drift-fall 12s linear infinite; }
 
-/* Glacier Mint sway: a gentle cool drift with a soft tilt. */
+/* Royal Grape sway: a gentle regal drift with a soft tilt. */
 @keyframes drift-sway {
   0%, 100% { transform: translate(6px, 0) rotate(1.5deg) scale(1); opacity: 0.7; }
   50% { transform: translate(-6px, 6px) rotate(-1.5deg) scale(1.05); opacity: 1; }
 }
 .pop-drift { animation: drift-sway 7s ease-in-out infinite; }
 
-/* Glacier Mint bob: a soft float with a gentle pulse. */
+/* Royal Grape bob: a soft float with a gentle pulse. */
 @keyframes drift-float {
   0%, 100% { transform: translateY(-6px) scale(1); }
   50% { transform: translateY(6px) scale(1.03) rotate(-1deg); }
 }
 .pop-bob { animation: drift-float 4.5s ease-in-out infinite; }
 
-/* Glacier Mint spin: a CLOCKWISE spin. */
+/* Royal Grape spin: a COUNTER-CLOCKWISE spin. */
 @keyframes drift-turn {
   from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  to { transform: rotate(-360deg); }
 }
 .pop-spin { animation: drift-turn 20s linear infinite; }
 
-/* Glacier Mint shimmer: a cool sky flicker —
+/* Royal Grape shimmer: a soft fuchsia flicker —
    flaring bright, then settling again. */
 @keyframes drift-blink {
   0%, 100% { opacity: 1; transform: scale(1); }
@@ -160,43 +159,43 @@ h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #0d
 }
 .pop-twinkle { animation: drift-blink 3.2s ease-in-out infinite; }
 
-/* Glacier Mint ticker: a LEFTWARD marquee. */
+/* Royal Grape ticker: a RIGHTWARD marquee. */
 @keyframes drift-ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
 }
 .pop-ticker { animation: drift-ticker 32s linear infinite; }
 
-/* Glacier Mint bands: teal / sky /
-   indigo HORIZONTAL bands. */
+/* Royal Grape bands: violet / fuchsia /
+   lime HORIZONTAL bands. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(0deg, #f2faf8 0px, #f2faf8 3px, #0d9488 3px, #0d9488 6px, #0284c7 6px, #0284c7 9px, #4f46e5 9px, #4f46e5 12px);
+    repeating-linear-gradient(0deg, #faf7fd 0px, #faf7fd 3px, #7c3aed 3px, #7c3aed 6px, #d946ef 6px, #d946ef 9px, #84cc16 9px, #84cc16 12px);
   background-size: 17px 17px;
   background-repeat: repeat;
   border-radius: 4px;
 }
 
-/* Glacier Mint card: GLACIER
-   (14px corners) with a crisp TEAL ring
-   and a SOFT COOL shadow over ice
+/* Royal Grape card: GRAPE
+   (26px corners) with a crisp VIOLET ring
+   and a SOFT PLUM shadow over lavender
    white light — on hover the card LIFTS
-   and cools with a teal glow. */
+   and glows with a fuchsia glow. */
 .pop-lift {
   position: relative;
-  border: 1.5px solid rgba(15, 118, 110, 0.28);
-  box-shadow: 0 10px 30px -12px rgba(11, 34, 51, 0.22), 0 2px 6px -2px rgba(11, 34, 51, 0.08);
+  border: 1.5px solid rgba(109, 40, 217, 0.28);
+  box-shadow: 0 10px 30px -12px rgba(42, 15, 46, 0.22), 0 2px 6px -2px rgba(42, 15, 46, 0.08);
   background: #ffffff;
-  border-radius: 14px;
+  border-radius: 26px;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift::before {
   content: "";
   position: absolute;
-  inset: 0 auto 0 0;
-  width: 5px;
-  background: linear-gradient(180deg, #0d9488, #0284c7, #4f46e5);
+  inset: 0 0 auto 0;
+  height: 6px;
+  background: linear-gradient(90deg, #7c3aed, #d946ef, #84cc16);
   opacity: 0.85;
   transition: opacity 0.25s ease;
   pointer-events: none;
@@ -204,118 +203,116 @@ h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #0d
 }
 .pop-lift:hover {
   transform: translateY(-6px) scale(1.01);
-  border-color: rgba(15, 118, 110, 0.6);
-  box-shadow: 0 24px 44px -16px rgba(13, 148, 136, 0.4), 0 0 0 4px rgba(2, 132, 199, 0.16);
+  border-color: rgba(109, 40, 217, 0.6);
+  box-shadow: 0 24px 44px -16px rgba(192, 38, 211, 0.4), 0 0 0 4px rgba(163, 230, 53, 0.16);
 }
 .pop-lift:hover::before { opacity: 1; }
 
-/* Glacier Mint glass: shared by modals and drawers — a
-   cool ice pane with soft
-   corners, a teal border
-   and a sky glow. */
+/* Royal Grape glass: shared by modals and drawers — a
+   soft lavender pane with soft
+   corners, a violet border
+   and a fuchsia glow. */
 .pop-glass {
-  background: rgba(242, 250, 248, 0.92);
+  background: rgba(250, 247, 253, 0.92);
   backdrop-filter: blur(20px) saturate(1.1);
   -webkit-backdrop-filter: blur(20px) saturate(1.1);
-  border: 1px solid rgba(15, 118, 110, 0.35);
-  border-radius: 14px;
-  box-shadow: 0 18px 40px -16px rgba(11, 34, 51, 0.3);
+  border: 1px solid rgba(109, 40, 217, 0.35);
+  border-radius: 26px;
+  box-shadow: 0 18px 40px -16px rgba(42, 15, 46, 0.3);
 }
 
-/* Glacier Mint tag: a teal-to-sky
-   PILL badge — white type, cool
-   glow, a slight tilt, with a
-   soft deep-navy shadow. */
+/* Royal Grape tag: a violet-to-fuchsia
+   STARBURST badge — white type, royal
+   glow, with a soft deep-plum shadow. */
 .starburst {
-  background: linear-gradient(135deg, #0d9488 0%, #0284c7 55%, #4f46e5 100%);
+  background: linear-gradient(135deg, #7c3aed 0%, #d946ef 55%, #c026d3 100%);
   color: #ffffff;
   text-shadow: none;
-  clip-path: none;
-  border-radius: 999px;
+  clip-path: polygon(50% 0%, 61% 12%, 79% 6%, 79% 24%, 97% 26%, 90% 42%, 100% 50%, 90% 58%, 97% 74%, 79% 76%, 79% 94%, 61% 88%, 50% 100%, 39% 88%, 21% 94%, 21% 76%, 3% 74%, 10% 58%, 0% 50%, 10% 42%, 3% 26%, 21% 24%, 21% 6%, 39% 12%);
+  border-radius: 0;
   border: none;
-  box-shadow: 0 8px 20px -6px rgba(11, 34, 51, 0.35);
+  box-shadow: 0 8px 20px -6px rgba(42, 15, 46, 0.35);
   padding-left: 14px;
   padding-right: 14px;
-  transform: rotate(2deg);
+  transform: rotate(-2deg);
 }
 
-/* Glacier Mint texture: a GRID pattern —
-   teal lines over pale mint-ice. */
+/* Royal Grape texture: a DOT pattern —
+   violet dots over pale lavender. */
 .halftone {
   background-image:
-    linear-gradient(rgba(13, 148, 136, 0.10) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(13, 148, 136, 0.10) 1px, transparent 1px);
-  background-size: 22px 22px;
+    radial-gradient(rgba(124, 58, 237, 0.14) 1.5px, transparent 2px);
+  background-size: 20px 20px;
   background-position: 0 0;
 }
 
-/* Glacier Mint rule: a teal-to-sky-to-indigo
-   bar with a dotted sky edge. */
+/* Royal Grape rule: a violet-to-fuchsia-to-lime
+   bar with a dotted fuchsia edge. */
 .zigzag {
-  height: 8px;
+  height: 10px;
   border: none;
   border-radius: 999px;
   background:
-    radial-gradient(circle at 8px 4px, #7dd3fc 2px, transparent 2.5px) 0 0 / 16px 8px repeat-x,
-    linear-gradient(90deg, #0d9488, #0284c7, #4f46e5);
+    radial-gradient(circle at 8px 5px, #e879f9 2.5px, transparent 3px) 0 0 / 16px 10px repeat-x,
+    linear-gradient(90deg, #7c3aed, #d946ef, #84cc16);
   box-shadow: none;
   opacity: 1;
 }
 
-/* Glacier Mint band: a navy-to-teal band
-   with a MINT BOTTOM edge
+/* Royal Grape band: a plum-to-violet band
+   with a LIME BOTTOM edge
    and soft corners. */
 .bazaar-awning {
-  background: linear-gradient(135deg, #0b2233 0%, #3730a3 45%, #0f766e 75%, #0d9488 100%);
+  background: linear-gradient(135deg, #2a0f2e 0%, #6d28d9 45%, #a21caf 75%, #c026d3 100%);
   opacity: 1;
-  box-shadow: 0 10px 30px -12px rgba(11, 34, 51, 0.35);
+  box-shadow: 0 10px 30px -12px rgba(42, 15, 46, 0.35);
   border: none;
-  border-bottom: 4px solid #86efac;
-  border-radius: 12px;
+  border-bottom: 4px solid #a3e635;
+  border-radius: 20px;
 }
 
-/* Glacier Mint glow: a soft sky glow for the core. */
+/* Royal Grape glow: a soft fuchsia glow for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(45, 212, 191, 0.55) 42%, rgba(125, 211, 252, 0.22) 62%, rgba(125, 211, 252, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(217, 70, 239, 0.55) 42%, rgba(240, 171, 252, 0.22) 62%, rgba(240, 171, 252, 0) 76%);
 }
 
-/* Glacier Mint disc: a frost disc with
-   a sky centre, white ring and a
-   bright teal rim. */
+/* Royal Grape disc: a royal disc with
+   a fuchsia centre, white ring and a
+   bright violet rim. */
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 50%, #7dd3fc 0%, #0284c7 40%, #ffffff 52%, #0d9488 68%, #bae6fd 100%);
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(2, 132, 199, 0.55), 0 24px 48px -20px rgba(11, 34, 51, 0.3);
+    radial-gradient(circle at 50% 50%, #f0abfc 0%, #c026d3 40%, #ffffff 52%, #7c3aed 68%, #d9f99d 100%);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(217, 70, 239, 0.55), 0 24px 48px -20px rgba(42, 15, 46, 0.3);
   border: none;
 }
 
-/* Wider-spaced rings around the frost disc. */
+/* Wider-spaced rings around the royal disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(13, 148, 136, 0.3) 0px,
-    rgba(13, 148, 136, 0.3) 1px,
+    rgba(124, 58, 237, 0.3) 0px,
+    rgba(124, 58, 237, 0.3) 1px,
     transparent 1px,
     transparent 48px,
-    rgba(79, 70, 229, 0.30) 48px,
-    rgba(79, 70, 229, 0.30) 49px,
+    rgba(217, 70, 239, 0.30) 48px,
+    rgba(217, 70, 239, 0.30) 49px,
     transparent 49px,
     transparent 96px
   );
   -webkit-mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
   mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
-  border-radius: 14px;
+  border-radius: 26px;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(13, 148, 136, 0.35) 0deg 6deg,
+    rgba(124, 58, 237, 0.35) 0deg 6deg,
     transparent 6deg 42deg,
-    rgba(2, 132, 199, 0.30) 42deg 48deg,
+    rgba(217, 70, 239, 0.30) 42deg 48deg,
     transparent 48deg 96deg
   );
   -webkit-mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
   mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
-  border-radius: 14px;
+  border-radius: 26px;
 }
