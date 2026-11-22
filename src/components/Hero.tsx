@@ -20,7 +20,7 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Glacier Mint: icy mint-white light, cool teal water and emerald frost over sky ice. Frost cards, cool shadows, bubbles rising up.
+// Marigold Dusk: warm cream light, marigold amber and coral embers over plum dusk. Ember cards, warm shadows, embers falling down.
 const ORBS = [
   { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(234, 88, 12, 0.35)" },
   { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(225, 29, 72, 0.35)" },
@@ -186,7 +186,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
 
         {/* Frost ticker: deep navy band with fresh type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#1c1917]/80 bg-gradient-to-r from-[#1c1917] via-[#ea580c] to-[#1c1917] py-3 shadow-[0_10px_30px_-12px_rgba(28, 25, 23, 0.5)] backdrop-blur">
+        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#2b1522]/80 bg-gradient-to-r from-[#2b1522] via-[#d97706] to-[#2b1522] py-3 shadow-[0_10px_30px_-12px_rgba(43, 21, 34, 0.5)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
