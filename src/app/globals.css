@@ -1,88 +1,87 @@
 @import "tailwindcss";
 
 @theme {
-  /* Royal Violet: an original direction —
-     warm ivory paper,
-     deep plum ink,
-     violet as the brand,
-     amber as the sunny contrast,
-     rose as the warm glow.
-     Cards are STAMP: 10px corners,
-     a 2px plum border with an OFFSET
-     solid shadow — on hover the card
-     STEPS up-left and the shadow
-     grows violet, confetti FALLS
-     downward with a counter-clockwise
-     spin, a RIGHTWARD ticker,
-     violet / amber / rose VERTICAL
-     bands, a DOT texture and a
-     violet-to-plum band with an
-     AMBER BOTTOM edge. */
+  /* Lagoon Tide: an original direction —
+     pale aqua sea-mist,
+     deep navy ink,
+     teal as the brand,
+     coral as the warm contrast,
+     ocean blue as the cool depth.
+     Cards are FLOAT: 22px corners,
+     no border, soft layered shadows
+     — on hover the card LIFTS
+     straight up and the shadow
+     deepens teal, confetti RISES
+     upward with a clockwise spin,
+     a LEFTWARD ticker, teal / coral /
+     ocean HORIZONTAL bands, a GRID
+     texture and a teal-to-deep band
+     with a CORAL BOTTOM edge. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = violet scale */
-  --color-brand-50: #f5f3ff;
-  --color-brand-100: #ede9fe;
-  --color-brand-200: #ddd6fe;
-  --color-brand-300: #c4b5fd;
-  --color-brand-400: #a78bfa;
-  --color-brand-500: #8b5cf6;
-  --color-brand-600: #7c3aed;
-  --color-brand-700: #6d28d9;
-  --color-brand-800: #5b21b6;
-  --color-brand-900: #4c1d95;
-  --color-brand-950: #2e1065;
-  --color-brand: #7c3aed;
-  --color-brand-dark: #6d28d9;
-  --color-brand-deep: #4c1d95;
+  /* brand = teal scale */
+  --color-brand-50: #f0fdfa;
+  --color-brand-100: #ccfbf1;
+  --color-brand-200: #99f6e4;
+  --color-brand-300: #5eead4;
+  --color-brand-400: #2dd4bf;
+  --color-brand-500: #14b8a6;
+  --color-brand-600: #0d9488;
+  --color-brand-700: #0f766e;
+  --color-brand-800: #115e59;
+  --color-brand-900: #134e4a;
+  --color-brand-950: #042f2e;
+  --color-brand: #0d9488;
+  --color-brand-dark: #0f766e;
+  --color-brand-deep: #134e4a;
 
-  /* gold = amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #d97706;
-  --color-gold-deep: #92400e;
-  --color-gold-soft: #fef3c7;
+  /* gold = coral scale (name kept for legacy class refs) */
+  --color-gold-50: #fff7ed;
+  --color-gold-100: #ffedd5;
+  --color-gold-200: #fed7aa;
+  --color-gold-300: #fdba74;
+  --color-gold-400: #fb923c;
+  --color-gold-500: #f97316;
+  --color-gold-600: #ea580c;
+  --color-gold-700: #c2410c;
+  --color-gold-800: #9a3412;
+  --color-gold-900: #7c2d12;
+  --color-gold-950: #431407;
+  --color-gold: #ea580c;
+  --color-gold-deep: #9a3412;
+  --color-gold-soft: #ffedd5;
 
-  /* popblue = rose scale (name kept for legacy class refs) */
-  --color-popblue-50: #fff1f2;
-  --color-popblue-100: #ffe4e6;
-  --color-popblue-200: #fecdd3;
-  --color-popblue-300: #fda4af;
-  --color-popblue-400: #fb7185;
-  --color-popblue-500: #f43f5e;
-  --color-popblue-600: #e11d48;
-  --color-popblue-700: #be123c;
-  --color-popblue-800: #9f1239;
-  --color-popblue-900: #881337;
-  --color-popblue-950: #4c0519;
-  --color-popblue: #e11d48;
-  --color-popblue-deep: #be123c;
-  --color-popblue-soft: #ffe4e6;
+  /* popblue = ocean scale (name kept for legacy class refs) */
+  --color-popblue-50: #eff6ff;
+  --color-popblue-100: #dbeafe;
+  --color-popblue-200: #bfdbfe;
+  --color-popblue-300: #93c5fd;
+  --color-popblue-400: #60a5fa;
+  --color-popblue-500: #3b82f6;
+  --color-popblue-600: #2563eb;
+  --color-popblue-700: #1d4ed8;
+  --color-popblue-800: #1e40af;
+  --color-popblue-900: #1e3a8a;
+  --color-popblue-950: #172554;
+  --color-popblue: #2563eb;
+  --color-popblue-deep: #1d4ed8;
+  --color-popblue-soft: #dbeafe;
 
-  /* poprose = emerald scale (used by hero + header accents) */
-  --color-poprose-200: #a7f3d0;
-  --color-poprose-300: #6ee7b7;
-  --color-poprose-400: #34d399;
-  --color-poprose-500: #10b981;
-  --color-poprose-600: #059669;
-  --color-poprose-700: #047857;
-  --color-poprose-800: #065f46;
+  /* poprose = aqua scale (used by hero + header accents) */
+  --color-poprose-200: #a5f3fc;
+  --color-poprose-300: #67e8f9;
+  --color-poprose-400: #22d3ee;
+  --color-poprose-500: #06b6d4;
+  --color-poprose-600: #0891b2;
+  --color-poprose-700: #0e7490;
+  --color-poprose-800: #155e75;
 
-  --color-ink: #1e1b2e;
-  --color-paper: #faf6f0;
-  --color-mute: #6b6178;
+  --color-ink: #0b2239;
+  --color-paper: #f2f7f5;
+  --color-mute: #5b6b7a;
   --color-card: #ffffff;
-  --color-deep: #241b3a;
+  --color-deep: #062a33;
 }
 
 html { scroll-behavior: smooth; }
@@ -96,61 +95,61 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #faf6f0;
+  background-color: #f2f7f5;
   background-image:
-    radial-gradient(ellipse 46% 26% at 6% 4%, rgba(124, 58, 237, 0.16) 0%, rgba(124, 58, 237, 0) 70%),
-    radial-gradient(ellipse 42% 28% at 96% 96%, rgba(217, 119, 6, 0.16) 0%, rgba(217, 119, 6, 0) 70%),
-    linear-gradient(160deg, rgba(250, 246, 240, 0.95) 0%, rgba(237, 233, 254, 0.98) 45%, rgba(254, 243, 199, 0.55) 85%);
-  color: #1e1b2e;
+    radial-gradient(ellipse 46% 26% at 6% 4%, rgba(13, 148, 136, 0.16) 0%, rgba(13, 148, 136, 0) 70%),
+    radial-gradient(ellipse 42% 28% at 96% 96%, rgba(249, 115, 22, 0.16) 0%, rgba(249, 115, 22, 0) 70%),
+    linear-gradient(160deg, rgba(242, 247, 245, 0.95) 0%, rgba(204, 251, 241, 0.98) 45%, rgba(255, 237, 213, 0.55) 85%);
+  color: #0b2239;
 }
-::selection { background: #7c3aed; color: #ffffff; }
+::selection { background: #0d9488; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #7c3aed, #e11d48); border-radius: 999px; border: 2px solid #faf6f0; }
-::-webkit-scrollbar-track { background: #faf6f0; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0d9488, #2563eb); border-radius: 999px; border: 2px solid #f2f7f5; }
+::-webkit-scrollbar-track { background: #f2f7f5; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Royal Violet type: section headlines in
-   UPPERCASE with a confident stance,
-   tight tracking, with violet-to-amber-
-   to-rose gradient accents;
+/* Lagoon Tide type: section headlines in
+   sentence case with a relaxed stance,
+   tight tracking, with teal-to-coral-
+   to-ocean gradient accents;
    product names stay sentence case. */
-h1, h2 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: 0.01em; line-height: 1.05; text-transform: uppercase; text-wrap: balance; }
+h1, h2 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: -0.02em; line-height: 1.05; text-transform: none; text-wrap: balance; }
 h3 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: -0.01em; line-height: 1.15; text-wrap: balance; }
-h1 em, h2 em, h3 em { font-style: italic; background: linear-gradient(90deg, #7c3aed, #f59e0b, #e11d48); -webkit-background-clip: text; background-clip: text; color: transparent; }
+h1 em, h2 em, h3 em { font-style: italic; background: linear-gradient(90deg, #0d9488, #f97316, #2563eb); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
-/* Royal Violet fall: confetti FALLS
-   downward with a counter-clockwise spin. */
-@keyframes drift-fall {
-  0% { transform: translate3d(0, -105vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
+/* Lagoon Tide rise: confetti RISES
+   upward with a clockwise spin. */
+@keyframes drift-rise {
+  0% { transform: translate3d(0, 105vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
   15% { opacity: 0.95; }
-  50% { transform: translate3d(-2vw, 0, 0) scale(1.15) rotate(-180deg); }
-  100% { transform: translate3d(2vw, 105vh, 0) scale(0.7) rotate(-360deg); opacity: 0; }
+  50% { transform: translate3d(2vw, 0, 0) scale(1.15) rotate(180deg); }
+  100% { transform: translate3d(-2vw, -105vh, 0) scale(0.7) rotate(360deg); opacity: 0; }
 }
-.pop-rise { animation: drift-fall 14s linear infinite; }
+.pop-rise { animation: drift-rise 14s linear infinite; }
 
-/* Royal Violet sway: a gentle warm drift with a soft tilt. */
+/* Lagoon Tide sway: a gentle tide drift with a soft tilt. */
 @keyframes drift-sway {
-  0%, 100% { transform: translate(-10px, 0) rotate(-2deg) scale(1); opacity: 0.7; }
-  50% { transform: translate(10px, 6px) rotate(2deg) scale(1.05); opacity: 1; }
+  0%, 100% { transform: translate(10px, 0) rotate(2deg) scale(1); opacity: 0.7; }
+  50% { transform: translate(-10px, -6px) rotate(-2deg) scale(1.05); opacity: 1; }
 }
 .pop-drift { animation: drift-sway 8s ease-in-out infinite; }
 
-/* Royal Violet bob: a soft float with a gentle pulse. */
+/* Lagoon Tide bob: a soft float with a gentle pulse. */
 @keyframes drift-float {
-  0%, 100% { transform: translateY(-6px) scale(1); }
-  50% { transform: translateY(6px) scale(1.03) rotate(1deg); }
+  0%, 100% { transform: translateY(6px) scale(1); }
+  50% { transform: translateY(-6px) scale(1.03) rotate(-1deg); }
 }
 .pop-bob { animation: drift-float 5s ease-in-out infinite; }
 
-/* Royal Violet spin: a COUNTER-CLOCKWISE spin. */
+/* Lagoon Tide spin: a CLOCKWISE spin. */
 @keyframes drift-turn {
   from { transform: rotate(0deg); }
-  to { transform: rotate(-360deg); }
+  to { transform: rotate(360deg); }
 }
 .pop-spin { animation: drift-turn 26s linear infinite; }
 
-/* Royal Violet flicker: a soft rose flicker —
+/* Lagoon Tide flicker: a soft coral flicker —
    flaring bright, then settling again. */
 @keyframes drift-blink {
   0%, 100% { opacity: 1; transform: scale(1); }
@@ -158,161 +157,163 @@ h1 em, h2 em, h3 em { font-style: italic; background: linear-gradient(90deg, #7c
 }
 .pop-twinkle { animation: drift-blink 2.8s ease-in-out infinite; }
 
-/* Royal Violet ticker: a RIGHTWARD marquee. */
+/* Lagoon Tide ticker: a LEFTWARD marquee. */
 @keyframes drift-ticker {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: drift-ticker 28s linear infinite; }
 
-/* Royal Violet bands: violet / amber /
-   rose VERTICAL bands. */
+/* Lagoon Tide bands: teal / coral /
+   ocean HORIZONTAL bands. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(90deg, #faf6f0 0px, #faf6f0 3px, #7c3aed 3px, #7c3aed 6px, #e11d48 6px, #e11d48 9px, #f59e0b 9px, #f59e0b 12px);
+    repeating-linear-gradient(180deg, #f2f7f5 0px, #f2f7f5 3px, #0d9488 3px, #0d9488 6px, #2563eb 6px, #2563eb 9px, #f97316 9px, #f97316 12px);
   background-size: 17px 17px;
   background-repeat: repeat;
-  border-radius: 10px;
+  border-radius: 22px;
 }
 
-/* Royal Violet card: STAMP
-   (10px corners) with a 2px plum
-   border and an OFFSET solid shadow
-   — on hover the card STEPS up-left
-   and the shadow grows violet. */
+/* Lagoon Tide card: FLOAT
+   (22px corners) with no border and
+   soft layered shadows — on hover
+   the card LIFTS straight up and the
+   shadow deepens teal. */
 .pop-lift {
   position: relative;
-  border: 2px solid rgba(30, 27, 46, 0.9);
-  box-shadow: 5px 5px 0 rgba(30, 27, 46, 0.9);
+  border: 1px solid rgba(11, 34, 57, 0.06);
+  box-shadow: 0 1px 2px rgba(11, 34, 57, 0.06), 0 12px 32px -12px rgba(11, 34, 57, 0.18);
   background: #ffffff;
-  border-radius: 10px;
+  border-radius: 22px;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift::before {
   content: "";
   position: absolute;
-  inset: 0 auto 0 0;
-  width: 5px;
-  background: linear-gradient(180deg, #7c3aed, #f59e0b, #e11d48);
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0d9488, #f97316, #2563eb);
   opacity: 0.9;
   transition: opacity 0.25s ease;
   pointer-events: none;
   z-index: 1;
 }
 .pop-lift:hover {
-  transform: translate(-2px, -2px);
-  border-color: rgba(124, 58, 237, 0.9);
-  box-shadow: 8px 8px 0 rgba(124, 58, 237, 0.85);
+  transform: translateY(-4px);
+  border-color: rgba(13, 148, 136, 0.35);
+  box-shadow: 0 2px 4px rgba(11, 34, 57, 0.06), 0 24px 48px -16px rgba(13, 148, 136, 0.35);
 }
 .pop-lift:hover::before { opacity: 1; }
 
-/* Royal Violet glass: shared by modals and drawers — a
-   warm ivory pane with sharp corners,
-   a violet border and a rose glow. */
+/* Lagoon Tide glass: shared by modals and drawers — a
+   cool aqua pane with soft corners,
+   a teal border and an ocean glow. */
 .pop-glass {
-  background: rgba(250, 246, 240, 0.92);
+  background: rgba(242, 247, 245, 0.92);
   backdrop-filter: blur(20px) saturate(1.1);
   -webkit-backdrop-filter: blur(20px) saturate(1.1);
-  border: 2px solid rgba(124, 58, 237, 0.35);
-  border-radius: 10px;
-  box-shadow: 6px 6px 0 rgba(30, 27, 46, 0.25);
+  border: 1px solid rgba(13, 148, 136, 0.35);
+  border-radius: 22px;
+  box-shadow: 0 24px 48px -16px rgba(11, 34, 57, 0.25);
 }
 
-/* Royal Violet tag: a violet-to-rose
-   stamp tag — white type, amber
-   glow, with a hard offset shadow. */
+/* Lagoon Tide tag: a coral-to-teal
+   pill tag — white type, ocean
+   glow, with a soft shadow. */
 .starburst {
-  background: linear-gradient(135deg, #7c3aed 0%, #e11d48 55%, #f59e0b 100%);
+  background: linear-gradient(135deg, #f97316 0%, #0d9488 55%, #2563eb 100%);
   color: #ffffff;
   text-shadow: none;
   clip-path: none;
-  border-radius: 10px;
+  border-radius: 999px;
   border: 2px solid rgba(255, 255, 255, 0.6);
-  box-shadow: 3px 3px 0 rgba(30, 27, 46, 0.85);
+  box-shadow: 0 10px 20px -8px rgba(11, 34, 57, 0.35);
   padding-left: 14px;
   padding-right: 14px;
-  transform: rotate(-3deg);
+  transform: rotate(0deg);
 }
 
-/* Royal Violet texture: a DOT pattern —
-   violet dots over warm ivory. */
+/* Lagoon Tide texture: a GRID pattern —
+   teal lines over pale aqua. */
 .halftone {
   background-image:
-    radial-gradient(rgba(124, 58, 237, 0.22) 1.5px, transparent 1.5px),
-    radial-gradient(rgba(225, 29, 72, 0.16) 1.5px, transparent 1.5px);
-  background-size: 22px 22px, 22px 22px;
-  background-position: 0 0, 11px 11px;
+    linear-gradient(rgba(13, 148, 136, 0.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(13, 148, 136, 0.14) 1px, transparent 1px);
+  background-size: 26px 26px;
+  background-position: 0 0, 0 0;
 }
 
-/* Royal Violet rule: a dotted
-   rule in violet and amber. */
+/* Lagoon Tide rule: a scalloped
+   wave in teal and coral. */
 .zigzag {
-  height: 8px;
+  height: 10px;
   border: none;
   border-radius: 999px;
-  background-image: radial-gradient(circle, #7c3aed 2.5px, transparent 2.5px), radial-gradient(circle, #f59e0b 2.5px, transparent 2.5px);
-  background-size: 18px 8px, 18px 8px;
-  background-position: 0 0, 9px 0;
+  background-image:
+    radial-gradient(circle at 12px 0px, rgba(13, 148, 136, 0.55) 6px, transparent 7px),
+    radial-gradient(circle at 24px 10px, rgba(249, 115, 22, 0.5) 6px, transparent 7px);
+  background-size: 24px 10px;
+  background-position: 0 0, 0 0;
   background-repeat: repeat-x;
   box-shadow: none;
   opacity: 1;
 }
 
-/* Royal Violet band: a violet-to-plum band
-   with an AMBER BOTTOM edge
-   and sharp corners. */
+/* Lagoon Tide band: a teal-to-deep band
+   with a CORAL BOTTOM edge
+   and soft corners. */
 .bazaar-awning {
-  background: linear-gradient(135deg, #f5f3ff 0%, #c4b5fd 45%, #7c3aed 75%, #241b3a 100%);
+  background: linear-gradient(135deg, #f0fdfa 0%, #99f6e4 45%, #0d9488 75%, #062a33 100%);
   opacity: 1;
-  box-shadow: 0 14px 30px -12px rgba(30, 27, 46, 0.45);
+  box-shadow: 0 14px 30px -12px rgba(11, 34, 57, 0.45);
   border: none;
-  border-bottom: 4px solid #f59e0b;
-  border-radius: 10px;
+  border-bottom: 4px solid #f97316;
+  border-radius: 22px;
 }
 
-/* Royal Violet glow: a soft rose glow for the core. */
+/* Lagoon Tide glow: a soft coral glow for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(124, 58, 237, 0.55) 42%, rgba(225, 29, 72, 0.22) 62%, rgba(225, 29, 72, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(13, 148, 136, 0.55) 42%, rgba(249, 115, 22, 0.22) 62%, rgba(249, 115, 22, 0) 76%);
 }
 
-/* Royal Violet disc: a violet disc with
-   an amber centre, white ring and a
-   rose rim. */
+/* Lagoon Tide disc: a teal disc with
+   a coral centre, white ring and an
+   ocean rim. */
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 50%, #f59e0b 0%, #8b5cf6 40%, #ffffff 52%, #7c3aed 68%, #e11d48 100%);
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(124, 58, 237, 0.55), 0 24px 48px -20px rgba(30, 27, 46, 0.3);
+    radial-gradient(circle at 50% 50%, #f97316 0%, #14b8a6 40%, #ffffff 52%, #0d9488 68%, #2563eb 100%);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(13, 148, 136, 0.55), 0 24px 48px -20px rgba(11, 34, 57, 0.3);
   border: none;
 }
 
-/* Wider-spaced rings around the violet disc. */
+/* Wider-spaced rings around the teal disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(124, 58, 237, 0.3) 0px,
-    rgba(124, 58, 237, 0.3) 1px,
+    rgba(13, 148, 136, 0.3) 0px,
+    rgba(13, 148, 136, 0.3) 1px,
     transparent 1px,
     transparent 22px,
-    rgba(225, 29, 72, 0.30) 22px,
-    rgba(225, 29, 72, 0.30) 23px,
+    rgba(37, 99, 235, 0.30) 22px,
+    rgba(37, 99, 235, 0.30) 23px,
     transparent 23px,
     transparent 44px
   );
   -webkit-mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
   mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
-  border-radius: 10px;
+  border-radius: 22px;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(124, 58, 237, 0.35) 0deg 6deg,
+    rgba(13, 148, 136, 0.35) 0deg 6deg,
     transparent 6deg 42deg,
-    rgba(245, 158, 11, 0.30) 42deg 48deg,
+    rgba(249, 115, 22, 0.30) 42deg 48deg,
     transparent 48deg 96deg
   );
   -webkit-mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
   mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
-  border-radius: 10px;
+  border-radius: 22px;
 }
