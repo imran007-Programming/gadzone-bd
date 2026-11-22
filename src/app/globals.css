@@ -1,87 +1,89 @@
 @import "tailwindcss";
 
 @theme {
-  /* Ember Harvest: an original direction —
-     warm cream light,
-     deep rosewood as the ink,
-     crimson rose as the brand,
-     amber as the glow,
-     teal as the cool contrast.
-     Cards are EMBER: 24px corners,
-     a layered warm shadow — on hover
-     the card LIFTS and TILTS slightly,
-     the shadow WARMS with an amber
-     glow, ember motes RISE upward with a
-     drift, a CLOCKWISE spin, a
-     LEFTWARD ticker, rose / amber /
-     teal HORIZONTAL bands, a CHECKER
-     texture and a rose-to-amber band
-     with an AMBER BOTTOM edge. */
+  /* Polar Night: an original direction —
+     icy pale-blue light,
+     deep navy as the ink,
+     indigo as the brand,
+     cyan as the glow,
+     emerald as the cool contrast.
+     Cards are FROST: 10px corners,
+     a crisp flat shadow with a LEFT
+     vertical accent bar — on hover
+     the card LIFTS straight up,
+     the shadow turns ICY indigo,
+     snowflakes FALL downward with a
+     drift, a COUNTER-CLOCKWISE spin,
+     a RIGHTWARD ticker, indigo /
+     cyan / emerald VERTICAL bands, a
+     DOTTED texture and an indigo-to-
+     cyan band with a CYAN BOTTOM
+     edge. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = rose scale */
-  --color-brand-50: #fff1f2;
-  --color-brand-100: #ffe4e6;
-  --color-brand-200: #fecdd3;
-  --color-brand-300: #fda4af;
-  --color-brand-400: #fb7185;
-  --color-brand-500: #f43f5e;
-  --color-brand-600: #e11d48;
-  --color-brand-700: #be123c;
-  --color-brand-800: #9f1239;
-  --color-brand-900: #881337;
-  --color-brand-950: #4c0519;
-  --color-brand: #be123c;
-  --color-brand-dark: #9f1239;
-  --color-brand-deep: #881337;
+  /* brand = indigo scale */
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-200: #c7d2fe;
+  --color-brand-300: #a5b4fc;
+  --color-brand-400: #818cf8;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+  --color-brand-800: #3730a3;
+  --color-brand-900: #312e81;
+  --color-brand-950: #1e1b4b;
+  --color-brand: #4338ca;
+  --color-brand-dark: #3730a3;
+  --color-brand-deep: #312e81;
 
-  /* gold = amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #d97706;
-  --color-gold-deep: #92400e;
-  --color-gold-soft: #fef3c7;
+  /* gold = cyan scale (name kept for legacy class refs) */
+  --color-gold-50: #ecfeff;
+  --color-gold-100: #cffafe;
+  --color-gold-200: #a5f3fc;
+  --color-gold-300: #67e8f9;
+  --color-gold-400: #22d3ee;
+  --color-gold-500: #06b6d4;
+  --color-gold-600: #0891b2;
+  --color-gold-700: #0e7490;
+  --color-gold-800: #155e75;
+  --color-gold-900: #164e63;
+  --color-gold-950: #083344;
+  --color-gold: #0891b2;
+  --color-gold-deep: #155e75;
+  --color-gold-soft: #cffafe;
 
-  /* popblue = teal scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0fdfa;
-  --color-popblue-100: #ccfbf1;
-  --color-popblue-200: #99f6e4;
-  --color-popblue-300: #5eead4;
-  --color-popblue-400: #2dd4bf;
-  --color-popblue-500: #14b8a6;
-  --color-popblue-600: #0d9488;
-  --color-popblue-700: #0f766e;
-  --color-popblue-800: #115e59;
-  --color-popblue-900: #134e4a;
-  --color-popblue-950: #042f2e;
-  --color-popblue: #0d9488;
-  --color-popblue-deep: #0f766e;
-  --color-popblue-soft: #ccfbf1;
+  /* popblue = emerald scale (name kept for legacy class refs) */
+  --color-popblue-50: #ecfdf5;
+  --color-popblue-100: #d1fae5;
+  --color-popblue-200: #a7f3d0;
+  --color-popblue-300: #6ee7b7;
+  --color-popblue-400: #34d399;
+  --color-popblue-500: #10b981;
+  --color-popblue-600: #059669;
+  --color-popblue-700: #047857;
+  --color-popblue-800: #065f46;
+  --color-popblue-900: #064e3b;
+  --color-popblue-950: #022c22;
+  --color-popblue: #059669;
+  --color-popblue-deep: #047857;
+  --color-popblue-soft: #d1fae5;
 
-  /* poprose = orange scale (used by hero + header accents) */
-  --color-poprose-200: #fed7aa;
-  --color-poprose-300: #fdba74;
-  --color-poprose-400: #fb923c;
-  --color-poprose-500: #f97316;
-  --color-poprose-600: #ea580c;
-  --color-poprose-700: #c2410c;
-  --color-poprose-800: #9a3412;
+  /* poprose = violet scale (used by hero + header accents) */
+  --color-poprose-200: #ddd6fe;
+  --color-poprose-300: #c4b5fd;
+  --color-poprose-400: #a78bfa;
+  --color-poprose-500: #8b5cf6;
+  --color-poprose-600: #7c3aed;
+  --color-poprose-700: #6d28d9;
+  --color-poprose-800: #5b21b6;
 
-  --color-ink: #292524;
-  --color-paper: #fff7ed;
-  --color-mute: #78716c;
+  --color-ink: #0f1e3d;
+  --color-paper: #f2f7ff;
+  --color-mute: #5b6b8c;
   --color-card: #ffffff;
-  --color-deep: #44403c;
+  --color-deep: #1e3a5f;
 }
 
 html { scroll-behavior: smooth; }
@@ -95,62 +97,62 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fff7ed;
+  background-color: #f2f7ff;
   background-image:
-    radial-gradient(ellipse 46% 26% at 94% 4%, rgba(190, 18, 60, 0.14) 0%, rgba(190, 18, 60, 0) 70%),
-    radial-gradient(ellipse 42% 28% at 4% 96%, rgba(245, 158, 11, 0.16) 0%, rgba(245, 158, 11, 0) 70%),
-    linear-gradient(200deg, rgba(255, 247, 237, 0.95) 0%, rgba(255, 228, 230, 0.98) 45%, rgba(254, 243, 199, 0.55) 85%);
-  color: #292524;
+    radial-gradient(ellipse 46% 26% at 94% 4%, rgba(79, 70, 229, 0.14) 0%, rgba(79, 70, 229, 0) 70%),
+    radial-gradient(ellipse 42% 28% at 4% 96%, rgba(6, 182, 212, 0.16) 0%, rgba(6, 182, 212, 0) 70%),
+    linear-gradient(200deg, rgba(242, 247, 255, 0.95) 0%, rgba(224, 231, 255, 0.98) 45%, rgba(207, 250, 254, 0.55) 85%);
+  color: #0f1e3d;
 }
-::selection { background: #be123c; color: #ffffff; }
+::selection { background: #4338ca; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #be123c, #d97706); border-radius: 999px; border: 2px solid #fff7ed; }
-::-webkit-scrollbar-track { background: #fff7ed; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #4338ca, #06b6d4); border-radius: 999px; border: 2px solid #f2f7ff; }
+::-webkit-scrollbar-track { background: #f2f7ff; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Ember Harvest type: section headlines in
-   UPPERCASE with a warm stance,
-   relaxed leading, with rose-to-
-   amber-to-teal gradient accents;
+/* Polar Night type: section headlines in
+   sentence case with a cool stance,
+   tight tracking, with indigo-to-
+   cyan-to-emerald gradient accents;
    product names stay sentence case. */
-h1, h2 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: 0.01em; line-height: 1.12; text-transform: uppercase; text-wrap: balance; }
+h1, h2 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: -0.02em; line-height: 1.12; text-transform: none; text-wrap: balance; }
 h3 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: -0.01em; line-height: 1.15; text-wrap: balance; }
-h1 em, h2 em, h3 em { font-style: italic; background: linear-gradient(90deg, #be123c, #d97706, #0d9488); -webkit-background-clip: text; background-clip: text; color: transparent; }
+h1 em, h2 em, h3 em { font-style: italic; background: linear-gradient(90deg, #4338ca, #06b6d4, #059669); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
-/* Ember Harvest rise: ember motes RISE
-   upward with a drift,
-   spinning clockwise. */
+/* Polar Night fall: snowflakes FALL
+   downward with a drift,
+   spinning counter-clockwise. */
 @keyframes drift-rise {
-  0% { transform: translate3d(0, 105vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(0, -105vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
   15% { opacity: 0.95; }
-  50% { transform: translate3d(2vw, 0, 0) scale(1.15) rotate(180deg); }
-  100% { transform: translate3d(-2vw, -105vh, 0) scale(0.7) rotate(360deg); opacity: 0; }
+  50% { transform: translate3d(2vw, 0, 0) scale(1.15) rotate(-180deg); }
+  100% { transform: translate3d(-2vw, 105vh, 0) scale(0.7) rotate(-360deg); opacity: 0; }
 }
 .pop-rise { animation: drift-rise 14s linear infinite; }
 
-/* Ember Harvest sway: a gentle warm drift with a soft tilt. */
+/* Polar Night sway: a gentle cool drift with a soft tilt. */
 @keyframes drift-sway {
-  0%, 100% { transform: translate(10px, 0) rotate(-2deg) scale(1); opacity: 0.7; }
-  50% { transform: translate(-10px, 6px) rotate(2deg) scale(1.05); opacity: 1; }
+  0%, 100% { transform: translate(10px, 0) rotate(2deg) scale(1); opacity: 0.7; }
+  50% { transform: translate(-10px, 6px) rotate(-2deg) scale(1.05); opacity: 1; }
 }
 .pop-drift { animation: drift-sway 8s ease-in-out infinite; }
 
-/* Ember Harvest bob: a soft float with a gentle pulse. */
+/* Polar Night bob: a soft float with a gentle pulse. */
 @keyframes drift-float {
   0%, 100% { transform: translateY(-6px) scale(1); }
-  50% { transform: translateY(6px) scale(1.03) rotate(1deg); }
+  50% { transform: translateY(6px) scale(1.03) rotate(-1deg); }
 }
 .pop-bob { animation: drift-float 5s ease-in-out infinite; }
 
-/* Ember Harvest spin: a CLOCKWISE spin. */
+/* Polar Night spin: a COUNTER-CLOCKWISE spin. */
 @keyframes drift-turn {
   from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  to { transform: rotate(-360deg); }
 }
 .pop-spin { animation: drift-turn 26s linear infinite; }
 
-/* Ember Harvest flicker: a soft amber flicker —
+/* Polar Night flicker: a soft cyan flicker —
    flaring bright, then settling again. */
 @keyframes drift-blink {
   0%, 100% { opacity: 1; transform: scale(1); }
@@ -158,160 +160,160 @@ h1 em, h2 em, h3 em { font-style: italic; background: linear-gradient(90deg, #be
 }
 .pop-twinkle { animation: drift-blink 2.8s ease-in-out infinite; }
 
-/* Ember Harvest ticker: a LEFTWARD marquee. */
+/* Polar Night ticker: a RIGHTWARD marquee. */
 @keyframes drift-ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
 }
 .pop-ticker { animation: drift-ticker 28s linear infinite; }
 
-/* Ember Harvest bands: rose / amber /
-   teal HORIZONTAL bands. */
+/* Polar Night bands: indigo / cyan /
+   emerald VERTICAL bands. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(0deg, #fff7ed 0px, #fff7ed 3px, #be123c 3px, #be123c 6px, #d97706 6px, #d97706 9px, #0d9488 9px, #0d9488 12px);
+    repeating-linear-gradient(90deg, #f2f7ff 0px, #f2f7ff 3px, #4338ca 3px, #4338ca 6px, #06b6d4 6px, #06b6d4 9px, #059669 9px, #059669 12px);
   background-size: 17px 17px;
   background-repeat: repeat;
-  border-radius: 24px;
+  border-radius: 10px;
 }
 
-/* Ember Harvest card: EMBER
-   (24px corners) with a layered
-   warm shadow — on hover the card
-   LIFTS and TILTS slightly, and the
-   shadow WARMS with an amber glow. */
+/* Polar Night card: FROST
+   (10px corners) with a crisp flat
+   shadow and a LEFT vertical accent
+   bar — on hover the card LIFTS
+   straight up, and the shadow turns
+   ICY indigo. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(41, 37, 36, 0.1);
-  box-shadow: 0 10px 30px -12px rgba(76, 5, 25, 0.28), 0 2px 6px -2px rgba(76, 5, 25, 0.12);
+  border: 1px solid rgba(15, 30, 61, 0.1);
+  box-shadow: 0 4px 14px -6px rgba(15, 30, 61, 0.22), 0 1px 3px -1px rgba(15, 30, 61, 0.1);
   background: #ffffff;
-  border-radius: 24px;
+  border-radius: 10px;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift::before {
   content: "";
   position: absolute;
-  inset: auto 0 0 0;
-  height: 6px;
-  background: linear-gradient(90deg, #be123c, #d97706, #0d9488);
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(180deg, #4338ca, #06b6d4, #059669);
   opacity: 0.9;
   transition: opacity 0.25s ease;
   pointer-events: none;
   z-index: 1;
 }
 .pop-lift:hover {
-  transform: translateY(-6px) rotate(-0.6deg);
-  border-color: rgba(190, 18, 60, 0.45);
-  box-shadow: 0 26px 48px -16px rgba(217, 119, 6, 0.5), 0 0 0 4px rgba(244, 63, 94, 0.18);
+  transform: translateY(-6px);
+  border-color: rgba(67, 56, 202, 0.45);
+  box-shadow: 0 20px 36px -14px rgba(79, 70, 229, 0.5), 0 0 0 3px rgba(6, 182, 212, 0.18);
 }
 .pop-lift:hover::before { opacity: 1; }
 
-/* Ember Harvest glass: shared by modals and drawers — a
-   warm cream pane with soft
-   corners, a rose border
-   and an amber glow. */
+/* Polar Night glass: shared by modals and drawers — an
+   icy pale pane with crisp corners,
+   an indigo border and a cyan glow. */
 .pop-glass {
-  background: rgba(255, 247, 237, 0.92);
+  background: rgba(242, 247, 255, 0.92);
   backdrop-filter: blur(20px) saturate(1.1);
   -webkit-backdrop-filter: blur(20px) saturate(1.1);
-  border: 1px solid rgba(190, 18, 60, 0.3);
-  border-radius: 24px;
-  box-shadow: 0 18px 40px -16px rgba(76, 5, 25, 0.3);
+  border: 1px solid rgba(67, 56, 202, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 18px 40px -16px rgba(15, 30, 61, 0.3);
 }
 
-/* Ember Harvest tag: a rose-to-orange
-   rounded tag — white type, amber
-   glow, with a soft warm shadow. */
+/* Polar Night tag: an indigo-to-cyan
+   rounded tag — white type, cyan
+   glow, with a soft cool shadow. */
 .starburst {
-  background: linear-gradient(135deg, #be123c 0%, #ea580c 55%, #d97706 100%);
+  background: linear-gradient(135deg, #4338ca 0%, #7c3aed 55%, #06b6d4 100%);
   color: #ffffff;
   text-shadow: none;
   clip-path: none;
-  border-radius: 12px;
+  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 8px 20px -6px rgba(190, 18, 60, 0.5);
+  box-shadow: 0 8px 20px -6px rgba(67, 56, 202, 0.5);
   padding-left: 14px;
   padding-right: 14px;
-  transform: rotate(2deg);
+  transform: rotate(-2deg);
 }
 
-/* Ember Harvest texture: a CHECKER pattern —
-   amber checks over warm cream. */
+/* Polar Night texture: a DOTTED pattern —
+   indigo dots over icy pale blue. */
 .halftone {
   background-image:
-    conic-gradient(rgba(190, 18, 60, 0.10) 25%, transparent 0 50%, rgba(190, 18, 60, 0.10) 0 75%, transparent 0);
-  background-size: 28px 28px;
+    radial-gradient(rgba(67, 56, 202, 0.12) 1.5px, transparent 1.6px);
+  background-size: 22px 22px;
   background-position: 0 0;
 }
 
-/* Ember Harvest rule: a scalloped
-   bar in rose and amber. */
+/* Polar Night rule: a dotted
+   bar in indigo and cyan. */
 .zigzag {
   height: 12px;
   border: none;
   border-radius: 999px;
-  background-image: radial-gradient(circle at 8px 6px, #be123c 5px, transparent 6px), radial-gradient(circle at 24px 6px, #d97706 5px, transparent 6px);
+  background-image: radial-gradient(circle at 8px 6px, #4338ca 5px, transparent 6px), radial-gradient(circle at 24px 6px, #06b6d4 5px, transparent 6px);
   background-size: 32px 12px;
   background-repeat: repeat-x;
   box-shadow: none;
   opacity: 1;
 }
 
-/* Ember Harvest band: a rose-to-amber band
-   with an AMBER BOTTOM edge
-   and soft corners. */
+/* Polar Night band: an indigo-to-cyan band
+   with a CYAN BOTTOM edge
+   and crisp corners. */
 .bazaar-awning {
-  background: linear-gradient(135deg, #292524 0%, #9f1239 45%, #ea580c 75%, #d97706 100%);
+  background: linear-gradient(135deg, #0f1e3d 0%, #3730a3 45%, #7c3aed 75%, #06b6d4 100%);
   opacity: 1;
-  box-shadow: 0 14px 30px -12px rgba(76, 5, 25, 0.45);
+  box-shadow: 0 14px 30px -12px rgba(15, 30, 61, 0.45);
   border: none;
-  border-bottom: 4px solid #fbbf24;
-  border-radius: 24px;
+  border-bottom: 4px solid #22d3ee;
+  border-radius: 10px;
 }
 
-/* Ember Harvest glow: a soft amber glow for the core. */
+/* Polar Night glow: a soft cyan glow for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(244, 63, 94, 0.55) 42%, rgba(251, 113, 133, 0.22) 62%, rgba(251, 113, 133, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(99, 102, 241, 0.55) 42%, rgba(129, 140, 248, 0.22) 62%, rgba(129, 140, 248, 0) 76%);
 }
 
-/* Ember Harvest disc: an ember disc with
-   an amber centre, white ring and a
-   teal rim. */
+/* Polar Night disc: a frost disc with
+   a cyan centre, white ring and an
+   indigo rim. */
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 50%, #f59e0b 0%, #be123c 40%, #ffffff 52%, #ea580c 68%, #0d9488 100%);
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(244, 63, 94, 0.55), 0 24px 48px -20px rgba(76, 5, 25, 0.3);
+    radial-gradient(circle at 50% 50%, #06b6d4 0%, #4338ca 40%, #ffffff 52%, #7c3aed 68%, #059669 100%);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(99, 102, 241, 0.55), 0 24px 48px -20px rgba(15, 30, 61, 0.3);
   border: none;
 }
 
-/* Tighter-spaced rings around the ember disc. */
+/* Tighter-spaced rings around the frost disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(190, 18, 60, 0.3) 0px,
-    rgba(190, 18, 60, 0.3) 1px,
+    rgba(67, 56, 202, 0.3) 0px,
+    rgba(67, 56, 202, 0.3) 1px,
     transparent 1px,
     transparent 32px,
-    rgba(217, 119, 6, 0.30) 32px,
-    rgba(217, 119, 6, 0.30) 33px,
+    rgba(6, 182, 212, 0.30) 32px,
+    rgba(6, 182, 212, 0.30) 33px,
     transparent 33px,
     transparent 64px
   );
   -webkit-mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
   mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
-  border-radius: 24px;
+  border-radius: 10px;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(190, 18, 60, 0.35) 0deg 6deg,
+    rgba(67, 56, 202, 0.35) 0deg 6deg,
     transparent 6deg 42deg,
-    rgba(217, 119, 6, 0.30) 42deg 48deg,
+    rgba(6, 182, 212, 0.30) 42deg 48deg,
     transparent 48deg 96deg
   );
   -webkit-mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
   mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
-  border-radius: 24px;
+  border-radius: 10px;
 }
