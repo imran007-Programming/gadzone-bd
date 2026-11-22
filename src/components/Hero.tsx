@@ -176,8 +176,8 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
-              <div className="bg-gradient-to-r from-brand-600 via-gold-500 to-popblue-700 p-2 shadow-[0_20px_40px_-18px_rgba(43, 26, 18, 0.35)] rounded-[16px]">
-                <div className="overflow-hidden rounded-[12px] bg-paper ring-1 ring-brand-950/10">
+              <div className="bg-gradient-to-r from-brand-600 via-gold-500 to-popblue-700 p-2 shadow-[0_20px_40px_-18px_rgba(11, 34, 51, 0.35)] rounded-[28px]">
+                <div className="overflow-hidden rounded-[20px] bg-paper ring-1 ring-brand-950/10">
                   <BannerCarousel />
                 </div>
               </div>
