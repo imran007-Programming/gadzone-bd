@@ -20,7 +20,7 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Ember Grove: warm amber light, indigo over bright sky. Ember Grove cards, soft warm shadows, embers rising up.
+// Frost Circuit: icy cyan light, violet over bright sky. Frost Circuit cards, sharp cool shadows, snowflakes falling down.
 const ORBS = [
   { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(79, 70, 229, 0.35)" },
   { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(56, 189, 248, 0.35)" },
@@ -185,7 +185,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* Ember Grove ticker: deep navy band with warm amber type */}
+        {/* Frost Circuit ticker: deep navy band with icy cyan type */}
         <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#431407]/80 bg-gradient-to-r from-[#431407] via-[#9a3412] to-[#431407] py-3 shadow-[0_10px_30px_-12px_rgba(23, 37, 84, 0.5)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
