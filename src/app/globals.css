@@ -1,88 +1,90 @@
 @import "tailwindcss";
 
 @theme {
-  /* Tidepool Lagoon: an original direction —
-     icy aqua paper,
-     deep navy ink,
-     teal as the brand,
-     cyan as the contrast,
-     deep ocean navy as the depth,
-     coral as the small hot accent.
-     Cards are SOFT and AIRY:
-     24px corners, a 1px soft navy
-     border, a DIFFUSE teal-tinted
-     shadow — on hover the card LIFTS
-     straight up and glows, bubbles
-     RISE upward with a sway, a LEFTWARD
-     ticker, teal / cyan / navy
-     LAGOON bands, a RIPPLE texture
-     and a cyan-to-navy band with a
-     NAVY BOTTOM edge. */
+  /* Grape Dusk: an original direction —
+     lavender dusk paper,
+     deep grape ink,
+     violet as the brand,
+     fuchsia as the contrast,
+     lime as the spark,
+     rose as the small hot accent.
+     Cards are BOLD and GRAPHIC:
+     16px corners, a violet
+     border, a HARD violet offset
+     shadow — on hover the card
+     LIFTS and TILTS and glows
+     fuchsia, confetti FALLS
+     downward with a sway, a
+     RIGHTWARD ticker, violet /
+     fuchsia / lime DUSK bands,
+     a DOT-GRID texture and a
+     violet-to-fuchsia band with
+     a LIME BOTTOM edge. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = teal scale */
-  --color-brand-50: #f0fdfa;
-  --color-brand-100: #ccfbf1;
-  --color-brand-200: #99f6e4;
-  --color-brand-300: #5eead4;
-  --color-brand-400: #2dd4bf;
-  --color-brand-500: #14b8a6;
-  --color-brand-600: #0d9488;
-  --color-brand-700: #0f766e;
-  --color-brand-800: #115e59;
-  --color-brand-900: #134e4a;
-  --color-brand-950: #042f2e;
-  --color-brand: #0f766e;
-  --color-brand-dark: #115e59;
-  --color-brand-deep: #042f2e;
+  /* brand = violet scale */
+  --color-brand-50: #f5f3ff;
+  --color-brand-100: #ede9fe;
+  --color-brand-200: #ddd6fe;
+  --color-brand-300: #c4b5fd;
+  --color-brand-400: #a78bfa;
+  --color-brand-500: #8b5cf6;
+  --color-brand-600: #7c3aed;
+  --color-brand-700: #6d28d9;
+  --color-brand-800: #5b21b6;
+  --color-brand-900: #4c1d95;
+  --color-brand-950: #2e1065;
+  --color-brand: #6d28d9;
+  --color-brand-dark: #5b21b6;
+  --color-brand-deep: #2e1065;
 
-  /* gold = cyan scale (name kept for legacy class refs) */
-  --color-gold-50: #ecfeff;
-  --color-gold-100: #cffafe;
-  --color-gold-200: #a5f3fc;
-  --color-gold-300: #67e8f9;
-  --color-gold-400: #22d3ee;
-  --color-gold-500: #06b6d4;
-  --color-gold-600: #0891b2;
-  --color-gold-700: #0e7490;
-  --color-gold-800: #155e75;
-  --color-gold-900: #164e63;
-  --color-gold-950: #083344;
-  --color-gold: #0891b2;
-  --color-gold-deep: #155e75;
-  --color-gold-soft: #cffafe;
+  /* gold = fuchsia scale (name kept for legacy class refs) */
+  --color-gold-50: #fdf4ff;
+  --color-gold-100: #fae8ff;
+  --color-gold-200: #f5d0fe;
+  --color-gold-300: #f0abfc;
+  --color-gold-400: #e879f9;
+  --color-gold-500: #d946ef;
+  --color-gold-600: #c026d3;
+  --color-gold-700: #a21caf;
+  --color-gold-800: #86198f;
+  --color-gold-900: #701a75;
+  --color-gold-950: #4a044e;
+  --color-gold: #c026d3;
+  --color-gold-deep: #86198f;
+  --color-gold-soft: #fae8ff;
 
-  /* popblue = deep ocean navy scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0f9ff;
-  --color-popblue-100: #e0f2fe;
-  --color-popblue-200: #bae6fd;
-  --color-popblue-300: #7dd3fc;
-  --color-popblue-400: #38bdf8;
-  --color-popblue-500: #0ea5e9;
-  --color-popblue-600: #0284c7;
-  --color-popblue-700: #0369a1;
-  --color-popblue-800: #075985;
-  --color-popblue-900: #0c4a6e;
-  --color-popblue-950: #082f49;
-  --color-popblue: #075985;
-  --color-popblue-deep: #0c4a6e;
-  --color-popblue-soft: #e0f2fe;
+  /* popblue = lime scale (name kept for legacy class refs) */
+  --color-popblue-50: #f7fee7;
+  --color-popblue-100: #ecfccb;
+  --color-popblue-200: #d9f99d;
+  --color-popblue-300: #bef264;
+  --color-popblue-400: #a3e635;
+  --color-popblue-500: #84cc16;
+  --color-popblue-600: #65a30d;
+  --color-popblue-700: #4d7c0f;
+  --color-popblue-800: #3f6212;
+  --color-popblue-900: #365314;
+  --color-popblue-950: #1a2e05;
+  --color-popblue: #4d7c0f;
+  --color-popblue-deep: #365314;
+  --color-popblue-soft: #ecfccb;
 
-  /* poprose = coral scale (small hot accent for discounts) */
-  --color-poprose-200: #fed7aa;
-  --color-poprose-300: #fdba74;
-  --color-poprose-400: #fb923c;
-  --color-poprose-500: #f97316;
-  --color-poprose-600: #ea580c;
-  --color-poprose-700: #c2410c;
-  --color-poprose-800: #9a3412;
+  /* poprose = rose scale (small hot accent for discounts) */
+  --color-poprose-200: #fecdd3;
+  --color-poprose-300: #fda4af;
+  --color-poprose-400: #fb7185;
+  --color-poprose-500: #f43f5e;
+  --color-poprose-600: #e11d48;
+  --color-poprose-700: #be123c;
+  --color-poprose-800: #9f1239;
 
-  --color-ink: #0a2540;
-  --color-paper: #f0f9fa;
-  --color-mute: #4b6a7a;
+  --color-ink: #2e1065;
+  --color-paper: #faf5ff;
+  --color-mute: #6d5a8f;
   --color-card: #ffffff;
-  --color-deep: #06202e;
+  --color-deep: #1e1033;
 }
 
 html { scroll-behavior: smooth; }
@@ -96,60 +98,60 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f0f9fa;
+  background-color: #faf5ff;
   background-image:
-    radial-gradient(ellipse 46% 26% at 6% 4%, rgba(13, 148, 136, 0.14) 0%, rgba(13, 148, 136, 0) 70%),
-    radial-gradient(ellipse 42% 28% at 96% 96%, rgba(8, 145, 178, 0.12) 0%, rgba(8, 145, 178, 0) 70%),
-    linear-gradient(160deg, rgba(240, 249, 250, 0.95) 0%, rgba(207, 250, 254, 0.98) 45%, rgba(224, 242, 254, 0.55) 85%);
-  color: #0a2540;
+    radial-gradient(ellipse 46% 26% at 6% 4%, rgba(124, 58, 237, 0.16) 0%, rgba(124, 58, 237, 0) 70%),
+    radial-gradient(ellipse 42% 28% at 96% 96%, rgba(192, 38, 211, 0.14) 0%, rgba(192, 38, 211, 0) 70%),
+    linear-gradient(160deg, rgba(250, 245, 255, 0.95) 0%, rgba(250, 232, 255, 0.98) 45%, rgba(237, 233, 254, 0.55) 85%);
+  color: #2e1065;
 }
-::selection { background: #0f766e; color: #ffffff; }
+::selection { background: #6d28d9; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0d9488, #075985); border-radius: 999px; border: 2px solid #f0f9fa; }
-::-webkit-scrollbar-track { background: #f0f9fa; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #7c3aed, #c026d3); border-radius: 999px; border: 2px solid #faf5ff; }
+::-webkit-scrollbar-track { background: #faf5ff; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Tidepool Lagoon type: section headlines in
-   sentence case with a cool, airy stance,
-   teal-to-cyan-to-navy gradient accents;
+/* Grape Dusk type: section headlines in
+   sentence case with a bold, dusk stance,
+   violet-to-fuchsia gradient accents;
    product names stay sentence case. */
 h1, h2 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: -0.02em; line-height: 1.08; text-wrap: balance; }
 h3 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; text-wrap: balance; }
-h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #0f766e, #0891b2, #075985); -webkit-background-clip: text; background-clip: text; color: transparent; }
+h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #6d28d9, #c026d3, #4c1d95); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
-/* Tidepool Lagoon rise: bubbles RISE
-   upward with a side sway and a slow spin. */
+/* Grape Dusk fall: confetti FALLS
+   downward with a side sway and a slow spin. */
 @keyframes drift-fall {
-  0% { transform: translate3d(0, 105vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(0, -105vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
   15% { opacity: 0.95; }
   50% { transform: translate3d(2vw, 0, 0) scale(1.15) rotate(160deg); }
-  100% { transform: translate3d(-2vw, -105vh, 0) scale(0.7) rotate(340deg); opacity: 0; }
+  100% { transform: translate3d(-2vw, 105vh, 0) scale(0.7) rotate(340deg); opacity: 0; }
 }
 .pop-rise { animation: drift-fall 14s linear infinite; }
 
-/* Tidepool Lagoon sway: a gentle current drift with a soft tilt. */
+/* Grape Dusk sway: a gentle dusk drift with a soft tilt. */
 @keyframes drift-sway {
   0%, 100% { transform: translate(10px, 0) rotate(2deg) scale(1); opacity: 0.7; }
   50% { transform: translate(-10px, -6px) rotate(-2deg) scale(1.05); opacity: 1; }
 }
 .pop-drift { animation: drift-sway 8s ease-in-out infinite; }
 
-/* Tidepool Lagoon bob: a soft float with a gentle pulse. */
+/* Grape Dusk bob: a soft float with a gentle pulse. */
 @keyframes drift-float {
   0%, 100% { transform: translateY(6px) scale(1); }
   50% { transform: translateY(-6px) scale(1.03) rotate(-1deg); }
 }
 .pop-bob { animation: drift-float 5s ease-in-out infinite; }
 
-/* Tidepool Lagoon spin: a CLOCKWISE spin. */
+/* Grape Dusk spin: a COUNTER-CLOCKWISE spin. */
 @keyframes drift-turn {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
 }
 .pop-spin { animation: drift-turn 26s linear infinite; }
 
-/* Tidepool Lagoon flicker: a soft cyan shimmer —
+/* Grape Dusk flicker: a soft fuchsia shimmer —
    flaring bright, then settling again. */
 @keyframes drift-blink {
   0%, 100% { opacity: 1; transform: scale(1); }
@@ -157,35 +159,35 @@ h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #0f
 }
 .pop-twinkle { animation: drift-blink 2.8s ease-in-out infinite; }
 
-/* Tidepool Lagoon ticker: a LEFTWARD marquee. */
+/* Grape Dusk ticker: a RIGHTWARD marquee. */
 @keyframes drift-ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
 }
 .pop-ticker { animation: drift-ticker 28s linear infinite; }
 
-/* Tidepool Lagoon bands: teal / cyan /
-   navy LAGOON bands, diagonal and cool. */
+/* Grape Dusk bands: violet / fuchsia /
+   lime DUSK bands, diagonal and bold. */
 .pop-stripes {
   background-image:
-    repeating-linear-gradient(45deg, #f0f9fa 0px, #f0f9fa 4px, #14b8a6 4px, #14b8a6 8px, #06b6d4 8px, #06b6d4 12px, #0284c7 12px, #0284c7 16px);
+    repeating-linear-gradient(45deg, #faf5ff 0px, #faf5ff 4px, #8b5cf6 4px, #8b5cf6 8px, #d946ef 8px, #d946ef 12px, #84cc16 12px, #84cc16 16px);
   background-size: 32px 100%;
   background-repeat: repeat;
   border-radius: 999px;
   opacity: 0.85;
 }
 
-/* Tidepool Lagoon card: SOFT white
-   (24px corners) with a 1px soft navy
-   border and a DIFFUSE teal shadow —
-   on hover the card LIFTS straight up
-   and glows teal. */
+/* Grape Dusk card: BOLD white
+   (16px corners) with a 1.5px violet
+   border and a HARD violet offset
+   shadow — on hover the card LIFTS,
+   TILTS and glows fuchsia. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(10, 37, 64, 0.08);
-  box-shadow: 0 18px 40px -18px rgba(13, 148, 136, 0.35);
+  border: 1.5px solid rgba(76, 29, 149, 0.18);
+  box-shadow: 0 18px 36px -18px rgba(124, 58, 237, 0.45), 5px 5px 0 rgba(124, 58, 237, 0.1);
   background: #ffffff;
-  border-radius: 24px;
+  border-radius: 16px;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
@@ -194,125 +196,125 @@ h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #0f
   position: absolute;
   inset: 0 0 auto 0;
   height: 4px;
-  background: linear-gradient(90deg, #14b8a6 0%, #06b6d4 50%, #0284c7 100%);
+  background: linear-gradient(90deg, #8b5cf6 0%, #d946ef 50%, #84cc16 100%);
   opacity: 0.9;
   transition: opacity 0.25s ease;
   pointer-events: none;
   z-index: 1;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  border-color: rgba(15, 118, 110, 0.5);
-  box-shadow: 0 28px 48px -18px rgba(8, 145, 178, 0.45);
+  transform: translateY(-6px) rotate(-0.4deg);
+  border-color: rgba(192, 38, 211, 0.55);
+  box-shadow: 0 28px 48px -18px rgba(192, 38, 211, 0.5), 7px 7px 0 rgba(192, 38, 211, 0.14);
 }
 .pop-lift:hover::before { opacity: 1; }
 
-/* Tidepool Lagoon glass: shared by modals and drawers — an
-   icy aqua pane with soft corners,
-   a teal border and a cyan glow. */
+/* Grape Dusk glass: shared by modals and drawers — a
+   lavender dusk pane with soft corners,
+   a violet border and a fuchsia glow. */
 .pop-glass {
-  background: rgba(240, 249, 250, 0.92);
+  background: rgba(250, 245, 255, 0.92);
   backdrop-filter: blur(20px) saturate(1.1);
   -webkit-backdrop-filter: blur(20px) saturate(1.1);
-  border: 1px solid rgba(15, 118, 110, 0.4);
-  border-radius: 24px;
-  box-shadow: 0 24px 48px -20px rgba(6, 32, 46, 0.28), 0 0 0 1px rgba(7, 89, 133, 0.1);
+  border: 1px solid rgba(109, 40, 217, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 24px 48px -20px rgba(30, 16, 51, 0.28), 0 0 0 1px rgba(77, 124, 15, 0.1);
 }
 
-/* Tidepool Lagoon tag: a teal-to-cyan-to-navy
-   soft pill — white type, cool
+/* Grape Dusk tag: a violet-to-fuchsia
+   soft pill — white type, bold
    glow, with a soft diffuse shadow. */
 .starburst {
-  background: linear-gradient(135deg, #06b6d4 0%, #0f766e 55%, #075985 100%);
+  background: linear-gradient(135deg, #d946ef 0%, #6d28d9 55%, #4c1d95 100%);
   color: #ffffff;
   text-shadow: none;
   clip-path: none;
   border-radius: 999px;
   border: 2px solid rgba(255, 255, 255, 0.65);
-  box-shadow: 0 10px 24px -8px rgba(8, 145, 178, 0.55);
+  box-shadow: 0 10px 24px -8px rgba(192, 38, 211, 0.55);
   padding-left: 14px;
   padding-right: 14px;
   transform: rotate(0deg);
 }
 
-/* Tidepool Lagoon texture: a RIPPLE
-   pattern — teal rings over icy aqua. */
+/* Grape Dusk texture: a DOT-GRID
+   pattern — violet dots over lavender dusk. */
 .halftone {
   background-image:
-    radial-gradient(circle at 50% 50%, rgba(15, 118, 110, 0.18) 1.5px, transparent 2.5px),
-    radial-gradient(circle at 50% 50%, rgba(8, 145, 178, 0.14) 1px, transparent 2px);
+    radial-gradient(circle at 50% 50%, rgba(109, 40, 217, 0.18) 1.5px, transparent 2.5px),
+    radial-gradient(circle at 50% 50%, rgba(192, 38, 211, 0.14) 1px, transparent 2px);
   background-size: 28px 28px, 28px 28px;
   background-position: 0 0, 14px 14px;
 }
 
-/* Tidepool Lagoon rule: a slim
-   tri-color lagoon divider with
-   a cool sheen. */
+/* Grape Dusk rule: a slim
+   tri-color dusk divider with
+   a bold sheen. */
 .zigzag {
   height: 6px;
   border: none;
   border-radius: 999px;
-  background-image: linear-gradient(90deg, #14b8a6 0%, #06b6d4 45%, #0284c7 100%);
+  background-image: linear-gradient(90deg, #8b5cf6 0%, #d946ef 45%, #84cc16 100%);
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  box-shadow: 0 6px 16px -6px rgba(8, 145, 178, 0.45);
+  box-shadow: 0 6px 16px -6px rgba(192, 38, 211, 0.45);
   opacity: 1;
 }
 
-/* Tidepool Lagoon band: a cyan-to-navy band
-   with a NAVY BOTTOM edge
-   and softer corners. */
+/* Grape Dusk band: a violet-to-fuchsia band
+   with a LIME BOTTOM edge
+   and bolder corners. */
 .bazaar-awning {
-  background: linear-gradient(135deg, #a5f3fc 0%, #67e8f9 45%, #0891b2 78%, #0c4a6e 100%);
+  background: linear-gradient(135deg, #f5d0fe 0%, #e879f9 45%, #c026d3 78%, #4c1d95 100%);
   opacity: 1;
-  box-shadow: 0 16px 32px -16px rgba(6, 32, 46, 0.28);
+  box-shadow: 0 16px 32px -16px rgba(30, 16, 51, 0.28);
   border: none;
-  border-bottom: 3px solid #075985;
-  border-radius: 24px;
+  border-bottom: 3px solid #84cc16;
+  border-radius: 16px;
 }
 
-/* Tidepool Lagoon glow: a soft cyan glow for the core. */
+/* Grape Dusk glow: a soft fuchsia glow for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(20, 184, 166, 0.55) 42%, rgba(6, 182, 212, 0.22) 62%, rgba(6, 182, 212, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(139, 92, 246, 0.55) 42%, rgba(217, 70, 239, 0.22) 62%, rgba(217, 70, 239, 0) 76%);
 }
 
-/* Tidepool Lagoon orb: a lagoon orb with
-   a cyan centre, white ring and a
-   teal rim. */
+/* Grape Dusk orb: a dusk orb with
+   a fuchsia centre, white ring and a
+   lime rim. */
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 50%, #06b6d4 0%, #14b8a6 40%, #ffffff 52%, #0891b2 68%, #075985 100%);
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(15, 118, 110, 0.45), 0 18px 36px -18px rgba(6, 32, 46, 0.3);
+    radial-gradient(circle at 50% 50%, #d946ef 0%, #8b5cf6 40%, #ffffff 52%, #c026d3 68%, #4c1d95 100%);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(109, 40, 217, 0.45), 0 18px 36px -18px rgba(30, 16, 51, 0.3);
   border: none;
 }
 
-/* Wider-spaced rings around the lagoon orb. */
+/* Wider-spaced rings around the dusk orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(15, 118, 110, 0.3) 0px,
-    rgba(15, 118, 110, 0.3) 1px,
+    rgba(109, 40, 217, 0.3) 0px,
+    rgba(109, 40, 217, 0.3) 1px,
     transparent 1px,
     transparent 22px,
-    rgba(7, 89, 133, 0.30) 22px,
-    rgba(7, 89, 133, 0.30) 23px,
+    rgba(192, 38, 211, 0.30) 22px,
+    rgba(192, 38, 211, 0.30) 23px,
     transparent 23px,
     transparent 44px
   );
   -webkit-mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
   mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
-  border-radius: 24px;
+  border-radius: 16px;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(15, 118, 110, 0.35) 0deg 6deg,
+    rgba(109, 40, 217, 0.35) 0deg 6deg,
     transparent 6deg 42deg,
-    rgba(6, 182, 212, 0.30) 42deg 48deg,
+    rgba(217, 70, 239, 0.30) 42deg 48deg,
     transparent 48deg 96deg
   );
   -webkit-mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
   mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
-  border-radius: 24px;
+  border-radius: 16px;
 }
