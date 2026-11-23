@@ -1,42 +1,42 @@
 @import "tailwindcss";
 
 @theme {
-  /* Emerald Grove: an original direction —
-     pale mint paper,
-     deep forest ink,
-     vivid emerald as the brand,
-     warm amber as the harvest accent,
-     fresh lime as the contrast pop,
-     coral red as the small sale accent.
-     Cards are STICKER-SHARP:
-     16px corners, a 2px forest border,
-     a hard offset shadow — on hover
-     the card SHIFTS up-left and the
-     shadow grows; leaves DRIFT DOWN
-     with a sway, a LEFTWARD ticker,
-     VERTICAL tri-color bands,
-     a plus-grid texture and a deep
-     forest band with a LIME TOP edge. */
+  /* Solar Ember: an original direction —
+     warm cream paper,
+     deep cocoa ink,
+     burnt orange as the brand,
+     marigold amber as the harvest accent,
+     vivid fuchsia as the contrast pop,
+     warm red as the small sale accent.
+     Cards are SOFT PILLOWS:
+     28px corners, no hard border,
+     layered soft shadows — on hover
+     the card LIFTS straight up and the
+     shadow blooms warm; embers RISE UP
+     with a sway, a RIGHTWARD ticker,
+     HORIZONTAL tri-color bands,
+     a dot-grid texture and a deep
+     ember band with a GOLD BOTTOM edge. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = emerald scale */
-  --color-brand-50: #ecfdf5;
-  --color-brand-100: #d1fae5;
-  --color-brand-200: #a7f3d0;
-  --color-brand-300: #6ee7b7;
-  --color-brand-400: #34d399;
-  --color-brand-500: #10b981;
-  --color-brand-600: #059669;
-  --color-brand-700: #047857;
-  --color-brand-800: #065f46;
-  --color-brand-900: #064e3b;
-  --color-brand-950: #022c22;
-  --color-brand: #047857;
-  --color-brand-dark: #065f46;
-  --color-brand-deep: #022c22;
+  /* brand = burnt orange scale */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-brand-950: #431407;
+  --color-brand: #c2410c;
+  --color-brand-dark: #9a3412;
+  --color-brand-deep: #431407;
 
-  /* gold = amber scale (name kept for legacy class refs) */
+  /* gold = marigold amber scale (name kept for legacy class refs) */
   --color-gold-50: #fffbeb;
   --color-gold-100: #fef3c7;
   --color-gold-200: #fde68a;
@@ -52,23 +52,23 @@
   --color-gold-deep: #92400e;
   --color-gold-soft: #fef3c7;
 
-  /* popblue = lime scale (name kept for legacy class refs) */
-  --color-popblue-50: #f7fee7;
-  --color-popblue-100: #ecfccb;
-  --color-popblue-200: #d9f99d;
-  --color-popblue-300: #bef264;
-  --color-popblue-400: #a3e635;
-  --color-popblue-500: #84cc16;
-  --color-popblue-600: #65a30d;
-  --color-popblue-700: #4d7c0f;
-  --color-popblue-800: #3f6212;
-  --color-popblue-900: #365314;
-  --color-popblue-950: #1a2e05;
-  --color-popblue: #65a30d;
-  --color-popblue-deep: #3f6212;
-  --color-popblue-soft: #ecfccb;
+  /* popblue = fuchsia scale (name kept for legacy class refs) */
+  --color-popblue-50: #fdf2f8;
+  --color-popblue-100: #fce7f3;
+  --color-popblue-200: #fbcfe8;
+  --color-popblue-300: #f9a8d4;
+  --color-popblue-400: #f472b6;
+  --color-popblue-500: #ec4899;
+  --color-popblue-600: #db2777;
+  --color-popblue-700: #be185d;
+  --color-popblue-800: #9d174d;
+  --color-popblue-900: #831843;
+  --color-popblue-950: #500724;
+  --color-popblue: #db2777;
+  --color-popblue-deep: #9d174d;
+  --color-popblue-soft: #fce7f3;
 
-  /* poprose = coral red scale (small sale accent) */
+  /* poprose = warm red scale (small sale accent) */
   --color-poprose-200: #fecaca;
   --color-poprose-300: #fca5a5;
   --color-poprose-400: #f87171;
@@ -77,11 +77,11 @@
   --color-poprose-700: #b91c1c;
   --color-poprose-800: #991b1b;
 
-  --color-ink: #14261c;
-  --color-paper: #f7fdf8;
-  --color-mute: #5c6f60;
+  --color-ink: #2b1a12;
+  --color-paper: #fff8ef;
+  --color-mute: #7c5a48;
   --color-card: #ffffff;
-  --color-deep: #022c22;
+  --color-deep: #2b1a12;
 }
 
 html { scroll-behavior: smooth; }
@@ -95,60 +95,61 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f7fdf8;
+  background-color: #fff8ef;
   background-image:
-    radial-gradient(ellipse 46% 26% at 6% 4%, rgba(5, 150, 105, 0.16) 0%, rgba(5, 150, 105, 0) 70%),
-    radial-gradient(ellipse 42% 28% at 96% 96%, rgba(132, 204, 22, 0.16) 0%, rgba(132, 204, 22, 0) 70%),
-    linear-gradient(155deg, rgba(209, 250, 229, 0.95) 0%, rgba(247, 253, 248, 0.55) 45%, rgba(236, 252, 203, 0.6) 85%);
-  color: #14261c;
+    radial-gradient(ellipse 46% 26% at 6% 4%, rgba(234, 88, 12, 0.16) 0%, rgba(234, 88, 12, 0) 70%),
+    radial-gradient(ellipse 42% 28% at 96% 96%, rgba(219, 39, 119, 0.16) 0%, rgba(219, 39, 119, 0) 70%),
+    linear-gradient(155deg, rgba(255, 237, 213, 0.95) 0%, rgba(255, 248, 239, 0.55) 45%, rgba(252, 231, 243, 0.6) 85%);
+  color: #2b1a12;
 }
-::selection { background: #047857; color: #ffffff; }
+::selection { background: #c2410c; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #059669, #84cc16); border-radius: 999px; border: 2px solid #f7fdf8; }
-::-webkit-scrollbar-track { background: #f7fdf8; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ea580c, #db2777); border-radius: 999px; border: 2px solid #fff8ef; }
+::-webkit-scrollbar-track { background: #fff8ef; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Emerald Grove type: section headlines in
+/* Solar Ember type: section headlines in
    sentence case with tight tracking,
-   emerald-to-amber-to-lime gradient accents;
-   product names stay sentence case. */
-h1, h2 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: -0.02em; line-height: 1.08; text-wrap: balance; }
+   burnt-orange-to-marigold-to-fuchsia
+   gradient accents; product names stay
+   sentence case. */
+h1, h2 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: -0.03em; line-height: 1.08; text-wrap: balance; }
 h3 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; text-wrap: balance; }
-h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #047857, #f59e0b, #65a30d); -webkit-background-clip: text; background-clip: text; color: transparent; }
+h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #c2410c, #f59e0b, #db2777); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
-/* Emerald Grove leaves: motes DRIFT DOWNWARD
+/* Solar Ember embers: sparks RISE UPWARD
    with a wide sway and a slow spin. */
 @keyframes spark-rise {
-  0% { transform: translate3d(0, -12vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(0, 112vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
   15% { opacity: 0.95; }
-  50% { transform: translate3d(3vw, 50vh, 0) scale(1.15) rotate(200deg); }
-  100% { transform: translate3d(-3vw, 112vh, 0) scale(0.7) rotate(420deg); opacity: 0; }
+  50% { transform: translate3d(-3vw, 50vh, 0) scale(1.15) rotate(-200deg); }
+  100% { transform: translate3d(3vw, -12vh, 0) scale(0.7) rotate(-420deg); opacity: 0; }
 }
 .pop-rise { animation: spark-rise 16s linear infinite; }
 
-/* Emerald Grove sway: a soft SIDE-TO-SIDE drift with a slight tilt. */
+/* Solar Ember sway: a soft SIDE-TO-SIDE drift with a slight tilt. */
 @keyframes spark-sway {
-  0%, 100% { transform: translate(14px, 0) rotate(-2deg) scale(1); opacity: 0.7; }
-  50% { transform: translate(-14px, -4px) rotate(2deg) scale(1.05); opacity: 1; }
+  0%, 100% { transform: translate(18px, 0) rotate(2deg) scale(1); opacity: 0.7; }
+  50% { transform: translate(-18px, -6px) rotate(-2deg) scale(1.05); opacity: 1; }
 }
 .pop-drift { animation: spark-sway 10s ease-in-out infinite; }
 
-/* Emerald Grove bob: an up-and-down float with a slight tilt. */
+/* Solar Ember bob: an up-and-down float with a slight tilt. */
 @keyframes spark-float {
   0%, 100% { transform: translateY(8px) rotate(-2deg) scale(1); }
   50% { transform: translateY(-8px) rotate(2deg) scale(1.04); }
 }
 .pop-bob { animation: spark-float 7s ease-in-out infinite; }
 
-/* Emerald Grove spin: a COUNTER-CLOCKWISE spin. */
+/* Solar Ember spin: a CLOCKWISE spin. */
 @keyframes spark-turn {
-  from { transform: rotate(360deg); }
-  to { transform: rotate(0deg); }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 .pop-spin { animation: spark-turn 26s linear infinite; }
 
-/* Emerald Grove flicker: a fresh shimmer —
+/* Solar Ember flicker: a warm shimmer —
    flaring bright, then settling again. */
 @keyframes spark-blink {
   0%, 100% { opacity: 1; transform: scale(1); }
@@ -156,88 +157,91 @@ h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #04
 }
 .pop-twinkle { animation: spark-blink 2.8s ease-in-out infinite; }
 
-/* Emerald Grove ticker: a LEFTWARD marquee. */
+/* Solar Ember ticker: a RIGHTWARD marquee. */
 @keyframes spark-ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
 }
 .pop-ticker { animation: spark-ticker 34s linear infinite; }
 
-/* Emerald Grove stripes: an emerald / amber /
-   lime VERTICAL tri-color band, fresh and crisp. */
+/* Solar Ember stripes: a burnt orange /
+   marigold / fuchsia HORIZONTAL tri-color
+   band, warm and glowing. */
 .pop-stripes {
-  background-image: linear-gradient(90deg, #059669 0%, #059669 33%, #f59e0b 33%, #f59e0b 66%, #84cc16 66%, #84cc16 100%);
+  background-image: linear-gradient(180deg, #ea580c 0%, #ea580c 33%, #f59e0b 33%, #f59e0b 66%, #db2777 66%, #db2777 100%);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   border-radius: 4px;
   opacity: 0.9;
 }
 
-/* Emerald Grove card: STICKER-SHARP white
-   (16px corners) with a 2px forest border
-   and a hard offset shadow — on hover
-   the card SHIFTS up-left and the
-   shadow grows into a lime-tinted block. */
+/* Solar Ember card: a SOFT PILLOW in white
+   (28px corners) with a faint warm rim
+   and layered soft shadows — on hover
+   the card LIFTS straight up and the
+   shadow blooms warm with a marigold halo. */
 .pop-lift {
   position: relative;
-  border: 2px solid rgba(4, 120, 87, 0.35);
-  box-shadow: 5px 5px 0 rgba(2, 44, 34, 0.9);
+  border: 1px solid rgba(234, 88, 12, 0.14);
+  box-shadow: 0 2px 6px rgba(43, 26, 18, 0.06), 0 18px 38px -18px rgba(194, 65, 12, 0.35);
   background: #ffffff;
-  border-radius: 16px;
+  border-radius: 28px;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translate(-2px, -2px);
-  border-color: rgba(5, 150, 105, 0.7);
-  box-shadow: 9px 9px 0 rgba(2, 44, 34, 0.9), 0 0 0 3px rgba(132, 204, 22, 0.35);
+  transform: translateY(-6px);
+  border-color: rgba(234, 88, 12, 0.35);
+  box-shadow: 0 4px 10px rgba(43, 26, 18, 0.06), 0 28px 48px -18px rgba(194, 65, 12, 0.45), 0 0 0 4px rgba(245, 158, 11, 0.18);
 }
 
-/* Emerald Grove glass: shared by modals and drawers — a
-   pale mint pane with crisp corners,
-   a forest border and a lime glow. */
+/* Solar Ember glass: shared by modals and drawers — a
+   warm cream pane with soft corners,
+   a warm rim and a fuchsia glow. */
 .pop-glass {
-  background: rgba(247, 253, 248, 0.92);
+  background: rgba(255, 248, 239, 0.92);
   backdrop-filter: blur(20px) saturate(1.1);
   -webkit-backdrop-filter: blur(20px) saturate(1.1);
-  border: 2px solid rgba(4, 120, 87, 0.4);
-  border-radius: 16px;
-  box-shadow: 5px 5px 0 rgba(2, 44, 34, 0.9), 0 0 0 1px rgba(132, 204, 22, 0.25);
+  border: 1px solid rgba(234, 88, 12, 0.25);
+  border-radius: 24px;
+  box-shadow: 0 18px 40px -18px rgba(124, 45, 18, 0.35), 0 0 0 1px rgba(219, 39, 119, 0.12);
 }
 
-/* Emerald Grove tag: a solid CORAL RED
-   OCTAGON badge — white type,
-   with a hard offset shadow. */
+/* Solar Ember tag: a solid FUCHSIA
+   SCALLOPED SUN badge — white type,
+   with a soft warm shadow. */
 .starburst {
-  background: #dc2626;
+  background: #db2777;
   color: #ffffff;
   text-shadow: none;
-  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  clip-path: polygon(50% 0%, 61% 13%, 75% 5%, 79% 21%, 96% 20%, 91% 37%, 100% 50%, 91% 63%, 96% 80%, 79% 79%, 75% 95%, 61% 87%, 50% 100%, 39% 87%, 25% 95%, 21% 79%, 4% 80%, 9% 63%, 0% 50%, 9% 37%, 4% 20%, 21% 21%, 25% 5%, 39% 13%);
   border-radius: 0;
   border: none;
   box-shadow: none;
-  filter: drop-shadow(3px 3px 0 rgba(2, 44, 34, 0.85));
+  filter: drop-shadow(0 6px 12px rgba(124, 45, 18, 0.35));
   padding-left: 14px;
   padding-right: 14px;
-  transform: rotate(0deg);
+  transform: rotate(-4deg);
 }
 
-/* Emerald Grove texture: fresh PLUS grid —
-   emerald and lime crosses over pale mint. */
+/* Solar Ember texture: a warm DOT grid —
+   burnt orange and fuchsia dots over warm cream. */
 .halftone {
   background-image:
-    radial-gradient(circle, rgba(5, 150, 105, 0.16) 1.2px, transparent 1.3px),
-    radial-gradient(circle, rgba(132, 204, 22, 0.16) 1.2px, transparent 1.3px);
-  background-size: 26px 26px;
-  background-position: 0 0, 13px 13px;
+    radial-gradient(circle, rgba(234, 88, 12, 0.14) 1.4px, transparent 1.5px),
+    radial-gradient(circle, rgba(219, 39, 119, 0.14) 1.4px, transparent 1.5px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
 }
 
-/* Emerald Grove rule: a diamond divider band. */
+/* Solar Ember rule: a bead-chain divider band. */
 .zigzag {
   height: 12px;
   border: none;
-  border-radius: 4px;
-  background-image: conic-gradient(from 45deg, #059669 25%, transparent 0, transparent 50%, #f59e0b 0, #f59e0b 75%, transparent 0);
+  border-radius: 999px;
+  background-image:
+    radial-gradient(circle at 6px 6px, #ea580c 5px, transparent 6px),
+    radial-gradient(circle at 18px 6px, #f59e0b 5px, transparent 6px);
   background-position: 0 0;
   background-size: 24px 12px;
   background-repeat: repeat-x;
@@ -245,60 +249,60 @@ h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #04
   opacity: 0.9;
 }
 
-/* Emerald Grove band: a deep forest band
-   with a LIME TOP edge
+/* Solar Ember band: a deep ember band
+   with a GOLD BOTTOM edge
    and round bottom corners. */
 .bazaar-awning {
-  background: linear-gradient(135deg, #022c22 0%, #047857 55%, #65a30d 100%);
+  background: linear-gradient(135deg, #2b1a12 0%, #c2410c 55%, #db2777 100%);
   opacity: 1;
-  box-shadow: 0 12px 28px -12px rgba(2, 44, 34, 0.35);
+  box-shadow: 0 12px 28px -12px rgba(43, 26, 18, 0.35);
   border: none;
-  border-top: 3px solid #84cc16;
-  border-radius: 0 0 16px 16px;
+  border-bottom: 3px solid #f59e0b;
+  border-radius: 0 0 20px 20px;
 }
 
-/* Emerald Grove glow: a fresh emerald glow for the core. */
+/* Solar Ember glow: a warm ember glow for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(16, 185, 129, 0.55) 42%, rgba(132, 204, 22, 0.22) 62%, rgba(132, 204, 22, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(249, 115, 22, 0.55) 42%, rgba(219, 39, 119, 0.22) 62%, rgba(219, 39, 119, 0) 76%);
 }
 
-/* Emerald Grove orb: a fresh grove sun with
-   a pale lime centre, emerald ring and a
-   deep forest rim. */
+/* Solar Ember orb: a warm ember sun with
+   a pale gold centre, orange ring and a
+   deep cocoa rim. */
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 50%, #f7fee7 0%, #a3e635 40%, #ffffff 52%, #059669 68%, #022c22 100%);
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(16, 185, 129, 0.45), 5px 5px 0 rgba(2, 44, 34, 0.85);
+    radial-gradient(circle at 50% 50%, #fffbeb 0%, #fcd34d 40%, #ffffff 52%, #ea580c 68%, #2b1a12 100%);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(249, 115, 22, 0.45), 0 18px 36px -12px rgba(194, 65, 12, 0.5);
   border: none;
 }
 
-/* Wider-spaced rings around the fresh grove sun. */
+/* Wider-spaced rings around the warm ember sun. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(5, 150, 105, 0.3) 0px,
-    rgba(5, 150, 105, 0.3) 1px,
+    rgba(234, 88, 12, 0.3) 0px,
+    rgba(234, 88, 12, 0.3) 1px,
     transparent 1px,
-    transparent 26px,
-    rgba(132, 204, 22, 0.30) 26px,
-    rgba(132, 204, 22, 0.30) 27px,
-    transparent 27px,
-    transparent 52px
+    transparent 28px,
+    rgba(219, 39, 119, 0.30) 28px,
+    rgba(219, 39, 119, 0.30) 29px,
+    transparent 29px,
+    transparent 56px
   );
   -webkit-mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
   mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
-  border-radius: 16px;
+  border-radius: 28px;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(5, 150, 105, 0.35) 0deg 6deg,
+    rgba(234, 88, 12, 0.35) 0deg 6deg,
     transparent 6deg 42deg,
-    rgba(132, 204, 22, 0.30) 42deg 48deg,
+    rgba(245, 158, 11, 0.30) 42deg 48deg,
     transparent 48deg 96deg
   );
   -webkit-mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
   mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
-  border-radius: 16px;
+  border-radius: 28px;
 }
