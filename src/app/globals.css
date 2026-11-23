@@ -1,87 +1,88 @@
 @import "tailwindcss";
 
 @theme {
-  /* Glacier Pine: an original direction —
-     icy mint paper,
-     deep pine ink,
-     vivid teal as the brand,
-     bright lime as the pop,
-     cool sky as the contrast,
-     warm coral as the small bright accent.
-     Cards are CRISP and ANGULAR:
-     12px corners, a thin teal border,
-     a cool layered shadow — on hover the
-     card LIFTS straight up and the shadow
-     deepens into a cool teal glow; snowflakes
-     FALL downward with a sway, a LEFTWARD
-     ticker, teal / lime / sky GRADIENT
-     bands, a fine DIAGONAL-LINE texture and a
-     pine band with a LIME BOTTOM edge. */
+  /* Sunset Ember: an original direction —
+     warm cream paper,
+     deep plum-brown ink,
+     vivid ember orange as the brand,
+     golden amber as the pop,
+     bright rose as the contrast,
+     deep plum as the small dark accent.
+     Cards are SOFT and ROUND:
+     24px corners, a thin ember border,
+     a warm layered shadow — on hover the
+     card LIFTS straight up with a slight
+     tilt and the shadow deepens into a
+     warm ember glow; embers RISE upward
+     with a sway, a RIGHTWARD ticker,
+     ember / amber / rose GRADIENT bands,
+     a fine POLKA-DOT texture and a sunset
+     band with a ROSE BOTTOM edge. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = teal scale */
-  --color-brand-50: #f0fdfa;
-  --color-brand-100: #ccfbf1;
-  --color-brand-200: #99f6e4;
-  --color-brand-300: #5eead4;
-  --color-brand-400: #2dd4bf;
-  --color-brand-500: #14b8a6;
-  --color-brand-600: #0d9488;
-  --color-brand-700: #0f766e;
-  --color-brand-800: #115e59;
-  --color-brand-900: #134e4a;
-  --color-brand-950: #042f2e;
-  --color-brand: #0f766e;
-  --color-brand-dark: #115e59;
-  --color-brand-deep: #042f2e;
+  /* brand = ember orange scale */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-brand-950: #431407;
+  --color-brand: #c2410c;
+  --color-brand-dark: #9a3412;
+  --color-brand-deep: #431407;
 
-  /* gold = lime scale (name kept for legacy class refs) */
-  --color-gold-50: #f7fee7;
-  --color-gold-100: #ecfccb;
-  --color-gold-200: #d9f99d;
-  --color-gold-300: #bef264;
-  --color-gold-400: #a3e635;
-  --color-gold-500: #84cc16;
-  --color-gold-600: #65a30d;
-  --color-gold-700: #4d7c0f;
-  --color-gold-800: #3f6212;
-  --color-gold-900: #365314;
-  --color-gold-950: #1a2e05;
-  --color-gold: #65a30d;
-  --color-gold-deep: #3f6212;
-  --color-gold-soft: #ecfccb;
+  /* gold = amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #d97706;
+  --color-gold-deep: #92400e;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = sky scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0f9ff;
-  --color-popblue-100: #e0f2fe;
-  --color-popblue-200: #bae6fd;
-  --color-popblue-300: #7dd3fc;
-  --color-popblue-400: #38bdf8;
-  --color-popblue-500: #0ea5e9;
-  --color-popblue-600: #0284c7;
-  --color-popblue-700: #0369a1;
-  --color-popblue-800: #075985;
-  --color-popblue-900: #0c4a6e;
-  --color-popblue-950: #082f49;
-  --color-popblue: #0284c7;
-  --color-popblue-deep: #0c4a6e;
-  --color-popblue-soft: #e0f2fe;
+  /* popblue = rose scale (name kept for legacy class refs) */
+  --color-popblue-50: #fff1f2;
+  --color-popblue-100: #ffe4e6;
+  --color-popblue-200: #fecdd3;
+  --color-popblue-300: #fda4af;
+  --color-popblue-400: #fb7185;
+  --color-popblue-500: #f43f5e;
+  --color-popblue-600: #e11d48;
+  --color-popblue-700: #be123c;
+  --color-popblue-800: #9f1239;
+  --color-popblue-900: #881337;
+  --color-popblue-950: #4c0519;
+  --color-popblue: #e11d48;
+  --color-popblue-deep: #881337;
+  --color-popblue-soft: #ffe4e6;
 
-  /* poprose = coral-orange scale (small bright accent for discounts) */
-  --color-poprose-200: #fed7aa;
-  --color-poprose-300: #fdba74;
-  --color-poprose-400: #fb923c;
-  --color-poprose-500: #f97316;
-  --color-poprose-600: #ea580c;
-  --color-poprose-700: #c2410c;
-  --color-poprose-800: #9a3412;
+  /* poprose = plum scale (small dark accent for discounts) */
+  --color-poprose-200: #e9d5ff;
+  --color-poprose-300: #d8b4fe;
+  --color-poprose-400: #c084fc;
+  --color-poprose-500: #a855f7;
+  --color-poprose-600: #9333ea;
+  --color-poprose-700: #7e22ce;
+  --color-poprose-800: #6b21a8;
 
-  --color-ink: #042f2e;
-  --color-paper: #f0fdfa;
-  --color-mute: #475569;
+  --color-ink: #292524;
+  --color-paper: #fff7ed;
+  --color-mute: #78716c;
   --color-card: #ffffff;
-  --color-deep: #042f2e;
+  --color-deep: #431407;
 }
 
 html { scroll-behavior: smooth; }
@@ -95,60 +96,60 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f0fdfa;
+  background-color: #fff7ed;
   background-image:
-    radial-gradient(ellipse 46% 26% at 6% 4%, rgba(13, 148, 136, 0.16) 0%, rgba(13, 148, 136, 0) 70%),
-    radial-gradient(ellipse 42% 28% at 96% 96%, rgba(132, 204, 22, 0.16) 0%, rgba(132, 204, 22, 0) 70%),
-    linear-gradient(155deg, rgba(204, 251, 241, 0.95) 0%, rgba(240, 253, 250, 0.55) 45%, rgba(224, 242, 254, 0.6) 85%);
-  color: #042f2e;
+    radial-gradient(ellipse 46% 26% at 6% 4%, rgba(234, 88, 12, 0.16) 0%, rgba(234, 88, 12, 0) 70%),
+    radial-gradient(ellipse 42% 28% at 96% 96%, rgba(245, 158, 11, 0.16) 0%, rgba(245, 158, 11, 0) 70%),
+    linear-gradient(155deg, rgba(255, 237, 213, 0.95) 0%, rgba(255, 247, 237, 0.55) 45%, rgba(255, 228, 230, 0.6) 85%);
+  color: #292524;
 }
-::selection { background: #0f766e; color: #ffffff; }
+::selection { background: #c2410c; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0d9488, #84cc16); border-radius: 999px; border: 2px solid #f0fdfa; }
-::-webkit-scrollbar-track { background: #f0fdfa; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ea580c, #f59e0b); border-radius: 999px; border: 2px solid #fff7ed; }
+::-webkit-scrollbar-track { background: #fff7ed; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Glacier Pine type: section headlines in
+/* Sunset Ember type: section headlines in
    sentence case with tight tracking,
-   teal-to-lime gradient accents;
+   ember-to-amber gradient accents;
    product names stay sentence case. */
 h1, h2 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: -0.02em; line-height: 1.08; text-wrap: balance; }
 h3 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; text-wrap: balance; }
-h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #0f766e, #84cc16, #0284c7); -webkit-background-clip: text; background-clip: text; color: transparent; }
+h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #c2410c, #f59e0b, #e11d48); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
-/* Glacier Pine snowflakes: flakes FALL
-   downward with a wide sway and a slow spin. */
+/* Sunset Ember embers: sparks RISE
+   upward with a wide sway and a slow spin. */
 @keyframes spark-rise {
-  0% { transform: translate3d(0, -105vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(0, 105vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
   15% { opacity: 0.95; }
   50% { transform: translate3d(3vw, 0, 0) scale(1.15) rotate(200deg); }
-  100% { transform: translate3d(-3vw, 105vh, 0) scale(0.7) rotate(420deg); opacity: 0; }
+  100% { transform: translate3d(-3vw, -105vh, 0) scale(0.7) rotate(420deg); opacity: 0; }
 }
 .pop-rise { animation: spark-rise 16s linear infinite; }
 
-/* Glacier Pine sway: a soft drift with a slight tilt. */
+/* Sunset Ember sway: a soft drift with a slight tilt. */
 @keyframes spark-sway {
   0%, 100% { transform: translate(10px, 0) rotate(-2deg) scale(1); opacity: 0.7; }
   50% { transform: translate(-10px, -6px) rotate(2deg) scale(1.05); opacity: 1; }
 }
 .pop-drift { animation: spark-sway 10s ease-in-out infinite; }
 
-/* Glacier Pine bob: an up-and-down float with a slight tilt. */
+/* Sunset Ember bob: an up-and-down float with a slight tilt. */
 @keyframes spark-float {
   0%, 100% { transform: translateY(8px) rotate(-2deg) scale(1); }
   50% { transform: translateY(-8px) rotate(2deg) scale(1.04); }
 }
 .pop-bob { animation: spark-float 7s ease-in-out infinite; }
 
-/* Glacier Pine spin: a COUNTER-CLOCKWISE spin. */
+/* Sunset Ember spin: a CLOCKWISE spin. */
 @keyframes spark-turn {
-  from { transform: rotate(360deg); }
-  to { transform: rotate(0deg); }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 .pop-spin { animation: spark-turn 26s linear infinite; }
 
-/* Glacier Pine flicker: a flake shimmer —
+/* Sunset Ember flicker: an ember shimmer —
    flaring bright, then settling again. */
 @keyframes spark-blink {
   0%, 100% { opacity: 1; transform: scale(1); }
@@ -156,87 +157,88 @@ h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #0f
 }
 .pop-twinkle { animation: spark-blink 2.8s ease-in-out infinite; }
 
-/* Glacier Pine ticker: a LEFTWARD marquee. */
+/* Sunset Ember ticker: a RIGHTWARD marquee. */
 @keyframes spark-ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
 }
 .pop-ticker { animation: spark-ticker 34s linear infinite; }
 
-/* Glacier Pine stripes: a teal / lime /
-   sky GRADIENT band, cool and crisp. */
+/* Sunset Ember stripes: an ember / amber /
+   rose GRADIENT band, warm and soft. */
 .pop-stripes {
-  background-image: linear-gradient(90deg, #0d9488 0%, #84cc16 50%, #0ea5e9 100%);
+  background-image: linear-gradient(90deg, #ea580c 0%, #f59e0b 50%, #e11d48 100%);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   border-radius: 999px;
   opacity: 0.9;
 }
 
-/* Glacier Pine card: CRISP mint-white
-   (12px corners) with a thin teal border
-   and a cool layered shadow — on hover
-   the card LIFTS straight up and the shadow
-   deepens into a cool teal glow. */
+/* Sunset Ember card: SOFT warm-white
+   (24px corners) with a thin ember border
+   and a warm layered shadow — on hover
+   the card LIFTS straight up with a slight
+   tilt and the shadow deepens into a warm
+   ember glow. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(15, 118, 110, 0.14);
-  box-shadow: 0 12px 32px -14px rgba(4, 47, 46, 0.22), 0 2px 8px -2px rgba(4, 47, 46, 0.08);
+  border: 1px solid rgba(194, 65, 12, 0.14);
+  box-shadow: 0 12px 32px -14px rgba(67, 20, 7, 0.22), 0 2px 8px -2px rgba(67, 20, 7, 0.08);
   background: #ffffff;
-  border-radius: 12px;
+  border-radius: 24px;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-6px) scale(1.01);
-  border-color: rgba(13, 148, 136, 0.35);
-  box-shadow: 0 24px 48px -16px rgba(13, 148, 136, 0.35), 0 4px 12px -2px rgba(4, 47, 46, 0.12);
+  transform: translateY(-6px) rotate(-0.4deg) scale(1.01);
+  border-color: rgba(234, 88, 12, 0.35);
+  box-shadow: 0 24px 48px -16px rgba(234, 88, 12, 0.35), 0 4px 12px -2px rgba(67, 20, 7, 0.12);
 }
 
-/* Glacier Pine glass: shared by modals and drawers — an
-   icy mint pane with crisp corners,
-   a teal border and a lime glow. */
+/* Sunset Ember glass: shared by modals and drawers — a
+   warm cream pane with soft corners,
+   an ember border and an amber glow. */
 .pop-glass {
-  background: rgba(240, 253, 250, 0.92);
+  background: rgba(255, 247, 237, 0.92);
   backdrop-filter: blur(20px) saturate(1.1);
   -webkit-backdrop-filter: blur(20px) saturate(1.1);
-  border: 1px solid rgba(15, 118, 110, 0.25);
-  border-radius: 12px;
-  box-shadow: 0 20px 44px -18px rgba(4, 47, 46, 0.28), 0 0 0 1px rgba(132, 204, 22, 0.2);
+  border: 1px solid rgba(194, 65, 12, 0.25);
+  border-radius: 24px;
+  box-shadow: 0 20px 44px -18px rgba(67, 20, 7, 0.28), 0 0 0 1px rgba(245, 158, 11, 0.2);
 }
 
-/* Glacier Pine tag: a solid TEAL
+/* Sunset Ember tag: a solid EMBER
    round badge — white type,
-   upright, with a soft shadow. */
+   tilted, with a soft shadow. */
 .starburst {
-  background: #0d9488;
+  background: #ea580c;
   color: #ffffff;
   text-shadow: none;
   clip-path: none;
   border-radius: 9999px;
   border: 2px solid #ffffff;
-  box-shadow: 0 10px 22px -8px rgba(15, 118, 110, 0.55);
+  box-shadow: 0 10px 22px -8px rgba(194, 65, 12, 0.55);
   padding-left: 14px;
   padding-right: 14px;
-  transform: rotate(0deg);
+  transform: rotate(-6deg);
 }
 
-/* Glacier Pine texture: fine DIAGONAL-LINE grid —
-   teal and sky lines over icy mint. */
+/* Sunset Ember texture: fine POLKA-DOT grid —
+   ember and rose dots over warm cream. */
 .halftone {
   background-image:
-    repeating-linear-gradient(45deg, rgba(13, 148, 136, 0.10) 0px, rgba(13, 148, 136, 0.10) 1px, transparent 1px, transparent 14px),
-    repeating-linear-gradient(-45deg, rgba(2, 132, 199, 0.08) 0px, rgba(2, 132, 199, 0.08) 1px, transparent 1px, transparent 14px);
+    radial-gradient(rgba(234, 88, 12, 0.12) 1.2px, transparent 1.3px),
+    radial-gradient(rgba(225, 29, 72, 0.10) 1.2px, transparent 1.3px);
   background-size: 20px 20px;
   background-position: 0 0, 10px 10px;
 }
 
-/* Glacier Pine rule: a smooth gradient divider bar. */
+/* Sunset Ember rule: a smooth gradient divider bar. */
 .zigzag {
   height: 6px;
   border: none;
   border-radius: 999px;
-  background-image: linear-gradient(90deg, #0d9488 0%, #84cc16 50%, #0ea5e9 100%);
+  background-image: linear-gradient(90deg, #ea580c 0%, #f59e0b 50%, #e11d48 100%);
   background-position: 0 0;
   background-size: 100% 6px;
   background-repeat: no-repeat;
@@ -244,60 +246,60 @@ h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #0f
   opacity: 0.9;
 }
 
-/* Glacier Pine band: a pine gradient band
-   with a LIME BOTTOM edge
+/* Sunset Ember band: a sunset gradient band
+   with a ROSE BOTTOM edge
    and soft rounded bottom corners. */
 .bazaar-awning {
-  background: linear-gradient(135deg, #082f49 0%, #0f766e 55%, #84cc16 100%);
+  background: linear-gradient(135deg, #431407 0%, #c2410c 55%, #f59e0b 100%);
   opacity: 1;
-  box-shadow: 0 12px 28px -12px rgba(4, 47, 46, 0.35);
+  box-shadow: 0 12px 28px -12px rgba(67, 20, 7, 0.35);
   border: none;
-  border-bottom: 3px solid #84cc16;
-  border-radius: 0 0 16px 16px;
+  border-bottom: 3px solid #e11d48;
+  border-radius: 0 0 24px 24px;
 }
 
-/* Glacier Pine glow: a cool teal glow for the core. */
+/* Sunset Ember glow: a warm ember glow for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(20, 184, 166, 0.55) 42%, rgba(132, 204, 22, 0.22) 62%, rgba(132, 204, 22, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(249, 115, 22, 0.55) 42%, rgba(245, 158, 11, 0.22) 62%, rgba(245, 158, 11, 0) 76%);
 }
 
-/* Glacier Pine orb: a frost disc with
-   a pale mint centre, lime ring and a
-   deep teal rim. */
+/* Sunset Ember orb: a warm sun disc with
+   a pale cream centre, amber ring and a
+   deep ember rim. */
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 50%, #f0fdfa 0%, #a3e635 40%, #ffffff 52%, #0d9488 68%, #042f2e 100%);
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(20, 184, 166, 0.45), 0 18px 36px -14px rgba(4, 47, 46, 0.35);
+    radial-gradient(circle at 50% 50%, #fff7ed 0%, #fbbf24 40%, #ffffff 52%, #ea580c 68%, #431407 100%);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(249, 115, 22, 0.45), 0 18px 36px -14px rgba(67, 20, 7, 0.35);
   border: none;
 }
 
-/* Wider-spaced rings around the frost disc. */
+/* Wider-spaced rings around the warm sun disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(13, 148, 136, 0.3) 0px,
-    rgba(13, 148, 136, 0.3) 1px,
+    rgba(234, 88, 12, 0.3) 0px,
+    rgba(234, 88, 12, 0.3) 1px,
     transparent 1px,
     transparent 26px,
-    rgba(132, 204, 22, 0.30) 26px,
-    rgba(132, 204, 22, 0.30) 27px,
+    rgba(245, 158, 11, 0.30) 26px,
+    rgba(245, 158, 11, 0.30) 27px,
     transparent 27px,
     transparent 52px
   );
   -webkit-mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
   mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
-  border-radius: 12px;
+  border-radius: 24px;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(13, 148, 136, 0.35) 0deg 6deg,
+    rgba(234, 88, 12, 0.35) 0deg 6deg,
     transparent 6deg 42deg,
-    rgba(132, 204, 22, 0.30) 42deg 48deg,
+    rgba(245, 158, 11, 0.30) 42deg 48deg,
     transparent 48deg 96deg
   );
   -webkit-mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
   mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
-  border-radius: 12px;
+  border-radius: 24px;
 }
