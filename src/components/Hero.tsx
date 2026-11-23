@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Emerald Grove: soft blush light, vivid rose over warm peach. Emerald Grove cards, soft layered shadows, petals rising up.
+// Glacier Pine: icy mint light, vivid teal over cool sky. Glacier Pine cards, crisp cool shadows, flakes falling down.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(225, 29, 72, 0.35)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(251, 191, 36, 0.32)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(244, 63, 94, 0.32)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(225, 29, 72, 0.35)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(13, 148, 136, 0.35)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(163, 230, 53, 0.32)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(20, 184, 166, 0.32)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(2, 132, 199, 0.35)" },
 ];
 
-// warm rose and peach petals rising up through the soft glow.
+// cool teal and lime flakes falling down through the soft glow.
 const BUBBLES = [
-  { left: "8%", top: "4%", delay: "0s", dur: "11.2s", s: 12, c: "#e11d48" },
-  { left: "21%", top: "10%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#f43f5e" },
-  { left: "36%", top: "2%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#92400e" },
-  { left: "53%", top: "14%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#d97706" },
-  { left: "68%", top: "6%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#881337" },
-  { left: "82%", top: "18%", delay: "-2s", dur: "12.2s", s: 14, c: "#fbbf24" },
-  { left: "93%", top: "8%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#e11d48" },
+  { left: "8%", top: "4%", delay: "0s", dur: "11.2s", s: 12, c: "#0d9488" },
+  { left: "21%", top: "10%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#14b8a6" },
+  { left: "36%", top: "2%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#65a30d" },
+  { left: "53%", top: "14%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#0284c7" },
+  { left: "68%", top: "6%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#0f766e" },
+  { left: "82%", top: "18%", delay: "-2s", dur: "12.2s", s: 14, c: "#a3e635" },
+  { left: "93%", top: "8%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#0d9488" },
 ];
 
-// Emerald Grove glints scattered through the warm glow.
+// Glacier Pine glints scattered through the cool glow.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -59,7 +59,7 @@ function Bubble({ left, top, delay, dur, s, c }: (typeof BUBBLES)[number]) {
           width: s,
           height: s,
           borderRadius: "999px",
-          background: `radial-gradient(circle at 35% 30%, #fff1f2cc 0%, ${c}88 55%, ${c} 100%)`,
+          background: `radial-gradient(circle at 35% 30%, #f0fdfacc 0%, ${c}88 55%, ${c} 100%)`,
           boxShadow: `0 0 12px 2px ${c}66`,
         }}
       />
@@ -75,19 +75,19 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* Emerald Grove wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#fff1f2] via-[#ffe4e6] to-[#ffe4e6]">
+      {/* Glacier Pine wash over the stage */}
+      <div className="relative bg-gradient-to-b from-[#ecfdf5] via-[#ccfbf1] to-[#f0fdfa]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
 
-        {/* Emerald Grove haze sweeping the sheet */}
+        {/* Glacier Pine haze sweeping the sheet */}
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-0 hidden h-[560px] opacity-90 sm:block">
           <div className="pop-drift absolute -left-24 top-6 h-72 w-[52rem] rotate-[-8deg] rounded-full bg-gradient-to-r from-brand-400/35 via-gold-300/25 to-transparent blur-3xl" />
           <div className="pop-drift absolute -right-24 top-40 h-64 w-[44rem] rotate-[10deg] rounded-full bg-gradient-to-r from-transparent via-brand-300/25 to-gold-400/30 blur-3xl" style={{ animationDelay: "-12s" }} />
         </div>
 
-        {/* Emerald Grove core: a glowing bloom disc ringed by a clockwise spin */}
+        {/* Glacier Pine core: a glowing frost disc ringed by a counter-clockwise spin */}
         <div aria-hidden className="pointer-events-none absolute -right-40 -top-32 z-0 hidden opacity-90 sm:block">
           <div className="relative h-[600px] w-[600px]">
             <div className="nebula-core absolute inset-8 rounded-full blur-xl" />
@@ -100,14 +100,14 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(225, 29, 72, 0.35), inset 0 0 18px rgba(225, 29, 72, 0.35)",
+                  boxShadow: "0 0 28px 2px rgba(13, 148, 136, 0.35), inset 0 0 18px rgba(13, 148, 136, 0.35)",
                   opacity: 1 - r * 0.22,
                 }}
               />
             ))}
-            {/* the bloom core: a layered glowing rosy bed */}
+            {/* the frost core: a layered glowing mint bed */}
             <div className="sun-disc pop-spin absolute inset-44 rounded-full" style={{ animationDuration: "24s" }} />
-            {/* Emerald Grove glints */}
+            {/* Glacier Pine glints */}
             <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
               {[{l:"30%",t:"34%",s:46},{l:"58%",t:"52%",s:34},{l:"44%",t:"66%",s:24},{l:"64%",t:"30%",s:20}].map((glint, i) => (
                 <span key={i} className="absolute rounded-full bg-white/80" style={{ left: glint.l, top: glint.t, width: glint.s, height: glint.s }} />
@@ -121,11 +121,11 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{ width: 26, height: 240, transform: `translate(-50%, -100%) rotate(${b * 120}deg)`, animationDuration: "36s" }}
               />
             ))}
-            {/* orbs dancing around the glowing bloom pool */}
+            {/* orbs dancing around the glowing frost pool */}
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#e11d48", "#f43f5e", "#92400e", "#d97706"];
+              const colors = ["#0d9488", "#14b8a6", "#65a30d", "#0284c7"];
               return (
                 <span
                   key={i}
@@ -143,7 +143,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* warm rose glow */}
+        {/* cool teal glow */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {ORBS.map((g, i) => (
             <div
@@ -154,7 +154,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* Emerald Grove glints */}
+        {/* Glacier Pine glints */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {STARS.map((s, i) => (
             <span
@@ -165,14 +165,14 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* petals rising up */}
+        {/* flakes falling down */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden overflow-hidden sm:block">
           {BUBBLES.map((r, i) => (
             <Bubble key={i} {...r} />
           ))}
         </div>
 
-        {/* 4-banner carousel in a warm glow frame */}
+        {/* 4-banner carousel in a cool glow frame */}
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
@@ -185,12 +185,12 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* Emerald Grove ticker: deep forest band with warm cream type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#1e1b4b]/80 bg-gradient-to-r from-[#1e1b4b] via-[#881337] to-[#1e1b4b] py-3 shadow-[0_10px_30px_-12px_rgba(76, 5, 25, 0.5)] backdrop-blur">
+        {/* Glacier Pine ticker: deep pine band with icy mint type */}
+        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#042f2e]/80 bg-gradient-to-r from-[#042f2e] via-[#0f766e] to-[#042f2e] py-3 shadow-[0_10px_30px_-12px_rgba(4, 47, 46, 0.5)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
-                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#fff1f2] drop-shadow-[0_1px_0_rgba(76, 5, 25, 0.35)]">
+                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#f0fdfa] drop-shadow-[0_1px_0_rgba(4, 47, 46, 0.35)]">
                   {t} <span className="text-gold-300">✦</span>
                 </span>
               ))}
