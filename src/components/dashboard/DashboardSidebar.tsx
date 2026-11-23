@@ -19,7 +19,7 @@ type DashboardSidebarProps = {
 
 export default function DashboardSidebar({ nav, active, onSelect, badge, userName, userEmail, userImage, userRole }: DashboardSidebarProps) {
   return (
-    <aside className="sticky top-0 hidden h-screen w-72 shrink-0 flex-col border-r border-[#cffafe] bg-white p-5 text-ink lg:flex">
+    <aside className="sticky top-0 hidden h-screen w-72 shrink-0 flex-col border-r border-[#ffedd5] bg-white p-5 text-ink lg:flex">
       <Link href="/" className="flex items-center gap-2">
         <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-500 text-xl font-black text-white">G</span>
         <span className="text-lg font-black tracking-tight">
@@ -47,7 +47,7 @@ export default function DashboardSidebar({ nav, active, onSelect, badge, userNam
         })}
       </nav>
 
-      <div className="mt-auto space-y-2 border-t border-[#cffafe] pt-4">
+      <div className="mt-auto space-y-2 border-t border-[#ffedd5] pt-4">
         <Link href="/" className="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-bold text-ink transition hover:bg-white hover:text-ink">
           <span aria-hidden="true">🛍️</span> Back to Shop
         </Link>
