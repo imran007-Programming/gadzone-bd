@@ -1,86 +1,85 @@
 @import "tailwindcss";
 
 @theme {
-  /* Frostline Glacier: an original direction —
-     icy blue-white paper,
-     deep navy ink and brand,
-     glacier sky-blue as the primary,
-     mint seafoam as the fresh counterpoint,
-     hot pink as the small sale accent.
-     Cards are FROST SLABS:
-     crisp 10px corners, a clean white face,
-     a thin navy rim with a thick ice-blue
-     LEFT edge, a cool shadow — on hover the
-     slab LIFTS and glows ice-blue; snowflakes
-     RISE with a leftward drift, a LEFTWARD
-     ticker, VERTICAL tri-color bands, a fine
-     GRID texture and a pale ice band with a
-     CYAN BOTTOM edge. */
+  /* Verdant Market: an original direction —
+     warm cream paper,
+     deep forest-green ink and brand,
+     lime zest as the fresh counterpoint,
+     terracotta as the warm sale accent.
+     Cards are MARKET CRATES:
+     big 22px corners, a warm cream-white face,
+     a thin forest rim with a thick lime
+     TOP edge, a soft warm shadow — on hover the
+     crate LIFTS and glows lime; leaves FALL
+     with a rightward drift, a RIGHTWARD
+     ticker, HORIZONTAL tri-color bands, a fine
+     DOT texture and a striped green awning
+     band with a FOREST bottom edge. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = glacier sky-blue scale */
-  --color-brand-50: #f0f9ff;
-  --color-brand-100: #e0f2fe;
-  --color-brand-200: #bae6fd;
-  --color-brand-300: #7dd3fc;
-  --color-brand-400: #38bdf8;
-  --color-brand-500: #0ea5e9;
-  --color-brand-600: #0284c7;
-  --color-brand-700: #0369a1;
-  --color-brand-800: #075985;
-  --color-brand-900: #0c4a6e;
-  --color-brand-950: #082f49;
-  --color-brand: #0369a1;
-  --color-brand-dark: #075985;
-  --color-brand-deep: #082f49;
+  /* brand = deep forest-green scale */
+  --color-brand-50: #ecfdf5;
+  --color-brand-100: #d1fae5;
+  --color-brand-200: #a7f3d0;
+  --color-brand-300: #6ee7b7;
+  --color-brand-400: #34d399;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-brand-900: #064e3b;
+  --color-brand-950: #022c22;
+  --color-brand: #047857;
+  --color-brand-dark: #065f46;
+  --color-brand-deep: #022c22;
 
-  /* gold = mint seafoam scale (name kept for legacy class refs) */
-  --color-gold-50: #ecfdf5;
-  --color-gold-100: #d1fae5;
-  --color-gold-200: #a7f3d0;
-  --color-gold-300: #6ee7b7;
-  --color-gold-400: #34d399;
-  --color-gold-500: #10b981;
-  --color-gold-600: #059669;
-  --color-gold-700: #047857;
-  --color-gold-800: #065f46;
-  --color-gold-900: #064e3b;
-  --color-gold-950: #022c22;
-  --color-gold: #059669;
-  --color-gold-deep: #065f46;
-  --color-gold-soft: #d1fae5;
+  /* gold = lime zest scale (name kept for legacy class refs) */
+  --color-gold-50: #f7fee7;
+  --color-gold-100: #ecfccb;
+  --color-gold-200: #d9f99d;
+  --color-gold-300: #bef264;
+  --color-gold-400: #a3e635;
+  --color-gold-500: #84cc16;
+  --color-gold-600: #65a30d;
+  --color-gold-700: #4d7c0f;
+  --color-gold-800: #3f6212;
+  --color-gold-900: #365314;
+  --color-gold-950: #1a2e05;
+  --color-gold: #65a30d;
+  --color-gold-deep: #3f6212;
+  --color-gold-soft: #ecfccb;
 
-  /* popblue = indigo violet scale (name kept for legacy class refs) */
-  --color-popblue-50: #eef2ff;
-  --color-popblue-100: #e0e7ff;
-  --color-popblue-200: #c7d2fe;
-  --color-popblue-300: #a5b4fc;
-  --color-popblue-400: #818cf8;
-  --color-popblue-500: #6366f1;
-  --color-popblue-600: #4f46e5;
-  --color-popblue-700: #4338ca;
-  --color-popblue-800: #3730a3;
-  --color-popblue-900: #312e81;
-  --color-popblue-950: #1e1b4b;
-  --color-popblue: #4f46e5;
-  --color-popblue-deep: #3730a3;
-  --color-popblue-soft: #e0e7ff;
+  /* popblue = terracotta scale (name kept for legacy class refs) */
+  --color-popblue-50: #fff7ed;
+  --color-popblue-100: #ffedd5;
+  --color-popblue-200: #fed7aa;
+  --color-popblue-300: #fdba74;
+  --color-popblue-400: #fb923c;
+  --color-popblue-500: #f97316;
+  --color-popblue-600: #ea580c;
+  --color-popblue-700: #c2410c;
+  --color-popblue-800: #9a3412;
+  --color-popblue-900: #7c2d12;
+  --color-popblue-950: #431407;
+  --color-popblue: #ea580c;
+  --color-popblue-deep: #9a3412;
+  --color-popblue-soft: #ffedd5;
 
-  /* poprose = hot pink scale (small sale accent) */
-  --color-poprose-200: #fbcfe8;
-  --color-poprose-300: #f9a8d4;
-  --color-poprose-400: #f472b6;
-  --color-poprose-500: #ec4899;
-  --color-poprose-600: #db2777;
-  --color-poprose-700: #be185d;
-  --color-poprose-800: #9d174d;
+  /* poprose = warm rose scale (small sale accent) */
+  --color-poprose-200: #fecdd3;
+  --color-poprose-300: #fda4af;
+  --color-poprose-400: #fb7185;
+  --color-poprose-500: #f43f5e;
+  --color-poprose-600: #e11d48;
+  --color-poprose-700: #be123c;
+  --color-poprose-800: #9f1239;
 
-  --color-ink: #0a2237;
-  --color-paper: #eef6fb;
-  --color-mute: #4b6a84;
-  --color-card: #ffffff;
-  --color-deep: #0a2237;
+  --color-ink: #14261b;
+  --color-paper: #faf7ef;
+  --color-mute: #5b6b5e;
+  --color-card: #fffdf7;
+  --color-deep: #14261b;
 }
 
 html { scroll-behavior: smooth; }
@@ -94,60 +93,60 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #eef6fb;
+  background-color: #faf7ef;
   background-image:
-    radial-gradient(ellipse 46% 26% at 94% 4%, rgba(2, 132, 199, 0.16) 0%, rgba(2, 132, 199, 0) 70%),
-    radial-gradient(ellipse 42% 28% at 4% 96%, rgba(79, 70, 229, 0.14) 0%, rgba(79, 70, 229, 0) 70%),
-    linear-gradient(200deg, rgba(224, 242, 254, 0.9) 0%, rgba(238, 246, 251, 0.55) 45%, rgba(209, 250, 229, 0.6) 85%);
-  color: #0a2237;
+    radial-gradient(ellipse 46% 26% at 94% 4%, rgba(4, 120, 87, 0.14) 0%, rgba(4, 120, 87, 0) 70%),
+    radial-gradient(ellipse 42% 28% at 4% 96%, rgba(132, 204, 22, 0.16) 0%, rgba(132, 204, 22, 0) 70%),
+    linear-gradient(200deg, rgba(236, 252, 203, 0.9) 0%, rgba(250, 247, 239, 0.55) 45%, rgba(255, 237, 213, 0.6) 85%);
+  color: #14261b;
 }
-::selection { background: #0284c7; color: #ffffff; }
+::selection { background: #84cc16; color: #14261b; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0284c7, #4f46e5); border-radius: 4px; border: 2px solid #eef6fb; }
-::-webkit-scrollbar-track { background: #eef6fb; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #047857, #ea580c); border-radius: 8px; border: 2px solid #faf7ef; }
+::-webkit-scrollbar-track { background: #faf7ef; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Frostline type: section headlines in
-   SENTENCE case with tight tracking and a
-   sky-to-violet-to-mint gradient accent;
+/* Verdant type: section headlines in
+   UPPERCASE with tight tracking and a
+   green-to-lime-to-terracotta gradient accent;
    product names stay sentence case. */
-h1, h2 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: -0.02em; line-height: 1.05; text-wrap: balance; text-transform: none; }
+h1, h2 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: -0.01em; line-height: 1.05; text-wrap: balance; text-transform: uppercase; }
 h3 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; text-wrap: balance; }
-h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #0369a1, #4f46e5, #059669); -webkit-background-clip: text; background-clip: text; color: transparent; }
+h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #047857, #65a30d, #ea580c); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
-/* Frostline snowflakes: cool flakes RISE
-   with a wide LEFTWARD drift and a pink flicker. */
+/* Verdant leaves: green leaves FALL
+   with a wide RIGHTWARD drift and a terracotta flicker. */
 @keyframes spark-rise {
-  0% { transform: translate3d(0, 112vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(0, -12vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
   15% { opacity: 0.95; }
-  50% { transform: translate3d(-3vw, 50vh, 0) scale(1.15) rotate(-200deg); }
-  100% { transform: translate3d(3vw, -12vh, 0) scale(0.7) rotate(-420deg); opacity: 0; }
+  50% { transform: translate3d(3vw, 50vh, 0) scale(1.15) rotate(200deg); }
+  100% { transform: translate3d(-3vw, 112vh, 0) scale(0.7) rotate(420deg); opacity: 0; }
 }
 .pop-rise { animation: spark-rise 18s linear infinite; }
 
-/* Frostline sway: a soft SIDE-TO-SIDE drift with a slight tilt. */
+/* Verdant sway: a soft SIDE-TO-SIDE drift with a slight tilt. */
 @keyframes spark-sway {
   0%, 100% { transform: translate(-22px, 0) rotate(-2deg) scale(1); opacity: 0.7; }
   50% { transform: translate(22px, -8px) rotate(2deg) scale(1.05); opacity: 1; }
 }
 .pop-drift { animation: spark-sway 11s ease-in-out infinite; }
 
-/* Frostline bob: an up-and-down float with a slight tilt. */
+/* Verdant bob: an up-and-down float with a slight tilt. */
 @keyframes spark-float {
   0%, 100% { transform: translateY(-14px) rotate(2deg) scale(1); }
   50% { transform: translateY(14px) rotate(-2deg) scale(1.04); }
 }
 .pop-bob { animation: spark-float 8s ease-in-out infinite; }
 
-/* Frostline spin: a COUNTER-CLOCKWISE spin. */
+/* Verdant spin: a CLOCKWISE spin. */
 @keyframes spark-turn {
-  from { transform: rotate(360deg); }
-  to { transform: rotate(0deg); }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 .pop-spin { animation: spark-turn 30s linear infinite; }
 
-/* Frostline twinkle: a cool ice-blue flicker —
+/* Verdant twinkle: a warm lime flicker —
    flaring bright, then settling again. */
 @keyframes spark-blink {
   0%, 100% { opacity: 1; transform: scale(1); }
@@ -155,152 +154,151 @@ h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #03
 }
 .pop-twinkle { animation: spark-blink 2.6s ease-in-out infinite; }
 
-/* Frostline ticker: a LEFTWARD marquee. */
+/* Verdant ticker: a RIGHTWARD marquee. */
 @keyframes spark-ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
 }
 .pop-ticker { animation: spark-ticker 38s linear infinite; }
 
-/* Frostline stripes: a sky /
-   violet / mint VERTICAL tri-color
-   band, cool and crisp. */
+/* Verdant stripes: a green /
+   lime / terracotta HORIZONTAL tri-color
+   band, warm and fresh. */
 .pop-stripes {
-  background-image: linear-gradient(90deg, #0284c7 0%, #0284c7 33%, #4f46e5 33%, #4f46e5 66%, #059669 66%, #059669 100%);
+  background-image: linear-gradient(180deg, #047857 0%, #047857 33%, #84cc16 33%, #84cc16 66%, #ea580c 66%, #ea580c 100%);
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  border-radius: 4px;
+  border-radius: 8px;
   opacity: 0.92;
 }
 
-/* Frostline card: a FROST SLAB in
-   clean white (10px corners) with a thin
-   navy rim and a thick sky-blue LEFT edge, plus a
-   cool shadow — on hover the slab
-   LIFTS higher and glows ice-blue. */
+/* Verdant card: a MARKET CRATE in
+   warm cream-white (22px corners) with a thin
+   forest rim and a thick lime TOP edge, plus a
+   soft warm shadow — on hover the crate
+   LIFTS higher and glows lime. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(10, 34, 55, 0.14);
-  border-left: 4px solid #0ea5e9;
-  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.9), 0 12px 24px -12px rgba(10, 34, 55, 0.3);
-  background: #ffffff;
-  border-radius: 10px;
+  border: 1px solid rgba(20, 38, 27, 0.14);
+  border-top: 4px solid #84cc16;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.9), 0 12px 24px -12px rgba(20, 38, 27, 0.3);
+  background: #fffdf7;
+  border-radius: 22px;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
   transform: translateY(-6px);
-  border-color: rgba(3, 105, 161, 0.5);
-  border-left-color: #0284c7;
-  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.9), 0 22px 38px -14px rgba(10, 34, 55, 0.38), 0 0 0 4px rgba(14, 165, 233, 0.16);
+  border-color: rgba(4, 120, 87, 0.5);
+  border-top-color: #65a30d;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.9), 0 22px 38px -14px rgba(20, 38, 27, 0.38), 0 0 0 4px rgba(132, 204, 22, 0.16);
 }
 
-/* Frostline glass: shared by modals and drawers — a
-   cool frosted pane with crisp corners,
-   a sky-blue rim and an ice glow. */
+/* Verdant glass: shared by modals and drawers — a
+   warm cream frosted pane with soft corners,
+   a forest-green rim and a lime glow. */
 .pop-glass {
-  background: rgba(238, 246, 251, 0.92);
+  background: rgba(250, 247, 239, 0.92);
   backdrop-filter: blur(20px) saturate(1.1);
   -webkit-backdrop-filter: blur(20px) saturate(1.1);
-  border: 1px solid rgba(3, 105, 161, 0.35);
-  border-radius: 10px;
-  box-shadow: 0 18px 40px -16px rgba(10, 34, 55, 0.3), 0 0 0 1px rgba(14, 165, 233, 0.12);
+  border: 1px solid rgba(4, 120, 87, 0.35);
+  border-radius: 22px;
+  box-shadow: 0 18px 40px -16px rgba(20, 38, 27, 0.3), 0 0 0 1px rgba(132, 204, 22, 0.12);
 }
 
-/* Frostline tag: a SKY-TO-VIOLET
-   badge — white type, straight and crisp,
-   with a cool shadow. */
+/* Verdant tag: a LIME disc badge —
+   deep green type, tilted slightly,
+   with a warm shadow. */
 .starburst {
-  background: linear-gradient(135deg, #0284c7, #4f46e5 60%, #059669);
-  color: #ffffff;
+  background: linear-gradient(135deg, #a3e635, #84cc16 60%, #65a30d);
+  color: #14261b;
   text-shadow: none;
   clip-path: none;
-  border-radius: 10px;
+  border-radius: 999px;
   border: none;
-  box-shadow: 0 8px 20px -6px rgba(2, 132, 199, 0.55);
+  box-shadow: 0 8px 20px -6px rgba(101, 163, 13, 0.55);
   padding-left: 14px;
   padding-right: 14px;
-  transform: rotate(0deg);
+  transform: rotate(-6deg);
 }
 
-/* Frostline texture: a fine GRID —
-   sky and violet lines over icy white. */
+/* Verdant texture: a fine DOT grid —
+   green and lime dots over warm cream. */
 .halftone {
   background-image:
-    linear-gradient(rgba(3, 105, 161, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(79, 70, 229, 0.07) 1px, transparent 1px);
+    radial-gradient(rgba(4, 120, 87, 0.16) 1.2px, transparent 1.3px),
+    radial-gradient(rgba(132, 204, 22, 0.18) 1.2px, transparent 1.3px);
   background-size: 26px 26px, 26px 26px;
-  background-position: 0 0, 0 0;
+  background-position: 0 0, 13px 13px;
 }
 
-/* Frostline rule: a crisp double frost line. */
+/* Verdant rule: a dotted tri-color rule. */
 .zigzag {
   height: 6px;
   border: none;
-  border-radius: 0;
+  border-radius: 999px;
   background-image:
-    linear-gradient(90deg, #0284c7 0%, #4f46e5 50%, #059669 100%);
-  background-size: 100% 2px, 100% 2px;
-  background-position: 0 0, 0 4px;
+    repeating-linear-gradient(90deg, #047857 0 14px, #84cc16 14px 28px, #ea580c 28px 42px);
+  background-size: 100% 100%;
   background-repeat: repeat-x;
   box-shadow: none;
   opacity: 0.85;
 }
 
-/* Frostline band: a pale ice band
-   with a CYAN BOTTOM edge
-   and crisp corners. */
+/* Verdant band: a striped green awning
+   band with a FOREST bottom edge
+   and soft corners. */
 .bazaar-awning {
-  background: linear-gradient(135deg, #e0f2fe 0%, #eef2ff 55%, #d1fae5 100%);
+  background: repeating-linear-gradient(45deg, #047857 0 18px, #faf7ef 18px 36px);
   opacity: 1;
-  box-shadow: 0 12px 28px -12px rgba(10, 34, 55, 0.25);
+  box-shadow: 0 12px 28px -12px rgba(20, 38, 27, 0.25);
   border: none;
-  border-bottom: 3px solid #0ea5e9;
+  border-bottom: 3px solid #065f46;
   border-radius: 0;
 }
 
-/* Frostline glow: a cool ice-blue glow for the core. */
+/* Verdant glow: a warm lime-green glow for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(125, 211, 252, 0.55) 42%, rgba(2, 132, 199, 0.22) 62%, rgba(2, 132, 199, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(163, 230, 53, 0.55) 42%, rgba(4, 120, 87, 0.22) 62%, rgba(4, 120, 87, 0) 76%);
 }
 
-/* Frostline disc: a cool moon disc with
-   a pale ice centre, violet ring and a
-   deep navy rim. */
+/* Verdant disc: a warm lime sun disc with
+   a pale cream centre, green ring and a
+   deep forest rim. */
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 50%, #eef6fb 0%, #7dd3fc 40%, #ffffff 52%, #4f46e5 68%, #0a2237 100%);
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(14, 165, 233, 0.45), 0 18px 36px -12px rgba(3, 105, 161, 0.5);
+    radial-gradient(circle at 50% 50%, #faf7ef 0%, #a3e635 40%, #ffffff 52%, #047857 68%, #14261b 100%);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(132, 204, 22, 0.45), 0 18px 36px -12px rgba(4, 120, 87, 0.5);
   border: none;
 }
 
-/* Wider-spaced rings around the cool moon disc. */
+/* Wider-spaced rings around the warm lime sun disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(3, 105, 161, 0.3) 0px,
-    rgba(3, 105, 161, 0.3) 1px,
+    rgba(4, 120, 87, 0.3) 0px,
+    rgba(4, 120, 87, 0.3) 1px,
     transparent 1px,
     transparent 28px,
-    rgba(79, 70, 229, 0.30) 28px,
-    rgba(79, 70, 229, 0.30) 29px,
+    rgba(234, 88, 12, 0.30) 28px,
+    rgba(234, 88, 12, 0.30) 29px,
     transparent 29px,
     transparent 56px
   );
   -webkit-mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
   mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
-  border-radius: 10px;
+  border-radius: 22px;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(3, 105, 161, 0.35) 0deg 6deg,
+    rgba(4, 120, 87, 0.35) 0deg 6deg,
     transparent 6deg 42deg,
-    rgba(79, 70, 229, 0.30) 42deg 48deg,
+    rgba(132, 204, 22, 0.30) 42deg 48deg,
     transparent 48deg 96deg
   );
   -webkit-mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
   mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
-  border-radius: 10px;
+  border-radius: 22px;
 }
