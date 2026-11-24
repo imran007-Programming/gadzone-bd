@@ -30,16 +30,16 @@ const ORBS = [
 
 // bubbles rising through the glacier air.
 const BUBBLES = [
-  { left: "8%", top: "4%", delay: "0s", dur: "11.2s", s: 12, c: "#dc2626" },
-  { left: "21%", top: "10%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#f59e0b" },
-  { left: "36%", top: "2%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#f59e0b" },
-  { left: "53%", top: "14%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#ea580c" },
-  { left: "68%", top: "6%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#f59e0b" },
-  { left: "82%", top: "18%", delay: "-2s", dur: "12.2s", s: 14, c: "#f59e0b" },
-  { left: "93%", top: "8%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#dc2626" },
+  { left: "8%", top: "4%", delay: "0s", dur: "11.2s", s: 12, c: "#0d9488" },
+  { left: "21%", top: "10%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#22d3ee" },
+  { left: "36%", top: "2%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#22d3ee" },
+  { left: "53%", top: "14%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#2dd4bf" },
+  { left: "68%", top: "6%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#22d3ee" },
+  { left: "82%", top: "18%", delay: "-2s", dur: "12.2s", s: 14, c: "#22d3ee" },
+  { left: "93%", top: "8%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#0d9488" },
 ];
 
-// Glacier Current glints scattered through the warm glacier.
+// Glacier Mint glints scattered through the cool frost.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -59,7 +59,7 @@ function Bubble({ left, top, delay, dur, s, c }: (typeof BUBBLES)[number]) {
           width: s,
           height: s,
           borderRadius: "999px",
-          background: `radial-gradient(circle at 35% 30%, #fecacacc 0%, ${c}88 55%, ${c} 100%)`,
+          background: `radial-gradient(circle at 35% 30%, #99f6e4cc 0%, ${c}88 55%, ${c} 100%)`,
           boxShadow: `0 0 12px 2px ${c}66`,
         }}
       />
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* Glacier Current wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#fff7ed] via-[#fecaca] to-[#fff7ed]">
+      <div className="relative bg-gradient-to-b from-[#f0fdfa] via-[#99f6e4] to-[#f0fdfa]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#dc2626", "#f59e0b", "#f59e0b", "#ea580c"];
+              const colors = ["#0d9488", "#22d3ee", "#22d3ee", "#2dd4bf"];
               return (
                 <span
                   key={i}
@@ -176,7 +176,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
-              <div className="bg-gradient-to-r from-brand-600 via-gold-500 to-popblue-700 p-2 shadow-[0_20px_40px_-18px_rgba(69, 26, 3, 0.35)] rounded-[10px]">
+              <div className="bg-gradient-to-r from-brand-600 via-gold-500 to-popblue-700 p-2 shadow-[0_20px_40px_-18px_rgba(4, 47, 46, 0.35)] rounded-[10px]">
                 <div className="overflow-hidden rounded-[8px] bg-paper ring-1 ring-brand-950/10">
                   <BannerCarousel />
                 </div>
@@ -185,12 +185,12 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* Glacier Current ticker: deep glacier-brown band with soft amber type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#450a0a]/80 bg-gradient-to-r from-[#450a0a] via-[#ea580c] to-[#450a0a] py-3 shadow-[0_10px_30px_-12px_rgba(69, 26, 3, 0.5)] backdrop-blur">
+        {/* Glacier Current ticker: deep teal band with soft aqua type */}
+        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#042f2e]/80 bg-gradient-to-r from-[#042f2e] via-[#2dd4bf] to-[#042f2e] py-3 shadow-[0_10px_30px_-12px_rgba(4, 47, 46, 0.5)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
-                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#fff7ed] drop-shadow-[0_1px_0_rgba(69, 26, 3, 0.35)]">
+                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#f0fdfa] drop-shadow-[0_1px_0_rgba(4, 47, 46, 0.35)]">
                   {t} <span className="text-gold-300">✦</span>
                 </span>
               ))}
@@ -215,7 +215,7 @@ export default function Hero({ onQuickView }: HeroProps) {
               <div key={s.l} className="pop-lift relative overflow-hidden p-4 pb-3 pt-5 text-center">
                 <span className="relative block bg-gradient-to-br from-brand-600 via-gold-500 to-popblue-700 bg-clip-text text-2xl font-black tracking-wide text-transparent">{s.v}</span>
                 <span className="relative mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-mute">{s.l}</span>
-                <span aria-hidden className="relative mx-auto mt-3 block h-1 w-16 rounded-full bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 shadow-[0_6px_16px_-6px_rgba(69, 26, 3, 0.35)]" />
+                <span aria-hidden className="relative mx-auto mt-3 block h-1 w-16 rounded-full bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 shadow-[0_6px_16px_-6px_rgba(4, 47, 46, 0.35)]" />
               </div>
             ))}
           </motion.div>
@@ -223,7 +223,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full border border-brand-200 bg-white/80 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_6px_16px_-6px_rgba(69, 26, 3, 0.35)] backdrop-blur">Handpicked for you</p>
+            <p className="inline-block rounded-full border border-brand-200 bg-white/80 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_6px_16px_-6px_rgba(4, 47, 46, 0.35)] backdrop-blur">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="relative bg-gradient-to-r from-brand-500 via-gold-500 to-popblue-800 bg-clip-text text-transparent">Picks<span aria-hidden className="absolute inset-x-0 -bottom-1 h-1 bg-gradient-to-r from-brand-500 to-gold-500 opacity-70" /></span></h2>
             <span className="zigzag mt-4 block w-44" aria-hidden />
           </div>
