@@ -24,13 +24,13 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
       whileHover={undefined}
       className="pop-lift group relative flex h-full flex-col overflow-hidden bg-paper"
     >
-      {/* Glacier Lagoon glow peeking from the card's top edge */}
+      {/* Indigo Circuit glow peeking from the card's top edge */}
       <div aria-hidden className="pointer-events-none absolute inset-x-10 top-0 h-24 bg-gradient-to-b from-brand-200/60 via-gold-200/40 to-transparent blur-sm" />
       <div className="relative p-3">
-        <div className="relative cursor-pointer overflow-hidden rounded-[22px] ring-1 ring-brand-900/10" onClick={() => onQuickView(p)}>
+        <div className="relative cursor-pointer overflow-hidden rounded-[12px] ring-1 ring-brand-900/10" onClick={() => onQuickView(p)}>
           <ProductImage product={p} />
           {p.badge === "New" && (
-            <span className="absolute left-3 top-3 rounded-full bg-gold-400 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-gold-950 shadow-[0_10px_20px_-8px_rgba(59, 35, 20, 0.35)] ring-1 ring-white/60">New</span>
+            <span className="absolute left-3 top-3 rounded-full bg-gold-400 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-gold-950 shadow-[0_10px_20px_-8px_rgba(30, 27, 75, 0.35)] ring-1 ring-white/60">New</span>
           )}
           {discountPct(p) > 0 && (
             <span className="starburst absolute -right-2 -top-2 flex h-16 w-16 items-center justify-center p-4 text-center text-[11px] font-black leading-tight">-{discountPct(p)}%</span>
@@ -53,7 +53,7 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
           whileTap={{ scale: 0.98 }}
           onClick={() => onAddToCart(p.id)}
           aria-label={`Add ${p.name} to cart`}
-          className="flex w-full items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-brand-600 via-brand-500 to-popblue-600 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-[0_12px_24px_-8px_rgba(194, 65, 12,0.55)] transition hover:-translate-y-0.5 hover:brightness-110 active:translate-y-0 active:scale-[0.98]"
+          className="flex w-full items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-brand-600 via-brand-500 to-popblue-600 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-[0_12px_24px_-8px_rgba(79, 70, 229, 0.55)] transition hover:-translate-y-0.5 hover:brightness-110 active:translate-y-0 active:scale-[0.98]"
         >
           🛒 Add
         </motion.button>
