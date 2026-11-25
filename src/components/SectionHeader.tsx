@@ -31,7 +31,7 @@ export default function SectionHeader({ accent, rest, subtitle, showViewAll = tr
         {showViewAll && (
           <button
             onClick={() => document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" })}
-            className="rounded-lg border-2 border-brand-800 bg-brand-600 px-6 py-2.5 text-sm font-black text-white shadow-[0_12px_24px_-8px_rgba(4, 47, 46, 0.45)] transition hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-[0_18px_30px_-10px_rgba(4, 47, 46, 0.5)] active:translate-y-0"
+            className="rounded-md border-2 border-popblue-900 bg-brand-600 px-6 py-2.5 text-sm font-black text-white shadow-[3px_3px_0_0_rgba(28,15,10,0.9)] transition hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-[4px_4px_0_0_rgba(28,15,10,0.9)] active:translate-y-0"
           >
             All Products →
           </button>

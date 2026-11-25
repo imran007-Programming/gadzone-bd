@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Lagoon Tide: deep teal, bright aqua and sea navy over seafoam paper. Tide panels, aqua glow, bubbles rising up.
+// Ember Forge: warm charcoal, molten orange and bright amber over warm cream. Forge panels, ember glow, embers falling down.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(13, 148, 136, 0.32)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(251, 191, 36, 0.30)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(180, 83, 9, 0.32)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(13, 148, 136, 0.32)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(234, 88, 12, 0.32)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245, 158, 11, 0.30)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(225, 29, 72, 0.32)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(234, 88, 12, 0.32)" },
 ];
 
-// bubbles rising up through the cool lagoon water.
+// embers falling down through the warm forge air.
 const BUBBLES = [
-  { left: "8%", top: "4%", delay: "0s", dur: "11.2s", s: 12, c: "#0d9488" },
-  { left: "21%", top: "10%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#14b8a6" },
-  { left: "36%", top: "2%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#14b8a6" },
-  { left: "53%", top: "14%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#0f766e" },
-  { left: "68%", top: "6%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#14b8a6" },
-  { left: "82%", top: "18%", delay: "-2s", dur: "12.2s", s: 14, c: "#14b8a6" },
-  { left: "93%", top: "8%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#0d9488" },
+  { left: "8%", top: "4%", delay: "0s", dur: "11.2s", s: 12, c: "#ea580c" },
+  { left: "21%", top: "10%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#f97316" },
+  { left: "36%", top: "2%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#f59e0b" },
+  { left: "53%", top: "14%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#c2410c" },
+  { left: "68%", top: "6%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#f97316" },
+  { left: "82%", top: "18%", delay: "-2s", dur: "12.2s", s: 14, c: "#e11d48" },
+  { left: "93%", top: "8%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#ea580c" },
 ];
 
-// Aqua glints scattered through the seafoam.
+// Amber glints scattered through the warm cream.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -59,7 +59,7 @@ function Bubble({ left, top, delay, dur, s, c }: (typeof BUBBLES)[number]) {
           width: s,
           height: s,
           borderRadius: "50%",
-          background: `radial-gradient(circle at 35% 30%, #e0f2fecc 0%, ${c}88 55%, ${c} 100%)`,
+          background: `radial-gradient(circle at 35% 30%, #fef3c7cc 0%, ${c}88 55%, ${c} 100%)`,
           boxShadow: `0 0 12px 2px ${c}66`,
         }}
       />
@@ -75,19 +75,19 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* Lagoon wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#f0fdfa] via-[#99f6e4] to-[#f0fdfa]">
+      {/* Ember wash over the stage */}
+      <div className="relative bg-gradient-to-b from-[#fff7ed] via-[#fed7aa] to-[#fff7ed]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
 
-        {/* Lagoon haze sweeping the sheet */}
+        {/* Ember haze sweeping the sheet */}
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-0 hidden h-[560px] opacity-90 sm:block">
           <div className="pop-drift absolute -left-24 top-6 h-72 w-[52rem] rotate-[-8deg] rounded-full bg-gradient-to-r from-brand-400/35 via-gold-300/25 to-transparent blur-3xl" />
           <div className="pop-drift absolute -right-24 top-40 h-64 w-[44rem] rotate-[10deg] rounded-full bg-gradient-to-r from-transparent via-brand-300/25 to-gold-400/30 blur-3xl" style={{ animationDelay: "-12s" }} />
         </div>
 
-        {/* Lagoon core: a lagoon disc ringed by a counter-clockwise spin */}
+        {/* Ember core: a forge disc ringed by a clockwise spin */}
         <div aria-hidden className="pointer-events-none absolute -left-48 -bottom-40 z-0 hidden opacity-90 sm:block">
           <div className="relative h-[600px] w-[600px]">
             <div className="nebula-core absolute inset-8 rounded-full blur-xl" />
@@ -100,20 +100,20 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(13, 148, 136, 0.35), inset 0 0 18px rgba(13, 148, 136, 0.35)",
+                  boxShadow: "0 0 28px 2px rgba(234, 88, 12, 0.35), inset 0 0 18px rgba(234, 88, 12, 0.35)",
                   opacity: 1 - r * 0.22,
                 }}
               />
             ))}
-            {/* the lagoon core: a layered glowing tide bed */}
+            {/* the forge core: a layered glowing ember bed */}
             <div className="sun-disc pop-spin absolute inset-44 rounded-full" style={{ animationDuration: "24s" }} />
-            {/* Aqua glints */}
+            {/* Amber glints */}
             <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
               {[{l:"30%",t:"34%",s:46},{l:"58%",t:"52%",s:34},{l:"44%",t:"66%",s:24},{l:"64%",t:"30%",s:20}].map((glint, i) => (
                 <span key={i} className="absolute rounded-full bg-white/80" style={{ left: glint.l, top: glint.t, width: glint.s, height: glint.s }} />
               ))}
             </div>
-            {/* sweeping lagoon beams */}
+            {/* sweeping forge beams */}
             {[0, 1, 2].map((b) => (
               <span
                 key={b}
@@ -121,11 +121,11 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{ width: 26, height: 240, transform: `translate(-50%, -100%) rotate(${b * 120}deg)`, animationDuration: "36s" }}
               />
             ))}
-            {/* bubbles dancing around the glowing lagoon disc */}
+            {/* embers dancing around the glowing forge disc */}
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#0d9488", "#14b8a6", "#2dd4bf", "#0f766e"];
+              const colors = ["#ea580c", "#f97316", "#f59e0b", "#c2410c"];
               return (
                 <span
                   key={i}
@@ -143,7 +143,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* lagoon glow */}
+        {/* forge glow */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {ORBS.map((g, i) => (
             <div
@@ -154,7 +154,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* Aqua glints */}
+        {/* Amber glints */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {STARS.map((s, i) => (
             <span
@@ -165,19 +165,19 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* bubbles rising up */}
+        {/* embers falling down */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden overflow-hidden sm:block">
           {BUBBLES.map((r, i) => (
             <Bubble key={i} {...r} />
           ))}
         </div>
 
-        {/* 4-banner carousel in a cool glow frame */}
+        {/* 4-banner carousel in a warm glow frame */}
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
-              <div className="bg-gradient-to-r from-brand-600 via-gold-500 to-popblue-700 p-2 shadow-[0_20px_40px_-18px_rgba(4, 47, 46, 0.35)] rounded-xl">
-                <div className="overflow-hidden rounded-lg bg-paper ring-1 ring-brand-950/10">
+              <div className="bg-gradient-to-r from-brand-600 via-gold-500 to-poprose-600 p-2 shadow-[0_20px_40px_-18px_rgba(28, 15, 10, 0.35)] rounded-md">
+                <div className="overflow-hidden rounded bg-paper ring-1 ring-brand-950/10">
                   <BannerCarousel />
                 </div>
               </div>
@@ -185,12 +185,12 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* Lagoon ticker: deep navy band with seafoam type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#042f2e]/80 bg-gradient-to-r from-[#042f2e] via-[#0f766e] to-[#042f2e] py-3 shadow-[0_10px_30px_-12px_rgba(4, 47, 46, 0.5)] backdrop-blur">
+        {/* Ember ticker: warm charcoal band with amber type */}
+        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#1c0f0a]/80 bg-gradient-to-r from-[#0c0a09] via-[#7c2d12] to-[#0c0a09] py-3 shadow-[0_10px_30px_-12px_rgba(28, 15, 10, 0.5)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
-                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#f0fdfa] drop-shadow-[0_1px_0_rgba(4, 47, 46, 0.35)]">
+                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#fff7ed] drop-shadow-[0_1px_0_rgba(28, 15, 10, 0.35)]">
                   {t} <span className="text-gold-300">✦</span>
                 </span>
               ))}
@@ -198,11 +198,11 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* single lagoon divider into the page */} 
+        {/* single forge divider into the page */} 
         <div aria-hidden className="zigzag relative z-10 mx-auto mt-0 w-full max-w-7xl opacity-90" />
       </div>
 
-      {/* Stats + featured picks under the lagoon glow */}
+      {/* Stats + featured picks under the ember glow */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 pb-24 pt-10 md:pb-28">
         <motion.div variants={container} initial="hidden" animate="show" {...anim}>
           <motion.div variants={item} className="grid grid-cols-2 gap-6 sm:grid-cols-4">
@@ -213,9 +213,9 @@ export default function Hero({ onQuickView }: HeroProps) {
               { v: "COD", l: "Available" },
             ].map((s) => (
               <div key={s.l} className="pop-lift relative overflow-hidden p-4 pb-3 pt-5 text-center">
-                <span className="relative block bg-gradient-to-br from-brand-600 via-gold-500 to-popblue-700 bg-clip-text text-2xl font-black tracking-wide text-transparent">{s.v}</span>
+                <span className="relative block bg-gradient-to-br from-brand-600 via-gold-500 to-poprose-600 bg-clip-text text-2xl font-black tracking-wide text-transparent">{s.v}</span>
                 <span className="relative mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-mute">{s.l}</span>
-                <span aria-hidden className="relative mx-auto mt-3 block h-1 w-16 rounded-full bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 shadow-[0_6px_16px_-6px_rgba(4, 47, 46, 0.35)]" />
+                <span aria-hidden className="relative mx-auto mt-3 block h-1 w-16 rounded-full bg-gradient-to-r from-brand-500 via-gold-400 to-poprose-600 shadow-[0_6px_16px_-6px_rgba(28, 15, 10, 0.35)]" />
               </div>
             ))}
           </motion.div>
@@ -223,7 +223,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full border border-brand-200 bg-white/80 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_6px_16px_-6px_rgba(4, 47, 46, 0.35)] backdrop-blur">Handpicked for you</p>
+            <p className="inline-block rounded-full border border-brand-200 bg-white/80 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_6px_16px_-6px_rgba(28, 15, 10, 0.35)] backdrop-blur">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="relative bg-gradient-to-r from-brand-500 via-gold-500 to-popblue-800 bg-clip-text text-transparent">Picks<span aria-hidden className="absolute inset-x-0 -bottom-1 h-1 bg-gradient-to-r from-brand-500 to-gold-500 opacity-70" /></span></h2>
             <span className="zigzag mt-4 block w-44" aria-hidden />
           </div>
@@ -239,7 +239,7 @@ export default function Hero({ onQuickView }: HeroProps) {
                 onClick={() => onQuickView(p)}
               >
                 <div className="relative">
-                  <div className="overflow-hidden border-b-4 border-popblue-500">
+                  <div className="overflow-hidden border-b-4 border-brand-500">
                     <ProductImage product={p} />
                   </div>
                   <span className="starburst absolute -right-1 -top-1 flex h-16 w-16 items-center justify-center p-4 text-center text-[11px] font-black leading-tight">-{discountPct(p)}%</span>
@@ -253,7 +253,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* single lagoon divider into the page */} 
+      {/* single forge divider into the page */} 
       <div aria-hidden className="zigzag absolute bottom-0 left-0 w-full opacity-90" />
     </section>
   );
