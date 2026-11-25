@@ -184,7 +184,7 @@ export default function HomeClient() {
       ) : (
         <>
           <Hero onQuickView={handleQuickView} />
-          {/* Midnight Aurora: post-hero sections ride on a violet-lit stage over the lavender page. */}
+          {/* Citrus Grove: post-hero sections ride on a sunlit grove stage over the warm cream page. */}
           <main className="relative z-10 mx-2.5 mt-10 rounded-[24px] bg-white shadow-[0_24px_48px_-20px_rgba(23, 18, 51, 0.35),0_0_70px_-18px_rgba(23, 18, 51, 0.35)] ring-2 ring-brand-500/40 sm:mx-5 lg:mx-auto lg:max-w-[86rem]">
           <CategoryGrid category={category} onCategoryChange={setCategory} />
           <FlashDeals products={flash} countdown={countdown} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
