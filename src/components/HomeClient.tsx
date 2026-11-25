@@ -185,7 +185,7 @@ export default function HomeClient() {
         <>
           <Hero onQuickView={handleQuickView} />
           {/* Monsoon Lagoon: post-hero sections ride on a cool lagoon stage over the pale mint page. */}
-          <main className="relative z-10 mx-2.5 mt-10 rounded-lg bg-white shadow-[0_24px_48px_-20px_rgba(28, 15, 11, 0.35),0_0_70px_-18px_rgba(28, 15, 11, 0.35)] ring-2 ring-brand-500/40 sm:mx-5 lg:mx-auto lg:max-w-[86rem]">
+          <main className="relative z-10 mx-2.5 mt-10 rounded-lg bg-white shadow-[0_24px_48px_-20px_rgba(10, 39, 51, 0.35),0_0_70px_-18px_rgba(10, 39, 51, 0.35)] ring-2 ring-brand-500/40 sm:mx-5 lg:mx-auto lg:max-w-[86rem]">
           <CategoryGrid category={category} onCategoryChange={setCategory} />
           <FlashDeals products={flash} countdown={countdown} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
           <ProductSection accent="Trending" rest="Audio Products" subtitle="Explore earbuds, headphones & speakers picked for better sound." products={audioProducts} onQuickView={handleQuickView} onAddToCart={(id) => addToCart(id)} />
