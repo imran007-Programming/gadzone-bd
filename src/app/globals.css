@@ -1,37 +1,37 @@
 @import "tailwindcss";
 
 @theme {
-  /* Aurora Violet: an original direction —
-     deep indigo as the live core,
+  /* Ember Bazaar: an original direction —
+     deep crimson as the live core,
      warm amber as the glowing counterpoint,
-     bright sky as the cool accent.
-     Cards are AURORA CARDS:
-     24px corners, a soft violet edge with a
-     diffused layered shadow — on hover the card
-     LIFTS up and the shadow blooms;
-     sparkles RISE UP with a gentle sway,
-     a LEFTWARD ticker, VIOLET
-     aurora bands, a fine dot-grid
-     texture and a soft gradient band with a
-     DEEP INDIGO bottom edge. */
+     fresh teal as the cool accent.
+     Cards are EMBER CARDS:
+     14px corners, a warm crimson edge with a
+     HARD offset shadow — on hover the card
+     LIFTS up-left and the shadow shifts;
+     embers FALL DOWN with a gentle sway,
+     a RIGHTWARD ticker, CRIMSON
+     ember bands, a fine diamond-grid
+     texture and a soft warm band with a
+     DEEP CHARCOAL bottom edge. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = indigo scale */
-  --color-brand-50: #eef2ff;
-  --color-brand-100: #e0e7ff;
-  --color-brand-200: #c7d2fe;
-  --color-brand-300: #a5b4fc;
-  --color-brand-400: #818cf8;
-  --color-brand-500: #6366f1;
-  --color-brand-600: #4f46e5;
-  --color-brand-700: #4338ca;
-  --color-brand-800: #3730a3;
-  --color-brand-900: #312e81;
-  --color-brand-950: #1e1b4b;
-  --color-brand: #4f46e5;
-  --color-brand-dark: #3730a3;
-  --color-brand-deep: #1e1b4b;
+  /* brand = crimson scale */
+  --color-brand-50: #fff1f2;
+  --color-brand-100: #ffe4e6;
+  --color-brand-200: #fecdd3;
+  --color-brand-300: #fda4af;
+  --color-brand-400: #fb7185;
+  --color-brand-500: #f43f5e;
+  --color-brand-600: #e11d48;
+  --color-brand-700: #be123c;
+  --color-brand-800: #9f1239;
+  --color-brand-900: #881337;
+  --color-brand-950: #4c0519;
+  --color-brand: #e11d48;
+  --color-brand-dark: #9f1239;
+  --color-brand-deep: #4c0519;
 
   /* gold = amber scale (name kept for legacy class refs) */
   --color-gold-50: #fffbeb;
@@ -49,36 +49,36 @@
   --color-gold-deep: #92400e;
   --color-gold-soft: #fef3c7;
 
-  /* popblue = sky scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0f9ff;
-  --color-popblue-100: #e0f2fe;
-  --color-popblue-200: #bae6fd;
-  --color-popblue-300: #7dd3fc;
-  --color-popblue-400: #38bdf8;
-  --color-popblue-500: #0ea5e9;
-  --color-popblue-600: #0284c7;
-  --color-popblue-700: #0369a1;
-  --color-popblue-800: #075985;
-  --color-popblue-900: #0c4a6e;
-  --color-popblue-950: #082f49;
-  --color-popblue: #0369a1;
-  --color-popblue-deep: #075985;
-  --color-popblue-soft: #e0f2fe;
+  /* popblue = teal scale (name kept for legacy class refs) */
+  --color-popblue-50: #f0fdfa;
+  --color-popblue-100: #ccfbf1;
+  --color-popblue-200: #99f6e4;
+  --color-popblue-300: #5eead4;
+  --color-popblue-400: #2dd4bf;
+  --color-popblue-500: #14b8a6;
+  --color-popblue-600: #0d9488;
+  --color-popblue-700: #0f766e;
+  --color-popblue-800: #115e59;
+  --color-popblue-900: #134e4a;
+  --color-popblue-950: #042f2e;
+  --color-popblue: #0f766e;
+  --color-popblue-deep: #115e59;
+  --color-popblue-soft: #ccfbf1;
 
-  /* poprose = fuchsia scale (small sale accent) */
-  --color-poprose-200: #f5d0fe;
-  --color-poprose-300: #f0abfc;
-  --color-poprose-400: #e879f9;
-  --color-poprose-500: #d946ef;
-  --color-poprose-600: #c026d3;
-  --color-poprose-700: #a21caf;
-  --color-poprose-800: #86198f;
+  /* poprose = orange scale (small sale accent) */
+  --color-poprose-200: #fed7aa;
+  --color-poprose-300: #fdba74;
+  --color-poprose-400: #fb923c;
+  --color-poprose-500: #f97316;
+  --color-poprose-600: #ea580c;
+  --color-poprose-700: #c2410c;
+  --color-poprose-800: #9a3412;
 
-  --color-ink: #1e1b4b;
-  --color-paper: #f6f4ff;
-  --color-mute: #55548a;
+  --color-ink: #292524;
+  --color-paper: #fff7ed;
+  --color-mute: #78716c;
   --color-card: #ffffff;
-  --color-deep: #1e1b4b;
+  --color-deep: #292524;
 }
 
 html { scroll-behavior: smooth; }
@@ -92,61 +92,61 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f6f4ff;
+  background-color: #fff7ed;
   background-image:
-    radial-gradient(ellipse 46% 26% at 6% 4%, rgba(79, 70, 229, 0.16) 0%, rgba(79, 70, 229, 0) 70%),
-    radial-gradient(ellipse 42% 28% at 96% 96%, rgba(245, 158, 11, 0.16) 0%, rgba(245, 158, 11, 0) 70%),
-    radial-gradient(ellipse 34% 22% at 88% 8%, rgba(14, 165, 233, 0.14) 0%, rgba(14, 165, 233, 0) 70%),
-    linear-gradient(200deg, rgba(224, 231, 255, 0.9) 0%, rgba(246, 244, 255, 0.6) 45%, rgba(254, 243, 199, 0.65) 85%);
-  color: #1e1b4b;
+    radial-gradient(ellipse 46% 26% at 6% 4%, rgba(225, 29, 72, 0.14) 0%, rgba(225, 29, 72, 0) 70%),
+    radial-gradient(ellipse 42% 28% at 96% 96%, rgba(245, 158, 11, 0.14) 0%, rgba(245, 158, 11, 0) 70%),
+    radial-gradient(ellipse 34% 22% at 88% 8%, rgba(13, 148, 136, 0.12) 0%, rgba(13, 148, 136, 0) 70%),
+    linear-gradient(200deg, rgba(255, 228, 230, 0.9) 0%, rgba(255, 247, 237, 0.6) 45%, rgba(254, 243, 199, 0.65) 85%);
+  color: #292524;
 }
-::selection { background: #4f46e5; color: #ffffff; }
+::selection { background: #e11d48; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #6366f1, #d946ef); border-radius: 999px; border: 2px solid #f6f4ff; }
-::-webkit-scrollbar-track { background: #f6f4ff; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #f43f5e, #f97316); border-radius: 999px; border: 2px solid #fff7ed; }
+::-webkit-scrollbar-track { background: #fff7ed; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Aurora Violet type: section headlines in
-   sentence case with tight tracking and an
-   indigo-to-fuchsia-to-sky gradient accent;
+/* Ember Bazaar type: section headlines in
+   sentence case with tight tracking and a
+   crimson-to-amber-to-teal gradient accent;
    product names stay sentence case. */
 h1, h2 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: -0.02em; line-height: 1.08; text-wrap: balance; }
 h3 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25; text-wrap: balance; }
-h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #4f46e5, #d946ef, #0369a1); -webkit-background-clip: text; background-clip: text; color: transparent; }
+h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #e11d48, #f97316, #0f766e); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
-/* Aurora Violet rise: sparkles RISE UP
-   from the bottom with a slight sway and a fuchsia shimmer. */
+/* Ember Bazaar fall: embers FALL DOWN
+   from the top with a slight sway and an amber shimmer. */
 @keyframes spark-rise {
-  0% { transform: translate3d(0, 112vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(0, -12vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
   15% { opacity: 0.95; }
-  50% { transform: translate3d(3vw, 50vh, 0) scale(1.15) rotate(200deg); }
-  100% { transform: translate3d(6vw, -12vh, 0) scale(0.7) rotate(420deg); opacity: 0; }
+  50% { transform: translate3d(-3vw, 50vh, 0) scale(1.15) rotate(200deg); }
+  100% { transform: translate3d(-6vw, 112vh, 0) scale(0.7) rotate(420deg); opacity: 0; }
 }
 .pop-rise { animation: spark-rise 18s linear infinite; }
 
-/* Aurora Violet sway: a soft SIDE-TO-SIDE drift with a slight tilt. */
+/* Ember Bazaar sway: a soft SIDE-TO-SIDE drift with a slight tilt. */
 @keyframes spark-sway {
-  0%, 100% { transform: translate(-14px, 0) rotate(-2deg) scale(1); opacity: 0.7; }
-  50% { transform: translate(14px, -6px) rotate(2deg) scale(1.05); opacity: 1; }
+  0%, 100% { transform: translate(14px, 0) rotate(2deg) scale(1); opacity: 0.7; }
+  50% { transform: translate(-14px, -6px) rotate(-2deg) scale(1.05); opacity: 1; }
 }
 .pop-drift { animation: spark-sway 11s ease-in-out infinite; }
 
-/* Aurora Violet bob: a slow up-and-down float with a slight tilt. */
+/* Ember Bazaar bob: a slow up-and-down float with a slight tilt. */
 @keyframes spark-float {
-  0%, 100% { transform: translateY(10px) rotate(2deg) scale(1); }
-  50% { transform: translateY(-10px) rotate(-2deg) scale(1.04); }
+  0%, 100% { transform: translateY(-10px) rotate(-2deg) scale(1); }
+  50% { transform: translateY(10px) rotate(2deg) scale(1.04); }
 }
 .pop-bob { animation: spark-float 10s ease-in-out infinite; }
 
-/* Aurora Violet spin: a COUNTER-CLOCKWISE spin. */
+/* Ember Bazaar spin: a CLOCKWISE spin. */
 @keyframes spark-turn {
-  from { transform: rotate(360deg); }
-  to { transform: rotate(0deg); }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 .pop-spin { animation: spark-turn 40s linear infinite; }
 
-/* Aurora Violet twinkle: a fuchsia flare —
+/* Ember Bazaar twinkle: an amber flare —
    dimming softly, then flaring again. */
 @keyframes spark-blink {
   0%, 100% { opacity: 0.55; transform: scale(0.92); }
@@ -154,145 +154,145 @@ h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #4f
 }
 .pop-twinkle { animation: spark-blink 2.6s ease-in-out infinite; }
 
-/* Aurora Violet ticker: a LEFTWARD marquee. */
+/* Ember Bazaar ticker: a RIGHTWARD marquee. */
 @keyframes spark-ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
 }
 .pop-ticker { animation: spark-ticker 38s linear infinite; }
 
-/* Aurora Violet stripes: an indigo /
-   fuchsia / sky diagonal band, soft and glowing. */
+/* Ember Bazaar stripes: a crimson /
+   amber / teal diagonal band, warm and glowing. */
 .pop-stripes {
-  background-image: linear-gradient(135deg, #6366f1 0%, #d946ef 45%, #0ea5e9 100%);
+  background-image: linear-gradient(135deg, #f43f5e 0%, #f97316 45%, #14b8a6 100%);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   border-radius: 999px;
   opacity: 0.95;
 }
 
-/* Aurora Violet card: an AURORA card
-   in white (24px corners) with a
-   soft violet edge and a diffused
-   layered shadow — on hover the card
-   LIFTS up and the shadow blooms. */
+/* Ember Bazaar card: an EMBER card
+   in white (14px corners) with a
+   warm crimson edge and a HARD offset
+   shadow — on hover the card LIFTS
+   up-left and the shadow shifts. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(79, 70, 229, 0.16);
-  box-shadow: 0 1px 2px rgba(30, 27, 75, 0.06), 0 12px 32px -12px rgba(79, 70, 229, 0.28);
+  border: 2px solid rgba(225, 29, 72, 0.18);
+  box-shadow: 0 1px 2px rgba(28, 25, 23, 0.08), 6px 6px 0 rgba(225, 29, 72, 0.12);
   background: #ffffff;
-  border-radius: 24px;
+  border-radius: 14px;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  border-color: rgba(99, 102, 241, 0.45);
-  box-shadow: 0 2px 4px rgba(30, 27, 75, 0.06), 0 24px 48px -16px rgba(79, 70, 229, 0.45), 0 0 0 1px rgba(217, 70, 239, 0.18);
+  transform: translate(-2px, -2px);
+  border-color: rgba(225, 29, 72, 0.45);
+  box-shadow: 0 2px 4px rgba(28, 25, 23, 0.08), 8px 8px 0 rgba(225, 29, 72, 0.22), 0 0 0 1px rgba(249, 115, 22, 0.18);
 }
 
-/* Aurora Violet glass: shared by modals and drawers — a
-   soft lavender pane with pill corners,
-   a violet edge and a fuchsia glow. */
+/* Ember Bazaar glass: shared by modals and drawers — a
+   soft warm-sand pane with squarish corners,
+   a crimson edge and an amber glow. */
 .pop-glass {
-  background: rgba(246, 244, 255, 0.82);
+  background: rgba(255, 247, 237, 0.85);
   backdrop-filter: blur(20px) saturate(1.1);
   -webkit-backdrop-filter: blur(20px) saturate(1.1);
-  border: 1px solid rgba(99, 102, 241, 0.35);
-  border-radius: 24px;
-  box-shadow: 0 1px 2px rgba(30, 27, 75, 0.06), 0 20px 48px -16px rgba(79, 70, 229, 0.35), 0 0 0 1px rgba(217, 70, 239, 0.1);
+  border: 1px solid rgba(225, 29, 72, 0.35);
+  border-radius: 14px;
+  box-shadow: 0 1px 2px rgba(28, 25, 23, 0.08), 0 20px 48px -16px rgba(225, 29, 72, 0.35), 0 0 0 1px rgba(249, 115, 22, 0.1);
 }
 
-/* Aurora Violet tag: a PILL badge —
-   white type on a violet-to-fuchsia gradient,
-   upright, with a soft violet shadow. */
+/* Ember Bazaar tag: a SQUARISH badge —
+   white type on a crimson-to-orange gradient,
+   tilted slightly, with a warm shadow. */
 .starburst {
-  background: linear-gradient(135deg, #6366f1, #d946ef 55%, #c026d3);
+  background: linear-gradient(135deg, #f43f5e, #f97316 55%, #ea580c);
   color: #ffffff;
   text-shadow: none;
   clip-path: none;
-  border-radius: 999px;
+  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 10px 24px -8px rgba(79, 70, 229, 0.55);
+  box-shadow: 0 10px 24px -8px rgba(225, 29, 72, 0.55);
   padding-left: 14px;
   padding-right: 14px;
-  transform: rotate(0deg);
+  transform: rotate(-2deg);
 }
 
-/* Aurora Violet texture: a dot-grid —
-   violet and fuchsia dots over soft lavender. */
+/* Ember Bazaar texture: a diamond-grid —
+   crimson and amber diamonds over warm sand. */
 .halftone {
   background-image:
-    radial-gradient(circle, rgba(79, 70, 229, 0.16) 1.2px, transparent 1.3px),
-    radial-gradient(circle, rgba(217, 70, 239, 0.16) 1.2px, transparent 1.3px);
-  background-size: 22px 22px, 22px 22px;
-  background-position: 0 0, 11px 11px;
+    radial-gradient(circle, rgba(225, 29, 72, 0.16) 1.2px, transparent 1.3px),
+    radial-gradient(circle, rgba(249, 115, 22, 0.16) 1.2px, transparent 1.3px);
+  background-size: 18px 18px, 18px 18px;
+  background-position: 0 0, 9px 9px;
 }
 
-/* Aurora Violet rule: a soft gradient line in indigo, fuchsia and sky. */
+/* Ember Bazaar rule: a warm gradient line in crimson, amber and teal. */
 .zigzag {
-  height: 6px;
+  height: 8px;
   border: none;
   border-radius: 999px;
-  background-image: linear-gradient(90deg, #6366f1 0%, #d946ef 50%, #0ea5e9 100%);
-  box-shadow: 0 6px 16px -6px rgba(79, 70, 229, 0.4);
+  background-image: linear-gradient(90deg, #f43f5e 0%, #f97316 50%, #14b8a6 100%);
+  box-shadow: 4px 4px 0 rgba(225, 29, 72, 0.18);
   opacity: 0.95;
 }
 
-/* Aurora Violet band: a soft vertical indigo /
-   fuchsia / sky gradient with a DEEP INDIGO
-   bottom edge and pill bottom corners. */
+/* Ember Bazaar band: a warm vertical crimson /
+   amber / teal gradient with a DEEP CHARCOAL
+   bottom edge and squarish bottom corners. */
 .bazaar-awning {
-  background: linear-gradient(180deg, #6366f1 0%, #a855f7 45%, #d946ef 75%, #1e1b4b 100%);
+  background: linear-gradient(180deg, #f43f5e 0%, #f97316 45%, #14b8a6 75%, #292524 100%);
   opacity: 1;
-  box-shadow: 0 12px 32px -12px rgba(79, 70, 229, 0.5);
+  box-shadow: 0 12px 32px -12px rgba(225, 29, 72, 0.5);
   border: none;
-  border-bottom: 3px solid #1e1b4b;
-  border-radius: 0 0 24px 24px;
+  border-bottom: 3px solid #292524;
+  border-radius: 0 0 14px 14px;
 }
 
-/* Aurora Violet glow: a fuchsia glow for the core. */
+/* Ember Bazaar glow: an amber glow for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(217, 70, 239, 0.55) 42%, rgba(79, 70, 229, 0.22) 62%, rgba(79, 70, 229, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(249, 115, 22, 0.55) 42%, rgba(225, 29, 72, 0.22) 62%, rgba(225, 29, 72, 0) 76%);
 }
 
-/* Aurora Violet orb: a violet moon with
-   a fuchsia centre, sky ring and a
-   deep indigo rim. */
+/* Ember Bazaar orb: an ember moon with
+   an amber centre, crimson ring and a
+   deep charcoal rim. */
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 50%, #fffbeb 0%, #e879f9 40%, #ffffff 52%, #6366f1 68%, #1e1b4b 100%);
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(217, 70, 239, 0.45), 0 18px 40px -12px rgba(79, 70, 229, 0.55);
+    radial-gradient(circle at 50% 50%, #fffbeb 0%, #fb923c 40%, #ffffff 52%, #f43f5e 68%, #292524 100%);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(249, 115, 22, 0.45), 0 18px 40px -12px rgba(225, 29, 72, 0.55);
   border: none;
 }
 
-/* Wider-spaced rings around the violet moon. */
+/* Wider-spaced rings around the ember moon. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(79, 70, 229, 0.3) 0px,
-    rgba(79, 70, 229, 0.3) 1px,
+    rgba(225, 29, 72, 0.3) 0px,
+    rgba(225, 29, 72, 0.3) 1px,
     transparent 1px,
     transparent 36px,
-    rgba(217, 70, 239, 0.30) 36px,
-    rgba(217, 70, 239, 0.30) 37px,
+    rgba(249, 115, 22, 0.30) 36px,
+    rgba(249, 115, 22, 0.30) 37px,
     transparent 37px,
     transparent 72px
   );
   -webkit-mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
   mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
-  border-radius: 24px;
+  border-radius: 14px;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(79, 70, 229, 0.35) 0deg 4deg,
+    rgba(225, 29, 72, 0.35) 0deg 4deg,
     transparent 4deg 30deg,
-    rgba(217, 70, 239, 0.30) 30deg 34deg,
+    rgba(249, 115, 22, 0.30) 30deg 34deg,
     transparent 34deg 60deg
   );
   -webkit-mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
   mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
-  border-radius: 24px;
+  border-radius: 14px;
 }
