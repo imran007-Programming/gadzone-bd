@@ -65,14 +65,14 @@ export default function CartDrawer({ open, cartDetailed, cartCount, promo, promo
             </div>
             {cartDetailed.length > 0 && (
               <div className="border-t border-[#d1fae5] bg-white p-4 sm:p-5">
-                <div className="mb-3 flex gap-2"><input value={promo} onChange={(e) => onPromoChange(e.target.value)} placeholder="Promo code (try GADZONE10)" className="flex-1 rounded-full border border-[#d1fae5] bg-white px-4 py-2.5 text-sm text-ink shadow-sm outline-none transition placeholder:text-[#022c22] focus:border-brand-400 focus:ring-2 focus:ring-brand-400/30" /><button onClick={onApplyPromo} className="rounded-full bg-gradient-to-r from-brand-500 to-brand-700 px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:brightness-110 active:scale-[0.98]">Apply</button></div>
+                <div className="mb-3 flex gap-2"><input value={promo} onChange={(e) => onPromoChange(e.target.value)} placeholder="Promo code (try GADZONE10)" className="flex-1 rounded-full border border-[#d1fae5] bg-white px-4 py-2.5 text-sm text-ink shadow-sm outline-none transition placeholder:text-[#1e1b4b] focus:border-brand-400 focus:ring-2 focus:ring-brand-400/30" /><button onClick={onApplyPromo} className="rounded-full bg-gradient-to-r from-brand-500 to-brand-700 px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:brightness-110 active:scale-[0.98]">Apply</button></div>
                 {promoMsg && <p className="mb-2 text-xs font-semibold text-ink/85">{promoMsg}</p>}
                 <div className="space-y-1 text-sm text-ink"><div className="flex justify-between"><span>Subtotal</span><span className="font-bold">{tk(subtotal)}</span></div>
                 {discountAmt > 0 && <div className="flex justify-between text-brand-700"><span>Promo discount</span><span className="font-bold">−{tk(discountAmt)}</span></div>}
                 <div className="flex justify-between"><span>Delivery ({district})</span><span className="font-bold">{delivery === 0 ? "FREE 🎉" : tk(delivery)}</span></div>
                 <div className="flex justify-between border-t border-[#d1fae5]/25 pt-2 text-base font-black text-ink"><span>Total</span><span className="text-brand-700">{tk(total)}</span></div></div>
                 {subtotal - discountAmt < 2000 && <p className="mt-2 rounded-md bg-white/40 p-2.5 text-center text-xs font-semibold text-gold-700 ring-1 ring-gold-400/40">Add {tk(2000 - (subtotal - discountAmt))} more for FREE delivery! 🚚</p>}
-                <motion.button whileTap={{ scale: 0.98 }} onClick={onCheckout} className="mt-3 w-full rounded-full bg-gradient-to-r from-brand-500 to-brand-700 py-3 font-bold text-white shadow-[0_10px_28px_-8px_rgba(2, 44, 34, 0.35)] transition hover:brightness-110 active:scale-[0.99]">Proceed to Checkout →</motion.button>
+                <motion.button whileTap={{ scale: 0.98 }} onClick={onCheckout} className="mt-3 w-full rounded-full bg-gradient-to-r from-brand-500 to-brand-700 py-3 font-bold text-white shadow-[0_10px_28px_-8px_rgba(30, 27, 75, 0.35)] transition hover:brightness-110 active:scale-[0.99]">Proceed to Checkout →</motion.button>
               </div>
             )}
           </motion.div>
