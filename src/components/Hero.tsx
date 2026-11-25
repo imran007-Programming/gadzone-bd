@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Ember Dusk: warm coral red, glowing amber and deep slate over warm charcoal ink and cream. Ember panels, amber glow, embers falling down.
+// Harvest Mango: warm mango amber, glowing coral and deep plum over warm stone ink and cream. Harvest panels, mango glow, leaves drifting down.
 const ORBS = [
   { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(225, 29, 72, 0.35)" },
   { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(251, 146, 60, 0.32)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(51, 65, 85, 0.32)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(126, 34, 206, 0.32)" },
   { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(225, 29, 72, 0.35)" },
 ];
 
-// market embers falling down through the warm dusk air.
+// harvest leaves drifting down through the warm evening air.
 const BUBBLES = [
   { left: "8%", top: "4%", delay: "0s", dur: "11.2s", s: 12, c: "#e11d48" },
   { left: "21%", top: "10%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#f59e0b" },
   { left: "36%", top: "2%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#f59e0b" },
-  { left: "53%", top: "14%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#334155" },
+  { left: "53%", top: "14%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#7e22ce" },
   { left: "68%", top: "6%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#f59e0b" },
   { left: "82%", top: "18%", delay: "-2s", dur: "12.2s", s: 14, c: "#f59e0b" },
   { left: "93%", top: "8%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#e11d48" },
 ];
 
-// Ember glints scattered through the warm cream.
+// Harvest glints scattered through the warm cream.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -75,19 +75,19 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* Ember wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#ecfeff] via-[#cffafe] to-[#ecfeff]">
+      {/* Harvest wash over the stage */}
+      <div className="relative bg-gradient-to-b from-[#fff7ed] via-[#ffedd5] to-[#fff7ed]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
 
-        {/* Ember haze sweeping the sheet */}
+        {/* Harvest haze sweeping the sheet */}
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-0 hidden h-[560px] opacity-90 sm:block">
           <div className="pop-drift absolute -left-24 top-6 h-72 w-[52rem] rotate-[-8deg] rounded-full bg-gradient-to-r from-brand-400/35 via-gold-300/25 to-transparent blur-3xl" />
           <div className="pop-drift absolute -right-24 top-40 h-64 w-[44rem] rotate-[10deg] rounded-full bg-gradient-to-r from-transparent via-brand-300/25 to-gold-400/30 blur-3xl" style={{ animationDelay: "-12s" }} />
         </div>
 
-        {/* Ember core: a warm ember orb ringed by a clockwise spin */}
+        {/* Harvest core: a warm mango sun ringed by a clockwise spin */}
         <div aria-hidden className="pointer-events-none absolute -left-48 -bottom-40 z-0 hidden opacity-90 sm:block">
           <div className="relative h-[600px] w-[600px]">
             <div className="nebula-core absolute inset-8 rounded-full blur-xl" />
@@ -105,15 +105,15 @@ export default function Hero({ onQuickView }: HeroProps) {
                 }}
               />
             ))}
-            {/* the ember core: a layered glowing ember bed */}
+            {/* the harvest core: a layered glowing mango bed */}
             <div className="sun-disc pop-spin absolute inset-44 rounded-full" style={{ animationDuration: "24s" }} />
-            {/* Grove glints */}
+            {/* Harvest glints */}
             <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
               {[{l:"30%",t:"34%",s:46},{l:"58%",t:"52%",s:34},{l:"44%",t:"66%",s:24},{l:"64%",t:"30%",s:20}].map((glint, i) => (
                 <span key={i} className="absolute rounded-full bg-white/80" style={{ left: glint.l, top: glint.t, width: glint.s, height: glint.s }} />
               ))}
             </div>
-            {/* sweeping grove beams */}
+            {/* sweeping harvest beams */}
             {[0, 1, 2].map((b) => (
               <span
                 key={b}
@@ -121,11 +121,11 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{ width: 26, height: 240, transform: `translate(-50%, -100%) rotate(${b * 120}deg)`, animationDuration: "36s" }}
               />
             ))}
-            {/* orbs dancing around the glowing grove orb */}
+            {/* orbs dancing around the glowing harvest sun */}
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#e11d48", "#f59e0b", "#f59e0b", "#334155"];
+              const colors = ["#e11d48", "#f59e0b", "#f59e0b", "#7e22ce"];
               return (
                 <span
                   key={i}
@@ -143,7 +143,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* grove glow */}
+        {/* harvest glow */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {ORBS.map((g, i) => (
             <div
@@ -154,7 +154,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* Grove glints */}
+        {/* Harvest glints */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {STARS.map((s, i) => (
             <span
@@ -165,7 +165,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* bubbles rising up */}
+        {/* leaves drifting down */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden overflow-hidden sm:block">
           {BUBBLES.map((r, i) => (
             <Bubble key={i} {...r} />
@@ -176,7 +176,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
-              <div className="bg-gradient-to-r from-brand-600 via-gold-500 to-popblue-700 p-2 shadow-[0_20px_40px_-18px_rgba(8, 47, 73, 0.35)] rounded-3xl">
+              <div className="bg-gradient-to-r from-brand-600 via-gold-500 to-popblue-700 p-2 shadow-[0_20px_40px_-18px_rgba(69, 26, 3, 0.35)] rounded-3xl">
                 <div className="overflow-hidden rounded-2xl bg-paper ring-1 ring-brand-950/10">
                   <BannerCarousel />
                 </div>
@@ -185,12 +185,12 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* Grove ticker: deep green band with pale mint type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#082f49]/80 bg-gradient-to-r from-[#082f49] via-[#0e7490] to-[#082f49] py-3 shadow-[0_10px_30px_-12px_rgba(8, 47, 73, 0.5)] backdrop-blur">
+        {/* Harvest ticker: deep plum band with warm cream type */}
+        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#3b0764]/80 bg-gradient-to-r from-[#3b0764] via-[#7e22ce] to-[#3b0764] py-3 shadow-[0_10px_30px_-12px_rgba(69, 26, 3, 0.5)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
-                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#ecfeff] drop-shadow-[0_1px_0_rgba(8, 47, 73, 0.35)]">
+                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#fff7ed] drop-shadow-[0_1px_0_rgba(69, 26, 3, 0.35)]">
                   {t} <span className="text-gold-300">✦</span>
                 </span>
               ))}
@@ -198,11 +198,11 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* single grove divider into the page */} 
+        {/* single harvest divider into the page */} 
         <div aria-hidden className="zigzag relative z-10 mx-auto mt-0 w-full max-w-7xl opacity-90" />
       </div>
 
-      {/* Stats + featured picks under the grove glow */}
+      {/* Stats + featured picks under the harvest glow */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 pb-24 pt-10 md:pb-28">
         <motion.div variants={container} initial="hidden" animate="show" {...anim}>
           <motion.div variants={item} className="grid grid-cols-2 gap-6 sm:grid-cols-4">
@@ -215,7 +215,7 @@ export default function Hero({ onQuickView }: HeroProps) {
               <div key={s.l} className="pop-lift relative overflow-hidden p-4 pb-3 pt-5 text-center">
                 <span className="relative block bg-gradient-to-br from-brand-600 via-gold-500 to-popblue-700 bg-clip-text text-2xl font-black tracking-wide text-transparent">{s.v}</span>
                 <span className="relative mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-mute">{s.l}</span>
-                <span aria-hidden className="relative mx-auto mt-3 block h-1 w-16 rounded-full bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 shadow-[0_6px_16px_-6px_rgba(8, 47, 73, 0.35)]" />
+                <span aria-hidden className="relative mx-auto mt-3 block h-1 w-16 rounded-full bg-gradient-to-r from-brand-500 via-gold-400 to-popblue-600 shadow-[0_6px_16px_-6px_rgba(69, 26, 3, 0.35)]" />
               </div>
             ))}
           </motion.div>
@@ -223,7 +223,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full border border-brand-200 bg-white/80 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_6px_16px_-6px_rgba(8, 47, 73, 0.35)] backdrop-blur">Handpicked for you</p>
+            <p className="inline-block rounded-full border border-brand-200 bg-white/80 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_6px_16px_-6px_rgba(69, 26, 3, 0.35)] backdrop-blur">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="relative bg-gradient-to-r from-brand-500 via-gold-500 to-popblue-800 bg-clip-text text-transparent">Picks<span aria-hidden className="absolute inset-x-0 -bottom-1 h-1 bg-gradient-to-r from-brand-500 to-gold-500 opacity-70" /></span></h2>
             <span className="zigzag mt-4 block w-44" aria-hidden />
           </div>
@@ -253,7 +253,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* single grove divider into the page */} 
+      {/* single harvest divider into the page */} 
       <div aria-hidden className="zigzag absolute bottom-0 left-0 w-full opacity-90" />
     </section>
   );

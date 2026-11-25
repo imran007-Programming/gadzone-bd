@@ -165,7 +165,7 @@ export default function DashboardPage() {
                       </p>
                       <div className="mt-5 flex flex-wrap gap-2">
                         <Link href="/" className="rounded-full bg-brand-600 px-5 py-2.5 text-sm font-black text-white transition hover:bg-brand-100 hover:text-deep">Shop Now →</Link>
-                        <button onClick={() => setTab("orders")} className="rounded-full bg-white/15 px-5 py-2.5 text-sm font-bold text-white ring-1 ring-white/30 transition hover:bg-[#ecfeff]/25">Track Order</button>
+                        <button onClick={() => setTab("orders")} className="rounded-full bg-white/15 px-5 py-2.5 text-sm font-bold text-white ring-1 ring-white/30 transition hover:bg-[#fff7ed]/25">Track Order</button>
                       </div>
                     </section>
                   </Reveal>
@@ -237,7 +237,7 @@ export default function DashboardPage() {
                     {(search.trim() || statusFilter !== "All") && (
                       <button
                         onClick={() => { setSearch(""); setStatusFilter("All"); }}
-                        className="rounded-full bg-white px-4 py-2 text-sm font-bold text-[#0f172a] ring-1 ring-[#ffe4e6] hover:bg-[#ecfeff]"
+                        className="rounded-full bg-white px-4 py-2 text-sm font-bold text-[#0f172a] ring-1 ring-[#ffe4e6] hover:bg-[#fff7ed]"
                       >
                         Clear filters ✕
                       </button>
