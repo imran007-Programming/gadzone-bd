@@ -1,90 +1,91 @@
 @import "tailwindcss";
 
 @theme {
-  /* Ember Sunset: an original direction —
-     warm orange as the ember,
-     golden amber as the glow,
-     coral rose as the flare,
-     deep plum as the dusk,
-     warm cream as the hearth.
-     Cards are EMBER TILES:
-     soft 24px corners, a thin warm ring,
-     a soft diffuse ember shadow and an
-     orange-to-amber-to-rose gradient bar
-     along the TOP edge — on hover the
-     tile LIFTS straight up and the
-     shadow blooms soft and warm. Embers
-     RISE slowly with a side sway, the
-     ticker runs RIGHTWARD, the sunset
-     orb turns COUNTER-CLOCKWISE,
-     headlines are UPPERCASE with a
-     warm gradient accent, and dividers
-     are double warm gradient rules. */
+  /* Tidepool Lagoon: an original direction —
+     cool teal as the tide,
+     bright cyan as the shallows,
+     deep ocean navy as the depth,
+     vivid coral as the reef flare,
+     pale aqua as the shore.
+     Cards are TIDE CARDS:
+     soft 16px corners, a thin cool ring,
+     a soft diffuse lagoon shadow and a
+     teal-to-cyan-to-navy gradient bar
+     along the LEFT edge — on hover the
+     card LIFTS straight up and the
+     shadow deepens cool and soft.
+     Bubbles RISE slowly with a side
+     sway, the ticker runs LEFTWARD,
+     the lagoon orb turns CLOCKWISE,
+     headlines are sentence case with
+     tight tracking and a cool gradient
+     accent, and dividers are single
+     smooth wave rules. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = warm orange scale */
-  --color-brand-50: #fff7ed;
-  --color-brand-100: #ffedd5;
-  --color-brand-200: #fed7aa;
-  --color-brand-300: #fdba74;
-  --color-brand-400: #fb923c;
-  --color-brand-500: #f97316;
-  --color-brand-600: #ea580c;
-  --color-brand-700: #c2410c;
-  --color-brand-800: #9a3412;
-  --color-brand-900: #7c2d12;
-  --color-brand-950: #431407;
-  --color-brand: #ea580c;
-  --color-brand-dark: #c2410c;
-  --color-brand-deep: #431407;
+  /* brand = cool teal scale */
+  --color-brand-50: #f0fdfa;
+  --color-brand-100: #ccfbf1;
+  --color-brand-200: #99f6e4;
+  --color-brand-300: #5eead4;
+  --color-brand-400: #2dd4bf;
+  --color-brand-500: #14b8a6;
+  --color-brand-600: #0d9488;
+  --color-brand-700: #0f766e;
+  --color-brand-800: #115e59;
+  --color-brand-900: #134e4a;
+  --color-brand-950: #042f2e;
+  --color-brand: #0d9488;
+  --color-brand-dark: #0f766e;
+  --color-brand-deep: #042f2e;
 
-  /* gold = golden amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #d97706;
-  --color-gold-deep: #92400e;
-  --color-gold-soft: #fef3c7;
+  /* gold = bright cyan scale (name kept for legacy class refs) */
+  --color-gold-50: #ecfeff;
+  --color-gold-100: #cffafe;
+  --color-gold-200: #a5f3fc;
+  --color-gold-300: #67e8f9;
+  --color-gold-400: #22d3ee;
+  --color-gold-500: #06b6d4;
+  --color-gold-600: #0891b2;
+  --color-gold-700: #0e7490;
+  --color-gold-800: #155e75;
+  --color-gold-900: #164e63;
+  --color-gold-950: #083344;
+  --color-gold: #0891b2;
+  --color-gold-deep: #155e75;
+  --color-gold-soft: #cffafe;
 
-  /* popblue = deep plum scale (name kept for legacy class refs) */
-  --color-popblue-50: #fdf4ff;
-  --color-popblue-100: #fae8ff;
-  --color-popblue-200: #f5d0fe;
-  --color-popblue-300: #f0abfc;
-  --color-popblue-400: #e879f9;
-  --color-popblue-500: #d946ef;
-  --color-popblue-600: #c026d3;
-  --color-popblue-700: #a21caf;
-  --color-popblue-800: #86198f;
-  --color-popblue-900: #701a75;
-  --color-popblue-950: #4a044e;
-  --color-popblue: #701a75;
-  --color-popblue-deep: #4a044e;
-  --color-popblue-soft: #fae8ff;
+  /* popblue = deep ocean navy scale (name kept for legacy class refs) */
+  --color-popblue-50: #f0f9ff;
+  --color-popblue-100: #e0f2fe;
+  --color-popblue-200: #bae6fd;
+  --color-popblue-300: #7dd3fc;
+  --color-popblue-400: #38bdf8;
+  --color-popblue-500: #0ea5e9;
+  --color-popblue-600: #0284c7;
+  --color-popblue-700: #0369a1;
+  --color-popblue-800: #075985;
+  --color-popblue-900: #0c4a6e;
+  --color-popblue-950: #082f49;
+  --color-popblue: #0c4a6e;
+  --color-popblue-deep: #082f49;
+  --color-popblue-soft: #e0f2fe;
 
-  /* poprose = coral rose scale (deal accent) */
-  --color-poprose-200: #fecdd3;
-  --color-poprose-300: #fda4af;
-  --color-poprose-400: #fb7185;
-  --color-poprose-500: #f43f5e;
-  --color-poprose-600: #e11d48;
-  --color-poprose-700: #be123c;
-  --color-poprose-800: #9f1239;
+  /* poprose = vivid coral scale (deal accent) */
+  --color-poprose-200: #fecaca;
+  --color-poprose-300: #fca5a5;
+  --color-poprose-400: #f87171;
+  --color-poprose-500: #ef4444;
+  --color-poprose-600: #dc2626;
+  --color-poprose-700: #b91c1c;
+  --color-poprose-800: #991b1b;
 
-  --color-ink: #1c1917;
-  --color-paper: #fff7ed;
-  --color-mute: #78716c;
+  --color-ink: #0f172a;
+  --color-paper: #f0fdfa;
+  --color-mute: #475569;
   --color-card: #ffffff;
-  --color-deep: #ea580c;
+  --color-deep: #0d9488;
 }
 
 html { scroll-behavior: smooth; }
@@ -98,33 +99,33 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fff7ed;
+  background-color: #f0fdfa;
   background-image:
-    radial-gradient(ellipse 46% 26% at 6% 4%, rgba(234, 88, 12, 0.13) 0%, rgba(234, 88, 12, 0) 70%),
-    radial-gradient(ellipse 42% 28% at 96% 96%, rgba(245, 158, 11, 0.16) 0%, rgba(245, 158, 11, 0) 70%),
-    radial-gradient(ellipse 34% 22% at 88% 8%, rgba(244, 63, 94, 0.11) 0%, rgba(244, 63, 94, 0) 70%),
-    linear-gradient(200deg, rgba(255, 237, 213, 0.9) 0%, rgba(255, 247, 237, 0.65) 45%, rgba(254, 243, 199, 0.55) 85%);
-  color: #1c1917;
+    radial-gradient(ellipse 46% 26% at 6% 4%, rgba(13, 148, 136, 0.13) 0%, rgba(13, 148, 136, 0) 70%),
+    radial-gradient(ellipse 42% 28% at 96% 96%, rgba(6, 182, 212, 0.16) 0%, rgba(6, 182, 212, 0) 70%),
+    radial-gradient(ellipse 34% 22% at 88% 8%, rgba(12, 74, 110, 0.11) 0%, rgba(12, 74, 110, 0) 70%),
+    linear-gradient(200deg, rgba(204, 251, 241, 0.9) 0%, rgba(240, 253, 250, 0.65) 45%, rgba(207, 250, 254, 0.55) 85%);
+  color: #0f172a;
 }
-::selection { background: #ea580c; color: #fff7ed; }
+::selection { background: #0d9488; color: #f0fdfa; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ea580c, #fbbf24); border-radius: 8px; border: 2px solid #fff7ed; }
-::-webkit-scrollbar-track { background: #fff7ed; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0d9488, #22d3ee); border-radius: 8px; border: 2px solid #f0fdfa; }
+::-webkit-scrollbar-track { background: #f0fdfa; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Ember Sunset type: section headlines in
-   UPPERCASE with relaxed tracking and a
-   warm orange-to-rose gradient accent;
+/* Tidepool Lagoon type: section headlines in
+   SENTENCE case with tight tracking and a
+   cool teal-to-cyan gradient accent;
    product names stay sentence case. */
-h1, h2 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: 0.01em; line-height: 1.05; text-transform: uppercase; text-wrap: balance; }
+h1, h2 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: -0.02em; line-height: 1.05; text-transform: none; text-wrap: balance; }
 h3 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25; text-wrap: balance; }
-h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #ea580c, #f43f5e); -webkit-background-clip: text; background-clip: text; color: transparent; }
+h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #0d9488, #06b6d4); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
-/* Ember Sunset rise: embers RISE slowly
-   through the warm air, swaying side
+/* Tidepool Lagoon rise: bubbles RISE slowly
+   through the cool water, swaying side
    to side as they climb. */
-@keyframes ember-rise-up {
+@keyframes lagoon-rise-up {
   0% { transform: translate3d(0, 110vh, 0) rotate(8deg) scale(0.7); opacity: 0; }
   15% { opacity: 0.95; }
   30% { opacity: 0.55; }
@@ -132,195 +133,192 @@ h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #ea
   70% { opacity: 0.6; }
   100% { transform: translate3d(0.6vw, -12vh, 0) rotate(6deg) scale(0.7); opacity: 0; }
 }
-.pop-rise { animation: ember-rise-up 30s linear infinite; }
+.pop-rise { animation: lagoon-rise-up 30s linear infinite; }
 
-/* Ember Sunset sway: a soft SIDE-TO-SIDE drift with a slight tilt. */
-.pop-drift { animation: ember-drift 14s ease-in-out infinite; }
-@keyframes ember-drift {
+/* Tidepool Lagoon sway: a soft SIDE-TO-SIDE drift with a slight tilt. */
+.pop-drift { animation: lagoon-drift 14s ease-in-out infinite; }
+@keyframes lagoon-drift {
   0%, 100% { transform: translate(-14px, 0) rotate(2deg) scale(1); opacity: 0.7; }
   50% { transform: translate(14px, -6px) rotate(-2deg) scale(1.05); opacity: 1; }
 }
 
-/* Ember Sunset bob: a slow up-and-down float with a slight tilt. */
-@keyframes ember-float {
+/* Tidepool Lagoon bob: a slow up-and-down float with a slight tilt. */
+@keyframes lagoon-float {
   0%, 100% { transform: translateY(-8px) rotate(1deg) scale(1); }
   50% { transform: translateY(8px) rotate(-1deg) scale(1.03); }
 }
-.pop-bob { animation: ember-float 9s ease-in-out infinite; }
+.pop-bob { animation: lagoon-float 9s ease-in-out infinite; }
 
-/* Ember Sunset spin: a COUNTER-CLOCKWISE turn. */
-@keyframes ember-turn {
+/* Tidepool Lagoon spin: a CLOCKWISE turn. */
+@keyframes lagoon-turn {
   from { transform: rotate(0deg); }
-  to { transform: rotate(-360deg); }
+  to { transform: rotate(360deg); }
 }
-.pop-spin { animation: ember-turn 60s linear infinite; }
+.pop-spin { animation: lagoon-turn 60s linear infinite; }
 
-/* Ember Sunset twinkle: a warm glint —
+/* Tidepool Lagoon twinkle: a cool glint —
    dimming softly, then flaring again. */
-@keyframes ember-blink {
+@keyframes lagoon-blink {
   0%, 100% { opacity: 0.55; transform: scale(0.92); }
   50% { opacity: 1; transform: scale(1.18); }
 }
-.pop-twinkle { animation: ember-blink 3s ease-in-out infinite; }
+.pop-twinkle { animation: lagoon-blink 3s ease-in-out infinite; }
 
-/* Ember Sunset ticker: a RIGHTWARD marquee. */
-@keyframes ember-ticker {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
+/* Tidepool Lagoon ticker: a LEFTWARD marquee. */
+@keyframes lagoon-ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
-.pop-ticker { animation: ember-ticker 42s linear infinite; }
+.pop-ticker { animation: lagoon-ticker 42s linear infinite; }
 
-/* Ember Sunset stripes: an orange /
-   amber / plum DIAGONAL band,
-   warm and glowing. */
+/* Tidepool Lagoon stripes: a teal /
+   cyan / navy DIAGONAL band,
+   cool and clear. */
 .pop-stripes {
-  background-image: repeating-linear-gradient(45deg, #ea580c 0px, #ea580c 10px, #fbbf24 10px, #fbbf24 20px, #701a75 20px, #701a75 30px);
+  background-image: repeating-linear-gradient(45deg, #0d9488 0px, #0d9488 10px, #22d3ee 10px, #22d3ee 20px, #0c4a6e 20px, #0c4a6e 30px);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   border-radius: 9999px;
   opacity: 0.9;
 }
 
-/* Ember Sunset card: an EMBER TILE in
-   white (24px corners) with a thin warm
-   ring, a soft diffuse ember shadow and
-   an orange-to-amber-to-rose gradient
-   bar along the TOP edge — on hover the
-   tile LIFTS straight up and the shadow
-   blooms soft and warm. */
+/* Tidepool Lagoon card: a TIDE CARD in
+   white (16px corners) with a thin cool
+   ring, a soft diffuse lagoon shadow and
+   a teal-to-cyan-to-navy gradient bar
+   along the LEFT edge — on hover the
+   card LIFTS straight up and the shadow
+   deepens cool and soft. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(124, 45, 18, 0.14);
-  box-shadow: 0 10px 30px -14px rgba(124, 45, 18, 0.28), 0 2px 8px -4px rgba(124, 45, 18, 0.12);
+  border: 1px solid rgba(8, 47, 73, 0.14);
+  box-shadow: 0 10px 30px -14px rgba(8, 47, 73, 0.28), 0 2px 8px -4px rgba(8, 47, 73, 0.12);
   background: rgba(255, 255, 255, 0.96);
-  border-radius: 24px;
+  border-radius: 16px;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift::after {
   content: "";
   position: absolute;
-  inset: 0 0 auto 0;
-  height: 6px;
-  background: linear-gradient(90deg, #ea580c, #fbbf24, #f43f5e);
+  inset: 0 auto 0 0;
+  width: 6px;
+  background: linear-gradient(180deg, #0d9488, #22d3ee, #0c4a6e);
   opacity: 0.95;
   pointer-events: none;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  border-color: rgba(234, 88, 12, 0.45);
-  box-shadow: 0 22px 44px -16px rgba(124, 45, 18, 0.38), 0 4px 14px -6px rgba(234, 88, 12, 0.22);
+  transform: translateY(-6px);
+  border-color: rgba(13, 148, 136, 0.45);
+  box-shadow: 0 22px 44px -16px rgba(8, 47, 73, 0.38), 0 4px 14px -6px rgba(13, 148, 136, 0.22);
 }
 
-/* Ember Sunset glass: shared by modals and drawers — a
-   warm frosted pane with soft corners,
-   an amber ring and a warm glow. */
+/* Tidepool Lagoon glass: shared by modals and drawers — a
+   cool frosted pane with soft corners,
+   a cyan ring and a cool glow. */
 .pop-glass {
-  background: rgba(255, 247, 237, 0.92);
+  background: rgba(240, 253, 250, 0.92);
   backdrop-filter: blur(20px) saturate(1.1);
   -webkit-backdrop-filter: blur(20px) saturate(1.1);
   border: 1px solid rgba(255, 255, 255, 0.7);
-  border-radius: 24px;
-  box-shadow: 0 18px 40px -16px rgba(124, 45, 18, 0.35), 0 4px 16px -8px rgba(234, 88, 12, 0.18);
+  border-radius: 16px;
+  box-shadow: 0 18px 40px -16px rgba(8, 47, 73, 0.35), 0 4px 16px -8px rgba(13, 148, 136, 0.18);
 }
 
-/* Ember Sunset tag: a round flare tag —
-   white type on an orange-to-rose
-   gradient, with a white ring, a plum
-   outline and a soft warm shadow. */
+/* Tidepool Lagoon tag: a round reef tag —
+   white type on a teal-to-cyan gradient,
+   with a white ring, a navy outline and
+   a soft cool shadow. */
 .starburst {
-  background: linear-gradient(135deg, #fb923c, #ea580c 55%, #e11d48);
+  background: linear-gradient(135deg, #2dd4bf, #0d9488 55%, #06b6d4);
   color: #ffffff;
   text-shadow: none;
   clip-path: none;
   border-radius: 9999px;
   border: 2px solid #ffffff;
-  outline: 2px solid #1c1917;
-  box-shadow: 0 10px 24px -8px rgba(124, 45, 18, 0.5);
+  outline: 2px solid #0f172a;
+  box-shadow: 0 10px 24px -8px rgba(8, 47, 73, 0.5);
   padding-left: 14px;
   padding-right: 14px;
-  transform: rotate(4deg);
+  transform: rotate(-3deg);
 }
 
-/* Ember Sunset texture: fine ember dots —
-   small warm dots over pale cream. */
+/* Tidepool Lagoon texture: fine ripple rings —
+   small cool rings over pale aqua. */
 .halftone {
   background-image:
-    radial-gradient(rgba(234, 88, 12, 0.13) 1.2px, transparent 1.3px);
+    radial-gradient(circle at center, transparent 1.2px, rgba(13, 148, 136, 0.16) 1.3px, transparent 2.4px);
   background-size: 22px 22px;
   background-position: 0 0;
 }
 
-/* Ember Sunset rule: DOUBLE warm
-   gradient rules — orange to amber
-   to rose, top and bottom. */
+/* Tidepool Lagoon rule: a single smooth
+   WAVE rule — teal to cyan to navy. */
 .zigzag {
-  height: 8px;
+  height: 6px;
   border: none;
   border-radius: 9999px;
-  background-image:
-    linear-gradient(90deg, #ea580c, #fbbf24, #f43f5e),
-    linear-gradient(90deg, #f43f5e, #fbbf24, #ea580c);
-  background-size: 100% 3px, 100% 3px;
-  background-position: 0 0, 0 100%;
+  background-image: linear-gradient(90deg, #0d9488, #22d3ee, #0c4a6e);
+  background-size: 100% 6px;
+  background-position: 0 0;
   background-repeat: no-repeat;
   opacity: 0.85;
   clip-path: none;
 }
 
-/* Ember Sunset band: a deep plum band
-   with an AMBER bottom edge and soft corners. */
+/* Tidepool Lagoon band: a deep ocean band
+   with a CYAN bottom edge and soft corners. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #1c1917, #701a75);
+  background: linear-gradient(90deg, #0f172a, #0c4a6e);
   opacity: 1;
-  box-shadow: 0 12px 32px -12px rgba(28, 25, 23, 0.45);
+  box-shadow: 0 12px 32px -12px rgba(15, 23, 42, 0.45);
   border: none;
-  border-bottom: 3px solid #fbbf24;
+  border-bottom: 3px solid #22d3ee;
   border-radius: 0;
 }
 
-/* Ember Sunset glow: a soft warm glow for the core. */
+/* Tidepool Lagoon glow: a soft cool glow for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(253, 230, 138, 0.6) 42%, rgba(234, 88, 12, 0.22) 62%, rgba(234, 88, 12, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(165, 243, 252, 0.6) 42%, rgba(13, 148, 136, 0.22) 62%, rgba(13, 148, 136, 0) 76%);
 }
 
-/* Ember Sunset orb: a glowing sunset orb
-   with a soft white centre, amber ring
-   and a deep plum rim. */
+/* Tidepool Lagoon orb: a glowing lagoon orb
+   with a soft white centre, cyan ring
+   and a deep navy rim. */
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 50%, #ffffff 0%, #fde68a 30%, #fb923c 52%, #ea580c 72%, #701a75 100%);
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(251, 191, 36, 0.5), 0 18px 40px -12px rgba(28, 25, 23, 0.5);
+    radial-gradient(circle at 50% 50%, #ffffff 0%, #a5f3fc 30%, #2dd4bf 52%, #0d9488 72%, #0c4a6e 100%);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(34, 211, 238, 0.5), 0 18px 40px -12px rgba(15, 23, 42, 0.5);
   border: none;
 }
 
-/* Wider-spaced rings around the sunset orb. */
+/* Wider-spaced rings around the lagoon orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(234, 88, 12, 0.3) 0px,
-    rgba(234, 88, 12, 0.3) 1px,
+    rgba(13, 148, 136, 0.3) 0px,
+    rgba(13, 148, 136, 0.3) 1px,
     transparent 1px,
     transparent 36px,
-    rgba(251, 191, 36, 0.30) 36px,
-    rgba(251, 191, 36, 0.30) 37px,
+    rgba(34, 211, 238, 0.30) 36px,
+    rgba(34, 211, 238, 0.30) 37px,
     transparent 37px,
     transparent 72px
   );
   -webkit-mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
   mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
-  border-radius: 24px;
+  border-radius: 16px;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(234, 88, 12, 0.35) 0deg 4deg,
+    rgba(13, 148, 136, 0.35) 0deg 4deg,
     transparent 4deg 30deg,
-    rgba(251, 191, 36, 0.30) 30deg 34deg,
+    rgba(34, 211, 238, 0.30) 30deg 34deg,
     transparent 34deg 60deg
   );
   -webkit-mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
   mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
-  border-radius: 24px;
+  border-radius: 16px;
 }
