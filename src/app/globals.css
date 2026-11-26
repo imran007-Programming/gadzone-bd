@@ -1,88 +1,87 @@
 @import "tailwindcss";
 
 @theme {
-  /* Plum Dusk: an original direction —
-     deep violet as the dusk,
-     bright fuchsia as the bloom,
-     soft indigo as the twilight,
-     warm rose as the ember,
-     deep plum as the ink,
-     lavender mist as the paper.
-     Cards are MOON TILES:
-     generous 28px corners, soft
-     layered shadows — on hover the
-     tile FLOATS straight up and
-     glows violet; petals FALL
-     DOWNWARD with a gentle sway, a
-     LEFTWARD ticker, DOT bands, a
-     soft violet stage with a glowing
-     plum core and a FUCHSIA bottom
-     edge. */
+  /* Coral Coast: an original direction —
+     deep teal as the lagoon,
+     bright coral as the sunset,
+     warm amber as the sand-light,
+     sky blue as the horizon,
+     deep sea as the ink,
+     warm sand as the paper.
+     Cards are SHORE SLABS:
+     crisp 16px corners, a 2px teal
+     edge and a HARD offset shadow —
+     on hover the slab SLIDES up-left
+     and the shadow grows; bubbles
+     RISE UPWARD with a gentle sway, a
+     RIGHTWARD ticker, WAVE bands, a
+     warm sand stage with a glowing
+     coral sun and a TEAL bottom edge. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = violet scale */
-  --color-brand-50: #faf5ff;
-  --color-brand-100: #f3e8ff;
-  --color-brand-200: #e9d5ff;
-  --color-brand-300: #d8b4fe;
-  --color-brand-400: #c084fc;
-  --color-brand-500: #a855f7;
-  --color-brand-600: #9333ea;
-  --color-brand-700: #7e22ce;
-  --color-brand-800: #6b21a8;
-  --color-brand-900: #581c87;
-  --color-brand-950: #3b0764;
-  --color-brand: #7e22ce;
-  --color-brand-dark: #6b21a8;
-  --color-brand-deep: #3b0764;
+  /* brand = teal scale */
+  --color-brand-50: #f0fdfa;
+  --color-brand-100: #ccfbf1;
+  --color-brand-200: #99f6e4;
+  --color-brand-300: #5eead4;
+  --color-brand-400: #2dd4bf;
+  --color-brand-500: #14b8a6;
+  --color-brand-600: #0d9488;
+  --color-brand-700: #0f766e;
+  --color-brand-800: #115e59;
+  --color-brand-900: #134e4a;
+  --color-brand-950: #042f2e;
+  --color-brand: #0f766e;
+  --color-brand-dark: #115e59;
+  --color-brand-deep: #042f2e;
 
-  /* gold = fuchsia scale (name kept for legacy class refs) */
-  --color-gold-50: #fdf4ff;
-  --color-gold-100: #fae8ff;
-  --color-gold-200: #f5d0fe;
-  --color-gold-300: #f0abfc;
-  --color-gold-400: #e879f9;
-  --color-gold-500: #d946ef;
-  --color-gold-600: #c026d3;
-  --color-gold-700: #a21caf;
-  --color-gold-800: #86198f;
-  --color-gold-900: #701a75;
-  --color-gold-950: #4a044e;
-  --color-gold: #c026d3;
-  --color-gold-deep: #86198f;
-  --color-gold-soft: #fae8ff;
+  /* gold = coral scale (name kept for legacy class refs) */
+  --color-gold-50: #fff7ed;
+  --color-gold-100: #ffedd5;
+  --color-gold-200: #fed7aa;
+  --color-gold-300: #fdba74;
+  --color-gold-400: #fb923c;
+  --color-gold-500: #f97316;
+  --color-gold-600: #ea580c;
+  --color-gold-700: #c2410c;
+  --color-gold-800: #9a3412;
+  --color-gold-900: #7c2d12;
+  --color-gold-950: #431407;
+  --color-gold: #ea580c;
+  --color-gold-deep: #9a3412;
+  --color-gold-soft: #ffedd5;
 
-  /* popblue = indigo scale (name kept for legacy class refs) */
-  --color-popblue-50: #eef2ff;
-  --color-popblue-100: #e0e7ff;
-  --color-popblue-200: #c7d2fe;
-  --color-popblue-300: #a5b4fc;
-  --color-popblue-400: #818cf8;
-  --color-popblue-500: #6366f1;
-  --color-popblue-600: #4f46e5;
-  --color-popblue-700: #4338ca;
-  --color-popblue-800: #3730a3;
-  --color-popblue-900: #312e81;
-  --color-popblue-950: #1e1b4b;
-  --color-popblue: #4f46e5;
-  --color-popblue-deep: #1e1b4b;
-  --color-popblue-soft: #e0e7ff;
+  /* popblue = sky scale (name kept for legacy class refs) */
+  --color-popblue-50: #f0f9ff;
+  --color-popblue-100: #e0f2fe;
+  --color-popblue-200: #bae6fd;
+  --color-popblue-300: #7dd3fc;
+  --color-popblue-400: #38bdf8;
+  --color-popblue-500: #0ea5e9;
+  --color-popblue-600: #0284c7;
+  --color-popblue-700: #0369a1;
+  --color-popblue-800: #075985;
+  --color-popblue-900: #0c4a6e;
+  --color-popblue-950: #082f49;
+  --color-popblue: #0284c7;
+  --color-popblue-deep: #082f49;
+  --color-popblue-soft: #e0f2fe;
 
-  /* poprose = rose accent */
-  --color-poprose-200: #fecdd3;
-  --color-poprose-300: #fda4af;
-  --color-poprose-400: #fb7185;
-  --color-poprose-500: #f43f5e;
-  --color-poprose-600: #e11d48;
-  --color-poprose-700: #be123c;
-  --color-poprose-800: #9f1239;
+  /* poprose = amber accent */
+  --color-poprose-200: #fde68a;
+  --color-poprose-300: #fcd34d;
+  --color-poprose-400: #fbbf24;
+  --color-poprose-500: #f59e0b;
+  --color-poprose-600: #d97706;
+  --color-poprose-700: #b45309;
+  --color-poprose-800: #92400e;
 
-  --color-ink: #2e1065;
-  --color-paper: #faf5ff;
-  --color-mute: #6b5a9e;
+  --color-ink: #134e4a;
+  --color-paper: #fffaf0;
+  --color-mute: #5b7a76;
   --color-card: #ffffff;
-  --color-deep: #7e22ce;
+  --color-deep: #0f766e;
 }
 
 html { scroll-behavior: smooth; }
@@ -96,61 +95,61 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #faf5ff;
+  background-color: #fffaf0;
   background-image:
-    radial-gradient(ellipse 46% 26% at 6% 4%, rgba(147, 51, 234, 0.14) 0%, rgba(147, 51, 234, 0) 70%),
-    radial-gradient(ellipse 42% 28% at 96% 96%, rgba(240, 171, 252, 0.24) 0%, rgba(240, 171, 252, 0) 70%),
-    radial-gradient(ellipse 34% 22% at 88% 8%, rgba(79, 70, 229, 0.09) 0%, rgba(79, 70, 229, 0) 70%),
-    linear-gradient(200deg, rgba(233, 213, 255, 0.85) 0%, rgba(250, 245, 255, 0.6) 45%, rgba(245, 208, 254, 0.7) 85%);
-  color: #2e1065;
+    radial-gradient(ellipse 46% 26% at 6% 4%, rgba(20, 184, 166, 0.16) 0%, rgba(20, 184, 166, 0) 70%),
+    radial-gradient(ellipse 42% 28% at 96% 96%, rgba(253, 186, 116, 0.28) 0%, rgba(253, 186, 116, 0) 70%),
+    radial-gradient(ellipse 34% 22% at 88% 8%, rgba(2, 132, 199, 0.10) 0%, rgba(2, 132, 199, 0) 70%),
+    linear-gradient(200deg, rgba(204, 251, 241, 0.85) 0%, rgba(255, 250, 240, 0.6) 45%, rgba(254, 215, 170, 0.7) 85%);
+  color: #134e4a;
 }
-::selection { background: #7e22ce; color: #ffffff; }
+::selection { background: #0f766e; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #9333ea, #d946ef); border-radius: 999px; border: 2px solid #faf5ff; }
-::-webkit-scrollbar-track { background: #faf5ff; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0d9488, #f97316); border-radius: 4px; border: 2px solid #fffaf0; }
+::-webkit-scrollbar-track { background: #fffaf0; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Plum Dusk type: section headlines in
+/* Coral Coast type: section headlines in
    sentence case with tight tracking and a
-   violet-to-fuchsia-to-rose gradient accent;
+   teal-to-coral-to-amber gradient accent;
    product names stay sentence case. */
 h1, h2 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: -0.02em; line-height: 1.12; text-transform: none; text-wrap: balance; }
 h3 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25; text-wrap: balance; }
-h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #7e22ce, #d946ef, #f43f5e); -webkit-background-clip: text; background-clip: text; color: transparent; }
+h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #0f766e, #f97316, #f59e0b); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
-/* Plum Dusk petals: soft petals FALL
-   DOWNWARD from the top with a slight sway and a bright shimmer. */
+/* Coral Coast bubbles: light bubbles RISE
+   UPWARD from the bottom with a slight sway and a bright shimmer. */
 @keyframes spark-rise {
-  0% { transform: translate3d(0, -12vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(0, 112vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
   15% { opacity: 0.9; }
-  50% { transform: translate3d(3vw, 50vh, 0) scale(1.15) rotate(200deg); }
-  100% { transform: translate3d(6vw, 112vh, 0) scale(0.7) rotate(420deg); opacity: 0; }
+  50% { transform: translate3d(-3vw, 50vh, 0) scale(1.15) rotate(-200deg); }
+  100% { transform: translate3d(-6vw, -12vh, 0) scale(0.7) rotate(-420deg); opacity: 0; }
 }
 .pop-rise { animation: spark-rise 22s linear infinite; }
 
-/* Plum Dusk sway: a soft SIDE-TO-SIDE drift with a slight tilt. */
+/* Coral Coast sway: a soft SIDE-TO-SIDE drift with a slight tilt. */
 .pop-drift { animation: spark-drift 12s ease-in-out infinite; }
 @keyframes spark-drift {
-  0%, 100% { transform: translate(-14px, 0) rotate(2deg) scale(1); opacity: 0.7; }
-  50% { transform: translate(14px, -6px) rotate(-2deg) scale(1.05); opacity: 1; }
+  0%, 100% { transform: translate(-14px, 0) rotate(-2deg) scale(1); opacity: 0.7; }
+  50% { transform: translate(14px, -6px) rotate(2deg) scale(1.05); opacity: 1; }
 }
 
-/* Plum Dusk bob: a slow up-and-down float with a slight tilt. */
+/* Coral Coast bob: a slow up-and-down float with a slight tilt. */
 @keyframes spark-float {
-  0%, 100% { transform: translateY(-10px) rotate(2deg) scale(1); }
-  50% { transform: translateY(10px) rotate(-2deg) scale(1.04); }
+  0%, 100% { transform: translateY(-10px) rotate(-2deg) scale(1); }
+  50% { transform: translateY(10px) rotate(2deg) scale(1.04); }
 }
 .pop-bob { animation: spark-float 9s ease-in-out infinite; }
 
-/* Plum Dusk spin: a CLOCKWISE spin. */
+/* Coral Coast spin: a COUNTER-CLOCKWISE spin. */
 @keyframes spark-turn {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
 }
 .pop-spin { animation: spark-turn 48s linear infinite; }
 
-/* Plum Dusk twinkle: a soft petal shimmer —
+/* Coral Coast twinkle: a soft bubble shimmer —
    dimming softly, then flaring again. */
 @keyframes spark-blink {
   0%, 100% { opacity: 0.55; transform: scale(0.92); }
@@ -158,146 +157,147 @@ h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #7e
 }
 .pop-twinkle { animation: spark-blink 3s ease-in-out infinite; }
 
-/* Plum Dusk ticker: a LEFTWARD marquee. */
+/* Coral Coast ticker: a RIGHTWARD marquee. */
 @keyframes spark-ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
 }
 .pop-ticker { animation: spark-ticker 42s linear infinite; }
 
-/* Plum Dusk stripes: a violet /
-   fuchsia / rose diagonal band, soft and warm. */
+/* Coral Coast stripes: a teal /
+   coral / amber diagonal band, warm and bright. */
 .pop-stripes {
-  background-image: linear-gradient(135deg, #9333ea 0%, #d946ef 45%, #f43f5e 100%);
+  background-image: linear-gradient(135deg, #0d9488 0%, #f97316 45%, #f59e0b 100%);
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  border-radius: 999px;
+  border-radius: 4px;
   opacity: 0.95;
 }
 
-/* Plum Dusk card: a MOON TILE
-   in clean white (28px corners) with
-   soft layered shadows — on hover the
-   tile FLOATS straight up and glows
-   violet with a soft fuchsia halo. */
+/* Coral Coast card: a SHORE SLAB
+   in clean white (16px corners) with
+   a 2px teal edge and a HARD offset
+   shadow — on hover the slab SLIDES
+   up-left and the shadow grows with
+   a coral edge. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(46, 16, 101, 0.10);
-  box-shadow: 0 2px 6px -2px rgba(46, 16, 101, 0.10), 0 16px 32px -16px rgba(126, 34, 206, 0.28);
+  border: 2px solid rgba(19, 78, 74, 0.16);
+  box-shadow: 6px 6px 0 rgba(15, 118, 110, 0.14);
   background: #ffffff;
-  border-radius: 28px;
+  border-radius: 16px;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translateY(-8px);
-  border-color: rgba(126, 34, 206, 0.45);
-  box-shadow: 0 4px 10px -2px rgba(46, 16, 101, 0.12), 0 28px 48px -16px rgba(126, 34, 206, 0.38), 0 0 0 6px rgba(245, 208, 254, 0.55);
+  transform: translate(-2px, -6px);
+  border-color: rgba(15, 118, 110, 0.55);
+  box-shadow: 10px 10px 0 rgba(15, 118, 110, 0.20), 0 0 0 3px rgba(249, 115, 22, 0.35);
 }
 
-/* Plum Dusk glass: shared by modals and drawers — a
-   lavender mist pane with soft corners,
-   a fuchsia ring and a violet glow. */
+/* Coral Coast glass: shared by modals and drawers — a
+   warm sand pane with crisp corners,
+   a coral ring and a teal glow. */
 .pop-glass {
-  background: rgba(250, 245, 255, 0.9);
+  background: rgba(255, 250, 240, 0.92);
   backdrop-filter: blur(20px) saturate(1.1);
   -webkit-backdrop-filter: blur(20px) saturate(1.1);
   border: 1px solid rgba(255, 255, 255, 0.7);
-  border-radius: 28px;
-  box-shadow: 0 24px 56px -20px rgba(46, 16, 101, 0.4), 0 20px 48px -16px rgba(217, 70, 239, 0.35);
+  border-radius: 16px;
+  box-shadow: 0 24px 56px -20px rgba(19, 78, 74, 0.4), 0 20px 48px -16px rgba(249, 115, 22, 0.35);
 }
 
-/* Plum Dusk tag: a soft pill badge —
-   lavender type on a violet-to-fuchsia
-   gradient, soft and warm, tilted
-   slightly, with a soft shadow. */
+/* Coral Coast tag: a crisp badge —
+   sand type on a teal-to-coral
+   gradient, warm and bright, tilted
+   slightly, with a hard offset shadow. */
 .starburst {
-  background: linear-gradient(135deg, #7e22ce, #d946ef 55%, #f43f5e);
-  color: #faf5ff;
+  background: linear-gradient(135deg, #0f766e, #f97316 55%, #f59e0b);
+  color: #fffaf0;
   text-shadow: none;
   clip-path: none;
-  border-radius: 999px;
+  border-radius: 14px;
   border: none;
-  box-shadow: 0 10px 24px -8px rgba(46, 16, 101, 0.5);
+  box-shadow: 4px 4px 0 rgba(19, 78, 74, 0.45);
   padding-left: 14px;
   padding-right: 14px;
-  transform: rotate(2deg);
+  transform: rotate(-2deg);
 }
 
-/* Plum Dusk texture: soft dot grid —
-   violet and indigo dots over lavender mist. */
+/* Coral Coast texture: soft dot grid —
+   teal and sky dots over warm sand. */
 .halftone {
   background-image:
-    radial-gradient(rgba(126, 34, 206, 0.16) 1.5px, transparent 1.5px),
-    radial-gradient(rgba(79, 70, 229, 0.14) 1.5px, transparent 1.5px);
+    radial-gradient(rgba(15, 118, 110, 0.16) 1.5px, transparent 1.5px),
+    radial-gradient(rgba(2, 132, 199, 0.14) 1.5px, transparent 1.5px);
   background-size: 26px 26px, 26px 26px;
   background-position: 0 0, 13px 13px;
 }
 
-/* Plum Dusk rule: a slim soft bar in violet and rose with a plum edge. */
+/* Coral Coast rule: a slim crisp bar in teal and amber with a deep edge. */
 .zigzag {
-  height: 8px;
+  height: 10px;
   border: none;
-  border-radius: 999px;
-  background-image: linear-gradient(90deg, #7e22ce 0%, #d946ef 50%, #f43f5e 100%);
-  box-shadow: 0 8px 20px -8px rgba(46, 16, 101, 0.4);
-  border-bottom: 2px solid rgba(46, 16, 101, 0.4);
+  border-radius: 4px;
+  background-image: linear-gradient(90deg, #0f766e 0%, #f97316 50%, #f59e0b 100%);
+  box-shadow: 4px 4px 0 rgba(19, 78, 74, 0.35);
+  border-bottom: 2px solid rgba(19, 78, 74, 0.4);
   opacity: 0.95;
 }
 
-/* Plum Dusk band: a deep plum band
-   with a FUCHSIA bottom edge and soft corners. */
+/* Coral Coast band: a deep sea band
+   with a CORAL bottom edge and crisp corners. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #2e1065, #6b21a8);
+  background: linear-gradient(90deg, #134e4a, #115e59);
   opacity: 1;
-  box-shadow: 0 12px 32px -12px rgba(46, 16, 101, 0.5);
+  box-shadow: 0 12px 32px -12px rgba(19, 78, 74, 0.5);
   border: none;
-  border-bottom: 3px solid #f0abfc;
-  border-radius: 0 0 28px 28px;
+  border-bottom: 3px solid #fdba74;
+  border-radius: 0 0 16px 16px;
 }
 
-/* Plum Dusk glow: a soft fuchsia glow for the core. */
+/* Coral Coast glow: a soft coral glow for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(240, 171, 252, 0.55) 42%, rgba(192, 38, 211, 0.22) 62%, rgba(192, 38, 211, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(253, 186, 116, 0.55) 42%, rgba(234, 88, 12, 0.22) 62%, rgba(234, 88, 12, 0) 76%);
 }
 
-/* Plum Dusk orb: a glowing dusk disc with
-   a soft pink centre, fuchsia ring and a
-   plum rim. */
+/* Coral Coast sun: a glowing sunset disc with
+   a soft amber centre, coral ring and a
+   teal rim. */
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 50%, #faf5ff 0%, #f5d0fe 38%, #7e22ce 62%, #2e1065 100%);
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(245, 208, 254, 0.45), 0 18px 40px -12px rgba(126, 34, 206, 0.55);
+    radial-gradient(circle at 50% 50%, #fffaf0 0%, #fed7aa 38%, #0f766e 62%, #134e4a 100%);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(254, 215, 170, 0.45), 0 18px 40px -12px rgba(15, 118, 110, 0.55);
   border: none;
 }
 
-/* Wider-spaced rings around the dusk disc. */
+/* Wider-spaced rings around the sunset disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(126, 34, 206, 0.3) 0px,
-    rgba(126, 34, 206, 0.3) 1px,
+    rgba(15, 118, 110, 0.3) 0px,
+    rgba(15, 118, 110, 0.3) 1px,
     transparent 1px,
     transparent 36px,
-    rgba(79, 70, 229, 0.30) 36px,
-    rgba(79, 70, 229, 0.30) 37px,
+    rgba(2, 132, 199, 0.30) 36px,
+    rgba(2, 132, 199, 0.30) 37px,
     transparent 37px,
     transparent 72px
   );
   -webkit-mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
   mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
-  border-radius: 28px;
+  border-radius: 16px;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(126, 34, 206, 0.35) 0deg 4deg,
+    rgba(15, 118, 110, 0.35) 0deg 4deg,
     transparent 4deg 30deg,
-    rgba(79, 70, 229, 0.30) 30deg 34deg,
+    rgba(2, 132, 199, 0.30) 30deg 34deg,
     transparent 34deg 60deg
   );
   -webkit-mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
   mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
-  border-radius: 28px;
+  border-radius: 16px;
 }
