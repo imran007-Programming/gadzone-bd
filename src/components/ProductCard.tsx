@@ -24,10 +24,10 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
       whileHover={undefined}
       className="pop-lift group relative flex h-full flex-col overflow-hidden bg-paper"
     >
-      {/* Warm glow rising from the card's bottom edge */}
+      {/* Violet glow rising from the card's bottom edge */}
       <div aria-hidden className="pointer-events-none absolute inset-x-10 bottom-0 h-24 bg-gradient-to-t from-brand-200/60 via-gold-200/40 to-transparent blur-sm" />
       <div className="relative p-3">
-        <div className="relative cursor-pointer overflow-hidden rounded-[14px] ring-1 ring-brand-300/60" onClick={() => onQuickView(p)}>
+        <div className="relative cursor-pointer overflow-hidden rounded-[6px] ring-2 ring-brand-300/60" onClick={() => onQuickView(p)}>
           <ProductImage product={p} />
           {p.badge === "New" && (
             <span className="absolute left-3 top-3 rounded-full bg-gold-400 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-gold-950 shadow-[0_10px_20px_-8px_rgba(15,23,42, 0.35)] ring-1 ring-white/60">New</span>
@@ -53,13 +53,13 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
           whileTap={{ scale: 0.98 }}
           onClick={() => onAddToCart(p.id)}
           aria-label={`Add ${p.name} to cart`}
-          className="flex w-full items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-brand-600 via-brand-500 to-poprose-600 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-[0_10px_24px_-8px_rgba(13,148,136,0.55)] transition hover:-translate-y-0.5 hover:brightness-110 active:translate-y-0 active:scale-[0.98]"
+          className="flex w-full items-center justify-center gap-1.5 rounded-[6px] bg-gradient-to-r from-brand-600 via-brand-500 to-poprose-600 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-[4px_4px_0_rgba(30,27,75,0.85)] transition hover:-translate-y-0.5 hover:brightness-110 active:translate-y-0 active:scale-[0.98]"
         >
           🛒 Add
         </motion.button>
         <button
           onClick={() => onQuickView(p)}
-          className="flex w-full items-center justify-center rounded-full border-2 border-popblue-900 bg-brand-50 px-4 py-2 text-xs font-black uppercase tracking-wider text-brand-700 shadow-[0_6px_16px_-8px_rgba(15,23,42,0.25)] transition hover:bg-brand-100 active:scale-[0.98]"
+          className="flex w-full items-center justify-center rounded-[6px] border-2 border-popblue-900 bg-brand-50 px-4 py-2 text-xs font-black uppercase tracking-wider text-brand-700 shadow-[4px_4px_0_rgba(30,27,75,0.25)] transition hover:bg-brand-100 active:scale-[0.98]"
         >
           View →
         </button>

@@ -16,22 +16,22 @@ export default function SectionHeader({ accent, rest, subtitle, showViewAll = tr
         <div className="max-w-xl">
           <h2 className="flex items-center gap-3 text-[1.65rem] font-black leading-tight tracking-tight text-ink sm:text-[2rem]">
             <span className="starburst pop-bob relative inline-flex h-10 w-10 shrink-0 items-center justify-center" aria-hidden>
-              <span className="text-sm font-black text-white">★</span>
+              <span className="text-sm font-black">★</span>
             </span>
             <span><span className="bg-gradient-to-r from-brand-500 to-brand-700 bg-clip-text text-transparent">{accent}</span> {rest}</span>
           </h2>
           {subtitle && <p className="mt-2.5 text-[15px] leading-relaxed text-mute">{subtitle}</p>}
           <span aria-hidden className="mt-3 flex items-center gap-2">
-            <span className="inline-block h-2.5 w-2.5 rounded-full bg-brand-500" />
-            <span className="inline-block h-2.5 w-2.5 rounded-full bg-poprose-800" />
-            <span className="inline-block h-2.5 w-2.5 rounded-full bg-gold-500" />
+            <span className="inline-block h-2.5 w-2.5 rounded-[2px] bg-brand-500" />
+            <span className="inline-block h-2.5 w-2.5 rounded-[2px] bg-poprose-800" />
+            <span className="inline-block h-2.5 w-2.5 rounded-[2px] bg-gold-500" />
             <span className="zigzag ml-1 w-40" />
           </span>
         </div>
         {showViewAll && (
           <button
             onClick={() => document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" })}
-            className="rounded-lg border-2 border-popblue-900 bg-brand-600 px-6 py-2.5 text-sm font-black text-white shadow-[0_10px_24px_-8px_rgba(13,148,136,0.55)] transition hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-[0_14px_28px_-8px_rgba(13,148,136,0.6)] active:translate-y-0"
+            className="rounded-[6px] border-2 border-popblue-900 bg-brand-600 px-6 py-2.5 text-sm font-black text-white shadow-[4px_4px_0_rgba(30,27,75,0.85)] transition hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-[6px_6px_0_rgba(30,27,75,0.85)] active:translate-y-0"
           >
             All Products →
           </button>

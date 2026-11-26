@@ -47,7 +47,7 @@ export default function FlashDeals({ products, countdown, onQuickView, onAddToCa
         </Reveal>
         <div className="mt-8 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">{products.map((p, i) => <ProductCard key={p.id} product={p} onQuickView={onQuickView} onAddToCart={onAddToCart} delay={(i % 4) * 0.06} />)}</div>
       </div>
-      {/* coral baseline accent strip along the base */}
+      {/* lime baseline accent strip along the base */}
       <div aria-hidden className="absolute inset-x-0 bottom-0 h-1.5 bg-gradient-to-r from-brand-500 via-gold to-popblue" />
     </section>
   );
