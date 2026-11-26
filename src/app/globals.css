@@ -1,91 +1,90 @@
 @import "tailwindcss";
 
 @theme {
-  /* Glacier Mint: an original direction —
-     cool teal as the glacier,
-     fresh mint as the meltwater,
-     deep navy as the crevasse,
-     sky blue as the ice light,
-     coral red as the flare,
-     ice-white as the snowfield.
-     Cards are GLACIER SLABS:
-     sharp 10px corners, a firm 2px navy
-     border, a hard offset navy shadow
-     and a teal-to-mint-to-sky gradient
-     bar along the LEFT edge — on hover
-     the slab SHIFTS up-left and the
-     shadow grows. Snow DRIFTS down
-     slowly with a side sway, the ticker
-     runs LEFTWARD, the glacier orb turns
-     CLOCKWISE, headlines are sentence
-     case with tight tracking and a mint
-     marker highlight, and dividers are
-     single thick gradient rules. */
+  /* Ember Sunset: an original direction —
+     warm orange as the ember,
+     golden amber as the glow,
+     coral rose as the flare,
+     deep plum as the dusk,
+     warm cream as the hearth.
+     Cards are EMBER TILES:
+     soft 24px corners, a thin warm ring,
+     a soft diffuse ember shadow and an
+     orange-to-amber-to-rose gradient bar
+     along the TOP edge — on hover the
+     tile LIFTS straight up and the
+     shadow blooms soft and warm. Embers
+     RISE slowly with a side sway, the
+     ticker runs RIGHTWARD, the sunset
+     orb turns COUNTER-CLOCKWISE,
+     headlines are UPPERCASE with a
+     warm gradient accent, and dividers
+     are double warm gradient rules. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = teal scale */
-  --color-brand-50: #f0fdfa;
-  --color-brand-100: #ccfbf1;
-  --color-brand-200: #99f6e4;
-  --color-brand-300: #5eead4;
-  --color-brand-400: #2dd4bf;
-  --color-brand-500: #14b8a6;
-  --color-brand-600: #0d9488;
-  --color-brand-700: #0f766e;
-  --color-brand-800: #115e59;
-  --color-brand-900: #134e4a;
-  --color-brand-950: #042f2e;
-  --color-brand: #0d9488;
-  --color-brand-dark: #0f766e;
-  --color-brand-deep: #042f2e;
+  /* brand = warm orange scale */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-brand-950: #431407;
+  --color-brand: #ea580c;
+  --color-brand-dark: #c2410c;
+  --color-brand-deep: #431407;
 
-  /* gold = mint scale (name kept for legacy class refs) */
-  --color-gold-50: #ecfdf5;
-  --color-gold-100: #d1fae5;
-  --color-gold-200: #a7f3d0;
-  --color-gold-300: #6ee7b7;
-  --color-gold-400: #34d399;
-  --color-gold-500: #10b981;
-  --color-gold-600: #059669;
-  --color-gold-700: #047857;
-  --color-gold-800: #065f46;
-  --color-gold-900: #064e3b;
-  --color-gold-950: #022c22;
-  --color-gold: #059669;
-  --color-gold-deep: #065f46;
-  --color-gold-soft: #d1fae5;
+  /* gold = golden amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #d97706;
+  --color-gold-deep: #92400e;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = sky / ice-blue scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0f9ff;
-  --color-popblue-100: #e0f2fe;
-  --color-popblue-200: #bae6fd;
-  --color-popblue-300: #7dd3fc;
-  --color-popblue-400: #38bdf8;
-  --color-popblue-500: #0ea5e9;
-  --color-popblue-600: #0284c7;
-  --color-popblue-700: #0369a1;
-  --color-popblue-800: #075985;
-  --color-popblue-900: #0c4a6e;
-  --color-popblue-950: #082f49;
-  --color-popblue: #075985;
-  --color-popblue-deep: #082f49;
-  --color-popblue-soft: #e0f2fe;
+  /* popblue = deep plum scale (name kept for legacy class refs) */
+  --color-popblue-50: #fdf4ff;
+  --color-popblue-100: #fae8ff;
+  --color-popblue-200: #f5d0fe;
+  --color-popblue-300: #f0abfc;
+  --color-popblue-400: #e879f9;
+  --color-popblue-500: #d946ef;
+  --color-popblue-600: #c026d3;
+  --color-popblue-700: #a21caf;
+  --color-popblue-800: #86198f;
+  --color-popblue-900: #701a75;
+  --color-popblue-950: #4a044e;
+  --color-popblue: #701a75;
+  --color-popblue-deep: #4a044e;
+  --color-popblue-soft: #fae8ff;
 
-  /* poprose = coral red scale (deal accent) */
-  --color-poprose-200: #fecaca;
-  --color-poprose-300: #fca5a5;
-  --color-poprose-400: #f87171;
-  --color-poprose-500: #ef4444;
-  --color-poprose-600: #dc2626;
-  --color-poprose-700: #b91c1c;
-  --color-poprose-800: #991b1b;
+  /* poprose = coral rose scale (deal accent) */
+  --color-poprose-200: #fecdd3;
+  --color-poprose-300: #fda4af;
+  --color-poprose-400: #fb7185;
+  --color-poprose-500: #f43f5e;
+  --color-poprose-600: #e11d48;
+  --color-poprose-700: #be123c;
+  --color-poprose-800: #9f1239;
 
-  --color-ink: #0f172a;
-  --color-paper: #f0fdfa;
-  --color-mute: #64748b;
+  --color-ink: #1c1917;
+  --color-paper: #fff7ed;
+  --color-mute: #78716c;
   --color-card: #ffffff;
-  --color-deep: #0d9488;
+  --color-deep: #ea580c;
 }
 
 html { scroll-behavior: smooth; }
@@ -99,223 +98,229 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f0fdfa;
+  background-color: #fff7ed;
   background-image:
-    radial-gradient(ellipse 46% 26% at 6% 4%, rgba(13, 148, 136, 0.14) 0%, rgba(13, 148, 136, 0) 70%),
-    radial-gradient(ellipse 42% 28% at 96% 96%, rgba(110, 231, 183, 0.18) 0%, rgba(110, 231, 183, 0) 70%),
-    radial-gradient(ellipse 34% 22% at 88% 8%, rgba(14, 165, 233, 0.12) 0%, rgba(14, 165, 233, 0) 70%),
-    linear-gradient(200deg, rgba(204, 251, 241, 0.9) 0%, rgba(240, 253, 250, 0.65) 45%, rgba(209, 250, 229, 0.55) 85%);
-  color: #0f172a;
+    radial-gradient(ellipse 46% 26% at 6% 4%, rgba(234, 88, 12, 0.13) 0%, rgba(234, 88, 12, 0) 70%),
+    radial-gradient(ellipse 42% 28% at 96% 96%, rgba(245, 158, 11, 0.16) 0%, rgba(245, 158, 11, 0) 70%),
+    radial-gradient(ellipse 34% 22% at 88% 8%, rgba(244, 63, 94, 0.11) 0%, rgba(244, 63, 94, 0) 70%),
+    linear-gradient(200deg, rgba(255, 237, 213, 0.9) 0%, rgba(255, 247, 237, 0.65) 45%, rgba(254, 243, 199, 0.55) 85%);
+  color: #1c1917;
 }
-::selection { background: #0d9488; color: #f0fdfa; }
+::selection { background: #ea580c; color: #fff7ed; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0d9488, #6ee7b7); border-radius: 8px; border: 2px solid #f0fdfa; }
-::-webkit-scrollbar-track { background: #f0fdfa; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ea580c, #fbbf24); border-radius: 8px; border: 2px solid #fff7ed; }
+::-webkit-scrollbar-track { background: #fff7ed; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Glacier Mint type: section headlines in
-   sentence case with tight tracking and
-   a mint marker highlight on the accent;
+/* Ember Sunset type: section headlines in
+   UPPERCASE with relaxed tracking and a
+   warm orange-to-rose gradient accent;
    product names stay sentence case. */
-h1, h2 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: -0.02em; line-height: 1.05; text-wrap: balance; }
+h1, h2 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: 0.01em; line-height: 1.05; text-transform: uppercase; text-wrap: balance; }
 h3 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25; text-wrap: balance; }
-h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(180deg, transparent 58%, #a7f3d0 58%); color: inherit; }
+h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #ea580c, #f43f5e); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
-/* Glacier Mint drift: snow DRIFTS down
-   slowly through the cold air, swaying
-   side to side as it falls. */
-@keyframes glacier-drift-down {
-  0% { transform: translate3d(0, -12vh, 0) rotate(-8deg) scale(0.7); opacity: 0; }
+/* Ember Sunset rise: embers RISE slowly
+   through the warm air, swaying side
+   to side as they climb. */
+@keyframes ember-rise-up {
+  0% { transform: translate3d(0, 110vh, 0) rotate(8deg) scale(0.7); opacity: 0; }
   15% { opacity: 0.95; }
   30% { opacity: 0.55; }
-  50% { transform: translate3d(0.6vw, 50vh, 0) rotate(10deg) scale(1.15); opacity: 1; }
+  50% { transform: translate3d(-0.6vw, 50vh, 0) rotate(-10deg) scale(1.15); opacity: 1; }
   70% { opacity: 0.6; }
-  100% { transform: translate3d(-0.6vw, 110vh, 0) rotate(-6deg) scale(0.7); opacity: 0; }
+  100% { transform: translate3d(0.6vw, -12vh, 0) rotate(6deg) scale(0.7); opacity: 0; }
 }
-.pop-rise { animation: glacier-drift-down 30s linear infinite; }
+.pop-rise { animation: ember-rise-up 30s linear infinite; }
 
-/* Glacier Mint sway: a soft SIDE-TO-SIDE drift with a slight tilt. */
-.pop-drift { animation: glacier-drift 14s ease-in-out infinite; }
-@keyframes glacier-drift {
-  0%, 100% { transform: translate(-14px, 0) rotate(-2deg) scale(1); opacity: 0.7; }
-  50% { transform: translate(14px, -6px) rotate(2deg) scale(1.05); opacity: 1; }
+/* Ember Sunset sway: a soft SIDE-TO-SIDE drift with a slight tilt. */
+.pop-drift { animation: ember-drift 14s ease-in-out infinite; }
+@keyframes ember-drift {
+  0%, 100% { transform: translate(-14px, 0) rotate(2deg) scale(1); opacity: 0.7; }
+  50% { transform: translate(14px, -6px) rotate(-2deg) scale(1.05); opacity: 1; }
 }
 
-/* Glacier Mint bob: a slow up-and-down float with a slight tilt. */
-@keyframes glacier-float {
-  0%, 100% { transform: translateY(-8px) rotate(-1deg) scale(1); }
-  50% { transform: translateY(8px) rotate(1deg) scale(1.03); }
+/* Ember Sunset bob: a slow up-and-down float with a slight tilt. */
+@keyframes ember-float {
+  0%, 100% { transform: translateY(-8px) rotate(1deg) scale(1); }
+  50% { transform: translateY(8px) rotate(-1deg) scale(1.03); }
 }
-.pop-bob { animation: glacier-float 9s ease-in-out infinite; }
+.pop-bob { animation: ember-float 9s ease-in-out infinite; }
 
-/* Glacier Mint spin: a CLOCKWISE turn. */
-@keyframes glacier-turn {
+/* Ember Sunset spin: a COUNTER-CLOCKWISE turn. */
+@keyframes ember-turn {
   from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  to { transform: rotate(-360deg); }
 }
-.pop-spin { animation: glacier-turn 60s linear infinite; }
+.pop-spin { animation: ember-turn 60s linear infinite; }
 
-/* Glacier Mint twinkle: an ice glint —
+/* Ember Sunset twinkle: a warm glint —
    dimming softly, then flaring again. */
-@keyframes glacier-blink {
+@keyframes ember-blink {
   0%, 100% { opacity: 0.55; transform: scale(0.92); }
   50% { opacity: 1; transform: scale(1.18); }
 }
-.pop-twinkle { animation: glacier-blink 3s ease-in-out infinite; }
+.pop-twinkle { animation: ember-blink 3s ease-in-out infinite; }
 
-/* Glacier Mint ticker: a LEFTWARD marquee. */
-@keyframes glacier-ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+/* Ember Sunset ticker: a RIGHTWARD marquee. */
+@keyframes ember-ticker {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
 }
-.pop-ticker { animation: glacier-ticker 42s linear infinite; }
+.pop-ticker { animation: ember-ticker 42s linear infinite; }
 
-/* Glacier Mint stripes: a teal /
-   mint / navy DIAGONAL band,
-   cool and crisp. */
+/* Ember Sunset stripes: an orange /
+   amber / plum DIAGONAL band,
+   warm and glowing. */
 .pop-stripes {
-  background-image: repeating-linear-gradient(45deg, #0d9488 0px, #0d9488 10px, #6ee7b7 10px, #6ee7b7 20px, #0c4a6e 20px, #0c4a6e 30px);
+  background-image: repeating-linear-gradient(45deg, #ea580c 0px, #ea580c 10px, #fbbf24 10px, #fbbf24 20px, #701a75 20px, #701a75 30px);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   border-radius: 9999px;
   opacity: 0.9;
 }
 
-/* Glacier Mint card: a GLACIER SLAB in
-   white (10px corners) with a firm 2px
-   navy border, a hard offset navy
-   shadow and a teal-to-mint-to-sky
-   gradient bar along the LEFT edge —
-   on hover the slab SHIFTS up-left and
-   the shadow grows. */
+/* Ember Sunset card: an EMBER TILE in
+   white (24px corners) with a thin warm
+   ring, a soft diffuse ember shadow and
+   an orange-to-amber-to-rose gradient
+   bar along the TOP edge — on hover the
+   tile LIFTS straight up and the shadow
+   blooms soft and warm. */
 .pop-lift {
   position: relative;
-  border: 2px solid rgba(15, 23, 42, 0.9);
-  box-shadow: 5px 5px 0 rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(124, 45, 18, 0.14);
+  box-shadow: 0 10px 30px -14px rgba(124, 45, 18, 0.28), 0 2px 8px -4px rgba(124, 45, 18, 0.12);
   background: rgba(255, 255, 255, 0.96);
-  border-radius: 10px;
+  border-radius: 24px;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift::after {
   content: "";
   position: absolute;
-  inset: 0 auto 0 0;
-  width: 5px;
-  background: linear-gradient(180deg, #0d9488, #6ee7b7, #0ea5e9);
+  inset: 0 0 auto 0;
+  height: 6px;
+  background: linear-gradient(90deg, #ea580c, #fbbf24, #f43f5e);
   opacity: 0.95;
   pointer-events: none;
 }
 .pop-lift:hover {
-  transform: translate(-2px, -2px);
-  border-color: rgba(15, 23, 42, 1);
-  box-shadow: 8px 8px 0 rgba(15, 23, 42, 0.9);
+  transform: translateY(-4px);
+  border-color: rgba(234, 88, 12, 0.45);
+  box-shadow: 0 22px 44px -16px rgba(124, 45, 18, 0.38), 0 4px 14px -6px rgba(234, 88, 12, 0.22);
 }
 
-/* Glacier Mint glass: shared by modals and drawers — a
-   cool frosted pane with sharp corners,
-   a mint ring and an icy glow. */
+/* Ember Sunset glass: shared by modals and drawers — a
+   warm frosted pane with soft corners,
+   an amber ring and a warm glow. */
 .pop-glass {
-  background: rgba(240, 253, 250, 0.92);
+  background: rgba(255, 247, 237, 0.92);
   backdrop-filter: blur(20px) saturate(1.1);
   -webkit-backdrop-filter: blur(20px) saturate(1.1);
   border: 1px solid rgba(255, 255, 255, 0.7);
-  border-radius: 10px;
-  box-shadow: 5px 5px 0 rgba(15, 23, 42, 0.85), 0 4px 16px -8px rgba(13, 148, 136, 0.18);
+  border-radius: 24px;
+  box-shadow: 0 18px 40px -16px rgba(124, 45, 18, 0.35), 0 4px 16px -8px rgba(234, 88, 12, 0.18);
 }
 
-/* Glacier Mint tag: a tilted square flare tag —
-   white type on a teal gradient, with a
-   white ring, a navy outline and a hard
-   offset shadow. */
+/* Ember Sunset tag: a round flare tag —
+   white type on an orange-to-rose
+   gradient, with a white ring, a plum
+   outline and a soft warm shadow. */
 .starburst {
-  background: linear-gradient(135deg, #2dd4bf, #0d9488 55%, #0f766e);
+  background: linear-gradient(135deg, #fb923c, #ea580c 55%, #e11d48);
   color: #ffffff;
   text-shadow: none;
   clip-path: none;
-  border-radius: 10px;
+  border-radius: 9999px;
   border: 2px solid #ffffff;
-  outline: 2px solid #0f172a;
-  box-shadow: 4px 4px 0 rgba(15, 23, 42, 0.85);
+  outline: 2px solid #1c1917;
+  box-shadow: 0 10px 24px -8px rgba(124, 45, 18, 0.5);
   padding-left: 14px;
   padding-right: 14px;
-  transform: rotate(-4deg);
+  transform: rotate(4deg);
 }
 
-/* Glacier Mint texture: fine ice dots —
-   small cool dots over pale ice. */
+/* Ember Sunset texture: fine ember dots —
+   small warm dots over pale cream. */
 .halftone {
   background-image:
-    radial-gradient(rgba(13, 148, 136, 0.14) 1.2px, transparent 1.3px);
+    radial-gradient(rgba(234, 88, 12, 0.13) 1.2px, transparent 1.3px);
   background-size: 22px 22px;
   background-position: 0 0;
 }
 
-/* Glacier Mint rule: a single thick
-   teal-to-mint-to-sky gradient rule. */
+/* Ember Sunset rule: DOUBLE warm
+   gradient rules — orange to amber
+   to rose, top and bottom. */
 .zigzag {
-  height: 4px;
+  height: 8px;
   border: none;
   border-radius: 9999px;
-  background: linear-gradient(90deg, #0d9488, #6ee7b7, #0ea5e9);
+  background-image:
+    linear-gradient(90deg, #ea580c, #fbbf24, #f43f5e),
+    linear-gradient(90deg, #f43f5e, #fbbf24, #ea580c);
+  background-size: 100% 3px, 100% 3px;
+  background-position: 0 0, 0 100%;
+  background-repeat: no-repeat;
   opacity: 0.85;
   clip-path: none;
 }
 
-/* Glacier Mint band: a deep navy band
-   with a MINT bottom edge and sharp corners. */
+/* Ember Sunset band: a deep plum band
+   with an AMBER bottom edge and soft corners. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #0f172a, #155e75);
+  background: linear-gradient(90deg, #1c1917, #701a75);
   opacity: 1;
-  box-shadow: 0 12px 32px -12px rgba(15, 23, 42, 0.45);
+  box-shadow: 0 12px 32px -12px rgba(28, 25, 23, 0.45);
   border: none;
-  border-bottom: 3px solid #6ee7b7;
+  border-bottom: 3px solid #fbbf24;
   border-radius: 0;
 }
 
-/* Glacier Mint glow: a soft icy glow for the core. */
+/* Ember Sunset glow: a soft warm glow for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(167, 243, 208, 0.6) 42%, rgba(13, 148, 136, 0.22) 62%, rgba(13, 148, 136, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(253, 230, 138, 0.6) 42%, rgba(234, 88, 12, 0.22) 62%, rgba(234, 88, 12, 0) 76%);
 }
 
-/* Glacier Mint orb: a glowing glacier orb
-   with a soft white centre, mint ring
-   and a deep navy rim. */
+/* Ember Sunset orb: a glowing sunset orb
+   with a soft white centre, amber ring
+   and a deep plum rim. */
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 50%, #ffffff 0%, #a7f3d0 30%, #2dd4bf 52%, #0d9488 72%, #0c4a6e 100%);
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(110, 231, 183, 0.5), 0 18px 40px -12px rgba(15, 23, 42, 0.5);
+    radial-gradient(circle at 50% 50%, #ffffff 0%, #fde68a 30%, #fb923c 52%, #ea580c 72%, #701a75 100%);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(251, 191, 36, 0.5), 0 18px 40px -12px rgba(28, 25, 23, 0.5);
   border: none;
 }
 
-/* Wider-spaced rings around the glacier orb. */
+/* Wider-spaced rings around the sunset orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(13, 148, 136, 0.3) 0px,
-    rgba(13, 148, 136, 0.3) 1px,
+    rgba(234, 88, 12, 0.3) 0px,
+    rgba(234, 88, 12, 0.3) 1px,
     transparent 1px,
     transparent 36px,
-    rgba(110, 231, 183, 0.30) 36px,
-    rgba(110, 231, 183, 0.30) 37px,
+    rgba(251, 191, 36, 0.30) 36px,
+    rgba(251, 191, 36, 0.30) 37px,
     transparent 37px,
     transparent 72px
   );
   -webkit-mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
   mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
-  border-radius: 10px;
+  border-radius: 24px;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(13, 148, 136, 0.35) 0deg 4deg,
+    rgba(234, 88, 12, 0.35) 0deg 4deg,
     transparent 4deg 30deg,
-    rgba(110, 231, 183, 0.30) 30deg 34deg,
+    rgba(251, 191, 36, 0.30) 30deg 34deg,
     transparent 34deg 60deg
   );
   -webkit-mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
   mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
-  border-radius: 10px;
+  border-radius: 24px;
 }
