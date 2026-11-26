@@ -1,58 +1,58 @@
 @import "tailwindcss";
 
 @theme {
-  /* Ember Bazaar: an original direction —
-     burnt orange as the ember,
-     deep rose as the flame,
-     warm amber as the spark,
-     deep teal as the cool counterpoint,
-     warm charcoal as the ink,
-     warm cream as the paper.
-     Cards are EMBER TILES:
-     chunky 16px corners, a 2px warm
-     ink edge and a HARD offset shadow —
-     on hover the tile LIFTS and the
-     shadow stretches; embers RISE
-     UPWARD with a gentle sway, a
-     RIGHTWARD ticker, WARM bands, a
-     warm cream stage with a glowing
-     ember orb and a CHARCOAL bottom edge. */
+  /* Glacier Mint: an original direction —
+     deep emerald as the glacier,
+     bright cyan as the meltwater,
+     ice sky blue as the frost,
+     soft mint as the snowfield,
+     deep pine as the ink,
+     frost white as the paper.
+     Cards are FROST PANES:
+     generous 28px corners, a hairline
+     mint edge and a SOFT diffused
+     shadow — on hover the pane LIFTS
+     gently and glows mint; snowflakes
+     DRIFT DOWNWARD with a soft sway,
+     a LEFTWARD ticker, AURORA bands,
+     a frost-white stage with a glowing
+     glacier orb and a PINE bottom edge. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = burnt-orange scale */
-  --color-brand-50: #fff7ed;
-  --color-brand-100: #ffedd5;
-  --color-brand-200: #fed7aa;
-  --color-brand-300: #fdba74;
-  --color-brand-400: #fb923c;
-  --color-brand-500: #f97316;
-  --color-brand-600: #ea580c;
-  --color-brand-700: #c2410c;
-  --color-brand-800: #9a3412;
-  --color-brand-900: #7c2d12;
-  --color-brand-950: #431407;
-  --color-brand: #c2410c;
-  --color-brand-dark: #9a3412;
-  --color-brand-deep: #431407;
+  /* brand = emerald scale */
+  --color-brand-50: #ecfdf5;
+  --color-brand-100: #d1fae5;
+  --color-brand-200: #a7f3d0;
+  --color-brand-300: #6ee7b7;
+  --color-brand-400: #34d399;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-brand-900: #064e3b;
+  --color-brand-950: #022c22;
+  --color-brand: #047857;
+  --color-brand-dark: #065f46;
+  --color-brand-deep: #022c22;
 
-  /* gold = amber scale (name kept for legacy class refs) */
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
-  --color-gold: #d97706;
-  --color-gold-deep: #92400e;
-  --color-gold-soft: #fef3c7;
+  /* gold = ice sky scale (name kept for legacy class refs) */
+  --color-gold-50: #f0f9ff;
+  --color-gold-100: #e0f2fe;
+  --color-gold-200: #bae6fd;
+  --color-gold-300: #7dd3fc;
+  --color-gold-400: #38bdf8;
+  --color-gold-500: #0ea5e9;
+  --color-gold-600: #0284c7;
+  --color-gold-700: #0369a1;
+  --color-gold-800: #075985;
+  --color-gold-900: #0c4a6e;
+  --color-gold-950: #082f49;
+  --color-gold: #0284c7;
+  --color-gold-deep: #075985;
+  --color-gold-soft: #e0f2fe;
 
-  /* popblue = deep teal scale (name kept for legacy class refs) */
+  /* popblue = mint teal scale (name kept for legacy class refs) */
   --color-popblue-50: #f0fdfa;
   --color-popblue-100: #ccfbf1;
   --color-popblue-200: #99f6e4;
@@ -68,20 +68,20 @@
   --color-popblue-deep: #042f2e;
   --color-popblue-soft: #ccfbf1;
 
-  /* poprose = rose accent */
-  --color-poprose-200: #fecdd3;
-  --color-poprose-300: #fda4af;
-  --color-poprose-400: #fb7185;
-  --color-poprose-500: #f43f5e;
-  --color-poprose-600: #e11d48;
-  --color-poprose-700: #be123c;
-  --color-poprose-800: #9f1239;
+  /* poprose = meltwater cyan accent */
+  --color-poprose-200: #a5f3fc;
+  --color-poprose-300: #67e8f9;
+  --color-poprose-400: #22d3ee;
+  --color-poprose-500: #06b6d4;
+  --color-poprose-600: #0891b2;
+  --color-poprose-700: #0e7490;
+  --color-poprose-800: #155e75;
 
-  --color-ink: #292524;
-  --color-paper: #fff7ed;
-  --color-mute: #78716c;
+  --color-ink: #0f2a26;
+  --color-paper: #f2fbf8;
+  --color-mute: #5b7a72;
   --color-card: #ffffff;
-  --color-deep: #c2410c;
+  --color-deep: #047857;
 }
 
 html { scroll-behavior: smooth; }
@@ -95,61 +95,61 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fff7ed;
+  background-color: #f2fbf8;
   background-image:
-    radial-gradient(ellipse 46% 26% at 6% 4%, rgba(234, 88, 12, 0.14) 0%, rgba(234, 88, 12, 0) 70%),
-    radial-gradient(ellipse 42% 28% at 96% 96%, rgba(225, 29, 72, 0.16) 0%, rgba(225, 29, 72, 0) 70%),
-    radial-gradient(ellipse 34% 22% at 88% 8%, rgba(245, 158, 11, 0.14) 0%, rgba(245, 158, 11, 0) 70%),
-    linear-gradient(200deg, rgba(255, 237, 213, 0.9) 0%, rgba(255, 247, 237, 0.65) 45%, rgba(254, 243, 199, 0.75) 85%);
-  color: #292524;
+    radial-gradient(ellipse 46% 26% at 6% 4%, rgba(5, 150, 105, 0.13) 0%, rgba(5, 150, 105, 0) 70%),
+    radial-gradient(ellipse 42% 28% at 96% 96%, rgba(6, 182, 212, 0.14) 0%, rgba(6, 182, 212, 0) 70%),
+    radial-gradient(ellipse 34% 22% at 88% 8%, rgba(56, 189, 248, 0.13) 0%, rgba(56, 189, 248, 0) 70%),
+    linear-gradient(200deg, rgba(209, 250, 229, 0.9) 0%, rgba(242, 251, 248, 0.65) 45%, rgba(224, 242, 254, 0.75) 85%);
+  color: #0f2a26;
 }
-::selection { background: #c2410c; color: #ffffff; }
+::selection { background: #047857; color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ea580c, #e11d48); border-radius: 999px; border: 2px solid #fff7ed; }
-::-webkit-scrollbar-track { background: #fff7ed; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #059669, #06b6d4); border-radius: 999px; border: 2px solid #f2fbf8; }
+::-webkit-scrollbar-track { background: #f2fbf8; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Ember Bazaar type: section headlines in
-   sentence case with tight tracking and a
-   burnt-orange-to-rose-to-amber gradient accent;
+/* Glacier Mint type: section headlines in
+   sentence case with tight tracking and an
+   emerald-to-cyan-to-sky gradient accent;
    product names stay sentence case. */
 h1, h2 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: -0.02em; line-height: 1.12; text-transform: none; text-wrap: balance; }
 h3 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25; text-wrap: balance; }
-h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #c2410c, #e11d48, #f59e0b); -webkit-background-clip: text; background-clip: text; color: transparent; }
+h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #047857, #06b6d4, #0284c7); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
-/* Ember Bazaar embers: warm sparks RISE
-   UPWARD from the bottom with a slight sway and a bright flicker. */
+/* Glacier Mint snowfall: soft flakes DRIFT
+   DOWNWARD from the top with a slight sway and a bright glint. */
 @keyframes spark-rise {
-  0% { transform: translate3d(0, 12vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
+  0% { transform: translate3d(0, -12vh, 0) scale(0.7) rotate(0deg); opacity: 0; }
   15% { opacity: 0.9; }
-  50% { transform: translate3d(-3vw, -50vh, 0) scale(1.15) rotate(-200deg); }
-  100% { transform: translate3d(-6vw, -112vh, 0) scale(0.7) rotate(-420deg); opacity: 0; }
+  50% { transform: translate3d(3vw, 50vh, 0) scale(1.15) rotate(200deg); }
+  100% { transform: translate3d(6vw, 112vh, 0) scale(0.7) rotate(420deg); opacity: 0; }
 }
 .pop-rise { animation: spark-rise 22s linear infinite; }
 
-/* Ember Bazaar sway: a soft SIDE-TO-SIDE drift with a slight tilt. */
+/* Glacier Mint sway: a soft SIDE-TO-SIDE drift with a slight tilt. */
 .pop-drift { animation: spark-drift 12s ease-in-out infinite; }
 @keyframes spark-drift {
   0%, 100% { transform: translate(-14px, 0) rotate(-2deg) scale(1); opacity: 0.7; }
   50% { transform: translate(14px, -6px) rotate(2deg) scale(1.05); opacity: 1; }
 }
 
-/* Ember Bazaar bob: a slow up-and-down float with a slight tilt. */
+/* Glacier Mint bob: a slow up-and-down float with a slight tilt. */
 @keyframes spark-float {
   0%, 100% { transform: translateY(-8px) rotate(-1deg) scale(1); }
   50% { transform: translateY(8px) rotate(1deg) scale(1.03); }
 }
 .pop-bob { animation: spark-float 9s ease-in-out infinite; }
 
-/* Ember Bazaar spin: a COUNTER-CLOCKWISE spin. */
+/* Glacier Mint spin: a CLOCKWISE spin. */
 @keyframes spark-turn {
   from { transform: rotate(0deg); }
-  to { transform: rotate(-360deg); }
+  to { transform: rotate(360deg); }
 }
 .pop-spin { animation: spark-turn 48s linear infinite; }
 
-/* Ember Bazaar twinkle: a soft ember flicker —
+/* Glacier Mint twinkle: a soft frost glint —
    dimming softly, then flaring again. */
 @keyframes spark-blink {
   0%, 100% { opacity: 0.55; transform: scale(0.92); }
@@ -157,147 +157,146 @@ h1 em, h2 em, h3 em { font-style: normal; background: linear-gradient(90deg, #c2
 }
 .pop-twinkle { animation: spark-blink 3s ease-in-out infinite; }
 
-/* Ember Bazaar ticker: a RIGHTWARD marquee. */
+/* Glacier Mint ticker: a LEFTWARD marquee. */
 @keyframes spark-ticker {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 .pop-ticker { animation: spark-ticker 42s linear infinite; }
 
-/* Ember Bazaar stripes: a burnt-orange /
-   rose / amber diagonal band, warm and bold. */
+/* Glacier Mint stripes: an emerald /
+   cyan / sky diagonal band, cool and crisp. */
 .pop-stripes {
-  background-image: linear-gradient(135deg, #ea580c 0%, #e11d48 45%, #f59e0b 100%);
+  background-image: linear-gradient(135deg, #059669 0%, #06b6d4 45%, #0284c7 100%);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   border-radius: 999px;
   opacity: 0.95;
 }
 
-/* Ember Bazaar card: an EMBER TILE
-   in clean white (16px corners) with
-   a 2px warm ink edge and a HARD
-   offset shadow — on hover the tile
-   LIFTS straight up and the shadow
-   stretches with a rose halo. */
+/* Glacier Mint card: a FROST PANE
+   in clean white (28px corners) with
+   a 1px hairline mint edge and a SOFT
+   diffused shadow — on hover the pane
+   LIFTS gently and glows mint. */
 .pop-lift {
   position: relative;
-  border: 2px solid rgba(41, 37, 36, 0.9);
-  box-shadow: 5px 5px 0 rgba(41, 37, 36, 0.9);
+  border: 1px solid rgba(6, 78, 59, 0.14);
+  box-shadow: 0 18px 40px -18px rgba(4, 120, 87, 0.28), 0 2px 8px -2px rgba(2, 44, 34, 0.08);
   background: #ffffff;
-  border-radius: 16px;
+  border-radius: 28px;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
 .pop-lift:hover {
-  transform: translate(-2px, -6px);
-  border-color: rgba(194, 65, 12, 1);
-  box-shadow: 8px 8px 0 rgba(194, 65, 12, 0.9), 0 0 0 3px rgba(225, 29, 72, 0.18);
+  transform: translateY(-6px);
+  border-color: rgba(5, 150, 105, 0.45);
+  box-shadow: 0 28px 56px -20px rgba(4, 120, 87, 0.38), 0 0 0 4px rgba(6, 182, 212, 0.12);
 }
 
-/* Ember Bazaar glass: shared by modals and drawers — a
-   warm cream pane with soft corners,
-   a rose ring and an ember glow. */
+/* Glacier Mint glass: shared by modals and drawers — a
+   frost-white pane with soft corners,
+   a cyan ring and a mint glow. */
 .pop-glass {
-  background: rgba(255, 247, 237, 0.92);
+  background: rgba(242, 251, 248, 0.92);
   backdrop-filter: blur(20px) saturate(1.1);
   -webkit-backdrop-filter: blur(20px) saturate(1.1);
   border: 1px solid rgba(255, 255, 255, 0.7);
-  border-radius: 16px;
-  box-shadow: 0 24px 56px -20px rgba(41, 37, 36, 0.4), 0 20px 48px -16px rgba(225, 29, 72, 0.35);
+  border-radius: 28px;
+  box-shadow: 0 24px 56px -20px rgba(15, 42, 38, 0.4), 0 20px 48px -16px rgba(6, 182, 212, 0.35);
 }
 
-/* Ember Bazaar tag: a soft pill badge —
-   white type on a burnt-orange-to-rose
-   gradient, warm and bold, with a
-   soft ember glow. */
+/* Glacier Mint tag: a soft pill badge —
+   white type on an emerald-to-cyan
+   gradient, cool and crisp, with a
+   soft mint glow. */
 .starburst {
-  background: linear-gradient(135deg, #ea580c, #e11d48 55%, #be123c);
-  color: #fff7ed;
+  background: linear-gradient(135deg, #059669, #06b6d4 55%, #0e7490);
+  color: #f0fdfa;
   text-shadow: none;
   clip-path: none;
   border-radius: 999px;
   border: none;
-  box-shadow: 0 8px 20px -6px rgba(234, 88, 12, 0.55);
+  box-shadow: 0 8px 20px -6px rgba(5, 150, 105, 0.55);
   padding-left: 14px;
   padding-right: 14px;
   transform: none;
 }
 
-/* Ember Bazaar texture: soft dot grid —
-   burnt-orange and rose dots over warm cream. */
+/* Glacier Mint texture: soft dot grid —
+   emerald and cyan dots over frost white. */
 .halftone {
   background-image:
-    radial-gradient(rgba(194, 65, 12, 0.16) 1.5px, transparent 1.5px),
-    radial-gradient(rgba(225, 29, 72, 0.14) 1.5px, transparent 1.5px);
+    radial-gradient(rgba(4, 120, 87, 0.16) 1.5px, transparent 1.5px),
+    radial-gradient(rgba(6, 182, 212, 0.14) 1.5px, transparent 1.5px);
   background-size: 26px 26px, 26px 26px;
   background-position: 0 0, 13px 13px;
 }
 
-/* Ember Bazaar rule: a slim soft bar in burnt-orange and amber with a deep edge. */
+/* Glacier Mint rule: a slim soft bar in emerald and sky with a deep edge. */
 .zigzag {
   height: 8px;
   border: none;
   border-radius: 999px;
-  background-image: linear-gradient(90deg, #c2410c 0%, #e11d48 50%, #f59e0b 100%);
-  box-shadow: 0 6px 16px -6px rgba(194, 65, 12, 0.35);
-  border-bottom: 2px solid rgba(41, 37, 36, 0.25);
+  background-image: linear-gradient(90deg, #047857 0%, #06b6d4 50%, #0284c7 100%);
+  box-shadow: 0 6px 16px -6px rgba(4, 120, 87, 0.35);
+  border-bottom: 2px solid rgba(15, 42, 38, 0.25);
   opacity: 0.95;
 }
 
-/* Ember Bazaar band: a deep charcoal band
-   with an AMBER bottom edge and soft corners. */
+/* Glacier Mint band: a deep pine band
+   with a MINT bottom edge and soft corners. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #1c1917, #292524);
+  background: linear-gradient(90deg, #022c22, #0f2a26);
   opacity: 1;
-  box-shadow: 0 12px 32px -12px rgba(41, 37, 36, 0.5);
+  box-shadow: 0 12px 32px -12px rgba(15, 42, 38, 0.5);
   border: none;
-  border-bottom: 3px solid #fbbf24;
+  border-bottom: 3px solid #6ee7b7;
   border-radius: 0 0 16px 16px;
 }
 
-/* Ember Bazaar glow: a soft rose glow for the core. */
+/* Glacier Mint glow: a soft cyan glow for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(253, 164, 175, 0.55) 42%, rgba(225, 29, 72, 0.22) 62%, rgba(225, 29, 72, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(153, 246, 228, 0.55) 42%, rgba(6, 182, 212, 0.22) 62%, rgba(6, 182, 212, 0) 76%);
 }
 
-/* Ember Bazaar orb: a glowing ember disc with
-   a soft cream centre, rose ring and a
-   burnt-orange rim. */
+/* Glacier Mint orb: a glowing glacier disc with
+   a soft frost centre, cyan ring and an
+   emerald rim. */
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 50%, #ffffff 0%, #ffedd5 38%, #ea580c 62%, #431407 100%);
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(253, 164, 175, 0.45), 0 18px 40px -12px rgba(194, 65, 12, 0.55);
+    radial-gradient(circle at 50% 50%, #ffffff 0%, #d1fae5 38%, #059669 62%, #022c22 100%);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(165, 243, 252, 0.45), 0 18px 40px -12px rgba(4, 120, 87, 0.55);
   border: none;
 }
 
-/* Wider-spaced rings around the ember disc. */
+/* Wider-spaced rings around the glacier disc. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(194, 65, 12, 0.3) 0px,
-    rgba(194, 65, 12, 0.3) 1px,
+    rgba(4, 120, 87, 0.3) 0px,
+    rgba(4, 120, 87, 0.3) 1px,
     transparent 1px,
     transparent 36px,
-    rgba(225, 29, 72, 0.30) 36px,
-    rgba(225, 29, 72, 0.30) 37px,
+    rgba(6, 182, 212, 0.30) 36px,
+    rgba(6, 182, 212, 0.30) 37px,
     transparent 37px,
     transparent 72px
   );
   -webkit-mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
   mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
-  border-radius: 16px;
+  border-radius: 28px;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(194, 65, 12, 0.35) 0deg 4deg,
+    rgba(4, 120, 87, 0.35) 0deg 4deg,
     transparent 4deg 30deg,
-    rgba(225, 29, 72, 0.30) 30deg 34deg,
+    rgba(6, 182, 212, 0.30) 30deg 34deg,
     transparent 34deg 60deg
   );
   -webkit-mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
   mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
-  border-radius: 16px;
+  border-radius: 28px;
 }
