@@ -22,16 +22,16 @@ export default function SectionHeader({ accent, rest, subtitle, showViewAll = tr
           </h2>
           {subtitle && <p className="mt-2.5 text-[15px] leading-relaxed text-mute">{subtitle}</p>}
           <span aria-hidden className="mt-3 flex items-center gap-2">
-            <span className="inline-block h-2.5 w-2.5 rounded-[2px] bg-brand-500" />
-            <span className="inline-block h-2.5 w-2.5 rounded-[2px] bg-poprose-800" />
-            <span className="inline-block h-2.5 w-2.5 rounded-[2px] bg-gold-500" />
+            <span className="inline-block h-2.5 w-2.5 rounded-full bg-brand-500" />
+            <span className="inline-block h-2.5 w-2.5 rounded-full bg-poprose-800" />
+            <span className="inline-block h-2.5 w-2.5 rounded-full bg-gold-500" />
             <span className="zigzag ml-1 w-40" />
           </span>
         </div>
         {showViewAll && (
           <button
             onClick={() => document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" })}
-            className="rounded-[6px] border-2 border-popblue-900 bg-brand-600 px-6 py-2.5 text-sm font-black text-white shadow-[4px_4px_0_rgba(30,27,75,0.85)] transition hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-[6px_6px_0_rgba(30,27,75,0.85)] active:translate-y-0"
+            className="rounded-full border-2 border-popblue-900 bg-brand-600 px-6 py-2.5 text-sm font-black text-white shadow-[0_12px_28px_-10px_rgba(194,65,12,0.6)] transition hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-[0_18px_32px_-10px_rgba(194,65,12,0.65)] active:translate-y-0"
           >
             All Products →
           </button>
