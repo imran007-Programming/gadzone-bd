@@ -1,90 +1,89 @@
 @import "tailwindcss";
 
 @theme {
-  /* Glacier Current: an original direction —
-     deep cyan as the current core,
-     fresh mint as the glacial glint,
-     deep ocean navy as the depth,
-     ice sky blue as the frost flare,
-     pale ice as the paper.
-     Cards are GLACIER SLABS:
-     sharp 10px corners, a thin ice border,
-     a cool diffuse depth shadow and a
-     cyan-to-mint-to-sky gradient bar along
-     the TOP edge — on hover the card LIFTS
-     straight up and the shadow deepens
-     and cools.
-     Ice crystals DRIFT DOWN slowly with a
-     side sway, the ice disc turns
-     COUNTER-CLOCKWISE, the ticker runs
-     RIGHTWARD, headlines are UPPERCASE
-     with wide tracking, and dividers are
-     diagonal hatch rules. */
+  /* Ember Marigold: an original direction —
+     burnt orange as the ember core,
+     marigold amber as the warm glint,
+     deep espresso brown as the depth,
+     rose as the sunset flare,
+     warm cream as the paper.
+     Cards are EMBER TILES:
+     fully rounded 24px corners, a thick
+     warm border, a soft warm shadow and an
+     orange-to-amber-to-rose gradient bar
+     along the BOTTOM edge — on hover the
+     card LIFTS straight up, tilts a touch
+     and glows warm.
+     Embers RISE slowly with a side sway,
+     the ember sun turns CLOCKWISE, the
+     ticker runs LEFTWARD, headlines are
+     sentence case with an italic gradient
+     accent, and dividers are dotted rules. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = deep cyan scale */
-  --color-brand-50: #ecfeff;
-  --color-brand-100: #cffafe;
-  --color-brand-200: #a5f3fc;
-  --color-brand-300: #67e8f9;
-  --color-brand-400: #22d3ee;
-  --color-brand-500: #06b6d4;
-  --color-brand-600: #0891b2;
-  --color-brand-700: #0e7490;
-  --color-brand-800: #155e75;
-  --color-brand-900: #164e63;
-  --color-brand-950: #083344;
-  --color-brand: #0891b2;
-  --color-brand-dark: #0e7490;
-  --color-brand-deep: #083344;
+  /* brand = burnt orange scale */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-brand-950: #431407;
+  --color-brand: #ea580c;
+  --color-brand-dark: #c2410c;
+  --color-brand-deep: #431407;
 
-  /* gold = fresh mint scale (name kept for legacy class refs) */
-  --color-gold-50: #ecfdf5;
-  --color-gold-100: #d1fae5;
-  --color-gold-200: #a7f3d0;
-  --color-gold-300: #6ee7b7;
-  --color-gold-400: #34d399;
-  --color-gold-500: #10b981;
-  --color-gold-600: #059669;
-  --color-gold-700: #047857;
-  --color-gold-800: #065f46;
-  --color-gold-900: #064e3b;
-  --color-gold-950: #022c22;
-  --color-gold: #059669;
-  --color-gold-deep: #065f46;
-  --color-gold-soft: #d1fae5;
+  /* gold = marigold amber scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #d97706;
+  --color-gold-deep: #92400e;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = deep ocean navy scale (name kept for legacy class refs) */
-  --color-popblue-50: #f0f9fb;
-  --color-popblue-100: #dcf0f5;
-  --color-popblue-200: #b9dfe9;
-  --color-popblue-300: #8ec9db;
-  --color-popblue-400: #5babc4;
-  --color-popblue-500: #3a8ea9;
-  --color-popblue-600: #2b7490;
-  --color-popblue-700: #265e75;
-  --color-popblue-800: #234e60;
-  --color-popblue-900: #0b2230;
-  --color-popblue-950: #06121b;
-  --color-popblue: #0b2230;
-  --color-popblue-deep: #06121b;
-  --color-popblue-soft: #dcf0f5;
+  /* popblue = deep espresso brown scale (name kept for legacy class refs) */
+  --color-popblue-50: #fafaf9;
+  --color-popblue-100: #f5f5f4;
+  --color-popblue-200: #e7e5e4;
+  --color-popblue-300: #d6d3d1;
+  --color-popblue-400: #a8a29e;
+  --color-popblue-500: #78716c;
+  --color-popblue-600: #57534e;
+  --color-popblue-700: #44403c;
+  --color-popblue-800: #292524;
+  --color-popblue-900: #1c1917;
+  --color-popblue-950: #0c0a09;
+  --color-popblue: #1c1917;
+  --color-popblue-deep: #0c0a09;
+  --color-popblue-soft: #f5f5f4;
 
-  /* poprose = ice sky scale (frost accent) */
-  --color-poprose-200: #bae6fd;
-  --color-poprose-300: #7dd3fc;
-  --color-poprose-400: #38bdf8;
-  --color-poprose-500: #0ea5e9;
-  --color-poprose-600: #0284c7;
-  --color-poprose-700: #0369a1;
-  --color-poprose-800: #075985;
+  /* poprose = sunset rose scale */
+  --color-poprose-200: #fecdd3;
+  --color-poprose-300: #fda4af;
+  --color-poprose-400: #fb7185;
+  --color-poprose-500: #f43f5e;
+  --color-poprose-600: #e11d48;
+  --color-poprose-700: #be123c;
+  --color-poprose-800: #9f1239;
 
-  --color-ink: #0b2230;
-  --color-paper: #f0fafa;
-  --color-mute: #4b6b7a;
-  --color-card: #ffffff;
-  --color-deep: #0891b2;
+  --color-ink: #292524;
+  --color-paper: #fffbeb;
+  --color-mute: #78716c;
+  --color-card: #fffdf5;
+  --color-deep: #ea580c;
 }
 
 html { scroll-behavior: smooth; }
@@ -98,101 +97,101 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #f0fafa;
+  background-color: #fffbeb;
   background-image:
-    radial-gradient(ellipse 46% 26% at 6% 4%, rgba(8, 145, 178, 0.12) 0%, rgba(8, 145, 178, 0) 70%),
-    radial-gradient(ellipse 42% 28% at 96% 96%, rgba(16, 185, 129, 0.14) 0%, rgba(16, 185, 129, 0) 70%),
-    radial-gradient(ellipse 34% 22% at 88% 8%, rgba(14, 165, 233, 0.08) 0%, rgba(14, 165, 233, 0) 70%),
-    linear-gradient(200deg, rgba(207, 250, 254, 0.9) 0%, rgba(240, 250, 250, 0.65) 45%, rgba(209, 250, 229, 0.55) 85%);
-  color: #0b2230;
+    radial-gradient(ellipse 46% 26% at 6% 4%, rgba(234, 88, 12, 0.12) 0%, rgba(234, 88, 12, 0) 70%),
+    radial-gradient(ellipse 42% 28% at 96% 96%, rgba(245, 158, 11, 0.14) 0%, rgba(245, 158, 11, 0) 70%),
+    radial-gradient(ellipse 34% 22% at 88% 8%, rgba(225, 29, 72, 0.08) 0%, rgba(225, 29, 72, 0) 70%),
+    linear-gradient(200deg, rgba(254, 215, 170, 0.9) 0%, rgba(255, 251, 235, 0.65) 45%, rgba(254, 243, 199, 0.55) 85%);
+  color: #292524;
 }
-::selection { background: #0891b2; color: #f0fafa; }
+::selection { background: #ea580c; color: #fffbeb; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0891b2, #10b981); border-radius: 9999px; border: 2px solid #f0fafa; }
-::-webkit-scrollbar-track { background: #f0fafa; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ea580c, #f59e0b); border-radius: 9999px; border: 2px solid #fffbeb; }
+::-webkit-scrollbar-track { background: #fffbeb; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Glacier Current type: section headlines in
-   UPPERCASE with wide tracking and a
-   cyan-to-mint gradient accent;
+/* Ember Marigold type: section headlines in
+   sentence case with a relaxed tracking and
+   an orange-to-amber-to-rose gradient accent;
    product names stay sentence case. */
-h1, h2 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: 0.04em; line-height: 1.12; text-transform: uppercase; text-wrap: balance; }
-h3 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 700; letter-spacing: 0.03em; line-height: 1.25; text-transform: uppercase; text-wrap: balance; }
-h1 em, h2 em, h3 em { font-style: italic; background: linear-gradient(90deg, #0891b2, #10b981, #0ea5e9); -webkit-background-clip: text; background-clip: text; color: transparent; }
+h1, h2 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: 0.01em; line-height: 1.12; text-wrap: balance; }
+h3 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 700; letter-spacing: 0.01em; line-height: 1.25; text-wrap: balance; }
+h1 em, h2 em, h3 em { font-style: italic; background: linear-gradient(90deg, #ea580c, #f59e0b, #e11d48); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
-/* Glacier Current fall: ice crystals DRIFT
-   DOWN slowly through the cold air,
-   swaying side to side as they fall. */
-@keyframes glacier-fall-down {
-  0% { transform: translate3d(0, -12vh, 0) rotate(-8deg) scale(0.7); opacity: 0; }
+/* Ember Marigold rise: embers RISE slowly
+   through the warm air, swaying side to
+   side as they climb. */
+@keyframes ember-rise-up {
+  0% { transform: translate3d(0, 110vh, 0) rotate(8deg) scale(0.7); opacity: 0; }
   15% { opacity: 0.95; }
   30% { opacity: 0.55; }
-  50% { transform: translate3d(-0.6vw, 50vh, 0) rotate(10deg) scale(1.15); opacity: 1; }
+  50% { transform: translate3d(0.6vw, 50vh, 0) rotate(-10deg) scale(1.15); opacity: 1; }
   70% { opacity: 0.6; }
-  100% { transform: translate3d(0.6vw, 110vh, 0) rotate(-6deg) scale(0.7); opacity: 0; }
+  100% { transform: translate3d(-0.6vw, -12vh, 0) rotate(6deg) scale(0.7); opacity: 0; }
 }
-.pop-rise { animation: glacier-fall-down 30s linear infinite; }
+.pop-rise { animation: ember-rise-up 30s linear infinite; }
 
-/* Glacier Current sway: a soft SIDE-TO-SIDE drift with a slight tilt. */
-.pop-drift { animation: glacier-drift 14s ease-in-out infinite; }
-@keyframes glacier-drift {
+/* Ember Marigold sway: a soft SIDE-TO-SIDE drift with a slight tilt. */
+.pop-drift { animation: ember-drift 14s ease-in-out infinite; }
+@keyframes ember-drift {
   0%, 100% { transform: translate(-14px, 0) rotate(-2deg) scale(1); opacity: 0.7; }
   50% { transform: translate(14px, 6px) rotate(2deg) scale(1.05); opacity: 1; }
 }
 
-/* Glacier Current bob: a slow up-and-down float with a slight tilt. */
-@keyframes glacier-float {
+/* Ember Marigold bob: a slow up-and-down float with a slight tilt. */
+@keyframes ember-float {
   0%, 100% { transform: translateY(-8px) rotate(-1deg) scale(1); }
   50% { transform: translateY(8px) rotate(1deg) scale(1.03); }
 }
-.pop-bob { animation: glacier-float 9s ease-in-out infinite; }
+.pop-bob { animation: ember-float 9s ease-in-out infinite; }
 
-/* Glacier Current spin: a COUNTER-CLOCKWISE turn. */
-@keyframes glacier-turn {
-  from { transform: rotate(360deg); }
-  to { transform: rotate(0deg); }
+/* Ember Marigold spin: a CLOCKWISE turn. */
+@keyframes ember-turn {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
-.pop-spin { animation: glacier-turn 60s linear infinite; }
+.pop-spin { animation: ember-turn 60s linear infinite; }
 
-/* Glacier Current twinkle: an icy glint —
+/* Ember Marigold twinkle: a warm glint —
    dimming softly, then flaring again. */
-@keyframes glacier-blink {
+@keyframes ember-blink {
   0%, 100% { opacity: 0.55; transform: scale(0.92); }
   50% { opacity: 1; transform: scale(1.18); }
 }
-.pop-twinkle { animation: glacier-blink 3s ease-in-out infinite; }
+.pop-twinkle { animation: ember-blink 3s ease-in-out infinite; }
 
-/* Glacier Current ticker: a RIGHTWARD marquee. */
-@keyframes glacier-ticker {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
+/* Ember Marigold ticker: a LEFTWARD marquee. */
+@keyframes ember-ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
-.pop-ticker { animation: glacier-ticker 42s linear infinite; }
+.pop-ticker { animation: ember-ticker 42s linear infinite; }
 
-/* Glacier Current stripes: a cyan /
-   mint / sky band, cool and bright. */
+/* Ember Marigold stripes: an orange /
+   amber / rose band, warm and bright. */
 .pop-stripes {
-  background-image: repeating-linear-gradient(90deg, #0891b2 0px, #0891b2 10px, #10b981 10px, #10b981 20px, #0ea5e9 20px, #0ea5e9 30px);
+  background-image: repeating-linear-gradient(90deg, #ea580c 0px, #ea580c 10px, #f59e0b 10px, #f59e0b 20px, #e11d48 20px, #e11d48 30px);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   border-radius: 9999px;
   opacity: 0.9;
 }
 
-/* Glacier Current card: a GLACIER SLAB in
-   ice white (10px corners) with a thin
-   ice border, a cool diffuse depth shadow
-   and a cyan-to-mint-to-sky gradient bar
-   along the TOP edge — on hover the card
-   LIFTS straight up and the shadow
-   deepens and cools. */
+/* Ember Marigold card: an EMBER TILE in
+   warm cream (24px corners) with a thick
+   warm border, a soft warm shadow and an
+   orange-to-amber-to-rose gradient bar
+   along the BOTTOM edge — on hover the
+   card LIFTS straight up, tilts a touch
+   and glows warm. */
 .pop-lift {
   position: relative;
-  border: 1px solid #dcf0f5;
-  box-shadow: 0 18px 40px -18px rgba(8, 51, 68, 0.28), 0 2px 8px -2px rgba(8, 51, 68, 0.08);
-  background: rgba(255, 255, 255, 0.96);
-  border-radius: 10px;
+  border: 2px solid #fed7aa;
+  box-shadow: 0 18px 40px -18px rgba(67, 20, 7, 0.28), 0 2px 8px -2px rgba(67, 20, 7, 0.08);
+  background: rgba(255, 253, 245, 0.96);
+  border-radius: 24px;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
@@ -200,127 +199,128 @@ h1 em, h2 em, h3 em { font-style: italic; background: linear-gradient(90deg, #08
   content: "";
   position: absolute;
   left: 0;
-  top: 0;
-  height: 5px;
+  bottom: 0;
+  height: 6px;
   width: 100%;
-  background: linear-gradient(90deg, #0891b2, #10b981, #0ea5e9);
+  background: linear-gradient(90deg, #ea580c, #f59e0b, #e11d48);
   opacity: 0.95;
   pointer-events: none;
 }
 .pop-lift:hover {
-  transform: translateY(-4px);
-  border-color: #67e8f9;
-  box-shadow: 0 28px 56px -20px rgba(8, 51, 68, 0.4), 0 4px 12px -2px rgba(8, 51, 68, 0.12);
+  transform: translateY(-6px) rotate(-0.4deg);
+  border-color: #fdba74;
+  box-shadow: 0 28px 56px -20px rgba(67, 20, 7, 0.4), 0 4px 12px -2px rgba(234, 88, 12, 0.18);
 }
 
-/* Glacier Current glass: shared by modals and drawers — a
-   cool frosted pane with sharp corners,
-   a cyan ring and a cool glow. */
+/* Ember Marigold glass: shared by modals and drawers — a
+   warm frosted pane with soft corners,
+   an amber ring and a warm glow. */
 .pop-glass {
-  background: rgba(240, 250, 250, 0.92);
+  background: rgba(255, 251, 235, 0.92);
   backdrop-filter: blur(20px) saturate(1.1);
   -webkit-backdrop-filter: blur(20px) saturate(1.1);
   border: 1px solid rgba(255, 255, 255, 0.7);
-  border-radius: 10px;
-  box-shadow: 0 18px 40px -18px rgba(8, 51, 68, 0.3), 0 4px 16px -8px rgba(8, 145, 178, 0.18);
+  border-radius: 24px;
+  box-shadow: 0 18px 40px -18px rgba(67, 20, 7, 0.3), 0 4px 16px -8px rgba(234, 88, 12, 0.18);
 }
 
-/* Glacier Current tag: a cool frost tag —
-   white type on a cyan-to-mint gradient,
-   with a white ring, a soft navy outline
-   and a soft cool shadow. */
+/* Ember Marigold tag: a warm sunset tag —
+   white type on an orange-to-amber-to-rose
+   gradient, with a white ring, a soft
+   espresso outline and a soft warm shadow. */
 .starburst {
-  background: linear-gradient(135deg, #06b6d4, #10b981 55%, #0ea5e9);
+  background: linear-gradient(135deg, #f97316, #f59e0b 55%, #e11d48);
   color: #ffffff;
   text-shadow: none;
   clip-path: none;
-  border-radius: 10px;
+  border-radius: 9999px;
   border: 2px solid #ffffff;
-  outline: 2px solid rgba(11, 34, 48, 0.85);
-  box-shadow: 0 10px 24px -8px rgba(8, 51, 68, 0.5);
+  outline: 2px solid rgba(41, 37, 36, 0.85);
+  box-shadow: 0 10px 24px -8px rgba(67, 20, 7, 0.5);
   padding-left: 14px;
   padding-right: 14px;
-  transform: rotate(-2deg);
+  transform: rotate(3deg);
 }
 
-/* Glacier Current texture: fine cool dots —
-   small cyan dots over pale ice. */
+/* Ember Marigold texture: fine warm dots —
+   small orange dots over warm cream. */
 .halftone {
   background-image:
-    radial-gradient(circle, rgba(8, 145, 178, 0.12) 1.2px, transparent 1.3px),
-    radial-gradient(circle, rgba(16, 185, 129, 0.10) 1.2px, transparent 1.3px);
-  background-size: 22px 22px;
+    radial-gradient(circle, rgba(234, 88, 12, 0.12) 1.2px, transparent 1.3px),
+    radial-gradient(circle, rgba(245, 158, 11, 0.10) 1.2px, transparent 1.3px);
+  background-size: 24px 24px;
   background-position: 0 0;
 }
 
-/* Glacier Current rule: a diagonal hatch rule —
-   alternating cyan and mint slashes. */
+/* Ember Marigold rule: a dotted rule —
+   warm orange dots marching in a row. */
 .zigzag {
-  height: 6px;
+  height: 8px;
   border: none;
   border-radius: 9999px;
-  background-image: repeating-linear-gradient(45deg, #0891b2 0px, #0891b2 6px, transparent 6px, transparent 12px, #10b981 12px, #10b981 18px, transparent 18px, transparent 24px);
-  background-size: 100% 6px;
+  background-image: radial-gradient(circle, #ea580c 2px, transparent 2.6px), radial-gradient(circle, #f59e0b 2px, transparent 2.6px);
+  background-size: 16px 8px;
+  background-position: 0 0, 8px 0;
   background-repeat: repeat-x;
   box-shadow: none;
   opacity: 0.85;
   clip-path: none;
 }
 
-/* Glacier Current band: a deep ocean-navy band
-   with a CYAN bottom edge and soft
+/* Ember Marigold band: a deep espresso band
+   with an AMBER bottom edge and soft
    rounded corners. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #0e7490, #06121b);
+  background: linear-gradient(90deg, #c2410c, #0c0a09);
   opacity: 1;
-  box-shadow: 0 12px 32px -12px rgba(6, 18, 27, 0.45);
+  box-shadow: 0 12px 32px -12px rgba(12, 10, 9, 0.45);
   border: none;
-  border-bottom: 3px solid #22d3ee;
-  border-radius: 0 0 12px 12px;
+  border-bottom: 3px solid #fbbf24;
+  border-radius: 0 0 24px 24px;
 }
 
-/* Glacier Current glow: a soft cool glow for the core. */
+/* Ember Marigold glow: a soft warm glow for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(103, 232, 249, 0.6) 42%, rgba(8, 145, 178, 0.22) 62%, rgba(8, 145, 178, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(251, 191, 36, 0.6) 42%, rgba(234, 88, 12, 0.22) 62%, rgba(234, 88, 12, 0) 76%);
 }
 
-/* Glacier Current disc: a glowing ice disc
-   with a soft pale centre, cyan ring
-   and a deep ocean rim. */
+/* Ember Marigold disc: a glowing ember sun
+   with a soft pale centre, amber ring
+   and a deep rust rim. */
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 50%, #f0fdff 0%, #a5f3fc 30%, #22d3ee 52%, #0891b2 72%, #0e7490 100%);
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(34, 211, 238, 0.5), 0 18px 40px -12px rgba(6, 18, 27, 0.5);
+    radial-gradient(circle at 50% 50%, #fffbeb 0%, #fde68a 30%, #fb923c 52%, #ea580c 72%, #c2410c 100%);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(251, 146, 60, 0.5), 0 18px 40px -12px rgba(12, 10, 9, 0.5);
   border: none;
 }
 
-/* Wider-spaced rings around the ice disc. */
+/* Wider-spaced rings around the ember sun. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(8, 145, 178, 0.3) 0px,
-    rgba(8, 145, 178, 0.3) 1px,
+    rgba(234, 88, 12, 0.3) 0px,
+    rgba(234, 88, 12, 0.3) 1px,
     transparent 1px,
     transparent 36px,
-    rgba(16, 185, 129, 0.30) 36px,
-    rgba(16, 185, 129, 0.30) 37px,
+    rgba(245, 158, 11, 0.30) 36px,
+    rgba(245, 158, 11, 0.30) 37px,
     transparent 37px,
     transparent 72px
   );
   -webkit-mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
   mask: radial-gradient(circle, transparent 8%, black 30%, transparent 88%);
-  border-radius: 10px;
+  border-radius: 24px;
 }
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(8, 145, 178, 0.35) 0deg 4deg,
+    rgba(234, 88, 12, 0.35) 0deg 4deg,
     transparent 4deg 30deg,
-    rgba(16, 185, 129, 0.30) 30deg 34deg,
+    rgba(245, 158, 11, 0.30) 30deg 34deg,
     transparent 34deg 60deg
   );
   -webkit-mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
   mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
-  border-radius: 10px;
+  border-radius: 24px;
 }
