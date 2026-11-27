@@ -1,91 +1,89 @@
 @import "tailwindcss";
 
 @theme {
-  /* Coral Porcelain: an original direction —
-     warm porcelain as the canvas,
-     coral rose as the living colour,
-     deep navy as the ink,
-     soft peach as the warmth,
-     pale teal as the cool counterpoint.
-     Cards are PORCELAIN CARDS:
-     pill-soft corners, a whisper-thin
-     navy border with a soft diffuse
-     shadow, and a thick coral-to-
-     peach-to-teal gradient bar along
-     the BOTTOM edge — on hover the
-     tile LIFTS UP off the page and the
-     shadow blooms. Bubbles RISE up
-     through the porcelain, the orb
-     turns CLOCKWISE, the ticker runs
-     LEFTWARD, headlines are UPPERCASE
-     with wide tracking and a coral
-     highlight, and dividers are soft
-     waves. */
+  /* Pine & Honey: an original direction —
+     deep pine forest as the living colour,
+     warm honey as the golden warmth,
+     cream paper as the canvas,
+     sage as the cool counterpoint.
+     Cards are PINE TILES: sharp 10px
+     corners, a crisp pine border, a
+     soft green shadow, and a thick
+     pine-to-honey-to-sage gradient bar
+     along the TOP edge — on hover the
+     tile LIFTS UP and the shadow
+     deepens. Leaves DRIFT DOWN through
+     the cream, the orb turns COUNTER-
+     CLOCKWISE, the ticker runs
+     RIGHTWARD, headlines are lowercase
+     sentence case with tight tracking
+     and a honey highlight, and
+     dividers are dotted pine rows. */
   --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
 
-  /* brand = coral rose scale */
-  --color-brand-50: #fff1f2;
-  --color-brand-100: #ffe4e6;
-  --color-brand-200: #fecdd3;
-  --color-brand-300: #fda4af;
-  --color-brand-400: #fb7185;
-  --color-brand-500: #f43f5e;
-  --color-brand-600: #e11d48;
-  --color-brand-700: #be123c;
-  --color-brand-800: #9f1239;
-  --color-brand-900: #881337;
-  --color-brand-950: #4c0519;
-  --color-brand: #e11d48;
-  --color-brand-dark: #be123c;
-  --color-brand-deep: #4c0519;
+  /* brand = deep pine green scale */
+  --color-brand-50: #f0fdf4;
+  --color-brand-100: #dcfce7;
+  --color-brand-200: #bbf7d0;
+  --color-brand-300: #86efac;
+  --color-brand-400: #4ade80;
+  --color-brand-500: #22c55e;
+  --color-brand-600: #16a34a;
+  --color-brand-700: #15803d;
+  --color-brand-800: #166534;
+  --color-brand-900: #14532d;
+  --color-brand-950: #052e16;
+  --color-brand: #15803d;
+  --color-brand-dark: #166534;
+  --color-brand-deep: #052e16;
 
-  /* gold = warm peach scale (name kept for legacy class refs) */
-  --color-gold-50: #fff7ed;
-  --color-gold-100: #ffedd5;
-  --color-gold-200: #fed7aa;
-  --color-gold-300: #fdba74;
-  --color-gold-400: #fb923c;
-  --color-gold-500: #f97316;
-  --color-gold-600: #ea580c;
-  --color-gold-700: #c2410c;
-  --color-gold-800: #9a3412;
-  --color-gold-900: #7c2d12;
-  --color-gold-950: #431407;
-  --color-gold: #f97316;
-  --color-gold-deep: #9a3412;
-  --color-gold-soft: #ffedd5;
+  /* gold = warm honey scale (name kept for legacy class refs) */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+  --color-gold: #d97706;
+  --color-gold-deep: #92400e;
+  --color-gold-soft: #fef3c7;
 
-  /* popblue = deep navy scale (name kept for legacy class refs) */
-  --color-popblue-50: #f8fafc;
-  --color-popblue-100: #f1f5f9;
-  --color-popblue-200: #e2e8f0;
-  --color-popblue-300: #cbd5e1;
-  --color-popblue-400: #94a3b8;
-  --color-popblue-500: #64748b;
-  --color-popblue-600: #475569;
-  --color-popblue-700: #334155;
-  --color-popblue-800: #1e293b;
-  --color-popblue-900: #0f172a;
-  --color-popblue-950: #020617;
-  --color-popblue: #0f172a;
-  --color-popblue-deep: #020617;
-  --color-popblue-soft: #f1f5f9;
+  /* popblue = deep pine-ink scale (name kept for legacy class refs) */
+  --color-popblue-50: #f2f7f3;
+  --color-popblue-100: #e6efe8;
+  --color-popblue-200: #cbdccf;
+  --color-popblue-300: #a9c2b1;
+  --color-popblue-400: #82a48d;
+  --color-popblue-500: #5f876c;
+  --color-popblue-600: #466b53;
+  --color-popblue-700: #385643;
+  --color-popblue-800: #2d4536;
+  --color-popblue-900: #1c2b21;
+  --color-popblue-950: #0d1a12;
+  --color-popblue: #1c2b21;
+  --color-popblue-deep: #0d1a12;
+  --color-popblue-soft: #e6efe8;
 
-  /* poprose = pale teal scale */
-  --color-poprose-200: #99f6e4;
-  --color-poprose-300: #5eead4;
-  --color-poprose-400: #2dd4bf;
-  --color-poprose-500: #14b8a6;
-  --color-poprose-600: #0d9488;
-  --color-poprose-700: #0f766e;
-  --color-poprose-800: #115e59;
+  /* poprose = sage scale */
+  --color-poprose-200: #a7f3d0;
+  --color-poprose-300: #6ee7b7;
+  --color-poprose-400: #34d399;
+  --color-poprose-500: #10b981;
+  --color-poprose-600: #059669;
+  --color-poprose-700: #047857;
+  --color-poprose-800: #065f46;
 
-  --color-ink: #0f172a;
-  --color-paper: #fff7f5;
-  --color-mute: #475569;
+  --color-ink: #1c2b21;
+  --color-paper: #fdf9ec;
+  --color-mute: #5b6b5e;
   --color-card: #ffffff;
-  --color-deep: #e11d48;
+  --color-deep: #15803d;
 }
 
 html { scroll-behavior: smooth; }
@@ -99,105 +97,105 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 body {
-  background-color: #fff7f5;
+  background-color: #fdf9ec;
   background-image:
-    radial-gradient(ellipse 46% 26% at 6% 4%, rgba(225, 29, 72, 0.12) 0%, rgba(225, 29, 72, 0) 70%),
-    radial-gradient(ellipse 42% 28% at 96% 96%, rgba(249, 115, 22, 0.12) 0%, rgba(249, 115, 22, 0) 70%),
-    radial-gradient(ellipse 34% 22% at 88% 8%, rgba(20, 184, 166, 0.10) 0%, rgba(20, 184, 166, 0) 70%),
-    linear-gradient(200deg, rgba(255, 228, 230, 0.9) 0%, rgba(255, 247, 245, 0.65) 45%, rgba(255, 237, 213, 0.55) 85%);
-  color: #0f172a;
+    radial-gradient(ellipse 46% 26% at 6% 4%, rgba(21, 128, 61, 0.12) 0%, rgba(21, 128, 61, 0) 70%),
+    radial-gradient(ellipse 42% 28% at 96% 96%, rgba(217, 119, 6, 0.12) 0%, rgba(217, 119, 6, 0) 70%),
+    radial-gradient(ellipse 34% 22% at 88% 8%, rgba(16, 185, 129, 0.10) 0%, rgba(16, 185, 129, 0) 70%),
+    linear-gradient(200deg, rgba(220, 252, 231, 0.9) 0%, rgba(253, 249, 236, 0.65) 45%, rgba(254, 243, 199, 0.55) 85%);
+  color: #1c2b21;
 }
-::selection { background: #e11d48; color: #fff1f2; }
+::selection { background: #15803d; color: #fdf9ec; }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #e11d48, #f97316); border-radius: 999px; border: 2px solid #fff7f5; }
-::-webkit-scrollbar-track { background: #fff7f5; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #15803d, #d97706); border-radius: 4px; border: 2px solid #fdf9ec; }
+::-webkit-scrollbar-track { background: #fdf9ec; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Coral Porcelain type: section headlines in
-   UPPERCASE with wide tracking and a
-   coral highlight; product names stay
-   sentence case. */
-h1, h2 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; line-height: 1.12; text-wrap: balance; }
-h3 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 700; letter-spacing: 0.01em; line-height: 1.25; text-wrap: balance; }
-h1 em, h2 em, h3 em { font-style: normal; color: #be123c; background: linear-gradient(transparent 62%, #fda4af 62%); }
+/* Pine & Honey type: section headlines in
+   lowercase sentence case with tight
+   tracking and a honey highlight;
+   product names stay sentence case. */
+h1, h2 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 800; letter-spacing: -0.02em; text-transform: none; line-height: 1.12; text-wrap: balance; }
+h3 { font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25; text-wrap: balance; }
+h1 em, h2 em, h3 em { font-style: normal; color: #166534; background: linear-gradient(transparent 62%, #fcd34d 62%); }
 
-/* Coral Porcelain bubbles: bubbles RISE UP
-   through the porcelain, swaying side
-   to side as they climb. */
-@keyframes bubble-rise-up {
-  0% { transform: translate3d(0, 62vh, 0) scale(0.6); opacity: 0; }
+/* Pine & Honey leaves: leaves DRIFT DOWN
+   through the cream, swaying side to
+   side as they fall. */
+@keyframes leaf-drift-down {
+  0% { transform: translate3d(0, -12vh, 0) scale(0.6) rotate(0deg); opacity: 0; }
   15% { opacity: 0.9; }
   30% { opacity: 0.5; }
-  50% { transform: translate3d(0.6vw, 24vh, 0) scale(1.1); opacity: 1; }
+  50% { transform: translate3d(0.6vw, 24vh, 0) scale(1.1) rotate(40deg); opacity: 1; }
   70% { opacity: 0.55; }
-  100% { transform: translate3d(-0.6vw, -12vh, 0) scale(0.6); opacity: 0; }
+  100% { transform: translate3d(-0.6vw, 62vh, 0) scale(0.6) rotate(80deg); opacity: 0; }
 }
-.pop-rise { animation: bubble-rise-up 36s linear infinite; }
+.pop-rise { animation: leaf-drift-down 36s linear infinite; }
 
-/* Coral Porcelain sway: a soft SIDE-TO-SIDE drift with a slight tilt. */
-.pop-drift { animation: bubble-drift 16s ease-in-out infinite; }
-@keyframes bubble-drift {
-  0%, 100% { transform: translate(-10px, 0) rotate(1deg) scale(1); opacity: 0.7; }
-  50% { transform: translate(10px, -4px) rotate(-1deg) scale(1.04); opacity: 1; }
+/* Pine & Honey sway: a soft SIDE-TO-SIDE drift with a slight tilt. */
+.pop-drift { animation: leaf-sway 16s ease-in-out infinite; }
+@keyframes leaf-sway {
+  0%, 100% { transform: translate(-10px, 0) rotate(-1deg) scale(1); opacity: 0.7; }
+  50% { transform: translate(10px, -4px) rotate(1deg) scale(1.04); opacity: 1; }
 }
 
-/* Coral Porcelain bob: a slow up-and-down float with a slight tilt. */
-@keyframes bubble-float {
-  0%, 100% { transform: translateY(6px) rotate(1deg) scale(1); }
-  50% { transform: translateY(-6px) rotate(-1deg) scale(1.02); }
+/* Pine & Honey bob: a slow up-and-down float with a slight tilt. */
+@keyframes leaf-float {
+  0%, 100% { transform: translateY(6px) rotate(-1deg) scale(1); }
+  50% { transform: translateY(-6px) rotate(1deg) scale(1.02); }
 }
-.pop-bob { animation: bubble-float 10s ease-in-out infinite; }
+.pop-bob { animation: leaf-float 10s ease-in-out infinite; }
 
-/* Coral Porcelain spin: a CLOCKWISE turn. */
-@keyframes bubble-turn {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+/* Pine & Honey spin: a COUNTER-CLOCKWISE turn. */
+@keyframes leaf-turn {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
 }
-.pop-spin { animation: bubble-turn 60s linear infinite; }
+.pop-spin { animation: leaf-turn 60s linear infinite; }
 
-/* Coral Porcelain twinkle: a cool glint —
+/* Pine & Honey twinkle: a warm glint —
    dimming softly, then flaring again. */
-@keyframes bubble-blink {
+@keyframes leaf-blink {
   0%, 100% { opacity: 0.55; transform: scale(0.92); }
   50% { opacity: 1; transform: scale(1.18); }
 }
-.pop-twinkle { animation: bubble-blink 3s ease-in-out infinite; }
+.pop-twinkle { animation: leaf-blink 3s ease-in-out infinite; }
 
-/* Coral Porcelain ticker: a LEFTWARD marquee. */
-@keyframes bubble-ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+/* Pine & Honey ticker: a RIGHTWARD marquee. */
+@keyframes leaf-ticker {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
 }
-.pop-ticker { animation: bubble-ticker 42s linear infinite; }
+.pop-ticker { animation: leaf-ticker 42s linear infinite; }
 
-/* Coral Porcelain stripes: diagonal coral /
-   peach / teal bands, warm and soft. */
+/* Pine & Honey stripes: diagonal pine /
+   honey / sage bands, warm and crisp. */
 .pop-stripes {
-  background-image: repeating-linear-gradient(45deg, #e11d48 0px, #e11d48 10px, #f43f5e 10px, #f43f5e 20px, #2dd4bf 20px, #2dd4bf 30px);
+  background-image: repeating-linear-gradient(45deg, #15803d 0px, #15803d 10px, #16a34a 10px, #16a34a 20px, #f59e0b 20px, #f59e0b 30px);
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  border-radius: 999px;
+  border-radius: 4px;
   opacity: 0.9;
 }
 
-/* Coral Porcelain card: a PORCELAIN CARD in
-   warm white, pill-soft corners,
-   with a whisper-thin navy border
-   and a soft diffuse shadow, plus a
-   thick coral-to-peach-to-teal
-   gradient bar along the BOTTOM edge
-   — on hover the tile LIFTS UP off
-   the page, the shadow blooms and the
-   border turns coral. */
+/* Pine & Honey card: a PINE TILE in
+   warm white, sharp 10px corners,
+   with a crisp pine border and a
+   soft green shadow, plus a thick
+   pine-to-honey-to-sage gradient bar
+   along the TOP edge — on hover the
+   tile LIFTS UP off the page, the
+   shadow deepens and the border
+   turns pine. */
 .pop-lift {
   position: relative;
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  box-shadow: 0 18px 40px -18px rgba(225, 29, 72, 0.25), 0 4px 12px -6px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(28, 43, 33, 0.14);
+  box-shadow: 0 14px 32px -16px rgba(21, 128, 61, 0.28), 0 3px 10px -4px rgba(28, 43, 33, 0.08);
   background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(14px) saturate(1.05);
   -webkit-backdrop-filter: blur(14px) saturate(1.05);
-  border-radius: 24px;
+  border-radius: 10px;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   overflow: hidden;
 }
@@ -205,66 +203,67 @@ h1 em, h2 em, h3 em { font-style: normal; color: #be123c; background: linear-gra
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  top: 0;
   width: 100%;
   height: 6px;
-  background: linear-gradient(90deg, #e11d48, #f43f5e, #f97316, #2dd4bf);
+  background: linear-gradient(90deg, #15803d, #16a34a, #d97706, #10b981);
   opacity: 0.95;
   pointer-events: none;
 }
 .pop-lift:hover {
   transform: translateY(-4px);
-  border-color: #e11d48;
-  box-shadow: 0 28px 56px -20px rgba(225, 29, 72, 0.35), 0 8px 20px -8px rgba(15, 23, 42, 0.12);
+  border-color: #15803d;
+  box-shadow: 0 24px 48px -18px rgba(21, 128, 61, 0.35), 0 6px 18px -6px rgba(28, 43, 33, 0.12);
 }
 
-/* Coral Porcelain glass: shared by modals and drawers — a
-   warm porcelain glass pane with pill
-   corners, a coral ring and a soft glow. */
+/* Pine & Honey glass: shared by modals and drawers — a
+   warm cream glass pane with sharp
+   corners, a pine ring and a soft glow. */
 .pop-glass {
-  background: rgba(255, 247, 245, 0.92);
+  background: rgba(253, 249, 236, 0.92);
   backdrop-filter: blur(20px) saturate(1.1);
   -webkit-backdrop-filter: blur(20px) saturate(1.1);
   border: 1px solid rgba(255, 255, 255, 0.7);
-  border-radius: 24px;
-  box-shadow: 0 24px 48px -20px rgba(225, 29, 72, 0.30), 0 4px 16px -8px rgba(15, 23, 42, 0.10);
+  border-radius: 10px;
+  box-shadow: 0 24px 48px -20px rgba(21, 128, 61, 0.30), 0 4px 16px -8px rgba(28, 43, 33, 0.10);
 }
 
-/* Coral Porcelain tag: a bold badge —
-   white type on coral, as a soft pill
-   with a peach border and a soft shadow. */
+/* Pine & Honey tag: a bold badge —
+   dark pine type on honey, as a sharp
+   chip with a pine border, tilted
+   slightly, and a soft shadow. */
 .starburst {
-  background: #e11d48;
-  color: #fff1f2;
+  background: #f59e0b;
+  color: #1c2b21;
   text-shadow: none;
   clip-path: none;
-  border-radius: 999px;
-  border: 2px solid #fdba74;
+  border-radius: 6px;
+  border: 2px solid #15803d;
   outline: none;
-  box-shadow: 0 8px 20px -8px rgba(225, 29, 72, 0.55);
+  box-shadow: 0 8px 20px -8px rgba(21, 128, 61, 0.55);
   padding-left: 14px;
   padding-right: 14px;
-  transform: rotate(0deg);
+  transform: rotate(-3deg);
 }
 
-/* Coral Porcelain texture: fine porcelain dots —
-   soft coral dots over warm porcelain. */
+/* Pine & Honey texture: fine pine dots —
+   soft pine dots over warm cream. */
 .halftone {
-  background-image: radial-gradient(rgba(225, 29, 72, 0.10) 1.5px, transparent 1.6px);
+  background-image: radial-gradient(rgba(21, 128, 61, 0.10) 1.5px, transparent 1.6px);
   background-size: 28px 28px;
   background-position: 0 0;
 }
 
-/* Coral Porcelain rule: soft waves —
-   a coral wave line with a peach
-   dot row running beneath it. */
+/* Pine & Honey rule: a dotted pine row —
+   pine dots with a honey dot row
+   running beneath it. */
 .zigzag {
   height: 12px;
   border: none;
-  border-radius: 999px;
+  border-radius: 4px;
   background-image:
-    radial-gradient(circle at 8px -4px, transparent 10px, #e11d48 11px, #e11d48 13px, transparent 14px),
-    radial-gradient(circle, rgba(249, 115, 22, 0.7) 1.5px, transparent 1.6px);
+    radial-gradient(circle, rgba(21, 128, 61, 0.85) 2px, transparent 2.5px),
+    radial-gradient(circle, rgba(217, 119, 6, 0.7) 1.5px, transparent 1.6px);
   background-size: 16px 12px, 14px 6px;
   background-position: 0 0, 0 6px;
   background-repeat: repeat-x;
@@ -275,44 +274,44 @@ h1 em, h2 em, h3 em { font-style: normal; color: #be123c; background: linear-gra
   padding-bottom: 10px;
 }
 
-/* Coral Porcelain band: a coral band
-   with a WHITE bottom edge and pill
+/* Pine & Honey band: a deep pine band
+   with a HONEY bottom edge and sharp
    corners. */
 .bazaar-awning {
-  background: linear-gradient(90deg, #be123c, #f43f5e, #fb7185);
+  background: linear-gradient(90deg, #052e16, #15803d, #16a34a);
   opacity: 1;
-  box-shadow: 0 12px 32px -12px rgba(225, 29, 72, 0.5);
+  box-shadow: 0 12px 32px -12px rgba(21, 128, 61, 0.5);
   border: none;
-  border-bottom: 3px solid #ffffff;
-  border-radius: 24px;
+  border-bottom: 3px solid #f59e0b;
+  border-radius: 10px;
 }
 
-/* Coral Porcelain glow: a soft coral glow for the core. */
+/* Pine & Honey glow: a soft honey glow for the core. */
 .nebula-core {
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 228, 230, 0.6) 42%, rgba(244, 63, 94, 0.22) 62%, rgba(244, 63, 94, 0) 76%);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, rgba(254, 243, 199, 0.6) 42%, rgba(245, 158, 11, 0.22) 62%, rgba(245, 158, 11, 0) 76%);
 }
 
-/* Coral Porcelain orb: a glowing coral
-   orb with a soft pale centre, peach
-   ring and a navy rim. */
+/* Pine & Honey orb: a glowing honey
+   orb with a soft cream centre, pine
+   ring and a deep pine rim. */
 .sun-disc {
   background:
-    radial-gradient(circle at 50% 50%, #fff1f2 0%, #fecdd3 30%, #f97316 52%, #e11d48 72%, #0f172a 100%);
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(251, 113, 133, 0.5), 0 18px 40px -12px rgba(15, 23, 42, 0.55);
+    radial-gradient(circle at 50% 50%, #fffbeb 0%, #fde68a 30%, #d97706 52%, #15803d 72%, #1c2b21 100%);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(22, 163, 74, 0.5), 0 18px 40px -12px rgba(28, 43, 33, 0.55);
   border: none;
 }
 
-/* Wider-spaced rings around the coral orb. */
+/* Wider-spaced rings around the honey orb. */
 .orbit-rings {
   background: repeating-radial-gradient(
     circle at 50% 50%,
-    rgba(225, 29, 72, 0.3) 0px,
-    rgba(225, 29, 72, 0.3) 1px,
+    rgba(21, 128, 61, 0.3) 0px,
+    rgba(21, 128, 61, 0.3) 1px,
     transparent 1px,
     transparent 30px,
-    rgba(249, 115, 22, 0.30) 30px,
-    rgba(249, 115, 22, 0.30) 31px,
+    rgba(217, 119, 6, 0.30) 30px,
+    rgba(217, 119, 6, 0.30) 31px,
     transparent 31px,
     transparent 60px
   );
@@ -323,9 +322,9 @@ h1 em, h2 em, h3 em { font-style: normal; color: #be123c; background: linear-gra
 .sun-rays {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    rgba(244, 63, 94, 0.35) 0deg 4deg,
+    rgba(21, 128, 61, 0.35) 0deg 4deg,
     transparent 4deg 30deg,
-    rgba(249, 115, 22, 0.30) 30deg 34deg,
+    rgba(217, 119, 6, 0.30) 30deg 34deg,
     transparent 34deg 60deg
   );
   -webkit-mask: radial-gradient(circle, transparent 12%, black 38%, transparent 92%);
