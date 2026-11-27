@@ -30,13 +30,13 @@ const ORBS = [
 
 // Sparks falling down through the graphite.
 const FLAKES = [
-  { left: "8%", top: "2%", delay: "0s", dur: "11.2s", s: 12, c: "#65a30d" },
+  { left: "8%", top: "2%", delay: "0s", dur: "11.2s", s: 12, c: "#e11d48" },
   { left: "21%", top: "6%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#f59e0b" },
-  { left: "36%", top: "4%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#a3e635" },
-  { left: "53%", top: "8%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#65a30d" },
+  { left: "36%", top: "4%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#fb7185" },
+  { left: "53%", top: "8%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#e11d48" },
   { left: "68%", top: "3%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#ea580c" },
-  { left: "82%", top: "7%", delay: "-2s", dur: "12.2s", s: 14, c: "#a3e635" },
-  { left: "93%", top: "5%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#d9f99d" },
+  { left: "82%", top: "7%", delay: "-2s", dur: "12.2s", s: 14, c: "#fb7185" },
+  { left: "93%", top: "5%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#fecdd3" },
 ];
 
 // Amber glints scattered through the warm glow.
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* Volt wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#fafaf9] via-[#ecfccb] to-[#fafaf9]">
+      <div className="relative bg-gradient-to-b from-[#fafaf9] via-[#ffe4e6] to-[#fafaf9]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#65a30d", "#f59e0b", "#a3e635", "#ea580c"];
+              const colors = ["#e11d48", "#f59e0b", "#fb7185", "#ea580c"];
               return (
                 <span
                   key={i}
@@ -186,11 +186,11 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
 
         {/* Volt ticker: charcoal band with lime type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#18181b]/80 bg-gradient-to-r from-[#18181b] via-[#3f3f46] to-[#18181b] py-3 shadow-[0_10px_30px_-12px_rgba(15, 23, 42, 0.5)] backdrop-blur">
+        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#0f172a]/80 bg-gradient-to-r from-[#0f172a] via-[#334155] to-[#0f172a] py-3 shadow-[0_10px_30px_-12px_rgba(15, 23, 42, 0.5)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
-                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#d9f99d] drop-shadow-[0_1px_0_rgba(15, 23, 42, 0.35)]">
+                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#fecdd3] drop-shadow-[0_1px_0_rgba(15, 23, 42, 0.35)]">
                   {t} <span className="text-gold-300">✦</span>
                 </span>
               ))}
