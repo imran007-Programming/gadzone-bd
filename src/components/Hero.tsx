@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Royal Grape: deep violet, vivid fuchsia and dark plum over pale lavender. Cool glow, violet petals drifting down.
+// Polar Frost: vivid cobalt, bright cyan and deep navy over pale ice. Cold glow, snowflakes drifting down.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(124, 58, 237, 0.30)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(192, 38, 211, 0.30)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(36, 26, 51, 0.30)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(244, 63, 94, 0.28)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(37, 99, 235, 0.30)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(6, 182, 212, 0.30)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(11, 31, 58, 0.30)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(14, 165, 233, 0.28)" },
 ];
 
-// violet petals drifting down through the cool air.
+// snowflakes drifting down through the cold air.
 const FLAKES = [
-  { left: "8%", top: "2%", delay: "0s", dur: "11.2s", s: 12, c: "#7c3aed" },
-  { left: "21%", top: "6%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#c026d3" },
-  { left: "36%", top: "4%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#6d28d9" },
-  { left: "53%", top: "8%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#8b5cf6" },
-  { left: "68%", top: "3%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#a21caf" },
-  { left: "82%", top: "7%", delay: "-2s", dur: "12.2s", s: 14, c: "#f43f5e" },
-  { left: "93%", top: "5%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#e879f9" },
+  { left: "8%", top: "2%", delay: "0s", dur: "11.2s", s: 12, c: "#2563eb" },
+  { left: "21%", top: "6%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#06b6d4" },
+  { left: "36%", top: "4%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#1d4ed8" },
+  { left: "53%", top: "8%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#3b82f6" },
+  { left: "68%", top: "3%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#0e7490" },
+  { left: "82%", top: "7%", delay: "-2s", dur: "12.2s", s: 14, c: "#0ea5e9" },
+  { left: "93%", top: "5%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#22d3ee" },
 ];
 
-// Royal Grape petals scattered through the cool glow.
+// Polar Frost flakes scattered through the cold glow.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -47,7 +47,7 @@ const STARS = Array.from({ length: 26 }).map((_, i) => ({
   delay: `${-(i * 0.53) % 3.4}s`,
 }));
 
-function MintDrift({ left, top, delay, dur, s, c }: (typeof FLAKES)[number]) {
+function FrostDrift({ left, top, delay, dur, s, c }: (typeof FLAKES)[number]) {
   return (
     <div
       aria-hidden
@@ -59,7 +59,7 @@ function MintDrift({ left, top, delay, dur, s, c }: (typeof FLAKES)[number]) {
           width: s,
           height: s,
           borderRadius: "9999px",
-          background: `radial-gradient(circle at 35% 30%, #faf7ffcc 0%, ${c}88 55%, ${c} 100%)`,
+          background: `radial-gradient(circle at 35% 30%, #f2f7fdcc 0%, ${c}88 55%, ${c} 100%)`,
           boxShadow: `0 0 12px 2px ${c}66`,
         }}
       />
@@ -75,19 +75,19 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* Lavender dusk wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#faf7ff] via-[#ede9fe] to-[#faf7ff]">
+      {/* Ice dawn wash over the stage */}
+      <div className="relative bg-gradient-to-b from-[#f2f7fd] via-[#dbeafe] to-[#f2f7fd]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
 
-        {/* Violet haze sweeping the sheet */}
+        {/* Frost haze sweeping the sheet */}
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-0 hidden h-[560px] opacity-90 sm:block">
           <div className="pop-drift absolute -left-24 top-6 h-72 w-[52rem] rotate-[-8deg] rounded-full bg-gradient-to-r from-brand-400/35 via-gold-300/25 to-transparent blur-3xl" />
           <div className="pop-drift absolute -right-24 top-40 h-64 w-[44rem] rotate-[10deg] rounded-full bg-gradient-to-r from-transparent via-brand-300/25 to-gold-400/30 blur-3xl" style={{ animationDelay: "-12s" }} />
         </div>
 
-        {/* Grape orb core: a glowing grape orb ringed by a clockwise spin */}
+        {/* Frost orb core: a glowing frost orb ringed by a counter-clockwise spin */}
         <div aria-hidden className="pointer-events-none absolute -right-48 -bottom-40 z-0 hidden opacity-90 sm:block">
           <div className="relative h-[600px] w-[600px]">
             <div className="nebula-core absolute inset-8 rounded-full blur-xl" />
@@ -100,20 +100,20 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(124, 58, 237, 0.35), inset 0 0 18px rgba(124, 58, 237, 0.35)",
+                  boxShadow: "0 0 28px 2px rgba(37, 99, 235, 0.35), inset 0 0 18px rgba(37, 99, 235, 0.35)",
                   opacity: 1 - r * 0.22,
                 }}
               />
             ))}
-            {/* the grape orb core: a layered glowing grape orb */}
+            {/* the frost orb core: a layered glowing frost orb */}
             <div className="sun-disc pop-spin absolute inset-44 rounded-full" style={{ animationDuration: "24s" }} />
-            {/* Violet sparkles */}
+            {/* Frost sparkles */}
             <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
               {[{l:"30%",t:"34%",s:46},{l:"58%",t:"52%",s:34},{l:"44%",t:"66%",s:24},{l:"64%",t:"30%",s:20}].map((glint, i) => (
                 <span key={i} className="absolute rounded-full bg-white/80" style={{ left: glint.l, top: glint.t, width: glint.s, height: glint.s }} />
               ))}
             </div>
-            {/* sweeping violet beams */}
+            {/* sweeping frost beams */}
             {[0, 1, 2].map((b) => (
               <span
                 key={b}
@@ -121,11 +121,11 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{ width: 26, height: 240, transform: `translate(-50%, -100%) rotate(${b * 120}deg)`, animationDuration: "36s" }}
               />
             ))}
-            {/* petals drifting around the grape orb */}
+            {/* snowflakes drifting around the frost orb */}
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#7c3aed", "#c026d3", "#6d28d9", "#f43f5e"];
+              const colors = ["#2563eb", "#06b6d4", "#1d4ed8", "#0ea5e9"];
               return (
                 <span
                   key={i}
@@ -143,7 +143,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* violet glow */}
+        {/* frost glow */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {ORBS.map((g, i) => (
             <div
@@ -154,7 +154,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* Violet sparkles */}
+        {/* Frost sparkles */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {STARS.map((s, i) => (
             <span
@@ -165,18 +165,18 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* violet petals drifting down */}
+        {/* snowflakes drifting down */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden overflow-hidden sm:block">
           {FLAKES.map((r, i) => (
-            <MintDrift key={i} {...r} />
+            <FrostDrift key={i} {...r} />
           ))}
         </div>
 
-        {/* 4-banner carousel in a grape frame */}
+        {/* 4-banner carousel in a frost frame */}
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
-              <div className="bg-gradient-to-r from-brand-600 via-gold-500 to-poprose-600 p-2 shadow-[0_20px_40px_-18px_rgba(46, 16, 101, 0.35)] rounded-[10px]">
+              <div className="bg-gradient-to-r from-brand-600 via-gold-500 to-poprose-600 p-2 shadow-[0_20px_40px_-18px_rgba(23, 37, 84, 0.35)] rounded-[10px]">
                 <div className="overflow-hidden rounded-[8px] bg-paper ring-1 ring-brand-950/10">
                   <BannerCarousel />
                 </div>
@@ -185,12 +185,12 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* Royal Grape ticker: deep plum band with pale fuchsia type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#171022]/80 bg-gradient-to-r from-[#171022] via-[#4c1d95] to-[#171022] py-3 shadow-[0_10px_30px_-12px_rgba(23, 16, 34, 0.5)] backdrop-blur">
+        {/* Polar Frost ticker: deep navy band with pale cyan type */}
+        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#060f1e]/80 bg-gradient-to-r from-[#060f1e] via-[#1e40af] to-[#060f1e] py-3 shadow-[0_10px_30px_-12px_rgba(6, 15, 30, 0.5)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
-                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#fae8ff] drop-shadow-[0_1px_0_rgba(23, 16, 34, 0.35)]">
+                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#cffafe] drop-shadow-[0_1px_0_rgba(6, 15, 30, 0.35)]">
                   {t} <span className="text-gold-300">✦</span>
                 </span>
               ))}
@@ -215,7 +215,7 @@ export default function Hero({ onQuickView }: HeroProps) {
               <div key={s.l} className="pop-lift relative overflow-hidden p-4 pb-3 pt-5 text-center">
                 <span className="relative block bg-gradient-to-br from-brand-600 via-gold-500 to-poprose-600 bg-clip-text text-2xl font-black tracking-wide text-transparent">{s.v}</span>
                 <span className="relative mt-1 block text-[10px] font-extrabold uppercase tracking-[0.18em] text-mute">{s.l}</span>
-                <span aria-hidden className="relative mx-auto mt-3 block h-1 w-16 rounded-full bg-gradient-to-r from-brand-500 via-gold-400 to-poprose-600 shadow-[0_6px_16px_-6px_rgba(46, 16, 101, 0.35)]" />
+                <span aria-hidden className="relative mx-auto mt-3 block h-1 w-16 rounded-full bg-gradient-to-r from-brand-500 via-gold-400 to-poprose-600 shadow-[0_6px_16px_-6px_rgba(23, 37, 84, 0.35)]" />
               </div>
             ))}
           </motion.div>
@@ -223,7 +223,7 @@ export default function Hero({ onQuickView }: HeroProps) {
 
         <div className="relative mt-12">
           <div className="mb-6">
-            <p className="inline-block rounded-full border border-brand-200 bg-white/80 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_6px_16px_-6px_rgba(46, 16, 101, 0.35)] backdrop-blur">Handpicked for you</p>
+            <p className="inline-block rounded-full border border-brand-200 bg-white/80 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-brand-700 shadow-[0_6px_16px_-6px_rgba(23, 37, 84, 0.35)] backdrop-blur">Handpicked for you</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-ink">Featured <span className="relative bg-gradient-to-r from-brand-500 via-gold-500 to-popblue-800 bg-clip-text text-transparent">Picks<span aria-hidden className="absolute inset-x-0 -bottom-1 h-1 bg-gradient-to-r from-brand-500 to-gold-500 opacity-70" /></span></h2>
             <span className="zigzag mt-4 block w-44" aria-hidden />
           </div>
