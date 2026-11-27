@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Ember Harvest: burnt orange, warm amber and deep plum over warm cream. Warm ember glow, embers rising up.
+// Lagoon Current: deep teal, bright aqua and deep sea navy over seafoam. Cool lagoon glow, bubbles rising up.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(194, 65, 12, 0.30)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(180, 83, 9, 0.30)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(15, 118, 110, 0.30)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(8, 145, 178, 0.30)" },
   { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(15, 23, 42, 0.30)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(225, 29, 72, 0.28)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(244, 63, 94, 0.28)" },
 ];
 
-// Embers rising up through the warm air.
+// Bubbles rising up through the lagoon water.
 const FLAKES = [
-  { left: "8%", top: "2%", delay: "0s", dur: "11.2s", s: 12, c: "#c2410c" },
-  { left: "21%", top: "6%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#b45309" },
-  { left: "36%", top: "4%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#fdba74" },
-  { left: "53%", top: "8%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#c2410c" },
-  { left: "68%", top: "3%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#9a3412" },
-  { left: "82%", top: "7%", delay: "-2s", dur: "12.2s", s: 14, c: "#fcd34d" },
-  { left: "93%", top: "5%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#fed7aa" },
+  { left: "8%", top: "2%", delay: "0s", dur: "11.2s", s: 12, c: "#0f766e" },
+  { left: "21%", top: "6%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#0e7490" },
+  { left: "36%", top: "4%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#67e8f9" },
+  { left: "53%", top: "8%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#0f766e" },
+  { left: "68%", top: "3%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#115e59" },
+  { left: "82%", top: "7%", delay: "-2s", dur: "12.2s", s: 14, c: "#67e8f9" },
+  { left: "93%", top: "5%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#99f6e4" },
 ];
 
-// Ember glints scattered through the warm glow.
+// Aqua glints scattered through the cool glow.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -47,7 +47,7 @@ const STARS = Array.from({ length: 26 }).map((_, i) => ({
   delay: `${-(i * 0.53) % 3.4}s`,
 }));
 
-function EmberSpark({ left, top, delay, dur, s, c }: (typeof FLAKES)[number]) {
+function BubbleSpark({ left, top, delay, dur, s, c }: (typeof FLAKES)[number]) {
   return (
     <div
       aria-hidden
@@ -59,7 +59,7 @@ function EmberSpark({ left, top, delay, dur, s, c }: (typeof FLAKES)[number]) {
           width: s,
           height: s,
           borderRadius: "9999px",
-          background: `radial-gradient(circle at 35% 30%, #fff7edcc 0%, ${c}88 55%, ${c} 100%)`,
+          background: `radial-gradient(circle at 35% 30%, #f0fdfacc 0%, ${c}88 55%, ${c} 100%)`,
           boxShadow: `0 0 12px 2px ${c}66`,
         }}
       />
@@ -75,19 +75,19 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* Ember wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#fff7ed] via-[#ffedd5] to-[#fff7ed]">
+      {/* Lagoon wash over the stage */}
+      <div className="relative bg-gradient-to-b from-[#f0fdfa] via-[#ccfbf1] to-[#f0fdfa]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
 
-        {/* Ember haze sweeping the sheet */}
+        {/* Lagoon haze sweeping the sheet */}
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-0 hidden h-[560px] opacity-90 sm:block">
           <div className="pop-drift absolute -left-24 top-6 h-72 w-[52rem] rotate-[-8deg] rounded-full bg-gradient-to-r from-brand-400/35 via-gold-300/25 to-transparent blur-3xl" />
           <div className="pop-drift absolute -right-24 top-40 h-64 w-[44rem] rotate-[10deg] rounded-full bg-gradient-to-r from-transparent via-brand-300/25 to-gold-400/30 blur-3xl" style={{ animationDelay: "-12s" }} />
         </div>
 
-        {/* Harvest sun core: a glowing Harvest Sun ringed by a counter-clockwise spin */}
+        {/* Lagoon orb core: a glowing Lagoon Orb ringed by a clockwise spin */}
         <div aria-hidden className="pointer-events-none absolute -right-48 -bottom-40 z-0 hidden opacity-90 sm:block">
           <div className="relative h-[600px] w-[600px]">
             <div className="nebula-core absolute inset-8 rounded-full blur-xl" />
@@ -100,20 +100,20 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(194, 65, 12, 0.35), inset 0 0 18px rgba(194, 65, 12, 0.35)",
+                  boxShadow: "0 0 28px 2px rgba(15, 118, 110, 0.35), inset 0 0 18px rgba(15, 118, 110, 0.35)",
                   opacity: 1 - r * 0.22,
                 }}
               />
             ))}
-            {/* the Harvest Sun core: a layered glowing Harvest Sun */}
+            {/* the Lagoon Orb core: a layered glowing Lagoon Orb */}
             <div className="sun-disc pop-spin absolute inset-44 rounded-full" style={{ animationDuration: "24s" }} />
-            {/* Ember glints */}
+            {/* Aqua glints */}
             <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
               {[{l:"30%",t:"34%",s:46},{l:"58%",t:"52%",s:34},{l:"44%",t:"66%",s:24},{l:"64%",t:"30%",s:20}].map((glint, i) => (
                 <span key={i} className="absolute rounded-full bg-white/80" style={{ left: glint.l, top: glint.t, width: glint.s, height: glint.s }} />
               ))}
             </div>
-            {/* sweeping ember beams */}
+            {/* sweeping lagoon beams */}
             {[0, 1, 2].map((b) => (
               <span
                 key={b}
@@ -121,11 +121,11 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{ width: 26, height: 240, transform: `translate(-50%, -100%) rotate(${b * 120}deg)`, animationDuration: "36s" }}
               />
             ))}
-            {/* Ember glints glowing around the Harvest Sun */}
+            {/* Aqua glints glowing around the Lagoon Orb */}
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#c2410c", "#b45309", "#fdba74", "#c2410c"];
+              const colors = ["#0f766e", "#0e7490", "#67e8f9", "#0f766e"];
               return (
                 <span
                   key={i}
@@ -143,7 +143,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* Ember glow */}
+        {/* Lagoon glow */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {ORBS.map((g, i) => (
             <div
@@ -154,7 +154,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* Ember glints */}
+        {/* Aqua glints */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {STARS.map((s, i) => (
             <span
@@ -165,14 +165,14 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* Embers rising up */}
+        {/* Bubbles rising up */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden overflow-hidden sm:block">
           {FLAKES.map((r, i) => (
-            <EmberSpark key={i} {...r} />
+            <BubbleSpark key={i} {...r} />
           ))}
         </div>
 
-        {/* 4-banner carousel in an Ember frame */}
+        {/* 4-banner carousel in a Lagoon frame */}
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
@@ -185,12 +185,12 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* Ember ticker: deep plum band with amber type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#3b0764]/80 bg-gradient-to-r from-[#3b0764] via-[#7c2d12] to-[#3b0764] py-3 shadow-[0_10px_30px_-12px_rgba(15, 23, 42, 0.5)] backdrop-blur">
+        {/* Lagoon ticker: deep sea navy band with seafoam type */}
+        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#082f49]/80 bg-gradient-to-r from-[#082f49] via-[#134e4a] to-[#082f49] py-3 shadow-[0_10px_30px_-12px_rgba(15, 23, 42, 0.5)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
-                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#ffedd5] drop-shadow-[0_1px_0_rgba(15, 23, 42, 0.35)]">
+                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#ccfbf1] drop-shadow-[0_1px_0_rgba(15, 23, 42, 0.35)]">
                   {t} <span className="text-gold-300">✦</span>
                 </span>
               ))}
@@ -198,11 +198,11 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* single Ember rule divider into the page */} 
+        {/* single Lagoon wave divider into the page */} 
         <div aria-hidden className="zigzag relative z-10 mx-auto mt-0 w-full max-w-7xl opacity-90" />
       </div>
 
-      {/* Stats + featured picks under the warm glow */}
+      {/* Stats + featured picks under the cool glow */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 pb-24 pt-10 md:pb-28">
         <motion.div variants={container} initial="hidden" animate="show" {...anim}>
           <motion.div variants={item} className="grid grid-cols-2 gap-6 sm:grid-cols-4">
@@ -253,7 +253,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* single Ember rule divider into the page */} 
+      {/* single Lagoon wave divider into the page */} 
       <div aria-hidden className="zigzag absolute bottom-0 left-0 w-full opacity-90" />
     </section>
   );

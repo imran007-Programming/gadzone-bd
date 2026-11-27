@@ -17,10 +17,10 @@ export default function FlashDeals({ products, countdown, onQuickView, onAddToCa
   const { hh, mm, ss } = countdown;
   const reduce = useReducedMotion();
   return (
-    <section id="flash" className="relative overflow-hidden bg-[#fed7aa] py-14 text-ink ring-1 ring-inset ring-brand-400/20 sm:py-16">
+    <section id="flash" className="relative overflow-hidden bg-[#99f6e4] py-14 text-ink ring-1 ring-inset ring-brand-400/20 sm:py-16">
       <div aria-hidden className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-brand-400/20 blur-[100px]" />
       <div aria-hidden className="pointer-events-none absolute -bottom-24 -left-16 h-72 w-72 rounded-full bg-brand-600/20 blur-[100px]" />
-      {/* delta ember-fleck dots */}
+      {/* delta lagoon-fleck dots */}
       <div aria-hidden className="pointer-events-none absolute inset-0 opacity-40 [background-image:radial-gradient(rgba(15, 23, 42, 0.35)_1px,transparent_1.5px)] [background-size:30px_30px]" />
       <div className="relative mx-auto max-w-7xl px-4">
         <Reveal>
