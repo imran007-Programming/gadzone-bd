@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Ember Harvest: burnt orange, warm amber and deep charcoal over warm cream. Warm glow, embers rising up.
+// Glacier Mint: burnt orange, warm amber and deep charcoal over warm cream. Warm glow, glaciers rising up.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(234, 88, 12, 0.30)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(245, 158, 11, 0.30)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(13, 148, 136, 0.30)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(34, 197, 94, 0.30)" },
   { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(28, 25, 23, 0.30)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(225, 29, 72, 0.28)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(6, 182, 212, 0.28)" },
 ];
 
-// embers rising up through the warm air.
-const EMBERS = [
-  { left: "8%", top: "2%", delay: "0s", dur: "11.2s", s: 12, c: "#c2410c" },
-  { left: "21%", top: "6%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#f59e0b" },
-  { left: "36%", top: "4%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#7c2d12" },
-  { left: "53%", top: "8%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#ea580c" },
-  { left: "68%", top: "3%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#9a3412" },
-  { left: "82%", top: "7%", delay: "-2s", dur: "12.2s", s: 14, c: "#fb923c" },
-  { left: "93%", top: "5%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#fcd34d" },
+// glaciers rising up through the warm air.
+const BUBBLES = [
+  { left: "8%", top: "2%", delay: "0s", dur: "11.2s", s: 12, c: "#0f766e" },
+  { left: "21%", top: "6%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#22c55e" },
+  { left: "36%", top: "4%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#134e4a" },
+  { left: "53%", top: "8%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#0d9488" },
+  { left: "68%", top: "3%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#115e59" },
+  { left: "82%", top: "7%", delay: "-2s", dur: "12.2s", s: 14, c: "#2dd4bf" },
+  { left: "93%", top: "5%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#86efac" },
 ];
 
-// Ember Harvest sparks scattered through the cool glow.
+// Glacier Mint sparks scattered through the cool glow.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -47,7 +47,7 @@ const STARS = Array.from({ length: 26 }).map((_, i) => ({
   delay: `${-(i * 0.53) % 3.4}s`,
 }));
 
-function EmberDrift({ left, top, delay, dur, s, c }: (typeof EMBERS)[number]) {
+function GlacierDrift({ left, top, delay, dur, s, c }: (typeof BUBBLES)[number]) {
   return (
     <div
       aria-hidden
@@ -59,7 +59,7 @@ function EmberDrift({ left, top, delay, dur, s, c }: (typeof EMBERS)[number]) {
           width: s,
           height: s,
           borderRadius: "9999px",
-          background: `radial-gradient(circle at 35% 30%, #fff7edcc 0%, ${c}88 55%, ${c} 100%)`,
+          background: `radial-gradient(circle at 35% 30%, #f0fdfacc 0%, ${c}88 55%, ${c} 100%)`,
           boxShadow: `0 0 12px 2px ${c}66`,
         }}
       />
@@ -75,19 +75,19 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* Ember dawn wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#fff7ed] via-[#ffedd5] to-[#fff7ed]">
+      {/* Glacier dawn wash over the stage */}
+      <div className="relative bg-gradient-to-b from-[#f0fdfa] via-[#ccfbf1] to-[#f0fdfa]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
 
-        {/* Ember haze sweeping the sheet */}
+        {/* Glacier haze sweeping the sheet */}
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-0 hidden h-[560px] opacity-90 sm:block">
           <div className="pop-drift absolute -left-24 top-6 h-72 w-[52rem] rotate-[-8deg] rounded-full bg-gradient-to-r from-brand-400/35 via-gold-300/25 to-transparent blur-3xl" />
           <div className="pop-drift absolute -right-24 top-40 h-64 w-[44rem] rotate-[10deg] rounded-full bg-gradient-to-r from-transparent via-brand-300/25 to-gold-400/30 blur-3xl" style={{ animationDelay: "-12s" }} />
         </div>
 
-        {/* Ember disc core: a glowing ember sun ringed by a counter-clockwise spin */}
+        {/* Glacier disc core: a glowing glacier sun ringed by a counter-clockwise spin */}
         <div aria-hidden className="pointer-events-none absolute -right-48 -bottom-40 z-0 hidden opacity-90 sm:block">
           <div className="relative h-[600px] w-[600px]">
             <div className="nebula-core absolute inset-8 rounded-full blur-xl" />
@@ -100,20 +100,20 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(234, 88, 12, 0.35), inset 0 0 18px rgba(234, 88, 12, 0.35)",
+                  boxShadow: "0 0 28px 2px rgba(13, 148, 136, 0.35), inset 0 0 18px rgba(13, 148, 136, 0.35)",
                   opacity: 1 - r * 0.22,
                 }}
               />
             ))}
-            {/* the ember sun core: a layered glowing ember sun */}
+            {/* the glacier sun core: a layered glowing glacier sun */}
             <div className="sun-disc pop-spin absolute inset-44 rounded-full" style={{ animationDuration: "24s" }} />
-            {/* Ember sparkles */}
+            {/* Glacier sparkles */}
             <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
               {[{l:"30%",t:"34%",s:46},{l:"58%",t:"52%",s:34},{l:"44%",t:"66%",s:24},{l:"64%",t:"30%",s:20}].map((glint, i) => (
                 <span key={i} className="absolute rounded-full bg-white/80" style={{ left: glint.l, top: glint.t, width: glint.s, height: glint.s }} />
               ))}
             </div>
-            {/* sweeping ember beams */}
+            {/* sweeping glacier beams */}
             {[0, 1, 2].map((b) => (
               <span
                 key={b}
@@ -121,11 +121,11 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{ width: 26, height: 240, transform: `translate(-50%, -100%) rotate(${b * 120}deg)`, animationDuration: "36s" }}
               />
             ))}
-            {/* embers falling around the ember sun */}
+            {/* glaciers falling around the glacier sun */}
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#c2410c", "#f59e0b", "#7c2d12", "#ea580c"];
+              const colors = ["#0f766e", "#22c55e", "#134e4a", "#0d9488"];
               return (
                 <span
                   key={i}
@@ -143,7 +143,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* ember glow */}
+        {/* glacier glow */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {ORBS.map((g, i) => (
             <div
@@ -154,7 +154,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* Ember sparkles */}
+        {/* Glacier sparkles */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {STARS.map((s, i) => (
             <span
@@ -165,14 +165,14 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* embers rising up */}
+        {/* glaciers rising up */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden overflow-hidden sm:block">
-          {EMBERS.map((r, i) => (
-            <EmberDrift key={i} {...r} />
+          {BUBBLES.map((r, i) => (
+            <GlacierDrift key={i} {...r} />
           ))}
         </div>
 
-        {/* 4-banner carousel in a ember frame */}
+        {/* 4-banner carousel in a glacier frame */}
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
@@ -185,12 +185,12 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* Ember Harvest ticker: deep rust band with warm cream type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#431407]/80 bg-gradient-to-r from-[#431407] via-[#c2410c] to-[#431407] py-3 shadow-[0_10px_30px_-12px_rgba(2, 6, 23, 0.5)] backdrop-blur">
+        {/* Glacier Mint ticker: deep rust band with warm cream type */}
+        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#042f2e]/80 bg-gradient-to-r from-[#042f2e] via-[#0f766e] to-[#042f2e] py-3 shadow-[0_10px_30px_-12px_rgba(2, 6, 23, 0.5)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
-                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#ffedd5] drop-shadow-[0_1px_0_rgba(2, 6, 23, 0.35)]">
+                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#ccfbf1] drop-shadow-[0_1px_0_rgba(2, 6, 23, 0.35)]">
                   {t} <span className="text-gold-300">✦</span>
                 </span>
               ))}
