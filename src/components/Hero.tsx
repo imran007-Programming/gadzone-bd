@@ -30,13 +30,13 @@ const ORBS = [
 
 // Embers rising through the warm air.
 const FLAKES = [
-  { left: "8%", top: "2%", delay: "0s", dur: "11.2s", s: 12, c: "#ea580c" },
-  { left: "21%", top: "6%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#f59e0b" },
+  { left: "8%", top: "2%", delay: "0s", dur: "11.2s", s: 12, c: "#0d9488" },
+  { left: "21%", top: "6%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#06b6d4" },
   { left: "36%", top: "4%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#e11d48" },
-  { left: "53%", top: "8%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#7e22ce" },
-  { left: "68%", top: "3%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#f97316" },
-  { left: "82%", top: "7%", delay: "-2s", dur: "12.2s", s: 14, c: "#9333ea" },
-  { left: "93%", top: "5%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#fbbf24" },
+  { left: "53%", top: "8%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#155e75" },
+  { left: "68%", top: "3%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#14b8a6" },
+  { left: "82%", top: "7%", delay: "-2s", dur: "12.2s", s: 14, c: "#0e7490" },
+  { left: "93%", top: "5%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#22d3ee" },
 ];
 
 // Amber glints scattered through the ember glow.
@@ -59,7 +59,7 @@ function BubbleSpark({ left, top, delay, dur, s, c }: (typeof FLAKES)[number]) {
           width: s,
           height: s,
           borderRadius: "9999px",
-          background: `radial-gradient(circle at 35% 30%, #fff7edcc 0%, ${c}88 55%, ${c} 100%)`,
+          background: `radial-gradient(circle at 35% 30%, #f0fdfacc 0%, ${c}88 55%, ${c} 100%)`,
           boxShadow: `0 0 12px 2px ${c}66`,
         }}
       />
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* Ember wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#fff7ed] via-[#ffedd5] to-[#fff7ed]">
+      <div className="relative bg-gradient-to-b from-[#f0fdfa] via-[#ccfbf1] to-[#f0fdfa]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#ea580c", "#f59e0b", "#e11d48", "#f97316"];
+              const colors = ["#0d9488", "#06b6d4", "#e11d48", "#14b8a6"];
               return (
                 <span
                   key={i}
@@ -186,11 +186,11 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
 
         {/* Ember ticker: deep plum band with amber type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#3b0764]/80 bg-gradient-to-r from-[#3b0764] via-[#581c87] to-[#3b0764] py-3 shadow-[0_10px_30px_-12px_rgba(59, 7, 100, 0.5)] backdrop-blur">
+        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#134e4a]/80 bg-gradient-to-r from-[#134e4a] via-[#164e63] to-[#134e4a] py-3 shadow-[0_10px_30px_-12px_rgba(59, 7, 100, 0.5)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
-                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#fde68a] drop-shadow-[0_1px_0_rgba(59, 7, 100, 0.35)]">
+                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#a5f3fc] drop-shadow-[0_1px_0_rgba(59, 7, 100, 0.35)]">
                   {t} <span className="text-gold-300">✦</span>
                 </span>
               ))}
