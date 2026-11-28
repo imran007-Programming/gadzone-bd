@@ -24,7 +24,7 @@ export default function ProductCard({ product: p, onQuickView, onAddToCart, dela
       whileHover={undefined}
       className="pop-lift group relative flex h-full flex-col overflow-hidden bg-paper"
     >
-      {/* Warm glow rising from the card's bottom edge */}
+      {/* Cool glow rising from the card's bottom edge */}
       <div aria-hidden className="pointer-events-none absolute inset-x-10 bottom-0 h-24 bg-gradient-to-t from-brand-200/60 via-gold-200/40 to-transparent blur-sm" />
       <div className="relative p-3">
         <div className="relative cursor-pointer overflow-hidden rounded-[8px] ring-2 ring-brand-300/60" onClick={() => onQuickView(p)}>
