@@ -20,26 +20,26 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-// Ember Orchard: deep plum, warm amber and coral over warm cream. Amber sun glow, leaves falling down.
+// Glacier Circuit: deep teal, electric lime and sky blue over icy blue-white. Lime orb glow, frost motes rising up.
 const ORBS = [
-  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(134, 25, 143, 0.30)" },
-  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(217, 119, 6, 0.30)" },
-  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(74, 4, 78, 0.30)" },
-  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(225, 29, 72, 0.28)" },
+  { left: "4%", top: "8%", size: 180, delay: "0s", dur: "14s", c: "rgba(15, 118, 110, 0.30)" },
+  { left: "70%", top: "2%", size: 230, delay: "-4s", dur: "15s", c: "rgba(101, 163, 13, 0.30)" },
+  { left: "42%", top: "46%", size: 150, delay: "-7s", dur: "13s", c: "rgba(4, 47, 46, 0.30)" },
+  { left: "84%", top: "52%", size: 130, delay: "-2s", dur: "14s", c: "rgba(2, 132, 199, 0.28)" },
 ];
 
-// Leaves falling down through the orchard light.
+// Frost motes rising up through the glacier light.
 const FLAKES = [
-  { left: "8%", top: "2%", delay: "0s", dur: "11.2s", s: 12, c: "#86198f" },
-  { left: "21%", top: "6%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#d97706" },
-  { left: "36%", top: "4%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#86198f" },
-  { left: "53%", top: "8%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#be123c" },
-  { left: "68%", top: "3%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#ea580c" },
-  { left: "82%", top: "7%", delay: "-2s", dur: "12.2s", s: 14, c: "#86198f" },
-  { left: "93%", top: "5%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#fcd34d" },
+  { left: "8%", top: "2%", delay: "0s", dur: "11.2s", s: 12, c: "#0f766e" },
+  { left: "21%", top: "6%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#65a30d" },
+  { left: "36%", top: "4%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#0f766e" },
+  { left: "53%", top: "8%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#0369a1" },
+  { left: "68%", top: "3%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#4f46e5" },
+  { left: "82%", top: "7%", delay: "-2s", dur: "12.2s", s: 14, c: "#0f766e" },
+  { left: "93%", top: "5%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#bef264" },
 ];
 
-// Amber glints scattered through the orchard glow.
+// Lime glints scattered through the glacier glow.
 const STARS = Array.from({ length: 26 }).map((_, i) => ({
   left: `${(i * 37 + 11) % 96}%`,
   top: `${(i * 53 + 7) % 62}%`,
@@ -59,7 +59,7 @@ function BubbleSpark({ left, top, delay, dur, s, c }: (typeof FLAKES)[number]) {
           width: s,
           height: s,
           borderRadius: "9999px",
-          background: `radial-gradient(circle at 35% 30%, #fffbebcc 0%, ${c}88 55%, ${c} 100%)`,
+          background: `radial-gradient(circle at 35% 30%, #f7fee7cc 0%, ${c}88 55%, ${c} 100%)`,
           boxShadow: `0 0 12px 2px ${c}66`,
         }}
       />
@@ -75,19 +75,19 @@ export default function Hero({ onQuickView }: HeroProps) {
   const anim = reduce ? { initial: false } : {};
   return (
     <section className="relative overflow-hidden">
-      {/* Orchard wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#fff7ed] via-[#fef3c7] to-[#fff7ed]">
+      {/* Circuit wash over the stage */}
+      <div className="relative bg-gradient-to-b from-[#f0f9ff] via-[#ecfccb] to-[#f0f9ff]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
 
-        {/* Orchard haze sweeping the sheet */}
+        {/* Circuit haze sweeping the sheet */}
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-0 hidden h-[560px] opacity-90 sm:block">
           <div className="pop-drift absolute -left-24 top-6 h-72 w-[52rem] rotate-[-8deg] rounded-full bg-gradient-to-r from-brand-400/35 via-gold-300/25 to-transparent blur-3xl" />
           <div className="pop-drift absolute -right-24 top-40 h-64 w-[44rem] rotate-[10deg] rounded-full bg-gradient-to-r from-transparent via-brand-300/25 to-gold-400/30 blur-3xl" style={{ animationDelay: "-12s" }} />
         </div>
 
-        {/* Orchard sun core: a warm amber sun ringed by a counter-clockwise spin */}
+        {/* Circuit orb core: a glowing lime orb ringed by a clockwise spin */}
         <div aria-hidden className="pointer-events-none absolute -right-48 -bottom-40 z-0 hidden opacity-90 sm:block">
           <div className="relative h-[600px] w-[600px]">
             <div className="nebula-core absolute inset-8 rounded-full blur-xl" />
@@ -100,20 +100,20 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{
                   width: `${96 - r * 20}%`,
                   height: `${96 - r * 20}%`,
-                  boxShadow: "0 0 28px 2px rgba(134, 25, 143, 0.35), inset 0 0 18px rgba(134, 25, 143, 0.35)",
+                  boxShadow: "0 0 28px 2px rgba(15, 118, 110, 0.35), inset 0 0 18px rgba(15, 118, 110, 0.35)",
                   opacity: 1 - r * 0.22,
                 }}
               />
             ))}
-            {/* the amber sun core: a layered glowing amber sun */}
+            {/* the lime orb core: a layered glowing lime orb */}
             <div className="sun-disc pop-spin absolute inset-44 rounded-full" style={{ animationDuration: "24s" }} />
-            {/* Amber glints */}
+            {/* Lime glints */}
             <div className="absolute inset-44 overflow-hidden rounded-full opacity-40">
               {[{l:"30%",t:"34%",s:46},{l:"58%",t:"52%",s:34},{l:"44%",t:"66%",s:24},{l:"64%",t:"30%",s:20}].map((glint, i) => (
                 <span key={i} className="absolute rounded-full bg-white/80" style={{ left: glint.l, top: glint.t, width: glint.s, height: glint.s }} />
               ))}
             </div>
-            {/* sweeping plum beams */}
+            {/* sweeping teal beams */}
             {[0, 1, 2].map((b) => (
               <span
                 key={b}
@@ -121,11 +121,11 @@ export default function Hero({ onQuickView }: HeroProps) {
                 style={{ width: 26, height: 240, transform: `translate(-50%, -100%) rotate(${b * 120}deg)`, animationDuration: "36s" }}
               />
             ))}
-            {/* Amber glints glowing around the amber sun */}
+            {/* Lime glints glowing around the lime orb */}
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#86198f", "#d97706", "#be123c", "#ea580c"];
+              const colors = ["#0f766e", "#65a30d", "#0369a1", "#4f46e5"];
               return (
                 <span
                   key={i}
@@ -143,7 +143,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* Orchard glow */}
+        {/* Circuit glow */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {ORBS.map((g, i) => (
             <div
@@ -154,7 +154,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* Amber glints */}
+        {/* Lime glints */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-10 hidden sm:block">
           {STARS.map((s, i) => (
             <span
@@ -172,7 +172,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           ))}
         </div>
 
-        {/* 4-banner carousel in an Orchard frame */}
+        {/* 4-banner carousel in a Circuit frame */}
         <div className="relative z-20">
           <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
             <div className="pop-lift !overflow-visible p-2">
@@ -185,12 +185,12 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* Orchard ticker: deep plum band with amber type */}
-        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#4a044e]/80 bg-gradient-to-r from-[#4a044e] via-[#86198f] to-[#4a044e] py-3 shadow-[0_10px_30px_-12px_rgba(74, 4, 78, 0.5)] backdrop-blur">
+        {/* Circuit ticker: deep teal band with lime type */}
+        <div aria-hidden className="relative z-10 mt-8 border-y-2 border-[#042f2e]/80 bg-gradient-to-r from-[#042f2e] via-[#0f766e] to-[#042f2e] py-3 shadow-[0_10px_30px_-12px_rgba(4, 47, 46, 0.5)] backdrop-blur">
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
-                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#fde68a] drop-shadow-[0_1px_0_rgba(74, 4, 78, 0.35)]">
+                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#d9f99d] drop-shadow-[0_1px_0_rgba(4, 47, 46, 0.35)]">
                   {t} <span className="text-gold-300">✦</span>
                 </span>
               ))}
@@ -198,11 +198,11 @@ export default function Hero({ onQuickView }: HeroProps) {
           </div>
         </div>
 
-        {/* single Orchard dashed divider into the page */} 
+        {/* single Circuit trace divider into the page */} 
         <div aria-hidden className="zigzag relative z-10 mx-auto mt-0 w-full max-w-7xl opacity-90" />
       </div>
 
-      {/* Stats + featured picks under the orchard glow */}
+      {/* Stats + featured picks under the circuit glow */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 pb-24 pt-10 md:pb-28">
         <motion.div variants={container} initial="hidden" animate="show" {...anim}>
           <motion.div variants={item} className="grid grid-cols-2 gap-6 sm:grid-cols-4">
@@ -253,7 +253,7 @@ export default function Hero({ onQuickView }: HeroProps) {
         </div>
       </div>
 
-      {/* single Orchard dashed divider into the page */} 
+      {/* single Circuit trace divider into the page */} 
       <div aria-hidden className="zigzag absolute bottom-0 left-0 w-full opacity-90" />
     </section>
   );
