@@ -20,7 +20,7 @@ export default function FlashDeals({ products, countdown, onQuickView, onAddToCa
     <section id="flash" className="relative overflow-hidden bg-[#d9f2ec] py-14 text-ink ring-1 ring-inset ring-brand-400/20 sm:py-16">
       <div aria-hidden className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-brand-400/20 blur-[100px]" />
       <div aria-hidden className="pointer-events-none absolute -bottom-24 -left-16 h-72 w-72 rounded-full bg-brand-600/20 blur-[100px]" />
-      {/* delta coral-fleck dots */}
+      {/* delta rose-fleck dots */}
       <div aria-hidden className="pointer-events-none absolute inset-0 opacity-40 [background-image:radial-gradient(rgba(15, 23, 42, 0.35)_1px,transparent_1.5px)] [background-size:30px_30px]" />
       <div className="relative mx-auto max-w-7xl px-4">
         <Reveal>
@@ -47,7 +47,7 @@ export default function FlashDeals({ products, countdown, onQuickView, onAddToCa
         </Reveal>
         <div className="mt-8 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">{products.map((p, i) => <ProductCard key={p.id} product={p} onQuickView={onQuickView} onAddToCart={onAddToCart} delay={(i % 4) * 0.06} />)}</div>
       </div>
-      {/* coral baseline accent strip along the base */}
+      {/* rose baseline accent strip along the base */}
       <div aria-hidden className="absolute inset-x-0 bottom-0 h-1.5 bg-gradient-to-r from-brand-500 via-gold to-popblue" />
     </section>
   );
