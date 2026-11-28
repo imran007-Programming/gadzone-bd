@@ -30,13 +30,13 @@ const ORBS = [
 
 // Sparks falling down through the graphite.
 const FLAKES = [
-  { left: "8%", top: "2%", delay: "0s", dur: "11.2s", s: 12, c: "#4f46e5" },
-  { left: "21%", top: "6%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#e11d48" },
-  { left: "36%", top: "4%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#4f46e5" },
-  { left: "53%", top: "8%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#4f46e5" },
-  { left: "68%", top: "3%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#be123c" },
-  { left: "82%", top: "7%", delay: "-2s", dur: "12.2s", s: 14, c: "#4f46e5" },
-  { left: "93%", top: "5%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#fecdd3" },
+  { left: "8%", top: "2%", delay: "0s", dur: "11.2s", s: 12, c: "#047857" },
+  { left: "21%", top: "6%", delay: "-1.4s", dur: "12.8s", s: 16, c: "#d97706" },
+  { left: "36%", top: "4%", delay: "-2.6s", dur: "11.8s", s: 13, c: "#047857" },
+  { left: "53%", top: "8%", delay: "-0.8s", dur: "12.4s", s: 17, c: "#047857" },
+  { left: "68%", top: "3%", delay: "-3.2s", dur: "11.6s", s: 12, c: "#b45309" },
+  { left: "82%", top: "7%", delay: "-2s", dur: "12.2s", s: 14, c: "#047857" },
+  { left: "93%", top: "5%", delay: "-0.4s", dur: "11.4s", s: 10, c: "#fde68a" },
 ];
 
 // Amber glints scattered through the warm glow.
@@ -76,7 +76,7 @@ export default function Hero({ onQuickView }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* Pine wash over the stage */}
-      <div className="relative bg-gradient-to-b from-[#f8f7ff] via-[#e0e7ff] to-[#f8f7ff]">
+      <div className="relative bg-gradient-to-b from-[#fdf9ec] via-[#d5efe0] to-[#fdf9ec]">
         <div aria-hidden className="bazaar-awning absolute inset-x-0 top-0 z-30 h-3" />
         <div aria-hidden className="halftone pointer-events-none absolute inset-0 opacity-70" />
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-400/15" />
@@ -125,7 +125,7 @@ export default function Hero({ onQuickView }: HeroProps) {
             {Array.from({ length: 10 }).map((_, i) => {
               const x = 12 + ((i * 37) % 76);
               const y = 62 + ((i * 53) % 24);
-              const colors = ["#4f46e5", "#e11d48", "#4f46e5", "#be123c"];
+              const colors = ["#047857", "#d97706", "#047857", "#b45309"];
               return (
                 <span
                   key={i}
@@ -190,7 +190,7 @@ export default function Hero({ onQuickView }: HeroProps) {
           <div className="overflow-hidden py-2">
             <div className="pop-ticker flex w-max items-center gap-8 pr-8">
               {[...TICKER, ...TICKER].map((t, i) => (
-                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#fecdd3] drop-shadow-[0_1px_0_rgba(15, 23, 42, 0.35)]">
+                <span key={i} className="flex items-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-[#fde68a] drop-shadow-[0_1px_0_rgba(15, 23, 42, 0.35)]">
                   {t} <span className="text-gold-300">✦</span>
                 </span>
               ))}
